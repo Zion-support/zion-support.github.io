@@ -7,40 +7,60 @@ import { motion } from 'framer-motion';
 
 import {
 
+  Rocket
+  Brain
+  Atom
+  Zap
+  Sparkles
+  Shield
+  Phone
+  Mail
+  MapPin
+  Globe
+  ArrowRight
+  Linkedin
+  Twitter
+  Facebook
+  Instagram
+  Youtube
+  Github
+  CheckCircle
+  Award
+  Star
+  Crown
+  Gem
+  Infinity
+  Heart
+  ShieldCheck
+  Users
+  Briefcase
+  BookOpen
+  Target
+  Microscope
+  Cpu
+  Database
+  Cloud
+  Lock
+  Home
+  Building
+  DollarSign
+  FileText
+  MessageSquare
+  MessageCircle
+  Newspaper
+  Handshake
+  LifeBuoy
+  Activity
+  ShoppingCart
+  UserCheck
+  BarChart
+  Palette
+  Video
+  LockIcon
+  GlobeIcon
+  CpuIcon;} from 'lucide-react';import {
+  Rocket, Brain, Atom, Zap, Sparkles, Shield
 
-
-
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Link from 'next / link';
-import { motion } from 'framer-motion';
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
   Rocket,
   Brain,
@@ -103,6 +123,8 @@ import { motion } from 'framer-motion';
 
 
 
+
+
   Phone, Mail, MapPin, Globe, ArrowRight;
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
   CheckCircle, Award, Star, Crown, Gem, Infinity;
@@ -113,6 +135,8 @@ import { motion } from 'framer-motion';
 
   { name: 'Status', href: '/status', icon: Activity }
 ];
+
+
 
 
 
@@ -241,7 +265,7 @@ import { motion } from 'framer-motion';
       { name: 'Marketing Automation Suite', href: '/marketing-automation-suite', price: '$279/month' }
       { name: 'Financial Analytics Platform', href: '/financial-analytics-platform', price: '$349/month' }
       { name: 'Legal Document Automation', href: '/legal-document-automation', price: '$399/month' }
-    ]
+    ];
   }
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home }
@@ -254,19 +278,30 @@ const quickLinks = [
 
 
 
+
+
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
-  { label: 'Happy Customers', value: '50K+', icon: Users },
-  { label: 'Services Delivered', value: '200+', icon: Rocket },
-  { label: 'Countries Served', value: '45+', icon: Globe },
-  { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Target },
+  { name: 'Pricing', href: '/pricing - 2034', icon: DollarSign },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'Case Studies', href: '/case - studies', icon: FileText },
+  { name: 'Blog', href: '/blog', icon: MessageSquare },
+  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ];
-const companyLinks = [;
-  { name: 'About Us', href: '/about', icon: Users },;
-  { name: 'Careers', href: '/careers', icon: Briefcase },;
-  { name: 'News', href: '/news', icon: Newspaper },;
-  { name: 'Partners', href: '/partners', icon: Handshake },;
-  { name: 'Support', href: '/support', icon: LifeBuoy },;
-  { name: 'Status', href: '/status', icon: Activity },;
+const companyLinks = [
+  { name: 'About Us', href: '/about', icon: Users }
+  { name: 'Careers', href: '/careers', icon: Briefcase }
+  { name: 'News', href: '/news', icon: Newspaper }
+  { name: 'Partners', href: '/partners', icon: Handshake }
+  { name: 'Support', href: '/support', icon: LifeBuoy }
+  { name: 'About Us', href: '/about', icon: Users },
+  { name: 'Careers', href: '/careers', icon: Briefcase },
+  { name: 'News', href: '/news', icon: Newspaper },
+  { name: 'Partners', href: '/partners', icon: Handshake },
+  { name: 'Support', href: '/support', icon: LifeBuoy },
+  { name: 'Status', href: '/status', icon: Activity }
 ];
 const socialLinks = [;
   {;
@@ -320,8 +355,10 @@ export default function UltraFuturisticFooter2034() {;
 
 export default function UltraFuturisticFooter2034() {
   return (
+
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>  { label: 'Success Rate', value: '99.9%', icon: CheckCircle };
 ];
+
 
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>
 
@@ -356,6 +393,7 @@ export default function UltraFuturisticFooter2034() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -382,6 +420,7 @@ export default function UltraFuturisticFooter2034() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -432,6 +471,8 @@ export default function UltraFuturisticFooter2034() {
 
 
 
+
+
                 className='space-y-6'>;
                 <div className='flex items-center space-x-3'>;
                   <div className='relative'>;
@@ -449,11 +490,13 @@ export default function UltraFuturisticFooter2034() {
                     </p>;
                   </div>;
                 </div>;
+
                 <p className='text-gray-300 leading-relaxed'>;
                   Leading provider of cutting-edge AI, quantum computing, and;
                   emerging technology solutions. Empowering businesses with;
                   innovative tools for the future.;
                 </p>;
+
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-4">
                   {stats.map((stat, index) => (
@@ -486,8 +529,10 @@ export default function UltraFuturisticFooter2034() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -515,13 +560,22 @@ export default function UltraFuturisticFooter2034() {
                     <MapPin className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.address}</span>                  </div>                    <span>{contactInfo.mobile}</span>
 
+                  ))}
+                </div>
+                      <div className='text-xs text-gray-400'>{stat.label}</div>                    </motion.div>
+
+
+
+
+                  ))}
+                </div>
 
                 {/* Contact Info */}
-
 
                 <div className='space-y-3'>
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors'>
                     <Phone className='w-4 h-4' />
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -529,6 +583,7 @@ export default function UltraFuturisticFooter2034() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                     <span>{contactInfo.mobile}</span>
                   </div>
@@ -581,6 +636,7 @@ export default function UltraFuturisticFooter2034() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -593,6 +649,7 @@ export default function UltraFuturisticFooter2034() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -601,7 +658,7 @@ export default function UltraFuturisticFooter2034() {
 
                       initial={{ opacity: 0, x: -20 }}
                       whileInView={{ opacity: 1, x: 0 }}
-transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
+                      transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                       viewport={{ once: true }}
                       className='space-y-4'
 
@@ -610,7 +667,9 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                     >
                       <div className='flex items-center space-x-2'>
@@ -653,6 +712,7 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -666,9 +726,10 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                             </span>
                           </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                         ))}
-                      </div>
-                    </motion.div>
+                      </div>;
+                    </motion && motion.div>;
                   ))}
                 </div>
               </motion.div>
@@ -683,17 +744,20 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
               <motion.div
 
 
+
               <motion.div
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
                 viewport={{ once: true }}
                 className='space-y-8'
+
 
 
 
@@ -721,6 +785,7 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
               >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                 {/* Quick Links */}
                 <div>;
                   <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>;
@@ -728,13 +793,16 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                     {quickLinks && quickLinks.map((link) => (;
                       <Link
 
-
+                        key={link && link.name}
+                        href={link && link.href}
+                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group">;
+                        <link && link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />;
+                        <span className="text-sm">{link && link.name}</span>;
+                      </Link>;
 
                     ))}
-
-                  </div>;
-                </div>;
-
+                  </div>
+                </div>
 
                 {/* Company Links */}
 
@@ -746,6 +814,29 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
 
 
+                        key={link.name}
+                        href={link.href}
+                        className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group'
+                      >
+                        <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
+                        <span className='text-sm'>{link.name}</span>                      </Link>              >
+                {/* Quick Links */}
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
+                  <div className="space-y-2">
+                    {quickLinks.map((link) => (
+                      <Link
+                        key={link.name}
+                        href={link.href}
+                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"
+                      >
+                        <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                        <span className="text-sm">{link.name}</span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+                        <span className='text-sm'>{link.name}</span>                      </Link>
 
 
                       </Link>
@@ -756,7 +847,9 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 {/* Company Links */}
@@ -796,6 +889,7 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -816,12 +910,14 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
                     ))}
                   </div>
                 </div>
               </motion.div>
             </div>
           </div>
+
 
 
 
@@ -845,6 +941,7 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
           {/* Certifications */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -858,6 +955,8 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
+
+
 
                   className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200'
                 >
@@ -875,10 +974,13 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
 
 
+
+
               ))}
             </div>
           </motion.div>
         </div>
+
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -900,6 +1002,7 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
 
 
+
         {/* Bottom Bar */}
         <div className='border-t border-white/10 bg-black/50 backdrop-blur-sm'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
@@ -909,13 +1012,11 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
               <div className='flex items-center space-x-6 text-sm text-gray-400'>
 
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
                   href='/privacy'
-                  className='hover:text-cyan-400 transition-colors'
-                >
-                  Privacy Policy
-                </Link>
+                  className='hover:text-cyan-400 transition-colors'>;
+                  Privacy Policy;
+                </Link>;
                 <Link
                   href='/terms'
 
@@ -936,6 +1037,13 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
       </div>
     </footer>
 
+);
+}
+import React from "react"; export default function UltraFuturisticFooter2034() { return ( <footer className="py-8 text-center text-sm text-gray-400">", <span>© {new: Date().getFullYear()} Zion Tech Group</span> </footer> )}
+export default function UltraFuturisticFooter2034() {return (";
+;
+export default function UltraFuturisticFooter2034() {;
+  return (";
 
     <footer className = "py-8 text-center text-sm text-gray-400">;
       <span>© {new Date().getFullYear()} Zion Tech Group</span>;
@@ -946,6 +1054,7 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 }
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -953,5 +1062,6 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

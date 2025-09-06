@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -41,6 +42,7 @@ Alert.displayName = 'Alert';
 const AlertTitle = React.forwardRef<
   HTMLParagraphElement
   React.HTMLAttributes<HTMLHeadingE</HTMLHeadingElement>lement>
+
 ))
 Alert.displayName = "Alert"
 
@@ -50,8 +52,16 @@ const AlertTitle = React.forwardRef<
 
 >(({ className, ...props }, ref) => (
   <h5
+  />));
+Alert.display_name = 'Alert';
+;
+const AlertTitle = React.forward_ref<;
+  HTMLParagraphElement,
+  React.HTMLAttributes < HTMLHeadingE</HTMLHeadingElement > lement>;
+>(({ class_name, ...props }, ref) => (
+  <h5;
     ref={ref}
-    className={cn('mb-1 font-medium leading-none tracking-tight', className)}
+    className={cn ('mb - 1 font - medium leading - none tracking - tight', class_name)}
     {...props}
   />
 
@@ -69,8 +79,16 @@ const AlertDescription = React.forwardRef<
 
 >(({ className, ...props }, ref) => (
   <div
+  />));
+AlertTitle.display_name = 'AlertTitle';
+;
+const AlertDescription = React.forward_ref<;
+  HTMLParagraphElement,
+  React.HTMLAttr</HTMLParagraphElement > ibutes < HTMLParagraphElement>;
+>(({ class_name, ...props }, ref) => (
+  <div;
     ref={ref}
-    className={cn('text-sm [&_p]:leading-relaxed', className)}
+    className={cn ('text - sm [&_p]:leading - relaxed', class_name)}
     {...props}
   />
 
@@ -84,10 +102,12 @@ AlertDescription.displayName = "AlertDescription"
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -8,6 +8,8 @@ interface ResultsHeaderProps {;
 
 
 
+
+
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">
       {isLoading ? (
@@ -55,6 +57,7 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
             ? 'No talents found. Try adjusting your filters.'
             : `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`}          {resultCount === 0 ? (
           {resultCount === 0 ? (
+
 
 
 
@@ -120,3 +123,4 @@ function ResultsHeader() {
 }
 
 ;
+

@@ -8,8 +8,10 @@ BarChart3,;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -43,10 +45,12 @@ export default function LandingPage() {
   
 
 
+
   // Tools and features showcase
 
   const toolsFeatures = [
     {
+
 
 
   // Tools and features showcase;
@@ -136,7 +140,7 @@ function LandingPage() {
       link: '/mobile - launch',
     },
   ];
-
+;
   return (
 
         title={t('home && home.seo_title')}
@@ -256,6 +260,24 @@ export default function LandingPage() { const { t  } = useTranslation(),
 
   return (
 
+    <div className='min-h-screen bg-zion-blue text-white'>
+      <SEO
+        title={t('home.seo_title')}
+        description={t('home.seo_description')}
+        keywords={t('home.seo_keywords')}
+        canonical='https://app.ziontechgroup.com/'      />
+      <Header />
+      <HeroSection />
+    <div className="min-h-screen bg-zion-blue text-white">
+      <SEO 
+        title={t("home.seo_title")} 
+        description={t("home.seo_description")} 
+        keywords={t("home.seo_keywords")}
+        canonical="https://app.ziontechgroup.com/"
+      />
+      <Header />
+      <HeroSection />
+      
 
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
@@ -288,6 +310,7 @@ export default function LandingPage() { const { t  } = useTranslation(),
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
 
 
+
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
@@ -295,6 +318,7 @@ export default function LandingPage() { const { t  } = useTranslation(),
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <span>{t("general.explore")}</span>
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
+
               </Link>
             ))}
           </div>
@@ -320,6 +344,7 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <TestimonialCarousel />
       <TrustedBySection />
       <BlogSection />
+
 
 
           </div>;
@@ -459,5 +484,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
     </div>);
 }
 ;
+
 
 

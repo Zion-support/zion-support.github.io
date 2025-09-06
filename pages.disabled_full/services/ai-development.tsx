@@ -9,6 +9,7 @@ interface AidevelopmentProps {
   // Add props here as needed
 
 }
+export default function Aidevelopment({ }: AidevelopmentProps) {
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 

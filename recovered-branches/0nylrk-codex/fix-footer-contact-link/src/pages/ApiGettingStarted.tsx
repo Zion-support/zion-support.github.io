@@ -1,30 +1,34 @@
 
 
-
-
-
-
-
-
+import React from "react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import {CodeBlock} from "@/components/developers/CodeBlock";
+export function ApiGettingStarted() {
+  const authExample = `curl -X GET \\
+  https: //api.zionai.com/v1/jobs \\
+  -H "Authorization: Bearer YOUR_API_KEY"`,;
+const quickStartJs = `import axios from 'axios';
+import React from "react",
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import { CodeBlock } from "@/components/developers/CodeBlock";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import { CodeBlock } from "@/components/developers/CodeBlock",
 
 export function ApiGettingStarted() {
 
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
 
+  -H "Authorization: Bearer YOUR_API_KEY"`
+const quickStartJs = `import axios from 'axios';
+  -H "Authorization: Bearer YOUR_API_KEY"`,
 
+  const quickStartJs = `import axios from 'axios',
+  -H "Authorization: Bearer YOUR_API_KEY"`,
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
+  const quickStartJs = `import axios from 'axios',
 
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   headers: {
     Authorization: \`Bearer \${API_KEY}\`;
   }
@@ -185,7 +189,6 @@ console && console.log(response && response.data),`;
       </div>;
     </ApiDocsLayout>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 ;
@@ -193,7 +196,9 @@ console && console.log(response && response.data),`;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export default ApiGettingStarted;

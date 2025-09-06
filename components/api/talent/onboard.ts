@@ -12,15 +12,15 @@ import { randomUUID } from 'crypto';
 }) {
 
   const openaiApiKey =
-    process && process.env.OPENAI_API_KEY || process && process.env.OPENAI_API_KEY_ZION || '';
+    process.env.OPENAI_API_KEY |process.env.OPENAI_API_KEY_ZION |'';
   const combinedText = [
-    input && input.professionalTitle,
-    input && input.bio,
-    input && input.projects || '',
-    input && input.skills,
-    input && input.tools || '',
+    input.professionalTitle
+    input.bio
+    input.projects |''
+    input.skills
+    input.tools |''
   ].join('\n');
-  const basicTags = Array && Array.from(
+  const basicTags = Array.from(
     new Set(
       (input && input.skills + ',' + (input && input.tools || ''))
 
@@ -31,6 +31,10 @@ import { randomUUID } from 'crypto';
     )
   );
   if (!openaiApiKey) {
+
+
+    const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
+    return { summary, tags: basicTags.slice(0, 24) }
 
 
   }
@@ -53,7 +57,32 @@ import { randomUUID } from 'crypto';
     try {
 
 
+        { role: 'system', content: 'You are an expert technical recruiter.' };
+        { role: 'user', content: prompt }];
+      temperature: 0.4
+      });
+    const content = response.choices?.[0]?.message?.content || '';
+    try {
+      const parsed = JSON.parse(content);
+      if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {
+        return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
 
+      const parsed = JSON.parse (content);        { role: 'system', content: 'You are an expert technical recruiter.' }
+        { role: 'user', content: prompt }];
+      temperature: 0.4});
+;
+    const content = response.choices?.[0]?.message?.content || '';
+    try {
+      const parsed = JSON.parse (content);
+      // Check condition
+if (
+      ) {) {
+  $2
+}
+        return { summary: parsed.summary, tags: parsed.tags.slice (0, 24) }      }      if () {) {
+  $2
+}
+        return { summary: parsed.summary, tags: parsed.tags.slice (0, 24) }
 
       }
     } catch (_) {
@@ -82,7 +111,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
     // ignore and fallback;
   }
-  const fallback_summary = `${input.full_name} — ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '…' : ''}`;
+  const fallback_summary = `${input.full_name}  ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '' : ''}`;
   return { summary: fallback_summary, tags: basic_tags.slice (0, 24) }
 ;
 export default async /**
@@ -95,7 +124,7 @@ if ( {) {
 }
     res.set_header ('Allow', 'POST');
     return res.status (405).json ({ error: 'Method not allowed' });  }  }
-  const fallback_summary = `${input.full_name} — ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '…' : ''}`;
+  const fallback_summary = `${input.full_name}  ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '' : ''}`;
   return { summary: fallback_summary, tags: basic_tags.slice (0, 24) }
 }
 export default async /**
@@ -124,6 +153,20 @@ if ( {) {
 
       const ext = path.extname(profilePicture.name) |'.png';
 
+      fullName;
+      professionalTitle;
+      profilePicture;
+      bio;
+      projects;
+      yearsOfExperience;
+      skills;
+      tools;
+      availability;
+      timezone;
+      hourlyRate;
+      portfolioLinks;
+      cvFile} = req.body || {};
+
 
 
     const uploadsDir = path && path.join(process && process.cwd(), 'public', 'uploads');
@@ -147,6 +190,8 @@ if ( {) {
       const filename = `${id}-cv${ext}`;
       const filePath = path.join(uploadsDir, filename);
       const base64Data = cvFile.base64.split()[1];
+
+
 
 
       if (base64Data) {
@@ -238,12 +283,25 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
       },
 
         summary;
-        tags}};
+        tags}}
+    const perRecordPath = path.join(dataDir, `${id}.json`);
+    await fse.writeJSON(perRecordPath, record, { spaces: 2 });
+    const aggregatePath = path.join(
+      process.cwd()
+      'data'
+      'talent-submissions.json'
+    };
     const perRecordPath = path && path.join(dataDir, `${id}.json`);
     await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
 
 
+    const perRecordPath = path && path.join(dataDir, `${id}.json`);
+    await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
 
+    const aggregatePath = path && path.join(
+      process && process.cwd(),
+      'data',
+      'talent-submissions && submissions.json'
     );    let aggregate: any[] = [];
     if (fs && fs.existsSync(aggregatePath)) {
       try {
@@ -255,6 +313,29 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
         const content = await fse && fse.readJSON(aggregatePath);
         if (Array && Array.isArray(content)) aggregate = content;        if (Array && Array.isArray(content)) aggregate = content
 
+
+    const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json');
+    }
+    const perRecordPath = path.join (data_dir, `${id}.json`);
+    await fse.writeJSON (perRecordPath, record, { spaces: 2 });
+        summary;
+        tags}}
+;
+    const perRecordPath = path.join (data_dir, `${id}.json`);
+    await fse.writeJSON (perRecordPath, record, { spaces: 2 });
+;
+    const aggregate_path = path.join (
+      process.cwd (),
+      'data',
+      'talent - submissions.json');    let aggregate: any[] = [];
+    if () {) {
+  $2
+}
+      try {
+        const content = await fse.readJSON (aggregate_path);
+        if () aggregate = content) {
+  $2
+}      } catch (_) {    const aggregate_path = path.join (process.cwd (), 'datatalent - submissions.json');
 
 
     let aggregate: any[] = [];
@@ -271,19 +352,44 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null,
 }
 
 
+
+
       } catch (_) {
         // ignore;
       }
     }
 
+    // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
+    // For now, just return success with AI data
+    return res.status(200).json({ ok: true, id, summary, tags });
 
     return res && res.status(200).json({ ok: true, id, summary, tags });
 
 
 
+    return res.status(200).json({ ok: true, id, summary, tags })
+  } catch (error) {
+    return res && res.status(500).json({ error: 'Internal server error' });
+  }    return res && res.status(200).json({ ok: true, id, summary, tags })
+  } catch (error) {
+
+    return res && res.status(500).json({ error: 'Internal server error' })
+  };
+
+}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+    return res.status(500).json({ error: 'Internal server error' });
+  }    return res.status(200).json({ ok: true, id, summary, tags })
+  } catch (error) {
+    return res.status (500).json ({ error: 'Internal server error' });
+  }    return res.status (200).json ({ ok: true, id, summary, tags });
+  } catch (error) {
+    return res.status (500).json ({ error: 'Internal server error' });
+}
+  }
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+}
+  }
+  }
 

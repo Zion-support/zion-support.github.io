@@ -5,6 +5,7 @@
 
 
 
+
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
   {
@@ -21,7 +22,13 @@ const BLOG_POSTS: BlogPost[] = [
 
 
 
+    id: "ai-trends-2025"
+    title: "10 Emerging AI Trends to Watch in 2025"
+    slug: "ai-trends-2025"
+    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
+
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -89,6 +96,7 @@ const BLOG_POSTS: BlogPost[] = [
     readTime: "8 min read"
     category: "Marketing"
     tags: ["Marketing", "AI Services", "Visibility", "SEO"];
+
     featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630"
   }
   {
@@ -103,7 +111,7 @@ const BLOG_POSTS: BlogPost[] = [
     category: "Marketing",
     tags: ["Marketing", "AI Services", "Visibility", "SEO"],
     featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630"
-  },
+  }
   {
     id: "green-it",
     title: "Green IT: Reducing Your Data Center's Carbon Footprint",
@@ -111,6 +119,7 @@ const BLOG_POSTS: BlogPost[] = [
     excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.",
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.performance.</p>
+
 
 
 
@@ -123,6 +132,7 @@ const BLOG_POSTS: BlogPost[] = [
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
@@ -201,7 +211,7 @@ const BLOG_POSTS: BlogPost[] = [
 <h2>Building Internal Talent Pipelines</h2>
 <p>Forward-thinking organizations are creating robust upskilling programs to develop AI capabilities within their existing workforce. Structured mentorship, educational stipends, and dedicated learning time can transform motivated employees into valuable AI contributors.</p>
 <h2>Creating Compelling AI Missions</h2>
-<p>Top AI talent is increasingly mission-driven, seeking roles where their work creates meaningful impact. Articulating how your AI initiatives address important challenges—whether in sustainability, healthcare, education, or other domains—can be a powerful recruitment tool.</p>
+<p>Top AI talent is increasingly mission-driven, seeking roles where their work creates meaningful impact. Articulating how your AI initiatives address important challengeswhether in sustainability, healthcare, education, or other domainscan be a powerful recruitment tool.</p>
 <h2>Remote-First Talent Strategies</h2>
 <p>The most successful AI employers have embraced truly global talent strategies, creating distributed teams that leverage expertise regardless of location. This approach requires investing in collaboration tools, asynchronous workflows, and inclusive management practices.</p>
 <h2>Retention Through Growth Paths</h2>
@@ -567,6 +577,7 @@ export default function Blog() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -574,6 +585,7 @@ export default function Blog() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           {/* Featured Post Section - Only show if there are featured posts */}
@@ -584,7 +596,6 @@ export default function Blog() {;
                 <div className="aspect-video overflow-hidden rounded-lg">;
                   <img
                     src={featuredPosts[0].featuredImage} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     alt={featuredPosts[0].title}
                     className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                   />;
@@ -620,6 +631,8 @@ export default function Blog() {;
                     asChild
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit">;
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;
+
+
 
                       Read Article;
                     </Link>;
@@ -766,6 +779,8 @@ export default function Blog() {;
                       asChild>;
                       <Link to={`/blog/${post && post.slug}`}>;
 
+
+
                         Read More →;
                       </Link>;
                     </Button>;
@@ -776,6 +791,8 @@ export default function Blog() {;
 
 
                   setSelectedCategory("All Categories")
+
+
 
                 }}
 
@@ -788,6 +805,8 @@ export default function Blog() {;
                 Clear all filters
               </Button>
             </div>
+
+
 
 
 
@@ -817,22 +836,8 @@ export default function Blog() {;
                   </CardFooter>;
                 </Card>;
               ))}
-            </div>;
-          ) : (;
-            <div className="text-center py-16">;
-              <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>;
-              <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>;
-              <Button;
-                variant="outline";
-                onClick={() => {;
-                  setSearchQuery("");
-                  setSelectedCategory("All Categories");
-                }}
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-              >
-                Clear all filters
-              </Button>
             </div>
+
 
 
 
@@ -843,8 +848,8 @@ export default function Blog() {;
 
 
 
+
           )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>;
       </div>;
       <Footer />;

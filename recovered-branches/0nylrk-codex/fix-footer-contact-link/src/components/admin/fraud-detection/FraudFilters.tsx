@@ -1,18 +1,17 @@
 
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+import React from "react";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Search, Filter} from "lucide-react";
+import React from "react",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Search, Filter } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Search, Filter } from "lucide-react",
 
 
 interface FraudFiltersProps {
@@ -35,6 +34,7 @@ interface FraudFiltersProps {
 
 
 
+
 interface FraudFiltersProps {;
   searchQuery: string,;
   setSearchQuery: (value: string) => void,;
@@ -48,15 +48,19 @@ interface FraudFiltersProps {;
 }
 
 
+
 export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 
   searchQuery;
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  setSearchQuery;
+  statusFilter;
+  setStatusFilter;
+  severityFilter;
+  setSeverityFilter;
+  contentTypeFilter;
+export const FraudFilters: React.FC<FraudFiltersProps> = ({
+  searchQuery;
 
   setSearchQuery;
   status_filter;
@@ -77,6 +81,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 
   resetFilters}) => {
 
+  setContentTypeFilter,;
+  resetFilters}) => {;
+
   return (
     <div className="flex flex-col md:flex-row gap-4 mb-6">;
       <div className="relative flex-1">;
@@ -90,11 +97,13 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 
 
 
+
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         <SelectTrigger className="w-[180px]">
@@ -109,11 +118,8 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         </SelectContent>
       </Select>
 
-
-
-
-
-
+      <Select value={severityFilter |""} onValueChange={value => setSeverityFilter(value |null)}>
+      <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
 
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Severity" />
@@ -126,11 +132,8 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         </SelectContent>
       </Select>
 
-
-
-
-
-
+      <Select value={contentTypeFilter |""} onValueChange={value => setContentTypeFilter(value |null)}>
+      <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
 
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Content Type" />
@@ -150,11 +153,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
     </div>
   )
 
-
+}
 
 };
-
-
 
 },
 import React from "react",;
@@ -173,31 +174,27 @@ interface FraudFiltersProps {;
   setContentTypeFilter: (value: string | null) => void,;
   resetFilters: () => void;
 }
-;
-export const FraudFilters: React.FC<FraudFiltersProps> = ({;
-  searchQuery,;
-  setSearchQuery,;
-  statusFilter,;
-  setStatusFilter,;
-  severityFilter,;
-  setSeverityFilter,;
-  contentTypeFilter,;
-  setContentTypeFilter;
-  resetFilters}) => {;
-  return (;
-    <div className="flex flex-col md:flex-row gap-4 mb-6">;
-      <div className="relative flex-1">;
-        <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />;
-        <Input;
-          placeholder="Search by user or content...";
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
 
           className="pl-10";
         />;
       </div>;
 
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>;
+
+  setContentTypeFilter,
+  reset_filters}) => {
+  return (
+    <div className="flex flex - col md:flex - row gap - 4 mb - 6">;
+      <div className="relative flex - 1">;
+        <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 h - 4 w - 4 text - gray - 400" />;
+        <Input;
+          placeholder="Search by user or content...";
+          value={search_query}
+          on_change={(e) => setSearchQuery (e.target.value)}
+          className="pl - 10";
+        />;
+      </div>;
+      <Select value={status_filter || ""} onValueChange={value => setStatusFilter (value || null)}>;
 
         <SelectTrigger className="w-[180px]">;
           <SelectValue placeholder="Status" />;
@@ -251,6 +248,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 
 
 
+
 export default FraudFilters;
 
 
@@ -258,5 +256,6 @@ export default FraudFilters;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

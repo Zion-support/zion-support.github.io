@@ -4,6 +4,8 @@
 
 
 
+
+
 interface Props {
   children: ReactNode;
 }
@@ -35,10 +37,14 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 
+
+
     this.setState({
       error,
       errorInfo
     });
+
+
 
 
 
@@ -48,6 +54,7 @@ class ErrorBoundary extends Component<Props, State> {
 
     if (this.state.hasError) {
       return (
+
 
 
 
@@ -99,10 +106,12 @@ class ErrorBoundary extends Component<Props, State> {
 
 
 
+
           </div>
         </div>
       );
     }
+
 
 
 
@@ -170,10 +179,13 @@ export default ErrorBoundary
 ,
 export { ErrorBoundary };
 
+
     return this.props.children;
   }
 }
 
+
 export { ErrorBoundary };
 export default ErrorBoundary;
+
 

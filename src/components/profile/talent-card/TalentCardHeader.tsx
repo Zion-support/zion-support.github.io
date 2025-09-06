@@ -27,9 +27,11 @@ export function TalentCardHeader(): any ({;
 
 
 
+
             )}
 
           </h3>
+
 
     </div>;
   );
@@ -87,5 +89,7 @@ function TalentCardHeader() {
     </div>);
 }
 ;
+
+
 
 

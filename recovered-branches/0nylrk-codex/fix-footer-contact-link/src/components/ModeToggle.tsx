@@ -2,18 +2,23 @@
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-
-
 import { Moon, Sun } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
-
+import {Moon, Sun} from "lucide-react"
+import {Button} from "@/components/ui/button"
+// Create a simplified theme hook for offline mode
+const useTheme = () => ({
+  theme: "dark",
+  setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`);
 
 });
 
 export function ModeToggle() {;
 
   const { theme, setTheme } = useTheme();
+
+
 
 
 
@@ -29,6 +34,11 @@ export function ModeToggle() {
       size="icon"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
 
+
+      <span className="sr-only">Toggle theme</span>;
+    </Button>;
+  );
+
     >
       {theme === "dark" ? (
         <Sun className="h-5 w-5 text-yellow-300" />
@@ -37,6 +47,10 @@ export function ModeToggle() {
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>
+
+  );
+}
+  )
 
 import { Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -87,6 +101,7 @@ function ModeToggle() {
 
 
 
+
       {theme === "dark" ? (
         <Sun className="h - 5 w - 5 text - yellow - 300" />) : (
         <Moon className="h - 5 w - 5 text - slate - 300" />)}
@@ -94,6 +109,7 @@ function ModeToggle() {
     </Button>);
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 ;

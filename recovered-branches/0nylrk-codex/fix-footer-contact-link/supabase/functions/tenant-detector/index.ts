@@ -4,6 +4,7 @@
 
 
 
+
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
 
 
@@ -12,6 +13,7 @@ import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts',;
 
 
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
+
 
 
 
@@ -193,6 +195,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -200,6 +203,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           }
         }
@@ -210,6 +214,7 @@ if ( {) {
         tenant_info = data as TenantInfo;
       }
     }
+
 
 
 
@@ -233,10 +238,28 @@ if ( {) {
     console && console.error('Tenant detector error:', error);
     return new Response(
 
+
       JSON && JSON.stringify({ 
         error: error && error.message || 'Internal server error',
 
         status: 'error'
+
+    return new Response (
+      JSON.stringify ({
+        tenant: tenant_info,
+        status: 'success';
+      });
+      {
+        headers: {
+          'Content - Type': 'application / json',
+          ...cors_headers}}
+    );
+  } catch (error) {
+    console.error ('Tenant detector error:', error);
+    return new Response (
+      JSON.stringify ({
+        error: error.message || 'Internal server error',
+        status: 'error';
 
       });
       {
@@ -275,6 +298,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -286,5 +310,6 @@ if ( {) {
 
   }
 });
+
 
 

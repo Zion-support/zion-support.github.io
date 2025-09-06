@@ -12,6 +12,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
     res.status(405).json({ error: 'Method Not Allowed' });
 
 
@@ -19,11 +20,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     return
   }
+
   const { username, password } = req.body || {};
   const envUser = process.env.ADMIN_USERNAME || 'kleber@ziontechgroup.com';
   const envPass = process.env.ADMIN_PASSWORD || 'Tw2.R5u&2!sDfeW';
+
   if (username === envUser && password === envPass) {
     setSessionCookie(res, { username, issuedAt: Date.now() });
     res.status(200).json({ ok: true })
@@ -35,4 +39,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+

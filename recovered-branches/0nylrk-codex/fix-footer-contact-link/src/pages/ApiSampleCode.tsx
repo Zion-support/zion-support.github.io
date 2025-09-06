@@ -2,6 +2,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -34,10 +35,12 @@ class ErrorBoundary extends React.Component {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+
 
 
 
@@ -51,6 +54,7 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
+
 export function ApiSampleCode() {
   // JavaScript example with Axios
   const jsAxiosExample = `// Using Axios with JavaScript
@@ -60,6 +64,22 @@ import axios from 'axios',
 // Configure Axios with the base URL and headers
 const api = axios.create({
   baseURL: 'https://api.zionai.com/v1'
+
+import React from './react';
+import ApiDocsLayout from "@/components / developers / ApiDocsLayout";
+import { CodeBlock } from '@/components / developers / CodeBlock';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+;
+export /**
+ * ApiSampleCode - Function description
+ */
+function ApiSampleCode() {
+  // JavaScript example with Axios;
+  const jsAxiosExample = `// Using Axios with JavaScript;
+import axios from 'axios';
+// Configure Axios with the base URL and headers;
+const api = axios.create ({
+  baseURL: 'https://api.zionai.com / v1',
 
   headers: {
     'Authorization': \`Bearer \${YOUR_API_KEY}\`,
@@ -82,7 +102,26 @@ function get_jobs() {
   }
 }
 
-
+// Post a new job
+async function createJob(jobData) {
+  try {
+    const response = await api.post('/api/jobs', jobData);
+    return response.data
+  } catch (error) {
+    console.error('Error creating job:', error.response?.data |error.message);
+    throw error
+  }
+}
+// Search for talent
+async function searchTalent(filters = {}) {
+  try {
+    const response = await api.get('/api/talent', { params: filters })
+    return response.data
+  } catch (error) {
+    console.error('Error searching talent:', error.response?.data |error.message);
+    throw error
+  }
+}
 
 
 import React from "react",;
@@ -111,15 +150,14 @@ async function getJobs(filters = {}) {;
     throw error;
   }
 }
-;
-// Post a new job;
-async function createJob(jobData) {;
-  try {;
-    const response = await api.post('/api/jobs', jobData),;
-    return response.data;
-  } catch (error) {;
-    console.error('Error creating job:', error.response?.data || error.message),;
-    throw error;
+// Search for talent
+async function searchTalent(filters = {}) {
+  try {
+    const response = await api.get('/api/talent', { params: filters })
+    return response.data
+  } catch (error) {
+    console.error('Error searching talent:', error.response?.data |error.message);
+    throw error
   }
 }
 ;
@@ -140,6 +178,7 @@ async function searchTalent(filters = {}) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -147,6 +186,7 @@ async function searchTalent(filters = {}) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 // Example usage
@@ -175,6 +215,10 @@ async function main() {
     console.log('New job created:', newJob);
     // Search for talent with React skills
 
+    const talent = await searchTalent({ skills: 'React', limit: 10 })
+    console.log('Talent:', talent)
+  } catch (error) {
+    console.error('Something went wrong:', error)
 
   }
 }
@@ -187,6 +231,12 @@ API_KEY = 'YOUR_API_KEY'
 BASE_URL = 'https://api.zionai.com/v1'
 headers = {
     'Authorization': f'Bearer {API_KEY}Content-Type': 'application/json'
+
+}
+    const talent = await searchTalent({ skills: 'React', limit: 10 }),
+    // // // console.log('Talent:', talent)
+  } catch (error) {
+    console.error('Something went wrong:', error)
 
 ;
 
@@ -280,6 +330,7 @@ API_KEY = 'YOUR_API_KEY';
 
 
 
+
 BASE_URL = 'https://api.zionai.com / v1';
 
 headers = {
@@ -287,6 +338,7 @@ headers = {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 }
@@ -341,11 +393,16 @@ if __name__ == "__main__":
         print(f"Error: {e}")`
   // Node.js example with fetch
 
-
+const nodeFetchExample = `// Using node-fetch with Node.js
+import fetch from 'node-fetch';
+const API_KEY = 'YOUR_API_KEY';
+const BASE_URL = 'https: //api.zionai.com/v1'
+// Helper to handle API requests
+async function apiRequest(endpoint, options = {}) {
+  const url = \`\${BASE_URL}\${endpoint}\`;
   const nodeFetchExample = `// Using node-fetch with Node.js
 import fetch from 'node-fetch',
 const API_KEY = 'YOUR_API_KEY',
-
 
 const BASE_URL = 'https: //api.zionai.com/v1',
 
@@ -368,6 +425,18 @@ async function apiRequest(endpoint, options = {}) {
     ...options;
     headers
 
+  }
+  const response = await fetch(url, config);
+  if (!response.ok) {
+    const error = await response.json();
+    throw new Error(error.message |\`API error: \${response.status}\`)
+  },
+  
+  const response = await fetch(url, config),
+  
+  if (!response.ok) {
+    const error = await response.json(),
+    throw new Error(error.message || \`API error: \${response.status}\`)
 
 ;
 def get_jobs(filters=None):;
@@ -435,6 +504,8 @@ async function apiRequest(endpoint, options = {}) {;
     throw new Error(error.message || \`API error: \${response.status}\`);
 
 
+
+
   }
   return response.json()
 }
@@ -444,10 +515,11 @@ async function apiRequest(endpoint, options = {}) {;
 
 
 
+
+
 // Get all jobs
 async function getJobs(filters = {}) {
   // Convert filters to query string
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const params = new URLSearchParams();
   Object && Object.entries(filters).forEach(([key, value]) => {;
     params && params.append(key, value);
@@ -472,6 +544,7 @@ async function getJobs(filters = {}) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -479,6 +552,7 @@ async function getJobs(filters = {}) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 }
@@ -489,6 +563,7 @@ async function createJob(jobData) {
     body: JSON.stringify(jobData)
   })
 }
+
 
 
 
@@ -513,6 +588,7 @@ async function searchTalent(filters = {}) {
 
 
 
+
 ;
 // Search for talent;
 async function searchTalent(filters = {}) {;
@@ -528,6 +604,7 @@ async function searchTalent(filters = {}) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -535,6 +612,7 @@ async function searchTalent(filters = {}) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 }
@@ -569,9 +647,8 @@ async function main() {
     console.log('Talent:', talent)
       },
       skills: ['Node.jsExpressMongoDB']
-    }),
-    // // // console.log('New job created:', newJob),
-    
+    });
+    console.log('New job created:', newJob);
     // Search for talent with Node.js skills
     const talent = await searchTalent({ skills: 'Node.js', limit: 10 }),
     // // // console.log('Talent:', talent)
@@ -626,14 +703,14 @@ main(),`;
         </Tabs>
         <h2>Using the Examples</h2>
         <p>
-          To use these examples, you'll need to replace 'YOUR_API_KEY' with your actual API key,
-          which you can generate in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</Link>.
+          To use these examples, you'll need to replace 'YOUR_API_KEY' with your actual API key;
+          which you can generate in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a>.
         </p>
         <h2>Additional Resources</h2>
         <ul>
-          <li>Download our <a href="#" className="text-zion-cyan">Postman Collection</Link> for easy API testing</li>
-          <li>Check out our <a href="#" className="text-zion-cyan">GitHub repository</Link> for more code examples</li>
-          <li>Join our <a href="#" className="text-zion-cyan">Developer Discord</Link> for community support</li>
+          <li>Download our <a href="#" className="text-zion-cyan">Postman Collection</a> for easy API testing</li>
+          <li>Check out our <a href="#" className="text-zion-cyan">GitHub repository</a> for more code examples</li>
+          <li>Join our <a href="#" className="text-zion-cyan">Developer Discord</a> for community support</li>
         </ul>
       </div>
     </ApiDocsLayout>
@@ -735,7 +812,6 @@ main(),`,;
       </div>;
     </ApiDocsLayout>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 ;
@@ -743,7 +819,9 @@ main(),`,;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export default ApiSampleCode;

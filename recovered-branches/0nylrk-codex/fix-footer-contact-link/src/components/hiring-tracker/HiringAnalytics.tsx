@@ -1,5 +1,19 @@
 
 
+import { useState, useEffect } from "react",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
+interface HiringAnalyticsProps {
+  job_id?: string;
+}
+export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
+import {useState, useEffect} from "react";
+import {useJobApplications} from "@/hooks/useJobApplications";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
+
+export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
 
   const { applications, isLoading } = useJobApplications(jobId);
   const [analyticsData, setAnalyticsData] = useState<{
@@ -54,6 +68,11 @@
   }, [applications]);
   if (isLoading) {
     return <div>Loading analytics data...</div>
+
+  }
+  if (!applications |applications.length === 0) {
+import { useState, useEffect } from "react",
+import { useJobApplications } from "@/hooks/useJobApplications",
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',
@@ -130,6 +149,7 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
 
 
 
+
   }
 
   if (!applications || applications.length === 0) {;
@@ -170,6 +190,7 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
       </Card>
     )
   }
+
 
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
 
@@ -273,5 +294,7 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
 
     </div>);
 }
+
+
 
 

@@ -4,6 +4,7 @@
 
 
 
+
 import fs from 'fs',;
 import path from 'path',;
 import Link from 'next/link',;
@@ -16,6 +17,7 @@ import Link from 'next/link',;
 function list(dir: string, baseDir: string) {
 
 
+
   return items.map((name) => {
     const full = path.join(dir, name)
     const rel = path.relative(baseDir, full)
@@ -23,7 +25,9 @@ function list(dir: string, baseDir: string) {
     return { name, rel, isDir: stat.isDirectory() }
   })
 
-
+}
+export async function getStaticProps() {
+  const base = path.join(process.cwd(), 'docs/gitbook')
 
   const sections = fs.existsSync(base)
     ? list(base, base).map((entry) => ({
@@ -32,6 +36,8 @@ function list(dir: string, baseDir: string) {
     : []
 
   return { props: { sections }, revalidate: 600 }
+
+
 
 
 
@@ -56,7 +62,9 @@ function list(dir: string, baseDir: string) {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 }
@@ -103,6 +111,8 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
                     {it.rel}
 
 
+
+
                 </li>
               ))}
             </ul>
@@ -112,11 +122,17 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
     </div>
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
 
-
-
-
+                  </a>;
+                </li>))}
+            </ul>;
+          </div>))}
+      </div>;
+    </div>);
+}
+  );
+};
 
                     {it.rel  } catch (error) {
     console.error("Error:", error);
@@ -150,11 +166,13 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
   }
 
 
+
 }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

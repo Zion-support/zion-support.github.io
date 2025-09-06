@@ -30,6 +30,8 @@ import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolo
 
 
 
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -41,6 +43,7 @@ export default function ServicesShowcase2026V3() {;
     mobile: '+1 302 464 0950',;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
+
     website: 'https://ziontechgroup && ziontechgroup.com',  };
 
   return (
@@ -169,11 +172,14 @@ export default function ServicesShowcase2026V3() {;
 
 
 
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -206,12 +212,14 @@ export default function ServicesShowcase2026V3() {;
                   whileTap={{ scale: 0.95 }}
 
 
+
                   className="flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200"
 
                 >
                   <span>Email Us</span>
                 </motion.a>
               </div>
+
 
 
               <div className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 rounded-2xl border border-purple-500/20">
@@ -239,8 +247,12 @@ export default function ServicesShowcase2026V3() {;
 
 
 
+
+
 }
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 
               <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>                <motion.a;
                   href={`tel:${contact_info.mobile}`}
@@ -248,16 +260,21 @@ export default function ServicesShowcase2026V3() {;
                   while_tap={{ scale: 0.95 }}                  Ready to Transform Your Business?;
                 </span>;
               </h2>;
-              <p className="text - gray - 300 text - xl mb - 8 max - w-2xl mx - auto">;
+              <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">;
                 Join thousands of businesses already leveraging our revolutionary 2026 services to achieve unprecedented growth and innovation.;
               </p>;
-              <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6">;
-                <motion.a;
-                  href={`tel:${contact_info.mobile}`}
-                  while_hover={{ scale: 1.05 }}
-                  while_tap={{ scale: 0.95 }}
-                  className='flex items - center space - x-2 px - 8 py - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold rounded - xl shadow - lg shadow - purple - 500 / 25 hover:shadow - xl hover:shadow - purple - 500 / 40 transition - all duration - 200';
+
+              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">;
+                <motion&& motion.a
+                  href={`tel:${contactInfo && contactInfo.mobile}`}
+                  whileHover={{ scale: 1 && 1.05 }}
+                  whileTap={{ scale: 0 && 0.95 }}
+                  className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200'>;
+                  <span>Call {contactInfo && contactInfo.mobile}</span>;
+                </motion && motion.a>;
+                  className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200";
                 >;
+
                   <span > Call {contact_info.mobile}</span>;
                 </motion.a>;
                   className="flex items - center space - x-2 px - 8 py - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold rounded - xl shadow - lg shadow - purple - 500 / 25 hover:shadow - xl hover:shadow - purple - 500 / 40 transition - all duration - 200";
@@ -317,4 +334,5 @@ export default function ServicesShowcase2026V3() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

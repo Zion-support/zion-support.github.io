@@ -1,4 +1,10 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { readJson, writeJson } from '../../../utils/fsDb';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readJson, writeJson } from '../../../utils/fsDb',;
+;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
@@ -18,6 +24,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     writeJson('support/requests.json', reqs)
   }
 
+  return res.status(200).json({ ok: true, id })
+
+  return res.status(200).json({ ok: true, id });
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -51,7 +62,15 @@ export default async function handler(req, res) {
 }
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import type { NextApiRequest, NextApiResponse } from 'next',
+import { read_json, write_json } from '../../../utils / fs_db',
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' }), ) {
+  $2
 
 }
 
@@ -92,4 +111,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+}
+}
 

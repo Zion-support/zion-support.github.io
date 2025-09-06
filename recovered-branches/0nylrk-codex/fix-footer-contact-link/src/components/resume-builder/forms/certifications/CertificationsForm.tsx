@@ -1,6 +1,18 @@
 
 
-
+import { useState  } from 'react';
+import { useForm  } from 'react-hook-form';
+import { Button  } from '@/components/ui/button';
+import { Form  } from '@/components/ui/form';
+import { Certification  } from '@/types/resume';
+import { Loader2  } from 'lucide-react';
+import { useResume  } from '@/hooks/useResume';
+import { Alert, AlertDescription  } from '@/components/ui/alert';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { format  } from 'date-fns';
+import { CertificationsList  } from './CertificationsList';
+import { CertificationFormFields  } from './CertificationFormFields';
+import { CertificationFormValues, certificationSchema } from './types';
 
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
@@ -22,6 +34,8 @@ import {CertificationFormValues, certificationSchema} from './types';
 
 
 
+
+
 interface CertificationsFormProps {
 
   resumeId: string
@@ -30,6 +44,8 @@ interface CertificationsFormProps {
 
   onBack: () => void
 }
+
+
 
 
 
@@ -47,10 +63,13 @@ import {zod_resolver} from '@hookform / resolvers / zod';
 import {format} from 'date - fns';
 import {CertificationsList} from './CertificationsList';
 import {CertificationFormFields} from './CertificationFormFields';
+import {CertificationFormValues, certificationSchema} from './types';
 
 
 
 export function CertificationsForm({ resumeId, certifications, onComplete, onBack }: CertificationsFormProps) {;
+
+
 
 
 
@@ -154,6 +173,8 @@ function CertificationsForm() {
         success = await addCertification(resumeId, certData);
 
 
+
+
       }
       if (success) {
         form.reset({
@@ -168,6 +189,7 @@ function CertificationsForm() {
     } catch (err: any) {
       setError(err.message |'An error occurred')
     }
+
 
 
   }
@@ -191,6 +213,7 @@ function CertificationsForm() {
 
 
 
+
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
     form.reset({
@@ -202,11 +225,9 @@ function CertificationsForm() {
     if (confirm('Are you sure you want to delete this certification?')) {
       await deleteCertification(id)
 
-
-
-
-
-
+    }
+  }
+  };
 
   },;
 
@@ -221,8 +242,8 @@ function CertificationsForm() {
   const handleDelete = async (id: string) => {;
     if (confirm('Are you sure you want to delete this certification?')) {;
       await deleteCertification(id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
+
 
 
   },
@@ -237,6 +258,7 @@ function CertificationsForm() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
+
 
     <div className="space-y-6">;
       <div>;

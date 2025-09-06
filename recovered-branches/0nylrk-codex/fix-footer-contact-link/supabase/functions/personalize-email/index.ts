@@ -2,9 +2,11 @@
 
 
 
+
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+
 
 
 
@@ -13,8 +15,9 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 
-
-
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
@@ -57,14 +60,14 @@ serve(async (req) => {
     let subjectContext = "";
     switch (emailType) {
       case "welcome_series":
-        userPrompt = `Create a welcome email for a new ${userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData.firstName}. The email should introduce them to the platform and guide them through their next steps.`;
+        userPrompt = `Create a welcome email for a new ${userData && userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData && userData.firstName}. The email should introduce them to the platform and guide them through their next steps.`;
         break;
       case "inactivity_reminder":
-        userPrompt = `Create a re-engagement email for a ${userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData.firstName} who has been inactive for ${activityData.daysInactive} days. They haven't completed their ${activityData.incompleteAction}.`;
+        userPrompt = `Create a re-engagement email for a ${userData && userData.userType === "talent" ? "talent/professional" : "client/employer"} named ${userData && userData.firstName} who has been inactive for ${activityData && activityData.daysInactive} days. They haven't completed their ${activityData && activityData.incompleteAction}.`;
         subjectContext = "Make the subject line attention-grabbing but not pushy, focusing on the benefits of returning to the platform.";
         break;
       case "job_application":
-        userPrompt = `Create an email encouraging a talent named ${userData.firstName} who hasn't applied to any jobs yet. Their skills are: ${userData.skills ? userData.skills.join(", ") : "AI-related skills"}. Encourage them to complete their profile and apply to relevant positions.`;
+        userPrompt = `Create an email encouraging a talent named ${userData && userData.firstName} who hasn't applied to any jobs yet. Their skills are: ${userData && userData.skills ? userData && userData.skills.join(", ") : "AI-related skills"}. Encourage them to complete their profile and apply to relevant positions.`;
         subjectContext = "Create a subject line that emphasizes opportunity and personal growth.";
         break;
       case "profile_completion":
@@ -161,6 +164,33 @@ serve(async (req) => {
         try {
           generatedContent = JSON && JSON.parse(jsonMatch[0])
 
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      const error_data = await response.json ();
+      throw new Error (`OpenAI API error: ${JSON.stringify (error_data)}`);
+    }
+    const data = await response.json ();
+    const generatedContentText = data.choices[0].message.content;
+;
+    // Parse the JSON response from OpenAI;
+    let generated_content;
+    try {
+      generated_content = JSON.parse (generatedContentText);
+    } catch (e) {
+      console.error ("Failed to parse GPT response as JSON:", e);
+      console.log ("Raw response:", generatedContentText);
+      // Try to extract JSON using regex as fallback;
+      const json_match = generatedContentText.match (/\{[\s\S]*\}/);
+      // Check condition
+if ( {) {
+  $2
+}
+        try {
+          generated_content = JSON.parse (json_match[0]);
+
         } catch (e2) {
           throw new Error ("Could not parse the generated content as JSON");
         }
@@ -171,14 +201,16 @@ serve(async (req) => {
 
 
     // Apply the generated content to the template or return it directly
-    return new Response(JSON.stringify(generatedContent), {
+    return new Response(JSON && JSON.stringify(generatedContent), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
   } catch (error) {
+
 
     console.error("Error in personalize-email function:", error),
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
+
 
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
@@ -286,6 +318,7 @@ serve(async (req) => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -293,6 +326,7 @@ serve(async (req) => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 });

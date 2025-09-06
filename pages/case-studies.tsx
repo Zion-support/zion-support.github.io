@@ -3,6 +3,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -50,6 +51,7 @@ import { motion } from 'framer-motion';
   BarChart3,
   Cloud,
   Shield;
+
 
 
 
@@ -118,6 +120,7 @@ const stats = [
   { number: "500+", label: "Projects Completed" }
   { number: "50+", label: "Happy Clients" }
   { number: "99.9%", label: "Success Rate" }
+
 
   { number: "24/7", label: "Support Available" }
 ];
@@ -528,6 +531,7 @@ export default function CaseStudiesPage() {
                           <h4 className="text-xl font-semibold mb-2">Project Overview</h4>;
                           <p className="text-green-100">;
 
+
                           </span>;
                           <span className="text - gray - 500 text - sm">{study.duration}</span>;
                         </div>;
@@ -628,25 +632,38 @@ export default function CaseStudiesPage() {
   );
 }
 
+import Head from 'next/head';
 
 
->>>>>>> origin/automation-improvements-final
+import Head from 'next/head';
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+  return (
+    <Layout>;
+      <Head>;
+        <title>Case Studies | Zion Tech Group</title>;
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/case-studies' />;
+        <meta
+          name='description'
+          content='Proven outcomes across AI, IT, and micro SaaS deployments.'
+
+
+import Head from 'next/head';
+
+
+import Head from 'next/head';
+
+
+
+
   );
  </Head> </section> </Layout>
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-  );
- </Head> </section> </Layout>
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
+export default function CaseStudiesPage() {
 
 	return (
 		<Layout>
@@ -662,6 +679,8 @@ export default function CaseStudiesPage() {
 		</Layout>
 	)
 
+}
+}
 
 import React from 'react';
 import Head from 'next/head';
@@ -685,18 +704,44 @@ export default function CaseStudiesPage(req, res) {
 }
 
 
-
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+        {/* CTA Section */}
+        <section className="py - 20 bg - gradient - to - r from - green - 600 to - teal - 600 text - white">;
+          <div className="container mx - auto px - 4">;
+            <motion.div;
+              className="text - center";
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >;
+              <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
+                Ready to Start Your Success Story?;
+              </h2>;
+              <p className="text - xl text - green - 100 mb - 8 max - w-3xl mx - auto">;
+                Let's work together to create your own success story.;
+                Contact us today to discuss your project.;
+              </p>;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <a;
+                  href="/contact";
+                  className="px - 8 py - 4 bg - white text - green - 600 rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold";
+                >;
+                  Start Your Project;
+                </a>;
+                <a;
+                  href="/services";
+                  className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - green - 600 transition - all duration - 300 font - semibold";
+                >;
+                  Explore Our Services;
+                </a>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </MainLayout>);
+}
+import Link from 'next / link';
+import Layout from '../components / Layout';
+;
 

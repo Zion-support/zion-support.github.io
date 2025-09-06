@@ -1,4 +1,6 @@
 
+export interface MarketTrend {
+export interface MarketTrend {;
 
   id: string;
   keyword: string;
@@ -24,6 +26,7 @@
 
 
 
+
   id: string;
   competitor_name: string;
   website: string;
@@ -32,6 +35,7 @@
   weaknesses: string[];
   opportunities: string[];
   threats: string[];
+
 
   pricing_strategy: string,
   feature_comparison: Record < string, boolean>;
@@ -45,9 +49,11 @@
 
 
 
+
   id: string;
   name: string;
   size: number;
+
 
   growth_rate: number,
   demographics: Record < string, any>;
@@ -63,6 +69,7 @@
 
 
 
+
   id: string;
   title: string;
   industry: string;
@@ -71,6 +78,7 @@
   market_size: number;
   growth_projection: number;
   recommendations: string[];
+
 
   data_sources: string[];
   generated_at: Date,
@@ -83,10 +91,12 @@
 
 
 
+
   industry: string;
   target_market: string;
   research_type: 'trends' | 'competitors' | 'segments' | 'comprehensive';
   timeframe: '7d' | '30d' | '90d' | '1y';
+
 
   includeHistoricalData: boolean,
   custom_metrics?: string[];
@@ -98,10 +108,12 @@
 
 
 
+
   success: boolean;
   data: {
     trends?: MarketTrend[];
     competitors?: CompetitorAnalysis[];
+
 
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
     this && this.apiKey = apiKey,
@@ -110,6 +122,10 @@
 
   estimatedROI: number
 }
+
+export class AIMarketResearchService {
+
+export class AIMarketResearchService {;
 
   private apiKey: string;
 
@@ -268,6 +284,8 @@
   }
 }
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key');
+
+
 
 
   id: string,;
@@ -508,9 +526,11 @@ export const aiMarketResearchService = new AIMarketResearchService (process.env.
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 
 
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY || 'demo-key');

@@ -1,11 +1,11 @@
 
+import dynamic from 'next/dynamic';
 
 
+import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic',;
+import dynamic from 'next/dynamic'
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false }),
 
 const TranslationPreview = dynamic(() => import('../../components/admin/TranslationPreview'), { ssr: false }),
@@ -18,20 +18,24 @@ export default function TranslationsAdminPage() {
       <TranslationPreview />
     </div>
 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+  );
+};
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+import dynamic from 'next/dynamic';
+const _TranslationPreview = dynamic__(() => import('../../components/admin/TranslationPreview'), {_ssr: false});
+export default function TranslationsAdminPage() {_return (
+    <div className="container mx-auto px-4 py-8">
+      <TranslationPreview />
+    </div>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 

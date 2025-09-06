@@ -3,7 +3,9 @@
 
 
 
+
 "use client";
+
 
 "use client";
 
@@ -54,8 +56,23 @@ import {
   Factory,
   Truck,
 
-
-
+  CreditCard,
+  Menu
+  X
+  ChevronDown
+  Code
+  Smartphone
+  Cloud
+  Database
+  Shield
+  Zap
+  Building
+  ShoppingCart
+  Heart
+  GraduationCap
+  Factory
+  Truck
+  CreditCard
 
 import {;
   Menu,;
@@ -80,7 +97,9 @@ import {;
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 } from "lucide-react";
 
@@ -121,6 +140,7 @@ function Header() {
     {
 
 
+
   ];
   const handleServiceClick = (href: string) => {
     closeMenu();
@@ -137,6 +157,15 @@ origin/automation-improvements-final
           {/* Logo */}
           <div className="flex-shrink-0">
 
+            <Link href="/" className="text-2xl font-bold text-blue-600">
+              Zion Tech Group
+            </Link>
+            <Link href="/" className="flex items-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
+                <Brain className="h-5 w-5 text-white" />
+              </div>
+              <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+            </Link>
 
             <Link href="/" className="text-2xl font-bold text-blue-600">
               Zion Tech Group
@@ -177,6 +206,8 @@ origin/automation-improvements-final
         </div>
         {/* Mobile Menu */}
 
+
+
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -185,67 +216,8 @@ import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
 
 
 
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { 
-      name: 'Services', 
-      href: '/services', 
-      dropdown: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: 'Cloud Solutions', href: '/solutions/cloud-migration' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity' },
-        { name: 'Data Analytics', href: '/services/data-analytics' }
-      ]
-    },
-    { 
-      name: 'Solutions', 
-      href: '/solutions', 
-      dropdown: [
-        { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-        { name: 'Healthcare', href: '/solutions/healthcare' },
-        { name: 'Finance', href: '/solutions/finance' },
-        { name: 'Government', href: '/solutions/government' },
-        { name: 'Retail', href: '/solutions/retail' },
-        { name: 'Education', href: '/solutions/education' }
-      ]
-    },
-    { 
-      name: 'Industries', 
-      href: '/industries', 
-      dropdown: [
-        { name: 'Financial Services', href: '/industries/financial' },
-        { name: 'Healthcare', href: '/industries/healthcare' },
-        { name: 'Manufacturing', href: '/industries/manufacturing' },
-        { name: 'Retail', href: '/industries/retail' },
-        { name: 'Government', href: '/industries/government' }
-      ]
-    },
-    { 
-      name: 'Company', 
-      href: '/about', 
-      dropdown: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Case Studies', href: '/case-studies' }
-      ]
-    },
-    { 
-      name: 'Resources', 
-      href: '/resources', 
-      dropdown: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Tutorials', href: '/tutorials' },
-        { name: 'API Documentation', href: '/api-docs' }
-      ]
-    },
-    { name: 'Contact', href: '/contact' }
-  ];
+
+
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropdown = (name: string) => {
@@ -398,25 +370,73 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           </div>;
           {/* Desktop Navigation */}
 
-
-
-          <nav className="hidden lg:flex space-x-8">;
-            {navigation && navigation.map((item) => (;
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+origin/automation-improvements-final
+          </div>
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex space-x-8">
+            {navigation.map((item) => (
+ursor/integrate-build-improve-and-re-verify-8f7d
+          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden lg:flex space-x-8">
+origin/main
+            {navigation.map((item) => (
 
               <Link
-                key={item && item.name}
-                href={item && item.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">;
-                {item && item.name}
-              </Link>;
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+              >
+                {item.name}
+              </Link>
             ))}
 
-
+          </nav>
+          <div className="hidden lg:flex items-center space-x-8">
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button
+                className="flex items-center text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                onMouseEnter={() => setIsServicesOpen(true)}
+                onMouseLeave={() => setIsServicesOpen(false)}
+              >
+                Services <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              <AnimatePresence>
+                {isServicesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute top-full left-0 mt-2 w-96 bg-white rounded-lg shadow-xl border z-50"
+                    onMouseEnter={() => setIsServicesOpen(true)}
+                    onMouseLeave={() => setIsServicesOpen(false)}
+                  >
+                    <div className="p-6">
+                      <div className="grid grid-cols-2 gap-4">
+                        {servicesDropdown.map((service) => (
+                          <Link key={service.title} href={service.href} className="group">
+                            <div className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
+                              <service.icon className="w-6 h-6 text-blue-600 mt-1" />
+                              <div>
+                                <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">{service.title}</h3>
+                                <p className="text-sm text-gray-600">{service.description}</p>
+                              </div>
+                            </div>
+            {navigation.map((item) => (
+              <div key={item.name} className="relative group">
+                <button
+                  onClick={() => item.dropdown && toggleDropdown(item.name)}
+                  className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+                >
+                  <Link href={item.href}>{item.name}</Link>
+                  {item.dropdown && (
+                    <ChevronDown 
+                      className={`w-4 h-4 transition-transform duration-200 ${
+                        activeDropdown === item.name ? 'rotate-180' : ''
+                      }`} 
+                    />
+                  )}
+                </button>
 
 
                 {/* Dropdown Menu */}
@@ -452,13 +472,32 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
+
+
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
 
-
-
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden bg-white shadow-lg"
+            >
+              <div className="px-4 py-6 space-y-4">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="block text-gray-700 hover:text-blue-600 font-medium"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <Link
+                  href="/contact"
+                  onClick={closeMenu}
+                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
 
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
@@ -569,11 +608,13 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
           </div>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
 
+origin/automation-improvements-final
 
-
-
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200">;
+              Get Started;
+            </Link>;
+          </div>;
 
 
 
@@ -601,6 +642,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
           </button>;
         </div>;
+
+
 
 
 
@@ -818,6 +861,15 @@ className="lg:hidden bg-white shadow-lg">;
 
 }
 
+                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                  )}
+                </div>
+              ))}
+              <div className="mt-4 pt-4 border-t border-gray-200">
+                <Link
+                  href="/contact"
+                  className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+                  onClick={() => setIsMenuOpen(false)}
 
                 >
                   Get Started
@@ -841,10 +893,12 @@ export default Header;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

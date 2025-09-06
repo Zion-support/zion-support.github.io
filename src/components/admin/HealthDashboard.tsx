@@ -40,12 +40,11 @@ import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
 
-
-
-
-
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-
+import React, { useState, useEffect } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 import {
   AlertTriangle,
@@ -229,6 +228,7 @@ const HealthDashboard: React.FC = () => {;
 
 
 
+
   if (loading) {
     return (
       <div className='flex items-center justify-center p-8'>
@@ -282,7 +282,9 @@ const HealthDashboard: React.FC = () => {;
 
 
 
+
   if (!healthData) return null,
+
 
 
 
@@ -306,6 +308,7 @@ const HealthDashboard: React.FC = () => {;
 
 
 
+
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -323,6 +326,7 @@ const HealthDashboard: React.FC = () => {;
             size="sm"
             onClick={() => setAutoRefresh(!autoRefresh)}
           >
+
 
 
 
@@ -431,6 +435,7 @@ const HealthDashboard: React.FC = () => {;
                 {healthData.health.issues.length > 0 ? (
                   <ul className='space-y-2'>
                     {healthData.health.issues.map((issue, index) => (
+
                       <li
                         key={index}
                         className='text-sm text-red-600 flex items-start'
@@ -640,6 +645,12 @@ const HealthDashboard: React.FC = () => {;
               </CardHeader>;
               <CardContent>;
 
+                {healthData.health.issues.length > 0 ? (;
+                  <ul className="space-y-2">;
+                    {healthData.health.issues.map((issue, index) => (;
+                      <li key={index} className="text-sm text-red-600 flex items-start">;
+                        <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>;
+                        {issue}
 
                       </li>
                     ))}
@@ -656,6 +667,7 @@ const HealthDashboard: React.FC = () => {;
 
         <TabsContent value="errors" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+
 
 
             <Card>
@@ -1189,5 +1201,6 @@ if (return null) {
 export default HealthDashboard;
 export default HealthDashboard,
 export default HealthDashboard,
+
 
 

@@ -23,6 +23,7 @@ interface QuickAction {;
   category: 'performance' | 'development' | 'maintenance';
 
 
+
 ;
   const [isVisible, setIsVisible] = useState(false);
   const [isProcessing, setIsProcessing] = useState<string | null>(null);
@@ -47,6 +48,7 @@ import { logErrorToProduction } from '@/utils / production_logger';
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 import {
@@ -81,16 +83,25 @@ if ( {) {
     return null;
   }
 
-
+  const [isVisible, setIsVisible] = useState(false)
+  const [isProcessing, setIsProcessing] = useState<string | null>(null)
+  const executeAction = async (actionId: string, action: () => void) => {
+;
+  const [isVisible, setIsVisible] = useState(false);
+  const [isProcessing, setIsProcessing] = useState<string | null>(null);
+  const executeAction = async (actionId: string, action: () => void) => {;
+    setIsProcessing(actionId);    try {
+      await action()
 
     } catch (error) {
       logErrorToProduction (`Failed to execute action ${action_id}:`, {
         data: error,
       });
     } finally {
-      setIsProcessing(null)
+      setIsProcessing (null);
     }
   }
+
 
 
 
@@ -143,6 +154,7 @@ export function QuickActions() {;
   const actions: QuickAction[] = [
     // Performance Actions
     {
+
       id: 'enable-performance-monitor',
       label: 'Enable Performance Monitor',
       description: 'Show real-time performance metrics',
@@ -150,7 +162,16 @@ export function QuickActions() {;
       category: 'performance',
       action: () => {
 
-
+        localStorage.setItem('performance-monitoringtrue'),
+        window.location.reload()
+      }},
+        localStorage.setItem('performance-monitoring', 'true')
+        window.location.reload()
+      },
+    },
+        localStorage.setItem('performance-monitoringtrue'),
+        window.location.reload()
+      }},
 
     {
       id: 'enable-bundle-analyzer',
@@ -160,7 +181,16 @@ export function QuickActions() {;
       category: 'performance',
       action: () => {
 
-
+        localStorage.setItem('bundle-analyzertrue'),
+        window.location.reload()
+      }},
+        localStorage.setItem('bundle-analyzer', 'true')
+        window.location.reload()
+      },
+    },
+        localStorage.setItem('bundle-analyzertrue'),
+        window.location.reload()
+      }},
 
     {
       id: 'clear-cache',
@@ -176,8 +206,11 @@ export function QuickActions() {;
           })
         }
 
-
-
+        localStorage.clear()
+        sessionStorage.clear()
+        window.location.reload()
+      }
+    }
 
       },
     },
@@ -185,6 +218,7 @@ export function QuickActions() {;
         sessionStorage.clear(),
         window.location.reload()
       }},
+
 
 
 
@@ -322,6 +356,7 @@ export function QuickActions() {;
 
 
     {
+
       id: 'download-performance-report',
       label: 'Download Performance Report',
       description: 'Export current performance metrics',
@@ -340,6 +375,179 @@ export function QuickActions() {;
 
 
 
+
+            colorDepth: screen.colorDepth,
+          },
+        }
+        const blob = new Blob([JSON.stringify(metrics, null, 2)], {
+          type: 'application/json',
+        })
+        const url = URL.createObjectURL(blob)
+        const a = document.createElement('a')
+        a.href = url
+        a.download = `performance-report-${Date.now()}.json`
+        document.body.appendChild(a)
+        a.click()
+        document.body.removeChild(a)
+        URL.revokeObjectURL(url)
+      },
+    },
+
+            colorDepth: screen.colorDepth
+          }
+        },
+
+        const blob = new Blob([JSON.stringify(metrics, null, 2)], {
+          type: 'application/json'
+        }),
+        
+        const url = URL.createObjectURL(blob),
+        const a = document.createElement('a'),
+        a.href = url,
+        a.download = `performance-report-${Date.now()}.json`,
+        document.body.appendChild(a),
+        a.click(),
+        document.body.removeChild(a),
+        URL.revokeObjectURL(url)
+      }},
+
+
+
+
+
+    {
+      id: 'test-error-boundary',
+      label: 'Test Error Boundary',
+      description: 'Trigger an error to test Sentry integration',
+      icon: <Monitor className="w-4 h-4" />,
+      category: 'development',
+      dangerous: true,
+      action: () => {
+
+
+
+
+        throw new Error('Test error for Sentry integration - this is intentional!')
+      }},
+        throw new Error(
+          'Test error for Sentry integration - this is intentional!'
+        )
+      },
+    },
+        throw new Error('Test error for Sentry integration - this is intentional!')
+      }},
+
+
+
+
+    {
+      id: 'refresh-app',
+      label: 'Hard Refresh',
+      description: 'Force reload with cache bypass',
+      icon: <RefreshCw className="w-4 h-4" />,
+      category: 'maintenance',
+      action: () => {
+        window.location.reload()
+
+      }}],
+
+  const categorizedActions = {
+    performance: actions.filter(a => a.category === 'performance'),
+    development: actions.filter(a => a.category === 'development'),
+    maintenance: actions.filter(a => a.category === 'maintenance')},
+
+  const categoryColors = {
+    performance: 'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',
+    development: 'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',
+    maintenance: 'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200'},
+
+        const blob = new Blob([JSON && JSON.stringify(metrics, null, 2)], {;
+          type: 'application/json',;
+        });
+
+        const url = URL && URL.createObjectURL(blob);
+        const a = document && document.createElement('a');
+        a && a.href = url;
+        a && a.download = `performance-report-${Date && Date.now()}.json`;
+        document && document.body.appendChild(a);
+        a && a.click();
+        document && document.body.removeChild(a);
+        URL && URL.revokeObjectURL(url);
+      },;
+    },;
+    {;
+      id: 'test-error-boundary',;
+      label: 'Test Error Boundary',;
+      description: 'Trigger an error to test Sentry integration',;
+      icon: <Monitor className='w-4 h-4' />,;
+      category: 'development',;
+      dangerous: true,;
+      action: () => {;
+        throw new Error(;
+          'Test error for Sentry integration - this is intentional!';
+        );
+      },;
+    },;
+    {;
+      id: 'refresh-app',;
+      label: 'Hard Refresh',;
+      description: 'Force reload with cache bypass',;
+      icon: <RefreshCw className='w-4 h-4' />,;
+      category: 'maintenance',;
+      action: () => {;
+        window && window.location.reload();
+      },;
+    },;
+  ];
+
+  const categorizedActions = {;
+    performance: actions && actions.filter(a => a && a.category === 'performance'),;
+    development: actions && actions.filter(a => a && a.category === 'development'),;
+    maintenance: actions && actions.filter(a => a && a.category === 'maintenance'),;
+  };
+
+  const categoryColors = {;
+    performance:;
+      'bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-200',;
+    development:;
+      'bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-200',;
+    maintenance:;
+      'bg-orange-100 dark:bg-orange-900/20 text-orange-800 dark:text-orange-200',;
+  };
+
+
+  if (!isVisible) {;
+
+
+        // Preload critical images
+        const criticalImages = [
+          '/logos/zion-logo.png/images/hero-bg.webp'
+        ],
+        
+        criticalImages.forEach(img => {
+          const link = document.createElement('link'),
+          link.rel = 'preload',
+          link.as = 'image',
+          link.href = img,
+          document.head.appendChild(link)
+        })
+      }},
+    {
+      id: 'download-performance-report',
+      label: 'Download Performance Report',
+      description: 'Export current performance metrics',
+      icon: <Download className="w-4 h-4" />,
+      category: 'development',
+      action: () => {
+        const metrics = {
+          timestamp: new Date().toISOString(),
+          performance: window.window.window.performance.getEntriesByType('navigation')[0],
+          resources: window.window.window.performance.getEntriesByType('resource').slice(0, 20),
+          memory: (performance as any).memory || {},
+          userAgent: navigator.userAgent,
+          screen: {
+            width: screen.width,
+            height: screen.height,
             colorDepth: screen.colorDepth,
           },
         }
@@ -373,9 +581,6 @@ export function QuickActions() {;
         document.body.removeChild(a),
         URL.revokeObjectURL(url)
       }},
-
-
-
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -384,9 +589,6 @@ export function QuickActions() {;
       category: 'development',
       dangerous: true,
       action: () => {
-
-
-
         throw new Error('Test error for Sentry integration - this is intentional!')
       }},
         throw new Error(
@@ -396,9 +598,6 @@ export function QuickActions() {;
     },
         throw new Error('Test error for Sentry integration - this is intentional!')
       }},
-
-
-
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
@@ -407,8 +606,6 @@ export function QuickActions() {;
       category: 'maintenance',
       action: () => {
         window.location.reload()
-
-
 
       },
     },
@@ -439,6 +636,8 @@ export function QuickActions() {;
 
 
 
+
+
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
@@ -456,10 +655,12 @@ export function QuickActions() {;
           <Settings className="w-4 h-4 mr-2" />
 
 
+
           Quick Actions
         </Button>
       </div>
     )
+
           className='bg-background/80 backdrop-blur-sm'        >;
           <Settings className='w-4 h-4 mr-2' />;
           Quick Actions;
@@ -488,10 +689,13 @@ export function QuickActions() {;
 
 
 
+
+
               ✕
             </Button>
           </div>
         </CardHeader>
+
 
 
 
@@ -732,3 +936,4 @@ if ( {) {
 }
 }
 }
+

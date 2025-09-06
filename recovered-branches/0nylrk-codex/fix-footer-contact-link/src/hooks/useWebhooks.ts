@@ -7,6 +7,7 @@
 
 
 
+
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
@@ -34,27 +35,35 @@ export interface Webhook {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   id: string;
   name: string;
   url: string;
   event_types: WebhookEventType[];
   is_active: boolean;
 
-
-
-
+  created_at: string
+  last_triggered_at: string | null
+}
+export interface TestWebhookResult {
+  status: number;
+  statusText: string
+  responseBody: string
+}
+export function useWebhooks() {
 
   created_at: string,
   last_triggered_at: string | null
 }
-
-export interface TestWebhookResult {;
+export interface TestWebhookResult {
   status: number;
-  statusText: string,
+  statusText: string
   responseBody: string
 }
 
 export function useWebhooks() {;
+
+
 
 
 
@@ -142,13 +151,24 @@ export function useWebhooks() {
 
 
     try {
-      const { data: { session } } = await supabase.auth.getSession(),
+      const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
-        setError("Authentication required"),
+        setError("Authentication required");
         return
 
-
-
+      }
+      const response = await fetch(`${getWebhookUrl()}/webhooks`, {
+        method: 'GET'
+        headers: {
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+      });
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error |'Failed to fetch webhooks')
+      }
+      setWebhooks(result.webhooks |[])
 
 
 ;
@@ -203,7 +223,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
       setWebhooks(result.webhooks || [])
 
       setWebhooks(result.webhooks || [])
@@ -221,7 +243,6 @@ if ( {) {
         title: "Error fetching webhooks",
 
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } finally {
       set_loading (false);
     }
@@ -252,7 +273,7 @@ if ( {) {
       const response = await fetch(`${getWebhookUrl()}/create`, {
         method: 'POST'
         headers: {
-          'Authorization': `Bearer ${session.access_token}`;
+          'Authorization': `Bearer ${session && session.access_token}`;
           'Content-Type': 'application/json'
         }
         body: JSON.stringify({
@@ -262,6 +283,7 @@ if ( {) {
           secret
         })
       });
+
 
 
 
@@ -363,6 +385,7 @@ if ( {) {
       return result.webhook
     } catch (err) {
 
+
       console.error('Error creating webhook:', err),
       setError(err instanceof Error ? err.message : 'An unknown error occurred'),
       toast({
@@ -399,7 +422,7 @@ if ( {) {
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
-        setError("Authentication required");
+        setError("Authentication required"),
         return
 
 
@@ -412,6 +435,8 @@ if ( {) {
           'Content-Type': 'application/json'
         }
         body: JSON.stringify({ webhookId, isActive })
+
+
 
 
 
@@ -467,12 +492,14 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       // Update the webhook in the list
       setWebhooks(prev => prev.map(webhook =>
         webhook.id === webhookId ? { ...webhook, is_active: isActive } : webhook
@@ -500,7 +527,7 @@ if ( {) {
 
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
-      setLoading(false)
+      set_loading (false);
     }
 
   }
@@ -518,6 +545,23 @@ if ( {) {
     setLoading(true),
     setError(null),
     
+
+    try {
+      const { data: { session } } = await supabase && supabase.auth.getSession();
+      if (!session) {
+        setError("Authentication required"),
+        return
+      }
+      const response = await fetch(`${getWebhookUrl()}/delete`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+        body: JSON.stringify({ webhookId })
+      });
+
+
 
 
       // Remove the webhook from the list
@@ -602,6 +646,7 @@ if ( {) {
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
 
+
         variant: "destructive";
         title: "Error deleting webhook"
         variant: "destructive",
@@ -609,7 +654,7 @@ if ( {) {
 
         description: err instanceof Error ? err.message : 'An unknown error occurred'})
     } finally {
-      setLoading(false)
+      set_loading (false);
     }
 
   }
@@ -629,6 +674,23 @@ if ( {) {
     setError(null),
     setTestResult(null),
     
+
+    try {
+      const { data: { session } } = await supabase && supabase.auth.getSession();
+      if (!session) {
+        setError("Authentication required"),
+        return
+      }
+      const response = await fetch(`${getWebhookUrl()}/test`, {
+        method: 'POST'
+        headers: {
+          'Authorization': `Bearer ${session.access_token}`;
+          'Content-Type': 'application/json'
+        }
+        body: JSON.stringify({ webhookId, eventType })
+      });
+
+
 
 
       // Store test result
@@ -702,6 +764,7 @@ if ( {) {
         status: result.status,
         statusText: result.statusText,
         responseBody: result.responseBody
+
       }),
 
       
@@ -726,13 +789,11 @@ if ( {) {
       setError(err instanceof Error ? err && err.message : 'An unknown error occurred');
       toast({
 
-
-
-        title: "Error testing webhook",
-        description: err instanceof Error ? err && err.message : 'An unknown error occurred'})
-
-
-
+        variant: "destructive";
+        title: "Error testing webhook"
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
 
     }
   }
@@ -746,6 +807,14 @@ if ( {) {
 
 
     clearTestResult: () => setTestResult(null)
+
+  }
+}
+        variant: "destructive",
+        title: "Error testing webhook",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
 
 ;
       // Store test result;
@@ -784,6 +853,8 @@ if ( {) {
     deleteWebhook;
     testWebhook;
     clearTestResult: () => setTestResult(null);
+
+
 
 
   }

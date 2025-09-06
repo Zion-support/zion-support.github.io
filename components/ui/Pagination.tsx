@@ -4,21 +4,26 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
+
 
 
 
@@ -29,12 +34,23 @@ import EnhancedButton from './EnhancedButton';
 
 
 
+
 export type PaginationProps = {
   on_change: (next_page: number) => void;
 }
 
-
-
+export default function Pagination({
+  page
+  pageSize
+  total
+  onChange
+}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
+  page: number
+  pageSize: number
+  total: number
+  onChange: (nextPage: number) => void
+}
+export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
 
   page,
   pageSize,
@@ -48,6 +64,8 @@ export type PaginationProps = {
 };
 
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
+
+
 
 
 
@@ -72,6 +90,32 @@ export default function Pagination(): any ({;
 };
 export default function Pagination(): any ({ page, pageSize, total, onChange }: PaginationProps) {;
   const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));
+
+import React from 'react';
+import EnhancedButton from './EnhancedButton';
+
+export type PaginationProps = {
+  page: number;
+  pageSize: number;
+  total: number;
+  onChange: (nextPage: number) => void;
+}
+export default function Pagination({
+  onChange: (nextPage: number) => void
+}
+export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
+  page,
+  pageSize,
+  total,
+  onChange,;
+}: PaginationProps) {  const totalPages = Math.max(1, Math.ceil(total / pageSize));export type PaginationProps = {
+  page: number,
+  pageSize: number,
+  total: number,
+  onChange: (nextPage: number) => void;
+};
+
+export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
 
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
@@ -102,6 +146,7 @@ export default function Pagination(): any ({ page, pageSize, total, onChange }: 
       </EnhancedButton>;
     </div>;
   );
+}  };
 
 }  }
     if (p >= 1 && p <= totalPages) onChange(p)
@@ -137,73 +182,6 @@ const Pagination: React.FC<PaginationProps> = ({ ;
   totalPages,;
   baseUrl,;
   className = '' ;
-}) => {;
-  const getPageNumbers = () => {;
-  on_change: (next_page: number) => void;
-}
-;
-export default /**
- * Pagination - Function description
- */
-function Pagination() {
-  const total_pages = Math.max (1, Math.ceil (total / page_size));
-  const can_prev = page > 1;
-  const can_next = page < total_pages;
-;
-  const go_to = (p: number) =>: any {
-    if (on_change (p)) {
-  $2
-}
-  }
-;
-  return (
-    <div className='flex items - center justify - between gap - 2 mt - 4'>;
-      <EnhancedButton;
-        variant='secondary';
-        size='md';
-        on_click={() => go_to (page - 1)}
-        disabled={!can_prev}
-      >;
-        Prev;
-      </EnhancedButton>;
-      <div className='text - sm'>;
-        Page {page} of {total_pages}
-      </div>;
-      <EnhancedButton;
-        variant='secondary';
-        size='md';
-        on_click={() => go_to (page + 1)}
-        disabled={!can_next}
-      >        Next;
-      </EnhancedButton>;
-    </div>);
-}  }
-;
-  return (
-    <div className="flex items - center justify - between gap - 2 mt - 4">;
-      <EnhancedButton variant="secondary" size="md" on_click={() => go_to (page - 1)} disabled={!can_prev}>;
-        Prev;
-      </EnhancedButton>;
-      <div className="text - sm">;
-        Page {page} of {total_pages}
-      </div>;
-      <EnhancedButton variant="secondary" size="md" on_click={() => go_to (page + 1)} disabled={!can_next}>;
-        Next;
-      </EnhancedButton>;
-    </div>);
-import Link from 'next / link';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-interface PaginationProps {
-  current_page: number;
-  total_pages: number;
-  base_url: string;
-  class_name?: string;
-}
-const Pagination: React.FC < PaginationProps> = ({
-  current_page,
-  total_pages,
-  base_url,
-  class_name = '' ;
 }) => {
   const getPageNumbers = () =>: any {
 
@@ -394,6 +372,8 @@ export default Pagination;
 
 
 
+
+
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </span>)}
     </nav>);
@@ -404,7 +384,11 @@ export default Pagination;
 
 
 
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 

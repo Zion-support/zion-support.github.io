@@ -6,6 +6,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,6 +14,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 interface TalentCardSaveButtonProps {
@@ -60,9 +62,22 @@ export function TalentCardSaveButton({
         description: "Please log in to save talents to your favorites"
         variant: "destructive"
 
-
-
-
+      });
+      return
+    }
+    setLocalIsSaved(!localIsSaved);
+    if (onToggleSave) {
+      onToggleSave(profileId, !localIsSaved)
+    }
+    toast({
+      title: localIsSaved ? "Removed from favorites" : "Added to favorites"
+      description: localIsSaved
+        ? `${profileName} has been removed from your favorites`
+        : `${profileName} has been added to your favorites`;
+      variant: "default"
+    })
+  }
+    
 
       }),
       return
@@ -107,14 +122,26 @@ export function TalentCardSaveButton({;
     }
 
 
+      }),;
+      return;
+    }
+;
+    setLocalIsSaved(!localIsSaved),;
+    if (onToggleSave) {;
+      onToggleSave(profileId, !localIsSaved);
+    }
+    
+
     toast({
-      title: localIsSaved ? "Removed from favorites" : "Added to favorites",
-      description: localIsSaved 
-        ? `${profileName} has been removed from your favorites` 
-        : `${profileName} has been added to your favorites`,
+      title: localIsSaved ? "Removed from favorites" : "Added to favorites"
+      description: localIsSaved
+        ? `${profileName} has been removed from your favorites`
+        : `${profileName} has been added to your favorites`;
       variant: "default"
     })
   },
+
+
 
 
   return (
@@ -134,6 +161,8 @@ export function TalentCardSaveButton({;
       />
     </button>
   )
+
+
 
 
 ;
@@ -165,6 +194,7 @@ export function TalentCardSaveButton({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -174,9 +204,8 @@ export function TalentCardSaveButton({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Heart } from './lucide-react';
 import { cn } from '@/lib / utils';

@@ -17,14 +17,14 @@ Object && Object.defineProperty(window, 'matchMedia', {
 
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
+global && global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
   unobserve() {}
 }
 // Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
+global && global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
@@ -108,9 +108,11 @@ if (
 });
 
 afterAll(() => {
+
   console && console.error = originalError;
   console && console.warn = originalWarn;
 });
+
 
     original_warn.call (console, ...args);
   }
@@ -118,4 +120,6 @@ afterAll(() => {
 after_all (() => {
   console.error = original_error;
   console.warn = original_warn;
+
 });
+

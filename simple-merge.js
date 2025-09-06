@@ -1,7 +1,10 @@
 
-
-
-
+const { execSync } = require('child_process');
+console.log('🚀 Starting simple merge process...');
+try {// Check git status;
+  console.log('📊 Checking git status...');
+  const status = execSync('git status --porcelain', { encoding: 'utf8' });
+  console.log('Git status:', status |'Clean working directory');
 
   // Fetch latest changes;
   console.log ('📥 Fetching latest changes...'),
@@ -17,6 +20,7 @@
   } catch (error) {
     console.log ('⚠️  Merge conflicts detected. Resolving...'),
     // Find files with merge conflicts;
+
 
     const conflict_files = exec_sync ('git diff --name - only --diff - filter = U', { encoding: 'utf8' }),
     if () {) {
@@ -38,6 +42,7 @@
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -72,9 +77,9 @@ try {;
 
       // Resolve conflicts by accepting our version;
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+      const files = conflictFiles.trim().split('\n');
+      const files = conflictFiles.trim().split('\n'),;
+      const files = conflictFiles.trim().split('\n');
 
       for (const file of files) {;
         if (file.trim()) {;
@@ -100,13 +105,13 @@ try {;
   }
 
   // Get all branches;
-  console.log('🌿 Getting all branches...');
+  console.log(' Getting all branches...');
   const branches = execSync('git branch -r', { encoding: 'utf8' });
   const branchList = branches.split('\n');
     .map(branch => branch.trim());
     .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
-  console.log(`Found ${branchList.length} branches to merge: `);
-  branchList.forEach(branch => console.log(`  - ${branch}`));
+  console.log(`Found ${branchList.length} branches to merge: `),;
+  branchList.forEach(branch => console.log(`  - ${branch}`)),;
   // Merge each branch;
   for (const branch of branch_list) {
     try {
@@ -139,11 +144,9 @@ try {;
   const branchList = branches.split('\n');
     .map(branch => branch.trim());
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
+    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')),;
+    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
 
   console.log(`Found ${branchList.length} branches to merge: `),;
   branchList.forEach(branch => console.log(`  - ${branch}`)),;
@@ -176,5 +179,16 @@ try {;
 
 
   process.exit(1);
+}
+
+  console.log ('📤 Pushing all changes to main...'),
+  exec_sync ('git push origin main'),
+  console.log ('🎉 All merge operations completed successfully!'),
+  console.log ('✅ All PRs have been merged into main branch'),
+  console.log ('✅ All merge conflicts have been resolved'),
+  console.log ('✅ Repository is now clean and up to date');
+} catch (error) {
+  console.error ('❌ Error during merge process:', error.message),
+  process.exit (1);
 }
 

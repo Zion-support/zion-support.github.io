@@ -1,7 +1,11 @@
 
-
-
-
+import React, { useState, useEffect, useRef, ReactNode } from 'react';
+import { ChatMessage  } from './ChatMessage';
+import { ChatInput  } from './ChatInput';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
+export interface Message {
 
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
@@ -33,14 +37,15 @@ export interface Message {
 
 
 
+
+
+  isOpen: boolean
+  onClose: () => void
+  recipient: {
+    id: string
+    name: string
     id: string,
     name: string,;
-
-
-
-
-
-
 
     avatarUrl?: string;
     role?: string
@@ -56,11 +61,13 @@ export interface Message {
 
 
 
+
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   isOpen;
@@ -80,6 +87,25 @@ import {ChatInput} from './ChatInput';
       setMessages(initialMessages)
     }
   }, [initialMessages]);
+
+  useEffect(() => {
+    scrollToBottom()
+  }, [messages]);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+import React, { useState, useEffect, useRef, ReactNode } from 'react',
+import { ChatMessage } from './ChatMessage',
+import { ChatInput } from './ChatInput',
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { X } from "lucide-react",
+export interface Message {
+  id: string,
+  role: 'user' | 'assistant',
+  message: string,
+  timestamp: Date,
+  read?: boolean
 
 import React, { useState, useEffect, useRef, ReactNode } from 'react',;
 import { ChatMessage } from './ChatMessage',;
@@ -138,7 +164,8 @@ export function ChatAssistant({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
   useEffect(() => {
     scrollToBottom()
   }, [messages]);
@@ -261,6 +288,16 @@ export function ChatAssistant({;
           )}
           <div ref={messagesEndRef} />
         </div>
+
+                key={msg && msg.id} 
+                role={msg && msg.role}
+                message={msg && msg.message}
+              />;
+            ));
+          )}
+          <div ref={messagesEndRef} />;
+        </div>;
+
 
         {/* Input */}
 
@@ -390,6 +427,13 @@ if (return null) {
 
 }
 
-
-
+        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
+          <ChatInput onSend={handleSendMessage} />
+        </div>
+      </div>
+    </div>
+  )
+}
+};
+}
 

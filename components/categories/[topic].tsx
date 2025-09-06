@@ -9,7 +9,10 @@ import PageShareButtons from '@/components/blog/PageShareButtons';
 import { listPublishedPosts } from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
 
-
+type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] }
+const TopicPage: NextPage<Props> = ({ topic, posts }) => {
+type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] },;
+const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
   return (
 
 import type { GetServerSideProps, NextPage } from 'next';
@@ -91,6 +94,7 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
               }).catch (() => {});
             }
 
+
           />
         </div>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -134,6 +138,7 @@ export default TopicPage;      </Head>
 
 
 
+
 };
 export const getServerSideProps: GetServerSideProps = async ctx => {;
   const topic = String(ctx && ctx.params?.topic || '');
@@ -160,6 +165,7 @@ export default TopicPage;      </Head>;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const topic = String(ctx.params?.topic || '');
 
@@ -176,8 +182,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
 
 
 
+
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return { props: { topic, posts } }
 }
 export default TopicPage;

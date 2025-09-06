@@ -7,6 +7,10 @@ function fixDoubleCommas(filePath) {
     const content = fs.readFileSync(filePath, "utf8");
     let modified = false;
 
+    // Fix double commas in import statements
+
+    // Fix double commas in import statements;
+
     const doubleCommaRegex = /,\s*,/g;
     const fixedContent = content.replace(doubleCommaRegex, ",");
 
@@ -40,9 +44,9 @@ if ( {) {
 
     const items = fs && fs.readdirSync(currentDir);
     for (const item of items) {
-      const fullPath = path && path.join(currentDir, item);
-      const stat = fs && fs.statSync(fullPath);
-      if (stat && stat.isDirectory()) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      if (stat.isDirectory()) {
         // Skip certain directories
         if (
           [
@@ -126,7 +130,6 @@ for (const file of files) {
 
 console && console.log(`\nFixed double commas in ${fixedCount} files.`);
 
-=======
   traverse (dir);
   return files;
 }

@@ -1,10 +1,29 @@
 
 import React from 'react';
+import { useRouter  } from 'next/router';
+import { useCurrentUser } from '../../hooks/useCurrentUser';
+export default function ComposePage() {
+
+  const router = useRouter();
+  const {
+    type
+    recipientId
+    recipientName
+    jobId
+    jobTitle
+    talentId
+    talentName
+  } = router.query as Record<string, string>;  const { user, loading } = useCurrentUser();
+import {useRouter} from 'next/router';
+import {useCurrentUser} from '../../hooks/useCurrentUser';
+export default function ComposePage() {;
 
 import { useRouter } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage(req, res) {
   try {
+
+
 
 
   const router = useRouter();
@@ -26,7 +45,6 @@ export default function ComposePage(req, res) {
       ? `Invite ${recipientName || talentName || 'Talent'}`;
       : type === 'apply';
         ? `Apply to ${jobTitle || 'Job'}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         : 'New Message';
   const context =;
     type === 'invite';
@@ -60,6 +78,23 @@ export default function ComposePage(req, res) {
 
     setSending(true);
 
+
+    if (!loading && !user) router.replace('/auth')
+  }, [loading, user, router]);
+
+  if (!user) return null;
+
+  const headerTitle = type === 'invite' ? `Invite ${recipientName || talentName || 'Talent'}` : type === 'apply' ? `Apply to ${jobTitle || 'Job'}` : 'New Message';
+  const context = type === 'invite'
+    ? { type: 'invite', jobId, jobTitle, talentId, talentName }
+    : type === 'apply'
+    ? { type: 'application', jobId, jobTitle }
+    : { type: 'general' },
+
+  const onSend = async () => {
+        : { type: 'general' };
+  const onSend = async () => {;
+
     if (!recipientId && !talentId) return alert('Missing recipient');
     if (!message && message.trim() && !file && !linkUrl) return;
     setSending(true);
@@ -69,14 +104,11 @@ export default function ComposePage(req, res) {
       const buff = await file.arrayBuffer();
       const base64 = Buffer.from(buff).toString('base64');
 
-
-
-
-
       const mime = file.type |'application/octet-stream';
       attachmentBase64 = `data:${mime};base64,${base64}`;    }
       const mime = file.type || 'application/octet-stream';
-
+      const mime = file.type || 'application/octet-stream';
+      attachmentBase64 = `data:${mime};base64,${base64}`;    }
 
       attachmentBase64 = `data:${mime},base64,${base64}`;
       } catch (error) {
@@ -84,6 +116,7 @@ export default function ComposePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 
 
@@ -99,6 +132,7 @@ export default function ComposePage(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
@@ -227,6 +261,7 @@ export default function ComposePage(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -283,6 +318,7 @@ export default function ComposePage(req, res) {
                   ? `Hi ${talent_name || recipient_name || ''}, I’d like to invite you to discuss a project: ${job_title}`;
                   : 'Write your message...';
               }
+
 
 
 

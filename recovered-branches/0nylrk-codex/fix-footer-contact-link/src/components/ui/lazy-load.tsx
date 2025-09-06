@@ -1,13 +1,20 @@
+import React from 'react';
 
 
-
-
+import {useEffect, useState, useRef, ReactNode} from "react";
+import {cn} from "@/lib/utils";
+import {Skeleton} from "@/components/ui/skeleton";
+import { useEffect, useState, useRef, ReactNode } from "react",
+import { cn } from "@/lib/utils";
+import { Skeleton } from "@/components/ui/skeleton";
+interface LazyLoadProps {
 
   height?: string | number;
   width?: string | number;
   children: ReactNode,;
 
   loadingComponent?: ReactNode;
+
 
 
   className?: string;
@@ -30,6 +37,7 @@ export function LazyLoad(): any ({;
 
 
 
+
 interface LazyLoadProps {
   height?: string | number,
   width?: string | number,
@@ -39,6 +47,7 @@ interface LazyLoadProps {
 
   className?: string
 }
+
 
 export function LazyLoad({
 
@@ -125,6 +134,7 @@ if ( {) {
 
 
 
+
   }, []),;
 
   useEffect(() => {;
@@ -133,14 +143,14 @@ if ( {) {
       const timer = setTimeout(() => {;
         setIsLoaded(true);
       }, 500);
-
-      return () => clearTimeout(timer);
+      return () => clearTimeout(timer)
     }
   }, [isVisible]);
 
   const defaultLoadingComponent = (;
 
     <Skeleton;
+
 
 
 
@@ -154,6 +164,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       style={{ height, width }}
@@ -185,5 +196,7 @@ if ( {) {
     </div>;
   );
 }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 

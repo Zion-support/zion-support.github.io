@@ -51,6 +51,7 @@ import { Input } from '@/components / ui / input';
 import {
 
 
+
   Select,
   SelectContent,
   SelectItem,
@@ -67,6 +68,7 @@ import { X, Filter } from 'lucide-react';
 } from '@/components / ui / sheet';
 import { Badge } from '@/components / ui / badge';
 import { Label } from '@/components / ui / label';
+
 
 
 
@@ -208,14 +210,51 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 
 
+
+
 import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
 import { Badge } from "@/components/ui/badge",
 import { Label } from "@/components/ui/label",
 interface BrowseFiltersProps {
 
-
-
+  type: 'jobs' | 'talents'
+export function BrowseFilters({ type }: BrowseFiltersProps) {
+  const [activeFilters, setActiveFilters] = useState<string[]>([])
+  const addFilter = (filter: string) => {    if (!activeFilters.includes(filter)) {
+      setActiveFilters([...activeFilters, filter])
+    }
+  }
+  const removeFilter = (filter: string) => {
+    setActiveFilters(activeFilters.filter(f => f !== filter))
+  }
+  type: "jobs" | "talents"
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Slider } from "@/components/ui/slider",;
+import { Switch } from "@/components/ui/switch",;
+import { Input } from "@/components/ui/input",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { X, Filter } from 'lucide-react';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",;
+import { Badge } from "@/components/ui/badge",;
+import { Label } from "@/components/ui/label",;
+interface BrowseFiltersProps {;
+  type: "jobs" | "talents";
+}
+;
+export function BrowseFilters({ type }: BrowseFiltersProps) {;
+  const [activeFilters, setActiveFilters] = useState<string[]>([]),;
+  const addFilter = (filter: string) => {;
+    if (!activeFilters.includes(filter)) {;
+      setActiveFilters([...activeFilters, filter]);
+    }
+  },
+  
+  const removeFilter = (filter: string) => {
+    setActiveFilters(activeFilters.filter(f => f !== filter))
+  },
+  
 
   return (
     <div className="space-y-3">
@@ -238,19 +277,50 @@ interface BrowseFiltersProps {
               <div className="py-6 space-y-6">
                 {type === "jobs" ? (
 
+                    <div className='space-y-2'>
+                    
+                    <div className="space-y-2">
+                    <div className='space-y-2'>
+                      <Label>Experience (years)</Label>
+                      <Slider
+                        aria-label='Years of experience'
+                        defaultValue={[0, 10]}
+                        max={20}
+                        step={1}
+                        className='my-4'                      />
+                      <div className='flex justify-between text-xs text-muted-foreground'>
+                    
+                    <div className="space-y-2">
+                      <Label>Experience (years)</Label>
+                      <Slider
+                        aria-label="Years of experience"
+                        defaultValue={[0, 10]}
+                        max={20}
+                        step={1}
+                        className="my-4"
+                      />
+                      <div className="flex justify-between text-xs text-muted-foreground">
+                
+                <div className="space-y-2">
 
+                  <Label>Location</Label>
+                  <Select>
+                    <SelectTrigger>
+                      <SelectValue placeholder="Select location" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="remote">Remote</SelectItem>
+                      <SelectItem value="us">United States</SelectItem>
+                      <SelectItem value="europe">Europe</SelectItem>
+                      <SelectItem value="asia">Asia</SelectItem>
+                    </SelectContent>
+                  </Select>
 
-
-                  <Label>Salary Range</Label>
-                  <div className="flex gap-4 items-center">
-                    <Input placeholder="Min" type="number" className="w-full" />
-                    <span>to</span>
-                    <Input placeholder="Max" type="number" className="w-full" />
-                  </div>
                 </div>
                 <div className='space-y-2'>
                 
                 <div className="space-y-2">
+
 
 
                   <Label>Skills</Label>
@@ -426,6 +496,7 @@ interface BrowseFiltersProps {
     </div>;
   );
 };
+
 
 
 

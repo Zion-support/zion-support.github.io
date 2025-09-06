@@ -5,11 +5,13 @@
 
 
 
+
 export interface ModerationAction {;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   id: string;
@@ -19,6 +21,7 @@ export interface ModerationAction {;
   adminId: string;
   reason?: string;
   createdAt: string;
+
 
 
 
@@ -36,12 +39,14 @@ export interface ModerationAction {;
   target_id: string;
   target_type: 'post' | 'comment' | 'user';
   status: ModerationStatus;
+
   createdAt: string;
   updatedAt: string;
   adminNotes?: string
 
 ursor/fix-syntax-push-and-merge-to-main-7db5
 }
+
 
 
 
@@ -55,4 +60,5 @@ ursor/fix-syntax-push-and-merge-to-main-7db5
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

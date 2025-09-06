@@ -1,11 +1,6 @@
 
-
-
-
-
-
-
-
+export interface Message {
+export interface Message {;
 
   id: string;
   role: 'user' | 'assistant';
@@ -14,9 +9,9 @@
   read?: boolean
 }
 
-
-
-
+export interface Recipient {
+  id: string;
+  name: string;
 
 
 export interface Recipient {;
@@ -25,6 +20,7 @@ export interface Recipient {;
   avatarUrl?: string;
   role?: string;
 }
+
 
 
 
@@ -43,6 +39,7 @@ export interface Recipient {;
   name: string,;
 
 
+
   avatarUrl?: string;
 
   role?: string;
@@ -54,10 +51,12 @@ export interface Recipient {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

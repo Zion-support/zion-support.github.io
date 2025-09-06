@@ -1,12 +1,16 @@
 
-
-
-
+import * as React from 'react';
+import * as ToastPrimitives from '@radix-ui/react-toast';
+import {cva, type, VariantProps} from 'class-variance-authority';
+import {X} from 'lucide-react';
+import {cn} from '@/lib/utils';
+const ToastProvider = ToastPrimitives.Provider;
 
 import * as React from "react"
 import * as ToastPrimitives from "@radix-ui/react-toast"
 import { cva, type VariantProps } from "class-variance-authority"
 import { X } from "lucide-react"
+
 
 
 
@@ -25,6 +29,7 @@ const ToastViewport = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Viewport>
 ></typeof>(({ className, ...props }, ref) => (
   <ToastPrimitives.Viewport
+
 
     ref={ref}
     className={cn(
@@ -86,6 +91,8 @@ const Toast = React.forwardRef<
 
 
 
+
+
     />
   );
 });
@@ -96,9 +103,9 @@ const ToastAction = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ToastPrimitives.Action
 
-
-
-
+    ref={ref}
+    className={cn(
+      'inline-flex h-8 shrink-0 items-center justify-center rounded-md border bg-transparent px-3 text-sm font-medium ring-offset-background transition-colors hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 group-[.destructive]:border-muted/40 group-[.destructive]:hover:border-destructive/30 group-[.destructive]:hover:bg-destructive group-[.destructive]:hover:text-destructive-foreground group-[.destructive]:focus:ring-destructive'
 
   return (
     <ToastPrimitives.Root
@@ -123,6 +130,7 @@ const ToastAction = React && React.forwardRef<;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -130,6 +138,7 @@ const ToastAction = React && React.forwardRef<;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     ref={ref}
     className={cn(
@@ -141,9 +150,9 @@ const ToastAction = React && React.forwardRef<;
   />;
 ));
 
+ToastAction.displayName = ToastPrimitives.Action.displayName;
 
-
-
+ToastAction.displayName = ToastPrimitives.Action.displayName;
 
 
 const ToastClose = React.forwardRef<
@@ -152,9 +161,9 @@ const ToastClose = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <ToastPrimitives.Close
 
-
-
-
+    ref={ref}
+    className={cn(
+      'absolute right-2 top-2 rounded-md p-1 text-foreground/50 opacity-0 transition-opacity hover:text-foreground focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600'
 
 const ToastClose = React.forwardRef<;
   React.ElementRef<typeof ToastPrimitives.Close>,;
@@ -168,7 +177,9 @@ const ToastClose = React.forwardRef<;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
     ref={ref}
     className={cn(
@@ -182,9 +193,9 @@ const ToastClose = React.forwardRef<;
   </ToastPrimitives && ToastPrimitives.Close>;
 ));
 
+ToastClose.displayName = ToastPrimitives.Close.displayName;
 
-
-
+ToastClose.displayName = ToastPrimitives.Close.displayName;
 
 
 const ToastTitle = React.forwardRef<
@@ -205,7 +216,9 @@ const ToastTitle = React.forwardRef<;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -215,6 +228,7 @@ const ToastTitle = React.forwardRef<;
   />
 ));
 ToastTitle.displayName = ToastPrimitives.Title.displayName;
+
 
 
 
@@ -235,6 +249,7 @@ const ToastDescription = React.forwardRef<
 
 
 
+
 const ToastDescription = React.forwardRef<;
   React.ElementRef<typeof ToastPrimitives.Description>,;
   React.ComponentPropsWithoutRef<typeof ToastPrimitives.Description>;
@@ -243,16 +258,20 @@ const ToastDescription = React.forwardRef<;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
     ref={ref}
-    className={cn('text-sm opacity-90', className)}
+    className={cn ('text - sm opacity - 90', class_name)}
     {...props}
 
   />
 ));
 ToastDescription.displayName = ToastPrimitives.Description.displayName;
+
+
 
 
 
@@ -263,6 +282,8 @@ type ToastProps = React.ComponentPropsWithoutRef<typeof Toast>;
 type ToastActionElement = React.ReactElement;
 ;
 export {
+
+
 
 
   type ToastProps
@@ -280,6 +301,8 @@ export {
 
 
 
+
+
   type ToastProps,
   type ToastActionElement,
   ToastProvider,
@@ -288,6 +311,7 @@ export {
   ToastTitle,
   ToastDescription,
   ToastClose,
+
 
 
   ToastAction,
@@ -312,6 +336,7 @@ type ToastProps = React && React.ComponentPropsWithoutRef<typeof Toast>;
 
 
 
+
 // Older React type definitions may not support generics on `ReactElement`.;
 // Using the base `ReactElement` type here avoids compilation errors while;
 // still representing a valid React element returned by `ToastAction`.;
@@ -329,11 +354,26 @@ export {;
   ToastClose;
   ToastAction}
 
+
+// Add useToast hook export
+export function useToast() {
+  return {
+    // Accept a loosely typed props object to allow custom fields like `description`
+    toast: (props: any) => {
+      // Implementation of toast functionality
+      console.log('Toast:', props);
+    }
+  }
+
+
 // Add useToast hook export export function useToast() {
   return {
     // Accept a loosely typed props object to allow custom fields like `description`
     toast: (props: any) => {
 
+
+}
+      // Implementation of toast functionality
 
       // // // console.log("Toast:", props)
 ;
@@ -354,6 +394,7 @@ export function useToast() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
     ref={ref}
@@ -365,6 +406,7 @@ ToastDescription.displayName = ToastPrimitives.Description.displayName;
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

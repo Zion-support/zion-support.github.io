@@ -1,19 +1,30 @@
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {Project, ProjectStatus} from "@/types/projects";
+import {toast} from "sonner";
+export function useProjects() {;
+  const { user } = useAuth();
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+import { useState, useEffect } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { useAuth } from "@/hooks/useAuth",
+import { Project, ProjectStatus } from "@/types/projects";
+import { toast } from "sonner";
+export function useProjects() {
+  const { user } = useAuth();
+  const [projects, setProjects] = useState<Project[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+import { Project, ProjectStatus } from "@/types/projects",
+import { toast } from "sonner",
+export function useProjects() {
+  const { user } = useAuth(),
+  const [projects, setProjects] = useState<Project[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
 
 
   const [error, setError] = useState<string | null>(null);
@@ -88,7 +99,7 @@
 
       toast.error("Failed to fetch projects")
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
 
   }
@@ -122,6 +133,20 @@
 
       // Transform the data to match our project types
       const transformedProject = {
+
+          job:jobs (title, description);
+          talent_profile:profiles ! talent_id (display_name:display_name, professional_title:bio, profile_picture_url: avatar_url),
+          client_profile:profiles ! client_id (display_name, avatar_url);
+        `);
+        .eq ("id", project_id);
+        .single ();
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      // Transform the data to match our project types;
+      const transformed_project = {
 
         ...data;
 
@@ -337,12 +362,14 @@ export function useProjects() {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   }
 }

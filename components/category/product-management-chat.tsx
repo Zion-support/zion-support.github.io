@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Seo from '../../components/seo/Seo';
 
   return (
-=======
 
 const ProductManagementChat: NextPage = () => {
   return (

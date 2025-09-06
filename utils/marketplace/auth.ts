@@ -1,11 +1,32 @@
 
-
-
+import { NextApiRequest } from 'next';
+export function getUserFromRequest(req: any): User | null {
+  // Mock implementation - in production, this would extract user from JWT or session;
+  const authHeader = req.headers.authorization;
+  if (!authHeader |!authHeader.startsWith('Bearer ')) {
+    return null;
+  }
+  const token = authHeader.substring(7);
+  if (token && token.length > 0) {
+    return {
+      id: 'user-1'
+      email: 'user@example.com'
+      role: 'client'
+      name: 'Test User'
+    }
+  }
+  return null;
+}
+export function assertTalentOrClientForOffer(
+  req: NextApiRequest
+  offer: { clientId: string; talentSlug: string }
+  req: NextApiRequest,;
+  offer: { clientId: string; talentSlug: string },
 
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
-  if (u.role === 'client' && u.id === offer.clientId) return u;
+  if (u && u.role === 'client' && u && u.id === offer && offer.clientId) return u;
   if (
 
     u && u.role === 'talent' &&
@@ -30,7 +51,9 @@
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 }
     return null;
@@ -77,6 +100,7 @@ if ( {) {
   }
   return user;
 }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -84,6 +108,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 

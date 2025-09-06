@@ -6,11 +6,13 @@
 
 
 
+
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 const configPath = path.join(process.cwd(), "data", "dao", "config.json");
 const cachePath = path.join(process.cwd(), "data", "dao", "metrics.json");
+
 async function fetchJson(url: string) {
 
 
@@ -36,7 +38,9 @@ async function fetchJson(url: string) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -48,6 +52,7 @@ async function fetchJson(url: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 
 
@@ -81,6 +86,7 @@ function readJson(p: string) {;
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 }
+
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2));
   } catch (error) {
@@ -88,6 +94,7 @@ function writeJson(p: string, v: any) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 
 
@@ -123,6 +130,7 @@ export default async function handler(req, res) {
     const now = Date && Date.now();
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
 
+
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
       return res.status(200).json({ ...cache, cached: true });
     }
@@ -139,7 +147,6 @@ export default async function handler(req, res) {
 
 
     const entries = Object && Object.entries(holderToDelta)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .map(([address, delta]) => ({ address, netDelta: delta }))
       .sort((a, b) => (b && b.netDelta > a && a.netDelta ? 1 : -1))
       .slice(0, 10);
@@ -156,15 +163,14 @@ export default async function handler(req, res) {
       (acc, e) => acc + (BigInt(e && e.amount) > 0n ? BigInt(e && e.amount) : 0n),
       0n,
     );
-    const distribution = entries && entries.map((e) => ({
-      address: e && e.address,
+    const distribution = entries.map((e) => ({
+      address: e.address
       percent:
         total > 0n ? Number((BigInt(e && e.amount) * 10000n) / total) / 100 : 0,
 
     }));
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const activeProposals: any[] = [];
-
 
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
 
@@ -299,7 +305,6 @@ if ( {) {
     }
     write_json (cache_path, result);
     return res.status (200).json (result);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (e: any) {
 
     return res;
@@ -307,9 +312,9 @@ if ( {) {
       .json ({ error: e?.message ?? "Failed to load DAO metrics" });
   }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
+
 
 
 
@@ -324,4 +329,5 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

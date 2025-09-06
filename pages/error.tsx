@@ -19,14 +19,19 @@ export default function ErrorPage() {
               <AlertTriangle className=&quot;h-6 w-6 text-red-600 dark:text-red-400&quot; />
       <Head>
         <title>Authentication Error - Zion Tech Marketplace</title>
-        <meta name="description" content="Authentication error page" />
+        <meta name=&quot;description&quot; content=&quot;Authentication error page&quot; />
       </Head>
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+      <div className=&quot;min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4&quot;>
+        <Card className=&quot;w-full max-w-md&quot;>
+          <CardHeader className=&quot;space-y-1 text-center&quot;>
+            <div className=&quot;mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20&quot;>
+              <AlertTriangle className=&quot;h-6 w-6 text-red-600 dark:text-red-400&quot; />
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4">
+        <Card className="w-full max-w-md">
+          <CardHeader className="space-y-1 text-center">
+            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20">
+              <AlertTriangle className="h-6 w-6 text-red-600 dark:text-red-400" />
 
             </div>
             <CardTitle className=&quot;text-2xl font-bold&quot;>Authentication Error</CardTitle>
@@ -40,10 +45,10 @@ export default function ErrorPage() {
                 This could be due to:
               </p>
               <ul className=&quot;text-sm text-muted-foreground space-y-1 text-left&quot;>
-                <li>• Invalid email or password</li>
-                <li>• Account not verified</li>
-                <li>• Network connectivity issues</li>
-                <li>• Temporary service unavailability</li>
+                <li> Invalid email or password</li>
+                <li> Account not verified</li>
+                <li> Network connectivity issues</li>
+                <li> Temporary service unavailability</li>
               </ul>
 
               <div className=&quot;pt-4 space-y-2&quot;>
@@ -57,12 +62,14 @@ export default function ErrorPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     Try Again
                   </Link>
@@ -83,12 +90,14 @@ export default function ErrorPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               </div>
             </div>
@@ -103,10 +112,13 @@ export default function ErrorPage() {
 
 
 
+
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 
 
 }
@@ -114,6 +126,7 @@ export default function ErrorPage() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

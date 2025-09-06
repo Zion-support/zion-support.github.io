@@ -5,6 +5,8 @@
 
 
 
+
+
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
 import { Bell, Calendar, X } from 'lucide-react'
@@ -58,8 +60,10 @@ export function ProjectOfferBanner() {;
 
 
 
+
   }
   
+
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -78,13 +82,14 @@ export function ProjectOfferBanner() {;
                   <Bell className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">🎉 New Project Offer!</h4>
+                  <h4 className="font-semibold"> New Project Offer!</h4>
                   <p className="text-sm text-muted-foreground">
                     You've been selected for "{offer.job?.title}". Review and accept to get started.
                   </p>
                 </div>
               </div>
               
+
 
 
               <div className="flex items-center gap-2">
@@ -179,6 +184,7 @@ updated.add (projectId)
 return updated
 })
 }
+
 const handleViewOffer = (projectId: string) => {
   router.push (`/project/$ {
 
@@ -218,7 +224,20 @@ if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.h
 }</div>)
 }'"}
 
+
+  project_id;
+}`);
+}
+if (isLoading |pendingOffers.length === 0 |pendingOffers.every (p => dismissed.has (p.id) ) ) {
+  return null
+}return (<div className="mb-6 space-y-3" > {
+  pendingOffers offer.id "
+}> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) )
+}</div>)
+}'"}
+
     </div>;
   );
 }
 ;
+

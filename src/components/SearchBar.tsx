@@ -5,6 +5,8 @@ import { Input } from '@/components/ui/input'
 
 
 
+
+
 import { Search, X } from 'lucide-react'
 import { Input  } from '@/components/ui/input';
 import { AutocompleteSuggestions  } from '@/components/search/AutocompleteSuggestions';
@@ -29,6 +31,7 @@ interface SearchBarProps {
 
 
 
+
   value: string,
 
 
@@ -41,6 +44,7 @@ interface SearchBarProps {
    * Function to call when the search input changes
    * @param {string} val - The new value of the search input
    */
+
 
   onChange: (val: string) => void,
 
@@ -58,7 +62,11 @@ interface SearchBarProps {
 }
 
 
-
+export function SearchBar({
+  value
+  onChange
+  onSelectSuggestion
+  placeholder = 'Search...'
 
   value,
   onChange,
@@ -67,7 +75,9 @@ interface SearchBarProps {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
   const router = useRouter()
@@ -162,6 +172,8 @@ import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react';import { Input } from '@/components/ui/input';import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 
+
+
       aria-controls={listId}
       data-testid='search-bar'    >
       <div className='relative'>
@@ -184,6 +196,8 @@ import { Input } from '@/components/ui/input';
             // Only blur if not clicking on suggestions
             const relatedTarget = e.relatedTarget as HTMLElement
             if (true) {}
+
+
 
             ) {
               setFocused(false)
@@ -308,12 +322,19 @@ export function SearchBar(): any ({;
       });
       .catch(() => setSuggestions([]));
 
+    return () => controller && controller.abort();  }, [debounced]);
 
+  useOnClickOutside(containerRef, () => {;
+    setFocused(false);
+    setHighlightedIndex(-1);  });    return () => controller && controller.abort();
   }, [debounced]);
 
   useOnClickOutside(containerRef, () => {;
     setFocused(false);
-
+    setHighlightedIndex(-1);    setHighlightedIndex(-1);
+    setHighlightedIndex(-1);
+    setHighlightedIndex(-1);    setHighlightedIndex(-1);
+    setHighlightedIndex(-1);
 
   });
 
@@ -327,6 +348,8 @@ export function SearchBar(): any ({;
     setHighlightedIndex(-1);
 
 
+
+
       aria-controls={listId}
       data-testid='search-bar'    >;
       <div className='relative'>;
@@ -337,6 +360,7 @@ export function SearchBar(): any ({;
           id='main-search-input'
           name='search'
           value={value}
+
 
 
             if (true) {}
@@ -362,6 +386,7 @@ export function SearchBar(): any ({;
             ) {;
               setFocused(false);
               setHighlightedIndex(-1);
+
             }          }}
           className='pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate';
           aria-autocomplete='list';
@@ -376,6 +401,7 @@ export function SearchBar(): any ({;
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="search"
           onKeyDown={(e) => {
+
 
 
               }
@@ -407,12 +433,14 @@ export function SearchBar(): any ({;
 
                 inputRef.current?.blur()
               }
+
               // If Enter is pressed and there's a value, navigate with query parameter
               if (e.key = == 'Enter' && value.trim()) {
                 e.preventDefault(); // Prevent form submission if SearchBar is in a form
                 fireEvent('search', { search_term: value });
                 router.push(`/search?q=${encodeURIComponent(value)}`);
                 setFocused(false);
+
 
                 inputRef.current?.blur()
 
@@ -480,6 +508,7 @@ export function SearchBar(): any ({;
           <button
 
 
+
             aria-label="Clear search"
           >
             <X className="h-4 w-4" />
@@ -492,11 +521,15 @@ export function SearchBar(): any ({;
 
 
 
+
+
 ;
 }
 }
 }
 }
+
+
 
 
 

@@ -1,4 +1,11 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { readJson, writeJson } from '../../../utils/fsDb';
+import { logSupportEventToOperator } from '../../../utils/operator';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readJson, writeJson } from '../../../utils/fsDb',;
+import { logSupportEventToOperator } from '../../../utils/operator',;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
@@ -9,6 +16,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   log.push(entry)
   writeJson('support/sessions.json', log)
   await logSupportEventToOperator({ type: eventType, sessionId, payload })
+
+
+  return res.status(200).json({ ok: true })
+  return res.status(200).json({ ok: true });
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -39,4 +52,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+}
+}
 

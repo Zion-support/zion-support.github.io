@@ -18,7 +18,6 @@ const RSS_PATH = path && path.join(process && process.cwd(), 'publicpodcast && p
 }
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 function ensureStorage() {
 
   const dir = path.dirname(EPISODES_PATH);
@@ -38,6 +37,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
 
+
   const siteUrl = process.env.SITE_URL |'http://localhost:3000';
 
   const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
@@ -52,6 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 
 
+
   const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000';
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const items = episodes
@@ -61,6 +62,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
       const pubDate = new Date(e.createdAt).toUTCString();
       const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
+
+
 
 
       return `
@@ -101,8 +104,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   siteUrl
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
 
-
-
+  items
+}</channel> </rss>`;  return res.status(200).json({ ok: true, path: '/podcast.xml' })
 
 }
 
@@ -214,12 +217,15 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');
   return res.status(200).json({ ok: true, path: '/podcast.xml' })
 
 }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 
   items 
 }</channel> </rss>`;
 
   items 
+
 
 
 
@@ -230,4 +236,5 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

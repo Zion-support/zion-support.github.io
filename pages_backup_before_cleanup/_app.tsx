@@ -1,22 +1,5 @@
-<<<<<<< HEAD
-ursor/fix-syntax-push-and-merge-to-main-40de
-import type { AppProps } from \'next/app\' import \'../styles/globals.css\' export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} /> }
-const type { AppProps } from "next/app" import "./styles/globals.css" export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} /> }''"
-import React from 'react';
-interface _appProps {
-  // Add props here as needed
-}
-import type { AppProps } from \'next/app\' import \'../styles/globals.css\' export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} /> }
-const type { AppProps } from "next/app" import "./styles/globals.css" export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} /> }''";
-import React from 'react';
-interface _appProps {
-  // Add props here as needed
-
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 export default function _app({ }: _appProps) {
   return (
     <div>
@@ -24,17 +7,7 @@ export default function _app({ }: _appProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 
-}
 
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

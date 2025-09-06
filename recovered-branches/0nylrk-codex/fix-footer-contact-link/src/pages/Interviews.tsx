@@ -1,5 +1,20 @@
 
 
+import React, { useEffect, useState } from "react";
+import {useInterviews} from "@/hooks/useInterviews";
+import {Interview} from "@/types/interview";
+import {AppHeader} from "@/layout/AppHeader";
+import {Footer} from "@/components/Footer";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {SEO} from "@/components/SEO";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {InterviewCard} from "@/components/interviews/InterviewCard";
+import {Button} from "@/components/ui/button";
+import {Calendar, Clock, Video} from "lucide-react";
+import {format, isAfter, parseISO, startOfDay} from "date-fns";
+function InterviewsContent() {
+  const { interviews, isLoading, fetchInterviews } = useInterviews();
+  const [activeTab, setActiveTab] = useState("upcoming");
 
 import React, { useEffect, useState } from "react",
 import { useInterviews } from "@/hooks/useInterviews",
@@ -12,6 +27,11 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { InterviewCard } from "@/components/interviews/InterviewCard",
 import { Button } from "@/components/ui/button",
 
+
+function InterviewsContent() {
+  const { interviews, isLoading, fetchInterviews } = useInterviews(),
+  const [activeTab, setActiveTab] = useState("upcoming"),
+  
 
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
@@ -32,12 +52,10 @@ import { Button } from "@/components/ui/button",
     },
     
     loadInterviews()
-  }, []),
-
+  }, []);
   // Filter interviews based on status and date
-  const now = new Date(),
-  const today = startOfDay(now),
-  
+  const now = new Date();
+  const today = startOfDay(now);
   const upcomingInterviews = interviews
     .filter((interview) => {
       const interviewDate = parseISO(interview.scheduled_date),
@@ -64,14 +82,12 @@ import { Button } from "@/components/ui/button",
   
   const pendingInterviews = interviews.filter(interview => 
     interview.status === 'requested'
-  ),
-  
+  );
   const pastInterviews = interviews.filter(interview => {
-    const interviewDate = parseISO(interview.scheduled_date),
-    return !isAfter(interviewDate, now) || 
+    const interviewDate = parseISO(interview.scheduled_date);
+    return !isAfter(interviewDate, now) |
       ['completeddeclinedcancelled'].includes(interview.status)
-  }),
-
+  });
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
     const grouped: Record<string Interview[]> = {},
@@ -202,6 +218,10 @@ function InterviewsContent() {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (
 
+              <InterviewCard
+                key={interview.id}
+              <InterviewCard 
+                key={interview.id} 
 
 import React, { useEffect, useState } from "react",;
 import { useInterviews } from "@/hooks/useInterviews",;
@@ -278,6 +298,7 @@ function InterviewsContent() {;
 
 
 
+
             {interviews && interviews.map((interview) => (;
               <InterviewCard
                 key={interview && interview.id} 
@@ -291,6 +312,7 @@ function InterviewsContent() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 interview={interview}
@@ -395,11 +417,12 @@ function InterviewsContent() {;
 
             )}
 
-
-
-
-
-
+          </TabsContent>
+        </Tabs>
+      </main>
+      <Footer />
+    </>
+  )
 
           </TabsContent>;
         </Tabs>;
@@ -410,7 +433,9 @@ function InterviewsContent() {;
     </>;
   );
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 }
 export default function Interviews() {
@@ -425,7 +450,9 @@ export default function Interviews() {
 
 
 
+
 }
+
 
 
 
@@ -454,6 +481,8 @@ export default function Interviews() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

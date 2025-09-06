@@ -7,6 +7,8 @@ export default function Custom404() {
     <>
       <Head>
 
+
+
         <title>404 - Page Not Found</title>
       </Head>
 
@@ -20,11 +22,15 @@ export default function Custom404() {
             Go Home
 
 
+
+
           </Link>
         </main>
       </div>
     </>
   );
+
+
 
 
   } catch (error) {
@@ -83,4 +89,6 @@ export default function Custom404(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+}
+}
 

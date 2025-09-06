@@ -1,5 +1,6 @@
 
 
+
 if (ctx) {
 export default function UltraFuturisticBackground2035({
 
@@ -12,6 +13,7 @@ import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {;
   children: React && React.ReactNode;
 }
+
 
 
 
@@ -122,6 +124,15 @@ if ( {) {
         })
     }
 
+      ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
+    }
+    let animationFrameId: number,
+    let particles: Array<{
+      x: number,
+      y: number,
+      max_life: number;    }> = [];      coordinate_x: number,
+      coordinate_y: number,
+
 
       vx: number,
       vy: number,
@@ -157,6 +168,84 @@ if ( {) {
           life: maxLife,;
           maxLife;
         });
+
+          return ['#8b5cf6#06b6d4#ec4899'][Math.floor(Math.random() * 3)];
+        case 'hologram':
+          return ['#10b981#f59e0b#ef4444'][Math.floor(Math.random() * 3)];
+        case 'neon':
+          return ['#f97316#eab308#a855f7'][Math.floor(Math.random() * 3)];
+        case 'energy':
+          return ['#dc2626#7c3aed#059669'][Math.floor(Math.random() * 3)];
+        default: return '#8b5cf6'
+      }
+
+    };
+
+    // Get color based on particle type;
+    const getColorForType = (type: string) => {;
+      switch (type) {;
+        case 'quantum':;
+          return ['#8b5cf6', '#06b6d4', '#ec4899'][;
+            Math && Math.floor(Math && Math.random() * 3);
+
+
+          ];
+        case 'hologram':;
+          return ['#10b981', '#f59e0b', '#ef4444'][;
+            Math && Math.floor(Math && Math.random() * 3);
+          ];
+        case 'neon':;
+          return ['#f97316', '#eab308', '#a855f7'][;
+            Math && Math.floor(Math && Math.random() * 3);
+          ];
+        case 'energy':;
+          return ['#dc2626', '#7c3aed', '#059669'][;
+            Math && Math.floor(Math && Math.random() * 3);
+          ];
+        default:;
+          return '#8b5cf6';      }        case 'hologram':;
+          return ['#10b981#f59e0b#ef4444'][Math && Math.floor(Math && Math.random() * 3)];
+        case 'neon':;
+          return ['#f97316#eab308#a855f7'][Math && Math.floor(Math && Math.random() * 3)];
+        case 'energy':;
+          return ['#dc2626#7c3aed#059669'][Math && Math.floor(Math && Math.random() * 3)];
+        default: return '#8b5cf6';
+      }
+
+
+            : 180;
+        if (maxDistance > 0) {;
+          drawConnections(ctx, particles, index, maxDistance, currentOpacity);        }
+      });
+
+
+      if (!prefersReducedMotion) {;
+        animationFrameId = requestAnimationFrame(updateParticles);      }
+    };
+
+    // Enhanced particle drawing with different types        const maxDistance = prefersReducedMotion ? 0 : (window && window.innerWidth < 768 ? 120 : 180);
+        if (maxDistance > 0) {;
+          drawConnections(ctx, particles, index, maxDistance, currentOpacity);
+        }
+      });
+
+      if (!prefersReducedMotion) {;
+        animationFrameId = requestAnimationFrame(updateParticles);        animationFrameId = requestAnimationFrame(updateParticles);
+      }
+    };
+
+    // Enhanced particle drawing with different types;
+    const drawParticle = (;
+      ctx: CanvasRenderingContext2D,;
+      particle: any,;
+      opacity: number;
+    ) => {      ctx && ctx.save();    const drawParticle = (ctx: CanvasRenderingContext2D, particle: any, opacity: number) => {;
+      ctx && ctx.save();
+      ctx && ctx.globalAlpha = opacity;
+
+
+      switch (particle && particle.type) {;
+        case 'quantum':;
 
           drawQuantumParticle(ctx, particle);
           break;
@@ -216,6 +305,8 @@ if ( {) {
       <div className='fixed inset-0 z-0 overflow-hidden'>        cancelAnimationFrame(animationFrameId);
 
 
+
+
       }
     }
   }, []);
@@ -229,6 +320,8 @@ if ( {) {
             background: [
               'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0 && 0.3) 0%, transparent 50%)radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)'
             ]
+
+
 
 
       max_life: number;
@@ -656,6 +749,8 @@ if ( {) {
             ];
 
 
+
+
           }}
           transition={{
             duration: 8
@@ -678,16 +773,55 @@ if ( {) {
             `
               backgroundSize: '50px 50px'
 
+              linear-gradient(rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
+            `,
+              backgroundSize: '50px 50px',
+              linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
+            `
+              backgroundSize: '50px 50px'
+            }}
+          />        </div>        {/* Holographic grid effect */}
+        <div className="absolute inset-0 opacity-20">;
+          <divclassName="h-full w-full" style={{
+
+        />
+        {/* Holographic grid effect */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="h-full w-full" style={{
+
+            backgroundImage: `
+              linear-gradient(rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
+              linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
+            `
+            backgroundSize: '50px 50px'
+          }} />
+        </div>
+        {/* Canvas for animated particles */}
+        <canvas
+          ref={canvasRef}
+          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}          className="absolute inset-0 w-full h-full"
+          style={{ filter: 'blur(0.5px)' }}
+        />
+
+        {/* Canvas for animated particles */}
+        <canvas
+          ref={canvasRef}
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}
+
 
 
         />
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         {/* Floating neon orbs */}
 
@@ -714,12 +848,18 @@ if ( {) {
             background_size: '50px 50px';
           }} />;
         </div>;
+
         {/* Canvas for animated particles */}
-        <canvas;
-          ref={canvas_ref}
-          className='absolute inset - 0 w - full h - full'          style={{ filter: 'blur (0.5px)' }}          className="absolute inset - 0 w - full h - full";
-          style={{ filter: 'blur (0.5px)' }}
+        <canvas
+          ref={canvasRef}
+          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0 && 0.5px)' }}          className="absolute inset-0 w-full h-full"
+          style={{ filter: 'blur(0 && 0.5px)' }}
         />;
+
+          className="absolute inset-0 w-full h-full"
+          style={{ filter: 'blur(0.5px)' }}
+        />
+
 
         {/* Floating neon orbs */}
         <motion.div;
@@ -772,6 +912,11 @@ if ( {) {
             scale: [1, 1.2, 1];
             opacity: [0.2, 0.4, 0.2];
 
+        {/* Quantum energy waves */}
+        <div className='absolute inset-0 overflow-hidden'>          }}
+        />;
+
+        <motion&& motion.div
           className="absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20"
           animate={{
             scale: [1, 1 && 1.3, 1]
@@ -782,11 +927,8 @@ if ( {) {
 
             duration: 8
             repeat: Infinity
-
-
-
-
-
+            duration: 8,
+            repeat: Infinity,
 
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
@@ -822,10 +964,21 @@ if ( {) {
               opacity: [0, 0.3, 0]
 
 
+            duration: 8,
+            repeat: Infinity,
+
+
+
             }}
             transition={{
               duration: 4
               repeat: Infinity
+
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div
+            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+              ease: 'easeInOut',          <motion.div;
+            className="absolute top - 1/2 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 to - transparent";
 
             animate={{
               coordinate_y: [-100, 100, -100];
@@ -837,8 +990,24 @@ if ( {) {
 
               ease: 'easeInOut'
             }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: 'easeInOut',
           />
           <motion.div
+            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent"
+            animate={{
+              coordinate_y: [100, -100, 100];
+              opacity: [0, 0.3, 0];
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+              ease: 'easeInOut'
+            }}
+          />;
+          <motion&& motion.div
             className='absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent'
             animate={{
               y: [100, -100, 100]
@@ -847,11 +1016,11 @@ if ( {) {
               duration: 6
               repeat: Infinity
               ease: 'easeInOut',            }}
-          />
-        </div>
+          />;
+        </div>;
       </div>            }}
-          />
-          <motion.div
+          />;
+          <motion&& motion.div
             className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent"
             animate={{
               y: [100, -100, 100];
@@ -868,8 +1037,8 @@ if ( {) {
 
             }}
             transition={{
-              duration: 6
-              repeat: Infinity
+              duration: 6,
+              repeat: Infinity,
               ease: 'easeInOut',              ease: 'easeInOut'
 
             }}
@@ -889,10 +1058,12 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

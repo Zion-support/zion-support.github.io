@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import { Milestone } from '../../utils/types/milestones';
 
@@ -53,6 +54,7 @@ export default function MilestoneCard({
 
 
 
+
   onAction: (;
     action: 'in_progress' | 'submitted' | 'approved' | 'paid',;
     milestoneId: string;
@@ -94,13 +96,78 @@ export default function MilestoneCard(): any ({;
           </p>;
         </div>;
 
+import React, { useState } from 'react';
+import { Milestone } from '../../utils/types/milestones';
 
+
+type Props = {
+  milestone: Milestone;
+  projectId: string;
+  role: 'client' | 'talent' | 'admin';
+  onAction: (
+    action: 'in_progress' | 'submitted' | 'approved' | 'paid'
+    milestoneId: string
+  ) => Promise<void> | void;
+}
+const statusSteps = [
+  'Pending'
+  'In Progress'
+  'Submitted'
+  'Approved'
+  'Paid'
+] as const;
+export default function MilestoneCard({
+  milestone,
+  projectId,
+  role,
+  onAction,
+}: Props) {;
   const [expanded, setExpanded] = useState(false);
-  const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
-  const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
-  const canTalentSubmit = (role === 'talent' |role === 'admin') && milestone.status === 'In Progress';
-  const canClientApprove = role !== 'talent' && milestone.status === 'Submitted';
-  const canClientMarkPaid = role !== 'talent' && milestone.status === 'Approved';
+  const currentIndex = statusSteps.findIndex(s => s === milestone.status);
+  const canClientMarkInProgress =
+    role !== 'talent' && milestone.status === 'Pending';
+  const canTalentSubmit =
+    (role === 'talent' |role === 'admin') &&
+    milestone.status === 'In Progress';
+  const canClientApprove =
+    role !== 'talent' && milestone.status === 'Submitted';
+  const canClientMarkPaid =
+    role !== 'talent' && milestone.status === 'Approved';
+  return (
+    <div className='border rounded-lg p-4 bg-white shadow-sm'>
+      <div className='flex items-start justify-between'>
+        <div>
+          <h3 className='text-lg font-semibold'>{milestone.title}</h3>
+          <p className='text-sm text-gray-600'>
+            Due: {new Date(milestone.dueDate).toLocaleDateString()}
+          </p>
+        </div>
+        <button
+          className='text-sm text-blue-600'
+          onClick={() => setExpanded(v => !v)}
+        >          {expanded ? 'Hide' : 'Details'}
+        </button>;
+      </div>;
+
+      <div className='mt-3'>;
+        <div className='flex items-center gap-2'>type Props = {;
+  milestone: Milestone,;
+  projectId: string,;
+  role: 'client' | 'talent' | 'admin',;
+  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void;
+};
+
+const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const;
+
+export default function MilestoneCard(): any ({ milestone, projectId, role, onAction }: Props) {;
+  const [expanded, setExpanded] = useState(false);
+
+  const currentIndex = statusSteps && statusSteps.findIndex((s) => s === milestone && milestone.status);
+
+  const canClientMarkInProgress = role !== 'talent' && milestone && milestone.status === 'Pending';
+  const canTalentSubmit = (role === 'talent' || role === 'admin') && milestone && milestone.status === 'In Progress';
+  const canClientApprove = role !== 'talent' && milestone && milestone.status === 'Submitted';
+  const canClientMarkPaid = role !== 'talent' && milestone && milestone.status === 'Approved';
 
 
   return (
@@ -174,7 +241,9 @@ function MilestoneCard() {
                   'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300')
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
                 }
@@ -193,8 +262,9 @@ function MilestoneCard() {
         </div>                <div className={'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300')} />
 
 
+        </button>
+      </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
                 }
                 title={step}
@@ -204,11 +274,13 @@ function MilestoneCard() {
 
 
 
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               )}
@@ -258,7 +330,7 @@ function MilestoneCard() {
                   <li key={a.id}>
                     <a
                       className='text-blue-600 underline'
-                      href={a.url}
+                      href={a && a.url}
                       target='_blank'
                       rel='noreferrer'
                     >                      {a.label |a.url}              <div className="font-medium">Attachments</div>
@@ -274,7 +346,9 @@ function MilestoneCard() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                     </a>
                   </li>
@@ -298,6 +372,8 @@ function MilestoneCard() {
         {canClientMarkInProgress && (
           <button
 
+
+
                     </a>
                   </li>
                 ))}
@@ -308,10 +384,12 @@ function MilestoneCard() {
       )}
 
 
+
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">
         {canClientMarkInProgress && (
           <button
             className="px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700"
+
 
 
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}
@@ -319,7 +397,9 @@ function MilestoneCard() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
 
@@ -334,7 +414,7 @@ function MilestoneCard() {
             Mark In Progress
           </button>
         )}
-{canTalentSubmit && (;
+        {canTalentSubmit && (;
           <button
 
             className='px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700'            onClick={() => onAction('submitted', milestone.id)}            className="px-3 py-1 text-sm rounded bg-amber-600 text-white hover:bg-amber-700"
@@ -346,12 +426,14 @@ function MilestoneCard() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           >
             Submit Work
@@ -371,12 +453,14 @@ function MilestoneCard() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           >
             Approve
@@ -396,12 +480,14 @@ function MilestoneCard() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           >
             Mark as Paid
@@ -410,6 +496,68 @@ function MilestoneCard() {
       </div>
     </div>
 
+);
+  );
+            <div>        <div className="mt - 2 text - xs text - gray - 700">Status: {milestone.status}</div>;
+      </div>;
+      {expanded && (
+        <div className="mt - 4 space - y-2 text - sm text - gray - 800">;
+          <div > Amount: ${milestone.amount_usd.to_fixed (2)}</div>;
+          {milestone.attachments && milestone.attachments.length > 0 && (
+            <div>;
+              <div className='font - medium'>Attachments</div>;
+              <ul className='list - disc ml - 5'>;
+                {milestone.attachments.map (array => (
+                  <li key={a.id}>;
+                    <a;
+                      className='text - blue - 600 underline';
+                      href={a.url}
+                      target='_blank';
+                      rel='noreferrer';
+                    >                      {a.label || a.url}              <div className="font - medium">Attachments</div>;
+              <ul className="list - disc ml - 5">;
+                {milestone.attachments.map ((a) => (
+                  <li key={a.id}>;
+                    <a className="text - blue - 600 underline" href={a.url} target="_blank" rel="noreferrer">;
+                    </a>;
+                  </li>))}
+              </ul>;
+            </div>)}
+        </div>)}
+      <div className='mt - 4 flex flex - wrap gap - 2'>;
+        {canClientMarkInProgress && (
+          <button;
+            className='px - 3 py - 1 text - sm rounded bg - indigo - 600 text - white hover:bg - indigo - 700'            on_click={() => on_action ('in_progress', milestone.id)}      <div className="mt - 4 flex flex - wrap gap - 2">;
+        {canClientMarkInProgress && (
+          <button;
+            className="px - 3 py - 1 text - sm rounded bg - indigo - 600 text - white hover:bg - indigo - 700";
+          >;
+            Mark In Progress;
+          </button>)}
+        {canTalentSubmit && (
+          <button;
+            className='px - 3 py - 1 text - sm rounded bg - amber - 600 text - white hover:bg - amber - 700'            on_click={() => on_action ('submitted', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - amber - 600 text - white hover:bg - amber - 700";
+            on_click={() => on_action ('submitted', milestone.id)}
+          >;
+            Submit Work;
+          </button>)}
+        {canClientApprove && (
+          <button;
+            className='px - 3 py - 1 text - sm rounded bg - green - 600 text - white hover:bg - green - 700'            on_click={() => on_action ('approved', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - green - 600 text - white hover:bg - green - 700";
+            on_click={() => on_action ('approved', milestone.id)}
+          >;
+            Approve;
+          </button>)}
+        {canClientMarkPaid && (
+          <button;
+            className='px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800'            on_click={() => on_action ('paid', milestone.id)}            className="px - 3 py - 1 text - sm rounded bg - slate - 700 text - white hover:bg - slate - 800";
+            on_click={() => on_action ('paid', milestone.id)}
+          >;
+            Mark as Paid;
+          </button>)}
+      </div>;
+    </div>);
+  );
 
 }
 
@@ -420,5 +568,7 @@ function MilestoneCard() {
 
   );
 
+
 }
+
 

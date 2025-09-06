@@ -1,4 +1,18 @@
 
+import Link from "next/link";
+export const metadata = {title: "Zion OS - Sovereign AI-Powered Digital Economies Platform | Zion Tech Group";
+  description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.";
+  keywords: "Zion OS, digital economy, blockchain, governance, marketplace, deployment, sovereign, AI-powered, Zion Tech Group"}
+export default function ZionOSPage() {return (;
+import Link from "next/link",;
+export const metadata = {;
+  title: "Zion OS - Sovereign AI-Powered Digital Economies Platform | Zion Tech Group",;
+  description: "Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.",;
+  keywords: "Zion OS, digital economy, blockchain, governance, marketplace, deployment, sovereign, AI-powered, Zion Tech Group"},;
+export default function ZionOSPage() {;
+  return (;
+    <div className="min-h-screen">;
+
 import Link from './next / link';,
 export const metadata = {
   title: "Zion OS - Sovereign AI - Powered Digital Economies Platform | Zion Tech Group",
@@ -10,7 +24,8 @@ export default /**
 function ZionOSPage() {
   return (
     <div className="min - h-screen">;
-=======
+
+
 import Link from "next/link",;
 export const metadata = {;
   title: "Zion OS - Sovereign AI-Powered Digital Economies Platform | Zion Tech Group",;
@@ -18,7 +33,6 @@ export const metadata = {;
   keywords: "Zion OS, digital economy, blockchain, governance, marketplace, deployment, sovereign, AI-powered, Zion Tech Group"},;
 export default function ZionOSPage() {;
   return (;
-=======
 
 
     <div className="min-h-screen">;
@@ -310,7 +324,7 @@ export default function ZionOSPage() {;
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
             <div className="card text - center">;
               <div className="w - 16 h - 16 bg - blue - 500 / 20 rounded - xl flex items - center justify - center mx - auto mb - 4">;
-                <span className="text - 2xl font - bold text - blue - 400">⚡</span>;
+                <span className="text - 2xl font - bold text - blue - 400"></span>;
               </div>;
               <h3 className="text - lg font - semibold mb - 2">High Performance</h3>;
               <p className="text - gray - 400 text - sm">;
@@ -319,7 +333,7 @@ export default function ZionOSPage() {;
             </div>;
             <div className="card text - center">;
               <div className="w - 16 h - 16 bg - purple - 500 / 20 rounded - xl flex items - center justify - center mx - auto mb - 4">;
-                <span className="text - 2xl font - bold text - purple - 400">🔒</span>;
+                <span className="text - 2xl font - bold text - purple - 400"></span>;
               </div>;
               <h3 className="text - lg font - semibold mb - 2">Enterprise Security</h3>;
               <p className="text - gray - 400 text - sm">;
@@ -328,7 +342,7 @@ export default function ZionOSPage() {;
             </div>;
             <div className="card text - center">;
               <div className="w - 16 h - 16 bg - green - 500 / 20 rounded - xl flex items - center justify - center mx - auto mb - 4">;
-                <span className="text - 2xl font - bold text - green - 400">🌐</span>;
+                <span className="text - 2xl font - bold text - green - 400"></span>;
               </div>;
               <h3 className="text - lg font - semibold mb - 2">Interoperable</h3>;
               <p className="text - gray - 400 text - sm">;
@@ -337,7 +351,7 @@ export default function ZionOSPage() {;
             </div>;
             <div className="card text - center">;
               <div className="w - 16 h - 16 bg - red - 500 / 20 rounded - xl flex items - center justify - center mx - auto mb - 4">;
-                <span className="text - 2xl font - bold text - red - 400">🤖</span>;
+                <span className="text - 2xl font - bold text - red - 400"></span>;
               </div>;
               <h3 className="text - lg font - semibold mb - 2">AI - Powered</h3>;
               <p className="text - gray - 400 text - sm">;

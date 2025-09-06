@@ -5,11 +5,21 @@
 
 
 
+
+
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Badge} from "@/components/ui/badge";
 import {Star} from "lucide-react";
 import {cn} from "@/lib/utils";
+
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { Badge } from "@/components/ui/badge",
+import { Star } from "lucide-react";
+import { cn } from "@/lib/utils";
+interface ProfileHeroProps {
+
 
 
 
@@ -19,6 +29,7 @@ import {cn} from "@/lib/utils";
   rating?: number;
   reviewCount?: number;
   aiScore?: number;
+
 
 
 
@@ -41,6 +52,7 @@ export function ProfileHero(): any ({;
 
 
 
+
 interface ProfileHeroProps {
   name: string,
   title: string,
@@ -53,6 +65,7 @@ interface ProfileHeroProps {
 
   profileType: 'service' | 'talent'
 }
+
 
 
 export function ProfileHero({
@@ -69,6 +82,7 @@ export function ProfileHero({
   profileType
 }: ProfileHeroProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   return (
 
     <div className="w-full overflow-hidden">
@@ -146,12 +160,14 @@ export function ProfileHero({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
@@ -163,6 +179,7 @@ export function ProfileHero({;
                 <Badge
                   variant="outline"
                   className={cn(
+
 
 
 
@@ -205,6 +222,7 @@ export function ProfileHero({;
 
 
 
+
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}>;
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
@@ -228,9 +246,10 @@ export function ProfileHero({;
 
                     )}
 
-
-
-
+                  </div>
+                )}
+                  </div>;
+                  </div>;
 
                 )}
                 
@@ -251,7 +270,6 @@ export function ProfileHero({;
                   </div>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
                 )}
-=======
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 import { AspectRatio } from '@/components / ui / aspect - ratio';
 import { Badge } from '@/components / ui / badge';
@@ -308,25 +326,38 @@ function ProfileHero() {
               <h2 className="text - lg md:text - xl text - zion - slate - light mb - 1">{title}</h2>;
               <div className="flex flex - wrap items - center gap - 3 mt - 2">;
                 {location && (
-                  <span className="text - sm text - zion - slate - light">{location}</span>)}
+                  <span className="text-sm text-zion-slate-light">{location}</span>
+                )}
                 {rating && (
-                  <div className="flex items - center gap - 1">;
-                    <Star className="w - 4 h - 4 fill - zion - cyan text - zion - cyan" />;
-                    <span className="text - white font - medium">{rating.to_fixed (1)}</span>;
-                    {review_count && (
-                      <span className="text - zion - slate - light text - sm">({review_count})</span>)}
-                  </div>)}
-                {ai_score && (
-                  <div className="px - 2 py - 0.5 rounded bg - zion - purple / 20 text - xs font - medium text - zion - cyan">;
-                    AI Match: {ai_score}%;
-                  </div>)}
-
+                  <div className="flex items-center gap-1">
+                    <Star className="w-4 h-4 fill-zion-cyan text-zion-cyan" />
+                    <span className="text-white font-medium">{rating.toFixed(1)}</span>
+                    {reviewCount && (
+                      <span className="text-zion-slate-light text-sm">({reviewCount})</span>
+                    )}
+                  </div>;
+                )}
+                {aiScore && (
+                  <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">
+                    AI Match: {aiScore}%
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
-
+    </div>;
+  );
+}
     </div>);
 }
 

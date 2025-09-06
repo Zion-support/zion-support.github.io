@@ -24,16 +24,16 @@ const Button: React.FC < ButtonProps> = ({
   disabled = false,
   style
 }) => {
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
+  const baseClasses = "px-4 py-2 rounded-md font-medium transition-colors duration-200"
+  const sizeClasses = {
+    sm: "px-3 py-1.5 text-sm",
+    md: "px-4 py-2 text-base",
+    lg: "px-6 py-3 text-lg"
   }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
+  const variantClasses = {
+    primary: "bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-400",
+    secondary: "bg-gray-600 text-white hover:bg-gray-700 disabled:bg-gray-400",
+    outline: "border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:bg-gray-100"
   }
   
   componentDidCatch(error, errorInfo) {
@@ -94,7 +94,7 @@ const Button: React.FC<ButtonProps> = ({;
   if (href) {;
 
     return (
-      <Link href={href} className={classes} style={style}>
+      <Link href={href} className={classes} style={style}>;
         {content}
 
       </Link>;
@@ -123,10 +123,10 @@ if ( {) {
       </Link>);
   }
   return (
-    <button
+    <button;
       type={type}
       className={classes}
-      onClick={onClick}
+      on_click={on_click}
       disabled={disabled}
 
     </button>;

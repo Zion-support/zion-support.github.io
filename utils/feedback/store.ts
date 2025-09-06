@@ -4,11 +4,13 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   id: string;
@@ -17,11 +19,13 @@
   rating: number;
 
 
+
   metadata: Record<string, any>;
   createdAt: string;
   ip: string;
 }
 const feedbackData: FeedbackRecord[] = [];
+
 
 
 
@@ -48,6 +52,49 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   return rec;
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {;
+  feedbackData.push(feedback);
+  console.log('Feedback saved:', feedback.id);
+}
+
+export function writeAll(rows: any[]): void {;
+  console.log('Writing feedback rows:', rows.length);
+  // Implementation would write to database or file
+}
+
+export function getAllFeedback(): FeedbackRecord[] {;
+  return [...feedbackData];
+  metadata: Record < string, any>;
+  created_at: string;
+  ip: string;
+}
+const feedbackData: FeedbackRecord[] = [];
+export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {
+  feedbackData.push(feedback);
+  console.log('Feedback saved:', feedback.id);
+}
+
+export function writeAll(rows: any[]): void {;
+  console.log('Writing feedback rows:', rows.length);
+  // Implementation would write to database or file
+}
+export function getAllFeedback(): FeedbackRecord[] {
+  return [...feedbackData];
+
+
+export async function saveFeedbackFallback(feedback: FeedbackRecord): Promise<void> {;
+  feedbackData.push(feedback);
+  console.log('Feedback saved:', feedback.id);
+}
+
+export function writeAll(rows: any[]): void {;
+  console.log('Writing feedback rows:', rows.length);
+  // Implementation would write to database or file
+}
+
+export function getAllFeedback(): FeedbackRecord[] {;
+  return [...feedbackData];
+
+}
 

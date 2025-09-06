@@ -69,7 +69,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🚀',
+  ',
     "color": 'from-purple-600 to-indigo-700,
     textColor:,
   text-purple-400',
@@ -128,7 +128,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": false,
     icon:,
-  🧬',
+  ',
     "color": 'from-green-600 to-emerald-700,
     textColor:,
   text-green-400',
@@ -196,7 +196,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🧠',
+  ',
     "color": 'from-pink-600 to-rose-700,
     textColor:,
   text-pink-400',
@@ -264,7 +264,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  ⚡',
+  ',
     "color": 'from-yellow-600 to-amber-700,
     textColor:,
   text-yellow-400',
@@ -332,7 +332,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🚗',
+  ',
     "color": 'from-blue-600 to-indigo-700,
     textColor:,
   text-blue-400',
@@ -400,7 +400,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🔬',
+  ',
     "color": 'from-indigo-600 to-purple-700,
     textColor:,
   text-indigo-400',
@@ -468,7 +468,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🤖',
+  ',
     "color": 'from-gray-600 to-slate-700,
     textColor:,
   text-gray-400',
@@ -536,7 +536,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🌐',
+  ',
     "color": 'from-red-600 to-pink-700,
     textColor:,
   text-red-400',
@@ -604,7 +604,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🚚',
+  ',
     "color": 'from-orange-600 to-red-700,
     textColor:,
   text-orange-400',
@@ -672,7 +672,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🌍',
+  ',
     "color": 'from-teal-600 to-cyan-700,
     textColor:,
   text-teal-400',
@@ -740,7 +740,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🧠',
+  ',
     "color": 'from-purple-600 to-indigo-600,
     textColor:,
   text-purple-400',
@@ -819,7 +819,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  ⚡
+  
   ',
     "color": 'from-blue-600 to-cyan-600,
     textColor:,
@@ -912,7 +912,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🧬
+  
   ',
     "color": 'from-green-600 to-emerald-600,
     textColor:,
@@ -994,7 +994,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🚀
+  
   ',
     "color": 'from-purple-500 to-indigo-600,
     textColor:,
@@ -1101,7 +1101,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🧠
+  
   ',
     "color": 'from-pink-500 to-purple-600,
     textColor:,
@@ -1211,7 +1211,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": false,
     icon:,
-  ⚛️
+  
   ',
     "color": 'from-cyan-500 to-blue-600,
     textColor:,
@@ -1318,7 +1318,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🚗
+  
   ',
     "color": 'from-green-500 to-emerald-600,
     textColor:,
@@ -1428,7 +1428,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": false,
     icon:,
-  🧬
+  
   ',
     "color": 'from-emerald-500 to-teal-600,
     textColor:,
@@ -1535,7 +1535,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  ⚡
+  
   ',
     "color": 'from-yellow-500 to-orange-600,
     textColor:,
@@ -1683,7 +1683,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🚀',
+  ',
     "color": 'from-purple-600 to-indigo-700,
     textColor:,
   text-purple-400',
@@ -1742,7 +1742,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": false,
     icon:,
-  🧬',
+  ',
     "color": 'from-green-600 to-emerald-700,
     textColor:,
   text-green-400',
@@ -1810,7 +1810,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🧠',
+  ',
     "color": 'from-pink-600 to-rose-700,
     textColor:,
   text-pink-400',
@@ -1878,7 +1878,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  ⚡',
+  ',
     "color": 'from-yellow-600 to-amber-700,
     textColor:,
   text-yellow-400',
@@ -1946,7 +1946,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🚗',
+  ',
     "color": 'from-blue-600 to-indigo-700,
     textColor:,
   text-blue-400',
@@ -2014,7 +2014,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🔬',
+  ',
     "color": 'from-indigo-600 to-purple-700,
     textColor:,
   text-indigo-400',
@@ -2082,7 +2082,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🤖',
+  ',
     "color": 'from-gray-600 to-slate-700,
     textColor:,
   text-gray-400',
@@ -2150,7 +2150,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🌐',
+  ',
     "color": 'from-red-600 to-pink-700,
     textColor:,
   text-red-400',
@@ -2218,7 +2218,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🚚',
+  ',
     "color": 'from-orange-600 to-red-700,
     textColor:,
   text-orange-400',
@@ -2286,7 +2286,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🌍',
+  ',
     "color": 'from-teal-600 to-cyan-700,
     textColor:,
   text-teal-400',
@@ -2354,7 +2354,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🧠',
+  ',
     "color": 'from-purple-600 to-indigo-600,
     textColor:,
   text-purple-400',
@@ -2433,7 +2433,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  ⚡
+  
   ',
     "color": 'from-blue-600 to-cyan-600,
     textColor:,
@@ -2526,7 +2526,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🧬
+  
   ',
     "color": 'from-green-600 to-emerald-600,
     textColor:,
@@ -2608,7 +2608,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🚀
+  
   ',
     "color": 'from-purple-500 to-indigo-600,
     textColor:,
@@ -2715,7 +2715,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🧠
+  
   ',
     "color": 'from-pink-500 to-purple-600,
     textColor:,
@@ -2825,7 +2825,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": false,
     icon:,
-  ⚛️
+  
   ',
     "color": 'from-cyan-500 to-blue-600,
     textColor:,
@@ -2932,7 +2932,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  🚗
+  
   ',
     "color": 'from-green-500 to-emerald-600,
     textColor:,
@@ -3042,7 +3042,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": false,
     icon:,
-  🧬
+  
   ',
     "color": 'from-emerald-500 to-teal-600,
     textColor:,
@@ -3149,7 +3149,7 @@ export const "emergingTechServicesEnhanced2025": EmergingTechService[] = [{
     ],
     "popular": true,
     icon:,
-  ⚡
+  
   ',
     "color": 'from-yellow-500 to-orange-600,
     textColor:,

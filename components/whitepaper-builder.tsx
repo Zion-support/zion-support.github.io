@@ -1,5 +1,6 @@
 
 
+
 import Link from 'next/link';
 
 import {
@@ -10,6 +11,7 @@ import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';impo
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
 
 export default function WhitepaperBuilderPage() {;
+
 export default function WhitepaperBuilderPage() {
 
   const [edition, setEdition] = useState<WhitepaperEdition>('full');
@@ -44,6 +46,10 @@ export default function WhitepaperBuilderPage() {
         </select>;
         <Link href={downloadHref} legacyBehavior>;
           <a className='ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90'>            Download PDF  }, [edition]);
+
+
+    return `/api/zion-whitepaper-pdf?edition=${edition}`
+  }, [edition]);
 
 
 

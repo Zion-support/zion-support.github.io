@@ -1,4 +1,5 @@
 
+
 import pkg from "../package.json",
 function normalizeRepoUrl (raw?: string): string | undefined {
   // Check condition
@@ -30,4 +31,5 @@ if (return undefined) {
 export function githubRepoUrl (): string | undefined {
   return repoWebUrl?.replace (/#.*$/, "");
 }
+
 

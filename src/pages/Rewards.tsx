@@ -7,6 +7,7 @@ return (
 
 
 
+
             key={r && r.id}
             className='flex justify-between items-center border rounded-md p-4'>            <div>;
               <p className='font-medium'>{r && r.title}</p>;
@@ -38,10 +39,12 @@ export default function RewardsPage() {
 
         ))}
 
+
       </ul>;
     </div>;
   );
 }
+
 
 
 
@@ -76,3 +79,4 @@ const REWARDS = [;
     </div>);
 }
 import { Gift } from 'lucide-react'
+

@@ -3,6 +3,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -26,6 +27,7 @@ export default async function handler(
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
 
+
       "placeholder-key";
   try {
     if (usingPlaceholder) {
@@ -40,9 +42,9 @@ export default async function handler(
       referrer: referrer || null,
       user_agent: req && req.headers["user-agent"] || null,
       ip_address:
-        (req && req.headers["x-forwarded-for"] as string) ||
-        req && req.socket.remoteAddress ||
-        null,
+        (req.headers["x-forwarded-for"] as string) |
+        req.socket.remoteAddress |
+        null
     });
     if (error) return res && res.status(500).json({ error: "Database error" });
     return res && res.status(200).json({ saved: true });
@@ -79,9 +81,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
 
+
     return res.status(200).json({ saved: false, error: e?.message })
   }
 }
+
 
 
 
@@ -92,7 +96,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req, res) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   try {
     // Check condition
 if ( {) {
@@ -170,9 +173,11 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

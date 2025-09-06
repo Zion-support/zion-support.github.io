@@ -3,16 +3,20 @@
 
 
 
+
 export const metadata = { 
   title: 'IT Services | Zion Tech Group',
   description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and enterprise solutions for modern businesses.',
   keywords: 'IT services, cloud migration, DevOps, cybersecurity, infrastructure, enterprise IT, cloud consulting, SRE'
+
 
 };
 
 
 export default function ITServicesPage() {
   return (
+
+
 
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -137,11 +141,14 @@ function ITPricingCard({
             : 'border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white'
         }`}
 
+
+
       >
         Get Started
       </a>
     </div>
   );
+
 
 }
 
@@ -246,3 +253,4 @@ function Pricing() {
 
 
 >>>>>>> origin/final-merged-improvements
+

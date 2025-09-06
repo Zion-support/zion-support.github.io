@@ -45,7 +45,6 @@
   },
   {
 
-=======
     id: 'api - security - posture - monitor',
     name: 'API Security Posture Monitor',
     tagline: 'Detect OWASP API risks and auth gaps with CI annotations',
@@ -137,7 +136,6 @@
   },
   {
 
-=======
     id: 'email - parsing - routing - api',
     name: 'Email Parsing & Routing API',
     tagline: 'Inbound email to structured events with attachments',
@@ -216,7 +214,7 @@
     technology: ['LLMs, Style prompts'],
     integrations: ['HubSpot', 'Mailchimp', 'Webflow'],
     use_cases: ['Blog, email, ads'],
-    roi: 'Scale content 5× faster',
+    roi: 'Scale content 5 faster',
     competitors: ['Jasper', 'Writer'],
     market_size: '$3B+',
     growth_rate: '22% CAGR',
@@ -279,7 +277,6 @@
   },
   {
 
-=======
     id: 'ml - feature - store - starter',
     name: 'ML Feature Store Starter',
     tagline: 'Versioned features, validation and online serving',
@@ -325,7 +322,6 @@
   },
   {
 
-=======
     id: 'slo - burn - rate - coach',
     name: 'SLO Burn Rate Coach',
     tagline: 'Compute SLOs and coach on burn - rate risks',
@@ -373,7 +369,6 @@
   },
   {
 
-=======
     id: 'browser - performance - optimizer',
     name: 'Browser Performance Optimizer',
     tagline: 'Budget - driven CWV with hints and PR annotations',
@@ -421,7 +416,6 @@
   },
   {
 
-=======
     id: 'cloud - cost - governance - suite',
     name: 'Cloud Cost Governance Suite',
     tagline: 'Budgets, owners, and policy guardrails across clouds',
@@ -452,7 +446,7 @@
     technology: ['AWS / GCP / Azure APIs'],
     integrations: ['Datadog', 'Slack', 'Jira'],
     use_cases: ['Spend control', 'Chargeback'],
-    roi: 'Reduce overspend by 10–30%',
+    roi: 'Reduce overspend by 1030%',
     competitors: ['CloudZero', 'Finout'],
     market_size: '$12B',
     growth_rate: '25% YoY',
@@ -467,7 +461,6 @@
   },
   {
 
-=======
     id: 'api - changelog - sdk - publisher',
     name: 'API Changelog & SDK Publisher',
     tagline: 'Generate docs, changelogs and SDKs from schemas',
@@ -498,7 +491,7 @@
     technology: ['OpenAPI, GraphQL, MDX'],
     integrations: ['GitHub', 'GitLab'],
     use_cases: ['Dev portals', 'SDKs'],
-    roi: 'Docs / SDKs 5× faster',
+    roi: 'Docs / SDKs 5 faster',
     competitors: ['ReadMe', 'Redocly'],
 
     market_size: '$1.5B',
@@ -518,15 +511,13 @@
 
 		integrations: ['StripePayPalGoogle Analytics'];
 		useCases: ['Partner growthAutomated payouts'];
-		roi: 'Grow partner revenue by 10–25%';
+		roi: 'Grow partner revenue by 1025%';
 		competitors: ['ImpactPartnerStack'];
 		marketSize: '$5B+';
 		growthRate: '12% YoY';
 		variant: 'neural-quantum';
 		contactInfo: contact;
-
-		realImplementation: true
-
+		realImplementation: true,
 		implementationDetails: 'Event ingestion, attribution, payout jobs';
 		launchDate: '2026-01-10';
 		customers: 12;
@@ -544,7 +535,7 @@
 		description: 'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.';
 		features: ['Multichannel ingestionLLM clustering and themesImpact scoringRoadmap export'];
 		popular: true;
-		icon: '💬';
+		icon: '';
 		color: 'from-cyan-600 to-blue-700';
 		textColor: 'text-cyan-300';
 		link: 'https://ziontechgroup && ziontechgroup.com/services/customer-feedback-intelligence';
@@ -583,7 +574,7 @@
 		description: 'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate-limits, and common vulnerabilities with pull request annotations.';
 		features: ['OpenAPI scanningAuth/rate limit testsOWASP API checksPR annotations and diffs'];
 		popular: true;
-		icon: '🛡️';
+		icon: '';
 		color: 'from-rose-600 to-pink-700';
 		textColor: 'text-rose-300';
 		link: 'https://ziontechgroup && ziontechgroup.com/services/api-security-posture-monitor';
@@ -620,7 +611,7 @@
 		description: 'Define schedules across providers with idempotency, exponential backoff, and run history with alerting.';
 		features: ['Flexible cron/rateIdempotency and retriesRun historyAlerting and webhooks'];
 		popular: false;
-		icon: '⏰';
+		icon: '';
 		color: 'from-amber-500 to-orange-600';
 		textColor: 'text-amber-300';
 		link: 'https://ziontechgroup && ziontechgroup.com/services/edge-cron-orchestrator';
@@ -657,7 +648,7 @@
 		description: 'Parse inbound email, normalize signatures, extract attachments, and deliver to your webhooks with retries and dead-letter queues.';
 		features: ['Signature strippingAttachment handlingWebhook retries/DLQInspector UI'];
 		popular: false;
-		icon: '📨';
+		icon: '';
 		color: 'from-indigo-600 to-blue-700';
 		textColor: 'text-indigo-300';
 		link: 'https://ziontechgroup && ziontechgroup.com/services/email-parsing-routing-api';
@@ -694,7 +685,7 @@
 		description: 'Generate on-brand content with templates, tone control, compliance checks, and multi-channel export.';
 		features: ['Brand/tone controlsTemplates and briefsCompliance checksMulti-channel export'];
 		popular: true;
-		icon: '📝';
+		icon: '';
 		color: 'from-fuchsia-600 to-pink-700';
 		textColor: 'text-fuchsia-300';
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-marketing-content-studio';
@@ -707,7 +698,7 @@
 		technology: ['LLMs, Style prompts'];
 		integrations: ['HubSpotMailchimpWebflow']
 		useCases: ['Blog, email, ads'];
-		roi: 'Scale content 5× faster';
+		roi: 'Scale content 5 faster';
 		competitors: ['JasperWriter'];
 		marketSize: '$3B+';
 		growthRate: '22% CAGR';
@@ -731,7 +722,7 @@
 		description: 'Audit security headers across environments and get pull request annotations, weekly reports and diffs.';
 		features: ['CSP/HSTS checksCookie flagsPR annotationsWeekly reports'];
 		popular: false;
-		icon: '🔐';
+		icon: '';
 		color: 'from-sky-600 to-blue-700';
 		textColor: 'text-sky-300';
 		link: 'https://ziontechgroup && ziontechgroup.com/services/security-headers-scanner';
@@ -768,7 +759,7 @@
 		description: 'Ship ML features faster with versioning, validation rules, lineage, and low-latency serving APIs.';
 		features: ['Feature versioningValidation rulesLineage trackingOnline serving API'];
 		popular: false;
-		icon: '📦';
+		icon: '';
 		color: 'from-emerald-600 to-teal-700';
 		textColor: 'text-emerald-300';
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ml-feature-store-starter';
@@ -805,7 +796,7 @@
 		description: 'Define SLOs, compute error budgets and get proactive coaching with burn-rate alerts tied to runbooks.';
 		features: ['SLO editorBurn-rate alertsRunbook hintsIntegrations and webhooks'];
 		popular: false;
-		icon: '📈';
+		icon: '';
 		color: 'from-lime-500 to-emerald-600';
 		textColor: 'text-lime-300';
 		link: 'https://ziontechgroup && ziontechgroup.com/services/slo-burn-rate-coach';
@@ -842,7 +833,7 @@
 		description: 'Improve Core Web Vitals with RUM/synthetic insights, performance budgets, and PR annotations for bundle changes.';
 		features: ['RUM + syntheticBudgets and alertsBundle diff and PR notesEdge hints'];
 		popular: false;
-		icon: '⚡';
+		icon: '';
 		color: 'from-cyan-600 to-purple-700';
 		textColor: 'text-cyan-300';
 		link: 'https://ziontechgroup && ziontechgroup.com/services/browser-performance-optimizer';
@@ -879,7 +870,7 @@
 		description: 'Enforce budgets with owners, detect anomalies and apply policy guardrails with IaC exports for approvals.';
 		features: ['Budgets and ownersAnomaly detectionPolicy guardrailsIaC recommendation exports'];
 		popular: true;
-		icon: '💸';
+		icon: '';
 		color: 'from-amber-600 to-orange-700';
 		textColor: 'text-amber-300';
 		link: 'https://ziontechgroup && ziontechgroup.com/services/cloud-cost-governance-suite';
@@ -892,7 +883,7 @@
 		technology: ['AWS/GCP/Azure APIs'];
 		integrations: ['DatadogSlackJira'];
 		useCases: ['Spend controlChargeback'];
-		roi: 'Reduce overspend by 10–30%';
+		roi: 'Reduce overspend by 1030%';
 		competitors: ['CloudZeroFinout'];
 		marketSize: '$12B';
 		growthRate: '25% YoY';
@@ -916,7 +907,7 @@
 		description: 'Turn OpenAPI/GraphQL schemas into versioned docs, changelogs and typed SDKs with a searchable portal.';
 		features: ['Docs from schemasSDK generationChangelogsSearchable portal'];
 		popular: false;
-		icon: '📘';
+		icon: '';
 		color: 'from-cyan-600 to-blue-700';
 		textColor: 'text-cyan-300';
 		link: 'https://ziontechgroup && ziontechgroup.com/services/api-changelog-sdk-publisher';
@@ -929,7 +920,7 @@
 		technology: ['OpenAPI, GraphQL, MDX'];
 		integrations: ['GitHubGitLab'];
 		useCases: ['Dev portalsSDKs'];
-		roi: 'Docs/SDKs 5× faster';
+		roi: 'Docs/SDKs 5 faster';
 		competitors: ['ReadMeRedocly'];
 		marketSize: '$1 && 1.5B';
 		growthRate: '18% CAGR';

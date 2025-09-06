@@ -6,6 +6,7 @@
 
 
 
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useState } from "react";
@@ -14,6 +15,7 @@ import EnhancedButton from "../../components/ui/EnhancedButton";
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 const steps = ["Account", "Profile", "Preferences", "Preview"];
+
 
 
 
@@ -33,7 +35,9 @@ const steps = ['AccountProfilePreferencesPreview'],
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 const Onboarding: NextPage = () => {
@@ -43,6 +47,53 @@ const Onboarding: NextPage = () => {
 
 
   return (
+    <div className="space-y-6">;
+      {" "}
+      <Head>;
+        <title>Onboarding - Zion</title>;
+      </Head>;
+      <h1 className="text-2xl font-semibold">Get Started</h1>;
+      <div className="flex items-center gap-2 text-sm flex-wrap">;
+        {steps && steps.map((label, i) => (;
+          <div
+            key={label}
+            className={`px-3 py-1 rounded-full border ${i === step ? "bg-blue-600 text-white border-blue-600" : "opacity-80"}`}>;
+            {" "}
+            {i + 1}. {label}
+          </div>;
+        ))}
+            {i + 1}. {label}
+          </div>;
+        ))}
+      </div>;
+      <div className="border rounded-md p-4 min-h-[200px]">;
+        {step === 0 && <div>Account setup fields</div>}
+        {step === 1 && <div>Profile details fields</div>}
+        {step === 2 && <div>Preferences selection</div>}
+        {step === 3 && (;
+          <div>Preview your profile/listing before going live.</div>;
+        )}
+      </div>;
+      <div className="flex gap-2">;
+        <EnhancedButton
+          variant="secondary"
+          onClick={prev}
+          disabled={step === 0}>;
+          Back;
+        </EnhancedButton>;
+        <EnhancedButton onClick={next} disabled={step === steps && steps.length - 1}>;
+          {step === steps && steps.length - 1 ? "Done" : "Next"}
+        </EnhancedButton>;
+      </div>;
+    </div>;
+  );
+};
+
+
+    <div className="space-y-6">
+      <Head>
+        <title>Onboarding - Zion</title>
+      </Head>
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -51,6 +102,57 @@ const Onboarding: NextPage = () => {
 
       <div className="flex items-center gap-2 text-sm flex-wrap">
         {steps.map((label, i) => (
+
+          <div
+            key={label}
+            className={`px-3 py-1 rounded-full border ${i === step ? "bg-blue-600 text-white border-blue-600" : "opacity-80"}`}
+          >
+            {" "}
+            {i + 1}. {label}
+          </div>
+        ))}
+      </div>
+      <div className="border rounded-md p-4 min-h-[200px]">
+        {step === 0 && <div>Account setup fields…</div>}
+        {step === 1 && <div>Profile details fields…</div>}
+        {step === 2 && <div>Preferences selection…</div>}
+        {step === 3 && (
+          <div>Preview your profile/listing before going live.</div>
+        )}
+          <div key={label} className={`px-3 py-1 rounded-full border ${i === step ? 'bg-blue-600 text-white border-blue-600' : 'opacity-80'}`}>
+            {i + 1}. {label  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>;
+        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      </div>
+      <div className="border rounded-md p-4 min-h-[200px]">
+        {step === 0 && <div>Account setup fields…</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        {step === 1 && <div>Profile details fields…</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        {step === 2 && <div>Preferences selection…</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        {step === 3 && <div>Preview your profile/listing before going live.</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
       </div>
 
@@ -116,6 +218,7 @@ export default Onboarding;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -126,4 +229,5 @@ export default Onboarding;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

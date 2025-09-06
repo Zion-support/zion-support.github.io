@@ -12,6 +12,7 @@ interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement
 
 
 
+
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn('px-3 py-2', className)}        {...props}
       >
@@ -27,12 +28,14 @@ interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement
             </div>
             {showChevron && (
               <ChevronDown
+
                 className={cn(
                   'h-4 w-4 transition-transform'
                   expanded ? 'rotate-0' : '-rotate-90'
                 )}              />
                 className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}
               />
+
 
 
             )}
@@ -101,4 +104,5 @@ export { SidebarGroup }
 SidebarGroup.displayName = 'SidebarGroup';
 export { SidebarGroup };
 }
+
 

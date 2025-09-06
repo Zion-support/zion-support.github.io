@@ -1,10 +1,36 @@
 
+import { useRouter  } from 'next/router';
+import {useRouter} from 'next/router';
 
 import useSWR from 'swr';
 import { TALENT_PROFILES  } from '../../../../data/talent';
 import Link from 'next/link';
 
 const fetcher = (url: string) => fetch(url).then(r => r.json());
+
+export default function JobApplicantsPage() {
+  const router = useRouter()
+  const { id } = router.query;
+  const { data: appsData } = useSWR(
+    id ? `/api/applications?jobId=${id}` : null
+    fetcher
+  );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
+
+
+  const job = jobData?.job;
+  const applications = (appsData?.applications as any[]) |[];
+
+export default function JobApplicantsPage() {
+  const router = useRouter(),;
+  const { id } = router.query;
+  const { data: appsData } = useSWR(
+    id ? `/api/applications?jobId=${id}` : null,
+    fetcher
+  );  const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher);
+
+  const job = jobData?.job;
+  const applications = (appsData?.applications as any[]) || [];
+
 
 import { useRouter } from 'next/router'
 import useSWR from 'swr'
@@ -18,6 +44,8 @@ export default function JobApplicantsPage() {
   const { data: jobData } = useSWR(id ? `/api/jobs/${id}` : null, fetcher),
   const job = jobData?.job
   const applications = (appsData?.applications as any[]) || []
+
+
 
 
   return (
@@ -70,17 +98,9 @@ export default function JobApplicantsPage() {_const _router = useRouter();
         <h1 className="text-2xl font-semibold">Applicants</h1>
         <Link href="/client/dashboard"><a className="text-sm underline">Back to Dashboard</a></Link>
       </div>
-      {_job && <p className="text-sm text-gray-600">For job: {job.title}</p>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+      {job && <p className="text-sm text-gray-600">For job: {job.title}</p>}
       <div className="grid gap-3">
-        {applications.length === 0 && <p className="text-sm text-gray-500">No applicants yet.</p>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+        {applications.length === 0 && <p className="text-sm text-gray-500">No applicants yet.</p>}
         {applications.map((a) => {
           const talent = TALENT_PROFILES.find((t) => t.slug === a.talentSlug)
           return (
@@ -98,14 +118,23 @@ export default function JobApplicantsPage() {_const _router = useRouter();
           );
         })}
 
+      </div>
+    </div>
+);
 
+}
+          )
+        })  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       </div>;
     </div>;
   );
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 

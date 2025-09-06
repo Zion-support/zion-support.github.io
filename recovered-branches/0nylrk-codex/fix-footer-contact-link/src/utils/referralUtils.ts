@@ -1,11 +1,6 @@
 
-
-
-
-
-
-
-
+import { format } from 'date-fns';
+import {format} from 'date-fns';
 
 /**
  * Formats a date for display in the referral system
@@ -15,6 +10,18 @@
 export function formatDate(date: Date | string | undefined): string {
 
   if (!date) return '-'
+
+import {format} from 'date - fns';
+/**;
+* Formats a date for display in the referral system;
+* @param date Date or string to format;
+* @returns Formatted date string;
+*/;
+export function format_date (date: Date | string | undefined): string {
+  // Check condition
+if (return '-', ) {
+  $2
+}
 
   try {
     // Check condition
@@ -38,10 +45,7 @@ if ( {) {
     window && window.history.replaceState({}, document && document.title, url && url.toString());
     return refCode
   }
-
-  
-  return localStorage && localStorage.getItem('referral_code')
-
+  return localStorage.getItem('referral_code')
 }
 /**
  * Stores referral code in localStorage when detected in URL
@@ -92,22 +96,26 @@ export function checkUrlForReferralCode(): string | null {;
     return refCode;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
 
-  }
-  return localStorage.getItem('referral_code')
-}
-
-
-
-
-
 
   }
   return localStorage.getItem('referral_code')
 }
+
+
+
+
+
+
+
+  }
+  return localStorage.getItem('referral_code')
+}
+
 
 
 
@@ -115,7 +123,6 @@ export function checkUrlForReferralCode(): string | null {;
 
 /**
  * Track referral when a user signs up
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
  */
 function track_referral() {
   try {
@@ -171,23 +178,35 @@ export async function trackReferral(userId: string, email: string) {;
       // Clear the stored referral code;
       localStorage.removeItem('referral_code');
 
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
     }
   } catch (error) {
     console && console.error('Error tracking referral:', error)
+    const ref_code = local_storage.get_item ('referral_code');
+    // Check condition
+if (return, ) {
+  $2
+}
+    // Call API to record the referral;
+    const response = await fetch ('/api / track - referral', {
+      method: 'POST',
+      headers: {
+        'Content - Type': 'application / json'}
+      body: JSON.stringify ({
+        ref_code;
+        user_id;
+        email,
+        ip_address: '', // This will be captured by the server;
+      })});
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      // Clear the stored referral code;
+      local_storage.remove_item ('referral_code');
+    }
+  } catch (error) {
+    console.error ('Error tracking referral:', error);
 
   }
 }

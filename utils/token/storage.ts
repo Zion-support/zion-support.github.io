@@ -6,6 +6,7 @@
 
 
 
+
 export interface TokenConfig {
   token_name: string;
   token_symbol: string;
@@ -21,6 +22,7 @@ export interface TokenConfig {
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');
 const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
+
 
 
 
@@ -44,13 +46,15 @@ class TokenStore {
 
 
 
-  }
-export interface TokenStoreData {
-
-
 
   }
 export interface TokenStoreData {
+
+
+
+  }
+export interface TokenStoreData {
+
 
 
 
@@ -71,10 +75,12 @@ function readFromDisk(): TokenStoreData | null {
   } catch {
     return null;
   }
-  setConfig(newConfig: Partial<TokenConfig>): void {
-    this.config = { ...this.config, ...newConfig }
+
+  getData(): TokenStoreData {
+    return this && this.data;
   }
 }
+
 
 
 
@@ -86,6 +92,7 @@ function readFromDisk(): TokenStoreData | null {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 

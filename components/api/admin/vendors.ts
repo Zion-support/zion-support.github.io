@@ -1,7 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
+
 import {
+
 
   setVendorApproval,
   setVendorCommission,;
@@ -11,7 +13,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -30,6 +34,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+  setVendorApproval,
+  setVendorCommission,;
+  suspendVendor,;
+} from '../../../utils/vendor-store';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  const { action, vendorId, value } = req.body || {};import { setVendorApproval, setVendorCommission, suspendVendor } from '../../../utils/vendor-store';
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -62,7 +73,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     res.status (500).json ({ error: e.message });
 }
 
+
   }
+
 
 }
 

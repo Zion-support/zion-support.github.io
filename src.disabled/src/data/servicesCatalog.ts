@@ -1729,13 +1729,13 @@ export const "servicesCatalog": ServiceCategory[] = [{
 			{
 				"id": 'kubernetes-cost-analyzer',
 				"title": 'Kubernetes Cost Analyzer',
-				"description": 'Allocation, rightsizing, and bin‑packing insights by team/namespace with chargeback reports.',
+				"description": 'Allocation, rightsizing, and binpacking insights by team/namespace with chargeback reports.',
 				"category": 'Cloud & DevOps',
 				"price": '$99',
 				"billing": 'month',
 				"features": ['Cost allocation by namespace/team',
 					'Requests/limits advisor',
-					'Bin‑packing recommendations',
+					'Binpacking recommendations',
 					'Chargeback/showback reports',
 					'Slack/Grafana integrations'
 				],
@@ -2026,7 +2026,7 @@ export const "servicesCatalog": ServiceCategory[] = [{
 			{
 				"id": 'carbon-accounting-saas',
 				"title": 'Carbon Accounting & ESG Reporting',
-				"description": 'Automate Scope 1–3 emissions tracking with audit-ready ESG disclosures.',
+				"description": 'Automate Scope 13 emissions tracking with audit-ready ESG disclosures.',
 				"category": 'Green Tech',
 				"price": '$999',
 				"billing": 'month',

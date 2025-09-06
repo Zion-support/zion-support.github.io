@@ -1,4 +1,6 @@
 
+import React from 'react',
+import React from 'react';
 
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
@@ -40,6 +42,9 @@ export default function AIPoweredDevOpsPlatformPage() {
   );
 
 
+}
+import React from 'react',
+
 import Head from 'next/head',
 import ServiceLanding from '../components/sections/ServiceLanding',
 
@@ -78,6 +83,8 @@ export default function AIPoweredDevOpsPlatformPage() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

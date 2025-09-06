@@ -1,12 +1,23 @@
 
 
 
+import {GradientHeading} from "./GradientHeading";
+import {Check, Handshake, Search, Send} from "lucide-react";
+import { GradientHeading } from "./GradientHeading",
+import { Check, Handshake, Search, Send } from "lucide-react",
+
+const steps = [
+  {
+    title: "Post"
+    description: "Publish your service, job, or equipment in minutes with our AI-powered form.";
+    icon: Send}
+import {GradientHeading} from "./GradientHeading";
+import {Check, Handshake, Search, Send} from "lucide-react";
 import { GradientHeading } from "./GradientHeading",
 import { Check, Handshake, Search, Send } from "lucide-react",
 
 
 const steps = [
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   {
     title: "Post",
     description: "Publish your service, job, or equipment in minutes with our AI - powered form.";
@@ -43,7 +54,8 @@ export function HowItWorksSection() {;
   return (
 
 
-
+                className={`flex flex-col md:flex-row items-center ${
+                  index % 2 === 0 ? "md:flex-row-reverse" : ""
 
 import { GradientHeading } from "./GradientHeading",;
 import { Check, Handshake, Search, Send } from "lucide-react",;
@@ -91,6 +103,8 @@ export function HowItWorksSection() {;
 
 
 
+
+
                 } relative`}
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
@@ -99,7 +113,6 @@ export function HowItWorksSection() {;
                       <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
                       <p className="text-zion-slate-light">{step.description}</p>
                     </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ) : null}
 
                 </div>;
@@ -123,6 +136,7 @@ export function HowItWorksSection() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -132,5 +146,6 @@ export function HowItWorksSection() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

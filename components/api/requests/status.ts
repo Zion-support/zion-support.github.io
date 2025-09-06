@@ -40,14 +40,10 @@ if (idx === -1) return res.status(404).json({ error: 'Not found' });
 
 
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-
+;
+const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json');
+;
+const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
 
   try {
     return JSON.parse (fs.readFileSync (REQUESTS_PATH, 'utf - 8'));
@@ -55,14 +51,19 @@ if (idx === -1) return res.status(404).json({ error: 'Not found' });
     return [];
   }
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-
-
+/**
+ * write_all - Function description
+ */
+function write_all() {
+  fs.mkdir_sync (path.dirname (REQUESTS_PATH), { recursive: true });
+  fs.writeFileSync (REQUESTS_PATH, JSON.stringify (items, null, 2));
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: 'Method not allowed' })) {
+  $2
+}
 

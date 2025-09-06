@@ -1,6 +1,7 @@
 
 
 
+
 import React from 'react';
 const AIPoweredITAssetManagement = () => {
   const features = [
@@ -30,6 +31,7 @@ const AIPoweredITAssetManagement = () => {
       description: "Continuous monitoring and health assessment of all IT assets",
       color: "from-blue-500 to-cyan-500"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
     },
     {
       icon: Shield,
@@ -43,8 +45,12 @@ const AIPoweredITAssetManagement = () => {
       icon: TrendingUp,
       title: "Predictive Analytics",
 
+
+  ],
+  const asset_types = [;
       description: "AI-driven insights for asset lifecycle management and optimization",
       color: "from-red-500 to-orange-500"
+    }
 
       } catch (error) {
     console.error("Error:", error);
@@ -60,16 +66,21 @@ const AIPoweredITAssetManagement = () => {
   }
 }
 
+
   ],
   const assetTypes = [
+
     "Hardware devices (servers, workstations, mobile devices)",
     "Software licenses and applications",
     "Network infrastructure and equipment",
     "Cloud resources and virtual machines",
     "Security devices and appliances",
+
+
     "Peripheral devices and accessories",
     "Peripheral devices and accessories"
   ],
+
 
 
   const benefits = [
@@ -99,6 +110,7 @@ const AIPoweredITAssetManagement = () => {
       value: "200%",
       description: "Increased operational efficiency"
 
+
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -112,6 +124,7 @@ const AIPoweredITAssetManagement = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 
   ],
@@ -141,6 +154,7 @@ const AIPoweredITAssetManagement = () => {
     "Asset lifecycle optimization",
     "Cost allocation and tracking",
     "Integration with existing IT tools"
+
 
 
 
@@ -179,6 +193,7 @@ export default AIPoweredITAssetManagement;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -186,6 +201,7 @@ export default AIPoweredITAssetManagement;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   return (
     <>
@@ -219,12 +235,14 @@ export default AIPoweredITAssetManagement;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20"></div>
@@ -284,9 +302,14 @@ export default AIPoweredITAssetManagement;
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 
+                Transform your IT operations with intelligent asset management that discovers
+                Transform your IT operations with intelligent asset management that discovers,
+
                 Transform your IT operations with intelligent asset management that discovers, 
 
                 Transform your IT operations with intelligent asset management that discovers,
+
+
 
 
                 monitors, and optimizes every piece of your technology infrastructure.
@@ -530,7 +553,6 @@ const AIPoweredITAssetManagement = () => {;
             </motion.div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -593,12 +615,14 @@ const AIPoweredITAssetManagement = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="text-center mb-16"
             >
@@ -619,15 +643,71 @@ const AIPoweredITAssetManagement = () => {;
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+                  key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300"
                 >
@@ -739,12 +819,14 @@ const AIPoweredITAssetManagement = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="text-center mb-16"
             >
@@ -767,15 +849,71 @@ const AIPoweredITAssetManagement = () => {;
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+                  key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, x: -20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
                   className="flex items-center space-x-3"
                 >
@@ -884,12 +1022,14 @@ const AIPoweredITAssetManagement = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="text-center mb-16"
             >
@@ -910,15 +1050,71 @@ const AIPoweredITAssetManagement = () => {;
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+                  key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
                   className="text-center"
                 >
@@ -1033,12 +1229,14 @@ const AIPoweredITAssetManagement = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="text-center mb-16"
             >
@@ -1059,15 +1257,71 @@ const AIPoweredITAssetManagement = () => {;
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+                  key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, x: -20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
                   className="flex items-center space-x-3"
                 >
@@ -1114,12 +1368,14 @@ const AIPoweredITAssetManagement = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1203,6 +1459,11 @@ const AIPoweredITAssetManagement = () => {;
 export default AIPoweredITAssetManagement;
 
 
+},
+
+export default AIPoweredITAssetManagement,;
+;
+export default AIPoweredITAssetManagement,
 
             >;
               <h2 className="text - 3xl md: text - 4xl font - bold text - white mb - 6">;
@@ -1229,6 +1490,7 @@ export default AIPoweredITAssetManagement;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -1240,5 +1502,6 @@ export default AIPoweredITAssetManagement,
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -3,9 +3,18 @@
 
 
 
+
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
+
+import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
+import { Resend } from 'npm: resend@2.0.0';
+const cors_headers = {
+  "Access - Control - Allow - Origin": "*",
+  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
+;
 
 interface SendNewsletterRequest {
   subject: string;
@@ -18,6 +27,8 @@ import { Resend } from "npm: resend@2.0.0",
 
 
 
+
+
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Resend} from "npm: resend@2.0.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
@@ -26,7 +37,9 @@ import { Resend } from "npm: resend@2.0.0",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -93,6 +106,19 @@ serve(async (req) => {
       message: "Email would be sent to all subscribers in production"
 
 
+
+    },
+
+    return new Response(JSON.stringify(emailResponse), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: 200})
+  } catch (error) {
+    console.error("Error in send-newsletter function:", error),
+    
+    return new Response(JSON.stringify({ error: error.message }), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" };
+      status: 500})
+
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
@@ -148,6 +174,8 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
+
+
 
   }
 });

@@ -1,13 +1,23 @@
 
 
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 
-
-
+import { Control } from "react-hook-form";
+import { BasicInfoFormData } from "./schema";
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Control} from "react-hook-form";
 import {BasicInfoFormData} from "./schema";
+
+
 
 
 
@@ -23,7 +33,9 @@ import { BasicInfoFormData } from "./schema",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -49,13 +61,11 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input",;
 import { Control } from "react-hook-form",;
 import { BasicInfoFormData } from "./schema";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ContactFieldsProps {;
   control: Control<BasicInfoFormData>;
 }
 
 export function ContactFields(): any ({ control }: ContactFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
       <FormField
@@ -74,7 +84,6 @@ function ContactFields() {
         render={({ field }) => (
           <FormItem>;
             <FormLabel > Location</FormLabel>;
-
             <FormControl>;
               <Input placeholder="San Francisco, CA" {...field} />;
             </FormControl>;
@@ -93,12 +102,14 @@ function ContactFields() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         )}
 
@@ -125,15 +136,15 @@ function ContactFields() {
         name="website";
         render={({ field }) => (
           <FormItem>;
-            <FormLabel > Website</FormLabel>;
+            <FormLabel>Website</FormLabel>;
             <FormControl>;
-              <Input placeholder="https://yourwebsite.com" {...field} />;
+              <Input placeholder="https://yourwebsite && yourwebsite.com" {...field} />;
             </FormControl>;
             <FormMessage />;
-          </FormItem>)}
-      />;
-      <FormField;
-
+          </FormItem>;
+        )}
+      />
+      <FormField
         control={control}
         name="linkedin";
         render={({ field }) => (
@@ -177,6 +188,7 @@ function ContactFields() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -187,5 +199,6 @@ function ContactFields() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

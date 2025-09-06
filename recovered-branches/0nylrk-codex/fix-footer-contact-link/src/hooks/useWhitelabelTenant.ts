@@ -4,12 +4,14 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 export interface WhitelabelTenant {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   id: string;
@@ -31,6 +33,8 @@ export interface WhitelabelTenant {
   updated_at: string;
   account_manager_id: string | null;
 
+  dns_verified: boolean
+
 
 
 
@@ -43,6 +47,7 @@ export function useWhitelabelTenant(externalSubdomain?: string) {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const [isLoading, setIsLoading] = useState(true);
@@ -147,7 +152,6 @@ if ( {) {
 ;
         const { data, error: function_error } = await supabase.functions.invoke (
           `${function_name}${params}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {
             headers: {
               'Content - Type': 'application / json'}}
@@ -164,16 +168,70 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
         }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (data.tenant) {
           setTenant(data.tenant)
 
 
+        if (data && data.tenant) {
+          setTenant(data && data.tenant)
+;
+        // Check condition
+if ( {) {
+  $2
+}
+          console.error ('Edge Function error:', function_error);
+          set_error ('Failed to load tenant configuration. Please try again later.');
+          set_tenant (null);
+          return;
+        }
+      } catch (err: any) {
+        console.error('Error loading tenant:', err);
+        let message = err.message |'An unexpected error occurred while loading tenant configuration';
+        if (
+          message && message.includes('Failed to send a request to the Edge Function') ||
+          message && message.includes('Failed to connect to Supabase') ||
+          message && message.includes('No internet connection')
+
+
+
+
+        const { data: sessionData, error: sessionError } = await supabase && supabase.auth.getSession();
+        if (sessionError || !sessionData && sessionData.session) {
+          setIsAdmin(false);
+          return
+        }
+
+        const userId = sessionData && sessionData.session.user && user.id;
+
+        const { data, error } = await supabase
+          .from('tenant_administrators')
+          .select('*')
+          .eq('tenant_id', tenantId)
+          .eq('user_id', userId)
+          .single();
+        setIsAdmin(!!data && !error)
+      } catch (err) {
+        console && console.error('Error checking tenant admin status:', err);
+        setIsAdmin(false)
+        console.error ('Error loading tenant:', err);
+        let message = err.message || 'An unexpected error occurred while loading tenant configuration';
+        // Check condition
+if (||) {
+  $2
+}
+          message.includes ('Failed to connect to Supabase') ||;
+          message.includes ('No internet connection')) {
+          message = 'Unable to reach the server. Please check your internet connection and try again.';
+        }
+        set_error (message);
+        set_tenant (null);
 
       } finally {
         setIsLoading (false);
@@ -249,10 +307,10 @@ if ( {) {
       } finally {
         setIsLoading (false);
       }
-
-    };
-    checkAdminStatus();
+    }
+    checkAdminStatus()
   }, [tenantId]);
+
 
 
 
@@ -261,6 +319,6 @@ if ( {) {
 
 
 
+
   return { isAdmin, isLoading }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

@@ -4,19 +4,23 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 import { motion } from 'framer-motion';
 import React from 'react';
 
 import Head from 'next/head';
-
-
-
 import Link from 'next/link';
 
-
+import {
+  ArrowRight
+  Server
+  Lock
+  Brain
+  Cloud
 
 import { 
   ArrowRight,
@@ -24,6 +28,8 @@ import {
   Lock,
   Brain,
   Cloud;
+
+
 
 
 
@@ -61,6 +67,43 @@ const apiEndpoints = [
     methods: ['POST', 'GET', 'PUT']
     endpoint: '/api/it-services'
 
+import { ;
+  ArrowRight,;
+  Server,;
+  Lock,;
+  Brain,;
+  Cloud;
+} from 'lucide-react';
+
+const apiEndpoints = [;
+  {;
+    title: 'Authentication API',;
+    description: 'Secure authentication and authorization endpoints',;
+    icon: Lock,;
+    methods: ['POST', 'GET', 'PUT', 'DELETE'],;
+    endpoint: '/api/auth';
+  },;
+  {;
+    title: 'AI Services API',;
+    description: 'Access to all AI-powered services and models',;
+    icon: Brain,;
+    methods: ['POST', 'GET'],;
+    endpoint: '/api/ai';
+  },;
+  {;
+    title: 'Micro SaaS API',;
+    description: 'Manage micro SaaS applications and subscriptions',;
+    icon: Cloud,;
+    methods: ['POST', 'GET', 'PUT', 'DELETE'],;
+    endpoint: '/api/micro-saas';
+  },;
+  {;
+    title: 'IT Services API',;
+    description: 'Infrastructure and IT service management',;
+    icon: Server,;
+    methods: ['POST', 'GET', 'PUT'],;
+    endpoint: '/api/it-services';
+
   }
 ];
 
@@ -75,8 +118,9 @@ origin/automation-improvements-final
 
 
 export default function APIDocsPage() {
+export default function ApiDocsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <>
       <Head>
         <title>API Documentation - Zion Tech Group | Developer Resources</title>
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group services. Access our RESTful APIs for AI, IT, and micro SaaS solutions." />
@@ -90,9 +134,13 @@ export default function APIDocsPage() {
 
 
 
+
+
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -226,6 +274,18 @@ function APIDocsPage() {
 
               const IconComponent = endpoint.icon;
 
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">API Endpoints</h2>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              Explore our comprehensive API endpoints for seamless integration with our services.;
+            </p>;
+          </motion && motion.div>;
+
+          <div className="grid md:grid-cols-2 gap-8">;
+            {apiEndpoints && apiEndpoints.map((endpoint, index) => {;
+              const IconComponent = endpoint && endpoint.icon;
+
               return (
 
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -314,6 +374,7 @@ export default function APIDocsPage() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -341,6 +402,7 @@ export default function ApiDocsPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
       </Head>
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
@@ -364,6 +426,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
+
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Help with Integration?</h2>;
@@ -377,6 +440,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         </div>;
       </section>;
     </div>;
+
 
   );
 }
@@ -406,7 +470,25 @@ origin/main
 }
 }
 
+    </Layout>;
+);
+    </>
+  )
+}
 
+}
+    </>
+  )
+import React from 'react';
+import Head from 'next/head';
+export default function ApiDocsPage(req, res) {
+  try {
+  return (;
+    <>;
+      <Head>;
+        <title>API Docs | Zion Tech Group</title>;
+        <meta name='description' content='API reference and guides.' />;
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/api-docs' />;
 
       </Head>;
       <div className="container mx-auto px-4 py-16 text-gray-200">;
@@ -474,6 +556,7 @@ origin/main
       </section>;
     </div>);
 }
+
 import Layout from '../components / Layout';
 ;
 export default /**
@@ -502,5 +585,6 @@ function ApiDocsPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

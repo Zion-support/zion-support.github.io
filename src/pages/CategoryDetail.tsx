@@ -9,6 +9,78 @@ const AUTO_SERVICE_TITLES = [
   "Blockchain Data Solutions"
 
 
+
+const AUTO_SERVICE_TITLES = [;
+  "AI - Powered Customer Support";
+  "Cloud Infrastructure Management";
+  "Predictive Analytics Consulting";
+  "Cybersecurity Automation Suite";
+  "Robotic Process Automation";
+  "Machine Learning Model Tuning";
+  "IoT Device Integration Service";
+  "Blockchain Data Solutions";
+];
+function generateInnovationListing (index: number): ProductListing {
+  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service';
+  const price = Math.floor (Math.random () * 9500) + 500, // $500 - $10, 000;
+  const rating = Math.floor (Math.random () * 2) + 4, // 4 - 5 stars;
+
+
+  const params = router.query as { slug?: string }
+  const slug = slugProp ?? params.slug
+      icon: <Briefcase className="w-6 h-6" />
+    }
+    'talents': {
+
+      title: "Talents"
+      description: "Connect with AI experts, developers, and tech specialists"
+      icon: <Brain className="w-6 h-6" />
+    }
+    'equipment': {
+      title: "Equipment"
+      description: "Rent or buy specialized hardware, servers, and devices"
+      icon: <Code className="w-6 h-6" />
+    }
+],
+
+function generateInnovationListing(index: number): ProductListing {
+  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service',
+  const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000
+  const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars
+  const reviewCount = Math.floor(Math.random() * 50) + 10,
+
+  return {
+    id: `innovation-auto-${index}`,
+    title,
+    description: `Professional ${title} package with expert support and global delivery. Ideal for businesses seeking modern IT and AI solutions at competitive market rates.`,
+    category: "Innovation",
+    price,
+    currency: "$",
+    tags: ["innovation", "ai", "service"],
+    author: {
+      name: "AutoGen Solutions",
+      id: "autogen"
+    },
+    images: ["https://source.unsplash.com/random/800x500?technology"],
+    createdAt: new Date().toISOString(),
+    rating,
+    reviewCount,
+    location: "Global",
+    availability: "Immediate",
+    aiScore: Math.floor(Math.random() * 20) + 80
+import { GradientHeading } from "@/components/GradientHeading",;
+import { ProductListingCard } from "@/components/ProductListingCard",;
+import { useState, useEffect, useRef, Suspense } from "react",;
+import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react';
+import { MARKETPLACE_LISTINGS } from "@/data/listingData",;
+import { ProductListing } from "@/types/listings",;
+import { useRouter } from 'next/router',;
+import Link from 'next/link',;
+import { toast } from "@/hooks/use-toast",;
+import { NextSeo } from '@/components/NextSeo',;
+import { Header } from "@/components/Header",;
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton',;
+import {logErrorToProduction} from '@/utils/productionLogger',;
 const AUTO_SERVICE_TITLES = [;
   "AI - Powered Customer Support";
   "Cloud Infrastructure Management";
@@ -25,13 +97,19 @@ function generateInnovationListing (index: number): ProductListing {
   const rating = Math.floor (Math.random () * 2) + 4, // 4 - 5 stars;
 
   const params = router.query as { slug?: string }
-  const slug = slugProp ?? params.slug
-      icon: <Briefcase className="w-6 h-6" />
+  const slug = slug_prop ?? params.slug;
+      icon: <Briefcase className="w - 6 h - 6" />;
     }
     'talents': {
-
-
-
+      title: "Talents",
+      description: "Connect with AI experts, developers, and tech specialists",
+      icon: <Brain className="w-6 h-6" />
+    },
+    'equipment': {
+      title: "Equipment",
+      description: "Rent or buy specialized hardware, servers, and devices",
+      icon: <Code className="w-6 h-6" />
+    },
 
     'innovation': {
       title: "Innovation"
@@ -39,6 +117,7 @@ function generateInnovationListing (index: number): ProductListing {
       icon: <Bot className="w-6 h-6" />
     }
     },
+
 
 
 
@@ -91,12 +170,14 @@ function generateInnovationListing (index: number): ProductListing {
 
     },
 
+
     'developer-tools': {
       title: "Developer Tools",
       description: "AI-powered coding assistance and automation",;
       icon: <Code className="w-6 h-6" />;
     };          icon: <Bot className="w-6 h-6" />},
     },
+
 
     'developer-tools': {
       title: "Developer Tools"
@@ -108,6 +189,7 @@ function generateInnovationListing (index: number): ProductListing {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -220,20 +302,23 @@ function generateInnovationListing (index: number): ProductListing {
 
 
 
+
   return (
     <>
       <NextSeo title={seoTitle} description={seoDescription} />
       <Header />
       <Suspense fallback={<ListingGridSkeleton />}>
+
       <Suspense fallback={<ListingGridSkeleton />}> 
         <div className="min-h-screen bg-zion-blue">
           <div className="container mx-auto px-4 py-12">
           <div className="mb-4">
             <Link href="/categories" className="text-zion-cyan hover:text-zion-cyan-light transition-colors inline-flex items-center">
-              ← Back to Categories
+               Back to Categories
             </Link>
           </div>
           
+
 
 
           <div className="text-center mb-12">
@@ -318,6 +403,7 @@ function generateInnovationListing (index: number): ProductListing {
               {category.description}
 
 
+
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import {toast} from "@/hooks/use-toast";
@@ -344,6 +430,7 @@ function generateInnovationListing(): any (index: number): ProductListing {;
   const slug = slugProp ?? params && params.slug;
 
 
+
               {listings.map((listing) => (
                 <ProductListingCard
                   key={listing.id}
@@ -364,6 +451,7 @@ function generateInnovationListing(): any (index: number): ProductListing {;
     'services': {;
       title: "Services",;
       description: "On-demand IT support, consulting, development, and more",;
+
       icon: <Briefcase className="w-6 h-6" />;
     },;
     'talents': {;
@@ -547,9 +635,11 @@ function generateInnovationListing(): any (index: number): ProductListing {;
 
 
 
+
               ))}
             </div>
           )}
+
 
 
 
@@ -589,6 +679,8 @@ function generateInnovationListing(): any (index: number): ProductListing {;
 ;
 
 
+
 ;
+
 
 

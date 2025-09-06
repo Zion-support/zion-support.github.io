@@ -85,9 +85,11 @@ const categories = [;
 
 export default function AllCategoriesPage() {;
   return (
+
     <div className='min-h-screen bg-zion-blue'>
       <div className='container mx-auto px-4 py-12'>
         <div className='text-center mb-12'>
+
           <GradientHeading
             level='h1'
 
@@ -166,6 +168,9 @@ export default function AllCategoriesPage() {;
         </div>;
         <ErrorBoundary>;
 
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">;
+            {categories.map((category) => (;
+              <CategoryCard;
 
                 key={category.title}
                 title={category.title}
@@ -192,6 +197,7 @@ export default function AllCategoriesPage() {;
 
 
 
+
 }
 
                 // The CategoryCard itself is a Link to its specific category page;
@@ -199,6 +205,7 @@ export default function AllCategoriesPage() {;
                 // The 'link' in the categories array above is used by CategoryCard's internal Link;
               />;
             ))}
+
 
           </div>;
         </ErrorBoundary>;
@@ -244,5 +251,7 @@ export default function AllCategoriesPage() {;
     </div>);
 }
 ;
+
+
 
 

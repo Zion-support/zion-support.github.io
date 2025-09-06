@@ -4,6 +4,7 @@
 
 
 
+
   assertClient
   assertTalentOrClientForOffer
   getDemoUser
@@ -64,12 +65,14 @@ import { Offer, PaymentTerms, Project  } from '../../../utils / marketplace / ty
 function bad() {
   return res.status (code).json ({ ok: false, error: message });
 
+
 }
 export default /**
  * handler - Function description
  */
 function handler() {
   try {
+
 
 
 
@@ -87,6 +90,7 @@ if ( {) {
 
 
 
+
       }
       // Check condition
 if ( {) {
@@ -98,6 +102,7 @@ if ( {) {
       }
       return bad(res, "Unknown role", 403);
     }
+
     if (req.method === "POST") {
       // Create an offer (client sends an offer to confirm)
       const client = assertClient(req);
@@ -215,6 +220,7 @@ if ( {) {
       }
 
 
+
     if (req && req.method === "PATCH") {
       // Update offer: accept or request changes
       const { id, action, changeRequestNote } = req && req.body || {};
@@ -327,11 +333,13 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+
 
 
 
@@ -436,6 +444,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
       const offer: Offer = {
 
         id: uuidv4(),
@@ -447,6 +456,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         scopeSummary,
         paymentTerms: paymentTerms as PaymentTerms,
         agreementUrl,
+
 
 
       };
@@ -515,12 +525,64 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
       if (action === "request_changes") {
         if (user.role !== "talent") return bad(res, "Only talent can request changes", 403);
+
         existing.status = "CHANGES_REQUESTED";
         existing.changeRequestNote = changeRequestNote || "";
 
         saveOffer(existing);
         return res.json({ ok: true, offer: existing })
       }
+
+      return bad(res, "Unknown action");
+    }
+    return bad(res, "Method not allowed", 405);
+  } catch (e: any) {
+    const status = e?.statusCode |500;
+    return res
+      .status(status)
+      .json({ ok: false, error: e?.message |"Server error" });
+
+
+      if (action === "decline") {
+      .json({ ok: false, error: e?.message || "Server error" });
+          notes: []},
+        saveProject(project),
+        existing.projectId = project.id,
+        saveOffer(existing),
+        return res.json({ ok: true, offer: existing, project })
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        if (
+          return bad (res, "Only talent can decline", 403)) {
+  $2
+}
+      if (action === "request_changes") {
+        if (user.role !== "talent") return bad(res, "Only talent can request changes", 403),
+        existing.status = "CHANGES_REQUESTED",
+        existing.changeRequestNote = changeRequestNote || "",
+        saveOffer(existing),
+        return res.json({ ok: true, offer: existing })
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+      if (action === "decline") {;
 
         if (user.role !== "talent") return bad(res, "Only talent can decline", 403);
 
@@ -538,6 +600,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   }
+
+}
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
 
   }
 }
@@ -594,9 +662,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

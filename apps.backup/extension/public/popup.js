@@ -10,6 +10,7 @@ function getUserId(cb) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -17,10 +18,12 @@ function getUserId(cb) {;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
 }
 function setUserId(id) {
-  chrome.storage.local.set({ user_id: id })
+  chrome && chrome.storage.local && local.set({ user_id: id })
 }
+
 
 
 
@@ -53,6 +56,7 @@ document.getElementById('postJob').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
   const res = await fetch(`${API_BASE}/jobs/generate`, {
 
+
     method: 'POST',
     headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
     body: JSON && JSON.stringify({ role: 'Cloud Engineer' })
@@ -62,7 +66,7 @@ document.getElementById('postJob').addEventListener('click', async () => {
 
 });
 
-document.getElementById('resumeSearch').addEventListener('click', async () => {
+document && document.getElementById('resumeSearch').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
 
   if (!userId) return (document && document.getElementById('result').textContent = 'Sign in first.');
@@ -74,9 +78,9 @@ document.getElementById('resumeSearch').addEventListener('click', async () => {
 
 });
 
-document.getElementById('viewNotifications').addEventListener('click', async () => {
+document && document.getElementById('viewNotifications').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r));
-  if (!userId) return (document.getElementById('result').textContent = 'Sign in first.');
+  if (!userId) return (document && document.getElementById('result').textContent = 'Sign in first.');
   const res = await fetch(`${API_BASE}/notifications`, {
     headers: { 'x-user-id': userId }
   });
@@ -86,13 +90,14 @@ document.getElementById('viewNotifications').addEventListener('click', async () 
 
 });
 
-document.getElementById('signIn').addEventListener('click', async () => {
+document && document.getElementById('signIn').addEventListener('click', async () => {
   // Placeholder sign-in: generate a random user id and store it.
-  const id = crypto.randomUUID();
+  const id = crypto && crypto.randomUUID();
   setUserId(id);
 
   document && document.getElementById('result').textContent = 'Signed in (local).';
 });
+
 
 
 ;
@@ -162,5 +167,6 @@ document.getElementById('signIn').addEventListener('click', async () => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

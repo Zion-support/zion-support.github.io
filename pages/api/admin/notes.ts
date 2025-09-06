@@ -1,4 +1,9 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { randomUUID } from 'crypto';
+
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { randomUUID } from 'crypto',;
 
 type Note = {
   id: string
@@ -32,6 +37,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(405).json({ error: 'Method not allowed' })
 }
 export function getAllNotes(): Note[] {
+
+  return [...notesStore].sort((a, b) => b.createdAt - a.createdAt)
+}
+
+  return [...notesStore].sort((a, b) => b.createdAt - a.createdAt);
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+
 
 interface Note {
 
@@ -79,5 +92,7 @@ const notesStore: Note[] = [];
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 
 

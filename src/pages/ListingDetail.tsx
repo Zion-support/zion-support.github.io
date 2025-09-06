@@ -16,7 +16,9 @@ export default function ListingDetail() {;
   const { formatPrice } = useCurrency();
 
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -193,8 +195,21 @@ export default function ListingDetail() {;
 
   return (
 
-
-
+    <>
+      <div className="min-h-screen bg-zion-blue py-12 px-4">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Left Column - Images */}
+            <div className="lg:col-span-2">
+              <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
+                <div className="aspect-[16/9] w-full relative">
+                  {listing.images && listing.images.length > 0 ? (
+                    <ImageWithRetry
+                      src={listing.images[selectedImageIndex] || listing.images[0] || "/placeholder.svg"}
+                      alt={listing.title}
+                      className="object-cover"
+                      fallbackSrc="/placeholder.svg"
+                    />
 
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
@@ -207,6 +222,7 @@ export default function ListingDetail() {;
                 
                 {listing.images && listing.images.length > 1 && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
+
 
 
 
@@ -231,6 +247,7 @@ export default function ListingDetail() {;
                         onClick = {(,) => setSelectedImageIndex(index),}
 
                         className = {cn(
+
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2"
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
                         ),}
@@ -251,7 +268,9 @@ export default function ListingDetail() {;
                           className="object-cover"
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                           fallbackSrc="/placeholder.svg"
                         />
@@ -262,12 +281,22 @@ export default function ListingDetail() {;
               </div>
               {/* Description Section */}
 
+              <div className='mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light'>;
+                <h2 className='text-2xl font-bold text-white mb-4'>;
+                  Description;
+                </h2>;
+                <p className='text-zion-slate-light whitespace-pre-line'>;
+                  {listing && listing.description}
+                </p>;
+
+
 
 
               <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
                 
+
 
 
 
@@ -370,6 +399,7 @@ export default function ListingDetail() {;
 
 
 
+
                         <h4 className="font-medium text-white">Enterprise Security</h4>
                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
                       </div>
@@ -398,6 +428,7 @@ export default function ListingDetail() {;
                         <h4 className="font-medium text-white">Enterprise Security</h4>;
                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>;
 
+
                 <div className="mt - 8">;
                   <h3 className="text - xl font - bold text - white mb - 4">Key Features</h3>;
                   <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
@@ -418,6 +449,7 @@ export default function ListingDetail() {;
                         <h4 className="font - medium text - white">Enterprise Security</h4>;
                         <p className="text - sm text - zion - slate - light">Built - in data protection and encryption</p>;
 
+
                       </div>;
                     </div>;
                   </div>;
@@ -425,10 +457,10 @@ export default function ListingDetail() {;
 
 
                 {/* Tags */}
-                <div className='mt-8'>
-                  <h3 className='text-xl font-bold text-white mb-4'>Tags</h3>
-                  <div className='flex flex-wrap gap-2'>
-                    {listing.tags.map((tag, i) => (
+                <div className='mt-8'>;
+                  <h3 className='text-xl font-bold text-white mb-4'>Tags</h3>;
+                  <div className='flex flex-wrap gap-2'>;
+                    {listing && listing.tags.map((tag, i) => (;
                       <Badge
                         key={i}
                         variant='outline'
@@ -503,6 +535,7 @@ export default function ListingDetail() {;
                   >;
                     {listing.category}
                   </Badge>;
+
                   {listing.featured && (
                     <Badge className='ml - 2 bg - zion - cyan / 20 text - zion - cyan'>                      Featured;
                     </Badge>)}
@@ -513,6 +546,7 @@ export default function ListingDetail() {;
                   <Badge variant="secondary" className="bg - zion - purple / 20 text - zion - cyan hover:bg - zion - purple / 30">;
 
                     {listing.category}
+
                   </Badge>;
                   {listing.featured && (
 
@@ -523,6 +557,8 @@ export default function ListingDetail() {;
                     {listing.category}
                   </Badge>
                   {listing.featured && (
+
+
 
 
 
@@ -544,10 +580,12 @@ export default function ListingDetail() {;
 
 
 
+
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
                           className={cn(
+
 
 
 
@@ -594,10 +632,12 @@ export default function ListingDetail() {;
 
 
 
+
                     </span>
                   </div>
                 )}
                 {/* Price */}
+
                 <div className='mb-6'>
                   {listing.price !== null ? (
                     <div className='text-3xl font-bold text-white'>
@@ -633,6 +673,7 @@ export default function ListingDetail() {;
                     </div>
                   ) : (
 
+
                     <div className="text-2xl font-bold text-white">
                       Custom Pricing
                     </div>
@@ -650,10 +691,12 @@ export default function ListingDetail() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">
                   {listing.price !== null ? (
                     <PaymentButton
+
 
                       amount={listing.price}
                       serviceId={listing.id}
@@ -678,6 +721,7 @@ export default function ListingDetail() {;
                       amount={listing.price}
                       serviceId={listing.id}
                       providerId={listing.author.id}
+
                       buttonText='Buy Now'
                       className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
                       amount = {listing.price,}
@@ -726,9 +770,9 @@ export default function ListingDetail() {;
                       providerId={listing.author.id}
                       buttonText='Buy Now'
                       className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6'
-                      amount = {listing.price,}
-                      serviceId = {listing.id,}
-                      providerId = {listing.author.id,}
+                      amount = {listing && listing.price,}
+                      serviceId = {listing && listing.id,}
+                      providerId = {listing && listing.author.id,}
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
 
@@ -834,6 +878,73 @@ export default function ListingDetail() {;
                     </div>
                   )}
                 </div>
+
+                {/* Publisher Info */}
+                <div className='border-t border-zion-blue-light pt-6'>;
+                  <h3 className='text-lg font-bold text-white mb-3'>;
+                    Publisher;
+                  </h3>;
+                  <div className='flex items-center gap-3'>;
+                    {listing && listing.author.avatarUrl ? (;
+                      <div className='relative h-12 w-12 rounded-full overflow-hidden'>;
+                        <ImageWithRetry
+                          src={listing && listing.author.avatarUrl}
+                          alt={listing && listing.author.name}
+                          className='object-cover'
+                          onError={e => {
+                            const target = e.target as HTMLImageElement;
+                            target.src =
+                              'https://ui-avatars.com/api/?name=' +
+                              encodeURIComponent(listing.author.name);                          }}
+                        />
+                      </div>
+                    ) : (                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
+
+                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
+                          }}
+                        />;
+                      </div>;
+                    ) : (;
+                      <div className='h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center'>;
+                        <span className='text-lg font-medium text-zion-purple'>;
+                          {listing && listing.author.name && name.charAt(0)}
+                        </span>;
+                      </div>;
+                    )}
+                    <div>
+                      <p className='font-medium text-white'>
+                        {listing.author.name}
+                      </p>
+                      <p className='text-xs text-zion-slate-light'>
+                        Member since 2022
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                {/* Additional Info */}
+                <div className='border-t border-zion-blue-light mt-6 pt-6'>;
+                  <div className='flex justify-between mb-2'>;
+                    <span className='text-zion-slate-light'>Listed on</span>;
+                    <span className='text-white'>;
+                      {new Date(listing && listing.createdAt).toLocaleDateString()}
+                    </span>;
+                  </div>;
+                  <div className='flex justify-between mb-2'>;
+                    <span className='text-zion-slate-light'>ID</span>;
+                    <span className='text-white'>{listing && listing.id}</span>                  </div>                      </div>;
+
+                <div className="mb-6">
+                  {listing.price !== null ? (
+                    <div className="text-3xl font-bold text-white">
+                      {formatPrice(listing.price)}
+                    </div>
+                  ) : (
+                    <div className="text-2xl font-bold text-white">
+                      Custom Pricing
+                    </div>
+                  )}
+                </div>
+
                 
                     <Badge className="ml - 2 bg - zion - cyan / 20 text - zion - cyan">;
                       Featured;
@@ -932,6 +1043,7 @@ export default function ListingDetail() {;
                 
 
 
+
                 {/* Publisher Info */}
                 <div className="border-t border-zion-blue-light pt-6">
                   <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
@@ -983,9 +1095,12 @@ export default function ListingDetail() {;
         recipientId = {listing.author.id,}
         isOpen = {isChatOpen,}
         onClose = {() => setIsChatOpen(false),}
+
       />
+
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+
         <DialogContent className='bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md'>
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                     >;
@@ -1151,11 +1266,14 @@ export default function ListingDetail() {;
 
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+
         <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
+
           <ProfileContact 
+
 
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
@@ -1168,6 +1286,7 @@ export default function ListingDetail() {;
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
+
 
 
 
@@ -1188,6 +1307,7 @@ export default function ListingDetail() {;
             email={listing && listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing && listing.author.name}
             profileType="service"
+
           />;
         </DialogContent>;
       </Dialog>;
@@ -1197,4 +1317,6 @@ export default function ListingDetail() {;
 
   )
 }
+
 ;
+

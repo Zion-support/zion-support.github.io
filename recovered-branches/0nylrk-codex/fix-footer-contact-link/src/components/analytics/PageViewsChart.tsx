@@ -8,6 +8,7 @@
 
 
 
+
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
 
 interface PageViewsChartProps {;
@@ -34,6 +35,7 @@ interface PageViewsChartProps {
   onTimeRangeChange: (range: string) => void
 }
 
+
 export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {
 
 
@@ -49,11 +51,13 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
         <AnalyticsChart
           title=""
 
-
-
-
-
-
+          data={data |[]}
+          dataKeys={["views"]}
+          timeRange={timeRange}
+          onTimeRangeChange={onTimeRangeChange}
+        />
+      </CardContent>
+    </Card>
 
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -80,7 +84,9 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -93,11 +99,13 @@ export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViews
 
 
 
+
     </Card>;
 
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   );
 

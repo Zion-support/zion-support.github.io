@@ -5,6 +5,7 @@ import Link from './next / link';
 ;
 
 interface SearchResult {
+
 interface SearchResult {;
   title: string;
   description: string;
@@ -21,23 +22,23 @@ interface SearchModalProps {
 const search_data: SearchResult[] = [;
   // Services;
   {
-    title: "AI Services",
-    description: "Machine learning, computer vision, NLP, and AI solutions",
-    url: "/ai - services",
-    category: "Services",
-  },
+    title: "AI Services"
+    description: "Machine learning, computer vision, NLP, and AI solutions"
+    url: "/ai-services"
+    category: "Services"
+  }
   {
-    title: "IT Services",
-    description: "Cloud infrastructure, cybersecurity, and IT solutions",
-    url: "/it - services",
-    category: "Services",
-  },
+    title: "IT Services"
+    description: "Cloud infrastructure, cybersecurity, and IT solutions"
+    url: "/it-services"
+    category: "Services"
+  }
   {
-    title: "Micro SaaS",
-    description: "Custom micro SaaS platforms and automation tools",
-    url: "/micro - saas",
-    category: "Services",
-  },
+    title: "Micro SaaS"
+    description: "Custom micro SaaS platforms and automation tools"
+    url: "/micro-saas"
+    category: "Services"
+  }
   {
     title: "Cloud Solutions",
     description: "AWS, Azure, GCP migration and cloud infrastructure",
@@ -60,42 +61,42 @@ const search_data: SearchResult[] = [;
   },
   // Solutions;
   {
-    title: "Digital Transformation",
-    description: "Complete digital transformation solutions",
-    url: "/digital - transformation",
-    category: "Solutions",
-  },
+    title: "Digital Transformation"
+    description: "Complete digital transformation solutions"
+    url: "/digital-transformation"
+    category: "Solutions"
+  }
   {
-    title: "Enterprise Solutions",
-    description: "Large - scale enterprise technology solutions",
-    url: "/enterprise - solutions",
-    category: "Solutions",
-  },
+    title: "Enterprise Solutions"
+    description: "Large-scale enterprise technology solutions"
+    url: "/enterprise-solutions"
+    category: "Solutions"
+  }
   {
-    title: "Startup Solutions",
-    description: "Technology solutions for startups and SMBs",
-    url: "/startup - solutions",
-    category: "Solutions",
-  },
-  // Industries;
+    title: "Startup Solutions"
+    description: "Technology solutions for startups and SMBs"
+    url: "/startup-solutions"
+    category: "Solutions"
+  }
+  // Industries
   {
-    title: "Healthcare",
-    description: "Technology solutions for healthcare industry",
-    url: "/industries / healthcare",
-    category: "Industries",
-  },
+    title: "Healthcare"
+    description: "Technology solutions for healthcare industry"
+    url: "/industries/healthcare"
+    category: "Industries"
+  }
   {
-    title: "Finance",
-    description: "Financial technology and fintech solutions",
-    url: "/industries / finance",
-    category: "Industries",
-  },
+    title: "Finance"
+    description: "Financial technology and fintech solutions"
+    url: "/industries/finance"
+    category: "Industries"
+  }
   {
-    title: "Education",
-    description: "Educational technology and e - learning solutions",
-    url: "/industries / education",
-    category: "Industries",
-  },
+    title: "Education"
+    description: "Educational technology and e-learning solutions"
+    url: "/industries/education"
+    category: "Industries"
+  }
   {
     title: "Manufacturing",
     description: "Industrial IoT and manufacturing automation",
@@ -135,6 +136,10 @@ const search_data: SearchResult[] = [;
     category: "Company"
   }
 ];
+
+
+
+
 
 
 

@@ -20,11 +20,11 @@ class ComprehensiveAutomation {
       "optimizations": []};
     this.startTime = Date.now()}
   log() { const timestamp = new Date().toISOString()const icons={
-      'INFO': 'ℹ️',
-      'SUCCESS': '✅',
-      'ERROR': '❌',
-      'WARNING': '⚠️',
-      'PROGRESS': '🔄'};
+      'INFO': '',
+      'SUCCESS': '',
+      'ERROR': '',
+      'WARNING': '',
+      'PROGRESS': ''};
     console.log(`${icons[type]} [${timestamp}] ${message}`)}
   // File operations;
   ensureDirectory(dirPath) {
@@ -190,16 +190,16 @@ const path = require('path')class TestRunner {
         testFilesFound += testFiles.length }
     });
     if (testFilesFound === 0) {
-      console.log('⚠️ No test files found')} else {
-      console.log(\"✅ Found \${testFilesFound} test files\")}
+      console.log(' No test files found')} else {
+      console.log(\" Found \${testFilesFound} test files\")}
     return testFilesFound}
   checkPackageJsonScripts() { try {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (!packageJson.scripts.test) {
-        console.log('⚠️ No test script found in package.json');
+        console.log(' No test script found in package.json');
         return false }
-      console.log('✅ Test script found in package.json');
-      return true} catch() { console.log('❌ Error reading package."json":  ,', error.message);
+      console.log(' Test script found in package.json');
+      return true} catch() { console.log(' Error reading package."json":  ,', error.message);
       return false }
   }
   generateReport() { const report = {
@@ -273,10 +273,10 @@ class GitWorkflow {
   checkGitStatus() { try {
       // Check if we're in a git repository;
       if (!fs.existsSync('.git')) {
-        console.log('❌ Not in a git repository');
+        console.log(' Not in a git repository');
         return false }
-      console.log('✅ Git repository found');
-      return true} catch() { console.log('❌ Error checking git "status":  ,', error.message);
+      console.log(' Git repository found');
+      return true} catch() { console.log(' Error checking git "status":  ,', error.message);
       return false }
   }
   generateCommitMessage() { const timestamp = new Date().toISOString()return \"Automated improvements and optimizations - \${timestamp }\"}
@@ -293,7 +293,7 @@ npm test;
 echo "Pre-commit checks completed";
 \";
     this.writeFile('.git/hooks/pre-commit', preCommitHook);
-    console.log('✅ Created pre-commit hook') }
+    console.log(' Created pre-commit hook') }
   generateReport() { const report={
       "timestamp": new Date().toISOStrin,g(),
       "gitRepository": this.checkGitStatu,s(),
@@ -325,8 +325,8 @@ module.exports = GitWorkflow";
         scriptsGenerated: 4}
     };
     fs.writeFileSync('comprehensive-automation-report.json', JSON.stringify(report, null, 2));
-    this.log('📊 Comprehensive Automation Report Generated', 'SUCCESS')this.log(`🚀 Improvements "Created": ${report.summary.improvementsCreated }`, 'SUCCESS')this.log(`⚡ Optimizations "Applied": ${report.summary.optimizationsApplied }`, 'SUCCESS')this.log(`📝 Scripts "Generated": ${report.summary.scriptsGenerated }`, 'SUCCESS')}
-  async run() { this.log('🚀 Starting Comprehensive Automation System...', 'PROGRESS');
+    this.log(' Comprehensive Automation Report Generated', 'SUCCESS')this.log(` Improvements "Created": ${report.summary.improvementsCreated }`, 'SUCCESS')this.log(` Optimizations "Applied": ${report.summary.optimizationsApplied }`, 'SUCCESS')this.log(` Scripts "Generated": ${report.summary.scriptsGenerated }`, 'SUCCESS')}
+  async run() { this.log(' Starting Comprehensive Automation System...', 'PROGRESS');
     // Analysis phase;
     this.analyzePackageJson();
     this.analyzeNextConfig();

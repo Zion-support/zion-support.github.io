@@ -59,7 +59,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
-
+        fix: (content) => {
+          // Remove merge conflict markers
+          return content
+        }
 
 
 
@@ -94,6 +97,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
+
+
   async runBuildCheck() {
     try {
       this.log('Running build check...');
@@ -116,6 +121,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
+
+
   async runLintCheck() {
     try {
       this.log('Running lint check...');
@@ -135,6 +142,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+
+
 
 
 
@@ -182,6 +191,20 @@ ursor/integrate-build-improve-and-re-verify-8f7d
       
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+  async fixFile(filePath) {
+    if (!fs.existsSync(filePath)) {
+      this.log(`File not found: ${filePath}`, 'ERROR');
+      return false;
+    }
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+
     try {
       this.log(`Attempting to fix file: ${filePath}`);
       let content = fs.readFileSync(filePath, 'utf8');
@@ -190,6 +213,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+
+
 
 
 
@@ -213,6 +238,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
+
+
       // Specific fixes for common issues
       if (content.includes('return()')) {
         content = content.replace(/return\(\)/g, 'return (');
@@ -222,6 +249,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+
+
 
 
 
@@ -237,6 +266,36 @@ ursor/integrate-build-improve-and-re-verify-8f7d
         content = `import React from 'react';\n${content}`;
         modified = true;
       }
+
+
+
+      // Fix import statements
+      if (content.includes('React.') && !content.includes("import React")) {;
+        content = `import React from 'react';\n${content}`;
+        modified = true;
+      }
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+      if (modified) {
+        // Create backup
+        const backupPath = `${filePath}.backup.${Date.now()}`;
+        fs.copyFileSync(filePath, backupPath);
+
+
+        
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+        
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+        // Write fixed content
+        fs.writeFileSync(filePath, content);
+        this.log(`Successfully fixed and saved: ${filePath}`);
+        return true;
+      }
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
@@ -292,6 +351,38 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+          if (seen.has(relativePath)) {
+            duplicates.push(path.join(dir, file.name));
+          } else {
+            seen.add(relativePath);
+          }
+        }
+      });
+    }
+ursor/integrate-build-improve-and-re-verify-8f7d
+    scanDirectory(pagesDir);
+    // Remove duplicate .js files if .tsx exists
+    scanDirectory(pagesDir);
+    // Remove duplicate .js files if .tsx exists
+    for (const duplicate of duplicates) {
+      if (duplicate.endsWith('.js')) {
+        const tsxVersion = duplicate.replace('.js', '.tsx');
+        if (fs.existsSync(tsxVersion)) {
+          this.log(`Removing duplicate JS file: ${duplicate}`);
+          fs.unlinkSync(duplicate);
+        }
+      }
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+
+
+
+
+    // Remove duplicate .js files if .tsx exists
+    `);
+          fs.unlinkSync(duplicate);
+        }
+      }
 
 
 

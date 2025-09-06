@@ -1,11 +1,12 @@
 
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
+export default function ToolResourcePage() {
+  const router = useRouter(),
+  const { id } = router.query,
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
@@ -22,11 +23,18 @@ export default function ToolResourcePage() {
   // Tools data - this should match the data in resources.tsx
   const tools = [
     {
+      id: 'automation-assessment',
+      title: 'Automation Readiness Assessment',
+      description: 'Evaluate your organization\'s readiness for AI automation implementation.',
       id: 'automation-assessment'
       title: 'Automation Readiness Assessment'
       description: 'Evaluate your organization\'s readiness for AI automation implementation.'
       type: 'Interactive Tool'
       estimatedTime: '15 minutes'
+      title: 'Automation Readiness Assessment',
+      description: 'Evaluate your organization's readiness for AI automation implementation.',
+      type: 'Interactive Tool',
+      estimatedTime: '15 minutes',
       fullContent: `
         <h2>About This Tool</h2>
         <p>The Automation Readiness Assessment is designed to help organizations evaluate their current
@@ -194,12 +202,13 @@ export default function ToolResourcePage() {
       ]
     }
 
+  ]
+  const tool = tools.find(t => t.id === id)
 
-
-
-
-
-
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 export default function ToolResourcePage(req, res) {
   try {
@@ -379,7 +388,9 @@ export default function ToolResourcePage(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   ],
   const tool = tools.find(t => t.id === id),
@@ -398,17 +409,14 @@ export default function ToolResourcePage(req, res) {
                 The tool resource you're looking for doesn't exist.
               </p>
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+              <Link
+              <Link 
+              <Link
 
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
-                ← Back to Resources
+                 Back to Resources
               </Link>
             </div>
           </main>
@@ -432,7 +440,7 @@ export default function ToolResourcePage(req, res) {
           <div className="max-w-4xl mx-auto">
             <nav className="mb-8">
               <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-                ← Back to Resources
+                 Back to Resources
               </Link>
             </nav>
             <header className="mb-12">
@@ -450,12 +458,14 @@ export default function ToolResourcePage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 </span>
               </div>
@@ -475,6 +485,7 @@ export default function ToolResourcePage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -483,6 +494,7 @@ export default function ToolResourcePage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   />
@@ -601,12 +613,14 @@ export default function ToolResourcePage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   </ul>
                 </div>
@@ -631,12 +645,9 @@ export default function ToolResourcePage(req, res) {
 
             <div className="text-center">
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+              <Link
+              <Link 
+              <Link
 
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
@@ -649,8 +660,9 @@ export default function ToolResourcePage(req, res) {
       </div>
     </>
 
-
-
+  );
+};
+  )
 
                   </ul>;
                 </div>;
@@ -686,6 +698,7 @@ export default function ToolResourcePage(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -697,5 +710,6 @@ export default function ToolResourcePage(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

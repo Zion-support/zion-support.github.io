@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -17,8 +18,8 @@ export function TransactionHistory() {;
 
 
 
+
   if (loading) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <Card>;
         <CardHeader>;
@@ -121,10 +122,12 @@ export function TransactionHistory() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   ))}
                 </div>
@@ -160,6 +163,7 @@ export function TransactionHistory() {;
   )
 }
 
+
                   ))}
                 </div>;
               )}
@@ -188,5 +192,6 @@ export function TransactionHistory() {;
                   ))}
                 </div>;
               )}
+
 
 

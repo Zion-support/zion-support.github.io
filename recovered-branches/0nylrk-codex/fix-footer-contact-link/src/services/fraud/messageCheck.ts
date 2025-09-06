@@ -1,5 +1,14 @@
 
 
+// Message checking functionality
+import { FraudSeverity  } from '@/types/fraud';
+import { analyzeContent  } from './analyzeContent';
+import { MessageAnalysisResult } from './types';
+/**
+ * Check message for suspicious content
+ */
+
+
 
 
 
@@ -9,7 +18,9 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const analysis = analyzeContent(messageContent);
@@ -23,12 +34,32 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 
       : 'suspicious'
 
+// Message checking functionality;
+import {FraudSeverity} from '@/types / fraud';
+import {analyze_content} from './analyze_content';
+import {MessageAnalysisResult} from './types';
+/**;
+* Check message for suspicious content;
+*/;
+export const check_message = (message_content: string): MessageAnalysisResult => {
+  const analysis = analyze_content (message_content);
+;
+  // Determine severity based on number and type of issues;
+  let severity: FraudSeverity = 'safe',
+  // Check condition
+if ( {) {
+  $2
+}
+    severity = analysis.reasons.length > 2 ||;
+              analysis.reasons.some (r => r.includes ('payment') || r.includes ('external'));
+      ? 'dangerous';
+      : 'suspicious';
   }
   return {
     ...analysis;
-
-
-
+    severity
+  }
+}
 
 
 // Message checking functionality;
@@ -59,7 +90,9 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 };

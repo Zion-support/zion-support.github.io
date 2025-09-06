@@ -1,9 +1,15 @@
 
 
-
+import React from "react";
+import {QuoteRequestCard} from "./QuoteRequestCard";
+import {EmptyStateCard} from "./EmptyStateCard";
+import type { QuoteRequest } from "@/types/quotes";
 import React from "react",
 import { QuoteRequestCard } from "./QuoteRequestCard",
-
+import { EmptyStateCard } from "./EmptyStateCard";
+import type { QuoteRequest } from "@/types/quotes";
+import { EmptyStateCard } from "./EmptyStateCard",
+import type { QuoteRequest } from "@/types/quotes",
 
 type QuoteRequestsListProps = {
   quotes: QuoteRequest[],
@@ -14,6 +20,20 @@ type QuoteRequestsListProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 },
 
+
+type QuoteRequestsListProps = {
+  quotes: QuoteRequest[]
+  isLoading: boolean
+  isArchived: boolean
+  onViewDetails: (quote: QuoteRequest) => void
+  onMarkAsResponded: (id: string) => void
+  onToggleArchive: (id: string, isArchived: boolean) => void
+}
+export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
+  quotes;
+  isLoading;
+  isArchived;
+  onViewDetails;
 
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
 
@@ -33,7 +53,6 @@ import React from "react",;
 import { QuoteRequestCard } from "./QuoteRequestCard",;
 import { EmptyStateCard } from "./EmptyStateCard",;
 import type { QuoteRequest } from "@/types/quotes",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 type QuoteRequestsListProps = {;
   quotes: QuoteRequest[],;
   isLoading: boolean,;
@@ -44,7 +63,21 @@ type QuoteRequestsListProps = {;
 };
 
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+import React from './react';
+import { QuoteRequestCard } from './QuoteRequestCard';
+import { EmptyStateCard } from './EmptyStateCard';
+import type { QuoteRequest } from "@/types / quotes";
+type QuoteRequestsListProps = {
+  quotes: QuoteRequest[],
+  is_loading: boolean,
+  is_archived: boolean,
+  onViewDetails: (quote: QuoteRequest) => void,
+  onMarkAsResponded: (id: string) => void,
+  onToggleArchive: (id: string, is_archived: boolean) => void;
+}
+;
+export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
 
   quotes;
   is_loading;
@@ -64,6 +97,7 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 
 
 
+
   }
   if (quotes.length === 0) {
     return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />
@@ -80,6 +114,7 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 
@@ -105,6 +140,7 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 
 
 
+
     </div>;
   );
 
@@ -118,6 +154,7 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 };
 

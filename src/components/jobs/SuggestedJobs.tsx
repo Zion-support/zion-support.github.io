@@ -4,6 +4,8 @@ interface SuggestedJobsProps {
 
 
 
+
+
 export /**
  * SuggestedJobs - Function description
  */
@@ -36,13 +38,36 @@ function SuggestedJobs() {
 
 
 
+
+
   const { 
     isLoading,
     updateJobMatchStatus, 
     categorizedMatches: { 
 
+      newMatches,
+      viewedMatches,
+      appliedMatches ;
+    } ;
+  } = useJobSuggestions(currentTalentId);
+  const handleApply = (matchId: string, jobId: string) => {;
+    updateJobMatchStatus(matchId, 'applied');    // In a real app, this might redirect to application form or open a modal
+  }
+  const handleDecline = (matchId: string) => {
+    updateJobMatchStatus(matchId, 'declined')
+  }
+      newMatches, 
+      viewedMatches, 
+      appliedMatches 
+    } 
+  } = useJobSuggestions(currentTalentId),
 
 
+
+
+  const handleDecline = (matchId: string) => {
+    updateJobMatchStatus(matchId, 'declined')
+  },
 
 
 
@@ -65,6 +90,7 @@ import { NoJobsCard } from "./NoJobsCard";
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
     )
+
 
 
 
@@ -132,12 +158,14 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           <div className="grid gap-4 md:grid-cols-2">;
             {newMatches && newMatches.map(match => (;
 
+
               <JobMatchesCard
                 key = {match && match.id,}
 
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
+
 
 
               />;
@@ -185,12 +213,14 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
             {viewedMatches && viewedMatches.map(match => (;
 
 
+
               <JobMatchesCard
                 key = {match && match.id,}
 
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
+
 
 
               />;
@@ -230,6 +260,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
               <JobMatchesCard 
 
 
+
                 key = {match.id,}
 
       {/* Applied Jobs Section */}
@@ -258,6 +289,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 onDecline={handleDecline}
                 showApplied={true}
               />;
+
 
 
 
@@ -326,6 +358,7 @@ if (isLoading) {
 }</div> </div>)
 }</div>)
 }'"}
+
     </div>;
   );
 
@@ -334,6 +367,7 @@ if (isLoading) {
   // Check condition
 if ( {) {
   $2
+
 }
     return <NoJobsCard />;
   }
@@ -452,3 +486,4 @@ if ( {) {
 }'"}
 }
 ;
+

@@ -4,20 +4,25 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React, { useState, useEffect, Suspense } from 'react';
+
 import { motion, AnimatePresence } from 'framer-motion';
 
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
@@ -25,14 +30,16 @@ import { innovativeAIServicesEnhanced2025 } from '../data/2025-innovative-ai-ser
 import { innovativeITServicesEnhanced2025 } from '../data/2025-innovative-it-services-enhanced';
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import {
 
-
-
-
-
-import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';import { advancedAIAutomationServices } from '../data/2026-advanced-ai-automation-services';import { ;
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  innovativeRealMicroSaasServices2025
+} from '../data/2025-innovative-real-micro-saas-services';
+import {
+  innovativeAIServicesEnhanced2025
+} from '../data/2025-innovative-ai-services-enhanced';
+import {
+  innovativeITServicesEnhanced2025
+} from '../data/2025-innovative-it-services-enhanced';
+import {
+  emergingTechServicesEnhanced2025
 
   innovativeRealMicroSaasServices2025 ;
 } from '../data/2025-innovative-real-micro-saas-services';
@@ -51,6 +58,8 @@ import { ;
 
 
 
+
+
 } from '../data/2025-emerging-tech-services-enhanced';
 
 
@@ -61,6 +70,7 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
 import UltraFuturisticBackground2026 from './backgrounds/UltraFuturisticBackground2026';
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026';
 import Link from 'next/link';
+
 
 import {;
   ArrowRight,;
@@ -80,6 +90,7 @@ import {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 } from 'lucide-react';
 interface Homepage2025Props {;
   showInternalNav?: boolean;
@@ -88,12 +99,20 @@ const Homepage2025: React.FC<Homepage2025Props> = ({;
 }) => {  const [activeSection, setActiveSection] = useState('hero');} from 'lucide-react';
 
 
+import { 
+  ArrowRight, Star, Brain, Atom, Shield, Zap;
+  Users, Globe, TrendingUp, Rocket, Cpu, Lock;
+  BarChart3, Cloud
+} from 'lucide-react';
+
 
 
 interface Homepage2025Props { showInternalNav?: boolean }
 
 
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {;
+
+
 
 
   const [activeSection, setActiveSection] = useState('hero');
@@ -148,6 +167,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 
 
 
+
+
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
@@ -192,14 +213,14 @@ import {
   Cloud,
 
 } from 'lucide-react';
-;
-interface Homepage2025Props {
+
+interface Homepage2025Props {;
   showInternalNav?: boolean;
-;
-const Homepage2025: React.FC < Homepage2025Props> = ({
-  showInternalNav = true,
-}) => {  const [active_section, setActiveSection] = useState ('hero');} from 'lucide-react';
-;
+
+const Homepage2025: React.FC<Homepage2025Props> = ({;
+  showInternalNav = true,;
+}) => {  const [activeSection, setActiveSection] = useState('hero');} from 'lucide-react';
+
 interface Homepage2025Props { showInternalNav?: boolean }
 const Homepage2025: React.FC < Homepage2025Props> = ({ showInternalNav = true }) => {
   const [active_section, setActiveSection] = useState ('hero');
@@ -215,6 +236,50 @@ const Homepage2025: React.FC < Homepage2025Props> = ({ showInternalNav = true })
     }, 5000);
     return () => clear_interval (interval);  }, []);      setCurrentServiceIndex ((prev) => (prev + 1) % innovativeRealMicroSaasServices2025.length);
 
+const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {;
+interface Homepage2025Props { showInternalNav?: boolean }
+const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {
+  const [activeSection, setActiveSection] = useState('hero');
+  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  useEffect(() => {
+    setIsVisible(true);
+    const interval = setInterval(() => {;
+      setCurrentServiceIndex(;
+        prev => (prev + 1) % innovativeRealMicroSaasServices2025 && innovativeRealMicroSaasServices2025.length;
+      );
+    }, 5000);
+    return () => clearInterval(interval);  }, []);      setCurrentServiceIndex((prev) => (prev + 1) % innovativeRealMicroSaasServices2025 && innovativeRealMicroSaasServices2025.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setActiveSection(sectionId);
+      setIsMobileMenuOpen(false);    }
+  }
+  const allServices = [      element.scrollIntoView({ behavior: 'smooth' })
+      setActiveSection(sectionId);
+      setIsMobileMenuOpen(false);
+    }
+  }
+  const allServices = [
+    ...innovativeRealMicroSaasServices2025
+    ...innovativeAIServicesEnhanced2025
+    ...innovativeITServicesEnhanced2025
+    ...emergingTechServicesEnhanced2025
+    ...advancedAIAutomationServices
+    ...quantumCybersecurityServices
+    ...innovativeMicroSaasServices2026
+    ...specializedITSolutions2026
+    ...emergingTechServices2026
+  ];
+  const featuredServices = allServices
+    .filter(service => service.popular)
+    .slice(0, 12);
     }, 5000);
     return () => clear_interval (interval);
   }, []);
@@ -254,6 +319,8 @@ if ( {) {
     .slice (0, 12);
 
 
+
+
     ...innovativeRealMicroSaasServices2025;
     ...innovativeAIServicesEnhanced2025;
     ...innovativeITServicesEnhanced2025;
@@ -269,6 +336,22 @@ if ( {) {
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12);
 
   const navigationSections = [
+
+;
+  const featured_services = all_services.filter (service => service.popular).slice (0, 12);
+  const navigation_sections = [;
+
+    { id: 'hero', label: 'Home', icon: '🏠' },
+    { id: 'services', label: 'Micro SAAS', icon: '🚀' },
+    { id: 'ai', label: 'AI Services', icon: '🧠' },
+    { id: 'automation', label: 'AI Automation', icon: '⚡' },
+    { id: 'quantum', label: 'Quantum Security', icon: '🔐' },
+    { id: 'it', label: 'IT Solutions', icon: '💻' },
+    { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
+
+      title: "AI-Powered Innovation",
+      description: "Cutting-edge artificial intelligence solutions that transform business operations and drive growth",
+
 
     { id: 'hero', label: 'Home', icon: '🏠' }
     { id: 'services', label: 'Micro SAAS', icon: '🚀' }
@@ -330,6 +413,7 @@ if ( {) {
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
+
                   className='flex items-center space-x-2'
                 >
                   <div className='w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg'></div>
@@ -500,23 +584,36 @@ if ( {) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
                 {/* Contact Info */}
-                <motion.div
+                <motion&& motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
 
 
                 {/* Mobile Menu Button */}
                 <button
-
-                  className="lg:hidden text-white p-2"
-
+                  className='lg:hidden text-white p-2'
                   onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-
-                  </svg>
-
+                >;
+                  <svg
+                    className='w-6 h-6'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'>;
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      strokeWidth={2}
+                      d='M4 6h16M4 12h16M4 18h16'
+                    />                  </svg>                  className="lg:hidden text-white p-2";
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                 </button>
               </div>
+
 
 
 
@@ -539,6 +636,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               {/* Mobile Navigation Menu */}
               <AnimatePresence>;
@@ -565,7 +663,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -577,7 +677,9 @@ if ( {) {
                             activeSection === section.id
                               ? 'bg-cyan-400/20 text-cyan-400'
                               : 'text-gray-300 hover:bg-white/10'
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                           }`}
                         >;
                           <span>{section && section.icon}</span>;
@@ -606,7 +708,7 @@ if ( {) {
                     </div>
                   </motion.div>
                 )}
-</AnimatePresence>;
+              </AnimatePresence>;
             </div>;
           </nav>;
         </>;
@@ -631,6 +733,7 @@ if ( {) {
 
 
 
+
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -641,6 +744,7 @@ if ( {) {
               className='w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center'              className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center">;
               <motion&& motion.div
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
+
 
 
                     >;
@@ -732,7 +836,7 @@ if ( {) {
                         <a;
                           href="tel:+13024640950";
                           className="flex items - center space - x-3 px - 4 py - 2 text - cyan - 400 hover:bg - white / 10 rounded - lg transition - all duration - 300";
-                          <span>📱</span>;
+                          <span></span>;
                           <span>+1 302 464 0950</span>;
                         </a>;
                         <a;
@@ -740,7 +844,7 @@ if ( {) {
                           className='flex items - center space - x-3 px - 4 py - 2 text - cyan - 400 hover:bg - white / 10 rounded - lg transition - all duration - 300'                        >                          href="mailto:kleber@ziontechgroup.com";
                           className="flex items - center space - x-3 px - 4 py - 2 text - cyan - 400 hover:bg - white / 10 rounded - lg transition - all duration - 300";
                         >;
-                          <span>✉️</span>;
+                          <span></span>;
                           <span > kleber@ziontechgroup.com</span>;
                         </a>;
                       </div>;
@@ -750,6 +854,8 @@ if ( {) {
             </div>;
           </nav>;
         </>)}
+
+
 
 
 
@@ -771,6 +877,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Enhanced CTA Section */}
@@ -780,6 +887,7 @@ if ( {) {
       <section id="hero" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-16">
         <div className="text-center z-10 max-w-6xl mx-auto">
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -816,7 +924,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
               {/* Enhanced CTA Section */}
               <motion.div
@@ -901,12 +1011,14 @@ if ( {) {
                 <Star className="w-5 h-5" />;
                 <span>Innovation Leader 2025-2026</span>;
               </motion && motion.div>;
+
               <h1 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
                 Zion Tech Group;
               </h1>;
               <p className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">;
                 Pioneering the future of technology with innovative solutions that drive business transformation;
               </p>;
+
               {/* Enhanced CTA Section */}
               <motion&& motion.div 
                 variants={itemVariants}
@@ -933,6 +1045,7 @@ if ( {) {
 
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
@@ -950,6 +1063,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -965,10 +1079,13 @@ if ( {) {
 
 
 
+
+
       {/* Features Section */}
       <section className="py-20 px-4 relative">
         <div className="max-w-7xl mx-auto">
           <motion.div
+
 
 
 
@@ -980,6 +1097,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -995,7 +1113,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1029,6 +1149,8 @@ if ( {) {
 
 
 
+
+
             className='text-center mb-20'>;
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
               Comprehensive Technology Solutions;
@@ -1038,6 +1160,7 @@ if ( {) {
               tools you need to stay ahead of the competition.;
             </p>;
           </motion && motion.div>;
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>;
             {features && features.map((feature, index) => (;
               <motion&& motion.div
@@ -1050,6 +1173,7 @@ if ( {) {
               From AI-powered automation to quantum computing, we provide the tools you need to stay ahead of the competition.;
             </p>;
           </motion && motion.div>;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
             {features && features.map((feature, index) => (;
               <motion&& motion.div
@@ -1061,12 +1185,14 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -1094,10 +1220,20 @@ if ( {) {
           <motion&& motion.div
             className="text-center mb-16"
 
+      {/* Enhanced Services Preview */}
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 40 }}
+
+
+
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       {/* Enhanced Services Preview */}
@@ -1117,12 +1253,14 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             whileInView={{ opacity: 1, y: 0 }}
 
@@ -1303,6 +1441,7 @@ if ( {) {
             viewport={{ once: true }}
 
 
+
           >;
             <h2 className='text - 3xl md:text - 4xl font - bold text - white mb - 4'>;
               Our Revolutionary 2026 Services;
@@ -1474,6 +1613,7 @@ if ( {) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -1520,7 +1660,9 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -1532,6 +1674,7 @@ if ( {) {
             transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
             viewport={{ once: true }}>;
             <a
+
 
               href='/comprehensive-services-showcase-2026'
               className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25'
@@ -1546,6 +1689,7 @@ if ( {) {
           </motion.div>
         </div>
       </section>
+
       {/* Contact Section */}
       <section id='contact' className='py-20 px-4'>
         <div className='max-w-6xl mx-auto'>
@@ -1586,6 +1730,8 @@ if ( {) {
             </div>
           </div>
           <motion.div
+
+
 
 
             transition={{ duration: 0 && 0.6 }}
@@ -1669,6 +1815,7 @@ if ( {) {
 
 
 
+
             className="text-center"
 
 
@@ -1678,6 +1825,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             initial={{ opacity: 0, y: 20 }}
@@ -1694,7 +1842,6 @@ if ( {) {
               </a>
               <a
                 href="tel:+13024640950"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300"
               >
                 Call Us
@@ -1705,6 +1852,7 @@ if ( {) {
       </section>
 
 
+
 className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/30 hover:bg-white/20 transition-all duration-300">;
                 Call Us;
               </a>;
@@ -1712,6 +1860,7 @@ className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border bord
           </motion && motion.div>;
         </div>;
       </section>;
+
       {/* Footer */}
 
       <footer className='py-12 px-4 border-t border-white/10'>
@@ -1762,6 +1911,7 @@ className="bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border bord
     </UltraFuturisticBackground2026>
   );
 
+
 export default Homepage2025;  )
 }
 
@@ -1788,5 +1938,6 @@ export default Homepage2025;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

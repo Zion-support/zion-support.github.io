@@ -6,12 +6,9 @@ import {useRouter} from 'next/router';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication } from '../../types/grants';
 
+export default function GrantDetailPage() {
 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+export default function GrantDetailPage() {;
 
   const router = useRouter();
   const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
@@ -22,9 +19,15 @@ import type { GrantApplication } from '../../types/grants';
   const [item, setItem] = useState<GrantApplication | null>(null);
   const [loading, setLoading] = useState(true);
   const [updateContent, setUpdateContent] = useState('');
+  useEffect(() => {
+  const [item, setItem] = useState<GrantApplication | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [updateContent, setUpdateContent] = useState('');
+
   useEffect(() => {;
     if (!id) return;
     setLoading(true);
+
 
 
 
@@ -37,6 +40,7 @@ import type { GrantApplication } from '../../types/grants';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   }, [id]);
@@ -55,6 +59,8 @@ import type { GrantApplication } from '../../types/grants';
     }
   }
   if (loading)
+
+
 
 
   const addUpdate = async () => {;
@@ -224,6 +230,7 @@ if (
                         href={l}
                         target='_blank'
 
+
   );
 }
             <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;
@@ -370,5 +377,6 @@ if (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 }
+
 
 

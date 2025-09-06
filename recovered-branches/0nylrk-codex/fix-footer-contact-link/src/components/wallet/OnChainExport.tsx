@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState } from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -161,6 +162,7 @@ export function OnChainExport() {
                 onClick={handleExportTokens}
                 disabled={isExporting}
               >
+
                 {isExporting ? "Processing..." : "Export Tokens"}
                 {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
               </Button>
@@ -175,6 +177,14 @@ export function OnChainExport() {
               Connect Wallet
             </Button>
           </div>
+
+        )}
+      </CardContent>
+    </Card>
+  )
+}
+};
+;
 
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -267,6 +277,24 @@ export function OnChainExport() {;
               </TooltipTrigger>;
               <TooltipContent>;
                 <p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>;
+
+;
+  return (
+    <Card>;
+      <CardHeader>;
+        <CardTitle className="flex items - center gap - 2">;
+          {is_connected ? (
+            <Wallet className="h - 5 w - 5 text - primary" />) : (
+            <Wallet className="h - 5 w - 5" />)}
+          On - chain Export;
+          <TooltipProvider>;
+            <Tooltip>;
+              <TooltipTrigger as_child>;
+                <Info className="h - 4 w - 4 text - muted - foreground cursor - help" />;
+              </TooltipTrigger>;
+              <TooltipContent>;
+                <p className="max - w-xs">Export your ZION$ tokens to an external blockchain wallet</p>;
+
               </TooltipContent>;
             </Tooltip>;
           </TooltipProvider>;
@@ -311,5 +339,7 @@ export function OnChainExport() {;
   );
 }
 ;
+
+
 
 

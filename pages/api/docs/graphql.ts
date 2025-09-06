@@ -1,4 +1,16 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import v1 from '../../../data/api-docs/v1';
+import type { NextApiRequest, NextApiResponse } from "next";
+import v1 from "../../../data/api-docs/v1";
+function toSDL() {
+
+
+import type { NextApiRequest, NextApiResponse } from './next';
+import v1 from "../../../data / api - docs / v1";
+/**
+ * toSDL - Function description
+ */
 
 function toSDL() {
 
@@ -14,6 +26,7 @@ function toSDL() {
       `type ${typeName} { id: ID, title: String, description: String }`
     );
   });
+
   return typedefs.join("\n");
 }
 
@@ -40,5 +53,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 

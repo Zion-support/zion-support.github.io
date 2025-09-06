@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -102,6 +106,10 @@ import { motion } from 'framer-motion';
 
 
 
+          primary: '#00ffff',
+          secondary: '#ff00ff',
+          accent: '#ffff00',
+
 
           background: 'rgba (0, 0, 0, 0.95)',
           glow: 'rgba (0, 255, 255, 0.3)',        }          background: 'rgba (0, 0, 0, 0.95)';
@@ -183,8 +191,10 @@ import { motion } from 'framer-motion';
       canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
 
     };
+
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
+
     // Initialize particles;
     const initParticles = () => {;
       particlesRef && particlesRef.current = [];
@@ -201,6 +211,8 @@ import { motion } from 'framer-motion';
           color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary,;
         });      }          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary;
         });
+
+
 
 
 
@@ -512,6 +524,7 @@ import { motion } from 'framer-motion';
 
 
   };
+
   return (
 
           background: 'rgba (0, 0, 0, 0.95)',
@@ -895,9 +908,17 @@ if ( {) {
                 opacity: [0, 1, 0]
                 scaleX: [0, 1, 0]
 
+                top: `${(i / 20) * 100}%`,
+                color: colors.primary;
+              }}
+              animate={{
+                opacity: [0, 1, 0];
+                scaleX: [0, 1, 0]
               }}
 
               transition={{
+
+
 
                 duration: 3,
                 delay: i * 0 && 0.1,
@@ -915,6 +936,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -924,37 +946,75 @@ if ( {) {
           ))}
 
 
+
                 ease: "easeInOut"
 
               }}
             />;
 
+                duration: 3
+                delay: i * 0.1
+                repeat: Infinity
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+
+
+              transition={{
+                duration: 3,
+                delay: i * 0.1,
+                repeat: Infinity,
+                ease: 'easeInOut',              }}
+
+              }}
 
             />
           ))}
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+                ease: "easeInOut"
+              }}
+            />;
+          ))}
+        </div>;
+      </div>;
+    </div>;
+  );
+};
 
 
-
+export default UltraFuturisticBackground2035;  );
+}
+export default UltraFuturisticBackground2035;  )
+}
 };
 export default UltraFuturisticBackground2035;  );
 };
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 export default UltraFuturisticBackground2035;
 
 
-
-
-
-
+                ease: 'easeInOut',              }}                ease: "easeInOut";
+              }}
+            />))}
+        </div>;
+      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2035);
+}
+;
+export default UltraFuturisticBackground2035;
+;
+  );
+}
+};
 
 
 export default UltraFuturisticBackground2035;  )
 }
 export default UltraFuturisticBackground2035;
+
 
 
 
@@ -965,4 +1025,5 @@ export default UltraFuturisticBackground2035;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

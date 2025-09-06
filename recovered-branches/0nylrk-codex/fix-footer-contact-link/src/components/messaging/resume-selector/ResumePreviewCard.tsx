@@ -1,10 +1,32 @@
 
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
+import { Resume } from "@/types/resume";
 
 
 import React from 'react',
 import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 
+import { Button } from "@/components/ui/button";
+import { Download  } from 'lucide-react';
+import { Resume } from "@/types/resume";
+interface ResumePreviewCardProps {
+  resume: Resume,
+  onDownload: () => void,
+  isLoading: boolean
+}
+export function ResumePreviewCard({
+  resume
+  onDownload
+  isLoading
+}: ResumePreviewCardProps) {
+import { Button } from "@/components/ui/button",
+import { Download } from 'lucide-react',
+import { Resume } from "@/types/resume",
 
 interface ResumePreviewCardProps {
   resume: Resume,
@@ -86,7 +108,6 @@ function ResumePreviewCard() {
             <span className="sr - only">Download Resume</span>;
           </Button>;
         </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {resume.basic_info.summary && (
           <p className="text - xs text - zion - slate line - clamp - 2 mb - 2">;
             {resume.basic_info.summary}
@@ -103,6 +124,7 @@ function ResumePreviewCard() {
 
 
 
+
             {resume.basic_info.summary}
           </p>
         )}
@@ -115,6 +137,7 @@ function ResumePreviewCard() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
         {resume.skills && resume.skills.length > 0 && (
           <div className="flex flex-wrap gap-1 mt-2">
@@ -139,6 +162,7 @@ function ResumePreviewCard() {
         )}
 
       </CardContent>
+
 
 
       </CardContent>;
@@ -176,5 +200,6 @@ function ResumePreviewCard() {
 
 
   );
+
 
 }

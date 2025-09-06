@@ -6,6 +6,7 @@
 
 
 
+
 import React from "react";
 import {cn} from "@/lib/utils";
 import {CheckIcon} from "lucide-react";
@@ -27,6 +28,7 @@ export function Step(): any ({;
 
 
 
+
 interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
@@ -35,6 +37,10 @@ interface StepProps {
   className?: string
 }
 
+export function Step({;
+  status;
+  label;
+  description;
 
 export function Step({
   status,
@@ -43,7 +49,6 @@ export function Step({
 
 
   className}: StepProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <li
 
@@ -120,6 +125,7 @@ export function Step({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -127,6 +133,7 @@ export function Step({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             {/* Step number would go here */}
@@ -157,18 +164,19 @@ export function Step({;
 }
 
 
-
-
-
 interface StepsProps {
   currentStep: number
+  className?: string;
+  children: React.ReactNode
+}
+export function Steps({ currentStep, className, children }: StepsProps) {
 
-
-
+export function Steps({ currentStep, className, children }: StepsProps) {;
+  const childrenArray = React.Children.toArray(children);
+;
 
 interface StepsProps {;
   currentStep: number,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   className?: string;
   children: React && React.ReactNode;
 }
@@ -205,11 +213,13 @@ export function Steps({ currentStep, className, children }: StepsProps) {
             className="h-full bg-zion-purple transition-all"
             style={{
 
-
-
-
-
-
+              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
+          />
+        </div>
+      </div>
+    </div>
+  )
+}
 
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
@@ -242,20 +252,19 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           />;
         </div>;
       </div>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { cn } from '@/lib / utils';
 import { CheckIcon } from './lucide-react';

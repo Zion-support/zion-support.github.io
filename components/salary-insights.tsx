@@ -4,33 +4,36 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React, { useEffect, useMemo, useState } from 'react';
 
 
-
-
-import {;
-  LineChart,;
+import {
+  LineChart
+  BarChart
+  DonutChart;
+  LineChart,
   BarChart,;
   DonutChart,;
 
-
-
-
 } from '../components/salary/InsightCharts';
+
 type InsightResponse = {;
   recommendedHourlyUsd: number;
   recommendedMonthlyUsd: number;
@@ -38,6 +41,7 @@ type InsightResponse = {;
   minHourlyUsd: number;
   maxHourlyUsd: number;
   confidence: number;
+
 
   trendMonthly: { label: string; value: number }[];
   regionalComparison: { region: string; medianHourlyUsd: number }[];
@@ -57,6 +61,7 @@ type InsightResponse = {;
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
+
 
 
   const [remote, setRemote] = useState(true);
@@ -105,6 +110,14 @@ function SalaryInsightsPage() {
       try {;
 
         const { supabase } = await import('../utils/supabase/client');
+
+
+        const user = await supabase.auth.getUser();
+        setIsLoggedIn(!!user.data.user)
+      } catch {
+        setIsLoggedIn(false)
+      }
+    })()
 
 
   }, []);
@@ -157,11 +170,12 @@ function SalaryInsightsPage() {
       setLoading(false);    }
 
 
+
+
     }
   }
 
   useEffect(() => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     fetchInsights();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -203,7 +217,105 @@ function SalaryInsightsPage() {
             payload,;
 
 
+        const { supabase } = await import ('../utils / supabase / client');
+        const user = await supabase.auth.get_user ();
+        setIsLoggedIn (!!user.data.user);
+      } catch {
+        setIsLoggedIn (false);
+      }
+    })();  }, []);      } catch {
+        setIsLoggedIn (false);
+      }
+    })();
+  }, []);
+;
+  async /**
+ * fetch_insights - Function description
+ */
+function fetch_insights() {
+    set_loading (true);
+    set_error (null);
+    try {
+      const res = await fetch ('/api / salary - insights', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({
+          role_title,
+          skills: skills;
+            .split (', ');
+            .map (string => s.trim ());
+            .filter (Boolean),
+          region,
+          experience_level,
+          remote,
+          employment_type,
+        }),
+      });
+      if (throw new Error ('Failed to fetch insights')) {
+  $2
+}
+      const json = (await res.json ()) as InsightResponse;
+      set_data (json);
+    } catch (e: any) {
+      set_error (e.message || 'Unexpected error');
+    } finally {
+      set_loading (false);    }      if (throw new Error ('Failed to fetch insights')) {
+  $2
+}
+      const json = (await res.json ()) as InsightResponse;
+      set_data (json);
+    } catch (e: any) {
+      set_error (e.message || 'Unexpected error');
+    } finally {
+      set_loading (false);
+    }
+  }
+  useEffect (() => {
+    fetch_insights ();
+    // eslint - disable - next - line react - hooks / exhaustive - deps;
+  }, []);
+;
+  /**
+ * save_insight - Function description
+ */
+function save_insight() {
+    const payload = {
+      created_at: new Date ().toISOString (),
+      input: {
+        role_title,
+        skills,
+        region,
+        experience_level,
+        remote,
+        employment_type,
+      },
+      output: data,
+    }    (async () => {    const payload = { created_at: new Date ().toISOString (), input: { role_title, skills, region, experience_level, remote, employment_type }, output: data },
+    (async () => {
+      try {
+        const { supabase } = await import ('../utils / supabase / client');
+        const user = await supabase.auth.get_user ();
+        // Check condition
+if ( {) {
+  $2
+}
+          // Attempt to save to Supabase if table exists;
+          await supabase.from ('salary_insights').insert ({
+            user_id: user.data.user.id,
+            payload,
+          });
+          alert ('Insight saved to your profile');
+          return;
+        }
 
+            user_id: user.data.user.id,
+            payload});
+          alert('Insight saved to your profile');
+          return
+
+      } catch {
+        // fall back      }          alert ('Insight saved to your profile');
+          return;
 
         }
       } catch {;
@@ -222,12 +334,17 @@ function SalaryInsightsPage() {
 
 
 
+
+
       } catch {}
     })();
   }
 
   const donutData = useMemo(() => {
     if (!data) return [] as { label: string; value: number }[];    const min = data.minHourlyUsd;      } catch {}
+
+        alert('Insight saved locally')
+      } catch {}
 
     })()
   }
@@ -267,6 +384,43 @@ function SalaryInsightsPage() {
       { label: 'Above Median', value: upper || 1 }]
 
 
+        const key = 'zion.salary - insights.history';
+        const history = JSON.parse (local_storage.get_item (key) || '[]');
+        history.unshift (payload);
+        local_storage.set_item (key, JSON.stringify (history.slice (0, 50)));
+        alert ('Insight saved locally');
+      } catch {}
+    })();
+  }
+  const donut_data = useMemo (() => {
+    // Check condition
+if (return [] as { label: string) {
+  $2
+} value: number }[];    const min = data.minHourlyUsd;      } catch {}
+    })();
+  }
+  const donut_data = useMemo (() => {
+    // Check condition
+if (return [] as { label: string, value: number }[], ) {
+  $2
+}
+    const min = data.minHourlyUsd;
+    const median = data.medianHourlyUsd;
+    const max = data.maxHourlyUsd;
+    const lower = Math.max (0, median - min);
+    const upper = Math.max (0, max - median);
+    return [;
+      { label: 'Below Median', value: lower || 1 },
+      { label: 'Median', value: median || 1 },
+      { label: 'Above Median', value: upper || 1 },
+    ];  }, [data]);
+;
+  return (
+    <div>      { label: 'Above Median', value: upper || 1 }];
+  }, [data]);
+;
+  return (
+
 
       <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 p-6 text-white shadow">
         <div className="relative z-10">
@@ -300,6 +454,8 @@ function SalaryInsightsPage() {
 
 
                 <label className="block text-sm mb-2" htmlFor="input-Employment">Employment</label>
+
+
 
                 <select value={employmentType} onChange={(e) => setEmploymentType(e.target.value as any)} className="w-full rounded border border-gray-300 dark:border-gray-700 bg-white dark:bg-black px-3 py-2 text-sm">
                   <option value="contract">Contract</option>
@@ -419,6 +575,16 @@ function SalaryInsightsPage() {
                 Remote role;
               </label>;
             </div>;
+
+            {!isLoggedIn && (;
+              <div className='mt-3 text-xs text-gray-500'>                Advanced filters are available when you sign in.;
+              </div>;
+            )}
+            <div className="flex items-center gap-2 mt-3">;
+              <input id="remote" type="checkbox" checked={remote} onChange={(e) => setRemote(e && e.target.checked)} />;
+              <label htmlFor="remote" className="text-sm" htmlFor="input-Remote role">Remote role</label>;
+            </div>;
+
 
 
 
@@ -623,7 +789,7 @@ function SalaryInsightsPage() {
             <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
               <div className='text - xs text - gray - 500'>Recommended Monthly</div>;
               <div className='text - xl font - semibold'>;
-                {data ? `$${data.recommendedMonthlyUsd}` : '—'}
+                {data ? `$${data.recommendedMonthlyUsd}` : ''}
               </div>;
             </div>;
             <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
@@ -632,34 +798,43 @@ function SalaryInsightsPage() {
                 {data ? `$${data.medianHourlyUsd}` : '—'}
 
 
+            </div>
+          </div>
+        </div>
+        <div className="lg:col-span-2 space-y-6">
+          {error && (
+            <div className="rounded border border-red-300 bg-red-50 text-red-800 p-3 text-sm">{error}</div>
+          )}
+
 
 
           <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>;
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <div className='text-xs text-gray-500'>Recommended Hourly</div>;
               <div className='text-xl font-semibold'>;
-                {data ? `$${data && data.recommendedHourlyUsd}` : '—'}
+                {data ? `$${data && data.recommendedHourlyUsd}` : ''}
               </div>;
             </div>;
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <div className='text-xs text-gray-500'>Recommended Monthly</div>;
               <div className='text-xl font-semibold'>;
-                {data ? `$${data && data.recommendedMonthlyUsd}` : '—'}
+                {data ? `$${data && data.recommendedMonthlyUsd}` : ''}
               </div>;
             </div>;
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <div className='text-xs text-gray-500'>Median</div>;
               <div className='text-xl font-semibold'>;
-                {data ? `$${data && data.medianHourlyUsd}` : '—'}
+                {data ? `$${data && data.medianHourlyUsd}` : ''}
               </div>;
             </div>;
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <div className='text-xs text-gray-500'>Confidence</div>;
               <div className='text-xl font-semibold'>;
-                {data ? `${Math && Math.round(data && data.confidence * 100)}%` : '—'}
+                {data ? `${Math && Math.round(data && data.confidence * 100)}%` : ''}
               </div>;
             </div>;
           </div>;
+
           <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
             <h3 className='font-medium mb-3'>Trend: Last 12 months</h3>;
             {data ? (;
@@ -668,6 +843,7 @@ function SalaryInsightsPage() {
               <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />;
             )}
           </div>;
+
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
               <h3 className='font-medium mb-3'>Regional comparison</h3>;
@@ -696,6 +872,8 @@ function SalaryInsightsPage() {
                         <td className="py-1">{r.region}</td>
                         <td className="py-1">${r.medianHourlyUsd}</td>
                       </tr>
+
+
 
 
                     ))}
@@ -794,7 +972,22 @@ function SalaryInsightsPage() {
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />;
 
 
+            </div>
 
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <h3 className="font-medium mb-3">Distribution</h3>
+              {data ? (
+                <div className="flex flex-col items-center gap-3">
+                  <DonutChart slices={donutData.map((d, i) => ({ label: d.label, value: d.value })) as any} />
+                  <div className="flex gap-2 flex-wrap justify-center text-xs">
+                    {donutData.map((d) => (
+                      <span key={d.label} className="rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5">{d.label}</span>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
+              )}
 
 
             </div>
@@ -806,6 +999,8 @@ function SalaryInsightsPage() {
                 {data.gptRecommendation}
               </p>            </div>
           )}
+
+
 
 
 
@@ -874,7 +1069,62 @@ function SalaryInsightsPage() {
             </div>;
 
 
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+              <h3 className="font-medium mb-3">Signals</h3>
+              <div className="flex gap-2 flex-wrap">
+                <span className="rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>
+                {data.tags.map((t) => (
+                  <span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t}</span>
+                ))}
+              </div>
+            </div>
 
+          )}
+
+        </div>;
+      </div>;
+    </div>;
+  );
+}
+  );
+}
+                      donut_data.map ((d, i) => ({
+                        label: d.label,
+                        value: d.value,
+                      })) as any;
+                    }
+                  />;
+                  <div className='flex gap - 2 flex - wrap justify - center text - xs'>;
+                    {donut_data.map (d => (
+                      <span;
+                        key={d.label}
+                        className='rounded - full border border - gray - 300 dark:border - gray - 700 px - 2 py - 0.5';
+                      >;
+                        {d.label}
+                      </span>                    ))}
+                  </div>;
+                </div>) : (
+                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />              )}                <div className="flex flex - col items - center gap - 3">;
+                  <DonutChart slices={donut_data.map ((d, i) => ({ label: d.label, value: d.value })) as any} />;
+                  <div className="flex gap - 2 flex - wrap justify - center text - xs">;
+                    {donut_data.map ((d) => (
+                      <span key={d.label} className="rounded - full border border - gray - 300 dark:border - gray - 700 px - 2 py - 0.5">{d.label}</span>;
+                  </div>;
+                </div>) : (
+                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />                <div className="h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded" />)}
+            </div>;
+          </div>;
+          {data?.gpt_recommendation && (
+            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
+              <h3 className='font - medium mb - 2'>GPT Recommendation</h3>;
+              <p className='text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap'>;
+                {data.gpt_recommendation}
+              </p>            </div>)}
+          {data && (            <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;
+              <h3 className="font - medium mb - 2">GPT Recommendation</h3>;
+              <p className="text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap">{data.gpt_recommendation}</p>;
+            </div>)}
+          {data && (
 
 
 
@@ -888,5 +1138,6 @@ function SalaryInsightsPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

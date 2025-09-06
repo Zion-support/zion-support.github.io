@@ -22,5 +22,7 @@
   location,
   category,
   match_percent,
+
 }
 }
+

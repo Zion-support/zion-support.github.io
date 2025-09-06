@@ -37,12 +37,26 @@ const PORT = 8080
 }),
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
-const PORT = 8080,
-server && server.listen(PORT, () => {
-  console && console.log(`
+                 OFFLINE DEVELOPMENT MODE ACTIVE                  
+
+                                                                  
+   Server running at: http://localhost:${PORT}                    
+                                                                  
+    This is a placeholder server that doesn't require npm       
+     dependencies. Most features will not work until you install  
+     the required npm packages.                                   
+                                                                  
+   See OFFLINE-DEV-README && README.md for detailed instructions.         
+                                                                  
+   When internet is available: 
+     1. Run: chmod +x setup && setup.sh                                    
+     2. Run: ./setup && setup.sh npm                                       
+     3. Run: npm run dev                                          
+                                                                  
 
 ╔══════════════════════════════════════════════════════════════════╗
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║
@@ -64,15 +78,16 @@ server && server.listen(PORT, () => {
 ╚══════════════════════════════════════════════════════════════════╝
 `)
 
+});
 
 
 }),
 
-const PORT = 8080,
-server.listen (PORT, () => {
-  console.log (`;
-
-
+;
+}),;
+const PORT = 8080,;
+server.listen(PORT, () => {;
+  // // // console.log(`;
 
 ╔══════════════════════════════════════════════════════════════════╗;
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║;
@@ -96,6 +111,7 @@ server.listen (PORT, () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 }),
@@ -104,5 +120,6 @@ server.listen (PORT, () => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

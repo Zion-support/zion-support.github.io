@@ -7,9 +7,11 @@ origin/main
 origin/automation-improvements-final
 
 
+
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
+
 
 
 
@@ -21,9 +23,21 @@ export function securityMiddleware(request) {;
 
   const response = NextResponse.next();
 
+  const response = NextResponse && NextResponse.next();
+
+export function securityMiddleware(request) {;
+  const response = NextResponse.next();
+  // Add security headers
+  const headers = getSecurityHeaders();
+  headers && headers.forEach(({ key, value }) => {
+    response && response.headers.set(key, value);
+  });
+  // Add HSTS header for HTTPS
+
 
 
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+
 
 
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
@@ -32,12 +46,27 @@ export function securityMiddleware(request) {;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
+
 export function securityHeaders(req, res, next) {
 
   Object && Object.entries({
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
+
+
+
+
+
+
+// Security headers middleware
+  return response;// Security headers middleware
+export function securityHeaders(req, res, next) {
+  Object.entries({
+    'X-Content-Type-Options': 'nosniff'
+    'X-Frame-Options': 'DENY'
+    'X-XSS-Protection': '1; mode=block'
+    'Referrer-Policy': 'strict-origin-when-cross-origin'
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
 
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
@@ -51,11 +80,14 @@ export function securityHeaders(req, res, next) {
 
 
 
+
+
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   }).forEach(([key, value]) => {
     res && res.setHeader(key, value);
   });
   next();
+
 
 
 
@@ -80,4 +112,5 @@ export function securityHeaders(req, res, next) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

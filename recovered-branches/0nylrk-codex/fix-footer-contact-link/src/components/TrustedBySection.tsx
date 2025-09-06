@@ -1,11 +1,17 @@
 
 
+import { GradientHeading } from "./GradientHeading";
+import { useState } from "react";
+import { GradientHeading } from "./GradientHeading",
+import { useState } from "react",
 
 import {GradientHeading} from "./GradientHeading";
 import {useState} from "react";
 
 import { GradientHeading } from "./GradientHeading",
 import { useState } from "react",
+
+
 
 
 // Real company logos for trusted partners - with more reliable image URLs
@@ -212,6 +218,14 @@ export function TrustedBySection() {
                 </div>
               ) : (
 
+                <img
+                  src={company.logo}
+                  alt={company.alt}
+                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
+                <img 
+                  src={company.logo} 
+                  alt={company.alt} 
+                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
 
 import { GradientHeading } from "./GradientHeading",;
 import { useState } from "react",;
@@ -353,6 +367,7 @@ export function TrustedBySection() {;
 
 
 
+
                 <img
                   src={company && company.logo} 
                   alt={company && company.alt} 
@@ -368,9 +383,9 @@ export function TrustedBySection() {;
 
 
 
+
                   onError={() => handleImageError(company.name)}
                 />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </div>;
           ))}
@@ -381,6 +396,9 @@ export function TrustedBySection() {;
       </div>
     </section>
   )
+
+}
+}
 
 import { GradientHeading } from './GradientHeading';
 import { useState } from './react';

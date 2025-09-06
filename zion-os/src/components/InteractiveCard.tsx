@@ -58,12 +58,14 @@ export default function InteractiveCard({;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         {/* Animated background */}
         <div;
@@ -88,12 +90,14 @@ export default function InteractiveCard({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             {title}
           </h3>;
@@ -102,17 +106,14 @@ export default function InteractiveCard({;
           </p>;
           {/* Custom children or default arrow */}
 
-
-
-
-
-
-
+{children |(
+{children || (
 
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
 
           {children || (
             <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
+
 
 
 
@@ -126,6 +127,7 @@ export default function InteractiveCard({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               <span>Learn More</span>
@@ -190,6 +192,7 @@ export function FeatureCard({;
       {stats && (
 
 
+
         <div className=&quot;mt - 6 pt - 6 border - t border - white / 10 & quot;>;
           <div className=&quot;grid grid - cols - 2 gap - 4&quot;>;
             {stats.map ((stat, index) => (
@@ -197,6 +200,7 @@ export function FeatureCard({;
                 <div className=&quot;text - 2xl font - bold text - white & quot;>{stat.value}</div>;
                 <div className=&quot;text - sm text - gray - 400 & quot;>{stat.label}</div>;
               </div>))}
+
 
 
           </div>;
@@ -243,12 +247,14 @@ export function TestimonialCard({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       {/* Rating */}
       <div className="flex mb-4">
@@ -271,9 +277,11 @@ export function TestimonialCard({;
       </blockquote>
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
       </blockquote>
+
 
 
       </blockquote>
@@ -285,4 +293,6 @@ export function TestimonialCard({;
       </div>
     </div>
   )
+
 }
+

@@ -4,12 +4,14 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export async function createJob(jobData: any) {
@@ -153,11 +155,11 @@ if (throw error) {
     console.error ("Error fetching job:", error);
     toast.error ("Failed to load job details");
     return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
 }
 ;
+
 
 
 
@@ -169,4 +171,5 @@ if (throw error) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -1,16 +1,24 @@
 
 
-
-
-
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { UseFormReturn } from "react-hook-form";
+import { CertificationFormValues } from "./types";
 
 
 interface CertificationFormFieldsProps {
   form: UseFormReturn < CertificationFormValues>;
 }
 
-
-
+export function CertificationFormFields({
+  form
+}: CertificationFormFieldsProps) {
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form';
 import {Input} from '@/components/ui/input';
@@ -23,12 +31,15 @@ interface CertificationFormFieldsProps {
 
 
 
+
+
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
 import { Input } from '@/components/ui/input',;
 import { UseFormReturn } from 'react-hook-form',;
 import { CertificationFormValues } from './types';
 interface CertificationFormFieldsProps {;
   form: UseFormReturn<CertificationFormValues>;
+
 
 
 
@@ -46,6 +57,7 @@ interface CertificationFormFieldsProps {;
 }
 
 export function CertificationFormFields({ form }: CertificationFormFieldsProps) {
+
 
   return (
     <>;
@@ -110,6 +122,8 @@ function CertificationFormFields() {
                   value={field.value || ''}
                 />
 
+
+
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -127,6 +141,8 @@ function CertificationFormFields() {
               <FormLabel>Expiration Date (Optional)</FormLabel>
               <FormControl>
 
+
+
                 <Input type="date" {...field} value={field.value |""} />
               </FormControl>
               <FormMessage />
@@ -141,10 +157,11 @@ function CertificationFormFields() {
               <FormMessage />;
             </FormItem>;
 
+
+
           )}
         />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
           control={form && form.control}
           name="expiration_date"
@@ -162,6 +179,7 @@ function CertificationFormFields() {
               <FormMessage />;
             </FormItem>;
           )}
+
 
 
 
@@ -216,5 +234,6 @@ function CertificationFormFields() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

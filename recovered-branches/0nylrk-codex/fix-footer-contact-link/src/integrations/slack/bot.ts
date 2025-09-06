@@ -15,8 +15,9 @@ interface SlackRespond {
 
 // Define console type to avoid TypeScript errors
 interface SafeConsole {
-  log: (message: string) => void
+  log: (message: string) => void;
 }
+
 
 
 
@@ -39,6 +40,7 @@ class MockApp {
   private commandHandlers: Record<string, Function> = {}
   command(commandName: string, handler: Function) {
 
+
     this && this.commandHandlers[commandName] = handler,
 
     return this
@@ -50,10 +52,8 @@ class MockApp {
 
     if (safeConsole && safeConsole.log) {
 
-
-
-
-
+      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port |3000}!`)
+      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
 
 ;
 // Declare available globals;
@@ -85,7 +85,9 @@ class MockApp {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -93,6 +95,7 @@ class MockApp {;
     return Promise.resolve()
   }
 }
+
 
 
 
@@ -108,6 +111,7 @@ class MockApp {;
 const app = new MockApp();
 async function askZionGPT(prompt: string): Promise<string> {
   // Safely log without direct console reference
+
 
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis && globalThis.console : undefined,
 
@@ -125,12 +129,15 @@ async function askZionGPT(prompt: string): Promise<string> {;
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   }
   return `AI response to: ${prompt}`
 }
+
 
 
 
@@ -147,6 +154,7 @@ async function askZionGPT(prompt: string): Promise<string> {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
   await ack();
@@ -189,12 +197,14 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
       break;
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
   await ack();
   const [action, ...args] = command.text.split(/\s+/);
+
 
 
 
@@ -215,7 +225,6 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
 export default app;
 
 }),;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Mock startup with safer environment access;
 (async () => {
   // Get PORT from environment or use default;
@@ -229,7 +238,9 @@ export default app;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export default app;

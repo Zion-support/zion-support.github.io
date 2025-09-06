@@ -10,6 +10,7 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true
   },
+
   pageExtensions: ["tsx", "ts", "jsx", "js"],
   trailingSlash: true,
 
@@ -50,6 +51,7 @@ const nextConfig = {
   
   // Webpack configuration to exclude problematic directories
 
+
   },
 
     ignoreBuildErrors: true
@@ -75,7 +77,7 @@ const nextConfig = {
 
   webpack: (config, { dev, isServer }) => {
     if (dev) {
-      config.watchOptions = {
+      config && config.watchOptions = {
         ignored: [
 
           "**/node_modules/**",
@@ -84,25 +86,25 @@ const nextConfig = {
           "**/pages.*/**",
           "**/pages-*/**",
           "**/pages_disabled*/**",
-          "**/pages.disabled*/**",
-          "**/pages.broken*/**",
-          "**/pages.corrupted*/**",
-          "**/pages.old*/**",
-          "**/pages._*/**",
-          "**/pages.__*/**",
+          "**/pages && pages.disabled*/**",
+          "**/pages && pages.broken*/**",
+          "**/pages && pages.corrupted*/**",
+          "**/pages && pages.old*/**",
+          "**/pages && pages._*/**",
+          "**/pages && pages.__*/**",
           "**/backup-pages/**",
-          "**/src.pages.disabled/**",
+          "**/src && src.pages.disabled/**",
           "**/lib_backup*/**",
           "**/src_backup*/**",
-          "**/corrupted-files-backup*/**",
-          "**/performance-reports*/**",
-          "**/log-analysis-reports*/**",
-          "**/link-reports*/**",
-          "**/lint-target*/**",
+          "**/corrupted - files - backup*/**",
+          "**/performance - reports*/**",
+          "**/log - analysis - reports*/**",
+          "**/link - reports*/**",
+          "**/lint - target*/**",
           "**/monitoring*/**",
-          "**/pm2-automation*/**",
-          "**/automation/logs*/**",
-          "**/automation/backup*/**",
+          "**/pm2 - automation*/**",
+          "**/automation / logs*/**",
+          "**/automation / backup*/**",
           "**/performance-*.json",
           "**/performance-*.js",
           "**/performance-*.cjs",
@@ -110,13 +112,15 @@ const nextConfig = {
           "**/performance-*.html",
           "**/performance-*.md",
           "**/performance-*.txt",
-          "**/apps/**"
+          "**/apps/**",
         ],
         poll: 1000,
 
 
 
+
         aggregateTimeout: 300
+
       }
     }
 
@@ -140,6 +144,8 @@ const nextConfig = {
 
 
 
+
+
     // Exclude apps directory from compilation
     config.module.rules.push({
       test: /\.(ts|tsx|js|jsx)$/,
@@ -152,22 +158,22 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "/(.*)",
+        source: "/(.*)"
         headers: [
           {
-            key: "X-Content-Type-Options",
+            key: "X-Content-Type-Options"
             value: "nosniff"
-          },
+          }
           {
-            key: "X-Frame-Options",
+            key: "X-Frame-Options"
             value: "DENY"
-          },
+          }
           {
-            key: "X-XSS-Protection",
+            key: "X-XSS-Protection"
             value: "1; mode=block"
-          },
+          }
           {
-            key: "Referrer-Policy",
+            key: "Referrer-Policy"
             value: "origin-when-cross-origin"
           }
         ]
@@ -177,6 +183,7 @@ const nextConfig = {
 
     ];
   }
+
 
 }
 export default nextConfig;
@@ -223,5 +230,6 @@ export default nextConfig;
   }
 }
 export default nextConfig
+
 
 

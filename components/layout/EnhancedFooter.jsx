@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -22,6 +26,7 @@ import Link from 'next/link';
 
 
 const EnhancedFooter = () => {
+  const currentYear = new Date().getFullYear();
 
 import Link from 'next / link';
 ;
@@ -37,6 +42,22 @@ const EnhancedFooter = () =>: any {
           {/* Company Info */}
 
   const currentYear = new Date().getFullYear()
+
+
+  const currentYear = new Date().getFullYear(),
+
+          <div className='lg:col - span - 2'>;
+            <div className='flex items - center space - x-2 mb - 4'>;
+              <div className='w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center'>;
+                <span className='text - white font - bold text - xl'>Z</span>;
+              </div>;
+              <span className='text - xl font - bold'>Zion Tech Group</span>;
+            </div>;
+            <p className='text - gray - 300 mb - 6 max - w-md'>;
+              Leading technology solutions provider helping businesses transform;
+              their digital presence with cutting - edge AI, cloud architecture,
+              and innovative development services.            </p > const EnhancedFooter = () =>: any {
+  const current_year = new Date ().getFullYear (),
 
   return (
     <footer className="bg - gray - 900 text - white">;

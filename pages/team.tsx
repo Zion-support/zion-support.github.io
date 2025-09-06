@@ -6,10 +6,12 @@
 
 
 
+
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
+
 
 import React from './react';
 import Head from './next / head';
@@ -17,8 +19,18 @@ import Link from './next / link';
 import { motion  } from './framer-motion';
 import {
 
-
-
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  Linkedin
+  Twitter
+  Github
+  Award
+  Users
+  Globe
+  Code
+  Shield
 
   ArrowRight,
   Phone,
@@ -32,11 +44,13 @@ import {
   Globe,
   Code,
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+  Shield,;
+} from "lucide-react";
+import Layout from "../components/Layout";
+const teamMembers = [
+  {
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
 
     id: 1,
     name: "Kleber Santos",
@@ -128,6 +142,18 @@ origin/main
     expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"]
   }
 
+    image: "/api / placeholder / 300 / 300",
+    linkedin: "https://linkedin.com / in / klebersantos",
+    twitter: "https://twitter.com / klebersantos",
+    github: "https://github.com / klebersantos",
+    expertise: [;
+      "Strategic Leadership",
+      "AI / ML",
+      "Cloud Architecture",
+      "Business Development",
+    ],
+  },
+
   {
 
   }
@@ -150,49 +176,49 @@ const departments = [
   {
     name: "Leadership"
     description: "Strategic vision and company direction"
-    icon: "👑"
+    icon: ""
     count: 1
   }
   {
     name: "Technology"
     description: "Engineering and technical innovation"
-    icon: "💻"
+    icon: ""
     count: 15
   }
   {
     name: "AI & Machine Learning"
     description: "Artificial intelligence and data science"
-    icon: "🤖"
+    icon: ""
     count: 12
   }
   {
     name: "Cybersecurity"
     description: "Security and compliance solutions"
-    icon: "🛡️"
+    icon: ""
     count: 8
   }
   {
     name: "Data & Analytics"
     description: "Business intelligence and analytics"
-    icon: "📊"
+    icon: ""
     count: 10
   }
   {
     name: "Product"
     description: "Product development and design"
-    icon: "🎨"
+    icon: ""
     count: 6
   }
   {
     name: "Sales & Marketing"
     description: "Business development and growth"
-    icon: "📈"
+    icon: ""
     count: 8
   }
   {
     name: "Operations"
     description: "Project management and delivery"
-    icon: "⚙️"
+    icon: ""
     count: 5
   }
 ];
@@ -201,6 +227,107 @@ const stats = [
   { number: "15+", label: "Years Experience" }
   { number: "25+", label: "Countries Represented" }
   { number: "95%", label: "Employee Satisfaction" }
+
+import {;
+  ArrowRight,;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Linkedin,;
+  Twitter,;
+  Github,;
+  Award,;
+  Users,;
+  Globe,;
+  Code,;
+  Shield,;
+} from "lucide-react";
+import Layout from "../components/Layout";
+
+const teamMembers = [;
+  {;
+    id: 1,;
+    name: "Kleber Santos",;
+    position: "CEO & Founder",;
+    department: "Leadership",;
+    bio: "Visionary leader with 15+ years in technology and business transformation. Passionate about leveraging AI and cloud technologies to solve complex business challenges.",;
+    image: "/api/placeholder/300/300",;
+    linkedin: "https://linkedin && linkedin.com/in/klebersantos",;
+    twitter: "https://twitter && twitter.com/klebersantos",;
+    github: "https://github && github.com/klebersantos",;
+    expertise: [;
+      "Strategic Leadership",;
+      "AI/ML",;
+      "Cloud Architecture",;
+      "Business Development",;
+    ],;
+  },;
+  {;
+    id: 2,;
+    name: "Sarah Johnson",;
+    position: "CTO",;
+    department: "Technology",;
+    bio: "Technology visionary with expertise in cloud computing, AI, and scalable architecture. Led digital transformations for Fortune 500 companies.",;
+    image: "/api/placeholder/300/300",;
+    linkedin: "https://linkedin && linkedin.com/in/sarahjohnson",;
+    twitter: "https://twitter && twitter.com/sarahjohnson",;
+    github: "https://github && github.com/sarahjohnson",;
+    expertise: ["Cloud Computing", "AI/ML", "System Architecture", "DevOps"],;
+  },;
+  {;
+    id: 3,;
+    name: "Mike Chen",;
+    position: "Head of Cybersecurity",;
+    department: "Security",;
+    bio: "Cybersecurity expert with 12+ years protecting enterprise systems. Specializes in zero-trust architecture and threat intelligence.",;
+    image: "/api/placeholder/300/300",;
+    linkedin: "https://linkedin && linkedin.com/in/mikechen",;
+    twitter: "https://twitter && twitter.com/mikechen",;
+    github: "https://github && github.com/mikechen",;
+    expertise: [;
+      "Cybersecurity",;
+      "Zero-Trust",;
+      "Threat Intelligence",;
+      "Compliance",;
+    ],;
+  },;
+  {;
+    id: 4,;
+    name: "Emily Rodriguez",;
+    position: "Head of AI/ML",;
+    department: "AI & Machine Learning",;
+    bio: "AI researcher and practitioner with deep expertise in machine learning, natural language processing, and computer vision applications.",;
+    image: "/api/placeholder/300/300",;
+    linkedin: "https://linkedin && linkedin.com/in/emilyrodriguez",;
+    twitter: "https://twitter && twitter.com/emilyrodriguez",;
+    github: "https://github && github.com/emilyrodriguez",;
+    expertise: ["Machine Learning", "NLP", "Computer Vision", "Deep Learning"],;
+  },;
+  {;
+    id: 5,;
+    name: "David Kim",;
+    position: "Head of Data Analytics",;
+    department: "Data & Analytics",;
+    bio: "Data science leader with expertise in big data, predictive analytics, and business intelligence. Transforms data into actionable insights.",;
+    image: "/api/placeholder/300/300",;
+    linkedin: "https://linkedin && linkedin.com/in/davidkim",;
+    twitter: "https://twitter && twitter.com/davidkim",;
+    github: "https://github && github.com/davidkim",;
+    expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"],;
+  },;
+  {;
+    id: 6,;
+    name: "Lisa Wang",;
+    position: "Head of Product Development",;
+    department: "Product",;
+    bio: "Product strategist with experience building scalable SaaS platforms and mobile applications. Focuses on user experience and market fit.",;
+    image: "/api/placeholder/300/300",;
+    linkedin: "https://linkedin && linkedin.com/in/lisawang",;
+    twitter: "https://twitter && twitter.com/lisawang",;
+    github: "https://github && github.com/lisawang",;
+    expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],;
+  },;
+
 ];
 
 export default function TeamPage() {
@@ -228,17 +355,15 @@ export default function TeamPage() {
               className="text-xl mb-8 text-purple-100"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
-              Our diverse team of technology professionals brings together;
-              decades of experience in AI, cloud computing, cybersecurity, and;
-              business transformation.;
-            </motion && motion.p>;
-          </div>;
-        </div>;
-      </section>;
-
-
+              transition={{ duration: 0.8, delay: 0.2 }}
+            >
+              Our diverse team of technology professionals brings together
+              decades of experience in AI, cloud computing, cybersecurity, and
+              business transformation.
+            </motion.p>
+          </div>
+        </div>
+      </section>
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">;
         <div className="container mx-auto px-4">;
@@ -256,28 +381,25 @@ export default function TeamPage() {
                 <div className="text-gray-600">{stat && stat.label}</div>;
               </motion && motion.div>;
             ))}
-
-          </div>;
-        </div>;
-      </section>;
-
+          </div>
+        </div>
+      </section>
       {/* Leadership Team */}
-      <section className="py-16 bg-white">;
-        <div className="container mx-auto px-4">;
-          <div className="text-center mb-12">;
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">;
-              Leadership Team;
-            </h2>;
-            <p className="text-xl text-gray-600">;
-              Visionary leaders driving innovation and growth;
-            </p>;
-          </div>;
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Leadership Team
+            </h2>
+            <p className="text-xl text-gray-600">
+              Visionary leaders driving innovation and growth
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {teamMembers && teamMembers.slice(0, 3).map((member, index) => (;
-              <motion&& motion.div
-                key={member && member.id}
-
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.slice(0, 3).map((member, index) => (
+              <motion.div
+                key={member.id}
                 className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -324,28 +446,24 @@ export default function TeamPage() {
                 </div>;
               </motion && motion.div>;
             ))}
-
-          </div>;
-        </div>;
-      </section>;
-
+          </div>
+        </div>
+      </section>
       {/* All Team Members */}
-      <section className="py-16 bg-gray-50">;
-        <div className="container mx-auto px-4">;
-          <div className="text-center mb-12">;
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">;
-              Our Expert Team;
-            </h2>;
-            <p className="text-xl text-gray-600">;
-              Dedicated professionals across all departments;
-            </p>;
-          </div>;
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {teamMembers && teamMembers.map((member, index) => (;
-              <motion&& motion.div
-                key={member && member.id}
-
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Our Expert Team
+            </h2>
+            <p className="text-xl text-gray-600">
+              Dedicated professionals across all departments
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <motion.div
+                key={member.id}
                 className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -393,28 +511,24 @@ export default function TeamPage() {
                 </div>;
               </motion && motion.div>;
             ))}
-
-          </div>;
-        </div>;
-      </section>;
-
+          </div>
+        </div>
+      </section>
       {/* Departments */}
-      <section className="py-16 bg-white">;
-        <div className="container mx-auto px-4">;
-          <div className="text-center mb-12">;
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">;
-              Our Departments;
-            </h2>;
-            <p className="text-xl text-gray-600">;
-              Specialized teams working together to deliver excellence;
-            </p>;
-          </div>;
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">;
-            {departments && departments.map((dept, index) => (;
-              <motion&& motion.div
-                key={dept && dept.name}
-
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Our Departments
+            </h2>
+            <p className="text-xl text-gray-600">
+              Specialized teams working together to deliver excellence
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {departments.map((dept, index) => (
+              <motion.div
+                key={dept.name}
                 className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -427,12 +541,9 @@ export default function TeamPage() {
                 </div>;
               </motion && motion.div>;
             ))}
-
-          </div>;
-        </div>;
-      </section>;
-
-
+          </div>
+        </div>
+      </section>
       {/* Join Our Team CTA */}
       <section className="py-16 bg-purple-600 text-white">;
         <div className="container mx-auto px-4 text-center">;
@@ -493,6 +604,22 @@ export default function TeamPage() {
         </div>
       </section>
 
+    </Layout>
+    <>
+      <SEO
+        title='Our Team | Zion Tech Group'
+        description='Meet the leadership team at Zion Tech Group.'
+        canonical='/team'
+      />
+      <div className='container mx-auto px-4 py-16'>
+        <h1 className='text-4xl font-bold mb-4'>Our Team</h1>
+        <p className='text-gray-300 mb-8'>
+          Profiles coming soon. For inquiries, contact us.
+        </p>
+      </div>
+    </>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
     </Layout>;
 
   );
@@ -543,7 +670,6 @@ export default function TeamPage() {;
 ursor/integrate-build-improve-and-re-verify-8f7d
 
     <>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <SEO
         title="Our Team | Zion Tech Group"
         description="Meet the leadership team at Zion Tech Group."
@@ -561,6 +687,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 
 
+
     </>;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -571,6 +698,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     </>;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   );
@@ -594,9 +722,16 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
 import SEO from '../components/SEO';
 export default function TeamPage() {	return (
-
-
-
+import React from 'react',
+import SEO from '../components/SEO',
+export default function TeamPage() {
+	return (
+import SEO from '../components/SEO';
+export default function TeamPage() {	return (
+import React from 'react',
+import SEO from '../components/SEO',
+export default function TeamPage() {
+	return (
 
 		<>
 			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
@@ -610,6 +745,7 @@ export default function TeamPage() {	return (
 
 
 }
+
 </Layout>);
 
 }
@@ -702,4 +838,5 @@ function TeamPage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

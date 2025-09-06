@@ -17,6 +17,7 @@ import { Calendar } from 'lucide-react';
           {actions && actions.map(action => (;
             <Button
 
+
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -25,6 +26,7 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react'
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -67,6 +69,7 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react'
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -84,6 +87,7 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react'
 
                 <span className='mt - 1 text - xs text - muted - foreground'>;
                   {action.description}
+
 
 
   return (
@@ -109,6 +113,8 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react'
 
 
 
+
+
             >
               <div className="flex flex-col items-start text-left">
                 <div className="flex items-center">
@@ -116,7 +122,12 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react'
                   <span>{action.label}</span>
                 </div>
 
-
+                <span className='mt-1 text-xs text-muted-foreground'>
+                  {action.description}
+                </span>              </div>
+                <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
+          {actions.map(action => (
+            <Button
             <Button 
 
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
@@ -167,6 +178,7 @@ export function QuickActions() {;
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">;
           {actions.map(action => (;
             <Button;
+
 
 
               key={action.id}
@@ -245,3 +257,4 @@ export function QuickActions() {;
 }
 
 ;
+

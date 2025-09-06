@@ -1,6 +1,16 @@
 
 
-
+import React, { useState } from 'react';
+import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
+import { useAuth  } from '@/hooks/useAuth';
+import { MilestoneCard  } from './MilestoneCard';
+import { AddMilestoneForm  } from './AddMilestoneForm';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+// lucide-react doesn't export PlusIcon, use our icon wrapper
+import { Plus  } from '@/components/icons';
+import { EmptyState } from '@/components/ui/empty-state';
+interface MilestonesListProps {
 
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {useAuth} from '@/hooks/useAuth';
@@ -35,6 +45,8 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({;
   onDeleteMilestone;
   onUploadDeliverable;
   isSubmitting;
+
+
 
 
 
@@ -116,18 +128,18 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 
   if (isLoading) {
     return (
-      <div className="space-y-4">
-        {[1, 2, 3].map((i) => (
-          <Card key={i}>
-            <CardContent className="p-6">
-              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>
-              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>
-              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>
-            </CardContent>
-          </Card>
+      <div className="space-y-4">;
+        {[1, 2, 3].map((i) => (;
+          <Card key={i}>;
+            <CardContent className="p-6">;
+              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>;
+              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>;
+              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;
+            </CardContent>;
+          </Card>;
         ))}
-      </div>
-    )
+      </div>;
+    );
   }
 
   
@@ -135,7 +147,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
-        icon={<span className="text-3xl">📊</span>}
+        icon={<span className="text-3xl"></span>}
         title="No Milestones Yet"
         description={isClient ?
           "Break down the project into manageable milestones to track progress and payments." :
@@ -145,6 +157,27 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             text: "Create First Milestone"
             onClick: () => setShowAddForm(true)
           } : undefined
+
+
+
+  if (milestones && milestones.length === 0 && !showAddForm) {;
+    return (
+      <EmptyState
+        icon={<span className="text-3xl">📊</span>}
+        title="No Milestones Yet";
+        description={isClient ? ;
+          "Break down the project into manageable milestones to track progress and payments." : ;
+          "No milestones have been created for this project yet."}
+        action={isClient ? ;
+          {;
+            text: "Create First Milestone",;
+            onClick: () => setShowAddForm(true);
+          } : undefined;
+
+        }
+      />;
+    );
+  }
 
         }
       />
@@ -177,6 +210,10 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       <div className="space-y-4">
         {milestones.map((milestone) => (
 
+
+      <div className="space-y-4">;
+        {milestones && milestones.map((milestone) => (;
+
           <MilestoneCard
             key={milestone && milestone.id}
             id={milestone && milestone.id}
@@ -195,6 +232,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -204,6 +242,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 };
 

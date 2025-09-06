@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -21,10 +25,37 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 
+import {
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Brain
+  Rocket
+  Dna
+  Globe
+  Shield
+  Wifi
+  Package
+  Bot
+  Car
+  Building2
+  DollarSign
+  Monitor
+  Users
+  Cpu
+  Zap
+  Atom
+  Database
+  Cloud
+  Lock
+  Code;
+} from 'lucide-react';
+import Link from 'next/link';import {
 
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
   Menu,
   X,
   ChevronDown,
@@ -53,6 +84,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+
   Lock,
   Code,
 } from 'lucide-react';
@@ -68,6 +100,7 @@ import Link from 'next/link';import { ;
 
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
   Bot, Car, Building2, DollarSign, Monitor, Users;
+
 
   Cpu, Zap, Atom, Database, Cloud, Lock, Code;
 } from 'lucide-react';
@@ -99,6 +132,8 @@ import Link from 'next/link';
       icon: Brain
       description: 'Cutting-edge AI solutions'
       dropdown: [
+
+
 
 
   Cpu, Zap, Atom, Database, Cloud, Lock, Code;
@@ -459,9 +494,11 @@ import Link from 'next / link';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -518,32 +555,91 @@ import Link from 'next / link';
           </motion && motion.div>;
           {/* Desktop Navigation */}
 
-          <div className='hidden lg:flex items-center space-x-8'>
+
+          <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item, index) => (
-              <div key={item.name} className='relative group'>
-                {item.dropdown ? (
+              <div key={item.name} className="relative group">
+;
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+  }
+;
+    >;
+      <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+        <div className='flex justify - between items - center h - 20'>          {/* Logo */}  return (
+    <nav className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
+      is_scrolled;
+        ? 'bg - black / 90 backdrop - blur - xl border - b border - gray - 800 / 50';
+        : 'bg - transparent';
+    }`}>;
+      <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+        <div className="flex justify - between items - center h - 20">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_x: -20 }}
+            animate={{ opacity: 1, coordinate_x: 0 }}
+            transition={{ duration: 0.5 }}
+            className='flex items - center';
+          >;
+            <Link href='/' className='flex items - center space - x-3 group'>;
+              <div className='w - 10 h - 10 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300'>;
+                <Zap className='w - 6 h - 6 text - white' />;
+              </div>;
+              <div className='hidden sm:block'>;
+                <div className='text - xl font - bold bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent'>;
+                  Zion Tech Group;
+                </div>;
+                <div className='text - xs text - gray - 400'>;
+                  Revolutionary Technology;
+                </div>              </div>          >;
+            <Link href="/" className="flex items - center space - x-3 group">;
+              <div className="w - 10 h - 10 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300">;
+                <Zap className="w - 6 h - 6 text - white" />;
+              </div>;
+              <div className="hidden sm:block">;
+                <div className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - purple - 500 bg - clip - text text - transparent">;
+                  Zion Tech Group;
+                </div>;
+                <div className="text - xs text - gray - 400">Revolutionary Technology</div>;
+              </div>;
+            </Link>;
+          </motion.div>;
+          {/* Desktop Navigation */}
+          <div className='hidden lg:flex items-center space-x-8'>;
+            {navigationItems && navigationItems.map((item, index) => (;
+              <div key={item && item.name} className='relative group'>;
+                {item && item.dropdown ? (;
                   <button
-                    onClick={() =>
-                      setActiveDropdown(
-                        activeDropdown === item.name ? null : item.name
-                      )
+                    onClick={() =>;
+                      setActiveDropdown(;
+                        activeDropdown === item && item.name ? null : item && item.name;
+                      );
                     }
-                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
-                  >
-                    {item.icon && <item.icon className='w-4 h-4' />}
-                    <span>{item.name}</span>
+                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2';
+                  >;
+                    {item && item.icon && <item && item.icon className='w-4 h-4' />}
+                    <span>{item && item.name}</span>;
                     <ChevronDown
                       className={`w-4 h-4 transition-transform duration-300 ${
-                        activeDropdown === item.name ? 'rotate-180' : ''
+                        activeDropdown === item && item.name ? 'rotate-180' : ''
                       }`}
-                    />                  </button>
-                ) : (
+                    />                  </button>;
+                ) : (;
                   <Link
-                    href={item.href}
-                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
-                  >
-                    {item.icon && <item.icon className='w-4 h-4' />}                    <span>{item.name}</span>            {navigationItems.map((item, index) => (
-              <div key={item.name} className="relative group">
+                    href={item && item.href}
+                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'>;
+                    {item && item.icon && <item && item.icon className='w-4 h-4' />}                    <span>{item && item.name}</span>            {navigationItems && navigationItems.map((item, index) => (;
+              <div key={item && item.name} className="relative group">;
+                {item && item.dropdown ? (;
+                  <button
+                    onClick={() => setActiveDropdown(activeDropdown === item && item.name ? null : item && item.name)}
+                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2";
+                  >;
+                    {item.icon && <item.icon className='w - 4 h - 4' />}                    <span>{item.name}</span>            {navigation_items.map ((item, index) => (
+              <div key={item.name} className="relative group">;
+
+
                 {item.dropdown ? (
                   <button
                     onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
@@ -585,9 +681,11 @@ import Link from 'next / link';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
                       >
                         <div className="p-4">
@@ -610,7 +708,40 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                                 </div>
                                 <div className="text-sm font-semibold text-cyan-400">
 
+                  <button
+                    onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
+                  >
+                    {item.icon && <item.icon className="w-4 h-4" />}
+                    <span>{item.name}</span>
+                    <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
+                      activeDropdown === item.name ? 'rotate-180' : ''
+                    }`} />
+                  </button>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
+                  >
+                    {item.icon && <item.icon className='w-4 h-4' />}                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2"
+                  >
+                    {item.icon && <item.icon className="w-4 h-4" />}
+                    <span>{item.name}</span>
 
+
+                  </Link>
+                )}
+
+                {/* Dropdown Menu */}
+                {item.dropdown && (
+                  <AnimatePresence>
+                    {activeDropdown === item.name && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        transition={{ duration: 0.2 }}
+                        className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
 
 
                       >
@@ -639,7 +770,9 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                                   {dropdownItem.price}
                                 </div>
                               </Link>
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                             ))}
                           </div>;
                         </div>;
@@ -650,6 +783,7 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
               </div>;
             ))}
           </div>
+
 
 
 
@@ -669,6 +803,7 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>;
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
@@ -686,12 +821,13 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
               </a>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
 
           </div>
@@ -753,7 +889,6 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <button
               onClick={() => setIsOpen(!isOpen)}
 
@@ -763,6 +898,27 @@ className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 trans
                 <X className='w-6 h-6' />;
               ) : (;
                 <Menu className='w-6 h-6' />;
+
+          {/* Mobile Menu Button */}
+          <div className='lg:hidden'>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className='text-gray-300 hover:text-white transition-colors duration-200'
+            >
+              {isOpen ? (
+                <X className='w-6 h-6' />
+              ) : (
+                <Menu className='w-6 h-6' />
+              )}            </button>            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-gray-300 hover:text-white transition-colors duration-200"
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+      </div>
+
 
 
 
@@ -819,7 +975,9 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
                         <div className="ml-8 mt-2 space-y-2">
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
       {/* Mobile Menu */}
@@ -873,7 +1031,9 @@ className="flex items-center justify-between w-full text-left text-gray-300 hove
                               onClick={() => setIsOpen(false)}
 
 
+
 className="block py-2 text-gray-400 hover:text-white transition-colors duration-200"
+
 
 
                             >
@@ -898,13 +1058,17 @@ className="block py-2 text-gray-400 hover:text-white transition-colors duration-
 
 
 
+
+
                       {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>
 
                       <span>{item.name}</span>
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
 
@@ -982,6 +1146,8 @@ className="block py-2 text-gray-400 hover:text-white transition-colors duration-
 
 
 
+
+
 }
 
 
@@ -991,10 +1157,12 @@ export default UltraAdvancedNavigation;  );
 
 
 
+
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

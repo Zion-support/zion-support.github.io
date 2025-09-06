@@ -9,6 +9,7 @@ interface LeadenrichmentProps {
   // Add props here as needed
 
 }
+export default function Leadenrichment({ }: LeadenrichmentProps) {
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 

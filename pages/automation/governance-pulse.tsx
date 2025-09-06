@@ -11,6 +11,20 @@
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium underline">
 
+                {it.title}
+              </a>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">
+                {it.space} · {it.state} · Start {new Date(it.start * 1000).toLocaleString()} · End {new Date(it.end * 1000).toLocaleString()}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+  )
+  );
+};
+
                 {it.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -39,4 +53,6 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 
+}
+}
 

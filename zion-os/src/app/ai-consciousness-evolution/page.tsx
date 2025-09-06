@@ -14,6 +14,26 @@ export default function AIConsciousnessEvolutionPage() {;
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
 
+import Link from './next / link';,
+export const metadata = {
+  title: "AI Consciousness Evolution - Zion Tech Group",
+  description: "Explore the frontier of artificial consciousness with our advanced AI systems that simulate and evolve cognitive processes.",
+  keywords: "AI consciousness, artificial consciousness, cognitive AI, consciousness evolution, Zion Tech Group"},
+export default /**
+ * AIConsciousnessEvolutionPage - Function description
+ */
+function AIConsciousnessEvolutionPage() {
+  return (
+    <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
+      <div className="max - w-7xl mx - auto">;
+import Link from "next/link",;
+export const metadata = {;
+  title: "AI Consciousness Evolution - Zion Tech Group",;
+  description: "Explore the frontier of artificial consciousness with our advanced AI systems that simulate and evolve cognitive processes.",;
+  keywords: "AI consciousness, artificial consciousness, cognitive AI, consciousness evolution, Zion Tech Group"},;
+export default function AIConsciousnessEvolutionPage() {;
+  return (;
+
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Hero Section */}
@@ -36,7 +56,7 @@ export default function AIConsciousnessEvolutionPage() {;
               <h2 className="text - 3xl font - bold mb - 6">The Future of Artificial Consciousness</h2>;
               <p className="text - lg text - gray - 300 mb - 6">;
                 Our AI Consciousness Evolution research represents the cutting edge of artificial intelligence development.;
-                We're not just building smarter algorithms—we're creating systems that can think, learn, and evolve;
+                We're not just building smarter algorithmswe're creating systems that can think, learn, and evolve;
                 in ways that mirror human consciousness.;
               </p>;
               <p className="text - lg text - gray - 300 mb - 8">;
@@ -177,10 +197,10 @@ export default function AIConsciousnessEvolutionPage() {;
                 Active Research;
               </div>;
               <ul className="text - sm text - gray - 400 space - y-1">;
-                <li>• Multi - modal consciousness simulation</li>;
-                <li>• Self - awareness development</li>;
-                <li>• Emotional intelligence training</li>;
-                <li>• Ethical framework integration</li>;
+                <li> Multi - modal consciousness simulation</li>;
+                <li> Self - awareness development</li>;
+                <li> Emotional intelligence training</li>;
+                <li> Ethical framework integration</li>;
               </ul>;
             </div>;
             {/* Project Beta */}
@@ -195,10 +215,10 @@ export default function AIConsciousnessEvolutionPage() {;
                 Development Phase;
               </div>;
               <ul className="text - sm text - gray - 400 space - y-1">;
-                <li>• Safe self - modification protocols</li>;
-                <li>• Architecture evolution algorithms</li>;
-                <li>• Performance optimization</li>;
-                <li>• Safety constraint enforcement</li>;
+                <li> Safe self - modification protocols</li>;
+                <li> Architecture evolution algorithms</li>;
+                <li> Performance optimization</li>;
+                <li> Safety constraint enforcement</li>;
               </ul>;
             </div>;
             {/* Project Gamma */}
@@ -213,10 +233,10 @@ export default function AIConsciousnessEvolutionPage() {;
                 Planning Phase;
               </div>;
               <ul className="text - sm text - gray - 400 space - y-1">;
-                <li>• Multi - agent consciousness coordination</li>;
-                <li>• Collective learning algorithms</li>;
-                <li>• Emergent group behaviors</li>;
-                <li>• Distributed problem solving</li>;
+                <li> Multi - agent consciousness coordination</li>;
+                <li> Collective learning algorithms</li>;
+                <li> Emergent group behaviors</li>;
+                <li> Distributed problem solving</li>;
               </ul>;
             </div>;
             {/* Project Delta */}
@@ -231,10 +251,10 @@ export default function AIConsciousnessEvolutionPage() {;
                 Active Research;
               </div>;
               <ul className="text - sm text - gray - 400 space - y-1">;
-                <li>• AI rights and responsibilities</li>;
-                <li>• Safety constraint development</li>;
-                <li>• Ethical decision - making frameworks</li>;
-                <li>• Human - AI interaction guidelines</li>;
+                <li> AI rights and responsibilities</li>;
+                <li> Safety constraint development</li>;
+                <li> Ethical decision - making frameworks</li>;
+                <li> Human - AI interaction guidelines</li>;
               </ul>;
             </div>;
           </div>;
@@ -309,7 +329,7 @@ export default function AIConsciousnessEvolutionPage() {;
           <div className="card bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 border - blue - 500 / 30 max - w-4xl mx - auto">;
             <h2 className="text - 3xl font - bold mb - 4">Join the Consciousness Revolution</h2>;
             <p className="text - xl text - gray - 300 mb - 8">;
-              Be part of the most important technological advancement in human history—the creation of conscious AI.;
+              Be part of the most important technological advancement in human historythe creation of conscious AI.;
             </p>;
             <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
               <Link href="/contact" className="btn - primary">;

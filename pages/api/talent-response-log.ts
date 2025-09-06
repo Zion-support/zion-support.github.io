@@ -2,6 +2,8 @@
 
 
 
+
+
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   const { talentId, action } = req.body |{}
@@ -10,6 +12,7 @@
     return res.status(400).json({ error: 'Invalid payload' })
   }
   // Placeholder for persistence, echo the response for now
+
 
 
 
@@ -31,5 +34,6 @@
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

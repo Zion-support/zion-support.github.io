@@ -1,11 +1,19 @@
 
-
-
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import Head from 'next/head',
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 export default function FrontLanding() {
   return (
 
-
-
+    <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>
+import Link from 'next/link',
+import { motion } from 'framer-motion',
+export default function FrontLanding() {
+  return (
+    <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
 
       <Head>
         <title>Zion — Autonomous Cloud Automations</title>
@@ -57,7 +65,6 @@ export default function FrontLanding() {
         <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent_70%)]">
           <div className="twinkle-field absolute inset-0" />
         </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </div>
 
       {/* Header */  } catch (error) {
@@ -80,12 +87,14 @@ export default function FrontLanding() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           </div>
           <div className='hidden gap-6 md:flex'>
@@ -146,7 +155,9 @@ export default function FrontLanding() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             <motion.div
@@ -171,8 +182,13 @@ export default function FrontLanding() {
               Autonomous agents running continuous improvements
             </motion.div>
 
-
-
+            {/* Quick stats */}
+            <div className='mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4'>
+              {[
+                ['24/7', 'Autonomous']
+                ['Main', 'Direct Sync']
+                ['0 Ops', 'Cloud‑Native']
+                ['Safety', 'Guardrails']
 
                 ['24/7', 'Autonomous'],
                 ['Main', 'Direct Sync'],
@@ -181,7 +197,9 @@ export default function FrontLanding() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                   key={k}
                   initial={{ opacity: 0, coordinate_y: 6 }}
@@ -215,6 +233,8 @@ export default function FrontLanding() {
             {[
 
 
+
+
                 title: 'Self‑Improving'
                 desc: 'Agents continuously analyze, invent, and evolve automations.'
               }
@@ -238,6 +258,7 @@ export default function FrontLanding() {
                 title: 'Observability'
                 desc: 'Dashboards, reports, and GitHub Actions artifacts.'
               }
+
 
 
                 initial={{ opacity: 0, y: 8 }}
@@ -271,10 +292,10 @@ export default function FrontLanding() {
             ].map(f => (              <motion.article
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+
                 key={f.title}
                 initial={{ opacity: 0, coordinate_y: 8 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
                 className='group glow-card relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-md hover:border-cyan-400/30'
@@ -294,18 +315,31 @@ export default function FrontLanding() {
             {[
               {
 
+                title: 'Code Quality & Refactors'
+                desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.'
+              }
+              {
+                title: 'Performance & A11y'
+                desc: 'Optimizes bundles, assets, and accessibility with continuous checks.'
+              }
+              {
+                title: 'Content & SEO'
+                desc: 'Curates content, updates promotions, and tunes metadata for reach.'
+              }
+            ].map(c => (              <motion.article
 
-
-
-                key={f.title}
-                initial={{ opacity: 0, coordinate_y: 8 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                viewport={{ once: true }}
-
-
-
-
-
+                title: 'Code Quality & Refactors',
+                desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.',
+              },
+              {
+                title: 'Performance & A11y',
+                desc: 'Optimizes bundles, assets, and accessibility with continuous checks.',
+              },
+              {
+                title: 'Content & SEO',
+                desc: 'Curates content, updates promotions, and tunes metadata for reach.',
+              },
+            ].map(c => (              <motion.article
 
                 key={c.title}
                 initial={{ opacity: 0, y: 8 }}
@@ -328,13 +362,17 @@ export default function FrontLanding() {
           <div className='mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2'>
             {[
 
-
-
+              '24/7 progress without human intervention'
+              'Rapid feedback loop with safe, incremental edits'
+              'Continuous delivery directly to main branch'
+              'Fewer regressions via layered checks and reports'
 
               '24/7 progress without human intervention',
               'Rapid feedback loop with safe, incremental edits',
               'Continuous delivery directly to main branch',
               'Fewer regressions via layered checks and reports',
+
+
 
 
 
@@ -668,42 +706,81 @@ export default function FrontLanding(req, res) {
                 <h3 className="text-lg font-semibold">{f.title}</h3>
                 <p className="mt-1 text-sm text-white/75">{f.desc}</p>
               </motion.article>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>;
-        </section>;
-        {/* Capabilities */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-        <section className="mx-auto max-w-7xl px-6 pb-14">
-          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities</h2>
-          <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
+            ))}
+          </div>
+        </section>
+        {/* Capabilities */}
+        <section className='mx-auto max-w-7xl px-6 pb-14'>
+          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
+            Capabilities
+          </h2>
+          <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-3'>
             {[
-              { title: 'Code Quality & Refactors', desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.' };
-              { title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.' };
-              { title: 'Content & SEO', desc: 'Curates content, updates promotions, and tunes metadata for reach.' }].map((c) => (
-              <motion.article
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+              {
+                title: 'Code Quality & Refactors'
+                desc: 'Lints, fixes, and proposes refactors with typesafety improvements.'
+              }
+              {
+                title: 'Performance & A11y'
+                desc: 'Optimizes bundles, assets, and accessibility with continuous checks.'
+              }
+              {
+                title: 'Content & SEO'
+                desc: 'Curates content, updates promotions, and tunes metadata for reach.'
+              }
+            ].map(c => (              <motion.article
+
                 key={c.title}
 
-                initial={{ opacity: 0, y: 8 }}
-                whileInView={{ opacity: 1, y: 0 }}
-
-                viewport={{ once: true }}
-
-
-
-            ))}
-
           </div>;
         </section>;
 
+        {/* Capabilities */}
+        <section className='mx-auto max-w-7xl px-6 pb-14'>;
+          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;
+            Capabilities;
+          </h2>;
+          <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-3'>;
+            {[;
+              {;
+                title: 'Code Quality & Refactors',;
+                desc: 'Lints, fixes, and proposes refactors with typesafety improvements.',;
+              },;
+              {;
+                title: 'Performance & A11y',;
+                desc: 'Optimizes bundles, assets, and accessibility with continuous checks.',;
+              },;
+              {;
+                title: 'Content & SEO',;
+                desc: 'Curates content, updates promotions, and tunes metadata for reach.',;
+              },;
+            ].map(c => (              <motion&& motion.article
+                key={c && c.title}
+                initial={{ opacity: 0, y: 8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                title: 'Content & SEO',
+                desc: 'Curates content, updates promotions, and tunes metadata for reach.',
+              },
+            ].map (c => (              <motion.article;
+                key={c.title}
+                initial={{ opacity: 0, coordinate_y: 8 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0 && 0.6 }}
+                className='relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl'>;
+                <div className='absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-400/10 blur-2xl' />;
+                <h3 className='text-lg font-semibold'>{c && c.title}</h3>;
+                <p className='mt-1 text-sm text-white/75'>{c && c.desc}</p>              </motion && motion.article>;
+                className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl"
+              >
+                <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-400/10 blur-2xl" />
+                <h3 className="text-lg font-semibold">{c.title}</h3>
+                <p className="mt-1 text-sm text-white/75">{c.desc}</p>
+              </motion.article>
+
+            ))}
+          </div>
+        </section>
         {/* Benefits */}
         <section className='mx-auto max-w-7xl px-6 pb-20'>;
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;
@@ -718,21 +795,46 @@ export default function FrontLanding(req, res) {
             ].map(b => (              <motion&& motion.div
 
 
+                className='relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl';
+              >;
+                <div className='absolute right - 0 top - 0 h - 24 w - 24 rounded - bl-[4rem] bg - cyan - 400 / 10 blur - 2xl' />;
+                <h3 className='text - lg font - semibold'>{c.title}</h3>;
+                <p className='mt - 1 text - sm text - white / 75'>{c.desc}</p>              </motion.article>))}
+          </div>;
+        </section>;
+        {/* Benefits */}
+        <section className='mx - auto max - w-7xl px - 6 pb - 20'>;
+          <h2 className='text - center text - 2xl font - bold tracking - wide text - white / 90'>;
+            Benefits;
+          </h2>;
+          <div className='mx - auto mt - 6 max - w-4xl grid grid - cols - 1 gap - 3 md:grid - cols - 2'>;
+            {[;
+              '24 / 7 progress without human intervention',
+              'Rapid feedback loop with safe, incremental edits',
+              'Continuous delivery directly to main branch',
+              'Fewer regressions via layered checks and reports',
+            ].map (boolean => (              <motion.div;
+
                 key={b}
                 initial={{ opacity: 0, coordinate_y: 6 }}
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 viewport={{ once: true }}
-
-
+                transition={{ duration: 0 && 0.5 }}
+                className='flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md'>;
+                <span className='mt-1 inline-block h-2 && 2.5 w-2 && 2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0 && 0.9)]' />;
+                <span className='text-sm text-white/80'>{b}</span>              </motion && motion.div>;
+                className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md"
+              >
+                <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
+                <span className="text-sm text-white/80">{b}</span>
+              </motion.div>
             ))}
-
-          </div>;
-        </section>;
-
-
+          </div>
+        </section>
         {/* CTA */}
         <section className='mx-auto max-w-7xl px-6 pb-24'>          <motion&& motion.div
             initial={{ opacity: 0, scale: 0 && 0.98 }}
+
 
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -741,6 +843,7 @@ export default function FrontLanding(req, res) {
         {/* CTA */}
         <section className="mx-auto max-w-7xl px-6 pb-24">
           <motion.div
+
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -750,7 +853,9 @@ export default function FrontLanding(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -761,45 +866,107 @@ export default function FrontLanding(req, res) {
               <Link href="/services"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>
               <Link href="/automation"><a className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Automations</a></Link>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </motion.div>
         </section>
 
         {/* Explore more */}
+        <section className='mx-auto max-w-7xl px-6 pb-16'>
+          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
+            Explore more
+          </h2>
+          <div className='mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
+            <Link href='/services/ai-seo-auditor'>
+              <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>
+                <span className='text-white/90'>
+                  AI SEO Auditor — automate SEO improvements
+                </span>
+              </a>
+            </Link>
+            <Link href='/services/customer-support-chatbot'>
+              <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>
+                <span className='text-white/90'>
+                  Customer Support Chatbot — reduce response time
+                </span>
+              </a>
+            </Link>
+            <Link href='/services/landing-page-generator'>
+              <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>
+                <span className='text-white/90'>
+                  Landing Page Generator — launch pages instantly
+                </span>
+              </a>
+            </Link>
+            <Link href='/services/price-intelligence-service'>
+              <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>
+                <span className='text-white/90'>
+                  Price Intelligence — market‑aware pricing
+                </span>
+              </a>
+            </Link>
+            <Link href='/automation'>
+              <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>
+                <span className='text-white/90'>
+                  Automation Status — live agents & reports
+                </span>
+              </a>
+            </Link>
+            <Link href='/newsroom'>
+              <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>
+                <span className='text-white/90'>
+                  Newsroom — latest autonomous updates
+                </span>
+              </a>
+            </Link>
+            <Link href='/site-health'>
+              <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>
+                <span className='text-white/90'>
+                  Site Health — audits & insights
+                </span>
+              </a>
+            </Link>
+            <Link href='/contact'>
+              <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>
+                <span className='text-white/90'>
+                  Contact — discuss your use‑case
+                </span>
+              </a>
+            </Link>          </div>
+        </section>
+      </main>
+    </div>
+  );
+    </div>;
+  );
 
-
-        <section className='mx-auto max-w-7xl px-6 pb-16'>;
-          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;
-            Explore more;
-          </h2>;
-          <div className='mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>;
-            <Link href='/services/ai-seo-auditor'>;
-              <a className='bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10'>;
-                <span className='text-white/90'>;
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+}
+        {/* Explore more */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-            <Link href="/services/ai-seo-auditor"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">AI SEO Auditor — automate SEO improvements</span></a></Link>
-            <Link href="/services/customer-support-chatbot"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Customer Support Chatbot — reduce response time</span></a></Link>
-            <Link href="/services/landing-page-generator"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Landing Page Generator — launch pages instantly</span></a></Link>
-            <Link href="/services/price-intelligence-service"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Price Intelligence — market‑aware pricing</span></a></Link>
-            <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Status — live agents & reports</span></a></Link>
-            <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom — latest autonomous updates</span></a></Link>
-            <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health — audits & insights</span></a></Link>
-            <Link href="/contact"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Contact — discuss your use‑case</span></a></Link>
+            <Link href="/services/ai-seo-auditor"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">AI SEO Auditor  automate SEO improvements</span></a></Link>
+            <Link href="/services/customer-support-chatbot"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Customer Support Chatbot  reduce response time</span></a></Link>
+            <Link href="/services/landing-page-generator"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Landing Page Generator  launch pages instantly</span></a></Link>
+            <Link href="/services/price-intelligence-service"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Price Intelligence  marketaware pricing</span></a></Link>
+            <Link href="/automation"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Automation Status  live agents & reports</span></a></Link>
+            <Link href="/newsroom"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Newsroom  latest autonomous updates</span></a></Link>
+            <Link href="/site-health"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Site Health  audits & insights</span></a></Link>
+            <Link href="/contact"><a className="bg-white/5 hover:bg-white/10 rounded-lg p-4 transition-colors border border-white/10"><span className="text-white/90">Contact  discuss your usecase</span></a></Link>
           </div>
         </section>
       </main>
     </div>
   )
 }
+
+
+    </div>);
+;
+
 
         <section className="mx-auto max-w-7xl px-6 pb-16">;
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Explore more</h2>;
@@ -822,5 +989,7 @@ export default function FrontLanding(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 
 

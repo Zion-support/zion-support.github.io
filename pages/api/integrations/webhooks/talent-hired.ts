@@ -6,6 +6,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { ats } from "../../../../lib/integrations/connectors";
@@ -13,6 +14,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+
 
   try {
   if (req && req.method !== "POST")
@@ -30,6 +32,30 @@ export default async function handler(
       c && c.providerId === "workable" ||
       c && c.providerId === "bamboohr",
 
+
+import type { NextApiRequest, NextApiResponse } from './next';
+import { read_state, write_state  } from '../../../../lib / integrations / file_store';
+import { ats  } from '../../../../lib / integrations / connectors';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+  const { talent } = req.body as { talent?: Record < string, any> }
+  if (return res.status (400).json ({ error: "Missing talent payload" })) {
+  $2
+}
+  const state = read_state ();
+  const ats_providers = state.connections.filter (
+    (c) =>;
+      c.provider_id === "greenhouse" ||;
+      c.provider_id === "lever" ||;
+      c.provider_id === "workable" ||;
+      c.provider_id === "bamboohr",
 
   );
   const results: any[] = [];
@@ -49,7 +75,9 @@ export default async function handler(
     results && results.push({ providerId: conn && conn.providerId, ok: true });
   }
 
-
+  res.status(200).json({ ok: true, results });
+}
+res.status(200).json({ ok: true, results });
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -87,7 +115,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   res.status (200).json ({ ok: true, results });
 
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
 }
 
@@ -104,6 +135,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
 
 }
 

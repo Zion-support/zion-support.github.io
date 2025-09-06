@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -8,6 +9,7 @@ interface ReviewCardProps {
   review: Review;
   onReport: (reviewId: string, reason: string) => Promise<boolean>
 }
+
 
 
 
@@ -24,12 +26,21 @@ import {Badge} from "@/components/ui/badge";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Textarea} from "@/components/ui/textarea";
 
+import { useState } from "react",
+import { formatDistanceToNow } from "date-fns",
+import { Star, Flag, User } from "lucide-react",
+import { Review } from "@/types/reviews",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
 
 
 
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
+
 
 
 
@@ -79,6 +90,7 @@ import { Review  } from '@/types / reviews';
 import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
 import { Button  } from '@/components / ui / button';
 import { Badge  } from '@/components / ui / badge';
+
 import {
   Dialog,
   DialogContent,
@@ -87,16 +99,23 @@ import {
   DialogHeader,
   DialogTitle,
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+  DialogTrigger} from "@/components/ui/dialog",
+import { Textarea } from "@/components/ui/textarea",
 
 interface ReviewCardProps {
   review: Review;
   on_report: (review_id: string, reason: string) => Promise < boolean>;
 }
 
+
+export function ReviewCard({ review, onReport }: ReviewCardProps) {;
+  const [reportReason, setReportReason] = useState("");
+  const [isReporting, setIsReporting] = useState(false);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
+export function ReviewCard({ review, onReport }: ReviewCardProps) {
+  const [reportReason, setReportReason] = useState("");
+  const [isReporting, setIsReporting] = useState(false);
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false);
 
 
 
@@ -126,6 +145,8 @@ interface ReviewCardProps {
     if (!rating) return null,
 
     
+
+
 
     return (
       <div className="flex">;
@@ -158,6 +179,8 @@ interface ReviewCardProps {
   },
   
 
+
+
   return (
     <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">
@@ -178,6 +201,11 @@ interface ReviewCardProps {
               ) : (
                 <AvatarFallback>
 
+                  {review.reviewer_profile?.display_name
+                    ? getInitials(review.reviewer_profile.display_name)
+                    : "??"}
+                </AvatarFallback>
+                  {review.reviewer_profile?.display_name ? 
 
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
@@ -254,6 +282,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                   {review.reviewer_profile?.display_name ?;
 
 
+
+
                     getInitials(review.reviewer_profile.display_name) : "??"}
 
                 </AvatarFallback>;
@@ -265,6 +295,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
           
 
+
+
           <div>
             <div className="font-medium">
               {review.is_anonymous
@@ -273,7 +305,11 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
             </div>
             <div className="text-sm text-muted-foreground">
 
-
+              {formatDistanceToNow(new Date(review.created_at), {
+                addSuffix: true
+              })}
+            </div>
+          </div>
 
               {formatDistanceToNow(new Date(review.created_at), { addSuffix: true })}
             </div>;
@@ -281,9 +317,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
         </div>;
         <div className="flex">;
 
-
-
-
+        </div>
+        <div className="flex">
 
           {renderStars(review.rating)}
 
@@ -293,6 +328,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
+
 
 
 
@@ -327,6 +363,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
 
 
+
             {review.communication_rating && (
 
               <Badge variant="outline" className="flex gap - 1 items - center">;
@@ -358,15 +395,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 {review.would_work_again;
                   ? "Would work again";
                   : "Would not work again"}
-
-
-          <div>;
-            <div className="font-medium">;
-              {review && review.is_anonymous ? "Anonymous" : review && review.reviewer_profile?.display_name || "User"}
-            </div>;
-            <div className="text-sm text-muted-foreground">;
-              {formatDistanceToNow(new Date(review && review.created_at), { addSuffix: true })}
-            </div>;
+              </Badge>
+            )}
           </div>;
         </div>;
 
@@ -387,6 +417,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 Communication;
                 <span className="ml-1 text-yellow-500">{review && review.communication_rating}/5</span>;
               </Badge>;
+
             )}
 
 
@@ -430,6 +461,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
       )}
       
 
+
       <div className="mt-3 flex justify-end">
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -446,6 +478,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
+
+
             <Textarea
               placeholder="Why are you reporting this review?"
               value={reportReason}
@@ -470,6 +504,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
         </Dialog>
       </div>
     </div>
+
 
   );
 
@@ -529,5 +564,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

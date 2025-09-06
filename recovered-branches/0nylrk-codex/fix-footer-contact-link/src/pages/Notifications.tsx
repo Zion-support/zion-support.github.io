@@ -2,6 +2,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -33,6 +34,7 @@ class ErrorBoundary extends React.Component {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
@@ -76,7 +78,9 @@ import { cn } from "@/lib/utils",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -199,6 +203,14 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
 
   }
 
+    case 'system':;
+      return <Badge className="bg-yellow-500">System</Badge>,;
+    default:;
+      return <Badge variant="outline">Notification</Badge>;
+  }
+};
+
+
 
 
   const handleAction = () => {;
@@ -209,14 +221,16 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
+    }
+    if (notification.action_url) {
+      navigate(notification.action_url)
     }
 
-    if (notification && notification.action_url) {;
-      navigate(notification && notification.action_url);
-    }
 
 
 
@@ -230,6 +244,7 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   
@@ -311,6 +326,95 @@ export default function NotificationsPage() {
 
     filteredNotifications;
     unreadCount;
+
+    action_text?: string;
+  }
+  onMarkAsRead: (id: string) => Promise < void>,
+  on_dismiss: (id: string) => Promise < void>;
+}> = ({ notification, onMarkAsRead, on_dismiss }) => {
+  const navigate = use_navigate ();
+;
+  const handle_action = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      onMarkAsRead (notification.id);
+    }
+    // Check condition
+if ( {) {
+  $2
+}
+      navigate (notification.action_url);
+    }
+  }
+;
+  return (
+    <div className={cn (
+      "border rounded - lg shadow - sm p - 4 mb - 3 group transition - colors";
+      notification.read ? "border - zion - blue - light bg - zion - blue - dark / 10" : "border - zion - cyan bg - zion - blue - dark / 30")}>;
+      <div className="flex items - start gap - 4">;
+        <div className="mt - 1">;
+          {getNotificationIcon (notification.type, "h - 6 w - 6")}
+        </div>;
+        <div className="flex - 1">;
+          <div className="flex justify - between">;
+            <div className="flex flex - col">;
+              <h3 className="font - medium text - white">{notification.title}</h3>;
+              <div className="flex items - center gap - 2 mb - 2">;
+                {getNotificationTypeBadge (notification.type)}
+                <span className="text - xs text - zion - slate - light">;
+                  {formatDistanceToNow (new Date (notification.created_at), { add_suffix: true })}
+                </span>;
+                {!notification.read && (
+                  <Badge variant="outline" className="bg - zion - cyan bg - opacity - 20 text - zion - cyan text - xs">New</Badge>)}
+              </div>;
+            </div>;
+            <div className="flex items - center gap - 2">;
+              {!notification.read && (
+                <Button;
+                  variant="ghost";
+                  size="sm";
+                  className="h - 8 w - 8 p - 0";
+                  on_click={() => onMarkAsRead (notification.id)}
+                >;
+                  <Check className="h - 4 w - 4 text - green - 400" />;
+                  <span className="sr - only">Mark as read</span>;
+                </Button>)}
+              <Button;
+                variant="ghost";
+                size="sm";
+                className="h - 8 w - 8 p - 0";
+                on_click={() => on_dismiss (notification.id)}
+              >;
+                <Trash2 className="h - 4 w - 4 text - red - 400" />;
+                <span className="sr - only">Dismiss</span>;
+              </Button>;
+            </div>;
+          </div>;
+          <p className="text - zion - slate - light mb - 3">{notification.message}</p>;
+          {notification.action_url && notification.action_text && (
+            <Button;
+              variant="outline";
+              size="sm";
+              className="mt - 1 text - zion - cyan border - zion - cyan hover:bg - zion - cyan hover:text - black";
+              on_click={handle_action}
+            >;
+              {notification.action_text}
+              <ChevronRight className="ml - 1 h - 4 w - 4" />;
+            </Button>)}
+        </div>;
+      </div>;
+    </div>);
+}
+;
+export default /**
+ * NotificationsPage - Function description
+ */
+function NotificationsPage() {
+  const {
+    filtered_notifications;
+    unread_count;
 
     markAsRead;
     markAllAsRead;
@@ -418,5 +522,7 @@ export default function NotificationsPage() {
 
     </>);
 }
+
+
 
 

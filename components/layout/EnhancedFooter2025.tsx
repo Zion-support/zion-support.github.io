@@ -3,13 +3,32 @@ import React from 'react',
 import React from 'react';
 
 import Link from 'next/link';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 
 
-
-
-
+import {
+  Phone
+  Mail
+  MapPin
+  Star
+  ArrowRight
+  Brain
+  Atom
+  Shield
+  Rocket
+  Target
+  Microscope
+  Zap
+  Globe
+  Database
+  Lock
+  Cloud
+  BarChart3
+  Twitter
+  Linkedin
+  Github
+  Youtube
+  Instagram;} from 'lucide-react';import {
 
   Phone,
   Mail,
@@ -37,9 +56,11 @@ import { motion } from 'framer-motion';
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
@@ -197,10 +218,27 @@ const serviceCategories = [;
       { name: 'DevOps Automation Studio', href: '/devops-automation-studio' }
     ]
 
-  },];      { name: 'DevOps Automation Studio', href: '/devops-automation-studio' }
-    ]
-  }
-];
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Target,
+  Microscope,
+  Zap,
+  Globe,
+  Database,
+  Lock,
+  Cloud,
+  BarChart3,
+  Twitter,
+  Linkedin,
+  Github,
+
 const companyLinks = [
   { name: 'About Us', href: '/about' }
   { name: 'Careers', href: '/careers' }
@@ -324,6 +362,8 @@ const EnhancedFooter2025: React.FC = () => {
             </div>
 
 
+
+
             {/* Service Categories */}
             {serviceCategories && serviceCategories.map((category, index) => (;
               <motion&& motion.div
@@ -342,7 +382,9 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -375,6 +417,8 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
+
+
                 className='space-y-4'>;
                 <div className='flex items-center space-x-3'>;
                   <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;
@@ -389,8 +433,102 @@ const EnhancedFooter2025: React.FC = () => {
                     <Link
 
 
+              {/* Contact Info */}
+              <div className='space - y-3'>;
+                <div className='flex items - center space - x-3 text - gray - 300'>;
+                  <Phone className='w - 4 h - 4 text - cyan - 400' />;
+                  <a;
+                    href={`tel:${contact_info.mobile}`}
+                    className='hover:text - cyan - 400 transition - colors';
+                  >;
+                    {contact_info.mobile}
+                  </a>;
+                </div>;
+                <div className='flex items - center space - x-3 text - gray - 300'>;
+                  <Mail className='w - 4 h - 4 text - purple - 400' />;
+                  <a;
+                    href={`mailto:${contact_info.email}`}
+                    className='hover:text - purple - 400 transition - colors';
+                  >;
+                    {contact_info.email}
+                  </a>;
+                </div>;
+                <div className='flex items - center space - x-3 text - gray - 300'>;
+                  <MapPin className='w - 4 h - 4 text - pink - 400' />;
+                  <span className='text - sm'>{contact_info.address}</span>                </div>      {/* Background Effects */}
+      <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 via - purple - 500 / 5 to - pink - 500 / 5"></div>;
+      <div className="relative z - 10">;
+        {/* Main Footer Content */}
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 16">;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8 lg:gap - 12">;
+            {/* Company Info */}
+            <div className="lg:col - span - 1">;
+              <div className="flex items - center space - x-3 mb - 6">;
+                <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl flex items - center justify - center">;
+                  <Star className="w - 7 h - 7 text - white" />;
+                </div>;
+                <div>;
+                  <div className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - purple - 400 bg - clip - text text - transparent">;
+                    Zion Tech Group;
+                  </div>;
+                  <div className="text - sm text - gray - 400">Future Technology Solutions</div>;
+                </div>;
+              </div>;
+              <p className="text - gray - 400 mb - 6 leading - relaxed">;
+                Leading the future with revolutionary AI, quantum computing, and emerging technology solutions that transform businesses worldwide.;
+              </p>;
+              {/* Contact Info */}
+              <div className="space - y-3">;
+                <div className="flex items - center space - x-3 text - gray - 300">;
+                  <Phone className="w - 4 h - 4 text - cyan - 400" />;
+                  <a href={`tel:${contact_info.mobile}`} className="hover:text - cyan - 400 transition - colors">;
+                    {contact_info.mobile}
+                  </a>;
+                </div>;
+                <div className="flex items - center space - x-3 text - gray - 300">;
+                  <Mail className="w - 4 h - 4 text - purple - 400" />;
+                  <a href={`mailto:${contact_info.email}`} className="hover:text - purple - 400 transition - colors">;
+                    {contact_info.email}
+                  </a>;
+                </div>;
+                <div className="flex items - center space - x-3 text - gray - 300">;
+                  <MapPin className="w - 4 h - 4 text - pink - 400" />;
+                  <span className="text - sm">{contact_info.address}</span>;
+                </div>;
+              </div>;
+            </div>;
+            {/* Service Categories */}
+            {service_categories.map ((category, index) => (
+              <motion.div;
+                key={category.title}
+                initial={{ opacity: 0, coordinate_y: 20 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className='space - y-4';
+              >;
+                <div className='flex items - center space - x-3'>;
+                  <div className='w - 8 h - 8 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - lg flex items - center justify - center'>;
+                    <category.icon className='w - 4 h - 4 text - white' />;
+                  </div>;
+                  <h3 className='text - lg font - semibold text - white'>;
+                    {category.title}
+                  </h3>;
+                </div>;
+                <div className='space - y-2'>;
+                  {category.services.map (service => (
+                    <Link;
+                      key={service.name}
+                      href={service.href}
+                      className="block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                    >
+                      className='block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm'                    >
+
+
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                       {service.name}
                     </Link>
@@ -422,12 +560,14 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             {/* Company Links */}
             <div>;
@@ -467,11 +607,14 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
+
+
                     {link.name}
                   </Link>
                 ))}
               </div>
             </div>
+
 
 
 
@@ -487,6 +630,7 @@ const EnhancedFooter2025: React.FC = () => {
 
               </div>;
             </div>;
+
 
 
 
@@ -515,6 +659,7 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -525,6 +670,7 @@ const EnhancedFooter2025: React.FC = () => {
                     {link.name}
                   </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                 ))}
               </div>
             </div>
@@ -535,8 +681,10 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
             {/* Social Links */}
             <div>
@@ -552,6 +700,7 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
@@ -561,6 +710,7 @@ const EnhancedFooter2025: React.FC = () => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Social Links */}
+
 
 
 
@@ -584,6 +734,7 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -592,6 +743,7 @@ const EnhancedFooter2025: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 ))}
@@ -606,11 +758,13 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         {/* Newsletter Section */}
@@ -629,7 +783,9 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -651,7 +807,9 @@ const EnhancedFooter2025: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -661,10 +819,12 @@ const EnhancedFooter2025: React.FC = () => {
                 Stay Ahead of the Future
               </motion.h3>
               <motion.p
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
+                transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
                 className='text-gray-400 mb-6 max-w-2xl mx-auto'
 
@@ -676,7 +836,9 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -692,12 +854,15 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
 
 
 
+
+
                 className='text-gray-400 mb-6 max-w-2xl mx-auto'>;
                 Get the latest insights on AI, quantum computing, and emerging;
                 technologies delivered to your inbox.;
               </motion && motion.p>              >;
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.;
               </motion && motion.p>;
+
               <motion&& motion.div
 
 
@@ -715,20 +880,25 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
+
               >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <input
                   type='email'
                   placeholder='Enter your email'
                   className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 />;
                 <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>                  Subscribe              >;
+
+
+                className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+              >
 
 
                 <input
@@ -775,14 +945,16 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
     </footer>
   );
 
-
-export default EnhancedFooter2025;  )
 }
+};
+export default EnhancedFooter2025;
+
 export default EnhancedFooter2025;
 
 
 
 export default EnhancedFooter2025;
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -796,4 +968,5 @@ export default EnhancedFooter2025;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

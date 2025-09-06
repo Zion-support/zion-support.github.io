@@ -1,4 +1,5 @@
 if (isLoading) {
+
     return (
       <div className="flex justify-center items-center h-64">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
@@ -10,17 +11,34 @@ if (isLoading) {
   if (error) {
 
   if (error) {;
+
     return (
-      <div className="flex justify-center items-center h-64">
-        <Loader2 className="h-8 w-8 animate-spin text-primary" />
-      </div>
-    )
+      <div className="flex justify-center items-center h-64">;
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+      </div>;
+    );
   }
 
-
   
+  if (error) {
 
-
+  if (error) {;
+    return (
+      <div className="flex justify-center items-center h-64">;
+        <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+      </div>;
+    );
+  }
+  if (error) {
+    return (
+      <Alert variant="destructive" className="mb-6">
+        <AlertCircle className="h-4 w-4" />
+        <AlertTitle>Error</AlertTitle>
+        <AlertDescription>{error}</AlertDescription>
+      </Alert>
+    )
+  }
+  
 
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
@@ -46,6 +64,7 @@ if (isLoading) {
 
 
 
+
   
 
 
@@ -60,6 +79,7 @@ if (isLoading) {
           {resume && <ResumeVersionSelector currentResume={resume} onResumeChange={handleResumeChange} />}
           <Button
             onClick = {(,) => setShowNewResumeForm(true),}
+
           <Button;
             onClick={() => setShowNewResumeForm(true)}
             variant="outline"
@@ -72,6 +92,7 @@ if (isLoading) {
         </div>
       </div>
       
+
 
 
       <Card>
@@ -88,6 +109,7 @@ if (isLoading) {
 
 
           <Tabs value={activeTab} onValueChange={setActiveTab}>
+
             variant="outline";
             size="sm";
             className="gap-2";
@@ -154,11 +176,16 @@ if ( {) {
 
               <ResumeStepContent
 
+            {resume && (
+              <ResumeStepContent 
 
                 activeTab = {activeTab,}
                 resume = {resume as Resume,}
                 onNextStep = {nextStep,}
                 onPrevStep = {prevStep,}
+
+              />
+            )}
 
 
           </Tabs>;
@@ -166,6 +193,7 @@ if ( {) {
       </Card>;
     </div>;
   );
+
 
 
 };
@@ -256,5 +284,6 @@ if ( {) {
 }/>);
 }</Tabs> </CardContent> </Card> </div>);
 }'"}
+
 
 

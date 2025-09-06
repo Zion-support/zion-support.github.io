@@ -182,15 +182,5 @@ return (<> <Dialog open= {;
   loginOpen ;
 }onOpenChange= {;
   setLoginOpen ;
-<<<<<<< HEAD
-:temp_broken_files/profile/ContactPublisherModal.tsx
-}/> </>) ;"}'"
-}/> </>) ;
-}'"
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ContactPublisherModal.tsx
-=======
 
-}/> </>) ;
-}'"
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4

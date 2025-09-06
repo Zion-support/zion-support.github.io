@@ -5,6 +5,7 @@
 
 
 
+
 export default function CloudAutomationHub() {
 
   const [logs, setLogs] = useState<any[]>([])
@@ -91,6 +92,7 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 
 
 
+
           {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -102,7 +104,9 @@ ursor/fix-lint-push-and-merge-to-main-ce13
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           {logs.map((log) => (
@@ -120,6 +124,8 @@ ursor/fix-lint-push-and-merge-to-main-ce13
       </div>
     </div>
 
+  );
+};
 
   )
 import { useEffect, useState } from 'react';
@@ -172,6 +178,7 @@ export default function CloudAutomationHub(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -183,5 +190,6 @@ export default function CloudAutomationHub(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

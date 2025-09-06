@@ -176,11 +176,12 @@ export default function FAQ() {
           </div>
         </section>
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+        {/* FAQ Section */}
+        {/* FAQ Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
@@ -209,12 +210,14 @@ export default function FAQ() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">

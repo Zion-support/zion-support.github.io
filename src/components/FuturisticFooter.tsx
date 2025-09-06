@@ -5,6 +5,7 @@
               </div>;
           </div>";
 
+
           <div className="pt - 8 border - t border - slate - 800 / 50">";
 </div>";
             <div className="flex flex - col md: flex - row justify - between items - center space - y-4 md:space - y-0">", </div>",
@@ -29,10 +30,13 @@
 </Award>;
                 </span> </div>;
 
+
             </div>;
           </div>;
         </div>;
       </div>;
+
+
 
 
     };
@@ -367,4 +371,6 @@ export default function FuturisticFooter() {
           </div>,;
         </div>,;
       </div>,;
+
     </footer>",;
+

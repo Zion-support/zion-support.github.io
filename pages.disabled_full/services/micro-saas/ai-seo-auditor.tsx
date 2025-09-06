@@ -9,6 +9,7 @@ interface AiseoauditorProps {
   // Add props here as needed
 
 }
+export default function Aiseoauditor({ }: AiseoauditorProps) {
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 

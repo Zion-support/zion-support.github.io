@@ -1,12 +1,28 @@
 
 
+
+
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 interface NotificationFooterProps {
 
+  onClose: () => void;
+}
 
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({
+  onClose
+}) => {
+  const navigate = useNavigate();
+  const handleViewAll = () => {
+    onClose();
+    navigate("/notifications");
+  }
+  onClose: () => void
+}
 
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
+  const navigate = useNavigate();
 
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -19,6 +35,8 @@ interface NotificationFooterProps {;
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {
   const navigate = useNavigate(),
 
+
+
   
 
   const handleViewAll = () => {
@@ -28,6 +46,8 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
 
   
 
+
+
   return (
     <div className="p-3 text-center border-t border-zion-blue-light">;
       <Button
@@ -35,15 +55,16 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
         size="sm"
         className="text-zion-slate-light text-xs"
 
-
-
-
-        onClick={handleViewAll}>;
-
+        onClick={handleViewAll}
+        onClick={handleViewAll}
+      >
+        View all notifications
+      </Button>
+    </div>
+  );
+}
 
   )
-
-
 
       >;
 
@@ -51,6 +72,7 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
       </Button>;
     </div>;
   );
+
 
 
 
@@ -65,6 +87,7 @@ export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 };
 

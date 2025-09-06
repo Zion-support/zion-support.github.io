@@ -8,6 +8,8 @@ export default function HomePage() {
     <div className="animate-fade-in">
 
 
+
+
       <section className="text-center py-12 md:py-20">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
           Build and scale with{' '}
@@ -18,8 +20,10 @@ export default function HomePage() {
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
 
+
           We design, build and operate production-grade platforms: AI copilots, data/ML pipelines, 
           automation, cloud infrastructure, and secure micro SaaS products. Trusted by 500+ companies worldwide.
+
 
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -43,13 +47,35 @@ export default function HomePage() {
 
 
 
+
+
       <section className="py-12">
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
+          <Card
+            title="Micro SaaS"
+            href="/services/micro-saas"
+            description="End-to-end product engineering with billing, auth, analytics and growth."
+            icon="🚀"
+          />
+          <Card
+            title="AI Services"
+            href="/services/ai-services"
+            description="LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps."
+            icon="🤖"
+          />
+          <Card
+            title="IT Services"
+            href="/services/it-services"
+            description="Cloud migration, DevOps, SRE, security hardening and cost optimization."
+            icon="⚙️"
+
           />
         </div>
       </section>
+
+
 
 
 
@@ -91,6 +117,7 @@ export default function HomePage() {
       </section>
 
 
+
       {/* Contact CTA */}
       <section className="py-12">
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
@@ -122,6 +149,7 @@ export default function HomePage() {
 
         </div>
       </section>
+
     </div>
   );
 }
@@ -148,9 +176,10 @@ function Card({ title, description, href, icon }: {
       className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
     >
       <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{title}</h3>
 
-
+      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+        {title}
+      </h3>
 
       <p className="text-gray-600 leading-relaxed">{description}</p>
     </Link>

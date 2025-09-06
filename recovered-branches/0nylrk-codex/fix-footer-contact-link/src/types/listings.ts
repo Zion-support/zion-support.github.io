@@ -1,5 +1,7 @@
 
 
+export interface ListingCategory {
+export interface ListingCategory {;
 
   id: string;
   name: string;
@@ -12,6 +14,7 @@
 
 }
 
+
 export interface ProductListing {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -20,6 +23,7 @@ export interface ProductListing {
   id: string;
   title: string;
   description: string;
+
 
   category: string,
   subcategory?: string, // Adding optional subcategory field;
@@ -52,9 +56,11 @@ export interface ProductListing {
 
 
 
+
   id: string;
   title: string;
   category: string;
+
 
 
 
@@ -97,6 +103,8 @@ export interface ListingItem {;
   description?: string;
 }
 ;
+
+
 
 export type ListingView = 'grid' | 'list';
 

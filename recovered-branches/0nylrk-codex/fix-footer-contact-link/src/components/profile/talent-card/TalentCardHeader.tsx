@@ -5,10 +5,19 @@
 
 
 
+
+
 import React from "react";
 import {BadgeCheck} from "lucide-react";
 import {TalentCardAvatar} from "./TalentCardAvatar";
 import {TalentCardAvailability} from "./TalentCardAvailability";
+
+import React from "react",
+import { BadgeCheck } from "lucide-react",
+import { TalentCardAvatar } from "./TalentCardAvatar";
+import { TalentCardAvailability } from "./TalentCardAvailability";
+interface TalentCardHeaderProps {
+
 
 
   profilePicture?: string;
@@ -23,9 +32,8 @@ export function TalentCardHeader(): any ({ ;
 
   availabilityType;
 
-
-
-
+import { TalentCardAvatar } from "./TalentCardAvatar",
+import { TalentCardAvailability } from "./TalentCardAvailability",
 
 interface TalentCardHeaderProps {
   fullName: string,
@@ -50,7 +58,6 @@ export function TalentCardHeader({
 
   yearsExperience
 }: TalentCardHeaderProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className="flex items-start gap-4 mb-4">;
@@ -117,6 +124,7 @@ export function TalentCardHeader({;
 }
 
 
+
 import React from './react';
 import { BadgeCheck } from './lucide-react';
 import { TalentCardAvatar } from './TalentCardAvatar';
@@ -154,4 +162,5 @@ function TalentCardHeader() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

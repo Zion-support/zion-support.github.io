@@ -1,17 +1,17 @@
 
 import Head from 'next/head';
 
-
-
-
-
+import {motion} from 'framer-motion';
+import {WifiOff, RefreshCw, Home, ShoppingCart, Clock, Bookmark, Search,} from 'lucide-react';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
+import {Badge} from '@/components/ui/badge';
+import Link from 'next/link';
+import {useState, useEffect} from 'react';
+import {logErrorToProduction} from '@/utils/productionLogger';
+export default function OfflinePage() {
 
 export default function OfflinePage() {;
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 
   const [isOnline, setIsOnline] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<string>('');
@@ -36,6 +36,37 @@ export default function OfflinePage() {;
   }, []);
   const handleRetry = () => {
     try {
+
+
+export default function OfflinePage() {;
+  const [isOnline, setIsOnline] = useState(false);
+  const [lastUpdate, setLastUpdate] = useState<string>('');
+  const [retryCount, setRetryCount] = useState(0);
+
+  useEffect(() =></string> {;
+    // Check online status;
+    const updateOnlineStatus = () => {;
+      setIsOnline(navigator && navigator.onLine);
+      if (navigator && navigator.onLine) {;
+        setLastUpdate(new Date().toLocaleTimeString());
+      }
+    };
+
+    // Set initial status;
+    updateOnlineStatus();
+
+    // Listen for online/offline events;
+    window && window.addEventListener('online', updateOnlineStatus);
+    window && window.addEventListener('offline', updateOnlineStatus);
+
+    return () => {;
+      window && window.removeEventListener('online', updateOnlineStatus);
+      window && window.removeEventListener('offline', updateOnlineStatus);
+    };
+  }, []);
+
+  const handleRetry = () => {;
+    try {;
 
       setRetryCount(prev => prev + 1);
       window && window.location.reload();
@@ -119,6 +150,8 @@ if ( {) {
       available: true
     }
   ];
+
+
 
 
 import { motion } from 'framer-motion';
@@ -278,10 +311,8 @@ export default function OfflinePage(req, res) {
                     : { rotate: [0, -10, 10, -10, 0] }
                 }
                 transition={{
-
-                  duration: isOnline ? 0 && 0.6 : 2,
-                  repeat: isOnline ? 1 : Infinity,
-
+                  duration: isOnline ? 0.6 : 2
+                  repeat: isOnline ? 1 : Infinity
                 }}
                 className={`mx-auto w-24 h-24 rounded-full flex items-center justify-center mb-4 ${
                   isOnline
@@ -306,7 +337,9 @@ export default function OfflinePage(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   return (
     <>
@@ -323,7 +356,9 @@ export default function OfflinePage(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
           <motion.div
@@ -389,14 +424,15 @@ export default function OfflinePage(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               >
                 <WifiOff className={`w-12 h-12 ${
                   isOnline ? 'text-green-600' : 'text-orange-600'
                 }`} />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </motion.div>
               <Badge
                 variant={isOnline ? "default" : "secondary"  } catch (error) {
@@ -431,12 +467,14 @@ export default function OfflinePage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               {isOnline
                 ? 'Your internet connection has been restored. You can now access all features.'
@@ -498,7 +536,9 @@ export default function OfflinePage(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             >
@@ -533,8 +573,13 @@ export default function OfflinePage(req, res) {
               </Link>
             </Button>
           </div>
+                Go to Marketplace;
+              </Link>;
+            </Button>;
+          </div>;
+
           {/* Quick Actions */}
-          <motion.div
+          <motion&& motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -623,7 +668,9 @@ export default function OfflinePage(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 >
@@ -677,7 +724,6 @@ export default function OfflinePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </CardContent>;
                   </Card>;
                 </motion && motion.div>;
@@ -689,6 +735,72 @@ export default function OfflinePage(req, res) {
 
           {/* Tips Section */}
           <motion&& motion.div
+
+          {/* Quick Actions */}
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 40 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >;
+            <h2 className='text - 2xl font - bold text - center mb - 8'>;
+              Available Offline Features;
+            </h2>;
+            <div className='grid md:grid - cols - 3 gap - 6 max - w-4xl mx - auto'>;
+              {quick_actions.map ((action, index) => (
+                <motion.div;
+                  key={action.title}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  animate={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                >;
+                  <Card;
+                    className={`h - full transition - all duration - 300 hover:shadow - lg ${
+                      action.available;
+                        ? 'hover:scale - 105 cursor - pointer';
+                        : 'opacity - 60 cursor - not - allowed';
+                    }`}
+                  >;
+                    <CardHeader className='text - center'>;
+                      <div;
+                        className={`mx - auto w - 12 h - 12 rounded - full flex items - center justify - center mb - 3 ${
+                          action.available;
+                            ? 'bg - blue - 100 dark:bg - blue - 900 / 20';
+                            : 'bg - gray - 100 dark:bg - gray - 800';
+                        }`}
+                      >;
+                        <action.icon;
+                          className={`w - 6 h - 6 ${
+                            action.available;
+                              ? 'text - blue - 600 dark:text - blue - 400';
+                              : 'text - gray - 400';
+                          }`}
+                        />;
+                      </div>;
+                      <CardTitle className='text - lg'>{action.title}</CardTitle>;
+                    </CardHeader>;
+                    <CardContent className='text - center'>;
+                      <p className='text - muted - foreground mb - 4'>;
+                        {action.description}
+                      </p>;
+                      {action.available ? (
+                        <Button;
+                          as_child;
+                          variant='outline';
+                          size='sm';
+                          className='w - full';
+                        >;
+                          <Link href={action.href}>Access</Link>;
+                        </Button>) : (
+                        <Button disabled size='sm' className='w - full'>;
+                          Requires Internet;
+                        </Button>)}
+                    </CardContent>;
+                  </Card>;
+                </motion.div>))}
+            </div>;
+          </motion.div>;
+          {/* Tips Section */}
+          <motion.div;
 
 
             initial={{ opacity: 0 }  } catch (error) {
@@ -711,36 +823,38 @@ export default function OfflinePage(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           >
             <Card className='max-w-2xl mx-auto'>
               <CardHeader>
-                <CardTitle className='text-center'>💡 Offline Tips</CardTitle>
+                <CardTitle className='text-center'> Offline Tips</CardTitle>
               </CardHeader>
               <CardContent>
                 <div className='space-y-3 text-sm'>
                   <div className='flex items-start gap-2'>
-                    <span className='text-blue-600 font-semibold'>•</span>
+                    <span className='text-blue-600 font-semibold'></span>
                     <span>
                       Recently viewed pages are cached and available offline
                     </span>
                   </div>
                   <div className='flex items-start gap-2'>
-                    <span className='text-blue-600 font-semibold'>•</span>
+                    <span className='text-blue-600 font-semibold'></span>
                     <span>
                       Your bookmarks and saved items can be accessed anytime
                     </span>
                   </div>
                   <div className='flex items-start gap-2'>
-                    <span className='text-blue-600 font-semibold'>•</span>
+                    <span className='text-blue-600 font-semibold'></span>
                     <span>
                       Form submissions will be synced when you reconnect
                     </span>
                   </div>
                   <div className='flex items-start gap-2'>
-                    <span className='text-blue-600 font-semibold'>•</span>
+                    <span className='text-blue-600 font-semibold'></span>
                     <span>
                       Check your internet connection and try refreshing the page
                     </span>
@@ -778,7 +892,9 @@ export default function OfflinePage(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -806,20 +922,24 @@ export default function OfflinePage(req, res) {
               </Card>
             </motion.div>
 
+          )}
+        </div>
+      </div>
+    </>
+  );
 
-
-
+}
 
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>;
       </div>;
     </>;
   );
+
 
 
 
@@ -836,5 +956,6 @@ export default function OfflinePage(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

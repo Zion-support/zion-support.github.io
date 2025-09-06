@@ -3,6 +3,7 @@ import ContentCategorizer from '../../components/ContentCategorizer';
 
 
 
+
 export default function ReportsIndex() {
 
 
@@ -10,6 +11,7 @@ export default function ReportsIndex() {
 export default function ReportsIndex() {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export default function ReportsIndex() {
@@ -88,6 +90,7 @@ export default function ReportsIndex() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -95,12 +98,26 @@ export default function ReportsIndex() {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">
             ← Back to home
           </Link>
         </div>
       </main>
 
+    </div>
+  );
+}
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+}
+    </div>
 
   )
         <div className="mt-12 text-center">;
@@ -117,5 +134,7 @@ export default function ReportsIndex() {
   }
 }
 ;
+
+
 
 

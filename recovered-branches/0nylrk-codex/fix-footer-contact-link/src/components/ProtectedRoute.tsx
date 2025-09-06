@@ -2,9 +2,11 @@
 
 import React from 'react';
 
-
-
-
+import { Navigate  } from 'react-router-dom';
+import { useAuth  } from '@/hooks/useAuth';
+import { useTenantAdminStatus  } from '@/hooks/useWhitelabelTenant';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+export interface ProtectedRouteProps {
 
 
 
@@ -15,7 +17,9 @@ export interface ProtectedRouteProps {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   adminOnly?: boolean;
@@ -23,9 +27,21 @@ export interface ProtectedRouteProps {
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
 }
 
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
+  children;
 
+  adminOnly = false;
+  tenantAdminAllowed = false
+  requiredUserType
+}) => {
+  const { user, isLoading } = useAuth();
+  const { tenant } = useWhitelabel();
+  const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id)
+  const isCheckingPermissions = isLoading |isCheckingTenantAdmin;
 
-
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
+  children;
+  adminOnly = false;
 
 import React from 'react',
 import { Navigate } from 'react-router-dom',
@@ -137,7 +153,9 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export default ProtectedRoute;

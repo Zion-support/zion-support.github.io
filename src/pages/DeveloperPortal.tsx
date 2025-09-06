@@ -3,6 +3,11 @@ const [activeTab, setActiveTab] = useState<string>("documentation"),
   // Define the tabs
   const tabs: TabDefinition[] = [
 
+    { id: 'documentation', label: 'Documentation', icon: BookOpen },
+    { id: 'api-keys', label: 'API Keys', icon: Key },
+    { id: 'webhooks', label: 'Webhooks', icon: Webhook },
+    { id: 'logs', label: 'Logs', icon: List },
+  ]
 
 
 
@@ -13,10 +18,12 @@ const [activeTab, setActiveTab] = useState<string>("documentation"),
 
 
   return (
+
     <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-white flex items-center">
           <Terminal className="mr-3" size={32} />
+
 
           Developer Portal
         </h1>
@@ -62,6 +69,8 @@ export function DeveloperPortal() {
     { id: "api-keys", label: "API Keys", icon: Key },
     { id: "webhooks", label: "Webhooks", icon: Webhook },
     { id: "logs", label: "Logs", icon: List }],
+
+
 
 
 
@@ -247,6 +256,7 @@ export function DeveloperPortal() {;
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700";
                 }`}
                 onClick = {(,) => setActiveTab(tab && tab.id),}
+
               >;
                 <Icon size={16} className='mr-2' />;
                 {tab && tab.label}
@@ -283,9 +293,10 @@ export function DeveloperPortal() {;
     </div>;
   );
                 onClick={() => setActiveTab(tab && tab.id)}
+
               >;
-                <Icon size={16} className="mr-2" />;
-                {tab.label}
+                <Icon size={16} className='mr-2' />;
+                {tab && tab.label}
               </button>;
             );
           })}
@@ -293,9 +304,12 @@ export function DeveloperPortal() {;
       </div>;
 
 
+
+
       {/* Tab content */}
       <div>;
       <div>
+
 
 
 
@@ -307,10 +321,19 @@ export function DeveloperPortal() {;
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
+
         {activeTab === "documentation" && <ApiDocumentation />}
         {activeTab === "api-keys" && <ApiKeysManager />}
         {activeTab === "webhooks" && <WebhooksManager />}
         {activeTab === "logs" && <ApiLogs />}
+
+      </div>
+    </div>
+  )
+}
+
+
+
 
 
 
@@ -332,6 +355,7 @@ export default function ProtectedDeveloperPortal() {
 
 
 
+
       </div>;
     </div>;
   );
@@ -343,6 +367,7 @@ export default function ProtectedDeveloperPortal() {
 };
   );
 };
+
 
 
 

@@ -1,13 +1,25 @@
 
 
+import { useState, useEffect  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { useResume  } from '@/hooks/useResume';
+import { Tabs  } from '@/components/ui/tabs';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Alert, AlertDescription, AlertTitle  } from '@/components/ui/alert';
+import { AlertCircle, FilePlus, Loader2  } from 'lucide-react';
+import { Button  } from '@/components/ui/button';
+import { Resume  } from '@/types/resume';
+// Import components
+import { ResumeProgress  } from './ResumeProgress';
+import { EmptyResumeState  } from './EmptyResumeState';
+import { CreateResumeForm  } from './CreateResumeForm';
+import { ResumeSteps  } from './ResumeSteps';
+import { ResumeStepContent  } from './ResumeStepContent';
+import { useResumeProgress  } from './useResumeProgress';
+import { ResumeVersionSelector  } from './ResumeVersionSelector';
+import { RESUME_STEPS } from './constants';
+export function ResumeWizard() {
 
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 import {useState, useEffect} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {use_resume} from '@/hooks / use_resume';
@@ -15,10 +27,8 @@ import {Tabs} from '@/components / ui / tabs';
 import {Card, CardContent} from '@/components / ui / card';
 import {Alert, AlertDescription, AlertTitle} from '@/components / ui / alert';
 import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
-
-import {Button} from '@/components / ui / button';
-import {Resume} from '@/types / resume';
-
+import {Button} from '@/components/ui/button';
+import {Resume} from '@/types/resume';
 // Import components;
 import {ResumeProgress} from './ResumeProgress';
 import {EmptyResumeState} from './EmptyResumeState';
@@ -33,12 +43,13 @@ import {RESUME_STEPS} from './constants';
 
 
 
+
+
   const { user } = useAuth();
   const { ;
     isLoading;
     error, ;
     resume, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     fetchResume;
     createResume;
   } = useResume();
@@ -74,6 +85,12 @@ import {RESUME_STEPS} from './constants';
       setActiveTab(RESUME_STEPS[currentIndex - 1].id)
     }
 
+  }
+  const handleResumeChange = (resumeId: string) => {
+    fetchResume(resumeId)
+  }
+
+  };
 
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -113,27 +130,26 @@ export function ResumeWizard() {;
       fetchResume();
     }
   }, [user, fetchResume]);
-
-  const handleCreateNewResume = async (title: string) => {;
-    const resumeId = await createResume({ title: title && title.trim() }),;
-    if (resumeId) {;
+  const handleCreateNewResume = async (title: string) => {
+    const resumeId = await createResume({ title: title.trim() })
+    if (resumeId) {
       await fetchResume(resumeId);
-      setShowNewResumeForm(false);
+      setShowNewResumeForm(false)
     }
-  };
+  }
+  const nextStep = () => {
+    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
+    if (currentIndex < RESUME_STEPS.length - 1) {
+      setActiveTab(RESUME_STEPS[currentIndex + 1].id)
+    }
+  }
+  const prevStep = () => {
+    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
+    if (currentIndex > 0) {
+      setActiveTab(RESUME_STEPS[currentIndex - 1].id)
+    }
 
-  const nextStep = () => {;
-    const currentIndex = RESUME_STEPS && RESUME_STEPS.findIndex(step => step && step.id === activeTab);
-    if (currentIndex < RESUME_STEPS && RESUME_STEPS.length - 1) {;
-      setActiveTab(RESUME_STEPS[currentIndex + 1].id);
-    }
-  };
 
-  const prevStep = () => {;
-    const currentIndex = RESUME_STEPS && RESUME_STEPS.findIndex(step => step && step.id === activeTab);
-    if (currentIndex > 0) {;
-      setActiveTab(RESUME_STEPS[currentIndex - 1].id);
-    }
 
 
 
@@ -181,6 +197,7 @@ export function ResumeWizard() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -190,6 +207,7 @@ export function ResumeWizard() {;
 
   }
   if (showNewResumeForm) {
+
 
     return (
       <CreateResumeForm
@@ -258,5 +276,18 @@ export function ResumeWizard() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+export /**
+ * ResumeWizard - Function description
+ */
+function ResumeWizard() {
+  const { user } = use_auth ();
+  const {
+    is_loading;
+    error,
+    resume,
+    fetch_resume;
+    create_resume;
+  } = use_resume ();
+;
 

@@ -20,10 +20,10 @@
         </CardFooter>
       </Card>
           <ul className="space-y-2">
-            <li className="text-sm">✓ Legally binding templates</li>
-            <li className="text-sm">✓ Milestone-based payment terms</li>
-            <li className="text-sm">✓ IP rights and confidentiality clauses</li>
-            <li className="text-sm">✓ DocuSign integration</li>
+            <li className="text-sm"> Legally binding templates</li>
+            <li className="text-sm"> Milestone-based payment terms</li>
+            <li className="text-sm"> IP rights and confidentiality clauses</li>
+            <li className="text-sm"> DocuSign integration</li>
           </ul>
         </CardContent>
         <CardFooter>
@@ -38,6 +38,7 @@
       </Card>
       
       <Card>
+
 
 
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
@@ -56,6 +57,7 @@
         </CardHeader>
         <CardContent>
 
+
           <ul className="space-y-2">
 
             <li className="text-sm">✓ All standard contract features</li>
@@ -68,11 +70,11 @@
         <CardFooter>
           <Button
             className='w-full bg-gradient-to-r from-blue-600 to-indigo-600'            onClick={onSmartClick}          <ul className="space-y-2">
-            <li className="text-sm">✓ All standard contract features</li>
-            <li className="text-sm">✓ Automatic escrow payment release</li>
-            <li className="text-sm">✓ Transaction verification</li>
-            <li className="text-sm">✓ Permanent on-chain record</li>
-            <li className="text-sm">✓ Multi-signature approval flow</li>
+            <li className="text-sm"> All standard contract features</li>
+            <li className="text-sm"> Automatic escrow payment release</li>
+            <li className="text-sm"> Transaction verification</li>
+            <li className="text-sm"> Permanent on-chain record</li>
+            <li className="text-sm"> Multi-signature approval flow</li>
           </ul>
         </CardContent>
         <CardFooter>
@@ -84,6 +86,7 @@
           </Button>
         </CardFooter>
       </Card>
+
 
 
     </div>
@@ -181,6 +184,7 @@ function ContractTypeCards() {
         </CardHeader>;
         <CardContent>;
 
+
           <ul className='space - y-2'>;
             <li className='text - sm'>✓ Legally binding templates</li>;
             <li className='text - sm'>✓ Milestone - based payment terms</li>;
@@ -260,10 +264,11 @@ function ContractTypeCards() {
       </Card>;
     </div>;
   );
-};
 }
 
     </div>);
 }
 
+
 ;
+

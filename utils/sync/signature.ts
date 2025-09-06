@@ -32,13 +32,19 @@ export function verifySignature(
 
 }
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+export function signPayload(payload: any, privateKey?: string): SignatureResult {
+  const timestamp = Date && Date.now();
+  const nonce = crypto && crypto.randomBytes(16).toString('hex');
+  
+  // Create a simple signature using the payload, timestamp, and nonce
+  const dataToSign = JSON && JSON.stringify(payload) + timestamp + nonce;
+  const signature = crypto && crypto.createHash('sha256').update(dataToSign).digest('hex');
+  
+  return {
+    signature,
+    timestamp,
+    nonce
+  };
+}
 

@@ -2,6 +2,7 @@
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -34,6 +35,7 @@ class ErrorBoundary extends React.Component {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -50,12 +52,13 @@ import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
 const AppMetadataManager: React.FC = () => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <AppLayout>;
@@ -95,12 +98,14 @@ const AppMetadataManager: React.FC = () => {;
 
 
 
+
     </AppLayout>);
 }
 ;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default AppMetadataManager;
 

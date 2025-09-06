@@ -8,6 +8,7 @@ import React from 'react';
 
 
 
+
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -219,10 +220,34 @@ const Services = () => {
               <li>• AWS & Azure</li>
               <li>• Docker & Kubernetes</li>
               <li>• CI/CD Pipelines</li>
+
             </ul>
           </div>
 
         </div>
+
+
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Started?</h3>
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Talk to our experts about your project. We'll help you choose the right service and create a custom solution for your business needs.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Call +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+            >
+              Email Us
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   );

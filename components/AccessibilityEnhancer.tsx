@@ -15,6 +15,7 @@ const AccessibilityEnhancer: React.FC = () => {;
       text-decoration: none, z-index: 1000,;
 
 
+
     `;
     document && document.body.insertBefore(skipLink, document && document.body.firstChild);
     // Focus management;
@@ -60,6 +61,7 @@ const AccessibilityEnhancer: React.FC = () => {;
       };
       window && window.addEventListener('popstate', handleRouteChange);
     }
+
     // Cleanup;
     return () => {;
       document && document.removeEventListener('mousedown', handleMouseDown);
@@ -101,132 +103,51 @@ const AccessibilityEnhancer: React.FC = () => {
 if ( {) {
   $2
 }
-        document.body.class_list.remove ('using - mouse'),
-      }
-    }
-;
-    document.addEventListener ('mousedown', handleMouseDown);
-    document.addEventListener ('keydown', handleKeyDown);
-;
-    // Add ARIA live region for announcements;
-    const live_region = document.create_element ('div');
-    live_region.set_attribute ('aria - live', 'polite');
-    live_region.set_attribute ('aria - atomic', 'true');
-    live_region.class_name = 'sr - only';
-    live_region.id = 'live - region';
-    document.body.append_child (live_region);
-;
-    // Announce page changes;
-    const announcePageChange = (message: string) =>: any {
-      const live_region = document.getElementById ('live - region');
-      // Check condition
-if ( {) {
-  $2
-}
-        live_region.text_content = message,
-      }
-    }
-;
-    // Listen for route changes (Next.js specific);
-    const handleRouteChange = () =>: any {
-      announcePageChange ('Page loaded');
-    }
-;
-    // Add route change listener if available;
-    // Check condition
-if ( {) {
-  $2
-}
-      const originalPushState = window.history.push_state;
-      const originalReplaceState = window.history.replace_state;
-;
-      window.history.push_state = function (...args) {
-        originalPushState.apply (this, args);
-        set_timeout (handleRouteChange, 100);
-      }
-;
-      window.history.replace_state = function (...args) {
-        originalReplaceState.apply (this, args);
-        set_timeout (handleRouteChange, 100);
-      }
-;
-      window.addEventListener ('popstate', handleRouteChange);
-    }
-    // Cleanup;
-    return () => {
-      document.removeEventListener ('mousedown', handleMouseDown);
-      document.removeEventListener ('keydown', handleKeyDown);
-      // Check condition
-if ( {) {
-  $2
-}
-        skip_link.parent_node.remove_child (skip_link);
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        live_region.parent_node.remove_child (live_region);
-      }
-    }
-  }, []);
-;
-  return null;
-}
-;
-// Add CSS for focus management;
-const focus_styles = `;
-  .using - mouse *:focus {
-    outline: none !important,
+// Add CSS for focus management
+const focusStyles = `
+  .using-mouse *:focus {
+    outline: none !important
   }
-  .focus - visible:focus {
-    outline: 2px solid #2563eb !important, outline - offset: 2px !important,
+  .focus-visible:focus {
+    outline: 2px solid #2563eb !important, outline-offset: 2px !important
   }
-  .sr - only {
-    position: absolute, width: 1px,
-    height: 1px, padding: 0,
-    margin: -1px, overflow: hidden,
-    clip: rect (0, 0, 0, 0);
-    white - space: nowrap, border: 0,
+  .sr-only {
+    position: absolute, width: 1px
+    height: 1px, padding: 0
+    margin: -1px, overflow: hidden
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap, border: 0
   }
-  .sr - only.focus:not - sr - only:focus {
-    position: static, width: auto,
-    height: auto, padding: inherit,
-    margin: inherit, overflow: visible,
-    clip: auto, white - space: normal,
+  .sr-only.focus:not-sr-only:focus {
+    position: static, width: auto
+    height: auto, padding: inherit
+    margin: inherit, overflow: visible
+    clip: auto, white-space: normal
   }
 `;
-;
-// Inject styles;
-// Check condition
-if ( {) {
-  $2
-}
-  const style_sheet = document.create_element ('style');
-  style_sheet.text_content = focus_styles;
-  document.head.append_child (style_sheet);
+// Inject styles
+if (typeof document !== 'undefined') {
+  const styleSheet = document.createElement('style');
+  styleSheet.textContent = focusStyles;
+  document.head.appendChild(styleSheet);
 }
 export default AccessibilityEnhancer;
 import React, { useEffect, useState } from 'react';
-;
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
-const AccessibilityEnhancer: React.FC < AccessibilityEnhancerProps> = ({ children }) => {
-  const [isHighContrast, setIsHighContrast] = useState (false);
-  const [font_size, setFontSize] = useState ('normal');
-  const [reduced_motion, setReducedMotion] = useState (false);
-;
-  useEffect (() => {
-    const prefersReducedMotion = window.match_media ('(prefers - reduced - motion: reduce)').matches;
-    setReducedMotion (prefersReducedMotion);
-;
-    const savedHighContrast = local_storage.get_item ('high_contrast') === 'true';
-    const savedFontSize = local_storage.get_item ('font_size') || 'normal';
-    setIsHighContrast (savedHighContrast);
-    setFontSize (savedFontSize);
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState('normal');
+  const [reducedMotion, setReducedMotion] = useState(false);
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    setReducedMotion(prefersReducedMotion);
+    const savedHighContrast = localStorage.getItem('highContrast') === 'true';
+    const savedFontSize = localStorage.getItem('fontSize') |'normal';
+    setIsHighContrast(savedHighContrast);
+    setFontSize(savedFontSize);
   }, []);
-;
   const applyAccessibilityStyles = (
     high_contrast: boolean,
     fontSizeValue: string,
@@ -365,22 +286,51 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
               </button>;
             ))}
 
-
-          computing, blockchain infrastructure, and innovative development services.;
-        </p>;
-      </div>;
+          </div>
+        </div>
+      </div>
+      {/* Skip to main content link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+      >
+        Skip to main content
+      </a>
+      {/* Screen reader only content */}
+      <div className="sr-only">
+        <h1>Zion Tech Group - Technology Solutions Provider</h1>
+        <p>
+          Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum
+          computing, blockchain infrastructure, and innovative development services.
+        </p>
+      </div>
       {/* Main content */}
-
-      <div id="main - content">{children}</div>;
-    </>);
+      <div id="main-content">{children}</div>
+    </>
+  );
 }
-;
 export default AccessibilityEnhancer;
+};
 
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+      {/* Skip to main content link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+      >
+        Skip to main content
+      </a>
+      {/* Screen reader only content */}
+      <div className="sr-only">
+        <h1>Zion Tech Group - Technology Solutions Provider</h1>
+        <p>
+          Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum
+          computing, blockchain infrastructure, and innovative development services.
+        </p>
+      </div>
+      {/* Main content */}
+      <div id="main-content">{children}</div>
+    </>
+  );
+export default AccessibilityEnhancer;
 

@@ -3,6 +3,7 @@
 
 
 
+
 export interface RateLimitInfo {
   tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;
@@ -69,10 +70,12 @@ export interface EndpointSpec {;
 
 
 
+
   id: string;
   title: string;
   description?: string;
   endpoints: EndpointSpec[];
+
 
 
 
@@ -88,6 +91,7 @@ export interface ApiDocsSpec {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   product: 'Zion OS';
   versions: string[]; // available versions;
   default_version: string;
@@ -98,6 +102,16 @@ export type Visibility = 'public' | 'partner' | 'internal';
 export interface CodeSample {
   language: 'curl' | 'javascript' | 'python'
   code: string
+
+export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+
+  lastUpdatedIso: string;  auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>;
+;
+export type Visibility = 'public' | 'partner' | 'internal';
+;
+export interface CodeSample {
+  language: 'curl' | 'javascript' | 'python',
+  code: string;
 
 }
 export interface RateLimitInfo {
@@ -110,12 +124,26 @@ export interface ErrorCode {
 }
 export interface EndpointSpec {
 
+
+
   query?: Record<string, string>;
   params?: Record<string, string>;
   requestBodySchema?: unknown;
   responseBodySchema?: unknown;
 
   lastUpdatedIso: string
+
+
+}
+
+}
+
+
+}
+}
+}
+}
+}
 }
 
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
@@ -170,5 +198,7 @@ export interface ApiDocsSpec {;
   sections: SectionSpec[];
   lastUpdatedIso: string;
 }
+
+
 
 

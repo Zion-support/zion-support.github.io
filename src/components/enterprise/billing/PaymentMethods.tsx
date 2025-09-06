@@ -11,20 +11,29 @@ import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from 'lucide-react'
 
 
-
-
-
-export function PaymentMethods() {
-  // Mock payment methods
-
-  const paymentMethods = [
+      id: 'pm-1'
+      type: 'credit_card'
+      brand: 'Visa'
+      last4: '4242'
+      expYear: 2025
+      isDefault: true
+    }
     {
-
+      id: 'pm-2'
+      type: 'credit_card'
+      brand: 'Mastercard'
+      last4: '8888'
+      expMonth: 4
+      expYear: 2026
+      isDefault: false
+    }
+  ]
 
       id: 'pm-1',
       type: 'credit_card',
       brand: 'Visa',
       last4: '4242',
+
 
 
       id: "pm-1",
@@ -45,6 +54,7 @@ export function PaymentMethods() {
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
+
 
 
 
@@ -126,6 +136,7 @@ export function PaymentMethods() {;
           <div 
             key={method.id}
 
+
             className={`flex items-center justify-between p-4 rounded-lg border ${
 
               method.isDefault ? "bg-muted border-primary" : "border-border";
@@ -141,12 +152,14 @@ export function PaymentMethods() {;
                   {method.isDefault && (
 
 
+
                       Default
                     </span>
                   )}
                 </p>
                 <p className='text-sm text-muted-foreground'>                <p className="text-sm text-muted-foreground">
                 <p className="text-sm text-muted-foreground">
+
 
 
                   Expires {method.expMonth}/{method.expYear}
@@ -186,6 +199,7 @@ export function PaymentMethods() {;
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
+
         <Button className="gap-1">
 
           <Plus className="h-4 w-4" />
@@ -207,7 +221,9 @@ export function PaymentMethods() {;
 
 
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -404,5 +420,7 @@ function PaymentMethods() {
     </Card>);
 }
 ;
+
+
 
 

@@ -13,6 +13,7 @@ import { EndpointSpec } from '../../data/api-docs/types';
 
 
 
+
 import TryItConsole from './TryItConsole';
 
 
@@ -21,6 +22,7 @@ import TryItConsole from './TryItConsole';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   endpoint: EndpointSpec;
@@ -34,6 +36,7 @@ import TryItConsole from './TryItConsole';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -41,10 +44,35 @@ import TryItConsole from './TryItConsole';
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
     <div className='space-y-4'>
 
       <div>
         <div className='text-xl font-semibold text-high-contrast'>
+
+import { EndpointSpec } from '../../data / api - docs / types';
+;
+export default /**
+ * EndpointDetail - Function description
+ */
+function EndpointDetail() {
+    <div className='space - y-4'>;
+      <div>;
+        <div className='text - xl font - semibold text - high - contrast'>;
+          {endpoint.title}
+        </div>;
+        <div className='text - sm text - high - contrast - muted'>;
+          {endpoint.description}
+        </div>;
+        <div className='mt - 2 inline - flex items - center gap - 2 text - xs'>;
+          <span className='px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high - contrast - secondary'>;
+            {endpoint.method}
+          </span>;
+          <code className='px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high - contrast - secondary'>;
+            {endpoint.path}
+          </code>;
+          <span className='px - 2 py - 0.5 rounded bg - high - contrast - tertiary border border - high - contrast - secondary'>;
+            {endpoint.visibility}
 
 
 export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec }) {
@@ -53,6 +81,8 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec })
 
       <div>
         <div className='font-medium mb-2'>Code Examples</div>        <CodeSamples samples={endpoint.samples} />
+
+
 
       </div>
       <div>        <div className="text-xl font-semibold text-high-contrast">{endpoint.title}</div>
@@ -162,6 +192,8 @@ export default function EndpointDetail(): any ({;
 
 
 
+
+
       {endpoint && endpoint.rateLimits && endpoint && endpoint.rateLimits.length > 0 && (;
         <div>;
           <div className='font-medium mb-2'>Rate Limits</div>;
@@ -183,6 +215,8 @@ export default function EndpointDetail(): any ({;
           </ul>;
         </div>;
       )}
+
+
 
 
 
@@ -227,6 +261,13 @@ export default function EndpointDetail(): any ({;
           <div className=&quot;font-medium mb-2&quot;>Rate Limits</div>
           <ul className=&quot;list-disc pl-5 text-sm text-high-contrast-muted&quot;>
 
+            {endpoint.rateLimits.map((r, idx) => (
+              <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>
+
+            ))}
+
+
+
 
 
 
@@ -248,9 +289,20 @@ export default function EndpointDetail(): any ({;
 
 
 
+
           </ul>
         </div>
       )}
+
+
+            ))}
+
+            ))}
+
+          </ul>
+        </div>
+      )}
+
 
       {endpoint.errors && endpoint.errors.length > 0 && (
         <div>
@@ -268,6 +320,7 @@ export default function EndpointDetail(): any ({;
 
 
 
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
@@ -275,11 +328,14 @@ export default function EndpointDetail(): any ({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
           </ul>
         </div>
       )}
     </div>
   );
+
+
 
 
 
@@ -342,6 +398,14 @@ export default function EndpointDetail(): any ({;
         </div>)}
     </div>);
 
+  );
+}
+
+
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
+
+}
+}
 

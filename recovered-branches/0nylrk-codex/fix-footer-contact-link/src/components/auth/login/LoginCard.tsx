@@ -4,10 +4,11 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
 export function LoginCard() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="mx-auto w-full max-w-sm lg:w-96">
       <div className="text-center mb-10">
@@ -28,10 +29,12 @@ export function LoginCard() {
 
     </div>
 
+
   );
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   )
 import { Link } from "react-router-dom",;
@@ -62,8 +65,9 @@ export function LoginCard() {
 
             className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
 
+
+
   );
-=======
       <div className="bg - zion - blue - dark rounded - lg p - 6">;
         <LoginForm />;
         <SocialLogin />;

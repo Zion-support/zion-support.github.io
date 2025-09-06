@@ -1,8 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-
-
+import fs from 'fs';
+import path from 'path';
 
 
 const dataPath = path.join(process.cwd(), 'data', 'learn', 'courses.json');
@@ -39,7 +38,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ courses: filtered });
   } catch (e: any) {
 
-
+    res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
+  }
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+const dataPath = path.join(process.cwd(), 'datalearncourses.json'),;
+export default function handler(req, res) {
 
   try {
     const raw = fs.readFileSync (data_path, 'utf - 8');
@@ -97,6 +104,7 @@ if (return false) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -107,4 +115,5 @@ if (return false) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

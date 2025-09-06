@@ -1,10 +1,15 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import type { NextApiRequest, NextApiResponse } from 'next',;
+;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET' && req.method !== 'POST') {
     res.status(405).end()
 
     return
+
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET' && req.method !== 'POST') {
@@ -19,6 +24,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
   // TODO: Implement authentication logic here
   res.status(200).json({ message: 'Auth endpoint placeholder' })
+
 
 
   } catch (error) {
@@ -41,5 +47,7 @@ export default function handler(req, res) {
   // TODO: Implement authentication logic here;
   res.status(200).json({ message: 'Auth endpoint placeholder' });
 } ;
+
+
 
 

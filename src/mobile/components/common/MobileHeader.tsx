@@ -16,6 +16,8 @@ interface MobileHeaderProps {
   onSettingsClick?: () => void
 export function MobileHeader({
 
+
+
   title
 export function MobileHeader({
   title
@@ -31,6 +33,8 @@ export function MobileHeader({
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border"
 
 
+
+
   title,
   showBack = false,
   showNotifications = false,
@@ -43,6 +47,7 @@ export function MobileHeader({
   return (
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
+
 
 
 
@@ -70,6 +75,7 @@ export function MobileHeader({
               size="icon"
               className="mr-2"
               onClick = {(,) => router.back(),}
+
             <Button 
               variant="ghost" 
               size="icon" 
@@ -118,7 +124,7 @@ export function MobileHeader(): any ({;
               <span className="sr-only">Back</span>;
             </Button>;
           )}
-          <h1 className="text-lg font-medium leading-none truncate">
+          <h1 className="text-lg font-medium leading-none truncate">;
             {title}
           </h1>
         </div>
@@ -133,6 +139,7 @@ export function MobileHeader(): any ({;
               <span className="sr-only">Notifications</span>
             </Button>
           )}
+
 
           {showSettings && (;
             <Button variant='ghost' size='icon' onClick={onSettingsClick}>;
@@ -154,6 +161,7 @@ export function MobileHeader(): any ({;
 
 
 
+
               variant="ghost" 
               size="icon"
               onClick={onSettingsClick}
@@ -161,12 +169,46 @@ export function MobileHeader(): any ({;
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
 
+          )}
+        </div>
+      </div>;
+    </header>;
+  );  )
+}
 
 ;
 }
 }
 }
 
+              <span className='sr-only'>Settings</span>            </Button>            <Button 
+            <Button 
+              variant="ghost" 
+              size="icon"
+              onClick={onSettingsClick}
+            >
+              <Settings className="h-5 w-5" />
+              <span className="sr-only">Settings</span>
+            </Button>
+          )}
+          <h1 className='text-lg font-medium leading-none truncate'>{title}</h1>;
+        </div>;
+        <div className='flex items-center space-x-2'>;
+          {showNotifications && (;
+            <Button variant='ghost' size='icon' onClick={onNotificationsClick}>;
+              <Bell className='h-5 w-5' />;
+              <span className='sr-only'>Notifications</span>;
+            </Button>;
+          )}
 
-
+          {showSettings && (;
+            <Button variant='ghost' size='icon' onClick={onSettingsClick}>;
+              <Settings className='h-5 w-5' />;
+              <span className='sr-only'>Settings</span>            </Button>            <Button
+              variant="ghost"
+              size="icon"
+              onClick = {onSettingsClick,}>;
+              <Settings className="h-5 w-5" />;
+              <span className="sr-only">Settings</span>;
+          )}
 

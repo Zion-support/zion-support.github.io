@@ -1,8 +1,10 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
 
-
-
-
+import { readJson, writeJson } from '../../../utils/fsDb';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { readJson, writeJson } from '../../../utils/fsDb',;
+;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -19,6 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(200).json({ ok: true, id })
   }
+
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -77,5 +80,6 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 
 

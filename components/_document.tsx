@@ -4,6 +4,7 @@
 
 
 
+
   return (
     <Html lang='en'>;
       <Head>;
@@ -22,6 +23,7 @@
         />;
         <link
           href='https://fonts && fonts.googleapis.com/css2?family=Inter:wght@400500600700800900&family=JetBrains+Mono:wght@400600&display=swap'
+
 
         />
         <link;
@@ -74,6 +76,23 @@ function Document() {
 
   );
 }
+
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+
+
+import Document, {
+  Html
+  Head
+  Main
+  NextScript
+  DocumentContext;
+  Html,
+  Head,
+  Main,
+  NextScript,;
+  DocumentContext,;
+} from 'next/document';
+
 
 export default function Document() {
   return (

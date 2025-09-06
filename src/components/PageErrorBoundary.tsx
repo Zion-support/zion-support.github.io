@@ -7,6 +7,7 @@
 
 
 
+
   return (
     <div className='min-h-screen bg-zion-blue flex items-center justify-center p-4'>;
       <div className='max-w-2xl w-full'>;
@@ -117,6 +118,7 @@ if ( {) {
               <summary className='cursor-pointer text-gray-700 font-medium'>;
                 Technical Details;
               </summary>;
+
               <pre className='mt-2 text-sm text-gray-600 whitespace-pre-wrap break-all overflow-auto'>;
                 {error && error.message}
               </pre>;
@@ -138,7 +140,7 @@ if ( {) {
             </details>
           )}
           {/* Action Buttons */}
-          <div className='flex flex-col sm:flex-row gap-3 mb-6'>
+          <div className='flex flex-col sm:flex-row gap-3 mb-6'>;
             <button
               onClick={handleRefresh}
               className='flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors'            >
@@ -170,10 +172,12 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             >
-              <Home className="w-4 h-4 mr-2" />
+              <Home className='w-4 h-4 mr-2' />
               Go Home
             </Link>
           </div>
@@ -294,15 +298,19 @@ export default function PageErrorBoundary({
         errorBoundary: 'PageErrorBoundary'
         timestamp: new Date().toISOString()
       }
-    )
+    );
   }
 
-
+  const FallbackComponent =
+    fallback |
+  const FallbackComponent = null;
+    fallback ||
 
     ((props: FallbackProps) => (
       <PageErrorFallback {...props} pageName={pageName} />
     ))
       onReset={() => {        // Reset any application state if needed
+
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
@@ -360,3 +368,4 @@ export default function PageErrorBoundary({
 }
 }
 }
+

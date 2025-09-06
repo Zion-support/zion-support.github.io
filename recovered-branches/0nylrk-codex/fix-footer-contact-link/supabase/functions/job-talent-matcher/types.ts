@@ -1,5 +1,7 @@
 
 
+export interface JobData {
+export interface JobData {;
 
   id: string;
   title: string;
@@ -10,6 +12,8 @@
 
 
 
+
+
     min: number,
     max: number;
   }
@@ -17,6 +21,7 @@
   deadline: string;
 
 }
+
 export interface TalentProfile {
 
 
@@ -30,10 +35,12 @@ export interface TalentProfile {
   skills: string[];
   years_experience: number;
 
+
   hourly_rate?: number,
   availability_type?: string;
 
 }
+
 
 
 
@@ -45,10 +52,12 @@ export interface TalentProfile {
   match_score: number;
 
 
+
   matched_skills: string[]
 
   created_at: string
 }
+
 
   talentId: string;
   score: number;
@@ -57,6 +66,7 @@ export interface TalentProfile {
 
   reason?: string
 }
+
 
   id: string,;
   title: string,;
@@ -99,5 +109,7 @@ export interface MatchResult {;
   reason?: string;
 }
 ;
+
+
 
 

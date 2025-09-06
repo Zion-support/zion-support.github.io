@@ -1,15 +1,20 @@
 import type { NextPage } from 'next';
 
-
-
-
-
+import Head from 'next/head';
+import { useMemo, useState  } from 'react';
+import Pagination from '../../components/ui/Pagination';
+import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
+import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
 interface Talent {
+import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
+
+interface Talent {;
 
   id: string;
   name: string;
   title: string;
   badges: Array<'Verified' | 'Pro' | 'Top Rated'>;
+
 
 
 
@@ -74,6 +79,7 @@ const TalentDirectory: NextPage = () => {;
         <title>Talent - Zion</title>
       </Head>
 
+
       <h1 className='text-2xl font-semibold'>Explore Talent</h1>
       <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4'>
         {pageItems.map(t => (
@@ -104,12 +110,14 @@ const TalentDirectory: NextPage = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               </div>
             </div>
@@ -137,9 +145,11 @@ const TalentDirectory: NextPage = () => {;
 
 
 
+
 export default TalentDirectory;
 
 }
+
 
 
 
@@ -167,10 +177,12 @@ export default TalentDirectory;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

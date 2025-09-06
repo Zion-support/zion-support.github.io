@@ -7,6 +7,7 @@ const in_standalone = window.match_media ('(display - mode: standalone)').matche
       return;
 
 
+
 import React, { useEffect, useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Loader2 } from 'lucide-react';
@@ -73,5 +74,6 @@ export const PwaInstallButton: React.FC = () => {;
 },
 
 export default PwaInstallButton,
+
 
 

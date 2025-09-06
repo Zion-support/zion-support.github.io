@@ -1,7 +1,11 @@
 
 
-
-
+import { useState, useCallback  } from 'react';
+import { PortfolioProject  } from '@/types/resume';
+import { supabase  } from '@/integrations/supabase/client';
+import { useAuth  } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
+export function usePortfolio() {
 
 import {useState, useCallback} from 'react';
 import {PortfolioProject} from '@/types/resume';
@@ -9,6 +13,8 @@ import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {toast} from '@/hooks/use-toast';
 export function usePortfolio() {;
+
+
 
 
 
@@ -41,6 +47,49 @@ export function usePortfolio() {;
       console && console.error('Error fetching portfolio projects:', e);
       setError(e && e.message);
       return []
+
+import {useState, useCallback} from 'react';
+import {PortfolioProject} from '@/types / resume';
+import {supabase} from '@/integrations / supabase / client';
+import {use_auth} from '@/hooks / use_auth';
+import {toast} from '@/hooks / use - toast';
+export /**
+ * use_portfolio - Function description
+ */
+function use_portfolio() {
+  const { user } = use_auth ();
+  const [is_loading, setIsLoading] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+  const [projects, set_projects] = useState < PortfolioProject[]>([]);
+;
+  const fetch_projects = useCallback (async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_error ('You must be logged in to access portfolio projects');
+      return [];
+    }
+    setIsLoading (true);
+    set_error (null);
+;
+    try {
+      const { data, error } = await supabase;
+        .from ('portfolio_projects');
+        .select ('*');
+        .eq ('user_id', user.id);
+        .order ('created_at', { ascending: false });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      set_projects (data || []);
+      return data || [];
+    } catch (e: any) {
+      console.error ('Error fetching portfolio projects:', e);
+      set_error (e.message);
+      return [];
 
     } finally {
       setIsLoading (false);
@@ -104,7 +153,9 @@ export function usePortfolio() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     
@@ -158,7 +209,6 @@ export function usePortfolio() {;
       await fetchProjects(),
 
       return data.id
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     } catch (e: any) {
       console && console.error('Error adding portfolio project:', e);
       setError(e && e.message);
@@ -171,8 +221,19 @@ export function usePortfolio() {;
         description: `Could not add project: ${e.message}`,
         variant: "destructive"
 
-
-
+      }),
+      return null
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  const updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to update a portfolio project')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
 
 ;
     setIsLoading(true),;
@@ -222,7 +283,9 @@ export function usePortfolio() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -286,8 +349,19 @@ export function usePortfolio() {;
         description: `Could not update project: ${e.message}`,
         variant: "destructive"
 
-
-
+      }),
+      return false
+    } finally {
+      setIsLoading(false)
+    }
+  }
+  const deleteProject = async (projectId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to delete a portfolio project')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
 
 ;
     setIsLoading(true),;
@@ -336,7 +410,9 @@ export function usePortfolio() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -415,7 +491,6 @@ if (throw error) {
         title: "Error",
         description: `Could not delete project: ${e.message}`;
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
       return false;
     } finally {
@@ -469,12 +544,14 @@ if (throw error) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   }
 }

@@ -1379,6 +1379,8 @@ module.exports = GitWorkflowAutomator;
 module.exports = GitWorkflowAutomator;
 
 
+
+
 },;
 ,;
 if (require.main === module) {,;
@@ -1386,5 +1388,7 @@ if (require.main === module) {,;
 },;
 ,;
 module.exports = GitWorkflowAutomator,;
+
+
 
 

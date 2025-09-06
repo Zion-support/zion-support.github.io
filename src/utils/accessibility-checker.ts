@@ -19,4 +19,6 @@ export const validateAriaLabels = () => {
 
 export const validateAriaLabels = () => {;
   console.log('Validating ARIA labels...');
+
 };
+

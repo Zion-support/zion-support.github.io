@@ -2,8 +2,12 @@
 import React from "react";
 import {
 
-
-
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
 
   Card,
   CardContent,
@@ -15,10 +19,12 @@ import {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 } from "@/components/ui/card";
@@ -30,7 +36,26 @@ export function PaymentMethods() {
   // Mock payment methods
 
 
-
+  const paymentMethods = [
+    {
+      id: "pm-1"
+      type: "credit_card"
+      brand: "Visa"
+      last4: "4242"
+      expMonth: 12
+      expYear: 2025
+      isDefault: true
+    }
+    {
+      id: "pm-2"
+      type: "credit_card"
+      brand: "Mastercard"
+      last4: "8888"
+      expMonth: 4
+      expYear: 2026
+      isDefault: false
+    }
+  ];
 
       id: "pm-1",
       type: "credit_card",
@@ -40,6 +65,7 @@ export function PaymentMethods() {
       expYear: 2025,
       isDefault: true,
     },
+
 
 
 
@@ -135,12 +161,12 @@ import { CreditCard, Plus, Trash } from "lucide-react",
 
 
 
+
   )
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { CreditCard, Plus, Trash } from "lucide-react",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function PaymentMethods() {;
   // Mock payment methods;
   const paymentMethods = [;
@@ -162,20 +188,54 @@ export function PaymentMethods() {;
       expYear: 2026,;
       isDefault: false,;
     },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+import React from './react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { Button  } from '@/components / ui / button';
+import { CreditCard, Plus, Trash  } from './lucide-react';
+export /**
+ * PaymentMethods - Function description
+ */
+function PaymentMethods() {
+  // Mock payment methods;
+  const payment_methods = [;
+    {
+      id: "pm - 1",
+      type: "credit_card",
+      brand: "Visa",
+      last4: "4242",
+      exp_month: 12,
+      exp_year: 2025,
+      is_default: true,
+    },
+    {
+      id: "pm - 2",
+      type: "credit_card",
+      brand: "Mastercard",
+      last4: "8888",
+      exp_month: 4,
+      exp_year: 2026,
+      is_default: false,
+    },
 
   ];
 ;
   return (
     <Card>;
       <CardHeader>;
-
-        <CardTitle > Payment Methods</CardTitle>;
-
+        <CardTitle>Payment Methods</CardTitle>;
         <CardDescription>;
           Manage your payment methods for automatic billing;
         </CardDescription>;
       </CardHeader>;
+
 
       <CardContent className="space-y-4">;
         {paymentMethods.map((method) => (;
@@ -214,6 +274,7 @@ export function PaymentMethods() {;
               </Button>
             </div>
           </div>
+
         ))}
       </CardContent>;
       <CardFooter>;
@@ -223,6 +284,8 @@ export function PaymentMethods() {;
         </Button>;
       </CardFooter>;
     </Card>;
+
+
 
   );
 }

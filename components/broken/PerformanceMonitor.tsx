@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -25,6 +26,7 @@
 
 }) ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 }, []);
 //Check for performance issues and add alerts const newAlerts: string[] = [];
 if (newMetrics.loadTime > 3000) {
@@ -47,7 +49,7 @@ default: return Laptop;
 const getPerformanceScore = () => {
   let score = 0;
 let totalMetrics = 0;
-//FCP scoring (0-100) if (metrics.fcp !== null) {
+//FCP scoring (0-100) if (metrics && metrics.fcp !== null) {;
   totalMetrics++;
 if (metrics.fcp < 1800) score += 100;
 else if (metrics.fcp < 3000) score += 75;
@@ -88,9 +90,9 @@ else score += 25
   isExpanded && (<motion.div </div>)
 }</div> </div> </div>) )
 }</div> </div>)
-}<> <div>• Optimize images and assets</div> <div>• Minimize JavaScript bundles</div> <div>• Enable compression and caching</div> </>)
+}<> <div> Optimize images and assets</div> <div> Minimize JavaScript bundles</div> <div> Enable compression and caching</div> </>)
 }{
-  getPerformanceScore () >= 90 && (<div>• Excellent performance! Keep monitoring for any regressions.</div>)
+  getPerformanceScore () >= 90 && (<div> Excellent performance! Keep monitoring for any regressions.</div>)
 }</div> </div> </div> </motion.div>)
 }</AnimatePresence> </div> </div> </motion.div> </AnimatePresence>)
 }
@@ -102,6 +104,8 @@ if (score >= 50) return 'Needs Improvement';
 }
 export default PerformanceMonitor;
 
+
 }
+
 
 

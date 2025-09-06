@@ -3,33 +3,61 @@
 
 
 
-  Rocket, Target, TrendingUp, Users, CheckCircle,
-  ArrowRight, Star, Award, Clock, DollarSign,
-  Building2, Gauge, BarChart3, Settings, Workflow
-} from 'lucide-react',
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-const AutonomousBusinessOperationsPlatform = () => {
-  const features = [
+
+      color: "from-purple-500 to-pink-500"
+
+    },
     {
-      icon: Bot,
-      title: "AI Autonomous Management",
-      description: "Fully autonomous business operations with intelligent decision-making",
+      icon: Workflow,
+      title: "Automated Workflows",
+      description: "Seamless automation of complex business processes and operations",
 
+      color: "from-emerald-500 to-teal-500"
 
+    },
+    {
+      icon: Shield,
+      title: "Intelligent Security",
+
+      description: "AI-powered security monitoring and threat prevention",
+      color: "from-red-500 to-orange-500"
+    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],
+  const capabilities = [
+    "24/7 autonomous operation",
+    "Real-time decision making",
+
+    "Predictive analytics",
+    "Process optimization",
+    "Resource management",
+    "Performance monitoring",
+    "Risk assessment",
+    "Compliance automation"
+  ],
+
+  const industries = [
+    {
+      title: "Manufacturing",
       description: "Automated production lines, quality control, and supply chain management"
-    }
+    },
     {
-      title: "Healthcare"
+      title: "Healthcare",
       description: "Patient care automation, medical device management, and administrative tasks"
-    }
+    },
     {
-      title: "Finance"
+      title: "Finance",
       description: "Automated trading, risk management, and compliance monitoring"
-    }
+    },
     {
-      title: "Retail"
+      title: "Retail",
       description: "Inventory management, customer service, and sales optimization"
     }
+
 
 
 
@@ -72,11 +100,13 @@ const AutonomousBusinessOperationsPlatform = () => {
       color: "from-red-500 to-orange-500"
 
 
+
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 
   ],
@@ -152,6 +182,7 @@ const AutonomousBusinessOperationsPlatform = () => {
   }
 }
 
+
   ],
 
 
@@ -179,6 +210,7 @@ const AutonomousBusinessOperationsPlatform = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -186,10 +218,12 @@ const AutonomousBusinessOperationsPlatform = () => {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
         <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <motion.div
+
 
 
 
@@ -215,6 +249,7 @@ const AutonomousBusinessOperationsPlatform = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 making intelligent decisions and optimizing every aspect of your business.
               </p>
@@ -415,7 +450,6 @@ const AutonomousBusinessOperationsPlatform = () => {;
             </motion.div>;
           </div>;
         </section>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Features Section */}
         <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
           <div className="max - w-7xl mx - auto">;
@@ -446,12 +480,14 @@ const AutonomousBusinessOperationsPlatform = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="text-center mb-16"
             >
@@ -472,15 +508,31 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+                  key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
                 >
@@ -544,12 +596,14 @@ const AutonomousBusinessOperationsPlatform = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="text-center mb-16"
             >
@@ -570,15 +624,31 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+                  key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, x: -20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
                   className="flex items-center space-x-3"
                 >
@@ -639,12 +709,14 @@ const AutonomousBusinessOperationsPlatform = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="text-center mb-16"
             >
@@ -667,15 +739,31 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+                  key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
                   className="text-center"
                 >
@@ -742,12 +830,14 @@ const AutonomousBusinessOperationsPlatform = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="text-center mb-16"
             >
@@ -768,15 +858,31 @@ const AutonomousBusinessOperationsPlatform = () => {;
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+                  key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-8 rounded-xl border border-slate-700/50"
                 >
@@ -807,12 +913,14 @@ const AutonomousBusinessOperationsPlatform = () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -868,6 +976,9 @@ export default AutonomousBusinessOperationsPlatform;
 },
 
 
+export default AutonomousBusinessOperationsPlatform,;
+;
+
 export default AutonomousBusinessOperationsPlatform,
 
 
@@ -896,6 +1007,7 @@ export default AutonomousBusinessOperationsPlatform,
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -907,5 +1019,6 @@ export default AutonomousBusinessOperationsPlatform,
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -170,6 +170,52 @@ export function FeatureShowcase() {;
         <div className="text-center mb-16">;
           <h2 className="text-3xl md:text-4xl font-bold mb-4">;
 
+"use client",
+import { useState, useEffect  } from './react';,
+interface Feature {
+  id: string,
+  title: string,
+  description: string,
+  icon: React.ReactNode,
+  color: string,
+  details: string[],
+  demo?: string;
+}
+const features: Feature[] = [;
+  {
+    id: "marketplace",
+    title: "Marketplace & Jobs",
+    description: "Complete marketplace infrastructure with job posting, talent matching, and project management.",
+    icon: (
+      <svg className="w - 8 h - 8" fill="none" stroke="current_color" view_box="0 0 24 24">;
+        <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M19 21V5a2 2 0 00 - 2-2H7a2 2 0 00 - 2 2v16m14 0h2m - 2 0h - 5m - 9 0H3m2 0h5M9 7h1m - 1 4h1m4 - 4h1m - 1 4h1m - 5 10v - 5a1 1 0 011 - 1h2a1 1 0 011 1v5m - 4 0h4" />;
+      </svg>),
+    color: "blue",
+"use client",;
+import { useState, useEffect } from "react",;
+interface Feature {;
+  id: string,;
+  title: string,;
+  description: string,;
+  icon: React.ReactNode,;
+  color: string,;
+  details: string[],;
+  demo?: string;
+}
+;
+const features: Feature[] = [;
+  {;
+    id: "marketplace",;
+    title: "Marketplace & Jobs",;
+    description: "Complete marketplace infrastructure with job posting, talent matching, and project management.",;
+    icon: (;
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />;
+      </svg>;
+    };
+    return colorMap[color as keyof typeof colorMap] || "from-blue-500 to-blue-600";
+  };
+
   return (;
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-900/50 to-black/50">;
       <div className="max-w-7xl mx-auto">;
@@ -196,6 +242,16 @@ export function FeatureShowcase() {;
                 } ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}
                 style={{ transitionDelay: `${index * 100}ms` }}
                 onClick={() => setActiveFeature(activeFeature === feature.id ? null : feature.id)}
+
+                className={`card cursor - pointer transform transition - all duration - 300 hover:scale - 105 ${
+                  active_feature === feature.id;
+                    ? `ring - 2 ring-${feature.color}-500 / 50 bg - white / 10`;
+                    : 'hover:bg - white / 10';
+                } ${is_visible ? 'opacity - 100 translate - x-0' : 'opacity - 0 translate - x-10'}`}
+                style={{ transition_delay: `${index * 100}ms` }}
+                on_click={() => setActiveFeature (active_feature === feature.id ? null : feature.id)}
+                className={`card cursor-pointer transform transition-all duration-300 hover:scale-105 ${;
+                  activeFeature === feature.id;
 
                     ? `ring-2 ring-${feature.color}-500/50 bg-white/10`;
                     : 'hover:bg-white/10';
@@ -268,11 +324,11 @@ export function FeatureShowcase() {;
                       <div className="w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg flex items - center justify - center text - white font - bold">;
                         API;
                       </div>;
-                      <div className="text - gray - 400">→</div>;
+                      <div className="text - gray - 400"></div>;
                       <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - blue - 500 rounded - lg flex items - center justify - center text - white font - bold">;
                         SDK;
                       </div>;
-                      <div className="text - gray - 400">→</div>;
+                      <div className="text - gray - 400"></div>;
                       <div className="w - 16 h - 16 bg - gradient - to - r from - purple - 500 to - pink - 500 rounded - lg flex items - center justify - center text - white font - bold">;
                         UI;
                       </div>;

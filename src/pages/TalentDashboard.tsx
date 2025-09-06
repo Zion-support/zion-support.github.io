@@ -33,6 +33,7 @@ import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner';
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard';
 function TalentDashboardContent() {;
 
+
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState('job-matches');
   const onboardingStatus = useOnboardingStatus();
@@ -81,6 +82,7 @@ import { MyApplications } from '@/components/jobs/MyApplications'
 import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner'
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard'
 
+
 =======
 
 
@@ -114,6 +116,7 @@ function TalentDashboardContent() {
     onboardingStatus.skillsAdded &&
     onboardingStatus.availabilitySet &&
     onboardingStatus.matchReceived,
+
 
 
 
@@ -164,6 +167,7 @@ function TalentDashboardContent() {
                           alt={user.displayName |'User'}
                           loading='lazy'
                         />
+
                       ) : (
                         <div className='flex h-full w-full items-center justify-center bg-muted text-lg font-medium uppercase'>
                           {user?.displayName?.charAt(0) |'U'}
@@ -211,6 +215,7 @@ function TalentDashboardContent() {
                       <MessageSquare className="h-4 w-4 mr-2" />
 
 
+
                       Messages
                     </Link>
                   </Button>
@@ -230,6 +235,7 @@ function TalentDashboardContent() {
               <div className="mt-6">
                 <AdvancedOnboardingSteps />
               </div>
+
             )}
             {/* Upcoming Interviews Card */}
             <div className='mt-8'>
@@ -407,6 +413,7 @@ function TalentDashboardContent() {
                     </div>;
                   </div>;
 
+
                   <Badge className='bg - green - 100 text - green - 800'>Online</Badge>;
                 </div>;
               </CardHeader>;
@@ -423,13 +430,16 @@ function TalentDashboardContent() {
                     <div className='text - lg font - bold'>18</div>;
                     <span className='text - xs text - muted - foreground'>;
 
+
                       Projects;
                     </span>;
                   </div>;
                 </div>;
 
+
                 <div className='mt - 4'>;
                   <Button className='w - full' as_child>;
+
                     <Link href='/messages'>;
                       <MessageSquare className='h - 4 w - 4 mr - 2' />;
 
@@ -442,6 +452,7 @@ function TalentDashboardContent() {
 
             
             <Card className="mt-8">
+
 
 
               <CardHeader>
@@ -488,6 +499,7 @@ function TalentDashboardContent() {
                 <TabsTrigger value="saved">Saved Jobs</TabsTrigger>
               </TabsList>
               <TabsContent value='job-matches' className='mt-0'>
+
                 <SuggestedJobs />
               </TabsContent>
               <TabsContent value='applications' className='mt-0'>
@@ -497,6 +509,7 @@ function TalentDashboardContent() {
               </TabsContent>
               
               <TabsContent value="applications" className="mt-0">
+
 
 
                 <MyApplications />
@@ -620,6 +633,7 @@ function TalentDashboardContent() {
     </ProtectedRoute>;
   );
 };
+
 
 
 

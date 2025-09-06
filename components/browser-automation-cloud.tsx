@@ -6,19 +6,24 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
+
 
 
 
@@ -78,7 +83,7 @@ class ErrorBoundary extends React.Component {
               rel='noreferrer'
               className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'>;
               <ExternalLink className='w-4 h-4' /> Puppeteer;
-=======
+
 export default /**
  * BrowserAutomationCloudPage - Function description
  */

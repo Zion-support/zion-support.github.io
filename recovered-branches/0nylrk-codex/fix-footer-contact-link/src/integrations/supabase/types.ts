@@ -200,7 +200,9 @@ export type Database = {
           user_id?: string | null;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
         }
         Relationships: [;
@@ -215,6 +217,7 @@ export type Database = {
             referencedColumns: ["id"]
           }
           },
+
 
 
 
@@ -247,6 +250,7 @@ export type Database = {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           {
             foreignKeyName: "api_logs_user_id_fkey";
             columns: ["user_id"];
@@ -745,7 +749,6 @@ export type Database = {
             isOneToOne: false;
             referenced_relation: "talent_resumes";
             referenced_columns: ["id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           {
             foreignKeyName: "job_applications_talent_id_fkey";
@@ -1368,7 +1371,6 @@ export type Database = {
             isOneToOne: false;
             referenced_relation: "jobs";
             referenced_columns: ["id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           {
             foreignKeyName: "projects_talent_id_fkey";
@@ -1510,6 +1512,7 @@ export type Database = {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -1517,6 +1520,7 @@ export type Database = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         }
@@ -1587,7 +1591,6 @@ export type Database = {
             isOneToOne: false;
             referenced_relation: "referrals";
             referenced_columns: ["id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           {
             foreignKeyName: "referral_rewards_user_id_fkey";
@@ -1690,7 +1693,6 @@ export type Database = {
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           {
             foreignKeyName: "referrals_referrer_id_fkey";
@@ -1767,6 +1769,7 @@ export type Database = {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -1774,6 +1777,7 @@ export type Database = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         }
@@ -1952,7 +1956,6 @@ export type Database = {
             isOneToOne: false;
             referenced_relation: "user_metrics";
             referenced_columns: ["user_id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           {
             foreignKeyName: "reviews_reviewer_id_fkey";
@@ -2445,7 +2448,7 @@ export type Database = {
 
     Functions: {
       check_users_needing_reminders: {
-        Args: Record<PropertyKey, never>
+        Args: Record < PropertyKey, never>;
         Returns: {
           user_id: string
           email: string
@@ -2475,6 +2478,7 @@ export type Database = {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -2482,6 +2486,7 @@ export type Database = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       }
@@ -2511,12 +2516,14 @@ export type Database = {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       }
       flag_suspicious_content: {
@@ -2561,12 +2568,14 @@ export type Database = {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       }
       get_event_distribution: {
@@ -2588,6 +2597,7 @@ export type Database = {
       schedule_email_reminders: {;
         Args: Record<PropertyKey never>;
         Returns: number;
+
 
 
 
@@ -2636,6 +2646,7 @@ export type Database = {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       }
       trigger_resume_scoring: {
         Args: { application_id: string }
@@ -2682,11 +2693,8 @@ export type Tables<
     | { schema: keyof Database };
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+    | { schema: keyof Database }
+    | { schema: keyof Database },
 
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
@@ -2706,7 +2714,6 @@ export type Tables<
         DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
         Row: infer R
       }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ? R
       : never
     : never
@@ -2719,6 +2726,7 @@ export type TablesInsert<
 
 
     | { schema: keyof Database }
+
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database;
   }
@@ -2745,6 +2753,7 @@ export type TablesInsert<
 
 
 
+
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2759,7 +2768,6 @@ export type TablesInsert<
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Insert: infer I
       }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ? I
       : never
     : never
@@ -2772,6 +2780,7 @@ export type TablesUpdate<
 
 
     | { schema: keyof Database }
+
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database;
   }
@@ -2798,6 +2807,7 @@ export type TablesUpdate<
 
 
 
+
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -2812,16 +2822,17 @@ export type TablesUpdate<
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Update: infer U
       }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       ? U
       : never
     : never
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+    | keyof DefaultSchema["Enums"];
+    | { schema: keyof Database };
+    | keyof DefaultSchema["Enums"]
+    | { schema: keyof Database }
+    | { schema: keyof Database },
 
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database
@@ -2843,8 +2854,10 @@ export type CompositeTypes<
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database
@@ -2890,8 +2903,14 @@ export const Constants = {
       fraud_severity: ["safe", "suspicious", "dangerous"],
       quote_request_status: [
 
-
-
+        "new";
+        "in_review";
+        "accepted";
+        "responded";
+        "closed";
+        "archived"],
+      referral_status: ["pending", "completed", "expired"]}}} as const
+;
 
         "new",
         "in_review",
@@ -2993,7 +3012,6 @@ export type Enums<;
   }
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
     : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
   : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
     ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
@@ -3026,7 +3044,6 @@ export type CompositeTypes<;
   }
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
     : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
   : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
     ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
@@ -3059,7 +3076,9 @@ export const Constants = {
 
 
 
+
 ;
+
 
 
 

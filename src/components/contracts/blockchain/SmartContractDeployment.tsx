@@ -105,6 +105,7 @@ export function SmartContractDeployment({;
 
 
 
+
   return (
     <Card className="w-full">
       <CardHeader>
@@ -116,6 +117,7 @@ export function SmartContractDeployment({;
           Deploy your agreement as a smart contract for enhanced security and automation
         </CardDescription>
       </CardHeader>
+
 
 
 
@@ -171,6 +173,7 @@ export function SmartContractDeployment({;
       </CardHeader>;
 
 
+
       
 
 
@@ -195,11 +198,13 @@ export function SmartContractDeployment({;
                 <Label>Select blockchain network</Label>
 
 
+
                 <RadioGroup 
                   defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
+
 
 
                   onValueChange={(value) => setDeploymentOptions({;
@@ -235,9 +240,11 @@ export function SmartContractDeployment({;
                   aria-label="Use escrow"
                   checked={deploymentOptions.useEscrow}
 
+
             />;
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>;
           </div>;
+
 
 
 
@@ -299,6 +306,7 @@ export function SmartContractDeployment({;
           ) : (;
             'Deploy Contract';
           )}
+
 
 
         </Button>;
@@ -388,6 +396,7 @@ export function SmartContractDeployment({;
         </Button>;
       </CardFooter>;
     </Card>);
+
 }
 <CardHeader> <CardTitle className="flex items - center gap - 2" > <ShieldCheck className="h - 5 w - 5 text - primary" /> Smart Contract Deployment </CardTitle> <CardDescription> Deploy your agreement as a smart contract for enhanced security and automation </CardDescription> </CardHeader> <CardContent className="space - y-6" > <div className="space - y-4" > <div className="flex items - center space - x-2" > <Switch /> <Label html_for="deploy - blockchain" >Deploy to blockchain</Label> </div> > <div className="flex items - center space - x-2" > <RadioGroupItem value="ethereum" id="ethereum" /> <Label html_for="ethereum" >Ethereum (higher fees, more secure) </Label> </div> <div className="flex items - center space - x-2" > <RadioGroupItem value="polygon" id="polygon" /> <Label html_for="polygon" >Polygon (lower fees, faster) </Label> </div> </RadioGroup> </div> <div className="space - y-2" > <Label html_for="wallet - address" >Wallet address for transactions</Label> <Input /> </div> <div className="flex items - center space - x-2" > <Switch /> <Label html_for="use - escrow" >Use escrow for payments</Label> </div> </>);
 }</div> </div> </div> </CardContent> Download .sol File </Button> <Button on_click={
@@ -400,3 +409,4 @@ export function SmartContractDeployment({;
 }'"}
 }
 ;
+

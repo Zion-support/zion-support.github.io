@@ -6,6 +6,8 @@
 
 
 
+
+
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";
@@ -16,12 +18,9 @@ export const NavigationButtons = ({;
   backLabel = "Back";
   nextLabel = "Next";
 
-
-
-
-
-
-
+import { Button } from "@/components/ui/button",
+import { Loader2 } from "lucide-react",
+import { NavigationButtonsProps } from "./types",
 
 export const NavigationButtons = ({
   onBack,
@@ -46,7 +45,6 @@ export const NavigationButtons = ({;
   isNextDisabled = false,;
   backLabel = "Back",;
   nextLabel = "Next";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   isLoading = false}: NavigationButtonsProps) => {;
   return (
     <div className="flex justify-between">;
@@ -56,7 +54,9 @@ export const NavigationButtons = ({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
           {backLabel}
         </Button>;
@@ -75,10 +75,13 @@ export const NavigationButtons = ({;
   )
 
 
+
+
 }
 
     </div>;
   );
+
 
     </div>;
   );
@@ -118,6 +121,7 @@ export const NavigationButtons = ({;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 };
 

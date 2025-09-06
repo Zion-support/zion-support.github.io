@@ -7,6 +7,10 @@ export default function Blockchain() {
     <>
       <Head>
 
+        <title>Blockchain Services - Zion Tech Group</title>
+        <title>Blockchain Services - Zion Tech Group</title>
+;
+
         <meta
           name="description"
           content="Blockchain and Web3 solutions including smart contracts, _DeFi, _and cryptocurrency development."
@@ -67,5 +71,5 @@ function Blockchain() {
   }
 
 }
-
+}
 

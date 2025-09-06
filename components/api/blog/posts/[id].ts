@@ -4,6 +4,8 @@
 
 
 
+
+
   if (typeof id !== "string")
     return res && res.status(400).json({ error: "Invalid id" });
   if (req && req.method === "PUT") {
@@ -24,11 +26,14 @@
 
 
 
+
     const { id } = req.query;
 
 
 
+
     if (typeof id !== "string")
+      return res.status(400).json({ error: "Invalid id" });
 
 
       return res && res.status(400).json({ error: "Invalid id" });
@@ -53,8 +58,9 @@
 
       posts[idx] = updated;
       writePosts(posts);
-      return res && res.status(200).json(updated);
+      return res.status(200).json(updated);
     }
+
 
 
 
@@ -70,6 +76,8 @@
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -78,6 +86,7 @@
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 

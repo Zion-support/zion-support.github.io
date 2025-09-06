@@ -4,6 +4,7 @@
 
 
 
+
 import {;
   Dialog,;
   DialogContent,;
@@ -26,6 +27,7 @@ import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
 interface Integration {;
 
+
   id: string;
   name: string;
   description: string;
@@ -39,8 +41,10 @@ interface IntegrationConnectionModalProps {;
   onClose: () => void;
 
 
+
   integration: Integration
 }
+
 
 
 
@@ -53,7 +57,9 @@ export function IntegrationConnectionModal(): any ({;
   const [isConnecting, setIsConnecting] = useState(false);
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export function IntegrationConnectionModal({
@@ -208,6 +214,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
+
         integration.status === "warning" ? (
         
         {(integration.status === "connected" || integration.status === "warning") ? (
@@ -226,15 +233,21 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
           <>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">Sync Settings</h3>
 
-
-
-
-
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id="autoCreateContacts"
+                    checked={syncSettings.autoCreateContacts}
+                    onCheckedChange={(checked) =>
+                      setSyncSettings({
+                        ...syncSettings
+                        autoCreateContacts: checked as boolean
+                      })
 
                 
 
@@ -253,10 +266,15 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                   </Label>
                 </div>
 
-
-
-
-
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id="pushNotes"
+                    checked={syncSettings.pushNotes}
+                    onCheckedChange={(checked) =>
+                      setSyncSettings({
+                        ...syncSettings
+                        pushNotes: checked as boolean
+                      })
 
                 
 
@@ -273,10 +291,15 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
                 </div>
 
-
-
-
-
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id="syncJobDetails"
+                    checked={syncSettings.syncJobDetails}
+                    onCheckedChange={(checked) =>
+                      setSyncSettings({
+                        ...syncSettings
+                        syncJobDetails: checked as boolean
+                      })
 
                 
 
@@ -293,10 +316,15 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
                 </div>
 
-
-
-
-
+                <div className="flex items-center space-x-2">
+                  <Checkbox
+                    id="syncApplicantData"
+                    checked={syncSettings.syncApplicantData}
+                    onCheckedChange={(checked) =>
+                      setSyncSettings({
+                        ...syncSettings
+                        syncApplicantData: checked as boolean
+                      })
 
                 
 
@@ -316,20 +344,90 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
               
 
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
               <div className="space-y-2">
                 <h3 className="text-sm font-medium">API Details</h3>
                 <p className="text-xs text-muted-foreground">
+          />;
+          <div>;
+            <DialogTitle>{integration && integration.name} Integration</DialogTitle>;
+            <DialogDescription>;
+              {integration && integration.status === "connected" ||;
+              integration && integration.status === "warning";
+                ? "Manage your connection settings";
+                : `Connect your ${integration && integration.name} account`}
+            </DialogDescription>;
+          </div>;
+        </DialogHeader>;
+
+        {integration && integration.status === "connected" ||;
+        integration && integration.status === "warning" ? (;
+          <>;
+            <div className="grid gap-4 py-4">;
+              <div className="space-y-4">;
+                <h3 className="text-sm font-medium">Sync Settings</h3>;
+
+                <div className="flex items-center space-x-2">;
+                  <Checkbox
+                    id="autoCreateContacts"
+                    checked={syncSettings && syncSettings.autoCreateContacts}
+                    onCheckedChange={(checked) =>;
+                      setSyncSettings({;
+                        ...syncSettings,;
+                        autoCreateContacts: checked as boolean,;
+                      });
+                    }
+                  />;
+                  <Label htmlFor="autoCreateContacts">;
+                    Auto-create contacts in {integration && integration.name}
+                  </Label>;
+                </div>;
+
+                <div className="flex items-center space-x-2">;
+                  <Checkbox
+                    id="pushNotes"
+                    checked={syncSettings && syncSettings.pushNotes}
+                    onCheckedChange={(checked) =>;
+                      setSyncSettings({;
+                        ...syncSettings,;
+                        pushNotes: checked as boolean,;
+                      });
+                    }
+                  />;
+                  <Label htmlFor="pushNotes">Push notes and comments</Label>;
+                </div>;
+
+                <div className="flex items-center space-x-2">;
+                  <Checkbox
+                    id="syncJobDetails"
+                    checked={syncSettings && syncSettings.syncJobDetails}
+                    onCheckedChange={(checked) =>;
+                      setSyncSettings({;
+                        ...syncSettings,;
+                        syncJobDetails: checked as boolean,;
+                      });
+                    }
+                  />;
+                  <Label htmlFor="syncJobDetails">Sync job details</Label>;
+                </div>;
+
+                <div className="flex items-center space-x-2">;
+                  <Checkbox
+                    id="syncApplicantData"
+                    checked={syncSettings && syncSettings.syncApplicantData}
+                    onCheckedChange={(checked) =>;
+                      setSyncSettings({;
+                        ...syncSettings,;
+                        syncApplicantData: checked as boolean,;
+                      });
+                    }
+                  />;
+                  <Label htmlFor="syncApplicantData">Sync applicant data</Label>;
+                </div>;
+              </div>;
+
+              <div className="space-y-2">;
+                <h3 className="text-sm font-medium">API Details</h3>;
+                <p className="text-xs text-muted-foreground">;
 
                   Last synced:{" "}
                   {integration && integration.lastSync;
@@ -345,12 +443,14 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <DialogFooter className="flex items-center justify-between">
               <Button
@@ -380,12 +480,14 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               <div className="space-y-4">
@@ -405,12 +507,14 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <DialogFooter>
               <Button onClick={handleConnectOAuth} disabled={isConnecting}>
@@ -574,7 +678,6 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
               </Button>;
             </DialogFooter>;
           </>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         )}
       </DialogContent>;
     </Dialog>;
@@ -761,6 +864,6 @@ function IntegrationConnectionModal() {
 
 }
 
-
-
+}
+;
 

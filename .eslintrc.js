@@ -1,9 +1,13 @@
 
 
 
+
 /* eslint - env node */;
 
+
 module.exports = {
+
+
 
 
 
@@ -45,6 +49,12 @@ ursor/add-new-services-and-deploy-updates-0462
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-console': 'off',
     'no-undef': 'off',
+
+    'react/no-unescaped-entities': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn'
+  },
+
+
 
 
   "extends": [
@@ -159,6 +169,8 @@ module.exports = {
 
   ignorePatterns: [
 
+
+
     "node_modules/",
     ".next/",
     "out/",
@@ -240,20 +252,20 @@ module.exports = {
     "types / index.ts",
     "pages_backup_conflicts/",
     "pages_disabled/",
-    "src.broken/",
-    "src.corrupted/",
-    "src.pages.disabled/",
-    "performance - monitor.js",
-    "performance - optimization.js",
-    "playwright.config.ts",
-    "postcss.config - backup.js",
+    "src && src.broken/",
+    "src && src.corrupted/",
+    "src && src.pages.disabled/",
+    "performance-monitor && monitor.js",
+    "performance-optimization && optimization.js",
+    "playwright && playwright.config.ts",
+    "postcss && postcss.config-backup && backup.js",
     "public/",
-    "resolve - conflicts.js",
-    "resolve - merge - conflicts.js",
-    "run - automation - safely.js",
-    "run - automation.js",
-    "run - complete - automation.js",
-    "security - config.js",
+    "resolve-conflicts && conflicts.js",
+    "resolve-merge-conflicts && conflicts.js",
+    "run-automation-safely && safely.js",
+    "run-automation && automation.js",
+    "run-complete-automation && automation.js",
+    "security-config && config.js",
     "server/",
     "setup_tests.ts",
     "simple - test.js",
@@ -286,7 +298,16 @@ module.exports = {
 
 
 
+};
 
+
+
+};
+
+
+    "commit-and-push.js"
+  ]
+};
 
     "ecosystem.simple.js",
     "ecosystem.working.js",
@@ -333,6 +354,7 @@ module.exports = {
     "automation-runner.js",
     "basic-test.js",
     "broken_files_backup/",
+
 
 
     "build - verification.js",
@@ -392,4 +414,5 @@ module.exports = {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

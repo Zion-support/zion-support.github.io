@@ -34,7 +34,6 @@ describe('WebVitals', () => {
   });
 });
 
-=======
     expect(screen.getByTestId('webvitals.dynamic'
   test('displays correct content'
   test('handles user interactions'

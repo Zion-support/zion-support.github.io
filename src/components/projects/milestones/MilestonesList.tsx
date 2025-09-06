@@ -10,8 +10,8 @@ if (isLoading) {
             </CardContent>
           </Card>
         ))}
-      </div>
-    )
+      </div>;
+    );
   }
   
   if (milestones.length === 0 && !showAddForm) {
@@ -19,6 +19,7 @@ if (isLoading) {
       <EmptyState
         icon={<span className="text-3xl">📊</span>}
         title="No Milestones Yet"
+
 
 
         description={isClient ? 
@@ -35,6 +36,7 @@ if (isLoading) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -74,6 +76,8 @@ if (isLoading) {
 
 
 
+
+
             <AddMilestoneForm
             <AddMilestoneForm 
               onSubmit = {handleSubmit,}
@@ -107,10 +111,13 @@ if (isLoading) {
             onReject = {onReject,}
           />
 
+
+
       </div>;
     </div>;
   );
 };
+
 
 
 
@@ -189,3 +196,4 @@ if ( {) {
 ";
 
             <AddMilestoneForm
+

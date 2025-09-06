@@ -6,6 +6,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,6 +14,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export function TalentPlaceholder() {
@@ -30,7 +32,10 @@ export function TalentPlaceholder() {
       </Button>
     </div>
 
-
+  );
+}
+  )
+  )
 import { Card } from "@/components/ui/card",;
 import { Skeleton } from "@/components/ui/skeleton",;
 import { Button } from "@/components/ui/button";
@@ -48,6 +53,7 @@ export function TalentPlaceholder() {;
     </div>;
   );
 
+
 }
 ;
 
@@ -60,4 +66,5 @@ export function TalentPlaceholder() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

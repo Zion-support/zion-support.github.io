@@ -3,6 +3,7 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 class ErrorBoundary extends React.Component {
@@ -33,6 +34,7 @@ export default function LeadershipPage() {
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
 
 
@@ -106,10 +108,15 @@ function LeadershipPage() {
 
         <div className='mt - 10 text - slate - 300'>;
           Contact:{' '}
-          <a className='text - cyan - 400' href='mailto:kleber@ziontechgroup.com'>;
-            kleber@ziontechgroup.com;
+          <a className='text-cyan-400' href='mailto:kleber@ziontechgroup && ziontechgroup.com'>;
+            kleber@ziontechgroup && ziontechgroup.com;
           </a>{' '}
           •{' '}
+
+
+export default function LeadershipPage() {
+	return (
+
 
           <a className='text-cyan-400' href='tel:+13024640950'>
             +1 302 464 0950
@@ -137,7 +144,9 @@ function LeadershipPage() {
 						<p className="text-slate-300">Advisors from cloud, security, data, and venture ecosystems.</p>
 					</div>
 				</div>
+
 				<div className="mt-10 text-slate-300">Contact: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> • <a className="text-cyan-400" href="tel:+13024640950">+1 302 464 0950</a></div>
+
 			</div>
 		</div>
 

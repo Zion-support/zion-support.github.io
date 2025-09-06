@@ -34,7 +34,6 @@ describe('SecurityEnhancer', () => {
   });
 });
 
-=======
     expect(screen.getByTestId('securityenhancer.dynamic'
   test('displays correct content'
   test('handles user interactions'

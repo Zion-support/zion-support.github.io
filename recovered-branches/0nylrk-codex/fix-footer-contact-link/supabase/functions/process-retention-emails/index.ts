@@ -19,6 +19,8 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 
 
 
+
+
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
@@ -27,7 +29,9 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -95,6 +99,20 @@ serve(async (req) => {
               method: "POST",
               headers: {
 
+                "Content-Type": "application/json"
+                "Authorization": `Bearer ${supabaseServiceKey}`}
+              body: JSON.stringify(job)}
+          );
+          if (!reminderResponse.ok) {
+            const errorText = await reminderResponse.text();
+            console.error(`Failed to process job ${job.id}: ${errorText}`);
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${supabaseServiceKey}`},
+              body: JSON.stringify(job)}
+          ),
+
+
+
 
             // Update job status to failed
             await supabase
@@ -129,15 +147,22 @@ serve(async (req) => {
       JSON.stringify({
         error: "Internal server error"
         details: error.message
-      }),
+
+    console && console.error("Error in process-retention-emails function:", error);
+
+    return new Response(
+      JSON && JSON.stringify({ 
+        error: "Internal server error", 
+        details: error && error.message
+      });
 
       {
         status: 500
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
 
-
-
+  }
+});
 
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
@@ -212,6 +237,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -220,6 +246,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 });

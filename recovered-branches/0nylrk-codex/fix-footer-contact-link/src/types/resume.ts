@@ -1,5 +1,7 @@
 
 
+export interface ResumeBasicInfo {
+export interface ResumeBasicInfo {;
 
   id?: string;
   title: string;
@@ -11,6 +13,7 @@
   summary?: string;
 
 }
+
 
 export interface WorkExperience {
 
@@ -25,10 +28,12 @@ export interface WorkExperience {
   is_current: boolean;
   description?: string;
 
+
   company_logo_url?: string,
   location?: string;
 
 }
+
 
 
 
@@ -44,6 +49,7 @@ export interface WorkExperience {
   is_current: boolean;
   description?: string;
 
+
   institution_logo_url?: string,
   location?: string;
 
@@ -54,14 +60,17 @@ export interface WorkExperience {
 
 
 
+
   id?: string;
   name: string;
   proficiency?: number;
+
 
   category?: string,
   years_experience?: number;
 
 }
+
 
 
 
@@ -74,10 +83,12 @@ export interface WorkExperience {
   issue_date?: Date | string;
   expiration_date?: Date | string;
 
+
   credential_id?: string,
   credential_url?: string;
 
 }
+
 
 
 
@@ -91,10 +102,12 @@ export interface WorkExperience {
   image_url?: string;
   github_url?: string;
 
+
   demo_url?: string,
   pdf_url?: string;
 
 }
+
 
 
 
@@ -114,6 +127,7 @@ export interface WorkExperience {
 
   is_active: boolean
 }
+
 
 
   id?: string,;
@@ -188,5 +202,7 @@ export interface Resume {;
   is_active: boolean;
 }
 ;
+
+
 
 

@@ -9,9 +9,19 @@ export default function AISolutionsPage() {
   const aiSolutions = [
     {
 
-
-
-
+      id: 'machine-learning'
+      title: 'Machine Learning Solutions'
+      description:
+        'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.'
+      features: [
+        'Predictive Analytics'
+        'Pattern Recognition'
+        'Anomaly Detection'
+        'Recommendation Systems'
+      ],      icon: '🧠'
+      category: 'Core AI'
+      complexity: 'Advanced'
+    }
 
         'Predictive Analytics',
         'Pattern Recognition',
@@ -25,10 +35,12 @@ export default function AISolutionsPage() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
     {
@@ -36,7 +48,7 @@ export default function AISolutionsPage() {
       title: 'Natural Language Processing'
       description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.';
       features: ['Text AnalysisSentiment AnalysisLanguage TranslationChatbot Development']
-      icon: '💬'
+      icon: ''
       category: 'Language AI'
       complexity: 'Advanced'
     }
@@ -45,7 +57,7 @@ export default function AISolutionsPage() {
       title: 'Computer Vision'
       description: 'Computer vision solutions for image recognition, object detection, and visual analytics.';
       features: ['Image RecognitionObject DetectionFacial RecognitionQuality Control']
-      icon: '👁️'
+      icon: ''
       category: 'Visual AI'
       complexity: 'Advanced'
     }
@@ -54,7 +66,7 @@ export default function AISolutionsPage() {
       title: 'Autonomous Systems'
       description: 'Self-operating systems that can make decisions and take actions independently.'
       features: ['Decision MakingSelf-LearningAdaptive BehaviorContinuous Improvement']
-      icon: '🤖'
+      icon: ''
       category: 'Autonomy'
       complexity: 'Expert'
     }
@@ -63,7 +75,7 @@ export default function AISolutionsPage() {
       title: 'Predictive Analytics'
       description: 'Data-driven insights that help predict future trends and behaviors.'
       features: ['Trend AnalysisRisk AssessmentForecastingBehavioral Prediction']
-      icon: '📊'
+      icon: ''
       category: 'Analytics'
       complexity: 'Intermediate'
 
@@ -118,6 +130,7 @@ function AISolutionsPage() {
       ]
       icon: '🏭'
     }
+  const useCases = [
     {
       industry: 'Healthcare'
       solutions: [
@@ -143,6 +156,36 @@ function AISolutionsPage() {
     }
   ];
 
+  const useCases = [
+    {
+      industry: 'Manufacturing',
+      solutions: ['Quality ControlPredictive MaintenanceSupply Chain Optimization'],
+      icon: ''
+    }
+    {
+      industry: 'Healthcare'
+      solutions: [
+        'Diagnostic Support'
+        'Patient Care Optimization'
+        'Drug Discovery'
+      ]
+      icon: ''
+    }
+    {
+      industry: 'Finance'
+      solutions: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading']
+      icon: ''
+    }
+    {
+      industry: 'Retail'
+      solutions: [
+        'Customer Segmentation'
+        'Inventory Management'
+        'Personalized Marketing'
+      ]
+      icon: ''
+    }
+  ];
   const technologies = [
     'TensorFlow'
     'PyTorch'
@@ -154,17 +197,17 @@ function AISolutionsPage() {
     'Pandas',  ];    {
       industry: 'Healthcare'
       solutions: ['Diagnostic SupportPatient Care OptimizationDrug Discovery']
-      icon: '🏥'
+      icon: ''
     }
     {
       industry: 'Finance'
       solutions: ['Fraud DetectionRisk AssessmentAlgorithmic Trading']
-      icon: '💳'
+      icon: ''
     }
     {
       industry: 'Retail'
       solutions: ['Customer SegmentationInventory ManagementPersonalized Marketing']
-      icon: '🛍️'
+      icon: ''
     }
   ];
   const technologies = [
@@ -325,6 +368,77 @@ export default function AISolutionsPage() {;
     'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas';
 
 
+  const use_cases = [;
+    {
+      industry: 'Manufacturing',
+      solutions: [;
+        'Quality Control',
+        'Predictive Maintenance',
+        'Supply Chain Optimization',
+      ],
+      icon: '',
+    },
+    {
+      industry: 'Healthcare',
+      solutions: [;
+        'Diagnostic Support',
+        'Patient Care Optimization',
+        'Drug Discovery',
+      ],
+      icon: '',
+    },
+    {
+      industry: 'Finance',
+      solutions: ['Fraud Detection', 'Risk Assessment', 'Algorithmic Trading'],
+      icon: '',
+    },
+    {
+      industry: 'Retail',
+      solutions: [;
+        'Customer Segmentation',
+        'Inventory Management',
+        'Personalized Marketing',
+      ],
+      icon: '',
+    },
+  ];
+;
+  const technologies = [;
+    'TensorFlow',
+    'PyTorch',
+    'Scikit - learn',
+    'OpenAI GPT',
+    'BERT',
+    'YOLO',
+    'Keras',
+    'Pandas',  ];    {
+      industry: 'Healthcare',
+      solutions: ['Diagnostic SupportPatient Care OptimizationDrug Discovery'],
+      icon: '';
+    }
+    {
+      industry: 'Finance',
+      solutions: ['Fraud DetectionRisk AssessmentAlgorithmic Trading'],
+      icon: '';
+    }
+    {
+      industry: 'Retail',
+      solutions: ['Customer SegmentationInventory ManagementPersonalized Marketing'],
+      icon: '';
+    }
+  ];
+;
+  const technologies = [;
+    'TensorFlowPyTorchScikit - learnOpenAI GPTBERTYOLOKerasPandas';
+  ];
+;
+  return (
+    <>;
+      <Head>;
+        <title>;
+          AI Solutions | Zion Tech Group - Advanced AI & Machine Learning;
+        </title>;
+
 
         />;
         <meta name='twitter:card' content='summary_large_image' />;
@@ -370,7 +484,7 @@ export default function AISolutionsPage() {;
                         <li
                           key={featureIndex}
                           className='text-sm text-white/60 flex items-center'>;
-                          <span className='text-cyan-400 mr-2'>•</span>                          {feature}
+                          <span className='text-cyan-400 mr-2'></span>                          {feature}
                         </li>;
                       ))}
 
@@ -438,6 +552,7 @@ export default function AISolutionsPage() {;
                     </ul>;
                     <Link
 
+
                       href={`/services#${solution && solution.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
                       Learn More <span className='ml-1'>→</span>                    </Link>                      href={`/services#${solution && solution.id}`}
@@ -461,9 +576,11 @@ export default function AISolutionsPage() {;
 
                   </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                 ))}
               </div>
             </div>
+
 
 
 
@@ -485,6 +602,7 @@ export default function AISolutionsPage() {;
 
 
 
+
             {/* Industry Use Cases */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
@@ -500,12 +618,13 @@ export default function AISolutionsPage() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                 {useCases.map((useCase, index) => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
                     key={index}
                     className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center'>;
@@ -526,6 +645,18 @@ export default function AISolutionsPage() {;
                         <li key={solutionIndex} className="text-sm text-white/70">;
 
 
+            <div className="mb-16">
+              <h2 className="text-3xl font-bold mb-8 text-center text-fuchsia-400">Industry Applications</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {useCases.map((useCase, index) => (
+                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">
+                    <div className="text-4xl mb-4">{useCase.icon}</div>
+                    <h3 className="text-xl font-bold mb-4 text-white">{useCase.industry}</h3>
+                    <ul className="space-y-2">
+                      {useCase.solutions.map((solution, solutionIndex) => (
+                        <li key={solutionIndex} className="text-sm text-white/70">
+
+
                           {solution}
                         </li>;
                       ))}
@@ -534,6 +665,7 @@ export default function AISolutionsPage() {;
                 ))}
               </div>
             </div>
+
 
 
 
@@ -553,6 +685,7 @@ export default function AISolutionsPage() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
             {/* Technologies */}
@@ -583,6 +716,7 @@ export default function AISolutionsPage() {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -590,12 +724,14 @@ export default function AISolutionsPage() {;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
                       {tech}
                     </span>;
                   ))}
                 </div>
               </div>
             </div>
+
 
 
 
@@ -616,6 +752,7 @@ export default function AISolutionsPage() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             {/* Success Stories */}
 
@@ -641,6 +778,126 @@ export default function AISolutionsPage() {;
                     Read Case Study →
 
 
+                        </li>))}
+                    </ul>;
+                    <Link;
+                      href={`/services#${solution.id}`}
+                      className='inline - flex items - center text - cyan - 400 hover:text - cyan - 300 transition - colors';
+                    >;
+                      Learn More <span className='ml - 1'>→</span>                    </Link>                      href={`/services#${solution.id}`}
+                      className="inline - flex items - center text - cyan - 400 hover:text - cyan - 300 transition - colors";
+                    >;
+                      Learn More <span className="ml - 1">→</span>;
+                    </Link>;
+                  </div>))}
+              </div>;
+            </div>;
+            {/* Industry Use Cases */}
+            <div className='mb - 16'>;
+              <h2 className='text - 3xl font - bold mb - 8 text - center text - fuchsia - 400'>;
+                Industry Applications;
+              </h2>;
+              <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 6'>;
+                {use_cases.map ((use_case, index) => (
+                  <div;
+                    key={index}
+                    className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 text - center';
+                  >;
+                    <div className='text - 4xl mb - 4'>{use_case.icon}</div>;
+                    <h3 className='text - xl font - bold mb - 4 text - white'>;
+                      {use_case.industry}
+                    </h3>;
+                    <ul className='space - y-2'>;
+                      {use_case.solutions.map ((solution, solution_index) => (
+                        <li;
+                          key={solution_index}
+                          className='text - sm text - white / 70';
+                        >                          {solution}                {use_cases.map ((use_case, index) => (
+                  <div key={index} className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6 text - center">;
+                    <div className="text - 4xl mb - 4">{use_case.icon}</div>;
+                    <h3 className="text - xl font - bold mb - 4 text - white">{use_case.industry}</h3>;
+                    <ul className="space - y-2">;
+                      {use_case.solutions.map ((solution, solution_index) => (
+                        <li key={solution_index} className="text - sm text - white / 70">;
+                          {solution}
+                        </li>))}
+                    </ul>;
+                  </div>))}
+              </div>;
+            </div>;
+            {/* Technologies */}
+            <div className='mb - 16'>;
+              <h2 className='text - 3xl font - bold mb - 8 text - center text - green - 400'>;
+                Technologies We Use;
+              </h2>;
+              <div className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8'>;
+                <div className='flex flex - wrap justify - center gap - 4'>;
+                  {technologies.map ((tech, index) => (
+                    <span;
+                      key={index}
+                      className='px - 4 py - 2 bg - gradient - to - r from - cyan - 400 / 20 to - fuchsia - 400 / 20 text - white rounded - lg border border - white / 20'                    >                  {technologies.map ((tech, index) => (
+                    <span;
+                      key={index}
+                      className="px - 4 py - 2 bg - gradient - to - r from - cyan - 400 / 20 to - fuchsia - 400 / 20 text - white rounded - lg border border - white / 20";
+                    >;
+                      {tech}
+                    </span>))}
+                </div>;
+              </div>;
+            </div>;
+            {/* Success Stories */}
+            <div className='mb - 16'>;
+              <h2 className='text - 3xl font - bold mb - 8 text - center text - blue - 400'>;
+                AI Success Stories;
+              </h2>;
+              <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
+                <div className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6'>;
+                  <h3 className='text - xl font - bold mb - 3 text - cyan - 400'>;
+                    Manufacturing Excellence;
+                  </h3>;
+                  <p className='text - white / 70 mb - 4'>;
+                    Implemented computer vision and ML solutions that improved;
+                    quality control by 85% and reduced defects by 60%.;
+                  </p>;
+                  <Link;
+                    href='/case - studies#ai - automation - manufacturing';
+                    className='text - fuchsia - 400 hover:text - fuchsia - 300 transition - colors'                  >;
+                    Read Case Study →;
+                  </Link>;
+                </div>            <div className="mb - 16">;
+              <h2 className="text - 3xl font - bold mb - 8 text - center text - blue - 400">AI Success Stories</h2>;
+              <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
+                <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6">;
+                  <h3 className="text - xl font - bold mb - 3 text - cyan - 400">Manufacturing Excellence</h3>;
+                  <p className="text - white / 70 mb - 4">;
+                    Implemented computer vision and ML solutions that improved quality control by 85% and reduced defects by 60%.;
+                  </p>;
+                  <Link;
+                    href="/case - studies#ai - automation - manufacturing";
+                    className="text - fuchsia - 400 hover:text - fuchsia - 300 transition - colors";
+                    Read Case Study →;
+                  </Link>;
+                </div>;
+                <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-6'>;
+                  <h3 className='text-xl font-bold mb-3 text-fuchsia-400'>;
+                    Content Generation Scale;
+                  </h3>;
+                  <p className='text-white/70 mb-4'>;
+                    Built autonomous content generation systems that increased;
+                    output by 10x while maintaining quality standards.;
+                  </p>;
+                  <Link;
+                    href='/case - studies#content - generation - scale';
+                    className='text - cyan - 400 hover:text - cyan - 300 transition - colors'                  >                <div className="bg - white / 10 backdrop - blur - xl rounded - 2xl p - 6">;
+                  <h3 className="text - xl font - bold mb - 3 text - fuchsia - 400">Content Generation Scale</h3>;
+                  <p className="text - white / 70 mb - 4">;
+                    Built autonomous content generation systems that increased output by 10x while maintaining quality standards.;
+                  </p>;
+                  <Link;
+                    href="/case - studies#content - generation - scale";
+                    className="text - cyan - 400 hover:text - cyan - 300 transition - colors";
+                    Read Case Study →;
+
 
                   </Link>;
                 </div>;
@@ -655,6 +912,8 @@ export default function AISolutionsPage() {;
                   Start Your AI Journey
                 </Link>
 
+
+
                 <Link
                   href="/automation-insights"
 
@@ -668,6 +927,7 @@ export default function AISolutionsPage() {;
         </main>
       </div>
     </>
+
 
 
 
@@ -689,5 +949,6 @@ export default function AISolutionsPage() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

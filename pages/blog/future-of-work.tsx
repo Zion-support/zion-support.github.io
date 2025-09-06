@@ -5,6 +5,8 @@ import Head from 'next/head',
 import Link from 'next/link';
 
 
+
+
 import React from 'react';
 export default function FutureOfWork(req, res) {
   try {
@@ -114,7 +116,10 @@ function FutureOfWork() {
                 <p className='text-white/90 mb-4'>;
 
 
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -125,5 +130,6 @@ function FutureOfWork() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

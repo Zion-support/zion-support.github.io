@@ -1,11 +1,17 @@
 
 
+import { Badge } from "@/components/ui/badge";
+import { ProfileSkill } from "@/types/profile";
+import { Badge } from "@/components/ui/badge",
+import { ProfileSkill } from "@/types/profile",
 
 import {Badge} from "@/components/ui/badge";
 import {ProfileSkill} from "@/types/profile";
 
 import { Badge } from "@/components/ui/badge",
 import { ProfileSkill } from "@/types/profile",
+
+
 
 
 interface ProfileSkillsProps {
@@ -28,6 +34,10 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
             </div>
             <div className="h-2 w-full bg-zion-blue-light rounded-full overflow-hidden">
 
+              <div
+                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan"
+              <div 
+                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" 
 
                 style={{ width: `${(skill.level / 5) * 100}%` }}
               />
@@ -37,6 +47,9 @@ export function ProfileSkills({ skills }: ProfileSkillsProps) {
       </div>
     </div>
 
+              <div 
+                className="h-full bg-gradient-to-r from-zion-purple to-zion-cyan" 
+  )
 import { Badge } from "@/components/ui/badge",;
 import { ProfileSkill } from "@/types/profile";
 
@@ -76,6 +89,7 @@ export function ProfileSkills(): any ({ skills }: ProfileSkillsProps) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 }
@@ -112,5 +126,6 @@ function ProfileSkills() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

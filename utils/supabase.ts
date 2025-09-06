@@ -36,13 +36,13 @@ export function createSupabaseClient(config: SupabaseConfig): SupabaseClient {
           })
         })
       })
-    }),
-    auth: {
-      getUser: () => Promise && Promise.resolve({ data: { user: null }, error: null }),
-      signIn: (credentials: any) => Promise && Promise.resolve({ data: { user: null }, error: null }),
-      signOut: () => Promise && Promise.resolve({ error: null })
-    }
-  };
+    })
+    insert: (data: any) => ({
+      select: (columns: string) => ({
+        single: () => null
+      })
+    })
+  })
 }
 // Default configuration
 const supabaseConfig: SupabaseConfig = {
@@ -52,6 +52,19 @@ const supabaseConfig: SupabaseConfig = {
 export const supabase = createSupabaseClient(supabaseConfig);
 
 
-
-
+    sign_in: (email: string, password: string) => null,
+    sign_out: () => null,
+    get_user: () => null;
+  },
+  from: (table: string) => ({
+    select: (columns: string) => ({
+      eq: (column: string, value: any) => ({
+        single: () => null;
+      });
+    }),
+    insert: (data: any) => ({
+      select: (columns: string) => ({
+        single: () => null
+      })
+    })
 

@@ -1,5 +1,25 @@
 
-
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon, TrendingUp, as, ChartIcon, Megaphone, HeadphonesIcon, Users, as, TeamIcon,} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
+  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
+  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
+  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon;
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon;
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon;
+  Wifi, Building, Cpu as CpuIcon, TrendingUp as ChartIcon, Megaphone, HeadphonesIcon, Users as TeamIcon
+ } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
 
 
 
@@ -46,7 +66,9 @@ import {
 import Layout from '../components/layout/Layout',
 import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions',
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 const contactInfo = {
@@ -104,10 +126,13 @@ const serviceCategories = [
     icon: TeamIcon,
     color: 'from-teal-500 to-cyan-600',
 
+    features: [
+      'Recruitment Automation',
+      'Performance Analytics',
+      'Employee Engagement',
+    ],
+  },];
 
-    features: ['Recruitment AutomationPerformance AnalyticsEmployee Engagement']
-  }
-];
 
 const heroFeatures = [
   {
@@ -125,6 +150,159 @@ const contactInfo = {;
   address: '364 E Main St STE 1008 Middletown DE 19709',;
   website: 'https://ziontechgroup && ziontechgroup.com',;
 };
+
+];
+
+const testimonials = [
+import Head from 'next / head';
+import Link from 'next / link';
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon, TrendingUp, as, ChartIcon, Megaphone, HeadphonesIcon, Users, as, TeamIcon, } from 'lucide-react';
+import Layout from '../components / layout / Layout';
+import { innovativeBusinessSolutions2025 } from '../data / 2025 - innovative - business - solutions';
+const contact_info = {
+
+
+const contactInfo = {
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+}
+;
+const hero_stats = [;
+  {
+    label: 'Business Solutions',
+    value: '100+',
+    icon: <Target className='w - 5 h - 5' />,
+  },
+  {
+    label: 'Happy Businesses',
+    value: '250+',
+    icon: <Users className='w - 5 h - 5' />,
+  },
+  {
+    label: 'Success Rate',
+    value: '99.5%',
+    icon: <Award className='w - 5 h - 5' />,
+  },
+  {
+    label: 'ROI Average',
+    value: '400%',
+    icon: <TrendingUp className='w - 5 h - 5' />,
+  }, ];
+;
+const service_categories = [;
+  {
+    title: 'Business Intelligence & Analytics',
+    description:;
+      'AI - powered business intelligence and data analytics solutions',
+    services: innovativeBusinessSolutions2025.filter (
+      string => s.category === 'Business Intelligence & Analytics'),
+    icon: ChartIcon,
+    color: 'from - blue - 500 to - cyan - 600',
+    features: ['Data Analysis', 'Predictive Analytics', 'Real - time Insights'],
+  },
+  {
+    title: 'Marketing Automation',
+    description: 'Intelligent marketing automation with AI - driven optimization',
+    services: innovativeBusinessSolutions2025.filter (
+      string => s.category === 'Marketing Automation'),
+    icon: Megaphone,
+    color: 'from - purple - 500 to - pink - 600',
+    features: [;
+      'Campaign Optimization',
+      'Content Personalization',
+      'ROI Tracking',
+    ],
+  },
+  {
+    title: 'Sales Intelligence',
+    description: 'AI - powered sales automation and intelligence solutions',
+    services: innovativeBusinessSolutions2025.filter (
+      string => s.category === 'Sales Intelligence'),
+    icon: TrendingUp,
+    color: 'from - green - 500 to - emerald - 600',
+    features: ['Lead Scoring', 'Sales Forecasting', 'Pipeline Optimization'],
+  },
+  {
+    title: 'Customer Service',
+    description: 'Intelligent customer service with AI automation',
+    services: innovativeBusinessSolutions2025.filter (
+      string => s.category === 'Customer Service'),
+    icon: HeadphonesIcon,
+    color: 'from - orange - 500 to - red - 600',
+    features: ['AI Chatbots', 'Ticket Automation', 'Sentiment Analysis'],
+  },
+  {
+    title: 'HR Management',
+    description: 'AI - powered HR automation and management solutions',
+    services: innovativeBusinessSolutions2025.filter (
+      string => s.category === 'HR Management'),
+    icon: TeamIcon,
+
+    content:;
+      "Zion Tech Group's business intelligence platform has transformed our decision - making process. We now have real - time insights that have increased our revenue by 300%.",
+
+    rating: 5,
+    avatar: '👨‍💼'
+  };
+  {
+    name: 'Sarah Johnson',
+    role: 'Marketing Director, DigitalFlow Agency',
+    company: 'DigitalFlow Agency',
+
+    content:;
+      "The AI marketing automation platform has revolutionized our campaigns. We've seen conversion rates increase by 150% while reducing costs by 40%.",
+
+    rating: 5,
+    avatar: '👩‍💼'
+  };
+  {
+    name: 'David Chen',
+    role: 'Sales Manager, TechSales Pro',
+    company: 'TechSales Pro',
+
+    color: 'from-teal-500 to-cyan-600',
+
+
+export default function InnovativeBusinessSolutions() {
+
+  return (
+
+          href='https://ziontechgroup && ziontechgroup.com/innovative-business-solutions'
+        />;
+      </Head>;
+
+      {/* Hero Section */}
+
+    features: ['Recruitment AutomationPerformance AnalyticsEmployee Engagement']
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {;
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,;
+  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,;
+  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings,;
+  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon,;
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,;
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,;
+  Wifi, Building, Cpu as CpuIcon, TrendingUp as ChartIcon, Megaphone, HeadphonesIcon, Users as TeamIcon;
+} from 'lucide-react',;
+import Layout from '../components/layout/Layout';
+import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
+const contactInfo = {;
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
+};
+const heroStats = [;
+  { label: 'Business Solutions', value: '100+', icon: <Target className="w-5 h-5" /> },;
+  { label: 'Happy Businesses', value: '250+', icon: <Users className="w-5 h-5" /> },;
+  { label: 'Success Rate', value: '99.5%', icon: <Award className="w-5 h-5" /> },;
 
   { label: 'ROI Average', value: '400%', icon: <TrendingUp className="w-5 h-5" />   } catch (error) {
     console.error("Error:", error);
@@ -239,6 +417,8 @@ const testimonials = [;
   }
 }
 ],
+
+
 
 
 export default function InnovativeBusinessSolutions() {
@@ -381,12 +561,14 @@ export default function InnovativeBusinessSolutions() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           >
 
@@ -403,8 +585,8 @@ export default function InnovativeBusinessSolutions() {
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <motion.div
+
 
 
 
@@ -431,6 +613,7 @@ export default function InnovativeBusinessSolutions() {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                 >
                   {stat.icon}
                   <span className="text-teal-400 font-semibold">{stat.value}</span>
@@ -446,7 +629,6 @@ export default function InnovativeBusinessSolutions() {
               <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300">
                 <Phone className="mr-2 w-5 h-5" />
                 Get Started
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </Link>
             </div>
           </motion.div>
@@ -471,6 +653,7 @@ export default function InnovativeBusinessSolutions() {
           <motion.div
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
@@ -489,12 +672,14 @@ export default function InnovativeBusinessSolutions() {
 
 
 
+
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
               Why Choose Our Business Solutions?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Our business solutions combine cutting-edge AI technology with
+              proven business processes to deliver unprecedented results
             </p>
           </motion.div>
 
@@ -506,11 +691,36 @@ export default function InnovativeBusinessSolutions() {
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+                className='relative group'
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {heroFeatures.map((feature, index) => (
+              <motion.div
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="relative group"
 
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
@@ -548,10 +758,11 @@ export default function InnovativeBusinessSolutions() {
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
+
+
 
 
 
@@ -560,20 +771,35 @@ export default function InnovativeBusinessSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
-
-
-
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
 
           >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
               Business Solution Categories
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive business solutions covering every aspect of modern business operations
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Comprehensive business solutions covering every aspect of modern
+              business operations
             </p>
           </motion.div>
 
@@ -619,12 +845,14 @@ export default function InnovativeBusinessSolutions() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               >
                 <div className="text-center mb-12">
@@ -678,12 +906,14 @@ export default function InnovativeBusinessSolutions() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
@@ -740,12 +970,14 @@ export default function InnovativeBusinessSolutions() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                           </div>
                           <div className="flex items-center justify-between">
@@ -768,8 +1000,8 @@ export default function InnovativeBusinessSolutions() {
                     </motion.div>
 
                   ))}
-                </div>
-              </motion.div>
+                </div>;
+              </motion && motion.div>;
             ))}
           </div>
         </div>
@@ -799,10 +1031,11 @@ export default function InnovativeBusinessSolutions() {
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Testimonials Section */}
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
+
+
 
 
 
@@ -811,20 +1044,35 @@ export default function InnovativeBusinessSolutions() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}
-
-
-
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="text-center mb-16"
 
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Real feedback from businesses that have transformed their operations with our innovative solutions
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Real feedback from businesses that have transformed their
+              operations with our innovative solutions
             </p>
           </motion.div>
 
@@ -869,8 +1117,10 @@ export default function InnovativeBusinessSolutions() {
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20"
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               >
@@ -951,8 +1201,10 @@ export default function InnovativeBusinessSolutions() {
 }
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           >
@@ -992,12 +1244,14 @@ export default function InnovativeBusinessSolutions() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               >
                 <Mail className="mr-2 w-5 h-5" />
@@ -1008,11 +1262,12 @@ export default function InnovativeBusinessSolutions() {
               <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>
               <p className="text-gray-300">🌐 {contactInfo.website}</p>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </motion.div>
         </div>
       </section>
 
+    </Layout>
+    </Layout>;
 
 );
   return (<Layout> <Head> <title>Innovative Business Solutions - Zion Tech Group</title> </Head> {
@@ -1057,6 +1312,7 @@ export default function InnovativeBusinessSolutions() {
 
 
 
+
   once: true 
 
 }> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link > <Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion && motion.div> </div> </section> </Layout>) ;
@@ -1075,4 +1331,5 @@ export default function InnovativeBusinessSolutions() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

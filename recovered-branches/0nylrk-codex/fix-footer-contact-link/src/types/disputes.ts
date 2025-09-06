@@ -2,11 +2,15 @@
 
 
 
+
+
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed';
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null;
 ;
 
 export interface Dispute {
+
+
 
 
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed';
@@ -17,10 +21,12 @@ export interface Dispute {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   id: string;
@@ -51,11 +57,9 @@ export interface Dispute {;
   }
 }
 
+export interface DisputeMessage {
 
-
-
-
-
+export interface DisputeMessage {;
 
   id: string;
   dispute_id: string;
@@ -71,11 +75,9 @@ export interface Dispute {;
   }
 }
 
+export interface DisputeAttachment {
 
-
-
-
-
+export interface DisputeAttachment {;
 
   id: string;
   dispute_id: string;
@@ -101,6 +103,7 @@ export type DisputeReason =;
 
 
 
+
 export const disputeReasonLabels: Record<DisputeReason, string> = {;
 
 
@@ -111,20 +114,19 @@ export const disputeReasonLabels: Record<DisputeReason, string> = {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   milestone_quality: 'Quality of Deliverable';
   delayed_delivery: 'Delayed Delivery';
   scope_change: 'Scope Change Disagreement';
   communication: 'Communication Issues';
   payment: 'Payment Dispute';
 
-
-
+  contract_terms: 'Contract Terms Disagreement'
+other: 'Other Issue'}
 
   contract_terms: 'Contract Terms Disagreement',
 
 other: 'Other Issue'};
-
-
 
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed',;
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null,;
@@ -202,6 +204,7 @@ export const disputeReasonLabels: Record<DisputeReason string> = {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -209,5 +212,6 @@ export const disputeReasonLabels: Record<DisputeReason string> = {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

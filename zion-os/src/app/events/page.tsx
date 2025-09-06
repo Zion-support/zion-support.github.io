@@ -1,4 +1,18 @@
 
+import Link from "next/link";
+export const metadata = {title: "Events - Zion Tech Group | Conferences, Webinars & Workshops";
+  description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.";
+  keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"}
+export default function EventsPage() {return (;
+import Link from "next/link",;
+export const metadata = {;
+  title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",;
+  description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.",;
+  keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"},;
+export default function EventsPage() {;
+  return (;
+    <div className="min-h-screen">;
+
 import Link from './next / link';,
 export const metadata = {
   title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",
@@ -10,7 +24,8 @@ export default /**
 function EventsPage() {
   return (
     <div className="min - h-screen">;
-=======
+
+
 import Link from "next/link",;
 export const metadata = {;
   title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",;
@@ -18,7 +33,6 @@ export const metadata = {;
   keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"},;
 export default function EventsPage() {;
   return (;
-=======
 
 
     <div className="min-h-screen">;
@@ -130,7 +144,7 @@ export default function EventsPage() {;
                 and networking opportunities;
               </p>;
               <Link href="/events / category / conferences" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                View Conferences →;
+                View Conferences ;
               </Link>;
             </div>;
             <div className="card text - center group hover:bg - purple - 500 / 10 transition - colors">;
@@ -148,7 +162,7 @@ export default function EventsPage() {;
                 and industry trends;
               </p>;
               <Link href="/events / category / webinars" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
-                View Webinars →;
+                View Webinars ;
               </Link>;
             </div>;
             <div className="card text - center group hover:bg - green - 500 / 10 transition - colors">;
@@ -163,7 +177,7 @@ export default function EventsPage() {;
                 for practical skill development;
               </p>;
               <Link href="/events / category / workshops" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-                View Workshops →;
+                View Workshops ;
               </Link>;
             </div>;
           </div>;
@@ -208,7 +222,7 @@ export default function EventsPage() {;
                 60 minutes;
               </div>;
               <Link href="/events / ai - enterprise - implementation - webinar" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                Register Now →;
+                Register Now ;
               </Link>;
             </div>;
             {/* Event 2 */}
@@ -241,7 +255,7 @@ export default function EventsPage() {;
                 4 hours;
               </div>;
               <Link href="/events / quantum - computing - fundamentals - workshop" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
-                Register Now →;
+                Register Now ;
               </Link>;
             </div>;
             {/* Event 3 */}
@@ -272,7 +286,7 @@ export default function EventsPage() {;
                 New York, NY;
               </div>;
               <Link href="/events / cybersecurity - innovation - summit - 2025" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-                Register Now →;
+                Register Now ;
               </Link>;
             </div>;
             {/* Event 4 */}
@@ -302,7 +316,7 @@ export default function EventsPage() {;
                 6 hours;
               </div>;
               <Link href="/events / space - technology - applications - workshop" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
-                Register Now →;
+                Register Now ;
               </Link>;
             </div>;
             {/* Event 5 */}
@@ -332,7 +346,7 @@ export default function EventsPage() {;
                 90 minutes;
               </div>;
               <Link href="/events / ai - content - generation - best - practices" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
-                Register Now →;
+                Register Now ;
               </Link>;
             </div>;
             {/* Event 6 */}
@@ -363,7 +377,7 @@ export default function EventsPage() {;
                 Austin, TX;
               </div>;
               <Link href="/events / enterprise - it - transformation - 2025" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
-                Register Now →;
+                Register Now ;
               </Link>;
             </div>;
           </div>;
@@ -390,7 +404,7 @@ export default function EventsPage() {;
               <h3 className="text - lg font - semibold mb - 2">AI Ethics Workshop</h3>;
               <p className="text - gray - 400 text - sm mb - 3">December 10, 2024</p>;
               <Link href="/events / past / ai - ethics - workshop - december - 2024" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                View Recording →;
+                View Recording ;
               </Link>;
             </div>;
             <div className="card">;
@@ -402,7 +416,7 @@ export default function EventsPage() {;
               <h3 className="text - lg font - semibold mb - 2">Quantum Computing Summit</h3>;
               <p className="text - gray - 400 text - sm mb - 3">November 15 - 17, 2024</p>;
               <Link href="/events / past / quantum - computing - summit - november - 2024" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                View Highlights →;
+                View Highlights ;
               </Link>;
             </div>;
             <div className="card">;
@@ -414,7 +428,7 @@ export default function EventsPage() {;
               <h3 className="text - lg font - semibold mb - 2">Cybersecurity Conference</h3>;
               <p className="text - gray - 400 text - sm mb - 3">October 20 - 22, 2024</p>;
               <Link href="/events / past / cybersecurity - conference - october - 2024" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                View Highlights →;
+                View Highlights ;
               </Link>;
             </div>;
           </div>;

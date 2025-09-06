@@ -46,11 +46,14 @@ if ( {) {
         });
 
       } finally {
-        setIsLoading(false)
+        setIsLoading (false);
       }
     }
 
-
+    fetchSavedTalents()
+  }, [user])
+  const handleViewProfile = (talentId: string) => {
+    router.push(`/talent/${talentId}`)
 
   }
 
@@ -201,9 +204,11 @@ export default function SavedTalentsPage() {;
         // Remove from saved talents;
         const { error } = await supabase;
           .from ('saved_talents');
+
           .delete ();
           .eq ('user_id', user.id);
           .eq ('talent_id', talent_id);
+
         // Check condition
 if ( {) {
   $2
@@ -222,16 +227,22 @@ if ( {) {
 
 
 
+
+
       } else {
         // Add to saved talents
         const { error } = await supabase
           .from('saved_talents')
 
+          .insert([{ user_id: user.id, talent_id: talentId }])
+        if (error) {
+          throw error
+        }
+          .insert([{ user_id: user.id, talent_id: talentId }]),
+  
+          .insert([{ user_id: user.id, talent_id: talentId }]),
+  
 
-          .insert([{ user_id: user.id, talent_id: talentId }]),
-  
-          .insert([{ user_id: user.id, talent_id: talentId }]),
-  
 
         if (error) {
           throw error
@@ -243,13 +254,45 @@ if ( {) {
           .select('*')
           .eq('id', talentId)
 
-
-
-
-
-  useEffect((,) => {;
-    if (!user) {;
-      router && router.push(`/auth/login?returnTo=${encodeURIComponent(router && router.asPath)}`);
+          .single()
+        if (talentError) {
+          logErrorToProduction(
+            talentError instanceof Error
+              ? talentError.message
+              : String(talentError)
+            talentError instanceof Error ? talentError : undefined
+            { message: 'Error fetching talent profile' }
+          )
+          toast({
+            title: 'Error'
+            description:
+              'Failed to update saved talents. Please try again later.'
+            variant: 'destructive'
+          })
+          return
+        }
+        if (talentData) {
+          setSavedTalents(prevTalents => [
+            ...prevTalents
+            talentData as unknown as TalentProfile
+          ])
+          toast({
+            title: 'Talent Saved'
+            description: 'Talent saved to your list.'
+          })
+        }
+      }
+    } catch (error) {
+      logErrorToProduction(
+        error instanceof Error ? error.message : String(error)
+        error instanceof Error ? error : undefined
+        { message: 'Error toggling saved talent' }
+      )
+      toast({
+        title: 'Error'
+        description: 'Failed to update saved talents. Please try again later.'
+        variant: 'destructive'
+      })
     }
   }
           return;
@@ -267,6 +310,21 @@ if ( {) {
   
         if (talentData) {
 
+          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
+          toast({
+            title: "Talent Saved",
+            description: "Talent saved to your list."})
+        }
+      }
+    } catch (error) {
+      logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error toggling saved talent' }),
+      toast({
+        title: "Error",
+        description: "Failed to update saved talents. Please try again later.",
+        variant: "destructive"})
+    }
+  },
+
 
   return (
     <>
@@ -282,6 +340,8 @@ if ( {) {
         
 
 
+
+
         {isLoading ? (
           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (
@@ -290,6 +350,8 @@ if ( {) {
               icon={<Heart className="h-8 w-8" />}
               title="No Saved Talents"
               description="You haven't saved any talents yet."
+
+
 
 
               action={{ text: 'Browse Talent', href: '/talent' }}
@@ -430,6 +492,7 @@ if ( {) {
               />;
 
 
+
             ))}
           </div>
         )}
@@ -438,6 +501,7 @@ if ( {) {
   )
 }, [user, router])
 }const {
+
   data, error;
 }= await supabase .from ("saved talents") user id;
 full name;
@@ -455,16 +519,19 @@ is verified) `);
   setIsLoading (false);
 
 }
-}, [user])
+}, [user]);
 }
   try {
-  if (!user) {
+  // Check condition
+if ( {) {
+  $2
+}
 }//Remove from saved talents const {
-  error '
-}= await supabase .from ('saved talents') .delete () .eq ('user id', user.id) .eq ('talent id', talentId)
+  error ';
+}= await supabase .from ('saved talents') .delete () .eq ('user id', user.id) .eq ('talent id', talent_id);
 }else {
   //Add to saved talents const {
-  error '
+  error ';
 }= await supabase .from ('saved talents') .insert ([ {
 
       </div>;
@@ -545,7 +612,13 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
   handleViewProfile;
 }onRequestHire= {
 
-
+  handleRequestHire 
+}isAuthenticated= {
+  !!user 
+}/>) ) ;
+}</div>) ;
+}</div> </>) ;
+}'"}
 
   handleRequestHire;
 }is_authenticated= {
@@ -555,8 +628,11 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }</div> </>);
 }'"}
 
+
       </div>;
     </>;
   );
 }
+
 ;
+

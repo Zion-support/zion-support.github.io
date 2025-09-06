@@ -1,19 +1,21 @@
 
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import type { UserProfile } from "@/types/auth";
+import {toast} from "@/hooks/use-toast";
+import {trackReferral, checkUrlForReferralCode} from "@/utils/referralUtils";
+import {cleanupAuthState} from "@/utils/authUtils";
+import { useState, useEffect } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import type { UserProfile } from "@/types/auth";
+import { toast } from "@/hooks/use-toast";
+import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils";
+import { cleanupAuthState } from "@/utils/authUtils";
+import type { UserProfile } from "@/types/auth",
+import { toast } from "@/hooks/use-toast",
+import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils",
+import { cleanupAuthState } from "@/utils/authUtils",
 
 export function useAuthOperations(
 
@@ -31,7 +33,9 @@ export function useAuthOperations(
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   const login = async ({ email, password }: { email: string, password: string }) => {
     setIsLoading (true);
     try {
@@ -59,6 +63,10 @@ export function useAuthOperations(
           description: error.message}),
 
         return { data: null, error: error.message }
+
+          title: "Oh no! Something went wrong.",
+          description: error && error.message});
+        return { data: null, error: error && error.message }
 
       }
       toast({
@@ -118,12 +126,14 @@ export function useAuthOperations(
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
           description: error.message});
         return { data: null, error: error.message }
+
 
       }
 
@@ -204,7 +214,7 @@ if ( {) {
 
         description: "There was an issue logging you out. Please try again."})
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
 
   }
@@ -227,6 +237,19 @@ if ( {) {
 
       if (error) {
         toast({
+
+;
+  const reset_password = async (email: string) => {
+    setIsLoading (true),
+    try {
+      const { data, error } = await supabase.auth.resetPasswordForEmail (email, {
+        redirect_to: `${window.location.origin}/update - password`});
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
 
           variant: "destructive";
           title: "Oh no! Something went wrong.",
@@ -303,11 +326,18 @@ if ( {) {
           title: "Failed to update profile",
           description: error.message});
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+        return { error: error.message };
+        return { error: error.message }
+      }
+      // Optimistically update the local user state
+      setUser((prevUser) => {
+        if (prevUser) {
+        return { error: error.message };
+      }
+;
+      // Optimistically update the local user state;
+      setUser((prevUser) => {;
+        if (prevUser) {;
 
           return { ...prevUser, ...profileData }
         }
@@ -346,7 +376,7 @@ if ( {) {
 
 
   const loginWithGoogle = async () => {
-    setIsLoading(true),
+    setIsLoading (true);
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
 
@@ -358,7 +388,7 @@ if ( {) {
           description: error.message})
       }
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
   }
         provider: "google"}),
@@ -369,9 +399,44 @@ if ( {) {
           title: "Oh no! Something went wrong.",
           description: error.message})
 
+      }
+    } finally {
+      setIsLoading(false)
+    }
+  };
+        return prevUser;
+      }),;
+      toast({;
+        title: "Profile updated!",;
+        description: "Your profile has been successfully updated."}),;
+      return { error: null }
+    } catch (error) {;
+      console.error("Profile update failed:", error),;
+      toast({;
+        variant: "destructive",;
+        title: "Profile update failed",;
+        description: "There was an issue updating your profile. Please try again."}),;
+      return { error: "Failed to update profile." }
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  const loginWithGoogle = async () => {;
+    setIsLoading(true),;
+    try {;
+      const { data, error } = await supabase.auth.signInWithOAuth({;
+        provider: "google"}),;
+      if (error) {;
+        toast({;
+          variant: "destructive",;
+          title: "Oh no! Something went wrong.",;
+          description: error.message});
+      }
+    } finally {;
+      setIsLoading(false);
+    }
+  },
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   const loginWithFacebook = async () => {
     setIsLoading (true);
@@ -392,21 +457,23 @@ if ( {) {
           title: "Oh no! Something went wrong.",
           description: error.message})
 
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+  },;
+  const loginWithFacebook = async () => {;
+    setIsLoading(true),;
+    try {;
+      const { data, error } = await supabase.auth.signInWithOAuth({;
+        provider: "facebook"}),;
+      if (error) {;
+        toast({;
+          variant: "destructive",;
+          title: "Oh no! Something went wrong.",;
+          description: error.message});
 
       }
     } finally {
       setIsLoading (false);
     }
+
 
 
 
@@ -429,6 +496,7 @@ if ( {) {
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
 
+
         provider: "twitter"});
       if (error) {
         toast({
@@ -443,28 +511,27 @@ if ( {) {
           title: "Oh no! Something went wrong.",
           description: error.message})
 
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+  },;
+  const loginWithTwitter = async () => {;
+    setIsLoading(true),;
+    try {;
+      const { data, error } = await supabase.auth.signInWithOAuth({;
+        provider: "twitter"}),;
+      if (error) {;
+        toast({;
+          variant: "destructive",;
+          title: "Oh no! Something went wrong.",;
+          description: error.message});
 
       }
     } finally {
       setIsLoading (false);
     }
 
-
-
-
-
-
-;
+  }
+  },
+  };
+  },
 
 
   const loginWithWeb3 = async () => {
@@ -492,6 +559,26 @@ if ( {) {
         updatedAt: new Date().toISOString()
       } as UserProfile);
       toast({ title: 'Wallet connected', description: address })
+
+      const accounts = await ethereum.request ({ method: 'eth_requestAccounts' });
+      const address = accounts[0];
+      await ethereum.request ({
+        method: 'personal_sign',
+        params: [address, address];
+      });
+;
+      // Fix: Create a proper UserProfile object;
+      set_user ({
+        id: address;
+        display_name: address;
+        profile_complete: true,
+        email: '', // Add required fields;
+        user_type: 'talent', // Default user type;
+        created_at: new Date ().toISOString (),
+        updated_at: new Date ().toISOString ();
+      } as UserProfile);
+;
+      toast ({ title: 'Wallet connected', description: address });
 
     } catch (error: any) {
       toast ({
@@ -561,12 +648,14 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
     loginWithFacebook;
     loginWithTwitter;

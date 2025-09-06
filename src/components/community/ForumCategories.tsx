@@ -8,6 +8,7 @@
   },
 
 
+
   {
     id: "announcements"
     name: "Announcements"
@@ -16,6 +17,7 @@
     icon: "Megaphone"
 const categories: ForumCategoryInfo[] = [;
   {
+
     id: "getting - hired",
     name: "Getting Hired",
     description: "Tips, strategies, and questions about getting hired on the platform.";
@@ -57,9 +59,14 @@ export const ForumCategories = () => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
 
-
-
-
+      })}
+    </div>
+  )
+}
+export default ForumCategories
+"
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
+export default ForumCategories
 
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
 export default ForumCategories;
@@ -147,6 +154,7 @@ export const ForumCategories = () => {;
   );
 };
 
+
 export default ForumCategories;
 
 
@@ -158,3 +166,4 @@ export default ForumCategories;
 ";
   const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
 export default ForumCategories;
+

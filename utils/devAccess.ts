@@ -18,10 +18,13 @@ type ApiResponse = {
 export type DevRole = 'admin' | 'maintainer' | 'contributor';
 
 export interface DevIdentity {
+
+export interface DevIdentity {;
+
   isAuthenticated: boolean;
 
   roles: DevRole[];
-  userId?: string;
+  user_id?: string;
 }
 
 
@@ -35,16 +38,29 @@ export function getGitStatus(): { connected: boolean; branch?: string } {
     })
       .toString()
       .trim();
-    return { connected: true, branch };
+
+export function getGitStatus (): { connected: boolean; branch?: string } {
+  try {
+    const git_dir = path.join (process.cwd (), '.git');
+    if () return { connected: false }) {
+  $2
+}
+    const branch = exec_sync ('git rev - parse --abbrev - ref HEAD', {
+      stdio: ['ignore', 'pipe', 'ignore'],
+    });
+      .to_string ();
+      .trim ();
+    return { connected: true, branch }
+
   } catch {
     return { connected: false };
   }
 
 }
 
+export function getDevIdentity(req: NextApiRequest): DevIdentity {
 
-
-
+export function getDevIdentity(req: NextApiRequest): DevIdentity {;
 
   // TODO: integrate real auth; for now, check a header and env var for dev
 
@@ -52,6 +68,13 @@ export function getGitStatus(): { connected: boolean; branch?: string } {
   const adminToken = process && process.env.ADMIN_TOKEN;
 
   if (token && adminToken && token === adminToken) {
+
+    return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
+  }
+  return { isAuthenticated: false, roles: [] }
+}
+  if (token && adminToken && token === adminToken) {
+
 
 
 
@@ -68,12 +91,13 @@ export function requireRoles(
   allowed: DevRole[]
 ): DevIdentity | undefined {
   const identity = getDevIdentity(req);
-  if (!identity.isAuthenticated) {
-    res.status(401).json({ error: 'Unauthorized' });
+  if (!identity && identity.isAuthenticated) {
+    res && res.status(401).json({ error: 'Unauthorized' });
     return undefined;
   }
-  const hasRole = identity.roles.some(r => allowed.includes(r));
+  const hasRole = identity && identity.roles.some(r => allowed && allowed.includes(r));
   if (!hasRole) {
+
 
     res.status(403).json({ error: 'Forbidden' });
 
@@ -85,10 +109,12 @@ export function requireRoles(
 }
 
 
+
     return undefined;
   }
   return identity;
 }
+
 
 
 
@@ -104,4 +130,5 @@ export function requireRoles(
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

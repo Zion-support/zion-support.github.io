@@ -32,9 +32,9 @@ class HealthChecker {
   }
 
   async checkBuildFiles() {
-    const buildDir = path.join(process.cwd(), '.next');
-    const exists = fs.existsSync(buildDir);
-    this.results.push({
+    const buildDir = path && path.join(process && process.cwd(), '.next');
+    const exists = fs && fs.existsSync(buildDir);
+    this && this.results.push({
       check: 'Build Files',
       status: exists ? 'PASS' : 'FAIL',
       message: exists ? 'Build directory exists' : 'Build directory missing'
@@ -43,13 +43,13 @@ class HealthChecker {
   }
 
   async checkDependencies() {
-    const packageJsonPath = path.join(process.cwd(), 'package.json');
-    const nodeModulesPath = path.join(process.cwd(), 'node_modules');
+    const packageJsonPath = path && path.join(process && process.cwd(), 'package && package.json');
+    const nodeModulesPath = path && path.join(process && process.cwd(), 'node_modules');
     
-    const packageExists = fs.existsSync(packageJsonPath);
-    const nodeModulesExists = fs.existsSync(nodeModulesPath);
+    const packageExists = fs && fs.existsSync(packageJsonPath);
+    const nodeModulesExists = fs && fs.existsSync(nodeModulesPath);
     
-    this.results.push({
+    this && this.results.push({
       check: 'Dependencies',
       status: packageExists && nodeModulesExists ? 'PASS' : 'FAIL',
       message: packageExists && nodeModulesExists ? 'Dependencies installed' : 'Missing dependencies'
@@ -59,10 +59,10 @@ class HealthChecker {
   }
 
   async checkEnvironmentVariables() {
-    const envFile = path.join(process.cwd(), '.env.local');
-    const envExists = fs.existsSync(envFile);
+    const envFile = path && path.join(process && process.cwd(), '.env && env.local');
+    const envExists = fs && fs.existsSync(envFile);
     
-    this.results.push({
+    this && this.results.push({
       check: 'Environment Variables',
       status: envExists ? 'PASS' : 'WARN',
       message: envExists ? 'Environment file exists' : 'No environment file found'
@@ -72,15 +72,15 @@ class HealthChecker {
   }
 
   async runAllChecks() {
-    console.log('🏥 Running Health Checks...');
+    console && console.log(' Running Health Checks...');
     
-    await this.checkBuildFiles();
-    await this.checkDependencies();
-    await this.checkEnvironmentVariables();
+    await this && this.checkBuildFiles();
+    await this && this.checkDependencies();
+    await this && this.checkEnvironmentVariables();
     
-    const passed = this.results.filter(r => r.status === 'PASS').length;
-    const failed = this.results.filter(r => r.status === 'FAIL').length;
-    const warnings = this.results.filter(r => r.status === 'WARN').length;
+    const passed = this && this.results.filter(r => r && r.status === 'PASS').length;
+    const failed = this && this.results.filter(r => r && r.status === 'FAIL').length;
+    const warnings = this && this.results.filter(r => r && r.status === 'WARN').length;
     
 
     console && console.log('\n📊 Health Check Results: '),
@@ -90,13 +90,13 @@ class HealthChecker {
 
     });
     
-    console.log(`\n📈 Summary: ${passed} passed, ${failed} failed, ${warnings} warnings`);
+    console && console.log(`\n Summary: ${passed} passed, ${failed} failed, ${warnings} warnings`);
     
     return {
       passed,
       failed,
       warnings,
-      results: this.results
+      results: this && this.results
     };
   }
 

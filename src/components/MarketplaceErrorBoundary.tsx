@@ -1,3 +1,4 @@
+
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -107,6 +108,7 @@ function MarketplaceErrorFallback(): any ({;
 
 
 
+
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a
@@ -125,15 +127,31 @@ function MarketplaceErrorFallback(): any ({;
             href="mailto: support@example.com" 
             className="text-primary hover:underline"
 
-
-
-
-            contact support
-          </a>
-        </div>
-      </div>
-    </div>
-
+interface MarketplaceErrorBoundaryProps {
+  children: React.ReactNode
+export function MarketplaceErrorBoundary({
+  children
+}: MarketplaceErrorBoundaryProps) {
+  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
+    // Log boundary errors to Sentry
+    logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, {
+      componentStack: errorInfo.componentStack
+    })
+    Sentry.withScope(scope => {
+      scope.setTag('errorBoundary', 'marketplace')
+      scope.setContext('errorInfo', {
+        componentStack: errorInfo.componentStack |undefined
+      })
+      scope.setLevel('error')
+      Sentry.captureException(error)
+    })
+  }
+      >
+      {children}
+    </ErrorBoundary>
+  )
+}   return (
+    <ErrorBoundary
 
 
       // Re - call SWR mutate ('*') to refresh all cached data;
@@ -211,6 +229,7 @@ function MarketplaceErrorBoundary() {
 
   }
       >;
+
       {children}
 
 
@@ -260,4 +279,5 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
 
     </ErrorBoundary>);
 }
+
 

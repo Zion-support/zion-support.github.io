@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -30,11 +34,9 @@ const tabs: Array<{
   { key: 'python', label: 'Python' }
 ];
 
+export default function CodeSamples({ samples }: Props) {
 
-
-
-
-
+export default function CodeSamples({ samples }: Props) {;
 
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl');
   const sampleMap = Object.fromEntries(samples.map(s => [s.language, s.code]));
@@ -46,12 +48,16 @@ const tabs: Array<{
 
 
 
+
 const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
+
 
   { key: 'curl', label: 'cURL' }
   { key: 'javascript', label: 'JavaScript' }
   { key: 'python', label: 'Python' }]
 export default function CodeSamples({ samples }: Props) {
+
+
 
 
 
@@ -72,8 +78,10 @@ export default function CodeSamples(): any ({ samples }: Props) {;
   return (
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
   const sampleMap = Object && Object.fromEntries(samples && samples.map((s) => [s && s.language, s && s.code]));
@@ -85,12 +93,14 @@ export default function CodeSamples(): any ({ samples }: Props) {;
 
 
 
+
           <button
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
             key={t.key}
             className={`px-3 py-1 rounded border ${active === t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
@@ -115,6 +125,7 @@ export default function CodeSamples(): any ({ samples }: Props) {;
 
 
 
+
           <button
             key={t && t.key}
             className={`px-3 py-1 rounded border ${active === t && t.key ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-secondary border-high-contrast-secondary'}`}
@@ -123,6 +134,7 @@ export default function CodeSamples(): any ({ samples }: Props) {;
             {t && t.label}
           </button>;
         ))}
+
 
 
 
@@ -196,6 +208,7 @@ function CodeSamples() {
   )
 
 
+
 }
 
 
@@ -204,4 +217,5 @@ function CodeSamples() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

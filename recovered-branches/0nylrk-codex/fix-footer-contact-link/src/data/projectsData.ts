@@ -1,5 +1,7 @@
 
-
+import { Project } from "@/types/projects";
+export const PROJECTS: Project[] = [
+  {
 
 
 
@@ -23,6 +25,7 @@ import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
 
 
+
 import { Project } from '@/types/projects';
 import { Project } from "@/types/projects",
 export const PROJECTS: Project[] = [
@@ -31,6 +34,7 @@ export const PROJECTS: Project[] = [
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -51,6 +55,17 @@ export const PROJECTS: Project[] = [
     },
     talent_profile: {
 
+      full_name: 'Alexandra Chen',
+      professional_title: 'Senior AI Engineer',
+    },
+  },
+];
+}];      title: "AI Dashboard Development";
+      description: "Develop dashboards using React and integrate ML models"
+    };
+    talent_profile: {
+      full_name: "Alexandra Chen";
+      professional_title: "Senior AI Engineer"
 
       full_name: "Alexandra Chen",
       professional_title: "Senior AI Engineer"
@@ -74,6 +89,8 @@ export const PROJECTS: Project[] = [;
     talent_profile: {;
       full_name: "Alexandra Chen";
       professional_title: "Senior AI Engineer";
+
+
 
     }
   }

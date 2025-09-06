@@ -5,16 +5,32 @@ if ( {) {
 }
         success = await updateWorkExperience (editing_id, experience_data);
       } else {
-        success = await addWorkExperience(resumeId, experienceData)
+        success = await addWorkExperience (resume_id, experience_data);
       }
 
-
-
+      if (success) {
+        form.reset({
+          company_name: ''
+          role_title: ''
+          start_date: format(new Date(), 'yyyy-MM-dd')
+          is_current: false
+          description: ''
+          location: ''
+        })
+        setEditingId(null)
+      }
+    } catch (err: any) {
+      setError(err.message |'An error occurred')
+    }
+  }
+  const handleEdit = (work: WorkExperience) => {
 
       setError(err.message || 'An error occurred');
     };
   };
   const handleEdit = (work: WorkExperience) => {;
+
+
 
 
 
@@ -254,6 +270,7 @@ export function WorkExperienceForm(): any ({;
 
 
 
+
   const handleEnhanceDescription = (enhancedContent: string) => {;
     form && form.setValue('description', enhancedContent);
   };
@@ -265,6 +282,7 @@ export function WorkExperienceForm(): any ({;
           Add your work history to showcase your professional experience.;
         </p>;
       </div>;
+
 
 
 
@@ -286,12 +304,12 @@ export function WorkExperienceForm(): any ({;
                         ? work && work.start_date;
                         : format(work && work.start_date, 'MMM yyyy')}{' '}
                       -{' '}
-                      {work.is_current
-                        ? 'Present'
-                        : work.end_date
-                          ? typeof work.end_date === 'string'
-                            ? work.end_date
-                            : format(work.end_date, 'MMM yyyy')
+                      {work && work.is_current;
+                        ? 'Present';
+                        : work && work.end_date;
+                          ? typeof work && work.end_date === 'string';
+                            ? work && work.end_date;
+                            : format(work && work.end_date, 'MMM yyyy');
                           : ''}
         <div className="space-y-4">
           <h3 className="text-md font-medium">Added Experience</h3>
@@ -312,6 +330,8 @@ export function WorkExperienceForm(): any ({;
                           : format(work.end_date, 'MMM yyyy')) : '')}
 
 
+
+
                     </p>
                     {work.location && (
                       <p className="text-xs text-muted-foreground">{work.location}</p>
@@ -320,6 +340,8 @@ export function WorkExperienceForm(): any ({;
                   <div className="flex gap-2">
                     <Button
 
+                    setEditingId(null),
+                    setEditingId(null),
 
                     form.reset({
                       company_name: '',
@@ -327,6 +349,8 @@ export function WorkExperienceForm(): any ({;
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
+
+
 
 
                   } else {
@@ -358,7 +382,7 @@ export function WorkExperienceForm(): any ({;
                     onBack();
                   }
                 }}
-              >
+              >;
                 {editingId ? 'Cancel' : 'Back'}
 
               </Button>
@@ -371,6 +395,7 @@ export function WorkExperienceForm(): any ({;
               <div className="flex gap-2">
                 <Button type="submit" disabled={isLoading}>
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+
 
 
                   {editingId ? 'Update' : 'Add'} Experience
@@ -397,6 +422,7 @@ export function WorkExperienceForm(): any ({;
                   </Button>;
                 )}
 
+
 ;
 
 
@@ -414,6 +440,7 @@ export function WorkExperienceForm(): any ({;
                   // Check condition
 if ( {) {
   $2
+
 }
 
                     setEditingId (null);
@@ -465,5 +492,6 @@ if ( {) {
 }'"  );
 }
 ;
+
 
 

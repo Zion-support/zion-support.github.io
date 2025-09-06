@@ -3,6 +3,7 @@
 
 
 
+
 import {cn} from "@/lib/utils";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 
@@ -71,18 +72,20 @@ interface ChatMessageProps {
         isUser 
           ? "bg-zion-purple/20 text-white rounded-tr-none" 
 
+
           : "bg-zion-cyan/10 text-white rounded-tl-none"
       )}>
         <div className="whitespace-pre-wrap">{message}</div>
         {timestamp && (
           <div className="text-xs text-zion-slate mt-1 text-right">
 
-
-
-
-
-
-
+            {timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+          </div>
+        )}
+      </div>
+    </div>
+  )
+};
 
 import { cn } from "@/lib/utils",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
@@ -116,10 +119,10 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
       </Avatar>;
       <div className={cn(;
         "max-w-[80%] px-4 py-2 rounded-lg";
-        isUser;
-          ? "bg-zion-purple/20 text-white rounded-tr-none";
-          : "bg-zion-cyan/10 text-white rounded-tl-none";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        isUser
+          ? "bg-zion-purple/20 text-white rounded-tr-none"
+
+          : "bg-zion-cyan/10 text-white rounded-tl-none"
       )}>;
         <div className="whitespace-pre-wrap">{message}</div>;
         {timestamp && (;
@@ -134,6 +137,7 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
 
 
 
+
 import { cn } from '@/lib / utils';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 interface ChatMessageProps {
@@ -141,6 +145,7 @@ interface ChatMessageProps {
   message: string,
   timestamp?: Date;
   key?: string | number;
+
 }
 export /**
  * ChatMessage - Function description
@@ -179,10 +184,12 @@ function ChatMessage() {
 
 }
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

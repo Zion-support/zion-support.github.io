@@ -13,6 +13,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button  } from '@/components/ui/button';
 import { toast } from '@/hooks/use-toast';
 
+
+
 import { useEffect } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { useReferrals } from '@/hooks/useReferrals'
@@ -27,6 +29,16 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from '@/components/ui/button'
 import { toast } from '@/hooks/use-toast'
 import { Share, Users } from 'lucide-react'
+
+import { useRouter } from 'next/router', // Changed from useNavigate
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from '@/components/ui/card'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 import { useRouter } from 'next/router'; // Changed from useNavigate
 
@@ -84,6 +96,7 @@ export default function ReferralsPage() {
   return (
 
 
+
     <div className="container max-w-7xl py-10">
 
 
@@ -130,6 +143,7 @@ export default function ReferralsPage() {;
     stats,
     getReferralLink,
     copyReferralLink,
+
 
 
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">
@@ -184,6 +198,7 @@ export default function ReferralsPage() {;
 
           />
           
+
 
           <Tabs defaultValue="referrals" className="w-full">
             <TabsList className="w-full grid grid-cols-2">
@@ -292,6 +307,7 @@ export default function ReferralsPage() {;
             onShare={shareOnSocialMedia}
 
           />;
+
           <Tabs defaultValue="referrals" className="w-full">;
             <TabsList className="w-full grid grid-cols-2">;
               <TabsTrigger value="referrals" className="flex items-center gap-2">;
@@ -480,5 +496,7 @@ if ( {) {
 }'";
 }
 ;
+
+
 
 

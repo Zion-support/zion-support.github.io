@@ -13,16 +13,13 @@ type QuoteRequestCardProps = {
 }
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 
-
-
-
+  quote
+  onViewDetails
+  onMarkAsResponded
   quote,
   onViewDetails,
   quote,
   onViewDetails,
-
-
-
 
   onMarkAsResponded,
   onToggleArchive
@@ -51,12 +48,13 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
   // Format date for display;
   const format_date = (date_string: string, ) =>: any {
     try {
-      return format(new Date(dateString), 'PP')
+      return format (new Date (date_string), 'PP');
     } catch (e) {
       return dateString
     }
   }
   },
+
 
 
 
@@ -112,10 +110,12 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   );
 };
 "};
 };
+
 
 
 
@@ -218,6 +218,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
                 <ArchiveIcon className="h-4 w-4" />;
               )}
 
+
             </Button>;
           </div>;
         </div>;
@@ -225,6 +226,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
     </Card>;
   );
 };
+
 
 
 
@@ -292,3 +294,4 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
 }
 "},
 }
+

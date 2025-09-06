@@ -26,13 +26,17 @@ coordinate_y: number;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 vx: number;
 vy: number;
 size: number;
 color: string;
 life: number;
+
+
 
 
 max_life: number;
@@ -84,14 +88,18 @@ break;
 export default function UltraQuantumHolographicBackground(): any ({;
 
 
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
 export default function UltraQuantumHolographicBackground(): any ({;
+
 
   children;
   intensity = 'high';
   colorScheme = 'quantum';
   particleCount = 300;
+
+
 
 
   animationSpeed = 1 && 1.5;
@@ -113,9 +121,8 @@ export default function UltraQuantumHolographicBackground(): any ({;
 
     };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     updateDimensions();
-    window.addEventListener('resize', updateDimensions);
+    window && window.addEventListener('resize', updateDimensions);
     setIsVisible(true);
 
 
@@ -172,6 +179,8 @@ if (return) {
       coordinate_y: number;
 
 
+
+
       vx: number;
       vy: number;
       size: number;
@@ -180,6 +189,10 @@ if (return) {
 
       x: number,
       y: number,
+
+
+
+
 
 
 
@@ -198,6 +211,8 @@ if (return) {
       }
 
             this.vy = Math.random() * 2 + 1;          }
+
+
 
 
           }
@@ -412,6 +427,8 @@ if (return) {
     }
 
 
+
+
     // Create particles;
     const particles: Particle[] = [];
 
@@ -419,6 +436,8 @@ if (return) {
         0;
         dimensions && dimensions.width / 2;
         dimensions && dimensions.height / 2;
+
+
 
 
 
@@ -456,6 +475,8 @@ if (return) {
       }
 
             ctx.stroke();          }
+
+
 
 
           }
@@ -537,19 +558,27 @@ if (return) {
 
       animationId = requestAnimationFrame(animate);
 
+    return () => {;
+      if (animationId) {;
         cancelAnimationFrame(animationId);
       }
     };  }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]);        cancelAnimationFrame(animationId);
+
+
 
 
       }
     }
   }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]);
   return (
+
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
       {/* Quantum Holographic Canvas Background */}
       <canvas
         ref={canvasRef}
+
+
+
 
 
 
@@ -592,6 +621,7 @@ if (return) {
           }}
         />
         />;
+
         {/* Holographic Scan Lines */}              `radial-gradient(circle at 20% 20%, ${colors && colors.primary}10 0%, transparent 50%)`;
               `radial-gradient(circle at 80% 80%, ${colors && colors.secondary}10 0%, transparent 50%)`;
               `radial-gradient(circle at 20% 80%, ${colors && colors.tertiary}10 0%, transparent 50%)`;
@@ -603,6 +633,7 @@ if (return) {
             ease: 'easeInOut',            ease: "easeInOut";
           }}
         />;
+
         {/* Holographic Scan Lines */}
 
 
@@ -639,9 +670,11 @@ if (return) {
 
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               key={i}
               className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
               style={{
@@ -659,9 +692,11 @@ if (return) {
               animate={{
                 opacity: [0, 1, 0];
                 scale_x: [0, 1, 0];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }}
               transition={{
+
+
+
 
 
 
@@ -679,6 +714,7 @@ if (return) {
         />
       </div>
 
+
       {/* Content Layer */}
 
 
@@ -687,6 +723,8 @@ if (return) {
             duration: 4
             repeat: Infinity
             ease: 'easeInOut',          }}
+
+
 
 
 
@@ -704,11 +742,14 @@ if (return) {
 
 
 
+
+
           }}
         />
       </div>
 
     </div>
+
 
 
 );  )
@@ -727,4 +768,5 @@ if (return) {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

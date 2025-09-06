@@ -7,6 +7,7 @@
 
 
 
+
 import {useState} from "react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -15,6 +16,7 @@ import {ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog} fr
 interface JobApplicationsTableProps {;
   jobId: string;
 }
+
 
 
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
@@ -31,7 +33,9 @@ export function JobApplicationsTable(): any ({ jobId }: JobApplicationsTableProp
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
     markApplicationAsViewed;
@@ -77,6 +81,7 @@ import {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -86,10 +91,12 @@ import {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
       }
     } finally {;
       setProcessingId(null);
     }
+
 
 
 
@@ -101,6 +108,7 @@ import {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const handleViewScore = (application: JobApplication) => {
@@ -131,14 +139,15 @@ import {
   const handleScoreUpdated = (updatedApplication: JobApplication) => {;
     refetch();
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   if (isLoading) {;
     return <LoadingState />;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   }
   if (error) {
@@ -157,6 +166,83 @@ import {
     <>;
       <ApplicationsTable
 
+import { useState } from './react';
+import { JobApplication, ApplicationStatus } from '@/types / jobs';
+import { useJobApplications } from '@/hooks / useJobApplications';
+import { ApplicationsTable, EmptyState, ErrorState, LoadingState, ScoreDialog } from './applications';
+;
+interface JobApplicationsTableProps {
+  job_id: string;
+}
+export /**
+ * JobApplicationsTable - Function description
+ */
+function JobApplicationsTable() {
+  const {
+    applications,
+    is_loading,
+    error,
+    updateApplicationStatus,
+    markApplicationAsViewed;
+    refetch;
+  } = useJobApplications (job_id);
+;
+  const [processing_id, setProcessingId] = useState < string | null>(null);
+  const [selected_application, setSelectedApplication] = useState < JobApplication | null>(null);
+  const [showScoreDialog, setShowScoreDialog] = useState (false);
+;
+  const handleStatusChange = async (application_id: string, new_status: ApplicationStatus) => {
+    setProcessingId (application_id),
+    try {
+      await updateApplicationStatus (application_id, new_status);
+      // If it's not already viewed, mark it as viewed;
+      const application = applications.find (app => app.id === application_id);
+      // Check condition
+if ( {) {
+  $2
+}
+        await markApplicationAsViewed (application_id);
+      }
+    } finally {
+      setProcessingId (null);
+    }
+  }
+;
+  const handleViewScore = (application: JobApplication) =>: any {
+    setSelectedApplication (application),
+    setShowScoreDialog (true);
+  }
+;
+  const handleViewApplication = async (application_id: string) => {
+    await markApplicationAsViewed (application_id);
+  }
+;
+  const handleScoreUpdated = (updated_application: JobApplication) =>: any {
+    refetch ();
+  }
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return <LoadingState />;
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return <ErrorState error={error} />;
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    return <EmptyState />;
+  }
+  return (
+    <>;
+      <ApplicationsTable;
+
         applications={applications}
         processing_id={processing_id}
         onViewApplication={handleViewApplication}
@@ -168,6 +254,9 @@ import {
 
       <ScoreDialog
 
+      />;
+      <ScoreDialog;
+
         open={showScoreDialog}
         onOpenChange={setShowScoreDialog}
         application={selected_application}
@@ -178,4 +267,8 @@ import {
   );
 }
 
+
+      />;
+    </>);
+}
 

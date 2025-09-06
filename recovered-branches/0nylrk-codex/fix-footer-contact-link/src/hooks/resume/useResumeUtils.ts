@@ -1,7 +1,8 @@
 
 
-
-
+import { format  } from 'date-fns';
+import { toast } from '@/hooks/use-toast';
+// Utility function to format dates for DB operations
 
 import {format} from 'date-fns';
 import {toast} from '@/hooks/use-toast';
@@ -14,6 +15,8 @@ export const formatDateForDB = (date: Date | string | undefined) => {
 // Error handling with toast
 export const handleResumeError = (e: any, errorMessage: string) => {;
   console.error(`Error: ${errorMessage}`, e);
+
+
 
 
 
@@ -53,6 +56,16 @@ export const handleResumeError = (e: any, errorMessage: string) => {
 export const showSuccessToast = (title: string, description: string) => {
   toast({
 
+    title
+    description
+  });
+  return true
+}
+
+    title,
+    description
+  }),
+  return true
 
 },
 import { format } from 'date-fns',;
@@ -87,6 +100,7 @@ export const showSuccessToast = (title: string, description: string) => {;
 export default UseResumeUtils;
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -97,5 +111,6 @@ export default UseResumeUtils;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

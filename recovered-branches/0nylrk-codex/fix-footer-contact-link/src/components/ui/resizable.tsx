@@ -52,14 +52,17 @@ const ResizableHandle = ({
 
 
 
+
 import { GripVertical } from &quot;lucide-react & quot;
 import * as ResizablePrimitive from &quot;react - resizable - panels & quot;
+
 ;
 import { cn } from &quot;@/lib / utils & quot;
 
 
 
 ;
+
 
 
 
@@ -98,6 +101,7 @@ export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 

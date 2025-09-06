@@ -31,6 +31,7 @@ interface CertificationsListProps {;
 
 
 
+
 export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
   if (certifications && certifications.length === 0) {;
 
@@ -108,6 +109,7 @@ interface CertificationsListProps {
           </CardContent>;
         </Card>;
       ))}
+
 
     </div>;
   );
@@ -213,5 +215,7 @@ if ( {) {
     </div>);
 }
 ;
+
+
 
 

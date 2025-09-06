@@ -1,8 +1,30 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import OpenAI from 'openai',;
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 
+
+
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now(),
+  const bucket = ipToRequests[ip] || { timestamps: [] },
+  // Drop old timestamps
+  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS),
+  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS,
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+// In-memory simple rate limiter (per IP);
+const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes
+const RATE_LIMIT_MAX_REQUESTS = 15;
+const ipToRequests: Record<string, { timestamps: number[] }> = {};
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const bucket = ipToRequests[ip] || { timestamps: [] };
+  // Drop old timestamps;
+  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS);
+  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS;
 
   if (!limited) {
     bucket.timestamps.push(now);
@@ -12,14 +34,18 @@ import OpenAI from 'openai';
   ipToRequests[ip] = bucket;
   return limited;
 
+
+
   ipToRequests[ip] = bucket,
   return limited
   ipToRequests[ip] = bucket;
   return limited;
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -83,7 +109,9 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
 
 
 
+
 ;
+
 
 
 
@@ -92,8 +120,8 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
   };
 };
 
-
-
+    console.error('Operator error', err);
+    return res.status(500).json({ error: 'Internal Server Error' });
 
   }
 }
@@ -144,11 +172,13 @@ export default async function handler(req, res) {
 
   
 
+
 }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

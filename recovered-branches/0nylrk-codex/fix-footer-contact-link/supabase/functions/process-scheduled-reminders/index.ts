@@ -9,9 +9,11 @@
 
 
 
+
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
@@ -22,7 +24,9 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -162,8 +166,8 @@ serve(async (req: Request) => {
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
 
-
-
+  }
+});
 
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
@@ -297,6 +301,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -305,6 +310,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 });

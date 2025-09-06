@@ -20,7 +20,7 @@ const { execSync, spawn } = require(
 const cron = require(
   'node-cron')';
 // // console.log(
-  '🚀 "Build": Automation Starting...\n')';
+  ' "Build": Automation Starting...\n')';
 class: BuildAutomation {
   constructor() {
     this.projectRoot = process.cwd();

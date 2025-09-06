@@ -48,14 +48,39 @@ const pricingRanges = [
 export default function ComprehensiveServicesShowcase2025() {
 import React, { useState } from 'react';
 
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion, AnimatePresence} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search, Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart,} from 'lucide-react';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
+export default function ComprehensiveServicesShowcase2025() {;
+import { motion, AnimatePresence } from 'framer-motion';
+import {;
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
+  Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search,;
+  Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart;
+} from 'lucide-react',;
+import { comprehensiveRealServices2025 } from '../data/2025-comprehensive-real-services';
+const contactInfo = {;
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
+};
+const categories = [;
+  'All ServicesAI & Machine LearningCustomer SuccessSupply ChainFinancial PlanningSales IntelligenceHR AnalyticsDecision Intelligence';
+  'Content MarketingCRM & Customer IntelligenceBusiness Intelligence';
+];
+const pricingRanges = [;
+  'All PricesUnder $300$300 - $500$500 - $800$800+';
+];
+export default function ComprehensiveServicesShowcase2025(req, res) {
+  try {
 
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices');
@@ -86,7 +111,48 @@ import React, { useState } from 'react';
         case '$800+':;
           priceMatch = price > 800;
 
-
+          break;
+      }
+    }
+    const searchMatch =
+      service.name.toLowerCase().includes(searchQuery.toLowerCase()) |
+      service.description.toLowerCase().includes(searchQuery.toLowerCase()) |
+      service.category.toLowerCase().includes(searchQuery.toLowerCase());
+    return categoryMatch && priceMatch && searchMatch;  });
+  // Sort services
+  const sortedServices = [...filteredServices].sort((a, b) => {
+    switch (sortBy) {
+      case 'name':
+        return a.name.localeCompare(b.name);
+      case 'price':
+        return (
+          parseInt(a.price.replace('$', '')) -
+          parseInt(b.price.replace('$', ''))
+        );      case 'rating':
+        return b.rating - a.rating;
+      case 'popularity':
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+      default:
+        return 0;    }
+  });
+  const getPriceRange = (price: string) => {
+    const numPrice = parseInt(price.replace('$', ''));
+    if (numPrice < 300) return 'Under $300';
+    if (numPrice <= 500) return '$300 - $500';
+    if (numPrice <= 800) return '$500 - $800';
+    return '$800+';
+  }
+  const getCategoryIcon = (category: string) => {
+    const categoryData = categories.find(cat =>
+      category.toLowerCase().includes(cat.id.toLowerCase())
+    );
+    return categoryData ? categoryData.icon : Globe;
+  }
+  const getCategoryColor = (category: string) => {
+    const categoryData = categories.find(cat =>
+      category.toLowerCase().includes(cat.id.toLowerCase())
+    );
+    return categoryData ? categoryData.color : 'from-gray-500 to-gray-600';  }
 
 
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
@@ -149,7 +215,9 @@ import React, { useState } from 'react';
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -292,7 +360,9 @@ import React, { useState } from 'react';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 </div>
@@ -307,7 +377,6 @@ import React, { useState } from 'react';
                 <div className="text-center">
                   <div className="text-3xl font-bold text-green-400 mb-2">400%</div>
                   <div className="text-gray-400">Average ROI</div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <div className='text-gray-400'>Real Services</div>
               </div>
@@ -423,6 +492,226 @@ import React, { useState } from 'react';
 
                 onChange={e => setSortBy(e && e.target.value as any)}
                 className='px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500';
+
+      default:;
+        return 0;    }
+  });
+;
+  const getPriceRange = (price: string) =>: any {
+    const num_price = parse_int (price.replace ('$', ''));
+    // Check condition
+if (return 'Under $300') {
+  $2
+}
+    // Check condition
+if (return '$300 - $500') {
+  $2
+}
+    // Check condition
+if (return '$500 - $800') {
+  $2
+}
+    return '$800+';
+  }
+;
+  const getCategoryIcon = (category: string) =>: any {
+    const category_data = categories.find (cat =>;
+      category.toLowerCase ().includes (cat.id.toLowerCase ()));
+    return category_data ? category_data.icon : Globe;
+  }
+;
+  const getCategoryColor = (category: string) =>: any {
+    const category_data = categories.find (cat =>;
+      category.toLowerCase ().includes (cat.id.toLowerCase ()));
+    return category_data ? category_data.color : 'from - gray - 500 to - gray - 600';  }
+;
+  return (
+    <>;
+      <Head>;
+        <title > Comprehensive Services Showcase 2025 | Zion Tech Group</title>;
+        <meta;
+          name='description';
+          content='Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with cutting - edge technology.';
+        />;
+        <meta;
+          name='keywords';
+          content='AI services, micro SAAS, IT solutions, business automation, customer success, supply chain optimization, financial planning, sales intelligence';
+        />;
+        <meta;
+          property='og:title';
+          content='Comprehensive Services Showcase 2025 | Zion Tech Group';
+        />;
+        <meta;
+          property='og:description';
+          content='Explore our comprehensive portfolio of real, innovative micro SAAS services, IT solutions, and AI platforms.';
+        />;
+        <meta;
+          property='og:url';
+          content='https://ziontechgroup.com / comprehensive - services - showcase - 2025';
+        />;
+        <meta property='og:type' content='website' />;
+        <link;
+          rel='canonical';
+          href='https://ziontechgroup.com / comprehensive - services - showcase - 2025';
+        />;
+      </Head>;
+      {/* Hero Section */}
+      <section className='relative py - 20 bg - gradient - to - br from - black via - gray - 900 to - black overflow - hidden'>;
+        {/* Animated Background */}
+        <div className='absolute inset - 0'>;
+          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_30%_20%, rgba (120, 119, 198, 0.1), transparent_50%)]' />;
+          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_70%_80%, rgba (34, 211, 238, 0.05), transparent_50%)]' />;
+          <div className='absolute top - 1/4 left - 1/4 w - 32 h - 32 bg - cyan - 500 / 5 rounded - full blur - 3xl animate - pulse'></div>;
+          <div className='absolute top - 3/4 right - 1/4 w - 24 h - 24 bg - blue - 500 / 5 rounded - full blur - 3xl animate - pulse delay - 1000'></div>;
+          <div className='absolute bottom - 1/4 left - 1/3 w - 20 h - 20 bg - purple - 500 / 5 rounded - full blur - 3xl animate - pulse delay - 2000'></div>;
+        </div>;
+        <div className='relative z - 10 container mx - auto px - 4 text - center'>;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+          >;
+            <h1 className='text - 5xl lg:text - 7xl font - bold mb - 6'>;
+              <span className='bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent'>;
+                Comprehensive Services;
+              </span>;
+              <br />;
+              <span className='text - white'>Showcase 2025</span>;
+            </h1>;
+            <p className='text - xl lg:text - 2xl text - gray - 300 max - w-4xl mx - auto mb - 8 leading - relaxed'>;
+              Discover our portfolio of{' '}
+              <span className='text - cyan - 400 font - semibold'>;
+                real, innovative micro SAAS services;
+              </span>;
+              , cutting - edge IT solutions, and revolutionary AI platforms.;
+              Transform your business with;
+              <span className='text - blue - 400 font - semibold'>;
+                {' '}
+                proven technology;
+              </span>{' '}
+              that delivers measurable results.;
+            </p>;
+            {/* Stats */}
+            <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto mb - 12'>;
+              <div className='text - center'>;
+                <div className='text - 3xl font - bold text - cyan - 400 mb - 2'>;
+                  {comprehensiveRealServices2025.length}+;
+                </div>;
+                <div className='text - gray - 400'>Real Services</div>;
+              </div>;
+              <div className='text - center'>;
+                <div className='text - 3xl font - bold text - blue - 400 mb - 2'>;
+                  $2.5B+;
+                </div>;
+                <div className='text - gray - 400'>Market Coverage</div>;
+              </div>;
+              <div className='text - center'>;
+                <div className='text - 3xl font - bold text - purple - 400 mb - 2'>;
+                  95%;
+                </div>;
+                <div className='text - gray - 400'>AI Accuracy</div>;
+              </div>;
+              <div className='text - center'>;
+                <div className='text - 3xl font - bold text - green - 400 mb - 2'>;
+                  400%;
+                </div>;
+                <div className='text - gray - 400'>Average ROI</div>;
+              </div>;
+            </div>;
+            {/* Contact CTA */}
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center'>;
+              <Link;
+                href='/contact';
+                className='px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - semibold rounded - xl hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 shadow - 2xl shadow - cyan - 500 / 25';
+              >;
+                Get Started Today;
+                <ArrowRight className='w - 5 h - 5 ml - 2 inline' />;
+              </Link>;
+              <a;
+                href={`tel:${contact_info.mobile}`}
+                className='px - 8 py - 4 border border - cyan - 500 / 30 text - cyan - 400 font - semibold rounded - xl hover:bg - cyan - 500 / 10 transition - all duration - 300';
+              >;
+                <Phone className='w - 5 h - 5 mr - 2 inline' />;
+                {contact_info.mobile}
+              </a>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Filters and Search Section */}
+      <section className='py - 12 bg - gray - 900 border - b border - gray - 800'>;
+        <div className='container mx - auto px - 4'>;
+          <div className='flex flex - col lg:flex - row gap - 6 items - center justify - between'>;
+            {/* Search */}
+            <div className='relative flex - 1 max - w-md'>;
+              <Search className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400 w - 5 h - 5' />;
+              <input;
+                type='text';
+                placeholder='Search services...';
+                value={search_query}
+                on_change={e => setSearchQuery (e.target.value)}
+                className='w - full pl - 10 pr - 4 py - 3 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent';
+              />;
+            </div>;
+            {/* Category Filter */}
+            <div className='flex flex - wrap gap - 2'>;
+              {categories.map (category => (
+                <button;
+                  key={category}
+                  on_click={() => setSelectedCategory (category)}
+                  className={`px - 4 py - 2 rounded - lg text - sm font - medium transition - all duration - 300 ${
+                    selected_category === category;
+                      ? 'bg - cyan - 500 text - white shadow - lg shadow - cyan - 500 / 25';
+                      : 'bg - gray - 800 text - gray - 300 hover:bg - gray - 700 hover:text - white';
+                  }`}
+                >;
+                  {category}
+                </button>))}
+            </div>;
+            {/* Price Range Filter */}
+            <div className='flex items - center gap - 2'>;
+              <Filter className='w - 5 h - 5 text - gray - 400' />;
+              <select;
+                value={selectedPriceRange}
+                on_change={e => setSelectedPriceRange (e.target.value)}
+                className='px - 4 py - 2 bg - gray - 800 border border - gray - 700 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - cyan - 500';
+              >;
+                {pricing_ranges.map (range => (
+                  <option key={range} value={range}>;
+                    {range}
+                  </option>))}
+              </select>;
+            </div>;
+            {/* View Mode Toggle */}
+            <div className='flex items - center gap - 2 bg - gray - 800 rounded - lg p - 1'>;
+              <button;
+                on_click={() => setViewMode ('grid')}
+                className={`p - 2 rounded - md transition - all duration - 300 ${
+                  view_mode === 'grid';
+                    ? 'bg - cyan - 500 text - white';
+                    : 'text - gray - 400 hover:text - white';
+                }`}
+              >;
+                <Grid className='w - 5 h - 5' />;
+              </button>;
+              <button;
+                on_click={() => setViewMode ('list')}
+                className={`p - 2 rounded - md transition - all duration - 300 ${
+                  view_mode === 'list';
+                    ? 'bg - cyan - 500 text - white';
+                    : 'text - gray - 400 hover:text - white';
+                }`}
+              >;
+                <List className='w - 5 h - 5' />;
+              </button>;
+            </div>;
+            {/* Sort Options */}
+            <div className='flex items - center gap - 2'>;
+              <span className='text - gray - 400 text - sm'>Sort by:</span>;
+              <select;
+                value={sort_by}
+                on_change={e => setSortBy (e.target.value as any)}
+                className='px - 3 py - 2 bg - gray - 800 border border - gray - 700 rounded - lg text - white text - sm focus:outline - none focus:ring - 2 focus:ring - cyan - 500';
 
 
               >;
@@ -1237,6 +1526,8 @@ import React, { useState } from 'react';
 
 
 
+
+
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2 inline" />
@@ -1503,7 +1794,6 @@ import React, { useState } from 'react';
   }
 }
                   className="px-6 py-3 bg-cyan-500 text-white font-semibold rounded-lg hover:bg-cyan-600 transition-all duration-300"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   {contactInfo.website}
                 </a>
@@ -1515,7 +1805,32 @@ import React, { useState } from 'react';
     </>
 );
 
+                href={`mailto:${contactInfo && contactInfo.email}`}
+                className='flex items-center px-6 py-3 border border-cyan-500/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300'>;
+                <Mail className='w-5 h-5 mr-2' />;
+                {contactInfo && contactInfo.email}
+              </a>;
+            </div>;
 
+          <div className="relative z-10 container mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-5xl lg:text-7xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  Comprehensive Services
+                </span>
+                <br />
+                <span className="text-white">Showcase 2025</span>
+              </h1>
+              <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+                Discover our portfolio of <span className="text-cyan-400 font-semibold">real, innovative micro SAAS services</span>;
+                cutting-edge IT solutions, and revolutionary AI platforms. Transform your business with 
+                <span className="text-blue-400 font-semibold"> proven technology</span> that delivers measurable results.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8">
 
                 <a
                   href={`tel:${contactInfo.mobile}`}
@@ -1747,6 +2062,7 @@ export default ComprehensiveServicesShowcase2025;
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
             <div className='text-center text-gray-400'>;
@@ -1764,6 +2080,7 @@ export default ComprehensiveServicesShowcase2025;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 

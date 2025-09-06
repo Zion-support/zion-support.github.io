@@ -20,11 +20,11 @@ class CommitAndPush {
   }
   log(message, type = 'INFO') {
     const icons = {
-      "INFO": 'ℹ️',
-      "SUCCESS": '✅',
-      "ERROR": '❌',
-      "WARNING": '⚠️',
-      "PROGRESS": '🔄'};
+      "INFO": '',
+      "SUCCESS": '',
+      "ERROR": '',
+      "WARNING": '',
+      "PROGRESS": ''};
     console.log(`${icons[type]} ${message}`);
   }
   generateCommitMessage() {
@@ -70,29 +70,29 @@ class CommitAndPush {
   createCommitScript() {
     const script = `#!/bin/bash
 set -e
-echo "🚀 Starting git workflow..."
+echo " Starting git workflow..."
 # Check if we're in a git repository
 if [! -d ".git" ]; then
-    echo "❌ Not in a git repository"
+    echo " Not in a git repository"
     exit 1
 fi
 # Add all changes
-echo "📦 Adding changes..."
+echo " Adding changes..."
 git add .
 # Show status
-echo "📊 Current "status": "
+echo " Current "status": "
 git status
 # Commit with message
-echo "💾 Committing changes..."
+echo " Committing changes..."
 git commit -m "${this.commitMessage}"
 # Push to main branch
-echo "🚀 Pushing to main branch..."
+echo " Pushing to main branch..."
 git push origin main
 # Show final status
-echo "✅ Git workflow completed!"
-echo "📊 Final "status": "
+echo " Git workflow completed!"
+echo " Final "status": "
 git status
-echo "📝 Recent commits:"
+echo " Recent commits:"
 git log --oneline -5
 `;
     const scriptPath = path.join(process.cwd(), 'commit-and-push.sh');
@@ -115,7 +115,7 @@ git log --oneline -5
     this.log(`Summary written to ${summaryPath}`, 'SUCCESS');
   }
   async run() {
-    this.log('🚀 Starting git workflow preparation...', 'PROGRESS');
+    this.log(' Starting git workflow preparation...', 'PROGRESS');
     if (!this.checkGitRepository()) {
       this.log('Cannot proceed without git repository', 'ERROR');
       return;
@@ -123,8 +123,8 @@ git log --oneline -5
     this.createGitCommands();
     this.createCommitScript();
     this.generateSummary();
-    this.log('✅ Git operations prepared successfully', 'SUCCESS');
-    this.log('📋 Next "steps": ', 'INFO');
+    this.log(' Git operations prepared successfully', 'SUCCESS');
+    this.log(' Next "steps": ', 'INFO');
     this.log('1. Review the generated files', 'INFO');
     this.log('2. "Run": chmod +x commit-and-push.sh', 'INFO');
     this.log('3. "Execute": ./commit-and-push.sh', 'INFO');

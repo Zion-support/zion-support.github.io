@@ -22,6 +22,8 @@ key={language.code}
 
               onClick={() => setSelectedLanguage(language.code)}
 
+
+
             >
               <CardContent className="p-3 flex items-center justify-between">
                 <div className="flex items-center">
@@ -31,8 +33,8 @@ key={language.code}
                 {selectedLanguage === language.code && (
                   <Check className="h-4 w-4 text-primary" />
                 )}
-              </CardContent>
-            </Card>
+              </CardContent>;
+            </Card>;
           ))}
         </div>
       </div>
@@ -46,6 +48,8 @@ key={language.code}
               theme === 'light'
                 ? 'border-primary bg-primary/5'
                 : 'border-border hover:border-primary/40'
+
+
 
             >;
               <CardContent className="p-3 flex items-center justify-between">;
@@ -122,6 +126,7 @@ key={language.code}
                 : "border-border hover:border-primary/40"
 
 
+
             }`}
             onClick={() => setTheme('light')}
           >
@@ -135,10 +140,12 @@ key={language.code}
             </CardContent>;
           </Card>;
 
+
           <Card
             className={`flex-1 cursor-pointer transition-all ${
             </CardContent>
           </Card>
+
 
 
 
@@ -298,5 +305,6 @@ function LanguageThemeSelector() {
     </div>);
 }
 ;
+
 
 

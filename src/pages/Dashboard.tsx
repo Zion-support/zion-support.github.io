@@ -127,13 +127,14 @@ const GuidedTour = dynamic (
     ssr: false
   }
 
-
-
-
+)
+// Lazy load notification functions
+const loadNotificationFunctions = () => import('@/utils/notifications')
+export default function Dashboard() {
+  const { logout } = useAuth()
 const loadNotificationFunctions = () => import('@/utils/notifications');
 export default function Dashboard() {;
   const { logout } = useAuth();
-
 
   const { user, loading } = useRequireAuth(); // This will handle authentication and redirects
   const { toast } = useToast()
@@ -144,6 +145,7 @@ export default function Dashboard() {;
   const { favorites } = useFavorites()
   // Type assertion to work around Supabase User type limitations
   const userWithExtendedProps = user as any
+
 
 
   const userType = null;
@@ -282,6 +284,7 @@ if ( {) {
         description: 'Please try again'
         variant: 'destructive'
       })
+
     }
   }
 }
@@ -470,6 +473,7 @@ export default function Dashboard() {;
     );
   }
 
+
 ;
   // useRequireAuth will handle redirect if user is not authenticated;
   if (!user) {;
@@ -479,10 +483,12 @@ export default function Dashboard() {;
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>;
           <p className="text-gray-600">Redirecting to login...</p>;
 
+
         </div>;
       </div>;
     );
   }
+
 
       const { createTestNotification } = await loadNotificationFunctions ();
       const result = await createTestNotification (user?.id ?? '');
@@ -515,49 +521,80 @@ if ( {) {
       <Header />;
 
 ;
+
   const handleTestNotification = async () => {;
     try {;
-      const { createTestNotification } = await loadNotificationFunctions(),;
-      const result = await createTestNotification(user?.id ?? ""),;
-      if (result.success) {;
+      const { createTestNotification } = await loadNotificationFunctions();
+      const result = await createTestNotification(user?.id ?? '');
+      if (result && result.success) {;
         toast({;
-          title: "Test notification created",;
-          description: "Check your notification center"});
+          title: 'Test notification created',;
+          description: 'Check your notification center',;
+        });
       } else {;
         toast({;
-          title: "Error creating test notification",;
-          description: "Something went wrong",;
-          variant: "destructive"});
+          title: 'Error creating test notification',;
+          description: 'Something went wrong',;
+          variant: 'destructive',;
+        });
       }
     } catch (error) {;
       toast({;
-        title: "Error loading notification system",;
-        description: "Please try again",;
-        variant: "destructive"});
+        title: 'Error loading notification system',;
+        description: 'Please try again',;
+        variant: 'destructive',;
+      });
+      const { createTestNotification } = await loadNotificationFunctions ();
+      const result = await createTestNotification (user?.id ?? '');
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+          title: 'Test notification created',
+          description: 'Check your notification center',
+        });
+      } else {
+        toast ({
+          title: 'Error creating test notification',
+          description: 'Something went wrong',
+          variant: 'destructive',
+        });
+      }
+    } catch (error) {
+      toast ({
+        title: 'Error loading notification system',
+        description: 'Please try again',
+        variant: 'destructive',
+      });
     }
-  },;
-  return (;
+  }
+  return (
     <>;
       <Header />;
-      <div className="min-h-screen bg-zion-blue">;
-        <div className="container mx-auto px-4 py-8">;
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
+      <div className='min-h-screen bg-zion-blue'>;
+        <div className='container mx-auto px-4 py-8'>;
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
             {/* Left Sidebar - User Profile */}
-            <div className="lg:col-span-1">;
-              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">;
-                <div className="flex flex-col items-center text-center">;
-                  <div className="w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4">;
-                    {userWithExtendedProps?.displayName?.split(' ').map((name: string) => name[0]).join('') || userWithExtendedProps?.email?.charAt(0).toUpperCase()}
-                  </div>
-                  <h2 className="text-xl font-bold text-white">{userWithExtendedProps?.displayName || userWithExtendedProps?.email}</h2>
-                  <p className="text-zion-slate-light mb-2">{user?.email}</p>
-                  
-                  <Badge
-                    className="bg-zion-purple text-white mb-4"
-                  >
-                    {userType ? userType.charAt(0).toUpperCase() + userType.slice(1) : "New User"}
+            <div className='lg:col-span-1'>
+              <div className='bg-zion-blue-dark rounded-xl p-6 mb-6'>
+                <div className='flex flex-col items-center text-center'>
+                  <div className='w-24 h-24 rounded-full bg-zion-purple flex items-center justify-center text-2xl font-bold text-white mb-4'>
+                    {userWithExtendedProps?.displayName
+                      ?.split(' ')
+                      .map((name: string) => name[0])
+                      .join('') |
+                      userWithExtendedProps?.email?.charAt(0).toUpperCase()}                  </div>
+                  <h2 className='text-xl font-bold text-white'>
+                    {userWithExtendedProps?.displayName |
+                      userWithExtendedProps?.email}
+                  </h2>
+                  <p className='text-zion-slate-light mb-2'>{user?.email}</p>
+                  <Badge className='bg-zion-purple text-white mb-4'>
+                    {userType
+                      ? userType.charAt(0).toUpperCase() + userType.slice(1)
+                      : 'New User'}
                   </Badge>
-                  
                   <Button
                     id="profile-link"
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
@@ -565,11 +602,13 @@ if ( {) {
                   >
 
 
+
                     <UserCheck size={16} />
                     Edit Profile
                   </Button>
                 </div>
               </div>
+
 
             <div className='lg:col-span-1'>;
               <div className='bg-zion-blue-dark rounded-xl p-6 mb-6'>;
@@ -636,13 +675,25 @@ if ( {) {
 
 
 
+
+
               {/* Stats & Metrics */}
-              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
-                <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-zion-slate-light">Profile Completion</span>
-                    <span className="text-zion-cyan font-medium">65%</span>
+              <div className='bg-zion-blue-dark rounded-xl p-6 mb-6'>;
+                <h3 className='text-lg font-bold text-white mb-4'>;
+                  Your Activity;
+                </h3>;
+                <div className='space-y-4'>;
+                  <div className='flex justify-between items-center'>;
+                    <span className='text-zion-slate-light'>;
+                      Profile Completion;
+                    </span>;
+                    <span className='text-zion-cyan font-medium'>65%</span>;
+                  </div>;
+                  <div className='w-full bg-zion-blue rounded-full h-2'>;
+                    <div
+                      className='bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full'
+                      style={{ width: '65%' }}
+                    ></div>
                   </div>
                   <div className="w-full bg-zion-blue rounded-full h-2">
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>
@@ -652,6 +703,7 @@ if ( {) {
                   
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Points</span>
+
 
 
 
@@ -708,6 +760,7 @@ if ( {) {
                   </div>
                   
                   {/* Test notification buttons */}
+
                   <div className="flex flex-col gap-2 mt-4">
                     <Button 
                       className="w-full flex items-center justify-center gap-2"
@@ -725,7 +778,24 @@ if ( {) {
                         try {
                           const { createOnboardingNotification } = await loadNotificationFunctions(),
 
-
+                          await createOnboardingNotification({
+                            userId: user?.id ?? "",
+                            missingMilestone: 'profile_completed',
+                          await createOnboardingNotification({
+                            userId: user?.id ?? "",
+                            missingMilestone: 'profile_completed',
+                            userRole: roleForTour,
+                          })
+                          toast({
+                            title: 'Onboarding notification sent',
+                            description: 'Check your notification center',
+                          })
+                        } catch (error) {
+                          toast({
+                            title: 'Error sending notification',
+                            description: 'Please try again',
+                            variant: 'destructive',
+                          })
 
                             userRole: roleForTour
                           }),
@@ -740,12 +810,14 @@ if ( {) {
                             variant: "destructive"})
 
 
+
                         }
                       }}
                     >
                       <Settings size={16} className="text-zion-purple" />
                       Send Onboarding Nudge
                     </Button>
+
 
                       onClick={handleTestNotification}>;
                       <Send size={16} className='text-zion-cyan' />;
@@ -899,6 +971,8 @@ if ( {) {
 
 
 
+
+
                   Recent Notifications
                 </h3>
                 <div className="space-y-4">
@@ -941,6 +1015,8 @@ if ( {) {
                       <LogOut size={16} className='mr-2' />;
 
             
+
+
 
 
 
@@ -1140,6 +1216,8 @@ if ( {) {
 
 
 
+
+
                       </div>
                       <span className="text-xs text-center text-zion-slate-light">Newcomer</span>
                     </div>
@@ -1168,9 +1246,11 @@ if ( {) {
 
 
 
+
                         ))}
                       </ul>
                     )}
+
 
                         className='text-zion-purple underline'>;
                         className='border - none bg - transparent text - center';
@@ -1225,9 +1305,11 @@ if ( {) {
                           <li key={f.item_id}>{f.item_id}</li>;
 
 
+
                         ))}
                       </ul>
                     )}
+
                     <div className='mt-2 text-right'>
                       <Link
                         href='/wishlist'
@@ -1272,10 +1354,11 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className
 }className="text - zion - cyan" /> Send Test Notification </Button> <Button;
 
 }> <Settings size= {
-  16 "
-}className="text-zion-purple" /> async () => {
+  16 ";
+}className="text - zion - purple" /> async () => {
   try {
   const {
+
 
 
 
@@ -1291,6 +1374,7 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className
 
                     </div>;
                   </div>;
+
                   <div className="bg-zion-blue-dark rounded-xl p-6">;
                     <h3 className="text-lg font-bold text-white mb-4 flex items-center">;
                       <Key className="mr-2" size={18} /> API Keys;
@@ -1387,5 +1471,7 @@ function Dashboard() { const stats = [{ name: 'Active Services', value: '12', ic
 ));
 }
 ;
+
+
 
 

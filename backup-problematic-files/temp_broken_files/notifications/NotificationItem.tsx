@@ -16,25 +16,25 @@ import { Notification, NotificationType } from '@/context/notifications',;
 export const getTypeIcon = (type:NotificationType) => {;
   switch (type) {;
     case 'message':;
-      return <span className="text-blue-500">💬</span>,;
+      return <span className="text-blue-500"></span>,;
     case 'quote_request':;
-      return <span className="text-purple-500">📝</span>,;
+      return <span className="text-purple-500"></span>,;
     case 'booking_confirmation':;
-      return <span className="text-green-500">✅</span>,;
+      return <span className="text-green-500"></span>,;
     case 'hire_request':;
-      return <span className="text-zion-purple">🤝</span>,;
+      return <span className="text-zion-purple"></span>,;
     case 'onboarding':;
-      return <span className="text-zion-cyan">🚀</span>,;
+      return <span className="text-zion-cyan"></span>,;
     case 'system':;
-      return <span className="text-yellow-500">⚠️</span>,;
+      return <span className="text-yellow-500"></span>,;
     case 'project_update':;
-      return <span className="text-indigo-400">📌</span>,;
+      return <span className="text-indigo-400"></span>,;
     case 'milestone_complete':;
-      return <span className="text-green-500">🏁</span>,;
+      return <span className="text-green-500"></span>,;
     case 'order_status':;
-      return <span className="text-orange-500">📦</span>,;
+      return <span className="text-orange-500"></span>,;
     default:;
-      return <span className="text-gray-500">📣</span>;
+      return <span className="text-gray-500"></span>;
   }
 },;
 ;
@@ -168,20 +168,12 @@ onDismiss ;
 }) : 'Just now' ;
 }</p> {;
   notification.action url && notification.action text && (<Button variant="link" size="sm" className="text-zion-cyan p-0 h-auto" onClick={;
-<<<<<<< HEAD
-:temp_broken_files/notifications/NotificationItem.tsx
-  handleClick ;"}> </Button>) ";"}</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
-};"'"
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   handleClick ;
 }> </Button>) ";
 }</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
 };
 '"
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/notifications/NotificationItem.tsx
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

@@ -5,6 +5,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 
 
+
   res.status(200).json({ ok: true })
 
 
@@ -23,6 +24,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

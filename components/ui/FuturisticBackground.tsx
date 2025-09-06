@@ -8,25 +8,32 @@ export default function FuturisticBackground() {
 
 
 
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React from 'react';
+
 export default function FuturisticBackground() {;
   return (
     <div className='pointer-events-none absolute inset-0 overflow-hidden'>;
@@ -57,6 +64,9 @@ export default function FuturisticBackground() {;
 }
 
 
+import React from 'react';
+
+export default function FuturisticBackground() {
 
   return (
     <div className='pointer - events - none absolute inset - 0 overflow - hidden'>;
@@ -87,6 +97,7 @@ function FuturisticBackground() {
 
 
 
+
 export default function FuturisticBackground() {
   return (
     <div className=&quot;pointer-events-none absolute inset-0 overflow-hidden&quot;>
@@ -108,11 +119,10 @@ export default function FuturisticBackground() {_return (
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
+
     </div>
   );
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+}
+}
 

@@ -4,6 +4,8 @@
 
 
 
+
+
       } catch {
         // ignore;
       }
@@ -45,7 +47,10 @@ if ( {) {
 
 
 
+
+
   return res.status(200).json({ logs: remote });
+
 
 }
 };
@@ -62,4 +67,5 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

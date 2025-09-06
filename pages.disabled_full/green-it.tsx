@@ -9,6 +9,7 @@ interface GreenitProps {
   // Add props here as needed
 
 }
+export default function Greenit({ }: GreenitProps) {
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 

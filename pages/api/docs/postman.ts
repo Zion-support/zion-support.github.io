@@ -1,10 +1,15 @@
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+import v1 from '../../../data/api-docs/v1';
+function toPostman() {
+  return {
+import type { NextApiRequest, NextApiResponse } from "next";
+import v1 from "../../../data/api-docs/v1";
+function toPostman() {
+  return {
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const postmanCollection = {
 
     info: {
 
@@ -14,7 +19,8 @@
       section && section.endpoints.map((ep) => ({
         name: `${section && section.title} - ${ep && ep.title}`,
         request: {
-          method: ep && ep.method,
+
+          method: ep.method
           header: [
             {
               key: "Authorization",
@@ -35,6 +41,53 @@
     ),
     variable: [
 
+
+
+}
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+
+  res.setHeader("Content-Type", "application/json");
+  res.status(200).json(toPostman());
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const postmanCollection = {
+    info: {
+      name: 'Zion Tech Group API',
+      description: 'Postman collection for Zion Tech Group API',
+      schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
+    },
+    item: [
+      {
+        name: 'Health Check',
+        request: {
+          method: 'GET',
+          header: [],
+          url: {
+            raw: '{{baseUrl}}/api/health',
+            host: ['{{baseUrl}}'],
+            path: ['api', 'health']
+          }
+        }
+      }
+    ],
+    variable: [
+      {
+        key: 'baseUrl',
+        value: 'https://api.ziontechgroup.com'
+      }
+    ]
+  };
+      { key: "baseUrl", value: "https://api.zion.os" },
+      { key: "token", value: "" },
+    ],
+  };
+}
+
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
+  res.setHeader("Content-Type", "application/json");
+  res.status(200).json(toPostman());
+}
 
   res.status(200).json(postmanCollection);
   } catch (error) {
@@ -115,5 +168,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 
 

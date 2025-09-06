@@ -15,10 +15,28 @@ function ProfileBadges() {
 function ProfileBadges() {
   const labels = getBadgeLabels (profile || undefined);
   return <VerifiedBadge labels={labels} />;
-
 }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
+
+import type { KycProfile } from '../../utils/kyc';
+import { getBadgeLabels } from '../../utils/kyc';
+import { VerifiedBadge } from './VerifiedBadge';
+export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {
+
+
+
+
+export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
+  const labels = getBadgeLabels(profile || undefined);
+  return <VerifiedBadge labels={labels} />;export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
+  const labels = getBadgeLabels(profile || undefined);
+  return <VerifiedBadge labels={labels} />
+}
+}
+
+}
 

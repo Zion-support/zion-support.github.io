@@ -11,6 +11,7 @@ import { AnalysisResult } from './types',
  */
 
 
+
 export const analyzeContent = (content: string): AnalysisResult => {
 
   const reasons: string[] = [],
@@ -33,6 +34,7 @@ export const analyzeContent = (content: string): AnalysisResult => {
     reasons.push('Contains external payment links')
   }
   // Check for excessive capitalization (potential scam)
+
   const capitalRatio = (content.match(/[A-Z]/g) |[]).length / content.length;
   if (capitalRatio > 0.3 && content.length > 20) {
     reasons.push('Excessive capitalization')
@@ -70,12 +72,14 @@ export const analyzeContent = (content: string): AnalysisResult => {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   }
   // Check for poor grammar with repetitive punctuation

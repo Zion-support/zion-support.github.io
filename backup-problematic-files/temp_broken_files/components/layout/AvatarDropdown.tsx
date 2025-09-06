@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { use_user } from '../../providers / UserProvider';
@@ -12,6 +13,7 @@ function AvatarDropdown() {
 if (return null) {
   $2
 }
+
 
   return (
     <div className=&quot;relative & quot;>;
@@ -27,7 +29,8 @@ if (return null) {
         </div>)}
     </div>);
 }
-=======
+
+
 
 
 export default function AvatarDropdown() {_const { user, _logout} = useUser()
@@ -35,8 +38,10 @@ export default function AvatarDropdown() {_const { user, _logout} = useUser()
   const [open, setOpen] = useState(false)
   if (!user) return null
 
+
 ;
   return (;
+
 
     <div className=&quot;relative&quot;>
       <button onClick={() => setOpen(o => !o)} className=&quot;h-8 w-8 rounded-full bg-gradient-to-br from-indigo-500 to-cyan-500 text-white text-xs font-semibold grid place-items-center ring-1 ring-white/40&quot;>
@@ -53,5 +58,7 @@ export default function AvatarDropdown() {_const { user, _logout} = useUser()
 
   );}
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+

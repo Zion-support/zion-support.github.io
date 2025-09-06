@@ -7,6 +7,7 @@ import { Badge } from '@/components / ui / badge';
 
 
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
@@ -96,6 +97,7 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
 
 
 
+
 import React, { useState } from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -149,6 +151,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
         <Card key={item.id} className="overflow-hidden">
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -156,6 +159,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -196,6 +200,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 
 
 
+
+
                   )}
 
                 </button>;
@@ -212,6 +218,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -219,6 +226,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -230,6 +238,18 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 </button>
               </div>
 
+              <div className='mt-3 flex flex-wrap gap-1'>
+                {item.badges.map((badge, index) => (
+                  <Badge
+                    key={index}
+                    variant='outline'
+                    className='text-xs font-normal'                  >                      <AvatarImage src={item.image} alt={item.title} />
+                      <AvatarFallback>{item.title.charAt(0).toUpperCase()}</AvatarFallback>
+                    </Avatar>
+                  ) : (
+                    <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">
+                      <span className="text-primary font-semibold">JOB</span>
+                    </div>
 
                   )}
                   <div>
@@ -248,6 +268,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   )}
                 </button>
               </div>
+
 
 
 
@@ -276,6 +297,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   ) : (
                     <Bookmark className="h-5 w-5 text-muted-foreground" />
                   )}
+
                 </button>
               </div>
               <div className="mt-3 flex flex-wrap gap-1">
@@ -301,36 +323,65 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   >;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                     {badge}
                   </Badge>
                 ))}
               </div>
 
+              <p className='mt-3 text-sm line-clamp-2'>{item.description}</p>
+              <div className='mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground'>
+              
+              <p className="mt-3 text-sm line-clamp-2">{item.description}</p>
+              
+              <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
 
                 {item.location && (
+                  <div className='flex items-center gap-1'>
+                    <MapPin className='h-3 w-3' />
+                    <span>{item.location}</span>
+                  </div>
+                )}
+                
+                {item.price && (
+                  <div className='flex items-center gap-1'>
+                    <DollarSign className='h-3 w-3' />
+                    <span>{item.price}</span>
+                  </div>
+                )}
+                
+                {item.timePosted && (
+                  <div className='flex items-center gap-1'>
+                    <Clock className='h-3 w-3' />
+                    <span>{item.timePosted}</span>
+                  </div>
+                )}
+
+                {item.match && (
+                  <div className='ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5'>                    {item.match}% match                {item.location && (
                   <div className="flex items-center gap-1">
                     <MapPin className="h-3 w-3" />
                     <span>{item.location}</span>
                   </div>
                 )}
-                
                 {item.price && (
                   <div className="flex items-center gap-1">
                     <DollarSign className="h-3 w-3" />
                     <span>{item.price}</span>
                   </div>
                 )}
-                
                 {item.timePosted && (
                   <div className="flex items-center gap-1">
                     <Clock className="h-3 w-3" />
                     <span>{item.timePosted}</span>
                   </div>
                 )}
-
-
+                {item.match && (
+                
+                {item.match && (
 
                   <div className="ml-auto bg-primary/10 text-primary rounded-full px-2 py-0.5">
                     {item.match}% match
@@ -407,6 +458,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
             <div className="border-t border-border p-3 flex justify-end">
               <Button 
                 size="sm"
+
 
 
 
@@ -578,3 +630,4 @@ function BrowseCards() {
 }
 
 ;
+

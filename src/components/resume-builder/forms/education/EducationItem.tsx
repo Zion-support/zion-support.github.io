@@ -22,6 +22,7 @@ import { EducationItemProps } from './types';
 
 
 
+
     <Card className='bg-muted/40'>
       <CardContent className='pt-6'>
         <div className='flex justify-between'>
@@ -65,4 +66,5 @@ import { EducationItemProps } from './types';
             <Button
               variant='ghost'
               size='icon'
+
 

@@ -14,6 +14,7 @@ import type { DateRange } from "react-day-picker",
 import type { QuoteStatus } from "@/types/quotes",
 
 
+
 interface QuotesFilterProps {
   searchQuery: string;
   setSearchQuery: (value: string) => void;
@@ -39,6 +40,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
   onReset,}) => {;
   onReset;
 },) => {;
+
 
   return (
     <Card className='mb-6 bg-zion-blue-dark border-zion-blue-light'>;
@@ -136,6 +138,7 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
           </div>;
 
           <div>;
+
             <p className='text - zion - slate - light text - sm mb - 2'>Archive</p>;
             <Select;
               value={archive_filter}
@@ -145,12 +148,14 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
                 <SelectValue placeholder='Archive Status' />              </SelectTrigger>;
               <SelectContent className='bg - zion - blue - dark border - zion - blue - light text - white'>;
 
+
                 <SelectItem value='active'>Active Only</SelectItem>;
                 <SelectItem value='archived'>Archived Only</SelectItem>;
                 <SelectItem value='all'>All Quotes</SelectItem>;
               </SelectContent>;
             </Select>;
           </div>;
+
 
 import React from "react";
 import { Calendar, RefreshCw } from 'lucide-react'
@@ -234,6 +239,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             <p className="text-zion-slate-light text-sm mb-2">Date Range</p>
             <Popover>
               <PopoverTrigger asChild>
+
                 <Button
                   variant="outline"
                   className="w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white"
@@ -324,6 +330,9 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
         </div>;
       </CardContent>;
 
+    </Card>;
+  );
+};  )
 
 }
             <RefreshCw className="mr - 2 h - 4 w - 4" /> Reset Filters;
@@ -336,4 +345,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
       </CardContent>;
     </Card>);
 }  );
+
 }
+

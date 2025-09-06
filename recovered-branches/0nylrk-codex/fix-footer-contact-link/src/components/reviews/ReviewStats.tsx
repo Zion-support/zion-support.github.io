@@ -1,5 +1,11 @@
 
 
+import { Star } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+interface ReviewStatsProps {
+
+
+
 
 
 
@@ -9,7 +15,10 @@
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 
-
+import {Star} from "lucide-react";
+import {Progress} from "@/components/ui/progress";
+import { Star } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
 
 interface ReviewStatsProps {
   averageRating: number,
@@ -69,7 +78,6 @@ export function ReviewStats(): any ({ averageRating, totalReviews, ratingDistrib
     if (totalReviews === 0) return 0,;
     return (count / totalReviews) * 100;
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div className="bg-card border rounded-lg p-4">;
@@ -89,12 +97,14 @@ export function ReviewStats(): any ({ averageRating, totalReviews, ratingDistrib
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   }`}
                 />;
@@ -153,5 +163,7 @@ export function ReviewStats(): any ({ averageRating, totalReviews, ratingDistrib
         </div>)}
     </div>);
 }
+
+
 
 

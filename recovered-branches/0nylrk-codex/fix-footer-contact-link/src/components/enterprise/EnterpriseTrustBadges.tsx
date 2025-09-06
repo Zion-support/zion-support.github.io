@@ -1,5 +1,8 @@
 
 
+import React from "react";
+import { Shield, Lock, Award, CheckCircle } from "lucide-react";
+
 export function EnterpriseTrustBadges() {
   return (
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">
@@ -12,10 +15,10 @@ export function EnterpriseTrustBadges() {
             We maintain the highest standards of data protection and compliance
           </p>
 
+import React from "react";
+import { Shield, Lock, Award, CheckCircle } from "lucide-react";
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -38,15 +41,16 @@ export function EnterpriseTrustBadges() {
         </div>
       </div>
 
-
-
     </section>
   );
 }
-
-
-
-
+    </section>;
+  );
+}
+    </section>
+  )
+import React from "react",;
+import { Shield, Lock, Award, CheckCircle } from "lucide-react";
 
 export function EnterpriseTrustBadges() {;
 
@@ -91,6 +95,8 @@ export function EnterpriseTrustBadges() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

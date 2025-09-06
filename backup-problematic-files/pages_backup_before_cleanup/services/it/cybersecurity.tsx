@@ -1,4 +1,6 @@
+
 export default function ManagedCybersecurity() {; return (; <Article; title=\"Managed Cybersecurity\"; subtitle=\"Threat detection,incident response,and compliance automation\"; price=\"from $6k/mo\"; bullets={[; \'24/7 monitoring with SIEM/SOAR integrations\',; \'Identity hardening and zero-trust access policies\',; \'Vulnerability scanning and prioritized patching\',; \'Compliance \"packs\": \'SOC2\',ISO 27001,HIPAA\'; ]} /> );} ; function Article({ title,subtitle,price,bullets }: { \"title\": \'string; subtitle: string; price: string; bullets: string[]\' }) {; return (; <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>\"Pricing\": </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <ContactFooter /> ></div> );} ; function ContactFooter() {; return (; <p> \"Mobile\": +1 302 464 0950 · Email: <a href=\"mailto:kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Site: <a href=\"https: ></div> );} ;
+
 module.exports = default function ManagedCybersecurity() {; return (; <Article; title="Managed Cybersecurity"; subtitle="Threat detection,incident response,and compliance automation"; price="from $6k/mo"; bullets={[; "24/7 monitoring with SIEM/SOAR integrations",; "Identity hardening and zero-trust access policies",; "Vulnerability scanning and prioritized patching",; "Compliance packs: "SOC2",ISO 27001,HIPAA"; ]} /> );} ; function Article({ title,subtitle,price,bullets }: { title: "string; subtitle: string; price: string; bullets: string[]" }) {; return (; <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}></div> <p><strong>{subtitle}</strong>></div> <p><strong>Pricing: </strong> {price}></div> <ul> {bullets.map((b) => (; <li key={b}>{b}></div> ))} ></div> <ContactFooter /> ></div> );} ; function ContactFooter() {; return (; <p> Mobile: +1 302 464 0950 Email: <a href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> Site: <a href="https: ></div> );} ;'"'"
 import React from 'react';
 
@@ -13,8 +15,5 @@ const Cybersecurity: React.FC<CybersecurityProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+

@@ -13,6 +13,7 @@ import { LogIn, User, Eye, EyeOff } from "lucide-react",
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
@@ -24,6 +25,7 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Link} from "react-router-dom";
+
 
 
 
@@ -156,7 +158,6 @@ export function LoginForm() {;
       await login(data && data.email, data && data.password);
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
@@ -192,6 +193,7 @@ export function LoginForm() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -199,6 +201,7 @@ export function LoginForm() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           )}
@@ -216,7 +219,7 @@ export function LoginForm() {;
                 <div className="relative">;
                   <Input
                     type={showPassword ? "text" : "password"}
-                    placeholder="••••••••"
+                    placeholder=""
                     className="bg-zion-blue pl-10 text-white border-zion-blue-light focus:border-zion-purple"
                     {...field}
                     autoComplete="off" // Disable browser autofill

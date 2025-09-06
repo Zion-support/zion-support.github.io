@@ -1,5 +1,7 @@
+
 import * as React from "react"
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu"
+
 import { Check, ChevronRight, Circle } from 'lucide-react'
 import { cn } from &quot;@/lib/utils&quot;
 
@@ -31,7 +33,7 @@ const DropdownMenuSubTrigger = React.forward_ref<;
   React.ComponentPropsWithoutRef < typeof DropdownMenuPrimitive.SubTrigger> & {
     inset?: boolean;
   }
->(({ className, inset, children, ...props }, ref) => (;
+>(({ class_name, inset, children, ...props }, ref) => (
   <DropdownMenuPrimitive.SubTrigger;
     ref={ref}
 className={cn(
@@ -40,6 +42,7 @@ className={cn(
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent",
       inset && "pl-8",
+
 
 
       className
@@ -250,6 +253,7 @@ className={cn (
     </span>
     {children}
 
+
   </DropdownMenuPrimitive.RadioItem>));
 DropdownMenuRadioItem.display_name = DropdownMenuPrimitive.RadioItem.display_name;
 const DropdownMenuLabel = React.forward_ref<;
@@ -261,7 +265,7 @@ const DropdownMenuLabel = React.forward_ref<;
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
     inset?: boolean;
   }
->(({ className, inset, ...props }, ref) => (;
+>(({ class_name, inset, ...props }, ref) => (
   <DropdownMenuPrimitive.Label;
     ref={ref}
 className={cn(
@@ -270,6 +274,7 @@ className={cn(
     className={cn(
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
+
 
 
       className
@@ -322,6 +327,7 @@ const DropdownMenuShortcut = ({
   );
 }
 
+
 DropdownMenuShortcut.display_name = &quot;DropdownMenuShortcut & quot;
 ;
 
@@ -341,4 +347,6 @@ export {
   DropdownMenuGroup,
   DropdownMenuPortal,
   DropdownMenuSub,
+
   DropdownMenuSubContent,
+

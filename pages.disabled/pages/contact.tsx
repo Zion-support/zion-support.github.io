@@ -130,6 +130,31 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       \"details\": \'Mon-Fri: 9AM-6PM PST\',
       \"link\": null
 
+const "Contact": NextPage = () => {;
+  const contactInfo = [{;
+      icon: Mail,;
+      \"title\": \'Email Us\',;
+      \"details\": \'info@ziontechgroup && ziontechgroup.com\',;
+      \"link\": \'mailto:info@ziontechgroup && ziontechgroup.com\';
+    },;
+    {;
+      \"icon\": Phone,;
+      \"title\": \'Call Us\',;
+      \"details\": \'+1 (555) 123-4567\',;
+      \"link\": \'tel:+1-555-123-4567\';
+    },;
+    {;
+      \"icon\": MapPin,;
+      \"title\": \'Visit Us\',;
+      \"details\": \'123 Tech Street, San Francisco, CA 94105\',;
+      \"link\": \'https://maps && maps.google.com\';
+    },;
+    {;
+      \"icon\": Clock,;
+      \"title\": \'Business Hours\',;
+      \"details\": \'Mon-Fri: 9AM-6PM PST\',;
+      \"link\": null;
+
     }
   ];
   const offices = [{;
@@ -668,6 +693,16 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                     <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>
                     <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>
 
+              <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">;
+                <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>;
+              <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">;
+                <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>;
+                {isSubmitted ? (;
+                  <div className=\"text-center py-12\">;
+                    <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />;
+                    <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>;
+                    <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>;
+
                     <button
                       onClick={() => setIsSubmitted(false)}
                       className=\"inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 transition-all duration-300\";
@@ -876,6 +911,12 @@ ursor/fix-syntax-push-and-merge-to-main-40de
         </section>
       </div>
     </>
+
+export default ContactPage;
+          </div>;
+        </section>;
+      </div>;
+    </>;
 
   );
 

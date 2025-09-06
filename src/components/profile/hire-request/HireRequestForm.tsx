@@ -66,6 +66,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
   
 
 
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -118,6 +119,7 @@ export interface HireRequestFormProps {
 }
 
 
+
 export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess }: HireRequestFormProps) {;
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ ;
     talent, ;
@@ -143,6 +145,7 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
         <DialogFooter className="pt-4">;
           <Button
 
+
         
         <ProjectDetailsField form={form} />
         <TimelineField form={form} />
@@ -154,6 +157,7 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
         <DialogFooter className="pt-4">
           <Button 
 
+
             type="button" 
             variant="outline" 
             onClick={onClose}
@@ -163,10 +167,9 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
 
             onClick = {onClose,}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-            disabled = {isSubmitting,}
-          >
-            Cancel
-          </Button>
+            disabled = {isSubmitting,}>;
+            Cancel;
+          </Button>;
           <Button
             type='submit'
             className='bg-zion-purple hover:bg-zion-purple-dark text-white'          <Button
@@ -196,10 +199,12 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
 
 
+
                 Submitting...
               </>
             ) : (
               'Submit Request'
+
 
             )}
           </Button>
@@ -209,6 +214,7 @@ export function HireRequestForm(): any ({ talent, onClose, initialJobTitle, user
   );
 };
 }
+
 
 
 
@@ -340,5 +346,6 @@ function HireRequestForm() {
     </Form>);
 }
 ;
+
 
 

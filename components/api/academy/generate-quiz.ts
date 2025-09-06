@@ -1,9 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
+  const { moduleTitle, moduleContent } = req && req.body || {};
+  const apiKey = process && process.env.OPENAI_API_KEY;
 
   const fallback = () => {
-    return res.status(200).json({
+    return res && res.status(200).json({
       questions: [
         {
 
@@ -38,11 +40,13 @@ import OpenAI from 'openai';
 
 
 
+
       return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         { role: 'user', content: prompt }];
@@ -53,6 +57,31 @@ import OpenAI from 'openai';
       return res.status(200).json(json);
 
 
+      const json = JSON && JSON.parse(text);
+      return res && res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
+        { role: 'user', content: prompt }];
+      temperature: 0.2});
+    const text = completion.choices?.[0]?.message?.content ?? '';
+    try {
+      const json = JSON.parse(text);
+      return res.status(200).json(json);
+
+      const json = JSON.parse (text);
+      return res.status (200).json (json);        { role: 'system', content: 'You are an expert course designer for founders.' }
+        { role: 'user', content: prompt }];
+      temperature: 0.2});
+;
+    const text = completion.choices?.[0]?.message?.content ?? '';
+    try {
+      const json = JSON.parse (text);
+      return res.status (200).json (json);
+    } catch {
+      return fallback ();
+    }
+  } catch (err) {
+    return fallback ();
+  }    } catch {
+
 
 
       return fallback()
@@ -61,11 +90,18 @@ import OpenAI from 'openai';
     return fallback()
 }
 
+}
+
+}
+
+
 
       return res.status(200).json(json);
 
     const text = completion.choices?.[0]?.message?.content ?? '';
     try {
       const json = JSON.parse(text);
+
+
 
 

@@ -6,6 +6,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
 import { parseUserFromRequest } from "../../../utils/auth";
@@ -29,6 +30,7 @@ export default async function handler(
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
   const user = parseUserFromRequest(req);
 
 
@@ -42,6 +44,12 @@ export default async function handler(
       );
     }
     return res && res.status(200).json({ disputes: filtered });
+
+
+    if (user.role !== 'admin') {
+      filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id)
+    }
+    return res.status(200).json({ disputes: filtered })
 
 
   }
@@ -69,8 +77,11 @@ export default async function handler(
 
 
 
+
+
     }
     const id = generateCaseId();
+
 
 
     let filtered = all;
@@ -114,6 +125,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
       id,
       projectId: String(projectId),
       entityType,
@@ -126,21 +138,65 @@ if ( {) {
       reason: reason as DisputeReason,
       reasonDetails,
       description,
-      attachments: [],
-      messages: [],
-    };
-
-
+    } = req.body || {}
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      return res.status (400).json ({ error: "Missing required fields" });
+    }
+    const id = generateCaseId ();
+    const dispute: DisputeCase = {
+      id
+      projectId: String(projectId)
+      entityType
+      entityId
+      clientUserId: String(clientUserId)
+      talentUserId: String(talentUserId)
+      createdAt: now
+      updatedAt: now
+      status: "Open"
+      reason: reason as DisputeReason
+      reasonDetails
+      description
+      attachments: []
+      messages: []
+    }
     await createDispute(dispute);
     return res && res.status(201).json({ dispute });
   }
 
 
+
+  res && res.setHeader("Allow", "GET,POST");
+  return res && res.status(405).end("Method Not Allowed");
 }
 
-
-
-
+      project_id: String (project_id),
+      entity_type,
+      entity_id,
+      clientUserId: String (clientUserId),
+      talentUserId: String (talentUserId),
+      created_at: now,
+      updated_at: now,
+      status: "Open",
+      reason: reason as DisputeReason,
+      reason_details,
+      description,
+      attachments: [],
+      messages: [],
+    }
+;
+    await create_dispute (dispute);
+    return res.status (201).json ({ dispute });
+  }
+  res.set_header ("Allow", "GET, POST");
+  return res.status (405).end ("Method Not Allowed");
+}
+res.setHeader("Allow", "GET,POST");
+  return res.status(405).end("Method Not Allowed");
+}
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -273,10 +329,12 @@ export default async function handler(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

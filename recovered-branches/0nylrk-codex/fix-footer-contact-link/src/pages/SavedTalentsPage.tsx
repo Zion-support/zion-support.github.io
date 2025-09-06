@@ -2,6 +2,7 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -30,6 +31,7 @@ export default function SavedTalentsPage() {;
 
 
 
+
   useEffect(() => {;
     const fetchSavedTalents = async () => {;
 
@@ -39,43 +41,18 @@ export default function SavedTalentsPage() {;
           console && console.warn("User not authenticated.");
           return;
         }
-
-import { useState, useEffect } from './react';
-import { AppHeader } from '@/layout / AppHeader';
-import { Footer } from '@/components / Footer';
-import { SEO } from '@/components / SEO';
-import { TalentCard } from '@/components / talent / TalentCard';
-import { use_auth } from '@/hooks / use_auth';
-import { supabase } from '@/integrations / supabase / client';
-import { TalentProfile } from '@/types / talent';
-import { toast } from '@/components / ui / use - toast';
-import { use_navigate } from './react-router-dom';
-export default /**
- * SavedTalentsPage - Function description
- */
-function SavedTalentsPage() {
-  const { user } = use_auth ();
-  const [saved_talents, setSavedTalents] = useState < TalentProfile[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-  const navigate = use_navigate ();
-;
-  useEffect (() => {
-    const fetchSavedTalents = async () => {
-      setIsLoading (true);
-      try {
-        // Check condition
-if ( {) {
-  $2
-}
-          console.warn ("User not authenticated.");
-          return;
-        }
-        const { data, error } = await supabase;
-          .from ("saved_talents");
-          .select (
-            `;
-
+        const { data, error } = await supabase
+          .from("saved_talents")
+          .select(
+            `
             talent_profile (
+
+
+        const { data, error } = await supabase;
+          .from("saved_talents");
+          .select(;
+            `;
+            talent_profile (;
 
               id;
               user_id;
@@ -112,9 +89,10 @@ if ( {) {
           setSavedTalents(talentProfiles)
         }
           .eq("user_id", user.id),;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (error) {;
           throw error;
+
+
 
               is_verified);
           `);
@@ -126,6 +104,7 @@ if ( {) {
 }
           throw error;
         }
+
 
         // Check condition
 if ( {) {
@@ -142,6 +121,7 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
       } catch (error) {
 
@@ -187,9 +167,17 @@ if ( {) {
         console.warn("User not authenticated.")
         return
 
-
-
-
+      }
+      if (isCurrentlySaved) {
+        // Remove from saved talents
+        const { error } = await supabase
+          .from('saved_talents')
+          .delete()
+          .eq('user_id', user.id)
+          .eq('talent_id', talentId);
+        if (error) {
+          throw error
+        }
 
       } catch (error) {;
         console.error("Error fetching saved talents:", error),;
@@ -234,7 +222,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
         }
@@ -593,6 +583,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -600,17 +591,17 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
                 key={talent.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 talent={talent}
                 onViewProfile={handleViewProfile}
                 onRequestHire={handleRequestHire}
                 is_saved={true}
                 onToggleSave={handleToggleSave}
                 isAuthenticated={!!user}
-              />
+              />;
             ))}
-          </div>
+          </div>;
         )}
 
       </div>
@@ -622,5 +613,7 @@ if ( {) {
       <Footer />;
     </>);
 }
+
+
 
 

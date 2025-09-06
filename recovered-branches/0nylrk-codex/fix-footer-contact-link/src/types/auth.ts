@@ -1,4 +1,6 @@
 
+export interface UserDetails {
+export interface UserDetails {;
 
   id?: string;
   name?: string;
@@ -17,6 +19,7 @@
 }
 
 
+
   id?: string;
   display_name?: string;
   email: string;
@@ -29,6 +32,7 @@
   avatar_url?: string;
   headline?: string;
   role?: string;
+
 
   permissions?: string[],
   company_id?: string;
@@ -50,6 +54,9 @@
   signOut?: () => Promise<void>;
 
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>
+
+}
+export interface UserDetails {;
 
   id?: string,;
   name?: string,;
@@ -101,6 +108,8 @@ export interface AuthContextType {;
   signIn?: (email: string, password: string) => Promise<{ error: any }>,;
   signOut?: () => Promise<void>;
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>;
+
+
 
 }
 ;

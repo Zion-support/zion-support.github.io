@@ -1,19 +1,27 @@
 
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import {formatDistanceToNow} from "date-fns";
+import {Link} from "react-router-dom";
+import {ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle} from "lucide-react";
+import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {cn} from "@/lib/utils";
+import {ForumPost} from "@/types/community";
+import {ProfileBadge} from "@/components/profile/ProfileBadge";
+import { formatDistanceToNow } from "date-fns",
+import { Link } from "react-router-dom",
+import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { cn } from "@/lib/utils",
+import { ForumPost } from "@/types/community";
+import { ProfileBadge } from "@/components/profile/ProfileBadge";
+import { ForumPost } from "@/types/community",
+import { ProfileBadge } from "@/components/profile/ProfileBadge",
 
 interface PostCardProps {
 
@@ -47,8 +55,8 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
             {post.isAnswered && (
               <CheckCircle className="h-4 w-4 text-green-500 ml-2" />
             )}
-            {post.isPinned && (
-              <Pin className="h-4 w-4 text-amber-500 ml-2" />
+            {post && post.isPinned && (;
+              <Pin className="h-4 w-4 text-amber-500 ml-2" />;
             )}
             {post.isLocked && (
               <Lock className="h-4 w-4 text-red-500 ml-2" />
@@ -115,12 +123,14 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 {tag}
               </Badge>
@@ -171,7 +181,9 @@ export default PostCard;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export default PostCard;

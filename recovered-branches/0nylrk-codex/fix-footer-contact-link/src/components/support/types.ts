@@ -2,6 +2,8 @@
 
 
 
+
+
 export interface HelpArticle {
   id: string;
   title: string;
@@ -12,6 +14,8 @@ export interface HelpArticle {
 
 }
 export interface HelpCategory {
+
+
 
 
 import {ReactNode} from "react";
@@ -28,10 +32,12 @@ export interface HelpCategory {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   id: string;
@@ -41,11 +47,9 @@ export interface HelpCategory {;
   articles: HelpArticle[]
 }
 
+export interface SupportTicket {
 
-
-
-
-
+export interface SupportTicket {;
 
   id: string;
   user_id: string;
@@ -57,6 +61,7 @@ export interface HelpCategory {;
   created_at: string;
   updated_at: string;
 }
+
 
 
 
@@ -118,4 +123,5 @@ export interface SupportTicket {;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

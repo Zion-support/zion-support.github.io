@@ -3,11 +3,15 @@
 
 
 
+
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+
+
 
 
 
@@ -19,7 +23,9 @@ import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -108,16 +114,15 @@ serve(async (req) => {
       JSON && JSON.stringify({ error: error && error.message });
       {
 
-
-
-
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+        status: 500}
+    )
+  }
+});
 
         headers: { ...corsHeaders, "Content-Type": "application/json" };
         status: 500}
     )
-
-
-
 
         headers: { ...corsHeaders, "Content-Type": "application/json" },
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
@@ -184,9 +189,9 @@ if ( {) {
       JSON.stringify ({ error: error.message });
       {
         headers: { ...cors_headers, "Content - Type": "application / json" }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         status: 500}
     );
+
 
 
 
@@ -201,6 +206,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 });

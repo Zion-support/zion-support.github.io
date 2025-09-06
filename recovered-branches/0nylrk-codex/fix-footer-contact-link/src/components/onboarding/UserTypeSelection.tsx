@@ -1,3 +1,5 @@
+import React from 'react';
+
 
 
 
@@ -13,6 +15,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 interface UserTypeOption {
@@ -32,6 +35,7 @@ interface UserTypeSelectionProps {
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
   const userTypes: UserTypeOption[] = [
     {
+
 
 
 
@@ -62,6 +66,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       icon: Star
 
     }
+
     },
 
     {
@@ -129,12 +134,14 @@ export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSe
           return (
             <Button
               key={type.id}
+
               onClick={() => onSelect(type.id)}
               variant="outline"
               className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
                 isSelected
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple"
                   : "border-zion-blue-light hover:border-zion-cyan/50 text-white"
+
               }`}
             >
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
@@ -143,6 +150,17 @@ export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSe
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>
                 <p className="text-sm text-zion-slate-light mt-1">
+
+                  {type.description}
+                </p>
+              </div>
+            </Button>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
 
 import { useState } from "react",;
 import { Briefcase, Star, User } from "lucide-react",;
@@ -199,6 +217,17 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 
 
 
+
+          return (
+            <Button
+              key={type && type.id}
+              onClick={() => onSelect(type && type.id)}
+              variant="outline";
+              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${;
+                isSelected ;
+                  ? "border-zion-purple bg-zion-purple/10 text-zion-purple" ;
+                  : "border-zion-blue-light hover:border-zion-cyan/50 text-white";
+
               }`}
             >;
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>;
@@ -221,7 +250,9 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 }

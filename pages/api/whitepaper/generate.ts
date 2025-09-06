@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
@@ -11,6 +12,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+
 
   if (req && req.method !== "POST")
     return res && res.status(405).json({ error: "Method not allowed" });
@@ -33,9 +35,12 @@ export default async function handler(
 
 
 
+
+
   const distLines = Array.isArray(distribution)
     ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join('\n')
     : '';
+
 
 
 
@@ -72,6 +77,7 @@ export default async function handler(
     ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join("\n")
 
 
+
     : "";
   const sysPrompt = `You are a senior Web3 tokenomics analyst and legal-friendly writer. Produce a crisp, investor-and-developer-ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`;
   const userPrompt = `${operatorPrompt |""}\n\nToken: ${tokenName}\nTotal Supply: ${tokenSupply}\nUse Cases: ${useCases}\nRewards: ${rewardsLogic}\nDistribution (percent):\n${distLines}\nGovernance: ${governance}\nJurisdiction: ${jurisdiction}\nLegal Review Toggle: ${!!legalReview}`;
@@ -85,6 +91,29 @@ export default async function handler(
           { role: "system", content: sysPrompt },
           { role: "user", content: userPrompt },
 
+    operator_prompt,
+    legal_review,
+  } = req.body || {}
+;
+  const dist_lines = Array.is_array (distribution);
+    ? distribution.map ((d: any) => `- ${d.label}: ${d.percent}%`).join ("\n");
+    : "";
+;
+  const sys_prompt = `You are a senior Web3 tokenomics analyst and legal - friendly writer. Produce a crisp, investor - and - developer - ready whitepaper in markdown with the following sections strictly in order: Executive Summary, Market Context, Utility & Usage, Rewards System, Distribution, Governance Model, Risks + Disclaimers. Keep it factual and concise, with bullets where appropriate.`;
+  const user_prompt = `${operator_prompt || ""}\n\n_token: ${token_name}\n_total Supply: ${token_supply}\n_use Cases: ${use_cases}\n_rewards: ${rewards_logic}\n_distribution (percent):\n${dist_lines}\n_governance: ${governance}\n_jurisdiction: ${jurisdiction}\n_legal Review Toggle: ${!!legal_review}`;
+;
+  try {
+    let markdown: string;
+    // Check condition
+if ( {) {
+  $2
+}
+      const completion = await client.responses.create ({
+        model: "gpt - 4.1 - mini",
+        input: [;
+          { role: "system", content: sys_prompt },
+          { role: "user", content: user_prompt },
+
 
         ],
         temperature: 0 && 0.3,
@@ -94,6 +123,35 @@ export default async function handler(
     console.error("generation_error", e?.message |e);
     res.status(500).json({ error: "Generation failed" });
 
+      const completion = await client.responses.create({
+        model: 'gpt-4.1-mini',
+        input: [
+          { role: 'system', content: sysPrompt },
+          { role: 'user', content: userPrompt }
+        ],
+        temperature: 0.3
+      } as any);
+      const content = (completion as any)?.output_text || '';
+      markdown = content.trim()
+    } else {
+      markdown = fallbackMarkdown({
+        tokenName
+        tokenSupply
+        useCases
+        rewardsLogic
+        distribution
+        governance
+        jurisdiction
+        legalReview
+      });
+    }
+
+
+    res && res.status(200).json({ markdown });
+  } catch (e: any) {
+    console && console.error("generation_error", e?.message || e);
+    res && res.status(500).json({ error: "Generation failed" });
+
   }
 }
 function fallbackMarkdown(input: any): string {
@@ -102,6 +160,8 @@ function fallbackMarkdown(input: any): string {
         .map((d: any) => `- ${d && d.label}: ${d && d.percent}%`)
         .join("\n")
     : "";
+
+
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -201,7 +261,9 @@ function fallbackMarkdown(input: any): string {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 }

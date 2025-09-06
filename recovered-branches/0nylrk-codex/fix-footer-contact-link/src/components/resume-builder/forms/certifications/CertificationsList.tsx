@@ -1,12 +1,18 @@
 
 
-
+import { Certification  } from '@/types/resume';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Edit, Trash2  } from 'lucide-react';
+import { format } from 'date-fns';
 
 import {Certification} from '@/types/resume';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
 import {Edit, Trash2} from 'lucide-react';
 import {format} from 'date-fns';
+
+
 
 
 
@@ -35,6 +41,7 @@ interface CertificationsListProps {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -44,6 +51,7 @@ interface CertificationsListProps {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 }
 export function CertificationsList({
   certifications
@@ -51,6 +59,20 @@ export function CertificationsList({
   onDelete
 }: CertificationsListProps) {
   if (certifications.length === 0) {
+
+import {Certification} from '@/types/resume';
+import {Card, CardContent} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {Edit, Trash2} from 'lucide-react';
+import {format} from 'date-fns';
+interface CertificationsListProps {;
+  certifications: Certification[],;
+  onEdit: (cert: Certification) => void,;
+  onDelete: (id: string) => void;
+}
+
+export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
+  if (certifications && certifications.length === 0) {;
 
     return null;
   }
@@ -111,10 +133,30 @@ if ( {) {
                     </>;
 
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
+                </p>
+                <p className="text-xs text-muted-foreground mt-1">
+                  Issued:{" "}
+                  {cert.issue_date
+                    ? typeof cert.issue_date === "string"
+                      ? cert.issue_date
+                      : format(cert.issue_date, "MMM yyyy")
+                    : "N/A"}
+                  {cert.expiration_date && (
+                    <>
+                      {" "}
+                      · Expires:{" "}
+                      {typeof cert.expiration_date === "string"
+                        ? cert.expiration_date
+                        : format(cert.expiration_date, "MMM yyyy")}
+                    </>
+                  Issued: {cert.issue_date ? (typeof cert.issue_date === 'string' 
+                    ? cert.issue_date 
+                    : format(cert.issue_date, 'MMM yyyy')) : 'N/A'}
+                  {cert.expiration_date && (;
+                    <> · Expires: {typeof cert.expiration_date === 'string';
+                      ? cert.expiration_date;
+                      : format(cert.expiration_date, 'MMM yyyy')}
+                    </>;
 
                   )}
                 </p>;
@@ -159,19 +201,7 @@ if ( {) {
               <p className="text - xs mt - 2">;
                 <a;
                   href={cert.credential_url}
-
-                  onClick={() => onDelete(cert && cert.id!)}
-                >;
-                  <Trash2 className="h-4 w-4" />;
-                </Button>;
-              </div>;
-            </div>;
-            {cert && cert.credential_url && (;
-              <p className="text-xs mt-2">;
-                <a
-                  href={cert && cert.credential_url} 
-                  target="_blank" 
-
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline">;
                   View credential;
@@ -188,8 +218,32 @@ if ( {) {
 }
 
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+                  target="_blank";
+                  rel="noopener noreferrer";
+                  className="text - primary hover:underline";
+                >;
+                  View credential;
+                </a>;
+              </p>)}
+          </CardContent>;
+        </Card>))}
+    </div>);
+}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  View credential
+                </Link>
+              </p>
+            )}
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  );
+}
+  )
+}
+;
 

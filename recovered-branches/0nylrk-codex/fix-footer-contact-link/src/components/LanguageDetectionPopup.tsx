@@ -4,6 +4,7 @@
 
 
 
+
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -11,6 +12,7 @@
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
+
 AlertDialogTitle,;
 } from "../components/ui/alert-dialog";
 import {
@@ -18,14 +20,25 @@ import {
   SupportedLanguage,
   LanguageContextType,;
 
-
-
-
-
-
-
 } from "../context/LanguageContext";
 export function LanguageDetectionPopup() {
+import {;
+  AlertDialog,;
+  AlertDialogAction,;
+  AlertDialogCancel,;
+  AlertDialogContent,;
+  AlertDialogDescription,;
+  AlertDialogFooter,;
+  AlertDialogHeader,;
+  AlertDialogTitle,;
+} from "../components/ui/alert-dialog";
+import {;
+  useLanguage,;
+  SupportedLanguage,;
+  LanguageContextType,;
+} from "../context/LanguageContext";
+
+export function LanguageDetectionPopup() {;
 
   const [open, setOpen] = useState(false);
   const { t } = useTranslation();
@@ -63,9 +76,10 @@ export function LanguageDetectionPopup() {
     supportedLanguages && supportedLanguages.find((lang) => lang && lang.code === detectedLanguage)?.name ||;
     detectedLanguage;
 
-
-
-
+  const handleAccept = async () => {
+    await changeLanguage(detectedLanguage);
+    setOpen(false);
+  }
 
 import { useState, useEffect } from 'react',;
 import { useTranslation } from 'react-i18next',;
@@ -111,6 +125,7 @@ export function LanguageDetectionPopup() {;
 
 
 
+
   const handleAccept = async () => {
     await changeLanguage(detectedLanguage),
     setOpen(false)
@@ -126,6 +141,7 @@ export function LanguageDetectionPopup() {;
           <AlertDialogDescription className="text-zion-slate-light">
 
             {`${supportedLanguages.find((lang) => lang.code === detectedLanguage)?.flag |""} ${languageName}`}
+
             {`${supportedLanguages.find(lang => lang.code === detectedLanguage)?.flag || ''} ${languageName}`}
 
           </AlertDialogDescription>
@@ -138,8 +154,16 @@ export function LanguageDetectionPopup() {;
           <AlertDialogAction
             onClick={handleAccept}
 
-
-
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark"
+          >
+            {t("general.yes")}
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  );
+}
+);
 
             {t('general.no')}
           </AlertDialogCancel>;
@@ -148,12 +172,12 @@ export function LanguageDetectionPopup() {;
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
           >
             {t('general.yes')}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </AlertDialogAction>;
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>;
   );
+
 
 
 
@@ -191,6 +215,7 @@ function LanguageDetectionPopup() {
     // Check condition
 if (return) {
   $2
+
 
 
 }

@@ -1,18 +1,21 @@
 
 
-
-
-
+import { Resume } from "@/types/resume";
+import {
+  PreviewHeader
+  ResumeBasicInfoSection
+  WorkExperienceSection
+  EducationSection
+  SkillsSection
+  CertificationsSection
+} from "./preview";
 import {Resume} from '@/types/resume';
 import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
 
-
-
-
-
-
-
-
+interface PreviewResumeProps {
+  resume: Resume;
+  onBack: () => void
+}
 
 import { Resume } from '@/types/resume',;
 import {;
@@ -32,7 +35,9 @@ interface PreviewResumeProps {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -52,15 +57,13 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
       </div>
     </div>
 
+
+
   );
 }
   )
 }
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+;
+;
 

@@ -25,6 +25,14 @@ export default function SEOIndex() {
         <ul className="list-disc ml-5">
           {slugs.map((s) => (
 
+            <li key={s}><a className="text-cyan-600" href={`/seo/${s}`}>{s}</a></li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+  );
+};
 
             <li key={s}><a className="text-cyan-600" href={`/seo/${s}`}>{s}</Link></li>
           ))  } catch (error) {
@@ -45,4 +53,6 @@ export default function SEOIndex() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+}
+}
 

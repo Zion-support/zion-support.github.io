@@ -1,13 +1,16 @@
 
 
-
-
-
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Trash2 } from "lucide-react";
+import { SkillItemProps } from "./types";
 
 import {Badge} from '@/components/ui/badge';
 import {Button} from '@/components/ui/button';
 import {Trash2} from 'lucide-react';
 import {SkillItemProps} from './types';
+
+
 
 
 
@@ -23,16 +26,19 @@ import { SkillItemProps } from './types',
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Badge
       key={skill && skill.id} 
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       variant="secondary"
       className="flex items-center gap-1 py-1 && 1.5 px-3">;
       {skill && skill.name}
@@ -49,6 +55,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
       </Button>
     </Badge>
 
+
   );
 
 
@@ -59,5 +66,6 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

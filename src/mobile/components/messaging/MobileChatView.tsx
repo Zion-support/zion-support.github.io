@@ -20,7 +20,27 @@ interface MobileChatViewProps {;
   onSendMessage: (content: string) => void
 
 
+export function MobileChatView({
+  contact
+  messages
+  onBack
+  onSendMessage
+}: MobileChatViewProps) {
+  const [newMessage, setNewMessage] = useState('')
+  const router = useRouter()
+  const handleSend = () => {
+    if (newMessage.trim() !== '') {
+      onSendMessage(newMessage)
+      setNewMessage('')
 
+import React, { useState } from "react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react'
+import { cn } from "@/lib/utils",
+import { useRouter } from 'next/router',
+import { toast } from "sonner",
 
 interface Message {
   id: string;
@@ -99,6 +119,8 @@ export function MobileChatView(): any ({;
       onSendMessage(newMessage),;
       setNewMessage("");
 
+
+
     }
   };
 
@@ -157,6 +179,8 @@ export function MobileChatView(): any ({;
 
 
 
+
+
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -180,9 +204,65 @@ export function MobileChatView(): any ({;
           <div className="flex items-center flex-1 gap-3 mx-2">
 
 
+              aria-label='Start audio call'>;
+              <Phone className='h-5 w-5' />;
+            </Button>;
 
 
-
+            <Button
+              variant='ghost'
+              size='icon'
+              onClick={startVideoCall}
+              aria-label='Start video call'            >
+              <Video className='h-5 w-5' />
+            </Button>
+            <Button variant='ghost' size='icon' aria-label='More options'>
+              <MoreVertical className='h-5 w-5' />
+              <h3 className="font-medium">{contact.name}</h3>
+              <p className="text-xs text-muted-foreground">
+                {contact.status || "Online"}
+              </p>
+            </div>
+          </div>
+          <div className='flex'>
+            <Button
+              variant='ghost'
+              size='icon'
+              onClick={startAudioCall}
+              aria-label='Start audio call'            >
+              <Phone className='h-5 w-5' />
+            </Button>
+            <Button
+              variant='ghost'
+              size='icon'
+              onClick={startVideoCall}
+              aria-label='Start video call'            >
+              <Video className='h-5 w-5' />
+            </Button>
+            <Button variant='ghost' size='icon' aria-label='More options'>
+              <MoreVertical className='h-5 w-5' />
+          
+          <div className="flex">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={startAudioCall}
+              aria-label="Start audio call"
+            >
+              <Phone className="h-5 w-5" />
+            </Button>
+            
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={startVideoCall}
+              aria-label="Start video call"
+            >
+              <Video className="h-5 w-5" />
+            </Button>
+            
+            <Button variant="ghost" size="icon" aria-label="More options">
+              <MoreVertical className="h-5 w-5" />
 
             </Button>
           </div>
@@ -252,8 +332,8 @@ export function MobileChatView(): any ({;
 
                   ? 'bg-primary text-primary-foreground rounded-tr-none'
                   : 'bg-muted rounded-tl-none'
-              )}            >
-              <p>{message.content}</p>
+              )}>;
+              <p>{message && message.content}</p>;
               <div
                 className={cn(
 
@@ -262,6 +342,12 @@ export function MobileChatView(): any ({;
 
                     ? 'text-primary-foreground/80'
                     : 'text-muted-foreground'
+                )}>;
+                {message && message.timestamp}
+                {message && message.isMe && message && message.status && (;
+                  <span className='ml-1'>;
+                    {message && message.status === 'read' ? '' : ''}
+                  </span>;
                 )}
 
       <div className='flex - 1 overflow - y-auto p - 4 space - y-4'>;
@@ -386,12 +472,25 @@ export function MobileChatView(): any ({;
                   <span className="ml-1">;
 
 
-                    {message.status === 'read' ? '✓✓' : '✓'}
-
-              </div>;
-            </div>;
-          </div>;
-        ))}
+      
+      <div className="sticky bottom-0 bg-background border-t border-border p-2">
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="icon" aria-label="Attach file">
+            <PaperclipIcon className="h-5 w-5" />
+          </Button>
+          <Input
+            value={newMessage}
+            onChange={e => setNewMessage(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder='Type a message...'
+            className='flex-1'          />
+          <Button
+            size='icon'
+            onClick={handleSend}
+            disabled={!newMessage.trim()}
+            className={!newMessage.trim() ? 'opacity-50' : ''}
+            aria-label='Send message'          >
+            <Send className='h-5 w-5' />
 
       
       <div className="sticky bottom-0 bg-background border-t border-border p-2">
@@ -399,9 +498,11 @@ export function MobileChatView(): any ({;
           <Button variant="ghost" size="icon" aria-label="Attach file">
             <PaperclipIcon className="h-5 w-5" />
 
+
           </Button>
           <Input
             value={newMessage}
+
 
 
 
@@ -483,6 +584,8 @@ export function MobileChatView(): any ({;
 
 
 
+
+
             onChange={(e) => setNewMessage(e.target.value)}
 
             onKeyDown={handleKeyDown}
@@ -491,6 +594,8 @@ export function MobileChatView(): any ({;
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />
+
+
 
 
 
@@ -530,7 +635,9 @@ export function MobileChatView(): any ({;
         </div>;
       </div>;
     </div>);
+
 }
 
 }
 ;
+

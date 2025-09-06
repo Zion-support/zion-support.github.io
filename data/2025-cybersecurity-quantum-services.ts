@@ -1,4 +1,6 @@
 
+export interface CybersecurityQuantumService {
+export interface CybersecurityQuantumService {;
 
   id: string;
   name: string;
@@ -331,15 +333,37 @@
     ]
     support:
 
-
-
+      '24/7 technical support, security consulting, custom development, and dedicated success manager.'
+    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS']
+    link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment'
+    icon: '🔍'
+    color: 'from-green-500 to-emerald-600'
+    popular: true
+    launchDate: '2024-02-15'
+    customers: 2500
+    rating: 4.8
+    reviews: 1900
+  }
+      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
+    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
+    link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
+    icon: '🔍',
+    color: 'from-green-500 to-emerald-600',
+    popular: true,
+    launchDate: '2024-02-15',
+    customers: 2500,
+    rating: 4.8,
+    reviews: 1900,
+  },;
 
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
     ];
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'],
     support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 
 
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
@@ -419,8 +443,30 @@
   },
 
 
+  id: string, name: string,
+  tagline: string, description: string,
+  category: string,
+  price: {
+    monthly: number, yearly: number,
+    currency: string, trialDays: number,
+    setupTime: string,
+    enterprise: string
+    },
+    features: string[], benefits: string[],
+  targetAudience: string[], marketPosition: string,
+  competitors: string[], techStack: string[],
+  realImplementation: boolean, implementationDetails: string,
+  roi: string, useCases: string[],
+  integrations: string[], support: string,
+  compliance: string[], link: string,
+  icon: string, color: string,
+  popular: boolean, launchDate: string,
+  customers: number, rating: number,
+  reviews: number
+}
 
 
+];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring';
 
     ];
 
@@ -441,8 +487,12 @@
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
+
+];
+;
+export interface CybersecurityQuantumService {;
 
   id: string,;
   name: string,;
@@ -708,6 +758,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 
 
 
+
   }
 ];
+
 

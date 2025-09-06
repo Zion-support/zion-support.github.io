@@ -3,6 +3,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 ;
@@ -11,6 +12,7 @@ export interface PartnerProfile {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   id: string;
@@ -39,6 +41,7 @@ export interface PartnerProfile {
 }
 
 
+
 export interface PartnerSettings {
 
 
@@ -51,10 +54,12 @@ export interface PartnerSettings {
   id: string;
   commission_rate: number;
 
+
   fraud_threshold: number,
   is_payouts_enabled: boolean;
 
 }
+
 
 
 export interface PartnerReferralLink {
@@ -73,10 +78,12 @@ export interface PartnerReferralLink {
   source?: string;
   clicks: number;
 
+
   conversions: number,
   created_at: string;
 
 }
+
 
 
 export interface PartnerPayout {
@@ -93,6 +100,7 @@ export interface PartnerPayout {
   amount: number;
   status: 'pending' | 'processing' | 'completed' | 'failed';
   method: string;
+
 
 
 
@@ -150,5 +158,7 @@ export interface PartnerPayout {;
   completed_at?: string;
 }
 ;
+
+
 
 

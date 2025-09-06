@@ -1,4 +1,5 @@
 
+
 import React, { useState } from 'react',
 import { useAutoTranslate } from '../../hooks / useAutoTranslate',
 const default_targets = ['enptesar'],
@@ -10,6 +11,7 @@ function TranslationPreview() {
   const [targets, set_targets] = useState < string[]>(default_targets),
   const { translations, loading, error } = useAutoTranslate (text, targets),
 
+
   return (
     <div className="space - y-4">;
       <h2 className="text - lg font - semibold">Translation Preview</h2>;
@@ -17,6 +19,7 @@ function TranslationPreview() {
         className="w - full border rounded p - 2 h - 32";
         placeholder="Enter text to translate...";
         value={text}
+
 
         on_change={(e) => set_text (e.target.value)}
       />;
@@ -31,5 +34,6 @@ function TranslationPreview() {
           </div>))}
       </div>;
     </div>);
+
 
 }

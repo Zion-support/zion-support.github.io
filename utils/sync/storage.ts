@@ -1,6 +1,7 @@
 
 
 
+
     );
   }
 
@@ -8,6 +9,7 @@
   state = { ...defaultState }
 
 }
+
 
 
   config: {
@@ -20,6 +22,15 @@
   lastSyncedAt: new Date().toISOString()
 
 }
+let state: SyncState = { ...defaultState }
+export function readState(): SyncState {
+  return { ...state }
+}
+export function updateState(updates: Partial<SyncState>): void {
+  state = { ...state, ...updates }
+};
+
+
 
 
 
@@ -37,37 +48,42 @@ if ( {) {
     state.proposalMerkleById[entity_id] = event.merkle_root;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   }
   if (isNewer) {
-    state.latestVersionByEntityId[entityId] = event.version;
+    state && state.latestVersionByEntityId[entityId] = event && event.version;
   }
   state.events.push(event);
   state.seenEventIds[event.eventId] = true;
   state.lastSyncedAt = Math.max(state.lastSyncedAt |0, event.timestamp |0);
   return state;
+}
+
 export function getEntityId(event: SyncEvent): string {
-  switch (event.type) {
-    case 'proposal':;
-      return (event.payload as any).proposalId;
+  switch (event && event.type) {
+    case 'proposal':
+      return (event && event.payload as any).proposalId;
     case 'token_transfer':
-      return (event.payload as any).txId;
+      return (event && event.payload as any).txId;
     case 'talent_mobility':
       return (
-        (event.payload as any).personId + ':' + (event.payload as any).startDate
+        (event && event.payload as any).personId + ':' + (event && event.payload as any).startDate
       );
     case 'dao_endorsement':
-      return (event.payload as any).resolutionId;
+      return (event && event.payload as any).resolutionId;
     case 'leaderboard_entry':
       return (
-        (event.payload as any).subjectId + ':' + (event.payload as any).period
+        (event && event.payload as any).subjectId + ':' + (event && event.payload as any).period
       );
     default:
       return (event.payload as any).id |event.eventId;
   }
+}
+
 export function filterEventsByScope(
   events: SyncEvent[]
   scope: InstanceConfig['scope']
-): SyncEvent[] {;
+): SyncEvent[] {
   if (scope === 'full') return events;
   if (scope === 'dao') {
     return events.filter(
@@ -75,7 +91,7 @@ export function filterEventsByScope(
     );
   }
   if (scope === 'marketplace') {
-    return events.filter(
+    return events && events.filter(
       e =>
         e.type === 'token_transfer' |
         e.type === 'talent_mobility' |
@@ -83,7 +99,29 @@ export function filterEventsByScope(
     );
   }
 
+  return events;export function resetState(): void {
+  state = { ...defaultState }
+}
 
+  return events;export function resetState(): void {;
+  state = { ...defaultState };
+}
+
+  lastSyncedAt: new Date().toISOString()
+
+
+
+
+const default_state: SyncState = {
+  config: {
+    instance_id: 'default - instance',
+    peers: [],
+    scope: 'global',
+    opt_in: false,
+    paused: false;
+  },
+  lastSyncedAt: new Date ().toISOString ();
+}
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -143,8 +181,12 @@ if ( {) {
   }
 
 
+  return events;export function resetState(): void {;
+  state = { ...defaultState };
+}
 
-
-
+}
+}
+}
 
 

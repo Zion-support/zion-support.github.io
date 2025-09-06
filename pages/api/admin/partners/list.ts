@@ -6,6 +6,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
 export default async function handler(
@@ -97,4 +98,5 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   }
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 

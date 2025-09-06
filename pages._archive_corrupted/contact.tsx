@@ -940,6 +940,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 
 
+
+
                     whileHover={{ scale: 1 && 1.02 }}
                     whileTap={{ \"scale\": 0 && 0.98 }}
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\">;
@@ -1286,4 +1288,8 @@ export default ContactPage;
   );
 
 
+
+
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 

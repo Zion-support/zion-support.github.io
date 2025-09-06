@@ -40,7 +40,7 @@ import React from 'react';
   },;
 
   return (
-    <>
+    <>;
       <header
         style={{ "--nav-height": "64px" } as React.CSSProperties}
         className = {cn(
@@ -49,6 +49,8 @@ import React from 'react';
         className={cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
           { "bg-red-500": mobileMenuOpen }
+
+
 
 
 
@@ -71,7 +73,7 @@ import React from 'react';
 
 
           {/* Mobile menu button */}
-          <div className="md:hidden ml-auto mr-4">
+          <div className="md:hidden ml-auto mr-4">;
             <button
               onClick = {() => setMobileMenuOpen(!mobileMenuOpen),}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
@@ -81,6 +83,8 @@ import React from 'react';
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
+
+
 
 
 
@@ -108,6 +112,7 @@ import React from 'react';
 
 
 
+
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
@@ -124,6 +129,7 @@ import React from 'react';
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
 
                   openLoginModal(router.asPath)
+
                 onClick={(e,) => {;
                   e && e.preventDefault(),;
                   // For the main login link, we might not have a specific returnTo beyond current page,;
@@ -132,9 +138,9 @@ import React from 'react';
                   router && router.push({ pathname: '/auth/login', query: { returnTo: router && router.asPath } }, undefined, { shallow: true }),;
                   openLoginModal(router && router.asPath);
                 }}
-              >
-                {t('auth.login')}
-              </Link>
+              >;
+                {t('auth && auth.login')}
+              </Link>;
               <Link
                 href="/signup"
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
@@ -143,7 +149,9 @@ import React from 'react';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
                 data-testid="signup-nav-link"
               >
@@ -152,10 +160,10 @@ import React from 'react';
             </div>
           )}
           {/* User avatar menu */}
-          {isLoggedIn && (
-            <div className="ml-4">
-              <UserMenu />
-            </div>
+          {isLoggedIn && (;
+            <div className="ml-4">;
+              <UserMenu />;
+            </div>;
           )}
 
         </div>;
@@ -170,6 +178,7 @@ import React from 'react';
 
 
 
+
             onClick = {(,) => setMobileMenuOpen(false),}
             aria-hidden="true";
           />;
@@ -180,10 +189,12 @@ import React from 'react';
 
             onClick={() => setMobileMenuOpen(false)}
 
+
             aria-hidden="true"
           />
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">
             <MobileMenu 
+
               unreadCount={unreadCount} 
               onClose={() => setMobileMenuOpen(false)}
               openLoginModal={openLoginModal}
@@ -226,6 +237,7 @@ import React from 'react';
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
+
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
@@ -238,57 +250,131 @@ import React from 'react';
       setResourcesDropdownOpen(false)}
   }
   const closeAllDropdowns = (...args: unknown[]): unknown => {
-    setServicesDropdownOpen(false);    setSolutionsDropdownOpen(false)
-    setCompanyDropdownOpen(false)
-    setResourcesDropdownOpen(false)
-    setActiveNav(null)}
-  return ()
-    <>`
-      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${        scrolled
+    setServicesDropdownOpen (false);    setSolutionsDropdownOpen (false);
+    setCompanyDropdownOpen (false);
+    setResourcesDropdownOpen (false);
+    setActiveNav (null)}
+  return ();
+    <>`;
+      <header className={`sticky top - 0 z - 50 w - full transition - all duration - 300 ${        scrolled;
+          ? 'bg - slate - 900 / 95 backdrop - blur - xl border - b border - cyan - 400 / 20 shadow - 2xl shadow - cyan - 400 / 10';
+          : 'bg - slate - 900 / 80 backdrop - blur - md border - b border - slate - 700 / 20'      }`}>;
+        <div className="container - responsive">";
+          <div className="flex h - 20 items - center justify - between">;
+            {/* Logo */}";
+            <div className="flex items - center">";
+              <Link to="/" className="flex - shrink - 0 group">";
+                <div className="flex items - center space - x-3">";
+                  <div className="relative">";
+                    <div className="w - 10 h - 10 bg - gradient - to - br from - cyan - 400 via - blue - 500 to - purple - 600 rounded - lg flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300">";
+                      <Zap className="w - 6 h - 6 text - white"  />;
+                    </div>"                    <div className="absolute inset - 0 bg - gradient - to - br from - cyan - 400 via - blue - 500 to - purple - 600 rounded - lg blur - lg opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300"></div>;
+                  </div>";
+                  <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent group - hover:scale - 105 transition - transform duration - 300">;
+                    Zion Tech Group;
+                  </h1>;
+                </div>;
+                <span className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent">;
+                  Zion Tech Group;
+                </span>;
+              </Link>;
+            </div>;
+            {/* Desktop Navigation */}            <nav className="hidden lg:flex items - center space - x-8">;
+              {navigation.map ((item) => (";
+                <div key={item.name} className="relative">;
+                  {item.has_dropdown ? (";
+                    <div className="relative">;
+                      <button;
+                        on_click={() => {
+              <AnimatePresence>;
+                {active_dropdown === 'services' && (
+                  <motion.div;
+                    initial={{ opacity: 0, coordinate_y: -10 }}
+                    animate={{ opacity: 1, coordinate_y: 0 }}
+                    exit={{ opacity: 0, coordinate_y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top - full left - 0 mt - 2 w - 80 bg - zion - slate - dark border border - zion - cyan / 20 rounded - xl shadow - 2xl backdrop - blur - md">;
+                    <div className="p - 4">;
+                      <div className="grid grid - cols - 1 gap - 2">;
+                        {services.map ((service) => (
+                          <Link;
+                            key={service.name}
+                            to={service.href}
+                            on_click={() => setActiveDropdown (null)}
+                            className="flex items - center p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors group">;
+                            <div className={`w - 10 h - 10 bg - gradient - to - r ${service.color} rounded - lg flex items - center justify - center mr - 3 group - hover:scale - 110 transition - transform`}>;
+                              <service.icon className="w - 5 h - 5 text - white" />;
+                            </div>;
+                            <div>;
+                              <div className="font - medium text - white group - hover:text - zion - cyan transition - colors">;
+                                {service.name}
+                              </div>;
+                              <div className="text - sm text - zion - slate - light">;
+                                {service.description}
+
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
+    </>;
+      setActiveNav(null);
+      setServicesDropdownOpen(false);
+      setSolutionsDropdownOpen(false);
+      setCompanyDropdownOpen(false);
+      setResourcesDropdownOpen(false)}
+  };
+  const closeAllDropdowns = (...args: unknown[]): unknown => {;
+    setServicesDropdownOpen(false);    setSolutionsDropdownOpen(false);
+    setCompanyDropdownOpen(false);
+    setResourcesDropdownOpen(false);
+    setActiveNav(null)};
+  return ();
+    <>`;
+      <headerclassName={`sticky top-0 z-50 w-full transition-all duration-300 ${        scrolled
           ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-400/20 shadow-2xl shadow-cyan-400/10'
-          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'      }`}>
-        <div className="container-responsive">"
-          <div className="flex h-20 items-center justify-between">
-            {/* Logo */}"
-            <div className="flex items-center">"
-              <Link to="/" className="flex-shrink-0 group">"
-                <div className="flex items-center space-x-3">"
-                  <div className="relative">"
-                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">"
-                      <Zap className="w-6 h-6 text-white"  />
-                    </div>"                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
-                  </div>"
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">
-                    Zion Tech Group
-                  </h1>
-                </div>
-                <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  Zion Tech Group
-                </span>
-              </Link>
-            </div>
-            {/* Desktop Navigation */}            <nav className="hidden lg:flex items-center space-x-8">
-              {navigation.map((item) => ("
-                <div key={item.name} className="relative">
-                  {item.hasDropdown ? ("
-                    <div className="relative">
+          : 'bg-slate-900/80 backdrop-blur-md border-b border-slate-700/20'      }`}>;
+        <div className="container-responsive">";
+          <div className="flex h-20 items-center justify-between">;
+            {/* Logo */}";
+            <div className="flex items-center">";
+              <Link to="/" className="flex-shrink-0 group">";
+                <div className="flex items-center space-x-3">";
+                  <div className="relative">";
+                    <div className="w-10 h-10 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">";
+                      <Zap className="w-6 h-6 text-white"  />;
+                    </div>"                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-lg blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>;
+                  </div>";
+                  <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:scale-105 transition-transform duration-300">;
+                    Zion Tech Group;
+                  </h1>;
+                </div>;
+                <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
+                  Zion Tech Group;
+                </span>;
+              </Link>;
+            </div>;
+
+            {/* Desktop Navigation */}            <nav className="hidden lg:flex items-center space-x-8">;
+              {navigation && navigation.map((item) => (";
+                <div key={item && item.name} className="relative">;
+                  {item && item.hasDropdown ? (";
+                    <div className="relative">;
                       <button
-                        onClick={() => {
-              <AnimatePresence>
-                {activeDropdown === 'services' && (
-                  <motion.div
+                        onClick={() => {;
+
+              <AnimatePresence>;
+                {activeDropdown === 'services' && (;
+                  <motion&& motion.div
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">
-                    <div className="p-4">
-                      <div className="grid grid-cols-1 gap-2">
-                        {services.map((service) => (
+                    transition={{ duration: 0 && 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
+                    <div className="p-4">;
+                      <div className="grid grid-cols-1 gap-2">;
+                        {services && services.map((service) => (;
                           <Link
-                            key={service.name}
-                            to={service.href}
+                            key={service && service.name}
+                            to={service && service.href}
                             onClick={() => setActiveDropdown(null)}
+
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">
                             <div className={`w-10 h-10 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform`}>
                               <service.icon className="w-5 h-5 text-white" />
@@ -362,6 +448,7 @@ import React from 'react';
                             key={service && service.name}
                             to={service && service.href}
                             onClick={() => setActiveDropdown(null)}
+
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">;
                             <div className={`w-10 h-10 bg-gradient-to-r ${service && service.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform`}>;
                               <service && service.icon className="w-5 h-5 text-white" />;
@@ -418,14 +505,48 @@ import React from 'react';
                     exit={{ opacity: 0, coordinate_y: -10 }}
 
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">
-                    <div className="p-4">
-                      <div className="grid grid-cols-1 gap-2">
-                        {solutions.map((solution) => (
-                          <Link
+
+                    className="absolute top - full left - 0 mt - 2 w - 80 bg - zion - slate - dark border border - zion - cyan / 20 rounded - xl shadow - 2xl backdrop - blur - md">;
+                    <div className="p - 4">;
+                      <div className="grid grid - cols - 1 gap - 2">;
+                        {solutions.map ((solution) => (
+                          <Link;
                             key={solution.name}
                             to={solution.href}
+                            on_click={() => setActiveDropdown (null)}
+                            className="flex items - center p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors group">;
+                            <div className={`w - 10 h - 10 bg - gradient - to - r ${solution.color} rounded - lg flex items - center justify - center mr - 3 group - hover:scale - 110 transition - transform`}>;
+                              <solution.icon className="w - 5 h - 5 text - white" />;
+                            </div>;
+                            <div>;
+                              <div className="font - medium text - white group - hover:text - zion - cyan transition - colors">;
+                                {solution.name}
+                              </div>;
+                              <div className="text - sm text - zion - slate - light">;
+                                {solution.description}
+
+                aria-haspopup="true">;
+                Solutions;
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />;
+              </button>;
+
+              <AnimatePresence>;
+                {activeDropdown === 'solutions' && (;
+                  <motion&& motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0 && 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
+                    <div className="p-4">;
+                      <div className="grid grid-cols-1 gap-2">;
+                        {solutions && solutions.map((solution) => (;
+
+                          <Link
+                            key={solution && solution.name}
+                            to={solution && solution.href}
                             onClick={() => setActiveDropdown(null)}
+
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">
                             <div className={`w-10 h-10 bg-gradient-to-r ${solution.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform`}>
                               <solution.icon className="w-5 h-5 text-white" />
@@ -457,6 +578,7 @@ import React from 'react';
                             key={solution && solution.name}
                             to={solution && solution.href}
                             onClick={() => setActiveDropdown(null)}
+
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">;
                             <div className={`w-10 h-10 bg-gradient-to-r ${solution && solution.color} rounded-lg flex items-center justify-center mr-3 group-hover:scale-110 transition-transform`}>;
                               <solution && solution.icon className="w-5 h-5 text-white" />;
@@ -513,14 +635,42 @@ import React from 'react';
                     exit={{ opacity: 0, coordinate_y: -10 }}
 
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">
-                    <div className="p-4">
-                      <div className="grid grid-cols-1 gap-2">
-                        {resources.map((resource) => (
-                          <Link
+
+                    className="absolute top - full left - 0 mt - 2 w - 64 bg - zion - slate - dark border border - zion - cyan / 20 rounded - xl shadow - 2xl backdrop - blur - md">;
+                    <div className="p - 4">;
+                      <div className="grid grid - cols - 1 gap - 2">;
+                        {resources.map ((resource) => (
+                          <Link;
                             key={resource.name}
                             to={resource.href}
+                            on_click={() => setActiveDropdown (null)}
+                            className="flex items - center p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors group">;
+                            <resource.icon className="w - 5 h - 5 text - zion - cyan mr - 3 group - hover:scale - 110 transition - transform" />;
+                            <span className="text - white group - hover:text - zion - cyan transition - colors">;
+                              {resource.name}
+
+                aria-haspopup="true">;
+                Resources;
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />;
+              </button>;
+
+              <AnimatePresence>;
+                {activeDropdown === 'resources' && (;
+                  <motion&& motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0 && 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
+                    <div className="p-4">;
+                      <div className="grid grid-cols-1 gap-2">;
+                        {resources && resources.map((resource) => (;
+
+                          <Link
+                            key={resource && resource.name}
+                            to={resource && resource.href}
                             onClick={() => setActiveDropdown(null)}
+
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">
                             <resource.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform" />
                             <span className="text-white group-hover:text-zion-cyan transition-colors">
@@ -546,6 +696,7 @@ import React from 'react';
                             key={resource && resource.name}
                             to={resource && resource.href}
                             onClick={() => setActiveDropdown(null)}
+
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">;
                             <resource && resource.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform" />;
                             <span className="text-white group-hover:text-zion-cyan transition-colors">;
@@ -594,14 +745,42 @@ import React from 'react';
                     exit={{ opacity: 0, coordinate_y: -10 }}
 
                     transition={{ duration: 0.2 }}
-                    className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">
-                    <div className="p-4">
-                      <div className="grid grid-cols-1 gap-2">
-                        {company.map((item) => (
-                          <Link
+
+                    className="absolute top - full left - 0 mt - 2 w - 64 bg - zion - slate - dark border border - zion - cyan / 20 rounded - xl shadow - 2xl backdrop - blur - md">;
+                    <div className="p - 4">;
+                      <div className="grid grid - cols - 1 gap - 2">;
+                        {company.map ((item) => (
+                          <Link;
                             key={item.name}
                             to={item.href}
+                            on_click={() => setActiveDropdown (null)}
+                            className="flex items - center p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors group">;
+                            <item.icon className="w - 5 h - 5 text - zion - cyan mr - 3 group - hover:scale - 110 transition - transform" />;
+                            <span className="text - white group - hover:text - zion - cyan transition - colors">;
+                              {item.name}
+
+                aria-haspopup="true">;
+                Company;
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />;
+              </button>;
+
+              <AnimatePresence>;
+                {activeDropdown === 'company' && (;
+                  <motion&& motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0 && 0.2 }}
+                    className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
+                    <div className="p-4">;
+                      <div className="grid grid-cols-1 gap-2">;
+                        {company && company.map((item) => (;
+
+                          <Link
+                            key={item && item.name}
+                            to={item && item.href}
                             onClick={() => setActiveDropdown(null)}
+
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">
                             <item.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform" />
                             <span className="text-white group-hover:text-zion-cyan transition-colors">
@@ -627,6 +806,7 @@ import React from 'react';
                             key={item && item.name}
                             to={item && item.href}
                             onClick={() => setActiveDropdown(null)}
+
                             className="flex items-center p-3 rounded-lg hover:bg-zion-slate/50 transition-colors group">;
                             <item && item.icon className="w-5 h-5 text-zion-cyan mr-3 group-hover:scale-110 transition-transform" />;
                             <span className="text-white group-hover:text-zion-cyan transition-colors">;
@@ -651,7 +831,7 @@ import React from 'react';
             </div>;
           </nav>;
           {/* Right side - Search, User, Mobile menu */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items - center space - x-4">;
             {/* Search */}
 
             <div className="relative hidden md:block">;
@@ -661,7 +841,7 @@ import React from 'react';
                   type="text"
                   placeholder="Search..."
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onChange={(e) => setSearchQuery(e && e.target.value)}
                   onFocus={() => setSearchFocused(true)}
                   onBlur={() => setSearchFocused(false)}
                   className={`w-64 px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan transition-all duration-200 ${
@@ -678,10 +858,10 @@ import React from 'react';
                   className={`w - 64 px - 4 py - 2 pl - 10 bg - zion - slate / 20 border border - zion - cyan / 20 rounded - lg text - white placeholder - zion - slate - light focus:outline - none focus:ring - 2 focus:ring - zion - cyan / 50 focus:border - zion - cyan transition - all duration - 200 ${
                     search_focused ? 'w - 80' : '';
 }`}
-                />
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-zion-slate-light" />
-              </form>
-            </div>
+                />;
+                <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - zion - slate - light" />;
+              </form>;
+            </div>;
             {/* User Menu */}
 
             {user ? (;
@@ -712,35 +892,83 @@ import React from 'react';
                       exit={{ opacity: 0, coordinate_y: -10 }}
 
                       transition={{ duration: 0.2 }}
-                      className="absolute top-full right-0 mt-2 w-48 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">
-                      <div className="p-2">
+
+                      className="absolute top - full right - 0 mt - 2 w - 48 bg - zion - slate - dark border border - zion - cyan / 20 rounded - xl shadow - 2xl backdrop - blur - md">;
+                      <div className="p - 2">;
+                        <Link;
+                          to="/dashboard";
+                          on_click={() => setActiveDropdown (null)}
+                          className="flex items - center w - full p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">;
+                          <PanelLeft className="w - 4 h - 4 mr - 3" />;
+                          Dashboard;
+                        </Link>;
+                        <Link;
+                          to="/profile";
+                          on_click={() => setActiveDropdown (null)}
+                          className="flex items - center w - full p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">;
+                          <User className="w - 4 h - 4 mr - 3" />;
+                          Profile;
+                        </Link>;
+                        <Link;
+                          to="/settings";
+                          on_click={() => setActiveDropdown (null)}
+                          className="flex items - center w - full p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">;
+                          <Settings className="w - 4 h - 4 mr - 3" />;
+                          Settings;
+                        </Link>;
+                        <hr className="border - zion - slate / 20 my - 2" />;
+                        <button;
+                          on_click={() => {
+                            logout ();
+                            setActiveDropdown (null);
+}}
+
+                  aria-haspopup="true">;
+                  <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
+                    <User className="w-4 h-4 text-white" />;
+                  </div>;
+                  <span className="text-white text-sm hidden lg:block">{user && user.name}</span>;
+                  <ChevronDown className="w-4 h-4 text-zion-slate-light" />;
+                </button>;
+
+                <AnimatePresence>;
+                  {activeDropdown === 'user' && (;
+                    <motion&& motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -10 }}
+                      transition={{ duration: 0 && 0.2 }}
+                      className="absolute top-full right-0 mt-2 w-48 bg-zion-slate-dark border border-zion-cyan/20 rounded-xl shadow-2xl backdrop-blur-md">;
+                      <div className="p-2">;
+
                         <Link
                           to="/dashboard"
                           onClick={() => setActiveDropdown(null)}
-                          className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">
-                          <PanelLeft className="w-4 h-4 mr-3" />
-                          Dashboard
-                        </Link>
+                          className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">;
+                          <PanelLeft className="w-4 h-4 mr-3" />;
+                          Dashboard;
+                        </Link>;
                         <Link
                           to="/profile"
                           onClick={() => setActiveDropdown(null)}
-                          className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">
-                          <User className="w-4 h-4 mr-3" />
-                          Profile
-                        </Link>
+                          className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">;
+                          <User className="w-4 h-4 mr-3" />;
+                          Profile;
+                        </Link>;
                         <Link
                           to="/settings"
                           onClick={() => setActiveDropdown(null)}
-                          className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">
-                          <Settings className="w-4 h-4 mr-3" />
-                          Settings
-                        </Link>
-                        <hr className="border-zion-slate/20 my-2" />
+                          className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">;
+                          <Settings className="w-4 h-4 mr-3" />;
+                          Settings;
+                        </Link>;
+                        <hr className="border-zion-slate/20 my-2" />;
                         <button
-                          onClick={() => {
-                            logout()
-                            setActiveDropdown(null)
+                          onClick={() => {;
+                            logout();
+                            setActiveDropdown(null);
 }}
+
 
                   aria-haspopup="true">;
                   <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center">;
@@ -786,6 +1014,7 @@ import React from 'react';
                             logout();
                             setActiveDropdown(null);
 }}
+
                           className="flex items-center w-full p-3 rounded-lg hover:bg-zion-slate/50 transition-colors text-white hover:text-zion-cyan">;
                           <LogOut className="w-4 h-4 mr-3" />;
                           Logout;
@@ -808,7 +1037,7 @@ import React from 'react';
               </div>))}
           </nav>;
           {/* Right side actions */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items - center space - x-4">;
             {/* Search */}
 
             <form on_submit={handle_search} className="hidden md:flex relative">  const navigation = [;
@@ -826,9 +1055,9 @@ import React from 'react';
   ];
 
   return (
-    <>
-      <header className="sticky top-0 z-50 w-full border-b border-slate-700/20 bg-slate-900/95 backdrop-blur-md">
-        <div className="container flex h-16 items-center px-4 sm:px-6">
+    <>;
+      <header className="sticky top - 0 z - 50 w - full border - b border - slate - 700 / 20 bg - slate - 900 / 95 backdrop - blur - md">;
+        <div className="container flex h - 16 items - center px - 4 sm:px - 6">;
           {/* Logo */}
 
             <form onSubmit={handleSearch} className="hidden md:flex relative">  const navigation = [;
@@ -861,8 +1090,19 @@ import React from 'react';
             </Link>;
           </div>;
 
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex ml-8 space-x-8">;
+            {navigation && navigation.map((item) => (;
+              <Link
+                key={item && item.name}
+                to={item && item.href}
+                className="text-slate-300 hover:text-cyan-400 px-3 py-2 text-sm font-medium transition-colors duration-200">;
+                {item && item.name}
+              </Link>;
+            ))}
 
           {/* Desktop Navigation */}
+
           <nav className="hidden md:flex ml - 8 space - x-8">;
             {navigation.map ((item) => (
               <Link;
@@ -917,8 +1157,8 @@ import React from 'react';
                             <div className="text - white font - medium group - hover:text - cyan - 400 transition - colors">;
 
                               {service.name}
-                            </div>
-                            <div className="text-sm text-gray-400">
+                            </div>;
+                            <div className="text - sm text - gray - 400">;
                               {service.description}
 
                 >;
@@ -958,9 +1198,22 @@ import React from 'react';
                     </div>;
                   </div>;
 
-          <div className="hidden md:flex ml-6 flex-1 max-w-md">;
-            <form onSubmit={handleSearch} className="relative w-full">;
-              />;
+                </div>;
+              )}
+            </div>
+          </nav>
+
+          {/* Search Bar - Hidden on mobile */}
+          <div className="hidden md:flex ml-6 flex-1 max-w-md">
+            <form onSubmit={handleSearch} className="relative w-full">
+              <input
+                type="text"
+                placeholder="Search..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full px-4 py-2 pl-10 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400"
+              />
+
               <button
                 type="submit"
                 className="absolute right-2 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-cyan-400 transition-colors">;
@@ -1003,11 +1256,11 @@ import React from 'react';
                 </Link>;
               </div>)}
           {/* Right side actions */}
-          <div className="ml-6 flex items-center space-x-4">
+          <div className="ml - 6 flex items - center space - x-4">;
             {/* Notifications */}
-            <button className="p-2 text-slate-400 hover:text-cyan-400 transition-colors">
-              <Bell className="h-5 w-5" />
-            </button>
+            <button className="p - 2 text - slate - 400 hover:text - cyan - 400 transition - colors">;
+              <Bell className="h - 5 w - 5" />;
+            </button>;
             {/* User menu */}
 
             <button className="p - 2 text - slate - 400 hover:text - cyan - 400 transition - colors">;
@@ -1266,6 +1519,7 @@ import React from 'react';
 
 
 
+
 <<<<<<< HEAD
 
 
@@ -1414,3 +1668,4 @@ import React from 'react';
 
 
 ;
+

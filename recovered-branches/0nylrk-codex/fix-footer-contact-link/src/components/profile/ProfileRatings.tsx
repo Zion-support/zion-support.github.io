@@ -2,6 +2,7 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {Star} from "lucide-react";
 import {ReviewStats} from "@/components/reviews/ReviewStats";
@@ -17,6 +18,7 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 }
 
 
+
 export function ProfileRatings(): any ({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {;
   const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
   const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});
@@ -30,6 +32,51 @@ export function ProfileRatings(): any ({ userId, averageRating = 0, ratingCount 
         if (review && review.rating >= 1 && review && review.rating <= 5) {;
           distribution[review && review.rating] = (distribution[review && review.rating] || 0) + 1;
 
+import { useState, useEffect  } from './react';
+import { Star  } from './lucide-react';
+import { ReviewStats  } from '@/components / reviews / ReviewStats';
+import { ReviewsList  } from '@/components / reviews / ReviewsList';
+import { use_reviews  } from '@/hooks / use_reviews';
+import { Button  } from '@/components / ui / button';
+import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
+interface ProfileRatingsProps {
+  user_id: string;
+  average_rating?: number;
+  rating_count?: number;
+}
+export /**
+ * ProfileRatings - Function description
+ */
+function ProfileRatings() {
+  const { reviews, is_loading, fetchUserReviews, report_review } = use_reviews ();
+  const [rating_distribution, setRatingDistribution] = useState<;
+    Record < number, number>;
+  >({});
+;
+  // Calculate rating distribution;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      const distribution: Record < number, number> = {
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0,
+      }
+;
+      reviews.for_each ((review) => {
+        // Check condition
+if ( {) {
+  $2
+}
+          distribution[review.rating] = (distribution[review.rating] || 0) + 1;
+
+
+
+
 
 
 
@@ -41,6 +88,26 @@ interface ProfileRatingsProps {
   averageRating?: number,
   ratingCount?: number
 
+}
+
+export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) {;
+  const { reviews, isLoading, fetchUserReviews, reportReview } = useReviews();
+  const [ratingDistribution, setRatingDistribution] = useState<Record<number, number>>({});
+  
+  // Calculate rating distribution
+  useEffect(() => {
+    if (reviews.length > 0) {
+      const distribution: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+      
+      reviews.forEach((review) => {
+        if (review.rating >= 1 && review.rating <= 5) {
+          distribution[review.rating] = (distribution[review.rating] || 0) + 1
+        }
+      });
+      
+      setRatingDistribution(distribution)
+    }
+  }, [reviews]);
 
 import { useState, useEffect } from "react",;
 import { Star } from "lucide-react",;
@@ -72,12 +139,16 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   }, [reviews]),
 
 
+
+
   // Fetch reviews when component mounts
   useEffect(() => {
     fetchUserReviews(userId)
   }, [userId]),
 
   
+
+
 
   return (
     <div className="space-y-6">;
@@ -127,6 +198,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 onReportReview={reportReview}
 
 
+
+
               />
             </TabsContent>
           </Tabs>
@@ -134,6 +207,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
       </div>
     </div>
   );
+
 
 }
 }
@@ -144,4 +218,5 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -14,6 +14,7 @@ export interface PdfThemeColors {;
 
 
 
+
     ? {
   return theme === 'light' 
     ? { ;
@@ -29,6 +30,7 @@ export interface PdfThemeColors {;
         background: '#ffffff';
         text: '#000000';
         heading: '#222222';
+
 
         subheading: '#444444',
         accent: '#9b87f5';
@@ -63,11 +65,13 @@ export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       }
 }

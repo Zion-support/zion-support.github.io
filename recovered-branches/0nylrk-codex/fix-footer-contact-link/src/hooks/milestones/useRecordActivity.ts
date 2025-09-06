@@ -1,8 +1,21 @@
 
 
 
-
-
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {MilestoneActivity} from './types';
+export const useRecordActivity = () => {
+  const { user } = useAuth();
+  const recordMilestoneActivity = async (
+    milestoneId: string
+    action: string
+    previousStatus: string | null
+    newStatus: string;
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {MilestoneActivity} from './types';
+export const useRecordActivity = () => {;
+  const { user } = useAuth();
 
 import { useAuth } from '@/hooks/useAuth',
 import { supabase } from '@/integrations/supabase/client',
@@ -28,7 +41,7 @@ export const useRecordActivity = () => {
         .insert({
 
           milestone_id: milestoneId;
-          user_id: user.id;
+          user_id: user && user.id;
           action;
           previous_status: previousStatus;
           new_status: newStatus
@@ -55,6 +68,7 @@ export const useRecordActivity = () => {
     } catch (err: any) {
       console && console.error("Error recording activity:", err);
       return null
+
 
 
 
@@ -99,14 +113,17 @@ if (throw error) {
     } catch (err: any) {
       console.error ("Error recording activity:", err);
       return null;
+
     }
   }
 ;
   return {
+
     recordMilestoneActivity;
   }
 }
 ;
+
 
 
 
@@ -149,6 +166,9 @@ export const useRecordActivity = () => {;
 
     }
 
+  };
+  return {;
+    recordMilestoneActivity;
 
   }
   return {

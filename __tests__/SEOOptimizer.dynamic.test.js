@@ -34,7 +34,6 @@ describe('SEOOptimizer', () => {
   });
 });
 
-=======
     expect(screen.getByTestId('seooptimizer.dynamic'
   test('displays correct content'
   test('handles user interactions'

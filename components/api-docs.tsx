@@ -6,6 +6,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
 
 
+
       destination: '/developers/docs',
       permanent: true}}
 };
@@ -19,6 +20,7 @@ export default function ApiDocsRedirect() {
 
       destination: '/developers / docs',
       permanent: true,
+
     },
   }      permanent: true}}
 }
@@ -28,7 +30,10 @@ export default /**
  */
 function ApiDocsRedirect() {
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
 
-
+}
+;
 

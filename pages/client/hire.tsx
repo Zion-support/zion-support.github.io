@@ -1,8 +1,6 @@
 
-
-
-
-
+import { useState } from "react";
+import FeedbackModal from "../../components/ui/FeedbackModal";
 
 import {useState} from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
@@ -17,7 +15,21 @@ import {useState} from 'react';
   const [showFeedback, setShowFeedback] = useState(false);
 
 
-  async function sendOffer() {;
+import { useState } from "react",
+import FeedbackModal from "../../components/ui/FeedbackModal",
+export default function ClientHirePage() {
+  const [talentSlug, setTalentSlug] = useState("ava-chen");
+  const [startDateIso, setStartDateIso] = useState<string>(new Date().toISOString().slice(0, 10)),
+  const [scopeSummary, setScopeSummary] = useState("Build AI-enabled reporting module");
+  const [termsType, setTermsType] = useState("hourly");
+  const [hourlyRateUsd, setHourlyRateUsd] = useState(120);
+  const [fixedAmountUsd, setFixedAmountUsd] = useState(5000);
+  const [agreementUrl, setAgreementUrl] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [result, setResult] = useState<any | null>(null),
+  const [showFeedback, setShowFeedback] = useState(false);
+  async function sendOffer() {
+
     setLoading(true);
     setResult(null);
     const paymentTerms =;
@@ -56,18 +68,60 @@ import {useState} from 'react';
       setShowFeedback(true);    }
 
 
-
+  }
+  return (
+    <div className='max-w-3xl mx-auto p-6 space-y-6'>
+      <h1 className='text-xl font-semibold'>Hire Talent</h1>
+      <div className='space-y-4 border rounded p-4'>
+  const [scopeSummary, setScopeSummary] = useState("Build AI-enabled reporting module"),
+  const [termsType, setTermsType] = useState("hourly"),
+  const [hourlyRateUsd, setHourlyRateUsd] = useState(120),
+  const [fixedAmountUsd, setFixedAmountUsd] = useState(5000),
+  const [agreementUrl, setAgreementUrl] = useState(""),
+  const [loading, setLoading] = useState(false),
+  const [result, setResult] = useState<any | null>(null),
+  const [showFeedback, setShowFeedback] = useState(false),
 
   async function sendOffer() {
     setLoading(true),
     setResult(null),
     const paymentTerms =
 
+      termsType === 'hourly'
+        ? { type: 'hourly', hourlyRateUsd }
+        : termsType === 'fixed'
+          ? { type: 'fixed', fixedAmountUsd }
+          : { type: 'milestone', milestones: [] };
+
+    const res = await fetch('/api/marketplace/offers', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-demo-user-role': 'client',
+        'x-demo-user-id': 'client-1',
+      },
+      body: JSON.stringify({
+        talentSlug,
+        startDateIso,
+        scopeSummary,
+        paymentTerms,
+        agreementUrl,
+      }),
+    });
+    const json = await res.json();
+    setLoading(false);
+    if (!json.ok) {
+      alert(json.error || 'Failed to send offer');
+    } else {
+      setResult(json.offer);
+      setShowFeedback(true);    }
 
       termsType === "hourly"
         ? { type: "hourly", hourlyRateUsd   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
+
 
 
   }
@@ -78,7 +132,6 @@ import {useState} from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         : { type: "milestone", milestones: [] },
     const res = await fetch("/api/marketplace/offers", {
       method: "POST",
@@ -95,7 +148,6 @@ import {useState} from 'react';
       setShowFeedback(true)
     }
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   }
   return (
@@ -112,6 +164,7 @@ import {useState} from 'react';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -121,10 +174,19 @@ import {useState} from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
         <div>
           <label className="block text-sm font-medium">Talent</label>
           <input value={talentSlug} onChange={(e) => setTalentSlug(e.target.value)} className="w-full border rounded px-3 py-2" />
         </div>
+        <div className='flex justify-end'>
+          <button
+            onClick={sendOffer}
+            disabled={loading}
+            className='px-4 py-2 rounded bg-indigo-600 text-white'>;
+            {loading ? 'Sending' : 'Send Offer to Confirm'}          </button>;
+        </div>;
+      </div>;
 
         <div>
           <label className="block text-sm font-medium">Start date</label>
@@ -152,6 +214,7 @@ import {useState} from 'react';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -159,6 +222,7 @@ import {useState} from 'react';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           <div>
@@ -207,6 +271,7 @@ import {useState} from 'react';
             onClick={sendOffer}
             disabled={loading}
 
+
             className='px-4 py-2 rounded bg-indigo-600 text-white'>;
             {loading ? 'Sending…' : 'Send Offer to Confirm'}          </button>;
         </div>;
@@ -218,6 +283,7 @@ import {useState} from 'react';
           <div className='text-sm'>Offer ID: {result && result.id}</div>        </div>;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
       )}
       <FeedbackModal
         isOpen={showFeedback}
@@ -232,12 +298,24 @@ import {useState} from 'react';
 
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+        defaultContext={{ actionType: 'listing_publish', metadata: { talentSlug } }}
+        userHeaders={{ 'x-demo-user-role': 'clientx-demo-user-id': 'client-1' }}
+      />
+    </div>
+);
+        <div className="flex justify-end">
+          <button onClick={sendOffer} disabled={loading} className="px-4 py-2 rounded bg-indigo-600 text-white">
+            {loading ? "Sending…" : "Send Offer to Confirm"  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </button>
+        </div>
+      </div>
+      {result && (
+        </div>
+      </div>
 
       {result && (
         <div className='border rounded p - 4 bg - emerald - 50'>;
@@ -255,8 +333,25 @@ import {useState} from 'react';
           'x - demo - user - id': 'client - 1',
         }}
 
+      />;
+    </div>);
+;
+      />
+    </div>
+);
 
-
+}
+        <div className="flex justify-end">
+          <button onClick={sendOffer} disabled={loading} className="px-4 py-2 rounded bg-indigo-600 text-white">
+            {loading ? "Sending…" : "Send Offer to Confirm"  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </button>
+        </div>
+      </div>
+      {result && (
 
         <div className="border rounded p-4 bg-emerald-50">
           <div className="font-medium">Offer sent</div>
@@ -390,10 +485,12 @@ import {useState} from 'react';
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

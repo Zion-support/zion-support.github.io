@@ -31,10 +31,13 @@ import { ArrowLeft, ExternalLink } from 'lucide-react';
 import {ArrowLeft, ExternalLink} from 'lucide-react';
 
 
+
+
   const router = useRouter();
   const { id } = router.query;
 
 import {ArrowLeft, ExternalLink} from 'lucide-react';
+
 
 
 
@@ -68,6 +71,7 @@ export default function ServiceDetailPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
+
   const router = useRouter();
   const { id } = router.query;
   if (!id |typeof id !== 'string') {
@@ -86,6 +90,7 @@ export default function ServiceDetailPage() {
     );
   }
   const service = getServiceById(id);
+
   if (!service) {;
     return (
 
@@ -122,7 +127,6 @@ export default function ServiceDetailPage() {
                 icon={<ExternalLink className='w-4 h-4' />}              >      </Head>;
 
       <div className="min-h-screen bg-black">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Navigation */}
         <nav className="border-b border-gray-800 bg-black/50 backdrop-blur-sm sticky top-0 z-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -162,9 +166,11 @@ export default function ServiceDetailPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -187,7 +193,6 @@ export default function ServiceDetailPage() {
               perfect solution for your business needs.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Button
                 href='/services'
                 variant='primary'
@@ -201,9 +206,36 @@ export default function ServiceDetailPage() {
                 size='lg'
 
 
+                className='border-white/20 text-white hover:border-white/40'              >                href="/services"
+                variant="primary"
+                size="lg"
+                className="shadow-2xl shadow-blue-500/25"
+                View All Services
+              </Button>
+              <Button
+
+
+        <section className="py-16 bg-gray-900/50">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Looking for Something Else?
+            </h2>
+            <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+              Explore our complete portfolio of micro SaaS services to find the perfect solution for your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                href="/services"
 
 
 
+
+        {/* Related Services CTA */}
+        <section className='py-16 bg-gray-900/50'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+            <h2 className='text-3xl font-bold text-white mb-6'>
+
+              Looking for Something Else?
 
             </h2>
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
@@ -215,9 +247,9 @@ export default function ServiceDetailPage() {
                 href='/services'
                 variant='primary'
                 size='lg'
-                className='shadow-2xl shadow-blue-500/25'              >
-                View All Services
-              </Button>
+                className='shadow-2xl shadow-blue-500/25'>;
+                View All Services;
+              </Button>;
               <Button
                 href='/contact'
                 variant='outline'
@@ -229,6 +261,7 @@ export default function ServiceDetailPage() {
               >
                 View All Services
               </Button>
+
 
 
 
@@ -263,5 +296,6 @@ href="/contact"
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

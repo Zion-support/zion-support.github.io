@@ -4,9 +4,15 @@ import { SearchSuggestion, FilterOptions } from '@/types/search';
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
 
+  {
 
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion, FilterOptions } from "@/types/search";
+  {;
+import { ProductListing } from "@/types/listings";
+import { SearchSuggestion, FilterOptions } from "@/types/search";
+  {
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
@@ -361,12 +367,29 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     }
     images: [
 
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
+    ]
+    createdAt: '2023-12-15T09:45:00.000Z'
+    rating: 4.9
+    reviewCount: 18
+    featured: true
+    location: 'North America'
+    availability: '2-4 Weeks'
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',
+    ],
+    createdAt: '2023-12-15T09:45:00.000Z',
+    rating: 4.9,
+    reviewCount: 18,
+    featured: true,
+    location: 'North America',
+    availability: '2-4 Weeks',;
 
   },];      name: "ServerPro Systems";
       id: "serverpro"}
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
     createdAt: "2023-12-15T09:45:00.000Z";
     rating: 4.9;
+
 
     reviewCount: 18;
     featured: true;
@@ -602,6 +625,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     featured: true, location: "North America",
 
 
+
     availability: "2-4 Weeks"
   }
 ];
@@ -609,7 +633,24 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
 
-
+    'AI models'
+    'GPT integration'
+    'Machine learning'
+    'Computer vision'
+    'Speech recognition'
+    'Data analysis'
+    'Content generation'
+    'Code assistant'
+    'Virtual assistant'
+    'Enterprise AI solutions'
+    'Robotics'
+    'AI workstation'
+    'Business intelligence'
+    'Custom model development'
+    'Server rack'
+    'GPU cluster'
+    'Edge computing'
+    'High performance storage'
 
     'AI models',
     'GPT integration',
@@ -633,12 +674,12 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 
 
 
+
+
   ];
   // Convert strings to SearchSuggestion objects
-
-  return suggestions && suggestions.map(text => ({
-    text,
-
+  return suggestions.map(text => ({
+    text
     type: 'product', // Use a valid type from the updated SearchSuggestion interface
 
   }));};  ];
@@ -648,6 +689,12 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
   }))
 
+}
+// Generate filter options for sidebar
+export const generateFilterOptions = (): FilterOptions => {
+  // Extract unique categories, locations, and availability options from listings
+  const productTypes = [
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))
 
   ].sort();
   const locations = [
@@ -699,6 +746,10 @@ ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 
 
+};
+  }));};
+
+
 
 
 
@@ -734,9 +785,25 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
 },
 
 
+
+
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
+
+  const productTypes = [
+    ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),;
+  ].sort();
+  const locations = [
+    ...new Set(
+      MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean)
+    ),
+  ].sort();
+  const availability = [
+    ...new Set(
+      MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean)
+    ),
+  ].sort();
 
 
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort(),
@@ -744,6 +811,8 @@ export const generateFilterOptions = (): FilterOptions => {
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),
   
   return {
+
+
 
 
     productTypes: productTypes.map(type => ({
@@ -759,6 +828,30 @@ export const generateFilterOptions = (): FilterOptions => {
       value: item
 
     })),
+
+    ratingOptions: [1, 2, 3, 4, 5], // Add rating options
+  };
+};
+
+export const MAX_PRICE = Math.max(
+  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
+);
+export const MIN_PRICE = Math.min(
+  ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
+);
+  return {
+  productTypes: productTypes.map (type => ({
+  label: type, value: type 
+}) );
+locations: locations.map (location => ({
+  label: location, value: location 
+}) );
+availabilityOptions: availability.map (item => ({
+  label: item, value: item 
+}) );
+ratingOptions: [1, 2, 3, 4, 5] // Add rating options 
+
+};export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
 
     ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 import { ProductListing } from "@/types/listings",;
@@ -1116,6 +1209,7 @@ export const generateFilterOptions = (): FilterOptions => {
 
 
 
+
 }
 ;
 export const MAX_PRICE = Math.max (
@@ -1136,6 +1230,7 @@ rating_options: [1, 2, 3, 4, 5] // Add rating options;
 }export const MAX_PRICE = Math.max (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 ;
+
 
 
 

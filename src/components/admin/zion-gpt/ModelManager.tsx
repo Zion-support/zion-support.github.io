@@ -2,29 +2,85 @@
       // Check condition
 if ( {) {
   $2
+
 }
-
-
-
-
-        await supabase;
-
-          .from('model_versions');
-          .update({ active: false });
-          .eq('purpose', purpose);
-
-
-
-
 
 
       }
 
       // Update this model;
-
-
-
-
+  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
+    try {
+      // If activating, deactivate all other models with the same purpose
+      if (!currentActive) {
+        await supabase
+          .from('model_versions')
+          .update({ active: false })
+          .eq('purpose', purpose)
+import { useState, useEffect } from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client',;
+import { ModelConfig } from '@/utils/zion-gpt',;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+interface ModelVersionData extends ModelConfig {;
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',;
+  errorMessage?: string;
+}
+;
+export function ZionGPTModelManager() {;
+  const [models, setModels] = useState<ModelVersionData[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
+  // Fetch model data on component mount;
+  useEffect(() => {;
+    fetchModels();
+  }, []),;
+  const fetchModels = async () => {;
+    try {;
+      setIsLoading(true),;
+      const { data, error } = await supabase;
+        .from('model_versions');
+        .select('*');
+        .order('createdAt', { ascending: false }),;
+      if (error) throw error,;
+      // Map the data to our component state;
+      setModels(data.map((model: any) => ({;
+        id: model.id,;
+        version: model.version,;
+        createdAt: model.created_at,;
+        baseModel: model.base_model,;
+        purpose: model.purpose,;
+        active: model.active,;
+        trainingStatus: model.training_status,;
+        errorMessage: model.error_message;
+      })));
+    } catch (error) {;
+      logErrorToProduction('Error fetching models:', { data: error });
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  const checkTrainingStatus = async (modelId: string) => {;
+    try {;
+      setActiveJobs(prev => ({ ...prev, [modelId]: true })),;
+      // Call an edge function that checks the OpenAI fine-tuning job status;
+      const { data, error } = await supabase.functions.invoke('check-training-status', {;
+        body: { modelId }
+      }),;
+      if (error) throw error,;
+      // Update the local model status;
+      setModels(prev =>;
+        prev.map(model =>;
+          model.id === modelId;
+            ? { ...model, trainingStatus: (data as any)?.status || 'failed', errorMessage: (data as any)?.error || 'Unknown error' } ;
+            : model;
+        );
+      ),;
+      // Also update in the database;
 
       await supabase;
         .from ('model_versions');
@@ -54,9 +110,11 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -147,6 +205,12 @@ if ( {) {
                         variant="ghost"
                         size="sm"
 
+                        onClick={() => checkTrainingStatus(model.id)}
+                        disabled={activeJobs[model.id]}
+                        onClick = {(,) => checkTrainingStatus(model.id),}
+                        disabled = {activeJobs[model.id],}
+                        onClick={() => checkTrainingStatus(model.id)}
+                        disabled={activeJobs[model.id]}
 
                       >
                         {activeJobs[model.id] ? (
@@ -164,6 +228,8 @@ if ( {) {
                         variant={model.active ? "outline" : "default"}
                         size="sm"
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
+
+
 
 
 
@@ -187,6 +253,7 @@ if ( {) {
 
 
 
+
                         title = {model && model.errorMessage || "Training failed",}>;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
                       </Button>;
@@ -203,10 +270,12 @@ if ( {) {
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
+
                   </TableCell>
                 </TableRow>
                   </TableCell>;
                 </TableRow>;
+
 
 
 
@@ -301,3 +370,4 @@ if ( {) {
     </Card>);
 }
 }
+

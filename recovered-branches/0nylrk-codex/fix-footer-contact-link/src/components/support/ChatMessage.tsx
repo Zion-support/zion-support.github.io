@@ -1,19 +1,17 @@
 
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import React from "react";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {cn} from "@/lib/utils";
+import {format} from "date-fns";
+import {useTheme} from "@/hooks/useTheme";
+import React from "react",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { cn } from "@/lib/utils",
+import { format } from "date-fns";
+import { useTheme } from "@/hooks/useTheme";
+import { format } from "date-fns",
+import { useTheme } from "@/hooks/useTheme",
 
 interface ChatMessageProps {
 
@@ -23,9 +21,12 @@ interface ChatMessageProps {
   timestamp: Date
 }
 
-
-
-
+export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {;
+  const { theme } = useTheme();
+export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
+  const { theme } = useTheme();
+  const { theme } = useTheme(),
+  
 
   return (
 
@@ -39,11 +40,11 @@ interface ChatMessageProps {
         ) : (
           <>
             <AvatarImage
-              src="https://placehold.co/40x40?text=AI"
+              src="https://placehold && placehold.co/40x40?text=AI"
               alt="Zion Support"
-            />
-            <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>
-          </>
+            />;
+            <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>;
+          </>;
         )}
       </Avatar>
       <div className={cn(
@@ -74,10 +75,10 @@ interface ChatMessageProps {
               : "text-gray-500"
         )}>;
           {format(timestamp, "h:mm a")}
-        </div>
-      </div>
-    </div>
-  )
+        </div>;
+      </div>;
+    </div>;
+  );
 }
 // Function to convert URLs and help links to actual clickable links
 function formatMessageWithLinks(message: string): string {
@@ -99,6 +100,8 @@ function formatMessageWithLinks(message: string): string {
   )
 
   return formattedMessage
+
+
 
 
 
@@ -186,6 +189,7 @@ function formatMessageWithLinks(): any (message: string): string {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -196,9 +200,8 @@ function formatMessageWithLinks(): any (message: string): string {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { cn } from '@/lib / utils';

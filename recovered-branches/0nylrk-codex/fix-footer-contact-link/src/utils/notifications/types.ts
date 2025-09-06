@@ -2,6 +2,8 @@
 
 
 
+
+
 export type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 ;
 
@@ -15,35 +17,30 @@ export interface CreateNotificationParams {;
 
 
 
+
+
   userId: string;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   message: string;
   type: NotificationType;
 
-
-
-
-
-
+  relatedId?: string | null;
+  sendEmail?: boolean;
+  actionUrl?: string | null
+  actionText?: string | null
+}
+export interface CreateNotificationResult {
 
 export interface CreateNotificationResult {;
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 
   success: boolean;
   notificationId?: string
   error?: any
 }
 
+export interface HireRequestNotificationParams {
 
-
-
-
-
+export interface HireRequestNotificationParams {;
 
   talentId: string;
   adminId?: string;
@@ -53,6 +50,7 @@ export interface CreateNotificationResult {;
   projectSummary?: string
   hireRequestId: string
 }
+
 
 
 
@@ -76,6 +74,7 @@ export interface HireRequestNotificationParams {
   project_summary?: string,
   hireRequestId: string;
 }
+
 export interface OnboardingNotificationParams {
   user_id: string;
   missing_milestone: string,
@@ -91,19 +90,18 @@ export interface OnboardingNotificationParams {;
 
 
 
+
+
   userId: string;
   missingMilestone: string
   userRole: 'talent' | 'client'
 }
 
+export interface SystemNotificationParams {
 
-
-
-
-
+export interface SystemNotificationParams {;
 
   userId: string;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   message: string;
 
@@ -154,5 +152,7 @@ export interface SystemNotificationParams {;
   sendEmail?: boolean;
 }
 ;
+
+
 
 

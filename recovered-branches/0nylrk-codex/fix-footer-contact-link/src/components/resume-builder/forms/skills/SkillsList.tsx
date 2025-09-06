@@ -1,19 +1,17 @@
 
 
-
-
-
-
-
-
-
-
-
+import { useState, useEffect  } from 'react';
+import { Skill  } from '@/types/resume';
+import { SkillCategory } from './SkillCategory';
+import {useState, useEffect} from 'react';
+import {Skill} from '@/types/resume';
+import {SkillCategory} from './SkillCategory';
 
 interface SkillsListProps {
   skills: Skill[];
   onDeleteSkill: (id: string, category: string) => Promise<void>
 }
+
 
 
 
@@ -29,6 +27,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   useEffect(() => {
     // Group skills by category
     const grouped = skills.reduce(
@@ -36,10 +35,23 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
         const category = skill.category |"Other";
         if (!acc[category]) {
 
+;
+  useEffect (() => {
+    // Group skills by category;
+    const grouped = skills.reduce (
+      (acc, skill) => {
+        const category = skill.category || "Other";
+        // Check condition
+if ( {) {
+  $2
+}
+
           acc[category] = [];
         }
         acc[category].push (skill);
         return acc;
+
+
 
       }
       {} as Record<string, Skill[]>
@@ -48,6 +60,9 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
   }, [skills]);
   if (Object.keys(skillsByCategory).length === 0) {
 
+    return null;
+  }
+    return null
 
 import { useState, useEffect } from 'react',;
 import { Skill } from '@/types/resume',;
@@ -79,11 +94,13 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
   }
   
+
 
   return (
     <div className="space-y-6">
@@ -97,6 +114,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
             onDelete={onDeleteSkill}
           />
         ))}
+
 
 
 
@@ -141,6 +159,7 @@ export const SkillsList = ({ skills, onDeleteSkill }: SkillsListProps) => {;
       </div>;
     </div>;
   );
+
 
 
 

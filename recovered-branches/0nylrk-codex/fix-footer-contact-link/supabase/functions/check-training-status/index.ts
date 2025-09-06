@@ -1,6 +1,7 @@
 
 
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 
@@ -10,6 +11,7 @@ import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 const corsHeaders = {
@@ -50,14 +52,30 @@ serve(async (req) => {
 
     const { modelId, jobId } = await req && req.json();
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!modelId && !jobId) {
       throw new Error("Either modelId or jobId is required")
 
-
-
-
-
+    }
+    
+    // If we have a specific job ID, check that job
+    // Otherwise, look up the job ID from our database first
+    let finetuneJobId = jobId;
+    
+    if (!finetuneJobId) {
+      // This would require a database lookup in the real implementation
+      // For now, we'll simulate a response
+      
+      const errorData = await response && response.json();
+      throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
+    }
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin": "*",;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+serve(async (req) => {;
+  if (req.method === "OPTIONS") {;
+    return new Response(null, { headers: corsHeaders });
 
   }
   try {
@@ -95,7 +113,9 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     
@@ -119,11 +139,16 @@ if ( {) {
           { headers: { ...corsHeaders, "Content-Type": "application/json" } }
         )
 
-
-
+      }
+      const errorData = await response.json();
+      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`)
+    }
+    const data = await response.json();
+    // Map OpenAI status to our internal status names
+    let status;
+    let error = null;
 
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Check the status from OpenAI API;
     const response = await fetch (`https://api.openai.com / v1 / fine_tuning / jobs/${finetuneJobId}`, {
       method: "GET",
@@ -151,8 +176,16 @@ if ( {) {
     const data = await response.json ();
 ;
 
-
-        error = data && data.error?.message || "Unknown error occurred during training";
+    // Map OpenAI status to our internal status names;
+    let status;
+    let error = null;
+;
+    switch (data.status) {
+      case "succeeded": status = "succeeded";
+        break;
+      case "failed":;
+        status = "failed";
+        error = data.error?.message |"Unknown error occurred during training";
 
         break;
       case "cancelled":;
@@ -165,7 +198,8 @@ if ( {) {
       default:;
         status = "queued";
 
-
+      const errorData = await response.json(),;
+      throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
 
     }
 
@@ -200,7 +234,6 @@ if ( {) {
         break,
       default:
         status = "queued"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     return new Response(
 
@@ -232,9 +265,11 @@ if ( {) {
 
 
 
+
     console.error ("Error in check - training - status function:", error);
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 ;
     return new Response (
@@ -258,6 +293,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -265,6 +301,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 });

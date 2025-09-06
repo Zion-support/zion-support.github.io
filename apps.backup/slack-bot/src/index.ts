@@ -4,8 +4,18 @@ import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 
 
-
-
+dotenv.config()
+const apiBase = process.env.API_ORIGIN |'http: //localhost:4000';
+const app = new App({
+  token: process.env.SLACK_BOT_TOKEN
+  signingSecret: process.env.SLACK_SIGNING_SECRET
+  appToken: process.env.SLACK_APP_LEVEL_TOKEN
+  socketMode: true
+})
+function helpText(): string {
+  return [
+    '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list'
+  ].join('\n')
 
 }
 app.command ('/zion', async ({ command, ack, respond }) => {
@@ -73,6 +83,8 @@ if ( {) {
 
 
 
+
+
 import { App } from '@slack/bolt',;
 import dotenv from 'dotenv',;
 import fetch from 'node-fetch',;
@@ -95,7 +107,9 @@ function helpText(): string {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 }
@@ -164,13 +178,15 @@ app.command('/zion', async ({ command, ack, respond }) => {;
   await app.start(port),
   // eslint-disable-next-line no-console
 
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+  console.log(`⚡️ Zion Slack bot running on port ${port}`)
+})(),;
+  // // // console.log(`⚡️ Zion Slack bot running on port ${port}`)
+})(),
+}),;
+(async () => {;
+  const port = Number(process.env.SLACK_PORT || 3001),;
+  await app.start(port),;
+  // eslint-disable-next-line no-console;
+  // // // console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
 

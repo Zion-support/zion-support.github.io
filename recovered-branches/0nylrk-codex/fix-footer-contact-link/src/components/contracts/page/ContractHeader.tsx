@@ -10,6 +10,9 @@ interface ContractHeaderProps {
       </Button>
     </div>
 
+  );
+}
+
   )
 import { Button } from "@/components/ui/button";
 interface ContractHeaderProps {;
@@ -43,6 +46,7 @@ interface ContractHeaderProps {
   onCreateClick: () => void;
 }
 
+
 export /**
  * ContractHeader - Function description
  */
@@ -64,5 +68,6 @@ function ContractHeader() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

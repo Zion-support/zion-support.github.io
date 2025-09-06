@@ -16,10 +16,13 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
 
 
 
+
+
       </main>
     </div>
   )
 },
+
 
 
 
@@ -32,5 +35,6 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

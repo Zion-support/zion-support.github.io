@@ -16,6 +16,7 @@ import {
 
 
 
+
   Card,
   CardContent,
   CardDescription,
@@ -29,12 +30,14 @@ CardTitle,;
 
 
 
+
 } from "@/components/ui/card";
 import { Sparkles } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
 export function UsageStats() {
   const handleSaveChanges = () => {
     toast({
+
 
 
 
@@ -54,6 +57,7 @@ export function UsageStats() {;
     toast({;
       title: "Limits updated",;
       description: "The new usage limits have been saved successfully.",;
+
 
 
 
@@ -103,12 +107,14 @@ export function UsageStats() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <Card>
           <CardHeader>
@@ -149,12 +155,14 @@ export function UsageStats() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <Card>
           <CardHeader>
@@ -193,12 +201,14 @@ export function UsageStats() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <Card>
           <CardHeader>
@@ -249,12 +259,14 @@ export function UsageStats() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -273,9 +285,8 @@ export function UsageStats() {;
       </div>
     </div>
 
-
-
-
+  );
+}
 
   )
 import React from "react",;
@@ -306,12 +317,45 @@ export function UsageStats() {;
         <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>;
         <p className="text-muted-foreground mb-6">;
 
+import React from './react';
+import { Slider  } from '@/components / ui / slider';
+import { Badge  } from '@/components / ui / badge';
+import { Button  } from '@/components / ui / button';
+import { Input  } from '@/components / ui / input';
+import { toast  } from '@/hooks / use - toast';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { Sparkles  } from './lucide-react';
+import { Progress  } from '@/components / ui / progress';
+export /**
+ * UsageStats - Function description
+ */
+function UsageStats() {
+  const handleSaveChanges = () =>: any {
+    toast ({
+      title: "Limits updated",
+      description: "The new usage limits have been saved successfully.",
+    });
+  }
+;
+  return (
+    <div className="space - y-8">;
+      <div>;
+        <h3 className="text - xl font - medium mb - 4">Usage Limits & Settings</h3>;
+        <p className="text - muted - foreground mb - 6">;
+
           Configure usage limits for your team to manage your subscription;
           resources.;
         </p>;
       </div>;
 
-      <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 6">;
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">;
         <Card>;
           <CardHeader>;
             <CardTitle > Job Postings</CardTitle>;
@@ -498,9 +542,11 @@ export function UsageStats() {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   );

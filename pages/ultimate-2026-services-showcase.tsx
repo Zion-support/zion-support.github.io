@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState, useMemo } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -117,6 +118,7 @@ import { motion } from 'framer-motion';
 import {
   Search, Star, DollarSign, CheckCircle
   ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List
+
   ChevronDown, Sparkles
 } from 'lucide-react'
 import { ultimate2026Services } from '../data/ultimate-2026-services';
@@ -128,17 +130,14 @@ export default function Ultimate2026ServicesShowcase() {
   const [sortBy, setSortBy] = useState<string>('name')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const contactInfo = {
-
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
-  };
-
+  }
   // Combine all services
   const allServices = [
-    ...ultimate2026Services;
-
+    ...ultimate2026Services
     ...revolutionary2026Innovations
   ]
   // Dynamic category counts
@@ -152,19 +151,58 @@ export default function Ultimate2026ServicesShowcase() {
     service.category?.includes('Enterprise') |service.category?.includes('IT')
   ).length
   const emergingCount = allServices.filter(service =>
-
-    service.category?.includes('Emerging') || service.category?.includes('Innovation')
-  ).length;
-
+    service.category?.includes('Emerging') |service.category?.includes('Innovation')
+  ).length
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
-    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount },
-    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
-    { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emergingCount }
+    { id: 'all', name: 'All Services', icon: '', count: allServices.length }
+    { id: 'ai', name: 'AI & Machine Learning', icon: '', count: aiCount }
+    { id: 'quantum', name: 'Quantum & Space', icon: '', count: quantumCount }
+    { id: 'enterprise', name: 'Enterprise IT', icon: '', count: enterpriseCount }
+    { id: 'emerging', name: 'Emerging Tech', icon: '', count: emergingCount }
+  ]
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' }
+    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' }
+    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' }
+    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' }
+    { id: 'enterprise', name: 'Custom pricing', range: 'Custom' }
+  ]
+  // Filter and sort services
+  const filteredServices = useMemo(() => {
+    let filtered = allServices.filter(service => {
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase())
+      const matchesCategory = selectedCategory === 'all' |
+        (selectedCategory === 'ai' && service.category.includes('AI')) |
+        (selectedCategory === 'quantum' && (service.category.includes('Quantum') |service.category.includes('Space'))) |
+        (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') |service.category.includes('IT'))) |
+        (selectedCategory === 'emerging' && (service.category.includes('Emerging') |service.category.includes('Innovation')))
+      const matchesPrice = selectedPriceRange === 'all' |
+        (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) |
+        (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) <= 5000) |
+        (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) > 5000) |
+        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing')
+      return matchesSearch && matchesCategory && matchesPrice
+    })
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
+    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
+    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
+    { id: 'enterprise', name: 'Custom pricing', range: 'Custom' }
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $1K / month', range: 'Under $1K' },
+    { id: 'medium', name: '$1K - $5K / month', range: '$1K - $5K' },
+    { id: 'high', name: '$5K - $20K / month', range: '$5K - $20K' },
+    { id: 'enterprise', name: 'Custom pricing', range: 'Custom' }
   ];
 
-  const priceRanges = [
+  // Filter and sort services
+  const filteredServices = useMemo(() => {
+    const filtered = allServices.filter(service => {
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
 
       case 'popularity':
         filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0))
@@ -284,7 +322,9 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -325,12 +365,14 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
@@ -358,12 +400,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
               and cutting-edge enterprise solutions that will transform your business in 2026 and beyond.
             </p>
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+            {/* Service Statistics */}
+            {/* Service Statistics */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
               <div className="text-center">
@@ -407,12 +449,14 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <div className="absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
@@ -430,12 +474,14 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <section className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white py-4">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
@@ -491,12 +537,14 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -533,12 +581,14 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 transition={{ duration: 0.8, delay: index * 0.1 }} className="group relative">
                 <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
@@ -589,12 +639,14 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                         <span className="text-sm text-gray-400">{service.period}</span>
                       </div>
@@ -658,12 +710,14 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -693,12 +747,14 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <div className="relative max-w-2xl mx-auto">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -747,12 +803,14 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   onChange={(e) => setSelectedCategory(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   {categories.map((category) => (
@@ -785,12 +843,14 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   onChange={(e) => setSelectedPriceRange(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   {priceRanges.map((range) => (
@@ -831,12 +891,14 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   onChange={(e) => setSortBy(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   <option value="name">Sort by Name</option>
@@ -858,12 +920,14 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               <div className="flex bg-gray-800 border border-gray-700 rounded-lg p-1">
                 <button
@@ -900,13 +964,31 @@ export default function Ultimate2026ServicesShowcase(req, res) {
             {filteredServices.map((service, index) => (;
               <motion.div;
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+                key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.8, delay: index * 0.05 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className={viewMode === 'grid' ? 'group relative' : 'group relative bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
               >
                 {viewMode === 'grid' ? (
@@ -958,12 +1040,14 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                           <span className="text-sm text-gray-400">{service.period}</span>
                         </div>
@@ -1002,12 +1086,14 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                         </h3>
                         {service.popular && (
@@ -1038,12 +1124,14 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                         <span className="text-sm text-gray-400">{service.period}</span>
                       </div>
@@ -1086,6 +1174,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -1093,8 +1182,9 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
               animate={{ opacity: 1 }} className="text-center py-20">
-              <div className="text-6xl mb-4">🔍</div>
+              <div className="text-6xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-gray-400">Try adjusting your search criteria or filters</p>
             </motion.div>
@@ -1120,12 +1210,14 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <section className="py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center px-6">
@@ -1200,12 +1292,14 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
@@ -1275,11 +1369,13 @@ export default function Ultimate2026ServicesShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -3,11 +3,18 @@
 
 
 
+
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 
-
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+import Stripe from "https://esm.sh/stripe@14.21.0",;
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import Stripe from "https://esm.sh/stripe@14.21.0",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -165,8 +172,57 @@ if ( {) {
 
                 refund_id: refund.id
 
+                refunded_at: new Date().toISOString(),
+                refund_id: refund && refund.id
               })
               .eq("id", transactionId)
+        // Update transaction status;
+        await supabase_admin;
+          .from ("transactions");
+          .update ({
+            status: "completed";
+            in_escrow: false,
+            completed_at: new Date ().toISOString ();
+          });
+          .eq ("id", transaction_id);
+;
+        result = { message: "Funds released from escrow" }
+        break;
+;
+      case 'refund':;
+        // Check if transaction can be refunded;
+        // Check condition
+if ( {) {
+  $2
+}
+          throw new Error ("This transaction cannot be refunded");
+        }
+        // Process refund via Stripe;
+        // Check condition
+if ( {) {
+  $2
+}
+          // Retrieve payment intent from session;
+          const session = await stripe.checkout.sessions.retrieve (transaction.stripe_session_id);
+;
+          // Check condition
+if ( {) {
+  $2
+}
+            const refund = await stripe.refunds.create ({
+              payment_intent: session.payment_intent.to_string (),
+              reason: "requested_by_customer";
+            });
+;
+            // Update transaction status;
+            await supabase_admin;
+              .from ("transactions");
+              .update ({
+                status: "refunded";
+                refunded_at: new Date ().toISOString (),
+                refund_id: refund.id;
+              });
+              .eq ("id", transaction_id);
 
           }
         }
@@ -210,6 +266,9 @@ if ( {) {
     console.error("Transaction management error:", error.message);
     return new Response(JSON.stringify({ error: error.message }), {
 
+
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: 500})
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import Stripe from "https://esm.sh/stripe@14.21.0",;
@@ -256,11 +315,13 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 });

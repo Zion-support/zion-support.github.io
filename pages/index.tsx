@@ -1,4 +1,6 @@
 
+import React from 'react';
+origin/main
 
 import Link from 'next/link';
 import Head from 'next/head';
@@ -18,6 +20,8 @@ import LoadingSpinner from '../components/LoadingSpinner';
 // import PerformanceMonitor from '../components/PerformanceMonitor';
 
 
+
+
 import Link from 'next/link';
 import Head from 'next/head';
 import {useState, useEffect, Suspense} from 'react';
@@ -26,7 +30,11 @@ import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
 
+export default function Home() {
+  const [animationState, setAnimationState] = useState<AnimationState>({
 
+    isLoaded: false
+    hasError: false
 
 import React, { useState, useEffect, Suspense } from 'react';
 import Head from 'next/head';
@@ -44,7 +52,9 @@ export default function Home() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   });
@@ -68,7 +78,8 @@ export default function Home() {
         </div>
       </div>
 
-
+    )
+  }
 
     ),
   };
@@ -615,7 +626,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             </p>;
             <p className={`text - lg text - slate - 400 mb - 12 max - w-3xl mx - auto transition - all duration - 1000 delay - 400 ${animation_state.is_loaded ? 'opacity - 100 translate - y-0' :'opacity - 0 translate - y-8'}`}>;
               We deliver cutting - edge technology solutions with 150+ micro SaaS products,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               100+ advanced AI services, and 100+ comprehensive IT solutions. From cloud optimization ;
               to AI automation, quantum computing to blockchain solutions, we help businesses scale ;
               efficiently and securely in the digital age.;
@@ -877,14 +887,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   Smart Contract Analyzer, Cybersecurity Threat Intelligence, and 50+ more specialized tools.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• AI-Powered Video Clip Maker</li>
-                  <li>• Smart Contract Analyzer</li>
-                  <li>• Cybersecurity Threat Intelligence</li>
-                  <li>• Multi-Language Website Translator</li>
-                  <li>• Predictive Inventory Optimizer</li>
+                  <li> AI-Powered Video Clip Maker</li>
+                  <li> Smart Contract Analyzer</li>
+                  <li> Cybersecurity Threat Intelligence</li>
+                  <li> Multi-Language Website Translator</li>
+                  <li> Predictive Inventory Optimizer</li>
                 </ul>
                 <Link href="/micro-saas" className="text-blue-400 hover:text-blue-300 font-semibold">
-                  View All Micro SaaS →
+                  View All Micro SaaS 
                 </Link>
               </div>
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-colors">
@@ -894,14 +904,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   financial trading systems, legal document analysis, and 40+ more AI-powered services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• Autonomous AI Agents</li>
-                  <li>• AI-Powered Financial Trading</li>
-                  <li>• AI Legal Document Analysis</li>
-                  <li>• AI-Powered Voice Analytics</li>
-                  <li>• AI-Powered Search & Discovery</li>
+                  <li> Autonomous AI Agents</li>
+                  <li> AI-Powered Financial Trading</li>
+                  <li> AI Legal Document Analysis</li>
+                  <li> AI-Powered Voice Analytics</li>
+                  <li> AI-Powered Search & Discovery</li>
                 </ul>
                 <Link href="/ai-services" className="text-purple-400 hover:text-purple-300 font-semibold">
-                  View All AI Services →
+                  View All AI Services 
                 </Link>
               </div>
               <div className="p-8 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-colors">
@@ -911,14 +921,14 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
                   DevSecOps automation, and 40+ more enterprise-grade services.
                 </p>
                 <ul className="text-slate-400 space-y-2 mb-6">
-                  <li>• Quantum Computing Consulting</li>
-                  <li>• Blockchain & Web3 Solutions</li>
-                  <li>• DevSecOps & Security Automation</li>
-                  <li>• Enterprise Data Platform</li>
-                  <li>• High-Performance Computing Solutions</li>
+                  <li> Quantum Computing Consulting</li>
+                  <li> Blockchain & Web3 Solutions</li>
+                  <li> DevSecOps & Security Automation</li>
+                  <li> Enterprise Data Platform</li>
+                  <li> High-Performance Computing Solutions</li>
                 </ul>
                 <Link href="/it-services" className="text-green-400 hover:text-green-300 font-semibold">
-                  View All IT Services →
+                  View All IT Services 
                 </Link>
               </div>
             </div>
@@ -1066,6 +1076,7 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 
 
 
+
           </div>
         </section>
 origin/main
@@ -1077,6 +1088,7 @@ origin/main
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         {/* Services Section */}
@@ -1109,17 +1121,24 @@ origin/automation-improvements-final
               </p>
             </motion.div>
 
+        <section className="py-16 bg-gray-50">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center mb-12">;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
+                Our Core Services;
+              </h2>;
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+                Comprehensive technology solutions designed to accelerate your business growth;
+              </p>;
+            </motion && motion.div>;
 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
-                <motion.div
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {services && services.map((service, index) => (;
+                <motion&& motion.div
 
                   key={index}
                   className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
@@ -1152,12 +1171,65 @@ origin/automation-improvements-final
                 </motion && motion.div>;
               ))}
 
-
+            </div>
+          </div>
+        </section>
+        {/* Featured Services */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4 gradient-text">Why Choose Zion Tech Group?</h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                We deliver innovative solutions that drive business growth and technological advancement
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="card text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">AI-Powered Solutions</h3>
+                <p className="text-gray-300">
+                  Leverage cutting-edge artificial intelligence to automate processes and gain competitive advantages
+                </p>
+              </div>
+              
+              <div className="card text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Lightning Fast Performance</h3>
+                <p className="text-gray-300">
+                  Optimized solutions that deliver exceptional performance and scalability for your business needs
+                </p>
+              </div>
+              
+              <div className="card text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold mb-3">Enterprise Security</h3>
+                <p className="text-gray-300">
+                  Bank-level security measures to protect your data and ensure compliance with industry standards
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
 
         {/* Services Preview */}
         <section className="py-20">
             </motion.div>
+
+
 
 
 
@@ -1183,16 +1255,29 @@ origin/automation-improvements-final
               </p>
             </motion.div>
 
+            </div>;
+          </div>;
+        </section>;
 
+        {/* Featured Services */}
+        <section className="py-16 bg-white">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              className="text-center mb-12">;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
+                Featured Solutions;
+              </h2>;
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+                Our most popular and effective technology solutions;
+              </p>;
+            </motion && motion.div>;
 
-
-
-
-
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {featuredServices.map((service, index) => (
-                <motion.div
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {featuredServices && featuredServices.map((service, index) => (;
+                <motion&& motion.div
 
                   key={index}
                   className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
@@ -1242,6 +1327,7 @@ origin/automation-improvements-final
             </div>
           </div>
         </section>
+
 
 
 
@@ -1363,6 +1449,7 @@ origin/automation-improvements-final
 
 
 
+
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -1423,7 +1510,6 @@ origin/automation-improvements-final
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {whyChooseUs.map((item, index) => (
                 <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   key={index}
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
@@ -1507,6 +1593,18 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             </div>
           </div>
         </section>
+
+                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}>;
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <item && item.icon className="w-8 h-8 text-blue-600" />;
+                  </div>;
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{item && item.title}</h3>;
+                  <p className="text-gray-600">{item && item.description}</p>;
+                </motion && motion.div>;
+              ))}
+            </div>;
+          </div>;
+        </section>;
 
 
         {/* Testimonials Section */}
@@ -1597,6 +1695,20 @@ origin/automation-improvements-final
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 
+        <section className="py-16 bg-blue-600 text-white">;
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}>;
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">;
+                Let's discuss how our technology solutions can drive your success;
+              </p>;
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+
                 <Link
                   href="/contact"
                   className="bg-yellow-500 text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-yellow-400 transition-colors flex items-center justify-center">;
@@ -1611,6 +1723,16 @@ origin/automation-improvements-final
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
 
+                </Link>
+        <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+ursor/integrate-build-improve-and-re-verify-8f7d
 
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Transform Your Business?
@@ -1656,7 +1778,9 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 
 
 
+
 origin/main
+
 
 
 
@@ -1936,6 +2060,8 @@ origin/main
 
 
 
+
+
           </div>
         </section>
 
@@ -1945,7 +2071,9 @@ origin/main
 origin/automation-improvements-final
       </div>
 
-
+    </>
+  );
+}
 
     </MainLayout>
   );
@@ -1963,6 +2091,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
 </main>
     </>
+
 
 
 origin/main
@@ -1984,4 +2113,5 @@ origin/main
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

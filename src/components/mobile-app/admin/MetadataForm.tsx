@@ -2,6 +2,7 @@ interface MetadataFormProps {;
   form: UseFormReturn<AppMetadataValues>;
 
 
+
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
@@ -287,3 +288,4 @@ if ( {) {
     </Card>);
 },
 ;
+

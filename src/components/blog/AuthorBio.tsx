@@ -8,10 +8,14 @@
 
 
 
+
+
+
           target.src = '/images/blog-placeholder.svg'
         }}
       />
       <div>
+
 
 
 
@@ -28,6 +32,7 @@
       </div>
     </div>
   )
+
 
 
 
@@ -159,3 +164,4 @@ export function AuthorBio({ author }: AuthorBioProps) {;
 }'"}
 }
 ;
+

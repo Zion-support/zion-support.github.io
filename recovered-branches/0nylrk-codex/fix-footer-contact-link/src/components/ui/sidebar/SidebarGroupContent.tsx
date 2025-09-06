@@ -1,10 +1,16 @@
 
 
+import React from "react";
+import { cn } from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
 
 import {cn} from "@/lib/utils";
 
 import React from "react",
 import { cn } from "@/lib/utils",
+
+
 
 
 interface SidebarGroupContentProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -28,12 +34,11 @@ export function SidebarGroupContent(): any ({ className, children, ...props }: S
 
     <div className={cn("space-y-1", className)} {...props}>
 
-
-
-
-
-
-
+      {children}
+    </div>
+  );
+}
+  )
 
 import React from "react",;
 import { cn } from "@/lib/utils",;
@@ -47,11 +52,11 @@ export function SidebarGroupContent({ className, children, ...props }: SidebarGr
 
     <div className={cn("space-y-1", className)} {...props}>;
       {children}
-
-    </div>;
+    </div>
   );
 
 }
+
 
 
 
@@ -61,5 +66,6 @@ export function SidebarGroupContent({ className, children, ...props }: SidebarGr
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

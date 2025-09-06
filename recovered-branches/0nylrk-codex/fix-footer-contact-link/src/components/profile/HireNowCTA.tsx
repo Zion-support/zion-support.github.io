@@ -5,20 +5,24 @@
 
 
 
+
+
 import {Button} from "@/components/ui/button";
 import {HireRequestModal} from "./hire-request";
 import {useState} from "react";
 import {TalentProfile} from "@/types/talent";
 
-
-
+import { Button } from "@/components/ui/button",
+import { HireRequestModal } from "./hire-request",
+import { useState } from "react";
+import { TalentProfile } from "@/types/talent";
 
 interface HireNowCTAProps {
   talent_profile: {
     id: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     full_name?: string;
     professional_title?: string;
+
 
 
     hourly_rate?: number;
@@ -50,6 +54,7 @@ export function HireNowCTA(): any ({ talentProfile }: HireNowCTAProps) {;
 
 
 
+
 interface HireNowCTAProps {
   talentProfile: {
     id: string,
@@ -63,6 +68,7 @@ interface HireNowCTAProps {
 
 
 
+
   const handleOpenModal = () => {
     setModalOpen(true)
   }
@@ -73,6 +79,7 @@ interface HireNowCTAProps {
   const canHire = talentProfile && talentProfile.id && talentProfile.full_name;
   // Calculate talent profile completeness (simplified)
   const profileCompleteness = calculateProfileCompleteness(talentProfile);
+
   },
 
   const handleCloseModal = () => {
@@ -88,12 +95,8 @@ interface HireNowCTAProps {
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 sticky top-4">
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name |'This Talent'}</h3>
+      <h3 className="text-xl font-bold mb-4">Hire {talentProfile?.full_name || 'This Talent'}</h3>
 
       <div className="mb-4">
         <div className="flex justify-between mb-2">
@@ -120,6 +123,10 @@ interface HireNowCTAProps {
         </Button>
       </div>
 
+      <HireRequestModal
+
+      <HireRequestModal 
+      <HireRequestModal 
 
 import { Button } from "@/components/ui/button",;
 import { HireRequestModal } from "./hire-request",;
@@ -179,7 +186,9 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
         isOpen={modalOpen}
         onClose={handleCloseModal}
@@ -207,6 +216,7 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
 
@@ -219,6 +229,7 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {;
 
 
 
+
 // Helper function to calculate profile completeness
 function calculateProfileCompleteness(profile: any) {
   if (!profile) return 0;
@@ -226,6 +237,7 @@ function calculateProfileCompleteness(profile: any) {
 
 
   return Math.min(Math.round((completedFields / totalFields) * 100), 100)
+}
 
 ;
 
@@ -235,7 +247,9 @@ function calculateProfileCompleteness(): any (profile: any) {;
 
   const fields = [;
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     'full_nameprofessional_titlebioskillshourly_ratelocationportfolio_linksexperience';
     'availability_type';
   ];
@@ -253,6 +267,7 @@ function calculateProfileCompleteness(): any (profile: any) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -264,7 +279,7 @@ function calculateProfileCompleteness(): any (profile: any) {;
 
 }
 
-=======
+
           hourly_rate: talent_profile.hourly_rate;
         } : null}
       />;

@@ -59,6 +59,9 @@ export default function VendorsPage({ vendors }: Props) {
         Powered by Zion • Co-brand available
       </div>
 
+    </div>
+    </div>;
+
   );
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 const { listVendors } = await import('../../utils/vendor-store');
@@ -67,6 +70,8 @@ const { listVendors } = await import('../../utils/vendor-store');
 };      <div className="text-center text-xs text-gray-500">Powered by Zion • Co-brand available</div>
 
     </div>
+
+
 
 
   );
@@ -84,6 +89,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -91,5 +97,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

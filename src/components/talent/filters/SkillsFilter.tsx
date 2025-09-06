@@ -6,6 +6,7 @@ import { SkillsFilterProps } from "@/types/filters";
 
 
 
+
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -42,6 +43,7 @@ import { SkillsFilterProps } from "@/types/filters";
 
 
           {POPULAR_SKILLS.map(skill => (
+
       </button>;
 
       {expanded && (;
@@ -167,10 +169,12 @@ const POPULAR_SKILLS = [;
 ];
 
 
+
               <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills && selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
+
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />
               <label
                 htmlFor={`skill-${skill}`}
@@ -185,10 +189,25 @@ const POPULAR_SKILLS = [;
             </div>
           ))}
 
+      )}
+    </div>
+  )
+}
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer";
+              >;
+                {skill}
+              </label>;
+            </div>;
+          ))}
+        </div>;
+      )}
+      )};
 
     </div>;
   );
 };
 }
 
+
 ;
+

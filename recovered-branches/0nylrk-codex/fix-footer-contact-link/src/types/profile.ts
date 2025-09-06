@@ -2,6 +2,7 @@
 
 export interface ProfileSkill {
 
+  name: string
 
 
 
@@ -11,6 +12,7 @@ export interface ProfileSkill {
   endorsements?: number;
 
 }
+
 
 
 
@@ -37,10 +39,12 @@ export interface ProfileSkill {
   company: string;
   description: string;
 
+
   start_date: string;
   end_date?: string,
   current?: boolean;
 }
+
 
 
 
@@ -75,11 +79,17 @@ export interface ProfileSkill {
   experience: ProfileExperience[];
   availability: Availability;
 
+
   hourly_rate?: number,
   contact_email?: string;
 
 }
 
+export interface ProfileSkill {;
+  name: string,;
+  level: number, // 1-5;
+  endorsements?: number;
+}
 
 ;
 export interface ProfileProject {;
@@ -129,5 +139,7 @@ export interface ProfileData {;
   contactEmail?: string;
 }
 ;
+
+
 
 

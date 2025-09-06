@@ -93,14 +93,36 @@ function handler() {
 
 
 
+    const text = completion.choices?.[0]?.message?.content ?? '';
+    return res.status(200).json({ summary: text.trim() });
+  } catch (err) {
+    return fallback();
+  }
+    const text = completion.choices?.[0]?.message?.content ?? '';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+    return res.status (200).json ({ summary: text.trim () });
+  } catch (err) {
+    return fallback ();
+}
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+
+  try {
+    const client = new OpenAI({ apiKey })
+    const prompt = `Summarize the following module for a founder preparing to deploy a Zion instance. Provide a concise, actionable summary with 4-6 bullet points.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`
+
+    const completion = await client.chat.completions.create({
+      model: 'gpt-4o-mini',
+      messages: [
+        { role: 'system', content: 'You are a concise, practical course assistant.' },
+        { role: 'user', content: prompt }],
+      temperature: 0.3}),
+
+}
+  }
+  }
 

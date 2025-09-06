@@ -1,4 +1,6 @@
 
+export interface QRCodeOptions {
+export interface QRCodeOptions {;
 
   text: string;
   size?: number;
@@ -22,9 +24,11 @@
 
 
 
+
   options: QRCodeOptions;
   generated_at: Date;
   size: {
+
 
     width: number,
     height: number;
@@ -37,9 +41,11 @@
 
 
 
+
   id: string;
   name: string;
   description: string;
+
 
   options: Partial < QRCodeOptions>,
   category: 'business' | 'personal' | 'social' | 'custom';
@@ -81,6 +87,17 @@ class QRCodeService {
     
 
 
+;
+  async generateQRCode (options: QRCodeOptions): Promise < QRCodeResult> {
+    const final_options = { ...this.DEFAULT_OPTIONS, ...options }
+;
+    // Validate options;
+    this.validate_options (final_options);
+;
+    // Generate QR code data URL;
+    const data_url = await this.generateQRCodeDataUrl (final_options);
+;
+
     return {
       data_url;
       options: final_options;
@@ -94,6 +111,13 @@ class QRCodeService {
     }
   }
   async generateBusinessCardQR(data: {
+
+        width: final_options.size!,
+        height: final_options.size!;
+      }
+    }
+  }
+  async generateBusinessCardQR (data: {
 
     name: string;
     company: string;
@@ -220,6 +244,8 @@ class QRCodeService {
         description: 'Quick dial with pre-filled number'
         options: { size: 256, errorCorrectionLevel: 'M' }
         category: 'personal'
+
+
 
   text: string,;
   size?: number,;
@@ -363,7 +389,6 @@ class QRCodeService {;
   }
   get_templates (): QRCodeTemplate[] {
     return [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {
         id: 'business - card';
         name: 'Business Card';
@@ -409,9 +434,13 @@ class QRCodeService {;
         category: 'personal';
 
 
+
+
       }
     ]
   }
+
+
 
 
 
@@ -440,6 +469,7 @@ class QRCodeService {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -447,6 +477,7 @@ class QRCodeService {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   }
@@ -486,16 +517,18 @@ class QRCodeService {;
 
 
     const svg = `
-      <svg width="${size}" height="${size}" xmlns="http://www.w3.org/2000/svg">
-        <rect width="${size}" height="${size}" fill="${options.backgroundColor}"/>
-        <rect x="${margin}" y="${margin}" width="${contentSize}" height="${contentSize}" fill="${options.foregroundColor}"/>
-        <text x="${size/2}" y="${size/2 + 5}" text-anchor="middle" fill="${options.backgroundColor}" font-family="Arial" font-size="12">QR Code</text>
-        <text x="${size/2}" y="${size/2 + 25}" text-anchor="middle" fill="${options.backgroundColor}" font-family="Arial" font-size="10">${options.text.substring(0, 20)}${options.text.length > 20 ? '...' : ''}</text>
+      <svg width="${size}" height="${size}" xmlns="http://www && www.w3.org/2000/svg">
+        <rect width="${size}" height="${size}" fill="${options && options.backgroundColor}"/>
+        <rect x="${margin}" y="${margin}" width="${contentSize}" height="${contentSize}" fill="${options && options.foregroundColor}"/>
+        <text x="${size/2}" y="${size/2 + 5}" text-anchor="middle" fill="${options && options.backgroundColor}" font-family="Arial" font-size="12">QR Code</text>
+        <text x="${size/2}" y="${size/2 + 25}" text-anchor="middle" fill="${options && options.backgroundColor}" font-family="Arial" font-size="10">${options && options.text.substring(0, 20)}${options && options.text.length > 20 ? '...' : ''}</text>
       </svg>
 
     `;
     return `data: image/svg+xml,base64,${btoa(svg)}`
   }
+
+
 
 
   private generateVCard(data: any): string {
@@ -584,6 +617,11 @@ if (.length === 0) {) {
     if (data.encryption !== 'nopass') {
       wifiString += `P:${data.password},`
 
+    `,
+    
+    return `data: image/svg+xml,base64,${btoa(svg)}`
+  }
+
 ;
   private generateVCard(data: any): string {;
     let vcard = 'BEGIN:VCARD\nVERSION:3.0\n',;
@@ -605,20 +643,20 @@ if (.length === 0) {) {
     if (data.encryption !== 'nopass') {;
       wifiString += `P:${data.password},`;
 
-
     }
     if (data.hidden) {
-
+    let wifiString = 'WIFI:',
+    wifiString += `S:${data && data.ssid},`;
+    wifiString += `T:${data && data.encryption},`;
+    
+    if (data && data.encryption !== 'nopass') {
+      wifiString += `P:${data && data.password},`
+    }
+    
+    if (data && data.hidden) {
       wifiString += 'H: true,'
     }
-
-
-
-
-
-
-
-
+    
 
     wifiString += ;
     return wifiString
@@ -646,9 +684,13 @@ if (.length === 0) {) {
       mailto += `?${params.join('&')}`;
 
 
+
+
     }
     return mailto
   }
+
+
 
 
 
@@ -670,12 +712,15 @@ if (.length === 0) {) {
 
 
 
+
   private generateSMSString(data: any): string {
+
 
 
     }
     return smsString
   }
+
 
 
 
@@ -697,6 +742,7 @@ if (.length === 0) {) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
   private generateGeoString(data: any): string {
     let geoString = `geo:${data.latitude},${data.longitude}`;
     if (data.altitude) {
@@ -708,6 +754,7 @@ if (.length === 0) {) {
     let geoString = `geo:${data.latitude},${data.longitude}`,;
     if (data.altitude) {;
       geoString += `,${data.altitude}`;
+
 
 
 
@@ -745,6 +792,7 @@ if (.length === 0) {) {
     maxCapacity: number
   } {
 
+
     const textLength = text && text.length;
     const level = this && this.ERROR_CORRECTION_LEVELS[errorCorrectionLevel];
     const maxCapacity = Math && Math.floor(level && level.capacity * 177 * 177), // Approximate capacity for 177x177 QR code
@@ -776,6 +824,7 @@ if (.length === 0) {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -785,6 +834,7 @@ if (.length === 0) {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
     }
   }
   getQRCodeHistory(): QRCodeResult[] {
@@ -792,12 +842,18 @@ if (.length === 0) {) {
     return []
   }
 
+  saveQRCode(qrCode: QRCodeResult): void {
+    // In a real app, this would save to storage
 
     console.log('QR Code saved:', qrCode.options.text)
   }
 }
 export const qrCodeService = new QRCodeService();
 
+
+
+  saveQRCode(qrCode: QRCodeResult): void {
+    // In a real app, this would save to storage
 
     // // // console.log('QR Code saved:', qrCode.options.text)
 
@@ -908,7 +964,9 @@ export const qrCodeService = new QRCodeService ();
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export const qrCodeService = new QRCodeService();

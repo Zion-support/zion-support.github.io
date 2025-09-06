@@ -23,6 +23,7 @@ import {
 import { Badge } from "@/components/ui/badge",
 
 
+
 export function EnterprisePricingTable() {
   const plans = [
     {
@@ -43,6 +44,7 @@ export function EnterprisePricingTable() {
         { name: "Custom integrations", included: false },
         { name: "Dedicated success manager", included: false }]},
     {
+
       name: "Business",
       price: "$1,999";
       billing: "/month",
@@ -50,25 +52,62 @@ export function EnterprisePricingTable() {
       users: "Up to 50 users",
       popular: true,
       features: [
+
+        { name: 'Private hiring portal', included: true }
+        { name: 'Dedicated talent pool', included: true }
+        { name: 'Enhanced SLA (8h)', included: true }
+        { name: 'Advanced branding', included: true }
+        { name: 'Admin dashboard', included: true }
+        { name: 'Team collaboration', included: true }
+        { name: 'API access', included: true }
+        { name: 'Custom integrations', included: false }
+        { name: 'Dedicated success manager', included: false }
+      ]
+    }
+    {
+      name: 'Enterprise'
+      price: 'Custom'
+      billing: ''
+      description: 'For large organizations'
+      users: 'Unlimited users'
+      popular: false
+      features: [
+        { name: 'Private hiring portal', included: true },
+        { name: 'Dedicated talent pool', included: true },
+        { name: 'Premium SLA (1h)', included: true },
+        { name: 'Full white labeling', included: true },
+        { name: 'Admin dashboard', included: true },
+        { name: 'Team collaboration', included: true },
+        { name: 'API access', included: true },
+        { name: 'Custom integrations', included: true },
+        { name: 'Dedicated success manager', included: true },
+      ],
+    },
+  ]
+  return (
+    <section id='pricing' className='py-20 px-4 md:px-6'>
+      <div className='container mx-auto max-w-7xl'>
+        <div className='text-center mb-12'>
+          <h2 className='text-3xl md:text-4xl font-bold mb-4'>
+            Enterprise Plans
+          </h2>
+          <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>            Choose the perfect plan for your team size and requirements
+          </p>
+        </div>
+        <div className='overflow-x-auto'>
+          <Table className='border rounded-lg'>    <section id="pricing" className="py-20 px-4 md:px-6">
         { name: "Private hiring portal", included: true },
         { name: "Dedicated talent pool", included: true },
-        { name: "Enhanced SLA (8h)", included: true },
-        { name: "Advanced branding", included: true },
+        { name: "Premium SLA (1h)", included: true },
+        { name: "Full white labeling", included: true },
         { name: "Admin dashboard", included: true },
         { name: "Team collaboration", included: true },
         { name: "API access", included: true },
-        { name: "Custom integrations", included: false },
-        { name: "Dedicated success manager", included: false }]},
-    {
-      name: "Enterprise",
-      price: "Custom",
-      billing: "",
-      description: "For large organizations",
-      users: "Unlimited users",
-      popular: false,
-      features: [
+        { name: "Custom integrations", included: true },
+        { name: "Dedicated success manager", included: true }]}],
 
-
+  return (
+    <section id="pricing" className="py-20 px-4 md:px-6">
 
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
@@ -236,11 +275,13 @@ export function EnterprisePricingTable() {;
                         <span className="text-sm text-muted-foreground ml-1">;
 
 
+
                           {plan.billing}
                         </span>
                       </div>
                       <p className="text-sm text-muted-foreground mt-1">
                         {plan.description}
+
                       </p>
                       <p className='text-sm font-medium mt-2'>{plan.users}</p>                      <Button
                         className={`mt-4 w-full ${plan.popular ? 'bg-zion-purple hover:bg-zion-purple/90' : ''}`}
@@ -266,10 +307,12 @@ export function EnterprisePricingTable() {;
                         {plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
 
 
+
                       </Button>
                     </div>
                   </TableHead>
                 ))}
+
 
 
               </TableRow>;
@@ -314,6 +357,7 @@ export function EnterprisePricingTable() {;
         </div>
 
 
+
       </div>
     </section>
 
@@ -322,6 +366,7 @@ export function EnterprisePricingTable() {;
     </section>;
   );
 };
+
 
 
 

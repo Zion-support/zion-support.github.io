@@ -3,9 +3,11 @@
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
   model: 'gpt-4o-mini';
 messages: [ {
+
 
   role: 'system', content: 'You are a helpful assistant.' 
 
@@ -27,16 +29,25 @@ export const Create = () => {
 };
 
 {
-  role: 'user', content: prompt 
-}];
 
+  role: 'user', content: prompt
+}];
 temperature: 0.3
 });
-const content = response.choices[0]?.message?.content |'';
-const typeMatch = content.match (/type\s*:\s* (.+) $/im);
-      return { summary: description.slice(0, 280), type: 'unknown' };    const { OpenAI } = await import('openai');async function saveRequests(requests: any[]) {
-  fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true });
-  fs.writeFileSync(REQUESTS_PATH, JSON.stringify(requests, null, 2))
+const content = response && response.choices[0]?.message?.content || '';
+const typeMatch = content && content.match (/type\s*:\s* (.+) $/im);
+
+
+
+      return { summary: description && description.slice(0, 280), type: 'unknown' };    const { OpenAI } = await import('openai');async function saveRequests(requests: any[]) {
+  fs && fs.mkdirSync(path && path.dirname(REQUESTS_PATH), { recursive: true });
+  fs && fs.writeFileSync(REQUESTS_PATH, JSON && JSON.stringify(requests, null, 2))
+}
+
+      return { summary: description && description.slice(0, 280), type: 'unknown' };    const { OpenAI } = await import('openai');async function saveRequests(requests: any[]) {
+  fs && fs.mkdirSync(path && path.dirname(REQUESTS_PATH), { recursive: true });
+  fs && fs.writeFileSync(REQUESTS_PATH, JSON && JSON.stringify(requests, null, 2))
+
 }
 
 async function summarizeWithOpenAI(description: string) {
@@ -48,6 +59,7 @@ async function summarizeWithOpenAI(description: string) {
       model: 'gpt-4o-mini'
       messages: [
 
+
     });
     const content = response.choices[0]?.message?.content |'';
     const typeMatch = content.match(/type\s*:\s*(.+)$/im);
@@ -57,12 +69,13 @@ async function summarizeWithOpenAI(description: string) {
     }
   } catch (err) {
     return { summary: description.slice(0, 280), type: 'unknown' }
+
   }
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST');
+  if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } =
     req.body |{}
@@ -73,6 +86,7 @@ export default async function handler(
   } catch (err) {
     return { summary: description.slice(0, 280), type: 'unknown' }
   }
+
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -82,11 +96,59 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } = req.body |{}
   if (!name |!email |!description) return res.status(400).json({ error: 'Missing required fields' });
+
   const normalizedBudget = String(budget ?? '').replace(/[^0-9.\-]/g, '');
   const ai = await summarizeWithOpenAI(String(description));
   const requests = await loadRequests();
   const now = new Date().toISOString();
-  const id = `req_${Date.now()}`;
+
+  const id = `req_${Date && Date.now()}`;
+    const content = response.choices[0]?.message?.content || '';
+    const type_match = content.match (/type\s*:\s*(.+)$/im);
+    return {
+      summary: content.trim (),
+      type: type_match ? type_match[1].trim () : 'unknown',
+    }
+  } catch (err) {
+    return { summary: description.slice (0, 280), type: 'unknown' }
+  }
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: 'Method not allowed' })) {
+  $2
+}
+  const { name, email, budget, timeline, description, talent_slug } =;
+    req.body || {}
+  if (
+    return res.status (400).json ({ error: 'Missing required fields' })) {
+  $2
+}    const content = response.choices[0]?.message?.content || '';
+    const type_match = content.match (/type\s*:\s*(.+)$/im);
+    return { summary: content.trim (), type: type_match ? type_match[1].trim () : 'unknown' }
+  } catch (err) {
+    return { summary: description.slice (0, 280), type: 'unknown' }
+  }
+}
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).json ({ error: 'Method not allowed' })) {
+  $2
+}
+  const { name, email, budget, timeline, description, talent_slug } = req.body || {}
+  if (return res.status (400).json ({ error: 'Missing required fields' })) {
+  $2
+}
+  const normalized_budget = String (budget ?? '').replace (/[^0 - 9.\-]/g, '');
+  const ai = await summarizeWithOpenAI (String (description));
+;
+  const requests = await load_requests ();
+  const now = new Date ().toISOString ();
+  const id = `req_${Date.now ()}`;
 
   const record = {
 
@@ -96,20 +158,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     budget: normalizedBudget;
     timeline: String(timeline |'');
     description: String(description);
-
-    id;
-    name;
-    email;
-    budget: normalizedBudget, timeline: String(timeline || ''),
-    description: String(description), talentSlug: talentSlug || null,
-    aiSummary: ai.summary, aiType: ai.type,
-    status: 'new', createdAt: now,
-    updatedAt: now};
-
+    talentSlug: talentSlug |null;
+    aiSummary: ai.summary;
+    aiType: ai.type;
+    status: 'new';
+    createdAt: now
+    updatedAt: now}
   requests.push(record);
   await saveRequests(requests);
 
   // TODO: Integrate notifications (email/webhook) for admin and talent
+
+
+  return res.status(200).json({ id, status: 'ok' });
+}
 
     budget: normalized_budget,
     timeline: String (timeline || ''),
@@ -140,7 +202,11 @@ return res.status (200).json ({ id, status: 'ok' });
 
 
 
-
 =======
+}
+
+
+  return res.status(200).json({ id, status: 'ok' });
+}
 
 

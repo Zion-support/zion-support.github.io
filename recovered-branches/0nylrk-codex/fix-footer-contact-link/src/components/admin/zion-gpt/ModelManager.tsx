@@ -3,6 +3,8 @@
 
 
 
+
+
 import { useState, useEffect } from 'react',
 
 import { Button } from "@/components/ui/button",
@@ -16,6 +18,8 @@ import { ModelConfig } from '@/utils/zion-gpt';
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",
 import { supabase } from '@/integrations/supabase/client',
 import { ModelConfig } from '@/utils/zion-gpt',
+
+
 
 
 
@@ -37,11 +41,14 @@ import {ModelConfig} from '@/utils/zion-gpt';
 
 
 
+
+
 interface ModelVersionData extends ModelConfig {
 
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed'
 
   errorMessage?: string
+
 
 
 
@@ -58,13 +65,13 @@ export function ZionGPTModelManager() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   const [isLoading, setIsLoading] = useState(true);
   const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
 
   // Fetch model data on component mount;
   useEffect(() => {;
     fetchModels();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }, []);
 
   const fetchModels = async () => {;
@@ -183,9 +190,19 @@ if (throw error) {
       console.error('Error toggling model active state:', error)
     }
 
-
-
-
+  }
+  };
+import { useState, useEffect } from 'react',
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",
+import { supabase } from '@/integrations/supabase/client',
+import { ModelConfig } from '@/utils/zion-gpt',
+interface ModelVersionData extends ModelConfig {
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
+  errorMessage?: string
 
 import { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -284,21 +301,20 @@ export function ZionGPTModelManager() {;
           .update({ active: false });
           .eq('purpose', purpose);
       }
-
-      // Update this model;
-      await supabase;
-        .from('model_versions');
-        .update({ active: !currentActive });
+      // Update this model
+      await supabase
+        .from('model_versions')
+        .update({ active: !currentActive })
         .eq('id', modelId);
 
       // Refresh the model list;
       fetchModels();
     } catch (error) {;
       console && console.error('Error toggling model active state:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
+
 
 
 
@@ -361,6 +377,7 @@ export function ZionGPTModelManager() {;
                       <Badge className="bg-yellow-500">Queued</Badge>;
                     )}
 
+
                     {model && model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
                   </TableCell>;
                   <TableCell>{new Date(model && model.createdAt).toLocaleDateString()}</TableCell>;
@@ -418,7 +435,9 @@ export function ZionGPTModelManager() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               ))}
@@ -434,5 +453,7 @@ export function ZionGPTModelManager() {;
     </Card>;
   );
 }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 

@@ -3,6 +3,7 @@
 
 
 
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -95,6 +96,7 @@ function Pricing2025() {
 
 
 
+
     visible: {
       opacity: 1
       transition: {
@@ -113,6 +115,8 @@ function Pricing2025() {
         duration: 0.5;
       }
     }
+
+
 
 
 
@@ -193,7 +197,9 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   },
@@ -201,13 +207,13 @@ export default function Pricing2025(req, res) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
-        <title>2025 Pricing & Services — Zion Tech Group</title>
+        <title>2025 Pricing & Services  Zion Tech Group</title>
         <meta name="description" content="Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services. Transparent pricing with flexible plans." />
-        <meta property="og:title" content="2025 Pricing & Services — Zion Tech Group" />
+        <meta property="og:title" content="2025 Pricing & Services  Zion Tech Group" />
         <meta property="og:description" content="Explore our comprehensive pricing for innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
         <meta name="keywords" content="pricing, micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/pricing-2025" />
-        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"2025 Pricing & Services — Zion Tech Group","url":"https://ziontechgroup.com/pricing-2025","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
+        <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"2025 Pricing & Services  Zion Tech Group","url":"https://ziontechgroup.com/pricing-2025","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
       <EnhancedNavigation />
 
       {/* Hero Section */}
@@ -220,7 +226,9 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -242,19 +250,14 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
               2025 Pricing & Services
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
 
-
-
-
-
-
-
+              Transparent pricing for our comprehensive collection of innovative micro SAAS services
+              Transparent pricing for our comprehensive collection of innovative micro SAAS services, 
 
               AI solutions, quantum technologies, and revolutionary IT services.
             </p>
@@ -275,7 +278,9 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -296,7 +301,6 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >
                 <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
                   billingCycle === 'annual' ? 'right-1' : 'left-1'
@@ -324,7 +328,9 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       <section className="py-8 px-6 bg-gradient-to-r from-white/5 to-white/10">
@@ -334,14 +340,14 @@ export default function Pricing2025(req, res) {
               <button
 
                 key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-lg text-lg font-medium transition-all duration-300 flex items-center gap-2 ${
-                  selectedCategory === category.id
-                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                    : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
+                on_click={() => setSelectedCategory (category.id)}
+                className={`px - 6 py - 3 rounded - lg text - lg font - medium transition - all duration - 300 flex items - center gap - 2 ${
+                  selected_category === category.id;
+                    ? 'bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
+                    : 'bg - white / 10 text - white / 70 hover:bg - white / 20 hover:text - white';
                 }`}
-              >
-                <span>{category.icon}</span>
+              >;
+                <span>{category.icon}</span>;
                 {category.name}
               </button>
             ))}
@@ -406,7 +412,9 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             initial="hidden"
@@ -432,7 +440,6 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               >;
                 {/* Popular Badge */}
                 {service.popular && (
@@ -457,7 +464,9 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -468,7 +477,6 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                   <p className="text-white/70 text-sm leading-relaxed">{service.tagline}</p>
@@ -507,12 +515,14 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     </span>
                   </div>
@@ -539,7 +549,9 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -565,7 +577,6 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>
                   <span className="text-white/60 text-sm">
                     {service.rating} ({service.reviews} reviews)
@@ -583,7 +594,9 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 <div className="mb-8">
@@ -599,7 +612,6 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {service.features.length > 5 && (
                       <div className="text-cyan-400 text-sm font-medium text-center">
                         +{service.features.length - 5} more features
@@ -649,6 +661,7 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -656,8 +669,9 @@ export default function Pricing2025(req, res) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
                 <div className="mb-8 p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg border border-cyan-400/20">
-                  <div className="text-cyan-400 font-semibold mb-2 text-center">🚀 Expected ROI:</div>
+                  <div className="text-cyan-400 font-semibold mb-2 text-center"> Expected ROI:</div>
                   <p className="text-white/80 text-sm text-center">{service.roi}</p>
                   <div className="mt-3 grid grid-cols-2 gap-4 text-center text-sm">
                     <div>
@@ -692,12 +706,14 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     target="_blank"
                     rel="noopener noreferrer"
@@ -721,12 +737,14 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     className="w-full px-6 py-3 border border-white/20 hover:border-cyan-400/30 rounded-lg font-semibold text-white text-center transition-all duration-300 hover:bg-white/5"
                   >
@@ -745,12 +763,14 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 <div className="mt-6 pt-4 border-t border-white/10 text-center">
                   <div className="text-white/60 text-sm mb-2">Need help? Contact us:</div>
@@ -760,7 +780,7 @@ export default function Pricing2025(req, res) {
                       📞 {service.contactInfo.mobile}
                     </a>
                     <a href={`mailto:${service.contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300">
-                      ✉️ {service.contactInfo.email}
+                       {service.contactInfo.email}
                     </a>
                   </div>
                 </div>
@@ -800,6 +820,7 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -807,9 +828,10 @@ export default function Pricing2025(req, res) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
-              <div className="text-6xl mb-4">🔍</div>
+              <div className="text-6xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-white/70 mb-6">Try selecting a different category</p>
               <button
@@ -825,12 +847,14 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
@@ -858,7 +882,9 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -885,19 +911,15 @@ export default function Pricing2025(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Need Enterprise Solutions?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+              We offer custom enterprise solutions, volume discounts, and dedicated support
+              We offer custom enterprise solutions, volume discounts, and dedicated support 
+              We offer custom enterprise solutions, volume discounts, and dedicated support
 
               for organizations requiring multiple services or specialized implementations.
             </p>
@@ -916,12 +938,14 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               <a
                 href="tel:+13024640950"
@@ -975,12 +999,14 @@ export default function Pricing2025(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             className="text-center mb-16"
           >
@@ -1047,12 +1073,46 @@ export default function Pricing2025(req, res) {
 
                 answer: "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments."
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+              }
+            ].map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            ].map((faq, index) => (;
+              <motion.div;
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
                 className="p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl"
               >
@@ -1060,9 +1120,15 @@ export default function Pricing2025(req, res) {
                 <p className="text-white/70 leading-relaxed">{faq.answer}</p>
               </motion.div>
 
-
-
-
+            ))}
+          </div>
+        </div>
+      </section>
+      <EnhancedFooter />
+    </div>
+  )
+  );
+};
 
             ))  } catch (error) {
     console.error("Error:", error);
@@ -1072,6 +1138,17 @@ export default function Pricing2025(req, res) {
 }
 
 
+}
+
+                className="p - 6 rounded - xl border border - white / 10 bg - gradient - to - r from - white / 5 to - white / 10 backdrop - blur - xl";
+              >;
+                <h3 className="text - xl font - bold text - white mb - 3">{faq.question}</h3>;
+                <p className="text - white / 70 leading - relaxed">{faq.answer}</p>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      <EnhancedFooter />;
 
 
     </div>;
@@ -1082,11 +1159,13 @@ export default function Pricing2025(req, res) {
   }
 
 
+
 }
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

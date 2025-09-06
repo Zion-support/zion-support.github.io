@@ -9,7 +9,9 @@ import React from 'react';
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -23,8 +25,9 @@ import React from 'react';
     </div>;
     </div>
   );export default function NotFoundPage() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
+
+
 
 
 
@@ -34,16 +37,21 @@ import React from 'react';
         Sorry, we couldn’t find that page.
       </p>
 
+
     </div>
 
   );export default function NotFoundPage() {
   return (
+
 
     <div className="container mx-auto px-4 py-20 text-center">
       <h1 className="text-3xl font-semibold">404 - Page Not Found</h1>
       <p className="mt-2 text-gray-600 dark:text-gray-300">Sorry, we couldn’t find that page.</p>
     </div>;
   );
+
+
+
 
 
 
@@ -80,5 +88,6 @@ function NotFoundPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

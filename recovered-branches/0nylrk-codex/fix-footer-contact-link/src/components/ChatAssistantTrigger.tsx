@@ -1,5 +1,11 @@
 
 
+import {useState} from "react";
+import {MessageSquare} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {ChatAssistant} from "@/components/ChatAssistant";
+export function ChatAssistantTrigger() {;
+  const [isOpen, setIsOpen] = useState(false);
 
 import { useState } from "react",
 import { MessageSquare } from "lucide-react",
@@ -63,7 +69,6 @@ export function ChatAssistantTrigger() {;
     } catch (error) {;
       console && console.error("Error in AI chat:", error);
       return Promise && Promise.resolve();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
   return (
@@ -75,12 +80,14 @@ export function ChatAssistantTrigger() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         onClick={() => setIsOpen(true)}
 
@@ -106,6 +113,13 @@ export function ChatAssistantTrigger() {;
           onSendMessage={handleSendMessage}
         />;
       )}
+
+    </>
+  )
+}
+    </>;
+  );
+}
 
 import { useState } from './react';
 import { MessageSquare } from './lucide-react';

@@ -1,14 +1,13 @@
 interface ChangelogManagerProps {
-  platform: AppPlatform
+  platform: AppPlatform;
 }
-
 type ChangelogEntry = {
   id: string
   version: string
   date: string
   changes: string
 }
-    })
+    });
   }
   id: string,
   version: string,
@@ -50,10 +49,13 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
   
 
 
+
+
   const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id)),
   };
   );
+
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
@@ -85,10 +87,13 @@ import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./Metada
                 onChange={handleInputChange}
 
 
+
               />
               <Input
                 type="date"
                 name="date"
+
+
 
               disabled = {!newEntry.version || !newEntry.changes,}
 
@@ -173,11 +178,13 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
 
 
+
             >
               <Plus className="mr-2 h-4 w-4" />
               Add
             </Button>
           </div>
+
               />;
             </div>;
             <Button
@@ -193,6 +200,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             name="changes"
 
 
+
+
             value={newEntry.changes}
             onChange={handleInputChange}
             rows={3}
@@ -204,6 +213,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 key={entry.id}
 
 
+
                 className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"
               >
                 <div className="flex justify-between mb-2">
@@ -211,6 +221,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                     <span className="text-zion-cyan font-semibold">v{entry.version}</span>
                     <span className="text-sm text-gray-400">{entry.date}</span>
                   </div>
+
           />;
 
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">;
@@ -228,7 +239,9 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                     size="sm"
 
 
+
                     onClick={() => handleRemoveEntry(entry.id)}
+
 
 
                     className="text-gray-400 hover:text-red-400 p-1 h-auto"
@@ -246,16 +259,20 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             )}
 
 
+
 };
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
+
+
 
 

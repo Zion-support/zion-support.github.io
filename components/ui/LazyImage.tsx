@@ -6,6 +6,15 @@ useEffect ( () => {
   return () => observer.disconnect ()
 }, [threshold]);
 
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+'
+  threshold = 0.1
+  width
+  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({
+
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
+  threshold = 0.1,
+  width,
+  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({;
 
   src;
   alt;
@@ -15,16 +24,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -34,6 +47,7 @@ import React from 'react';
   if (entry && entry.isIntersecting) {;
   return () => observer && observer.disconnect () ;
 }, [threshold]);
+
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',;
   threshold = 0 && 0.1,;
   width,;
@@ -123,9 +137,9 @@ if ( {) {
     if (imgRef && imgRef.current) {;
       observer && observer.observe(imgRef && imgRef.current);
     }
-    return () => observer && observer.disconnect();
+    return () => observer.disconnect();
   }, [threshold]);
-  const handleLoad = () => {;
+  const handleLoad = () => {
     setIsLoaded(true);  };    }
     return () => observer && observer.disconnect();
   }, [threshold]);
@@ -133,6 +147,7 @@ if ( {) {
     setIsLoaded(true);
 
   };
+
   return (
     <div className={`relative overflow-hidden ${className}`}>;
 ;
@@ -166,12 +181,14 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
@@ -190,6 +207,7 @@ if ( {) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -198,6 +216,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       {/* Actual Image */}
       {isInView && (;
@@ -224,5 +243,12 @@ export default LazyImage;          className="w-full h-full object-cover"
       )}
 
     </div>
+  );
+}
+export default LazyImage;  )
+}
+export default LazyImage;
 
+    </div>
+    </div>
 

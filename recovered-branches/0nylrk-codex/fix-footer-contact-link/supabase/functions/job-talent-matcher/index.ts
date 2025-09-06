@@ -2,9 +2,11 @@
 
 
 
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
 import {processJobMatching, storeMatchResults} from "./job-matching ;
+
 
 
 
@@ -19,8 +21,9 @@ const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
 
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
-
-
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
+import {processJobMatching, storeMatchResults} from "./job-matching.ts";
 
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
@@ -33,7 +36,9 @@ import { processJobMatching, storeMatchResults } from "./job-matching.ts",
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 const corsHeaders = {
@@ -115,7 +120,8 @@ serve(async (req) => {
 
     console && console.error("Error in job-talent-matcher:", error);
 
-
+        matches: matchedTalents.length 
+      }),
 
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
@@ -131,6 +137,7 @@ serve(async (req) => {
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
 
+
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2';,
 import { processJobMatching, storeMatchResults } from './job - matching.ts';
@@ -138,6 +145,7 @@ const cors_headers = {
   "Access - Control - Allow - Origin": "*";
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
 ;
+
 
 
 // Initialize the Supabase client;
@@ -223,11 +231,13 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   }
 });
 

@@ -3,12 +3,12 @@
 
 
 export const metadata = {
-  title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+  title: 'Zion Tech Group  AI, Micro SaaS, and IT Services',
   description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
   keywords: 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software',
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+    title: 'Zion Tech Group  AI, Micro SaaS, and IT Services',
     description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
     url: 'https://ziontechgroup.com',
     siteName: 'Zion Tech Group',
@@ -17,7 +17,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+    title: 'Zion Tech Group  AI, Micro SaaS, and IT Services',
     description: 'Enterprise-grade AI, micro SaaS, and IT solutions. Build faster with Zion Tech Group.',
   },
   robots: {
@@ -72,6 +72,7 @@ function Footer() {
               <Link href="/services/it-services" className="block text-gray-600 hover:text-blue-600 transition-colors">IT Services</Link>
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -81,4 +82,5 @@ function Footer() {
 
 
 >>>>>>> origin/final-merged-improvements
+
 

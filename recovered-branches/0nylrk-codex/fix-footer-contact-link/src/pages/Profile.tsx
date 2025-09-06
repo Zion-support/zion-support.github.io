@@ -3,6 +3,8 @@
 
 
 
+
+
 import React, { useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -12,23 +14,28 @@ import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
 export default function Profile() {;
 
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
+  const { user, isLoading, logout } = useAuth();
+  const navigate = useNavigate();
+import React, { useEffect } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+export default function Profile() {
+  const { user, isLoading, logout } = useAuth();
+import { useNavigate } from "react-router-dom",
+import { toast } from "sonner",
+export default function Profile() {
+  const { user, isLoading, logout } = useAuth(),
+  const navigate = useNavigate(),
 
 
   const navigate = useNavigate();
   useEffect(() => {
     if (!isLoading && !user) {
-      toast.error("Please log in to view your profile"),
+      toast.error("Please log in to view your profile");
       navigate("/login?redirect=/profile")
     }
 
@@ -37,6 +44,14 @@ export default function Profile() {;
 
 
   if (isLoading) {
+  useEffect(() => {;
+    if (!isLoading && !user) {;
+      toast && toast.error("Please log in to view your profile");
+      navigate("/login?redirect=/profile");
+    }
+  }, [user, isLoading, navigate]);
+
+  if (isLoading) {;
 
     return (
       <>;
@@ -189,7 +204,6 @@ if ( {) {
                   }}
                   variant="outline";
                   className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text - white";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 >;
                   Logout;
                 </Button>;
@@ -204,6 +218,7 @@ if ( {) {
 }
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -211,4 +226,5 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

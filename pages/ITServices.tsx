@@ -361,21 +361,14 @@ const stats = [
 export default function ITServices() {
   
     >
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20">
+      <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              IT Services & Solutions
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              IT Services
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Comprehensive IT services that keep your business running smoothly. From managed IT support 
-              and cloud migration to cybersecurity and data management - we provide the technology foundation your business needs.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Complete IT solutions to power your digital transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 

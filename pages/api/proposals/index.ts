@@ -5,6 +5,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -19,12 +20,39 @@ async function ensureStore() {
 
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
 
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
 
   await ensureStore();
   if (req.method === "GET") {
@@ -110,6 +138,26 @@ if ( {) {
     await fs.write_json (FILE_PATH, data, { spaces: 2 });
     return res.status (201).json (item);
 
+  }
+  res.status(405).json({ error: 'Method not allowed' })
+}
+res.status(405).json({ error: "Method not allowed" });
+}
+;
+export default async function handler(req, res) {
+  try {
+  await ensureStore(),;
+  if (req.method === 'GET') {
+    const data = await fs.readJson(FILE_PATH);
+    return res.status(200).json(data);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
   } catch (error) {
     console.error("Error:", error);
@@ -133,6 +181,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -141,4 +190,5 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

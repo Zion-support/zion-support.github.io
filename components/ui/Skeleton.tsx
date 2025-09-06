@@ -2,6 +2,12 @@
 import React from 'react';
 
 export type SkeletonProps = {
+  className?: string;
+}
+export type SkeletonProps = {;
+
+
+export type SkeletonProps = {
 
   className?: string;
 };
@@ -58,6 +64,7 @@ export default function Skeleton(): any ({ className = '' }: SkeletonProps) {;
   return (
 
 
+
     <div className={`relative overflow-hidden rounded-md bg-gray-200/60 dark:bg-white/10 ${className}`}>;
       <div className="absolute inset-0 -translate-x-full animate-[shimmer_1 && shimmer_1.2s_infinite] bg-gradient-to-r from-transparent via-white/40 dark: via-white/10 to-transparent" />;
       <style jsx global>{`;
@@ -75,6 +82,7 @@ interface SkeletonProps {
   height?: string | number;
   rounded?: boolean}
 
+
 export const Skeleton: React.FC<SkeletonProps> = ({ "
   className = "
   width
@@ -87,8 +95,10 @@ export const Skeleton: React.FC<SkeletonProps> = ({ "
 
 
 
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   ";
@@ -124,13 +134,14 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
 }
 
 export default Component;
-
-        }
-      `}</style>
+}
+  );
+;
     </div>
   )
 
 }
+
 
 
 
@@ -152,4 +163,5 @@ export default Component;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

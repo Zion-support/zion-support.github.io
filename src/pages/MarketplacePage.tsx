@@ -1,3 +1,15 @@
+
+
+
+import { useRouter } from 'next/router'
+import { useState, useEffect, useCallback, useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useRouter } from 'next/router',
+import { useState, useEffect, useCallback, useMemo } from 'react',
+import { useTranslation } from 'react-i18next',
+import { motion, AnimatePresence } from 'framer-motion',
+
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react'
 import { NextSeo  } from '@/components/NextSeo';
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
@@ -23,6 +35,7 @@ import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
 import { INITIAL_MARKETPLACE_PRODUCTS  } from '@/data/initialMarketplaceProducts';
 import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
+
 
 
 
@@ -132,6 +145,7 @@ const MarketplaceFilterControls = ({;
       <Sparkles className="h-4 w-4 mr-1" />
       {showRecommended ? "All Products" : "Recommended"}
 
+
     </Button>;
   </div>;
 ),;
@@ -145,18 +159,18 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
   const { formatPrice } = useCurrency(),;
 
   return (
-  <Card className="h-full hover:shadow-lg transition-shadow">
-    <CardHeader className="pb-3">
-      <div className="flex items-start justify-between">
-        <div className="flex-1 min-w-0">
-          <h3 className="font-semibold text-lg truncate">{product.title}</h3>
-          <p className="text-sm text-muted-foreground">{product.category}</p>
-          <div className="flex items-center gap-2 mt-2">
-            <Badge variant="secondary" className="text-xs">{product.brand}</Badge>
-            {product.aiScore && product.aiScore > 80 && (
-              <Badge variant="default" className="text-xs bg-gradient-to-r from-blue-600 to-purple-600">
-                AI {product.aiScore}
-              </Badge>
+  <Card className="h-full hover:shadow-lg transition-shadow">;
+    <CardHeader className="pb-3">;
+      <div className="flex items-start justify-between">;
+        <div className="flex-1 min-w-0">;
+          <h3 className="font-semibold text-lg truncate">{product && product.title}</h3>;
+          <p className="text-sm text-muted-foreground">{product && product.category}</p>;
+          <div className="flex items-center gap-2 mt-2">;
+            <Badge variant="secondary" className="text-xs">{product && product.brand}</Badge>;
+            {product && product.aiScore && product && product.aiScore > 80 && (;
+              <Badge variant="default" className="text-xs bg-gradient-to-r from-blue-600 to-purple-600">;
+                AI {product && product.aiScore}
+              </Badge>;
             )}
           </div>;
         </div>;
@@ -275,6 +289,7 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
           onClick={onAddToCart}
 
 
+
           aria-label="Add to cart"
           data-testid="add-to-cart-listing-button"
         >
@@ -291,6 +306,7 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
 // Loading grid
 const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number },) => (
   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
     {Array.from({ length: count }).map((_, i,) => <SkeletonCard key={i} />)}
   </div>
 )
@@ -339,6 +355,7 @@ function MarketplacePageContent() {;
         processedDataset = processedDataset.filter(p => p.category === filterCategory);
 
 
+
       }
       // Apply recommended filtering
       if (showRecommended) {
@@ -375,6 +392,7 @@ function MarketplacePageContent() {;
       throw new Error('Failed to load marketplace data. Please try again.')
     }
   }, [sortBy, filterCategory, showRecommended])
+
   }, [sortBy, filterCategory, showRecommended]),
 
   const {
@@ -559,7 +577,9 @@ function MarketplacePageContent() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
         />
@@ -579,6 +599,7 @@ function MarketplacePageContent() {;
   if (error && products.length === 0) {
     return (
       <>;
+
         <NextSeo
           title="Marketplace - Zion Tech Marketplace Solutions & Services"
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
@@ -603,12 +624,14 @@ function MarketplacePageContent() {;
 
     return (
       <>
+
         <NextSeo
           title="Marketplace - Zion Tech Marketplace Solutions & Services"
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
           openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png' }] }}
         />;
       <div className="container py-8">;
+
         <div className="text-center space-y-4">;
           <AlertTriangle className="mx-auto h-12 w-12 text-red-500" />;
           <h2 className="text-2xl font-bold">Unable to load marketplace</h2>;
@@ -816,6 +839,7 @@ if ( {) {
 
 
 
+
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
         openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png' }] }}
       />;
@@ -844,9 +868,16 @@ if ( {) {
           setShowRecommended = {setShowRecommended,}
           loading = {isFetching,}
 
-
-
-
+        />
+      </motion.div>
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+        <AnimatePresence mode="popLayout">
+          {products.map((item, index,) => (
+            <motion.div
+              key = {item.id,}
+              ref = {index === products.length - 1 ? lastElementRef : null,}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
               initial={{ opacity: 0, scale: 0.9 }} 
               animate={{ opacity: 1, scale: 1 }} 
 
@@ -863,10 +894,9 @@ if ( {) {
           loading={isFetching}
         />
       </motion.div>
-
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
         <AnimatePresence mode="popLayout">
-          {products.map((item, index) => (
+          {products.map((item, index,) => (
             <motion.div
               key={item.id} 
               ref={index === products.length - 1 ? lastElementRef : null}
@@ -874,10 +904,12 @@ if ( {) {
               animate={{ opacity: 1, scale: 1 }} ;
 
 
+
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
               whileHover={{ scale: 1.02 }}
             >
+
         />;
       </motion && motion.div>;
 
@@ -900,6 +932,7 @@ if ( {) {
                       sessionStorage && sessionStorage.setItem(`product:${item && item.id}`, JSON && JSON.stringify(item));
                     } catch {;
                       // ignore storage errors;
+
                     }
                   }
                   router && router.push(`/marketplace/listing/${item && item.id}`);
@@ -957,6 +990,7 @@ if ( {) {
                       // ignore storage errors
                     }
                   }
+
                   router.push (`/marketplace / listing/${item.id}`);
                 }}
 
@@ -989,11 +1023,10 @@ if ( {) {
 
           ))}
 
-
-
-
+        </AnimatePresence>
+      </motion.div>
+      {(isFetching |loading) && products.length > 0 && (
       {(isFetching || loading) && products.length > 0 && (
-
 
         <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <MarketplaceLoadingGrid count={4} />
@@ -1020,6 +1053,8 @@ if ( {) {
 
 
 
+
+
           )}
         </div>
       )}
@@ -1038,6 +1073,7 @@ if ( {) {
             </p>;
           )}
         </div>;
+
       )}
 
 
@@ -1047,6 +1083,7 @@ if ( {) {
           <div className="text-sm text-muted-foreground">Showing {products && products.length} marketplace items</div>;
         </motion && motion.div>;
       )}
+
 
       <AnimatePresence>;
         {showScrollTop && (;
@@ -1071,6 +1108,8 @@ if ( {) {
     </div>
     </>
   )
+
+
 
 ;
 
@@ -1141,8 +1180,10 @@ function MarketplacePage() {
 
 
 
+
 // Main export export default function MarketplacePage() {
   return <MarketplacePageContent />;
 };
 }
 ;
+

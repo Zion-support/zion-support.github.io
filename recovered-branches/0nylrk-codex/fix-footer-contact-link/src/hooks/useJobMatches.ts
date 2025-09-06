@@ -1,10 +1,18 @@
 
 
-
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {JobMatch} from "@/types/jobs";
+export function useJobMatches(jobId: string) {;
+  const [matches, setMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isProcessing, setIsProcessing] = useState(false);
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
-
+import { JobMatch } from "@/types/jobs";
+import { JobMatch } from "@/types/jobs",
 
 export function useJobMatches(jobId: string) {
   const [matches, setMatches] = useState<JobMatch[]>([]),
@@ -24,6 +32,21 @@ export function useJobMatches(jobId: string) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const fetchMatches = async () => {
     setIsLoading(true);
+
+import { useState, useEffect } from './react';
+import { supabase } from '@/integrations / supabase / client';
+import { toast } from '@/hooks / use - toast';
+import { JobMatch } from '@/types / jobs';
+export /**
+ * useJobMatches - Function description
+ */
+function useJobMatches() {
+  const [matches, set_matches] = useState < JobMatch[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+  const [is_processing, setIsProcessing] = useState (false);
+;
+  const fetch_matches = async () => {
+    setIsLoading (true);
 
     try {
 
@@ -78,7 +101,7 @@ export function useJobMatches(jobId: string) {
 
         variant: "destructive"})
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
 
   }
@@ -111,6 +134,41 @@ export function useJobMatches(jobId: string) {
       console && console.error("Error triggering AI matching:", error);
       toast({
 
+        title: "Matching Failed";
+        description: "Could not process talent matching. Please try again later."
+        variant: "destructive"})
+    } finally {
+      setIsProcessing (false);
+    }
+  }
+  useEffect(() => {
+    fetchMatches()
+  }, [jobId]);
+  return {
+    matches;
+    isLoading;
+    isProcessing;
+
+    triggerAIMatching
+  }
+}
+        title: "Matching Failed",
+        description: "Could not process talent matching. Please try again later.",
+        variant: "destructive"})
+    } finally {
+      setIsProcessing(false)
+    }
+  };
+
+  useEffect(() => {
+    fetchMatches()
+  }, [jobId]);
+
+  return {
+    matches;
+    isLoading;
+    isProcessing;
+    triggerAIMatching
 
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -183,6 +241,8 @@ export function useJobMatches(jobId: string) {;
     isLoading;
     isProcessing;
     triggerAIMatching;
+
+
 
 
   }

@@ -25,6 +25,7 @@ import { logInfo } from '@/utils/productionLogger',
 
 
 
+
 interface PostCardProps {
   post: ForumPost
   compact?: boolean
@@ -74,3 +75,4 @@ export default PostCard;
 
 
 export default PostCard;
+

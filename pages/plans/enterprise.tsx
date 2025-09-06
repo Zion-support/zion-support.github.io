@@ -1,5 +1,7 @@
 
-
+import Link from 'next/link';
+import Link from 'next/link',;
+const features = [
 
   { key: 'private_portal', label: 'Private hiring portal' },
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },
@@ -15,7 +17,9 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   {
     id: 'teams',
@@ -31,17 +35,14 @@
     name: 'Business',
     price: '$499 / mo',
     blurb: 'Up to 50 users, advanced controls and limits',
-
-    highlights: ['50 seats_dedicated talent poolSLA options'],
-
+    highlights: ['50 seatsDedicated talent poolSLA options'],
     includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }},
   {
     id: 'enterprise - custom',
     name: 'Enterprise',
     price: 'Custom',
     blurb: 'Unlimited users, custom contracts and SLAs',
-
-    highlights: ['Unlimited seats_custom SLADedicated CSM'],
+    highlights: ['Unlimited seatsCustom SLADedicated CSM'],
     includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}],
 
 export default function EnterprisePlans() {
@@ -59,7 +60,7 @@ export default function EnterprisePlans() {
             <p style={{ color: '#4b5563' }}>{t.blurb}</p>
             <ul style={{ marginTop: 8 }}>
               {t.highlights.map(h => (
-                <li key={h}>• {h}</li>
+                <li key={h}> {h}</li>
               ))}
             </ul>
             <div style={{ marginTop: 16, display: 'flex', gap: 8 }}>
@@ -94,6 +95,8 @@ export default function EnterprisePlans() {
                   ))}
                 </tr>
               ))}
+
+
 
 
 const features = [;
@@ -201,6 +204,8 @@ export default function EnterprisePlans(req, res) {
 }
 
 
+
+
             </tbody>
           </table>
         </div>
@@ -223,11 +228,13 @@ export default function EnterprisePlans(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

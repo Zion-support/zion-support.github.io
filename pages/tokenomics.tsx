@@ -2,6 +2,8 @@ import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 
 
+type DistributionItem = { label: string; percent: number }
+const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`;
 
 type DistributionItem = { label: string, percent: number };
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,;
@@ -10,8 +12,10 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
 
 
 
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const [isAdmin, setIsAdmin] = useState(true);
@@ -19,6 +23,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
   const [legalReview, setLegalReview] = useState(false);
   const [tokenName, setTokenName] = useState('ZION$');
   const [tokenSupply, setTokenSupply] = useState('1,000,000,000');
+
 
 
 
@@ -101,10 +106,10 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
       setGeneratedMarkdown(data.markdown |'');
     } catch (e) {
       console.error(e);
+
       alert('Generation failed');
     } finally {
       setIsGenerating(false);    }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   }
   
   static getDerivedStateFromError(error) {
@@ -122,6 +127,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     
     return this.props.children;
   }
+
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
@@ -244,6 +250,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     } catch (e) {;
       console && console.error(e);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       alert('Generation failed');
     } finally {;
       setIsGenerating(false);    }
@@ -287,6 +294,27 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
     }
   }
 
+
+      const item = { ...copy[index] }
+      URL.revokeObjectURL(url)
+    } else {
+      const res = await fetch('/api/whitepaper/export', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ markdown: previewMarkdown, tokenName })});
+      if (!res.ok) {
+        alert('PDF export failed');
+        return
+      }
+      const { url } = await res.json();
+      window.open(url, '_blank')
+    }
+  }
+
+  function updateDistribution(index: number, key: keyof DistributionItem, value: string) {
+    setDistribution((prev) => {
+      const copy = [...prev];
+
 }
       const { url } = await res.json();
       window.open(url, '_blank');
@@ -304,6 +332,8 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {;
     setDistribution((prev) => {;
       const copy = [...prev];
+
+
 
       const item = { ...copy[index] };
 
@@ -372,6 +402,7 @@ export default function TokenomicsWhitepaperBuilder(req, res) {
   }
 }
 ;
+
 
 
 
@@ -494,12 +525,14 @@ if (item.label = value) {
 
 
 
+
       alert('Failed to create share link');
       return;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 
 
 
@@ -514,6 +547,7 @@ if (item.label = value) {
     'Distribution'
     'Governance Model'
     'Risks + Disclaimers'
+
 
 
 
@@ -534,11 +568,13 @@ if (item.label = value) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   return (
@@ -577,6 +613,7 @@ if (item.label = value) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -584,6 +621,7 @@ if (item.label = value) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 <div>
@@ -677,12 +715,14 @@ if (item.label = value) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 </div>
               </div>
@@ -708,16 +748,18 @@ if (item.label = value) {
               </div>
             </div>
 
-
-
-
-
-
+            <div className='rounded-lg border p-4 space-y-3'>
+              <h3 className='font-medium'>Operator Prompt</h3>
+              <textarea
+                className='w-full border rounded-md px-3 py-2'
+                rows={4}
+                value={operatorPrompt}
+                onChange={e => setOperatorPrompt(e.target.value)}
+              />
+              <div className='flex gap-3'>
+                <button
+                  disabled={!isAdmin |isGenerating}
                   disabled={!isAdmin || isGenerating}
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 
                   onClick={handleGenerate}
                   className='px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50'
@@ -748,6 +790,7 @@ if (item.label = value) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -755,6 +798,7 @@ if (item.label = value) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 </button>
@@ -814,12 +858,14 @@ if (item.label = value) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               </div>
               <span className="text-xs opacity-60">Auto-updating preview</span>
@@ -841,7 +887,9 @@ function buildLocalMarkdown(input: {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -854,7 +902,6 @@ function buildLocalMarkdown(input: {;
   jurisdiction: string;
   legalReview: boolean;
 }) {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const distLines = input.distribution.map((d) => `- ${d.label}: ${d.percent}%`).join('\n');
   const disclaimer = input.legalReview ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.` : '';
 
@@ -864,23 +911,24 @@ function buildLocalMarkdown(input: {;
     return res.status(500).json({ error: "Internal server error" });
   }
 
+function DistributionDonut({ data }: { data: DistributionItem[] }) {
+  // Simple textual donut placeholder until a chart lib is added
+  const total = data.reduce((a, b) => a + b.percent, 0) |1;
+
 }
 ;
 function jurisdictionalNote(j: string) {;
   switch (j) {;
     case 'US':;
       return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';
-    case 'EU':;
-      return 'Designed for utility under EU frameworks, subject to MiCA and local guidelines as applicable.',;
-    case 'SG':;
-      return 'Intended utility token under MAS guidance, prospective purchasers should not view it as capital markets products.',;
-    case 'AE':;
-      return 'Intended utility token within relevant UAE free zone guidance, not an investment product.',;
-    default:;
-      return 'Intended strictly for utility use.';
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    case 'EU':
+      return 'Designed for utility under EU frameworks, subject to MiCA and local guidelines as applicable.';
+    case 'SG':
+      return 'Intended utility token under MAS guidance, prospective purchasers should not view it as capital markets products.';
+    case 'AE':
+      return 'Intended utility token within relevant UAE free zone guidance, not an investment product.';
+    default:
+      return 'Intended strictly for utility use.'
   }
 }
   } catch (error) {
@@ -888,6 +936,8 @@ function jurisdictionalNote(j: string) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 
 
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
@@ -915,6 +965,7 @@ function MarkdownPreview({
   markdown: string;
   activeSection: string;
 
+
 }) {  // Very lightweight section filter: split by headings;
   const parts = useMemo(() => {;
     const sections = markdown && markdown.split(/\n## /g),;
@@ -925,20 +976,17 @@ function MarkdownPreview({
       map[titleLine && titleLine.trim()] = rest && rest.join('\n');
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     });
     return map;  }, [markdown]);
   const content = parts[activeSection] |'';
 
   return (
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
-
-
+<pre className='whitespace-pre-wrap text-sm leading-6'>
+      {content |markdown}
+    </pre>
+  );
 
       ))  } catch (error) {
     console.error("Error:", error);
@@ -961,7 +1009,9 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const parts = useMemo(() => {
@@ -977,6 +1027,16 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   const content = parts[activeSection] || '',
   return (
 
+<pre className='whitespace-pre-wrap text-sm leading-6'>
+      {content || markdown}
+    </pre>
+  );
+
+}
+}
+}
+}
+}
 
     <pre className="whitespace-pre-wrap text-sm leading-6">{content || markdown}</pre>
   )
@@ -1002,5 +1062,7 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 
 

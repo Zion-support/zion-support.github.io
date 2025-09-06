@@ -1,14 +1,13 @@
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/hf-spaces.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/hf-spaces.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/hf-spaces.json',
 
 export default function HfSpacesPage() {
 
@@ -29,10 +28,16 @@ export default function HfSpacesPage() {
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
 
-
-
-
-
+              <a className="font-medium underline" href={`https://huggingface.co/spaces/${it.spaceId}`} target="_blank" rel="noreferrer">{it.spaceId}</a>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Likes {it.likes} · {it.runtime}</div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+  );
+};
+              <a className="font-medium underline" href={`https://huggingface.co/spaces/${it.spaceId}`} target="_blank" rel="noreferrer">{it.spaceId}</Link>
 
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Likes {it.likes} · {it.runtime}</div>
             </li>
@@ -51,11 +56,13 @@ export default function HfSpacesPage() {
   }
 
 
+
 }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

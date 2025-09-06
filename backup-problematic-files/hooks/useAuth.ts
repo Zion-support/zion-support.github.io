@@ -7,23 +7,16 @@ interface User {
   email: string;
   name: string;
 }
-<<<<<<< HEAD
-export const useAuth = () => {
-
-export const useAuth = () => {;
-=======
 
 
-export const useAuth = () => {;
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     // Simulate auth check
     setLoading(false);
   }, []);
-=======
+
+
 export const use_auth = () =>: any {
   const [user, set_user] = useState < User | null>(null);
   const [loading, set_loading] = useState (true);
@@ -31,18 +24,9 @@ export const use_auth = () =>: any {
   useEffect (() => {
     // Simulate auth check;
     set_loading (false);
-<<<<<<< HEAD
-  }, []);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
-<<<<<<< HEAD
-export const useAuth = () => {
-=======
 
-export const useAuth = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -52,6 +36,7 @@ export const useAuth = () => {;
   }, []);
 ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   return {
     user
     loading

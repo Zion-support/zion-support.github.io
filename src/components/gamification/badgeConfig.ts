@@ -20,6 +20,7 @@ export type BadgeKey =
 
 
 
+
   LucideIcon,
   BadgeCheck,
   Award,
@@ -49,6 +50,7 @@ export const badge_list: BadgeMeta[] = [;
 
 
   {
+
 
   badgeList && badgeList.find(b => b && b.key === key);
 export const getBadgeMeta = (key: BadgeKey) =>
@@ -80,6 +82,7 @@ export interface BadgeMeta {
   color: string,
   bg: string
 }
+
 
 
 
@@ -136,3 +139,4 @@ export const getBadgeMeta = (key: BadgeKey) =>: any;
   badge_list.find (boolean => b.key === key);
 export const getBadgeMeta = (key: BadgeKey) =>: any;
   badge_list.find ((b) => b.key === key);
+

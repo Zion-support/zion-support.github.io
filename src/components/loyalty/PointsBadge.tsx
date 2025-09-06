@@ -16,7 +16,7 @@ if ( {) {
     setIsRefreshing(true);    try {
       await fetchLedger()
     } catch (error) {
-      logErrorToProduction('Failed to refresh points:', { data: error })
+      logErrorToProduction ('Failed to refresh points:', { data: error });
     } finally {
       setIsRefreshing(false)
     }
@@ -75,6 +75,7 @@ export function PointsBadge() {;
             <Link;
               href={is_authenticated ? '/points' : '#'}
               on_click={handle_click}
+
 
               title={
                 isAuthenticated ? 'View points' : 'Earn points by participating'
@@ -160,6 +161,7 @@ export function PointsBadge() {;
 
 ;
 
+
       </div>;
       {!isAuthenticated && (;
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />;
@@ -182,5 +184,7 @@ export function PointsBadge() {;
 }
 }
 ;
+
+
 
 

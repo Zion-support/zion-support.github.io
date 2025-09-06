@@ -3,6 +3,7 @@
 
 
 
+
   Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin
 } from 'lucide-react'
 import { cuttingEdge2033Services } from '../data/2033-cutting-edge-innovations';
@@ -31,6 +32,7 @@ import { innovativeITServices2033 } from '../data/2033-innovative-it-services',;
 
 const contactInfo = {
 
+
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -44,6 +46,30 @@ export default function Pricing2033Page() {
 
   // Enhanced service categories with pricing
   const serviceCategories = [
+
+import React, { useState } from 'react',
+import Head from 'next / head',
+import { motion } from 'framer-motion',
+import {
+  Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Crown, Gem, Infinity, Brain, Atom, Microscope, Phone, Mail, MapPin;
+} from 'lucide-react',
+import { cuttingEdge2033Services } from '../data / 2033 - cutting - edge - innovations',
+import { innovativeITServices2033 } from '../data / 2033 - innovative - it - services',
+const contact_info = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com';
+},
+export default /**
+ * Pricing2033Page - Function description
+ */
+function Pricing2033Page() {
+  const [billing_cycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
+  const [selected_plan, setSelectedPlan] = useState < string | null>(null),
+  // Enhanced service categories with pricing;
+  const service_categories = [;
+
 
     {
       name: 'Revolutionary AI Services'
@@ -99,6 +125,7 @@ export default function Pricing2033Page() {
       icon: Microscope
       color: 'from-orange-500 to-red-500'
     }
+
 
 
 import React, { useState } from 'react';
@@ -389,6 +416,7 @@ export default function Pricing2033Page(req, res) {
                 transition={{ duration: 0.6, delay: 0.2 }} className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
                 Experience the future of technology with our revolutionary AI consciousness, quantum DNA computing, and space mining automation solutions at competitive prices.
               </motion.p>
+
               {/* Billing Toggle */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -427,12 +455,14 @@ export default function Pricing2033Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 transition={{ duration: 0.6, delay: 0.3 }} className="flex items-center justify-center space-x-4 mb-8">
                 <span className={`text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
@@ -472,6 +502,7 @@ export default function Pricing2033Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -479,40 +510,21 @@ export default function Pricing2033Page(req, res) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
                 <motion.div
-                  key={tier.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  initial={{ opacity: 0, y: 20 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  animate={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  className={`relative ${;
-                    tier.popular ? 'scale-105' : '';
-                  }`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                >
+                  key={tier.name}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  animate={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className={`relative ${
+                    tier.popular ? 'scale - 105' : '';
+                  }`}
+                >;
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-full">
@@ -551,12 +563,14 @@ export default function Pricing2033Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     </div>
                     <ul className="space-y-4 mb-8">
@@ -629,12 +643,14 @@ export default function Pricing2033Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
@@ -674,12 +690,14 @@ export default function Pricing2033Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-center space-x-3 mb-4">
@@ -735,12 +753,14 @@ export default function Pricing2033Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
@@ -780,12 +800,14 @@ export default function Pricing2033Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-start justify-between mb-4">
@@ -805,12 +827,14 @@ export default function Pricing2033Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                       </div>
                     </div>
@@ -864,12 +888,14 @@ export default function Pricing2033Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
@@ -880,10 +906,8 @@ export default function Pricing2033Page(req, res) {
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 
-
-
-
-
+                Join the future of technology with our revolutionary AI, quantum computing, and cutting-edge solutions. 
+                Join the future of technology with our revolutionary AI, quantum computing, and cutting-edge solutions.
 
                 Get in touch with our experts to discuss your transformation journey and pricing options.
               </p>
@@ -900,12 +924,14 @@ export default function Pricing2033Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 <a
                   href={`tel:${contactInfo.mobile}`} className="px-8 py-4 bg-gray-800/50 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200">
@@ -925,12 +951,14 @@ export default function Pricing2033Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               <div className="mt-12 pt-8 border-t border-purple-500/20">
                 <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-300">
@@ -958,11 +986,13 @@ export default function Pricing2033Page(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

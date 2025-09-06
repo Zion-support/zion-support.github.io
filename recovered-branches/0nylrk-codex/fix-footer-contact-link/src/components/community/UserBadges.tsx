@@ -2,6 +2,7 @@
 
 
 
+
 import {Trophy, Award, BadgeCheck, Star, MessageSquare} from "lucide-react";
 import {Badge} from "@/types/community";
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
@@ -29,6 +30,7 @@ const icon_map = {
   Award;
   BadgeCheck;
   Star;
+
 
   MessageSquare;
 };
@@ -146,7 +148,9 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export default UserBadges;

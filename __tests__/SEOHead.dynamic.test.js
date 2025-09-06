@@ -34,7 +34,6 @@ describe('SEOHead', () => {
   });
 });
 
-=======
     expect(screen.getByTestId('seohead.dynamic'
   test('displays correct content'
   test('handles user interactions'

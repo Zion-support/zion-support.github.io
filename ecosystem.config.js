@@ -2,6 +2,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -13,6 +14,7 @@
 
 
 module.exports = {;
+
 
   apps:[;
 
@@ -121,6 +123,7 @@ origin/main
 }
 
 export default {
+
   apps: [
     {
       name: 'bolt-zion-app'
@@ -319,8 +322,13 @@ module.exports = {
     log_file: "./logs/combined.log"
     time: true
 
+
 };
 
+}
+
+origin/main
+origin/automation-improvements-final
 }
 
   }];
@@ -411,5 +419,7 @@ module.exports = {;
     }
   ];
 },;
+
+
 
 

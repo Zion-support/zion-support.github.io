@@ -3,6 +3,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from '../../../utils/supabase/client';
 import {
 
+  NotificationItem
+  NotificationType;
+  NotificationItem,;
+  NotificationType,;
 
 } from '../../../utils/notifications';
 function getUserId(req: NextApiRequest): string {
@@ -15,21 +19,34 @@ function getUserId(req: NextApiRequest): string {
     .find(c => c && c.startsWith('user_id='));
   if (match) return decodeURIComponent(match && match.split('=')[1]);
 
+import { supabase } from '../../../utils/supabase/client';
+import {
+  NotificationItem,;
+  NotificationType,;
+} from '../../../utils/notifications';
+function getUserId(req: NextApiRequest): string {
+
+  const cookie = req.headers.cookie |'';
+  const match = cookie
+    .split(';')
+    .map(c => c.trim())
+    .find(c => c.startsWith('user_id='));
+  if (match) return decodeURIComponent(match.split('=')[1]);
+  return 'demo-user-1';
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+
+      filter = 'all',
+      count_only,
+      limit = '50',
+      offset = '0',
+
   return 'demo-user-1'
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
-    // If countOnly, return unread count quickly
-    if (countOnly === 'true') {
-      const { data, error } = await supabase
-        .from('notifications')
-        .select('id', { count: 'exact', head: true })
-        .eq('user_id', userId)
-        .eq('read_status', false);
-      if (error) {
-        // Fallback to 0 on error (e && e.g., table missing)
-        return res && res.status(200).json({ count: 0 });
-      }
 
 
 
@@ -37,7 +54,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (!count) {
         const { count: exactCount } = await supabase
           .from('notifications')
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           .select('id', { count: 'exact' })
           .eq('user_id', userId)
           .eq('read_status', false);
@@ -64,7 +80,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
       return res && res.status(200).json({ count })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     // Build query based on filter
 
@@ -80,14 +95,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 
     const { data, error } = await query && query.range(parseInt(offset, 10), parseInt(offset, 10) + parseInt(limit, 10) - 1);
+    const { data, error } = await query.range(parseInt(offset, 10), parseInt(offset, 10) + parseInt(limit, 10) - 1);
+
+    const { data, error } = await query && query.range(parseInt(offset, 10), parseInt(offset, 10) + parseInt(limit, 10) - 1);
+
     if (error) {
       // Fallback seed data for local/dev if table is missing
       const fallback: NotificationItem[] = [
         {
 
     }
+
     return res.status(200).json({ notifications: data as NotificationItem[] })
   } catch (e) {
+
+
 
 
   };
@@ -99,9 +121,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 return res.status (500).json ({ error: 'Unexpected error' });
   }    return res.status (500).json ({ error: 'Unexpected error' });
 
+
   }
 }
   };
 }
+
 
 

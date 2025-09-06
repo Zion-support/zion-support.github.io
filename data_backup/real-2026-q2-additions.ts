@@ -87,7 +87,7 @@ export const real2026Q2Additions = [{
   {
     id:,
   ecommerce-returns-orchestrator',
-    "name": 'E‑commerce Returns Orchestrator,
+    "name": 'Ecommerce Returns Orchestrator,
     category:,
   Developer Tools',
     "tagline": Automate RMAs, labels, refunds, and disposition in one workflow.,
@@ -460,7 +460,7 @@ export const real2026Q2Additions = [{
   {
     id:,
   ecommerce-returns-orchestrator',
-    "name": 'E‑commerce Returns Orchestrator,
+    "name": 'Ecommerce Returns Orchestrator,
     category:,
   Developer Tools',
     "tagline": Automate RMAs, labels, refunds, and disposition in one workflow.,

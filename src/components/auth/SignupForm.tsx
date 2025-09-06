@@ -14,19 +14,19 @@ passwordStrength.strength >= 4 ? 'text-green-600' :
             <div className="text-xs text-gray-600 space-y-1">
               <div className="grid grid-cols-2 gap-1">
                 <span className={watchedFields.password?.length >= 8 ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ 8+ characters
+                   8+ characters
                 </span>
                 <span className={/[A-Z]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ Uppercase letter
+                   Uppercase letter
                 </span>
                 <span className={/[a-z]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ Lowercase letter
+                   Lowercase letter
                 </span>
                 <span className={/[0-9]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ Number
+                   Number
                 </span>
                 <span className={/[^A-Za-z0-9]/.test(watchedFields.password || '') ? 'text-green-600' : 'text-gray-400'}>
-                  ✓ Special character
+                   Special character
                 </span>
               </div>
             </div>
@@ -79,6 +79,8 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
       setError('root', { message: errorMessage }),;
               <span className={cn('font-medium', passwordStrength && passwordStrength.strength >= 4 ? 'text-green-600' :}
 }
+
+
 
 
 
@@ -177,4 +179,6 @@ type SignupFormData = z.infer < typeof signup_schema>;
     </form>;
   );
 }
+
 ;
+

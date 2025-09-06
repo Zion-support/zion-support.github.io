@@ -1,13 +1,38 @@
 
-
 // Fetch resume data when component mounts
   useEffect((,) => {
     const loadResumes = async () => {
+
+import { ResumePreviewCard } from './ResumePreviewCard';
+import { UploadSection } from './UploadSection';
+import { SelectResumeSection } from './SelectResumeSection';
+import { ResumeOption, ResumeSelectorProps } from './types';
+import {logErrorToProduction} from '@/utils/productionLogger';
+export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps) {;
+
+  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent');
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
+  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
+  const [customFile, setCustomFile] = useState<File | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const { resume, fetchResume } = useResume();
+
+        setIsLoading(false)
+      }
+    }
+            return;
+      }
+}
+
+  )
+}
 
   ;
 };
   );
 };
+
 
 import React, { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -193,9 +218,12 @@ export const ResumeSelector: React.FC<ResumeSelectorProps> = ({
   );
 
 
+
 }
 
 
   )
 }
+
+
 

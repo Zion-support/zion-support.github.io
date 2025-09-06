@@ -52,12 +52,70 @@ export default function InstancesPage() {;
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
 
+// import { prisma  } from '@/lib / prisma';,
+interface InstanceWithCounts {
+  id: string,
+  name: string,
+  slug: string,
+  domain: string | null,
+  subdomain: string | null,
+  vertical: string,
+  default_language: string,
+  token_system: string,
+  governance_type: string,
+  is_public: boolean,
+  region: string | null,
+  country: string | null,
+  created_at: Date,
+  updated_at: Date,
+  dao_config: any | null,
+  _count: {
+    deployments: number,
+    features: number;
+  }
+}
+export default /**
+ * InstancesPage - Function description
+ */
+function InstancesPage() {
+  const instances: any[] = [], // Temporary empty array;
+  const error: string | null = null,
+  return (
+    <div className="min - h-screen py - 8 px - 4 sm:px - 6 lg:px - 8">;
+      <div className="max - w-7xl mx - auto">;
+// import { prisma } from "@/lib/prisma",;
+interface InstanceWithCounts {;
+  id: string,;
+  name: string,;
+  slug: string,;
+  domain: string | null,;
+  subdomain: string | null,;
+  vertical: string,;
+  defaultLanguage: string,;
+  tokenSystem: string,;
+  governanceType: string,;
+  isPublic: boolean,;
+  region: string | null,;
+  country: string | null,;
+  createdAt: Date,;
+  updatedAt: Date,;
+  daoConfig: any | null,;
+  _count: {;
+    deployments: number,;
+    features: number;
+  }
+}
+;
+export default function InstancesPage() {;
+  const instances: any[] = [], // Temporary empty array;
+  const error: string | null = null,;
+
   return (;
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
         {/* Header */}
         <div className="text - center mb - 12">;
-          <h1 className="text - 4xl font - bold mb - 4">📊 Manage Your Instances</h1>;
+          <h1 className="text - 4xl font - bold mb - 4"> Manage Your Instances</h1>;
           <p className="text - xl text - white / 70 max - w-2xl mx - auto">;
             Monitor and manage your deployed digital economies, track performance, and access configuration settings.;
           </p>;
@@ -65,7 +123,7 @@ export default function InstancesPage() {;
         {/* Error State */}
         {error && (
           <div className="mb - 8 p - 6 bg - red - 900 / 20 border border - red - 500 / 20 rounded - xl text - center">;
-            <div className="text - red - 400 mb - 2">⚠️ Database Connection Error</div>;
+            <div className="text - red - 400 mb - 2"> Database Connection Error</div>;
             <p className="text - white / 70 mb - 4">{error}</p>;
             <p className="text - sm text - white / 50">;
               Please ensure your database is properly configured and the DATABASE_URL environment variable is set.;
@@ -123,7 +181,7 @@ export default function InstancesPage() {;
                 </div>;
                 <div className="space - y-3 mb - 4">;
                   <div className="flex items - center gap - 2 text - sm text - white / 70">;
-                    <span className="w - 4 h - 4">🌐</span>;
+                    <span className="w - 4 h - 4"></span>;
                     <span className="truncate">;
 
                       {inst.domain |inst.subdomain |inst.slug}
@@ -132,37 +190,42 @@ export default function InstancesPage() {;
                     </span>;
                   </div>;
                   <div className="flex items - center gap - 2 text - sm text - white / 70">;
-                    <span className="w - 4 h - 4">🗳️</span>;
+                    <span className="w - 4 h - 4"></span>;
                     <span > Governance: {getGovernanceLabel (inst.governance_type)}</span>;
                   </div>;
                   {inst.region && (
                     <div className="flex items - center gap - 2 text - sm text - white / 70">;
-                      <span className="w - 4 h - 4">📍</span>;
+                      <span className="w - 4 h - 4"></span>;
                       <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
                     </div>;
                   )}
+
+;
+                  <div className="flex items-center gap-2 text-sm text-white/70">;
+                    <span className="w-4 h-4">🔧</span>;
+                    <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>;
 
                     </div>)}
                   <div className="flex items - center gap - 2 text - sm text - white / 70">;
                     <span className="w - 4 h - 4">🔧</span>;
                     <span > Token: {getTokenSystemLabel (inst.token_system)}</span>;
-=======
                     </div>;
                   )}
 
 
-=======
 
+=======
+;
 
                   <div className="flex items-center gap-2 text-sm text-white/70">;
-                    <span className="w-4 h-4">🔧</span>;
+                    <span className="w-4 h-4"></span>;
                     <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>;
                   </div>;
                 </div>;
                 <div className="flex items - center justify - between text - xs text - white / 60">;
                   <div className="flex items - center gap - 4">;
-                    <span>🚀 {inst._count.deployments} deployments</span>;
-                    <span>⚡ {inst._count.features} features</span>;
+                    <span> {inst._count.deployments} deployments</span>;
+                    <span> {inst._count.features} features</span>;
                   </div>;
                   <span className="text - white / 40">;
                     {new Date (inst.created_at).toLocaleDateString ()}
@@ -172,12 +235,17 @@ export default function InstancesPage() {;
                   <div className="flex gap - 2">;
                     <a;
 
-                      href={`/admin / instances/${inst.id}`}
-                      className="flex - 1 text - center py - 2 px - 3 text - sm bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg transition - colors";
-=======
                       href={`/admin/instances/${inst.id}`} ;
 =======
 
+
+=======
+                      href={`/admin/instances/${inst.id}`}
+                      href={`/admin/instances/${inst.id}`} ;
+                      className="flex-1 text-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors";
+                      href={`/admin / instances/${inst.id}`}
+                      className="flex - 1 text - center py - 2 px - 3 text - sm bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg transition - colors";
+                      href={`/admin/instances/${inst.id}`} ;
 
                       className="flex-1 text-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors";
                     >;
@@ -185,12 +253,17 @@ export default function InstancesPage() {;
                     </a>;
                     <a;
 
-                      href={`/admin / instances/${inst.id}/deployments`}
-                      className="flex - 1 text - center py - 2 px - 3 text - sm border border - white / 20 hover:border - white / 40 text - white rounded - lg transition - colors";
-=======
                       href={`/admin/instances/${inst.id}/deployments`} ;
 =======
 
+
+=======
+                      href={`/admin/instances/${inst.id}/deployments`}
+                      href={`/admin/instances/${inst.id}/deployments`} ;
+                      className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";
+                      href={`/admin / instances/${inst.id}/deployments`}
+                      className="flex - 1 text - center py - 2 px - 3 text - sm border border - white / 20 hover:border - white / 40 text - white rounded - lg transition - colors";
+                      href={`/admin/instances/${inst.id}/deployments`} ;
 
                       className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";
                     >;
@@ -209,14 +282,14 @@ export default function InstancesPage() {;
         {instances.length === 0 && !error && (
           <div className="text - center py - 16">;
             <div className="w - 24 h - 24 mx - auto mb - 6 bg - white / 5 rounded - full flex items - center justify - center">;
-              <span className="text - 4xl">🚀</span>;
+              <span className="text - 4xl"></span>;
             </div>;
             <h3 className="text - 2xl font - semibold mb - 4">No Instances Yet</h3>;
             <p className="text - white / 70 mb - 8 max - w-md mx - auto">;
               You haven't deployed any digital economies yet. Start building your first instance to get started.;
             </p>;
             <a href="/multiverse / launch" className="btn - primary">;
-              🚀 Launch Your First Economy;
+               Launch Your First Economy;
             </a>;
           </div>)}
       </div>;
@@ -248,7 +321,7 @@ export default function InstancesPage() {;
       {/* Instances Grid */}
       {instances.length === 0 ? (
         <div className="card text - center py - 12">;
-          <div className="text - 6xl mb - 4">🚀</div>;
+          <div className="text - 6xl mb - 4"></div>;
           <h2 className="text - 2xl font - semibold mb - 2">No Instances Yet</h2>;
           <p className="text - white / 70 mb - 6">;
             Get started by launching your first digital economy instance;
@@ -266,6 +339,14 @@ export default function InstancesPage() {;
                   <h3 className="text-xl font-semibold text-white mb-1">{inst.name}</h3>;
                   <div className="flex items-center space-x-2 mb-2">;
 
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${;
+                      inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
+                      inst.vertical === 'HEALTH' ? 'bg-green-500/20 text-green-400' :;
+                      inst.vertical === 'EDUCATION' ? 'bg-purple-500/20 text-purple-400' :;
+                      inst.vertical === 'LAW' ? 'bg-yellow-500/20 text-yellow-400' :;
+                      'bg-gray-500/20 text-gray-400';
+
               <div className="flex items - start justify - between mb - 4">;
                 <div className="flex - 1">;
                   <h3 className="text - xl font - semibold text - white mb - 1">{inst.name}</h3>;
@@ -276,16 +357,17 @@ export default function InstancesPage() {;
                       inst.vertical === 'EDUCATION' ? 'bg - purple - 500 / 20 text - purple - 400' :;
                       inst.vertical === 'LAW' ? 'bg - yellow - 500 / 20 text - yellow - 400' :;
                       'bg - gray - 500 / 20 text - gray - 400';
-=======
               <div className="flex items-start justify-between mb-4">;
                 <div className="flex-1">;
                   <h3 className="text-xl font-semibold text-white mb-1">{inst.name}</h3>;
                   <div className="flex items-center space-x-2 mb-2">;
 
+
+
+=======
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${;
                       inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
-=======
-
 
                       inst.vertical === 'HEALTH' ? 'bg-green-500/20 text-green-400' :;
                       inst.vertical === 'EDUCATION' ? 'bg-purple-500/20 text-purple-400' :;
@@ -314,28 +396,33 @@ export default function InstancesPage() {;
 
                 </div>;
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
-                  <span>🏛️</span>;
+                  <span></span>;
                   <span > Governance: {inst.governance_type}</span>;
                 </div>;
                 {inst.region && (
                   <div className="flex items - center space - x-2 text - sm text - white / 70">;
-                    <span>📍</span>;
+                    <span></span>;
                     <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
                   </div>;
                 )}
 
+;
+                <div className="flex items-center space-x-2 text-sm text-white/70">;
+
                   </div>)}
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
-=======
                   </div>;
                 )}
 
 
-=======
-
 
                 <div className="flex items-center space-x-2 text-sm text-white/70">;
                   <span>💎</span>;
+=======
+;
+                <div className="flex items-center space-x-2 text-sm text-white/70">;
+                  <span></span>;
+
                   <span > Token: {inst.token_system}</span>;
                 </div>;
               </div>;
@@ -354,12 +441,17 @@ export default function InstancesPage() {;
               <div className="flex space - x-2">;
                 <a;
 
-                  href={`/admin / instances/${inst.id}`}
-                  className="flex - 1 btn - secondary text - center text - sm py - 2";
-=======
                   href={`/admin/instances/${inst.id}`} ;
 =======
 
+
+=======
+                  href={`/admin/instances/${inst.id}`}
+                  href={`/admin/instances/${inst.id}`} ;
+                  className="flex-1 btn-secondary text-center text-sm py-2";
+                  href={`/admin / instances/${inst.id}`}
+                  className="flex - 1 btn - secondary text - center text - sm py - 2";
+                  href={`/admin/instances/${inst.id}`} ;
 
                   className="flex-1 btn-secondary text-center text-sm py-2";
                 >;
@@ -367,12 +459,17 @@ export default function InstancesPage() {;
                 </a>;
                 <a;
 
-                  href={`/admin / instances/${inst.id}/deployments`}
-                  className="flex - 1 btn - secondary text - center text - sm py - 2";
-=======
                   href={`/admin/instances/${inst.id}/deployments`} ;
 =======
 
+
+=======
+                  href={`/admin/instances/${inst.id}/deployments`}
+                  href={`/admin/instances/${inst.id}/deployments`} ;
+                  className="flex-1 btn-secondary text-center text-sm py-2";
+                  href={`/admin / instances/${inst.id}/deployments`}
+                  className="flex - 1 btn - secondary text - center text - sm py - 2";
+                  href={`/admin/instances/${inst.id}/deployments`} ;
 
                   className="flex-1 btn-secondary text-center text-sm py-2";
                 >;
@@ -395,10 +492,10 @@ export default function InstancesPage() {;
         <h2 className="text - 2xl font - semibold mb - 4">Quick Actions</h2>;
         <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
           <a href="/multiverse / launch" className="btn - primary">;
-            🚀 Launch New Instance;
+             Launch New Instance;
           </a>;
           <a href="/admin / os - deploy" className="btn - secondary">;
-            ⚙️ Advanced Deployment;
+             Advanced Deployment;
           </a>;
         </div>;
       </div>;
@@ -416,7 +513,7 @@ export default function InstancesPage() {;
               Monitor and manage your deployed AI autonomous systems and their performance.;
             </p>;
             <Link href="/admin / ai - systems" className="text - blue - 400 hover:text - blue - 300 font - medium">;
-              Manage Systems →;
+              Manage Systems ;
             </Link>;
           </div>;
           <div className="bg - gradient - to - br from - green - 900 / 20 to - blue - 900 / 20 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 300 hover:transform hover:scale - 105">;
@@ -430,7 +527,7 @@ export default function InstancesPage() {;
               Access and manage your quantum computing resources and algorithms.;
             </p>;
             <Link href="/admin / quantum" className="text - green - 400 hover:text - green - 300 font - medium">;
-              Quantum Dashboard →;
+              Quantum Dashboard ;
             </Link>;
           </div>;
           <div className="bg - gradient - to - br from - purple - 900 / 20 to - pink - 900 / 20 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 300 hover:transform hover:scale - 105">;
@@ -444,7 +541,7 @@ export default function InstancesPage() {;
               Access research tools and development environments for AI consciousness evolution.;
             </p>;
             <Link href="/admin / research" className="text - purple - 400 hover:text - purple - 300 font - medium">;
-              Research Tools →;
+              Research Tools ;
             </Link>;
           </div>;
           <div className="bg - gradient - to - br from - orange - 900 / 20 to - red - 900 / 20 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 300 hover:transform hover:scale - 105">;
@@ -458,7 +555,7 @@ export default function InstancesPage() {;
               Monitor security protocols and ensure compliance with AI governance frameworks.;
             </p>;
             <Link href="/admin / security" className="text - orange - 400 hover:text - orange - 300 font - medium">;
-              Security Dashboard →;
+              Security Dashboard ;
             </Link>;
           </div>;
           <div className="bg - gradient - to - br from - cyan - 900 / 20 to - blue - 900 / 20 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 300 hover:transform hover:scale - 105">;
@@ -472,7 +569,7 @@ export default function InstancesPage() {;
               Access comprehensive business analytics and performance metrics.;
             </p>;
             <Link href="/admin / analytics" className="text - cyan - 400 hover:text - cyan - 300 font - medium">;
-              Analytics Dashboard →;
+              Analytics Dashboard ;
             </Link>;
           </div>;
           <div className="bg - gradient - to - br from - indigo - 900 / 20 to - purple - 900 / 20 border border - white / 10 rounded - xl p - 6 hover:border - white / 20 transition - all duration - 300 hover:transform hover:scale - 105">;
@@ -487,7 +584,7 @@ export default function InstancesPage() {;
               Configure system parameters and customize your AI platform settings.;
             </p>;
             <Link href="/admin / settings" className="text - indigo - 400 hover:text - indigo - 300 font - medium">;
-              System Settings →;
+              System Settings ;
             </Link>;
           </div>;
         </div>;

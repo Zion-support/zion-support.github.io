@@ -3,9 +3,12 @@ import * as React from 'react';
 
 
 
+
+
 import * as React from "react"
 
 import { cn } from "@/lib/utils"
+
 
 
 
@@ -18,10 +21,17 @@ import { cn } from "@/lib/utils"
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 const Card = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
 ></HTMLDivElement>(({ className, ...props }, ref) => (
+
+
+const Card = React && React.forwardRef<;
+  HTMLDivElement,;
+  React && React.HTMLAttributes<HTMLDivElement>;
+></HTMLDivElement>(({ className, ...props }, ref) => (;
 
   <div
     ref={ref}
@@ -48,6 +58,12 @@ const CardHeader = React.forwardRef<
   React.HTMLAttributes<HTMLDivElement>
 
 >(({ className, ...props }, ref) => (
+Card && Card.displayName = 'Card';
+
+const CardHeader = React && React.forwardRef<;
+  HTMLDivElement,;
+  React && React.HTMLAttributes<</HTMLDivElement>HTMLDivElement>;
+>(({ className, ...props }, ref) => (;
 
   <div
     ref={ref}
@@ -69,6 +85,12 @@ const CardTitle = React.forwardRef<
   React.HTMLAttributes<HTMLHeadingElement>
 
 >(({ className, ...props }, ref) => (
+CardHeader && CardHeader.displayName = 'CardHeader';
+
+const CardTitle = React && React.forwardRef<;
+  HTMLParagraphElement,;
+  React && React.HT</HTMLHeadingElement>MLAttributes<HTMLHeadingElement>;
+>(({ className, ...props }, ref) => (;
 
   <h3
     ref={ref}
@@ -147,12 +169,16 @@ export {
 CardFooter.displayName = "CardFooter"
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+;
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,;
+};
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+;
 

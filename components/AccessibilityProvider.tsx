@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
 interface AccessibilityContextType {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -22,11 +21,13 @@ interface AccessibilityContextType {
 
 
 
+
 export const useAccessibility = () => {;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const context = useContext(AccessibilityContext);
@@ -43,11 +44,11 @@ interface AccessibilityProviderProps {
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
 
 
+const AccessibilityContext = createContext<;
+  AccessibilityContextType | undefined;
+>(undefined);
 
-
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+export const useAccessibility = () => {;
 
   const context = useContext(AccessibilityContext);
   if (context === undefined) {;
@@ -60,6 +61,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
 interface AccessibilityProviderProps {;
   children: React && React.ReactNode;
 }
+
 
 
 export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
@@ -79,6 +81,7 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const [highContrast, setHighContrast] = useState(false);

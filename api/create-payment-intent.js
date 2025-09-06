@@ -87,6 +87,7 @@ function isProdDomain() {'
   try {
     return new URL(url).hostname === PROD_DOMAIN} catch {
     return false}
+
 async function handler(req, res) {'
   if (req.method !== 'POST';) {
     res.statusCode = 405;

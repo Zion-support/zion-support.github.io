@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -28,6 +29,7 @@ interface ResumeStepContentProps {
 
 
 
+
 import {TabsContent} from "@/components/ui/tabs";
 import {Resume} from "@/types/resume";
 import {BasicInfoForm} from '../forms/basic-info';
@@ -37,8 +39,21 @@ import {SkillsForm} from '../forms/SkillsForm';
 import {CertificationsForm} from '../forms/CertificationsForm';
 import {PreviewResume} from '../PreviewResume';
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import { TabsContent } from "@/components/ui/tabs",
+import { Resume } from "@/types/resume";
+import { BasicInfoForm  } from '../forms/basic-info';
+import { WorkExperienceForm  } from '../forms/WorkExperienceForm';
+import { EducationForm  } from '../forms/EducationForm';
+import { SkillsForm  } from '../forms/SkillsForm';
+import { CertificationsForm  } from '../forms/CertificationsForm';
+import { PreviewResume } from '../PreviewResume';
+import { Resume } from "@/types/resume",
+import { BasicInfoForm } from '../forms/basic-info',
+import { WorkExperienceForm } from '../forms/WorkExperienceForm',
+import { EducationForm } from '../forms/EducationForm',
+import { SkillsForm } from '../forms/SkillsForm',
+import { CertificationsForm } from '../forms/CertificationsForm',
+import { PreviewResume } from '../PreviewResume',
 
 interface ResumeStepContentProps {
 
@@ -80,6 +95,8 @@ export const ResumeStepContent = ({
 
         <WorkExperienceForm
         <WorkExperienceForm 
+
+
 
 
 
@@ -138,7 +155,9 @@ export const ResumeStepContent = ({ ;
 
 
 
+
         <WorkExperienceForm
+
 
 
 
@@ -184,11 +203,20 @@ export const ResumeStepContent = ({ ;
       </TabsContent>
       <TabsContent value="preview">
 
+        <PreviewResume
+          resume={resume as Resume}
+          onBack={onPrevStep}
+
         />
       </TabsContent>
     </>
   )
 
+}
+
+        <PreviewResume 
+          resume={resume as Resume} 
+          onBack={onPrevStep}
 
         />;
       </TabsContent>;
@@ -197,7 +225,9 @@ export const ResumeStepContent = ({ ;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 

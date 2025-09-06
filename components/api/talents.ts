@@ -7,6 +7,7 @@ import {
 
 
 
+
   authenticateRequest,
   enforceRateLimit,;
   recordRequest,;
@@ -14,6 +15,7 @@ import {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
@@ -28,6 +30,12 @@ const TALENTS_FILE = path.join(
   'talents'
   'talents.json'
 
+
+
+    partnerId: auth.partner.id,
+    createdAt: now,
+createdAt: now,
+    createdAt: now,
 
   };
   records && records.push(record);
@@ -92,6 +100,7 @@ created_at: now,
   await fs.writeJSON (TALENTS_FILE, records, { spaces: 2 });
   await record_request (req, res, auth.partner, auth.api_key, started, 201);
   return res.status (201).json ({ id: record.id });  return res.status (201).json ({ id: record.id });
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const started = Date.now()
   const auth = await authenticateRequest(req)
@@ -134,6 +143,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 }),
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201),
   return res.status(201).json({ id: record.id })
+
 
 
 }

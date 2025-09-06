@@ -1,12 +1,14 @@
 
 
 
+
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network;
   Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2;
   DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon
+
 
 } from 'lucide-react',;
 import EnhancedNavigation from '../components/EnhancedNavigation',;
@@ -50,17 +52,21 @@ export default function AdvancedServicesShowcase2025() {
     .sort((a, b) => {
       switch (sortBy) {
         case 'popularity':
-          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
         case 'price':
-          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''))
         case 'rating':
-          return b.rating - a.rating,
+          return b.rating - a.rating
         case 'newest':
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+        case 'rating':
+          return b.rating - a.rating;
+        case 'newest':
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
         default: return 0
       }
-    }),
-
+    })
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -69,6 +75,8 @@ export default function AdvancedServicesShowcase2025() {
         staggerChildren: 0.1
       }
     }
+
+
 
 
 
@@ -138,11 +146,93 @@ export default function AdvancedServicesShowcase2025() {
 
     hidden: { opacity: 0 }
 
+import React, { useState, useEffect } from 'react',
+import Head from 'next / head',
+import { motion, AnimatePresence } from 'framer-motion',
+import {
+  ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
+  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,
+  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2,
+  DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon;
+} from 'lucide-react',
+import EnhancedNavigation from '../components / EnhancedNavigation',
+import EnhancedFooter from '../components / EnhancedFooter',
+import { advancedInnovativeServices } from '../data / 2025 - advanced - innovative - services - expansion',
+import { emergingTechInnovations } from '../data / 2025 - emerging - tech - innovations',
+export default /**
+ * AdvancedServicesShowcase2025 - Function description
+ */
+function AdvancedServicesShowcase2025() {
+  const [search_term, setSearchTerm] = useState (''),
+  const [selected_category, setSelectedCategory] = useState ('all'),
+  const [view_mode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sort_by, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
+  const [price_range, setPriceRange] = useState<[number, number]>([0, 10000]),
+  // Combine all services;
+  const all_services = [...advancedInnovativeServices, ...emergingTechInnovations],
+  const categories = [;
+    { id: 'all', name: 'All Services', count: all_services.length, icon: '🚀' },
+    { id: 'AI & Machine Learning', name: 'AI & ML', count: all_services.filter (string => s.category.includes ('AI') || s.category.includes ('Machine Learning')).length, icon: '🧠' },
+    { id: 'Quantum Computing & AI', name: 'Quantum AI', count: all_services.filter (string => s.category.includes ('Quantum')).length, icon: '⚛️' },
+    { id: 'Cybersecurity', name: 'Security', count: all_services.filter (string => s.category.includes ('Cybersecurity') || s.category.includes ('Security')).length, icon: '🛡️' },
+    { id: 'Edge Computing & IoT', name: 'Edge & IoT', count: all_services.filter (string => s.category.includes ('Edge') || s.category.includes ('IoT')).length, icon: '🌐' },
+    { id: 'Space Technology & Innovation', name: 'Space Tech', count: all_services.filter (string => s.category.includes ('Space')).length, icon: '🚀' },
+    { id: 'Neural Technology & BCI', name: 'Neural & BCI', count: all_services.filter (string => s.category.includes ('Neural') || s.category.includes ('BCI')).length, icon: '🧠' },
+    { id: 'Healthcare AI', name: 'Healthcare', count: all_services.filter (string => s.category.includes ('Healthcare')).length, icon: '🏥' },
+    { id: 'Climate & Sustainability', name: 'Climate', count: all_services.filter (string => s.category.includes ('Climate') || s.category.includes ('Sustainability')).length, icon: '🌍' },
+    { id: 'Blockchain & DeFi', name: 'Blockchain', count: all_services.filter (string => s.category.includes ('Blockchain') || s.category.includes ('DeFi')).length, icon: '🔗' },
+    { id: 'Metaverse & VR / AR', name: 'Metaverse', count: all_services.filter (string => s.category.includes ('Metaverse') || s.category.includes ('VR / AR')).length, icon: '🌐' }
+  ],
+  const filtered_services = all_services;
+    .filter (service => {
+      const matches_search = service.name.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+                          service.description.toLowerCase ().includes (search_term.toLowerCase ()) ||;
+                          service.tagline.toLowerCase ().includes (search_term.toLowerCase ()),
+      const matches_category = selected_category === 'all' || service.category.includes (selected_category),
+      const price = parse_float (service.price.replace ('$', '').replace (, '')),
+      const matches_price = price >= price_range[0] && price <= price_range[1],
+      return matches_search && matches_category && matches_price;
+    });
+    .sort ((a, b) => {
+      switch (sort_by) {
+        case 'popularity':;
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
+        case 'price':;
+          return parse_float (a.price.replace ('$', '').replace (, '')) - parse_float (b.price.replace ('$', '').replace (, '')),
+        case 'rating':;
+          return b.rating - a.rating,
+        case 'newest':;
+          return new Date (b.launch_date).get_time () - new Date (a.launch_date).get_time (),
+        default: return 0;
+      }
+    }),
+  const container_variants = {
+    hidden: { opacity: 0 },
+
+    visible: {
+      opacity: 1
+      transition: {
+        stagger_children: 0.1;
+      }
+    }
+
+
+  };
+
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
+
+  },
+  const item_variants = {
+    hidden: { opacity: 0, coordinate_y: 20 },
+    visible: {
+      opacity: 1,
+      coordinate_y: 0,
 
       transition: {
 
@@ -152,7 +242,102 @@ export default function AdvancedServicesShowcase2025() {
 
   const getCategoryIcon = (category: string) => {
 
+    const categoryData = categories.find(cat => cat.id === category)
+    return categoryData?.icon |''
+  }
+  };
 
+  const getCategoryIcon = (category: string) => {
+    const categoryData = categories.find(cat => cat.id === category)
+    return categoryData?.icon |'🚀'
+  }
+export default function AdvancedServicesShowcase2025(req, res) {
+  try {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
+  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]),;
+  // Combine all services;
+  const allServices = [...advancedInnovativeServices, ...emergingTechInnovations],;
+  const categories = [;
+    { id: 'all', name: 'All Services', count: allServices.length, icon: '🚀' },;
+    { id: 'AI & Machine Learning', name: 'AI & ML', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length, icon: '🧠' },;
+    { id: 'Quantum Computing & AI', name: 'Quantum AI', count: allServices.filter(s => s.category.includes('Quantum')).length, icon: '⚛️' },;
+    { id: 'Cybersecurity', name: 'Security', count: allServices.filter(s => s.category.includes('Cybersecurity') || s.category.includes('Security')).length, icon: '🛡️' },;
+    { id: 'Edge Computing & IoT', name: 'Edge & IoT', count: allServices.filter(s => s.category.includes('Edge') || s.category.includes('IoT')).length, icon: '🌐' },;
+    { id: 'Space Technology & Innovation', name: 'Space Tech', count: allServices.filter(s => s.category.includes('Space')).length, icon: '🚀' },;
+    { id: 'Neural Technology & BCI', name: 'Neural & BCI', count: allServices.filter(s => s.category.includes('Neural') || s.category.includes('BCI')).length, icon: '🧠' },;
+    { id: 'Healthcare AI', name: 'Healthcare', count: allServices.filter(s => s.category.includes('Healthcare')).length, icon: '🏥' },;
+    { id: 'Climate & Sustainability', name: 'Climate', count: allServices.filter(s => s.category.includes('Climate') || s.category.includes('Sustainability')).length, icon: '🌍' },;
+    { id: 'Blockchain & DeFi', name: 'Blockchain', count: allServices.filter(s => s.category.includes('Blockchain') || s.category.includes('DeFi')).length, icon: '🔗' },;
+    { id: 'Metaverse & VR/AR', name: 'Metaverse', count: allServices.filter(s => s.category.includes('Metaverse') || s.category.includes('VR/AR')).length, icon: '🌐'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ],;
+  const filteredServices = allServices;
+    .filter(service => {;
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
+      const price = parseFloat(service.price.replace('$', '').replace(, '')),;
+      const matchesPrice = price >= priceRange[0] && price <= priceRange[1];
+      return matchesSearch && matchesCategory && matchesPrice;
+    });
+    .sort((a, b) => {;
+      switch (sortBy) {;
+        case 'popularity':;
+          return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),;
+        case 'price':;
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),;
+        case 'rating':;
+          return b.rating - a.rating,;
+        case 'newest':;
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),;
+        default: return 0;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    }),;
+  const containerVariants = {;
+    hidden: { opacity: 0 };
+    visible: {;
+      opacity: 1;
+      transition: {;
+        staggerChildren: 0.1;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  };
+  const itemVariants = {;
+    hidden: { opacity: 0, y: 20 },;
+    visible: {;
+      opacity: 1,;
+      y: 0,;
+      transition: {;
+        duration: 0.5;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
   },
   const getCategoryIcon = (category: string) => {
@@ -167,9 +352,9 @@ export default function AdvancedServicesShowcase2025() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
-        <title>2025 Advanced Services Showcase — Zion Tech Group</title>
+        <title>2025 Advanced Services Showcase  Zion Tech Group</title>
         <meta name="description" content="Explore our comprehensive collection of advanced innovative micro SAAS services, cutting-edge AI solutions, quantum technologies, and revolutionary IT services. Transform your business with Zion Tech Group." />
-        <meta property="og:title" content="2025 Advanced Services Showcase — Zion Tech Group" />
+        <meta property="og:title" content="2025 Advanced Services Showcase  Zion Tech Group" />
         <meta property="og:description" content="Explore our comprehensive collection of advanced innovative micro SAAS services, cutting-edge AI solutions, quantum technologies, and revolutionary IT services." />
         <meta name="keywords" content="advanced micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/2025-advanced-services-showcase" />
@@ -184,7 +369,9 @@ export default function AdvancedServicesShowcase2025() {
 }
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
@@ -211,6 +398,7 @@ export default function AdvancedServicesShowcase2025() {
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
 
 
+
               Discover our comprehensive collection of cutting-edge micro SAAS services, advanced AI solutions
               Discover our comprehensive collection of cutting-edge micro SAAS services, advanced AI solutions, 
 
@@ -231,6 +419,7 @@ export default function AdvancedServicesShowcase2025() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -267,12 +456,36 @@ export default function AdvancedServicesShowcase2025() {
           >;
             {/* Search Bar */}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+      {/* Search and Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="px-6 pb-12">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10"
+          >
+            {/* Search Bar */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
             <div className="mb-6">
               <div className="relative">
@@ -298,12 +511,14 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   className="w-full bg-white/10 border border-white/20 rounded-xl px-12 py-4 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
                 />
@@ -347,12 +562,14 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
                 >
@@ -400,12 +617,14 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
                 >
@@ -427,12 +646,14 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               <div className="flex-1">
                 <label className="block text-sm font-medium text-white/70 mb-3">Price Range</label>
@@ -441,9 +662,9 @@ export default function AdvancedServicesShowcase2025() {
                     type="number"
                     placeholder="Min"
 
-
-
-
+                    value={priceRange[0]}
+                    onChange={(e) => setPriceRange([parseInt(e.target.value) |0, priceRange[1]])}
+                    onChange={(e) => setPriceRange([parseInt(e.target.value) || 0, priceRange[1]])}
 
                     value={priceRange[0]  } catch (error) {
     console.error("Error:", error);
@@ -461,6 +682,7 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -470,15 +692,16 @@ export default function AdvancedServicesShowcase2025() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
                     className="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
                   />
                   <input
                     type="number"
                     placeholder="Max"
 
-
-
-
+                    value={priceRange[1]}
+                    onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value) |10000])}
+                    onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value) || 10000])}
 
                     value={priceRange[1]  } catch (error) {
     console.error("Error:", error);
@@ -496,6 +719,7 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -503,6 +727,7 @@ export default function AdvancedServicesShowcase2025() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                     className="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
@@ -521,12 +746,14 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               <div className="flex items-end">
                 <div className="flex bg-white/10 rounded-xl p-1">
@@ -570,15 +797,34 @@ export default function AdvancedServicesShowcase2025() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+      {/* Services Grid/List */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="px-6 pb-20">
+        <div className="max-w-7xl mx-auto">
+          {/* Results Count */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <motion.div;
+            initial={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.5 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
             className="mb-8"
           >
@@ -587,9 +833,15 @@ export default function AdvancedServicesShowcase2025() {
             </p>
           </motion.div>
 
-
-
-
+          {/* Services Display */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className={viewMode === 'grid' 
+              ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              : "space-y-6"
+            }
 
           {/* Services Display */  } catch (error) {
     console.error("Error:", error);
@@ -621,12 +873,14 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           >
             <AnimatePresence mode="wait">
@@ -638,8 +892,12 @@ export default function AdvancedServicesShowcase2025() {
 
                     ? "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                     : "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 hover:shadow-2xl"
+                  variants={item_variants}
+                  className={view_mode === 'grid';
+                    ? "group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl";
+                    : "group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 hover:shadow - 2xl";
                   }
-                >
+                >;
                   {/* Service Header */}
                   key={service.id  } catch (error) {
     console.error("Error:", error);
@@ -670,7 +928,9 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   <div className="p-6">
@@ -688,7 +948,6 @@ export default function AdvancedServicesShowcase2025() {
                           <p className="text-white/70 text-sm">{service.tagline}</p>
                         </div>
                       </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {service.popular && (
                         <span className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs font-medium px-3 py-1 rounded-full">
                           Popular
@@ -721,12 +980,14 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-4">
@@ -758,12 +1019,14 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     <div className="mb-6">
                       <h4 className="text-white font-semibold mb-3">Key Features:</h4>
@@ -850,12 +1113,14 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     <div className="mb-6">
                       <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-xl p-4 border border-cyan-500/20">
@@ -906,12 +1171,14 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                         target="_blank"
                         rel="noopener noreferrer"
@@ -933,12 +1200,14 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                         className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2"
                       >
@@ -965,24 +1234,24 @@ export default function AdvancedServicesShowcase2025() {
 
             </AnimatePresence>;
           </motion.div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* No Results */}
           {filtered_services.length === 0 && (
             <motion.div;
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+              initial={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
               className="text-center py-20"
             >
-              <div className="text-6xl mb-4">🔍</div>
+              <div className="text-6xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-white/70 mb-6">Try adjusting your search criteria or filters</p>
               <button
@@ -1004,12 +1273,14 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300"
               >
@@ -1038,12 +1309,14 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <section className="px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
@@ -1090,12 +1363,14 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               <a
                 href="tel:+13024640950"
@@ -1110,9 +1385,9 @@ export default function AdvancedServicesShowcase2025() {
       <EnhancedFooter />
     </div>
 
-
-
-
+  );
+};
+  )
 
           >;
             <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - cyan - 100 bg - clip - text text - transparent">;
@@ -1151,6 +1426,7 @@ export default function AdvancedServicesShowcase2025() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1161,5 +1437,6 @@ export default function AdvancedServicesShowcase2025() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

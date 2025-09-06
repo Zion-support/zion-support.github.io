@@ -1,12 +1,16 @@
 
 
-
-
+import { jsPDF  } from 'jspdf';
+import { PortfolioProject  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addPortfolioSection(
 
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addPortfolioSection(;
+
+
 
 
 
@@ -157,10 +161,14 @@ export function addPortfolioSection(;
         yPos += 4;
 
 
+
+
       }
     }
     yPos += 10, // Add space between projects
   }
+
+
 
 
 
@@ -179,9 +187,9 @@ export function addPortfolioSection(;
 
     yPos += 6
 
-
-
-
+  }
+  return yPos + 5
+}
 
 ;
   // If there are more projects than we're displaying;
@@ -196,6 +204,7 @@ export function addPortfolioSection(;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -203,6 +212,7 @@ export function addPortfolioSection(;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   }

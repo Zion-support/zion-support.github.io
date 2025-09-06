@@ -16,6 +16,7 @@ import {
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -51,11 +52,14 @@ import { motion } from 'framer-motion';
 
 
 
+
   Brain, Atom, Shield, Rocket, Zap;
   TrendingUp, Globe, Cpu, Database, Cloud;
   Lock, Palette, Target, CheckCircle, Sparkles
 } from 'lucide-react';
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 
 
 // Import new service data;
@@ -64,31 +68,34 @@ import { realITServices2025 } from '../data/real-it-services-2025';
 
 import { realAIServices2025 } from '../data/real-ai-services-2025';
 
-const Homepage2037: React.FC = () => {
-  // Get featured services from each category
-  const featuredMicroSaas = realMicroSaasServices2025
-    .filter(service => service.popular)
+const Homepage2037: React.FC = () => {;
+  // Get featured services from each category;
+  const featuredMicroSaas = realMicroSaasServices2025;
+    .filter(service => service && service.popular);
     .slice(0, 3);
-  const featuredIT = realITServices2025
-    .filter(service => service.popular)
+  const featuredIT = realITServices2025;
+    .filter(service => service && service.popular);
     .slice(0, 3);
-  const featuredAI = realAIServices2025
-    .filter(service => service.popular)
+  const featuredAI = realAIServices2025;
+    .filter(service => service && service.popular);
     .slice(0, 3);
   return (
-    <Layout>
+    <Layout>;
       {/* Main Content */}
-      <main className='relative z-10'>const Homepage2037: React.FC = () => {
-  // Get featured services from each category
-  const featuredMicroSaas = realMicroSaasServices2025.filter(service => service.popular).slice(0, 3);
-  const featuredIT = realITServices2025.filter(service => service.popular).slice(0, 3);
-  const featuredAI = realAIServices2025.filter(service => service.popular).slice(0, 3);
   return (
-    <Layout>
+    <Layout>;
       {/* Main Content */}
-      <main className='relative z-10'>
+      <main className='relative z-10'>const Homepage2037: React.FC = () => {;
+  // Get featured services from each category;
+  const featuredMicroSaas = realMicroSaasServices2025 && realMicroSaasServices2025.filter(service => service && service.popular).slice(0, 3);
+  const featuredIT = realITServices2025 && realITServices2025.filter(service => service && service.popular).slice(0, 3);
+  const featuredAI = realAIServices2025 && realAIServices2025.filter(service => service && service.popular).slice(0, 3);
+  return (
+    <Layout>;
+      {/* Main Content */}
+      <main className='relative z-10'>;
         {/* Hero Section */}
-        <section className='min-h-screen flex items-center justify-center px-4 relative'>
+        <section className='min-h-screen flex items-center justify-center px-4 relative'>;
           {/* Animated background elements */}
           <div className='absolute inset-0 overflow-hidden'>
             <div className='absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
@@ -112,6 +119,7 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
@@ -119,13 +127,14 @@ const Homepage2037: React.FC = () => {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1 }}
-            >
+              transition={{ duration: 1 }}>;
               {/* Main heading with enhanced typography */}
               <div className='mb-8'>
                 <h1 className='text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent leading-tight'>
+
 
 
 
@@ -141,13 +150,14 @@ const Homepage2037: React.FC = () => {
 
 
 
+
                   Zion Tech Group
                 </h1>
                 <div className='text-2xl md:text-3xl text-gray-300 mb-4 font-light'>
                   Pioneering the Future of Technology
                 </div>
                 <div className='text-xl md:text-2xl text-cyan-400 font-medium'>
-                  Revolutionary AI • Quantum Computing • Enterprise Solutions
+                  Revolutionary AI  Quantum Computing  Enterprise Solutions
                 </div>
               </div>
               <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed'>
@@ -170,7 +180,7 @@ const Homepage2037: React.FC = () => {
                   Pioneering the Future of Technology
                 </div>
                 <div className="text-xl md:text-2xl text-cyan-400 font-medium">
-                  Revolutionary AI • Quantum Computing • Enterprise Solutions
+                  Revolutionary AI  Quantum Computing  Enterprise Solutions
                 </div>
               </div>
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -213,14 +223,16 @@ const Homepage2037: React.FC = () => {
                   Pioneering the Future of Technology;
                 </div>;
                 <div className='text-xl md:text-2xl text-cyan-400 font-medium'>;
-                  Revolutionary AI • Quantum Computing • Enterprise Solutions;
+                  Revolutionary AI  Quantum Computing  Enterprise Solutions;
                 </div>;
               </div>;
+
               <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed'>;
                 Transform your business with cutting-edge AI, quantum computing,;
                 and enterprise solutions. We deliver innovative technology that;
                 drives business transformation and shapes the future.;
               </p>;
+
               {/* Enhanced CTA buttons */}
               <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'>;
                 <Link href='/contact'>;
@@ -236,13 +248,15 @@ const Homepage2037: React.FC = () => {
                   Pioneering the Future of Technology;
                 </div>;
                 <div className="text-xl md:text-2xl text-cyan-400 font-medium">;
-                  Revolutionary AI • Quantum Computing • Enterprise Solutions;
+                  Revolutionary AI  Quantum Computing  Enterprise Solutions;
                 </div>;
               </div>;
+
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">;
                 Transform your business with cutting-edge AI, quantum computing, and enterprise solutions. ;
                 We deliver innovative technology that drives business transformation and shapes the future.;
               </p>;
+
               {/* Enhanced CTA buttons */}
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">;
                 <Link href="/contact">;
@@ -269,11 +283,14 @@ const Homepage2037: React.FC = () => {
             </motion && motion.div>;
           </div>;
         </section>;
+
         {/* Enhanced Company Stats */}
         <section className='py-24 px-4 bg-black/40 backdrop-blur-sm'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4 bg-black/40 backdrop-blur-sm">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div
+
+
 
 
 
@@ -287,12 +304,14 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -308,7 +327,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -345,6 +366,7 @@ const Homepage2037: React.FC = () => {
                 across industries;
               </p>;
             </motion && motion.div>;
+
             <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>              <motion && motion.div            >;
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
                 Trusted by Industry Leaders;
@@ -353,8 +375,10 @@ const Homepage2037: React.FC = () => {
                 Our innovative solutions are powering the future of technology across industries;
               </p>;
             </motion && motion.div>;
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
               <motion&& motion.div
+
 
 
 
@@ -375,6 +399,7 @@ const Homepage2037: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
@@ -389,7 +414,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -413,6 +440,8 @@ const Homepage2037: React.FC = () => {
 
 
 
+
+
                 className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300'>;
                 <div className='text-5xl font-bold text-cyan-400 mb-3'>50+</div>;
                 <div className='text-gray-300 text-lg'>AI Services</div>;
@@ -424,6 +453,7 @@ const Homepage2037: React.FC = () => {
                 <div className="text-gray-300 text-lg">AI Services</div>;
                 <div className="text-cyan-400 text-sm mt-2">Revolutionary Solutions</div>;
               </motion && motion.div>;
+
               <motion&& motion.div
 
 
@@ -441,7 +471,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -467,6 +499,8 @@ const Homepage2037: React.FC = () => {
 
 
 
+
+
                 className='text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300'>;
                 <div className='text-5xl font-bold text-blue-400 mb-3'>;
                   100+;
@@ -480,6 +514,7 @@ const Homepage2037: React.FC = () => {
                 <div className="text-gray-300 text-lg">Quantum Solutions</div>;
                 <div className="text-blue-400 text-sm mt-2">Future Technology</div>;
               </motion && motion.div>;
+
               <motion&& motion.div
 
 
@@ -497,7 +532,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -525,6 +562,8 @@ const Homepage2037: React.FC = () => {
 
 
 
+
+
                 className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300'>;
                 <div className='text-5xl font-bold text-purple-400 mb-3'>;
                   24/7;
@@ -540,6 +579,7 @@ const Homepage2037: React.FC = () => {
                 <div className="text-gray-300 text-lg">Autonomous Operations</div>;
                 <div className="text-purple-400 text-sm mt-2">Always Available</div>;
               </motion && motion.div>;
+
               <motion&& motion.div
 
 
@@ -557,13 +597,15 @@ const Homepage2037: React.FC = () => {
             <motion&& motion.div
 
 
+              </motion.div>
+            </div>
+          </div>
+        </section>
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+        {/* Featured AI Services */}
+        <section className="py-24 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
 
 
               initial={{ opacity: 0, y: 20 }}
@@ -580,7 +622,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -616,6 +660,8 @@ const Homepage2037: React.FC = () => {
 
 
 
+
+
               className='text-center mb-16'>;
               <div className='flex items-center justify-center space-x-3 mb-6'>;
                 <Brain className='w-8 h-8 text-cyan-400' />;
@@ -628,6 +674,7 @@ const Homepage2037: React.FC = () => {
                 breakthrough consciousness and emotional intelligence platforms;
               </p>;
             </motion && motion.div>;
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {featuredAI && featuredAI.map((service, index) => (            >;
               <div className="flex items-center justify-center space-x-3 mb-6">;
                 <Brain className="w-8 h-8 text-cyan-400" />;
@@ -639,6 +686,7 @@ const Homepage2037: React.FC = () => {
                 Experience the future of artificial intelligence with our breakthrough consciousness and emotional intelligence platforms;
               </p>;
             </motion && motion.div>;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {featuredAI && featuredAI.map((service, index) => (;
                 <motion&& motion.div
@@ -733,7 +781,7 @@ const Homepage2037: React.FC = () => {
                   Pioneering the Future of Technology;
                 </div>;
                 <div className='text - xl md:text - 2xl text - cyan - 400 font - medium'>;
-                  Revolutionary AI • Quantum Computing • Enterprise Solutions;
+                  Revolutionary AI  Quantum Computing  Enterprise Solutions;
                 </div>;
               </div>;
               <p className='text - xl md:text - 2xl text - gray - 300 mb - 12 max - w-3xl mx - auto leading - relaxed'>;
@@ -756,7 +804,7 @@ const Homepage2037: React.FC = () => {
                   Pioneering the Future of Technology;
                 </div>;
                 <div className="text - xl md:text - 2xl text - cyan - 400 font - medium">;
-                  Revolutionary AI • Quantum Computing • Enterprise Solutions;
+                  Revolutionary AI  Quantum Computing  Enterprise Solutions;
                 </div>;
               </div>;
               <p className="text - xl md:text - 2xl text - gray - 300 mb - 12 max - w-3xl mx - auto leading - relaxed">;
@@ -882,7 +930,7 @@ const Homepage2037: React.FC = () => {
                 viewport={{ once: true }}
                 className='text - center p - 8 bg - gradient - to - br from - green - 500 / 10 to - teal - 500 / 10 rounded - 2xl border border - green - 500 / 20 hover:border - green - 500 / 40 transition - all duration - 300';
               >;
-                <div className='text - 5xl font - bold text - green - 400 mb - 3'>∞</div>;
+                <div className='text - 5xl font - bold text - green - 400 mb - 3'></div>;
                 <div className='text - gray - 300 text - lg'>;
                   Future Possibilities;
                 </div>;
@@ -890,7 +938,7 @@ const Homepage2037: React.FC = () => {
                   Limitless Innovation;
                 </div>              </motion.div>                className="text - center p - 8 bg - gradient - to - br from - green - 500 / 10 to - teal - 500 / 10 rounded - 2xl border border - green - 500 / 20 hover:border - green - 500 / 40 transition - all duration - 300";
               >;
-                <div className="text - 5xl font - bold text - green - 400 mb - 3">∞</div>;
+                <div className="text - 5xl font - bold text - green - 400 mb - 3"></div>;
                 <div className="text - gray - 300 text - lg">Future Possibilities</div>;
                 <div className="text - green - 400 text - sm mt - 2">Limitless Innovation</div>;
             </div>;
@@ -939,46 +987,59 @@ const Homepage2037: React.FC = () => {
                   viewport={{ once: true }}
                 >;
                   <UltraFuturisticServiceCard2026;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     service={{
 
-
-
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
-
+                      id: service.id
+                      name: service.name
+                      tagline: service.tagline
+                      description: service.description
+                      price: service.price
+                      period: service.period
+                      features: service.features.slice(0, 5)
+                      popular: service.popular
+                      category: service.category
+                      icon: service.icon
                     }}
-                    variant='ai'                  />;
-                </motion && motion.div>;
+                    variant='ai'                  />
+                </motion.div>
               ))}
-
-            </div>                      popular: service && service.popular,;
-                      category: service && service.category,;
-                      icon: service && service.icon;
-
+            </div>                      popular: service.popular
+                      category: service.category
+            </div>                      popular: service.popular,
+                      category: service.category,
+                      icon: service.icon
                     }}
-                    variant="ai";
-                  />;
-                </motion && motion.div>;
+                    variant="ai"
+            </div>
+
+                      id: service.id
+                      name: service.name
+                      tagline: service.tagline
+                      description: service.description
+                      price: service.price
+                      period: service.period
+                      features: service.features.slice(0, 5)
+                      popular: service.popular
+                      category: service.category
+                      icon: service.icon
+                    }}
+                    variant='ai'                  />
+                </motion.div>
               ))}
-
-
-
-
 
                   />
                 </motion.div>
               ))}
             </div>
+            
             <motion.div
+
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -993,7 +1054,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1029,6 +1092,7 @@ const Homepage2037: React.FC = () => {
             </motion && motion.div>;
           </div>;
         </section>;
+
         {/* Featured Enterprise IT Services */}
         <section className='py-24 px-4 bg-black/20'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4 bg-black/20">;
@@ -1037,10 +1101,14 @@ const Homepage2037: React.FC = () => {
 
 
 
+
+
         {/* Featured Enterprise IT Services */}
         <section className="py-24 px-4 bg-black/20">
           <div className="max-w-7xl mx-auto">
             <motion.div
+
+
 
 
 
@@ -1060,7 +1128,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1096,6 +1166,8 @@ const Homepage2037: React.FC = () => {
 
 
 
+
+
               className='text-center mb-16'>;
               <div className='flex items-center justify-center space-x-3 mb-6'>;
                 <Shield className='w-8 h-8 text-blue-400' />;
@@ -1108,6 +1180,7 @@ const Homepage2037: React.FC = () => {
                 and autonomous operations;
               </p>;
             </motion && motion.div>;
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {featuredIT && featuredIT.map((service, index) => (            >;
               <div className="flex items-center justify-center space-x-3 mb-6">;
                 <Shield className="w-8 h-8 text-blue-400" />;
@@ -1119,6 +1192,7 @@ const Homepage2037: React.FC = () => {
                 Future-proof your enterprise with quantum-secure infrastructure and autonomous operations;
               </p>;
             </motion && motion.div>;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {featuredIT && featuredIT.map((service, index) => (;
                 <motion&& motion.div
@@ -1139,7 +1213,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1220,10 +1296,23 @@ const Homepage2037: React.FC = () => {
                     service={{
 
 
+
+                      id: service.id
+                      name: service.name
+                      tagline: service.tagline
+                      description: service.description
+                      price: service.price
+                      period: service.period
+                      features: service.features.slice(0, 5)
+                      popular: service.popular
+                      category: service.category
+                      icon: service.icon
+
                     }}
                     variant='enterprise'                  />;
                 </motion && motion.div>;
               ))}
+
 
 
             </div>                      popular: service && service.popular,;
@@ -1243,18 +1332,20 @@ const Homepage2037: React.FC = () => {
 
 
 
+
                   />
                 </motion.div>
               ))}
             </div>
             
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <motion.div
+
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -1269,7 +1360,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1305,6 +1398,7 @@ const Homepage2037: React.FC = () => {
             </motion && motion.div>;
           </div>;
         </section>;
+
         {/* Featured Micro SAAS Services */}
         <section className='py-24 px-4'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4">;
@@ -1313,10 +1407,14 @@ const Homepage2037: React.FC = () => {
 
 
 
+
+
         {/* Featured Micro SAAS Services */}
         <section className="py-24 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
+
+
 
 
 
@@ -1336,7 +1434,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1372,6 +1472,8 @@ const Homepage2037: React.FC = () => {
 
 
 
+
+
               className='text-center mb-16'>;
               <div className='flex items-center justify-center space-x-3 mb-6'>;
                 <Rocket className='w-8 h-8 text-green-400' />;
@@ -1384,6 +1486,7 @@ const Homepage2037: React.FC = () => {
                 and AI-powered insights;
               </p>;
             </motion && motion.div>;
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {featuredMicroSaas && featuredMicroSaas.map((service, index) => (            >;
               <div className="flex items-center justify-center space-x-3 mb-6">;
                 <Rocket className="w-8 h-8 text-green-400" />;
@@ -1395,6 +1498,7 @@ const Homepage2037: React.FC = () => {
                 Transform your business operations with intelligent automation and AI-powered insights;
               </p>;
             </motion && motion.div>;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {featuredMicroSaas && featuredMicroSaas.map((service, index) => (;
                 <motion&& motion.div
@@ -1415,7 +1519,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1496,10 +1602,23 @@ const Homepage2037: React.FC = () => {
                     service={{
 
 
+
+                      id: service.id
+                      name: service.name
+                      tagline: service.tagline
+                      description: service.description
+                      price: service.price
+                      period: service.period
+                      features: service.features.slice(0, 5)
+                      popular: service.popular
+                      category: service.category
+                      icon: service.icon
+
                     }}
                     variant='automation'                  />;
                 </motion && motion.div>;
               ))}
+
 
 
             </div>                      popular: service && service.popular,;
@@ -1519,18 +1638,20 @@ const Homepage2037: React.FC = () => {
 
 
 
+
                   />
                 </motion.div>
               ))}
             </div>
             
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <motion.div
+
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -1545,7 +1666,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1581,6 +1704,7 @@ const Homepage2037: React.FC = () => {
             </motion && motion.div>;
           </div>;
         </section>;
+
         {/* Enhanced Why Choose Us Section */}
         <section className='py-24 px-4 bg-black/30'>;
           <div className='max-w-7xl mx-auto'>            <motion && motion.div        <section className="py-24 px-4 bg-black/30">;
@@ -1589,10 +1713,14 @@ const Homepage2037: React.FC = () => {
 
 
 
+
+
         {/* Enhanced Why Choose Us Section */}
         <section className="py-24 px-4 bg-black/30">
           <div className="max-w-7xl mx-auto">
             <motion.div
+
+
 
 
 
@@ -1612,7 +1740,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1649,6 +1779,7 @@ const Homepage2037: React.FC = () => {
                 deliver exceptional results;
               </p>;
             </motion && motion.div>;
+
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              <motion && motion.div            >;
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">;
                 Why Choose Zion Tech Group?;
@@ -1657,8 +1788,10 @@ const Homepage2037: React.FC = () => {
                 We combine cutting-edge technology with proven expertise to deliver exceptional results;
               </p>;
             </motion && motion.div>;
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               <motion&& motion.div
+
 
 
 
@@ -1679,6 +1812,7 @@ const Homepage2037: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
@@ -1693,7 +1827,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1724,6 +1860,8 @@ const Homepage2037: React.FC = () => {
 
 
 
+
+
                 className='text-center p-8 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-2xl border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group'>;
                 <div className='w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>;
                   <Brain className='w-10 h-10 text-white' />;
@@ -1742,6 +1880,7 @@ const Homepage2037: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-4">AI-First Approach</h3>;
                 <p className="text-gray-300 leading-relaxed">Leading-edge artificial intelligence solutions that adapt, evolve, and transform your business operations</p>;
               </motion && motion.div>;
+
               <motion&& motion.div
 
 
@@ -1759,7 +1898,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1790,6 +1931,8 @@ const Homepage2037: React.FC = () => {
 
 
 
+
+
                 className='text-center p-8 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 group'>;
                 <div className='w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>;
                   <Atom className='w-10 h-10 text-white' />;
@@ -1808,6 +1951,7 @@ const Homepage2037: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-4">Quantum Innovation</h3>;
                 <p className="text-gray-300 leading-relaxed">Next-generation quantum computing and security solutions that prepare you for the future</p>;
               </motion && motion.div>;
+
               <motion&& motion.div
 
 
@@ -1825,7 +1969,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1856,6 +2002,8 @@ const Homepage2037: React.FC = () => {
 
 
 
+
+
                 className='text-center p-8 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 group'>;
                 <div className='w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>;
                   <Shield className='w-10 h-10 text-white' />;
@@ -1874,6 +2022,7 @@ const Homepage2037: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-4">Enterprise Security</h3>;
                 <p className="text-gray-300 leading-relaxed">Military-grade security and compliance solutions that protect your most valuable assets</p>;
               </motion && motion.div>;
+
               <motion&& motion.div
 
 
@@ -1891,7 +2040,9 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1939,11 +2090,14 @@ const Homepage2037: React.FC = () => {
             </div>;
           </div>;
         </section>;
+
         {/* Enhanced Call to Action */}
         <section className='py-24 px-4'>;
           <div className='max-w-5xl mx-auto text-center'>            <motion && motion.div        <section className="py-24 px-4">;
           <div className="max-w-5xl mx-auto text-center">;
             <motion&& motion.div
+
+
 
 
 
@@ -1957,12 +2111,14 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1978,14 +2134,15 @@ const Homepage2037: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
+
             >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Background decoration */}
 
               className="relative"
@@ -2118,10 +2275,13 @@ const Homepage2037: React.FC = () => {
 
 
 
+
+
 };
 export default Homepage2037;  );
 
 };
+
 
 
 
@@ -2130,5 +2290,6 @@ export default Homepage2037;  );
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

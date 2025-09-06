@@ -1,5 +1,6 @@
 
 
+
 import React from 'react',;
 import Head from 'next/head',;
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',;
@@ -33,6 +34,7 @@ export default function AgenticRAGPage() {
 
 
 	}
+
 	const plans = [
 		{ name: 'Starter', price: '$199/month', items: ['100K tokens/monthWeb/PDF ingestionBasic rerankerCSV export'] }
 		{ name: 'Pro', price: '$599/month', items: ['2M tokens/monthGitHub/S3 connectorsHybrid search + rerankEval kits'] }
@@ -169,10 +171,12 @@ export default function AgenticRAGPage() {
 						                                        <a href="/resources" className="border-gray-600 text-gray-200 border px-6 py-3 rounded-xl">Explore Docs</Link>
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 					</div>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
@@ -202,10 +206,12 @@ export default function AgenticRAGPage() {
 }
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 				</div>
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
@@ -235,16 +241,19 @@ export default function AgenticRAGPage() {
 						<a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Talk to Engineering</Link>
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 					</div>
 				</div>
 			</div>
 		</UltraFuturisticMatrixBackground>
 
-
+	);
+};
 
 	)
   } catch (error) {
@@ -253,9 +262,12 @@ export default function AgenticRAGPage() {
   }
 
 
+
+
 }
 
 }
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -266,5 +278,6 @@ export default function AgenticRAGPage() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

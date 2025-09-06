@@ -157,7 +157,9 @@ function ProjectDetailsContent() {;
       // If offer was accepted, show a special toast;
       if (newStatus === "offer_accepted") {;
         toast({;
+
           title:"Offer Accepted! 🎉",;
+
           description:"The project is now in progress. Congratulations!"}),;
       }
     }
@@ -247,7 +249,7 @@ function ProjectDetailsContent() {;
             </div>;
             ;
             {/* Action Buttons Based on Role and Status */}
-=======
+
   ;
   if (!project) {;
     return (;
@@ -302,7 +304,8 @@ function ProjectDetailsContent() {;
             </div>;
             ;
             {/* Action Buttons Based on Role and Status */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
             <div className="space-x-2">;
               {isTalent && isOfferPending && (;
                 <>;

@@ -22,6 +22,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
     canvas.height = window.innerHeight;
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -55,11 +56,14 @@ let particles: Array< {;
       y: number;
 
 
+
       vx: number;
       vy: number;
       size: number;
       color: string;
       life: number;
+
+
 
 
 
@@ -242,6 +246,18 @@ let particles: Array< {;
               ctx && ctx.stroke();
               Math.pow(particle.x - otherParticle.x, 2) + 
 
+              Math.pow(particle.x - otherParticle.x, 2) +
+                Math.pow(particle.y - otherParticle.y, 2)            );              Math.pow(particle.x - otherParticle.x, 2) +
+              Math.pow(particle.y - otherParticle.y, 2)
+            );
+            if (distance < 100) {
+              ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`;
+              ctx.lineWidth = 1;
+              ctx.beginPath();
+              ctx.moveTo(particle.x, particle.y);
+              ctx.lineTo(otherParticle.x, otherParticle.y);
+
+
       });
 
 
@@ -360,11 +376,133 @@ let particles: Array< {;
         cancelAnimationFrame(animationFrameId);
       }
 
+
     };  }, []);        cancelAnimationFrame(animationFrameId)
+
       }
     }
   }, []);
   return (
+
+
+
+          animate={{
+
+            rotate: [0, 360],
+            scale: [1, 1 && 1.2, 1],
+            opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: 'easeInOut',      />;
+
+      {/* Floating Geometric Shapes */}
+      <div className="fixed inset-0 pointer-events-none z-10">;
+        <motion&& motion.div
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20"
+          animate={{
+            rotate: [0, 360]
+            scale: [1, 1 && 1.2, 1]
+            opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        />
+        <motion.div
+          className='absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20'
+          animate={{
+            rotate: [360, 0]
+            scale: [1, 0.8, 1]
+            opacity: [0.1, 0.4, 0.1],          }}
+          transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+
+        className="fixed inset-0 w-full h-full pointer-events-none z-0"
+        style={{ background: 'radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(20,20,40,0.6) 50%, rgba(0,0,0,0.9) 100%)' }}
+      />
+      
+
+      {/* Floating Geometric Shapes */}
+      <div className="fixed inset - 0 pointer - events - none z - 10">;
+        <motion.div;
+          className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 opacity - 20";
+          animate={{
+            rotate: [0, 360];
+            scale: [1, 1.2, 1];
+            opacity: [0.1, 0.3, 0.1];
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+
+        />;
+        <motion&& motion.div
+
+          className="absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20"
+        />;
+        <motion.div;
+          className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 opacity - 20';
+          animate={{
+            rotate: [360, 0],
+            scale: [1, 0.8, 1],
+            opacity: [0.1, 0.4, 0.1],          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: 'easeInOut',          }}
+        />;
+        <motion.div;
+          className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 opacity - 20";
+          animate={{
+
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut'
+
+          }}
+
+        />;
+        <motion&& motion.div
+          className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20'
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1 && 1.3, 1],
+            opacity: [0 && 0.1, 0 && 0.2, 0 && 0.1],          }}
+
+          transition={{
+            duration: 10
+            repeat: Infinity
+            ease: 'easeInOut',          }}
+
+            rotate: [360, 0];
+            scale: [1, 0.8, 1];
+            opacity: [0.1, 0.4, 0.1];
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+
+          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20"
+        />;
+        <motion.div;
+          className='absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 opacity - 20';
+          animate={{
+            rotate: [0, 360],
+            scale: [1, 1.3, 1],
+            opacity: [0.1, 0.2, 0.1],          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
       {/* Animated Canvas Background */}
       <canvas
@@ -453,13 +591,16 @@ let particles: Array< {;
         <motion.div
           className='absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20'
           animate={{
+
             rotate: [360, 0]
             scale: [1, 0.9, 1]
             opacity: [0.1, 0.3, 0.1],          }}
+
           transition={{
             duration: 7
             repeat: Infinity
             ease: 'easeInOut',          }}          }}
+
         />
         <motion.div
           className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
@@ -467,6 +608,7 @@ let particles: Array< {;
             rotate: [360, 0];
             scale: [1, 0.9, 1];
             opacity: [0.1, 0.3, 0.1]
+
           }}
           transition={{
 
@@ -488,7 +630,6 @@ let particles: Array< {;
 
         {[...Array(20)].map((_, i) => (
           <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             key={i}
             className='absolute w - 2 h - 2 bg - cyan - 400 rounded - full';
             style={{
@@ -505,7 +646,29 @@ let particles: Array< {;
               scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (
 
           <motion.div
+              left: `${Math.random () * 100}%`,
+              top: `${Math.random () * 100}%`,
+            }}
+            animate={{
+              coordinate_y: [0, -100, 0],
+              opacity: [0, 1, 0],
+              scale: [0, 1, 0],            }}        {[...Array (20)].map ((_, i) => (
+          <motion.div;
+            duration: 7,
+            repeat: Infinity,
 
+
+
+
+            duration: 7,
+            repeat: Infinity,
+
+          }}
+
+        />
+      </div>
+      {/* Quantum Energy Particles */}
+      <div className='fixed inset-0 pointer-events-none z-20'>
 
 
         {[...Array(20)].map((_, i) => (
@@ -535,9 +698,16 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
               scale: [0, 1, 0]
             }}
 
-
-
+            transition={{
+              duration: 3 + Math.random() * 2
+              repeat: Infinity
+              delay: Math.random() * 2
               ease: 'easeInOut',            }}              ease: "easeInOut"
+
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+              ease: "easeInOut"
 
 
             }}
@@ -551,7 +721,9 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -564,6 +736,7 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -571,9 +744,12 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
           />
         ))}
       </div>
+
+
 
 
       {/* Neural Network Connections */}
@@ -689,21 +865,19 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
                 repeat: Infinity,
                 delay: Math.random() * 2,
 
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+                ease: 'easeInOut',              }}
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                ease: 'easeInOut',              }}
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-
-
+              }}
 
 
             />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
         </svg>
       </div>
@@ -713,12 +887,15 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
       {/* Content */}
       <div className='relative z-40'>{children}</div>
     </div>
   );
+
 
 
 
@@ -748,4 +925,5 @@ export default UltraAdvancedFuturisticBackgroundV2;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

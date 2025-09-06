@@ -11,7 +11,7 @@ export default function Page() {
         />;
         <meta
           property='og:title'
-          content='Guide — Techcrunch Pebble Implementation'
+          content='Guide  Techcrunch Pebble Implementation'
         />;
         <meta
           property='og:description'
@@ -21,11 +21,12 @@ export default function Page() {
       </Head>;
       <main className='container mx-auto px-6 py-12 prose prose-invert'>;
         <h1 className='text-3xl font-extrabold'>;
-          Guide — Techcrunch Pebble Implementation;
+          Guide  Techcrunch Pebble Implementation;
         </h1>;
         <div
           className='mt-4'
           dangerouslySetInnerHTML={{
+
 
 
 
@@ -94,6 +95,7 @@ export default function Page() {
       </main>
 
 
+
   )
 import Head from 'next/head';
 export default function Page(req, res) {
@@ -120,5 +122,7 @@ export default function Page(req, res) {
   }
 }
 ;
+
+
 
 

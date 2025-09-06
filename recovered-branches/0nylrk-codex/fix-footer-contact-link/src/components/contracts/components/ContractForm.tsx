@@ -7,6 +7,7 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -23,6 +24,7 @@ import {ProjectDetailsFields} from "./ProjectDetailsFields";
 import {PaymentTermsFields} from "./PaymentTermsFields";
 import {AdditionalClausesFields} from "./AdditionalClausesFields";
 import {DeploymentOptions} from "@/types/smart-contracts";
+
 
 
 import { useState, useEffect } from "react",
@@ -47,6 +49,7 @@ import { DeploymentOptions } from "@/types/smart-contracts",
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -54,6 +57,7 @@ import { DeploymentOptions } from "@/types/smart-contracts",
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 const formSchema = z.object({
@@ -110,8 +114,10 @@ interface ContractFormProps {
 }
 
 
+
   onDeployOptionsChange
 }: ContractFormProps) {
+
   const [isGenerating, setIsGenerating] = useState(false);
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
   const { toast } = useToast();
@@ -146,7 +152,20 @@ interface ContractFormProps {
 
 
 
-
+        const typedKey = key as keyof ContractFormValues,
+        form.setValue(typedKey, initialValues[typedKey])
+      })
+    }
+  }, [initialValues, form]);
+  // Track form values for template saving
+  useEffect(() => {
+    if (onFormValuesChange) {
+      const subscription = form.watch((value) => {
+        onFormValuesChange(value as ContractFormValues)
+      });
+      return () => subscription.unsubscribe()
+    }
+  }, [form, onFormValuesChange]);
 
 import { useState, useEffect } from "react",;
 import { useForm } from "react-hook-form",;
@@ -227,6 +246,8 @@ export function ContractForm({;
   }, [form, onFormValuesChange]),
 
 
+
+
   
 
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
@@ -283,7 +304,6 @@ export function ContractForm({;
     }
 
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <>;
       <DialogHeader>;
@@ -292,7 +312,6 @@ export function ContractForm({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           Create a professional contract for your project with {talent.full_name}
 
 
@@ -349,7 +368,9 @@ export function ContractForm({;
         <DialogDescription>;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
           Create a professional contract for your project with {talent.full_name}
         </DialogDescription>
@@ -359,6 +380,7 @@ export function ContractForm({;
           <ProjectDetailsFields
             form={form}
           />
+
 
 
 
@@ -377,11 +399,24 @@ export function ContractForm({;
 
 
 
+
           <PaymentTermsFields 
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
 
+          />;
+          <AdditionalClausesFields;
+            form={form}
+          />
+          <AdditionalClausesFields
+            form={form}
+          />
+          <Button
+            type="submit"
+          />;
+          <AdditionalClausesFields;
+            form={form}
 
           />
           <AdditionalClausesFields 
@@ -389,6 +424,8 @@ export function ContractForm({;
           />
           <Button 
             type="submit" 
+
+
 
 
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
@@ -423,6 +460,41 @@ export function ContractForm({;
           onClick={() => form && form.reset()}
           disabled={isGenerating}
 
+        </DialogDescription>;
+      </DialogHeader>;
+      <Form {...form}>;
+        <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
+          <ProjectDetailsFields;
+            form={form}
+          />;
+          <PaymentTermsFields;
+            form={form}
+            talent={talent}
+            handleMilestonesGenerated={handleMilestonesGenerated}
+          />;
+          <AdditionalClausesFields;
+            form={form}
+          />;
+          <Button;
+            type="submit";
+            className="w - full bg - zion - purple hover:bg - zion - purple - dark";
+            disabled={is_generating}
+          >;
+            {is_generating ? (
+              <>;
+                <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" />;
+                Generating Contract...;
+              </>) : (
+              "Generate Contract")}
+          </Button>;
+        </form>;
+      </Form>;
+      <DialogFooter className="gap - 2 flex - wrap mt - 4">;
+        <Button;
+          variant="outline";
+          on_click={() => form.reset ()}
+          disabled={is_generating}
+
         >;
           Reset Form;
         </Button>;
@@ -430,5 +502,7 @@ export function ContractForm({;
 
     </>);
 }
+
+
 
 

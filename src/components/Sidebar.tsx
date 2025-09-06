@@ -16,6 +16,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   return (
 
 
+
     <div className="fixed inset-0 z-50 lg:hidden">
       {/* Backdrop */}
       <div 
@@ -32,20 +33,25 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         <div className="flex items-center justify-between p-4 border-b border-gray-700">
           <h2 className="text-white font-semibold">Menu</h2>
 
+
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-white"
           >
+
 
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
 
 
+
           </button>
         </div>
         
         <nav className="p-4">
+
+
 
 
           <div className="space-y-4">
@@ -93,6 +99,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             >
               Contact
             </Link>
+
+
 
 
           </div>

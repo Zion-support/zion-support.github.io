@@ -6,10 +6,30 @@ import React, { useState } from "react";
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 
 
+export default function UseTokensButton({
+  serviceId
+  defaultType
+}: {
+  serviceId?: string;
+  defaultType?: RedemptionType;
+}) {
 
-
-
+  serviceId,
+  defaultType,
 }: {;
+export default function UseTokensButton({
+serviceId
+  defaultType
+}: {
+  serviceId?: string;
+  defaultType?: RedemptionType;
+}) {
+
+export default function UseTokensButton({
+  serviceId,
+  defaultType,
+}: {;
+
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {;
@@ -48,6 +68,8 @@ import UseTokensModal, { RedemptionType } from "./UseTokensModal";
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
+
+
 
       />
     </>
@@ -107,8 +129,5 @@ import UseTokensModal, { RedemptionType } from "./UseTokensModal";
         default_type={default_type}
       />;
     </>);
-    </>
-  )
-
 }
 

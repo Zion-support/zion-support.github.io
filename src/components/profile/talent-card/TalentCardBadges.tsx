@@ -8,4 +8,6 @@ const TalentCardBadges = () => {
   );
 };
 
+
 export default TalentCardBadges;
+

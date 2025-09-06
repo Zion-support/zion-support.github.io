@@ -4,6 +4,7 @@
 
 
 
+
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Menu, X} from "lucide-react";
@@ -40,10 +41,13 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {
   const { open, toggleSidebar } = useSidebar(),
 
 
+
   return (
     <Button
       variant="ghost"
       size="icon"
+
+
 
 
 import React from "react",;
@@ -61,6 +65,8 @@ export function SidebarTrigger({ className, ...props }: SidebarTriggerProps) {;
     <Button;
       variant="ghost";
       size="icon";
+
+
 
 
       className={cn("", className)}

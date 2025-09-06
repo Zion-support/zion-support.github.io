@@ -6,6 +6,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -15,14 +16,16 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 export function QuickActions() {
 
   const actions = [
     {
 
-
-
-
+      id: "post-job"
+      label: "Post New Job"
+      icon: <FileText className="h-5 w-5 mr-2" />
+      description: "Create a new job posting"
 
       id: "post-job",
       label: "Post New Job",
@@ -33,6 +36,7 @@ export function QuickActions() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -40,6 +44,7 @@ export function QuickActions() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
     {
@@ -68,6 +73,21 @@ export function QuickActions() {
       icon: <Calendar className="h-5 w-5 mr-2" />
       description: "Set up candidate interviews"
       color: "bg-amber-100 dark:bg-amber-900/20"
+import React from './react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { FileText, Plus, Users, Search, Calendar } from './lucide-react';
+export /**
+ * QuickActions - Function description
+ */
+function QuickActions() {
+  const actions = [;
+    {
+      id: "post - job",
+      label: "Post New Job",
+      icon: <FileText className="h - 5 w - 5 mr - 2" />,
+      description: "Create a new job posting",
+      color: "bg - blue - 100 dark:bg - blue - 900 / 20";
     }
   ],
 
@@ -152,12 +172,28 @@ export function QuickActions() {;
               </div>;
             </Button>;
           ))}
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
+        </div>
+      </CardContent>
+    </Card>
+  )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+    <Card>;
+      <CardHeader>;
+        <CardTitle > Quick Actions</CardTitle>;
+        <CardDescription > Fast access to common tasks</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <div className="grid grid - cols - 1 sm:grid - cols - 2 gap - 4">;
+          {actions.map (action => (
+            <Button;
+              key={action.id}
+              variant="outline";
+              className={`h - auto justify - start p - 4 ${action.color}`}
+            >;
+              <div className="flex flex - col items - start text - left">;
+                <div className="flex items - center">;
+                  {action.icon}
 
 
                   <span>{action.label}</span>
@@ -169,10 +205,11 @@ export function QuickActions() {;
 
 
 
+
+
           ))}
         </div>
       </CardContent>
     </Card>
   )
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

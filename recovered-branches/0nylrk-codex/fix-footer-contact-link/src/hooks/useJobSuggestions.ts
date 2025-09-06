@@ -1,5 +1,12 @@
 
 
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {JobMatch} from "@/types/jobs";
+export function useJobSuggestions(talentId?: string) {;
+  const [jobMatches, setJobMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
@@ -48,7 +55,7 @@ import { toast } from "@/hooks/use-toast",
 
           variant: "destructive"})
       } finally {
-        setIsLoading(false)
+        setIsLoading (false);
       }
 
     }
@@ -112,6 +119,9 @@ import { toast } from "@/hooks/use-toast",
       console && console.error("Error updating job match status:", error);
       toast({
 
+        title: "Error";
+        description: "Failed to update job status"
+        variant: "destructive"})
 
     }
   }
@@ -132,6 +142,9 @@ import { toast } from "@/hooks/use-toast",
 
       declinedMatches
 
+        title: "Error",
+        description: "Failed to update job status",
+        variant: "destructive"})
 
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -214,6 +227,7 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   const new_matches = job_matches.filter (match => match.status === 'new');
@@ -235,7 +249,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
     }
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

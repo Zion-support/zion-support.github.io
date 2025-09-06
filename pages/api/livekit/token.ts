@@ -6,6 +6,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { AccessToken } from "livekit-server-sdk";
 
@@ -19,6 +20,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+
   if (req.method !== "POST") {;
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method not allowed" });
@@ -99,6 +101,34 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
   } catch (err: any) {
 
+    console.error("Token error", err);
+    return res.status(500).json({ error: "Failed to create token" });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { AccessToken } from 'livekit-server-sdk';
+const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
+const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || '';
+const LIVEKIT_HOST = process.env.LIVEKIT_HOST || '';
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 ;
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || "";
@@ -150,6 +180,7 @@ if ( {) {
       url: LIVEKIT_HOST});
   } catch (error) {
 
+
     console.error('Token error', err);
     return res.status(500).json({ error: 'Failed to create token' });
   }
@@ -196,10 +227,12 @@ if ( {) {
 
 
 
+
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
   }
@@ -254,6 +287,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Failed to create token" });
 
 
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -261,8 +295,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 

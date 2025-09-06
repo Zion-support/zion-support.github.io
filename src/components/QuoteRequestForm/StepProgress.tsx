@@ -8,6 +8,8 @@ return (
 
 
 
+
+
   currentStep: QuoteRequestSteps;
 export function StepProgress({ currentStep }: StepProgressProps) {;
   const steps: { id: QuoteRequestSteps; label: string }[] = [
@@ -17,10 +19,12 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     { id: 'budget', label: 'Budget' },
     { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
 
-
-
-
-
+    const stepOrder = steps.findIndex(s => s.id === stepId)
+    const currentStepOrder = steps.findIndex(s => s.id === currentStep)
+    if (stepOrder < currentStepOrder) return 'complete'
+    if (stepOrder === currentStepOrder) return 'current'
+    return 'upcoming'
+  const getStepStatus = (stepId: QuoteRequestSteps,) => {
 
     const stepOrder = steps.findIndex(s => s.id === stepId),
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),
@@ -70,6 +74,13 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
                   "bg-zion-blue-light text-zion-slate-light"
                 )}
 
+              >
+                {status === "complete" ? (
+                  <CheckIcon className="h-4 w-4" />
+                ) : (
+                  <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
+                )}
+              </div>
 
               <span
                 className={cn(
@@ -84,13 +95,23 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
                   "text-zion-slate-light"
 
                 )}
-              <span
-                className = {cn(
-                  "text-xs mt-2 font-medium"
-                  status === "complete" ? "text-zion-cyan" :
-                  status === "current" ? "text-white" :
+              </div>
                   "text-zion-slate-light"
 
+                ),}
+              >
+                {step.label}
+              </span>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+  (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100
+}%`
+  (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100 
+}%` 
 
 }/> </div>
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
@@ -108,6 +129,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     </div>
   )
 }
+
 
 
 
@@ -308,5 +330,6 @@ if (return "current", ) {
     </div>);
 }
 ;
+
 
 

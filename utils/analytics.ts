@@ -1,7 +1,15 @@
 
-
-
-export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',
+export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',;
+export type TrackEventPayload = {;
+  name: string,;
+  page?: string,;
+  userType?: UserType,;
+  properties?: Record<string any>,;
+  at?: string;
+},;
+export async function trackEvent(payload: TrackEventPayload) {;
+  try {;
+export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest';
 
 export type TrackEventPayload = {
   name: string;
@@ -22,10 +30,13 @@ function track_event() {
       keepalive: true as any});
   } catch (e) {
 
-
-
-
-
+    // swallow
+  userType?: UserType,;
+  properties?: Record<string, any>,;
+  at?: string;
+};
+export async function trackEvent(payload: TrackEventPayload) {;
+  try {
 
     await fetch('/api/analytics/events/track', {;
       method: 'POST',;
@@ -33,6 +44,8 @@ function track_event() {
       body: JSON.stringify(payload);
       keepalive: true as any});
 
+  } catch (e) {;
+    // swallow;
 
   } catch (error) {
     // swallow;
@@ -46,9 +59,11 @@ function track_event() {
     return res.status(500).json({ error: "Internal server error" });
 
 
+
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 

@@ -47,6 +47,32 @@ export function MilestoneCard({
 
 import React from 'react';
 
+import {;
+  Card,;
+  CardContent,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { format } from 'date-fns';
+import { Check, ArrowDown, X } from 'lucide-react';
+import { useDisputeCheck } from '@/hooks/useDisputeCheck';
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+
+interface MilestoneCardProps {;
+  id: string;
+  projectId: string;
+  title: string;
+  description?: string;
+  amount: number;
+  status: string;
+  dueDate?: string;
+  onApprove?: (id: string) => Promise<void>;
+  onReject?: (id: string) => Promise<void>;import React from 'react';
+
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -79,6 +105,15 @@ export function MilestoneCard({;
   onReject;
 }: MilestoneCardProps) {;
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
+
+
+  function getStatusBadgeColor() {;
+    switch (status) {;
+      case 'completed':;
+  function getStatusBadgeColor() {;
+    switch (status) {;
+      case 'completed':;
+}: MilestoneCardProps) { const { isUnderDispute, disputeStatus  } = useDisputeCheck(projectId, id),
 
 
 
@@ -153,6 +188,8 @@ interface MilestoneCardProps {
 
 
 
+
+
   onApprove?: (id: string,) => Promise<void>,
   onReject?: (id: string,) => Promise<void>
 }
@@ -210,6 +247,8 @@ export function MilestoneCard({;
 
 
 
+
+
   return (
     <Card>
       <CardHeader className="pb-2">
@@ -243,6 +282,7 @@ export function MilestoneCard({;
             {dueDate && (
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -250,6 +290,7 @@ export function MilestoneCard({;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -272,9 +313,33 @@ export function MilestoneCard({;
 
 
 
+
               <DisputeStatusBadge status={disputeStatus} />
             )}
           </div>
+
+
+        </div>
+      </CardContent>
+      <CardFooter className='pt-2 flex justify-between'>
+        <div>
+          {status !== 'completed' && status !== 'rejected' && (
+
+            <RaiseDisputeButton
+              projectId={projectId}
+              milestoneId={id}
+              variant='ghost'
+              size='sm'            <RaiseDisputeButton
+              projectId = {projectId,}
+              milestoneId = {id,}
+      
+      <CardContent className="pb-2">
+        {description && (
+          <p className="text-muted-foreground">{description}</p>
+        )}
+        <div className="mt-4">
+          <p className="text-xl font-bold">${amount.toFixed(2)}</p>
+
 
         </div>
       </CardContent>
@@ -292,6 +357,8 @@ export function MilestoneCard({;
               size='sm'            <RaiseDisputeButton 
               projectId = {projectId,}
               milestoneId = {id,}
+
+
 
 
       
@@ -494,6 +561,7 @@ export function MilestoneCard({;
 
 
 
+
   );
 }
       <CardHeader className='pb - 2'>;
@@ -565,3 +633,4 @@ export function MilestoneCard({;
       </CardFooter>;
     </Card>);
 }
+

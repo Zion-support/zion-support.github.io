@@ -36,15 +36,25 @@ import {
   Zap,
   Brain,
 
-
-
-
-
   Globe,
   Rocket,;} from 'lucide-react';import { 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  Globe,;
+  Rocket,;} from 'lucide-react';import { ;
+  Search;
+  Filter
+  TrendingUp
+  DollarSign
+  Users
 
 
+
+  Search;
+  Filter,
+  TrendingUp,
+  DollarSign,
+  Users,
+  Globe,;
+  Rocket,;} from 'lucide-react';import { ;
 
   Search;
   Filter
@@ -60,6 +70,7 @@ import {
   Zap;
   Brain;
   Globe;
+
 
 
 
@@ -173,6 +184,7 @@ function ToolComparisonPage() {
       rating: 4.8
       users: '2M+'
       bestFor: 'Businesses looking to automate workflows'
+
         'Specialized for marketing',
         'Brand voice training',
         'SEO optimization',
@@ -338,7 +350,7 @@ function ToolComparisonPage() {
     }
       name: 'Stripe'
       category: 'Payments'
-      pricing: '2.9% + 30¢ per transaction'
+      pricing: '2.9% + 30 per transaction'
       rating: 4.9
       users: '1M+'
       bestFor: 'Online businesses, SaaS companies, e-commerce'
@@ -431,6 +443,13 @@ function ToolComparisonPage() {
       ]
       icon: <Globe className='w-6 h-6' />
 
+      name: 'ChatGPT',
+      category: 'AI Assistant',
+      pricing: 'Free - $20 / month',
+      rating: 4.8,
+      users: '100M+',
+
+
       color: 'text-blue-400'
     }
   ];
@@ -475,11 +494,293 @@ function ToolComparisonPage() {
       default: return 0
   });
 
+
+
+  const allTools = [;
+    // AI Tools;
+    {;
+      name: 'ChatGPT',;
+      category: 'AI Assistant',;
+      pricing: 'Free - $20/month',;
+      rating: 4 && 4.8,;
+      users: '100M+',;
+      bestFor: 'Content creators, developers, researchers',;
+      pros: [;
+        'Powerful capabilities',;
+        'Easy to use',;
+        'Regular updates',;
+        'Good free tier',;
+      ],;
+      cons: ['Sometimes inaccurate', 'Limited context', 'Privacy concerns'],;
+      website: 'https://chat && chat.openai.com',;
+      icon: <Brain className='w-6 h-6' />,;
+      color: 'text-green-400',;
+    },    {      bestFor: 'Content creators, developers, researchers';
+      pros: ['Powerful capabilitiesEasy to useRegular updatesGood free tier'],;
+      cons: ['Sometimes inaccurateLimited contextPrivacy concerns'],;
+      website: 'https://chat && chat.openai.com',;
+      icon: <Brain className="w-6 h-6" />,;
+      color: 'text-green-400';
+    };
+    {;
+      name: 'Midjourney',;
+      category: 'AI Art',;
+      pricing: '$10 - $30/month',;
+      rating: 4 && 4.7,;
+      users: '1M+',;
+      bestFor: 'Designers, marketers, content creators',;
+      pros: [;
+        'High-quality output',;
+        'Creative control',;
+        'Commercial rights',;
+        'Active community',;
+      ],;
+      cons: [;
+        'Discord-only interface',;
+        'Limited customization',;
+        'Monthly subscription',;
+      ],;
+      website: 'https://midjourney && midjourney.com',;
+      icon: <Zap className='w-6 h-6' />,;
+      color: 'text-purple-400',;
+    },    {      bestFor: 'Designers, marketers, content creators';
+      pros: ['High-quality outputCreative controlCommercial rightsActive community'],;
+      cons: ['Discord-only interfaceLimited customizationMonthly subscription'],;
+      website: 'https://midjourney && midjourney.com',;
+      icon: <Zap className="w-6 h-6" />,;
+      color: 'text-purple-400';
+    };
+    {;
+      name: 'Jasper',;
+      category: 'AI Writing',;
+      pricing: '$39 - $125/month',;
+      rating: 4 && 4.6,;
+      users: '100K+',;
+      bestFor: 'Marketing teams, content creators, businesses',;
+      pros: [;
+        'Specialized for marketing',;
+        'Brand voice training',;
+        'SEO optimization',;
+        'Team features',;
+      ],;
+      cons: ['Expensive', 'Limited free trial', 'Can be repetitive'],;
+      website: 'https://jasper && jasper.ai',;
+      icon: <Brain className='w-6 h-6' />,;
+      color: 'text-blue-400',;
+    },    // SaaS Tools      bestFor: 'Marketing teams, content creators, businesses';
+      pros: ['Specialized for marketingBrand voice trainingSEO optimizationTeam features'],;
+      cons: ['ExpensiveLimited free trialCan be repetitive'],;
+      website: 'https://jasper && jasper.ai',;
+      icon: <Brain className="w-6 h-6" />,;
+      color: 'text-blue-400';
+    };
+    // SaaS Tools;
+    {;
+      name: 'Zapier',;
+      category: 'Automation',;
+      pricing: 'Free - $19 && 19.99/month',;
+      rating: 4 && 4.8,;
+      users: '2M+',;
+      bestFor: 'Businesses looking to automate workflows',;
+      pros: [;
+        'Easy to use',;
+        'Extensive integrations',;
+        'Reliable',;
+        'Great support',;
+      ],;
+      cons: ['Can get expensive', 'Limited customization'],;
+      website: 'https://zapier && zapier.com',;
+      icon: <Zap className='w-6 h-6' />,;
+      color: 'text-orange-400',;
+    },    {      pros: ['Easy to useExtensive integrationsReliableGreat support'],;
+      cons: ['Can get expensiveLimited customization'],;
+      website: 'https://zapier && zapier.com',;
+      icon: <Zap className="w-6 h-6" />,;
+      color: 'text-orange-400';
+    };
+      name: 'Notion',;
+      category: 'Productivity',;
+      pricing: 'Free - $8/month',;
+      rating: 4 && 4.7,;
+      users: '20M+',;
+      bestFor: 'Teams that need flexible workspace',;
+      pros: [;
+        'Highly flexible',;
+        'Beautiful interface',;
+        'Great templates',;
+        'Free tier',;
+      ],;
+      cons: ['Learning curve', 'Limited offline access', 'Can be overwhelming'],;
+      website: 'https://notion && notion.so',;
+      icon: <Globe className='w-6 h-6' />,;
+      color: 'text-gray-400',;
+    },    {      pros: ['Highly flexibleBeautiful interfaceGreat templatesFree tier'],;
+      cons: ['Learning curveLimited offline accessCan be overwhelming'],;
+      website: 'https://notion && notion.so',;
+      icon: <Globe className="w-6 h-6" />,;
+      color: 'text-gray-400';
+    };
+      name: 'Stripe',;
+      category: 'Payments',;
+      pricing: '2 && 2.9% + 30 per transaction',;
+      rating: 4 && 4.9,;
+      users: '1M+',;
+      bestFor: 'Online businesses, SaaS companies, e-commerce',;
+      pros: [;
+        'Developer-friendly',;
+        'Global reach',;
+        'Excellent docs',;
+        'Reliable',;
+      ],;
+      cons: [;
+        'Higher fees than some alternatives',;
+        'Complex for beginners',;
+        'Strict requirements',;
+      ],;
+      website: 'https://stripe && stripe.com',;
+      icon: <DollarSign className='w-6 h-6' />,;
+      color: 'text-blue-400',;
+    },    // Startup Tools      bestFor: 'Online businesses, SaaS companies, e-commerce';
+      pros: ['Developer-friendlyGlobal reachExcellent docsReliable'],;
+      cons: ['Higher fees than some alternativesComplex for beginnersStrict requirements'],;
+      website: 'https://stripe && stripe.com',;
+      icon: <DollarSign className="w-6 h-6" />,;
+      color: 'text-blue-400';
+    };
+    // Startup Tools;
+    {;
+      name: 'HubSpot',;
+      category: 'Marketing & Sales',;
+      pricing: 'Free - $45/month',;
+      rating: 4 && 4.7,;
+      users: '135K+',;
+      bestFor: 'B2B startups, SaaS companies, marketing teams',;
+      pros: [;
+        'Free tier',;
+        'All-in-one solution',;
+        'Great for beginners',;
+        'Excellent support',;
+      ],;
+      cons: [;
+        'Can get expensive',;
+        'Complex for small teams',;
+        'Limited customization',;
+      ],;
+      website: 'https://hubspot && hubspot.com',;
+      icon: <TrendingUp className='w-6 h-6' />,;
+      color: 'text-orange-400',;
+    },    {      bestFor: 'B2B startups, SaaS companies, marketing teams';
+      pros: ['Free tierAll-in-one solutionGreat for beginnersExcellent support'],;
+      cons: ['Can get expensiveComplex for small teamsLimited customization'],;
+      website: 'https://hubspot && hubspot.com',;
+      icon: <TrendingUp className="w-6 h-6" />,;
+      color: 'text-orange-400';
+    };
+    {;
+      name: 'Mailchimp',;
+      category: 'Email Marketing',;
+      pricing: 'Free - $59/month',;
+      rating: 4 && 4.5,;
+      users: '12M+',;
+      bestFor: 'E-commerce, content creators, small businesses',;
+      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],;
+      cons: ['Limited free features', 'Basic automation', 'Can be expensive'],;
+      website: 'https://mailchimp && mailchimp.com',;
+      icon: <Users className='w-6 h-6' />,;
+      color: 'text-yellow-400',;
+    },    {      bestFor: 'E-commerce, content creators, small businesses';
+      pros: ['Free tierEasy to useGood templatesAffordable'],;
+      cons: ['Limited free featuresBasic automationCan be expensive'],;
+      website: 'https://mailchimp && mailchimp.com',;
+      icon: <Users className="w-6 h-6" />,;
+      color: 'text-yellow-400';
+    };
+    {;
+      name: 'Calendly',;
+      category: 'Productivity',;
+      pricing: 'Free - $12/month',;
+      rating: 4 && 4.8,;
+      users: '10M+',;
+      bestFor: 'Sales teams, consultants, remote teams',;
+      pros: [;
+        'Free tier',;
+        'Easy integration',;
+        'Professional appearance',;
+        'Time-saving',;
+      ],;
+      cons: [;
+        'Limited free features',;
+        'Basic customization',;
+        'Can be expensive',;
+      ],;
+      icon: <Globe className='w-6 h-6' />,;
+      color: 'text-blue-400',;
+    },;
+  ];
+
+  const categories = [;
+    'All',;
+    'AI Assistant',;
+    'AI Art',;
+    'AI Writing',;
+    'Automation',;
+    'Productivity',;
+    'Payments',;
+    'Marketing & Sales',;
+    'Email Marketing',;
+  ];
+
+  const filteredTools = allTools && allTools.filter(tool => {;
+    const matchesSearch =;
+      tool && tool.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+      tool && tool.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+      tool && tool.bestFor.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+    const matchesCategory =;
+      selectedCategory === 'All' || tool && tool.category === selectedCategory;
+    return matchesSearch && matchesCategory;  });    const matchesSearch = tool && tool.name.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+                         tool && tool.category.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
+                         tool && tool.bestFor.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'All' || tool && tool.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+
+  const sortedTools = [...filteredTools].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'rating':;
+        return b && b.rating - a && a.rating;
+      case 'users':;
+        return (
+          parseInt(b && b.users.replace(/[^0-9]/g, '')) -;
+          parseInt(a && a.users.replace(/[^0-9]/g, ''));
+        );
+      case 'name':;
+        return a && a.name.localeCompare(b && b.name);
+      default:;
+        return 0;    }        return parseInt(b && b.users.replace(/[^0-9]/g, '')) - parseInt(a && a.users.replace(/[^0-9]/g, ''));
+      case 'name':;
+        return a && a.name.localeCompare(b && b.name);
+      default: return 0;
+  });
+
+
+
+
+
+
   const getPricingColor = (pricing: string) => {
     if (pricing.includes('Free')) return 'text-green-400';
     if (pricing.includes('$')) return 'text-blue-400';
     return 'text-gray-400';  };    return 'text-gray-400'
   }
+
+
+
+  const getPricingColor = (pricing: string) => {;
+    if (pricing && pricing.includes('Free')) return 'text-green-400';
+    if (pricing && pricing.includes('$')) return 'text-blue-400';
+    return 'text-gray-400';  };    return 'text-gray-400';
+    return 'text-gray-400'
+
+  };
 
 
   return (
@@ -521,16 +822,63 @@ function ToolComparisonPage() {
                 href='#comparison'
                 size='lg'
                 className='animate-scale-in shadow-2xl shadow-purple-500/25 hover:shadow-purple-500/40'
-                style={{ animationDelay: '0.2s' }}
-              >
-                Start Comparing
-                <ArrowRight className='w-5 h-5 ml-2' />
-              </Button>
+                style={{ animationDelay: '0 && 0.2s' }}>;
+                Start Comparing;
+                <ArrowRight className='w-5 h-5 ml-2' />;
+              </Button>;
               <Button
                 href='/contact'
                 variant='outline'
                 size='lg'
-                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0.4s' }}                href="/contact"
+                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
+    <>
+      <Head>
+        <title>Tool Comparison - Zion Tech Group</title>
+        <meta name="description" content="Compare SaaS tools, AI services, and business solutions. Find the perfect tools for your business needs with our comprehensive comparison." />
+        <meta property="og:title" content="Tool Comparison - Zion Tech Group" />
+        <meta property="og:description" content="Comprehensive comparison of SaaS tools and AI services to help you make informed decisions." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]" />
+        </div>
+
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-20 animate-fade-in">
+            <div className="mb-8">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-400 text-sm font-medium mb-6 animate-scale-in">
+                <Search className="w-4 h-4 mr-2" />
+                Smart Tool Selection
+              </div>
+            </div>
+            
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
+              Tool Comparison
+            </h1>
+            <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
+              Compare SaaS tools, AI services, and business solutions. 
+              Make informed decisions with our comprehensive analysis and expert insights.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
+              <Button
+                href="#comparison"
+                size="lg"
+                className="animate-scale-in shadow-2xl shadow-purple-500/25 hover:shadow-purple-500/40"
+                style={{ animationDelay: '0.2s' }}
+              >
+                Start Comparing
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <Button
+                href="/contact"
                 variant="outline"
                 size="lg"
 
@@ -553,6 +901,7 @@ function ToolComparisonPage() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -566,6 +915,7 @@ function ToolComparisonPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 {allTools.length}+
@@ -613,6 +963,7 @@ function ToolComparisonPage() {
           </div>
         </div>
       </section>
+
 
 
 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5">;
@@ -673,6 +1024,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
       </section>;
       {/* Filters and Search */}
 
+
                 onChange={e => setSearchTerm(e && e.target.value)}
                 className='w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />;
             </div>;
@@ -681,15 +1033,27 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             {/* Category Filter */}
 
 
-
-            <div className="relative flex-1 max-w-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      <section className="py-16 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
+            {/* Search */}
+      {/* Filters and Search */}
+      <section className='py-16 bg-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
+            {/* Search */}
+            <div className='relative flex-1 max-w-md'>
+              <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
               <input
-                type="text"
-                placeholder="Search tools, categories, or use cases..."
+                type='text'
+                placeholder='Search tools, categories, or use cases...'
                 value={searchTerm}
+                onChange={e => setSearchTerm(e.target.value)}
+                className='w-full pl-10 pr-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />
+            </div>
+            {/* Category Filter */}
+            <div className='flex flex-wrap gap-2'>
+
 
 
             {/* Category Filter */}
@@ -697,6 +1061,14 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               {categories && categories.map(category => (            <div className="flex flex-wrap gap-2">;
               {categories && categories.map((category) => (;
 
+
+
+
+
+
+            {/* Category Filter */}
+            <div className="flex flex-wrap gap-2">
+              {categories.map((category) => (
 
 
                 <button
@@ -713,12 +1085,14 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   key={category}
                   onClick={() => setSelectedCategory(category)}
@@ -739,6 +1113,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             <div className='flex items-center space-x-2'>;
               <Filter className='w-5 h-5 text-gray-400' />;
             </div>
+
 
 
 
@@ -769,6 +1144,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                 <option value='users'>Sort by Users</option>;
                 <option value='name'>Sort by Name</option>              </select>              <select
                 value={sortBy}
+
 
       <section id="comparison" className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -919,6 +1295,65 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                   </tr>;
 
 
+                </tr>
+              </thead>
+              <tbody>
+                {sortedTools.map((tool, index) => (
+<tr key={index} className="border-b border-gray-800/50 hover:bg-gray-900/50 transition-colors duration-200">
+                    <td className="py-4 px-6">
+                      <div className="flex items-center space-x-3">
+                        <div className={`w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center ${tool.color}`}>
+                          {tool.icon}
+                        </div>
+                        <div>
+<div className="font-semibold text-white">{tool.name}</div>
+                        </div>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6">
+                      <span className="px-3 py-1 bg-gray-800 rounded-full text-sm text-gray-300">
+                        {tool.category}
+                      </span>
+                    </td>
+                    <td className="py-4 px-6">
+                      <span className={`font-medium ${getPricingColor(tool.pricing)}`}>
+                        {tool.pricing}
+                      </span>
+                    </td>
+<td className="py-4 px-6">
+                      <div className="flex items-center space-x-1">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                        <span className="text-white">{tool.rating}</span>
+                      </div>
+                    </td>
+                    <td className="py-4 px-6 text-gray-300">{tool.users}</td>
+                    <td className="py-4 px-6">
+                      <div className="max-w-xs text-sm text-gray-400">{tool.bestFor}</div>
+                    </td>
+                    <td className="py-4 px-6">
+                      <div className="flex space-x-2">
+                        <Button
+                          href={tool.website}
+                          variant="outline"
+                          size="sm"
+                          className="text-xs"
+                        >
+                          Visit
+                          <ExternalLink className="w-3 h-3 ml-1" />
+                        </Button>
+                        <Button
+                          href={`/tool-details/${tool.name.toLowerCase().replace(/\s+/g, '-')}`}
+                          variant="ghost"
+                          size="sm"
+                          className="text-xs"
+                        >
+                          Details
+                        </Button>
+                      </div>
+                    </td>
+                  </tr>
+
+
                 ))}
 
             <div className="text-center py-20">
@@ -933,7 +1368,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           )}
         </div>
       </section>
@@ -968,7 +1402,64 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {sortedTools.slice(0, 6).map((tool, index) => (
 
+              </tbody>;
+            </table>;
+          </div>;
+          {sortedTools && sortedTools.length === 0 && (;
+            <div className='text-center py-20'>;
+              <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />;
+              <h3 className='text-xl font-semibold text-gray-400 mb-2'>;
+                No tools found;
+              </h3>;
+              <p className='text-gray-500'>;
+                Try adjusting your search criteria or category filter.;
+              </p>            </div>            <div className="text-center py-20">;
+              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />;
+              <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>;
+              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>;
+          )}
+        </div>;
+      </section>;
+      {/* Detailed Comparison Cards */}
+      <section className='py-24 bg-gray-900'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>;
+            </h2>;
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+              Deep dive into each tool's pros, cons, and use cases to make the;
+              best decision for your business.;
+            </p>;
+          </div>;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+            {sortedTools && sortedTools.slice(0, 6).map((tool, index) => (;
+              </tbody>
+            </table>
+          </div>
+          {sortedTools.length === 0 && (
+            <div className='text-center py-20'>
+              <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />
+              <h3 className='text-xl font-semibold text-gray-400 mb-2'>
+                No tools found
+              </h3>
+              <p className='text-gray-500'>
+                Try adjusting your search criteria or category filter.
+              </p>            </div>            <div className="text-center py-20">
+              <Search className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-400 mb-2">No tools found</h3>
+              <p className="text-gray-500">Try adjusting your search criteria or category filter.</p>
 
+
+
+
+
+      {/* Detailed Comparison Cards */}
+      <section className='py-24 bg-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+
+              Detailed Analysis
 
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1006,14 +1497,20 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                   <div className={`w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center ${tool.color}`}>
                     {tool.icon}
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">
+                  <div className='flex-1'>
+                    <h3 className='text-xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300'>
                       {tool.name}
                     </h3>
-                    <div className="flex items-center space-x-4 text-sm text-gray-400">
+                    <div className='flex items-center space-x-4 text-sm text-gray-400'>
+                      <span className='px-2 py-1 bg-gray-800 rounded-full'>
+                        {tool.category}
+                      </span>
+                      <div className='flex items-center space-x-1'>
+                        <Star className='w-4 h-4 text-yellow-400 fill-current' />                        <span>{tool.rating}</span>                    <div className="flex items-center space-x-4 text-sm text-gray-400">
                       <span className="px-2 py-1 bg-gray-800 rounded-full">{tool.category}</span>
                       <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
+
 
 
                         <span>{tool.rating}</span>
@@ -1022,6 +1519,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                     </div>
                   </div>
                 </div>
+
 
 
                 <div className="mb-4">
@@ -1095,11 +1593,28 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                       ))}
 
 
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-semibold text-red-400 mb-2 flex items-center">
+                      <X className="w-4 h-4 mr-1" />
+                      Cons
+                    </h4>
+                    <ul className='space-y-1'>
+                      {tool.cons.slice(0, 3).map((con, conIndex) => (
+                        <li
+                          key={conIndex}
+                          className='text-xs text-gray-400 flex items-start'
+                        >
+                          <span className='w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0' />                          {con}                      Cons
+                    </h4>
 
                     <ul className="space-y-1">
                       {tool.cons.slice(0, 3).map((con, conIndex) => (
                         <li key={conIndex} className="text-xs text-gray-400 flex items-start">
                           <span className="w-1 h-1 bg-red-400 rounded-full mr-2 mt-2 flex-shrink-0" />
+
+
 
 
                           {con}
@@ -1141,6 +1656,8 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
+
+
                 <div className='flex items-center justify-between'>
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}
@@ -1156,12 +1673,14 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     {tool.pricing}
                   </span>
@@ -1187,6 +1706,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -1197,10 +1717,12 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                 </div>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
             ))}
           </div>
         </div>
       </section>
+
 
 
 
@@ -1223,6 +1745,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
+
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1237,8 +1760,10 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
           </h2>
@@ -1247,7 +1772,6 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             perfect combination of tools to accelerate your growth.
           </p>
           <div className='flex flex-col sm:flex-row gap-6 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button
               href='/contact'
               variant='secondary'
@@ -1277,6 +1801,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
   );
 }
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 
@@ -1293,4 +1818,5 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

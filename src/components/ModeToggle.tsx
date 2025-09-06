@@ -3,9 +3,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { toast } from "@/hooks/use-toast"
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
 
-
-
-
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
@@ -18,13 +16,22 @@ import { useEffect, useState } from "react"
 export function ModeToggle() {
 
 
+  const { theme, toggleTheme } = useTheme();
+  const [isClient, setIsClient] = useState(false);
+  // Ensure we're on the client side to avoid hydration mismatches
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+  // Determine the actual resolved theme for display purposes
 
-
+  const resolvedTheme = (() => {
 
     setIsClient(true);
   }, []);
   // Determine the actual resolved theme for display purposes;
   const resolvedTheme = (() => {;
+
+
 
 
 
@@ -100,6 +107,8 @@ if ( {) {
 
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
+
+
 
 
     
@@ -179,6 +188,7 @@ export function ModeToggle() {
         disabled
         aria-label="Loading theme toggle"
         className="focus-visible:ring-ring relative text-foreground"
+
 
 
       >
@@ -325,6 +335,7 @@ export function ModeToggle() {;
             aria-label={`Toggle theme. Current theme: ${resolvedTheme}. Click to switch to ${isDarkMode ? 'light' : 'dark'} mode.`}
             title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
 
+
             />;
 
             <span className='sr-only'>;
@@ -351,6 +362,8 @@ export function ModeToggle() {;
             data-testid="theme-toggle"
             data-theme={resolvedTheme}
           >
+
+
 
 
 
@@ -386,6 +399,7 @@ export function ModeToggle() {;
 
 
 
+
 <<<<<<< HEAD
 
 
@@ -399,6 +413,7 @@ export function ModeToggle() {;
             <p className="text-sm font-medium">Theme: {resolvedTheme}</p>
             <p className="text-xs opacity-80">Click to switch to {isDarkMode ? 'light' : 'dark'} mode</p>
             {theme === 'system' && (
+
               <p className='text-xs opacity-60 mt-1'>
                 Following system preference
               </p>
@@ -435,12 +450,16 @@ if (!isClient) {"
 
       const newTheme = isDarkMode ? "light" : "dark";
 
+
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
+
 
 
       // Determine the new theme we are switching TO;
       const new_theme = isDarkMode ? 'light' : 'dark';
+
       log_info (`Theme toggle: ${resolved_theme} → ${new_theme}`);
+
       // Apply the new theme via ThemeProvider;
       toggle_theme ();
       // Show user feedback with a developer - centric message;
@@ -480,6 +499,7 @@ if (!isClient) {"
   // Check condition
 if ( {) {
   $2
+
 }
     // Return a neutral state during SSR to prevent hydration issues;
       >;
@@ -553,3 +573,4 @@ if ( {") {
 }'"}
 }
 ;
+

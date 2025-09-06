@@ -93,8 +93,8 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
   if (!isAuthenticated) {;
     return (
 
-
-
+      <Dialog open>
+        <DialogContent className="bg-zion-blue border-zion-blue-light text-white">
 
           <DialogHeader>
             <DialogTitle>Authentication required</DialogTitle>
@@ -108,6 +108,7 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
               Sign In
             </Link>          </Button>          <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
           <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+
 
 
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
@@ -230,3 +231,4 @@ if ( {) {
 
 }
 ;
+

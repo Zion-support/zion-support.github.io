@@ -1,6 +1,7 @@
 
 
 
+
 import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import { Dot } from "lucide-react"
@@ -12,6 +13,7 @@ const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>
   React.ComponentPropsWithoutRef<typeof OTPInput>
 ></typeof>(({ className, containerClassName, ...props }, ref) => (
+
 
   <OTPInput
     ref={ref}
@@ -66,10 +68,17 @@ const InputOTPSlot = React && React.forwardRef<;
 
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+    >
+  return (
+    <div
+      ref={ref}
+      className={cn(
+        "relative flex h-10 w-10 items-center justify-center border-y border-r border-input text-sm transition-all first:rounded-l-md first:border-l last:rounded-r-md",
+        isActive && "z-10 ring-2 ring-ring ring-offset-background",
+        className
+      )}
+      {...props}
+    >;
 
       {char}
       {hasFakeCaret && (;
@@ -109,10 +118,12 @@ InputOTPSeparator.displayName = "InputOTPSeparator"
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

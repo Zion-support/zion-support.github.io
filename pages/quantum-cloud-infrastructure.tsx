@@ -1,4 +1,5 @@
 
+import React from 'react';
 
 
 import Head from 'next/head';
@@ -27,6 +28,10 @@ export default function QuantumCloudInfrastructurePage() {
               <div className="text-sm text-gray-400 mt-2">Trial: 30 days • Setup: 1–2 weeks</div>
               <div className="mt-6 flex gap-3">
 
+                <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</a>
+                <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</a>
+                <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Link>
+                <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</Link>
 
               </div>
             </div>
@@ -46,6 +51,7 @@ export default function QuantumCloudInfrastructurePage() {
 
 
 
+
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -53,4 +59,5 @@ export default function QuantumCloudInfrastructurePage() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

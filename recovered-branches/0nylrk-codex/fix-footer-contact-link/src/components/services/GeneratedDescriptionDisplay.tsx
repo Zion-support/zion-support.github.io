@@ -1,12 +1,23 @@
 
 
-
+import React, { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from "@/components/ui/card";
 
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components/ui/card";
 import {Textarea} from "@/components/ui/textarea";
 import {Check, Pencil} from "lucide-react";
+
+
 
 
 
@@ -22,11 +33,13 @@ import { Check, Pencil } from "lucide-react",
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 interface GeneratedDescriptionDisplayProps {
   description: string;
@@ -34,8 +47,13 @@ interface GeneratedDescriptionDisplayProps {
 }
 
 
+export function GeneratedDescriptionDisplay({
+  description
+  onSave
 
-
+export function GeneratedDescriptionDisplay({ 
+  description, 
+  onSave 
 
 }: GeneratedDescriptionDisplayProps) {;
 
@@ -46,9 +64,11 @@ interface GeneratedDescriptionDisplayProps {
 
 
 
+
   const handleSave = () => {;
     onSave(editedDescription);
     setIsEditing(false);
+
 
 
 
@@ -69,6 +89,8 @@ interface GeneratedDescriptionDisplayProps {
   },
 
 
+
+
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -79,6 +101,55 @@ interface GeneratedDescriptionDisplayProps {
             size="sm"
 
 
+            onClick={() => setIsEditing(!isEditing)}
+            className="border-zion-blue-light text-zion-slate-light hover:text-white"
+          >
+            {isEditing ? (
+              <>
+                <Check className="h-4 w-4 mr-1" />
+                Done
+              </>
+            ) : (
+              <>
+                <Pencil className="h-4 w-4 mr-1" />
+                Edit
+              </>
+import React, { useState } from "react",;
+import { useToast } from "@/hooks/use-toast",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Check, Pencil } from "lucide-react",;
+interface GeneratedDescriptionDisplayProps {;
+  description: string,;
+  onSave: (editedDescription: string) => void;
+}
+;
+export function GeneratedDescriptionDisplay({;
+  description,;
+  onSave;
+}: GeneratedDescriptionDisplayProps) {;
+  const { toast } = useToast(),;
+  const [isEditing, setIsEditing] = useState(false),;
+  const [editedDescription, setEditedDescription] = useState(description),;
+  const handleSave = () => {;
+    onSave(editedDescription),;
+    setIsEditing(false),;
+
+    toast({;
+      title: "Description Saved",;
+      description: "Your edited description has been saved.";
+    });
+  };
+
+  return (
+    <Card className="border border-zion-blue-light bg-zion-blue-dark">;
+      <CardHeader>;
+        <CardTitle className="text-white flex items-center justify-between">;
+          Generated Description;
+          <Button
+            variant="outline" 
+            size="sm" 
 
             onClick={() => setIsEditing(!isEditing)}
             className="border-zion-blue-light text-zion-slate-light hover:text-white";
@@ -94,20 +165,60 @@ interface GeneratedDescriptionDisplayProps {
                 Edit;
               </>;
 
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
-
             )}
+import React, { useState } from './react';
+import { use_toast  } from '@/hooks / use - toast';
+import { Button  } from '@/components / ui / button';
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from '@/components / ui / card';
+import { Textarea  } from '@/components / ui / textarea';
+import { Check, Pencil  } from './lucide-react';
+interface GeneratedDescriptionDisplayProps {
+  description: string;
+  on_save: (edited_description: string) => void;
+}
+export /**
+ * GeneratedDescriptionDisplay - Function description
+ */
+function GeneratedDescriptionDisplay() {
+  const { toast } = use_toast ();
+  const [is_editing, setIsEditing] = useState (false);
+  const [edited_description, setEditedDescription] = useState (description);
+;
+  const handle_save = () =>: any {
+    on_save (edited_description);
+    setIsEditing (false);
+    toast ({
+      title: "Description Saved",
+      description: "Your edited description has been saved.",
+    });
+  }
+;
+  return (
+    <Card className="border border - zion - blue - light bg - zion - blue - dark">;
+      <CardHeader>;
+        <CardTitle className="text - white flex items - center justify - between">;
+          Generated Description;
+          <Button;
+            variant="outline";
+            size="sm";
+            on_click={() => setIsEditing (!is_editing)}
+            className="border - zion - blue - light text - zion - slate - light hover:text - white";
+          >;
+            {is_editing ? (
+              <>;
+                <Check className="h - 4 w - 4 mr - 1" />;
+                Done;
+              </>) : (
+              <>;
+                <Pencil className="h - 4 w - 4 mr - 1" />;
+                Edit;
+              </>)}
 
           </Button>;
         </CardTitle>;
@@ -130,4 +241,26 @@ interface GeneratedDescriptionDisplayProps {
   );
 }
 
+
+        {is_editing ? (
+          <Textarea;
+            value={edited_description}
+            on_change={(e) => setEditedDescription (e.target.value)}
+            className="bg - zion - blue border border - zion - blue - light text - white min - h-[300px] resize - none";
+          />) : (
+          <div className="bg - zion - blue p - 4 rounded - md text - white min - h-[300px] whitespace - pre - wrap">;
+            {edited_description}
+          </div>)}
+      </CardContent>;
+      {is_editing && (
+        <CardFooter>;
+          <Button;
+            on_click={handle_save}
+            className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white";
+          >;
+            Save Changes;
+          </Button>;
+        </CardFooter>)}
+    </Card>);
+}
 

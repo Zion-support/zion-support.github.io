@@ -3,12 +3,46 @@ import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 
 import Link from 'next/link';
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion, AnimatePresence } from 'framer-motion';
 
 
-
-
+import {
+  Menu
+  X
+  Zap
+  Sparkles
+  ChevronDown
+  ChevronRight
+  Brain
+  Atom
+  Globe
+  Shield
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Rocket
+  Star
+  TrendingUp
+  Users
+  Target
+  Award
+  Phone
+  Mail
+  MapPin
+  ExternalLink
+  Building;} from 'lucide-react';import {
+  Menu, X, Zap, Sparkles, ChevronDown, ChevronRight
+  Brain, Atom, Globe, Shield, Cpu, Database
+  Cloud, Smartphone, Palette, Search, MessageSquare
 
   Menu,
   X,
@@ -53,6 +87,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+
+
   FileText, Calendar, CreditCard, BarChart3, Settings;
   Rocket, Star, TrendingUp, Users, Target, Award;
   Phone, Mail, MapPin, ExternalLink, Building
@@ -62,6 +98,28 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',};  website: 'https://ziontechgroup.com'
 }
+
+import { 
+  Menu, X, Zap, Sparkles, ChevronDown, ChevronRight, 
+  Brain, Atom, Globe, Shield, Cpu, Database, 
+  Cloud, Smartphone, Palette, Search, MessageSquare, 
+  FileText, Calendar, CreditCard, BarChart3, Settings;
+  Rocket, Star, TrendingUp, Users, Target, Award;
+  Phone, Mail, MapPin, ExternalLink, Building
+} from 'lucide-react';
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+const serviceCategories = [
+  {
+    title: '🚀 2028 Cutting-Edge Innovations'
+    icon: Rocket
+    color: 'from-violet-600 to-purple-600'
+    description: 'Beyond the future of technology'
+    services: [
 
 
 
@@ -249,6 +307,89 @@ const serviceCategories = [;
 const companyLinks = [
 
 
+
+];
+
+    ]
+  }
+    title: '🏢 2028 Enterprise Solutions'
+    icon: Shield
+    color: 'from-red-600 to-orange-600'
+    description: 'Enterprise-grade solutions'
+    services: [
+      {
+        name: 'Zero Trust Architecture 2028'
+        href: '/zero-trust-network-architecture-2028'
+        description: 'Next-gen security architecture'
+        price: 'Custom pricing'
+      }
+      {
+        name: 'Edge Computing Orchestration'
+        href: '/edge-computing-orchestration-2028'
+        description: 'Intelligent edge computing'
+        price: 'Custom pricing'
+      }
+      {
+        name: '5G Private Networks'
+        href: '/5g-private-network-solutions-2028'
+        description: 'Enterprise 5G solutions'
+        price: 'Custom pricing'
+      }
+      {
+        name: 'Blockchain Infrastructure'
+        href: '/blockchain-infrastructure-platform-2028'
+        description: 'Enterprise blockchain'
+        price: 'Custom pricing'
+      }
+    ]
+  },  {      { name: 'Zero Trust Architecture 2028', href: '/zero-trust-network-architecture-2028', description: 'Next-gen security architecture', price: 'Custom pricing' }
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration-2028', description: 'Intelligent edge computing', price: 'Custom pricing' }
+      { name: '5G Private Networks', href: '/5g-private-network-solutions-2028', description: 'Enterprise 5G solutions', price: 'Custom pricing' }
+      { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform-2028', description: 'Enterprise blockchain', price: 'Custom pricing' }
+    ]
+  }
+    title: '🌌 2028 Metaverse & Digital Reality'
+    icon: Globe
+    color: 'from-pink-600 to-rose-600'
+    description: 'Virtual and augmented reality'
+    services: [
+      {
+        name: 'Holographic Metaverse'
+        href: '/holographic-metaverse-development-platform-2028'
+        description: '3D holographic experiences'
+        price: '$2,999/month'
+      }
+      {
+        name: 'AI Multiverse Creation'
+        href: '/ai-multiverse-creation-platform-2028'
+        description: 'Create AI-powered multiverses'
+        price: '$29,999/month'
+      }
+      {
+        name: 'Virtual Event Holograms'
+        href: '/virtual-event-hologram-platform-2028'
+        description: 'Holographic event platform'
+        price: '$1,999/month'
+      }
+      {
+        name: 'Digital Reality Interface'
+        href: '/digital-reality-interface-2028'
+        description: 'Next-gen reality interface'
+        price: '$4,999/month'
+      }
+    ]
+  },];
+const companyLinks = [
+  { name: '🏠 Home', href: '/', icon: Home },      { name: 'Holographic Metaverse', href: '/holographic-metaverse-development-platform-2028', description: '3D holographic experiences', price: '$2,999/month' };
+      { name: 'AI Multiverse Creation', href: '/ai-multiverse-creation-platform-2028', description: 'Create AI-powered multiverses', price: '$29,999/month' };
+      { name: 'Virtual Event Holograms', href: '/virtual-event-hologram-platform-2028', description: 'Holographic event platform', price: '$1,999/month' };
+      { name: 'Digital Reality Interface', href: '/digital-reality-interface-2028', description: 'Next-gen reality interface', price: '$4,999/month' }
+    ]
+  }
+
+];
+
+
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home }
   {
@@ -283,6 +424,8 @@ const technologyLinks = [
   { name: '📊 Analytics', href: '/analytics', icon: Database }
   { name: '🔄 Automation', href: '/automation', icon: Cpu },];  { name: '🔄 Automation', href: '/automation', icon: Cpu }
 ];
+
+
 
 
 const _serviceCategories = [
@@ -329,6 +472,7 @@ const _serviceCategories = [
     ]
   }
 ],
+
 
 
 
@@ -407,6 +551,7 @@ const company_links = [;
   { name: '🔄 Automation', href: '/automation', icon: Cpu }
 
 ];
+
 
 
 
@@ -1068,6 +1213,8 @@ icon: <Target className="w-5 h-5" />,
         { 
 
 
+
+
         {          name: 'AI Consciousness Platform',
           href: '/services/ai-consciousness-platform',
           description: 'Advanced AI consciousness simulation',
@@ -1189,6 +1336,7 @@ icon: <Building className="w-5 h-5" />,
           price: 'Custom',
 
 
+
   ];
 
 
@@ -1197,6 +1345,7 @@ icon: <Building className="w-5 h-5" />,
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
+
 };
   const quickLinks = [
     { name: 'Pricing', href: '/pricing', icon: <CreditCard className="w-4 h-4" /> }
@@ -1222,6 +1371,7 @@ icon: <Building className="w-5 h-5" />,
     <headerclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       isScrolled 
         ? 'bg-gray-900/95 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/20' 
+
 
 
 
@@ -1253,6 +1403,7 @@ icon: <Building className="w-5 h-5" />,
               </div>
             </div>
           </Link>
+
 
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse" />;
       <div className="relative container mx-auto px-4">;
@@ -1656,12 +1807,14 @@ icon: <Building className="w-5 h-5" />,
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   onMouseLeave={() => setActiveDropdown(null)}
                   whileHover={{ y: -2 }}
@@ -1691,12 +1844,14 @@ icon: <Building className="w-5 h-5" />,
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -1718,7 +1873,9 @@ icon: <Building className="w-5 h-5" />,
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1727,7 +1884,6 @@ icon: <Building className="w-5 h-5" />,
                     >
                       <div className='p-4'>
                         <div className='flex items-center space-x-3 mb-4'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <div
 
           {/* Desktop Navigation */}
@@ -1765,6 +1921,7 @@ icon: <Building className="w-5 h-5" />,
                       transition={{ duration: 0.2 }}
 
 
+
                       className='absolute top - full left - 0 mt - 2 w - 96 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl shadow - 2xl shadow - cyan - 500 / 20 overflow - hidden';
                     >;
                       <div className='p - 4'>;
@@ -1781,6 +1938,7 @@ icon: <Building className="w-5 h-5" />,
                             </h3>;
                             <p className='text - sm text - gray - 400'>;
                               {item.description}
+
 
                             </p>;
                           </div>;
@@ -1815,7 +1973,6 @@ icon: <Building className="w-5 h-5" />,
                           </div>
                           <div>
                             <h3 className="text-lg font-semibold text-white">{item.name}</h3>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                             <p className="text-sm text-gray-400">{item.description}</p>
                           </div>
                         </div>
@@ -1885,10 +2042,19 @@ icon: <Building className="w-5 h-5" />,
                               </div>;
                             </Link>;
 
+                                </div>
+                                <div className="text-sm text-gray-400">{child.description}</div>
+                              </div>
+                              <div className="text-right">
+                                <div className="text-sm font-medium text-cyan-400">{child.price}</div>
+                                <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
+                              </div>
+                                <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div>
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                             </Link>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           ))}
                         </div>;
                       </div>;
@@ -1903,7 +2069,6 @@ icon: <Building className="w-5 h-5" />,
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Right Side */}
 
           <div className='flex items-center space-x-4'>
@@ -1944,6 +2109,68 @@ icon: <Building className="w-5 h-5" />,
                               key={child.name}
                               href={child.href}
 
+                              className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200 group"
+                            >
+                              <span className="text-2xl">{child.icon}</span>
+                              <div className="flex-1">
+                                <div className="font-medium text-white group-hover:text-cyan-300 transition-colors">
+                                  {child.name}
+                                </div>
+                                <div className="text-sm text-gray-400">{child.description}</div>
+                              </div>
+                              <div className="text-right">
+                                <div className="text-sm font-medium text-cyan-400">{child.price}</div>
+                                <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
+                              </div>
+                                <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div>
+
+                              </div>
+
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </nav>
+
+          {/* Right Side */}
+          <div className='flex items-center space-x-4'>
+
+            {/* Contact Info */}
+            <div className='hidden lg:flex items-center space-x-4 text-sm'>
+              <a
+                href={`tel:${contactInfo && contactInfo.mobile}`}
+                className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors">;
+                <Phone className="w-4 h-4" />;
+                <span>{contactInfo && contactInfo.mobile}</span>;
+              </a>;
+              <a
+
+
+
+            {/* CTA Button */}
+
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+
+              <Link
+                href='/contact'
+                className='hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300'>;
+                <Rocket className='w-4 h-4' />                <span>Get Started</span>              <Link
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+                href={`mailto:${contactInfo.email}`}
+                className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors'
+              >
+                <Mail className='w-4 h-4' />                <span>{contactInfo.email}</span>            {/* Contact Info */}
+                              key={child.name}
+                              href={child.href}
 
                               className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200 group";
                             >;
@@ -1966,6 +2193,7 @@ icon: <Building className="w-5 h-5" />,
               </div>))}
           </nav>;
           {/* Right Side */}
+
 
                 href={`mailto:${contactInfo && contactInfo.email}`}
                 className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors'>;
@@ -2002,6 +2230,7 @@ icon: <Building className="w-5 h-5" />,
 
             {/* Contact Info */}
             <div className='hidden lg:flex items-center space-x-4 text-sm'>
+
               <a
                 href={`tel:${contactInfo && contactInfo.mobile}`}
                 className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors">;
@@ -2012,12 +2241,15 @@ icon: <Building className="w-5 h-5" />,
 
 
 
+
+
                 href={`mailto:${contactInfo && contactInfo.email}`}
                 className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors">;
                 <Mail className="w-4 h-4" />;
                 <span>{contactInfo && contactInfo.email}</span>;
               </a>;
             </div>;
+
 
 
             {/* CTA Button */}
@@ -2038,9 +2270,12 @@ icon: <Building className="w-5 h-5" />,
 
 
 
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               <Link
 
@@ -2059,10 +2294,12 @@ icon: <Building className="w-5 h-5" />,
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -2092,7 +2329,9 @@ icon: <Building className="w-5 h-5" />,
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -2135,6 +2374,8 @@ icon: <Building className="w-5 h-5" />,
                     {navigation.map (item => (
                       <div key={item.name}>;
                         <Link;
+
+
 
 
 
@@ -2196,10 +2437,12 @@ icon: <Building className="w-5 h-5" />,
 
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
                 {/* Quick Links & Contact */}
 
                 <div className='space-y-6'>
+
 
 
 
@@ -2209,13 +2452,13 @@ icon: <Building className="w-5 h-5" />,
 
 
 
+
                   <div>
                     <h3 className='text-lg font-semibold text-white mb-4'>
                       Quick Links
                     </h3>
                     <div className='space-y-2'>
                       {quickLinks.map(link => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Link
                           key={link && link.name}
                           href={link && link.href}
@@ -2233,6 +2476,106 @@ icon: <Building className="w-5 h-5" />,
                           <span className="text-white">{link && link.name}</span>;
                         </Link>;
 
+
+
+                {/* Quick Links & Contact */}
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+                    <div className="space-y-2">
+                      {quickLinks.map((link) => (
+                        <Link
+                          </div>;
+                          <div>;
+                            <div className="font - medium text - white">{item.name}</div>;
+                            <div className="text - sm text - gray - 400">{item.description}</div>;
+                          </div>;
+                        </Link>;
+                      </div>))}
+                  </div>;
+                </div>;
+                {/* Quick Links & Contact */}
+                <div className='space - y-6'>;
+                  <div>;
+                    <h3 className='text - lg font - semibold text - white mb - 4'>;
+                      Quick Links;
+                    </h3>;
+                    <div className='space - y-2'>;
+                      {quick_links.map (link => (
+                        <Link;
+                          key={link.name}
+                          href={link.href}
+                          className='flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200';
+                        >;
+                          {link.icon}
+                          <span className='text - white'>{link.name}</span>                        </Link>                  <div>;
+                    <h3 className="text - lg font - semibold text - white mb - 4">Quick Links</h3>;
+                    <div className="space - y-2">;
+                      {quick_links.map ((link) => (
+                        <Link;
+
+                          key={link.name}
+                          href={link.href}
+                          className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - gray - 800 / 50 transition - all duration - 200";
+                        >;
+                          {link.icon}
+
+                    </div>;
+                  </div>;
+                  <div>;
+                    <h3 className='text-lg font-semibold text-white mb-4'>;
+                      Contact Info;
+                    </h3>;
+                    <div className='space-y-3'>;
+
+                      <a
+                        href={`tel:${contactInfo && contactInfo.mobile}`}
+                        className='flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200'>;
+                        <Phone className='w-4 h-4 text-cyan-400' />;
+                        <span className='text-white'>{contactInfo && contactInfo.mobile}</span>;
+                      </a>;
+                      <a
+
+                    <h3 className="text-lg font-semibold text-white mb-4">Contact Info</h3>
+                    <div className="space-y-3">
+                      <a 
+                        href={`tel:${contactInfo.mobile}`}
+
+                        className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
+                      >
+                        <Phone className="w-4 h-4 text-cyan-400" />
+                        <span className="text-white">{contactInfo.mobile}</span>
+                      </a>
+                      <a
+                        href={`mailto:${contactInfo.email}`}
+                        className="flex items-center space-x-3 p-3 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
+                      >
+                        <Mail className="w-4 h-4 text-cyan-400" />
+                        <span className="text-white">{contactInfo.email}</span>
+                      </a>
+                      <div className="flex items-center space-x-3 p-3 rounded-xl">
+                        <MapPin className="w-4 h-4 text-cyan-400" />
+                        <span className="text-white text-sm">{contactInfo.address}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className='mt - 6 pt - 6 border - t border - gray - 700 / 50'>;
+                <Link;
+                  href='/contact';
+                  className='inline - flex items - center justify - center w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 transition - all duration - 300';
+                >;
+                  <Rocket className='w - 4 h - 4 mr - 2' />                  Get Started Today                <Link;
+                  href="/contact";
+                  className="inline - flex items - center justify - center w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 600 text - white font - medium rounded - xl shadow - lg shadow - cyan - 500 / 30 transition - all duration - 300";
+                >;
+                  <Rocket className="w - 4 h - 4 mr - 2" />;
+
+                  Get Started Today;
+                </Link>;
+              </div>;
+            </div>;
 
 
 
@@ -2276,8 +2619,10 @@ icon: <Building className="w-5 h-5" />,
 export default UltraFuturisticNavigation2027;
 
 
+
 export default UltraFuturisticNavigation2027;
 
 export default UltraFuturisticNavigation2027;
+
 
 

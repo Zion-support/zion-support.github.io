@@ -1,10 +1,16 @@
 
+import { useContext  } from 'react';
+import { AuthContext  } from '@/context/auth/AuthContext';
+import type { AuthContextType } from '@/types/auth';
 
+export const useAuth = (): AuthContextType => {
 
 import {useContext} from 'react';
 import {AuthContext} from '@/context/auth/AuthContext';
 import type { AuthContextType } from '@/types/auth';
 export const useAuth = (): AuthContextType => {;
+
+
 
 
 
@@ -20,6 +26,8 @@ export const useAuth = (): AuthContextType => {;
   // assume `context` might still be `{}`. Casting here ensures the
   // returned value matches `AuthContextType` exactly.
   return context as AuthContextType
+
+
 
 
 
@@ -44,7 +52,9 @@ export const useAuth = (): AuthContextType => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 };

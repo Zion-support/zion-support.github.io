@@ -16,10 +16,12 @@ interface SearchFilters {
 
 
 
+
 import React from 'react',;
 import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button',;
 import { Badge } from '@/components/ui/badge',;
+
 interface SearchFilters {;
   types: string[],;
   category: string,;
@@ -31,47 +33,52 @@ interface SearchFilters {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 }
-;
+
 interface ActiveFiltersBarProps {;
   filters: SearchFilters,;
-  onFiltersChange: (filters: SearchFilters) => void,;
+  onFiltersChange: (filters: SearchFilters,) => void,;
   onClearAll: () => void,;
   className?: string;
 }
-;
+
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
   filters,;
   onFiltersChange,;
   onClearAll,;
   className = '';
-}) => {;
+},) => {;
   const activeFilters: Array<{ key: string, label: string, value: string }> = [],;
+
   // Add type filters;
-  filters.types.forEach(type => {;
-    const labels: Record<string string> = {;
+  filters && filters.types.forEach(type => {;
+    const labels: Record<string, string> = {;
       product: 'Products',;
       talent: 'Talent',;
       service: 'Services',;
       blog: 'Blog Posts',;
       doc: 'Documentation';
     },;
-    activeFilters.push({;
+    activeFilters && activeFilters.push({;
       key: `type-${type}`,;
       label: 'Type',;
       value: labels[type] || type;
     });
   }),;
+
   // Add category filter;
-  if (filters.category) {;
-    activeFilters.push({;
+  if (filters && filters.category) {;
+    activeFilters && activeFilters.push({;
       key: 'category',;
       label: 'Category',;
-      value: filters.category;
+      value: filters && filters.category;
     });
   }
+
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -143,6 +150,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
     });
   }
 
+
   // Add price filter;
   if (filters && filters.minPrice > 0 || filters && filters.maxPrice < 10000) {;
     activeFilters && activeFilters.push({;
@@ -198,7 +206,12 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
   }
   return (
 
-
+    <div className={`flex items-center gap-2 flex-wrap ${className}`}>
+      <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
+      {activeFilters.map(filter => (
+        <Badge
+          key = {filter.key,}
+          variant="secondary"
         <Badge 
           key = {filter.key,}
 
@@ -210,7 +223,9 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
           variant="secondary" 
           className="flex items-center gap-1 pl-2 pr-1"
@@ -238,7 +253,9 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             aria-label={`Remove ${filter.label} filter`}
           >
@@ -251,6 +268,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
         size="sm"
         onClick = {onClearAll,}
         onClick={onClearAll}
+
 
 
         className="text-xs h-6 px-2"
@@ -473,3 +491,4 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
       </button>;
     </div>)}
 '";
+

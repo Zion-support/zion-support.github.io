@@ -1,5 +1,6 @@
 
 
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { AccessLevel } from '../../utils/search/filter';
 import { parseQueryToFilters } from '../../utils/search/parser';
@@ -50,5 +51,6 @@ import { searchAll, suggestDidYouMean } from '../../utils/search/filter';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -4,12 +4,14 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 type ProposalListItem = {
   id: string
@@ -62,7 +64,7 @@ export default function InternationalProposalsPage() {
             <div key={i.id} className="p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
               <div>
                 <div className="font-medium">{i.title}</div>
-                <div className="text-sm text-gray-600">{i.targetInstitution} • {i.type} • {i.regionalScope}</div>
+                <div className="text-sm text-gray-600">{i.targetInstitution}  {i.type}  {i.regionalScope}</div>
                 <div className="text-xs text-gray-500">Created {new Date(i.createdAt).toLocaleString()}</div>
               </div>
               <div className="flex items-center gap-4 text-sm">
@@ -95,6 +97,7 @@ export default function InternationalProposalsPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -102,10 +105,12 @@ export default function InternationalProposalsPage() {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
         </div>
         <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
     </EnhancedLayout>
+
 
 
 
@@ -129,5 +134,6 @@ type ProposalListItem = {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useState, useEffect } from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -13,6 +14,7 @@ import {basicInfoSchema, BasicInfoFormData} from "./schema";
 import {PersonalInfoFields} from "./PersonalInfoFields";
 import {ContactFields} from "./ContactFields";
 export interface BasicInfoFormProps {;
+
 
 
 
@@ -34,6 +36,7 @@ export interface BasicInfoFormProps {
   yearsExperience?: number,
   onComplete?: () => void
 }
+
 
 
 
@@ -68,6 +71,7 @@ export interface BasicInfoFormProps {
       github: ""
       hourlyRate: 0
       ...initialData}});
+
       fullName: "",
       title: "",
       email: "",
@@ -138,7 +142,9 @@ export function BasicInfoForm({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
         }
       });
@@ -150,6 +156,7 @@ export function BasicInfoForm({;
     if (onComplete) {
       onComplete()
     }
+
 
 
 
@@ -169,16 +176,17 @@ export function BasicInfoForm({;
 
 
 
+
   }, [initialData, form]),;
 
   const handleSubmit = (data: BasicInfoFormData) => {;
     onSave(data),;
     if (onComplete) {;
       onComplete();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
+
 
 
 
@@ -209,6 +217,7 @@ export function BasicInfoForm({;
               skills={skills}
 
               yearsExperience={yearsExperience |0}
+
               yearsExperience={yearsExperience || 0}
 
               location={form.getValues("location")}
@@ -222,6 +231,9 @@ export function BasicInfoForm({;
       </form>
     </Form>
   )
+
+}
+}
 
 import React, { useState, useEffect } from './react';
 import { use_form } from './react - hook - form';

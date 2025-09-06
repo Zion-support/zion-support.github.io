@@ -1,4 +1,10 @@
 
+export type KycRole = 'client' | 'talent' | 'enterprise';
+export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
+export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
+export interface KycDocumentMeta {
+
+
 
 
 
@@ -25,7 +31,6 @@ export interface KycProfile {
 
 
   userId: string;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   role: KycRole;
   fullLegalName?: string;
   business_name?: string;
@@ -49,6 +54,22 @@ export interface KycProfile {
   }>;
 
 
+// KYC (Know Your Customer) utilities
+export interface KycProfile {
+  userId: string;
+  role: 'client' | 'talent' | 'both';
+  fullLegalName: string;
+  businessName?: string;
+  businessRegistrationNumber?: string;
+  documents: KycDocument[];
+  status: 'in_progress' | 'pending_review' | 'approved' | 'rejected' | 'expired';
+  submittedAt?: string;
+  reviewedAt?: string;
+  expiresAt?: string;
+  reviewerId?: string;
+  rejectionReason?: string;
+  notes?: string;
+
 
 }
 
@@ -57,6 +78,8 @@ export function getRequiredDocuments (role: KycRole): string[] {
 if ( {) {
   $2
 }
+
+
 
 
     return ['government_id', 'proof_of_address'];
@@ -97,18 +120,25 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
     missing && missing.push('businessRegistrationNumber');
 
 
+
+
   
   if (!profile && profile.fullLegalName && !profile && profile.businessName) {
     missing && missing.push('name'),
 
 
+
+export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
+  const missing: string[] = [];
+  if (!profile.fullLegalName && !profile.businessName) {
+    missing.push('name');
+
   }
   
   if (!profile && profile.country) {
     missing && missing.push('country');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
-
+  
   if (profile.role === 'client' && !profile.dateOfBirth) {
     missing.push('dateOfBirth');
   }
@@ -133,14 +163,68 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
 }
 
 
+export interface KycProfile {;
+  userId: string;
+  role: KycRole;
+  fullLegalName?: string;
+  businessName?: string;
+  businessRegistrationNumber?: string;
+  country?: string;
+  dateOfBirth?: string;
+  documents: KycDocumentMeta[];
+  status: 'in_progress' | 'submitted' | 'approved' | 'rejected';
+  amlStatus: 'unknown' | 'clear' | 'match' | 'review';
+  flags?: string[];
+  riskScore?: number;
+  createdAt: string;
+  lastUpdatedAt: string;
+  auditTrail: Array<{
+    at: string;
+    by: string;
+    action: string;
+    details?: any
+  }>;
+}
+export function validateKycSubmission (profile: KycProfile): { ok: boolean, missing: string[] } {
+  const missing: string[] = [];
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('name');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('country');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('dateOfBirth');
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    missing.push ('businessRegistrationNumber');
+  }
+  return {
+    ok: missing.length === 0,
+    missing;
+  }
+}
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 

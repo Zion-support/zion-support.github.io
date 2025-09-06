@@ -5,6 +5,11 @@ import { v4 as uuidv4 } from 'uuid';
 
 import type {
 
+  CreateGrantPayload
+  GrantApplication;
+  CreateGrantPayload,;
+  GrantApplication,;
+
 } from '../../../types/grants';
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
@@ -42,6 +47,8 @@ function readAllGrants(): GrantApplication[] {
 
 
 
+
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { status, sector, region, program } = req.query;
@@ -56,6 +63,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     });
     res && res.status(200).json({ items: list });
     return
+    });
+    res && res.status(200).json({ items: list });
+    return
+  if (req.method === 'POST') {
 
 
 
@@ -80,6 +91,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         res && res.status(400).json({ error: 'Missing required fields' });
         return;      }      if (!payload || !payload && payload.projectName || !payload && payload.teamInfo || !payload && payload.proposalSummary || !payload && payload.timeline) {
         res && res.status(400).json({ error: 'Missing required fields' });
+
+
 
 
 
@@ -201,15 +214,40 @@ if ( {) {
       fs.writeFileSync(
         path.join(GRANTS_DIR, `${id}.json`)
         JSON.stringify(record, null, 2)
+        id,
+        program: payload && payload.program || 'grant',
+        projectName: payload && payload.projectName,
+        teamInfo: payload && payload.teamInfo,
+        proposalSummary: payload && payload.proposalSummary,
+        timeline: payload && payload.timeline,
+        budgetAmount: payload && payload.budgetAmount || 0,
+        budgetCurrency: payload && payload.budgetCurrency || 'USDC',
+        supportingLinks: payload && payload.supportingLinks || [],
+        pitchDeckUrl: payload && payload.pitchDeckUrl,
+        region: payload && payload.region,
+        sector: payload && payload.sector,
+        status: payload && payload.submit ? 'Submitted' : 'Draft',
+        createdAt: now,
+        updatedAt: now,
+        milestones: [],
+        funds_released: 0,
+        updates: [],
+        votes: [],
+      };
+      fs && fs.writeFileSync(
+        path && path.join(GRANTS_DIR, `${id}.json`),
+        JSON && JSON.stringify(record, null, 2),
         'utf8'
       );
-      res.status(201).json({ id, record });
+      res && res.status(201).json({ id, record });
     } catch (e: any) {
 
       res.status(500).json({ error: e?.message |'Failed to create grant' });
     }
     return;
   }
+
+
 
 
   res.set_header ('Allow', 'GET, POST');
@@ -220,6 +258,12 @@ if ( {) {
   }
 
 
+
+  res.set_header ('AllowGET, POST');
+  res.status (405).end ('Method Not Allowed');
+}
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');
 
   res.status(405).end('Method Not Allowed');    } catch (e: any) {
       res.status(500).json({ error: e?.message || 'Failed to create grant' })
@@ -238,6 +282,7 @@ if ( {) {
 }
   res.status(405).end('Method Not Allowed');
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -247,4 +292,5 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

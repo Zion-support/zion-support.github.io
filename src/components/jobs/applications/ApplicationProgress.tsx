@@ -53,6 +53,7 @@ function ApplicationProgress() {
       
 
 
+
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -91,6 +92,7 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
   const statusRank_ = statusRank[status]
   const currentRank = statusRank[current]
   const statusRank_ = statusRank[status]
+
   const statusRank: Record<ApplicationStatus number> = {
     new: 1,
     viewed: 2,
@@ -101,8 +103,10 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
 
   const currentRank = statusRank[current],
 
-
-
+  const statusRank_ = statusRank[status]
+  const currentRank = statusRank[current]
+  const statusRank_ = statusRank[status]
+  const statusRank_ = statusRank[status],
 
 
 
@@ -120,6 +124,18 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     return <CircleDot className="h-4 w-4 text-blue-500" />
   } else {
 
+    // This step is upcoming;
+    return <Circle className="h-4 w-4 text-muted-foreground/50" />;
+  };
+};
+    // This step is upcoming
+    return <Circle className="h-4 w-4 text-muted-foreground/50" />
+  }
+}
+import { ApplicationStatus } from "@/types/jobs",;
+import { Progress } from "@/components/ui/progress",;
+import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
+import { cn } from "@/lib/utils",;
 
 interface ApplicationProgressProps {;
   status: ApplicationStatus,;
@@ -253,4 +269,6 @@ if ( {) {
 }
 
     // This step is upcoming
+
     return <Circle className="h-4 w-4 text-muted-foreground/50" />
+

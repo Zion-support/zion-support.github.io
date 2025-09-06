@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -20,11 +21,23 @@ const Separator = React.forwardRef<
   (
 
     { className, orientation = 'horizontal', decorative = true, ...props }
+
     { className, orientation = "horizontal", decorative = true, ...props },
 
     ref
   ) => (
     <SeparatorPrimitive.Root
+
+
+const Separator = React && React.forwardRef<;
+  React && React.ElementRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>,;
+  React && React.ComponentPropsWithoutRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>;
+></typeof>(;
+  (;
+    { className, orientation = 'horizontal', decorative = true, ...props },;
+    ref;
+  ) => (;
+    <SeparatorPrimitive&& SeparatorPrimitive.Root
 
       ref={ref}
       decorative={decorative}
@@ -43,7 +56,10 @@ const Separator = React.forwardRef<
   );
 );
 
-
+Separator.displayName = SeparatorPrimitive.Root.displayName;
+export { Separator }
+export { Separator }
+;
 
 
 export { Separator };
@@ -51,9 +67,11 @@ export { Separator }
 ;
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

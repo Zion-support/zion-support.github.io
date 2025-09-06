@@ -1,8 +1,10 @@
 
 
-
-
-
+import { useEffect  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { Message, Conversation  } from '@/types/messaging';
+import { toast } from '@/hooks/use-toast';
 
 import {useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -18,9 +20,11 @@ import {toast} from '@/hooks/use-toast';
 
 export function useMessagingRealtime(;
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   user: UserWithProfile;
@@ -112,6 +116,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -121,7 +126,7 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
     }
   }, [user, active_conversation, fetch_conversations, setActiveMessages]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -9,11 +9,13 @@ import { cn } from "@/lib/utils"
 
 
 
+
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
 >(({ className, children, ...props }, ref) => (
   <NavigationMenuPrimitive.Root
+
 import React from 'react';
 import * as React from 'react';
 import * as NavigationMenuPrimitive from '@radix-ui/react-navigation-menu';
@@ -33,11 +35,18 @@ const NavigationMenu = React && React.forwardRef<;
       "relative z-10 flex w-full flex-1 items-center justify-center sm:max-w-max",
       className
     )}
-    {...props}
-  >
+    {...props}>;
     {children}
 
-
+    <NavigationMenuViewport />
+  </NavigationMenuPrimitive.Root>
+))
+NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName
+const NavigationMenuList = React.forwardRef<
+  React.ElementRef<typeof NavigationMenuPrimitive.List>
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitiv</typeof>e.List>
+>(({ className, ...props }, ref) => (
+  <NavigationMenuPrimitive.List
 
     ref={ref}
     className={cn(
@@ -53,6 +62,7 @@ const NavigationMenuList = React.forwardRef<;
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.List>;
 >(({ className, ...props }, ref) => (;
   <NavigationMenuPrimitive.List;
+
 
 
     ref={ref}
@@ -76,6 +86,7 @@ const NavigationMenuItem = NavigationMenuPrimitive.Item
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const navigationMenuTriggerStyle = cva(
+
   "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
 )
 
@@ -106,6 +117,7 @@ const NavigationMenuTrigger = React && React.forwardRef<;
     {children}{" "}
     <ChevronDown
 
+
       className='relative top-[1px] ml-1 h-4 w-4 transition duration-200 group-data-[state=open]:rotate-180 pointer-events-none'
       aria-hidden='true'
 
@@ -120,6 +132,7 @@ const NavigationMenuTrigger = React && React.forwardRef<;
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 const NavigationMenuContent = React.forwardRef<
@@ -150,6 +163,7 @@ const NavigationMenuContent = React && React.forwardRef<;
 
 
 
+
 const NavigationMenuLink = NavigationMenuPrimitive.Link
 
 
@@ -159,6 +173,7 @@ const NavigationMenuLink = NavigationMenuPrimitive.Link
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 const NavigationMenuViewport = React.forwardRef<
+
   React.ElementRef<typeof NavigationMenuPrimitive.Viewport>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Viewport>
 >(({ className, ...props }, ref) => (
@@ -188,6 +203,7 @@ const NavigationMenuViewport = React && React.forwardRef<;
       )}
       ref={ref}
       {...props}
+
 
 
 
@@ -269,6 +285,7 @@ NavigationMenuIndicator && NavigationMenuIndicator.displayName =;
 
 
 
+
 export {
   navigationMenuTriggerStyle,
   NavigationMenu,
@@ -283,4 +300,6 @@ export {
   NavigationMenuLink,
   NavigationMenuIndicator,
   NavigationMenuViewport}
+
 ;
+

@@ -1,18 +1,17 @@
 
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+import React, { useState } from "react";
+import {Button} from "@/components/ui/button";
+import {useTheme} from "@/hooks/useTheme";
+import {Moon, Sun, Check} from "lucide-react";
+import {Card, CardContent} from "@/components/ui/card";
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { useTheme } from "@/hooks/useTheme",
+import { Moon, Sun, Check } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Moon, Sun, Check } from "lucide-react",
+import { Card, CardContent } from "@/components/ui/card",
 
 
 interface Language {
@@ -24,9 +23,11 @@ interface Language {
 }
 const languages: Language[] = [
 
-
-
-
+  { code: "en", name: "English", flag: "🇺🇸" }
+  { code: "es", name: "Español", flag: "🇪🇸" }
+  { code: "fr", name: "Français", flag: "🇫🇷" }
+  { code: "de", name: "Deutsch", flag: "🇩🇪" }
+  { code: "zh", name: "中文", flag: "🇨🇳" }]
 
   { code: "en", name: "English", flag: "🇺🇸" },
   { code: "es", name: "Español", flag: "🇪🇸" },
@@ -35,20 +36,63 @@ const languages: Language[] = [
   { code: "zh", name: "中文", flag: "🇨🇳" }],
 
 
+export function LanguageThemeSelector() {;
+  const { theme, setTheme } = useTheme();
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+export function LanguageThemeSelector() {
+  const { theme, setTheme } = useTheme();
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
-
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+  const { theme, setTheme } = useTheme(),
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
 
   return (
 
+                  : "border-border hover:border-primary/40"
+              }`}
+              onClick={() => setSelectedLanguage(language.code)}
+            >
+              <CardContent className="p-3 flex items-center justify-between">
+                <div className="flex items-center">
+                  <span className="text-xl mr-2">{language.flag}</span>
+                  <span>{language.name}</span>
+                </div>
+                {selectedLanguage === language.code && (
+                  <Check className="h-4 w-4 text-primary" />
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { useTheme } from "@/hooks/useTheme",;
+import { Moon, Sun, Check } from "lucide-react",;
+import { Card, CardContent } from "@/components/ui/card",;
+interface Language {;
+  code: string,;
+  name: string,;
+  flag: string;
+}
+;
+const languages: Language[] = [;
+  { code: "en", name: "English", flag: "🇺🇸" },;
+  { code: "es", name: "Español", flag: "🇪🇸" },;
+  { code: "fr", name: "Français", flag: "🇫🇷" },;
+  { code: "de", name: "Deutsch", flag: "🇩🇪" },;
+  { code: "zh", name: "中文", flag: "🇨🇳" }],;
+export function LanguageThemeSelector() {;
+  const { theme, setTheme } = useTheme();
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+  return (;
+
+    <div className="space-y-8 px-4">;
+      <div className="space-y-2">;
+        <h2 className="text-xl font-medium">Select your language</h2>;
+        <p className="text-muted-foreground">Choose your preferred language</p>;
+
+        <div className="grid grid-cols-2 gap-3 mt-4">;
+          {languages && languages.map((language) => (;
+            <Card
+              key={language && language.code}
+              className={`cursor-pointer transition-all ${
+                selectedLanguage === language && language.code 
+                  ? "border-primary bg-primary/5" 
 
                   : "border-border hover:border-primary/40"
               }`}
@@ -66,12 +110,13 @@ const languages: Language[] = [
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
                   <Check className="h-4 w-4 text-primary" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </CardContent>;
             </Card>;
@@ -104,11 +149,13 @@ const languages: Language[] = [
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
           <Card
+
 
 
 
@@ -126,13 +173,13 @@ const languages: Language[] = [
                 <Check className="h-4 w-4 text-primary mt-2" />;
               )}
 
-
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </div>
+  )
+}
 
             </CardContent>;
           </Card>;
@@ -146,9 +193,11 @@ const languages: Language[] = [
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 ;

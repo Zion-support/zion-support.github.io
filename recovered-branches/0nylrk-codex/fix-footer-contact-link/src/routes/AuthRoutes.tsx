@@ -1,5 +1,15 @@
 
 
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import Login from "@/pages/Login";
+import Signup from "@/pages/Signup";
+import ForgotPassword from "@/pages/ForgotPassword";
+import UpdatePassword from "@/pages/UpdatePassword";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import Onboarding from "@/pages/Onboarding";
+import TalentOnboarding from "@/pages/TalentOnboarding";
+import ServiceOnboarding from "@/pages/ServiceOnboarding";
 
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
@@ -11,9 +21,26 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",
 import Onboarding from "@/pages/Onboarding",
 
 
+import TalentOnboarding from "@/pages/TalentOnboarding",
+import ServiceOnboarding from "@/pages/ServiceOnboarding",
+
 const AuthRoutes = () => {
+},
+
+export default AuthRoutes,
+import { Fragment } from "react",;
+import { Route, Routes } from "react-router-dom",;
+import Login from "@/pages/Login",;
+import Signup from "@/pages/Signup",;
+import ForgotPassword from "@/pages/ForgotPassword",;
+import UpdatePassword from "@/pages/UpdatePassword",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import Onboarding from "@/pages/Onboarding",;
+import TalentOnboarding from "@/pages/TalentOnboarding",;
+import ServiceOnboarding from "@/pages/ServiceOnboarding",;
+const AuthRoutes = () => {;
   return (
-    <Routes>
+    <Routes>;
       {/* Auth Routes */}
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
@@ -55,6 +82,8 @@ export default AuthRoutes;
 
 
 
+
+
 export default AuthRoutes,
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
@@ -76,7 +105,6 @@ const AuthRoutes = () => {
 
 
 const AuthRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Auth Routes */}
@@ -116,6 +144,7 @@ const AuthRoutes = () => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 };
@@ -124,6 +153,7 @@ const AuthRoutes = () => {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default AuthRoutes;
 

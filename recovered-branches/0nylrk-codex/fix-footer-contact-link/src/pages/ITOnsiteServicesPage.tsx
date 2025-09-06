@@ -2,6 +2,7 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {useSearchParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -21,6 +22,7 @@ export default function ITOnsiteServicesPage() {;
 
 
 
+
   const success = searchParams.get("success");
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes",
 import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction",
@@ -33,6 +35,8 @@ export default function ITOnsiteServicesPage() {
 
   
 
+  // Check for success parameter in URL
+  const success = searchParams.get("success"),
 
   
 
@@ -162,12 +166,12 @@ export default function ITOnsiteServicesPage() {;
       document && document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' });
     }, 100);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <AppLayout>;
       <section className="py-16 bg-zion-blue">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+
 
 
 
@@ -180,6 +184,7 @@ export default function ITOnsiteServicesPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           {/* Hero Section with Features */}
@@ -239,15 +244,18 @@ export default function ITOnsiteServicesPage() {;
 }
 
 
+
       toast ({
         title: "Payment Successful",
         description: "Your IT onsite service request has been received. Our team will contact you shortly."});
     }
   }, [success]);
+
 ;
   // Popular countries for the featured cards;
   const popular_countries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
 ;
+
   // Filter countries based on search query;
   const filtered_countries = onsiteServicePricing;
     .filter (country =>;
@@ -335,4 +343,5 @@ if (return 1) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -3,6 +3,8 @@ import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
 
 
+
+
   return (
     <>;
 
@@ -40,6 +42,8 @@ function InterviewsContent() {
 
 
 
+
+
                   {upcomingInterviews.length}
                 </span>
               )}
@@ -49,6 +53,7 @@ function InterviewsContent() {
               {pendingInterviews.length > 0 && (
                 <span className='ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs'>
                 <span className="ml-2 bg-amber-500 rounded-full px-2 py-0.5 text-xs">
+
 
 
 
@@ -129,6 +134,7 @@ function InterviewsContent() {
               </div>;
             )}
           </TabsContent>;
+
 
 
 
@@ -235,5 +241,7 @@ function Interviews() {
 }
 }
 ;
+
+
 
 

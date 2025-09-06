@@ -1,6 +1,13 @@
 
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
 
+async function handler(req, res) {
+  if (req.method !== 'GET') {
+    res.statusCode = 405;
+    res.setHeader('Allow', 'GET');
+    res.end('Method Not Allowed');
+    return;
+  }
 
   try {
     // Authentication would normally be checked here
@@ -34,6 +41,7 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 const { withErrorLogging } = require('../../utils/withErrorLogging.cjs');
+
 async function handler(req, res) {
   if (req.method !== 'GET') {
     res.statusCode = 405;
@@ -41,6 +49,7 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
+
   try {
     // Authentication would normally be checked here
     // This is a placeholder implementation

@@ -1,6 +1,7 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
@@ -12,6 +13,7 @@ interface ContractBuilderProps {
   clientName: string
 
   onContractGenerated?: (contractContent: string) => void
+
 
 
 
@@ -34,11 +36,23 @@ import {SmartContractBuilder} from "./SmartContractBuilder";
 
 }
 
+import { useState } from "react",
+import { Dialog, DialogContent } from "@/components/ui/dialog",
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
+import { Button } from "@/components/ui/button",
+import { Save } from "lucide-react",
+import { TalentProfile } from "@/types/talent",
+import { ContractForm, ContractFormValues } from "./components/ContractForm",
+import { ContractPreview } from "./components/ContractPreview",
+import { TemplateManager } from "./templates/TemplateManager",
+import { SmartContractBuilder } from "./SmartContractBuilder",
+interface ContractBuilderProps {
 
 
 
 
-
+  onContractGenerated?: (contractContent: string) => void
+}
 
 
 export function ContractBuilder({;
@@ -47,9 +61,11 @@ export function ContractBuilder({;
   talent;
   clientName;
 
-
-
-
+export function ContractBuilder({
+  isOpen,
+  onClose,
+  talent,
+  clientName,
 
   onContractGenerated
 }: ContractBuilderProps) {
@@ -76,7 +92,7 @@ export function ContractBuilder({;
     return (
       <SmartContractBuilder
         isOpen={isOpen}
-        onClose={() => {
+        onClose={() => {;
           setShowSmartContractBuilder(false);
 
           onClose()
@@ -93,15 +109,65 @@ export function ContractBuilder({;
     if (onContractGenerated) {
       onContractGenerated(contract)
 
+    }
+  };
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+  if (showSmartContractBuilder) {
+    return (
+      <SmartContractBuilder
+        isOpen={isOpen}
+        onClose={() => {
+          setShowSmartContractBuilder(false);
+          onClose()
+import { useState } from "react",;
+import { Dialog, DialogContent } from "@/components/ui/dialog",;
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
+import { Button } from "@/components/ui/button",;
+import { Save } from "lucide-react",;
+import { TalentProfile } from "@/types/talent",;
+import { ContractForm, ContractFormValues } from "./components/ContractForm",;
+import { ContractPreview } from "./components/ContractPreview",;
+import { TemplateManager } from "./templates/TemplateManager",;
+import { SmartContractBuilder } from "./SmartContractBuilder",;
+interface ContractBuilderProps {;
+  isOpen: boolean,;
+  onClose: () => void,;
+  talent: TalentProfile,;
+  clientName: string,;
+  onContractGenerated?: (contractContent: string) => void;
+}
+;
+export function ContractBuilder({;
+  isOpen,;
+  onClose,;
+  talent,;
+  clientName,;
+  onContractGenerated;
+}: ContractBuilderProps) {;
+  const [activeTab, setActiveTab] = useState<string>("form"),;
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null),;
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
+    undefined;
+  ),;
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),;
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false),;
+  const handleLoadTemplate = (templateData: ContractFormValues) => {;
+    setFormValues(templateData);
+  },;
+  const handleContractGenerated = (contract: string) => {;
+    setGeneratedContract(contract),;
+    setActiveTab("preview"),;
+    if (onContractGenerated) {;
+      onContractGenerated(contract);
+    }
+  };
+  if (showSmartContractBuilder) {;
+    return (;
+      <SmartContractBuilder;
+        isOpen={isOpen}
+        onClose={() => {;
+          setShowSmartContractBuilder(false);
+          onClose();
 
         }}
         talent={talent}
@@ -211,5 +277,7 @@ export function ContractBuilder({;
       </DialogContent>;
     </Dialog>);
 }
+
+
 
 

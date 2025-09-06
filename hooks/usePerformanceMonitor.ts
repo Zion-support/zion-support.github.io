@@ -6,6 +6,10 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number
 }
 
+export function usePerformanceMonitor() {
+
+export function usePerformanceMonitor() {;
+
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
@@ -23,8 +27,8 @@ interface PerformanceMetrics {
 
           const navEntry = entry as PerformanceNavigationTiming;
           setMetrics(prev => ({
-            ...prev,
-            loadTime: navEntry && navEntry.loadEventEnd - navEntry && navEntry.loadEventStart,
+            ...prev
+            loadTime: navEntry.loadEventEnd - navEntry.loadEventStart
           }));
         }
         if (entry && entry.entryType === 'paint') {
@@ -38,27 +42,26 @@ interface PerformanceMetrics {
             }));
           }
         }
-        if (entry && entry.entryType === 'largest-contentful-paint') {
+        if (entry.entryType === 'largest-contentful-paint') {
           const lcpEntry = entry as PerformanceEntry;
           setMetrics(prev => ({
-            ...prev,
-            largestContentfulPaint: lcpEntry && lcpEntry.startTime,
+            ...prev
+            largestContentfulPaint: lcpEntry.startTime
           }));
         }
-        if (entry && entry.entryType === 'first-input') {
+        if (entry.entryType === 'first-input') {
           const fidEntry = entry as PerformanceEventTiming;
           setMetrics(prev => ({
-            ...prev,
-            firstInputDelay: fidEntry && fidEntry.processingStart - fidEntry && fidEntry.startTime,
+            ...prev
+            firstInputDelay: fidEntry.processingStart - fidEntry.startTime
           }));
         }
-        if (entry && entry.entryType === 'layout-shift') {
-          const clsEntry = entry as PerformanceEntry & { value: number };
+        if (entry.entryType === 'layout-shift') {
+          const clsEntry = entry as PerformanceEntry & { value: number }
           setMetrics(prev => ({
             ...prev,
             cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry && clsEntry.value,
 
-=======
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
@@ -152,6 +155,7 @@ if ( {) {
   }, []);
   return { metrics, isSupported }
 }
+
 ;
     // Observe different performance entry types;
     try {

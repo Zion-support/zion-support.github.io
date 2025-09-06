@@ -1,4 +1,7 @@
 
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 
 
 import type { NextPage } from 'next',
@@ -28,13 +31,19 @@ const AutoIndex: NextPage = () => {
             <p className="text-sm text-gray-600">Scans pages for SEO gaps and commits a report for fixes.</p>
 
 
+
+
           </li>
         </ul>
       </main>
     </div>
 
+  ),
+};
 
-
+  )
+}
+export default AutoIndex;
 
 
 },
@@ -71,6 +80,7 @@ const AutoIndex: NextPage = () => {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -78,6 +88,7 @@ const AutoIndex: NextPage = () => {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default AutoIndex;
 

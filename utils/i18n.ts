@@ -1,11 +1,18 @@
 
+export const supportedLocales = ['en', 'pt', 'es', 'ar'] as const;
+export function isRtl(locale: string): boolean {
 
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
+export function isRtl(locale: string): boolean {;
+  return ['ar', 'he', 'fa', 'ur'].includes(locale);
+}
+export const i18n = {
+  language: 'en'
+  resolvedLanguage: 'en'
 }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  language: 'en',
+  resolvedLanguage: 'en';
+};
 
 

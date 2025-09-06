@@ -1,9 +1,23 @@
 
-
+import { ApplicationStatus } from "@/types/jobs";
+import { Progress } from "@/components/ui/progress";
+import { CheckCircle2, Circle, CircleDot } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 import { ApplicationStatus } from "@/types/jobs",
 import { Progress } from "@/components/ui/progress",
-
+import { CheckCircle2, Circle, CircleDot } from "lucide-react";
+import { cn } from "@/lib/utils";
+interface ApplicationProgressProps {
+  status: ApplicationStatus,
+  className?: string
+}
+export function ApplicationProgress({
+  status
+  className
+}: ApplicationProgressProps) {
+import { CheckCircle2, Circle, CircleDot } from "lucide-react",
+import { cn } from "@/lib/utils",
 
 interface ApplicationProgressProps {
   status: ApplicationStatus,
@@ -20,17 +34,17 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
 
       case "new":;
         return 20;
-      case "viewed":
+      case "viewed":;
         return 40;
-      case "shortlisted":
+      case "shortlisted":;
         return 60;
-      case "interview":
+      case "interview":;
         return 80;
-      case "hired":
+      case "hired":;
         return 100;
-      case "rejected":
+      case "rejected":;
         return 100;
-      default:
+      default:;
         return 0;
       case "new": return 20,
       case "viewed": return 40,
@@ -55,12 +69,14 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       <div className="flex justify-between text-xs text-muted-foreground">
@@ -207,7 +223,6 @@ function StatusIcon(): any ({;
     rejected: 5,;
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
 
@@ -221,7 +236,6 @@ function StatusIcon(): any ({;
     // This step is upcoming;
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   }
-
 ;
   const progress_value = getProgressValue ();
 ;
@@ -288,6 +302,6 @@ if ( {) {
 
 }
 
-
-
+}
+;
 

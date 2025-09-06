@@ -6,19 +6,25 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
+
+
 
 
 
@@ -28,6 +34,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { Code, Key, Globe, Database, Shield, Zap, ArrowRight, Copy, CheckCircle, ExternalLink, Clock, Users } from 'lucide-react';
+
 export default function API() {;
   const apiEndpoints = [;
     {;
@@ -55,6 +62,7 @@ export default function API() {;
       response: 'Array of services';
     }
   ];
+
   return (
     <>;
       <Head>;
@@ -62,6 +70,7 @@ export default function API() {;
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group services and integrations." />;
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
       </Head>;
+
       <div className="min-h-screen bg-gray-50">;
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">;
@@ -74,6 +83,7 @@ export default function API() {;
             </p>;
           </div>;
         </div>;
+
         {/* API Overview */}
         <div className="py-16 bg-white>;
           <div className=container mx-auto px-4">;
@@ -102,6 +112,7 @@ export default function API() {;
             </div>;
           </div>;
         </div>;
+
         {/* API Endpoints */}
         <div className="py-16 bg-gray-50>;
           <div className="container mx-auto px-4">;
@@ -144,6 +155,7 @@ export default function API() {;
             </div>;
           </div>;
         </div>;
+
         {/* Getting Started */}
         <div className=py-16 bg-white">;
           <div className="container mx-auto px-4>;

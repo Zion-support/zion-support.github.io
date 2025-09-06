@@ -5,12 +5,14 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -24,9 +26,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const tx = earnTokens(userId, Math.floor(amount), reason, metadata)
 
 
-
-
-
+    return res.status(200).json({ tx })
+  } catch (err: any) {
+    return res.status(400).json({ error: err.message })
+  };
+};
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { earnTokens } from "../../../utils/token/service";
@@ -44,10 +48,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
   try {
     const tx = earnTokens(userId, Math.floor(amount), reason, metadata);
@@ -80,13 +80,17 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 
 
+
+
   }
 }
   }
 }
+
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

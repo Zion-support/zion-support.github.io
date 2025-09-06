@@ -1,4 +1,6 @@
 
+export interface CustomerTicket {
+export interface CustomerTicket {;
 
   id: string;
   customerId: string;
@@ -27,6 +29,7 @@
 
 
 
+
   id: string;
   ticket_id: string;
   sender_id: string;
@@ -36,10 +39,12 @@
   attachments?: string[];
   sentiment: 'positive' | 'neutral' | 'negative';
 
+
   intent: string,
   confidence: number;
 
 }
+
 
 
 
@@ -59,6 +64,7 @@
   last_contact: Date;
   preferences: {
 
+
     communication_channel: 'email' | 'chat' | 'phone';
     language: string,
     timezone: string;
@@ -72,10 +78,12 @@
 
 
 
+
   id: string;
   ticket_id: string;
   response: string;
   confidence: number;
+
 
   suggested_actions: string[];
   next_steps: string[];
@@ -85,11 +93,13 @@
 }
 
 
+
   totalTickets: number;
   openTickets: number;
   resolvedTickets: number;
 
   averageResolutionTime: number;
+
 
     ticketsResolved: number
     averageResolutionTime: number,
@@ -98,6 +108,10 @@
   }>
 
 }
+
+export interface CustomerServiceRequest {
+
+export interface CustomerServiceRequest {;
 
   customerId: string;
 
@@ -114,9 +128,11 @@
 
 
 
+
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
   ai_response?: AIResponse;
   estimatedResolutionTime: string;
+
 
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
     this && this.apiKey = apiKey,
@@ -125,6 +141,10 @@
 
   assignedAgent?: string
 }
+
+export class AICustomerServiceService {
+
+export class AICustomerServiceService {;
 
   private apiKey: string;
 
@@ -359,6 +379,9 @@
 }
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
 
+
+export interface CustomerTicket {;
+export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
 
   id: string,;
   customerId: string,;
@@ -671,5 +694,7 @@ export class AICustomerServiceService {;
 }
 ;
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
+
+
 
 

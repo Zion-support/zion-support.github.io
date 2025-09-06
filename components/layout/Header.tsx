@@ -83,6 +83,46 @@
         : 'bg-transparent'
 
 
+  const service_categories = [;
+    { name: 'AI Solutions', href: '/services / ai - solutions' },
+    { name: 'Cloud & DevOps', href: '/services / cloud' },
+    { name: 'Cybersecurity', href: '/services / cybersecurity' },
+    { name: 'Data & Analytics', href: '/services / data' },
+    { name: 'Micro SaaS', href: '/services / micro - saas' },
+    { name: 'Digital Transformation', href: '/services / transformation' },
+  ];
+  const solution_categories = [;
+    { name: 'Enterprise', href: '/solutions / enterprise' },
+    { name: 'SMB', href: '/solutions / smb' },
+    { name: 'Startup', href: '/solutions / startup' },
+  ];
+  const resource_categories = [;
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+  ];
+  const is_active = (path: string) =>: any location.pathname === path;
+  const resource_categories = [;
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case - studies' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Documentation', href: '/documentation' },
+    { name: 'API Reference', href: '/api' },
+    { name: 'Help Center', href: '/help' },
+    { name: 'FAQ', href: '/faq' },
+  ];
+  return (
+    <header className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
+      is_scrolled ;
+        ? 'bg - slate - 900 / 95 backdrop - blur - md border - b border - slate - 700 / 50' ;
+        : 'bg - transparent';
+}`}>;
+      <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+        <div className="flex items - center justify - between h - 16">;
+          {/* Logo */}
+
 
           <div className="flex-shrink-0">;
             <Link href="/" className="text-2xl font-bold text-blue-600">;
@@ -104,8 +144,10 @@
               ))}
 
 
+
             </div>;
           </div>;
+
 
 
 
@@ -160,6 +202,7 @@ export default Header;
 
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
@@ -169,4 +212,5 @@ export default Header;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

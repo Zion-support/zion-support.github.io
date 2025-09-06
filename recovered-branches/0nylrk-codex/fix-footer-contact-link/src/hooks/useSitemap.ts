@@ -1,11 +1,13 @@
 
 
-
+import { useAuth  } from './useAuth';
+import { getAccessibleRoutes  } from '@/config/sitemap';
 
 import {useAuth} from './useAuth';
 import {getAccessibleRoutes} from '@/config/sitemap';
 import type { SitemapItem } from '@/config/sitemap';
 // Define the allowed user types
+
 
 
 type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
@@ -19,6 +21,7 @@ export function useSitemap() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const { user, isAuthenticated } = useAuth();
@@ -125,6 +128,7 @@ if (return false) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -133,6 +137,7 @@ if (return false) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   }

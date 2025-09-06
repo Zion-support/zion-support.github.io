@@ -14,6 +14,14 @@ interface ActionButtonsProps {
     action: "warning" | "suspension" | "ban" | "ignore"
   ) => void;
 
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Eye, Info, AlertTriangle, Ban } from "lucide-react",
+
+interface ActionButtonsProps {
+  flagId: string,
+  status: string,
+  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
 export const ActionButtons: React.FC<ActionButtonsProps> = ({
   flagId
@@ -23,6 +31,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
+
 
 
 
@@ -42,6 +51,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
   return (
 
     <div className="flex space-x-2">
+
 
       <Button
         variant="ghost"
@@ -65,6 +75,11 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         <Info className="h-4 w-4" />
       </Button>
 
+        disabled={status === "actioned" || status === "ignored"}
+      >;
+        <Info className="h-4 w-4" />;
+      </Button>;
+
       <Button
         variant="ghost"
         size="icon"
@@ -78,6 +93,11 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
       >
         <AlertTriangle className="h-4 w-4" />
       </Button>
+
+        disabled={status === "actioned" || status === "ignored"}
+      >;
+        <AlertTriangle className="h-4 w-4" />;
+      </Button>;
 
       <Button
         variant="ghost"
@@ -97,9 +117,17 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
           variant="ghost"
           size="sm"
 
+          onClick={() => onAction(flagId, "ignore")}
+        >
+          Ignore
+        </Button>
+      )}
+    </div>
+  );
+}
 
-
-
+    </div>;
+);
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -150,7 +178,6 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
         <Ban className="h-4 w-4" />;
       </Button>;
       {status === "pending" && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Button
           variant="ghost"
           size="sm"
@@ -161,6 +188,7 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
       )}
     </div>;
   );
+
 
 
 
@@ -223,6 +251,7 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
     </div>);
 }
 ;
+
 
 
 

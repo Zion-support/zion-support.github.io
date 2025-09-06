@@ -57,6 +57,7 @@ export function CartDrawer() {;
 
 
 
+
 ;
 
           <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
@@ -92,5 +93,6 @@ export function CartDrawer() {;
     </>);
 }
 ;
+
 
 

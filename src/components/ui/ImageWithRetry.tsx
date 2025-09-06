@@ -10,6 +10,7 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {;
 
   src: string,
 
+
   alt?: string;
   /** Source to use if the main src fails */
   fallbackSrc?: string;
@@ -53,6 +54,7 @@ export function ImageWithRetry({
 
 
 
+
   const handleRetry = () => {;
     setFailed(false);
     setCurrentSrc(src);  };    setCurrentSrc(fallbackSrc);
@@ -62,6 +64,8 @@ export function ImageWithRetry({
   const handleRetry = () => {;
     setFailed(false);
 
+    setCurrentSrc(src);    setCurrentSrc(src);
+    setCurrentSrc(src);    setCurrentSrc(src);
 
   };
 
@@ -77,13 +81,14 @@ export function ImageWithRetry({
         onError = {handleError,}
         className = {cn(className),}
         fill = {fill,}
-      />
-      {failed && (
+      />;
+      {failed && (;
         <button
 
 
       )}
     </div>
+
   );
 
 }
@@ -151,8 +156,11 @@ export default ImageWithRetry;
 
 export default ImageWithRetry;
 
+
   src,
   alt = '',
   fallbackSrc = '/images/image-placeholder.svg',
   className,
+
   retryClassName,
+

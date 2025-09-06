@@ -1,6 +1,7 @@
 
 
 
+
 import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
@@ -9,8 +10,8 @@ import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
 
 export default function CybersecurityPage() {
   const features = [
+
     'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const solutions = [
     { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },
     { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' },
@@ -45,12 +46,14 @@ export default function CybersecurityPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             </div>
           </header>
@@ -86,12 +89,14 @@ export default function CybersecurityPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               <a href="/vulnerability-assessment-penetration-testing" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40 transition-colors">
                 <div className="text-gray-200 font-semibold mb-2">Vulnerability Assessment & Pentest (VAPT)</div>
@@ -107,6 +112,8 @@ export default function CybersecurityPage() {
       </div>
     </Layout>
 
+  );
+};
 
   )
 import React from 'react';
@@ -180,6 +187,7 @@ export default function CybersecurityPage(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -191,5 +199,6 @@ export default function CybersecurityPage(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

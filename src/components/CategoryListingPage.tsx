@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { GradientHeading } from '@/components/GradientHeading';
 import { ListingScoreCard } from '@/components/ListingScoreCard';
@@ -13,6 +14,41 @@ import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
 import { safeStorage } from '@/utils/safeStorage';
 
+
+interface Listing {
+import React from 'react';
+import { useState, useEffect } from 'react';
+import { GradientHeading } from '@/components/GradientHeading';
+import { ListingScoreCard } from '@/components/ListingScoreCard';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import {;
+  Select,;
+  SelectTrigger,;
+  SelectContent,;
+  SelectItem,;
+} from '@/components/ui/select';
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
+import { safeStorage } from '@/utils/safeStorage';
+
+// Example listing type;
+interface Listing {;
+import { useState, useEffect } from 'react';
+import { GradientHeading } from '@/components / GradientHeading';
+import { ListingScoreCard } from '@/components / ListingScoreCard';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import {
+  Select,
+  SelectTrigger,
+  SelectContent,
+  SelectItem,
+} from '@/components / ui / select';
+import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
+import ListingGridSkeleton from '@/components / skeletons / ListingGridSkeleton';
+import { safe_storage } from '@/utils / safe_storage';
+// Example listing type;
 interface Listing {
   id: string;
   title: string;
@@ -26,38 +62,60 @@ interface Listing {
   tags?: string[];
   author?: string;
 
-
-}
-
+  authorImage?: string;
+  aiScore?: number;
+  rating?: number;
+  reviewCount?: number;
+  price?: number | null;
+  createdAt: string
 interface CategoryListingPageProps {
-  category: string;
+
+  author_image?: string;
+  ai_score?: number;
+  rating?: number;
+  review_count?: number;
+  price?: number | null;
+  created_at: string;
+interface CategoryListingPageProps {
+  title: string;
+  description: string;
   listings: Listing[];
-  loading?: boolean;
+  sort_options?: { label: string; value: string }[];
+  filter_options?: { label: string; value: string }[];
+export /**
+ * CategoryListingPage - Function description
+ */
+function CategoryListingPage() {
+  const [search_query, setSearchQuery] = useState ('');
+  const [selected_sort, setSelectedSort] = useState (
+    () =>;
+      safe_storage.get_item ('category_selected_sort') ||;
+      sort_options[0]?.value ||;
+      'newest');
+  const [selected_filter, setSelectedFilter] = useState (
+    () =>;
+      safe_storage.get_item ('category_selected_filter') ||;
+      filter_options[0]?.value ||;
+      'all');
+  const [is_loading, setIsLoading] = useState (false);
+  useEffect (() => {
+    safe_storage.set_item ('category_selected_sort', selected_sort);
+  }, [selected_sort]);
+  useEffect (() => {
+    safe_storage.set_item ('category_selected_filter', selected_filter);
+  }, [selected_filter]);
+  useEffect (() => {
+    let mounted = true;
+    setIsLoading (true);
+    const timeout = set_timeout (() => {
+      if (setIsLoading (false)) {
+  $2
 }
 
-export const CategoryListingPage: React.FC<CategoryListingPageProps> = ({
-  category,
-  listings,
-  loading = false,
-}) => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortBy, setSortBy] = useState('newest');
-  const [filterBy, setFilterBy] = useState('all');
-  const [filteredListings, setFilteredListings] = useState<Listing[]>([]);
+    }, 300); return () => {
+      mounted = false;
+      clear_timeout (timeout);
 
-  useEffect(() => {
-    let filtered = listings;
-
-    // Filter by search term
-    if (searchTerm) {
-      filtered = filtered.filter(
-        listing =>
-          listing.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          listing.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          listing.tags.some(tag =>
-            tag.toLowerCase().includes(searchTerm.toLowerCase())
-          )
-      );
     }
 
 
@@ -291,6 +349,7 @@ export function CategoryListingPage(): any ({;
           return b.title.locale_compare (a.title);
         default:;
 
+
           return 0;
       }
     });
@@ -406,12 +465,41 @@ export function CategoryListingPage(): any ({;
       <div className='min - h-screen bg - zion - blue py - 12 px - 4'>;
         <div className='container mx - auto'>;
           <div className='text - center mb - 12'>;
+
             <GradientHeading>{title}</GradientHeading>;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
               {description}
 
             </p>;
           </div>;
+
+
+
+          {/* Filters and Search */}
+
+                  className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />;
+              </div>;
+
+              <Select value={selectedSort} onValueChange={setSelectedSort}>;
+                <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>;
+                  <div className='flex items-center'>;
+                    {selectedSort === 'a-z' ? (;
+                      <ArrowDownAZ className='mr-2 h-4 w-4' />;
+                    ) : selectedSort === 'z-a' ? (;
+                      <ArrowUpZA className='mr-2 h-4 w-4' />;
+                    ) : null}
+                    <span>;
+                      {sortOptions && sortOptions.find(option => option && option.value === selectedSort);
+      <div className='min - h-screen bg - zion - blue py - 12 px - 4'>;
+        <div className='container mx - auto'>;
+          <div className='text - center mb - 12'>;
+            <GradientHeading>{title}</GradientHeading>;
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+              {description}
+
+            </p>;
+          </div>;
+
 
 
           {/* Filters and Search */}
@@ -426,16 +514,25 @@ export function CategoryListingPage(): any ({;
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                     setSearchQuery(e.target.value)
                   }
-                  className='pl - 10 bg - zion - blue border border - zion - blue - light text - white'                />;
-              </div>;
-              <Select value={selected_sort} onValueChange={setSelectedSort}>;
-                <SelectTrigger className='bg - zion - blue border border - zion - blue - light text - white'>;
-                  <div className='flex items - center'>;
-                    {selected_sort === 'a - z' ? (
-                      <ArrowDownAZ className='mr - 2 h - 4 w - 4' />) : selected_sort === 'z - a' ? (
-                      <ArrowUpZA className='mr - 2 h - 4 w - 4' />) : null}
-                    <span>;
-                      {sort_options.find (option => option.value === selected_sort);
+
+                  className='pl-10 bg-zion-blue border border-zion-blue-light text-white'                />
+              </div>
+              <Select value={selectedSort} onValueChange={setSelectedSort}>
+                <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>
+                  <div className='flex items-center'>
+                    {selectedSort === 'a-z' ? (
+                      <ArrowDownAZ className='mr-2 h-4 w-4' />
+                    ) : selectedSort === 'z-a' ? (
+                      <ArrowUpZA className='mr-2 h-4 w-4' />
+                    ) : null}
+                    <span>
+                      {sortOptions.find(option => option.value === selectedSort)
+                        ?.label |'Sort By'}
+                    </span>
+                  </div>
+                </SelectTrigger>
+                <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
+                  {sortOptions.map(option => (
 
                         ?.label || 'Sort By'}
                     </span>;
@@ -490,13 +587,98 @@ export function CategoryListingPage(): any ({;
                   </div>;
                 </SelectTrigger>;
                 <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>;
+
                   {filterOptions && filterOptions.map(option => (;
+
                     <SelectItem
                       key={option && option.value}
                       value={option && option.value}
                       className='text-white'>                      {option && option.label}
                     </SelectItem>;
 
+                  ))}
+                </SelectContent>
+              </Select>
+              <Select value={selectedFilter} onValueChange={setSelectedFilter}>
+                <SelectTrigger className='bg-zion-blue border border-zion-blue-light text-white'>
+                  <div className='flex items-center'>
+                    <Filter className='mr-2 h-4 w-4' />
+                    <span>
+                      {filterOptions.find(
+                        option => option.value === selectedFilter
+                      )?.label |'Filter'}
+                    </span>
+                  </div>
+                </SelectTrigger>
+                <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
+                  {filterOptions.map(option => (
+                    <SelectItem
+                      key={option && option.value}
+                      value={option && option.value}
+                      className='text-white'>                      {option && option.label}
+                    </SelectItem>;
+
+            </p>;
+          </div>;
 
 
+
+          {/* Listings Grid */}
+          <div aria-busy={isLoading}>;
+            {isLoading ? (;
+              <ListingGridSkeleton />;
+            ) : processedListings && processedListings.length > 0 ? (;
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+                {processedListings && processedListings.map(listing => (                  <ListingScoreCard
+                    key = {listing && listing.id,}
+                    title = {listing && listing.title,}
+                    description = {listing && listing.description,}
+                    category = {listing && listing.subcategory || listing && listing.category,}
+                    image = {listing && listing.image,}
+                    tags = {listing && listing.tags,}
+                    author = {listing && listing.author,}
+                    authorImage = {listing && listing.authorImage,}
+                    aiScore = {listing && listing.aiScore,}
+                    rating = {listing && listing.rating,}
+                    reviewCount = {listing && listing.reviewCount,}
+                  />;
+                  variant='outline'
+                  onClick={() => {
+                    setSearchQuery('')
+                    setSelectedFilter(filterOptions[0]?.value |'all') }}
+                  className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
+
+
+
+                  variant="outline"
+                  onClick={() => {
+                    setSearchQuery(""),
+                    setSelectedFilter(filterOptions[0]?.value || 'all')
+                  }}
+                  className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+
+
+              </div>;
+            ) : (;
+              <div className="text-center py-20">;
+                <h3 className="text-xl font-bold text-white mb-2">No listings found</h3>;
+                <p className="text-zion-slate-light mb-6">Try adjusting your filters or search query</p>;
+                <Button;
+                  variant="outline";
+
+                  onClick={() => {;
+                    setSearchQuery('');
+                    setSelectedFilter(filterOptions[0]?.value || 'all');                  }}
+                  className='border-zion-purple text-zion-purple hover:bg-zion-purple/10';
+                >;
+                  Clear all filters;
+                </Button>;
+              </div>;
+            )}
+          </div>;
+        </div>;
+      </div>;
+    </>;
+  );
+}
 

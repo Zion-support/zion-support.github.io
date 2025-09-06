@@ -4,6 +4,7 @@
 
 
 
+
 import {;
   Card,;
   CardHeader,;
@@ -35,6 +36,7 @@ interface FraudStatsCardsProps {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
+
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
       <Card>
         <CardHeader className="pb-2">
@@ -49,12 +51,14 @@ interface FraudStatsCardsProps {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
@@ -72,12 +76,14 @@ interface FraudStatsCardsProps {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
@@ -97,12 +103,14 @@ interface FraudStatsCardsProps {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
@@ -122,12 +130,14 @@ interface FraudStatsCardsProps {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <Card>
         <CardHeader className="pb-2">
@@ -144,12 +154,14 @@ interface FraudStatsCardsProps {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <Card>
         <CardHeader className="pb-2">
@@ -159,6 +171,10 @@ interface FraudStatsCardsProps {
           <CardDescription>False Positives</CardDescription>
         </CardHeader>
       </Card>
+
+    </div>
+  );
+}
 
 
   )
@@ -171,6 +187,8 @@ interface FraudStatsCardsProps {;
   stats: FraudStats;
 }
 ;
+
+
 
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
   return (
@@ -249,6 +267,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
 export default FraudStatsCards;
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -259,5 +278,6 @@ export default FraudStatsCards;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

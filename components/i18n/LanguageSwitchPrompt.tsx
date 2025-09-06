@@ -13,14 +13,19 @@ const localeLabelKey: Record<string, string> = {
 export default function LanguageSwitchPrompt() {
 
 
+
+
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+const localeLabelKey: Record<string, string> = {
+  en: "lang.english",
+  pt: "lang.portuguese",
+  es: "lang.spanish",
+  ar: "lang.arabic",
+};
+export default function LanguageSwitchPrompt() {;
 
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
@@ -70,6 +75,15 @@ export default function LanguageSwitchPrompt() {;
         ? normalized;
 
         : null;
+
+
+    const key = 'langPromptShown';
+    const preferred = localStorage.getItem('preferredLanguage');
+    if (preferred) return; // user has chosen
+    if (localStorage.getItem(key)) return; // already prompted
+    const detected = i18n.language || i18n.resolvedLanguage || navigator.language || 'en';
+    const normalized = detected.split('-')[0];
+    const suggestion = supportedLocales.includes(normalized as any) && normalized !== 'en' ? normalized : null;
 
 
     if (suggestion) setSuggested(suggestion);
@@ -141,11 +155,9 @@ export default function LanguageSwitchPrompt() {;
       </div>
     </div>
 
-
-
-
-
-
+  );
+);
+  );
 
 }
 }
@@ -253,5 +265,7 @@ if (return null) {
   )
 
 }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 

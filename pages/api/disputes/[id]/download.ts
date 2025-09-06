@@ -1,24 +1,18 @@
 
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  const { id, fileName } = req.query as { id?: string; fileName?: string }
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+} from "../../../../utils/auth";
 
-
-
-
-
-
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs";
-import path from "path";
-import { getDisputeById } from "../../../../utils/fsdb";
-import {
-
-
-
-
-
-
-
-
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  const { id, fileName } = req.query as { id?: string; fileName?: string };
 
   if (
     !id |
@@ -28,12 +22,15 @@ import {
   ) {
 
 
+    return res.status(400).json({ error: "Invalid parameters" });
+  }
+
 
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
-  if (!dispute) return res.status($1).json({ $2 });
+  if (!dispute) return res && res.status($1).json({ $2 });
   try {
-    ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
+    ensureInvolvedOrAdmin(user, dispute && dispute.clientUserId, dispute && dispute.talentUserId);
   } catch (e: any) {
     return res.status(e.statusCode |403).json({ error: "Forbidden" });
   }
@@ -46,9 +43,10 @@ import {
     "Content-Disposition"
     `attachment; filename="${path.basename(att.fileName)}"`
   );
-  const stream = fs.createReadStream(att.path);
-  stream.pipe(res);
+  const stream = fs && fs.createReadStream(att && att.path);
+  stream && stream.pipe(res);
 }
+
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -70,6 +68,7 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
 
   }
 
@@ -121,5 +120,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 
 

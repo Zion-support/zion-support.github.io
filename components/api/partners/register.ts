@@ -104,4 +104,14 @@ export default async function handler(_req: NextApiRequest, _res: NextApiRespons
   } catch (e) {_return res.status(500).json({ error: "Failed to create partner"});
 
 
+import type { NextApiRequest, NextApiResponse } from "next";
+import { createPartner } from "../../../utils/api/partnerAuth";
+
+
+
+
+  }
+
+}
+
 

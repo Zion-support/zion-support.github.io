@@ -43,6 +43,8 @@ if ( {) {
                   <WifiOff className='h - 4 w - 4' />) : (
                   <RefreshCw className='h - 4 w - 4' />)}
 
+
+
                 <AlertTitle>;
                   {isNetworkError;
                     ? 'Connection Problem';
@@ -69,6 +71,8 @@ if ( {) {
                 )}
                 <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
+
+
 
 
 
@@ -105,6 +109,8 @@ if ( {) {
 
 
 
+
+
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
@@ -127,6 +133,7 @@ if ( {) {
               >
 
 
+
                 Reload Page
               </Button>
             </div>
@@ -136,6 +143,7 @@ if ( {) {
                 <span>Offline</span>
               </div>
             )}
+
               <AlertDescription className='mt - 2'>;
                 {isNetworkError;
                   ? !this.state.is_online;
@@ -227,12 +235,35 @@ export const useApiErrorHandler = () =>: any {
 
 
 
+
+
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
 
+          </div>
+        </div>
+      )
+    }
+    return this.props.children
+  }
+// Hook for accessing query client in function components
+export const useApiErrorHandler = () => {
+  const handleApiError = (error: Error) => {
+    Sentry.withScope(scope => {
+      scope.setTag('source', 'useApiErrorHandler')
+      scope.setLevel('error')
+      Sentry.captureException(error)
+    })
+  }
+  return { handleApiError }
+}
+  return { handleApiError }
+}
+  return { handleApiError }
+}
 
 
 }, ;
@@ -262,9 +293,11 @@ export const useApiErrorHandler = () => {;
 
 
 
+
 },
   return { handleApiError }
 },
 
 
 };
+

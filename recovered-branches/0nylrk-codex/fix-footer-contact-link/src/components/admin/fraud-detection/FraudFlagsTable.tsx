@@ -1,19 +1,21 @@
 
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import React from "react";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {FraudFlag} from "@/types/fraud";
+import {SeverityDisplay} from "./SeverityDisplay";
+import {ActionButtons} from "./ActionButtons";
+import {EmptyFraudState} from "./EmptyFraudState";
+import React from "react",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { FraudFlag } from "@/types/fraud",
+import { SeverityDisplay } from "./SeverityDisplay",
+import { ActionButtons } from "./ActionButtons";
+import { EmptyFraudState } from "./EmptyFraudState";
+import { ActionButtons } from "./ActionButtons",
+import { EmptyFraudState } from "./EmptyFraudState",
 
 interface FraudFlagsTableProps {
 
@@ -24,6 +26,8 @@ interface FraudFlagsTableProps {
 
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
+
+
 
 
 
@@ -78,7 +82,9 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -125,6 +131,40 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
 
                 <span className="text-muted-foreground text-xs">Not analyzed</span>
 
+    <Table>;
+      <TableHeader>;
+        <TableRow>;
+          <TableHead>Severity</TableHead>;
+          <TableHead>User</TableHead>;
+          <TableHead>Content</TableHead>;
+          <TableHead>Type</TableHead>;
+          <TableHead>Reason</TableHead>;
+          <TableHead>GPT Analysis</TableHead>;
+          <TableHead>Timestamp</TableHead>;
+          <TableHead>Status</TableHead>;
+          <TableHead>Actions</TableHead>;
+        </TableRow>;
+      </TableHeader>;
+      <TableBody>;
+        {flags && flags.map((flag) => (;
+          <TableRow key={flag && flag.id}>;
+            <TableCell>;
+              <SeverityDisplay severity={flag && flag.severity} />;
+            </TableCell>;
+            <TableCell className="font-medium">;
+              {flag && flag.user_email || flag && flag.user_id.substring(0, 8)}
+            </TableCell>;
+            <TableCell className="max-w-xs truncate">;
+              {flag && flag.content_excerpt}
+            </TableCell>;
+            <TableCell>;
+              <Badge variant="outline">{flag && flag.content_type}</Badge>;
+            </TableCell>;
+            <TableCell className="max-w-xs truncate">{flag && flag.reason}</TableCell>;
+            <TableCell className="max-w-xs truncate">;
+              {flag && flag.gpt_explanation || (;
+                <span className="text-muted-foreground text-xs">Not analyzed</span>;
+
               )}
             </TableCell>;
             <TableCell>;
@@ -155,10 +195,10 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
           </TableRow>
         ))}
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+      </TableBody>
+    </Table>
+  )
+}
 
 
       </TableBody>;
@@ -167,7 +207,9 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 };
 

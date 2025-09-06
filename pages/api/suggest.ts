@@ -1,4 +1,7 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import type { NextApiRequest, NextApiResponse } from "next";
 
 const SAMPLE_QUERIES = [
   'React developers under $50/hr',
@@ -62,11 +65,13 @@ const SAMPLE_QUERIES = [
 
 
 
+
   if (req.method !== "GET") {;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
     res.setHeader("Allow", "GET");
@@ -89,13 +94,28 @@ const SAMPLE_QUERIES = [
 
   return res.status(200).json({ suggestions });
 
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+const SAMPLE_QUERIES = [;
+  'React developers under $50/hrPart-time DevOps jobs in LATAMLLM engineers with RAG experienceSecurity projects with Zero TrustNext.js freelancers in Berlin';
+];
+const SKILLS = [;
+  'ReactNext.jsTypeScriptNodePythonAWSKubernetesDevOps', 'DockerTerraformOpenAILangChainRAGNLPPostgreSQLRust';
+],;
+export default function handler(req, res) {
+  try {
+
   const q = ((req.query.q as string) || '').toLowerCase();
   const suggestions = new Set<string>();
 
 
 
-
-
+  return res && res.status(200).json({ suggestions });
+  res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
+}
 
   } catch (error) {
     console.error("Error:", error);
@@ -106,6 +126,8 @@ const SAMPLE_QUERIES = [
   }
 
 }
+
+
 
 ;
 export default /**
@@ -121,6 +143,8 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

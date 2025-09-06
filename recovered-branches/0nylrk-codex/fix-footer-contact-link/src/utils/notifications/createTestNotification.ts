@@ -4,12 +4,14 @@
 
 
 
+
 import {NotificationType} from './types';
 import {createNotification} from './createNotification';
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 /**
@@ -32,6 +34,26 @@ export async function createTestNotification(userId: string) {
   
 
 
+import {NotificationType} from './types';
+import {create_notification} from './create_notification';
+/**;
+* Demo function to create test notifications for the current user;
+*/;
+export async /**
+ * createTestNotification - Function description
+ */
+function createTestNotification() {
+  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
+  const random_type = types[Math.floor (Math.random () * types.length)],
+  const titles = {
+    'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update';
+  }
+;
+  const messages = {
+    'message': 'You have received a new message from a potential client.quote_request': 'A client has submitted a quote request for your services.booking_confirmation': 'Your booking has been confirmed and scheduled.hire_request': 'A client wants to hire you for a project. Check your dashboard for details.onboarding': 'Complete your profile to get more visibility and job matches.system': 'Our platform has been updated with new features. Check them out!';
+  }
+;
+
   const actions = {
     'message': { url: '/messages', text: 'View Messages' }
     'quote_request': { url: '/quotes', text: 'View Quote' }
@@ -44,6 +66,8 @@ export async function createTestNotification(userId: string) {
 
     actionText: actions[randomType].text
   })
+
+
 
 
 import { NotificationType } from './types',;
@@ -83,12 +107,13 @@ export async function createTestNotification(userId: string) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
 
 

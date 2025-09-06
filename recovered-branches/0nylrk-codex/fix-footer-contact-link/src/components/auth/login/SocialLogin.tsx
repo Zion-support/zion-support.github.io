@@ -13,6 +13,7 @@ export function SocialLogin() {
 
 
 
+
   const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
 
 
@@ -42,6 +43,7 @@ export function SocialLogin() {
 
 
 
+
   )
 import { Facebook, Twitter } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -61,11 +63,14 @@ export function SocialLogin() {;
         <div className="relative flex justify-center text-sm">;
           <span className="px-2 bg-zion-blue-dark text-zion-slate-light">;
 
+
+
             Or continue with;
           </span>;
         </div>;
       </div>;
-
+    </div>;
+  );
       <div className="mt - 6 grid grid - cols - 4 gap - 3">;
         <Button;
           type="button";
@@ -74,7 +79,9 @@ export function SocialLogin() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 

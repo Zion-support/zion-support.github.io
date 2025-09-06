@@ -1,12 +1,8 @@
 
-
-
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+:src.disabled/components/BundleAnalyzer.js.jsx
+"export\": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \';\"";
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+"export\": const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState (\'overview\') \';\"";
+:temp_exclude/src.disabled/components/BundleAnalyzer.js.jsx
 
 export: const BundleAnalyzer = () => { const [isOpen,setIsOpen] = useState (false) const [analysis,setAnalysis] = useState (null) const [isAnalyzing,setIsAnalyzing] = useState (false) const [activeTab,setActiveTab] = useState ("overview") ";"";"""

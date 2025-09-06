@@ -1,10 +1,7 @@
 
 
-
-
-
-
-
+import { completeSitemap, SitemapItem } from "@/config/sitemap";
+import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
 
 import {completeSitemap, SitemapItem} from "@/config/sitemap";
@@ -14,6 +11,8 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 };
 
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
+
+
 
 
 
@@ -34,13 +33,20 @@ export const isProtectedRoute = (path: string): boolean => {
 
 
 
+
+
   const route = findRouteByPath(path),
   return route?.requiredAuth === true;
 };
 
 
-
-
+// Check if a route is accessible by a specific user type
+export const canAccessRoute = (;
+  path: string;
+  isAuthenticated: boolean;
+  return route?.requiredAuth === true
+}
+},
 
 
 // Check if a route is accessible by a specific user type
@@ -94,6 +100,7 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
     }
   }
   return breadcrumbs
+
 
 
 
@@ -184,4 +191,5 @@ if ( {) {
 
 
 };
+
 

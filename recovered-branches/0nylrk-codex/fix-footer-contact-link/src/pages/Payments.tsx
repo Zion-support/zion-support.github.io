@@ -1,18 +1,19 @@
 
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+import React from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {TransactionHistory} from "@/components/transactions/TransactionHistory";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { TransactionHistory } from "@/components/transactions/TransactionHistory",
+import { GradientHeading } from "@/components/GradientHeading";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { GradientHeading } from "@/components/GradientHeading",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
 
 export default function Payments() {
@@ -109,16 +110,19 @@ export default function Payments() {
 
 
 
+
 // Import UI components for Payment Settings tab;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 import {Button} from "@/components/ui/button";
 import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
 import {Checkbox} from "@/components/ui/checkbox";
+
 
 
 import { Button } from "@/components/ui/button",
@@ -235,5 +239,6 @@ import { Checkbox } from '@/components / ui / checkbox';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

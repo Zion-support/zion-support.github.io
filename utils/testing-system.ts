@@ -9,11 +9,14 @@ export class TestingSystem {
         element.click ();
 
         break;
-      case 'type': // Handle typing
+      case 'type': // Handle typing;
         break;
-      case 'hover': // Handle hover
+      case 'hover': // Handle hover;
         break;
     }
+
+
+
 
 
 
@@ -25,5 +28,6 @@ export class TestingSystem {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

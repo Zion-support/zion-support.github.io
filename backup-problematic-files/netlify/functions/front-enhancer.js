@@ -1,4 +1,6 @@
 
+
+
 :netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
 const path = require('path'),;
@@ -32,7 +34,9 @@ exports.handler = async () => {;
 :backup-problematic-files/netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
@@ -69,6 +73,8 @@ exports.handler = async () => {
   // Attempt to sync changes back to main (best-effort)
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
 
+
+
 :netlify/functions/front-enhancer.js
   return { statusCode: 200, body: logs.join('\n') }
 };function runNode(relPath, args = []) {
@@ -100,16 +106,19 @@ exports.handler = async () => {
 
 
 
+
+
   return { statusCode: 200, body: logs.join('\n') };
 };function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '....', relPath),
-  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+  const abs = path.resolve(__dirname, '....', relPath)
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
+  return { status: res.status |0, stdout: res.stdout |'', stderr: res.stderr |'' }
 }
-
 exports.config = {
   schedule: '*/20 * * * *', // every 20 minutes
 },
+
+
 
 
 
@@ -127,4 +136,6 @@ main:netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
 :backup-problematic-files/netlify/functions/front-enhancer.js
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+

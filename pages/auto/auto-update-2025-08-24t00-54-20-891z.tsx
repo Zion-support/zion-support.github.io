@@ -6,12 +6,14 @@
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 const Page: NextPage = () => {
@@ -34,17 +36,16 @@ ursor/fix-lint-push-and-merge-to-main-ce13
     </>
   )
 
+}
+export default Page;
 
+},
+;
+export default Page
+},
 
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+export default Page,;
+;
+;
+export default Page
 

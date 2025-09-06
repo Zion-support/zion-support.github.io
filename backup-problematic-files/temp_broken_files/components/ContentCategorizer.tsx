@@ -1,13 +1,19 @@
 
+
+
 :components/ContentCategorizer.tsx
 import React, { useState, useEffect, useMemo } from 'react';
 import {Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
 
+
+
 import React, { useState, useEffect, useMemo } from 'react',;
 import {;
   Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,;
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings,;
+
+
 
 
   BarChart3, Globe, Database, Cpu, Rocket, Brain;
@@ -43,10 +49,12 @@ interface ContentItem {
   source: string,
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature'
 
+
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 }
 interface ContentCategory {id: string;
   name: string;
@@ -56,6 +64,8 @@ interface ContentCategory {id: string;
   count: number;
   subcategories?: string[];
 }
+
+
 
 :components/ContentCategorizer.tsx
 const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
@@ -67,6 +77,8 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
   const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
 
+
+
 ;
 const ContentCategorizer: React.FC = () => {;
   const [searchTerm, setSearchTerm] = useState(''),;
@@ -77,6 +89,8 @@ const ContentCategorizer: React.FC = () => {;
   const [selectedRelevance, setSelectedRelevance] = useState('all'),;
   const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),;
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),;
+
+
 
 
   // Sample content data - in a real implementation, this would come from an API;
@@ -93,6 +107,8 @@ const ContentCategorizer: React.FC = () => {;
       tags: ['seojson-ldschemaaudit'];
       source: 'autonomous-auditor';
       type: 'report';
+
+
 
 
     },;
@@ -160,6 +176,8 @@ const ContentCategorizer: React.FC = () => {;
       tags: ['analyticsuser-behaviorengagementoptimization'],;
       source: 'behavior-analyzer',;
       type: 'insight';
+
+
 
 
 
@@ -304,6 +322,8 @@ const ContentCategorizer: React.FC = () => {;
     { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
     { id: 'low', name: 'Low Priority', color: 'text-red-400' }
 
+
+
 :components/ContentCategorizer.tsx
   ];
   const filteredItems = useMemo(() => {const filtered = contentItems.filter(item => {;
@@ -314,6 +334,8 @@ const ContentCategorizer: React.FC = () => {;
       const matchesSubcategory = selectedSubcategory === 'all' |item.subcategory === selectedSubcategory;
       const matchesType = selectedType === 'all' |item.type === selectedType;
       const matchesRelevance = selectedRelevance === 'all' |item.relevance === selectedRelevance;
+
+
 
   ],;
   const filteredItems = useMemo(() => {;
@@ -327,6 +349,8 @@ const ContentCategorizer: React.FC = () => {;
       const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,;
 
 
+
+
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
     });
     // Sort items;
@@ -336,6 +360,8 @@ const ContentCategorizer: React.FC = () => {;
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
           break;
 
+
+
         case 'relevance':;
           const relevanceOrder = { high: 3, medium: 2, low: 1 }
           comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
@@ -343,6 +369,8 @@ const ContentCategorizer: React.FC = () => {;
         case 'title':;
           comparison = a.title.localeCompare(b.title);
           break;
+
+
 
   ],
 
@@ -372,10 +400,12 @@ filtered.sort((a, b) => {
           comparison = a.title.localeCompare(b.title),
           break
 
+
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       }
       return sortOrder === 'asc' ? comparison : -comparison;
     });
@@ -423,6 +453,8 @@ type=&quot;text&quot;
           {/* Category Filter */}          <div>
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
 
+
+
 :components/ContentCategorizer.tsx
             <select
               value={selectedCategory}
@@ -432,6 +464,8 @@ type=&quot;text&quot;
 className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
             >
 
+
+
             <select,
 value={selectedCategory}
               onChange={(e) => {
@@ -440,15 +474,19 @@ value={selectedCategory}
               }}
               className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;            >
 
+
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               {categories.map(category => (
                 <option key={category.id} value={category.id}>
                   {category.name} ({category.count})
                 </option>
               ))}
+
+
 
 :components/ContentCategorizer.tsx
             </select>;
@@ -456,16 +494,20 @@ value={selectedCategory}
           {/* Subcategory Filter */}
 <div>
 
+
+
             </select>
           </div>
 
           {_/* Subcategory Filter */}
           <div>
 
+
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Subcategory</label>
             <select,
 value={selectedSubcategory}
@@ -476,6 +518,8 @@ value={selectedSubcategory}
               {selectedCategory !== 'all' && categories.find(c => c.id === selectedCategory)?.subcategories?.map(sub => (
                 <option key={sub} value={sub}>
 
+
+
 :components/ContentCategorizer.tsx
                   {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}
                 </option>;
@@ -485,6 +529,8 @@ value={selectedSubcategory}
           {/* Content Type Filter */}
 <div>
 
+
+
                   {sub.replace('- ').replace(/\b\w/g, l => l.toUpperCase())}                </option>
               ))}
             </select>
@@ -493,10 +539,12 @@ value={selectedSubcategory}
           {_/* Content Type Filter */}
           <div>
 
+
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Content Type</label>
             <select,
 value={selectedType}
@@ -508,11 +556,15 @@ value={selectedType}
                 </option>;
               ))}
 
+
+
 :components/ContentCategorizer.tsx
             </select>;
           </div>;
           {/* Relevance Filter */}
 <div>
+
+
 
             </select>
           </div>
@@ -520,10 +572,12 @@ value={selectedType}
           {_/* Relevance Filter */}
           <div>
 
+
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Relevance</label>
             <select,
 value={selectedRelevance}
@@ -538,12 +592,16 @@ value={selectedRelevance}
           </div>;
         </div>;
 
+
+
 :components/ContentCategorizer.tsx
 ;
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
         {/* Sort Controls and Clear Filters */}
 <div className=&quot;flex flex-wrap items-center justify-between gap-4&quot;>
           <div className=&quot;flex items-center gap-4&quot;>
@@ -562,6 +620,8 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                 className=&quot;p-1 bg-white/5 border border-white/10 rounded hover:bg-white/10 transition-colors duration-200&quot;              >
                 {sortOrder === 'asc' ? '↑' : '↓'}
 
+
+
 :components/ContentCategorizer.tsx
               </button>;
             </div>;
@@ -571,6 +631,8 @@ onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
 className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
           >
 
+
+
               </button>
             </div>
           </div>
@@ -579,10 +641,12 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
 onClick={clearAllFilters}
             className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover:text-white hover:bg-white/10 transition-all duration-200&quot;          >
 
+
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             Clear All Filters
           </button>
         </div>
@@ -611,31 +675,37 @@ onClick={clearAllFilters}
       </div>;
 
 
+
+
       {_/* Category Pills */}
       <div>
         <div className=&quot;flex flex-wrap gap-2&quot;>
-          {categories.map(category => (            <button,
-key={category.id}
-              onClick={_() => setSelectedCategory(category.id)}
-              className={_`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${
-                selectedCategory === category.id
-                  ? 'border-cyan-500 bg-cyan-500/20 text-cyan-300'
-                  : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10'}`}
-            >
+          {categories.map(category => (
+            <button
+              key={category.id}
+              onClick={() => setSelectedCategory(category.id)}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${selectedCategory === category.id;
+                  ? 'border-cyan-500 bg-cyan-500/20 text-cyan-300';
+                  : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10';
+              }`}
+>
               <category.icon className=&quot;w-4 h-4&quot; />
               {category.name}
               <span className=&quot;text-xs bg-white/10 px-2 py-1 rounded-full&quot;>
-                {category.count}              </span>
-            </button>
+                {category.count}
+              </span>;
+            </button>;
           ))}
         </div>;
       </div>;
 ;
 
+
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       {/* Results Summary */}
 <div className=&quot;text-sm text-white/60&quot;>
         Showing {filteredItems.length} of {contentItems.length} items
@@ -645,6 +715,7 @@ key={category.id}
       </div>;
       {/* Content Grid */}
 
+
 :components/ContentCategorizer.tsx
 
 
@@ -652,6 +723,7 @@ key={category.id}
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
                   {item.type}
                 </div>;
               </div>;
@@ -695,10 +767,12 @@ key={category.id}
               </div>;
 ;
 
+
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               {/* Title and Description */}
 <h3 className=&quot;text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors duration-200&quot;>
                 {item.title}
@@ -707,12 +781,16 @@ key={category.id}
                 {item.desc}
               </p>;
 
+
+
 :components/ContentCategorizer.tsx
 ;
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               {/* Tags */}
 <div className=&quot;flex flex-wrap gap-1 mb-4&quot;>
                 {item.tags.slice(0, 3).map((tag, index) => (
@@ -720,6 +798,8 @@ key={category.id}
                     {tag}
                   </span>;
                 ))}
+
+
 
 :components/ContentCategorizer.tsx
 {item.tags.length > 3 && (
@@ -729,6 +809,8 @@ key={category.id}
                 )}
               </div>;
 
+
+
                 {item.tags.length > 3 && (
                   <span className=&quot;px-2 py-1 bg-white/5 border border-white/10 rounded text-xs text-white/60&quot;>                    +{item.tags.length - 3}
                   </span>
@@ -736,10 +818,12 @@ key={category.id}
               </div>;
 ;
 
+
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
               {/* Metadata */}
 <div className=&quot;flex items-center justify-between text-xs text-white/50 mb-4&quot;>
                 <span className=&quot;flex items-center gap-1&quot;>
@@ -757,11 +841,15 @@ key={category.id}
                   Source: {item.source}
                 </span>
 
+
+
 :components/ContentCategorizer.tsx
                 <a
                   href={item.href}
                 <a 
                   href={item.href} 
+
+
 
 
         })}
@@ -776,7 +864,7 @@ href={item.href}
                   className=&quot;inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 transition-colors duration-200 text-sm font-medium&quot;
                 >
                   Open Content
-                  <span aria-hidden>→</span>
+                  <span aria-hidden></span>
                 </a>
               </div>
             </div>
@@ -785,14 +873,16 @@ href={item.href}
       </div>;
 ;
 
+
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       {/* No Results */}
 {filteredItems.length === 0 && (
         <div className=&quot;text-center py-12&quot;>
-          <div className=&quot;text-white/40 text-6xl mb-4&quot;>🔍</div>
+          <div className=&quot;text-white/40 text-6xl mb-4&quot;></div>
           <h3 className=&quot;text-xl font-semibold text-white/70 mb-2&quot;>No content found</h3>
           <p className=&quot;text-white/50 mb-4&quot;>            Try adjusting your search terms or filters to find what you're looking for.
           </p>

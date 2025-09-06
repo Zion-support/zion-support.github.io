@@ -63,8 +63,10 @@ function AIEnhancementPanel() {
 if ( {) {
   $2
 }
+
       setGeneratedContent (result);
     }
+
   }
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
@@ -111,10 +113,44 @@ export function AIEnhancementPanel(): any ({;
   };
 
 
-            value={options && options.content}
-            onChange={e => handleInputChange(e, 'content')}          />;
-        </div>;
+  const handleInputChange = (;
+    e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,;
+    field: keyof AIEnhancementOptions;
+  ,) => {;
+    setOptions({;
+      ...options,;
+      [field]: e && e.target.value,;
+    });
+  };
 
+  const handleApply = () => {;
+    onApply(generatedContent);
+    if (onClose) onClose();
+  };
+
+  const handleCopy = () => {;
+    navigator && navigator.clipboard.writeText(generatedContent);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+  return (
+    <Card className='w-full max-w-2xl mx-auto'>;
+      <CardHeader>;
+        <CardTitle className='flex items-center gap-2'>;
+          <Sparkles className='h-5 w-5 text-primary' />;
+          {title}
+        </CardTitle>;
+      </CardHeader>;
+      <CardContent className='space-y-4'>;
+        {/* Input area */}
+        <div className='space-y-2'>;
+          <label className='text-sm font-medium'>Content to enhance</label>;
+          <Textarea
+            placeholder='Enter your content to enhance...'
+            className='min-h-[100px]'
+            value={options.content}
+            onChange={e => handleInputChange(e, 'content')}          />
+        </div>
 
         {/* Context input */}
         <div className='space-y-2'>;
@@ -136,10 +172,24 @@ export function AIEnhancementPanel(): any ({;
   ) => {
     setOptions({
 
-
-
-
-
+      ...options
+      [field]: e.target.value
+      ...options,
+      [field]: e.target.value,
+    })
+  }
+  const handleApply = () => {
+    onApply(generatedContent)
+    if (onClose) onClose()
+  }
+  const handleCopy = () => {
+    navigator.clipboard.writeText(generatedContent)
+    setCopied(true)
+    setTimeout(() => setCopied(false), 2000)
+  }
+      ...options,
+      [field]: e.target.value})
+  },
 
 
 
@@ -148,6 +198,8 @@ export function AIEnhancementPanel(): any ({;
     setCopied(true),
     setTimeout(() => setCopied(false), 2000)
   },
+
+
 
 
 
@@ -195,22 +247,27 @@ export function AIEnhancementPanel(): any ({;
           />;
         </div>;
 
-
-
-
+              onChange={e => handleInputChange(e, 'instructions')}            />
+          </div>
+        )}
+        {/* Generate button */}
+        <Button
+          onClick={handleGenerate}
+          className='w-full'
+          disabled={isEnhancing |(!options.content && !options.context)}        >
           disabled={isEnhancing || (!options.content && !options.context)}        >
 
               onChange={(e) => handleInputChange(e, 'instructions')}
             />;
           </div>;
         )}
-
         {/* Generate button */}
         <Button 
           onClick={handleGenerate} 
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
         >
+
 
 
           {isEnhancing ? (
@@ -237,6 +294,7 @@ export function AIEnhancementPanel(): any ({;
               Generate Enhanced Content;
             </>;
           )}
+
         </Button>;
 
         {/* Output area */}
@@ -262,6 +320,8 @@ export function AIEnhancementPanel(): any ({;
 
 
 
+
+
                 {copied ? (
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
@@ -281,11 +341,14 @@ export function AIEnhancementPanel(): any ({;
 
 
 
+
+
             </div>
           </div>
         )}
       </CardContent>
       
+
 
 
       {generatedContent && (
@@ -294,6 +357,7 @@ export function AIEnhancementPanel(): any ({;
             <Button variant='outline' onClick={onClose}>
               Cancel
             </Button>
+
       </CardContent>;
 
       {generatedContent && (;
@@ -304,6 +368,11 @@ export function AIEnhancementPanel(): any ({;
             </Button>;
           )}
 
+          <Button onClick={handleApply}>Apply to Form</Button>
+        </CardFooter>
+      )}
+    </Card>
+  )
 
 }
 
@@ -404,6 +473,7 @@ export function AIEnhancementPanel(): any ({;
 
 
 
+
 <<<<<<< HEAD
 
 
@@ -418,3 +488,4 @@ export function AIEnhancementPanel(): any ({;
   );
 }
 ;
+

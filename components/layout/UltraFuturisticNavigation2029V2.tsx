@@ -7,40 +7,64 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
-
-
-
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import Link from 'next / link';
-import { motion, AnimatePresence } from 'framer-motion';
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  Menu
+  X
+  Search
+  ChevronDown
+  ChevronRight
+  Home
+  Users
+  Settings
+  HelpCircle
+  Mail
+  Phone
+  MapPin
+  BookOpen
+  MessageCircle
+  Star
+  TrendingUp
+  Layers
+  Cpu
+  Database
+  Cloud
+  Lock
+  Shield
+  Globe
+  Factory
+  Car
+  Building
+  GraduationCap
+  Scale
+  Palette
+  Camera
+  Video
+  Music
+  Gamepad2
+  Heart
+  Leaf
+  Sun
+  Moon
+  Wind
+  Droplets
+  Mountain
+  Code
+  Wrench
+  Smartphone
+  BarChart3
+  Eye
+  Globe2
+  Zap
+  Rocket
+  Brain
+  Sparkles
+  ShieldCheck
+  Target
+  Users2
+  Briefcase
+  Lightbulb
+  Award
+  Clock
+  CheckCircle;} from 'lucide-react';import {
 
   Menu,
   X,
@@ -108,6 +132,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 
 
+
+
   Menu, X, Search, ChevronDown, ChevronRight;
 
   Home, Users, Settings, HelpCircle, Mail, Phone, MapPin;
@@ -122,12 +148,70 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const serviceCategories = [
 
-    title: '🚀 2029 Futuristic AI Services'
-    icon: Brain
-    color: 'from-violet-600 via-purple-600 to-indigo-600'
-    description: 'Next-generation AI consciousness and creativity'
+
+
+      {
+
+        name: 'AI Autonomous Business Manager',
+        href: '/services / ai - autonomous - business - manager',
+        description: 'Fully autonomous business operations',
+        price: '$12, 999 / month',
+      },
+    ],
+
+    title: '⚛️ 2029 Quantum & Emerging Tech',
+    icon: Globe,
+    color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
+    description: 'Quantum computing and beyond',
+
+
+      {
+
+        name: 'Quantum Creativity Studio',
+        href: '/services / quantum - creativity - studio',
+        description: 'Quantum - enhanced creativity',
+        price: '$1, 999 / month',
+      },
+    ],
+
+    title: '🏙️ 2029 Enterprise IT Solutions',
+    icon: Cpu,
+    color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
+    description: 'Autonomous enterprise infrastructure',
+
+
+      {
+
+        name: 'Smart Financial Management Platform',
+        href: '/services / smart - financial - management - platform',
+        description: 'AI - powered financial planning',
+        price: '$2, 999 / month',
+      },
+    ],
+
+    title: '🌌 2029 Space & Metaverse Tech',
+    icon: Rocket,
+    color: 'from - teal - 600 via - emerald - 600 to - green - 600',
+    description: 'Space exploration and digital reality',
+
+
+      {
+
+        name: 'Virtual Event Hologram Platform',
+        href: '/services / virtual - event - hologram - platform',
+        description: 'Holographic event experiences',
+        price: '$2, 999 / month',
+      },
+    ],
+
+    title: '🎯 2029 Innovative Micro SAAS',
+    icon: Target,
+    color: 'from-green-600 via-yellow-600 to-orange-600',
+    description: 'Cutting-edge micro solutions',
+
     services: [
       {
+
         name: 'AI Consciousness Evolution Platform'
         href: '/services/ai-consciousness-evolution-platform'
         description: 'Develop genuine AI consciousness'
@@ -335,6 +419,7 @@ const quickLinks = [
   { name: 'News', href: '/news', icon: TrendingUp }
   { name: 'Careers', href: '/careers', icon: GraduationCap }
   { name: 'Support', href: '/support', icon: MessageCircle },];  { name: 'Support', href: '/support', icon: MessageCircle }
+
 ];
 
 export default function UltraFuturisticNavigation2029V2() {
@@ -342,8 +427,9 @@ export default function UltraFuturisticNavigation2029V2() {
 export default function UltraFuturisticNavigation2029V2() {;
 
 
+
+
   const [isOpen, setIsOpen] = useState(false);
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -370,7 +456,9 @@ export default function UltraFuturisticNavigation2029V2() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -548,7 +636,6 @@ function UltraFuturisticNavigation2029V2() {
 
             ))}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Search */}
             <div className='relative'>;
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />;
@@ -561,7 +648,21 @@ function UltraFuturisticNavigation2029V2() {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
 
+                animate={{ opacity: 1, y: 0 }}          <div className="hidden lg:flex items-center space-x-8">
+            {mainNavigation.map((item) => (
+              <motion.div
+                key={item.name}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+          <div className='hidden lg:flex items-center space-x-4'>
 
+
+
+
+            ))}
+          </div>
+
+          {/* Right side - Contact & Search */}
 
 
             {/* Search */}
@@ -572,6 +673,7 @@ function UltraFuturisticNavigation2029V2() {
                 placeholder='Search services...'
                 value={searchQuery}
                 onChange={e => setSearchQuery(e.target.value)}
+
 
 
 
@@ -589,6 +691,7 @@ function UltraFuturisticNavigation2029V2() {
                 className="pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64"
               />
             </div>
+
                 className='pl-10 pr-4 py-2 bg-gray-900/50 border border-gray-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 w-64'              />
 
               />
@@ -599,10 +702,12 @@ function UltraFuturisticNavigation2029V2() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             {/* Contact Button */}
             <motion&& motion.div
@@ -634,7 +739,9 @@ function UltraFuturisticNavigation2029V2() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -659,7 +766,9 @@ function UltraFuturisticNavigation2029V2() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -667,7 +776,6 @@ function UltraFuturisticNavigation2029V2() {
 
           >
             <div className='px-4 py-6 space-y-4'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Mobile Search */}
               <div className='relative'>
                 <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -692,6 +800,12 @@ function UltraFuturisticNavigation2029V2() {
             <div className="px-4 py-6 space-y-4">;
 
 
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20"
+          >
+            <div className="px-4 py-6 space-y-4">
+
+
               {/* Mobile Search */}
               <div className="relative">;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />;
@@ -702,6 +816,10 @@ function UltraFuturisticNavigation2029V2() {
 
 
               {/* Mobile Navigation Links */}
+
+
+              <div className="space-y-2">
+                {mainNavigation.map((item) => (
 
 
                   <Link
@@ -728,6 +846,7 @@ function UltraFuturisticNavigation2029V2() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -735,15 +854,16 @@ function UltraFuturisticNavigation2029V2() {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
               {/* Quick Links */}
-              <div className='pt-4 border-t border-gray-700'>
-                <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
-                  Quick Links
-                </h3>
-                <div className='space-y-2'>
-                  {quickLinks.map(item => (                    <Link
-                      key={item.name}
-                      href={item.href}
+              <div className='pt-4 border-t border-gray-700'>;
+                <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>;
+                  Quick Links;
+                </h3>;
+                <div className='space-y-2'>;
+                  {quickLinks && quickLinks.map(item => (                    <Link
+                      key={item && item.name}
+                      href={item && item.href}
                       onClick={closeMenu}
                       className='flex items-center space-x-3 px-4 py-2 text-gray-400 hover:text-cyan-400 hover:bg-gray-800/50 rounded-lg transition-colors duration-300'
                     >
@@ -770,6 +890,7 @@ function UltraFuturisticNavigation2029V2() {
 
 
 
+
                   ))}
                 </div>
               </div>
@@ -778,6 +899,7 @@ function UltraFuturisticNavigation2029V2() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -797,6 +919,7 @@ function UltraFuturisticNavigation2029V2() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
@@ -806,6 +929,7 @@ function UltraFuturisticNavigation2029V2() {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   </div>
                   <div className="flex items-center space-x-3 text-gray-400">
@@ -968,6 +1092,12 @@ function UltraFuturisticNavigation2029V2() {
 
 
 
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
@@ -977,6 +1107,10 @@ function UltraFuturisticNavigation2029V2() {
         {activeCategory && (;
           <motion&& motion.div
 
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
 
       {/* Service Categories Dropdown */}
@@ -997,7 +1131,9 @@ function UltraFuturisticNavigation2029V2() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -1009,7 +1145,6 @@ function UltraFuturisticNavigation2029V2() {
                 {serviceCategories.map(category => (
                   <div key={category.title} className='space-y-4'>
                     <div className='flex items-center space-x-3'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <div
 
           </motion.div>)}
@@ -1022,6 +1157,7 @@ function UltraFuturisticNavigation2029V2() {
             animate={{ opacity: 1, coordinate_y: 0 }}
             exit={{ opacity: 0, coordinate_y: -20 }}
             transition={{ duration: 0.3 }}
+
 
 
             className='absolute top - full left - 0 right - 0 bg - gray - 900 / 95 backdrop - blur - xl border - t border - cyan - 500 / 20 z - 40';
@@ -1043,6 +1179,7 @@ function UltraFuturisticNavigation2029V2() {
                         </h3>;
                         <p className='text - sm text - gray - 400'>;
                           {category.description}
+
 
             transition={{ duration: 0.3 }}
             className="absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-xl border-t border-cyan-500/20 z-40"
@@ -1125,6 +1262,35 @@ function UltraFuturisticNavigation2029V2() {
                         </Link>;
 
 
+                        <Link
+                          key={service.name}
+                          href={service.href}
+                          className='block p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800/70 transition-colors duration-300 group'
+                        >
+                          <div className='flex justify-between items-start'>
+                            <div>
+                              <h4 className='font-medium text-white group-hover:text-cyan-400 transition-colors duration-300'>
+                                {service.name}
+                              </h4>
+                              <p className='text-sm text-gray-400 mt-1'>
+                                {service.description}
+                              </p>
+                            </div>
+                            <span className='text-sm font-semibold text-cyan-400'>
+                              {service.price}
+                            </span>                          </div>                        >
+                          <div className="flex justify-between items-start">
+                            <div>
+                              <h4 className="font-medium text-white group-hover:text-cyan-400 transition-colors duration-300">
+                                {service.name}
+                              </h4>
+                              <p className="text-sm text-gray-400 mt-1">{service.description}</p>
+                            </div>
+                            <span className="text-sm font-semibold text-cyan-400">{service.price}</span>
+                          </div>
+
+
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1137,6 +1303,7 @@ function UltraFuturisticNavigation2029V2() {
 
                         </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                       ))}
                     </div>;
                   </div>;
@@ -1146,15 +1313,16 @@ function UltraFuturisticNavigation2029V2() {
           </motion && motion.div>;
         )}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-      </AnimatePresence>;
-    </nav>;
+      </AnimatePresence>
+    </nav>
   );
 
+  );
+
+}
+}
+  );
+}
 
                         </p>;
                       </div>;
@@ -1215,8 +1383,10 @@ function UltraFuturisticNavigation2029V2() {
       </AnimatePresence>;
     </nav>);
 }
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

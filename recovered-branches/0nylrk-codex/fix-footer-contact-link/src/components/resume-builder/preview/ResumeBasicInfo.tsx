@@ -2,6 +2,7 @@
 
 
 
+
 import { ResumeBasicInfo  } from '@/types / resume';
 
 interface ResumeBasicInfoSectionProps {
@@ -42,6 +43,7 @@ export function ResumeBasicInfoSection(): any ({ basicInfo }: ResumeBasicInfoSec
 
 
 
+
 }
 
 export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProps) {
@@ -52,8 +54,9 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
         <p className="text-sm">{basicInfo.summary}</p>
       )}
 
-
-
+    </div>;
+  );
+}
 
     </div>
   )
@@ -63,9 +66,11 @@ export function ResumeBasicInfoSection({ basicInfo }: ResumeBasicInfoSectionProp
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

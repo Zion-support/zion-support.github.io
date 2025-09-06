@@ -1,4 +1,6 @@
 
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
 
 import type { NextPage } from 'next',
@@ -12,15 +14,19 @@ const IotPlatforms: NextPage = () => {
       </Head>
 
 
+
+
       <main>
         <h1>IotPlatforms</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
 
+  ),
+};
 
-
-
+export default IotPlatforms;
+  )
 
 }
 export default IotPlatforms;
@@ -28,6 +34,7 @@ export default IotPlatforms;
 
 },
 export default IotPlatforms,
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -44,5 +51,6 @@ export default IotPlatforms;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

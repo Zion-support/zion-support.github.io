@@ -2,6 +2,7 @@
 
 
 
+
 import React from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -34,6 +35,7 @@ export function MobileResumeBuilder() {
   )
 
 
+
 import React from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -56,6 +58,7 @@ export function MobileResumeBuilder() {;
   );
 
 }
+
 
 
 
@@ -86,5 +89,6 @@ function MobileResumeBuilder() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

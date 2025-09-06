@@ -24,8 +24,20 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 
-
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Atom
+  Shield;
 
   Menu,
   X,
@@ -45,12 +57,30 @@ interface UltraFuturisticNavigationProps {
 export default function UltraFuturisticNavigation({
 
   className = '',;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,;
+  Shield,;
+} from 'lucide-react';
+interface UltraFuturisticNavigationProps {
+  className?: string;
+export default function UltraFuturisticNavigation({
+  className = '',;
 
 }: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
 interface UltraFuturisticNavigationProps {;
   className?: string;
+
 
 
 
@@ -154,6 +184,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 
 
 
+
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -218,9 +249,11 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -287,6 +320,7 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
+
                   >;
                     <button className='flex items-center space-x-1 text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50'>;
                       <span>{item && item.name}</span>;
@@ -306,6 +340,7 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     {/* Dropdown Menu */}
                     <AnimatePresence>;
@@ -387,20 +422,26 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                                     <dropdownItem.icon className='w-5 h-5 text-white' />
                                   </div>
 
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+                                  <div>
+                                    <div className='text-white font-medium group-hover/item:text-cyan-300 transition-colors'>
+                                      {dropdownItem.name}
+                                    </div>
+                                    {dropdownItem.name ===
+                                      'View All Services' && (
+                                      <div className='text-xs text-gray-400'>
+                                        Explore our complete portfolio
+                                      </div>                                    )}                                >
+                                  <div className={`w-10 h-10 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300`}>
+                                    <dropdownItem.icon className="w-5 h-5 text-white" />
+                                  </div>
+                                  <div>
+                                    <div className="text-white font-medium group-hover/item:text-cyan-300 transition-colors">
+                                      {dropdownItem.name}
+                                    </div>
+                                    {dropdownItem.name === 'View All Services' && (
+                                      <div className="text-xs text-gray-400">Explore our complete portfolio</div>
+                                    )}
+                                  </div>
 
                                 </Link>
                               ))}
@@ -422,17 +463,19 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
                   >
                     {item.name}
                   </Link>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </div>;
             ))}
+
 
 
 
@@ -457,6 +500,7 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
           {/* Contact Info & CTA */}
 
 
@@ -477,10 +521,13 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             {/* CTA Button */}
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+
 
 
 
@@ -494,10 +541,17 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
               <Link
                 href='/contact'
                 className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30'>;
                 <Rocket className='w-4 h-4 mr-2' />                Get Started              <Link
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link
 
                 href="/contact"
 
@@ -517,7 +571,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
           {/* Mobile Menu Button */}
           <div className="lg:hidden">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <button
               onClick={() => setIsOpen(!isOpen)}
               className='text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50'
@@ -542,7 +595,9 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -590,6 +645,7 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -605,8 +661,10 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                       {activeDropdown === item.name && (
                         <motion.div
 
+
                         />;
                       </button>;
+
                       {activeDropdown === item && item.name && (;
                         <motion&& motion.div
 
@@ -624,19 +682,20 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
                         >
                           {item.dropdownItems?.map(dropdownItem => (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             <Link
-                              key={dropdownItem.name}
-                              href={dropdownItem.href}
+                              key={dropdownItem && dropdownItem.name}
+                              href={dropdownItem && dropdownItem.href}
                               className='flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-300'
                               onClick={() => setIsOpen(false)}
-                            >
+                            >;
                               <div
                                 className={`w-8 h-8 bg-gradient-to-r ${dropdownItem.color} rounded-lg flex items-center justify-center`}
                               >
@@ -667,6 +726,7 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -676,6 +736,7 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                               </span>
                             </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                           ))}
                         </motion && motion.div>;
                       )}
@@ -694,6 +755,7 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
+
                     >
                       {item.name}
                     </Link>
@@ -706,10 +768,10 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
                     >
                       {item.name}
                     </Link>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   )}
                 </div>;
               ))}
@@ -728,7 +790,9 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -748,9 +812,34 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
               <div className='pt-4'>                  <span>{contactInfo.mobile}</span>
 
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>;
+              ))}
+
+              {/* Mobile Contact Info */}
+              <div className='pt-6 border-t border-gray-700/50 space-y-3'>
+                <div className='flex items-center space-x-3 text-gray-300'>
+                  <Phone className='w-4 h-4 text-cyan-400' />
+
 
                   <span>{contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center space-x-3 text-gray-300'>
+                  <Mail className='w-4 h-4 text-purple-400' />
+                  <span>{contactInfo.email}</span>
+                </div>
+                <div className='flex items-center space-x-3 text-gray-300'>
+                  <MapPin className='w-4 h-4 text-green-400' />
+                  <span className='text-sm'>{contactInfo.address}</span>                </div>
+              </div>
+              {/* Mobile CTA */}
+              <div className='pt-4'>                  <span>{contactInfo.mobile}</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Mail className="w-4 h-4 text-purple-400" />
@@ -761,6 +850,8 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
                   <span className="text-sm">{contactInfo.address}</span>
                 </div>
               </div>
+
+
 
 
 
@@ -905,11 +996,26 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
             </div>;
 
 
+              <div className="pt-4">
+                <Link
+                  href="/contact"
+                  className="block w-full text-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Rocket className="w-5 h-5 inline mr-2" />
+                  Get Started
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+
+
         )}
 
 
       </AnimatePresence>
     </nav>
+
 
 
 }
@@ -930,5 +1036,6 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

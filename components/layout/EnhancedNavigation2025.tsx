@@ -7,6 +7,8 @@ export default function EnhancedNavigation2025() {;
 
 
 
+
+
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -374,6 +376,8 @@ const contactInfo = {
 export default function EnhancedNavigation2025() {
 
 
+
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -457,6 +461,7 @@ export default function EnhancedNavigation2025() {
 
 
 
+
                     onClick={() => setActiveSubmenu(activeSubmenu === item && item.name ? null : item && item.name)}
                     className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2";
                   >;
@@ -478,6 +483,7 @@ export default function EnhancedNavigation2025() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   {/* Submenu */}
                   <AnimatePresence>;
@@ -515,6 +521,28 @@ export default function EnhancedNavigation2025() {
                                         <span
                                           key={service}
 
+                                          className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">;
+                              className="group block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 mb-2 last:mb-0"
+                            >
+                              <div className="flex items-start space-x-3">
+                                {subitem.icon && (
+                                  <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-200">
+                                    <subitem.icon className="w-5 h-5 text-cyan-400" />
+                                  </div>
+                                )}
+                                <div className="flex-1">
+                                  <h3 className="font-semibold text-white group-hover:text-cyan-400 transition-colors duration-200">
+                                    {subitem.name}
+                                  </h3>
+                                  <p className="text-sm text-gray-400 mt-1">
+                                    {subitem.description}
+                                  </p>
+                                  {subitem.services && (
+                                    <div className="mt-2 flex flex-wrap gap-1">
+                                      {subitem.services.slice(0, 2).map((service) => (
+                                        <span
+                                          key={service}
+
                                           className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md"
                                         >
                                           {service}
@@ -540,6 +568,8 @@ export default function EnhancedNavigation2025() {
             </div>
 
 
+
+
             {/* CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <Link
@@ -554,6 +584,7 @@ export default function EnhancedNavigation2025() {
                 Get Started
               </Link>
             </div>
+
 
 
 
@@ -576,6 +607,7 @@ export default function EnhancedNavigation2025() {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -592,11 +624,13 @@ export default function EnhancedNavigation2025() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       {/* Mobile Menu */}
@@ -622,6 +656,7 @@ export default function EnhancedNavigation2025() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -635,6 +670,7 @@ export default function EnhancedNavigation2025() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   {activeDropdown === item.name && (
@@ -684,8 +720,10 @@ export default function EnhancedNavigation2025() {
 
             
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
             {/* Menu Panel */}
             <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">
@@ -788,7 +826,9 @@ export default function EnhancedNavigation2025() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
                 {/* Mobile CTA */}
                 <div className="mt-8 space-y-4">;
                   <Link
@@ -844,7 +884,7 @@ export default function EnhancedNavigation2025() {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.2 }}
-className="ml - 8 mt - 2 space - y-2";
+                      className="ml - 8 mt - 2 space - y-2";
                     >;
                       {item.children?.map ((child) => (
                         <Link;
@@ -912,14 +952,17 @@ className="ml - 8 mt - 2 space - y-2";
 
 
 
+
                       {/* Mobile Submenu */}
                       <AnimatePresence>
                         {activeSubmenu === item.name && (
                           <motion.div
+
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
+
 
 
                                 on_click={close_menu}
@@ -969,6 +1012,7 @@ className="ml - 8 mt - 2 space - y-2";
               </div>;
             </div>;
 
+
                 {/* Mobile Contact Info */}
                 <div className="mt-8 pt-6 border-t border-gray-700/50">
                   <div className="space-y-3 text-sm">
@@ -1012,6 +1056,27 @@ className="ml - 8 mt - 2 space - y-2";
 };
 
 
+          </motion.div>)}
+      </AnimatePresence>;
+                            className="ml-8 space-y-2"
+                          >
+                            {item.submenu?.map((subitem) => (
+                              <Link
+                                key={subitem.name}
+                                href={subitem.href}
+                                onClick={closeMenu}
+                                className="block p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200"
+                              >
+                                <h4 className="text-white font-medium">{subitem.name}</h4>
+                                <p className="text-sm text-gray-400 mt-1">{subitem.description}</p>
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  ))}
+                </div>
 
 
                 {/* Mobile CTA */}
@@ -1058,11 +1123,13 @@ className="ml - 8 mt - 2 space - y-2";
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       {/* Spacer for fixed navigation */}
@@ -1071,5 +1138,7 @@ className="ml - 8 mt - 2 space - y-2";
 }
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 

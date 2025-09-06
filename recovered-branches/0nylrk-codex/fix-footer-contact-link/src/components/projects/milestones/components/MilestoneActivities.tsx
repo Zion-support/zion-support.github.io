@@ -1,5 +1,6 @@
 
 
+
 import React from 'react';
 
 interface MilestoneActivitiesProps {
@@ -35,4 +36,5 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

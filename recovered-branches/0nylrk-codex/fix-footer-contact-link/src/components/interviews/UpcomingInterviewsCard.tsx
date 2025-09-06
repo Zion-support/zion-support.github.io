@@ -2,6 +2,7 @@
 
 
 
+
 import React, { useEffect, useState } from "react";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -14,6 +15,7 @@ import {Avatar} from "@/components/ui/avatar";
 export function UpcomingInterviewsCard() {;
 
   const { fetchInterviews } = useInterviews();
+
 
 
 
@@ -71,6 +73,68 @@ function UpcomingInterviewsCard() {
       } catch (error) {
         console.error ("Error loading upcoming interviews:", error);
       } finally {
+        setIsLoading(false)
+      }
+    }
+    loadInterviews()
+  }, []);
+    },
+
+    loadInterviews()
+  }, []),
+
+  if (isLoading) {
+    return (
+      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
+        <CardHeader>
+          <CardTitle className="text-lg flex items-center">
+            <Video className="h-5 w-5 mr-2 text-zion-purple" />
+            Upcoming Interviews
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="space-y-4">
+            {[1, 2].map(i => (
+              <div key={i} className="flex items-center gap-3 animate-pulse">
+                <div className="w-10 h-10 bg-zion-blue-light/30 rounded-full"></div>
+                <div className="flex-1">
+                  <div className="h-4 w-3/4 bg-zion-blue-light/30 rounded mb-2"></div>
+                  <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
+                </div>
+              </div>
+import React, { useEffect, useState } from "react",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { useInterviews } from "@/hooks/useInterviews",;
+import { Interview } from "@/types/interview",;
+import { format, isPast, parseISO } from "date-fns",;
+import { Link } from "react-router-dom",;
+import { Calendar, Clock, Video } from "lucide-react",;
+import { Avatar } from "@/components/ui/avatar",;
+export function UpcomingInterviewsCard() {;
+  const { fetchInterviews } = useInterviews(),;
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  useEffect(() => {;
+    const loadInterviews = async () => {;
+      setIsLoading(true),;
+      try {;
+        const interviews = await fetchInterviews(),;
+        const now = new Date(),;
+
+        // Filter for confirmed interviews in the future;
+        const upcoming = interviews;
+          .filter (interview =>;
+            interview.status === 'confirmed' &&;
+            !is_past (parseISO (interview.scheduled_date)));
+          .sort ((a, b) =>;
+            parseISO (a.scheduled_date).get_time () - parseISO (b.scheduled_date).get_time ());
+          .slice (0, 3), // Take only the next 3 interviews;
+        setUpcomingInterviews (upcoming);
+
+      } catch (error) {
+        console.error ("Error loading upcoming interviews:", error);
+      } finally {
         setIsLoading (false);
       }
 
@@ -122,6 +186,7 @@ function UpcomingInterviewsCard() {
 
 
 
+
             ))}
           </div>
         </CardContent>
@@ -141,6 +206,7 @@ function UpcomingInterviewsCard() {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             ))}
           </div>;
         </CardContent>;
@@ -150,7 +216,6 @@ function UpcomingInterviewsCard() {
 
 
   if (upcomingInterviews.length === 0) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">;
         <CardHeader>;
@@ -228,14 +293,14 @@ function UpcomingInterviewsCard() {
                         Soon
                       </span>
                     )}
-                  </div>
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <Clock className="h-3 w-3 mr-1" />
+                  </div>;
+                  <div className="flex items-center text-sm text-muted-foreground">;
+                    <Clock className="h-3 w-3 mr-1" />;
                     {formattedDate} at {formattedTime}
-                  </div>
-                </div>
-              </div>
-            )
+                  </div>;
+                </div>;
+              </div>;
+            );
           })}
         </div>
         <div className="mt-4 pt-3 border-t border-zion-blue-light/40">

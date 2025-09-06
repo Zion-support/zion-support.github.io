@@ -9,9 +9,12 @@ export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
     },
 
     {} as { [key: string]: EquipmentDetails }
-  )
-export default function EquipmentDetail() {
-  const router = useRouter()
+  );
+export default /**
+ * EquipmentDetail - Function description
+ */
+function EquipmentDetail() {
+  const router = use_router ();
   const { id } = router.query as { id?: string }
   const { isAuthenticated, user } = useAuth()
   const { items, dispatch } = useCart()
@@ -217,6 +220,7 @@ export default function EquipmentDetail() {;
               return;
             }
 
+
                 // It's a ProductListing, convert it;
                 equipment_data = convertProductListingToEquipmentDetails (
                   stored_data as ProductListing);
@@ -385,28 +389,32 @@ export default function EquipmentDetail() {;
                 // Already in EquipmentDetails format;
                 equipmentData = storedData;
               } else {;
+
                 // It's a ProductListing, convert it;
-                equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing);
+                equipment_data = convertProductListingToEquipmentDetails (
+                  stored_data as ProductListing);
               }
-;
-              setEquipment(equipmentData),;
-              setLoading(false),;
+              set_equipment (equipment_data);
+              set_loading (false);
               return;
             }
-          } catch (storageError) {;
-            logErrorToProduction('Error reading from sessionStorage:', { data: storageError });
+          } catch (storage_error) {
+            logErrorToProduction ('Error reading from session_storage:', {
+              data: storage_error,
+            });
           }
         }
-;
         // If not found anywhere, set error;
-        setError('Equipment not found'),;
-        setLoading(false);
-      } catch (error) {;
-        logErrorToProduction('Error loading equipment:', { data: error }),;
-        setError('Failed to load equipment details'),;
-        setLoading(false);
+        set_error ('Equipment not found');
+        set_loading (false);
+
+      } catch (error) {
+        logErrorToProduction ('Error loading equipment:', { data: error });
+        set_error ('Failed to load equipment details');
+        set_loading (false);
       }
     }
+
 
     loadEquipment()
   }, [id]),
@@ -425,12 +433,15 @@ export default function EquipmentDetail() {;
         description: 'Please log in to add items to cart',
         variant: 'destructive',
 
+
       })
       return;
     }
 
 
     setIsAdding(true),
+
+
 
 
 
@@ -456,6 +467,7 @@ export default function EquipmentDetail() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -467,6 +479,7 @@ export default function EquipmentDetail() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -492,6 +505,7 @@ export default function EquipmentDetail() {;
 if ( {) {
   $2
 }
+
     return (
       <>;
         <NextSeo title='Loading Equipment...' />;
@@ -572,6 +586,7 @@ if ( {) {
     return (
       <>;
         <NextSeo title='Loading Equipment...' />;
+
         <div className='min-h-screen bg-zion-blue py-12 px-4'>;
           <div className='container mx-auto'>;
             <div className='text-center py-20'>;
@@ -604,8 +619,14 @@ if ( {) {
               </h1>;
               <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>;
                 {error === 'Equipment not found';
-                  ? "The equipment you're looking for doesn't exist or has been removed.";
-                  : error ||;
+
+                  ? 'Equipment Not Found';
+                  : 'Something went wrong'}
+              </h1>
+              <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>
+                {error === 'Equipment not found'
+                  ? "The equipment you're looking for doesn't exist or has been removed."
+                  : error |
 
                     "We couldn't load the equipment details. Please try again."}
               </p>;
@@ -626,6 +647,42 @@ if ( {) {
                 {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}
               </h1>
 
+              <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>
+                {error === 'Equipment not found'
+                  ? "The equipment you're looking for doesn't exist or has been removed."
+                  : error |
+                    "We couldn't load the equipment details. Please try again."}
+              </p>
+              <div className='space-x-4'>
+                <Button
+                  onClick={() => router && router.back()}
+                  variant='outline';
+                  className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue'                >;
+                  <ArrowLeft className='h-4 w-4 mr-2' />;
+                  Go Back;
+                </Button>;
+                <Button
+                  onClick={() => router.push('/equipment')}
+                  className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >
+              <p className="text-zion-slate-light mb-8 max-w-md mx-auto">
+                {error === 'Equipment not found' 
+                  ? "The equipment you're looking for doesn't exist or has been removed." 
+                  : error || "We couldn't load the equipment details. Please try again."
+                }
+              </p>
+              <div className="space-x-4">
+                <Button 
+                  onClick={() => router.back()} 
+                  variant="outline"
+                  className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue"
+                >
+                  <ArrowLeft className="h-4 w-4 mr-2" />
+                  Go Back
+                </Button>
+                <Button 
+                  onClick={() => router.push('/equipment')}
+                  className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue"
+                >
 
                   Browse Equipment
                 </Button>
@@ -637,11 +694,12 @@ if ( {) {
     )
   }
   return (
-    <>
+    <>;
       <NextSeo
-        title={`${equipment.name} - Zion Marketplace`}
-        description = {equipment.description,}
+        title={`${equipment && equipment.name} - Zion Marketplace`}
+        description = {equipment && equipment.description,}
         openGraph={{
+
 
 
 
@@ -762,11 +820,11 @@ if ( {) {
       <div className="min-h-screen bg-zion-blue py-8 px-4">
         <div className="container mx-auto">
           {/* Breadcrumb */}
+
           <motion.nav
             className='flex mb-8'
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
+            animate={{ opacity: 1, y: 0 }}>;
             <button
               onClick={() => router.push('/equipment')}
               className='text-zion-cyan hover:text-white transition-colors'            >
@@ -779,6 +837,7 @@ if ( {) {
               onClick={() => router.push('/equipment')}
               className="text-zion-cyan hover:text-white transition-colors"
             >
+
 
 
               Equipment
@@ -804,6 +863,7 @@ if ( {) {
 
 
 
+
                       />
                     </button>
                   ))}
@@ -820,11 +880,13 @@ if ( {) {
               className="space-y-6"
 
 
+
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
             >
               {/* Header */}
+
 
                     className='border-zion-slate-light text-zion-slate-light'>;
                     {equipment && equipment.brand}
@@ -842,9 +904,10 @@ if ( {) {
                       {[...Array(5)].map((_, i) => (                        <Star
                           key = {i,}
                           className={`h-4 w-4 ${
-                            i < Math.floor(equipment.rating!)
+                            i < Math && Math.floor(equipment && equipment.rating!)
                               ? 'text-yellow-400 fill-current'
                               : 'text-zion-slate-light'
+
 
               <div className="space-y-2">
                 <div className="flex items-center gap-2 mb-2">
@@ -907,11 +970,13 @@ if ( {) {
 
 
 
+
   equipment.returnPolicy 
 }</p> </div> </div>) 
 }</div> </motion.div> </div> </div> </div> </>) 
 }'"};
 ;
+
 
 
 
@@ -949,9 +1014,12 @@ if ( {) {
           </div>;
         </div>;
       </div>;
+
     </>;
   );
 }
 ;
 }
+
 ;
+

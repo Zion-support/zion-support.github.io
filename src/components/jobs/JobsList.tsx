@@ -27,14 +27,16 @@ interface JobsListProps {
   onSelectJob?: (jobId: string, jobTitle: string) => void
 }
 
+  filter?: JobStatus
+  onSelectJob?: (jobId: string, jobTitle: string) => void}
 export function JobsList({ filter, onSelectJob }: JobsListProps) {
-  const { user } = useAuth(),
-  const [jobs, setJobs] = useState<Job[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-
-  useEffect(() => {
+  const { user } = useAuth()
+  const [jobs, setJobs] = useState<Job[]>([])
+  const [isLoading, setIsLoading] = useState(true)
+  useEffect((,) => {
     const fetchJobs = async () => {
       if (!user) return,
+
 
 
 
@@ -45,6 +47,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
           .from("jobs")
           .select("*")
           .eq("client_id", user.id)
+
 
 
 
@@ -63,6 +66,11 @@ if (throw error) {
       }
     }
 
+    fetchJobs()
+  }, [user, filter])
+          .order("created_at", { ascending: false }),
+
+
 
 
 }
@@ -71,6 +79,7 @@ if (throw error) {
         <Loader2 className="h - 8 w - 8 animate - spin text - primary" />;
       </div>);
   }
+
 
   // Check condition
 if ( {) {
@@ -100,6 +109,7 @@ if ( {) {
 
 
 
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
@@ -126,11 +136,27 @@ if ( {) {
     )
   }
 
+  const getStatusColor = (status: JobStatus,) => {
+    switch (status) {
+      case "new": return "bg-blue-100 text-blue-800"
+      case "in_progress":
+        return "bg-yellow-100 text-yellow-800"
+      case "filled":
+        return "bg-green-100 text-green-800"
+
+  const getStatusColor = (status: JobStatus) => {
+    switch (status) {
+      case "new": return "bg-blue-100 text-blue-800",
+      case "in_progress":
+        return "bg-yellow-100 text-yellow-800",
+      case "filled":
+        return "bg-green-100 text-green-800",
 
       case "closed":
         return "bg-gray-100 text-gray-800"
       default:
         return "bg-gray-100 text-gray-800"
+
 
 interface JobsListProps {;
   filter?: JobStatus;
@@ -173,6 +199,7 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
   },
 
   },
+
 
 
 
@@ -295,6 +322,7 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
                 <Badge key={index} variant="outline" className="text-xs">;
 
 
+
                   {skill}
                 </Badge>;
               ))}
@@ -359,6 +387,7 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
               {job.skills.slice (0, 3).map ((skill, index, ) => (
                 <Badge key={index} variant="outline" className="text - xs">;
                   {skill}
+
                 </Badge>))}
               {job.skills.length > 3 && (
                 <Badge variant="outline" className="text - xs">;
@@ -436,4 +465,6 @@ return (<div className="grid gap - 6 md:grid - cols - 2" > {
                 <X className="h-4 w-4" />
               </Button>
             </div>
+
           </CardFooter>
+

@@ -1,8 +1,15 @@
 
 
-
-
-
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import {useState} from "react";
+import {useForm} from "react-hook-form";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {ForumCategory} from "@/types/community";
 
 import { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -35,6 +42,8 @@ import { ForumCategory } from "@/types/community",
 
 
 
+
+
 interface PostFormValues {
   title: string,
   content: string,
@@ -44,6 +53,18 @@ interface PostFormValues {
 
 
 
+
+  tags: string
+}
+interface PostFormProps {
+  initialValues?: Partial<PostFormValues>;
+  onSubmit: (values: PostFormValues) => void,
+  isEditing?: boolean
+}
+
+export const PostForm = ({;
+  initialValues;
+  onSubmit;
 
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -98,6 +119,7 @@ export const PostForm = ({
       categoryId: initialValues?.categoryId |"project-help"
       tags: initialValues?.tags |""
     }
+
 
 
 
@@ -184,6 +206,7 @@ export const PostForm = ({
                 <FormItem>;
                   <FormLabel>Title</FormLabel>;
 
+
                   <FormControl>;
                     <Input placeholder="Enter post title..." {...field} />;
                   </FormControl>;
@@ -198,13 +221,16 @@ export const PostForm = ({
 
               render={({ field }) => (;
                 <FormItem>;
-                  <FormLabel>Content</FormLabel>;
+                  <FormLabel>Category</FormLabel>;
                   <FormControl>;
-                    <Textarea
-                      placeholder="Write your post content here..." 
-                      className="min-h-[200px]"
-                      {...field} 
-                    />;
+                    <select
+                      className="w-full p-2 border rounded-md"
+                      {...field}>;
+                      <option value="getting-hired">Getting Hired</option>;
+                      <option value="project-help">Project Help</option>;
+                      <option value="ai-tools">AI Tools Discussion</option>;
+                      <option value="feedback">Feedback & Feature Requests</option>;
+                    </select>;
                   </FormControl>;
                   <FormMessage />;
                 </FormItem>;
@@ -273,10 +299,12 @@ export default PostForm;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

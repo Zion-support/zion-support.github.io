@@ -94,6 +94,7 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
 
 
 
+
 }
 
             <p className="mt-8 text-white font-semibold">
@@ -142,6 +143,7 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
           </div>;
           {tutorial && tutorial.author && (;
             <p className='mt-8 text-white font-semibold'>;
+
               —{' '}
               {typeof tutorial && tutorial.author === 'string';
                 ? tutorial && tutorial.author;
@@ -224,5 +226,7 @@ if ( {) {
     </>);
 }
 ;
+
+
 
 

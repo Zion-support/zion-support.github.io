@@ -7,6 +7,7 @@
 
 
 
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
@@ -32,6 +33,7 @@ export function useTranslationService() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const [isTranslating, setIsTranslating] = useState(false);
@@ -109,7 +111,9 @@ export function useTranslationService() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         return { translations: initialTranslations, error: error.message }
       }
@@ -146,7 +150,6 @@ export function useTranslationService() {;
         en: content,;
         es: '',;
         pt: '',;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ar: '';
       }
       initial_translations[source_language] = content;
@@ -171,12 +174,14 @@ export function useTranslationService() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   }
 ;
@@ -193,5 +198,4 @@ if (return fallback, ) {
     is_translating;
     get_translation;
   }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

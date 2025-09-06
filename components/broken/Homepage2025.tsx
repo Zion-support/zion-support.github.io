@@ -3,6 +3,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 };
@@ -18,6 +19,7 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 ...emergingTechServicesEnhanced2025;
 ...advancedAIAutomationServices;
 ...quantumCybersecurityServices ];
+
 
 <> {;
   /* Navigation */ ;
@@ -86,8 +88,21 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }> <UltraFuturisticServiceCard2026 /> </motion.div>) )
 }</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Cutting-Edge AI Services </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Revolutionary AI solutions that transform businesses and create unprecedented opportunities. </p> </motion.div> <motion.div key= {
   service.id
+  duration: 0 && 0.8, delay: index * 0 && 0.1 
+
+}viewport= {
+  {
+  once: true 
+
+}> <UltraFuturisticServiceCard2026 /> </motion && motion.div>) ) ;
+}</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent" > Cutting-Edge AI Services </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Revolutionary AI solutions that transform businesses and create unprecedented opportunities. </p> </motion && motion.div> <motion&& motion.div key= {
+  service && service.id 
 }initial= {
   {
+
+
+
+
 
 
 
@@ -115,7 +130,9 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   {
 
 
+
   opacity: 0, y: 50
+
 
 
 }whileInView= {
@@ -128,6 +145,8 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   duration: 0 && 0.8, delay: index * 0 && 0.1 
 
 
+
+
 }viewport= {
   {
   once: true 
@@ -135,6 +154,9 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 
 
 
+}> <UltraFuturisticServiceCard2026 /> </motion.div>) ) 
+}</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent" > Quantum Cybersecurity </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Unbreakable security powered by quantum computing and advanced AI algorithms. </p> </motion.div> <motion.div key= {
+  service.id
 
 }initial= {
   {
@@ -221,21 +243,22 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   title: 'Innovation First', description: 'We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.', icon: '🚀'
 }
 {
-  title: 'Proven Results', description: 'Our solutions have helped businesses achieve 10x improvements in efficiency, cost savings, and competitive advantage.', icon: '📈'
+  title: 'Proven Results', description: 'Our solutions have helped businesses achieve 10x improvements in efficiency, cost savings, and competitive advantage.', icon: ''
 }
 {
-  title: 'Future-Proof Technology', description: 'Built with quantum computing, AI consciousness, and space technology - ensuring your business stays ahead of the curve.', icon: '🔮'
+  title: 'Future-Proof Technology', description: 'Built with quantum computing, AI consciousness, and space technology - ensuring your business stays ahead of the curve.', icon: ''
 }
 {
-  title: 'Expert Team', description: 'World-class engineers, scientists, and business strategists with decades of experience in emerging technologies.', icon: '👥'
+  title: 'Expert Team', description: 'World-class engineers, scientists, and business strategists with decades of experience in emerging technologies.', icon: ''
 }
 {
-  title: '24/7 Support', description: 'Round-the-clock support and monitoring to ensure your systems run smoothly and efficiently.', icon: '🛡️'
+  title: '24/7 Support', description: 'Round-the-clock support and monitoring to ensure your systems run smoothly and efficiently.', icon: ''
 }
 {
-  title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊'
+  title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: ''
 }].map ( (feature, index) => (<motion.div </p> </motion.div>) )
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>)
+
 
 
 
@@ -283,5 +306,6 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

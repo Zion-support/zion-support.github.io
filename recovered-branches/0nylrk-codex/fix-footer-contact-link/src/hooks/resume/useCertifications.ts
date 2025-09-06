@@ -1,7 +1,11 @@
 
 
-
-
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Certification  } from '@/types/resume';
+import { useAuth  } from '@/hooks/useAuth';
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+export function useCertifications() {
 
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -9,6 +13,8 @@ import {Certification} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useCertifications() {;
+
+
 
 
 
@@ -25,11 +31,9 @@ export function useCertifications() {;
       setError('You must be logged in to add certifications')
       return false
 
-
-
-
-
-
+    }
+    setIsLoading(true);
+    setError(null);
 
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -50,7 +54,9 @@ export function useCertifications() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -93,9 +99,15 @@ export function useCertifications() {;
     } finally {
       setIsLoading(false)
 
-
-
-
+    }
+  }
+  const updateCertification = async (certId: string, cert: Certification): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to update certifications')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
 
 ;
     setIsLoading(true),;
@@ -130,7 +142,9 @@ export function useCertifications() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -173,9 +187,15 @@ export function useCertifications() {;
     } finally {
       setIsLoading(false)
 
-
-
-
+    }
+  }
+  const deleteCertification = async (certId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to delete certifications')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
 
 ;
     setIsLoading(true),;
@@ -210,7 +230,9 @@ export function useCertifications() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -249,16 +271,28 @@ export function useCertifications() {;
     updateCertification;
 
 
+    deleteCertification
+  }
+}
+;
+  const add_certification = async (resume_id: string, cert: Certification): Promise < boolean> => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_error ('You must be logged in to add certifications'),
+      return false;
+    }
 
-
-
-
-
-
-
+  },;
+  return {;
+    isLoading,;
+    error,;
+    addCertification;
+    updateCertification;
+    deleteCertification;
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
 

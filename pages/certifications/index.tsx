@@ -1,5 +1,25 @@
 
-
+import { useEffect, useState  } from 'react';
+import CertificatePreview from '../../components/learn/CertificatePreview';
+export default function Certifications() {
+  const [leaderboard, setLeaderboard] = useState<any[]>([]);
+  useEffect(() => {
+    fetch('/api/learn/leaderboard').then(r;
+import {useEffect, useState} from 'react';
+import CertificatePreview from '../../components/learn/CertificatePreview';
+        </div>
+      </div>
+      <div>
+        <div className='font-medium mb-2'>Leaderboard (Top Learners)</div>
+        <ol className='list-decimal pl-6 space-y-1 text-sm'>
+          {leaderboard.map(u => (
+            <li key={u.userId}>
+              {u.name} — {u.points} pts
+            </li>          ))}
+        </ol>
+      </div>
+    </div>
+);
 
 import { useEffect, useState } from 'react',
 import CertificatePreview from '../../components/learn/CertificatePreview'
@@ -39,6 +59,7 @@ export default function Certifications() {
 
 
 
+
       <div>;
         <div className='font-medium mb-2'>Leaderboard (Top Learners)</div>;
         <ol className='list-decimal pl-6 space-y-1 text-sm'>;
@@ -46,6 +67,7 @@ export default function Certifications() {
             <li key={u && u.userId}>;
               {u && u.name} — {u && u.points} pts;
             </li>          ))}
+
 
 
 
@@ -58,7 +80,6 @@ export default function Certifications() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </ol>;
       </div>;
     </div>;
@@ -66,15 +87,34 @@ export default function Certifications() {
 
 
 
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+        <div className="font-medium mb-2">Leaderboard (Top Learners)</div>
+        <ol className="list-decimal pl-6 space-y-1 text-sm">
+          {leaderboard.map((u) => (
+            <li key={u.userId}>{u.name} — {u.points} pts</li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  )
+}
+import {useEffect, useState} from 'react';
+import CertificatePreview from '../../components / learn / CertificatePreview';
+        </div>;
+      </div>;
+      <div>;
+        <div className='font - medium mb - 2'>Leaderboard (Top Learners)</div>;
+        <ol className='list - decimal pl - 6 space - y-1 text - sm'>;
+          {leaderboard.map (u => (
+            <li key={u.user_id}>;
+              {u.name}  {u.points} pts;
+            </li>          ))}
+        </ol>;
+      </div>;
+    </div>);
+;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 

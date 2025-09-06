@@ -3,6 +3,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import {useState} from 'react';
@@ -14,6 +15,7 @@ export interface TalentProfileData {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   name: string;
   title: string;
   bio: string;
@@ -22,6 +24,7 @@ export interface TalentProfileData {
   location?: string;
 
 }
+
 
 
 export interface CategorizedSkills {
@@ -42,19 +45,34 @@ export interface CategorizedSkills {
 
 
 
+
+  const [error, setError] = useState<string | null>(null);
+  const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
+    setIsGenerating(true);
+    setError(null)
+
+
 export interface EnhancedProfile {
   summary: string,
   categorizedSkills: CategorizedSkills
 }
 
-export function useTalentProfileEnhancer() {;
+export interface EnhancedProfile {
+
+  summary: string
+
+  categorizedSkills: CategorizedSkills
+}
+export function useTalentProfileEnhancer() {
   const [isGenerating, setIsGenerating] = useState(false);
+
   const [error, setError] = useState<string | null>(null);
-  
   const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {
     setIsGenerating(true);
     setError(null),
     
+
+
 
 
 
@@ -63,6 +81,7 @@ export function useTalentProfileEnhancer() {;
       const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {
         body: { talentData: profileData }
       });
+
 
 
 
@@ -131,6 +150,7 @@ export function useTalentProfileEnhancer() {;
       return data as EnhancedProfile
     } catch (err: any) {
 
+
       setError(err && err.message || 'Failed to enhance profile'),
 
       return null
@@ -138,13 +158,9 @@ export function useTalentProfileEnhancer() {;
       setIsGenerating(false)
     }
 
-
-
-
-
-
-
-
+  }
+  };
+  
 
   return {
     enhanceProfile;
@@ -164,6 +180,7 @@ export function useTalentProfileEnhancer() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -172,6 +189,7 @@ export function useTalentProfileEnhancer() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   }

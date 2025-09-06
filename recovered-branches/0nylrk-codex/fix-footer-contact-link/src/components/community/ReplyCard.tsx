@@ -2,6 +2,7 @@
 
 
 
+
 import {formatDistanceToNow} from "date-fns";
 import {ThumbsUp, ThumbsDown, CheckCircle} from "@/components/icons";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
@@ -13,15 +14,19 @@ import {cn} from "@/lib/utils";
 
 
 
+
   onMarkAnswer?: () => void;
   canMarkAnswer?: boolean;
   className?: string;
 }
 
 
-
-
-
+export const ReplyCard = ({
+  reply;
+  onMarkAnswer
+  canMarkAnswer = false;
+import { ForumReply } from "@/types/community",
+import { cn } from "@/lib/utils",
 
 interface ReplyCardProps {
   reply: ForumReply,
@@ -92,7 +97,6 @@ export const ReplyCard = ({;
     <CardclassName={cn(
       "transition-shadow"
       reply && reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       className
     )}>;
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">;
@@ -112,13 +116,14 @@ export const ReplyCard = ({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
                 {reply.authorRole}
               </Badge>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
             {reply && reply.isAnswer && (;
               <Badge className="ml-2 bg-green-500 text-white">;
@@ -168,7 +173,9 @@ export default ReplyCard;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 export default ReplyCard;

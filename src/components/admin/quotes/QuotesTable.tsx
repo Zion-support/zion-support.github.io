@@ -6,11 +6,14 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 
 
+
+
   quotes
   isArchived = false
   isLoading
   updateStatus
   toggleArchive
+
 
 
   quotes,
@@ -59,6 +62,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
             quotes.map(quote => (
               <TableRow
                 key = {quote.id,}
+
               <TableRow 
                 key={quote.id}
                 className="border-zion-blue-light hover:bg-zion-blue"
@@ -180,6 +184,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                     
 
 
+
                     {isArchived ? (
                       <>
                         <Button
@@ -192,6 +197,7 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                         </Button>
                         <Button
                           variant="ghost"
+
 
 
   quotes;
@@ -263,7 +269,11 @@ import {formatDate} from "@/utils/dateUtils";
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
 
-
+                              }
+                            }}
+                              } }}
+                              }
+                            }}
 
                             className="text-red-500"
                           >
@@ -448,20 +458,23 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
 
-
-
-
+        </TableBody>
+      </Table>
+    </div>
+  )
+}
+'"
 
   );
 };
 '";
-
 
         </TableBody>;
       </Table>;
     </div>;
   );
 };
+
 
 
 
@@ -569,3 +582,4 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
     </div>);
 }
 '";
+

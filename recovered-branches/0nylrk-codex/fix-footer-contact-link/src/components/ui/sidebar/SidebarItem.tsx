@@ -1,10 +1,16 @@
 
 
+import React from "react";
+import { cn } from "@/lib/utils";
+import React from "react",
+import { cn } from "@/lib/utils",
 
 import {cn} from "@/lib/utils";
 
 import React from "react",
 import { cn } from "@/lib/utils",
+
+
 
 
 interface SidebarItemProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -17,6 +23,10 @@ export function SidebarItem({ className, children, active, ...props }: SidebarIt
     <div
 
 
+      className={cn(;
+        "flex items-center px-3 py-2 text-sm font-medium rounded-md";
+        active ? "bg-primary/10 text-primary" : "text-muted-foreground hover: bg-accent hover:text-accent-foreground",
+        className
 
       className={cn(
         "flex items-center px-3 py-2 text-sm font-medium rounded-md";
@@ -41,6 +51,7 @@ export function SidebarItem({ className, children, active, ...props }: SidebarIt
         "flex items-center px-3 py-2 text-sm font-medium rounded-md";
         active ? "bg-primary/10 text-primary" : "text-muted-foreground hover:bg-accent hover:text-accent-foreground";
         className;
+
 
 
 
@@ -74,6 +85,7 @@ export function SidebarItem(): any ({ className, children, active, ...props }: S
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
       )}
       {...props}>;
       {children}
@@ -82,4 +94,27 @@ export function SidebarItem(): any ({ className, children, active, ...props }: S
   );
 }
 
+
+import React from './react';
+import { cn } from '@/lib / utils';
+interface SidebarItemProps extends React.HTMLAttributes < HTMLDivElement> {
+  class_name?: string;
+  children?: React.ReactNode;
+  active?: boolean;
+}
+export /**
+ * SidebarItem - Function description
+ */
+function SidebarItem() {
+  return (
+    <div;
+      className={cn (
+        "flex items - center px - 3 py - 2 text - sm font - medium rounded - md";
+        active ? "bg - primary / 10 text - primary" : "text - muted - foreground hover: bg - accent hover:text - accent - foreground",
+        class_name)}
+      {...props}
+    >;
+      {children}
+    </div>);
+}
 

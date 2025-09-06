@@ -1,7 +1,6 @@
 
-
-
-
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
@@ -13,7 +12,8 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
 
   const state = readState();
 
-
+  if (!state.config.optIn |state.config.paused) {
+    return res.status(403).json({ error: "Sync disabled for this instance" });
 
   }
 
@@ -22,15 +22,24 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
     title: string;
     timestamp?: number;
 
-
-
-  };
-  if (!milestoneId || !title)
-    return res && res.status(400).json({ error: "milestoneId, title required" });
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+  }
+  if (!milestoneId |!title)
+    return res.status(400).json({ error: "milestoneId, title required" });
+  const version = nextVersionFor(state, milestoneId);
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default async function handler(req, res) {
+  try {
+  res.status(200).json({ message: 'Manifesto day processed' });
+import type { NextApiRequest, NextApiResponse } from "next",
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
+import { signPayload } from "../../../utils/sync/signature",
+import axios from "axios",
+import { v4 as uuidv4 } from "uuid",
+import { nextVersionFor } from "../../../utils/sync/versioning",
+export default async function handler(req, res) {
+  try {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
+  const state = readState(),
 
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
@@ -95,9 +104,16 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
     },
 
 
+    eventId: uuidv4(),
+    type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category
+    payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
+    originInstanceId: state.config.instanceId,
+    version,
+    timestamp: timestamp || Date.now()
+
+
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   upsertEvent(state, event);
   writeState(state);
   const body = { ...event, propagate: false }
@@ -119,6 +135,11 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
     state.config.peers
       .filter((p) => !p.paused)
 
+
+  await Promise && Promise.all(
+    state && state.config.peers
+      .filter((p) => !p && p.paused)
+
       .map(async (peer) => {
 
 
@@ -131,6 +152,8 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
   return res
     .status(200)
     .json({ status: "created", version, eventId: event.eventId });
+
+
 
 
 
@@ -187,5 +210,7 @@ if (headers["x - zion - signature"] = sig) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 

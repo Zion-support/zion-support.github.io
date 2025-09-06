@@ -9,7 +9,9 @@ const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -29,13 +31,10 @@ const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
 interface QuoteStatusBadgeProps {
   status: QuoteStatus
 
-
-
-
+}
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
 
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
-
-
 
   const config = statusConfig[status];
 
@@ -45,6 +44,8 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
 
     </Badge>
   )
+
+
 
 import { Badge } from "@/components/ui/badge",;
 import { QuoteStatus } from "@/types/quotes",;
@@ -66,6 +67,8 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
       {config.label}
     </Badge>;
   );
+
+
 
 };
 

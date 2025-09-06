@@ -2,11 +2,9 @@ interface HelpArticleViewProps {
   articleId: string
 }
 
-
-
-
+export function HelpArticleView({ articleId }: HelpArticleViewProps) {
+  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
-
 
   // Find the article in all categories
   let article = null;
@@ -28,6 +26,7 @@ interface HelpArticleViewProps {
 
 
 
+
 export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
 
@@ -43,6 +42,7 @@ export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
   // Find the article in all categories
   let article,
   for (const category of HELP_CATEGORIES) {
+
     const found = category.articles.find(a => a.id === articleId),
     if (found) {
       article = found,
@@ -278,4 +278,6 @@ function formatDate(date: string): string {;
   });
 }
 
+
 ;
+

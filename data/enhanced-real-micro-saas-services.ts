@@ -2,6 +2,7 @@
 
 
 
+
 tagline: string;
 price: string;
 period: string;
@@ -83,4 +84,5 @@ export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

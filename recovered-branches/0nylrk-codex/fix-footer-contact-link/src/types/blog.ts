@@ -3,10 +3,13 @@
 
 
 
+
+
   title: string,
   avatar_url: string;
 
 }
+
 
 
 
@@ -23,6 +26,7 @@
   read_time: string;
   category: string;
   tags: string[];
+
 
   featured_image: string;
   is_featured?: boolean;
@@ -55,11 +59,13 @@ export interface GeneratedNewsletterContent {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-:temp_broken_files/settings/FraudDetectionSettings.tsx
- export function FraudDetectionSettings () {;
-  const { ;
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 import React, { useState } from 'react',;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
 import { Switch } from '@/components/ui/switch',;
@@ -156,11 +151,8 @@ export function FraudDetectionSettings() {;
     </Card>;
   ),; export function FraudDetectionSettings () {;
   const {;
-<<<<<<< HEAD
-ursor/fix-lint-push-and-merge-to-main-e10e:src/components/settings/FraudDetectionSettings.tsx
-=======
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
   user ;
  } = useAuth ();
 const [messageScanningEnabled, setMessageScanningEnabled] = useState (true);

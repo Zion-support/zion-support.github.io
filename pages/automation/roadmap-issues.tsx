@@ -1,14 +1,13 @@
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/roadmap-issues.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/roadmap-issues.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/roadmap-issues.json',
 
 export default function RoadmapIssuesPage() {
 
@@ -23,17 +22,24 @@ export default function RoadmapIssuesPage() {
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
-              <a href={it.url} target="_blank" rel="noreferrer" className="font-medium underline">#{it.number} — {it.title}</a>
+              <a href={it.url} target="_blank" rel="noreferrer" className="font-medium underline">#{it.number}  {it.title}</a>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels |[]).join(', ')}</div>
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
 
-
-
-
-
+              <a href={it.url} target="_blank" rel="noreferrer" className="font-medium underline">#{it.number} — {it.title}</a>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels || []).join(', ')}</div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+  );
+};
+              <a href={it.url} target="_blank" rel="noreferrer" className="font-medium underline">#{it.number} — {it.title}</Link>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels || []).join(', ')}</div>
 
             </li>
           ))  } catch (error) {
@@ -51,11 +57,13 @@ export default function RoadmapIssuesPage() {
   }
 
 
+
 }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

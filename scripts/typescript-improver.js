@@ -134,7 +134,7 @@ function improveTypeScriptFile(content, filePath) {
     /useEffect\s*\(\s*\(\s*\)\s*=>\s*{[^}]*},\s*\[\s*\]\s*\)/g;
   const useEffectMatches = improved.match(useEffectRegex);
   if (useEffectMatches) {
-    console.log(`⚠️  Found useEffect with empty dependencies in ${filePath}`)}
+    console.log(`  Found useEffect with empty dependencies in ${filePath}`)}
   // Add proper typing for event handlers
   const eventHandlerRegex =
     /const\s+(\w+)\s*=\s*\(\s*event\s*:\s*any\s*\)\s*=>/g;
@@ -161,7 +161,7 @@ function processFile(filePath) {
       fs.writeFileSync(filePath, result.content, 'utf8');
       totalImprovements += result.changes;
       console.log(
-        `✅ Improved ${filePath} (${result.changes} type improvements)`
+        ` Improved ${filePath} (${result.changes} type improvements)`
       )}
     filesProcessed++} catch (error) {
     console.error(`❌ Error processing ${filePath}:`, error.message)}
@@ -171,6 +171,8 @@ function processFile(filePath) {
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+
+
 
 
 
@@ -194,11 +196,11 @@ function generateTypeScriptReport() {
     JSON.stringify(report, null, 2)
   );
   console.log(
-    '📊 TypeScript improvement report "generated": typescript-improvement-report.json'
+    ' TypeScript improvement report "generated": typescript-improvement-report.json'
   )}
 // Main improvement function
 async function main() {
-  console.log('🔧 Starting TypeScript improvements...\n');
+  console.log(' Starting TypeScript improvements...\n');
   const patterns = ['src/**/*.{ts,tsx}',
     'pages/**/*.{ts,tsx}',
     'components/**/*.{ts,tsx}',
@@ -230,10 +232,10 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
   }
   generateTypeScriptReport();
-  console.log("\n📊 TypeScript Improvement "Summary": ");
+  console.log("\n TypeScript Improvement "Summary": ");
   console.log(`   Files processed: ${filesProcessed}`);
   console.log(`   Total type "improvements": ${totalImprovements}`);
-  console.log("\n✨ TypeScript improvements completed!")}
+  console.log("\n TypeScript improvements completed!")}
 // Run the script
 main().catch(console.error);
 

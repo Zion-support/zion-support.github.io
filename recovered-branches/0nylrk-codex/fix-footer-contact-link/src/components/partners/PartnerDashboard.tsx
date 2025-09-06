@@ -1,15 +1,35 @@
 
 
-
-
+import {
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  BarChart
+  DollarSign
+  LineChart
+  TrendingUp
+  Users
+} from "lucide-react";
+export function PartnerDashboard() {
+  // Placeholder data - would come from API in real implementation
+  const stats = {
+    totalReferrals: 42
+    pendingReferrals: 8
+    completedReferrals: 34
+    conversionRate: 18.5
+    totalRevenue: 850.0
+    pendingRevenue: 200.0
+  }
 
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
-
-
-
-
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -22,7 +42,9 @@ import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export function PartnerDashboard() {
@@ -34,6 +56,11 @@ export function PartnerDashboard() {
     conversionRate: 18.5,
     totalRevenue: 850.00,
 
+    pendingRevenue: 200.00;
+  };
+    pendingRevenue: 200.00
+  },
+  
 
   return (
     <div className="space-y-6">
@@ -123,6 +150,10 @@ export function PartnerDashboard() {
       </Card>
     </div>
 
+  );
+}
+  )
+
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",;
@@ -137,6 +168,8 @@ export function PartnerDashboard() {;
     pendingRevenue: 200.00;
   };
   return (;
+
+
 
     <div className="space-y-6">;
       {/* Stats Overview */}
@@ -211,7 +244,35 @@ export function PartnerDashboard() {;
             <p className="text-zion-slate-light mb-4">No referrals yet</p>;
             <p className="text-xs text-zion-slate-light">;
 
-}
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { Button  } from '@/components / ui / button';
+import {
+  BarChart,
+  DollarSign,
+  LineChart,
+  TrendingUp,
+  Users,
+} from './lucide-react';
+export /**
+ * PartnerDashboard - Function description
+ */
+function PartnerDashboard() {
+  // Placeholder data - would come from API in real implementation;
+  const stats = {
+    total_referrals: 42,
+    pending_referrals: 8,
+    completed_referrals: 34,
+    conversion_rate: 18.5,
+    total_revenue: 850.0,
+    pending_revenue: 200.0,
+  }
+
 ;
 
   return (
@@ -302,10 +363,8 @@ export function PartnerDashboard() {;
         </CardContent>;
       </Card>;
 
-
-
-  )
-
+    </div>;
+  );
 
 }
 

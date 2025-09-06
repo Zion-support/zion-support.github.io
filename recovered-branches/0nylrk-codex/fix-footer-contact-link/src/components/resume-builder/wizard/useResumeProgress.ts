@@ -4,6 +4,7 @@
 
 
 
+
 import {useState, useEffect} from 'react';
 import {Resume} from '@/types/resume';
 export const useResumeProgress = (resume: Resume | null) => {;
@@ -11,6 +12,7 @@ export const useResumeProgress = (resume: Resume | null) => {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const [progress, setProgress] = useState(0);
@@ -26,10 +28,12 @@ export const useResumeProgress = (resume: Resume | null) => {;
     // Work experience (1 point if at least one entry)
 
 
+
     if (resume.work_experience && resume.work_experience.length > 0) {
 
 
       completed += 1
+
 
 
 
@@ -62,12 +66,14 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
     }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 ;
     // Education (1 point if at least one entry);
 
@@ -84,19 +90,23 @@ if ( {) {
       completed += 1;
     }
 
+    // Certifications (1 point if at least one entry)
+    if (resume.certifications && resume.certifications.length > 0) {
+      completed += 1;
+    }
+    
     const progressPercentage = (completed / 5) * 100;
     setProgress(progressPercentage);
   }, [resume]);
-  return progress;
-}
 
+  return progress
 
 ;
     const progressPercentage = (completed / 5) * 100,;
     setProgress(progressPercentage);
   }, [resume]);
-;
   return progress;
+
 
 
 
@@ -140,6 +150,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 };

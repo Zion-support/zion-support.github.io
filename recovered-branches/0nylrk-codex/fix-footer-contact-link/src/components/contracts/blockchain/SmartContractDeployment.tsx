@@ -1,19 +1,27 @@
 
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import React, { useState } from "react";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
+import {Label} from "@/components/ui/label";
+import {Input} from "@/components/ui/input";
+import {Switch} from "@/components/ui/switch";
+import {BlockchainNetwork, DeploymentOptions} from "@/types/smart-contracts";
+import {Loader2, ShieldCheck, Download} from "lucide-react";
+import {toast} from "sonner";
+import React, { useState } from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
+import { Label } from "@/components/ui/label",
+import { Input } from "@/components/ui/input",
+import { Switch } from "@/components/ui/switch",
+import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",
+import { Loader2, ShieldCheck, Download } from "lucide-react";
+import { toast } from "sonner";
+import { Loader2, ShieldCheck, Download } from "lucide-react",
+import { toast } from "sonner",
 
 interface SmartContractDeploymentProps {
 
@@ -30,6 +38,7 @@ export function SmartContractDeployment({
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -39,6 +48,7 @@ export function SmartContractDeployment({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   isDeploying
@@ -121,11 +131,16 @@ if ( {) {
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
 
+            <Switch
+              id="deploy-blockchain"
 
               checked={deploymentOptions.deployToChain}
               onCheckedChange={(checked) => setDeploymentOptions({
                 ...deploymentOptions;
                 deployToChain: checked
+
+            <Switch 
+              id="deploy-blockchain"
 
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -194,6 +209,32 @@ export function SmartContractDeployment(): any ({ ;
         <CardTitle className="flex items-center gap-2">;
           <ShieldCheck className="h-5 w-5 text-primary" />;
 
+;
+  const handleDownloadSolidity = () =>: any {
+    // Create a blob from the Solidity code;
+    const blob = new Blob ([solidity_code], { type: 'text / plain' }),
+    const url = URL.createObjectURL (blob);
+;
+    // Create a temporary anchor to trigger download;
+    const array = document.create_element ('a');
+    a.href = url;
+    a.download = 'ZionContract.sol';
+    document.body.append_child (a);
+    a.click ();
+;
+    // Clean up;
+    URL.revokeObjectURL (url);
+    document.body.remove_child (a);
+;
+    toast.success ("Solidity contract downloaded");
+  }
+;
+  return (
+    <Card className="w - full">;
+      <CardHeader>;
+        <CardTitle className="flex items - center gap - 2">;
+          <ShieldCheck className="h - 5 w - 5 text - primary" />;
+
 
           Smart Contract Deployment;
         </CardTitle>;
@@ -213,6 +254,8 @@ export function SmartContractDeployment(): any ({ ;
                 deployToChain: checked;
 
 
+
+
               })}
             />
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
@@ -225,6 +268,7 @@ export function SmartContractDeployment(): any ({ ;
                 <RadioGroup
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
                   defaultValue={deploymentOptions && deploymentOptions.network}
@@ -235,6 +279,7 @@ export function SmartContractDeployment(): any ({ ;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   })}
@@ -269,12 +314,14 @@ export function SmartContractDeployment(): any ({ ;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   })}
                 />
@@ -294,12 +341,14 @@ export function SmartContractDeployment(): any ({ ;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   })}
                 />;
@@ -331,10 +380,18 @@ export function SmartContractDeployment(): any ({ ;
             'Deploy Contract'
           )}
 
+        </Button>
+      </CardFooter>
+    </Card>
+  )
+}
+
         </Button>;
       </CardFooter>;
     </Card>;
   );
+
+
 
 }
 ;

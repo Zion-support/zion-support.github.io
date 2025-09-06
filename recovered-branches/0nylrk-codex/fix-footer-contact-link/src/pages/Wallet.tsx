@@ -1,5 +1,15 @@
 
 
+import { useWallet  } from '@/hooks/useWallet';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription  } from '@/components/ui/card';
+import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
+import { BadgeDollarSign } from 'lucide-react';
+export default function WalletPage() {
+import {useWallet} from '@/hooks/useWallet';
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/components/ui/card';
+import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
+import {BadgeDollarSign} from 'lucide-react';
+export default function WalletPage() {;
 
   const { wallet, transactions, loading } = useWallet();
 
@@ -46,8 +56,21 @@ export default function WalletPage() {
                   <span>{t.reason |'Reward'}</span>
                   <span className="font-medium">+{t.amount} ZION$</span>
                 </li>
+          <TabsTrigger value="earnings">Earnings</TabsTrigger>;
+          <TabsTrigger value="spending">Spending</TabsTrigger>;
+        </TabsList>;
+        <TabsContent value="earnings">;
+          {transactions && transactions.filter(t => t && t.transaction_type === 'earn').length === 0 ? (;
+            <p className="text-muted-foreground">No earnings yet</p>;
+          ) : (;
+            <ul className="space-y-2">;
+              {transactions && transactions.filter(t => t && t.transaction_type === 'earn').map(t => (;
+                <li key={t && t.id} className="flex justify-between border-b py-2">;
+                  <span>{t && t.reason || 'Reward'}</span>;
+                  <span className="font-medium">+{t && t.amount} ZION$</span>;
+                </li>;
               ))}
-            </ul>
+            </ul>;
           )}
         </TabsContent>
         <TabsContent value="spending">
@@ -61,7 +84,7 @@ export default function WalletPage() {
                   <span className="font-medium">-{t.amount} ZION$</span>
                 </li>
               ))}
-            </ul>
+            </ul>;
           )}
         </TabsContent>
       </Tabs>

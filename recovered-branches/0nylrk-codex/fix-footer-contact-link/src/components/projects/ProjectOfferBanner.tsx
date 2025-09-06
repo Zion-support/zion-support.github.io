@@ -1,3 +1,5 @@
+import React from 'react';
+
 
 
 
@@ -10,6 +12,7 @@ import {Card, CardContent} from "@/components/ui/card";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ProjectOfferBanner() {;
+
 
 
 
@@ -32,9 +35,8 @@ export function ProjectOfferBanner() {
       setPendingOffers(offers)
 
 
-
-
-
+    return null
+  }
 
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
@@ -73,7 +75,9 @@ export function ProjectOfferBanner() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   }
@@ -95,7 +99,7 @@ export function ProjectOfferBanner() {;
                   <Bell className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">🎉 New Project Offer!</h4>
+                  <h4 className="font-semibold"> New Project Offer!</h4>
                   <p className="text-sm text-muted-foreground">
                     You've been selected for "{offer.job?.title}". Review and accept to get started.
                   </p>
@@ -108,14 +112,21 @@ export function ProjectOfferBanner() {;
                 <Button
                   size="sm"
                   variant="ghost"
-                  onClick={(e) => handleDismiss(offer.id, e)}
-                >
-                  <X className="h-4 w-4" />
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+                  onClick={(e) => handleDismiss(offer && offer.id, e)}
+                >;
+                  <X className="h-4 w-4" />;
+                </Button>;
+              </div>;
+            </CardContent>;
+          </Card>;
         ))}
+
+    </div>
+  )
+}
+    </div>;
+  );
+}
 
 import { useEffect, useState } from './react';
 import { use_navigate } from './react-router-dom';

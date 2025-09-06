@@ -1,8 +1,45 @@
 
+export type UIKitKind = 'ios' | 'android' | 'web';
+export interface TokenSet {
 
+export interface TokenSet {;
+  colors: Record<string, string>;
+  typography: Record<string, any>;
+  spacing: Record<string, number>;
+}
+export interface UIKit {
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+export interface UIKit {;
+  components: Record<string, any>;
+  tokens: TokenSet;
+}
+export async function buildTokenSet(fileId: string): Promise<TokenSet> {
+  // Placeholder implementation
+  return {
+    colors: {
+      primary: '#007AFF'
+      secondary: '#5856D6'
+      success: '#34C759'
+      warning: '#FF9500'
+      error: '#FF3B30'
+    }
+    typography: {
+      heading1: { fontSize: 32, fontWeight: 'bold' }
+      heading2: { fontSize: 24, fontWeight: 'bold' }
+      body: { fontSize: 16, fontWeight: 'normal' }
+    }
+    spacing: {
+      xs: 4
+      sm: 8
+      md: 16
+      lg: 24
+      xl: 32
+    }
+    
+    return this.props.children;
+  }
+}
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
 
     };
   }
@@ -33,7 +70,17 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
   } catch {
     return null;
 
-
+  }
+// Design mapping utilities
+export interface DesignElement {
+  id: string;
+  type: 'component' | 'layout' | 'style' | 'asset';
+  name: string;
+  figmaId?: string;
+  properties: Record<string, any>;
+  children?: DesignElement[];
+  parent?: string;
+}
 
 
 export interface DesignSystem {
@@ -89,7 +136,12 @@ export interface FigmaNode {
 
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
 
+  const tokens = await buildTokenSet(fileId);
+    };
+  };
+}
 
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
 
   const tokens = await buildTokenSet(fileId);
 
@@ -103,13 +155,22 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
     properties,
     children: []
 
+
+
+
+
+  };
 }
 
+          background_color: tokens.colors.primary,
+          padding: tokens.spacing.md;
+        }
+      }
+    }
+    tokens
+  }
 
+  };
 
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+}
 

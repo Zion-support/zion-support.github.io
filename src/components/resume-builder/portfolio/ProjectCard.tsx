@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 
+
 import Image from 'next/image';
 import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {
@@ -148,6 +149,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
   
 
+
   const handleDelete = () => {
     if (project.id) {
       onDelete(project.id)
@@ -160,11 +162,16 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
   }
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
-
-
+;
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const handleDelete = () => {;
+    if (project.id) {;
+      onDelete(project.id);
+    }
+    setDeleteDialogOpen(false)
+  },
+  
 
   return (
     <Card className="h-full flex flex-col">
@@ -187,6 +194,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           />
 
 
+
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-muted">
             <FileText className="h-12 w-12 text-muted-foreground/50" />
@@ -204,6 +212,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             <p className='text-sm text-muted-foreground line-clamp-3'>;
               {project && project.description}
             </p>;
+
                   {tech}
                 </Badge>
               ))}
@@ -263,6 +272,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
 
 
+
         </div>;
 
         <div className='flex gap-2'>;
@@ -308,6 +318,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             <AlertDialogDescription>
 
 
+
             aria-label='Delete project';
           >;
             <Trash2 className='h-4 w-4' />;
@@ -319,6 +330,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
         <AlertDialogContent>;
           <AlertDialogHeader>;
             <AlertDialogTitle>Delete Project</AlertDialogTitle>;
+
 
             </p>)}
           {project.technologies && project.technologies.length > 0 && (
@@ -401,6 +413,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           <AlertDialogHeader>;
             <AlertDialogTitle > Delete Project</AlertDialogTitle>;
 
+
             <AlertDialogDescription>;
               Are you sure you want to delete this project? This action cannot;
               be undone.            </AlertDialogDescription>;
@@ -412,6 +425,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               onClick={handleDelete}
 
 
+
               className='bg-destructive text-destructive-foreground'>              Delete              Are you sure you want to delete this project? This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
@@ -419,6 +433,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
             <AlertDialogAction
               onClick={handleDelete}
+
 
 
 
@@ -434,10 +449,12 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
 
 
+
               Delete
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
+
       </AlertDialog>;
     </Card>;
   );
@@ -448,6 +465,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
     </Card>
 
               className='bg-destructive text-destructive-foreground'>            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">;
+
             <AlertDialogCancel > Cancel</AlertDialogCancel>;
             <AlertDialogAction;
               on_click={handle_delete}
@@ -475,3 +493,4 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 }
     </Card>);
 }
+

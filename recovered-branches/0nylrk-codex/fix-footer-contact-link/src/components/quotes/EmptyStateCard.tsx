@@ -3,6 +3,7 @@
 
 
 
+
 type EmptyStateCardProps = {
   type: "active" | "archived";
 }
@@ -33,6 +34,7 @@ import { MessageSquare, ArchiveIcon } from "lucide-react",
 
 
 type EmptyStateCardProps = {
+
   type: 'active' | 'archived'
 },
 
@@ -41,6 +43,8 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   const isActive = type === 'active',
   
+
+
 
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light text-center py-12">
@@ -51,13 +55,30 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
           ) : (
             <ArchiveIcon className="h-8 w-8 text-white" />
           )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>
         <h3 className="text-xl font-medium text-white mb-2">
           {isActive ? "No hire requests yet" : "No archived requests"}
         </h3>
         <p className="text-zion-slate-light max-w-md mx-auto">
 
+          {isActive
+            ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
+            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."}
+        </p>
+      </CardContent>
+    </Card>
+  );
+}
+
+          {isActive 
+            ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
+            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
+            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
+          }
+        </p>
+      </CardContent>
+    </Card>
+  )
 
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -77,6 +98,8 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
             <ArchiveIcon className="h-8 w-8 text-white" />;
           )}
 
+
+
         </div>;
         <h3 className="text-xl font-medium text-white mb-2">;
           {isActive ? 'No hire requests yet' : 'No archived requests'}
@@ -93,7 +116,9 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 

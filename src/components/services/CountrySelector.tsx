@@ -14,6 +14,8 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
 
 
 
+
+
     const popular = [
       'United States'
       'United Kingdom'
@@ -32,12 +34,13 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country)),
 
-
-    setTopCountries(top)
-  }, [])
-  // Handle country selection
-  const handleCountryChange = (countryName: string) => {
-
+    const country =
+      onsiteServicePricing.find(item => item.country === countryName) |null
+    const country = null;
+      onsiteServicePricing.find(item => item.country === countryName) || null
+    onCountryChange(country)
+  }
+  },
 
 
 
@@ -243,12 +246,16 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
           <SelectValue placeholder="Select a country" />;
         </SelectTrigger>;
-        <SelectContent className="bg-zion-blue-dark border-zion-blue-light max-h-80">;
-          <div className="p-2 border-b border-zion-blue-light">;
-            <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>;
-            {topCountries.map((item) => (;
-              <SelectItem key={item.country} value={item.country} className="text-white">;
-                {item.country} - ${item.pricePerIncident.toFixed(2)}
+        <SelectContent className='bg-zion-blue-dark border-zion-blue-light max-h-80'>;
+          <div className='p-2 border-b border-zion-blue-light'>;
+            <p className='text-sm text-zion-slate-light pb-1'>;
+              Popular Countries;
+            </p>;
+            {topCountries && topCountries.map(item => (;
+              <SelectItem
+                key={item && item.country}
+                value={item && item.country}
+                className='text-white'>                {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
               </SelectItem>;
             ))}
           </div>
@@ -257,6 +264,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
             {onsiteServicePricing
               .sort((a, b) => a.country.localeCompare(b.country))
               .map((item) => (
+
 
 
               <SelectItem key={item.country} value={item.country} className="text-white">
@@ -342,5 +350,6 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   );
 }
 ;
+
 
 

@@ -7,6 +7,7 @@
 
 
 
+
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -18,6 +19,7 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {Zap, ChevronLeft, ChevronRight} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {Card, CardContent} from "@/components/ui/card";
+
 
 
 
@@ -50,11 +52,13 @@ import { Card, CardContent } from "@/components/ui/card",
 
 
 
+
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
 
 export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
 export function MobileJobPost() {
+
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
   
 
@@ -178,12 +182,28 @@ function DetailsStep() {
       <div className="space-y-2">
         <Label htmlFor="description">Job Description</Label>
 
+        <Textarea
+          id="description"
+          placeholder="Describe the job role and responsibilities"
+        <Textarea 
+          id="description" 
+          placeholder="Describe the job role and responsibilities" 
+
           rows={5}
         />
       </div>
     </div>
   )
 }
+
+function RequirementsStep() {
+  const [skills, setSkills] = useState<string[]>([
+    "React", "TypeScript", "Node.js"
+  ]);
+  const [newSkill, setNewSkill] = useState("");
+        <Textarea 
+          id="description" 
+          placeholder="Describe the job role and responsibilities" 
 
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
@@ -229,7 +249,6 @@ export function MobileJobPost() {;
 
   const renderStepContent = () => {;
     switch (currentStep) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       case "details": return <DetailsStep />;
       case "requirements":;
         return <RequirementsStep />;
@@ -242,6 +261,8 @@ export function MobileJobPost() {;
     }
 
   };
+
+
 
 
 
@@ -356,7 +377,9 @@ function DetailsStep() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -457,52 +480,53 @@ if ( {) {
  */
 function DetailsStep() {
   return (
-    <div className="space - y-4">;
-      <h2 className="text - lg font - medium">Job Details</h2>;
-      <div className="space - y-2">;
-        <Label html_for="title">Job Title</Label>;
-        <Input id="title" placeholder="e.g. Senior React Developer" />;
-      </div>;
-      <div className="space - y-2">;
-        <Label html_for="company">Company Name</Label>;
-        <Input id="company" placeholder="Your company name" />;
-      </div>;
-      <div className="space - y-2">;
-        <Label html_for="location">Location</Label>;
-        <Select default_value="remote">;
-          <SelectTrigger>;
-            <SelectValue placeholder="Select location type" />;
-          </SelectTrigger>;
-          <SelectContent>;
-            <SelectItem value="remote">Remote</SelectItem>;
-            <SelectItem value="onsite">On - site</SelectItem>;
-            <SelectItem value="hybrid">Hybrid</SelectItem>;
-          </SelectContent>;
-        </Select>;
-      </div>;
-      <div className="space - y-2">;
-        <Label html_for="job_type">Job Type</Label>;
-        <Select>;
-          <SelectTrigger>;
-            <SelectValue placeholder="Select job type" />;
-          </SelectTrigger>;
-          <SelectContent>;
-            <SelectItem value="fulltime">Full - time</SelectItem>;
-            <SelectItem value="parttime">Part - time</SelectItem>;
-            <SelectItem value="contract">Contract</SelectItem>;
-            <SelectItem value="freelance">Freelance</SelectItem>;
-          </SelectContent>;
-        </Select>;
-      </div>;
-      <div className="space - y-2">;
-        <Label html_for="description">Job Description</Label>;
-        <Textarea;
-          id="description";
-          placeholder="Describe the job role and responsibilities";
+    <div className="space-y-4">
+      <h2 className="text-lg font-medium">Job Details</h2>
+      <div className="space-y-2">
+        <Label htmlFor="title">Job Title</Label>
+        <Input id="title" placeholder="e.g. Senior React Developer" />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="company">Company Name</Label>
+        <Input id="company" placeholder="Your company name" />
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="location">Location</Label>
+        <Select defaultValue="remote">
+          <SelectTrigger>
+            <SelectValue placeholder="Select location type" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="remote">Remote</SelectItem>
+            <SelectItem value="onsite">On-site</SelectItem>
+            <SelectItem value="hybrid">Hybrid</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="jobType">Job Type</Label>
+        <Select>
+          <SelectTrigger>
+            <SelectValue placeholder="Select job type" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="fulltime">Full-time</SelectItem>
+            <SelectItem value="parttime">Part-time</SelectItem>
+            <SelectItem value="contract">Contract</SelectItem>
+            <SelectItem value="freelance">Freelance</SelectItem>
+          </SelectContent>
+        </Select>
+      </div>
+      <div className="space-y-2">
+        <Label htmlFor="description">Job Description</Label>
+        <Textarea
+          id="description"
+          placeholder="Describe the job role and responsibilities"
           rows={5}
         />;
       </div>;
-    </div>);
+    </div>;
+  );
 }
 /**
  * RequirementsStep - Function description
@@ -559,6 +583,11 @@ function DetailsStep() {
               className="flex items-center gap-1 px-3 py-1"
             >
               {skill}
+
+              <button
+                className="ml-1 rounded-full hover:bg-background/20 p-1"
+              <button 
+                className="ml-1 rounded-full hover:bg-background/20 p-1"
 
 ;
 function RequirementsStep() {;
@@ -627,6 +656,7 @@ function RequirementsStep() {;
 
 
 
+
               <button
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
 
@@ -638,6 +668,7 @@ function RequirementsStep() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 onClick={() => removeSkill(skill)}
@@ -672,11 +703,22 @@ function RequirementsStep() {;
 
         <Textarea
 
+          id="responsibilities"
+          placeholder="List the key responsibilities for this role"
+          rows={4}
+        />
+      </div>
+    </div>
+  )
+}
+        <Textarea 
 
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
 
           rows={4}
+
+
 
 
 
@@ -690,11 +732,13 @@ function RequirementsStep() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 }
@@ -782,7 +826,7 @@ function PreviewStep() {
       <Card>
         <CardContent className="p-4">
           <h3 className="font-bold text-lg">Senior React Developer</h3>
-          <p className="text-muted-foreground">TechCorp Inc. • Remote • Full-time</p>
+          <p className="text-muted-foreground">TechCorp Inc.  Remote  Full-time</p>
           <div className="flex gap-2 my-3">
             <Badge variant="outline">React</Badge>
             <Badge variant="outline">TypeScript</Badge>
@@ -812,6 +856,7 @@ function PreviewStep() {
 
 }
 }
+
 
 
 /**
@@ -862,4 +907,5 @@ function PreviewStep() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

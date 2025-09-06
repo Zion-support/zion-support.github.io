@@ -16,21 +16,27 @@ function generateSessionId(): string {
 
 
 
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -43,6 +49,7 @@ type ChatMessage = {;
   content: string,;
   timestamp?: number;
 };
+
 function generateSessionId(): any (): string {;
   if (typeof window === 'undefined') return '';
   const existing = window && window.localStorage.getItem('zion_support_session_id');
@@ -66,6 +73,7 @@ function generateSessionId(): any (): string {;
   useEffect(() => {
 
 
+
     sessionIdRef.current = generateSessionId()
 
   }, []);
@@ -73,6 +81,7 @@ function generateSessionId(): any (): string {;
     if (!isOpen && messages.length === 0) {
       // Seed greeting
       setMessages([
+
 
         { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
 
@@ -97,6 +106,20 @@ function generateSessionId(): any (): string {;
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
 
+          sessionId: sessionIdRef.current
+          eventType
+          payload
+        })
+      });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
+          sessionId: sessionIdRef.current,
+          eventType,
+          payload,
+        }),
+      });    } catch {}
+
+
+
+
 
     } catch {}
   }
@@ -108,6 +131,7 @@ function generateSessionId(): any (): string {;
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
+
 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -149,6 +173,7 @@ function generateSessionId(): any (): string {;
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
     } catch {}
   }
@@ -294,8 +319,10 @@ function generateSessionId(): any (): string {;
 
   return (
 
-      if (data?.meta?.intentMatched === false) {
-        setFailedIntents((n) => {
+    <div className='fixed bottom-4 right-4 z-50'>      }
+
+      if (data?.meta?.intentMatched === false) {;
+        setFailedIntents((n) => {;
 
           const next = n + 1;
           if (next >= 3) {;
@@ -317,6 +344,8 @@ function generateSessionId(): any (): string {;
 
 
 
+
+
     }
   }
     <div className='fixed bottom-4 right-4 z-50'>
@@ -326,7 +355,9 @@ function generateSessionId(): any (): string {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -352,7 +383,9 @@ function generateSessionId(): any (): string {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -361,7 +394,6 @@ function generateSessionId(): any (): string {;
                   {m.content}
                 </div>
               </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
 
@@ -381,19 +413,23 @@ function generateSessionId(): any (): string {;
 
 
 
+
               <div className="flex flex-wrap gap-2 mb-2">
                 {quickReplies.map((q) => (
                   <button
                     key={q}
                     onClick={() => onSend(q)}
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
 
                   >
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                     {q}
                   </button>
@@ -422,6 +458,8 @@ function generateSessionId(): any (): string {;
               <div className='flex gap-2'>
 
 
+
+
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
             {!showEscalation ? (;
               <div className='flex gap-2'>;
@@ -432,10 +470,21 @@ function generateSessionId(): any (): string {;
                     if (e && e.key === 'Enter' && !e && e.shiftKey) {;
                       e && e.preventDefault();
 
+
+          <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
+            {!showEscalation ? (
+              <div className='flex gap-2'>
+                <input
+                  value={input}
+                  onChange={e => setInput(e.target.value)}
+                  onKeyDown={e => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                      e.preventDefault();
+
                       onSend();
                     }
                   }}
-                  placeholder='Ask a question…';
+                  placeholder='Ask a question';
                   className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'                />;
                 <button
                   onClick={() => onSend()}
@@ -444,8 +493,10 @@ function generateSessionId(): any (): string {;
 
 
 
+
           <div className="border-t border-gray-200 dark:border-gray-800 p-2">
             {!showEscalation ? (
+
 
 
 
@@ -460,7 +511,9 @@ function generateSessionId(): any (): string {;
                   }}
 
 
-
+                  placeholder="Ask a question…"
+                  className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >
 
 
                 />
@@ -480,7 +533,9 @@ function generateSessionId(): any (): string {;
                   <a href="/contact" className="rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Chat with Live Agent</a>
                 </div>
               </div>
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
             )}
           </div>;
         </div>;
@@ -491,6 +546,7 @@ function generateSessionId(): any (): string {;
   );
 
 }
+
 
 
 }
@@ -880,4 +936,5 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

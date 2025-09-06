@@ -11,6 +11,7 @@ for (let index = 0, i < count, i++) {
 
 
 
+
  canvas && canvas.width = window && window.innerWidth;
 canvas && canvas.height = window && window.innerHeight;
 const particles: Array< {;
@@ -18,6 +19,7 @@ const particles: Array< {;
   const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math && Math.floor (particleCount * 0 && 0.7) : Math && Math.floor (particleCount * 0 && 0.5);
 for (let i = 0, i < count, i++) {;
   particles && particles.push ({;
+
 
 
 
@@ -34,10 +36,12 @@ for (let i = 0, i < count, i++) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   children;
@@ -55,7 +59,7 @@ for (let i = 0, i < count, i++) {;
   useEffect(() => {;
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas && canvas.getContext('2d');
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
     canvas && canvas.width = window && window.innerWidth;
     canvas && canvas.height = window && window.innerHeight;
@@ -347,6 +351,8 @@ if (return) {
             ctx.stroke();          }
 
 
+
+
           }
         }
 
@@ -356,6 +362,8 @@ if (return) {
             // Quantum tunneling effect
             particle.x = particle.x <= 0 ? canvas.width : 0;
           } else {
+
+
 
 
           }
@@ -400,6 +408,16 @@ if (return) {
           gradient.addColorStop(1, 'transparent');
 
 
+          ctx.fillStyle = gradient;
+          ctx.fillRect(
+            -particle.size * 2
+            -particle.size * 2
+            particle.size * 4
+            particle.size * 4
+          );
+            }
+
+
           // Quantum wave rings
           if (enableQuantumEffects) {
             for (let i = 1; i <= 3; i++) {
@@ -409,6 +427,16 @@ if (return) {
               ctx.beginPath();
               ctx.arc(0, 0, particle.size * i, 0, Math.PI * 2);
               ctx.stroke();            }          ctx.fillStyle = gradient;
+
+        
+        if (particle.type === 'quantum') {
+          // Quantum particle with wave effect
+          const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, particle.size * 4);
+          gradient.addColorStop(0, particle.color);
+          gradient.addColorStop(0.3, particle.color + '80');
+          gradient.addColorStop(0.6, particle.color + '40');
+          gradient.addColorStop(1, 'transparent');
+          ctx.fillStyle = gradient;
 
           ctx.fillRect(-particle.size * 2, -particle.size * 2, particle.size * 4, particle.size * 4);
           // Quantum wave rings
@@ -449,6 +477,8 @@ if (return) {
           if (Math.random() < 0.05) {
             ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
             ctx.fillRect(-particle.size * 1.5, -particle.size * 1.5, particle.size * 3, particle.size * 3)
+
+
 
         } else if (particle.type === 'cyberpunk') {
           // Cyberpunk particle with neon glow
@@ -506,6 +536,7 @@ if (return) {
           ctx.lineWidth = 2;
           ctx.arc(x, y, 50 + 30 * Math.sin(time + i), 0, Math.PI * 2);
 
+
           ctx.stroke();        }
 
 
@@ -520,6 +551,7 @@ if (return) {
         const time = Date.now() * 0.001;
         ctx.strokeStyle = 'rgba(139, 92, 246, 0.1)';
         ctx.lineWidth = 1;
+
 
         
         for (let i = 0, i < 20, i++) {
@@ -639,8 +671,10 @@ if (return) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   return (
@@ -651,12 +685,14 @@ if (return) {
         style={{ zIndex: -1 }}
 
 
+
       />;
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       {/* Additional futuristic overlay effects */}
@@ -681,6 +717,7 @@ if (return) {
       )}
 
       {children}
+
 
 
 
@@ -723,10 +760,12 @@ if ( {) {
       <canvas;
         ref={canvas_ref}
         className='fixed inset - 0 w - full h - full pointer - events - none';
+
         style={{ z_index: -1 }}
       />;
       {/* Additional futuristic overlay effects */}
       {enable_holographic && (
+
         <div;
           className='fixed inset - 0 pointer - events - none';
           style={{ z_index: -1 }}
@@ -769,6 +808,7 @@ if ( {) {
       )}
 
 
+
     }
   }, [intensity, theme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]),
 
@@ -799,6 +839,7 @@ if ( {) {
     </div>
 
 
+
 );
 }
 
@@ -810,6 +851,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 

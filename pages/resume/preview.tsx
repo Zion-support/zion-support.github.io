@@ -1,5 +1,6 @@
 
 
+
 }</div> </div> <PdfExportButton targetRef= {
   targetRef
 }fileName= {
@@ -17,10 +18,13 @@
 export default function ResumePreviewPage({
 
 
+
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [selectedVersionId, setSelectedVersionId] = useState<string>(
     versions[0]?.id |'current'
   );  const targetRef = useRef<HTMLDivElement>(null);
+
+
 
 
 
@@ -29,6 +33,7 @@ export default function ResumePreviewPage({
     const found = versions.find(v => v.id === selectedVersionId);
     return found?.data |initialData;
   }, [selectedVersionId, initialData, versions]);
+
 
   }, [selectedVersionId, initialData, versions]);
   return (
@@ -39,6 +44,7 @@ export default function ResumePreviewPage({
           <select
             value={theme}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
@@ -77,6 +83,8 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
   const targetRef = useRef<HTMLDivElement>(null),
 
 
+
+
   const activeData = useMemo(() => {
     if (selectedVersionId === 'current') return initialData;
     const found = versions.find(v => v.id === selectedVersionId);
@@ -105,6 +113,7 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -112,6 +121,7 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
           {versions.length > 0 && (
@@ -125,8 +135,19 @@ export default function ResumePreviewPage({ initialData, versions = [] }: Resume
                 <option value="current">Current</option>
                 {versions.map(v => (
 
-
-
+                  <option value={v.id} key={v.id}>
+                    {v.label}
+                  </option>                ))}
+              </select>
+            </>
+          )}
+        </div>
+      </div>
+      <PdfExportButton
+        targetRef={targetRef}
+        fileName={`resume-${activeData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
+      />
+      <div className='mx-auto'>
 
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
@@ -181,6 +202,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 
 
+
+
         </div>
       </div>
       <PdfExportButton
@@ -195,6 +218,8 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 
 
 
+
+
   );
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
@@ -205,61 +230,60 @@ export const getServerSideProps: GetServerSideProps = async ctx => {;
   if (!user) {
     return {
       redirect: {
-        destination: '/auth',
-        permanent: false,
-      },
+        destination: '/auth'
+        permanent: false
+      }
     };  }
-
   // Placeholder: fetch resume data for the logged-in user and versions if any
   const initialData: ResumeData = {
-    name: 'Your Name',
+    name: 'Your Name'
     contact: {
-      email: 'you@example.com',
-      phone: '+1 555-123-4567',
-      location: 'City, Country',
-      website: 'https://example.com',
-    },
+      email: 'you@example.com'
+      phone: '+1 555-123-4567'
+      location: 'City, Country'
+      website: 'https://example.com'
+    }
     summary:
-      'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.',
+      'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.'
     skills: [
-      'AI Engineering',
-      'Prompt Design',
-      'TypeScript',
-      'Node.js',
-      'Next.js',
-    ],
+      'AI Engineering'
+      'Prompt Design'
+      'TypeScript'
+      'Node.js'
+      'Next.js'
+    ]
     technologies: ['OpenAI', 'Supabase', 'Postgres', 'Vercel', 'Docker'],    experience: [
       {
-        title: 'Senior AI Engineer',
-        company: 'Zion AI',
-        start: '2023',
-        end: 'Present',
-        location: 'Remote',
+        title: 'Senior AI Engineer'
+        company: 'Zion AI'
+        start: '2023'
+        end: 'Present'
+        location: 'Remote'
         bullets: [
-          'Built multi-agent automation systems improving throughput by 40%.',
-          'Designed AI-driven dashboards and PDF export workflows.',
-        ],
-      },
-    ],
+          'Built multi-agent automation systems improving throughput by 40%.'
+          'Designed AI-driven dashboards and PDF export workflows.'
+        ]
+      }
+    ]
     education: [
       {
-        institution: 'University of Example',
-        degree: 'B.Sc. Computer Science',
-        start: '2016',
-        end: '2020',
-      },
-    ],
+        institution: 'University of Example'
+        degree: 'B.Sc. Computer Science'
+        start: '2016'
+        end: '2020'
+      }
+    ]
     certifications: [
-      'AWS Certified Solutions Architect – Associate',
-      'TensorFlow Developer Certificate',
-    ],
+      'AWS Certified Solutions Architect  Associate'
+      'TensorFlow Developer Certificate'
+    ]
     portfolio: [
       {
-        title: 'Agentic Resume Builder',
+        title: 'Agentic Resume Builder'
         description:
-          'Automated resume generation using LLMs and vector search.',
-        link: 'https://example.com',
-      },
+          'Automated resume generation using LLMs and vector search.'
+        link: 'https://example.com'
+      }
       {
         title: 'AI Marketplace',
         description: 'Talent dashboard with export features.',
@@ -293,6 +317,8 @@ return { props: { initialData, versions } };
         <ResumePreview ref={targetRef} data={activeData} theme={theme} />
       </div>
     </div>
+
+
 
 
 
@@ -376,10 +402,10 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
     ],;
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const versions = [] as Array<{ id: string; label: string, data: ResumeData }>;
 return { props: { initialData, versions } }
 }
+
 
 
 
@@ -462,6 +488,7 @@ if (return initial_data) {
       </div>;
     </div>);
 ;
+
 
 
 

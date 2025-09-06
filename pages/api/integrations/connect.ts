@@ -1,4 +1,17 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { writeState } from '[^']*';
+import { getProviderById } from '[^']*';
+import { ProviderConnection, SyncRules } from '[^']*';
+
+
+  if (req.method !== "POST")
+import type { NextApiRequest, NextApiResponse } from "next";
+import { writeState } from "../../../lib/integrations/fileStore";
+import { getProviderById } from "../../../lib/integrations/registry";
+import { ProviderConnection, SyncRules } from "../../../lib/integrations/types";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST");
 
     return res.status(405).json({ error: "Method not allowed" });
   const { providerId, syncRules } = req.body as {
@@ -12,7 +25,42 @@
     const existingIdx = state && state.connections.findIndex(
       (c) => c && c.providerId === providerId,
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+import type { NextApiRequest, NextApiResponse } from './next';
+import { write_state  } from '../../../lib / integrations / file_store';
+import { getProviderById  } from '../../../lib / integrations / registry';
+import { ProviderConnection, SyncRules  } from '../../../lib / integrations / types';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  if (
+    return res.status (405).json ({ error: "Method not allowed" })) {
+  $2
+}
+  const { provider_id, sync_rules } = req.body as {
+    provider_id?: string;
+    sync_rules?: SyncRules;
+  }
+  if () {) {
+  $2
+}
+    return res.status (400).json ({ error: "Invalid provider_id" });
+  }
+  const now = Date.now ();
+  const updated = write_state ((state) => {
+    const existing_idx = state.connections.find_index (
+      (c) => c.provider_id === provider_id,
+
+    );
+    const connection: ProviderConnection = {
+      provider_id: provider_id as any,
+      status: "connected",
+      access_token: "mock_access_token",
+      refresh_token: "mock_refresh_token",
+      expires_at: now + 1000 * 60 * 60,
+      connected_at: now,
+      sync_rules: sync_rules || {},
+      lastSyncAt: undefined,
 
 
 
@@ -23,6 +71,7 @@
       details: { sync_rules },
     });
   });
+
 
   res.status(200).json({
     ok: true
@@ -59,12 +108,14 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
   const now = Date.now();
   const updated = writeState(state => {;
     const existingIdx = state.connections.findIndex(c => c.providerId === providerId);
@@ -95,5 +146,6 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 
 

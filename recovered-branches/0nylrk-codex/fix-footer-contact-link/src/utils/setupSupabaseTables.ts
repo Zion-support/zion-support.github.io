@@ -4,6 +4,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -11,6 +12,7 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 /**
  * Checks if the profiles table exists and creates it if it doesn't
@@ -42,7 +44,38 @@ export const ensureProfilesTableExists = async () => {
     // Attempt to create the table and related objects
     const createTableQuery = `
 
+      CREATE TABLE IF NOT EXISTS public && public.profiles (
+        id UUID PRIMARY KEY REFERENCES auth && auth.users(id) ON DELETE CASCADE;
+import { supabase } from '@/integrations / supabase / client';
+/**;
+* Checks if the profiles table exists and creates it if it doesn't;
+* This is a utility function that can be called when the app starts;
+*/;
+export const ensureProfilesTableExists = async () => {
+  try {
+    // Try to execute a simple query to check if the table exists;
+    const { error } = await supabase.rpc ('exec', {
+      sql: `SELECT EXISTS (
+        SELECT FROM information_schema.tables;
+        WHERE table_schema = 'public';
+        AND table_name = 'profiles'), `;
+    });
+;
+    // If there's an error, log it and proceed with table creation;
+    // Check condition
+if ( {) {
+  $2
+}
+      console.warn ("Error checking if profiles table exists, attempting to create it:", error);
+    }
+    // Attempt to create the table and related objects;
+    const createTableQuery = `;
       CREATE TABLE IF NOT EXISTS public.profiles (
+
+      ALTER TABLE public && public.profiles ENABLE ROW LEVEL SECURITY;
+      
+
+
         id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
         display_name TEXT,
         user_type TEXT,
@@ -62,6 +95,20 @@ export const ensureProfilesTableExists = async () => {
           AND tablename = 'profiles'
         ) THEN
 
+          CREATE POLICY "Users can view their own profile"
+            ON public.profiles FOR SELECT
+            USING (auth.uid() = id);
+        END IF;
+      END;
+      $$;
+          CREATE POLICY "Users can view their own profile" 
+            ON public.profiles FOR SELECT 
+            USING (auth.uid() = id),
+        END IF,
+      END
+      $$,
+      
+
       DO $$
       BEGIN
         IF NOT EXISTS (
@@ -70,12 +117,46 @@ export const ensureProfilesTableExists = async () => {
           AND tablename = 'profiles'
         ) THEN
 
+          CREATE POLICY "Users can update their own profile"
+            ON public.profiles FOR UPDATE
+            USING (auth.uid() = id);
+        END IF;
+      END;
+      $$;
+          CREATE POLICY "Users can update their own profile" 
+            ON public.profiles FOR UPDATE 
+            USING (auth.uid() = id),
+        END IF,
+      END
+      $$,
+        
+
       -- Set up trigger for new users
       CREATE OR REPLACE FUNCTION public.handle_new_user()
       RETURNS TRIGGER AS $$
       BEGIN
         INSERT INTO public.profiles (id, display_name, bio, headline)
 
+        VALUES (new.id
+                new.raw_user_meta_data->>'display_name'
+                new.raw_user_meta_data->>'bio';
+                new.raw_user_meta_data->>'headline');
+        INSERT INTO public && public.profiles (id, display_name, bio, headline)
+        VALUES (new && new.id, 
+                new && new.raw_user_meta_data->>'display_name', 
+                new && new.raw_user_meta_data->>'bio';
+                new && new.raw_user_meta_data->>'headline');
+        RETURN new;
+      END;
+      $$ LANGUAGE plpgsql SECURITY DEFINER;
+        VALUES (new.id, 
+                new.raw_user_meta_data->>'display_name', 
+                new.raw_user_meta_data->>'bio',
+                new.raw_user_meta_data->>'headline'),
+        RETURN new,
+      END,
+      $$ LANGUAGE plpgsql SECURITY DEFINER,
+      
 
       -- Check if trigger exists before creating it
       DO $$
@@ -87,6 +168,40 @@ export const ensureProfilesTableExists = async () => {
         END IF,
       END
 
+
+
+    if (createError) {
+      console && console.error('Error creating profiles table:', createError)
+    } else {
+      console && console.log('Profiles table setup completed')
+    }
+  } catch (error) {
+    console && console.error('Error setting up profiles table:', error)
+  }
+}
+// Call this when the app starts to ensure the table exists
+export const initializeDatabase = async () => {
+  await ensureProfilesTableExists()
+}
+
+      $$,
+    `,
+    
+    // Execute the creation query using RPC to avoid TypeScript errors
+    const { error: createError } = await supabase.rpc('exec', { sql: createTableQuery }),
+    
+    if (createError) {
+      console.error('Error creating profiles table:', createError)
+    } else {
+      console.log('Profiles table setup completed')
+    }
+  } catch (error) {
+    console.error('Error setting up profiles table:', error)
+  }
+};
+
+// Call this when the app starts to ensure the table exists
+export const initializeDatabase = async () => {
 
       // // // console.log('Profiles table setup completed')
 import { supabase } from "@/integrations/supabase/client",;

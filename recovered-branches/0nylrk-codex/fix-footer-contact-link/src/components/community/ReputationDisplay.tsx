@@ -1,11 +1,17 @@
 
 
+import { Trophy } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+import { Trophy } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
 
 import {Trophy} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
 
 import { Trophy } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
+
+
 
 
 interface ReputationDisplayProps {
@@ -76,7 +82,7 @@ export const ReputationDisplay = ({
       </div>
       <Progress value={progress} className={sizeClasses[size].progress} />
       <div className="text-xs text-muted-foreground">
-        Level {currentLevel} • {Math.round(nextMilestone - reputation)} to level up
+        Level {currentLevel}  {Math.round(nextMilestone - reputation)} to level up
       </div>
     </div>
   )
@@ -86,7 +92,9 @@ export default ReputationDisplay;
 
 
 
-
+export default ReputationDisplay,
+import { Trophy } from "lucide-react",;
+import { Progress } from "@/components/ui/progress",;
 
 interface ReputationDisplayProps {;
   reputation: number,;
@@ -141,11 +149,13 @@ export const ReputationDisplay = ({ ;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default ReputationDisplay;
 

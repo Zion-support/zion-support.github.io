@@ -5,6 +5,12 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {
   return (
 
+
+        onClick = {() => onDelete(skill && skill.id!, category),}
+        aria-label="Delete skill";
+      >;
+        <Trash2 className="h-3 w-3" />;
+      </Button>;
     <Badge 
       key={skill.id} 
 
@@ -26,6 +32,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {
       </Button>
     </Badge>
   )
+
 
 },
 
@@ -129,6 +136,7 @@ import {Button} from '@/components/ui/button'
 import {Trash2} from 'lucide-react'
 import {SkillItemProps} from './types'
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
+
   return (
     <Badge
       key={skill.id}
@@ -148,6 +156,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
       >
         <Trash2 className="h-3 w-3" />
       </Button>
+
     </Badge>
   )
 } }
@@ -216,3 +225,4 @@ export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: an
     </Badge>);
 } },
 }
+

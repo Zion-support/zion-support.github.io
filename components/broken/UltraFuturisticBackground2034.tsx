@@ -1,4 +1,10 @@
 
+resizeCanvas ();
+window.addEventListener ('resize', resizeCanvas);
+type ParticleType = 'quantum' | 'neural' | 'holographic';
+// Particle system
+
+
 
 
 
@@ -7,16 +13,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -25,13 +35,16 @@ import React from 'react';
 window && window.addEventListener ('resize', resizeCanvas);
 
 
+
 resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
 type ParticleType = 'quantum' | 'neural' | 'holographic';
 // Particle system ;
+
 const UltraFuturisticBackground2034: React.FC<;
   UltraFuturisticBackground2034Props;
 > = ({ intensity = 1 }) => {;
@@ -48,6 +61,7 @@ interface UltraFuturisticBackground2034Props {
 
 
 const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({
+
   intensity = 1
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -79,13 +93,65 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
 
     };
+
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
+
     type ParticleType = 'quantum' | 'neural' | 'holographic';
 
 
+    // Particle system;
+    const particles: Array<{;
       x: number;
       y: number;
+
+resize_canvas ();
+window.addEventListener ('resize', resize_canvas);
+type ParticleType = 'quantum' | 'neural' | 'holographic';
+// Particle system;
+const UltraFuturisticBackground2034: React.FC<;
+  UltraFuturisticBackground2034Props;
+> = ({ intensity = 1 }) => {
+  const canvas_ref = useRef < HTMLCanvasElement>(null);
+  const animation_ref = useRef < number | undefined>(undefined);
+  const [mouse_position, setMousePosition] = useState ({ coordinate_x: 0, coordinate_y: 0 });
+const UltraFuturisticBackground2034: React.FC < UltraFuturisticBackground2034Props> = ({
+  intensity = 1;
+}) => {
+  const canvas_ref = useRef < HTMLCanvasElement>(null);
+  const animation_ref = useRef < number | undefined>(undefined);
+  const [mouse_position, setMousePosition] = useState ({ coordinate_x: 0, coordinate_y: 0 }),
+  useEffect (() => {
+    const canvas = canvas_ref.current;
+    // Check condition
+if (return) {
+  $2
+}
+    const ctx = canvas.get_context ('2d');
+    // Check condition
+if (return) {
+  $2
+}
+    const resize_canvas = () =>: any {
+      canvas.width = window.inner_width;
+      canvas.height = window.inner_height;    }      canvas.height = window.inner_height;
+    }
+;
+    resize_canvas ();
+    window.addEventListener ('resize', resize_canvas);
+;
+    type ParticleType = 'quantum' | 'neural' | 'holographic';
+;
+    // Particle system;
+    const particles: Array<{
+      coordinate_x: number;
+      coordinate_y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      life: number;
+      max_life: number;
+      type: ParticleType;    }> = [];
 
 
 
@@ -158,9 +224,21 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       x2: number,
       y2: number,
       strength: number,
+      life: number
+    }> = [];
 
-      for (let i = 0, i < 20 * intensity, i++) {
-        neuralNodes.push({
+    // Neural network nodes
+    const neuralNodes: Array<{
+      x: number,
+      y: number,
+      connections: number[],
+      activation: number
+    }> = [];
+
+    // Initialize particles
+    const initParticles = () => {
+      for (let i = 0, i < 100 * intensity, i++) {
+        particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           connections: [],
@@ -183,6 +261,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
 
           const targetIndex = Math.floor(Math.random() * neuralNodes.length);
           if (targetIndex !== i && !node.connections.includes(targetIndex)) {
+
+
 
             node.connections.push(targetIndex)
           }
@@ -292,6 +372,96 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         });      }        entanglementLines && entanglementLines.push({;
 
 
+      life: number;
+    // Neural network nodes;
+    const neural_nodes: Array<{
+      coordinate_x: number;
+      coordinate_y: number;
+      connections: number[];
+      activation: number;      coordinate_x: number,
+      coordinate_y: number,
+      connections: number[],
+      activation: number;
+    // Initialize particles;
+    const init_particles = () =>: any {
+      for (let index = 0; i < 100 * intensity; i++) {      for (let index = 0, i < 100 * intensity, i++) {
+        particles.push ({
+          coordinate_x: Math.random () * canvas.width,
+          coordinate_y: Math.random () * canvas.height,
+          vx: (Math.random () - 0.5) * 2,
+          vy: (Math.random () - 0.5) * 2,
+          size: Math.random () * 3 + 1,
+          life: Math.random () * 100,
+          max_life: 100,
+          type: ['quantum', 'neural', 'holographic'][;
+            Math.floor (Math.random () * 3);
+          ] as ParticleType,
+        });      }          type: ['quantumneuralholographic'][Math.floor (Math.random () * 3)] as ParticleType;
+        });
+      }
+    }
+;
+    // Initialize neural network;
+    const initNeuralNetwork = () =>: any {
+      for (let index = 0; i < 20 * intensity; i++) {        neural_nodes.push ({
+          coordinate_x: Math.random () * canvas.width,
+          coordinate_y: Math.random () * canvas.height,
+          connections: [],
+          activation: Math.random (),
+        });      }      for (let index = 0, i < 20 * intensity, i++) {
+        neural_nodes.push ({
+          coordinate_x: Math.random () * canvas.width,
+          coordinate_y: Math.random () * canvas.height,
+          connections: [],
+          activation: Math.random (),
+        });          activation: Math.random ();
+        });
+      }
+      // Create connections;
+      neural_nodes.for_each ((node, i) => {
+        const num_connections = Math.floor (Math.random () * 3) + 1;
+        for (let inner_index = 0; j < num_connections; j++) {
+          const target_index = Math.floor (Math.random () * neural_nodes.length);
+          if () {) {
+  $2
+}
+            node.connections.push (target_index);
+          }
+        }
+      });    }
+;
+    // Initialize entanglement lines;
+    const initEntanglementLines = () =>: any {
+      for (let index = 0; i < 15 * intensity; i++) {        const x1 = Math.random () * canvas.width;
+        const y1 = Math.random () * canvas.height;
+        const x2 = x1 + (Math.random () - 0.5) * 200;
+        const y2 = y1 + (Math.random () - 0.5) * 200;
+          const target_index = Math.floor (Math.random () * neural_nodes.length);
+          if () {) {
+  $2
+}
+            node.connections.push (target_index);
+          }
+        }
+      });
+    }
+;
+    // Initialize entanglement lines;
+    const initEntanglementLines = () =>: any {
+      for (let index = 0; i < 15 * intensity; i++) {      for (let index = 0, i < 15 * intensity, i++) {
+        const x1 = Math.random () * canvas.width;
+        const y1 = Math.random () * canvas.height;
+        const x2 = x1 + (Math.random () - 0.5) * 200;
+        const y2 = y1 + (Math.random () - 0.5) * 200;
+;
+        entanglement_lines.push ({
+          x1,
+          y1,
+          x2,
+          y2,
+          strength: Math.random (),
+          life: Math.random () * 100,
+        });      }        entanglement_lines.push ({
 
           x1;
           y1;
@@ -315,6 +485,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           ctx.fillStyle = `rgba(255, 0, 255, ${alpha})`;
           ctx.shadowColor = 'magenta';
           ctx.shadowBlur = 8
+
 
 
           strength: Math.random (),
@@ -389,6 +560,7 @@ if ( {) {
           ctx.shadow_color = 'lime';
           ctx.shadow_blur = 6;
         }
+
 
           particles.splice(index, 1)
 
@@ -481,7 +653,6 @@ if ( {) {
         })
       }
       // Add new entanglement lines
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       if (entanglementLines.length < 15 * intensity) {
         const x1 = Math.random() * canvas.width;
         const y1 = Math.random() * canvas.height;
@@ -492,18 +663,22 @@ if ( {) {
     // Animation loop;
     const animate = () => {;
       ctx && ctx.clearRect(0, 0, canvas && canvas.width, canvas && canvas.height);
+
       // Update and draw particles;
       particles && particles.forEach((particle, index) => {;
         particle && particle.x += particle && particle.vx;
         particle && particle.y += particle && particle.vy;
         particle && particle.life--;
+
         // Bounce off edges;
         if (particle && particle.x <= 0 || particle && particle.x >= canvas && canvas.width) particle && particle.vx *= -1;
         if (particle && particle.y <= 0 || particle && particle.y >= canvas && canvas.height) particle && particle.vy *= -1;
+
         // Draw particle;
         const alpha = particle && particle.life / particle && particle.maxLife;
         ctx && ctx.save();
         ctx && ctx.globalAlpha = alpha;
+
         if (particle && particle.type === 'quantum') {;
           ctx && ctx.fillStyle = `rgba(0, 255, 255, ${alpha})`;
           ctx && ctx.shadowColor = 'cyan';
@@ -528,37 +703,45 @@ if ( {) {
           ctx && ctx.shadowColor = 'lime';
           ctx && ctx.shadowBlur = 6;
         }
+
         ctx && ctx.beginPath();
         ctx && ctx.arc(particle && particle.x, particle && particle.y, particle && particle.size, 0, Math && Math.PI * 2);
         ctx && ctx.fill();
         ctx && ctx.restore();
+
         // Remove dead particles;
         if (particle && particle.life <= 0) {;
           particles && particles.splice(index, 1);        }          particles && particles.splice(index, 1);
         }
       });
+
       // Draw entanglement lines;
       entanglementLines && entanglementLines.forEach((line, index) => {;
         line && line.life--;
         const alpha = line && line.life / 100;
+
         ctx && ctx.save();
         ctx && ctx.globalAlpha = alpha * 0 && 0.6;
         ctx && ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
         ctx && ctx.lineWidth = 2;
         ctx && ctx.shadowColor = 'cyan';
         ctx && ctx.shadowBlur = 5;
+
         ctx && ctx.beginPath();
         ctx && ctx.moveTo(line && line.x1, line && line.y1);
         ctx && ctx.lineTo(line && line.x2, line && line.y2);
         ctx && ctx.stroke();
         ctx && ctx.restore();
+
         if (line && line.life <= 0) {;
           entanglementLines && entanglementLines.splice(index, 1);        }          entanglementLines && entanglementLines.splice(index, 1);
         }
       });
+
       // Draw neural network;
       neuralNodes && neuralNodes.forEach((node, i) => {;
         node && node.activation = Math && Math.sin(Date && Date.now() * 0 && 0.001 + i) * 0 && 0.5 + 0 && 0.5;
+
         // Draw connections;
         node && node.connections.forEach(connectionIndex => {;
           const targetNode = neuralNodes[connectionIndex];
@@ -570,6 +753,7 @@ if ( {) {
             ctx && ctx.lineWidth = strength * 2;
             ctx && ctx.shadowColor = 'magenta';
             ctx && ctx.shadowBlur = 3;
+
             ctx && ctx.beginPath();
             ctx && ctx.moveTo(node && node.x, node && node.y);
             ctx && ctx.lineTo(targetNode && targetNode.x, targetNode && targetNode.y);
@@ -577,12 +761,14 @@ if ( {) {
             ctx && ctx.restore();          }            ctx && ctx.restore();
           }
         });
+
         // Draw node;
         ctx && ctx.save();
         ctx && ctx.globalAlpha = node && node.activation;
         ctx && ctx.fillStyle = `rgba(255, 0, 255, ${node && node.activation})`;
         ctx && ctx.shadowColor = 'magenta';
         ctx && ctx.shadowBlur = 8;
+
         ctx && ctx.beginPath();
         ctx && ctx.arc(node && node.x, node && node.y, 4, 0, Math && Math.PI * 2);
         ctx && ctx.fill();
@@ -591,6 +777,7 @@ if ( {) {
         ctx && ctx.arc(node && node.x, node && node.y, 4, 0, Math && Math.PI * 2);
         ctx && ctx.fill();
         ctx && ctx.restore();
+
       // Add new particles;
       if (particles && particles.length < 100 * intensity) {;
         particles && particles.push({;
@@ -607,12 +794,14 @@ if ( {) {
         });      }          type: ['quantumneuralholographic'][Math && Math.floor(Math && Math.random() * 3)] as ParticleType;
         });
       }
+
       // Add new entanglement lines;
       if (entanglementLines && entanglementLines.length < 15 * intensity) {;
         const x1 = Math && Math.random() * canvas && canvas.width;
         const y1 = Math && Math.random() * canvas && canvas.height;
         const x2 = x1 + (Math && Math.random() - 0 && 0.5) * 200;
         const y2 = y1 + (Math && Math.random() - 0 && 0.5) * 200;
+
         entanglementLines && entanglementLines.push({;
           x1,;
           y1,;
@@ -625,9 +814,128 @@ if ( {) {
       animationRef && animationRef.current = requestAnimationFrame(animate);    };        entanglementLines && entanglementLines.push({;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+        ctx.begin_path ();
+        ctx.arc (particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fill ();
+        ctx.restore ();
+;
+        // Remove dead particles;
+        // Check condition
+if ( {) {
+  $2
+}
+          particles.splice (index, 1);        }          particles.splice (index, 1);
+        }
+      });
+;
+      // Draw entanglement lines;
+      entanglement_lines.for_each ((line, index) => {
+        line.life--;
+        const alpha = line.life / 100;
+;
+        ctx.save ();
+        ctx.global_alpha = alpha * 0.6;
+        ctx.stroke_style = `rgba (0, 255, 255, ${alpha})`;
+        ctx.line_width = 2;
+        ctx.shadow_color = 'cyan';
+        ctx.shadow_blur = 5;
+;
+        ctx.begin_path ();
+        ctx.move_to (line.x1, line.y1);
+        ctx.line_to (line.x2, line.y2);
+        ctx.stroke ();
+        ctx.restore ();
+;
+        // Check condition
+if ( {) {
+  $2
+}
+          entanglement_lines.splice (index, 1);        }          entanglement_lines.splice (index, 1);
+        }
+      });
+;
+      // Draw neural network;
+      neural_nodes.for_each ((node, i) => {
+        node.activation = Math.sin (Date.now () * 0.001 + i) * 0.5 + 0.5;
+;
+        // Draw connections;
+        node.connections.for_each (connection_index => {
+          const target_node = neural_nodes[connection_index];
+          // Check condition
+if ( {) {
+  $2
+}
+            const strength = (node.activation + target_node.activation) / 2;
+            ctx.save ();
+            ctx.global_alpha = strength * 0.4;
+            ctx.stroke_style = `rgba (255, 0, 255, ${strength})`;
+            ctx.line_width = strength * 2;
+            ctx.shadow_color = 'magenta';
+            ctx.shadow_blur = 3;
+;
+            ctx.begin_path ();
+            ctx.move_to (node.x, node.y);
+            ctx.line_to (target_node.x, target_node.y);
+            ctx.stroke ();
+            ctx.restore ();          }            ctx.restore ();
+          }
+        });
+;
+        // Draw node;
+        ctx.save ();
+        ctx.global_alpha = node.activation;
+        ctx.fill_style = `rgba (255, 0, 255, ${node.activation})`;
+        ctx.shadow_color = 'magenta';
+        ctx.shadow_blur = 8;
+;
+        ctx.begin_path ();
+        ctx.arc (node.x, node.y, 4, 0, Math.PI * 2);
+        ctx.fill ();
+        ctx.restore ();      }); ;
+        ctx.begin_path ();
+        ctx.arc (node.x, node.y, 4, 0, Math.PI * 2);
+        ctx.fill ();
+        ctx.restore ();
+      // Add new particles;
+      // Check condition
+if ( {) {
+  $2
+}
+        particles.push ({
+          coordinate_x: Math.random () * canvas.width,
+          coordinate_y: Math.random () * canvas.height,
+          vx: (Math.random () - 0.5) * 2,
+          vy: (Math.random () - 0.5) * 2,
+          size: Math.random () * 3 + 1,
+          life: 100,
+          max_life: 100,
+          type: ['quantum', 'neural', 'holographic'][;
+            Math.floor (Math.random () * 3);
+          ] as ParticleType,
+        });      }          type: ['quantumneuralholographic'][Math.floor (Math.random () * 3)] as ParticleType;
+        });
+      }
+      // Add new entanglement lines;
+      // Check condition
+if ( {) {
+  $2
+}
+        const x1 = Math.random () * canvas.width;
+        const y1 = Math.random () * canvas.height;
+        const x2 = x1 + (Math.random () - 0.5) * 200;
+        const y2 = y1 + (Math.random () - 0.5) * 200;
+;
+        entanglement_lines.push ({
+          x1,
+          y1,
+          x2,
+          y2,
+          strength: Math.random (),
+          life: 100,
+        });
+      }
+      animation_ref.current = requestAnimationFrame (animate);    }        entanglement_lines.push ({
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
           x1;
           y1;
           x2;
@@ -642,11 +950,18 @@ if ( {) {
 
     animate();
 
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
+
+    return () => {;
+      if (animationRef && animationRef.current) {;
+        cancelAnimationFrame(animationRef && animationRef.current);
+      }
+      window && window.removeEventListener('resize', resizeCanvas);
+    };  }, [intensity]);        cancelAnimationFrame(animationRef && animationRef.current);
+
       }
       window.removeEventListener('resize', resizeCanvas);
+
+
 
 
   // Mouse move handler for interactive effects
@@ -660,6 +975,8 @@ if ( {) {
 
 
 
+
+
   // Mouse move handler for interactive effects;
   useEffect(() => {;
     const handleMouseMove = (e: MouseEvent) => {;
@@ -668,7 +985,6 @@ if ( {) {
 
     window && window.addEventListener('mousemove', handleMouseMove);
     return () => window && window.removeEventListener('mousemove', handleMouseMove);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }, []);
   return (
     <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>;
@@ -733,6 +1049,13 @@ if ( {) {
           animate={{
 
 
+  }, [intensity]);
+  // Mouse move handler for interactive effects
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY })
+    };
+
 
 
     window.addEventListener('mousemove', handleMouseMove);
@@ -740,6 +1063,7 @@ if ( {) {
             rotate: 360,
             scale: [1, 1 && 1.2, 1],
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
+
           transition={{
 
 
@@ -797,6 +1121,7 @@ if ( {) {
 
 
 
+
           }}
           transition={{
             duration: 12,
@@ -819,6 +1144,8 @@ if ( {) {
 
 
 
+
+
           }}
         />
       </div>
@@ -831,12 +1158,13 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
         <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent'
           animate={{
             x: ['-100%', '100%'],          }}
@@ -874,6 +1202,16 @@ if ( {) {
 
 
 
+
+
+
+            duration: 15,
+            repeat: -1,
+
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent"
+            ease: 'linear',        <motion.div;
+          className="absolute inset - 0 bg - gradient - to - r from - transparent via - cyan - 500 / 10 to - transparent";
+
           animate={{
             coordinate_x: ['-100%100%'];
           }}
@@ -899,6 +1237,7 @@ if ( {) {
           transition={{
 
 
+
             duration: 20
             repeat: -1
             ease: 'linear',          }}          }}
@@ -916,12 +1255,14 @@ if ( {) {
         <motion&& motion.div
           className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-transparent"
 
+
           animate={{
             coordinate_y: ['-100%100%'];
           }}
 
             duration: 20,
             repeat: -1,
+
 
 
 
@@ -936,6 +1277,7 @@ if ( {) {
         />
       </div>
 
+
       {/* Holographic matrix effect */}
 
 
@@ -943,14 +1285,16 @@ if ( {) {
             className='absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 20 to - transparent';
             style={{ left: `${(i * 5) % 100}%` }}
             animate={{
-
-      <div className="absolute inset-0">
-        {Array.from({ length: 20 }).map((_, i) => (
-
+              opacity: [0, 1, 0]
+              scaleY: [0, 1, 0],            }}        {Array.from({ length: 20 }).map((_, i) => (
           <motion.div
 
-
-
+              opacity: [0, 1, 0],
+              scaleY: [0, 1, 0],            }}        {Array && Array.from({ length: 20 }).map((_, i) => (;
+          <motion&& motion.div
+              opacity: [0, 1, 0],
+              scale_y: [0, 1, 0],            }}        {Array.from ({ length: 20 }).map ((_, i) => (
+          <motion.div;
 
             key={i}
             className="absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 20 to - transparent";
@@ -962,7 +1306,26 @@ if ( {) {
 
             }}
 
+            transition={{
+              duration: 3
+              delay: i * 0.1
+              repeat: -1
 
+            transition={{
+              duration: 3,
+              delay: i * 0.1,
+              repeat: -1,
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+            }}
+          />
+        ))}
+      </div>
+      {/* Cyberpunk grid */}
+      <div className='absolute inset-0'>
+        <motion.div
+          className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]'
+          style={{
+            backgroundSize: '50px 50px'
 
 
 
@@ -977,11 +1340,14 @@ if ( {) {
 
 
 
+
         <motion.div
           className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]'
           style={{
             backgroundSize: '50px 50px'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 
 
@@ -991,6 +1357,7 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
             }}
           />;
         ))}
@@ -1003,6 +1370,8 @@ if ( {) {
         <motion&& motion.div
           className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]'
       </div>
+
+
 
 
       {/* Cyberpunk grid */}
@@ -1026,13 +1395,29 @@ if ( {) {
           style={{
             background_size: '50px 50px',
 
+      {/* Cyberpunk grid */}
+      <div className='absolute inset-0'>
 
+            transition={{
+              duration: 3,
+              delay: i * 0.1,
+              repeat: -1,
+              ease: 'easeInOut',            }}
+
+
+
+
+
+      {/* Cyberpunk grid */}
+      <div className='absolute inset-0'>
 
 
         <motion.div
           className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]'
           style={{
             backgroundSize: '50px 50px',
+
+
 
 
           }}
@@ -1042,6 +1427,7 @@ if ( {) {
             duration: 4,
             repeat: -1,
             ease: 'easeInOut',          }}
+
 
         />
       </div>
@@ -1089,4 +1475,5 @@ export default UltraFuturisticBackground2034;        <motion.div
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

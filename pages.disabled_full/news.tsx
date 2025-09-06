@@ -9,6 +9,7 @@ interface NewsProps {
   // Add props here as needed
 
 }
+export default function News({ }: NewsProps) {
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 

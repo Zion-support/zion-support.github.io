@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -28,6 +32,10 @@ type PersonaConfig = {
 export default function StudioHostPage() {
   const [persona, setPersona] = useState<PersonaConfig>({
 
+    voice: 'Visionary'
+    language: 'English'
+    voice: 'Visionary',
+    language: 'English',;
 
   });
   const [inviteeName, setInviteeName] = useState('');
@@ -39,6 +47,8 @@ export default function StudioHostPage() {
   );}
 export default function StudioHostPage() {
 
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' })
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
 
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
@@ -52,6 +62,64 @@ export default function StudioHostPage() {
   const [synthesizing, setSynthesizing] = useState(false);
   const [publishing, setPublishing] = useState(false);
 
+
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ persona, invitee: { name: inviteeName, bio: inviteeBio }, topic, operatorPrompt })});
+      const data = await res.json();
+      setEpisode(data.episode)
+}
+;
+export default /**
+ * StudioHostPage - Function description
+ */
+function StudioHostPage() {
+  const [persona, set_persona] = useState < PersonaConfig>({
+    voice: 'Visionary',
+    language: 'English',
+  });
+  const [invitee_name, setInviteeName] = useState ('');
+  const [invitee_bio, setInviteeBio] = useState ('');
+  const [topic, set_topic] = useState ('');
+  const [operator_prompt, setOperatorPrompt] = useState (
+    'Generate a 15 - minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');}
+;
+export default /**
+ * StudioHostPage - Function description
+ */
+function StudioHostPage() {
+  const [persona, set_persona] = useState < PersonaConfig>({ voice: 'Visionary', language: 'English' }),
+  const [invitee_name, setInviteeName] = useState ('');
+  const [invitee_bio, setInviteeBio] = useState ('');
+  const [topic, set_topic] = useState ('');
+  const [operator_prompt, setOperatorPrompt] = useState ('Generate a 15 - minute podcast script interviewing the founder of a global decentralized talent protocol called Zion. Include visionary and technical questions, plus a CTA.');
+;
+  const [generating, set_generating] = useState (false);
+  const [episode, set_episode] = useState < any>(null);
+  const [synthesizing, set_synthesizing] = useState (false);
+  const [publishing, set_publishing] = useState (false);
+;
+  const handle_generate = async () => {
+    set_generating (true);
+    try {
+      const res = await fetch ('/api / podcast / generate', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({
+          persona,
+          invitee: { name: invitee_name, bio: invitee_bio },
+          topic,
+          operator_prompt,
+        }),
+      });
+      const data = await res.json ();
+      set_episode (data.episode);
+    } catch (e) {
+      console.error (e);
+      alert ('Failed to generate episode');
+    } finally {
+      set_generating (false);    }      const data = await res.json ();
+      set_episode (data.episode);
 
 
     } catch (e) {
@@ -71,6 +139,7 @@ export default function StudioHostPage() {
 
     if (!episode?.id) return;
     setPublishing(true);
+
 
 
     <div className='space-y-8'>;
@@ -112,6 +181,7 @@ export default function StudioHostPage() {
           </div>;
           <div>;
 
+
             <label className='block text - sm font - medium'>Language</label>;
             <input;
               className='mt - 1 w - full border rounded p - 2';
@@ -139,11 +209,13 @@ export default function StudioHostPage() {
             />          </div>;
         </div>;
       </section>;
+
       <section className='space-y-3'>;
         <h2 className='text-xl font-semibold'>Episode Generator</h2>;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>          </div>;
         </div>;
       </section>;
+
       <section className='space-y-3'>;
         <h2 className='text-xl font-semibold'>Episode Generator</h2>;
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
@@ -185,7 +257,7 @@ export default function StudioHostPage() {
         <button
           className='px-4 py-2 bg-blue-600 text-white rounded'
           onClick={handleGenerate}
-          disabled={generating}>          {generating ? 'Generating…' : 'Generate Episode'}
+          disabled={generating}>          {generating ? 'Generating' : 'Generate Episode'}
       <section className="space-y-3">;
         <h2 className="text-xl font-semibold">AI Persona</h2>;
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
@@ -240,7 +312,7 @@ export default function StudioHostPage() {
           </div>
         </div>
         <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>
-          {generating ? 'Generating…' : 'Generate Episode'}
+          {generating ? 'Generating' : 'Generate Episode'}
         </button>
       </section>
       {episode && (
@@ -276,6 +348,7 @@ export default function StudioHostPage() {
           </div>;
         </div>;
       </section>;
+
           <div>;
             <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>;
             <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e && e.target.value)} />;
@@ -294,9 +367,10 @@ export default function StudioHostPage() {
           </div>;
         </div>;
         <button className="px-4 py-2 bg-blue-600 text-white rounded" onClick={handleGenerate} disabled={generating}>;
-          {generating ? 'Generating…' : 'Generate Episode'}
+          {generating ? 'Generating' : 'Generate Episode'}
         </button>;
       </section>;
+
       {episode && (;
         <section className='space-y-4'>;
           <h2 className='text-xl font-semibold'>Episode Draft</h2>;
@@ -332,10 +406,35 @@ export default function StudioHostPage() {
     } catch (e) {
       console.error(e),
 
+  const handleGenerate = async () => {
+    setGenerating(true);
+    try {
+      const res = await fetch('/api/podcast/generate', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          persona
+          invitee: { name: inviteeName, bio: inviteeBio }
+          topic
+          operatorPrompt
+        })
+      });
+      const data = await res.json();
+      setEpisode(data.episode);
+    } catch (e) {
+      console.error(e);
+      alert('Failed to generate episode');
+    } finally {
+      setGenerating(false);    }      const data = await res.json();
+      setEpisode(data.episode)
+    } catch (e) {
+      console.error(e);
+
       alert('Failed to generate episode')
     } finally {
       setGenerating(false)
     }
+
 
 
   },
@@ -354,10 +453,13 @@ export default function StudioHostPage() {
       console.error(e),
 
 
+
       alert('Failed to synthesize audio')
     } finally {
       setSynthesizing(false)
     }
+
+
 
 
 
@@ -384,10 +486,13 @@ export default function StudioHostPage() {
 
 
 
+
+
       alert('Failed to update RSS')
     } finally {
       setPublishing(false)
     }
+
 
 
   },
@@ -458,6 +563,7 @@ export default function StudioHostPage() {
               <h4 className=&quot;font-semibold&quot;>Questions</h4>
               <ol className=&quot;list-decimal list-inside space-y-1&quot;>
                 {episode.questions?.map((q: string, idx: number) => (
+
 
 
 
@@ -577,10 +683,14 @@ export default function StudioHostPage() {
 
 
 
+
+
     }
   };
 
   return (
+
+
 
 
 
@@ -628,6 +738,7 @@ export default function StudioHostPage() {
                   <li key={idx}>{q}</li>
 
                 ))}
+
 
 
 
@@ -799,6 +910,7 @@ export default function StudioHostPage() {
                 </pre>;
               </div>;
             </div>;
+
             <div className='flex gap - 3'>;
               <button;
                 className='px - 4 py - 2 bg - purple - 600 text - white rounded';
@@ -807,27 +919,26 @@ export default function StudioHostPage() {
               >;
                 {synthesizing ? 'Synthesizing…' : 'Synthesize Audio'}
               </button>;
-              <button;
-                className='px - 4 py - 2 bg - gray - 800 text - white rounded';
-                on_click={handlePublishRss}
-                disabled={publishing}
-              >                {publishing ? 'Publishing…' : 'Update RSS'}
+              <button
+                className='px-4 py-2 bg-gray-800 text-white rounded'
+                onClick={handlePublishRss}
+                disabled={publishing}>                {publishing ? 'Publishing' : 'Update RSS'}
               </button>;
             </div>;
-            {episode.audio && (              <p>{episode.best_quote}</p>;
+            {episode && episode.audio && (              <p>{episode && episode.bestQuote}</p>;
             </div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 3">;
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">;
               <div>;
-                <h4 className="font - semibold">YouTube Description</h4>;
-                <pre className="whitespace - pre - wrap text - sm bg - gray - 50 p - 3 rounded">{episode.youtube_description}</pre>;
+                <h4 className="font-semibold">YouTube Description</h4>;
+                <pre className="whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded">{episode && episode.youtubeDescription}</pre>;
               </div>;
               <div>;
-                <h4 className="font - semibold">Spotify Description</h4>;
-                <pre className="whitespace - pre - wrap text - sm bg - gray - 50 p - 3 rounded">{episode.spotify_description}</pre>;
+                <h4 className="font-semibold">Spotify Description</h4>;
+                <pre className="whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded">{episode && episode.spotifyDescription}</pre>;
               </div>;
               <div>;
-                <h4 className="font - semibold">Transcript</h4>;
-                <pre className="whitespace - pre - wrap text - sm bg - gray - 50 p - 3 rounded max - h-64 overflow - auto">{episode.transcript}</pre>;
+                <h4 className="font-semibold">Transcript</h4>;
+                <pre className="whitespace-pre-wrap text-sm bg-gray-50 p-3 rounded max-h-64 overflow-auto">{episode && episode.transcript}</pre>;
               </div>;
             </div>;
             <div className="flex gap - 3">;
@@ -845,6 +956,8 @@ export default function StudioHostPage() {
 }
 
 
+              <div className='flex gap - 3'>;
+              <div className='flex gap-3'>
 
                 {episode.audio.mp3Url && (
                   <a;
@@ -864,25 +977,102 @@ export default function StudioHostPage() {
                   <a;
                     href={episode.audio.mp4Url}
 
-
+                    className='text - blue - 600 underline';
+                  >;
+                    Download MP4;
+                  </a>)}              </div>              <div className="flex gap - 3">;
+                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text - blue - 600 underline">Download MP3</a>}
+                {episode.audio.wav_url && <a href={episode.audio.wav_url} className="text - blue - 600 underline">Download WAV</a>}
+                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text - blue - 600 underline">Download MP4</a>}
+            )}
+          </div>;
+        </section>)}
+    </div>);
+}
 
                 disabled={publishing}
               >                {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
 
-
-
-
-
-
-
-
-
+            {episode.audio && (
+              <div className='flex gap-3'>
+                {episode.audio.mp3Url && (
+                  <a
+                    href={episode.audio.mp3Url}
+                    className='text-blue-600 underline'
+                  >
+                    Download MP3
+                  </a>
+                )}
+                {episode.audio.wavUrl && (
+                  <a
+                    href={episode.audio.wavUrl}
+                    className='text-blue-600 underline'
+                  >
+                    Download WAV
+                  </a>
+                )}
+                {episode.audio.mp4Url && (
+                  <a
+                    href={episode.audio.mp4Url}
+                    className='text-blue-600 underline'
+                  >
+                    Download MP4
+                  </a>
+                )}              </div>              <div className="flex gap-3">
+                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text-blue-600 underline">Download MP3</a>}
+                {episode.audio.wavUrl && <a href={episode.audio.wavUrl} className="text-blue-600 underline">Download WAV</a>}
+                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text-blue-600 underline">Download MP4</a>}
+            )}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
 ;
+            {episode.audio && (
+              <div className='flex gap-3'>
+                {episode.audio.mp3Url && (
+                  <a
+                    href={episode.audio.mp3Url}
+                    className='text-blue-600 underline'
+                  >
+                    Download MP3
+                  </a>
+                )}
+                {episode.audio.wavUrl && (
+                  <a
+                    href={episode.audio.wavUrl}
+                    className='text-blue-600 underline'
+                  >
+                    Download WAV
+                  </a>
+                )}
+                {episode.audio.mp4Url && (
+                  <a
+                    href={episode.audio.mp4Url}
+                    className='text-blue-600 underline'
+                  >
+                    Download MP4
+                  </a>
+                )}              </div>              <div className="flex gap-3">
+                {episode.audio.mp3Url && <a href={episode.audio.mp3Url} className="text-blue-600 underline">Download MP3</a>}
+                {episode.audio.wavUrl && <a href={episode.audio.wavUrl} className="text-blue-600 underline">Download WAV</a>}
+                {episode.audio.mp4Url && <a href={episode.audio.mp4Url} className="text-blue-600 underline">Download MP4</a>}
+            )}
+          </div>
+        </section>
+      )}
+    </div>
+  );
+}
+;
+            {episode.audio && (
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+                {publishing ? 'Publishing…' : 'Update RSS'}
+              </button>
+            </div>
+            {episode.audio && (
 

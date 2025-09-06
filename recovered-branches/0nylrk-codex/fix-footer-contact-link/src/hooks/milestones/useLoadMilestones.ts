@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -120,7 +121,7 @@ if (throw milestones_error) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
       }
       set_activities (activities_map);
       set_error (null);
@@ -128,7 +129,6 @@ if (throw milestones_error) {
       console.error ("Error fetching milestones:", err);
       set_error ("Failed to fetch milestones: " + err.message),
       toast.error ("Failed to fetch milestones");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
 
 ;
@@ -149,12 +149,30 @@ if ( {) {
     is_loading;
     error;
 
-
-
-    refetch: fetch_milestones;
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+    refetch: fetchMilestones
+;
+      setActivities(activitiesMap),;
+      setError(null);
+    } catch (err: any) {;
+      console.error("Error fetching milestones:", err),;
+      setError("Failed to fetch milestones: " + err.message),;
+      toast.error("Failed to fetch milestones");
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  // Fetch milestones when component mounts or projectId changes;
+  useEffect(() => {;
+    if (projectId) {;
+      fetchMilestones();
+    }
+  }, [projectId]),;
+  return {;
+    milestones,;
+    activities,;
+    isLoading,;
+    error;
+    refetch: fetchMilestones;
 
   }
 };

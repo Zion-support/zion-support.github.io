@@ -1,5 +1,11 @@
 
 
+import { useEffect, useState  } from 'react';
+import { useAuth  } from '@/hooks/useAuth';
+import { supabase  } from '@/integrations/supabase/client';
+import {useEffect, useState} from 'react';
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
 
 import type { Wallet, TokenTransaction } from '@/types/tokens';
 export function useWallet() {;
@@ -67,6 +73,78 @@ if ( {) {
     fetchWallet();
     fetchTransactions()
   }, [user?.id]);
+
+  async /**
+ * fetch_transactions - Function description
+ */
+function fetch_transactions() {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_transactions ([]);
+      return;
+    }
+    try {
+      const { data, error } = await supabase;
+        .from ('token_transactions');
+        .select ('*');
+        .eq ('user_id', user.id);
+        .order ('created_at', { ascending: false });
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      set_transactions ((data || []) as TokenTransaction[]);
+    } catch (err: any) {
+      console.error ('Error fetching transactions:', err);
+    }
+  }
+  async /**
+ * earn_tokens - Function description
+ */
+function earn_tokens() {
+    // Check condition
+if (return) {
+  $2
+}
+    set_wallet (prev => prev ? { ...prev, balance: prev.balance + amount } : prev);
+    set_transactions (prev => [;
+      {
+        id: crypto.randomUUID ();
+        user_id: user.id;
+        amount;
+        transaction_type: 'earn';
+        reason: reason || null,
+        created_at: new Date ().toISOString ()}
+      ...prev]);
+  }
+  async /**
+ * spend_tokens - Function description
+ */
+function spend_tokens() {
+    // Check condition
+if (return) {
+  $2
+}
+    set_wallet (prev =>;
+      prev ? { ...prev, balance: Math.max (0, prev.balance - amount) } : prev);
+    set_transactions (prev => [;
+      {
+        id: crypto.randomUUID ();
+        user_id: user.id;
+        amount;
+        transaction_type: 'burn';
+        reason: reason || null,
+        created_at: new Date ().toISOString ()}
+      ...prev]);
+  }
+  useEffect (() => {
+    fetch_wallet ();
+    fetch_transactions ();
+  }, [user?.id]);
+;
 
   return {
     wallet;
@@ -177,7 +255,9 @@ export function useWallet() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -185,5 +265,10 @@ export function useWallet() {;
     earnTokens;
 
     spendTokens}
+
+    fetch_wallet;
+    fetch_transactions;
+    earn_tokens;
+    spend_tokens}
 
 }

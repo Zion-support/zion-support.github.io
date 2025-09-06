@@ -17,6 +17,7 @@ const shareToTwitter = () => {
   }
 
 
+
   const copy_link = () =>: any {
     // Check condition
 if (return) {
@@ -105,6 +106,7 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
         </Button>;
       ))}
 
+
     </div>;
   );
 }
@@ -168,6 +170,8 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 
 
 
+
+
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
@@ -200,10 +204,13 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 
 
 
+
+
     </div>;
   );
 };
 };
+
 
 
 
@@ -265,3 +272,4 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {;
   );
 }
 ;
+

@@ -1,4 +1,11 @@
 
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import EnterprisePlans from "../pages/EnterprisePlans";
+import EnterpriseAdmin from "../pages/EnterpriseAdmin";
+import CompanyWorkspace from "../pages/CompanyWorkspace";
+import EnterpriseBilling from "../pages/EnterpriseBilling";
+import ZionHireAI from "../pages/ZionHireAI";
 
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
@@ -6,6 +13,9 @@ import EnterprisePlans from "../pages/EnterprisePlans",
 import EnterpriseAdmin from "../pages/EnterpriseAdmin",
 import CompanyWorkspace from "../pages/CompanyWorkspace",
 
+
+import EnterpriseBilling from "../pages/EnterpriseBilling",
+import ZionHireAI from "../pages/ZionHireAI",
 
 const EnterpriseRoutes = () => {
   return (
@@ -30,6 +40,8 @@ export default EnterpriseRoutes;
 
 
 
+
+
 export default EnterpriseRoutes,
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
@@ -49,7 +61,6 @@ const EnterpriseRoutes = () => {
 
 
 const EnterpriseRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Enterprise Routes */}
@@ -68,6 +79,7 @@ const EnterpriseRoutes = () => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 };
@@ -76,6 +88,7 @@ const EnterpriseRoutes = () => {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default EnterpriseRoutes;
 

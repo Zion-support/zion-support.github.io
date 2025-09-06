@@ -1,20 +1,22 @@
 import OpenAI from 'openai';
 
 
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
+type OpenAIClient = OpenAI;
+export function createOpenAIClient(apiKey: string): OpenAIClient {
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
-
-
   return new OpenAI({ apiKey });
-
-
-
-
+export async function generateJobPost(
+  openai: OpenAIClient
+  role: string
+  opts: any
+): Promise<string> {
+  const prompt = `Create a concise, compelling job post for a ${role}.
+Company: ${opts.company |'Confidential'}
+Location: ${opts.location |'Remote'}
+Key skills: ${(opts.tags |[]).join(', ') |'N/A'}
+Company: ${opts.company || 'Confidential'}
+Location: ${opts.location || 'Remote'}
+Key skills: ${(opts.tags || []).join(', ') || 'N/A'};
 
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai && openai.responses.create({
@@ -23,6 +25,7 @@ Add responsibilities, requirements, and benefits in bullet points.`;
   });
 
   return completion.output_text
+
 
 }
 
@@ -41,4 +44,5 @@ Add responsibilities, requirements, and benefits in bullet points.`;
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

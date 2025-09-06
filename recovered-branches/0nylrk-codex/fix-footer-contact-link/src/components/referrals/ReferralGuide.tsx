@@ -1,5 +1,8 @@
 
 
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 
@@ -9,16 +12,25 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 export function ReferralGuide() {
 
   const steps = [
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+export /**
+ * ReferralGuide - Function description
+ */
+function ReferralGuide() {
+  const steps = [;
 
     {
       title: "Share your referral link"
       description: "Copy your unique referral link and share it with potential clients or talent"}
     {
 
-
-
-
-
+      title: "They sign up"
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"}
+    {
+      title: "They complete onboarding"
+      description: "Once they complete their profile setup, your referral is confirmed"}
+      title: "They sign up",;
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"};
 
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"},
@@ -29,6 +41,8 @@ export function ReferralGuide() {
     {
       title: "You earn rewards"
       description: "Rewards are issued based on the type of user who completes onboarding"}]
+
+
 
 
 
@@ -51,6 +65,15 @@ export function ReferralGuide() {
               </div>
             </div>
 
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+
+
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 export function ReferralGuide() {;
@@ -65,9 +88,11 @@ export function ReferralGuide() {;
       title: "They complete onboarding",;
       description: "Once they complete their profile setup, your referral is confirmed"},;
     {;
+
       title: "You earn rewards";
       description: "Rewards are issued based on the type of user who completes onboarding"}];
   return (;
+
 
     <Card>;
       <CardHeader>;
@@ -85,6 +110,7 @@ export function ReferralGuide() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -93,6 +119,7 @@ export function ReferralGuide() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 ;

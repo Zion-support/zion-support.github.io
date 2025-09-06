@@ -1,15 +1,21 @@
 
 
+import * as React from "react";
+import { Toaster as SonnerToaster } from "sonner";
+import * as React from "react",
+import { Toaster as SonnerToaster } from "sonner",
 
 import {Toaster, as, SonnerToaster} from "sonner";
 
 import * as React from "react",
 import { Toaster as SonnerToaster } from "sonner",
 
-
 export function Toaster() {
   return (
 
+import {Toaster, as, SonnerToaster} from "sonner";
+export function Toaster() {;
+  return (
 
     <SonnerToaster
       position="top-right"
@@ -25,6 +31,8 @@ export function Toaster() {
 
     />
   )
+
+
 
 
 import * as React from "react",;
@@ -46,6 +54,7 @@ export function Toaster() {;
   );
 
 }
+
 
 
 
@@ -75,5 +84,6 @@ function Toaster() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

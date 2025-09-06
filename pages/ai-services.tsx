@@ -1,13 +1,21 @@
 
 
+
+
 import React from "react";
 import Layout from "../components/Layout";
 export default function AIServices() {
   return (
 <Layout
 
+ursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react';
 import Layout from '../components/Layout';
+
+export default function AIServices() {
+  return (
+    <Layout
+origin/automation-improvements-final
 
       title="AI Services - Zion Tech Group"
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
@@ -15,6 +23,27 @@ import Layout from '../components/Layout';
       <div className="min-h-screen bg-gray-50 py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
+
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              AI Services
+            </h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your business with cutting-edge AI solutions and
+              services.
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-gray-600">
+              AI Services page is under construction.
+            </p>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your business with cutting-edge AI solutions and services.
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-gray-600">AI Services page is under construction.</p>
+origin/automation-improvements-final
 
 import Link from 'next/link',
 import Head from 'next/head';
@@ -30,16 +59,249 @@ export default function AIServices() {
               { title: 'AI Sales Intelligence', href: '/ai-sales-automation' }].map((c) => (
               <Link key={c.href} href={c.href} className="p-6 rounded-2xl bg-black/40 border border-white/10 hover:border-cyan-500/40 transition-colors">
                 <div className="text-xl font-semibold">{c.title}</div>
-                <div className="text-sm text-gray-400 mt-2">Implementation‑ready with pricing and SLAs.</div>
+                <div className="text-sm text-gray-400 mt-2">Implementationready with pricing and SLAs.</div>
               </Link>
             ))}
 
           </div>
         </div>
       </div>
+
+
+      description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more.">;
+      <div className="min-h-screen bg-gray-50 py-20">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
+              AI Services;
+            </h1>;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+              Transform your business with cutting-edge AI solutions and;
+              services.;
+            </p>;
+          </div>;
+          <div className="text-center">;
+            <p className="text-gray-600">;
+import React from './react';
+import Layout from "../components / Layout";
+export default /**
+ * AIServices - Function description
+ */
+function AIServices() {
+  return (
+    <Layout;
+      title="AI Services - Zion Tech Group";
+      description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more.";
+    >;
+      <div className="min - h-screen bg - gray - 50 py - 20">;
+        <div className="container mx - auto px - 4">;
+          <div className="text - center mb - 12">;
+            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">;
+              AI Services;
+            </h1>;
+            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
+              Transform your business with cutting - edge AI solutions and;
+              services.;
+            </p>;
+          </div>;
+          <div className="text - center">;
+            <p className="text - gray - 600">;
+
+              AI Services page is under construction.;
+            </p>;
+          </div>;
+        </div>;
+      </div>;
+
     </Layout>;
   );
+import Link from 'next/link';
+import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import { ContactInfo } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+export default function AIServices() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer)
+  }, []);
 
+
+
+
+  const categories = [
+    { id: 'all', name: 'All AI Services', count: 100 },
+    { id: 'autonomous', name: 'Autonomous Agents', count: 25 },
+    { id: 'nlp', name: 'Natural Language', count: 20 },
+    { id: 'computer-vision', name: 'Computer Vision', count: 15 },
+    { id: 'predictive', name: 'Predictive Analytics', count: 15 },
+    { id: 'automation', name: 'AI Automation', count: 15 },
+    { id: 'specialized', name: 'Specialized AI', count: 10 }
+  ];
+
+  const services = [
+    {
+      id: 1,
+      name: 'Autonomous AI Agents',
+      description: 'Self-managing AI agents that can perform complex tasks independently with minimal human intervention.',
+      category: 'autonomous',
+      features: ['Task AutomationDecision MakingLearning CapabilitiesMulti-platform Integration'],
+      price: 'Custom Pricing',
+      popular: true,
+      useCases: ['Process AutomationCustomer ServiceData AnalysisContent Generation']
+    };
+    {
+      id: 2,
+      name: 'AI-Powered Financial Trading',
+      description: 'Advanced AI algorithms for automated trading, risk management, and market analysis.',
+    category: 'predictive',
+      features: ['Market AnalysisRisk AssessmentAutomated TradingReal-time Monitoring'],
+      price: 'Custom Pricing',
+      popular: true,
+      useCases: ['Algorithmic TradingPortfolio ManagementRisk AnalysisMarket Prediction']
+    };
+    {
+      id: 3,
+      name: 'AI Legal Document Analysis',
+      description: 'Intelligent document review and analysis for legal professionals with contract insights.',
+      category: 'nlp',
+      features: ['Contract AnalysisRisk IdentificationCompliance CheckingDocument Summarization'],
+      price: '$199/month',
+      popular: false,
+      useCases: ['Contract ReviewLegal ResearchCompliance MonitoringDocument Management']
+    };
+    {
+      id: 4,
+      name: 'AI-Powered Voice Analytics',
+      description: 'Advanced voice analysis for sentiment, emotion, and intent detection in customer interactions.',
+    category: 'nlp',
+      features: ['Sentiment AnalysisEmotion DetectionIntent RecognitionReal-time Processing'],
+      price: '$149/month',
+      popular: true,
+      useCases: ['Customer ServiceCall Center AnalyticsMarket ResearchQuality Assurance']
+    };
+    {
+      id: 5,
+      name: 'AI-Powered Search & Discovery',
+      description: 'Intelligent search solutions with semantic understanding and personalized results.',
+      category: 'specialized',
+      features: ['Semantic SearchPersonalizationNatural Language QueriesContext Awareness'],
+      price: '$99/month',
+      popular: false,
+      useCases: ['Enterprise SearchE-commerceContent DiscoveryKnowledge Management']
+    };
+    {
+      id: 6,
+      name: 'Computer Vision Solutions',
+      description: 'Advanced image and video analysis for object detection, recognition, and processing.',
+    category: 'computer-vision',
+      features: ['Object DetectionImage RecognitionVideo AnalysisReal-time Processing'],
+      price: '$179/month',
+      popular: true,
+      useCases: ['Quality ControlSecurity MonitoringMedical ImagingAutonomous Vehicles']
+    };
+    {
+      id: 7,
+      name: 'Machine Learning Model Training',
+      description: 'Custom ML model development and training for specific business requirements.',
+      category: 'specialized',
+      features: ['Custom ModelsData PreprocessingModel OptimizationDeployment Support'],
+      price: 'Custom Pricing',
+      popular: false,
+      useCases: ['Predictive ModelingPattern RecognitionAnomaly DetectionRecommendation Systems']
+    };
+    {
+      id: 8,
+      name: 'Natural Language Processing',
+      description: 'Advanced NLP capabilities for text analysis, translation, and language understanding.',
+    category: 'nlp',
+      features: ['Text AnalysisLanguage TranslationSentiment AnalysisEntity Recognition'],
+      price: '$129/month',
+      popular: true,
+      useCases: ['Content AnalysisMultilingual SupportCustomer FeedbackDocument Processing']
+    };
+    {
+      id: 9,
+      name: 'AI Process Automation',
+      description: 'Intelligent automation of complex business processes using AI and machine learning.',
+      category: 'automation',
+      features: ['Process MiningWorkflow OptimizationDecision AutomationIntegration APIs'],
+      price: '$159/month',
+      popular: false,
+      useCases: ['Business Process AutomationWorkflow ManagementDecision SupportSystem Integration']
+    };
+    {
+      id: 10,
+      name: 'Predictive Analytics Engine',
+      description: 'Advanced predictive modeling for forecasting trends, behaviors, and outcomes.',
+    category: 'predictive',
+      features: ['Trend ForecastingBehavioral AnalysisRisk PredictionScenario Modeling'],
+      price: '$189/month',
+      popular: true,
+      useCases: ['Sales ForecastingCustomer BehaviorRisk ManagementResource Planning']
+    };
+    {
+      id: 11,
+      name: 'AI Content Generation',
+      description: 'Intelligent content creation for marketing, documentation, and communication.',
+    category: 'specialized',
+      features: ['Content CreationMulti-format SupportBrand ConsistencyQuality Control'],
+      price: '$79/month',
+      popular: false,
+      useCases: ['Marketing ContentTechnical DocumentationSocial MediaEmail Campaigns']
+    };
+    {
+      id: 12,
+      name: 'AI Chatbot Development',
+      description: 'Intelligent conversational AI for customer service and engagement.',
+      category: 'automation',
+      features: ['Natural ConversationsMulti-channel SupportLearning CapabilitiesIntegration APIs'],
+      price: '$89/month',
+      popular: true,
+      useCases: ['Customer SupportLead GenerationInternal HelpdeskE-commerce Assistant']
+    }
+  ];
+
+  const filteredServices = selectedCategory === 'all' 
+    ? services 
+    : services.filter(service => service.category === selectedCategory);
+  return (
+    <>
+      <Head>
+        <title>AI Services - Zion Tech Group</title>
+        <meta name="description" content="Explore our 100+ advanced AI services including autonomous agents, machine learning, computer vision, NLP, and predictive analytics solutions." />
+        <meta name="keywords" content="AI services, artificial intelligence, machine learning, autonomous agents, computer vision, NLP, predictive analytics" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`${contact.site}/ai-services`} />
+      </Head>
+      
+      <ErrorBoundary level="page">
+        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+          {/* Hero Section */}
+          <section className="py-20 px-4 text-center" role="banner">
+            <div className="max-w-4xl mx-auto">
+              <h1 
+                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                AI Services
+              </h1>
+              <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                100+ Advanced Artificial Intelligence Solutions
+              </p>
+              <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+                Harness the power of artificial intelligence with our comprehensive suite of AI services. 
+                From autonomous agents to predictive analytics, we provide cutting-edge AI solutions 
+                to transform your business operations.
+              </p>
+            </div>
+          </section>
+
+          {/* Category Filter */}
+}
 
 import React from 'react';
 import Head from 'next/head';
@@ -584,6 +846,7 @@ export default function AIServicesPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -591,5 +854,6 @@ export default function AIServicesPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

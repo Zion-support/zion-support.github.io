@@ -35,8 +35,28 @@ import {
   CardContent,
   CardFooter,
 
+  CardHeader,;
+  CardHeader,
+} from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { toast } from "sonner";
+import { Check, Copy, ExternalLink } from "lucide-react";
+export function ZapierIntegration() {;
+  const [copied, setCopied] = useState(false);
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
+
+
+import React, { useState } from "react",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { toast } from "sonner",
+import { Check, Copy, ExternalLink } from "lucide-react",
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -51,6 +71,8 @@ export function ZapierIntegration() {
     setTimeout(() => setCopied(false), 2000),
     toast.success("API key copied to clipboard")
   },
+
+
 
 
   return (
@@ -77,12 +99,14 @@ export function ZapierIntegration() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <div className="space-y-4">
               <div className="space-y-2">
@@ -114,12 +138,14 @@ export function ZapierIntegration() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <Card>
           <CardHeader>
@@ -160,12 +186,14 @@ export function ZapierIntegration() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <Card>
         <CardHeader>
@@ -183,12 +211,14 @@ export function ZapierIntegration() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           <div className="grid md: grid-cols-3 gap-4">
             <div className="border rounded-md p-4">
@@ -207,12 +237,14 @@ export function ZapierIntegration() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Application</h4>
@@ -230,12 +262,14 @@ export function ZapierIntegration() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">Contract Signed</h4>
@@ -251,6 +285,8 @@ export function ZapierIntegration() {
       </Card>
     </div>
 
+  );
+}
 
   )
 import React, { useState } from "react",;
@@ -301,7 +337,6 @@ export function ZapierIntegration() {;
                     {copied ? (
                       <Check className="h - 4 w - 4" />) : (
                       <Copy className="h - 4 w - 4" />)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </Button>;
                 </div>;
               </div>;
@@ -406,6 +441,7 @@ export function ZapierIntegration() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -413,6 +449,7 @@ export function ZapierIntegration() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   );
 }

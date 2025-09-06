@@ -21,9 +21,11 @@ interface Process {;
 }
 
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+declare let process: Process,
+declare let console: Console,
+declare let __dirname: string,
+;
+declare let process: Process,;
+declare let console: Console,;
+declare let __dirname: string,;
 

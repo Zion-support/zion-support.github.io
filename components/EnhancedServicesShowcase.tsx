@@ -4,24 +4,40 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
 
 
-
-
+import {
+  Brain,
+  Shield,
+  Rocket,
+  Cpu,
+  Database,
+  Atom,
+  Users,
+  CheckCircle,
+  TrendingUp,
+  Clock,
+  Star,
+  Filter,;
+  ChevronDown,;
 
 } from 'lucide-react';
 interface Service {;
@@ -40,6 +56,8 @@ interface Service {;
 
   Filter,;
   ChevronDown,;
+
+
 
 
 
@@ -290,6 +308,10 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
 
+
+
+
+
   const filteredServices = services.filter(service => {
     const matchesCategory =
       selectedCategory === 'all' |service.category === selectedCategory;
@@ -342,7 +364,7 @@ const EnhancedServicesShowcase: React.FC = () => {
 
   };
   return (
-    <section id="services" className="py-24 px-6 relative overflow-hidden">;
+    <section id='services' className='py-24 px-6 relative overflow-hidden'>;
       {/* Background */}
 
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">;
@@ -379,12 +401,14 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   {category === 'all' ? 'All Categories' : category}
                 </option>
@@ -410,7 +434,6 @@ const EnhancedServicesShowcase: React.FC = () => {
         {/* Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>          </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Search */}
           <div className="relative">;
             <input
@@ -418,11 +441,98 @@ const EnhancedServicesShowcase: React.FC = () => {
               placeholder="Search services..."
               value={searchTerm}
 
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64"
+            />
+            <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
+          </div>
+        </div>
+        {/* Services Grid */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {filteredServices.map((service, index) => (
+            <div
+              key={service.id}
+              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className='absolute top-4 right-4 z-20'>
+                  <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
+                    <Star className='w-3 h-3' />                    Popular          {filteredServices.map((service, index) => (
+            <div
+              key={service.id}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className="absolute top-4 right-4 z-20">
+                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                    <Star className="w-3 h-3" />
+                    Popular
+                  </div>
+                </div>
+              )}
+
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64"
+            />
+            <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />
+          </div>
+        </div>
+        {/* Services Grid */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          {filteredServices.map((service, index) => (
+            <div
+              key={service.id}
+              className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className='absolute top-4 right-4 z-20'>
+                  <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1'>
+                    <Star className='w-3 h-3' />                    Popular          {filteredServices.map((service, index) => (
+            <div
+              key={service.id}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className="absolute top-4 right-4 z-20">
+                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                    <Star className="w-3 h-3" />
+                    Popular
+                  </div>
+                </div>
+              )}
+
+              {/* Service Content */}
+              <div className='p-8'>
 
         </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              onChange={(e) => setSearchTerm(e && e.target.value)}
+              className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64";
+            />;
+            <Filter className="absolute right-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-white/50" />;
+          </div>;
+        </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredServices.map((service, index) => (
+            <div
+              key={service.id}
+              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className="absolute top-4 right-4 z-20">
+                  <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+                    <Star className="w-3 h-3" />
+                    Popular
+                  </div>
+                </div>
+              )}
+
         {/* Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {filteredServices && filteredServices.map((service, index) => (;
@@ -626,8 +736,21 @@ const EnhancedServicesShowcase: React.FC = () => {
               <div className='p - 8'>;
 
 
+              {/* Service Content */}
+              <div className='p-8'>
+        </div>
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+
+                    Popular
+
+                  </div>
+                </div>
+              )}
+
+              {/* Service Content */}
+              <div className='p-8'>
 
 
                 {/* Icon and Category */}
@@ -672,6 +795,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                       {service && service.category}
                     </div>                  </div>;
                 </div>;
+
                 {/* Service Info */}                {/* Icon and Category */}
                 <div className="flex items-center justify-between mb-4">;
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service && service.color} p-4 flex items-center justify-center text-2xl`}>;
@@ -687,14 +811,16 @@ const EnhancedServicesShowcase: React.FC = () => {
                 <h3 className="text-xl font-bold mb-3 text-white">{service.name}</h3>
                 <p className="text-white/70 text-sm mb-4 leading-relaxed">{service.tagline}</p>
                 {/* Pricing */}
-                <div className="mb-6">
-                  <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-3xl font-bold text-white">{service.price}</span>
-                    <span className="text-white/60">{service.period}</span>
+                <div className='mb-6'>
+                  <div className='flex items-baseline gap-2 mb-2'>
+                    <span className='text-3xl font-bold text-white'>
+                      {service.price}
+                    </span>
+                    <span className='text-white/60'>{service.period}</span>
                   </div>
-                  <div className="flex items-center gap-4 text-xs text-white/50">
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3 h-3" />
+                  <div className='flex items-center gap-4 text-xs text-white/50'>
+                    <span className='flex items-center gap-1'>
+                      <Clock className='w-3 h-3' />
                       {service.setupTime}
                     </span>
                     <span className="flex items-center gap-1">
@@ -704,6 +830,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                     </span>
                   </div>
                 </div>
+
 
 
 <div className='mb-6'>;
@@ -729,6 +856,7 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
 
+
                     ))}
                   </div>
                 </div>
@@ -737,8 +865,10 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                 {/* Benefits */}
                 <div className='mb-6'>
@@ -779,6 +909,7 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -788,6 +919,7 @@ const EnhancedServicesShowcase: React.FC = () => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 {/* ROI and Market Info */}
 
@@ -801,6 +933,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                 </div>
                   </div>;
                 </div>;
+
                 {/* ROI and Market Info */}
                 <div className='mb-6 p-4 bg-white/5 rounded-lg'>;
                   <div className='text-xs text-white/60 mb-2'>;
@@ -809,7 +942,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                   <div className='text-xs text-white/80 leading-relaxed'>;
                     {service && service.roi}
                   </div>;
-                  <div className='mt-2 text-xs text-white/60'>                    Market: {service && service.marketSize} • Growth: {service && service.growthRate}                <div className="mb-6 p-4 bg-white/5 rounded-lg">;
+                  <div className='mt-2 text-xs text-white/60'>                    Market: {service && service.marketSize}  Growth: {service && service.growthRate}                <div className="mb-6 p-4 bg-white/5 rounded-lg">;
                   <div className="text-xs text-white/60 mb-2">ROI & Market Position</div>;
                   <div className="text-xs text-white/80 leading-relaxed">{service && service.roi}</div>;
                   <div className="mt-2 text-xs text-white/60">;
@@ -911,28 +1044,28 @@ const EnhancedServicesShowcase: React.FC = () => {
                   </div>;
                 </div>;
                 {/* Action Buttons */}
-                <div className='flex gap - 3'>;
-                  <button;
-                    on_click={() =>;
-                      (window.location.href = `mailto:kleber@ziontechgroup.com?subject = Inquiry about ${service.name}`);
+                <div className='flex gap-3'>;
+                  <button
+                    onClick={() =>;
+                      (window && window.location.href = `mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Inquiry about ${service && service.name}`);
                     }
-                    className='flex - 1 px - 4 py - 3 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - xl font - semibold text - white transition - all duration - 300 transform hover:scale - 105'                  >;
+                    className='flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105'                  >;
                     Get Started;
                   </button>;
-                  <button;
-                    on_click={() =>;
-                      (window.location.href = `mailto:kleber@ziontechgroup.com?subject = Demo request for ${service.name}`);
+                  <button
+                    onClick={() =>;
+                      (window && window.location.href = `mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Demo request for ${service && service.name}`);
                     }
-                    className='px - 4 py - 3 border border - white / 20 hover:border - white / 40 rounded - xl font - semibold text - white transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'                  >                <div className="flex gap - 3">;
-                  <button;
-                    on_click={() => window.location.href = `mailto:kleber@ziontechgroup.com?subject = Inquiry about ${service.name}`}
-                    className="flex - 1 px - 4 py - 3 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - xl font - semibold text - white transition - all duration - 300 transform hover:scale - 105";
+                    className='px-4 py-3 border border-white/20 hover:border-white/40 rounded-xl font-semibold text-white transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'                  >                <div className="flex gap-3">;
+                  <button
+                    onClick={() => window && window.location.href = `mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Inquiry about ${service && service.name}`}
+                    className="flex-1 px-4 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-xl font-semibold text-white transition-all duration-300 transform hover:scale-105";
                   >;
                     Get Started;
                   </button>;
-                  <button;
-                    on_click={() =>;
-                      (window.location.href = `mailto:kleber@ziontechgroup.com?subject = Demo request for ${service.name}`);
+                  <button
+                    onClick={() =>;
+                      (window && window.location.href = `mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Demo request for ${service && service.name}`);
                     }
                     className='px - 4 py - 3 border border - white / 20 hover:border - white / 40 rounded - xl font - semibold text - white transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'                    on_click={() => window.location.href = `mailto:kleber@ziontechgroup.com?subject = Demo request for ${service.name}`}
                     className="px - 4 py - 3 border border - white / 20 hover:border - white / 40 rounded - xl font - semibold text - white transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10";
@@ -942,6 +1075,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                   </button>;
                 </div>;
               </div>;
+
 
 
 
@@ -968,6 +1102,7 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
 
+
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
@@ -981,8 +1116,10 @@ const EnhancedServicesShowcase: React.FC = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               Ready to Transform Your Business?
@@ -992,7 +1129,6 @@ const EnhancedServicesShowcase: React.FC = () => {
               accelerate your digital transformation journey.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <a
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Consultation Request'
                 className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
@@ -1015,24 +1151,83 @@ const EnhancedServicesShowcase: React.FC = () => {
                 href='tel:+13024640950'
                 className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'                href="tel:+13024640950"
 
-                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10"
-              >
-                Call Now
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+                className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">;
+            </div>))}
+        </div>;
+        {/* CTA Section */}
+        <div className='text - center mt - 16'>;
+          <div className='bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20 rounded - 3xl p - 8 border border - blue - 500 / 20'>;
+            <h3 className='text - 2xl font - bold text - white mb - 4'>;
+              Ready to Transform Your Business?;
+            </h3>;
+            <p className='text - white / 70 mb - 6 max - w-2xl mx - auto'>;
+              Let's discuss how our cutting - edge technology solutions can;
+              accelerate your digital transformation journey.;
+            </p>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <a;
+                href='mailto:kleber@ziontechgroup.com?subject = Consultation Request';
+                className='px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl'              >;
+                Schedule Consultation;
+              </a>;
+              <a;
+                href='tel:+13024640950';
+                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'              >              Ready to Transform Your Business?;
+            </h3>;
+            <p className="text - white / 70 mb - 6 max - w-2xl mx - auto">;
+              Let's discuss how our cutting - edge technology solutions can accelerate your digital transformation journey.;
+            </p>;
+            <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
+              <a;
+                href="mailto:kleber@ziontechgroup.com?subject = Consultation Request";
+                className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl";
+              >;
+                Schedule Consultation;
+              </a>;
+              <a;
+                href='tel:+13024640950';
+                className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'                href="tel:+13024640950";
+                className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 backdrop - blur - sm bg - white / 5 hover:bg - white / 10";
+              >;
+                Call Now;
+              </a>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+
+};
+
+export default EnhancedServicesShowcase;  );
+}
+export default EnhancedServicesShowcase;  )
+}
+};
+
+export default EnhancedServicesShowcase;  );
+};
+
+export default EnhancedServicesShowcase;
+
+
+    </section>);
+}
+;
+export default EnhancedServicesShowcase);
+}
+;
+export default EnhancedServicesShowcase;
+;
   );
-
-
-
+}
+};
 
 
 export default EnhancedServicesShowcase;  )
 }
 export default EnhancedServicesShowcase;
+
 
 
 
@@ -1045,4 +1240,5 @@ export default EnhancedServicesShowcase;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

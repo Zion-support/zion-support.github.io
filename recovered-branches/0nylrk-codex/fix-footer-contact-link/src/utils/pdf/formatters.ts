@@ -4,11 +4,13 @@
 
 
 
+
 import {format} from 'date-fns';
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 /**
@@ -38,6 +40,8 @@ export function formatDate(date: Date | string | undefined): string {;
 
 
 
+
+
   }
   return format(date, 'MMM yyyy')
 
@@ -45,9 +49,11 @@ export function formatDate(date: Date | string | undefined): string {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
     return format (new Date (date), 'MMM yyyy');
+
 
   }
   return format (date, 'MMM yyyy');
@@ -55,6 +61,8 @@ export function formatDate(date: Date | string | undefined): string {;
 }
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -1,5 +1,18 @@
 
 
+import {useState, useEffect} from "react";
+import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
+import {useJobApplications} from "@/hooks/useJobApplications";
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Skeleton} from "@/components/ui/skeleton";
+import {toast} from "@/hooks/use-toast";
+import {KanbanColumn} from "./KanbanColumn";
+import {useIsMobile} from "@/hooks/use-mobile";
+interface DnDLocation {
+  droppableId: string,
+  index: number
 
 import { useState, useEffect } from "react",
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",
@@ -10,6 +23,27 @@ import { Button } from "@/components/ui/button",
 import { Skeleton } from "@/components/ui/skeleton",
 import { toast } from "@/hooks/use-toast",
 
+import { KanbanColumn } from "./KanbanColumn";
+import { useIsMobile } from "@/hooks/use-mobile";
+interface DnDLocation {
+import { KanbanColumn } from "./KanbanColumn",
+import { useIsMobile } from "@/hooks/use-mobile",
+interface DnDLocation {
+  droppableId: string,
+  index: number
+import { useState, useEffect } from "react",;
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { toast } from "@/hooks/use-toast",;
+import { KanbanColumn } from "./KanbanColumn",;
+import { useIsMobile } from "@/hooks/use-mobile",;
+interface DnDLocation {;
+  droppableId: string,;
+  index: number;
 
 }
 ;
@@ -62,11 +96,13 @@ interface KanbanBoardProps {
 
 
 
+
 export function KanbanBoard({ jobId }: KanbanBoardProps) {;
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
@@ -93,9 +129,20 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
       return
     }
 
-
-
-
+    // Get the application that was dragged
+    const application = applications.find(app => app.id === draggableId);
+    if (!application) return;
+    // Update the application status in the database
+    const newStatus = destination.droppableId as ApplicationStatus;
+    // Optimistically update the UI
+    const sourceColumn = [...columns[source.droppableId]];
+    const destColumn = [...columns[destination.droppableId]];
+    const [removed] = sourceColumn.splice(source.index, 1);
+    destColumn.splice(destination.index, 0, { ...removed, status: newStatus })
+    setColumns({
+      ...columns;
+      [source.droppableId]: sourceColumn;
+      [destination.droppableId]: destColumn});
 
 ;
 
@@ -160,24 +207,23 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
     
 
     // Get the application that was dragged
-    const application = applications.find(app => app.id === draggableId),
-    if (!application) return,
-    
+    const application = applications.find(app => app.id === draggableId);
+    if (!application) return;
     // Update the application status in the database
-    const newStatus = destination.droppableId as ApplicationStatus,
-    
+    const newStatus = destination.droppableId as ApplicationStatus;
     // Optimistically update the UI
-    const sourceColumn = [...columns[source.droppableId]],
-    const destColumn = [...columns[destination.droppableId]],
-    const [removed] = sourceColumn.splice(source.index, 1),
-    destColumn.splice(destination.index, 0, { ...removed, status: newStatus }),
-    
+    const sourceColumn = [...columns[source.droppableId]];
+    const destColumn = [...columns[destination.droppableId]];
+    const [removed] = sourceColumn.splice(source.index, 1);
+    destColumn.splice(destination.index, 0, { ...removed, status: newStatus })
     setColumns({
       ...columns,
       [source.droppableId]: sourceColumn,
@@ -189,7 +235,7 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
 
     // Update status in the database
     try {
-      await updateApplicationStatus(draggableId, newStatus),
+      await updateApplicationStatus(draggableId, newStatus);
       toast({
         title: "Status updated"
         description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`})
@@ -220,7 +266,6 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
           </Card>
 
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     // Get the application that was dragged;
     const application = applications && applications.find(app => app && app.id === draggableId);
     if (!application) return;
@@ -255,7 +300,6 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
   };
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>;
         {Array && Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (;
@@ -272,6 +316,7 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -279,6 +324,7 @@ export function KanbanBoard(): any ({ jobId }: KanbanBoardProps) {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         ))}
@@ -446,12 +492,13 @@ if ( {) {
     return (
       <Card className="text - center py - 16">;
         <CardContent>;
-          <h3 className="text - lg font - semibold mb - 2">No applications yet</h3>;
-          <p className="text - muted - foreground mb - 6">;
+          <h3 className="text-lg font-semibold mb-2">No applications yet</h3>;
+          <p className="text-muted-foreground mb-6">;
             You haven't received any applications for this job yet.;
           </p>;
         </CardContent>;
-      </Card>);
+      </Card>;
+    );
   }
   return (
     <DragDropContext onDragEnd={handleDragEnd}>;
@@ -488,5 +535,7 @@ if ( {) {
       </div>;
     </DragDropContext>);
 }
+
+
 
 

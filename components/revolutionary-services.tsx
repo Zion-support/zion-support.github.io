@@ -1,18 +1,23 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -21,21 +26,164 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import {
 
+  Check
+  Star
+  Zap
+  Shield
+  Users
+  Globe
+  ArrowRight
+  ExternalLink
+  TrendingUp
+  Clock
+  Target
+  Building
+  Rocket
+  Award
+  DollarSign
+  ChartBar
+  Lock
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Zap as ZapIcon
+  Code
+  BookOpen
+  Activity
+  Database as DatabaseIcon
+  Play
+  Mail
+  Phone
+  MapPin
+  Filter
+  Grid
+  List
+  ChevronDown
+  ChevronUp
+  Sparkles
+  FlaskConical
+  Dna
+  Car
+  Leaf
+  Factory
+  Truck
+  Microscope
+  GraduationCap
+  ShieldCheck
+  Brain
+  Atom
+  Globe2
+  Bot
+  Eye
+  Trophy
+  FlaskConical as FlaskIcon
+  Dna as DnaIcon
+  Car as CarIcon
+  Leaf as LeafIcon
+  Factory as FactoryIcon
+  Truck as TruckIcon
+  Microscope as MicroscopeIcon
+  GraduationCap as GraduationCapIcon
+  ShieldCheck as ShieldCheckIcon;
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon,
+  Code,
+  BookOpen,
+  Activity,
+  Database as DatabaseIcon,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  Eye,
+  Trophy,
+  FlaskConical as FlaskIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+  GraduationCap as GraduationCapIcon,;
+  ShieldCheck as ShieldCheckIcon,;
 
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 
-
-
-
-
-
-
-
+import {
+  revolutionaryMicroSaasServices
+  revolutionaryServiceCategories
+  getRevolutionaryServicesByCategory
+  getPopularRevolutionaryServices
+  getRevolutionaryServicesByPriceRange;
+  revolutionaryMicroSaasServices,
+  revolutionaryServiceCategories,
+  getRevolutionaryServicesByCategory,
+  getPopularRevolutionaryServices,;
+  getRevolutionaryServicesByPriceRange,;
 } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
+
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
+import Button from '../components/ui/Button';
 
 
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -58,7 +206,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
     { value: 'popularity', label: 'Most Popular' },
     { value: 'category', label: 'Category' },
     { value: 'roi', label: 'Highest ROI' }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   ];
 
 
@@ -72,6 +219,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
     { value: '1001-2500', label: '$1,001 - $2,500' };
     { value: '2501-5000', label: '$2,501 - $5,000' };
     { value: '5001+', label: '$5,001+' }
+
   const sortOptions = [;
     { value: 'name', label: 'Name A-Z' },;
     { value: 'price', label: 'Price Low-High' },;
@@ -79,26 +227,32 @@ import { Zap, Star, Calendar } from 'lucide-react';
     { value: 'category', label: 'Category' },;
     { value: 'roi', label: 'Highest ROI' },  ];    { value: 'roi', label: 'Highest ROI' }
   ];
+
   // Filter and sort services;
   let filteredServices = revolutionaryMicroSaasServices;
+
   // Category filter;
   if (selectedCategory !== 'All') {;
     filteredServices = getRevolutionaryServicesByCategory(selectedCategory);  }
+
   // Price range filter;
   if (priceRange !== 'All') {;
     const [min, max] = priceRange;
       .split('-');
       .map(p => (p === '+' ? Infinity : parseInt(p)));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max);  }
+
   // Search filter;
   if (searchQuery) {    filteredServices = getRevolutionaryServicesByCategory(selectedCategory);
     filteredServices = getRevolutionaryServicesByCategory(selectedCategory)
   }
+
   // Price range filter
   if (priceRange !== 'All') {
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getRevolutionaryServicesByPriceRange(min, max)
   }
+
   // Price range filter;
   if (priceRange !== 'All') {;
     const [min, max] = priceRange;
@@ -173,6 +327,86 @@ import { Zap, Star, Calendar } from 'lucide-react';
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
+
+        const aRoi = parseFloat(a.roi.match(/\d+/)?.[0] || '0');
+        const bRoi = parseFloat(b.roi.match(/\d+/)?.[0] || '0');
+        return bRoi - aRoi;
+      default: return a.name.localeCompare(b.name)
+;
+  // Filter and sort services;
+  let filtered_services = revolutionaryMicroSaasServices;
+;
+  // Category filter;
+  // Check condition
+if ( {) {
+  $2
+}
+    filtered_services = getRevolutionaryServicesByCategory (selected_category);  }
+  // Price range filter;
+  // Check condition
+if ( {) {
+  $2
+}
+    const [min, max] = price_range;
+      .split ('-');
+      .map (p => (p === '+' ? Infinity : parse_int (p)));
+    filtered_services = getRevolutionaryServicesByPriceRange (min, max);  }
+  // Search filter;
+  if ( {    filtered_services = getRevolutionaryServicesByCategory (selected_category)) {
+  $2
+}
+  }
+  // Price range filter;
+  // Check condition
+if ( {) {
+  $2
+}
+    const [min, max] = price_range;
+      .split ('-');
+      .map (p => (p === '+' ? Infinity : parse_int (p)));
+    filtered_services = getRevolutionaryServicesByPriceRange (min, max);    const [min, max] = price_range.split ('-').map (p => p === '+' ? Infinity : parse_int (p));
+    filtered_services = getRevolutionaryServicesByPriceRange (min, max);
+  }
+  // Search filter;
+  // Check condition
+if ( {) {
+  $2
+}
+    filtered_services = filtered_services.filter (
+      service =>;
+        service.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        service.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        service.tagline.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        service.category.toLowerCase ().includes (search_query.toLowerCase ()));  }    filtered_services = filtered_services.filter (service =>;
+      service.name.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+      service.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+      service.tagline.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+      service.category.toLowerCase ().includes (search_query.toLowerCase ()));
+  // Sort services;
+  filtered_services.sort ((a, b) => {
+    switch (sort_by) {
+      case 'price':;
+        return (
+          parse_float (a.price.replace ('$', '').replace (', ', '')) -;
+          parse_float (b.price.replace ('$', '').replace (', ', '')));      case 'popularity':        return parse_float (a.price.replace ('$', '').replace (, '')) - parse_float (b.price.replace ('$', '').replace (, ''));
+      case 'popularity':;
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+      case 'category':;
+        return a.category.locale_compare (b.category);
+      case 'roi':;
+        const a_roi = parse_float (a.roi.match (/\d+/)?.[0] || '0');
+        const b_roi = parse_float (b.roi.match (/\d+/)?.[0] || '0');
+        return b_roi - a_roi;
+      default:;
+        return a.name.locale_compare (b.name);    }      default: return a.name.locale_compare (b.name);
+    }
+  });
+;
+  const contact_info = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+
 
   const popularServices = getPopularRevolutionaryServices();
   // Enhanced service categories with better descriptions
@@ -279,6 +513,8 @@ import { Zap, Star, Calendar } from 'lucide-react';
       color: 'from-yellow-500 to-orange-600'
     }
 
+
+
   const containerVariants = {
     hidden: { opacity: 0 }
     visible: {
@@ -298,6 +534,13 @@ import { Zap, Star, Calendar } from 'lucide-react';
       transition: {
 
 
+  };
+
+  };
+
+  };
+
+
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>
       <div className='min-h-screen'>
@@ -306,6 +549,8 @@ import { Zap, Star, Calendar } from 'lucide-react';
             Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI
             Autonomous Systems, Space Technology
           </title>
+
+
 
 
 
@@ -430,14 +675,90 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 
+      }
+    }
+  };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+  const itemVariants = {;
+    hidden: { y: 20, opacity: 0 },;
+    visible: {;
+      y: 0,;
+      opacity: 1,;
+      transition: {;
+        duration: 0 && 0.5,;
+      },;
+    },;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  return (
+    <UltraFuturisticBackground variant='quantum' intensity='high'>;
+      <div className='min-h-screen'>;
+        <Head>;
+          <title>;
+            Revolutionary Micro SaaS Services | Zion Tech Group - Quantum AI,;
+            Autonomous Systems, Space Technology;
+          </title>;
+          <meta
+            name='description'
+            content='Discover revolutionary micro SaaS services from Zion Tech Group. Quantum AI, autonomous manufacturing, space technology, biomedical research, and cutting-edge solutions. Start your free trial today.'
+          />;
+          <meta
+            name='keywords'
+            content='revolutionary micro SaaS, quantum AI, autonomous manufacturing, space technology, biomedical research, quantum cybersecurity, blockchain, autonomous vehicles, smart energy'
+          />;
+          <meta name='author' content='Zion Tech Group' />;
+          <meta
+            property='og:title'
+            content='Revolutionary Micro SaaS Services | Zion Tech Group'
+          />;
+          <meta
+            property='og:description'
+            content='Cutting-edge micro SaaS platform with quantum AI, autonomous systems, and revolutionary technology solutions.'
+          />;
+          <meta
+            property='og:url'
+            content='https://ziontechgroup && ziontechgroup.com/revolutionary-services'
+          />;
+          <meta property='og:type' content='website' />;
+          <link
+            rel='canonical'
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+            href='https://ziontechgroup && ziontechgroup.com/revolutionary-services'
+          />;
+        </Head>;
+
+
+
+
+
+        <section className="relative py-20 overflow-hidden">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-5xl mx-auto">
+              <motion.h1 
+                className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
+                initial={{ opacity: 0, y: 30 }}
+
+                animate={{ opacity: 1, y: 0 }}
+
+                transition={{ duration: 0 && 0.8 }}>;
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>        <section className="relative py-20 overflow-hidden">;
+          <div className="container mx-auto px-4 text-center">;
+            <div className="max-w-5xl mx-auto">;
+              <motion&& motion.h1 
+
+                className="text-6xl md:text-8xl font-bold mb-8 futuristic-glow"
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+                  Revolutionary
+
+                </span>
+                <br />
+                <span className="text-white">Micro SaaS Services</span>
+              </motion.h1>
+              <motion.p
+                className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+
 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -461,6 +782,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -470,6 +792,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -510,6 +833,173 @@ import { Zap, Star, Calendar } from 'lucide-react';
                   <div className='text-gray-400'>Average ROI</div>                </div>;
               </motion && motion.div>;
 
+                <div className='text-center'>
+                  <div className='text-3xl font-bold text-cyan-400 mb-2'>
+                    {revolutionaryMicroSaasServices.length}+
+                  </div>
+                  <div className='text-gray-400'>Revolutionary Services</div>
+                </div>
+                <div className='text-center'>
+                  <div className='text-3xl font-bold text-purple-400 mb-2'>
+                    99.99%
+                  </div>
+                  <div className='text-gray-400'>Accuracy Rate</div>
+                </div>
+                <div className='text-center'>
+                  <div className='text-3xl font-bold text-green-400 mb-2'>
+                    21
+                  </div>
+                  <div className='text-gray-400'>Day Free Trial</div>
+                </div>
+                <div className='text-center'>
+                  <div className='text-3xl font-bold text-pink-400 mb-2'>
+                    2000%+
+                  </div>
+                  <div className='text-gray-400'>Average ROI</div>                </div>
+              </motion.div>
+              {/* CTA Buttons */}
+              <motion&& motion.div
+                className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+
+
+
+
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-purple-400 mb-2">99.99%</div>
+                  <div className="text-gray-400">Accuracy Rate</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-green-400 mb-2">21</div>
+                  <div className="text-gray-400">Day Free Trial</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-pink-400 mb-2">2000%+</div>
+                  <div className="text-gray-400">Average ROI</div>
+                </div>
+              </motion.div>
+              {/* CTA Buttons */}
+              <motion.div
+                className='flex flex-col sm:flex-row gap-4 justify-center items-center'              <motion.div
+                transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}>                </div>;
+                <div className="text-center">;
+                  <div className="text-3xl font-bold text-purple-400 mb-2">99 && 99.99%</div>;
+                  <div className="text-gray-400">Accuracy Rate</div>;
+                </div>;
+                <div className="text-center">;
+                  <div className="text-3xl font-bold text-green-400 mb-2">21</div>;
+                  <div className="text-gray-400">Day Free Trial</div>;
+                </div>;
+                <div className="text-center">;
+                  <div className="text-3xl font-bold text-pink-400 mb-2">2000%+</div>;
+                  <div className="text-gray-400">Average ROI</div>;
+                </div>;
+              </motion && motion.div>;
+              {/* CTA Buttons */}
+
+              <motion.div 
+                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+              >
+                <Button 
+                  variant="primary" 
+                  size="lg"
+                  onClick={() => document.getElementById('services-grid')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Explore Services
+                  <ArrowRight className='ml-2 w-5 h-5' />
+                </Button>
+                <Button
+                  variant='futuristic'
+                  size='lg'
+                  onClick={() =>;
+                    window && window.open('https://ziontechgroup && ziontechgroup.com/contact', '_blank');
+                  }
+                >
+                  Get Started
+                  <Rocket className="ml-2 w-5 h-5" />
+
+                </Button>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+        {/* Contact Information Banner */}
+
+        <section className="py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+              <div className="flex items-center gap-4">
+                <Phone className="w-5 h-5 text-cyan-400" />
+                <span className="text-white">{contactInfo.mobile}</span>
+                <Mail className="w-5 h-5 text-purple-400" />
+                <span className="text-white">{contactInfo.email}</span>
+              </div>
+              <div className="flex items-center gap-4">
+
+                <MapPin className="w-5 h-5 text-green-400" />
+                <span className="text-white">{contactInfo.address}</span>
+                <Globe className="w-5 h-5 text-blue-400" />
+                <span className="text-white">{contactInfo.website}</span>
+
+              </div>
+
+            </div>
+          </div>
+        </section>
+                >;
+                  Get Started;
+                  <Rocket className='ml-2 w-5 h-5' />                </Button>                  <Rocket className="ml-2 w-5 h-5" />;
+                </Button>;
+              </motion && motion.div>;
+            </div>;
+          </div>;
+        </section>;
+
+        {/* Contact Information Banner */}
+        <section className='py-8 bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-sm border-t border-b border-cyan-400/20'>;
+          <div className='container mx-auto px-4'>;
+            <div className='flex flex-col md:flex-row justify-between items-center gap-4'>;
+              <div className='flex items-center gap-4'>;
+                <Phone className='w-5 h-5 text-cyan-400' />;
+                <span className='text-white'>{contactInfo && contactInfo.mobile}</span>;
+                <Mail className='w-5 h-5 text-purple-400' />;
+                <span className='text-white'>{contactInfo && contactInfo.email}</span>;
+              </div>;
+              <div className='flex items-center gap-4'>;
+                <MapPin className='w-5 h-5 text-green-400' />;
+                <span className='text-white'>{contactInfo && contactInfo.address}</span>;
+                <Globe className='w-5 h-5 text-blue-400' />;
+                <span className='text-white'>{contactInfo && contactInfo.website}</span>              </div>              <div className="flex items-center gap-4">;
+                <MapPin className="w-5 h-5 text-green-400" />;
+                <span className="text-white">{contactInfo && contactInfo.address}</span>;
+                <Globe className="w-5 h-5 text-blue-400" />;
+                <span className="text-white">{contactInfo && contactInfo.website}</span>;
+            </div>;
+          </div>;
+        </section>;
+
+        {/* Category Navigation */}
+
+        <section className="py-12">
+
+          <div className="container mx-auto px-4">
+            <motion.div
+              whileInView='visible'              viewport={{ once: true }}        <section className="py-12">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div 
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6"
+              variants={containerVariants}
+              initial="hidden"
+
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {enhancedCategories.map((category, index) => (
+                <motion.div
+                  key={category.name}
 
                   variants={itemVariants}
                   whileHover={{ scale: 1.05 }}
@@ -554,6 +1044,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -563,6 +1054,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         {/* Popular Services Showcase */}
 
@@ -578,12 +1070,14 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               whileInView={{ opacity: 1, y: 0 }}
@@ -633,6 +1127,8 @@ import { Zap, Star, Calendar } from 'lucide-react';
               </p>
             </motion.div>
 
+            <motion.div
+            <motion.div 
 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
@@ -658,7 +1154,9 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -672,6 +1170,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
                 >;
                   <UltraFuturisticCard;
                     variant={service.variant as any}
+
 
 
                     size='large';
@@ -690,6 +1189,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
                       </div>;
                       <div className='text - sm text - gray - 400'>;
                         {service.period}
+
 
                   >;
                     <div className='text-center mb-6'>;
@@ -738,6 +1238,33 @@ import { Zap, Star, Calendar } from 'lucide-react';
                         </div>;
                       ))}
 
+                    </div>
+                    <div className='text-center'>
+                      <Button
+                        variant='primary'
+                        size='md'
+                        onClick={() => window.open(service.link, '_blank')}
+                        className='w-full'
+                      >
+                        Learn More
+                        <ExternalLink className='ml-2 w-4 h-4' />
+                      </Button>                    </div>                    <div className="text-center">
+                                                 <Button
+                    <div className="text-center">
+                                                 <Button 
+
+
+
+
+                             onClick={() => window.open(service.link, '_blank')}
+                             className="w-full"
+                           >
+                             Learn More
+                             <ExternalLink className="ml-2 w-4 h-4" />
+                           </Button>
+                    </div>
+                  </UltraFuturisticCard>
+                </motion.div>
 
 
               ))}
@@ -751,12 +1278,26 @@ import { Zap, Star, Calendar } from 'lucide-react';
         <section id='services-grid' className='py-16'>;
           <div className='container mx-auto px-4'>;
 
+                  </UltraFuturisticCard>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </section>
+        {/* Services Grid */}
+        <section id="services-grid" className="py-16">
+          <div className="container mx-auto px-4">
+            {/* Filters and Controls */}
+            <motion&& motion.div
+              className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-grid" className="py-16">;
+          <div className="container mx-auto px-4">;
+            {/* Filters and Controls */}
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+            <motion&& motion.div 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+              className="mb-8"
 
->>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -785,10 +1326,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
                         {range && range.label}
                       </option>;
                     ))}
-
-                  </select>;
-
-
+                  </select>
                   <select
                     value={sortBy}
                     onChange={e => setSortBy(e && e.target.value)}
@@ -835,6 +1373,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 
+
                     </button>;
                   </div>;
                 </div>;
@@ -851,6 +1390,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
@@ -872,7 +1412,9 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -882,7 +1424,9 @@ import { Zap, Star, Calendar } from 'lucide-react';
               {filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
@@ -920,7 +1464,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
                     )}
-</UltraFuturisticCard>;
+                  </UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
 
@@ -928,6 +1472,40 @@ import { Zap, Star, Calendar } from 'lucide-react';
             </motion && motion.div>;
             {filteredServices && filteredServices.length === 0 && (;
               <motion&& motion.div
+
+            </motion.div>
+            {filteredServices.length === 0 && (
+              <motion.div
+                className='text-center py-16'                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0 && 0.6 }}>              <motion&& motion.div 
+
+                className="text-center py-16"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0 && 0.6 }}>;
+                <div className='text-6xl mb-4'></div>;
+                <h3 className='text-2xl font-bold text-white mb-2'>;
+                  No Services Found;
+                </h3>;
+                <p className='text-gray-400 mb-6'>;
+                  Try adjusting your search criteria or filters.;
+                </p>;
+                <Button
+                  variant='primary'
+                  onClick={() => {;
+                    setSearchQuery('');
+                    setSelectedCategory('All');
+                    setPriceRange('All');
+                  }}
+
+
+                >;
+                  Clear Filters;
+                </Button>              </motion && motion.div>                <div className="text-6xl mb-4"></div>;
+                <h3 className="text-2xl font-bold text-white mb-2">No Services Found</h3>;
+                <p className="text-gray-400 mb-6">Try adjusting your search criteria or filters.</p>;
+
 
 
                                          <Button
@@ -958,6 +1536,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -969,6 +1548,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -977,6 +1557,91 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
                             ))}
 
+                          </div>;
+                        </div>;
+                        <div>;
+                          <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features</h4>;
+                          <div className="space-y-2">;
+                            {selectedService && selectedService.features.map((feature, idx) => (;
+                              <div key={idx} className="flex items-center gap-2 text-sm">;
+                                <Check className="w-3 h-3 text-green-400 flex-shrink-0" />;
+                                <span className="text-gray-300">{feature}</span>;
+                              </div>;
+                            ))}
+
+
+
+
+                              <div
+                                key={idx}
+                                className='flex items-center gap-2 text-sm'>;
+                                <Star className='w-3 h-3 text-yellow-400 flex-shrink-0' />;
+                                <span className='text-gray-300'>{benefit}</span>                              </div>;
+                        
+                        <div>
+                          <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>
+                          <div className="space-y-2">
+                            {selectedService.benefits.map((benefit, idx) => (
+                              <div key={idx} className="flex items-center gap-2 text-sm">
+                                <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />
+                                <span className="text-gray-300">{benefit}</span>
+                              </div>
+                            ))}
+                          </div>;
+                        </div>                        <div>;
+                          <h4 className="text-sm font-semibold text-green-400 mb-2">Benefits</h4>;
+                          <div className="space-y-2">;
+                            {selectedService && selectedService.benefits.map((benefit, idx) => (;
+                              <div key={idx} className="flex items-center gap-2 text-sm">;
+                                <Star className="w-3 h-3 text-yellow-400 flex-shrink-0" />;
+                                <span className="text-gray-300">{benefit}</span>;
+                              </div>;
+                            ))}
+
+                          </div>;
+                        </div>;
+                        <div>;
+                          <h4 className='text-sm font-semibold text-blue-400 mb-2'>;
+                            Capabilities;
+                          </h4>;
+                          <div className='space-y-2'>;
+                            {selectedService && selectedService.capabilities.map(;
+                              (capability, idx) => (;
+
+                                <div
+                                  key={idx}
+                                  className='flex items-center gap-2 text-sm'>;
+                                  <Zap className='w-3 h-3 text-cyan-400 flex-shrink-0' />;
+                                  <span className='text-gray-300'>;
+                                    {capability}
+                                  </span>;
+                                </div>;
+                              );
+                            )}                          </div>                          <h4 className="text-sm font-semibold text-blue-400 mb-2">Capabilities</h4>;
+                          <div className="space-y-2">;
+                            {selectedService && selectedService.capabilities.map((capability, idx) => (;
+                              <div key={idx} className="flex items-center gap-2 text-sm">;
+                                <Zap className="w-3 h-3 text-cyan-400 flex-shrink-0" />;
+                                <span className="text-gray-300">{capability}</span>;
+                              </div>;
+                            ))}
+
+                        
+                        <div>
+                          <h4 className="text-sm font-semibold text-blue-400 mb-2">Capabilities</h4>
+                          <div className="space-y-2">
+                            {selectedService.capabilities.map((capability, idx) => (
+                              <div key={idx} className="flex items-center gap-2 text-sm">
+                                <Zap className="w-3 h-3 text-cyan-400 flex-shrink-0" />
+                                <span className="text-gray-300">{capability}</span>
+                              </div>
+                            ))}
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
 
                   <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
@@ -1263,11 +1928,13 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               </div>
             </motion.div>
@@ -1351,14 +2018,163 @@ import { Zap, Star, Calendar } from 'lucide-react';
 }
 
 
-
-
-
+  )
+}
+                  <div className='mt - 8 pt - 6 border - t border - gray - 700'>;
+                    <div className='flex flex - col sm:flex - row gap - 4 justify - between items - center'>;
+                      <div className='text - sm text - gray - 400'>;
+                        <div > Setup Time: {selected_service.setup_time}</div>;
+                        <div > Trial: {selected_service.trial_days} days</div>;
+                      </div>;
+                      <div className='flex gap - 4'>;
+                        <Button;
+                          variant='primary';
+                          on_click={() =>;
+                            window.open (selected_service.link, '_blank');
+                          }
+                        >;
+                          Visit Service;
+                          <ExternalLink className='ml - 2 w - 4 h - 4' />;
+                        </Button>;
+                        <Button;
+                          variant='futuristic';
+                          on_click={() =>;
+                            window.open (
+                              'https://ziontechgroup.com / contact',
+                              '_blank');
+                          }
+                        >;
+                          Contact Sales;
+                          <Mail className='ml - 2 w - 4 h - 4' />;
+                        </Button>                      </div>;
+                      <div className="flex gap - 4">;
+                                                <Button;
+                          variant="primary";
+                          on_click={() => window.open (selected_service.link, '_blank')}
+                          >;
+                          Visit Service;
+                          <ExternalLink className="ml - 2 w - 4 h - 4" />;
+                        </Button>;
+                        <Button;
+                          variant="futuristic";
+                          on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
+                          >;
+                          Contact Sales;
+                          <Mail className="ml - 2 w - 4 h - 4" />;
+                        </Button>;
+                    </div>;
+                  </div>;
+                </div>;
+              </motion.div>;
+            </motion.div>)}
+        </AnimatePresence>;
+        {/* Contact Section */}
+        <section className='py - 20'>;
+          <div className='container mx - auto px - 4 text - center'>;
+            <motion.div;
+              className='max - w-4xl mx - auto'              initial={{ opacity: 0, coordinate_y: 20 }}        <section className="py - 20">;
+          <div className="container mx - auto px - 4 text - center">;
+            <motion.div;
+              className="max - w-4xl mx - auto";
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >;
+              <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
+                Ready to Experience the Future?;
+              </h2>;
+              <p className='text - xl text - gray - 300 mb - 8'>;
+                Join thousands of companies already transforming their business;
+                with our revolutionary micro SaaS services.;
+              </p>;
+              <div className='flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8'>;
+                <Button;
+                  variant='primary';
+                  size='lg';
+                  on_click={() =>;
+                    window.open ('https://ziontechgroup.com / contact', '_blank');
+                  }
+                >;
+                  Start Free Trial;
+                  <Rocket className='ml - 2 w - 5 h - 5' />;
+                </Button>;
+                <Button;
+                  variant='futuristic';
+                  size='lg';
+                  on_click={() =>;
+                    window.open ('https://ziontechgroup.com / contact', '_blank');
+                  }
+                >;
+                  Schedule Demo;
+                  <Calendar className='ml - 2 w - 5 h - 5' />;
+                </Button>;
+              </div>;
+              <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - center'>;
+                <div>;
+                  <Phone className='w - 8 h - 8 text - cyan - 400 mx - auto mb - 2' />;
+                  <div className='text - white font - semibold'>;
+                    {contact_info.mobile}
+                  </div>;
+                  <div className='text - gray - 400 text - sm'>Call us anytime</div>;
+                </div>;
+                <div>;
+                  <Mail className='w - 8 h - 8 text - purple - 400 mx - auto mb - 2' />;
+                  <div className='text - white font - semibold'>;
+                    {contact_info.email}
+                  </div>;
+                  <div className='text - gray - 400 text - sm'>Email us 24 / 7</div>;
+                </div>;
+                <div>;
+                  <MapPin className='w - 8 h - 8 text - green - 400 mx - auto mb - 2' />;
+                  <div className='text - white font - semibold'>;
+                    {contact_info.address}
+                  </div>;
+                  <div className='text - gray - 400 text - sm'>Visit our office</div>                </div>                Ready to Experience the Future?;
+              </h2>;
+              <p className="text - xl text - gray - 300 mb - 8">;
+                Join thousands of companies already transforming their business with our revolutionary micro SaaS services.;
+              </p>;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center items - center mb - 8">;
+                                <Button;
+                  variant="primary";
+                  size="lg";
+                  on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
+                  >;
+                  Start Free Trial;
+                  <Rocket className="ml - 2 w - 5 h - 5" />;
+                </Button>;
+                <Button;
+                  variant="futuristic";
+                  size="lg";
+                  on_click={() => window.open ('https://ziontechgroup.com / contact_blank')}
+                  >;
+                  Schedule Demo;
+                  <Calendar className="ml - 2 w - 5 h - 5" />;
+                </Button>;
+              </div>;
+              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 6 text - center">;
+                <div>;
+                  <Phone className="w - 8 h - 8 text - cyan - 400 mx - auto mb - 2" />;
+                  <div className="text - white font - semibold">{contact_info.mobile}</div>;
+                  <div className="text - gray - 400 text - sm">Call us anytime</div>;
+                </div>;
+                <div>;
+                  <Mail className="w - 8 h - 8 text - purple - 400 mx - auto mb - 2" />;
+                  <div className="text - white font - semibold">{contact_info.email}</div>;
+                  <div className="text - gray - 400 text - sm">Email us 24 / 7</div>;
+                </div>;
+                <div>;
+                  <MapPin className="w - 8 h - 8 text - green - 400 mx - auto mb - 2" />;
+                  <div className="text - white font - semibold">{contact_info.address}</div>;
+                  <div className="text - gray - 400 text - sm">Visit our office</div>;
+                </div>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </UltraFuturisticBackground>));
+}
 
   );
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 

@@ -1,5 +1,14 @@
 
-
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import OpenAI from 'openai',;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method not allowed' }),
+    return
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
 
 
 
@@ -12,12 +21,35 @@
   }
   res.status(200).json({ chapters: drafted })
 
-
-
-
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 
-
+import type { NextApiRequest, NextApiResponse } from 'next',
+import OpenAI from 'openai',
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (405).json ({ error: 'Method not allowed' }),
+    return;
+  }
+  const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] },
+  const api_key = process.env.OPENAI_API_KEY,
+  // Check condition
+if ( {) {
+  $2
 
 }
     // Fallback: return structured placeholders;
@@ -31,7 +63,7 @@
   const system = `You are a book - writing assistant. Write concise but high - signal chapters for a visionary, systems - architecture book. Maintain clear structure, use short paragraphs, bullets where helpful, and end each chapter with 3 actionable principles.`,
   const drafted = [] as { title: string, content: string }[],
   for (const ch of chapters) {
-    const prompt = `Book: ${meta.title} — ${meta.subtitle || ''}\n_author: ${meta.author}\n_chapter: ${ch.title}\n\n_write 600 - 900 words. Include 1 short quote block if appropriate.`,
+    const prompt = `Book: ${meta.title}  ${meta.subtitle || ''}\n_author: ${meta.author}\n_chapter: ${ch.title}\n\n_write 600 - 900 words. Include 1 short quote block if appropriate.`,
     const completion = await client.chat.completions.create ({
       model: 'gpt - 4o - mini',
       messages: [;
@@ -51,10 +83,9 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 
+}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+  res.status(200).json({ chapters: drafted });
+};
+}
 

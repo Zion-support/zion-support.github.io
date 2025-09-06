@@ -13,6 +13,8 @@ function fetch_milestones() {
   $2
 }
 
+
+
 ;
 export async function createMilestone(projectId: string, payload: any) {;
   const res = await fetch(`/api/projects/${projectId}/milestones`, {;
@@ -22,6 +24,7 @@ export async function createMilestone(projectId: string, payload: any) {;
     body: JSON.stringify(payload)}),;
   if (!res.ok) throw new Error(await res.text()),;
   return res.json();
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 }
@@ -73,10 +76,13 @@ export async function createMilestone(projectId: string, payload: any) {;
   if (!res.ok) throw new Error(await res.text()),;
   return res.json();
 
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
 
 
 }
@@ -119,6 +125,8 @@ export async function createMilestone(projectId: string, payload: any) {;
 
 
 
+
+
 }
 ;
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {;
@@ -135,6 +143,7 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
@@ -142,4 +151,5 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

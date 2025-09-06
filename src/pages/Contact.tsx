@@ -1,5 +1,6 @@
 
 
+
 import React, { useState } from 'react';
 
 import { useToast } from '../components/ui/use-toast';
@@ -182,6 +183,7 @@ const Contact: React.FC = () => {
               </div>
 
 
+
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                   Message *
@@ -360,4 +362,7 @@ const Contact: React.FC = () => {
         </div>
       </div>
 
+    </div>
+  );
+}
 

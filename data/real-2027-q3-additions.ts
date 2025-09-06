@@ -5,6 +5,8 @@
 
 
 
+
+
 export const real2027Q3Additions = [
   {
     id: 'it-asset-discovery-agent'
@@ -319,6 +321,8 @@ export const real2027Q3Additions = [
       'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.'
     features: [
 
+
+
       'Discovery via traffic/specs'
       'OWASP API Top 10 checks'
       'PR annotations and CI gating'
@@ -341,12 +345,16 @@ export const real2027Q3Additions = [
   },;
 
 
+
+
 ];      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
     ];
     category: 'Security & Identity';
     link: '/api-security-scanner';
     realService: true
     roi: 'Prevent high-severity API incidents and cut MTTR.'
+
+
 
 
 
@@ -397,7 +405,7 @@ export const real2027Q3Additions = [;
     category: 'Cloud & Infrastructure',
     link: '/managed - postgres - ha',
     real_service: true,
-    roi: 'Eliminate 2–4 on - call incidents / month and improve p99 latency by 20–40%.',
+    roi: 'Eliminate 24 on - call incidents / month and improve p99 latency by 2040%.',
   },
   {
     id: 'vector - search - starter',
@@ -568,7 +576,7 @@ export const real2027Q3Additions = [;
     category: 'Operations',
     link: '/incident - copilot',
     real_service: true,
-    roi: 'Reduce incident resolution time by 30–50% and improve learning capture.',
+    roi: 'Reduce incident resolution time by 3050% and improve learning capture.',
   },
   {
     id: 'ai - market - research',
@@ -587,7 +595,7 @@ export const real2027Q3Additions = [;
     category: 'AI & Data',
     link: '/ai - market - research',
     real_service: true,
-    roi: 'Save 10–20 analyst hours per week while increasing coverage.',
+    roi: 'Save 1020 analyst hours per week while increasing coverage.',
   },
   {
     id: 'ai - sales - automation',
@@ -606,7 +614,7 @@ export const real2027Q3Additions = [;
     category: 'Sales & Marketing',
     link: '/ai - sales - automation',
     real_service: true,
-    roi: 'Increase meetings booked by 20–40% with consistent outreach.',
+    roi: 'Increase meetings booked by 2040% with consistent outreach.',
   },
   {
     id: 'ai - legal - contract - analyzer',
@@ -644,7 +652,7 @@ export const real2027Q3Additions = [;
     category: 'Content & Marketing',
     link: '/ai - content - generator',
     real_service: true,
-    roi: 'Publish 3–5x more content while improving rankings.',
+    roi: 'Publish 35x more content while improving rankings.',
   },
   {
     id: 'email - dmarc - analyzer',
@@ -674,23 +682,50 @@ export const real2027Q3Additions = [;
     description:;
       'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
     features: [;
-
-];      'Discovery via traffic / specsOWASP API Top 10 checksPR annotations and CI gating_change detection and drift alerts';
-
+      'Discovery via traffic / specs',
+      'OWASP API Top 10 checks',
+      'PR annotations and CI gating',
+      'Change detection and drift alerts',
+    ],
+    category: 'Security & Identity',
+    link: '/api - security - scanner',
+    real_service: true,
+    roi: 'Prevent high - severity API incidents and cut MTTR.',
+  },
+];      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
     ];
     category: 'Security & Identity';
     link: '/api - security - scanner';
     real_service: true,
     roi: 'Prevent high - severity API incidents and cut MTTR.';
 
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+      'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports';
+    ],;
+    category: 'Security & Identity',;
+    link: '/email-dmarc-analyzer',;
+    realService: true,;
+    roi: 'Improve deliverability and block spoofing/phishing attempts.';
+  },;
+  {;
+    id: 'api-security-scanner',;
+    name: 'API Security Scanner',;
+    tagline: 'API discovery and vuln scanning with CI gates',;
+    price: '$199',;
+    period: '/month',;
+    description: 'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',;
+    features: [;
+      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts';
+    ],;
+    category: 'Security & Identity',;
+    link: '/api-security-scanner',;
+    realService: true,;
+    roi: 'Prevent high-severity API incidents and cut MTTR.';
 
   }
 ];
 ;
+
+
 
 
 
@@ -950,7 +985,9 @@ export const real2027Q3Additions = [;
     realService: true,;
     roi: 'Prevent high-severity API incidents and cut MTTR.';
 
+
   }
 ];
+
 
 

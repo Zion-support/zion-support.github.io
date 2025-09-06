@@ -6,6 +6,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -15,13 +16,20 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 export const useLogout = (setUser: (user: UserProfile | null) => void) => {
   const logout = async () => {
     try {
       // Clean up existing auth state
 
-
-
+      cleanupAuthState()
+      cleanupAuthState(),
+      
+      // Sign out;
+      await supabase.auth.signOut({ scope: 'global' });
+      // Sign out
+      await supabase.auth.signOut({ scope: 'global' });
+      await supabase.auth.signOut({ scope: 'global' }),
 
       
 
@@ -35,8 +43,8 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {
     } catch (error) {
       console.error("Error during logout:", error)
 
-
-
+    }
+  };
 
 
 import { supabase } from "@/integrations/supabase/client",;
@@ -56,9 +64,9 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {;
 
     }
 
+  }
+  };
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   return { logout }
 }
 

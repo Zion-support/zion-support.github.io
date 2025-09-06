@@ -10,12 +10,14 @@
 
 
 
+
   "announcements": {
     id: "announcements"
     name: "Announcements"
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
+
 import { log_info } from '@/utils / production_logger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react';
 // Mock category data;
@@ -28,12 +30,12 @@ const categories_info: Record < string, ForumCategoryInfo> = {
     icon: "Briefcase";
   }
 }
-const iconMap = {
-  "Briefcase": Briefcase
-  "MessageSquare": MessageSquare
-  "Code": Code
-  "FileText": FileText
-  "Megaphone": Megaphone
+const icon_map = {
+  "Briefcase": Briefcase;
+  "MessageSquare": MessageSquare;
+  "Code": Code;
+  "FileText": FileText;
+  "Megaphone": Megaphone;
 }
 function CategoryContent({
   categoryId
@@ -53,6 +55,7 @@ function CategoryContent({
   categoryId,
   category,
   IconComponent,
+
 
 
   user}: {
@@ -83,6 +86,7 @@ function CategoryContent({
 
 
 
+
   // Apply search filter
   const filteredPosts = searchQuery
     ? categoryPosts.filter(post =>
@@ -91,7 +95,10 @@ function CategoryContent({
         post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
       )
 
-
+    : categoryPosts
+  const canCreatePost = user && (!category.adminOnly |user.userType === 'admin' |user.role === 'admin')
+  const { isFollowed, follow, unfollow } = useFollowedCategories()
+  const { toast } = useToast()
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),
@@ -106,12 +113,15 @@ function CategoryContent({
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   const handleFollow = () => {
     if (!user) {
       toast({ title: 'Login required', description: 'Please sign in to follow this category' })
       return
+
 
 
 import React from 'react';
@@ -123,6 +133,7 @@ import { logInfo } from '@/utils/productionLogger';
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -226,6 +237,7 @@ function CategoryContent({;
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),;
 
 
+
       return;
 
 
@@ -314,3 +326,4 @@ if ( {) {
 }
 
 ;
+

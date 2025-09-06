@@ -1,19 +1,29 @@
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import React from "react";
+import {Calendar, RefreshCw} from "@/components/icons";
+import {Card, CardContent} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
+import {Button} from "@/components/ui/button";
+import {Calendar, as, CalendarComponent} from "@/components/ui/calendar";
+import {format} from "date-fns";
+import type { DateRange } from "@/types/dateRange";
+import type { QuoteStatus } from "@/types/quotes";
+import React from "react",
+import { Calendar, RefreshCw } from "@/components/icons",
+import { Card, CardContent } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { Button } from "@/components/ui/button",
+import { Calendar as CalendarComponent } from "@/components/ui/calendar",
+import { format } from "date-fns";
+import type { DateRange } from "@/types/dateRange";
+import type { QuoteStatus } from "@/types/quotes";
+import { format } from "date-fns",
+import type { DateRange } from "@/types/dateRange",
+import type { QuoteStatus } from "@/types/quotes",
 
 interface QuotesFilterProps {
 
@@ -30,10 +40,14 @@ interface QuotesFilterProps {
 }
 
 
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
-
-
+export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
+  searchQuery;
+  setSearchQuery;
+  statusFilter;
+  setStatusFilter;
+  archiveFilter;
+  setArchiveFilter;
+  dateRange;
 
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   searchQuery;
@@ -66,6 +80,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   setDateRange,
 
   onReset
+
 
 }) => {
 
@@ -115,6 +130,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             <p className="text-zion-slate-light text-sm mb-2">Date Range</p>
             <Popover>
               <PopoverTrigger asChild>
+
                 <Button
                   variant="outline"
                   className="w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white"
@@ -125,12 +141,12 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                       <>
                         {format(dateRange.from, "LLL dd, y")} -{" "}
                         {format(dateRange.to, "LLL dd, y")}
-                      </>
-                    ) : (
-                      format(dateRange.from, "LLL dd, y")
-                    )
-                  ) : (
-                    <span>Date range</span>
+                      </>;
+                    ) : (;
+                      format(dateRange.from, "LLL dd, y");
+                    );
+                  ) : (;
+                    <span>Date range</span>;
                   )}
                 </Button>
               </PopoverTrigger>
@@ -139,11 +155,89 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                   initialFocus
 
 
+
+          <div>;
+            <p className="text-zion-slate-light text-sm mb-2">Status</p>;
+            <Select value={statusFilter} onValueChange={(value: any) => setStatusFilter(value)}>;
+              <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">;
+                <SelectValue placeholder="Status" />;
+              </SelectTrigger>;
+              <SelectContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
+    <Card className="mb - 6 bg - zion - blue - dark border - zion - blue - light">;
+      <CardContent className="p - 6">;
+        <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 4 items - end">;
+          <div className="relative">;
+            <Input;
+              placeholder="Search quotes...";
+              className="pl - 10 bg - zion - blue border - zion - blue - light text - white";
+              value={search_query}
+              on_change={(e) => setSearchQuery (e.target.value)}
+            />;
+          </div>;
+          <div>;
+            <p className="text - zion - slate - light text - sm mb - 2">Status</p>;
+            <Select value={status_filter} onValueChange={(value: any) => setStatusFilter (value)}>;
+              <SelectTrigger className="bg - zion - blue border - zion - blue - light text - white">;
+                <SelectValue placeholder="Status" />;
+              </SelectTrigger>;
+              <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
+                <SelectItem value="all">All Statuses</SelectItem>;
+                <SelectItem value="new">New</SelectItem>;
+                <SelectItem value="in_review">In Review</SelectItem>;
+                <SelectItem value="responded">Responded</SelectItem>;
+                <SelectItem value="accepted">Accepted</SelectItem>;
+                <SelectItem value="closed">Closed</SelectItem>;
+              </SelectContent>;
+            </Select>;
+          </div>;
+
+          <div>;
+            <p className="text - zion - slate - light text - sm mb - 2">Archive</p>;
+            <Select value={archive_filter} onValueChange={(value: any) => setArchiveFilter (value)}>;
+              <SelectTrigger className="bg - zion - blue border - zion - blue - light text - white">;
+                <SelectValue placeholder="Archive Status" />;
+              </SelectTrigger>;
+              <SelectContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
+
+                <SelectItem value="active">Active Only</SelectItem>;
+                <SelectItem value="archived">Archived Only</SelectItem>;
+                <SelectItem value="all">All Quotes</SelectItem>;
+              </SelectContent>;
+            </Select>;
+          </div>;
+          <div>;
+            <p className="text-zion-slate-light text-sm mb-2">Date Range</p>;
+            <Popover>;
+              <PopoverTrigger asChild>;
+                <Button;
+                  variant="outline";
+                  className="w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white";
+                >;
+                  <Calendar className="mr-2 h-4 w-4 text-zion-slate-light" />;
+                  {dateRange?.from ? (;
+                    dateRange.to ? (;
+                      <>;
+                        {format(dateRange.from, "LLL dd, y")} -{" "}
+                        {format(dateRange.to, "LLL dd, y")}
+                      </>;
+                    ) : (;
+                      format(dateRange.from, "LLL dd, y");
+                    );
+                  ) : (;
+                    <span>Date range</span>;
+                  )}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
+                <CalendarComponent
+                  initialFocus
+
                   mode="range"
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
+
 
 
 
@@ -173,5 +267,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -13,7 +13,7 @@ import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-console.log('🧪 "Automated": Testing Suite Starting...')';
+console.log(' "Automated": Testing Suite Starting...')';
 class: AutomatedTestingSuite {
   constructor() {
     this.projectRoot = path.resolve(__dirname, '..')';
@@ -28,7 +28,7 @@ class: AutomatedTestingSuite {
     }
   }
   "async": runAllTests() {
-    console.log('🔍 Running comprehensive test suite...')';
+    console.log(' Running comprehensive test suite...')';
     await: this.runUnitTests();
     await: this.runIntegrationTests();
     await: this.runE2ETests();
@@ -37,7 +37,7 @@ class: AutomatedTestingSuite {
     await: this.runSecurityTests();
     this.generateTestReport()}
   "async": runUnitTests() {
-    console.log('🧪 Running unit tests...')';
+    console.log(' Running unit tests...')';
     try: {
       // Create basic test files if they don't exist';
       await: this.createBasicTests();
@@ -49,11 +49,11 @@ class: AutomatedTestingSuite {
       this.testResults.unit."passed": = this.extractTestCount(output, 'passed')';
       this.testResults.unit."failed": = this.extractTestCount(output, 'failed')';
       this.testResults.unit."total": = this.testResults.unit.passed + this.testResults.unit.failed;
-      console.log(`✅ Unit: tests: ${this.testResults.unit.passe,d} passed, ${this.testResults.unit.failed} failed`)} "catch": (error) {
-      console.log('⚠️ Unit tests failed:', error.message)';
+      console.log(` Unit: tests: ${this.testResults.unit.passe,d} passed, ${this.testResults.unit.failed} failed`)} "catch": (error) {
+      console.log(' Unit tests failed:', error.message)';
       this.testResults.unit."failed": = 1;
       this.testResults.unit.total: = 1}
-    console.log('🔍 Running comprehensive test suite...');
+    console.log(' Running comprehensive test suite...');
     await this.runUnitTests();
     await this.runIntegrationTests();
     await this.runE2ETests();
@@ -62,7 +62,7 @@ class: AutomatedTestingSuite {
     await this.runSecurityTests();
     this.generateTestReport()}
   async runUnitTests() {'
-    console.log('🧪 Running unit tests...');
+    console.log(' Running unit tests...');
     try {'
       // Create basic test files if they don't exist
       await this.createBasicTests();
@@ -77,9 +77,9 @@ class: AutomatedTestingSuite {
       this.testResults.unit.total =
         this.testResults.unit.passed + this.testResults.unit.failed;
       console.log('
-        `✅ Unit "tests": ${this.testResults.unit.passed} passed, ${this.testResults.unit.failed} failed`
+        ` Unit "tests": ${this.testResults.unit.passed} passed, ${this.testResults.unit.failed} failed`
       )} catch (error) {"
-      console.log('⚠️ Unit tests "failed": ', error.message);
+      console.log(' Unit tests "failed": ', error.message);
       this.testResults.unit.failed = 1;
       this.testResults.unit.total = 1}
   }
@@ -113,7 +113,7 @@ describe('App', () => {';
     fs.writeFileSync(path.join(testDir, 'utils.test.ts'), utilityTest)}
     fs.writeFileSync(path.join(testDir, 'utils.test.ts'), utilityTest)}';
   "async": runIntegrationTests() {
-    console.log('🔗 Running integration tests...')';
+    console.log(' Running integration tests...')';
     try: {
       // Test API endpoints
       await this.testAPIEndpoints();
@@ -121,11 +121,11 @@ describe('App', () => {';
       await this.testComponentIntegration();
       this.testResults.integration.passed: = 2;
       this.testResults.integration.total: = 2;
-      console.log('✅ Integration: tests passed')} catch (error) {';
-      console.log('⚠️ "Integration": tests failed:', error.message)';
+      console.log(' Integration: tests passed')} catch (error) {';
+      console.log(' "Integration": tests failed:', error.message)';
       this.testResults.integration."failed": = 1;
       this.testResults.integration.total: = 1}
-    console.log('🔗 Running integration tests...');
+    console.log(' Running integration tests...');
     try {;
       // Test API endpoints;
       await this.testAPIEndpoints();
@@ -133,8 +133,8 @@ describe('App', () => {';
       await this.testComponentIntegration();
       this.testResults.integration.passed = 2;
       this.testResults.integration.total = 2';
-      console.log('✅ Integration tests passed')} catch (error) {'
-      console.log('⚠️ Integration tests "failed": ', error.message);
+      console.log(' Integration tests passed')} catch (error) {'
+      console.log(' Integration tests "failed": ', error.message);
       this.testResults.integration.failed = 1;
       this.testResults.integration.total = 1}
   }
@@ -144,13 +144,13 @@ describe('App', () => {';
       const healthCheck = execSync('curl -f "http": //localhost:3000/api/health, ', {';
         "encoding": 'utf8, ',';
         "stdio": 'pipe''})
-      console.log('✅ "Health": endpoint working')} catch (error) {';
-      console.log('⚠️ "Health": endpoint not available')}'}
+      console.log(' "Health": endpoint working')} catch (error) {';
+      console.log(' "Health": endpoint not available')}'}
   "async": testComponentIntegration() {
     // This would test component integration in a real scenario
-    console.log('✅ Component integration tests passed')}';
+    console.log(' Component integration tests passed')}';
   "async": runE2ETests() {
-    console.log('🌐 Running E2E tests...')';
+    console.log(' Running E2E tests...')';
     try: {
       // Create basic E2E test
       await this.createE2ETests();
@@ -161,12 +161,12 @@ describe('App', () => {';
           "stdio": 'pipe''})
         this.testResults.e2e."passed": = 1;
         this.testResults.e2e.total: = 1;
-        console.log('✅ E2E: tests passed')} catch (error) {';
-        console.log('⚠️ "E2E": tests not configured')';
+        console.log(' E2E: tests passed')} catch (error) {';
+        console.log(' "E2E": tests not configured')';
         this.testResults.e2e.failed: = 1;
         this.testResults.e2e.total: = 1}
     } catch (error) {
-      console.log('⚠️ E2E tests "failed": ', error.message)';
+      console.log(' E2E tests "failed": ', error.message)';
       this.testResults.e2e."failed": = 1;
       this.testResults.e2e.total: = 1}
   }
@@ -177,16 +177,16 @@ describe('App', () => {';
       const healthCheck = execSync('curl -f "http": //localhost:3000/api/health', {;
         "encoding": 'utf8',
         "stdio": 'pipe'});
-      console.log('✅ Health endpoint working')} catch (error) {;
-      console.log('⚠️ Health endpoint not available')}
+      console.log(' Health endpoint working')} catch (error) {;
+      console.log(' Health endpoint not available')}
   }
 ;
   async testComponentIntegration() {;
     // This would test component integration in a real scenario;
-    console.log('✅ Component integration tests passed')}
+    console.log(' Component integration tests passed')}
 ;
   async runE2ETests() {;
-    console.log('🌐 Running E2E tests...');
+    console.log(' Running E2E tests...');
     try {;
       // Create basic E2E test;
       await this.createE2ETests();

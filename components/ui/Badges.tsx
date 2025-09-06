@@ -3,6 +3,11 @@ import React from 'react';
 
 export function TrustBadge({
 
+  type
+}: {
+  type,
+}: {;
+
   type: 'Verified' | 'Pro' | 'Top Rated';
 }) {
   const colorMap = {
@@ -18,6 +23,12 @@ export function TrustBadge({
   );
 export function MicroTestimonial({
 
+  quote
+  author
+}: {
+  quote,
+  author,
+}: {;
 
   quote: string;
   author: string;
@@ -59,8 +70,19 @@ export function MicroTestimonial({
 }
 
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+export /**
+ * MicroTestimonial - Function description
+ */
+function MicroTestimonial() {
+  return (
+    <figure className="border rounded - md p - 3 text - sm">;
+      <blockquote className="italic opacity - 90">“{quote}”</blockquote>;
+      <figcaption className="mt - 2 font - medium opacity - 80">— {author}</figcaption>;
+    </figure>);
+    </span>
+  )
+}
+    </figure>
+  );
+}
 

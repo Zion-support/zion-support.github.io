@@ -1,7 +1,9 @@
 
 
-
-
+import { useState  } from 'react';
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast";
+import { TalentProfile } from "@/types/talent";
 
 export interface HireRequestData {
   talent: {
@@ -25,6 +27,8 @@ export interface HireRequestData {
 
 
 
+
+
 import {useState} from 'react';
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -33,6 +37,8 @@ export interface HireRequestData {
   talent: {;
     id: string;
     full_name: string;
+
+
 
 
 
@@ -67,13 +73,9 @@ export interface HireRequestData {
   }
 }
 
+export function useHireRequest() {
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+export function useHireRequest() {;
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -168,13 +170,34 @@ if (throw error) {
     error;
 
 
-
+        ? error.message 
+        : "There was a problem submitting your request. Please try again.",
+      
       setError(errorMessage);
       toast({
-
-
+        title: "Error";
+        description: errorMessage
+        variant: "destructive"});
+        title: "Error",
+        description: errorMessage,
+        variant: "destructive"}),
+      
+      return { success: false, error: errorMessage }
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+  return {
+    submitHireRequest;
+    isSubmitting;
 
     error
+  }
+}
+        title: "Error",
+        description: errorMessage,
+        variant: "destructive"}),
+      
 
 import { useState } from 'react',;
 import { supabase } from "@/integrations/supabase/client",;
@@ -236,6 +259,8 @@ export function useHireRequest() {;
     submitHireRequest;
     isSubmitting;
     error;
+
+
 
 
   }

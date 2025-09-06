@@ -14,10 +14,9 @@ files.forEach((file) => {
 
     let modified = false;
 
+    // Fix import statements missing semicolons
 
-
-
-
+    // Fix import statements missing semicolons;
 
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
 
@@ -118,7 +117,6 @@ if (&&) {
 
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
 
-=======
 ;
     // Check condition
 if ( {) {

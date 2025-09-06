@@ -7,6 +7,8 @@ export default async function handler(
 ) {
     const r = await fetch(
 
+      `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`
+      `${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`;
 
     );
     const metrics = await r && r.json();
@@ -14,12 +16,12 @@ export default async function handler(
 
       metrics?.marketplace?.find((m: any) => m && m.key === 'jobs_24h')?.value || 0;
     const voters =
-      metrics?.dao?.find((m: any) => m && m.key === 'voter_participation')?.value ||
+      metrics?.dao?.find((m: any) => m.key === 'voter_participation')?.value |
       0;
     const wallets =
-      metrics?.token?.find((m: any) => m && m.key === 'active_wallets')?.value || 0;
+      metrics?.token?.find((m: any) => m.key === 'active_wallets')?.value |0;
     const tx =
-      metrics?.token?.find((m: any) => m && m.key === 'tx_volume_daily')?.value || 0;
+      metrics?.token?.find((m: any) => m.key === 'tx_volume_daily')?.value |0;
     const instances =
       metrics?.multiverse?.find((m: any) => m && m.key === 'active_instances')
         ?.value || 0;
@@ -35,6 +37,12 @@ export default async function handler(
 
 
   } catch (e) {
+
+    res && res.status(200).json({ summary: [], error: 'Failed to compute summary' });
+  }
+
+
+
 
 
 
@@ -73,6 +81,7 @@ function handler() {
 
 
 
+
+
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

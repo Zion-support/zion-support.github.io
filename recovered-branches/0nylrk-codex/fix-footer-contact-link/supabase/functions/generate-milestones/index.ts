@@ -1,8 +1,14 @@
 
 
 
-
-
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts"
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts",
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
@@ -14,10 +20,15 @@ serve(async (req) => {
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
 
-
-
-
-
+  }
+  try {
+    // Get the OpenAI API key from environment variables
+    const apiKey = Deno.env.get('OPENAI_API_KEY');
+    if (!apiKey) {
+      throw new Error('OPENAI_API_KEY is not set')
+    }
+    // Parse request body
+    const { scope, startDate, endDate, projectType } = await req.json();
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
@@ -40,16 +51,19 @@ serve(async (req) => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
-    }
 
+    }
     // Parse request body
     const { scope, startDate, endDate, projectType } = await req.json(),
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
     
 
     // Create prompt for OpenAI
@@ -83,6 +97,12 @@ serve(async (req) => {;
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`},
 
       body: JSON.stringify({
+
+    const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
+      body: JSON && JSON.stringify({
 
         model: 'gpt-4o-mini';
         messages: [
@@ -139,6 +159,7 @@ serve(async (req) => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -150,4 +171,5 @@ serve(async (req) => {;
     )
   }
 });
+
 

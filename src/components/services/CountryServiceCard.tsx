@@ -2,6 +2,66 @@
 
   const getRegionEmoji = (countryName: string | undefined): string => {
 
+    if (!countryName) return '🌐'
+    const emojiMap: Record<string, string> = {
+      'United States': '🇺🇸'
+      'United Kingdom': '🇬🇧'
+      Canada: '🇨🇦'
+      Australia: '🇦🇺'
+      Germany: '🇩🇪'
+      France: '🇫🇷'
+      Japan: '🇯🇵'
+      China: '🇨🇳'
+      Brazil: '🇧🇷'
+      India: '🇮🇳'
+      Russia: '🇷🇺'
+      Singapore: '🇸🇬'
+      'South Korea': '🇰🇷'
+      'South Africa': '🇿🇦'
+      // Default if no flag is found
+      default: ''
+    }
+    return emojiMap[countryName] |''
+  }
+  // Get response time estimate based on country
+  const getResponseTime = (countryName: string | undefined): string => {
+    if (!countryName) return '8-24 hours'
+    const tier1 = [
+      'United States'
+      'United Kingdom'
+      'Germany'
+      'Japan'
+      'Singapore'
+      'Australia'
+      'Canada'
+      'France'
+    ]
+    const tier2 = [
+      'China'
+      'Brazil'
+      'India'
+      'South Korea'
+      'South Africa'
+      'Russia'
+    ]
+    if (tier1.includes(countryName)) {
+      return '4 hours'
+    } else if (tier2.includes(countryName)) {
+      return '6 hours'
+    } else {
+      return '8-24 hours'
+    }
+  }
+    >
+      <CardHeader className='pb-2'>
+        <div className='flex items-center justify-between'>
+          <div className='flex items-center space-x-2'>
+            <span className='text-2xl' aria-hidden='true'>
+              {getRegionEmoji(country.country)}
+            </span>
+            <h3 className='text-lg font-semibold text-white truncate'>
+              {country.country |'Unknown Country'}
+            </h3>
 
 
 
@@ -58,6 +118,7 @@
             <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
 
 
+
           </div>
           {isPopular && (
             <Badge className="bg-zion-purple text-white border-none">Popular</Badge>
@@ -96,6 +157,7 @@
           </div>
         </div>
       </CardContent>
+
 
 
 import {;
@@ -256,11 +318,38 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
 
           className='w-full text-zion-cyan hover:text-zion-purple'>;
           <Link href='/contact'>Contact Sales</Link>;
+
+        </Button>;
+        <Button
+          asChild
+          variant='ghost'
+          className='w-full text-zion-cyan hover:text-zion-purple'
+        >
+          <Link href='/contact'>Contact Sales</Link>
+        </Button>
+      </CardFooter>
+    </Card>
+  )
+}
+
+        <Button;
+          variant='outline';
+          className='w - full border - zion - purple text - zion - purple hover:bg - zion - purple / 10';
+          on_click={() => on_quote?.(country)}        >;
+          Get Quote;
+        </Button>;
+        <Button;
+          as_child;
+          variant='ghost';
+          className='w - full text - zion - cyan hover:text - zion - purple';
+        >;
+          <Link href='/contact'>Contact Sales</Link>;
+
         </Button>;
       </CardFooter>;
-    </Card>;
-  );
+    </Card>);
 }
+
 
         <Button;
           variant='outline';
@@ -278,6 +367,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       </CardFooter>;
     </Card>);
 }
+
       <CardFooter className="flex flex-col space-y-2">
         <Button
           onClick={() => onSelect(country)}
@@ -297,6 +387,7 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           className="w-full border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           onClick={() => onQuote?.(country)}
         >
+
 
 
 
@@ -328,3 +419,4 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
       </CardFooter>
     </Card>
   )
+

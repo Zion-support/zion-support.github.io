@@ -1,4 +1,18 @@
 
+import Link from "next/link";
+export const metadata = {title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services";
+  description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.";
+  keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"}
+export default function SpaceTechPage() {return (;
+import Link from "next/link",;
+export const metadata = {;
+  title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",;
+  description: "Explore Zion Tech Group's cutting-edge space technology solutions. From satellite communications to space infrastructure, we're advancing the future of space exploration.",;
+  keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"},;
+export default function SpaceTechPage() {;
+  return (;
+    <div className="min-h-screen">;
+
 import Link from './next / link';,
 export const metadata = {
   title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",
@@ -10,7 +24,8 @@ export default /**
 function SpaceTechPage() {
   return (
     <div className="min - h-screen">;
-=======
+
+
 import Link from "next/link",;
 export const metadata = {;
   title: "Space Technology Solutions - Zion Tech Group | Satellite & Space Services",;
@@ -18,7 +33,6 @@ export const metadata = {;
   keywords: "space technology, satellite communications, space infrastructure, Zion Tech Group, space solutions, satellite services"},;
 export default function SpaceTechPage() {;
   return (;
-=======
 
 
     <div className="min-h-screen">;
@@ -111,13 +125,13 @@ export default function SpaceTechPage() {;
                 and communication infrastructure for remote regions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• High - speed satellite internet</li>;
-                <li>• Global connectivity solutions</li>;
-                <li>• Remote region communications</li>;
-                <li>• Emergency communications</li>;
+                <li> High - speed satellite internet</li>;
+                <li> Global connectivity solutions</li>;
+                <li> Remote region communications</li>;
+                <li> Emergency communications</li>;
               </ul>;
               <Link href="/space - tech / satellite - communications" className="text - yellow - 400 hover:text - yellow - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Earth Observation */}
@@ -133,13 +147,13 @@ export default function SpaceTechPage() {;
                 data analytics for climate and resource management.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• High - resolution imaging</li>;
-                <li>• Environmental monitoring</li>;
-                <li>• Climate change tracking</li>;
-                <li>• Resource management</li>;
+                <li> High - resolution imaging</li>;
+                <li> Environmental monitoring</li>;
+                <li> Climate change tracking</li>;
+                <li> Resource management</li>;
               </ul>;
               <Link href="/space - tech / earth - observation" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Space Infrastructure */}
@@ -155,13 +169,13 @@ export default function SpaceTechPage() {;
                 infrastructure for future space exploration missions.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Space station development</li>;
-                <li>• Orbital platforms</li>;
-                <li>• Space habitats</li>;
-                <li>• Launch infrastructure</li>;
+                <li> Space station development</li>;
+                <li> Orbital platforms</li>;
+                <li> Space habitats</li>;
+                <li> Launch infrastructure</li>;
               </ul>;
               <Link href="/space - tech / space - infrastructure" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Navigation Systems */}
@@ -178,13 +192,13 @@ export default function SpaceTechPage() {;
                 location - based services for global applications.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Satellite navigation</li>;
-                <li>• Precision positioning</li>;
-                <li>• Location services</li>;
-                <li>• Autonomous navigation</li>;
+                <li> Satellite navigation</li>;
+                <li> Precision positioning</li>;
+                <li> Location services</li>;
+                <li> Autonomous navigation</li>;
               </ul>;
               <Link href="/space - tech / navigation - systems" className="text - green - 400 hover:text - green - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Space Research */}
@@ -200,13 +214,13 @@ export default function SpaceTechPage() {;
                 technology development for space exploration.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Scientific platforms</li>;
-                <li>• Space experiments</li>;
-                <li>• Technology development</li>;
-                <li>• Research collaboration</li>;
+                <li> Scientific platforms</li>;
+                <li> Space experiments</li>;
+                <li> Technology development</li>;
+                <li> Research collaboration</li>;
               </ul>;
               <Link href="/space - tech / space - research" className="text - red - 400 hover:text - red - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
             {/* Space Consulting */}
@@ -222,13 +236,13 @@ export default function SpaceTechPage() {;
                 and space industry partnerships.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
-                <li>• Space strategy development</li>;
-                <li>• Regulatory compliance</li>;
-                <li>• Industry partnerships</li>;
-                <li>• Investment guidance</li>;
+                <li> Space strategy development</li>;
+                <li> Regulatory compliance</li>;
+                <li> Industry partnerships</li>;
+                <li> Investment guidance</li>;
               </ul>;
               <Link href="/space - tech / consulting" className="text - indigo - 400 hover:text - indigo - 300 text - sm font - medium">;
-                Learn More →;
+                Learn More ;
               </Link>;
             </div>;
           </div>;

@@ -1,10 +1,11 @@
 import React from 'react';
 
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+export default function TestSimple() {return (;
+export default function TestSimple(req, res) {
+  try {
+export default function TestSimple() {;
+export default function TestSimple(req, res) {
+  try {
 
   return (;
 
@@ -22,6 +23,7 @@ import React from 'react';
   }
 
 
+
 }
 
 
@@ -32,4 +34,5 @@ import React from 'react';
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

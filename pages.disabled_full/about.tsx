@@ -9,6 +9,7 @@ interface AboutProps {
   // Add props here as needed
 
 }
+export default function About({ }: AboutProps) {
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 

@@ -6,10 +6,13 @@ import ReactMarkdown from 'react-markdown';
 
 
 
+
+
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 export default function BlogPost() {;
+
 
 import { BLOG_POSTS } from "@/data/blog-posts"
 
@@ -60,6 +63,7 @@ function BlogPost() {
   const timedOut = useSkeletonTimeout(20000)
   useEffect((,) => {
     const fetchPost = async () => {
+
       setIsLoading(true)
       setError(null)
       try {
@@ -76,9 +80,11 @@ function BlogPost() {
         return } catch (err) {
 
 
+
         logErrorToProduction('Failed to fetch blog post', { data: err });
         setError('Failed to load article');
       };
+
 
 
       const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
@@ -104,7 +110,7 @@ if ( {) {
         setRelatedPosts (related) } else {
         router.replace ('/blog');
       }
-      setIsLoading(false)
+      setIsLoading (false);
     }
 
     fetchPost()
@@ -198,6 +204,8 @@ export default function BlogPost() {;
 
 
 
+
+
   if (isLoading && !timedOut) {
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
@@ -233,6 +241,8 @@ export default function BlogPost() {;
 
 
 
+
+
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
     if (!post) return ''
@@ -247,7 +257,7 @@ if (return '') {
     const url = encodeURIComponent (window.location.href);
     const title = encodeURIComponent (post.title);
     switch (platform) {
-      case 'facebook':        return `https://www.facebook.com/sharer/sharer.php?u=${url}`
+      case 'facebook':        return `https://www.facebook.com / sharer / sharer.php?u=${url}`;
     switch (platform) {
 
       case 'facebook':;
@@ -259,6 +269,8 @@ if (return '') {
       default:;
         return '#';
   }
+
+
 
 
 
@@ -360,6 +372,8 @@ if (return '') {
 
 
 
+
+
   const articleLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -368,6 +382,8 @@ if (return '') {
     image: post.featuredImage,
     datePublished: post.publishedDate,
     author: {
+
+
 
 
 
@@ -403,6 +419,7 @@ if (return '') {
                 Back to all articles;
               </Link>;
             </Button>;
+
           </div>;
 
 
@@ -420,6 +437,7 @@ if (return '') {
                 </Link>{' '}
                 to accelerate your projects.
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
+
 
 
 

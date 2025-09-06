@@ -9,6 +9,7 @@ interface IntegrationCardProps {
 
 
 
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -34,6 +35,7 @@ import {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -107,6 +109,7 @@ interface IntegrationCardProps {
             <ArrowRight className='ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5' />          </Button>;
             <ArrowRight className="ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5" />;
 
+
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
 import React from "react",;
@@ -115,6 +118,7 @@ import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react';
+
 interface IntegrationCardProps {;
   title: string,;
   description: string,;
@@ -127,12 +131,14 @@ interface IntegrationCardProps {;
 
 
 
+
 }
 
 export function IntegrationCard(): any ({;
   title;
   description;
   icon;
+
 
   status = "disconnected";
   href;
@@ -173,7 +179,9 @@ export function IntegrationCard(): any ({;
             <a href={href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">;
               <span>Manage</span>;
 
+
               <ExternalLink className="h-3.5 w-3.5" />;
+
 
             </a>;
           </Button>;
@@ -223,9 +231,11 @@ export function IntegrationCards() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -239,12 +249,19 @@ export function IntegrationCards() {
         description="Send notifications and interact with Zion from Slack."
         icon={<Slack className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Slack clicked')}
-      />
+      />;
+      <IntegrationCard
+        title='Salesforce'
+        description='Sync leads and opportunities with Salesforce.'
+        icon={<Briefcase className='h-5 w-5' />}
+        onConnect={() => logDebug('Connect Salesforce clicked')}      />;
       <IntegrationCard
         title="Salesforce"
         description="Sync leads and opportunities with Salesforce."
 
         icon={<Briefcase className="h-5 w-5" />}
+
+
 
 
 
@@ -267,10 +284,10 @@ export function IntegrationCards() {
         icon = {<Users className="h-5 w-5" />,}
         onConnect = {() => logDebug('Connect Teams clicked'),}
       />
-    </div>;
-  );
-};
+    </div>
+  )
 }
+
 
 
 
@@ -279,6 +296,7 @@ export function IntegrationCards() {
       />;
     </div>;
   );
+
 }
 
 
@@ -451,5 +469,7 @@ function IntegrationCards() {
     </div>);
 }
 ;
+
+
 
 

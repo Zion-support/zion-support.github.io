@@ -26,6 +26,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
@@ -36,6 +37,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   const [ens, setEns] = useState('');
   const [lens, setLens] = useState('');
@@ -93,7 +95,68 @@ import React, { useEffect, useMemo, useState } from 'react';
 
       const msg = `Link Web3 identities to Zion account\n${JSON.stringify(payload)}`;
       // Sign message with connected wallet if possible (best effort);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+import Head from 'next / head';
+export default /**
+ * AccountSettingsPage - Function description
+ */
+function AccountSettingsPage() {
+  const [user, set_user] = useState<{
+    address: string;
+    chain: 'evm' | 'sol';
+  } | null>(null);  const [displayWeb3, setDisplayWeb3] = useState < boolean>(false);
+  const [ens, set_ens] = useState ('');
+  const [lens, set_lens] = useState ('');
+  const [ceramic, set_ceramic] = useState ('');
+  const [farcaster, set_farcaster] = useState ('');
+  const [linking, set_linking] = useState (false);
+  const [backup_cid, setBackupCid] = useState ('');
+  const [restore_cid, setRestoreCid] = useState ('');
+  const [status, set_status] = useState < string | null>(null);
+;
+  useEffect (() => {
+    const saved =;
+      typeof window !== 'undefined';
+        ? window.local_storage.get_item ('zion - web3 - user');
+        : null;
+    if (set_user (JSON.parse (saved))) {
+  $2
+}
+    const pref =;
+      typeof window !== 'undefined';
+        ? window.local_storage.get_item ('zion - web3 - display');
+        : null;
+    setDisplayWeb3 (pref === 'true');  }, []);
+;
+  const saveDisplayPref = (val: boolean) =>: any {
+    setDisplayWeb3 (val),
+    if (
+      window.local_storage.set_item ('zion - web3 - display', String (val))) {
+  $2
+}  }
+;
+  const linkDID = async () => {
+    // Check condition
+if (return) {
+  $2
+}
+    set_linking (true);
+    set_status (null);
+    try {
+      const nonce_res = await fetch ('/api / auth / nonce');
+      const { nonce } = await nonce_res.json ();
+      const payload = {
+        ens,
+        lens,
+        ceramic,
+        farcaster,
+        address: user.address,
+        chain: user.chain,
+        nonce,
+        ts: Date.now (),
+      }
+      const msg = `Link Web3 identities to Zion account\n${JSON.stringify (payload)}`;
+      // Sign message with connected wallet if possible (best effort);
 
       let signature: string | null = null;
       try {;
@@ -118,8 +181,40 @@ import React, { useEffect, useMemo, useState } from 'react';
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ payload, message: msg, signature })
-      });
+        if (user.chain === 'evm' && (window as any).ethereum) {
+          const ethers = await import('ethers');
+          const provider = new ethers.providers.Web3Provider((window as any).ethereum);
+          const signer = provider.getSigner();
+          signature = await signer.signMessage(msg)
+        } else if (user.chain === 'sol' && (window as any).solana?.isPhantom) {
+          const enc = new TextEncoder().encode(msg);
+          const { signature: sig } = await (window as any).solana.signMessage(enc, 'utf8');
+          const bs58 = (await import('bs58')).default;
+          signature = bs58.encode(sig)
+        }
+      } catch {}
+      const res = await fetch ('/api / did / link', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ payload, message: msg, signature })});
       if (!res.ok) throw new Error('Failed to link DIDs');
+      setStatus('Linked successfully')
+    } catch (e: any) {
+      setStatus(e?.message || 'Linking failed')
+    } finally {
+      setLinking(false)
+    }
+  };
+
+      const res = await fetch('/api/did/link', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ payload, message: msg, signature }),;
+      });
+      if (!res && res.ok) throw new Error('Failed to link DIDs');
+      setStatus('Linked successfully');
+      });
+      if (!res && res.ok) throw new Error('Failed to link DIDs');
       setStatus('Linked successfully');
     } catch (e: any) {
       setStatus(e?.message |'Linking failed');
@@ -319,9 +414,15 @@ import React, { useEffect, useMemo, useState } from 'react';
     } catch (e: any) {;
       setStatus(e?.message || 'Restore failed');    }
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
+        setFarcaster(did.farcaster || '');
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      setStatus('Profile restored from backup');
 
     } catch (e: any) {
       set_status (e?.message || 'Restore failed');    }
@@ -435,6 +536,8 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 
 
+
+
     } catch (error) {
       setStatus(e?.message || 'Restore failed');
       } catch (error) {
@@ -447,15 +550,17 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
   return (
 
 
     <>
       <Head>
-        <title>Account Settings — Zion</title>
+        <title>Account Settings  Zion</title>
       </Head>
       <div className="max-w-3xl mx-auto space-y-8">
         <section className="rounded-xl border p-5">
@@ -539,7 +644,7 @@ import React, { useEffect, useMemo, useState } from 'react';
             <input value={lens} onChange={(e) => setLens(e.target.value)} placeholder="Lens handle (e.g. alice.lens)" className="w-full rounded-md border px-3 py-2" />
             <input value={ceramic} onChange={(e) => setCeramic(e.target.value)} placeholder="Ceramic DID (did:3:...)" className="w-full rounded-md border px-3 py-2" />
             <input value={farcaster} onChange={(e) => setFarcaster(e.target.value)} placeholder="Farcaster handle (e.g. @alice)" className="w-full rounded-md border px-3 py-2" />
-            <button onClick={linkDID} disabled={linking} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2">{linking ? 'Linking…' : 'Link & Verify'}</button>
+            <button onClick={linkDID} disabled={linking} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2">{linking ? 'Linking' : 'Link & Verify'}</button>
           </div>
         </section>
 
@@ -559,12 +664,14 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           </div>
           <div className="mt-4 flex gap-2">
@@ -573,9 +680,12 @@ import React, { useEffect, useMemo, useState } from 'react';
           </div>
         </section>
 
+        {status && <div className='text-sm text-gray-600'>{status}</div>}
+      </div>
+    </>
+);
 
-
-
+}
 
         {status && <div className="text-sm text-gray-600">{status}</div>  } catch (error) {
     console.error("Error:", error);
@@ -587,6 +697,7 @@ import React, { useEffect, useMemo, useState } from 'react';
     </>
   )
 }
+
 
 
 
@@ -605,5 +716,6 @@ import React, { useEffect, useMemo, useState } from 'react';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

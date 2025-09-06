@@ -5,12 +5,20 @@
 
 
 
+
+
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardFooter, CardHeader} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {ArrowRight, Check, ExternalLink} from "lucide-react";
 
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Check, ExternalLink } from "lucide-react";
+interface IntegrationCardProps {
 
 
 interface IntegrationCardProps {;
@@ -27,6 +35,7 @@ import { ArrowRight, Check, ExternalLink } from "lucide-react",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -34,6 +43,7 @@ export function IntegrationCard(): any ({;
   title;
   description;
   icon;
+
 
 
 
@@ -50,6 +60,7 @@ interface IntegrationCardProps {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -61,6 +72,7 @@ interface IntegrationCardProps {
 
   onConnect}: IntegrationCardProps) {
   return (
+
     <Card className="overflow-hidden">
       <CardHeader className="pb-2">
         <div className="flex justify-between items-start">
@@ -119,11 +131,9 @@ export function IntegrationCard({;
   title,;
   description,;
   icon,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   status = "disconnected";
   href;
   onConnect}: IntegrationCardProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Card className="overflow-hidden">;
       <CardHeader className="pb-2">;
@@ -167,6 +177,7 @@ export function IntegrationCard({;
 
 
 
+
         )}
       </CardFooter>
     </Card>
@@ -185,6 +196,7 @@ export function IntegrationCard({;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
         )}
       </CardFooter>;
     </Card>;
@@ -192,10 +204,10 @@ export function IntegrationCard({;
 }
 
 export function IntegrationCards() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="grid md:grid-cols-3 gap-6">;
       {/* Integration cards would go here */}
+
 
 
 
@@ -208,5 +220,6 @@ export function IntegrationCards() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

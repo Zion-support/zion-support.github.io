@@ -1,7 +1,15 @@
 
-
+export interface TalentCardProps {
+  talent: TalentProfile
+  onViewProfile: (id: string) => void
+  onRequestHire: (talent: TalentProfile) => void
+  isSaved: boolean
+  onToggleSave: (id: string, isSaved: boolean) => void
+  isAuthenticated: boolean
+}
 
       onViewProfile(talent.id)
+
 
     }
   }
@@ -23,6 +31,25 @@
     if (onToggleSave) {
 
 
+              {talent.profile_picture_url && !avatarError ? (
+                <Image
+                  src={talent.profile_picture_url}
+                  alt={talent.full_name |'Talent Avatar'}
+                  fill={true}                  style={{ objectFit: 'cover' }}
+                  className='rounded-full' // Make sure image itself is rounded if fill is used in a rounded container                  onError={() => setAvatarError(true)}
+                  priority={false}
+                />
+              ) : (
+                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  {talentNameInitial}
+                  className="rounded-full" // Make sure image itself is rounded if fill is used in a rounded container
+                  onError={() => setAvatarError(true)}
+                  priority={false}                />
+              ) : (
+                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url}
+                  alt={talent.full_name |'Talent Avatar'}
+                <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  src={talent.profile_picture_url} 
+import { Button } from "@/components/ui/button",;
+import { Card } from "@/components/ui/card",;
 
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
 import Link from "next/link",;
@@ -86,6 +113,7 @@ export function TalentCard({;
                   priority={false}
 
 
+
                 />;
               ) : (;
                 <div className='w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold'>                  {talentNameInitial}
@@ -138,6 +166,7 @@ export interface TalentCardProps {
 
 
 
+
               >
                 <Star className={`h-5 w-5 ${isSaved ? "fill-yellow-400 text-yellow-400" : ""}`} />
                 <span className="sr-only">{isSaved ? "Saved" : "Save"}</span>
@@ -162,6 +191,7 @@ export interface TalentCardProps {
                 <div className="flex items-center text-zion-slate-light">
 
 
+
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{talent.location}</span>
                 </div>
@@ -178,6 +208,7 @@ export interface TalentCardProps {
                 <div className='flex items-center text-zion-slate-light'>;
                   <MapPin className='h-4 w-4 mr-1' />                  <span>{talent && talent.location}</span>;
                 </div>;
+
 
 
               )}
@@ -229,34 +260,79 @@ export interface TalentCardProps {
             </div>;
           </div>;
         </div>;
-        {skills.length > 0 && (;
-          <div className="mt-4">;
-            <div className="flex flex-wrap gap-2">;
-              {skills.map((skill, index) => (;
-                <span;
+
+        {skills && skills.length > 0 && (;
+          <div className='mt-4'>;
+            <div className='flex flex-wrap gap-2'>;
+              {skills && skills.map((skill, index) => (;
+                <span
                   key={index}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light";
-                >;
+                  className='px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light'>          <div className="mt-4">;
+            <div className="flex flex-wrap gap-2">;
+              {skills && skills.map((skill, index,) => (;
+                <span
+                  key = {index,}
+                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
+                <span
+                  key = {index,}
+                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
                   {skill}
                 </span>;
               ))}
-              {(talent.skills?.length || 0) > 5 && (;
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
-                  +{(talent.skills?.length || 0) - 5} more;
+              {(talent.skills?.length |0) > 5 && (
+                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent.skills?.length |0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
+                  +{(talent.skills?.length |0) - 5} more
+                  {skill}
+                </span>
+              ))}
+                </span>
+              {(talent && talent.skills?.length || 0) > 5 && (;
+                <span className='px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan'>                  +{(talent && talent.skills?.length || 0) - 5} more                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
+                  +{(talent && talent.skills?.length || 0) - 5} more;
                 </span>;
               )}
             </div>
           </div>
         )}
 
+        <div className='mt-5 flex items-center justify-between'>
+          <div>
+            {talent.hourly_rate ? (
+              <div className='text - white font - bold'>;
+                ${talent.hourly_rate}
+                <span className='text-zion-slate-light font-normal'>/hr</span>
+              </div>
+            ) : (
+              <div className='text-zion-slate-light'>Rate not specified</div>
+            )}
+          </div>
+          <div className='flex items-center gap-2'>
+            {isAuthenticated && (
+
+        <div className='mt-5 flex items-center justify-between'>;
+          <div>;
+            {talent && talent.hourly_rate ? (;
+              <div className='text-white font-bold'>;
+                ${talent && talent.hourly_rate}
+                <span className='text-zion-slate-light font-normal'>/hr</span>;
+              </div>;
+            ) : (;
+              <div className='text-zion-slate-light'>Rate not specified</div>;
+            )}
+          </div>;
+
+          <div className='flex items-center gap-2'>;
+            {isAuthenticated && (;
 
               <Button
                 size='sm'
                 variant='secondary'
                 onClick={handleRequestHire}
                 className='bg-zion-purple hover:bg-zion-purple-light text-white'>                className="bg-zion-purple hover:bg-zion-purple-light text-white";
+
 ;
         <div className="mt-5 flex items-center justify-between">;
+
           <div>;
             {talent && talent.hourly_rate ? (;
               <div className="text-white font-bold">;
@@ -265,6 +341,7 @@ export interface TalentCardProps {
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
+
 
 
         
@@ -300,12 +377,15 @@ export interface TalentCardProps {
                 onClick={handleRequestHire}
 
 
+
             </Button>;
           </div>;
         </div>;
       </div>;
 
 
+
 ;
+
 
 

@@ -12,3 +12,5 @@ export default function SearchUtils({ }: SearchUtilsProps) {
     </div>
   );
 
+
+

@@ -5,6 +5,9 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
+import { useState, useEffect } from 'react'
 
 import { X } from 'lucide-react'
 
@@ -20,6 +23,7 @@ import { X } from 'lucide-react';
   // TODO: Add dependencies if needed;
   return () => {
     // Cleanup function;
+
 
 
 }
@@ -58,6 +62,7 @@ export function FloatingCTA() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -107,7 +112,7 @@ if ( {) {
 }
         setIsVisible (true);
       } else {
-        setIsVisible(false)
+        setIsVisible (false);
       }
 
 import { X } from 'lucide-react';
@@ -168,6 +173,8 @@ export function FloatingCTA() {;
 
 
 
+
+
   }, [isClosed]),
 
   const handleClose = () => {
@@ -182,12 +189,14 @@ export function FloatingCTA() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -218,6 +227,7 @@ export function FloatingCTA() {;
             className="text-zion-slate hover: text-white p-1"
             aria-label="Close"
           >
+
 
 
             <X className="w-5 h-5" />
@@ -358,5 +368,6 @@ return (<div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md
 }
 }
 ;
+
 
 

@@ -4,21 +4,26 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+
 
 
 
@@ -45,6 +50,7 @@ import {;
   Phone, Mail, MapPin, Globe, ;
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   Clock, ChevronDown, ChevronUp;
@@ -78,9 +84,12 @@ const quickActions = [
 
 
 
+
+
 export default function TopContactBar() {
 
 export default function TopContactBar() {;
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -90,6 +99,7 @@ export default function TopContactBar() {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const [isExpanded, setIsExpanded] = useState(false);
@@ -137,9 +147,9 @@ export default function TopContactBar() {;
 
             {/* Center - Business Hours & Rating */}
             <div className='hidden lg:flex items-center space-x-6 text-sm'>;
+
             {/* Center - Business Hours & Rating */}
             <div className="hidden lg:flex items-center space-x-6 text-sm">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               {/* Business Hours */}
 
               <div className='flex items-center space-x-2 text-gray-300'>;
@@ -173,11 +183,15 @@ export default function TopContactBar() {;
 
 
 
+
+
               <div className='hidden sm:flex items-center space-x-2'>
                 {quickActions.map(action => (
                   <a
                     key={action.name}
                     href={action.href}
+
+
 
             {/* Right Side - Quick Actions & Expand Button */}
             <div className='flex items-center space-x-4'>
@@ -202,11 +216,14 @@ export default function TopContactBar() {;
 
 
 
+
+
                     {action.icon}
                     <span>{action.name}</span>
                   </a>
                 ))}
               </div>
+
 
 
 
@@ -241,6 +258,7 @@ export default function TopContactBar() {;
 
 
 
+
               {/* Expand/Collapse Button */}
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
@@ -254,8 +272,10 @@ export default function TopContactBar() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
               >
@@ -279,12 +299,14 @@ export default function TopContactBar() {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               </button>
             </div>
@@ -295,11 +317,13 @@ export default function TopContactBar() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       {/* Expanded Information Panel */}
@@ -320,7 +344,9 @@ export default function TopContactBar() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -329,25 +355,23 @@ export default function TopContactBar() {;
           >
             <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Contact Details */}
-                <div className='space-y-4'>
-                  <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>
-                    <Phone className='w-5 h-5 text-cyan-400' />
-                    <span>Contact Details</span>
-                  </h3>
-                  <div className='space-y-3'>
-                    <div className='flex items-center space-x-3 text-gray-300'>
-                      <Phone className='w-4 h-4 text-cyan-400' />
+                <div className='space-y-4'>;
+                  <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>;
+                    <Phone className='w-5 h-5 text-cyan-400' />;
+                    <span>Contact Details</span>;
+                  </h3>;
+                  <div className='space-y-3'>;
+                    <div className='flex items-center space-x-3 text-gray-300'>;
+                      <Phone className='w-4 h-4 text-cyan-400' />;
                       <a
-                        href={`tel:${contactInfo.mobile}`}
-                        className='hover:text-cyan-400 transition-colors duration-200'
-                      >
-                        {contactInfo.mobile}
-                      </a>
-                    </div>
-                    <div className='flex items-center space-x-3 text-gray-300'>
-                      <Mail className='w-4 h-4 text-cyan-400' />
+                        href={`tel:${contactInfo && contactInfo.mobile}`}
+                        className='hover:text-cyan-400 transition-colors duration-200'>;
+                        {contactInfo && contactInfo.mobile}
+                      </a>;
+                    </div>;
+                    <div className='flex items-center space-x-3 text-gray-300'>;
+                      <Mail className='w-4 h-4 text-cyan-400' />;
                       <a
                         href={`mailto:${contactInfo && contactInfo.email}`}
                         className='hover:text-cyan-400 transition-colors duration-200'>;
@@ -416,6 +440,7 @@ export default function TopContactBar() {;
                     </div>;
                   </div>;
                 </div>;
+
                 {/* Business Information */}
 
                 <div className="space-y-4">
@@ -568,6 +593,7 @@ export default function TopContactBar() {;
 
 
 
+
                   <div className="space-y-3">
                     {quickActions.map((action) => (
                       <a
@@ -589,6 +615,7 @@ export default function TopContactBar() {;
                         </div>;
                         <span className='font - medium'>{action.name}</span>                      </a>                    <span > Quick Actions</span>;
                   </h3>;
+
                   <div className="space - y-3">;
                     {quick_actions.map ((action) => (
                       <a;
@@ -645,12 +672,15 @@ export default function TopContactBar() {;
                 </div>
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
                 {/* Company Highlights */}
                 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>
                     <Star className='w-5 h-5 text-cyan-400' />
+
 
 
 
@@ -669,6 +699,7 @@ export default function TopContactBar() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -715,6 +746,7 @@ export default function TopContactBar() {;
                   </div>
                 </div>
               </div>
+
 
 
 </div>;
@@ -846,6 +878,7 @@ export default function TopContactBar() {;
                     >;
                       Get Started Today;
                     </a>;
+
                     <a;
                       href='/comprehensive - services - showcase - 2025';
                       className='px - 6 py - 3 text - cyan - 400 hover:text - white border border - cyan - 500 / 50 hover:border - cyan - 400 rounded - lg transition - all duration - 300 hover:bg - cyan - 500 / 10'                      href="/comprehensive - services - showcase - 2025";
@@ -860,6 +893,32 @@ export default function TopContactBar() {;
             </div>;
 
 
+              <div className="mt-6 pt-6 border-t border-cyan-500/30">
+                <div className="text-center">
+                  <h3 className="text-lg font-semibold text-white mb-3">
+                    Ready to Transform Your Business?
+                  </h3>
+              {/* Call to Action */}
+              <div className='mt-6 pt-6 border-t border-cyan-500/30'>
+                <div className='text-center'>
+                  <h3 className='text-lg font-semibold text-white mb-3'>
+                    Ready to Transform Your Business?
+                  </h3>
+                  <p className='text-gray-400 mb-4 max-w-2xl mx-auto'>
+                    Get in touch with our team of experts to discuss how our
+                    cutting-edge technology solutions can drive your business
+                    forward.
+                  </p>
+                  <div className='flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4'>
+                    <a
+                      href='/contact'
+                      className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'                    >
+                      Get Started Today
+                    </a>
+                    <a
+                      href='/comprehensive-services-showcase-2025'
+                      className='px-6 py-3 text-cyan-400 hover:text-white border border-cyan-500/50 hover:border-cyan-400 rounded-lg transition-all duration-300 hover:bg-cyan-500/10'                    >                    Ready to Transform Your Business?
+                  </h3>
 
                   <p className="text-gray-400 mb-4 max-w-2xl mx-auto">
                     Get in touch with our team of experts to discuss how our cutting-edge technology solutions can drive your business forward.
@@ -908,10 +967,12 @@ export default function TopContactBar() {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

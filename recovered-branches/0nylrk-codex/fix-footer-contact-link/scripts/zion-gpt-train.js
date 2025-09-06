@@ -1,11 +1,6 @@
 
-
-
-
-
-
-
-
+import { createClient  } from '@supabase/supabase-js';
+import {createClient} from '@supabase/supabase-js';
 
 import fs from 'fs/promises';
 import { createReadStream  } from 'fs';
@@ -37,6 +32,8 @@ const {;
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {;
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),;
   process.exit(1);
+
+
 
 
 }
@@ -115,6 +112,25 @@ async function saveJsonl(pairs, filePath) {;
 
       completion: stripPii(log.answer)
 
+  for (const job of records && records.jobs) {
+    pairs && pairs.push({
+      prompt: `Create a job description titled "${stripPii(job && job.title)}"`,
+      completion: stripPii(job && job.description)
+    })
+  }
+
+  for (const resume of records && records.resumes) {
+    pairs && pairs.push({
+      prompt: `Summarize the candidate with skills: ${stripPii(resume && resume.skills)}`,
+      completion: stripPii(resume && resume.summary)
+    })
+  }
+
+  for (const log of records && records.logs) {
+    pairs && pairs.push({
+      prompt: stripPii(log && log.question),
+      completion: stripPii(log && log.answer)
+
     })
   }
   return pairs
@@ -158,6 +174,12 @@ async function createFineTune(filePath) {
     })
 
 
+
+  console.log('Fine-tune job created:', job.id)
+  }),
+  const job = await jobRes.json(),
+  console.log('Fine-tune job created:', job.id)
+
   // // // console.log('Fine-tune job created:', job.id)
 ;
 async function createFineTune(filePath) {;
@@ -189,6 +211,8 @@ async function createFineTune(filePath) {;
   // // // console.log('Fine-tune job created:', job.id);
 
 
+
+
 }
 async function main() {
 
@@ -200,6 +224,12 @@ async function main() {
 
 }
 
+main().catch((err) => {
+  console.error('Training workflow failed', err)
+
+
+
+
 
 
 
@@ -208,6 +238,7 @@ main().catch((err) => {
   console.error('Training workflow failed', err)
 }),
 ;
+
 
 
 
@@ -219,6 +250,7 @@ main().catch((err) => {
   console.error('Training workflow failed', err)
 }),
 ;
+
 
 
 
@@ -232,10 +264,12 @@ main().catch((err) => {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

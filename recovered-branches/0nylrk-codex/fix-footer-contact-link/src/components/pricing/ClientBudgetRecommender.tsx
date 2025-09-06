@@ -1,7 +1,12 @@
 
 
-
-
+import React, { useState } from "react";
+import { Button } from "@/components/ui/button";
+import {Button} from "@/components/ui/button";
+import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
+import {PricingSuggestionBox} from "./PricingSuggestionBox";
+import {useAuth} from "@/hooks/useAuth";
+import {Sparkles} from "lucide-react";
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -72,7 +77,9 @@ import { Sparkles } from "lucide-react",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -84,6 +91,12 @@ interface ClientBudgetRecommenderProps {
   experienceLevel?: string,
   onSuggestionApplied: (minValue: number, maxValue: number) => void
 
+}
+
+
+  const generateSuggestion = async () => {
+    if (!jobTitle || !category) {
+      return
 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -120,6 +133,8 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       return;
 
 
+
+
     }
 
     setIsLoading(true),
@@ -141,12 +156,24 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     } finally {
       setIsLoading(false)
 
-
-
-
-
-
-
+    }
+  }
+  const handleApplySuggestion = () => {
+    if (suggestion) {
+      onSuggestionApplied(suggestion.minRate, suggestion.maxRate);
+      // Track this suggestion application
+      if (user) {
+        trackPricingSuggestion({
+          userId: user.id
+          suggestionType: 'client'
+          suggestedMin: suggestion.minRate
+          suggestedMax: suggestion.maxRate
+          accepted: true
+        })
+      }
+    }
+  }
+  };
 
 ;
     setIsLoading(true),;
@@ -165,7 +192,6 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       setIsLoading(false);
     }
   },;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleApplySuggestion = () => {;
     if (suggestion) {;
       onSuggestionApplied(suggestion && suggestion.minRate, suggestion && suggestion.maxRate);
@@ -179,9 +205,9 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestedMax: suggestion && suggestion.maxRate,;
           accepted: true;
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
+
 
 
   },
@@ -231,6 +257,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 };
 

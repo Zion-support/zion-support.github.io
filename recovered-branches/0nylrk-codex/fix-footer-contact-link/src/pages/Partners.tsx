@@ -2,6 +2,7 @@
 
 
 
+
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -18,13 +19,18 @@ export default function Partners() {;
 
 
 
+
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import { useAuth } from "@/hooks/useAuth",
+import { useNavigate } from "react-router-dom",
+export default function Partners() {
+  const [activeTab, setActiveTab] = useState("overview"),
+  const { user, isAuthenticated } = useAuth(),
+  const navigate = useNavigate(),
 
 
   // If not authenticated, display partner program info and signup CTA
@@ -150,6 +156,8 @@ export default function Partners() {;
             size="lg" 
             variant="outline" 
             className="text-zion-cyan border-zion-cyan"
+
+
 
 
 
@@ -306,6 +314,8 @@ export default function Partners() {;
             size="lg";
             variant="outline";
             className="text-zion-cyan border-zion-cyan";
+
+
 
 
             onClick={() => navigate('/login')}

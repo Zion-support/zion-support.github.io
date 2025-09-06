@@ -1,6 +1,6 @@
 
-
-
+import Head from 'next/head';
+import React, { useMemo, useState } from 'react';
 
 
 type RoadmapInputs = {
@@ -41,6 +41,50 @@ type RoadmapInputs = {
     const metrics: string[] = [
       'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-payRetention and NPS']
 
+  priorities: string;
+},
+type Stage = {
+  id: number,
+  name: string,
+  theme: string,
+  objective: string,
+  highlights: string[],
+  metrics: string[];
+},
+function generate_stages ({ milestones, keywords, priorities }: RoadmapInputs): Stage[] {
+  const keyword_list = keywords;
+    .split (/, |\n/);
+    .map ((s) => s.trim ());
+    .filter (Boolean),
+  const priority_list = priorities;
+    .split (/, |\n/);
+    .map ((s) => s.trim ());
+    .filter (Boolean),
+  const base_themes = [;
+    'FoundationsTrust LayerAI - Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces',
+    'Governance & OwnershipGlobal Scale'],
+  return base_themes.map ((theme, index) => {
+    const id = index + 1,
+    const name = `Zion v${id}`,
+    const objective = `Advance ${theme.toLowerCase ()} informed by: ${keyword_list.join () || 'core principles'}, focus: ${
+      priority_list.join () || 'execution and learning';
+    }.`,
+    const highlights: string[] = [;
+      index === 0 && 'Design system, domain model, and initial data architecture',
+      index === 1 && 'Verifiable credentials, attestations, and dispute primitives',
+      index === 2 && 'AI - assisted scoping, matching, and brief generation',
+      index === 3 && 'Reputation graph, portable profiles, contribution proofs',
+      index === 4 && 'Programmable escrow, milestone releases, stable on / off - ramps',
+      index === 5 && 'Liquidity flywheel: supply activation, demand orchestration',
+      index === 6 && 'Sovereign workspaces: contracts, IP, revenue share automations',
+      index === 7 && 'Public APIs / SDKs, indexer services, client ecosystem',
+      index === 8 && 'Progressive decentralization, contributor ownership, councils',
+      index === 9 && 'Regionalization, localization, reliability, and performance'];
+      .filter (Boolean);
+      .map ((s) => String (s)),
+    const metrics: string[] = [;
+      'Weekly active contributors_verified engagements (intros, briefs, scopes)On - chain / escrow settlement volume_time - to - hire and time - to - pay_retention and NPS'],
+
     return { id, name, theme, objective, highlights, metrics }
   });
 }
@@ -61,10 +105,11 @@ Goals:
 Format:
 
 
-
-
-
-
+import Head from 'next/head',;
+import React, { useMemo, useState } from 'react',;
+;
+import Head from 'next/head';
+import React, { useMemo, useState } from 'react';
 
 type RoadmapInputs = {
   milestones: string;
@@ -138,7 +183,6 @@ Goals:;
 4) Include explicit risks and validation signals per stage;
 5) Output concise, skimmable, exec - ready text;
 Format:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 Zion v{n} — {theme}
 Objective: ...;
 Highlights:;
@@ -151,9 +195,13 @@ Validation:;
 - ...;
 `;
 }
-
-    () => generateStages({ milestones, keywords, priorities });
-
+export default function RoadmapPage(): JSX.Element {
+  const [milestones, setMilestones] = useState('MVP live, First 50 users, First 10 paid engagements')
+  const [keywords, setKeywords] = useState('AI-native, trustless, talent-first, sovereign tools')
+  const [priorities, setPriorities] = useState('governance, scale, regional expansion')
+  const [copied, setCopied] = useState(false)
+  const stages = useMemo(
+    () => generateStages({ milestones, keywords, priorities })
     [milestones, keywords, priorities]
   )
   const operatorPrompt = useMemo(() => defaultOperatorPrompt(), [])
@@ -196,7 +244,7 @@ Validation:;
                 <textarea
 
                   value={milestones}
-                  onChange={(e) => setMilestones(e.target.value)}
+                  on_change={(e) => set_milestones (e.target.value)}
                   rows={3}
                   value={milestones  } catch (error) {
     console.error("Error:", error);
@@ -217,7 +265,9 @@ Validation:;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -246,7 +296,9 @@ Validation:;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
@@ -273,12 +325,14 @@ Validation:;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
@@ -304,12 +358,14 @@ Validation:;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
@@ -319,11 +375,11 @@ Validation:;
             <pre className="whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800">{operatorPrompt}</pre>
           </section>
           <section>
-            <h2 className="mb-4 text-xl font-semibold">Zion v1 → v10</h2>
+            <h2 className="mb-4 text-xl font-semibold">Zion v1  v10</h2>
             <div className="grid gap-6 md:grid-cols-2">
               {stages.map((stage) => (
                 <article key={stage.id} className="rounded-lg border border-gray-200 p-5 shadow-sm">
-                  <h3 className="text-lg font-bold">{stage.name} — {stage.theme}</h3>
+                  <h3 className="text-lg font-bold">{stage.name}  {stage.theme}</h3>
                   <p className="mt-2 text-gray-700"><span className="font-semibold">Objective:</span> {stage.objective}</p>
                   <div className="mt-3">
                     <p className="font-semibold">Highlights</p>
@@ -359,8 +415,14 @@ Validation:;
                   </div>
                 </article>
 
-
-
+              ))}
+            </div>
+          </section>
+        </div>
+      </main>
+    </>
+  );
+};
 
   };
   return (;
@@ -454,11 +516,11 @@ Validation:;
             <pre className="whitespace - pre - wrap rounded - lg border border - gray - 200 bg - gray - 50 p - 4 text - sm text - gray - 800">{operator_prompt}</pre>;
           </section>;
           <section>;
-            <h2 className="mb - 4 text - xl font - semibold">Zion v1 → v10</h2>;
+            <h2 className="mb - 4 text - xl font - semibold">Zion v1  v10</h2>;
             <div className="grid gap - 6 md:grid - cols - 2">;
               {stages.map ((stage) => (
                 <article key={stage.id} className="rounded - lg border border - gray - 200 p - 5 shadow - sm">;
-                  <h3 className="text - lg font - bold">{stage.name} — {stage.theme}</h3>;
+                  <h3 className="text - lg font - bold">{stage.name}  {stage.theme}</h3>;
                   <p className="mt - 2 text - gray - 700"><span className="font - semibold">Objective:</span> {stage.objective}</p>;
                   <div className="mt - 3">;
                     <p className="font - semibold">Highlights</p>;
@@ -499,6 +561,7 @@ Validation:;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -510,5 +573,6 @@ Validation:;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -21,6 +21,8 @@ function useCounter(target: number, durationMs: number) {
 
 
 
+
+
       if (start === null) start = ts;
 
       const progress = Math && Math.min(1, (ts - start) / durationMs);
@@ -38,9 +40,7 @@ function useCounter(target: number, durationMs: number) {
     return () => cancelAnimationFrame(raf);
   }, [target, durationMs]);
   return value;}
-
-    }
-
+    };
     raf = requestAnimationFrame(step);
     return () => cancelAnimationFrame(raf);
   }, [target, durationMs]);
@@ -54,6 +54,7 @@ function useCounter(target: number, durationMs: number) {
   }, [target, durationMs]);
   return value
 }
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -70,6 +71,7 @@ export default function InteractiveStats() {;
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
   const satisfaction = useCounter(98, 1200);
+
 
 import {useEffect, useState} from 'react';
 /**
@@ -151,12 +153,14 @@ function Stat({ label, value, suffix = '' }: { label: string, value: number, suf
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 function Stat({
   label
@@ -169,12 +173,47 @@ function Stat({
   suffix?: string;
 }) {
   return (
-    <div className='p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur'>
-      <div className='text-3xl font-bold'>
+
+    <div className='p-5 rounded-xl border border-gray-200 dark:border-gray-800 bg-white/60 dark:bg-black/40 backdrop-blur'>;
+      <div className='text-3xl font-bold'>;
         {value}
         {suffix}
+      </div>;
+      <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>;
+    </div>;
+  );
+
+}
+
+    </div>);
+    </div>);
+}
+/**
+ * Stat - Function description
+ */
+function Stat() {
+  return (
+    <div className="p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg - black / 40 backdrop - blur">;
+      <div className="text - 3xl font - bold">{value}{suffix}</div>;
+      <div className="text - sm text - gray - 600 dark:text - gray - 300">{label}</div>;
+    </div>);
+/**
+ * Stat - Function description
+ */
+function Stat() {
+  return (
+    <div className='p - 5 rounded - xl border border - gray - 200 dark:border - gray - 800 bg - white / 60 dark:bg - black / 40 backdrop - blur'>;
+      <div className='text - 3xl font - bold'>;
+        {value}
+        {suffix}
+      </div>;
+      <div className='text - sm text - gray - 600 dark:text - gray - 300'>{label}</div>;
+    </div>);
+}
       </div>
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
-
+  );
+}
+  );
 

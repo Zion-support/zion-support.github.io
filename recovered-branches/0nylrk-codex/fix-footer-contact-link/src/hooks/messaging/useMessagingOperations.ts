@@ -1,13 +1,18 @@
 
 
-
-
+import { UserProfile, UserDetails  } from '@/types/auth';
+import { Message, Conversation, ConversationContextData  } from '@/types/messaging';
+import { useConversationState  } from './useConversationState';
+import { useConversations  } from './useConversations';
+import { useMessages } from './useMessages';
 
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation, ConversationContextData} from '@/types/messaging';
 import {useConversationState} from './useConversationState';
 import {useConversations} from './useConversations';
 import {useMessages} from './useMessages';
+
+
 
 
 
@@ -25,54 +30,54 @@ export function useMessagingOperations(user: UserWithProfile) {
   // State management
   const {;
     messages;
-    setMessages;
-    activeMessages;
+    set_messages;
+    active_messages;
     setActiveMessages;
     conversations;
-    setConversations;
-    unreadCount;
+    set_conversations;
+    unread_count;
     setUnreadCount;
-    activeConversation;
+    active_conversation;
     setActiveConversation;
     isLoading
     setIsLoading
   } = useConversationState();
   // Conversations management
   const {
-    fetchConversations;
-    createConversation
-  } = useConversations(
+    fetch_conversations;
+    create_conversation;
+  } = use_conversations (
     user;
-    setConversations;
+    set_conversations;
     setUnreadCount;
     setIsLoading
   );
   // Messages management
   const {
-    loadMessages;
-    sendMessage;
-    markAsRead
-  } = useMessages(
+    load_messages;
+    send_message;
+    markAsRead;
+  } = use_messages (
     user;
-    activeConversation;
-    activeMessages;
+    active_conversation;
+    active_messages;
     setActiveMessages;
     conversations;
-    setConversations;
+    set_conversations;
     setUnreadCount;
     setIsLoading;
     fetchConversations
   );
   return {
-    // State
+    // State;
     messages;
-    activeMessages;
+    active_messages;
     setActiveMessages;
     conversations;
-    setConversations;
-    unreadCount;
+    set_conversations;
+    unread_count;
     setUnreadCount;
-    activeConversation;
+    active_conversation;
     setActiveConversation;
     isLoading;
     // Operations
@@ -97,7 +102,6 @@ type UserWithProfile = UserProfile | UserDetails | null;
 */;
 export /**
  * useMessagingOperations - Function description
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
  */
 function useMessagingOperations() {
   // State management;
@@ -169,11 +173,13 @@ function useMessagingOperations() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   }
 }

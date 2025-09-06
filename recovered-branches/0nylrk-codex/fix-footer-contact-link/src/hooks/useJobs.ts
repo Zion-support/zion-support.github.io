@@ -7,6 +7,7 @@
 
 
 
+
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {Job, JobStatus} from "@/types/jobs";
@@ -20,10 +21,13 @@ import {createJob, updateJob, getJobById} from "@/services/jobService";
 
 
 
+
   const { user } = useAuth();
   const [jobs, setJobs] = useState<Job[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+
 
 
 
@@ -66,7 +70,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
 
         .order("created_at", { ascending: false });
       if (status) {
-        query = query.eq("status", status)
+        query = query && query.eq("status", status)
       }
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
@@ -89,7 +93,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       setError("Failed to fetch jobs. Please try again."),
       toast.error("Failed to fetch jobs")
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
 
   }
@@ -183,8 +187,12 @@ if (throw delete_error) {
     refetch: fetch_jobs;
     updateJobStatus;
 
-
-
+    deleteJob;
+    createJob;
+    updateJob
+    getJobById
+  }
+}
 
 
 import { useState, useEffect } from "react",;
@@ -284,6 +292,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -291,6 +300,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 };

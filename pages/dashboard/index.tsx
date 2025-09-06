@@ -7,6 +7,7 @@ const Dashboard: NextPage = () => {
         <title>Dashboard - Zion</title>
       </Head>
 
+      <h1 className="text-2xl font-semibold">Dashboard</h1>
 
       <h1 className="text-2xl font-semibold">Dashboard</h1>
       <section>
@@ -38,12 +39,14 @@ const Dashboard: NextPage = () => {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         />
       </section>
@@ -63,9 +66,17 @@ const Dashboard: NextPage = () => {
 export default Dashboard;
 
 
-
-
-
+export default Dashboard,;
+          icon={<span>💬</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          primaryAction={{ label: 'Browse services', href: '/services' }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
         />;
       </section>;
@@ -80,6 +91,7 @@ export default Dashboard;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -87,5 +99,6 @@ export default Dashboard;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

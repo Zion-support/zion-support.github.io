@@ -1,6 +1,7 @@
 
 
 
+
 export function ContactSection() {
   const [formData, setFormData] = useState({
     name: ""
@@ -86,6 +87,7 @@ export function ContactSection() {
 
     fetch("/api/contact", {
 
+
       method: "POST"
       headers: { "Content-Type": "application/json" }
       body: JSON.stringify(formData)})
@@ -105,6 +107,7 @@ export function ContactSection() {
           description: "We've received your message and will get back to you soon."}),
 
 
+
         setSubmitted(true)
         setTimeout(() => setSubmitted(false), 2000)
         setFormData({ name: "", email: "", subject: "", message: "" })
@@ -114,6 +117,7 @@ export function ContactSection() {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
         setIsSubmitting(false),
@@ -129,11 +133,13 @@ export function ContactSection() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -144,6 +150,7 @@ export function ContactSection() {
       .catch((err) => {
         setIsSubmitting(false),
         toast({
+
 
 
 
@@ -162,6 +169,7 @@ export function ContactSection() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -552,6 +560,7 @@ if ( {) {
 
 
 
+
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
@@ -594,5 +603,6 @@ description: err.message;
 }'"}
 }
 ;
+
 
 

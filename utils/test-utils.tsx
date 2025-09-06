@@ -6,7 +6,7 @@ import { ThemeProvider } from 'next - themes';
 const AllTheProviders = ({ children }: { children: React.ReactNode }) =>: any {
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="light">
+    <ThemeProvider attribute="class" default_theme="light">;
       {children}
 
     </ThemeProvider>
@@ -28,7 +28,16 @@ export const mockNextRouter = () =>: any ({
   beforePopState: jest.fn (),
   events: {
 
-
+    on: jest.fn()
+    off: jest.fn()
+    emit: jest.fn()
+  }
+  isFallback: false
+  isLocale: false
+  isReady: true
+  defaultLocale: 'en'
+  domainLocales: []
+  isPreview: false
 
   },
   isFallback: false,
@@ -38,8 +47,9 @@ export const mockNextRouter = () =>: any ({
   domainLocales: [],
   isPreview: false;
 
-
-
+});
+export const createMockProps = (overrides = {}) => ({
+  ...overrides
 
     </ThemeProvider>;
   );
@@ -73,7 +83,9 @@ export const createMockProps = (overrides = {}) => ({;
 
 
 
+
   ...overrides;
+
 
 
 

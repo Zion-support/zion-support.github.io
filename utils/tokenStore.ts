@@ -4,6 +4,7 @@ import path from 'path';
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -15,6 +16,7 @@ export interface TokenTransaction {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -24,11 +26,9 @@ export interface TokenTransaction {
   metadata?: Record < string, any>;
 }
 
+export interface TokenConfig {
 
-
-
-
-
+export interface TokenConfig {;
 
   name: string;
   symbol: string;
@@ -87,13 +87,11 @@ function save_transactions (transactions: TokenTransaction[]): void {
   ensureDataDir ();
   fs.writeFileSync (TRANSACTIONS_FILE, JSON.stringify (transactions, null, 2));
 }
-function load_config (): TokenConfig {
+function loadConfig(): TokenConfig {
   try {
-    ensureDataDir ();
-    if () {) {
-  $2
-}
-      return getDefaultConfig ();
+    ensureDataDir();
+    if (!fs && fs.existsSync(CONFIG_FILE)) {
+      return getDefaultConfig();
     }
     const raw = fs.readFileSync (CONFIG_FILE, 'utf8');
     return JSON.parse (raw);
@@ -121,6 +119,14 @@ function getDefaultConfig (): TokenConfig {
   }
 }
 
+export function getAllTransactions(): TokenTransaction[] {
+  return loadTransactions();
+}
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+
+
+
+
 
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
@@ -136,9 +142,13 @@ function getDefaultConfig (): TokenConfig {
   return newTransaction;
 }
 
-
-
-
+export function getConfig(): TokenConfig {
+  return loadConfig();
+}
+export function setConfig(config: TokenConfig): void {
+  saveConfig(config);
+}
+export function getUserBalance(userId: string): number {
 
 
 export function getConfig(): TokenConfig {;
@@ -157,6 +167,8 @@ export function getUserBalance(userId: string): number {;
 
 
 
+
+
   const transactions = loadTransactions();
   let balance = 0;
   for (const tx of transactions) {
@@ -168,13 +180,11 @@ export function getUserBalance(userId: string): number {;
       }
     }
   }
-
-  
-  return Math && Math.max(0, balance);
-
+  return Math.max(0, balance);
 }
 
-=======
+
+
     total_supply: 1000000000,
     circulating_supply: 250000000,
     exchange_rate: 0.05,
@@ -194,12 +204,15 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     timestamp: new Date().toISOString()
 
+
+
   }
 ;
   transactions.push (new_transaction);
   save_transactions (transactions);
   return new_transaction;
 }
+
 
 
 export function get_config (): TokenConfig {
@@ -214,6 +227,7 @@ export function set_config (config: TokenConfig): void {
 export function getUserBalance(userId: string): number {
 
 
+
 export function getConfig(): TokenConfig {;
   return loadConfig();
 }
@@ -224,6 +238,8 @@ export function setConfig(config: TokenConfig): void {;
 
 export function getUserBalance(userId: string): number {;
   const transactions = loadTransactions();
+
+
 
   let balance = 0;
 ;

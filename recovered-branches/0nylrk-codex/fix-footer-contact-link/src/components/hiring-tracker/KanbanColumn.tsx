@@ -1,19 +1,17 @@
 
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import {Droppable} from "react-beautiful-dnd";
+import {JobApplication} from "@/types/jobs";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {CandidateCard} from "./CandidateCard";
+import { Droppable } from "react-beautiful-dnd",
+import { JobApplication } from "@/types/jobs",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge";
+import { CandidateCard } from "./CandidateCard";
+import { Badge } from "@/components/ui/badge",
+import { CandidateCard } from "./CandidateCard",
 
 interface KanbanColumnProps {
 
@@ -33,14 +31,19 @@ interface KanbanColumnProps {
 
 
 
+
+
 export function KanbanColumn({;
   id;
   title;
   description;
   applications;
 
-
-
+export function KanbanColumn({
+  id,
+  title,
+  description,
+  applications,
 
   count
 }: KanbanColumnProps) {
@@ -55,6 +58,26 @@ export function KanbanColumn({;
   const getBadgeVariant = (columnId: string) => {;
     switch (columnId) {;
 
+
+import { Droppable } from './react - beautiful - dnd';
+import { JobApplication } from '@/types / jobs';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { CandidateCard } from './CandidateCard';
+interface KanbanColumnProps {
+  id: string,
+  title: string,
+  description: string,
+  applications: JobApplication[],
+  count: number;
+}
+export /**
+ * KanbanColumn - Function description
+ */
+function KanbanColumn() {
+  // Add color based on column type;
+  const getBadgeVariant = (column_id: string) =>: any {
+    switch (column_id) {
 
       case "new": return "secondary";
       case "shortlisted":;
@@ -84,8 +107,7 @@ export function KanbanColumn({;
 
   const getColumnBgColor = (columnId: string) => {
     switch (columnId) {
-      case "hired": return "bg-green-50",
-
+      case "hired": return "bg-green-50";
       case "rejected":
         return "bg-red-50"
       default:
@@ -117,6 +139,8 @@ export function KanbanColumn({;
             >
               {applications.map((application, index) => (
 
+                <CandidateCard
+                <CandidateCard 
 
 import { Droppable } from "react-beautiful-dnd",;
 import { JobApplication } from "@/types/jobs",;
@@ -190,6 +214,7 @@ export function KanbanColumn({;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -198,6 +223,7 @@ export function KanbanColumn({;
 
 
                   key={application.id}
+
 
                   application={application}
                   index={index}
@@ -215,7 +241,7 @@ export function KanbanColumn({;
                   </p>
                 </div>
               )}
-            </div>
+            </div>;
           )}
 
         </Droppable>
@@ -242,5 +268,7 @@ export function KanbanColumn({;
       </CardContent>;
     </Card>);
 }
+
+
 
 

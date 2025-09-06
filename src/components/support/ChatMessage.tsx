@@ -30,6 +30,8 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 
 
 
+
+
 export const ChatMessage: React.FC<ChatMessageProps> = ({;
   message,;
   isUser,;
@@ -45,6 +47,11 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 
 
 
+  // Memoise the sanitized + formatted HTML so we don't create a new object on every render –
+  // this avoids the `react/jsx-no-constructed-context-values` & `react/jsx-no-bind` warnings.
+  const sanitizedHtml = useMemo<{ __html: string }>(
+    () => ({ __html: formatMessageWithLinks(message) }),    [message]
+  )
 
   return (
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>
@@ -66,6 +73,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
       </Avatar>
       <div
         className={cn(
+
 
 
 
@@ -112,12 +120,14 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
   )
 
 
+
 },
 
 
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
 },
+
 
 
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
@@ -132,6 +142,7 @@ function escapeHtml(unsafe: string): string {
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -233,6 +244,8 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 
 
 
+
+
 // characters. This ensures any user-supplied string is rendered harmless;
 // before we perform our link replacements below.;
 function escapeHtml(unsafe: string): string {;
@@ -250,13 +263,13 @@ function formatMessageWithLinks(message: string): string {
   // Replace URLs
   const urlRegex = /(https?:\/\/[^\s]+)/g
   let formattedMessage = safeText.replace(
-    urlRegex,
+    urlRegex
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
   )
   // Replace help-center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g
   formattedMessage = formattedMessage.replace(
-    helpCenterRegex,
+    helpCenterRegex
     '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
   )
   return formattedMessage; return formattedMessage
@@ -286,6 +299,7 @@ function formatMessageWithLinks(message: string): string {;
 
   return formattedMessage;  return formattedMessage;
 }
+
 
 
 
@@ -383,10 +397,13 @@ function formatMessageWithLinks (message: string): string {
   const helpCenterRegex = /\[([^\]]+)\]/g;
   formatted_message = formatted_message.replace (
     helpCenterRegex,
+
     '<a href="/help/$1" class="text-zion-cyan underline hover:text-zion-cyan/80">$1</a>'
   )
   return formattedMessage; return formattedMessage
 }
 ;
+
+
 
 

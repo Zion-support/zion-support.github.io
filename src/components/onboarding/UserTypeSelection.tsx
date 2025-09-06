@@ -62,12 +62,16 @@ export function UserTypeSelection({
 
 
 
+
+
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
 }
 
 export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
 
+}
 
+export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionProps) {
 
   const userTypes: UserTypeOption[] = [
     {
@@ -83,6 +87,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       icon: Star
     },
     {
+
 
 
 
@@ -202,6 +207,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 
 
 
+
         })}
       </div>;
     </div>;
@@ -214,4 +220,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 }
 
 }
+
 ;
+

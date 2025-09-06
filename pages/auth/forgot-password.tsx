@@ -1,4 +1,6 @@
 
+import type { NextPage } from 'next';
+import Head from 'next/head';
 
 
 import type { NextPage } from 'next',
@@ -12,15 +14,19 @@ const ForgotPassword: NextPage = () => {
       </Head>
 
 
+
+
       <main>
         <h1>ForgotPassword</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
 
+  ),
+};
 
-
-
+export default ForgotPassword;
+  )
 
 }
 export default ForgotPassword;
@@ -28,6 +34,7 @@ export default ForgotPassword;
 
 },
 export default ForgotPassword,
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -44,5 +51,6 @@ export default ForgotPassword;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

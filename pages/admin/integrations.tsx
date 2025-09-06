@@ -1,5 +1,6 @@
 
-
+import { useEffect, useMemo, useState  } from 'react';
+import Head from 'next/head';
 
 
 
@@ -29,6 +30,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 
 
+
 import React, { useState } from 'react';
 import { useEffect, useMemo, useState } from 'react';
 
@@ -36,6 +38,7 @@ import { useEffect, useMemo, useState } from 'react';
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -58,7 +61,6 @@ function StatusIcon({ status }: { status: 'connected' | 'warning' | 'disconnecte
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function AdminIntegrationsPage() {
   const [providers, setProviders] = useState<ProviderMeta[]>([]);
   const [connections, setConnections] = useState<ConnectionMap>({});
@@ -171,6 +173,20 @@ export default function AdminIntegrationsPage() {
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh();
 
+    } finally {
+      setLoading(false);
+    }  }
+
+
+
+  const grouped = useMemo(
+    () => ({
+      crm: providers.filter(p => p.category === 'crm'),
+      ats: providers.filter(p => p.category === 'ats'),
+    }),
+    [providers]
+  );
+
 
     } finally { setLoading(false);   } catch (error) {
     console.error("Error:", error);
@@ -218,6 +234,8 @@ export default function AdminIntegrationsPage() {
   }), [providers]);
 
 
+
+
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
@@ -246,6 +264,32 @@ export default function AdminIntegrationsPage() {
           {isConnected && (
             <>
 
+              <button
+                onClick={() => resync(p.id)}
+                disabled={loading}
+                className='px-3 py-1.5 rounded bg-blue-600 text-white text-sm'
+              >
+                Resync Now
+              </button>
+              <button
+                onClick={() => setSelected(p.id)}
+                className='px-3 py-1.5 rounded border text-sm'
+              >
+                Configure
+              </button>
+              <button
+                onClick={() => disconnect(p.id)}
+                disabled={loading}
+                className='px-3 py-1.5 rounded border text-sm'
+              >
+                Disconnect
+              </button>            </>
+          )}
+        </div>
+      </div>
+    );  }
+
+
               <button onClick={() => resync(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-blue-600 text-white text-sm">Resync Now</button>
               <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
               <button onClick={() => disconnect(p.id)} disabled={loading} className="px-3 py-1.5 rounded border text-sm">Disconnect</button>
@@ -263,6 +307,8 @@ export default function AdminIntegrationsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 
 
   function RulesModal() {
@@ -327,6 +373,17 @@ export default function AdminIntegrationsPage() {
                             pushNotesMode: 'manual',;
                           });
 
+
+                    <label className='flex items - center gap - 2'>;
+                      <input;
+                        type='radio';
+                        name='push_notes';
+                        checked={sync_rules.pushNotesMode === 'manual'}
+                        on_change={() =>;
+                          setSyncRules ({
+                            ...sync_rules,
+                            pushNotesMode: 'manual',
+                          });
 
                         }
                       />{' '}
@@ -394,7 +451,7 @@ export default function AdminIntegrationsPage() {
   return (
     <>
       <Head>
-        <title>Admin Integrations • Zion</title>
+        <title>Admin Integrations  Zion</title>
       </Head>
       <main className='container mx-auto px-4 py-8'>
         <h1 className='text-2xl font-semibold mb-2'>Integrations</h1>
@@ -431,19 +488,93 @@ export default function AdminIntegrationsPage() {
             <li>;
               Talent Matched → GET{' '}
 
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
+              <code>
+                /api/integrations/zapier/talent-matched?since=TIMESTAMP
+              </code>
+            </li>          </ul>
+    ),
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return (
+    <>
+      <Head>
+        <title>Admin Integrations • Zion</title>
+      </Head>
+      <main className='container mx-auto px-4 py-8'>
+        <h1 className='text-2xl font-semibold mb-2'>Integrations</h1>
+        <p className='text-sm text-gray-600 mb-6'>
+          Connect your CRM and ATS to sync contacts, applicants, and activity.
+        </p>
+        <section className='mb-8'>
+          <h2 className='text-lg font-semibold mb-3'>CRM</h2>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+            {grouped.crm.map(p => (
+              <Card key={p.id} p={p} />
+            ))}
+          </div>
+        </section>
+        <section className='mb-10'>
+          <h2 className='text-lg font-semibold mb-3'>ATS</h2>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4'>
+            {grouped.ats.map(p => (
+              <Card key={p.id} p={p} />
+            ))}
+          </div>
+        </section>
+        <section className='mb-10'>
+          <h2 className='text-lg font-semibold mb-2'>Zapier</h2>
+          <div className='text-sm text-gray-600'>Polling endpoints:</div>
+          <ul className='list-disc pl-6 text-sm mt-2'>
+            <li>
+              New Zion Job Posted → GET{' '}
+              <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code>
+            </li>
+            <li>
+              Talent Matched → GET{' '}
+              <code>
+                /api/integrations/zapier/talent-matched?since=TIMESTAMP
+              </code>
+            </li>          </ul>
+      <Head><title>Admin Integrations • Zion</title></Head>
+      <main className="container mx-auto px-4 py-8">
+        <h1 className="text-2xl font-semibold mb-2">Integrations</h1>
+        <p className="text-sm text-gray-600 mb-6">Connect your CRM and ATS to sync contacts, applicants, and activity.</p>
+        <section className="mb-8">
+          <h2 className="text-lg font-semibold mb-3">CRM</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {grouped.crm.map(p => <Card key={p.id} p={p} />)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>
+        </section>
+        <section className="mb-10">
+          <h2 className="text-lg font-semibold mb-3">ATS</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {grouped.ats.map(p => <Card key={p.id} p={p} />)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          </div>
+        </section>
+        <section className="mb-10">
+          <h2 className="text-lg font-semibold mb-2">Zapier</h2>
+          <div className="text-sm text-gray-600">Polling endpoints: </div>
+          <ul className="list-disc pl-6 text-sm mt-2">
+            <li>New Zion Job Posted → GET <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code></li>
+            <li>Talent Matched → GET <code>/api/integrations/zapier/talent-matched?since=TIMESTAMP</code></li>
+          </ul>
 
         </section>
 
         <section>
           <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
           <ManualOverrideForm />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </section>
       </main>
       <RulesModal />
@@ -469,12 +600,20 @@ function ManualOverrideForm() {;
     else setMessage('Error');
 
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+function ManualOverrideForm() {
+  const [jobId, setJobId] = useState(''),
+  const [disableCrmSync, setDisableCrmSync] = useState(false),
+  const [disableAtsSync, setDisableAtsSync] = useState(false),
+  const [message, setMessage] = useState(''),
+  async function save() {
+    setMessage(''),
+    const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) }),
+    if (res.ok) setMessage('Saved'), else setMessage('Error'),
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
   return (
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
@@ -497,12 +636,16 @@ function ManualOverrideForm() {;
 
 
 
+
+
 }
 }
 }
 }
 }
 }
+
+
 
 
 
@@ -518,10 +661,12 @@ function ManualOverrideForm() {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

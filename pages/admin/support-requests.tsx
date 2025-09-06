@@ -3,6 +3,7 @@
 
 
 
+
 import { GetServerSideProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
@@ -36,6 +37,7 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
 
 
 
+
 import { GetServerSideProps } from 'next';
 import { useState } from 'react';
 import { readJson } from '../../utils/fsDb';
@@ -48,12 +50,14 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   }
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
   }
 }
@@ -75,9 +79,17 @@ export default function SupportRequests(req, res) {
   return (
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
 
-
+              <button on_click={() => resolve (r.id)} className="enhanced - button enhanced - button - primary">Mark Resolved</button>)}
+          </div>))}
+      </div>;
+    </div>);
+}
+    <div className="space-y-6">
+      <h1 className="text-2xl font-semibold">Support Requests</h1>
+      <div className="grid gap-3">
+        {requests.length === 0 && <div className="opacity-70">No requests found.</div>}
 
         {requests.length === 0 && <div className="opacity-70">No requests found.</div>  } catch (error) {
     console.error("Error:", error);
@@ -86,8 +98,10 @@ export default function SupportRequests(req, res) {
 }
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         {requests.map((r) => (
@@ -102,12 +116,14 @@ export default function SupportRequests(req, res) {
             {r.status !== 'resolved' && (
               <button onClick={() => resolve(r.id)} className="enhanced-button enhanced-button-primary">Mark Resolved</button>
 
-
-
-
-
-
-
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+  );
+};
 
             )  } catch (error) {
     console.error("Error:", error);
@@ -129,11 +145,13 @@ export default function SupportRequests(req, res) {
   }
 
 
+
 }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

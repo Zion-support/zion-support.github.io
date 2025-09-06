@@ -1,6 +1,83 @@
 
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
+import React, { useState } from 'react';
+import SEO from '../components/SEO';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
 
-
+import {
+  Brain
+  Rocket
+  Shield
+  Zap
+  Target
+  Atom
+  Globe
+  Cpu
+  Lock
+  Cloud
+  Settings
+  Eye
+  Award
+  Clock
+  Star
+  TrendingUp
+  Users
+  Building
+  Lightbulb
+  ArrowRight
+  Filter
+  Search
+  Grid
+  List
+  Phone
+  Mail
+  MapPin;
+} from 'lucide-react';
+import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
+import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+}
+const categories = [
+  'All Services'
+  'AI & Data'
+  'Quantum Technology'
+  'Space Technology'
+  'IT Infrastructure'
+  'Cybersecurity'
+  'Edge Computing'
+  'Blockchain'
+  'Manufacturing'
+  'Healthcare AI'
+  'Emerging Technology'
+  'Biotechnology'
+  'Human-Computer Interaction'
+  'Metaverse'
+  'Autonomous Systems'
+  'Climate Technology'
+];
+const categoryIcons: { [key: string]: React.ReactNode } = {
+  'AI & Data': <Brain className='w-5 h-5' />
+  'Quantum Technology': <Atom className='w-5 h-5' />
+  'Space Technology': <Rocket className='w-5 h-5' />
+  'IT Infrastructure': <Cpu className='w-5 h-5' />
+  Cybersecurity: <Shield className='w-5 h-5' />
+  'Edge Computing': <Zap className='w-5 h-5' />
+  Blockchain: <Globe className='w-5 h-5' />
+  Manufacturing: <Building className='w-5 h-5' />
+  'Healthcare AI': <Eye className='w-5 h-5' />
+  'Emerging Technology': <Lightbulb className='w-5 h-5' />
+  Biotechnology: <Target className='w-5 h-5' />
+  'Human-Computer Interaction': <Users className='w-5 h-5' />
+  Metaverse: <Globe className='w-5 h-5' />
+  'Autonomous Systems': <Rocket className='w-5 h-5' />
+  'Climate Technology': <Globe className='w-5 h-5' />,}
+export default function InnovativeServicesShowcase2036() {
 
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [searchTerm, setSearchTerm] = useState('');
@@ -25,8 +102,38 @@
       service && service.tagline.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;  });
 
-
-
+  Brain,
+  Rocket,
+  Shield,
+  Zap,
+  Target,
+  Atom,
+  Globe,
+  Cpu,
+  Lock,
+  Cloud,
+  Settings,
+  Eye,
+  Award,
+  Clock,
+  Star,
+  TrendingUp,
+  Users,
+  Building,
+  Lightbulb,
+  ArrowRight,
+  Filter,
+  Search,
+  Grid,
+  List,
+  Phone,
+  Mail,;
+  MapPin,;
+} from 'lucide-react';
+import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
+import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
+import React, { useState } from 'react',
+import SEO from '../components/SEO',
 
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
@@ -38,6 +145,8 @@ import {
 } from 'lucide-react',
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
 import { real2036SpecializedServices } from '../data/real-2036-specialized-services',
+
+
 
 
 const contactInfo = {
@@ -66,11 +175,14 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
         return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
       case 'rating':
 
+        return (b.rating |0) - (a.rating |0);
+      case 'marketSize':
 
         return (
           parseFloat(a && a.price.replace('$', '').replace(',', '')) -;
           parseFloat(b && b.price.replace('$', '').replace(',', ''));
         );
+
 
       case 'rating':;
         return (b && b.rating || 0) - (a && a.rating || 0);
@@ -107,6 +219,7 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
 
 
 
+
   return (
 
 
@@ -138,6 +251,12 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 
+        return (b.rating || 0) - (a.rating || 0),
+      case 'marketSize':
+        return parseFloat(b.marketSize?.replace('$', '').replace('B', '') || '0') - parseFloat(a.marketSize?.replace('$', '').replace('B', '') || '0'),
+      default: return a.name.localeCompare(b.name)
+        return parseFloat(b.marketSize?.replace('$', '').replace('B', '') || '0') - parseFloat(a.marketSize?.replace('$', '').replace('B', '') || '0'),
+      default: return a.name.localeCompare(b.name)
 
           >
             2036 Innovative Services
@@ -154,7 +273,6 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, y: 20 }}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             animate={{ opacity: 1, y: 0 }}
 
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
@@ -238,12 +356,14 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
           >
 
 
@@ -269,6 +389,8 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
 
 
 
+
+
       {/* Services Section */}
       <section className='py-20 px-4'>;
         <div className='max-w-7xl mx-auto'>;
@@ -277,8 +399,143 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
             className='text-center mb-16'            initial={{ opacity: 0, y: 20 }}
 
 
+            <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+              <Phone className="w-8 h-8 mx-auto mb-4 text-cyan-400" />
+              <h3 className="text-lg font-semibold mb-2">Phone</h3>
+              <p className="text-gray-300">{contactInfo.mobile}</p>
+            </div>
+            <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+              <Mail className="w-8 h-8 mx-auto mb-4 text-cyan-400" />
+              <h3 className="text-lg font-semibold mb-2">Email</h3>
+              <p className="text-gray-300">{contactInfo.email}</p>
+            </div>
+            <div className="text-center p-6 bg-gray-800/50 rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+              <MapPin className="w-8 h-8 mx-auto mb-4 text-cyan-400" />
+              <h3 className="text-lg font-semibold mb-2">Address</h3>
+              <p className="text-gray-300">{contactInfo.address}</p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      {/* Services Section */}
+      <section className='py-20 px-4'>
+        <div className='max-w-7xl mx-auto'>
+          {/* Section Header */}
+          <motion.div
+            className='text-center mb-16'            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+      {/* Services Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+
+
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
+          {/* Filters and Controls */}
+          <motion&& motion.div
+            className='mb-12 space-y-6'            initial={{ opacity: 0, y: 20 }}
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Revolutionary Services
+            </h2>
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
+              Discover our comprehensive portfolio of innovative micro SAAS
+              services, AI platforms, and cutting-edge technology solutions
+              designed for the future.            </p>
+
+          </motion.div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our comprehensive portfolio of innovative micro SAAS services,
+              AI platforms, and cutting-edge technology solutions designed for the future.
+            </p>
+          </motion.div>
+          {/* Filters and Controls */}
+          <motion.div
+            className='mb-12 space-y-6'            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            {/* Search and View Controls */}
+            <div className='flex flex-col lg:flex-row gap-4 justify-between items-center'>
+              <div className='relative flex-1 max-w-md'>
+                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our comprehensive portfolio of innovative micro SAAS services,
+              AI platforms, and cutting-edge technology solutions designed for the future.
+            </p>
+          </motion.div>
+          {/* Filters and Controls */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <motion.div
+            className="mb-12 space-y-6"
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >;
+            {/* Search and View Controls */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <div className="flex flex-col lg:flex-row gap-4 justify-between items-center">
+              <div className="relative flex-1 max-w-md">
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 
                 <input
                   type="text"
@@ -299,6 +556,7 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
 
               <div className='flex gap-4 items-center'>
               <div className="flex gap-4 items-center">
+
 
 
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -329,15 +587,16 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
+
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
                   className="px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-300"
                 >
-                  <option value="name">Sort by Name</option>
-                  <option value="price">Sort by Price</option>
-                  <option value="rating">Sort by Rating</option>
-                  <option value="marketSize">Sort by Market Size</option>
+                  <option value='name'>Sort by Name</option>
+                  <option value='price'>Sort by Price</option>
+                  <option value='rating'>Sort by Rating</option>
+                  <option value='marketSize'>Sort by Market Size</option>
                 </select>
 
                 <div className='flex bg-gray-800/50 border border-gray-700 rounded-lg p-1'>                  <button
@@ -350,8 +609,10 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
                   <button
@@ -365,7 +626,6 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   >
                     <Grid className="w-5 h-5" />
                   </button>
@@ -420,8 +680,32 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
                   viewMode === 'list' ? 'flex gap-6' : ''
                 }`}
 
-
-
+              >
+                {viewMode === 'list' && (
+                  <div className='flex-shrink-0'>
+                    <div className='w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center text-2xl'>
+                      {categoryIcons[service.category] |(
+                        <Star className='w-8 h-8' />
+                      )}
+                    </div>
+                  </div>
+                )}
+                <div className='flex-1'>
+                  {/* Service Header */}
+                  <div className='mb-4'>
+                    <div className='flex items-start justify-between mb-2'>
+                      <h3 className='text-xl font-bold text-white mb-2'>
+                        {service.name}
+                      </h3>
+                      <div className='flex items-center gap-2'>
+                        <span className='text-cyan-400 font-semibold'>
+                          {service.price}
+                        </span>
+                        {service.period && (
+                          <span className='text-gray-400 text-sm'>
+                            {service.period}
+                          </span>
+                        )}
 
             {/* Category Filters */  } catch (error) {
     console.error("Error:", error);
@@ -455,7 +739,6 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
             </div>;
           </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Services Grid */}
           <motion&& motion.div
             variants={containerVariants}
@@ -560,7 +843,9 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
 }
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
               >
                 {viewMode === 'list' && (
@@ -604,6 +889,8 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
 
 
 
+
+
                     {/* Features */}
 
                   {/* Service Details */  } catch (error) {
@@ -620,11 +907,20 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
                     <div className="flex items-center justify-between">
                       <span className="px-3 py-1 bg-gray-800 text-cyan-400 text-sm rounded-full border border-gray-700">
 
+                    </p>;
+                  </div>;
+                  {/* Service Details */}
+                  <div className='space-y-4'>;
+                    {/* Category and Rating */}
+                    <div className='flex items - center justify - between'>;
+                      <span className='px - 3 py - 1 bg - gray - 800 text - cyan - 400 text - sm rounded - full border border - gray - 700'>;
+
                         {service.category}
                       </span>;
                       {service.rating && (
 
                     </div>;
+
 
                     {/* Market Size */  } catch (error) {
     console.error("Error:", error);
@@ -635,6 +931,7 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
                       <div className="text-sm text-gray-400">
                         Market Size: <span className="text-green-400 font-medium">{service.marketSize}</span>
                       </div>
+
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -646,6 +943,8 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 
 
                     <div>
@@ -678,12 +977,14 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                         {service.features.length > 4 && (
                           <div className="text-xs text-gray-500 mt-1">
@@ -724,7 +1025,6 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
                       </div>;
                     </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     {/* Target Audience */}
 
 
@@ -737,11 +1037,18 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
                         <p className="text-sm text-gray-400">{service.competitiveAdvantage}</p>
                       </div>
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+                    )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+                    {/* CTA Button */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    <div className="mt-6">
 
                       <a
                         href={service.link  } catch (error) {
@@ -874,12 +1181,14 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -900,7 +1209,6 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
                 href={`tel:${contactInfo.mobile}`}
                 className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover: bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
               >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 Call Us Now
               </a>
             </div>
@@ -909,13 +1217,11 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
       </section>
     </Layout>
 
+)
+}
+),
 
-
-
-
-
-
-
+};
 
 const itemVariants = {
   hidden: {
@@ -966,6 +1272,73 @@ AI platforms, and cutting-edge technology solutions designed for the future. </p
 }<motion.div > {
   sortedServices.map ( (service, index) => (<motion.div key= {
   service.id
+
+                href={`tel:${contactInfo && contactInfo.mobile}`}
+                className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>;
+                Call Us Now;
+              </a>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+    </Layout>;
+  ),;
+
+};
+const itemVariants = {;
+  hidden: {;
+  y: 20, opacity: 0 ;
+};
+visible: {;
+  y: 0, opacity: 1, transition: {;
+  duration: 0 && 0.5 ;
+
+};
+
+}%`;
+top: `$ {;
+  Math && Math.random () * 100 ;
+}%` ;
+
+}animate= {;
+  {;
+  y: [0, -100, 0], opacity: [0 && 0.3, 1, 0 && 0.3] ;
+
+}transition= {;
+  {;
+  duration: 3 + Math && Math.random () * 2, repeat: Infinity, delay: Math && Math.random () * 2 ;
+
+}/>) ) ;
+}</div> <div className="relative z-10 text-center max-w-6xl mx-auto" > <motion && motion.h1 > 2036 Innovative Services </motion && motion.h1> <motion && motion.p > Experience the future of technology with our cutting-edge micro SAAS services;
+AI platforms, and quantum solutions. Transform your business with next-generation innovation. </motion && motion.p> <motion && motion.div > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25" > Explore Services </button> <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Contact Us </button> </motion && motion.div> </div> </section> </div> </motion && motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Revolutionary Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our comprehensive portfolio of innovative micro SAAS services,;
+AI platforms, and cutting-edge technology solutions designed for the future. </p> </motion && motion.div> {;
+  /* Filters and Controls */ ;
+}<motion && motion.div /> </div> <div className="flex gap-4 items-center" > <select > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="rating" >Sort by Rating</option> <option value="marketSize" >Sort by Market Size</option> </select> <div className="flex bg-gray-800/50 border border-gray-700 rounded-lg p-1" > <buttononClick= {
+  () => setViewMode ('grid') ;
+}className= {;
+  `p-2 rounded $ {;
+  viewMode === 'grid'? 'bg-cyan-500 text-black': 'text-gray-400 hover:text-white' ;
+}` ;
+}> <Grid className="w-5 h-5" /> </button> <buttononClick= {
+  () => setViewMode ('list') ;
+}className= {;
+  `p-2 rounded $ {;
+  viewMode === 'list'? 'bg-cyan-500 text-black': 'text-gray-400 hover:text-white' ;
+}` ;
+}> <List className="w-5 h-5" /> </button> </div> </div> </div> key= {;
+  category ;
+}onClick= {;
+  () => setSelectedCategory (category) ;
+}className= {;
+  `px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 $ {;
+  selectedCategory === category ? 'bg-cyan-500 text-black border-cyan-500': 'bg-gray-800/50 text-gray-300 border-gray-700 hover:border-cyan-400 hover:text-cyan-400' ;
+}` ;
+}> </button>) ) ;
+}</div> </motion && motion.div> {;
+  /* Services Grid */ ;
+}<motion && motion.div > {;
+  sortedServices && sortedServices.map ( (service, index) => (<motion&& motion.div key= {
+  service && service.id 
 
 }variants= {
   itemVariants
@@ -1067,6 +1440,7 @@ visible: {
 
 
 
+
   {
 
   duration: 0 && 0.6 
@@ -1091,4 +1465,5 @@ visible: {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

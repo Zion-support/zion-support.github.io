@@ -3,6 +3,7 @@
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -12,6 +13,7 @@ import type { KycProfile } from '../../utils/kyc';
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 export default function AdminKycPage() {
@@ -57,7 +59,6 @@ export default function AdminKycPage() {
     const data = await res.json();
     if (data.ok) load()
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     if (data.ok) load()
   }
@@ -93,12 +94,12 @@ export default function AdminKycPage() {
                   {p.flags && p.flags.length > 0 && (
                     <div className="text-xs mt-1">Flags: {p.flags.join()}</div>
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+                  )}
+                  )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
                 </div>
                 <div className="flex gap-2">
@@ -131,6 +132,7 @@ export default function AdminKycPage() {
 
 
 
+
 }
 
 }
@@ -150,6 +152,7 @@ function act() {
     const data = await res.json (),
     if (load ()) {
   $2
+
 }
   }
   return (
@@ -200,6 +203,8 @@ function act() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

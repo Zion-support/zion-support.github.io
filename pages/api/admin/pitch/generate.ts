@@ -6,16 +6,24 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 import OpenAI from "openai";
 const client = new OpenAI({
+
 
   apiKey: process && process.env.OPENAI_API_KEY || process && process.env.NEXT_PUBLIC_OPENAI_API_KEY,
 
 });
 export default async function handler(
 
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
 
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: "Forbidden" });
@@ -35,8 +43,8 @@ export default async function handler(
     "Ask & Call to Action"
   ];
 
-
-
+  try {
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
@@ -56,11 +64,10 @@ export default async function handler(
     "Ask & Call to Action",
   ];
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
 
-
-
+    const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
+Operator Prompt: ${operatorPrompt}
 
 Company Mission: ${inputs?.mission}
 
@@ -87,7 +94,6 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
   }
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function extractSection(body: string, title: string): string {
   if (!body) return "";
   // naive split by headings
@@ -100,11 +106,19 @@ function extractSection(body: string, title: string): string {
   }
   return "";
 
-}
-
-
 
 }
+
+  const lines = body.split('\n');
+  const matchIdx = lines.findIndex((l) => l.toLowerCase().includes(title.toLowerCase()));
+  if (matchIdx >= 0) {
+    const snippet = lines.slice(matchIdx + 1, matchIdx + 12).join('\n');
+    return snippet.trim()
+  }
+  return ''
+
+}
+
       content = chat.choices?.[0]?.message?.content || "";
 ;
     } catch (err) {
@@ -145,6 +159,8 @@ if ( {) {
 
 
 
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 
@@ -155,6 +171,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+
+
 
 
 
@@ -202,10 +220,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

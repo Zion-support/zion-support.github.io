@@ -8,15 +8,18 @@ reputation: number;
 
 
 
+
 import { Trophy } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
 interface ReputationDisplayProps {
+
   reputation: number,
   size?: 'sm' | 'md' | 'lg'
 }
 
 export const ReputationDisplay = ({ 
   reputation,
+
 
 
 
@@ -148,6 +151,7 @@ export default ReputationDisplay
   }
   return (
 
+
     <div className='space-y-1'>
       <div className={`flex items-center gap-1 ${sizeClasses[size].container}`}>
         <Trophy className={`text-amber-500 ${sizeClasses[size].icon}`} />
@@ -161,6 +165,7 @@ export default ReputationDisplay
       </div>
     </div>
   )
+
 
     <div className='space - y-1'>;
       <div className={`flex items - center gap - 1 ${size_classes[size].container}`}>;
@@ -258,3 +263,4 @@ export default ReputationDisplay;
 
 };
 export default ReputationDisplay;
+

@@ -247,6 +247,7 @@ export default function SupportRequests() {;
 
 
 
+
   // Count by status for the summary dashboard;
   const openCount = MOCK_SUPPORT_REQUESTS && MOCK_SUPPORT_REQUESTS.filter(;
     r => r && r.status === 'open';
@@ -274,6 +275,7 @@ export default function SupportRequests() {;
 
 
 
+
   return (
     <>
       <SEO 
@@ -295,6 +297,7 @@ export default function SupportRequests() {;
           
           <div className="mt-4 md:mt-0">
             <Button className="bg-zion-purple hover:bg-zion-purple-light">
+
 
 
 
@@ -429,6 +432,7 @@ export default function SupportRequests() {;
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
 
 
+
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Status' />
@@ -445,6 +449,7 @@ export default function SupportRequests() {;
 
 
 
+
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="">All Statuses</SelectItem>
@@ -456,6 +461,7 @@ export default function SupportRequests() {;
 
 
 
+
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Priority' />
@@ -463,6 +469,7 @@ export default function SupportRequests() {;
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
+
 
 
 
@@ -477,6 +484,7 @@ export default function SupportRequests() {;
 
 
 
+
               >
                 <SelectTrigger className='w-[180px]'>
                   <SelectValue placeholder='Category' />
@@ -484,6 +492,7 @@ export default function SupportRequests() {;
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
+
 
 
 
@@ -498,6 +507,7 @@ export default function SupportRequests() {;
                   <SelectItem value="profile">Profile</SelectItem>
                 </SelectContent>
               </Select>
+
 
                   onChange={e => setSearchQuery(e && e.target.value)}
                   className='pl-10'                />;
@@ -516,7 +526,9 @@ export default function SupportRequests() {;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             {/* Support Requests Table */}
             <Card>
@@ -543,6 +555,7 @@ export default function SupportRequests() {;
                     {filteredRequests.map((request) => (
                       <TableRow key={request.id}>
                         <TableCell className="font-medium">{request.id}</TableCell>
+
 
                         <TableCell>{request.user}</TableCell>
                         <TableCell className="max-w-xs truncate">{request.issue}</TableCell>
@@ -593,6 +606,7 @@ export default function SupportRequests() {;
   return (;
     <>;
       <SEO;
+
         title="Support Requests | Admin Dashboard";
         description="Manage and track user support requests and issues";
       />;
@@ -669,6 +683,7 @@ export default function SupportRequests() {;
                   <SelectItem value=''>All Statuses</SelectItem>;
                   <SelectItem value='open'>Open</SelectItem>;
 
+
                   <SelectItem value='in - progress'>In Progress</SelectItem>;
                   <SelectItem value='resolved'>Resolved</SelectItem>;
                 </SelectContent>;
@@ -676,6 +691,7 @@ export default function SupportRequests() {;
               <Select;
                 value={priority_filter || ''}
                 onValueChange={value => setPriorityFilter (value || null)}
+
 
               >;
                 <SelectTrigger className='w-[180px]'>;
@@ -689,9 +705,11 @@ export default function SupportRequests() {;
                 </SelectContent>;
               </Select>;
 
+
               <Select;
                 value={category_filter || ''}
                 onValueChange={value => setCategoryFilter (value || null)}
+
 
               >;
                 <SelectTrigger className='w-[180px]'>;
@@ -708,6 +726,76 @@ export default function SupportRequests() {;
                 </SelectContent>;
               </Select>;
 
+
+              <Button;
+                variant='outline';
+                on_click={reset_filters}
+                className='md:w - auto';
+              >;
+                <Filter className='h - 4 w - 4 mr - 2' /> Reset Filters;
+
+              </Button>;
+            </div>;
+
+            {/* Support Requests Table */}
+            <Card>;
+
+              <CardContent className='p - 0'>;
+
+                <Table>;
+                  <TableHeader>;
+                    <TableRow>;
+                      <TableHead > ID</TableHead>;
+                      <TableHead > User</TableHead>;
+                      <TableHead > Issue</TableHead>;
+                      <TableHead > Status</TableHead>;
+                      <TableHead > Priority</TableHead>;
+                      <TableHead > Category</TableHead>;
+                      <TableHead > Created</TableHead>;
+                      <TableHead > Last Updated</TableHead>;
+                      <TableHead > Actions</TableHead>;
+                    </TableRow>;
+                  </TableHeader>;
+                  <TableBody>;
+
+                    {filteredRequests && filteredRequests.map(request => (                      <TableRow key={request && request.id}>;
+                        <TableCell className='font-medium'>;
+                          {request && request.id}
+                        </TableCell>;
+                        <TableCell>{request && request.user}</TableCell>;
+                        <TableCell className='max-w-xs truncate'>;
+                          {request && request.issue}
+                        </TableCell>;
+                        <TableCell>;
+                          <Badge
+                            variant={
+                              request && request.status === 'open'
+                                ? 'default'
+                                : request && request.status === 'in-progress'
+                                  ? 'secondary'
+                                  : 'outline'
+                            }>;
+                            {request && request.status}
+                          </Badge>;
+                        </TableCell>;
+                        <TableCell>;
+                          <Badge
+                            variant={
+                              request && request.priority === 'high'
+                                ? 'destructive'
+                                : request && request.priority === 'medium'
+                                  ? 'default'
+                                  : 'outline'
+                            }>;
+                            {request && request.priority}
+                          </Badge>;
+                        </TableCell>;
+                        <TableCell>{request && request.category}</TableCell>;
+                        <TableCell>;
+                          {new Date(request && request.createdAt).toLocaleDateString()}
+                        </TableCell>;
+                        <TableCell>;
+                          {new Date(request && request.lastUpdated).toLocaleDateString()}
               <Button;
                 variant='outline';
                 on_click={reset_filters}
@@ -734,6 +822,7 @@ export default function SupportRequests() {;
                     </TableRow>;
                   </TableHeader>;
                   <TableBody>;
+
                     {filtered_requests.map (request => (                      <TableRow key={request.id}>;
                         <TableCell className='font - medium'>;
                           {request.id}
@@ -753,6 +842,13 @@ export default function SupportRequests() {;
                         </TableCell>;
                         <TableCell>;
 
+                          <Badge variant={;
+                            request.priority === 'high';
+                              ? 'destructive';
+                              : request.priority === 'medium';
+                              ? 'default';
+                              : 'outline';
+                          }>;
 
                             {request.priority}
                           </Badge>;
@@ -783,12 +879,14 @@ export default function SupportRequests() {;
               </p>
             </div>
           </TabsContent>
+
           
           <TabsContent value="ai-flagged" className="mt-6">
             <div className="bg-zion-blue-light/20 p-8 rounded-lg text-center">
               <h3 className="text-xl font-medium mb-4">AI Flagged Issues</h3>
               <p className="text-zion-slate-light">
                 This tab shows issues that our AI system has identified as requiring human attention.
+
               </p>
             </div>
           </TabsContent>
@@ -798,6 +896,7 @@ export default function SupportRequests() {;
               <h3 className="text-xl font-medium mb-4">Awaiting Response</h3>
               <p className="text-zion-slate-light">
                 These support requests have been waiting for an agent response for over 24 hours.
+
 
 
               </p>
@@ -944,5 +1043,6 @@ export default function SupportRequests() {;
 
 }</TableBody> </Table> </CardContent> </Card> </TabsContent> <TabsContent value=" escalated"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Escalated Requests</h3> <p className=" text - zion - slate - light"> This tab will show support requests that have been escalated by agents or the system. </p> </div> </TabsContent> <TabsContent value=" ai - flagged"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">AI Flagged Issues</h3> <p className=" text - zion - slate - light"> This tab shows issues that our AI system has identified as requiring human attention. </p> </div> </TabsContent> <TabsContent value=" need - response"className=" mt - 6"> <div className=" bg - zion - blue - light / 20 p - 8 rounded - lg text - center"> <h3 className=" text - xl font - medium mb - 4">Awaiting Response</h3> <p className=" text - zion - slate - light" > These support requests have been waiting for an agent response for over 24 hours. </p> </div> </TabsContent> </Tabs> </div> </>);
 }'"}
+
 
 

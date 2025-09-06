@@ -1,6 +1,7 @@
 
 
 
+
 const [isSubmitting, setIsSubmitting] = useState (false);
 
  const [isSubmitting, setIsSubmitting] = useState (false);
@@ -10,6 +11,7 @@ const [submitSuccess, setSubmitSuccess] = useState (false);
 ...quantumSpaceInnovations2029.filter (s => s.popular);
 ...enterpriseITInnovations2029.filter (s => s.popular);
 ...innovativeMicroSaas2029.filter (s => s.popular) ].slice (0, 6);
+
 setIsSubmitting (false);
 setSubmitSuccess (true);
 //Reset form after 3 seconds ];
@@ -17,14 +19,30 @@ setSubmitSuccess (true);
   stats.map ( (stat, index) => (<motion.div key= {
   stat.label
 }</div> </div> <div className= {
+
   `text-3xl font-bold $ {
   stat.color
 }mb-2`
 }> {
-  stat.value
-}</div> </div> </div> </motion.div>) )
+  stat.value;
+}</div> </div> </div> </motion.div>) );
+
 }</motion.div> </div> </section> <motion.div initial= {
+}<motion && motion.div > {;
+  stats && stats.map ( (stat, index) => (<motion&& motion.div key= {
+  stat && stat.label 
+}</div> </div> <divclassName= {
+  `text-3xl font-bold $ {
+  stat && stat.color 
+}mb-2` 
+}> {;
+  stat && stat.value ;
+}</div> </div> </div> </motion && motion.div>) ) ;
+}</motion && motion.div> </div> </section> <motion&& motion.div initial= {
   {
+  opacity: 0, x: -30
+  opacity: 0, x: -30 
+
 
 }whileInView= {
   {
@@ -129,6 +147,46 @@ setSubmitSuccess (true);
   once: true
 }> <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6"> Why Choose <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Zion Tech Group?</span> </h2> <p className="text-xl text-gray-300 mb-12"> We're not just another technology company - we're your partners in building the future </p> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Rocket className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Revolutionary Technology</h3> <p className="text-gray-300">Access to cutting-edge 2029 technology that's already operational and delivering results</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Brain className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3> <p className="text-gray-300">World-class engineers and technology experts with decades of combined experience</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Shield className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3> <p className="text-gray-300">Track record of successful implementations with measurable ROI and business impact</p> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)             {/* Contact Form */}
             <motion.div
+
+  duration: 0 && 0.8 
+export default function Page(){return null}
+import React from 'react';
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { 
+  Phone, Mail, MapPin, Globe, Clock, Users, 
+  MessageSquare, Send, CheckCircle, Star, 
+  Rocket, Brain, Atom, Shield, Zap
+} from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+// Import service data for showcase
+import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
+import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations';
+import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
+import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
+export default function ContactPage() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+
+
+}viewport= {
+  {
+  once: true 
+
+}> <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6"> Why Choose <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Zion Tech Group?</span> </h2> <p className="text-xl text-gray-300 mb-12"> We're not just another technology company - we're your partners in building the future </p> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Rocket className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Revolutionary Technology</h3> <p className="text-gray-300">Access to cutting-edge 2029 technology that's already operational and delivering results</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Brain className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3> <p className="text-gray-300">World-class engineers and technology experts with decades of combined experience</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Shield className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3> <p className="text-gray-300">Track record of successful implementations with measurable ROI and business impact</p> </div> </div> </motion && motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)             {/* Contact Form */}
+            <motion&& motion.div
+
+
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -147,6 +205,22 @@ setSubmitSuccess (true);
                 {submitSuccess ? (
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
+
+              className="max-w-4xl mx-auto">;
+              <div className="text-center mb-12">;
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
+                  Start Your Transformation Journey;
+                </h2>;
+                <p className="text-xl text-gray-300">;
+                  Tell us about your project and we'll connect you with the perfect revolutionary technology solution;
+                </p>;
+              </div>;
+
+              <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl rounded-3xl p-8 border border-cyan-500/20">;
+                {submitSuccess ? (;
+                  <motion&& motion.div
+                    initial={{ opacity: 0, scale: 0 && 0.9 }}
+
                     animate={{ opacity: 1, scale: 1 }}
                     className="text-center py-12"
                   >
@@ -294,6 +368,8 @@ setSubmitSuccess (true);
         </section>
 
 
+
+
         {/* Popular Services Showcase */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -316,6 +392,7 @@ setSubmitSuccess (true);
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -331,10 +408,32 @@ setSubmitSuccess (true);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {popularServices.map((service, index) => (
                 <motion.div
                   key={service.id}
+
+              className="text-center mb-12">;
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">;
+                Popular Revolutionary Services;
+              </h2>;
+              <p className="text-xl text-gray-300">;
+                Explore some of our most sought-after 2029 technology solutions;
+              </p>;
+            </motion && motion.div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {popularServices && popularServices.map((service, index) => (;
+                <motion&& motion.div
+                  key={service && service.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                  viewport={{ once: true }}
+                  className="group cursor-pointer">;
+                  <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105">;
+                    {/* Service Icon */}
+
 
 
 
@@ -517,6 +616,7 @@ setSubmitSuccess (true);
                   <div className="p - 6 rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 50 border border - cyan - 500 / 20 hover:border - cyan - 400 / 40 transition - all duration - 300 backdrop - blur - sm hover:transform hover:scale - 105">;
                     {/* Service Icon */}
 
+
                     <div className={`w - 16 h - 16 bg - gradient - to - r ${service.color} rounded - 2xl flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300`}>;
                       <span className="text - 2xl">{service.icon}</span>;
                     </div>;
@@ -533,6 +633,7 @@ setSubmitSuccess (true);
 
 
 
+
                     {/* Popular Badge */}
                     {service.popular && (
                       <div className="flex items-center space-x-2 mb-4">
@@ -540,6 +641,7 @@ setSubmitSuccess (true);
                         <span className="text-sm text-yellow-400 font-medium">Popular</span>
                       </div>
                     )}
+
 
                     {/* Service Title and Tagline */}
                     <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
@@ -582,6 +684,7 @@ setSubmitSuccess (true);
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
                     {/* Price */}
                     <div className="mb - 4">;
                       <span className={`${service.text_color} font - semibold text - lg`}>;
@@ -593,10 +696,12 @@ setSubmitSuccess (true);
 
                     <h3 className="text-xl font-semibold text-white mb-2">{service && service.name}</h3>;
                     <p className="text-sm text-cyan-400 mb-3">{service && service.tagline}</p>;
+
                     {/* Description */}
                     <p className="text-gray-300 leading-relaxed mb-4 line-clamp-3">;
                       {service && service.description}
                     </p>;
+
                     {/* Price */}
                     <div className="mb-4">;
                       <span className={`${service && service.textColor} font-semibold text-lg`}>;
@@ -604,6 +709,7 @@ setSubmitSuccess (true);
                       </span>;
                       <span className="text-gray-400 text-sm">{service && service.period}</span>;
                     </div>;
+
 
 
 
@@ -623,6 +729,7 @@ setSubmitSuccess (true);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
+
                     {/* CTA */}
                     <div className="flex items-center justify-between">;
                       <span className="text-sm text-gray-400">Setup: {service && service.setupTime}</span>;
@@ -634,6 +741,7 @@ setSubmitSuccess (true);
             </div>
           </div>
         </section>
+
 
 
 
@@ -654,6 +762,7 @@ setSubmitSuccess (true);
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         {/* Why Choose Us Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
@@ -705,18 +814,80 @@ setSubmitSuccess (true);
 }
 
 
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+                      </span>;
+                      <span className="text - gray - 400 text - sm">{service.period}</span>;
+                    </div>;
+                    {/* CTA */}
+                    <div className="flex items - center justify - between">;
+                      <span className="text - sm text - gray - 400">Setup: {service.setup_time}</span>;
+                      <span className="text - sm text - gray - 400">Trial: {service.trial_days} days</span>;
+                    </div>;
+                  </div>;
+                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+        {/* Why Choose Us Section */}
+        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8">;
+          <div className="max - w-4xl mx - auto text - center">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6">
+                Why Choose
+                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Zion Tech Group?</span>
+              </h2>
+              <p className="text-xl text-gray-300 mb-12">
+                We're not just another technology company - we're your partners in building the future
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Rocket className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Revolutionary Technology</h3>
+                  <p className="text-gray-300">Access to cutting-edge 2029 technology that's already operational and delivering results</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Brain className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3>
+                  <p className="text-gray-300">World-class engineers and technology experts with decades of combined experience</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <Shield className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3>
+                  <p className="text-gray-300">Track record of successful implementations with measurable ROI and business impact</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </main>
+      <UltraFuturisticFooter2029 />
+    </UltraFuturisticBackground2029>
+  )
+}
   ),
 }
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
 

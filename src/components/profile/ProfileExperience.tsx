@@ -9,6 +9,7 @@
 
 
 
+
             <div>
               <h4 className="text-white font-medium">{exp.role}</h4>
               <div className="text-zion-cyan mb-1">{exp.company}</div>
@@ -101,5 +102,6 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {;
     </div>);
 }
 ;
+
 
 

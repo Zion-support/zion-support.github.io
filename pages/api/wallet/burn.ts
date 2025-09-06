@@ -1,5 +1,7 @@
 
-
+import type { NextApiRequest, NextApiResponse } from "next";
+import { burnTokens, burnForFeature } from "../../../utils/token/service";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
@@ -8,11 +10,17 @@
       ? burnForFeature (user_id, feature, metadata);
       : burn_tokens (user_id, Math.floor (amount), reason || "burn", metadata),
     return res.status (200).json ({ tx });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (err: any) {
 
-
-
+    return res.status(400).json({ error: err.message })
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { burnTokens, burnForFeature } from "../../../utils/token/service",;
+;
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from "next",
+import { burnTokens, burnForFeature } from "../../../utils/token/service",
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
@@ -26,8 +34,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (err: any) {
     return res.status(400).json({ error: err.message })
 
-
-
+  };
+};
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { burnTokens, burnForFeature } from "../../../utils/token/service";
@@ -68,12 +76,15 @@ export default function handler(req, res) {
 
 
 
+
+
   }
 }
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 }
+
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -84,5 +95,6 @@ export default function handler(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

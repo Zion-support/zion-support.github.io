@@ -1,12 +1,38 @@
 import { useIsMobile } from "@/hooks/use-mobile";
-interface SmartAppBannerProps {
+interface SmartAppBannerProps {;
   appName?: string;
   appIconSrc?: string;
   appStoreUrl?: string;
   googlePlayUrl?: string;
 
-
-
+import Link from "next/link",
+import { useIsMobile } from "@/hooks/use-mobile",
+interface SmartAppBannerProps {
+  appName?: string,
+  appIconSrc?: string,
+  appStoreUrl?: string,
+  googlePlayUrl?: string,
+  delay?: number, // Delay in milliseconds before showing the banner
+}
+export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+  delay = 1500
+}) => {
+  const [isVisible, setIsVisible] = useState(false)
+  const isMobile = useIsMobile()
+  useEffect((,) => {
+  appName = "Zion Marketplace",
+  appIconSrc,
+  appStoreUrl = "/download",
+  googlePlayUrl = "/download",
+  delay = 1500
+}) => {
+  const [isVisible, setIsVisible] = useState(false)
+  const isMobile = useIsMobile()
+  useEffect((,) => {
+  const [isVisible, setIsVisible] = useState(false),
+  const isMobile = useIsMobile(),
+  
+  useEffect(() => {
 
     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !safeStorage.getItem("smartBannerDismissed")) {
@@ -30,18 +56,17 @@ interface SmartAppBannerProps {
       return () => clearTimeout(timer)
     }
     return undefined
-  }, [isMobile, delay]),
-  
+  }, [isMobile, delay])
   const dismissBanner = () => {
-    setIsVisible(false),
+    setIsVisible(false)
     safeStorage.setItem("smartBannerDismissed", "true")
-  },
-
+  }
   const resetBanner = () => {
-    safeStorage.removeItem("smartBannerDismissed"),
+    safeStorage.removeItem("smartBannerDismissed")
     setIsVisible(true)
   },
   
+
 
 
   // Only render on mobile devices
@@ -62,11 +87,13 @@ interface SmartAppBannerProps {
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
   
   // Detect iOS or Android
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   
+
 
 
 
@@ -96,6 +123,7 @@ interface SmartAppBannerProps {
 
 '";
 ;
+
 
 },
 import React, { useState, useEffect } from "react",;
@@ -188,6 +216,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
 
 
 
+
   const banner_link = isIOS ? appStoreUrl : googlePlayUrl;
 import React, { useState, useEffect } from './react';
 import { safe_storage  } from '@/utils / safe_storage';
@@ -270,3 +299,4 @@ if ( {) {
     </div>);
 }
 '";
+

@@ -4,16 +4,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -23,7 +27,6 @@ import Link from 'next/link';
 const EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-=======
 import Link from 'next / link';
 ;
 const EnhancedNavigation = () =>: any {
@@ -36,11 +39,11 @@ const EnhancedNavigation = () =>: any {
           {/* Logo */}
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-=======
 import { Star } from 'lucide-react';
 const EnhancedNavigation = () => {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
+
           <Link href='/' className='flex items - center space - x-2'>;
             <div className='w - 10 h - 10 bg - blue - 600 rounded - lg flex items - center justify - center'>;
               <span className='text - white font - bold text - xl'>Z</span>;

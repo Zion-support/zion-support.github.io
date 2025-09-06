@@ -9,41 +9,71 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
+  Search
+  Star
+  Users
+  TrendingUp
+  DollarSign
+  Clock
+  CheckCircle
+  ArrowRight
+  Rocket
+  Brain
+  Atom
+  Globe
+  Zap
+  Sparkles
+  Shield
+  Target
+  Cpu
+  Database
+  Cloud
+  Lock
+  ShieldCheck
+  Eye
+  Heart
+  Share2
+  Download
+  Phone
+  Mail
+  MapPin;} from 'lucide-react';import {
+  Search, Star, Users, TrendingUp, DollarSign, Clock
+  CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe
+  Zap, Sparkles, Shield, Target, Cpu, Database, Cloud
 
-
-
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import Head from 'next / head';
-import Link from 'next / link';
-import { motion, AnimatePresence } from 'framer-motion';
+  Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin
+ } from 'lucide-react';
+import { cuttingEdge2027Innovations  } from '../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027  } from '../data/2027-practical-micro-saas';
+  Search,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Target,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Eye,
+  Heart,
+  Share2,
+  Download,
+  Phone,
 
 import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
@@ -258,6 +288,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
         <meta
           property='og:title'
           content='2027 Services Showcase - Zion Tech Group'
+
         />
         <meta
           property='og:description'
@@ -274,10 +305,12 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
           name='twitter:title'
           content='2027 Services Showcase - Zion Tech Group'
         />
+
         <meta
           name='twitter:description'
           content='Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions.'
         />      </Head>        {/* Open Graph */}
+
         <meta property="og:title" content="2027 Services Showcase - Zion Tech Group" />
         <meta property="og:description" content="Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions." />
         <meta property="og:url" content="https://ziontechgroup.com/2027-services-showcase" />
@@ -288,6 +321,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
         <meta name="twitter:description" content="Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions." />
       </Head>
       <UltraFuturisticNavigation2027 />
+
       {/* Hero Section */}
       <section className='pt-32 pb-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto text-center'>          <motion.div      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -362,12 +396,26 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">
-                  4.9★
+                  4.9
                 </div>
                 <div className="text-green-300">Rating</div>
               </div>
             </div>
+
+
             {/* CTA Buttons */}
+
+
+                href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 flex items-center justify-center space-x-2">;
+                <Rocket className="w-5 h-5" />;
+                <span>Get Started</span>;
+              </Link>;
+              <Link
+                href="/pricing"
+                className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2"
+              >
+                <DollarSign className="w-5 h-5" />
 
 
                 <span>View Pricing</span>
@@ -376,6 +424,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
           </motion.div>
         </div>
       </section>
+
 
 
 
@@ -397,6 +446,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
       {/* Search and Filters */}
 
 
+
                 <input
                   type="text"
                   placeholder="Search services..."
@@ -404,6 +454,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
 
 
             {/* Filters */}
+
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
               {/* Category Filter */}
@@ -419,6 +470,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                   {categories.map(category => (                    <option key={category.id} value={category.id}>              {/* Category Filter */}
               <div>
                 <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Category">Category</label>
+
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
@@ -428,9 +480,13 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                     <option key={category.id} value={category.id}>
                       {category.icon} {category.name} ({category.count})
                     </option>
+
+
                   ))}
                 </select>
               </div>
+
+
 
 
               {/* Price Range Filter */}
@@ -450,6 +506,12 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                 <label className='block text-cyan-400 font-medium mb-2'>;
                   Sort By;
                 </label>;
+
+                </select>
+              </div>
+
+
+
 
 
 
@@ -704,6 +766,29 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
 {sortedServices.map((service, index) => (
                 <motion.div
 
+                  onChange={(e) => setSortBy(e.target.value)}
+                  className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400"
+                >
+                  <option value="name">Name</option>
+                  <option value="price">Price</option>
+                  <option value="roi">ROI</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Services Grid */}
+      <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
+        <div className='max - w-7xl mx - auto'>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            <AnimatePresence>      <section className="px - 4 sm:px - 6 lg:px - 8 mb - 20">;
+        <div className="max - w-7xl mx - auto">;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+            <AnimatePresence>;
+              {sorted_services.map ((service, index) => (
+                <motion.div;
+
+
                   key={service.id}
                   initial={{ opacity: 0, y: 30, scale: 0.9 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -719,8 +804,21 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                     {/* Service Info */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
                       {service.name}
-                    </h3>
-                    <p className='text-cyan-300 text-sm mb-4 line-clamp-3'>                      {service.description}
+
+                    </h3>;
+                    <p className='text - cyan - 300 text - sm mb - 4 line - clamp - 3'>                      {service.description}
+                    </p>;
+                    {/* Price */}
+                    <div className='mb-4'>
+
+                    <div className="mb-4">
+
+                      <div className="text-2xl font-bold text-white">
+                        {service.price}
+                      <div className='text-2xl font-bold text-white'>                        {service.price}
+
+                      {service.description}
+
                     </p>
                     {/* Price */}
                     <div className='mb-4'>
@@ -729,8 +827,9 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                       </div>
                     </div>
                     <div className="flex items-start justify-between mb-4">;
-                      <div className="text-4xl">🚀</div>;
+                      <div className="text-4xl"></div>;
                     </div>;
+
                     {/* Service Info */}
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">;
                       {service && service.name}
@@ -738,6 +837,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                     <p className="text-cyan-300 text-sm mb-4 line-clamp-3">;
                       {service && service.description}
                     </p>;
+
                     {/* Price */}
                     <div className='mb-4'>;
                       <div className='text-2xl font-bold text-white'>                    <div className="mb-4">;
@@ -747,11 +847,13 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                     </div>;
                     {/* Features */}
 
+
                     <div className='mb-6'>
                       <h4 className='text-cyan-400 font-semibold mb-3'>
                         Key Features:
                       </h4>
                       <div className='space-y-2'>
+
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <div
                             key={idx}
@@ -779,6 +881,8 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                     </div>
 
 
+
+
                     {/* ROI */}
 
                       </div>;
@@ -792,11 +896,13 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
 
 
                     {/* ROI */}
@@ -808,6 +914,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                         Return on Investment;
                       </div>;
                     </div>;
+
                     {/* Actions */}
                     <div className='flex space-x-3'>;
                       <Link
@@ -836,12 +943,14 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                       >
                         Learn More
@@ -864,6 +973,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -879,6 +989,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
 
 
 
+
                     {/* Category Badge */}
                     <div className='mt-4'>;
                       <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>                        {service && service.category}                    <div className="mt-4">;
@@ -888,6 +999,8 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                     </div>;
                   </div>;
                 </motion && motion.div>;
+
+
 
 
 
@@ -901,9 +1014,12 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                 </motion.div>
 
 
+
+
               ))}
             </AnimatePresence>
           </div>
+
 
 
 
@@ -924,6 +1040,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (;
             <motion&& motion.div
@@ -937,6 +1054,8 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
 
                   setSelectedPriceRange('all');
                 }}
+
+
 
 
                 onClick={() => {
@@ -955,10 +1074,13 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                 Clear Filters
               </button>
             </motion.div>
+
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
           )}
         </div>
       </section>
+
 
 
 
@@ -977,6 +1099,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       {/* Contact Section */}
@@ -989,6 +1112,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -1002,6 +1126,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               Ready to Transform Your Business?
@@ -1027,9 +1152,9 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link
                 href='/contact'
-                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'              >
-                Get Started Today
-              </Link>
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25'>;
+                Get Started Today;
+              </Link>;
               <Link
                 href='/pricing'
 
@@ -1039,6 +1164,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
             <p className="text-cyan-300 mb-8 text-lg">;
               Contact our team to discuss how our 2027 services can revolutionize your operations and drive unprecedented growth.;
             </p>;
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">;
               <div className="flex items-center justify-center space-x-3">;
                 <Phone className="w-5 h-5 text-cyan-400" />;
@@ -1053,6 +1179,7 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
                 <span className="text-white">{contactInfo && contactInfo.address}</span>;
               </div>;
             </div>;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link
                 href="/contact"
@@ -1127,8 +1254,14 @@ import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisti
       </footer>
     </UltraFuturisticMatrixBackground2027>
 
+);  )
+}
+    </UltraFuturisticMatrixBackground2027>));
+
 }
 
   );
+
+
 
 

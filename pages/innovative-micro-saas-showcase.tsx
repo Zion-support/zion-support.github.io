@@ -1,6 +1,7 @@
 
 
 
+
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -105,6 +106,7 @@ const categories = [
   { name: 'Finance & Trading', value: 'finance', icon: TrendingUp, color: 'from-yellow-500 to-orange-600' }
 
 
+
 export default function InnovativeMicroSaasShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
@@ -113,6 +115,18 @@ export default function InnovativeMicroSaasShowcase() {
   // Combine all services
   const allServices = [
 
+  // Filter services based on category and search
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || 
+      service.category.toLowerCase().includes(selectedCategory) ||
+      service.name.toLowerCase().includes(selectedCategory);
+    
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+
+    return matchesCategory && matchesSearch
+  });
 
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -208,7 +222,9 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
   }),
@@ -233,12 +249,14 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-black"></div>
@@ -287,10 +305,12 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20"
                 >
@@ -317,6 +337,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
               <span className="text-white font-semibold">{contactInfo.email}</span>
             </div>
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -324,6 +345,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <div className="flex items-center space-x-4">
               <MapPin className="w-5 h-5 text-white" />
@@ -354,12 +376,14 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -394,8 +418,10 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
@@ -405,7 +431,8 @@ export default function InnovativeMicroSaasShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                  onClick={() => setSelectedCategory(category.value)  } catch (error) {
+            </div>;
+            {/* View Mode and Sort */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -441,6 +468,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
@@ -450,6 +478,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
             <div className="flex items-center space-x-4">
@@ -484,12 +513,14 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 className="bg-white/10 border border-white/20 rounded-lg px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
@@ -513,12 +544,14 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
       <section className="py-16">
         <div className="container mx-auto px-4">
@@ -534,12 +567,14 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             </h2>
             <p className="text-gray-400">
@@ -580,10 +615,12 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20"
                 >
@@ -610,6 +647,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                   <p className="text-gray-400 text-sm mb-4 line-clamp-2">
                     {service.tagline}
                   </p>
+
                   {/* Price */}
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-purple-400">
@@ -662,12 +700,14 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                       <span className="text-sm text-gray-400 font-normal">{service.period}</span>
                     </div>
@@ -689,12 +729,14 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   <div className="mb-4">
                     <div className="text-sm text-gray-400 mb-2">Key Features:</div>
@@ -726,12 +768,14 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   <div className="flex items-center justify-between text-xs text-gray-500 mb-4">
                     <span className="bg-white/10 px-2 py-1 rounded">{service.category}</span>
@@ -759,12 +803,14 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                       className="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-center py-2 px-4 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium"
                     >
@@ -786,12 +832,14 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl flex items-end p-6">
                     <div className="text-center w-full">
@@ -809,12 +857,14 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                         className="inline-flex items-center space-x-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors"
                       >
@@ -880,7 +930,9 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -900,7 +952,9 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                           </h3>
@@ -919,12 +973,14 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                             <span className="text-sm text-gray-400 font-normal">{service.period}</span>
                           </div>
@@ -936,6 +992,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
                         </div>
                       </div>
 
+                      <p className="text-gray-300 text-sm mb-4 line-clamp-2">{service.description}</p>
 
                       <p className="text-gray-300 text-sm mb-4 line-clamp-2">{service.description}</p>
                       <div className="flex items-center justify-between">
@@ -958,12 +1015,14 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                             className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 font-medium"
                           >
@@ -1004,7 +1063,9 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 }
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
       <section className="py-20 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20">
         <div className="container mx-auto px-4 text-center">
@@ -1055,8 +1116,8 @@ export default function InnovativeMicroSaasShowcase(req, res) {
       </section>
     </Layout>
 
-
-
+  );
+};
 
   )
 
@@ -1117,6 +1178,7 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1127,5 +1189,6 @@ export default function InnovativeMicroSaasShowcase(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

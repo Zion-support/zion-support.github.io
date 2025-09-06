@@ -1,12 +1,22 @@
 
 
 
-
-
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
+import {JobData, MatchResult} from "./types.ts";
+import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
+// Initialize the Supabase client
+const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
+const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
+import {JobData, MatchResult} from "./types.ts";
+import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
 
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { JobData, MatchResult } from "./types.ts",
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",
+
+
 
 
 
@@ -101,6 +111,20 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
       await supabase.rpc('create_notification', {
 
 
+  
+  await Promise && Promise.all(matchInsertPromises)
+}
+        _user_id: match.talentId,
+        _title: "New Job Match",
+        _message: `A new job "${jobTitle}" matches your skills. Check it out!`,
+        _type: "job_match",
+        _related_id: jobId
+      })
+    }
+  });
+  
+  await Promise.all(matchInsertPromises)
+
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { JobData, MatchResult } from "./types.ts",;
 import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts",;
@@ -134,6 +158,8 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
     throw error;
   }
 }
+
+
 
 ;
 /**;
@@ -170,6 +196,7 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
 
 
 
+
 ;
   await Promise.all (matchInsertPromises);
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -180,6 +207,7 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
   await Promise.all (matchInsertPromises);
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 }
 ;

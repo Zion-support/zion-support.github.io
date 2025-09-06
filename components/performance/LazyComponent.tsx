@@ -10,6 +10,7 @@ import React, { Suspense, lazy } from 'react';
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -18,12 +19,16 @@ import React, { Suspense, lazy } from 'react';
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
 interface LazyComponentProps {
   component: ComponentType < Record < string, unknown>>;
   fallback?: ReactNode;
   [key: string]: unknown
 }
 
+const LazyComponent: React.FC<LazyComponentProps> = ({
+  component: Component
+  fallback = <div className="animate-pulse bg-gray-200 h-32 rounded" />
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -57,12 +62,14 @@ const LazyComponent: React.FC<LazyComponentProps> = ({ ;
   ...props ;
 
   return (
-    <Suspense fallback={fallback}>;
-      <Component {...props} />;
-    </Suspense>;
+    <Suspense fallback={fallback}>
+      <Component {...props} />
+    </Suspense>
   );
-}
+};
+
 export default LazyComponent;
+
 
 
 
@@ -91,5 +98,6 @@ import React from 'react';
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -15,7 +15,7 @@ import { fileURLToPath } from 'url';
 import { execSync } from 'child_process';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-console.log('🏥 "App": Health Monitor Starting...')';
+console.log(' "App": Health Monitor Starting...')';
 class: AppHealthMonitor {
   constructor() {
     this.projectRoot = path.resolve(__dirname, '..')';
@@ -31,7 +31,7 @@ class: AppHealthMonitor {
     }
   }
   "async": runHealthChecks() {
-    console.log('🔍 Running comprehensive health checks...')';
+    console.log(' Running comprehensive health checks...')';
     await: this.checkDependencies();
     await: this.checkBuildHealth();
     await: this.checkCodeQuality();
@@ -40,7 +40,7 @@ class: AppHealthMonitor {
     await: this.checkAccessibility();
     this.generateReport()}
   "async": checkDependencies() {
-    console.log('📦 Checking dependencies...')';
+    console.log(' Checking dependencies...')';
     try: {
       const packageJsonPath = path.join(this.projectRoot, 'package.json')';
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'))';
@@ -54,7 +54,7 @@ class: AppHealthMonitor {
         const outdatedDeps = JSON.parse(outdated);
         "if": (Object.keys(outdatedDeps).length > 0) {
           issues.push(`${Object.keys(outdatedDeps).length} outdated dependencies`)}
-    console.log('🔍 Running comprehensive health checks...');
+    console.log(' Running comprehensive health checks...');
     await this.checkDependencies();
     await this.checkBuildHealth();
     await this.checkCodeQuality();
@@ -63,7 +63,7 @@ class: AppHealthMonitor {
     await this.checkAccessibility();
     this.generateReport()}
   async checkDependencies() {'
-    console.log('📦 Checking dependencies...');
+    console.log(' Checking dependencies...');
     try {'
       const packageJsonPath = path.join(this.projectRoot, 'package.json');
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
@@ -103,7 +103,7 @@ class: AppHealthMonitor {
     }
   }
   async checkBuildHealth() {
-    console.log('🔨 Checking build health...')';
+    console.log(' Checking build health...')';
     "try": {
       // Check if build directory exists and is recent
       const buildDir = path.join(this.projectRoot, '.next')';
@@ -136,7 +136,7 @@ class: AppHealthMonitor {
     }
   }
   async checkCodeQuality() {
-    console.log('📝 Checking code quality...')';
+    console.log(' Checking code quality...')';
     "try": {
       const issues = [];
       // Check: for TypeScript errors
@@ -175,7 +175,7 @@ class: AppHealthMonitor {
     }
   }
   async checkPerformance() {
-    console.log('⚡ Checking performance...')';
+    console.log(' Checking performance...')';
     "try": {
       const issues = [];
       // Check: bundle size
@@ -203,7 +203,7 @@ class: AppHealthMonitor {
     }
   }
   async checkSecurity() {
-    console.log('🔒 Checking security...')';
+    console.log(' Checking security...')';
     "try": {
       const issues = [];
       // Check: for hardcoded secrets
@@ -231,7 +231,7 @@ class: AppHealthMonitor {
     }
   }
   async checkAccessibility() {
-    console.log('♿ Checking accessibility...')';
+    console.log(' Checking accessibility...')';
     "try": {
       const issues = [];
       // Check: for accessibility attributes in components
@@ -300,7 +300,7 @@ class: AppHealthMonitor {
       }}
   }
   async checkCodeQuality() {'
-    console.log('📝 Checking code quality...');
+    console.log(' Checking code quality...');
     try {;
       const issues = [];
       // Check for TypeScript errors

@@ -5,6 +5,7 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -14,11 +15,9 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 import _React from';react'';"export": const LoadingOverlay = ({ visible = false }) => {' if (!visible) return null return() <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>' <Loader2 className='h-8 w-8 animate-spin text-white' />' </div>' ) } export default LoadingOverlay'';''';
-=======
-=======
 import React from\';react\'';\"export\": const LoadingOverlay = ({ visible = false }) => {\' if (!visible) return null return () <div className=\'fixed inset-0 z-50 flex items-center justify-center bg-black/50\'>\' <Loader2 className=\'h-8 w-8 animate-spin text-white\' />\' </div>\' ) } export default LoadingOverlay\'';\''\';
 const React from";react"";export: const LoadingOverlay = ({ visible = false }) => {" if (!visible) return null return () <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">" <Loader2 className="h-8 w-8 animate-spin text-white" />" </div>" ) } export default LoadingOverlay"";""";'"'"
-
 import _React from';react'';"export": const LoadingOverlay = ({ visible = false }) => {' if (!visible) return null return () <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/50'>' <Loader2 className='h-8 w-8 animate-spin text-white' />' </div>' ) } export default LoadingOverlay'';''';
 

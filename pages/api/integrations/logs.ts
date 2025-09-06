@@ -6,6 +6,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -67,5 +68,6 @@ function handler() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

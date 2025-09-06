@@ -8,6 +8,7 @@
 
 
 
+
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
@@ -66,6 +67,7 @@
 
 
 
+
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>;
     </div>);
@@ -101,6 +103,8 @@
 };
 
 
+
 '"
 
 '";
+

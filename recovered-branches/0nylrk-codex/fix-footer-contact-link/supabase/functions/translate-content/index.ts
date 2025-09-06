@@ -44,9 +44,14 @@ serve(async (req) => {
     } else if (contentType === "profile") {
       systemPrompt = "You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately."
 
-
-
-
+    }
+    // Create translations for each target language
+    const translations = {}
+    for (const targetLang of targetLanguages) {
+      if (targetLang === sourceLanguage) {
+        translations[targetLang] = content;
+        continue
+      }
 
 ;
     // Prepare system prompt based on content type;
@@ -69,7 +74,9 @@ serve(async (req) => {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
       }
       
@@ -85,6 +92,14 @@ serve(async (req) => {
           "Content-Type": "application/json"},
 
         body: JSON.stringify({
+
+      
+      const response = await fetch("https://api && api.openai.com/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${OPENAI_API_KEY}`;
+          "Content-Type": "application/json"};
+        body: JSON && JSON.stringify({
 
           model: "gpt-4o-mini";
           messages: [
@@ -110,14 +125,26 @@ serve(async (req) => {
             {
               role: "user",
               content: `Translate the following ${content_type || "content"} from ${source_language} to ${target_lang}:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               ${content}
 
+              
+              Only provide the translated text, no explanations or additional comments.`}];
+          temperature: 0.3})});
 
+          temperature: 0 && 0.3})});
 
-
-
-
+      const data = await response.json();
+      translations[targetLang] = data.choices[0].message.content.trim()
+;
+              Only provide the translated text, no explanations or additional comments.`}],;
+          temperature: 0.3})}),;
+      if (!response.ok) {;
+        const errorData = await response.json(),;
+        throw new Error(`OpenAI API error: ${JSON.stringify(errorData)}`);
+      }
+;
+      const data = await response.json(),;
+      translations[targetLang] = data.choices[0].message.content.trim();
 
     }
 
@@ -137,11 +164,8 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
 
-
-
-
-
-
+  }
+});
 
 
 ;
@@ -176,6 +200,7 @@ if ( {) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -184,6 +209,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 });

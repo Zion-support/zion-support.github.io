@@ -1,5 +1,6 @@
 
 
+
   id: string;
   name: string;
   description: string;
@@ -75,6 +76,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 
 
+
 ];	id: string;
 	id: string, name: string,
 	description: string,
@@ -141,6 +143,8 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		realService: true
 
 
+
+
 	id: string,;
 	name: string,;
 	description: string,;
@@ -199,7 +203,9 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		link: 'https://ziontechgroup.com/services/ai-creative-studio',;
 		realService: true;
 
+
 	}
 ];
+
 
 

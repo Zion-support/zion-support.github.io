@@ -2,6 +2,10 @@
 
 import { useRouter } from 'next/router';
 
+export default function GlobalSearchBar() {
+
+export default function GlobalSearchBar() {;
+
   const router = useRouter();
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState<string[]>([]);
@@ -46,6 +50,16 @@ export default function GlobalSearchBar() {;
       } catch {}
     }
     const id = setTimeout(run, 150);
+
+
+        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal }),
+        const j = await r.json();
+        setSuggestions(j.suggestions || []);
+        setOpen(true)
+      } catch {}
+    };
+    const id = setTimeout(run, 150);
+    return () => clearTimeout(id)
 
 
   }, [query]);
@@ -124,7 +138,7 @@ export default function GlobalSearchBar() {;
           onClick={startVoice}
           className='inline-flex sm:hidden text-gray-500 hover:text-gray-800 dark:hover:text-gray-200'
           aria-label='Voice search'>;
-          🎤;
+          ;
         </button>;
         <button
           type='submit'
@@ -148,6 +162,7 @@ export default function GlobalSearchBar() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -159,6 +174,7 @@ export default function GlobalSearchBar() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   return (
@@ -190,6 +206,12 @@ export default function GlobalSearchBar() {;
 
                   }}
 
+                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
+                >
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
+
+
+
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
@@ -209,6 +231,7 @@ export default function GlobalSearchBar() {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
                   {s}
                 </button>
               </li>
@@ -225,10 +248,12 @@ export default function GlobalSearchBar() {;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

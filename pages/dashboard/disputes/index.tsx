@@ -28,8 +28,24 @@ import EnhancedLayout from '../../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
-
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
+  const cookies = (req.headers.cookie || '').split(';').reduce(
+    (acc: any, part: string) => {
+      const [k, v] = part.trim().split('=');
+      if (k) acc[k] = decodeURIComponent(v || '');
+      return acc;
+    },
+    {} as Record<string, string>
+  );
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
+  const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {;
+    const [k, v] = part.trim().split('=');
+    if (k) acc[k] = decodeURIComponent(v || '');
+    return acc;
+  }, {} as Record<string, string>),;
 
   let role = 'guest';
   try {;
@@ -41,6 +57,14 @@ import type { GetServerSideProps } from 'next';
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+  return { props: {} };};
+
+export default function AdminDisputesDashboard() {;
+  const { data } = useSWR('/api/disputes', fetcher);
+  const [statusFilter, setStatusFilter] = useState<
+    'All' | 'Open' | 'Under Review' | 'Resolved'
+  >('Open');
 
 }
   if (role !== 'admin') {;
@@ -62,7 +86,9 @@ import type { GetServerSideProps } from 'next';
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 export default function AdminDisputesDashboard() {
   const { data } = useSWR('/api/disputes', fetcher),
   const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open'),
@@ -181,10 +207,16 @@ export default function AdminDisputesDashboard() {
                   </td>
                 </tr>
 
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </EnhancedLayout>
+);
 
 
-
-
+}
 
 },;
 export default function AdminDisputesDashboard(req, res) {
@@ -277,11 +309,14 @@ if (return list) {
                       </a>;
                     </Link>                  </td>;
                 </tr>))}
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             </tbody>;
           </table>;
         </div>;
       </div>;
+
 
 
 
@@ -295,4 +330,5 @@ if (return list) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

@@ -7,7 +7,25 @@ import { motion } from 'framer-motion';
 
 import {
 
-
+  ArrowRight
+  Zap
+  Brain
+  Atom
+  Rocket
+  Star
+  TrendingUp
+  Shield
+  Globe
+  Cpu
+  Sparkles
+  Play
+  CheckCircle
+  Award
+  Users
+  Clock
+  Phone
+  Mail;} from 'lucide-react';import {
+  ArrowRight, Zap, Brain, Atom, Rocket, Star
 
   ArrowRight,
   Zap,
@@ -28,6 +46,8 @@ import {
   Phone,;
   Mail,;} from 'lucide-react';import {
   ArrowRight, Zap, Brain, Atom, Rocket, Star, ;
+
+
 
 
 
@@ -96,6 +116,7 @@ export default function UltraFuturisticHero2030() {
 
 
 
+
   };
   {;
     icon: Rocket,;
@@ -119,13 +140,18 @@ export default function UltraFuturisticHero2030() {
   },];    description: 'Unbreakable encryption with quantum key distribution';
   }
 
+
 ];
+
 
 
 
 
         {/* Main Heading */}
         <motion&& motion.div
+
+
+        {/* Main Heading */}
 
 
 
@@ -136,8 +162,8 @@ export default function UltraFuturisticHero2030() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
         <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -152,7 +178,9 @@ export default function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -165,9 +193,11 @@ export default function UltraFuturisticHero2030() {
             transition={{ duration: 0.8, delay: 0.2 }}
 
 
+
             className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-6'
           >
             <Sparkles className='w-4 h-4 mr-2' />            Welcome to 2030 - The Future is Now            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-6"
+
 
 
           >
@@ -191,6 +221,8 @@ export default function UltraFuturisticHero2030() {
 
 
 
+
+
             transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
             className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-6'>;
             <Sparkles className='w-4 h-4 mr-2' />            Welcome to 2030 - The Future is Now            className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-6";
@@ -198,11 +230,13 @@ export default function UltraFuturisticHero2030() {
             <Sparkles className="w-4 h-4 mr-2" />;
             Welcome to 2030 - The Future is Now;
           </motion && motion.div>;
+
           <motion&& motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
 
 
+          <motion&& motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
@@ -222,10 +256,48 @@ export default function UltraFuturisticHero2030() {
           >;
 
 
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className='text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'
+          >
+            Pioneering the future with{' '}
+            <span className='text-purple-400 font-semibold'>
+              AI Consciousness
+            </span>
+            ,{' '}
+            <span className='text-cyan-400 font-semibold'>
+              Quantum Computing
+            </span>
+            , and{' '}
+            <span className='text-emerald-400 font-semibold'>
+              Space Technology
+            </span>          </motion.p>            className="text-2xl md:text-3xl lg:text-4xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
+          >
+
+            Pioneering the future with{' '}
+            <span className="text-purple-400 font-semibold">AI Consciousness</span>,{' '}
+            <span className="text-cyan-400 font-semibold">Quantum Computing</span>, and{' '}
+
+          </motion.p>
 
 
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+
+
+            <span className="text-emerald-400 font-semibold">Space Technology</span>;
+
+          <motion&& motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
+            className='text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto'>;
+            Transform your business with cutting-edge micro SAAS solutions,;
+            enterprise IT services, and revolutionary AI platforms that define;
+            the next decade of technological innovation.          </motion && motion.p>            className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto";
+          >;
+            Transform your business with cutting-edge micro SAAS solutions, enterprise IT services, and revolutionary AI platforms that define the next decade of technological innovation.;
+          </motion && motion.p>;
+        </motion && motion.div>;
 
 
 
@@ -244,14 +316,15 @@ export default function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
 
 
+
         >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Link
             href='/contact'
 
@@ -270,6 +343,11 @@ export default function UltraFuturisticHero2030() {
             <span className='flex items-center'>;
               Explore Services;
               <Play className='ml-2 w-5 h-5 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-200' />            </span>        >;
+
+
+          transition={{ duration: 0.8, delay: 1.0 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16"
+        >
 
 
           <Link
@@ -299,10 +377,12 @@ export default function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         {/* Features Grid */}
@@ -318,6 +398,7 @@ export default function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -327,10 +408,10 @@ export default function UltraFuturisticHero2030() {
 
 
 
+
         >
           {features.map((feature, index) => (
             <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               key={index}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -353,6 +434,7 @@ export default function UltraFuturisticHero2030() {
 
 
 
+
           transition={{ duration: 0.8, delay: 1.2 }}
 
 
@@ -361,6 +443,7 @@ export default function UltraFuturisticHero2030() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
         >
           {features.map((feature, index) => (
@@ -594,6 +677,7 @@ function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -603,14 +687,8 @@ function UltraFuturisticHero2030() {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
             >
-              <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>
-                <feature.icon className='w-6 h-6 text-white' />
-              </div>
-              <h3 className='text-lg font-semibold text-white mb-2'>
-                {feature.title}
-              </h3>
-              <p className='text-gray-400 text-sm'>{feature.description}</p>            </motion.div>            >
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300">
                 <feature.icon className="w-6 h-6 text-white" />
               </div>
@@ -629,12 +707,14 @@ function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         {/* Stats Section */}
         <motion&& motion.div
@@ -652,7 +732,9 @@ function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -699,9 +781,11 @@ function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -726,12 +810,14 @@ function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         {/* Contact Information */}
         <motion&& motion.div
@@ -745,7 +831,9 @@ function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
           <h3 className='text-2xl font-bold text-white mb-6'>
             Ready to Transform Your Business?
@@ -785,6 +873,31 @@ function UltraFuturisticHero2030() {
               <span className="text-gray-300 text-sm">Visit Us</span>
               <a href={contactInfo.website} className="text-white font-semibold hover:text-emerald-400 transition-colors">
 
+          transition={{ duration: 0.8, delay: 2.0 }}
+          className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-2xl p-8 backdrop-blur-sm"
+        >
+          <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform Your Business?</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="flex flex-col items-center">
+              <Phone className="w-6 h-6 text-purple-400 mb-2" />
+              <span className="text-gray-300 text-sm">Call Us</span>
+              <a href={`tel:${contactInfo.mobile}`} className="text-white font-semibold hover:text-purple-400 transition-colors">
+                {contactInfo.mobile}
+              </a>
+            </div>
+            <div className="flex flex-col items-center">
+              <Mail className="w-6 h-6 text-cyan-400 mb-2" />
+              <span className="text-gray-300 text-sm">Email Us</span>
+              <a href={`mailto:${contactInfo.email}`} className="text-white font-semibold hover:text-cyan-400 transition-colors">
+                {contactInfo.email}
+              </a>
+            </div>
+            <div className="flex flex-col items-center">
+              <Globe className="w-6 h-6 text-emerald-400 mb-2" />
+              <span className="text-gray-300 text-sm">Visit Us</span>
+              <a href={contactInfo.website} className="text-white font-semibold hover:text-emerald-400 transition-colors">
+                {contactInfo.website.replace('https://', '')}
+
               </a>
             </div>
           </div>
@@ -797,10 +910,12 @@ function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -822,7 +937,9 @@ function UltraFuturisticHero2030() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -861,6 +978,8 @@ function UltraFuturisticHero2030() {
           </div>
         </motion.div>
       </div>
+
+
 
 
 
@@ -1065,15 +1184,20 @@ function UltraFuturisticHero2030() {
 }
 
 
+  )
+}
+            ease: 'easeInOut',          }}
+        />;
+        <motion.div;
+          className='absolute bottom - 32 left - 32 w - 3 h - 3 bg - cyan - 400 rounded - full';
+          animate={{
+            scale: [1, 1.5, 1],
+            opacity: [0.3, 0.8, 0.3],
+          }}
+          transition={{
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+    </section>
+);  )
+}
+    </section>
 

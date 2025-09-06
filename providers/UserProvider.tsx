@@ -4,6 +4,7 @@
 
 
 
+
   useMemo,;
   useState,;} from 'react';} from 'react';
 
@@ -14,10 +15,13 @@
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
   id: string;
   name: string;
   email: string;
   role: UserRole;
+
+
 
 
   avatar?: string;
@@ -28,10 +32,13 @@
 export interface UserContextType {
 
 
+
+
   user: User | null;
   loading: boolean;
   login: (email: string, password: string) => Promise<void>;
   logout: () => void;
+
 
 
 
@@ -83,6 +90,7 @@ export function useUser() {;
 }
 
 
+
   updateUser: (userData: Partial<User>) => Promise<void>;
 
 }
@@ -96,6 +104,7 @@ const DEFAULT_USER: User = {;
 ;
 export function UserProvider({ children }: { children: React.ReactNode }) {;
   const [user, setUser] = useState<User | null>(null);
+
   useEffect(() => {;
     try {;
 
@@ -109,6 +118,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
       setUser(DEFAULT_USER);
     }
   }, []);
+
 
 
   useEffect(() => {
@@ -128,6 +138,8 @@ export function UserProvider({ children }: { children: React.ReactNode }) {;
   const login = async (email: string, password: string): Promise<void> => {
     setLoading(true);
     try {
+
+
 
       // Mock login logic - replace with actual authentication
       const mockUser: User = {
@@ -204,6 +216,7 @@ export default UserProvider;
 
 
 
+
 export function useUser() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const ctx = useContext(UserContext);
@@ -214,5 +227,6 @@ export function useUser() {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

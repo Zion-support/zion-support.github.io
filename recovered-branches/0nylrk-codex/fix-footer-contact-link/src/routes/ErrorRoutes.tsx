@@ -1,9 +1,16 @@
 
 
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import NotFound from "@/pages/NotFound";
+import Unauthorized from "@/pages/Unauthorized";
 
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 
+
+import NotFound from "@/pages/NotFound",
+import Unauthorized from "@/pages/Unauthorized",
 
 const ErrorRoutes = () => {
   return (
@@ -18,6 +25,8 @@ const ErrorRoutes = () => {
 export default ErrorRoutes;
 
 },
+
+
 
 
 
@@ -37,7 +46,6 @@ const ErrorRoutes = () => {
 
 
 const ErrorRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Error Routes */}
@@ -49,6 +57,7 @@ const ErrorRoutes = () => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 };
@@ -57,6 +66,7 @@ const ErrorRoutes = () => {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 export default ErrorRoutes;
 

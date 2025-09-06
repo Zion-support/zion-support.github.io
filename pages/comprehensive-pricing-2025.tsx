@@ -3,6 +3,7 @@
 
 
 
+
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown
 } from 'lucide-react'
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
@@ -36,9 +37,30 @@ export default function ComprehensivePricingPage() {
   const [expandedService, setExpandedService] = useState<string | null>(null)
   // Combine all services
 
+
   const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices];
 
   const categories = [
+
+import React, { useState } from 'react',
+import Head from 'next / head',
+import { motion, AnimatePresence } from 'framer-motion',
+import {
+  Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom,
+  ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown;
+} from 'lucide-react',
+import { comprehensiveMicroSaasServices } from '../data / comprehensive - 2025 - micro - saas - expansion',
+import { specializedEmergingTechServices } from '../data / specialized - emerging - tech - services - 2025',
+export default /**
+ * ComprehensivePricingPage - Function description
+ */
+function ComprehensivePricingPage() {
+  const [selected_category, setSelectedCategory] = useState ('all'),
+  const [billing_cycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
+  const [expanded_service, setExpandedService] = useState < string | null>(null),
+  // Combine all services;
+  const all_services = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices],
+  const categories = [;
 
 
     { id: 'all', name: 'All Services', icon: '🚀' },
@@ -59,6 +81,7 @@ export default function ComprehensivePricingPage() {
 
 
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠' }
+
 
 
   ]
@@ -146,6 +169,7 @@ export default function ComprehensivePricingPage(req, res) {
   const calculateYearlyPrice = (monthlyPrice: string) => {
     const price = parseFloat(monthlyPrice.replace('$', '').replace(, ''))
     return `$${(price * 12 * 0.8).toFixed(0)}`, // 20% discount for yearly
+
   }
   const toggleServiceExpansion = (serviceId: string) => {
     setExpandedService(expandedService === serviceId ? null : serviceId)
@@ -177,12 +201,14 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto text-center">
@@ -221,12 +247,14 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               <div className="flex items-center justify-center gap-4 mb-12">
                 <span className="text-white/60">Monthly</span>
@@ -273,12 +301,14 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
@@ -337,12 +367,14 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="flex flex-wrap justify-center gap-3"
             >
@@ -411,12 +443,14 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <section className="px-6 pb-20">
           <div className="max-w-7xl mx-auto">
@@ -460,12 +494,14 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
                   >
@@ -494,12 +530,14 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
@@ -528,12 +566,14 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                           </div>
                         </div>
@@ -554,12 +594,14 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                       <div className="space-y-2 mb-6">
                         {service.features.slice(0, 4).map((feature, idx) => (
@@ -587,12 +629,14 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                       <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                         <div>
@@ -637,9 +681,9 @@ export default function ComprehensivePricingPage(req, res) {
                           expanded_service === service.id ? 'rotate - 180' : '';
                         }`} />;
                       </button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {/* CTA Button */}
                       <a;
+
 
 
 
@@ -649,6 +693,7 @@ export default function ComprehensivePricingPage(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                         target="_blank"
@@ -674,12 +719,44 @@ export default function ComprehensivePricingPage(req, res) {
                           <div className="p - 6 bg - white / 5">;
                             {/* Market Position */}
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+                      </Link>
+                    </div>
+                    {/* Expanded Details */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    <AnimatePresence>;
+                      {expandedService === service.id && (;
+                        <motion.div;
+                          initial={{ height: 0, opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          animate={{ height: 'auto', opacity: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          exit={{ height: 0, opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          transition={{ duration: 0.3 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          className="overflow-hidden border-t border-white/10"
+                        >
+                          <div className="p-6 bg-white/5">
+                            {/* Market Position */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Market Position</h4>
@@ -697,12 +774,14 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Technology Stack</h4>
@@ -739,12 +818,14 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Use Cases</h4>
@@ -782,12 +863,14 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">ROI & Benefits</h4>
@@ -826,6 +909,7 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -833,13 +917,14 @@ export default function ComprehensivePricingPage(req, res) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
                             <div className="bg-white/5 rounded-xl p-4">
                               <h4 className="text-lg font-semibold text-white mb-3">Contact Information</h4>
                               <div className="space-y-2 text-sm text-white/60">
-                                <div>📱 {service.contactInfo.mobile}</div>
-                                <div>✉️ {service.contactInfo.email}</div>
-                                <div>📍 {service.contactInfo.address}</div>
-                                <div>🌐 {service.contactInfo.website}</div>
+                                <div> {service.contactInfo.mobile}</div>
+                                <div> {service.contactInfo.email}</div>
+                                <div> {service.contactInfo.address}</div>
+                                <div> {service.contactInfo.website}</div>
                               </div>
                             </div>
                           </div>
@@ -853,6 +938,7 @@ export default function ComprehensivePricingPage(req, res) {
             </div>
           </div>
         </section>
+
         {/* Contact CTA */}
         <section className="px-6 pb-20">
           <div className="max-w-4xl mx-auto">
@@ -907,12 +993,14 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
               className="text-center"
             >
@@ -938,12 +1026,14 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   <a
                     href="tel:+13024640950"
@@ -959,6 +1049,8 @@ export default function ComprehensivePricingPage(req, res) {
       </div>
     </>
 
+  );
+};
 
   )
               className="text-center";
@@ -1002,6 +1094,7 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1012,5 +1105,6 @@ export default function ComprehensivePricingPage(req, res) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

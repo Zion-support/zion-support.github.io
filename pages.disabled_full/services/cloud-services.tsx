@@ -9,6 +9,7 @@ interface CloudservicesProps {
   // Add props here as needed
 
 }
+export default function Cloudservices({ }: CloudservicesProps) {
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 

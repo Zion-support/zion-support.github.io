@@ -2,6 +2,8 @@
 
 import React from 'react';
 
+import {MobileApp} from './MobileApp';
+export { MobileApp }
 
 
 
@@ -16,6 +18,7 @@ export * from './pages/MobileProjects';
 export * from './pages/MobileMessages';
 export * from './pages/MobileResumeBuilder';
 export * from './pages/MobileJobPost';
+
 
 
 
@@ -38,6 +41,7 @@ export * from './theme / MobileThemeProvider';
 ;
 // Export all mobile pages;
 
+
 export * from './pages/MobileOnboarding',;
 export * from './pages/MobileHome',;
 export * from './pages/MobileBrowse',;
@@ -51,6 +55,7 @@ export * from './pages/MobileJobPost';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -58,5 +63,6 @@ export * from './pages/MobileJobPost';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

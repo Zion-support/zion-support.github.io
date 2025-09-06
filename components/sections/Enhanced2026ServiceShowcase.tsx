@@ -1,14 +1,25 @@
 import React from 'react';
 
-
+import {
 
 import { motion } from 'framer-motion';
-
-
-
-
-
-
+import {
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Shield
+  Brain
+  Globe
+  Rocket;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Brain,
+  Globe,;
+  Rocket,;
 
 } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
@@ -62,20 +73,37 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
     }
   }
 
+import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react';
+import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
+import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
+import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
+export default function Enhanced2026ServiceShowcase() {
+  const containerVariants = {
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Brain,
+  Globe,
+  Rocket,
+} from 'lucide-react';
+import { innovative2026AIServices } from '../../data / innovative - 2026 - ai - services';
+import { innovative2026ITInfrastructureServices } from '../../data / innovative - 2026 - it - infrastructure';
+import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 - micro - saas';import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react';
+import { innovative2026AIServices } from '../../data / innovative - 2026 - ai - services';
+import { innovative2026ITInfrastructureServices } from '../../data / innovative - 2026 - it - infrastructure';
+import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 - micro - saas';
+  const container_variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.3
+        ease: 'easeOut' as const
+      }
+    },  };        ease: "easeOut" as const
 
-
-        stagger_children: 0.2,
-        delay_children: 0.1,
-      },
-    },  }
-;
-  const item_variants = {
-    hidden: {
-      opacity: 0,
-      coordinate_y: 50,
-      scale: 0.9,
-    },
-    visible: {      opacity: 1,        delay_children: 0.1;
       }
     }
   }
@@ -103,6 +131,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
         delayChildren: 0 && 0.1,;
       },;
     },  };
+
   const itemVariants = {;
     hidden: {;
       opacity: 0,;
@@ -113,6 +142,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       }
     }
   };
+
   const itemVariants = {;
     hidden: { ;
       opacity: 0,;
@@ -132,7 +162,15 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
     }
   };
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
+      variants={itemVariants}
+      whileHover='hover'
+      className='group relative'
+
+
+    >
+      <motion.div
+
         variants={cardVariants}
         className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover:border-slate-600/50 transition-all duration-300'>;
         {/* Glowing border effect */}
@@ -168,10 +206,12 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -258,9 +298,11 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
           {/* Description */}
 
           </div>;
+
           {/* Description */}
           <p className='text-slate-300 text-sm mb-4 leading-relaxed'>            {service && service.description}
           </p>;
+
           {/* Features */}          <p className="text-slate-300 text-sm mb-4 leading-relaxed">;
             {service && service.description}
           </p>;
@@ -396,12 +438,14 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           </div>
           {/* Market info */}
@@ -410,15 +454,16 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
             <div className="text-right">
               <div className="text-2xl font-bold text-white">{service.price}</div>
               <div className="text-slate-400 text-sm">{service.period}</div>
-            </div>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
+              className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'
+            >
+              <span>Learn More</span>
+              <ArrowRight className='w-4 h-4' />              className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25"
             >
               <span>Learn More</span>
               <ArrowRight className="w-4 h-4" />
-            </motion.button>
           </div>
           {/* Market info */}
 
@@ -443,6 +488,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
                   </div>;
                 ))}            </div>;
           </div>;
+
           {/* Price and CTA */}          <div className="mb-4">;
             <h4 className="text-white font-semibold mb-2 text-sm">Key Features:</h4>;
             <div className="grid grid-cols-1 gap-1">;
@@ -453,6 +499,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
                 </div>;
               ))}
           </div>;
+
           {/* Price and CTA */}
           <div className='flex items-center justify-between'>;
             <div className='text-right'>;
@@ -467,6 +514,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
               <span>Learn More</span>;
               <ArrowRight className='w-4 h-4' />            </motion && motion.button>;
           </div>;
+
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>;
             <div className='flex items-center justify-between text-xs text-slate-500'>              <span>Market: {service && service.marketSize}</span>          <div className="flex items-center justify-between">;
@@ -483,6 +531,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
               <span>Learn More</span>;
               <ArrowRight className="w-4 h-4" />;
           </div>;
+
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>;
             <div className='flex items-center justify-between text-xs text-slate-500'>          <div className="mt-4 pt-4 border-t border-slate-700/50">;
@@ -492,6 +541,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
             </div>;
           </div>;
         </div>;
+
         {/* Hover glow effect */}
         <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300' />      </motion && motion.div>        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300" />;
       </motion && motion.div>;
@@ -526,6 +576,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -539,6 +590,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         >
@@ -585,6 +637,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
       <div className='container mx-auto px-4 relative z-10'>        {/* Section header */}    <section className="py-20 relative overflow-hidden">;
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />;
+
       <div className="container mx-auto px-4 relative z-10">;
         <motion&& motion.div
 
@@ -594,9 +647,10 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
 
 
+
+
         {/* AI Services Section */}
         <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
@@ -609,12 +663,14 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
               Innovation 2026;
             </span>;
           </div>;
+
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
             Next-Generation;
             <span className='block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
               AI & IT Services;
             </span>;
           </h2>;
+
           <p className='text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed'>;
             Discover our cutting-edge micro SAAS solutions, AI-powered;
             platforms, and quantum-enhanced infrastructure services designed for;
@@ -627,16 +683,19 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
               Innovation 2026;
             </span>;
           </div>;
+
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
             Next-Generation;
             <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
               AI & IT Services;
             </span>;
           </h2>;
+
           <p className="text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">;
             Discover our cutting-edge micro SAAS solutions, AI-powered platforms, and quantum-enhanced infrastructure services designed for the future of business.;
           </p>;
         </motion && motion.div>;
+
         {/* AI Services Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -644,6 +703,8 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
           transition={{ duration: 0.8, delay: 0.2 }}
           className='mb-20'
+
+
 
 
         >
@@ -686,14 +747,16 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
               AI-Powered Services;
             </h3>;
           </div>;
+
           <motion&& motion.div
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
+
         {/* IT Infrastructure Section */}
-        <motion.div
+        <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -703,7 +766,9 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 
         >
           <div className='flex items-center space-x-3 mb-8'>
@@ -736,6 +801,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 
@@ -751,6 +817,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
 
 
+
         {/* IT Infrastructure Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -762,9 +829,11 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -786,6 +855,10 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
             {innovative2026ITInfrastructureServices.map((service, index) =>
               renderServiceCard(service, index)
             )}          </motion.div>        >
+
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mb-20"
+        >
 
           <div className="flex items-center space-x-3 mb-8">
             <Globe className="w-6 h-6 text-purple-400" />
@@ -816,6 +889,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           </div>
           <motion.div
 
+
             variants={containerVariants}
             initial='hidden'
             whileInView='visible'
@@ -825,6 +899,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
               renderServiceCard(service, index)
             )}          </motion.div>          </div>
           <motion.div
+
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -833,6 +908,8 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
             {innovative2026MicroSaasServices.map((service, index) => renderServiceCard(service, index))}
           </motion.div>
         </motion.div>
+
+
 
 
         {/* CTA Section */}
@@ -860,6 +937,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -869,6 +947,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+
 
 
 
@@ -927,8 +1006,10 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
 
 
+
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 
             <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-4'>;
               <motion.button;
@@ -965,9 +1046,11 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 }
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

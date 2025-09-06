@@ -67,7 +67,7 @@ export const "zion2026AdvancedAIAutomationServices": Zion2026AdvancedAIAutomatio
       'Advanced analytics and reporting'
     ],
     "popular": true,
-    "icon": '🎯',
+    "icon": '',
     "color": 'from-green-600 to-blue-700',
     "textColor": 'text-green-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-customer-success-platform-2026',
@@ -113,7 +113,7 @@ export const "zion2026AdvancedAIAutomationServices": Zion2026AdvancedAIAutomatio
       'Advanced HR analytics and reporting'
     ],
     "popular": true,
-    "icon": '👥',
+    "icon": '',
     "color": 'from-blue-600 to-indigo-700',
     "textColor": 'text-blue-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-hr-recruitment-platform-2026',
@@ -159,7 +159,7 @@ export const "zion2026AdvancedAIAutomationServices": Zion2026AdvancedAIAutomatio
       'Advanced sales analytics and reporting'
     ],
     "popular": true,
-    "icon": '💰',
+    "icon": '',
     "color": 'from-yellow-600 to-orange-700',
     "textColor": 'text-yellow-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-sales-intelligence-platform-2026',
@@ -205,7 +205,7 @@ export const "zion2026AdvancedAIAutomationServices": Zion2026AdvancedAIAutomatio
       'Advanced R&D analytics and reporting'
     ],
     "popular": true,
-    "icon": '🔬',
+    "icon": '',
     "color": 'from-purple-600 to-pink-700',
     "textColor": 'text-purple-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-research-development-platform-2026',
@@ -251,7 +251,7 @@ export const "zion2026AdvancedAIAutomationServices": Zion2026AdvancedAIAutomatio
       'Advanced quality analytics and reporting'
     ],
     "popular": true,
-    "icon": '✅',
+    "icon": '',
     "color": 'from-green-600 to-teal-700',
     "textColor": 'text-green-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-quality-assurance-platform-2026',
@@ -297,7 +297,7 @@ export const "zion2026AdvancedAIAutomationServices": Zion2026AdvancedAIAutomatio
       'Advanced compliance analytics and reporting'
     ],
     "popular": true,
-    "icon": '📋',
+    "icon": '',
     "color": 'from-gray-600 to-blue-700',
     "textColor": 'text-gray-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-compliance-governance-platform-2026',
@@ -343,7 +343,7 @@ export const "zion2026AdvancedAIAutomationServices": Zion2026AdvancedAIAutomatio
       'Advanced energy analytics and reporting'
     ],
     "popular": true,
-    "icon": '⚡',
+    "icon": '',
     "color": 'from-yellow-600 to-orange-700',
     "textColor": 'text-yellow-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-energy-management-platform-2026',
@@ -389,7 +389,7 @@ export const "zion2026AdvancedAIAutomationServices": Zion2026AdvancedAIAutomatio
       'Advanced logistics analytics and reporting'
     ],
     "popular": true,
-    "icon": '🚛',
+    "icon": '',
     "color": 'from-blue-600 to-green-700',
     "textColor": 'text-blue-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-transportation-logistics-platform-2026',
@@ -492,7 +492,7 @@ export const "zion2026AdvancedAIAutomationServices": Zion2026AdvancedAIAutomatio
       'Advanced analytics and reporting'
     ],
     "popular": true,
-    "icon": '🎯',
+    "icon": '',
     "color": 'from-green-600 to-blue-700',
     "textColor": 'text-green-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-customer-success-platform-2026',
@@ -538,7 +538,7 @@ export const "zion2026AdvancedAIAutomationServices": Zion2026AdvancedAIAutomatio
       'Advanced HR analytics and reporting'
     ],
     "popular": true,
-    "icon": '👥',
+    "icon": '',
     "color": 'from-blue-600 to-indigo-700',
     "textColor": 'text-blue-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-hr-recruitment-platform-2026',
@@ -584,7 +584,7 @@ export const "zion2026AdvancedAIAutomationServices": Zion2026AdvancedAIAutomatio
       'Advanced sales analytics and reporting'
     ],
     "popular": true,
-    "icon": '💰',
+    "icon": '',
     "color": 'from-yellow-600 to-orange-700',
     "textColor": 'text-yellow-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-sales-intelligence-platform-2026',
@@ -630,7 +630,7 @@ export const "zion2026AdvancedAIAutomationServices": Zion2026AdvancedAIAutomatio
       'Advanced R&D analytics and reporting'
     ],
     "popular": true,
-    "icon": '🔬',
+    "icon": '',
     "color": 'from-purple-600 to-pink-700',
     "textColor": 'text-purple-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-research-development-platform-2026',
@@ -676,7 +676,7 @@ export const "zion2026AdvancedAIAutomationServices": Zion2026AdvancedAIAutomatio
       'Advanced quality analytics and reporting'
     ],
     "popular": true,
-    "icon": '✅',
+    "icon": '',
     "color": 'from-green-600 to-teal-700',
     "textColor": 'text-green-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-quality-assurance-platform-2026',
@@ -722,7 +722,7 @@ export const "zion2026AdvancedAIAutomationServices": Zion2026AdvancedAIAutomatio
       'Advanced compliance analytics and reporting'
     ],
     "popular": true,
-    "icon": '📋',
+    "icon": '',
     "color": 'from-gray-600 to-blue-700',
     "textColor": 'text-gray-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-compliance-governance-platform-2026',
@@ -768,7 +768,7 @@ export const "zion2026AdvancedAIAutomationServices": Zion2026AdvancedAIAutomatio
       'Advanced energy analytics and reporting'
     ],
     "popular": true,
-    "icon": '⚡',
+    "icon": '',
     "color": 'from-yellow-600 to-orange-700',
     "textColor": 'text-yellow-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-energy-management-platform-2026',
@@ -814,7 +814,7 @@ export const "zion2026AdvancedAIAutomationServices": Zion2026AdvancedAIAutomatio
       'Advanced logistics analytics and reporting'
     ],
     "popular": true,
-    "icon": '🚛',
+    "icon": '',
     "color": 'from-blue-600 to-green-700',
     "textColor": 'text-blue-400',
     "link": 'https://ziontechgroup.com/ai-autonomous-transportation-logistics-platform-2026',

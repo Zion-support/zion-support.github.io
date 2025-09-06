@@ -1,5 +1,8 @@
 
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/workspace/WorkspaceHeader.tsx
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {type, Company} from "./CompanyDashboard";
+import {Bell, Users, Settings} from "lucide-react";
 
 
 import React from "react";
@@ -16,13 +19,14 @@ import { Bell, Users, Settings } from "lucide-react",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
 interface WorkspaceHeaderProps {
   company: Company
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 
@@ -75,6 +79,8 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
     </div>
   )
 
+}
+};
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -134,8 +140,8 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
       </div>;
     </div>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+
 
 
 
@@ -205,5 +211,6 @@ function WorkspaceHeader() {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

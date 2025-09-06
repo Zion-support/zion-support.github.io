@@ -1,10 +1,8 @@
 
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react',;
+;
+import React, { useEffect, useMemo, useState } from 'react';
 
 interface FraudItem {
 
@@ -16,11 +14,6 @@ export default function FraudAdminPage() {
   const [error, setError] = useState<string | null>(null)
   useEffect(() => {
 
-    const saved = localStorage.getItem('admin-token') || '';
-    setAdminToken(saved)
-  }, []);
-
-
     const saved = localStorage.getItem('admin-token') |''
     setAdminToken(saved)
   }, [])
@@ -31,19 +24,27 @@ export default function FraudAdminPage() {
 
 
 
+export default /**
+ * FraudAdminPage - Function description
+ */
+function FraudAdminPage() {
+  const [items, set_items] = useState < FraudItem[]>([]),
+  const [admin_token, setAdminToken] = useState < string>(''),
+  const [loading, set_loading] = useState < boolean>(false),
+  const [error, set_error] = useState < string | null>(null),
+  useEffect (() => {
+    const saved = local_storage.get_item ('admin - token') || '',
+    setAdminToken (saved);
+  }, []),
+  const fetch_items = async () => {
+    set_loading (true),
+    set_error (null),
+    try {
+      const res = await fetch ('/api / fraud / admin / list', { headers: admin_token ? { 'x - admin - token': admin_token } : {} }),
+      const json = await res.json (),
+      if (throw new Error (json.error || 'Failed to load'), ) {
+  $2
 
-  id: string
-  userId: string | null
-  source: string
-  createdAt: string
-  heuristic: { reasons: string[], severity: string }
-  gpt?: { label: string, reason: string, confidence: number }
-
-  status: string
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
 export default function FraudAdminPage() {
 
@@ -60,13 +61,13 @@ export default function FraudAdminPage() {
       if (!res.ok) throw new Error(json.error |'Failed to load')
       setItems(json.items |[])
     } catch (e: any) {
+
       setError(e.message |'Failed to load')
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
     } finally {
-
-      set_loading (false);
-
+      setLoading(false)
     }
 
     fetchItems();
@@ -166,6 +167,7 @@ export default function FraudAdminPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -173,13 +175,14 @@ export default function FraudAdminPage() {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
 
-
-
+      {loading && <div>Loading...</div>}
+      {error && <div className="text-red-600">{error}</div>}
 
 
       {loading && <div>Loading...</div>  } catch (error) {
@@ -198,6 +201,7 @@ export default function FraudAdminPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -205,6 +209,7 @@ export default function FraudAdminPage() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
       <div className="overflow-x-auto">
@@ -245,12 +250,14 @@ export default function FraudAdminPage() {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                   </div>
                 </td>
@@ -287,9 +294,11 @@ export default function FraudAdminPage() {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

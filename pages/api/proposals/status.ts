@@ -1,4 +1,9 @@
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+import { updateProposalMeta } from '../../../utils/data/proposals';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { updateProposalMeta } from '../../../utils/data/proposals',;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
@@ -9,6 +14,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     res.status(200).json({ meta: updated })
   } catch (error: any) {
+
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -47,5 +53,6 @@ export default function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
 
 

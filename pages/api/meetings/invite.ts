@@ -6,6 +6,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 
@@ -50,6 +51,7 @@ const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
 
 
+
   }
   try {
     const { projectId, roomName, inviterName } = req.body || {};
@@ -65,8 +67,25 @@ const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
   }
 
-
+}
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 

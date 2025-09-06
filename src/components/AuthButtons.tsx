@@ -40,6 +40,7 @@ export function AuthButtons(): any ({;
 
 
 
+
   return (
     <div className={`mt-6 grid ${gridCols} gap-3`}>;
       {providers && providers.includes('google') && (;
@@ -48,6 +49,7 @@ export function AuthButtons(): any ({;
           variant='outline'
           className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
           onClick={() => handleSignIn('google')}
+
           disabled={loadingProvider !== null}        >
           <span className='sr-only'>Sign in with Google</span>
           {loadingProvider === 'google' ? (
@@ -93,7 +95,9 @@ export function AuthButtons(): any ({;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             </svg>
           )}
@@ -131,7 +135,9 @@ export function AuthButtons(): any ({;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
             </svg>
           )}
@@ -160,6 +166,7 @@ export function AuthButtons(): any ({;
             <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
           ) : (
             <Facebook className="h-5 w-5" />
+
 
 
           )}
@@ -258,6 +265,7 @@ export function AuthButtons(): any ({;
 
 
 
+
           ) : (
             <>Email Login</>
           )}
@@ -267,6 +275,7 @@ export function AuthButtons(): any ({;
   );
 };
 }
+
 
 
 
@@ -301,3 +310,4 @@ export function AuthButtons(): any ({;
   );
 }
 ;
+

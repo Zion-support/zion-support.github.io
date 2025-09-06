@@ -1,19 +1,15 @@
 
-
-
-
-
-
-
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+:src.disabled/components/Footer.jsx
+import React,{ useState } from\';react\' import { Link } from\';\';react-router-dom\' import { motion } from\';\';framer-motion\' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from\';\';lucide-react\' \"export\": function FooterNewsletter() { const [email,setEmail] = useState(\'';\';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)\'';
+const React,{ useState } from";react" import { Link } from";";react-router-dom" import { motion } from";";framer-motion" import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from";";lucide-react" export: function FooterNewsletter() { const [email,setEmail] = useState("";";) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)"";'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';
+import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';
+ursor/add-new-services-and-deploy-updates-0462
+:src.disabled/components/Footer.jsx
+import React,{ useState } from\';react\' import { Link } from\';\';react-router-dom\' import { motion } from\';\';framer-motion\' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from\';\';lucide-react\' \"export\": function FooterNewsletter() { const [email,setEmail] = useState(\'';\';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)\'';
+const React,{ useState } from";react" import { Link } from";";react-router-dom" import { motion } from";";framer-motion" import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from";";lucide-react" export: function FooterNewsletter() { const [email,setEmail] = useState("";";) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)"";'"'"
+import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('';';) const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';
+import _React,{ useState } from';react' import { Link } from';';react-router-dom' import { motion } from';';framer-motion' import { Mail,Phone,MapPin,ArrowUp,Heart,CheckCircle,Send,Globe } from';';lucide-react' "export": function FooterNewsletter() { const [email,setEmail] = useState('', ') const [isSubscribed,setIsSubscribed] = useState(false) const [isLoading,setIsLoading] = useState(false) const handleSubscribe = async (e) => { e.preventDefault() if (!email) return setIsLoading(true)'';
+:temp_exclude/src.disabled/components/Footer.jsx
 

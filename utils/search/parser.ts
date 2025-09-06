@@ -4,7 +4,10 @@ export const parseSearchQuery = (query: string) => {
   // Add search query parsing functionality here
   return {
 
-
+    keywords: []
+    skills: []
+    location: null
+    type: null
 
   }
 
@@ -18,6 +21,7 @@ export const parseSearchQuery = (query: string) => {
       keywords && keywords.push(word);
     }
   }
+
 
 
 
@@ -46,6 +50,7 @@ export const parseSearchQuery = (query: string) => {
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
     keywords: [],
     skills: [],
     location: null,
@@ -70,11 +75,14 @@ export const searchAll = (parsed: any, access: any) => {
 
 
 
+
+
 export const suggestDidYouMean = (query: string) => {
   // Add did you mean functionality here;
   return null;
 
 }
+
 
 
 
@@ -93,5 +101,6 @@ export const suggestDidYouMean = (query: string) => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

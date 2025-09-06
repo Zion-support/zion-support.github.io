@@ -38,9 +38,7 @@ export default function AICustomerService(req, res) {
     </>);
 }
 
+;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+;
 

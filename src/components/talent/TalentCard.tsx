@@ -26,6 +26,7 @@ import { useCart } from '@/context/CartContext',
 
 
 
+
 export interface TalentCardProps {
 
   talent: TalentProfile
@@ -66,6 +67,7 @@ const TalentCardComponent = ({
       onViewProfile(talent.id)
     }
 
+
   },;
   const handleRequestHire = (e: React.MouseEvent) => {;
     e.preventDefault(),;
@@ -74,6 +76,7 @@ const TalentCardComponent = ({
       onRequestHire(talent);
     }
 
+
   },
 
 
@@ -81,6 +84,7 @@ const TalentCardComponent = ({
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -147,18 +151,21 @@ const TalentCardComponent = ({;
 
 
 
+
+
     >
       <div className="p-6">
         <div className="flex items-start">
           {/* Avatar */}
-          <div className="relative mr-4">
-            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">
-              {talent.profile_picture_url ? (
+          <div className="relative mr-4">;
+            <div className="w-16 h-16 rounded-full overflow-hidden bg-zion-blue-dark border border-zion-blue-light">;
+              {talent && talent.profile_picture_url ? (;
                 <img
                   src = {talent.profile_picture_url,}
                   alt = {talent.full_name,}
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
+
 
 
                   className="w-full h-full object-cover"
@@ -167,6 +174,7 @@ const TalentCardComponent = ({;
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">
                   {talent.full_name?.charAt(0) |"T"}
+
                   {talent.full_name?.charAt(0) || "T"}
                 </div>
                 />;
@@ -175,6 +183,7 @@ const TalentCardComponent = ({;
                   {talent && talent.full_name?.charAt(0) || "T"}
                 </div>;
               )}
+
             </div>;
             {talent && talent.is_verified && (;
               <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0 && 0.5 rounded-full">;
@@ -183,6 +192,29 @@ const TalentCardComponent = ({;
             )}
 
           </div>;
+
+          {/* Main Info */}
+          <div className="flex-1">;
+            <div className="flex justify-between items-start">;
+              <h3 className="text-lg font-bold text-white">{talent && talent.full_name}</h3>;
+              <FavoriteButton itemId={talent && talent.id} className="-mt-1" />;
+            </div>;
+            <p className="text-white font-medium">{talent && talent.professional_title}</p>;
+
+
+
+            
+
+
+            </div>;
+            {talent && talent.is_verified && (;
+              <div className="absolute -bottom-1 -right-1 bg-zion-blue p-0 && 0.5 rounded-full">;
+                <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
+              </div>;
+            )}
+
+          </div>;
+
 
           {/* Main Info */}
           <div className="flex-1">;
@@ -208,6 +240,7 @@ const TalentCardComponent = ({;
           </div>;
         </div>;
         {/* Skills */}
+
         {skills && skills.length > 0 && (;
           <div className="mt-4">;
             <div className="flex flex-wrap gap-2">;
@@ -215,6 +248,7 @@ const TalentCardComponent = ({;
 
                 <span
                   key = {index,}
+
 
 
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
@@ -242,6 +276,7 @@ const TalentCardComponent = ({;
 
 
 
+
         {/* Hourly Rate & Actions */}
         <div className="mt-5 flex items-center justify-between">;
           <div>;
@@ -255,6 +290,7 @@ const TalentCardComponent = ({;
             )}
           </div>
           
+
 
 
 
@@ -289,6 +325,7 @@ const TalentCardComponent = ({;
               onClick={(e) => {
 
 
+
                 e.stopPropagation(),
                 handleViewProfile()
               }}
@@ -302,6 +339,48 @@ const TalentCardComponent = ({;
     </Card>
   )
 
+}
+export const TalentCard = React.memo(TalentCardComponent)
+TalentCard.displayName = 'TalentCard'
+export const TalentCard = React.memo(TalentCardComponent)
+TalentCard.displayName = 'TalentCard'
+
+export const TalentCard = React.memo(TalentCardComponent),
+TalentCard.displayName = 'TalentCard',
+},
+
+export const TalentCard = React.memo(TalentCardComponent),
+TalentCard.displayName = 'TalentCard',
+;
+export const TalentCard = React.memo(TalentCardComponent);
+TalentCard.displayName = 'TalentCard';
+        <div className="mt-5 flex items-center justify-between">;
+          <div>;
+            {talent.hourly_rate ? (;
+              <div className="text-white font-bold">;
+                ${talent.hourly_rate}
+                <span className="text-zion-slate-light font-normal">/hr</span>;
+              </div>;
+            ) : (;
+              <div className="text-zion-slate-light">Rate not specified</div>;
+            )}
+          </div>;
+          <div className="flex items-center gap-2">;
+            {isAuthenticated && (;
+              <Button;
+                size="sm";
+                variant="secondary";
+                onClick={handleRequestHire}
+                className="bg-zion-purple hover:bg-zion-purple-light text-white";
+              >;
+                Hire;
+              </Button>;
+            )}
+            <Button;
+              size="sm";
+              variant="ghost";
+              onClick={(e) => {;
+                e.stopPropagation(),;
 
                 handleViewProfile();
               }}
@@ -326,6 +405,7 @@ export interface TalentCardProps {
   onRequestHire: (talent: TalentProfile, ) => void,
   is_authenticated: boolean;
 }
+
 const TalentCardComponent = ({
   talent,
   onViewProfile,
@@ -453,10 +533,12 @@ if ( {) {
             >;
               View <ArrowRight className="ml - 1 h - 4 w - 4" />;
 
+
             </Button>;
           </div>;
         </div>;
       </div>;
+
 
 
 
@@ -474,3 +556,4 @@ TalentCard.displayName = 'TalentCard',
 
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard',
+

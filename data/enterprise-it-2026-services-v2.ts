@@ -4,6 +4,7 @@ import { ServiceVariant } from '../types/service-variants';
 
 
 
+
 export interface EnterpriseIt2026ServiceV2 {
 
 export interface EnterpriseIt2026ServiceV2 {;
@@ -12,6 +13,7 @@ export interface EnterpriseIt2026ServiceV2 {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   id: string;
@@ -44,10 +46,39 @@ export interface EnterpriseIt2026ServiceV2 {;
     mobile: string;
     email: string;
     address: string;
+
     website: string;
   }
 
   {
+
+
+export interface EnterpriseIT2026ServiceV2 {
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: ServiceVariant,
+  contactInfo: {
+      
+    mobile: string, email: string,
+    address: string,
+    website: string
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number
+}
 
 
     id: 'zero-trust-network-architecture-pro'
@@ -131,6 +162,7 @@ export interface EnterpriseIt2026ServiceV2 {;
   }
   // Multi-Cloud Orchestration Platform
   {
+
     id: 'multi-cloud-orchestration-platform'
     name: 'Multi-Cloud Orchestration Platform'
     tagline: 'Seamlessly manage and orchestrate across all cloud providers'
@@ -198,6 +230,7 @@ export interface EnterpriseIt2026ServiceV2 {;
     marketSize: '$28.9B market'
     growthRate: '280% annual growth'
     variant: 'cloud-futuristic'
+
     contactInfo: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -768,6 +801,19 @@ export interface EnterpriseIt2026ServiceV2 {;
     realImplementation: true
     implementationDetails:
 
+      'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.'
+    launchDate: '2026-05-01'
+    customers: 280
+    rating: 4.9
+    reviews: 180
+  }
+      'Production-ready quantum security platform with post-quantum algorithms, monitoring, and enterprise deployment.',
+    launchDate: '2026-05-01',
+    customers: 280,
+    rating: 4.9,
+    reviews: 180,
+  },;
+
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -780,6 +826,9 @@ export interface EnterpriseIt2026ServiceV2 {;
     rating: 4.9
 
     reviews: 180
+
+  }
+];
 
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV2 {;
@@ -1220,7 +1269,9 @@ export const enterpriseIT2026ServicesV2: EnterpriseIT2026ServiceV2[] = [;
     rating: 4.9;
     reviews: 180;
 
+
   }
 ];
+
 
 

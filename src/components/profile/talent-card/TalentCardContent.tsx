@@ -8,6 +8,7 @@ summary: string | undefined;
 
 
 
+
   return (
     <div>
       {/* Location */}
@@ -92,10 +93,13 @@ function TalentCardContent() {
         <p className="text - zion - slate mb - 4">;
 
 
+
           {summary || bio}
         </p>;
       </div>;
       {/* Skills */}
       <TalentCardSkills skills={skills} />;
     </div>);
+
 }
+

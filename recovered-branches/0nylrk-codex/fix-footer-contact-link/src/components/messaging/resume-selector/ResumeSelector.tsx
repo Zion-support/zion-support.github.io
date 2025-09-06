@@ -41,6 +41,18 @@ import { UploadSection } from "./UploadSection";
 import { SelectResumeSection } from "./SelectResumeSection";
 import { ResumeOption, ResumeSelectorProps } from "./types";
 
+export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
+  const [selectedOption, setSelectedOption] = useState<
+    "recent" | "select" | "upload";
+  >("recent");
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(
+    null,
+  );
+  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
+  const [customFile, setCustomFile] = useState<File | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
+
+
 
 
 
@@ -54,6 +66,8 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
   const [isLoading, setIsLoading] = useState(false),
   
   const { resume, fetchResume } = useResume(),
+
+
 
 
   // Fetch resume data when component mounts
@@ -120,6 +134,18 @@ if ( {) {
           resume: resume
         }
 
+
+  // Update resume options when resume data changes;
+  useEffect(() => {;
+    if (resume) {;
+      const options: ResumeOption[] = [;
+        {;
+          id: resume && resume.id || "current",;
+          title: resume && resume.basic_info.title,;
+          type: "ai_resume",;
+          resume: resume,;
+        },;
+
       ];
 
 
@@ -147,8 +173,19 @@ if ( {) {
       setSelectedResume(null);
     }
 
-
-
+  }
+  // Handle resume selection change
+  const handleResumeSelect = (resumeId: string) => {
+    const selected = resumeOptions.find((opt) => opt.id === resumeId);
+    if (selected) {
+      (setSelectedResume(selected), onResumeSelected(selected));
+    }
+  }
+  // Handle custom file upload
+  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const file = e.target.files[0];
+  };
 
 
         setIsLoading(false)
@@ -230,7 +267,9 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -244,6 +283,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
       // Check if it's a PDF file
       if (file.type !== "application/pdf") {
         toast({
+
 
 
 
@@ -274,10 +314,11 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
         });
         return;
       }
-
+;
       // Create a custom resume option;
       const customOption: ResumeOption = {;
         id: "custom-upload",;
@@ -302,6 +343,27 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     ) {
       return;
     }
+
+    try {
+      setIsLoading(true);
+      const pdfBlob = await exportResumeToPDF(selectedResume.resume);
+      // Create download link
+      const url = URL.createObjectURL(pdfBlob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `${selectedResume.title |"Resume"}.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      // Clean up
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      toast({
+        title: "Success!"
+        description: "Your resume has been downloaded."
+      });
+          title: "Invalid file type",
+          description: "Please upload a PDF file",
+
 
           variant: "destructive"
         }),
@@ -340,6 +402,8 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     }
 
 
+
+
     try {
       setIsLoading(true),
       const pdfBlob = await exportResumeToPDF(selectedResume.resume),
@@ -376,7 +440,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
     } finally {
       setIsLoading(false)
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
   }
@@ -408,12 +471,14 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
         className="space-y-3"
@@ -431,12 +496,14 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="select" id="select" />
@@ -451,12 +518,14 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="upload" id="upload" />
@@ -529,6 +598,159 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
           <RadioGroupItem value="upload" id="upload" />;
           <Label htmlFor="upload" className="text-white">;
 
+;
+      setResumeOptions (options);
+;
+      // Pre - select the most recent resume;
+      // Check condition
+if ( {) {
+  $2
+}
+        setSelectedResume (options[0]);
+        onResumeSelected (options[0]);
+      }
+    }
+  }, [resume, selected_option, onResumeSelected]);
+;
+  // Handle radio option change;
+  const handleOptionChange = (value: "recent" | "select" | "upload") =>: any {
+    setSelectedOption (value);
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      (setSelectedResume (resume_options[0]), onResumeSelected (resume_options[0]));
+    } else // Check condition
+if ( {) {
+  $2
+}
+      // Reset selection until user chooses;
+      setSelectedResume (null);
+    } else // Check condition
+if ( {) {
+  $2
+}
+      setSelectedResume (null);
+    }
+  }
+;
+  // Handle resume selection change;
+  const handleResumeSelect = (resume_id: string) =>: any {
+    const selected = resume_options.find ((opt) => opt.id === resume_id);
+    // Check condition
+if ( {) {
+  $2
+}
+      (setSelectedResume (selected), onResumeSelected (selected));
+    }
+  }
+;
+  // Handle custom file upload;
+  const handleFileUpload = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      const file = e.target.files[0];
+;
+      // Check if it's a PDF file;
+      // Check condition
+if ( {) {
+  $2
+}
+        toast ({
+          title: "Invalid file type",
+          description: "Please upload a PDF file",
+          variant: "destructive",
+        });
+        return;
+      }
+      // Create a custom resume option;
+      const custom_option: ResumeOption = {
+        id: "custom - upload",
+        title: file.name,
+        type: "custom_upload",
+        file: file,
+      }
+;
+      setCustomFile (file);
+      setSelectedResume (custom_option);
+      onResumeSelected (custom_option);
+    }
+  }
+;
+  // Handle resume download;
+  const handleDownloadResume = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      return;
+    }
+    try {
+      setIsLoading (true);
+      const pdf_blob = await exportResumeToPDF (selected_resume.resume);
+;
+      // Create download link;
+      const url = URL.createObjectURL (pdf_blob);
+      const link = document.create_element ("a");
+      link.href = url;
+      link.download = `${selected_resume.title || "Resume"}.pdf`;
+      document.body.append_child (link);
+      link.click ();
+;
+      // Clean up;
+      document.body.remove_child (link);
+      URL.revokeObjectURL (url);
+;
+      toast ({
+        title: "Success!",
+        description: "Your resume has been downloaded.",
+      });
+    } catch (error) {
+      console.error ("Error downloading PDF:", error);
+      toast ({
+        title: "Download failed",
+        description: "There was an error downloading your resume.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading (false);
+    }
+  }
+;
+  // Handle "Generate Resume Now" button;
+  const handleGenerateResume = () =>: any {
+    window.open ("/dashboard / talent / portfolio_blank");
+  }
+;
+  return (
+    <div className="space - y-4">;
+      <h3 className="text - lg font - medium text - white">Attach Resume</h3>;
+      <RadioGroup;
+        value={selected_option}
+        onValueChange={(value) =>;
+          handleOptionChange (value as "recent" | "select" | "upload");
+        }
+        className="space - y-3";
+      >;
+        <div className="flex items - center space - x-2">;
+          <RadioGroupItem value="recent" id="recent" />;
+          <Label html_for="recent" className="text - white">;
+            Use most recent AI Resume;
+          </Label>;
+        </div>;
+        <div className="flex items - center space - x-2">;
+          <RadioGroupItem value="select" id="select" />;
+          <Label html_for="select" className="text - white">;
+            Select from saved versions;
+          </Label>;
+        </div>;
+        <div className="flex items - center space - x-2">;
+          <RadioGroupItem value="upload" id="upload" />;
+          <Label html_for="upload" className="text - white">;
+
             Upload a custom resume (PDF);
           </Label>;
         </div>;
@@ -542,6 +764,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -549,11 +772,13 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
           resume={resume}
           onDownload={handleDownloadResume}
           isLoading={isLoading}
         />;
       )}
+
 
 
 
@@ -641,12 +866,20 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
       {/* Generate Resume Now button */}
       <div className="flex justify-between items-center pt-2">;
         <Button
           variant="outline"
           onClick={handleGenerateResume}
 
+          className="text-zion-purple border-zion-purple/20">;
+          <Plus className="h-4 w-4 mr-2" />;
+          Generate Resume Now;
+        </Button>;
+      </div>;
+    </div>;
+  );
 
       {/* Resume selection options based on radio selection */}
       {selected_option === "recent" && resume && (
@@ -683,13 +916,16 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
 
 }
 
-
+          className="text-zion-purple border-zion-purple/20"
+        >
+          <Plus className="h-4 w-4 mr-2" />
+          Generate Resume Now
+        </Button>
+      </div>
+    </div>
+  );
+}
   )
 }
 ;
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
 

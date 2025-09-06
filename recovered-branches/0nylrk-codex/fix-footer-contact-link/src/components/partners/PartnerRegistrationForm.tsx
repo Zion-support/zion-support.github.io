@@ -6,6 +6,7 @@
 
 
 
+
 import {useState} from "react";
 import {z} from "zod";
 import {useForm} from "react-hook-form";
@@ -21,6 +22,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
 
 
+
 import { useState } from "react",
 import { z } from "zod",
 import { useForm } from "react-hook-form",
@@ -34,6 +36,8 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
+
+
 
 
 const partnerFormSchema = z.object({
@@ -101,8 +105,34 @@ export function PartnerRegistrationForm() {
         variant: "destructive"})
       return
 
-
-
+    }
+    setIsSubmitting(true);
+    try {
+      // Check if they already have a partner profile
+      const hasExistingPartner = await checkExistingPartner();
+      if (hasExistingPartner) return;
+      // Insert new partner profile
+      const { data: newPartner, error } = await supabase
+        .from('partner_profiles')
+        .insert([
+          {
+            user_id: user.id
+            name: data.name
+            website: data.website |null
+            social_media: {
+              twitter: data.twitter |null
+              instagram: data.instagram |null
+              youtube: data.youtube |null
+              linkedin: data.linkedin |null}
+            niche: data.niche
+            audience_size: data.audience_size
+            payout_method: data.payout_method
+            bio: data.bio
+            status: 'pending', // Partners need approval
+          }
+        ])
+        .select();
+      if (error) throw error;
 
 import { useState } from "react",;
 import { z } from "zod",;
@@ -160,7 +190,6 @@ export function PartnerRegistrationForm() {;
         title: "Already registered",;
         description: "You have already registered as a partner.",;
         variant: "destructive"}),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setIsSubmitting(false);
       return true;
     }
@@ -307,12 +336,14 @@ if (return) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           }
         ]);
@@ -350,6 +381,37 @@ if (return) {
 
 
     }
+  }
+  return (
+    <Card className="bg-zion-blue-dark border-zion-blue-light">;
+      <CardHeader>;
+        <CardTitle>Partner Registration</CardTitle>;
+        <CardDescription>Register to become a Zion AI partner and start earning rewards</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <Form {...form}>;
+          <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
+            <div className="space-y-4">;
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Name / Brand</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Your name or brand name" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+        ]);
+        .select(),;
+      if (error) throw error,;
+
+
+    }
 
 
 
@@ -374,6 +436,7 @@ if (return) {
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
+
 
     }
 
@@ -437,20 +500,19 @@ if ( {) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
                 control={form.control}
                 name="name";
                 render={({ field }) => (
                   <FormItem>;
                     <FormLabel > Name / Brand</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     <FormControl>;
                       <Input placeholder="Your name or brand name" {...field} />;
                     </FormControl>;
                     <FormMessage />;
-
-              />;
-
-
+                  </FormItem>;
+                )}
+              />
               <FormField
                 control={form && form.control}
                 name="website"
@@ -472,6 +534,27 @@ if ( {) {
                   control={form && form.control}
                   name="twitter"
 
+                  render={({ field }) => (;
+                    <FormItem>;
+                      <FormLabel>Twitter (Optional)</FormLabel>;
+                  </FormItem>)}
+              />;
+              <FormField;
+                control={form.control}
+                name="website";
+                render={({ field }) => (
+                  <FormItem>;
+                    <FormLabel > Website (Optional)</FormLabel>;
+                    <FormControl>;
+                      <Input placeholder="https://yourwebsite.com" {...field} />;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>)}
+              />;
+              <div className="grid sm:grid - cols - 2 gap - 4">;
+                <FormField;
+                  control={form.control}
+                  name="twitter";
 
                   render={({ field }) => (
                     <FormItem>
@@ -485,7 +568,7 @@ if ( {) {
                 />
                 <FormField
                   control={form.control}
-                  name="instagram"
+                  name="instagram";
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Instagram (Optional)</FormLabel>
@@ -518,6 +601,7 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/feature/merge-conflicts-and-improvements
                       <FormControl>;
                         <Input placeholder="@username" {...field} />;
@@ -542,12 +626,12 @@ if ( {) {
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
                   control={form.control}
                   name="instagram";
                   render={({ field }) => (
                     <FormItem>;
                       <FormLabel > Instagram (Optional)</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       <FormControl>;
                         <Input placeholder="@username" {...field} />;
                       </FormControl>;
@@ -565,6 +649,17 @@ if ( {) {
                     <FormItem>;
                       <FormLabel>YouTube (Optional)</FormLabel>;
 
+                    </FormItem>)}
+                />;
+              </div>;
+              <div className="grid sm:grid - cols - 2 gap - 4">;
+                <FormField;
+                  control={form.control}
+                  name="youtube";
+                  render={({ field }) => (
+                    <FormItem>;
+                      <FormLabel > YouTube (Optional)</FormLabel>;
+
                       <FormControl>;
                         <Input placeholder="Channel name or URL" {...field} />;
                       </FormControl>;
@@ -580,11 +675,30 @@ if ( {) {
                     <FormItem>;
                       <FormLabel>LinkedIn (Optional)</FormLabel>;
 
+                    </FormItem>)}
+                />;
+                <FormField;
+                  control={form.control}
+                  name="linkedin";
+                  render={({ field }) => (
+                    <FormItem>;
+                      <FormLabel > LinkedIn (Optional)</FormLabel>;
+
                       <FormControl>;
                         <Input placeholder="Profile URL or username" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-
+                    </FormItem>;
+                  )}
+                />
+              </div>
+              <FormField
+                control={form && form.control}
+                name="niche"
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Your Niche</FormLabel>;
+                    </FormItem>)}
                 />;
               </div>;
 
@@ -595,6 +709,16 @@ if ( {) {
                 render={({ field }) => (;
                   <FormItem>;
                     <FormLabel>Your Niche</FormLabel>;
+
+                    </FormItem>)}
+                />;
+              </div>;
+              <FormField;
+                control={form.control}
+                name="niche";
+                render={({ field }) => (
+                  <FormItem>;
+                    <FormLabel > Your Niche</FormLabel>;
 
                     <FormControl>;
                       <Input placeholder="AI development, machine learning, tech tutorials, etc." {...field} />;
@@ -616,6 +740,17 @@ if ( {) {
                       <FormLabel>Audience Size</FormLabel>;
                       <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
 
+                  </FormItem>)}
+              />;
+              <div className="grid sm:grid - cols - 2 gap - 4">;
+                <FormField;
+                  control={form.control}
+                  name="audience_size";
+                  render={({ field }) => (
+                    <FormItem>;
+                      <FormLabel > Audience Size</FormLabel>;
+                      <Select onValueChange={field.on_change} default_value={field.value}>;
+
                         <FormControl>;
                           <SelectTrigger>;
                             <SelectValue placeholder="Select audience size" />;
@@ -633,6 +768,24 @@ if ( {) {
                     <FormItem>;
                       <FormLabel>Preferred Payout Method</FormLabel>;
                       <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
+
+                          <SelectItem value="under1k">Under 1, 000</SelectItem>;
+                          <SelectItem value="1k - 10k">1, 000 - 10, 000</SelectItem>;
+                          <SelectItem value="10k - 50k">10, 000 - 50, 000</SelectItem>;
+                          <SelectItem value="50k - 100k">50, 000 - 100, 000</SelectItem>;
+                          <SelectItem value="over100k">Over 100, 000</SelectItem>;
+                        </SelectContent>;
+                      </Select>;
+                      <FormMessage />;
+                    </FormItem>)}
+                />;
+                <FormField;
+                  control={form.control}
+                  name="payout_method";
+                  render={({ field }) => (
+                    <FormItem>;
+                      <FormLabel > Preferred Payout Method</FormLabel>;
+                      <Select onValueChange={field.on_change} default_value={field.value}>;
 
                         <FormControl>;
                           <SelectTrigger>;
@@ -663,6 +816,21 @@ if ( {) {
                       <Textarea
                         placeholder="Tell us about yourself and how you plan to promote Zion AI"
 
+                        rows={4} 
+                        {...field} 
+                    </FormItem>)}
+                />;
+              </div>;
+              <FormField;
+                control={form.control}
+                name="bio";
+                render={({ field }) => (
+                  <FormItem>;
+                    <FormLabel > Bio</FormLabel>;
+                    <FormControl>;
+                      <Textarea;
+                        placeholder="Tell us about yourself and how you plan to promote Zion AI";
+
                         rows={4}
                         {...field}
                       />
@@ -676,10 +844,35 @@ if ( {) {
               />
             </div>
 
+            <Button
+              type="submit"
+            <Button 
+              type="submit" 
+
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}
             >
               {isSubmitting ? "Submitting..." : "Submit Application"}
+
+
+                  </FormItem>)}
+              />;
+            </div>;
+            <Button;
+              type="submit";
+              className="w - full bg - zion - purple hover:bg - zion - purple - dark";
+              disabled={is_submitting}
+            >;
+              {is_submitting ? "Submitting..." : "Submit Application"}
+            </Button>;
+          </form>;
+        </Form>;
+      </CardContent>;
+
+    </Card>);
+
+}
+
             </Button>
           </form>
         </Form>
@@ -687,4 +880,7 @@ if ( {) {
     </Card>
   )
 
+}
+};
+}
 

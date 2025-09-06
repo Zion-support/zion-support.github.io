@@ -7,12 +7,14 @@
 
 
 
+
 import React, { useState } from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Gift, ArrowRight, ExternalLink} from "lucide-react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+
 
 
 import React, { useState } from "react",
@@ -34,6 +36,7 @@ import {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -46,6 +49,7 @@ type RewardOption = {
   type: 'credit' | 'feature' | 'course'
 
 }
+
 },
 
 
@@ -138,6 +142,7 @@ export function RedeemTokensCard() {
 
 
 
+
                       onClick={() => handleRedeem(option)}
 
                     >
@@ -145,6 +150,7 @@ export function RedeemTokensCard() {
                     </Button>
                   </div>
                 </div>
+
               ))}
             </div>
             <div className="flex justify-between">
@@ -158,6 +164,8 @@ export function RedeemTokensCard() {
       </CardContent>
     </Card>
   )
+
+
 
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
@@ -233,8 +241,20 @@ export function RedeemTokensCard() {;
               {REWARD_OPTIONS.map((option) => (;
                 <div key={option.id} className="flex justify-between items-center border-b pb-4">;
                   <div>;
-                    <h3 className="font-medium">{option.title}</h3>;
-                    <p className="text-sm text-muted-foreground">{option.description}</p>;
+
+                    <h3 className="font-medium">{option && option.title}</h3>;
+                    <p className="text-sm text-muted-foreground">{option && option.description}</p>;
+                  </div>;
+                  <div className="flex flex-col items-end gap-1">;
+                    <span className="text-sm font-bold">{option && option.cost} ZION$</span>;
+                    <Button
+                      size="sm" 
+                      variant={wallet && wallet.balance>= option && option.cost ? "default" : "outline"}
+                      disabled={!wallet || wallet.balance < option && option.cost}
+                      onClick={() => handleRedeem(option)}
+                    >;
+                      Redeem <ArrowRight className="ml-1 h-3 w-3" />;
+                    </Button>;
 
                   </div>;
                 </div>;
@@ -246,7 +266,20 @@ export function RedeemTokensCard() {;
               <Button variant="ghost" size="sm">;
                 Learn More <ExternalLink className="ml-1 h-3 w-3" />;
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+import React, { useState } from './react';
+import { use_wallet } from '@/hooks / use_wallet';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { Gift, ArrowRight, ExternalLink } from './lucide-react';
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';
+;
+type RewardOption = {
+  id: string,
+  title: string,
+  description: string,
+  cost: number,
+  type: 'credit' | 'feature' | 'course';
+
 }
 ;
 
@@ -341,10 +374,8 @@ if (return, ) {
         </Dialog>;
       </CardContent>;
 
-
-
-
-
+    </Card>;
+  );
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a

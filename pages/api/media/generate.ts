@@ -1,24 +1,20 @@
 
-
-
-
-
-
-
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { buildPressRelease } from "../../../utils/mediaKit";
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-
+import type { NextApiRequest, NextApiResponse } from './next';
+import { buildPressRelease  } from '../../../utils / media_kit';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
   try {
     const {
-
-
-
-
+      type = "launch"
+      companyName = "Zion"
+      date = new Date().toISOString().substring(0, 10)
+      raiseAmount
+      description = "Innovative technology company"
+      contactEmail = "press@zion.com"
+    } = req.body |{}
 
       type = "launch",
       companyName = "Zion",
@@ -29,15 +25,14 @@ export default async function handler(
     } = req.body || {};
 
 
-
-
-
-
-
-
     if (req.method !== "POST") {
       res.setHeader("Allow", "POST");
       return res.status(405).json({ error: "Method not allowed" });
+      type = "launch",
+      company_name = "Zion",
+      date = new Date ().toISOString ().substring (0, 10),
+      raise_amount,
+      description = "Innovative technology company",
 
 
 
@@ -55,6 +50,11 @@ export default async function handler(
     });
 
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+
 import { buildPressRelease } from '../../../utils/mediaKit';
 
 
@@ -94,7 +94,17 @@ import { buildPressRelease } from '../../../utils/mediaKit';
 
   }
 
+}
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
-
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 

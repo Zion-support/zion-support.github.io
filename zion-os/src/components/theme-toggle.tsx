@@ -16,6 +16,12 @@ export function ThemeToggle() {;
         <button;
           onClick={() => setTheme("light")}
 
+          className={`rounded px-2 py-1 text-sm transition-colors ${theme === "light";
+          className={`rounded px-2 py-1 text-sm transition-colors ${;
+            theme === "light";
+              ? "bg-zion-blue text-white";
+              : "text-zinc-400 hover:text-zinc-100";
+
 "use client",
 import { use_theme  } from '@/components / theme - provider';,
 import { Moon, Sun, Monitor  } from './lucide-react';,
@@ -34,7 +40,8 @@ function ThemeToggle() {
             theme === "light";
               ? "bg - zion - blue text - white";
               : "text - zinc - 400 hover:text - zinc - 100";
-=======
+
+
 "use client",;
 import { useTheme } from "@/components/theme-provider",;
 import { Moon, Sun, Monitor } from "lucide-react",;
@@ -47,10 +54,9 @@ export function ThemeToggle() {;
         <button;
           onClick={() => setTheme("light")}
 
+
           className={`rounded px-2 py-1 text-sm transition-colors ${;
             theme === "light";
-=======
-
 
               ? "bg-zion-blue text-white";
               : "text-zinc-400 hover:text-zinc-100";

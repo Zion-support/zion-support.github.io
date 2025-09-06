@@ -1,19 +1,23 @@
 
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+import {useState, useEffect} from "react";
+import {Link, useNavigate, useSearchParams} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {Button} from "@/components/ui/button";
+import PostForm from "@/components/community/PostForm";
+import {useToast} from "@/hooks/use-toast";
+import {ForumCategory} from "@/types/community";
+import { useState, useEffect } from "react",
+import { Link, useNavigate, useSearchParams } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import PostForm from "@/components/community/PostForm",
+import { useToast } from "@/hooks/use-toast";
+import { ForumCategory } from "@/types/community";
+import { useToast } from "@/hooks/use-toast",
+import { ForumCategory } from "@/types/community",
 
 interface PostFormValues {
 
@@ -24,6 +28,10 @@ interface PostFormValues {
   tags: string
 }
 
+export default function CreatePostPage() {;
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [searchParams] = useSearchParams();
 
 export default function CreatePostPage() {
 
@@ -233,6 +241,7 @@ function CreatePostPage() {
 ;
 
 
+
   // Get category from URL query params if available;
   const initial_category = search_params.get ("category") as ForumCategory | null;
 ;
@@ -283,6 +292,7 @@ function CreatePostPage() {
       </div>;
     </AppLayout>);
 }
+
 
 
 

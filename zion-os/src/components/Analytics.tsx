@@ -59,8 +59,8 @@ if ( {) {
 
           }
         }
-      }),
-      observer.observe ({ entry_types: ["largest - contentful - paint", "first - input"] }),
+      });
+      observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] });
       // Cumulative Layout Shift monitoring;
       let cls = 0,
       const observer2 = new PerformanceObserver ((list) => {

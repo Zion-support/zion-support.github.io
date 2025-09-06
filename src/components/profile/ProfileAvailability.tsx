@@ -11,6 +11,8 @@ interface ProfileAvailabilityProps {
 
 
 
+
+
 export function ProfileAvailability({
   availability
 }: ProfileAvailabilityProps) {
@@ -27,30 +29,32 @@ export /**
 function ProfileAvailability() {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') =>: any {
     switch (status) {
-      case 'available':
-        return 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
-      case 'limited':
-        return 'bg-amber-500/20 text-amber-400 border-amber-500/30'
-      case 'unavailable':
-        return 'bg-rose-500/20 text-rose-400 border-rose-500/30'
-      default:
-        return ''
+      case 'available':;
+        return 'bg - emerald - 500 / 20 text - emerald - 400 border - emerald - 500 / 30';
+      case 'limited':;
+        return 'bg - amber - 500 / 20 text - amber - 400 border - amber - 500 / 30';
+      case 'unavailable':;
+        return 'bg - rose - 500 / 20 text - rose - 400 border - rose - 500 / 30';
+      default:;
+        return '';
     }
   }
-  const getStatusText = (status: 'available' | 'limited' | 'unavailable') => {
+  const getStatusText = (status: 'available' | 'limited' | 'unavailable') =>: any {
     switch (status) {
-      case 'available':
-        return 'Available Now'
-      case 'limited':
-        return 'Limited Availability'
-      case 'unavailable':
-        return 'Currently Unavailable'
-      default:
+      case 'available':;
+        return 'Available Now';
+      case 'limited':;
+        return 'Limited Availability';
+      case 'unavailable':;
+        return 'Currently Unavailable';
+      default:;
         return '' }
   }
 
-
-
+        <Badge
+          variant="outline"
+        <Badge 
+          variant="outline" 
 
         >
           {getStatusText(availability.status)}
@@ -67,6 +71,7 @@ function ProfileAvailability() {
       {availability.message && (
         <p className='text-zion-slate mb-4'>{availability.message}</p>
       )}
+
 
 
 
@@ -93,6 +98,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Check } from 'lucide-react'
 import { Badge } from '@/components/ui/badge';
 import { Calendar } from 'lucide-react';
+
 
 interface ProfileAvailabilityProps {
   availability: Availability
@@ -140,6 +146,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
         <p className="text-zion-slate mb-4">{availability.message}</p>
       )}
       
+
 
 
 
@@ -257,9 +264,10 @@ export function ProfileAvailability(): any ({;
                 </div>;
 
 
+
               ))}
-            </div>
-          </div>
+            </div>;
+          </div>;
         )}
 
     </div>;
@@ -273,9 +281,11 @@ export function ProfileAvailability(): any ({;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -284,6 +294,7 @@ export function ProfileAvailability(): any ({;
             ))}
           </div>
         </div>
+
 
 
 
@@ -364,3 +375,4 @@ export function ProfileAvailability(): any ({;
 }
 
 ;
+

@@ -7,6 +7,7 @@ export default function YouTubeRedirect() {
 
 
 
+
   }
 }
 import React, { useEffect } from 'react';
@@ -16,10 +17,13 @@ import React, { useEffect } from 'react';
     }
 
 
+
   }, []);
   return (
     <>;
       <Head>;
+
+
 
 
 
@@ -35,7 +39,43 @@ export default function YouTubeRedirect(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-	}, []),
+
+import React, { useEffect } from 'react';
+
+
+import Head from 'next / head';
+export default /**
+ * YouTubeRedirect - Function description
+ */
+function YouTubeRedirect() {
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      window.location.replace ('https: //youtube.com/@ziontechgroup'),
+    }
+
+      window.location.replace('https: //youtube.com/@ziontechgroup'),
+    };
+
+  }, []);
+  return (
+    <>;
+      <Head>;
+
+
+
+}
+
+
+export default function YouTubeRedirect() {
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			window.location.replace('https: //youtube.com/@ziontechgroup')
+		}
+	}, []);
+
 	return (
 		<>
 			<Head>
@@ -72,5 +112,7 @@ export default function YouTubeRedirect(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 
 

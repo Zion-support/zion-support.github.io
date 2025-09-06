@@ -4,15 +4,27 @@
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
 interface ChangelogManagerProps {
   platform: AppPlatform
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
+type ChangelogEntry = {;
+import React, { useState } from './react';
+import { Card, CardHeader, CardTitle, CardContent  } from '@/components / ui / card';
+import { Button  } from '@/components / ui / button';
+import { Input  } from '@/components / ui / input';
+import { Textarea  } from '@/components / ui / textarea';
+import { Plus, Trash2  } from './lucide-react';
+import { AppPlatform  } from './MetadataManager';
+interface ChangelogManagerProps {
+  platform: AppPlatform;
+}
 type ChangelogEntry = {
 
   id: string;
@@ -23,6 +35,22 @@ type ChangelogEntry = {
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
   platform
 }) => {
+  const [entries, set_entries] = useState < ChangelogEntry[]>([;
+    {
+
+};
+
+export const ChangelogManager: React.FC<ChangelogManagerProps> = ({;
+  platform,;
+}) => {;
+
+  id: string,
+  version: string,
+  date: string,
+  changes: string
+},
+
+export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) => {
   const [entries, setEntries] = useState<ChangelogEntry[]>([
     {
       id: "1"
@@ -135,6 +163,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
 
 
+
+
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -193,7 +223,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,;
   ) => {;
     const { name, value } = e && e.target;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setNewEntry((prev) => ({ ...prev, [name]: value }));
   }
   return (
@@ -226,6 +255,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -233,6 +263,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
@@ -248,12 +279,14 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
           <Textarea
             placeholder="What's new in this version?"
@@ -269,6 +302,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -278,6 +312,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
             {entries.map((entry) => (
+
 
               <div
                 key={entry && entry.id}
@@ -305,6 +340,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
 
 
+
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
 
 
@@ -318,6 +354,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
             )}
           </div>;
         </div>;
@@ -327,9 +364,11 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 }
+
 
 
 

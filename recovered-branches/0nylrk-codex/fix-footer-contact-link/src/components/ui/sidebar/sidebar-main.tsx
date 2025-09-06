@@ -25,7 +25,13 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
 export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
 
-
+  if (props.collapsible === &quot;none&quot;) {
+    return (
+      <div
+        className={cn(
+          &quot;flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground&quot;
+;
+  if (props.collapsible === &quot;none&quot;) {
 
 
   if (props.collapsible === "none") {
@@ -38,6 +44,30 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
 
           props.className
         )}
+
+import * as React from &quot;react & quot;
+import type { CSSProperties } from &quot;react & quot;
+import { Sheet, SheetContent } from &quot;@/components / ui / sheet & quot;
+import { cn } from &quot;@/lib / utils & quot;
+import { use_sidebar } from &quot;./sidebar - context & quot;
+import type { SafeRef } from &quot;../sidebar.types & quot;
+;
+export interface SidebarProps extends React.ComponentProps<&quot;div & quot;> {
+  side?: &quot;left & quot; | &quot;right & quot;
+  variant?: &quot;sidebar & quot; | &quot;floating & quot; | &quot;inset & quot;
+  collapsible?: &quot;offcanvas & quot; | &quot;icon & quot; | &quot;none & quot;
+}
+export const Sidebar = React.forward_ref < HTMLDivElement SidebarProps>((props, ref) => {
+  const { is_mobile, state, open_mobile, setOpenMobile } = use_sidebar ();
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <div;
+        className={cn (
+          &quot;flex h - full w-[--sidebar - width] flex - col bg - sidebar text - sidebar - foreground & quot;,
+          props.class_name)}
 
         ref={ref}
         {...props}
@@ -75,17 +105,14 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
     <div;
       ref={ref}
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+      className="group peer hidden md:block text-sidebar-foreground"
+className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
+      className="group peer hidden md:block text-sidebar-foreground"
 
       data-state={state}
       data-collapsible={state === "collapsed" ? props.collapsible : ""}
       data-variant={props.variant}
       data-side={props.side}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     >;
       {/* This is what handles the sidebar gap on desktop */}
 <div
@@ -151,6 +178,7 @@ export const SidebarRail = React.forwardRef<
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -159,16 +187,17 @@ export const SidebarRail = React.forwardRef<
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
   return (
-    <button
+    <button;
       ref={ref}
       data-sidebar="rail"
       aria-label="Toggle Sidebar"
       tabIndex={-1}
       onClick={toggleSidebar}
-      title="Toggle Sidebar"
+      title=&quot;Toggle Sidebar"
       className={cn(
 
         "absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex&quot;
@@ -201,12 +230,14 @@ export const SidebarInset = React.forwardRef<
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 >((props, ref) => {

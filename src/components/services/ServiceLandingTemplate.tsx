@@ -6,6 +6,8 @@ name: string;
 
 
 
+
+
   title: string;
   subtitle: string;
   heroImage?: string;
@@ -46,6 +48,7 @@ interface ServiceLandingTemplateProps {
   stats?: Array<{ label: string; value: string }>
   ctaText: string
   ctaLink: string
+
 import React from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -59,6 +62,30 @@ export interface Benefit {;
 export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({
 
 
+export interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode
+
+
+  stats?: Array<{ label: string; value: string }>
+  ctaText: string
+  ctaLink: string
+
+import React from "react",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+import Image from "next/image",;
+export interface Benefit {;
+  title: string,;
+  description: string,;
+  icon?: React.ReactNode;
+}
+
+export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({
+
+
 
 export interface Benefit {
   title: string;
@@ -69,6 +96,7 @@ export interface Benefit {
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -100,8 +128,10 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
   testimonials,
   ctaText,
 
-
-
+  ctaLink}) => {
+  ctaLink,
+}) => {
+  ctaLink}) => {
 
   return (
     <div className="bg-background text-white">
@@ -132,6 +162,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
 
 
+
             {description}
 
     <div className="min - h-screen bg - white">;
@@ -150,6 +181,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
         </div>;
       </section>;
       {benefits.length > 0 && (
+
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -181,13 +213,13 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                     </div>;
 
                   )}
-                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
-                </div>
+                  <h3 className="text-xl font-semibold mb-3">{benefit && benefit.title}</h3>;
+                  <p className="text-gray-600">{benefit && benefit.description}</p>;
+                </div>;
               ))}
-            </div>
-          </div>
-        </section>
+            </div>;
+          </div>;
+        </section>;
       )}
 
 
@@ -205,9 +237,11 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                 </div>;
 
               ))}
+
             </div>
           </div>
         </section>
+
       )}
 
                     </div>)}
@@ -234,12 +268,12 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
         </section>)}
 
       {stats.length > 0 && (
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-              {stats.map((stat, index) => (
-                <div key={index}>
-                  <div className="text-4xl font-bold text-blue-600 mb-2">
+        <section className="py - 16 px - 4">;
+          <div className="max - w-7xl mx - auto">;
+            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center">;
+              {stats.map ((stat, index) => (
+                <div key={index}>;
+                  <div className="text - 4xl font - bold text - blue - 600 mb - 2">;
                     {stat.value}
 
 
@@ -256,9 +290,9 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
                 </div>;
 
               ))}
-            </div>
-          </div>
-        </section>
+            </div>;
+          </div>;
+        </section>;
       )}
 
 
@@ -273,17 +307,22 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 
           <a
             href={ctaLink}
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
-          >
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
             {ctaText}
 
-
+          </a>
+        </div>
+      </section>
+    </div>
+  )
+}
 
           </a>;
         </div>;
       </section>;
     </div>;
   );
+
 
 
       <section className="py-16 bg-zion-blue-light">
@@ -363,6 +402,7 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
   )
 
 
+
                   </div>;
                   <div className="text - gray - 600">{stat.label}</div>;
                 </div>))}
@@ -389,5 +429,6 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
 }
 
 },
+
 
 

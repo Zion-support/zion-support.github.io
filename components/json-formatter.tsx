@@ -28,11 +28,16 @@ import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import {
 
-
-
-
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+  Code
+  Copy
+  RefreshCw
+  CheckCircle
+  XCircle
+  ArrowRight
+  Download
+  Upload
+  Settings
+  Eye;
 
   Code,
   Copy,
@@ -52,9 +57,17 @@ import {
 
 
 
+
+
 } from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Star } from 'lucide-react';
+
+
+import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star } from 'lucide-react';
+export default function JSONFormatterPage() {
 
 
   const [inputJson, setInputJson] = useState('');
@@ -80,8 +93,8 @@ import { Star } from 'lucide-react';
 
       setFormattedJson(formatted);
       setIsValid(true);
-      setErrorMessage('')
-    } catch (error) {
+      setErrorMessage('');
+    } catch (error) {;
       setIsValid(false);
 
 
@@ -92,27 +105,48 @@ import { Star } from 'lucide-react';
     try {
       const parsed = JSON.parse(inputJson);
       const minified = JSON.stringify(parsed);
+  };
+
+  const minifyJSON = () => {;
+    if (!inputJson && inputJson.trim()) return;
+
+    try {;
+      const parsed = JSON && JSON.parse(inputJson);
+      const minified = JSON && JSON.stringify(parsed);
       setFormattedJson(minified);
       setIsValid(true);
       setErrorMessage('');
-    } catch (error) {
+    } catch (error) {;
       setIsValid(false);
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');    }      setErrorMessage('')
-    } catch (error) {
+      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');    }      setErrorMessage('');
+    } catch (error) {;
       setIsValid(false);
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
   }
   const validateJSON = () => {
     if (!inputJson.trim()) {
+    }
+    try {
+      JSON.parse(inputJson);
+      setIsValid(true);
+      setErrorMessage('')
+    } catch (error) {
+      setIsValid(false);
+      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
+    }
+  };
+
+  const validateJSON = () => {;
+    if (!inputJson && inputJson.trim()) {;
       setIsValid(true);
       setErrorMessage('');
-      return;    }      return
+      return;    }      return;
     }
     try {
       JSON.parse(inputJson);
       setIsValid(true);
       setErrorMessage('');
-    } catch (error) {
+    } catch (error) {;
       setIsValid(false);
 
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');    }      setErrorMessage('')
@@ -241,6 +275,7 @@ import { Star } from 'lucide-react';
                   <label className='text-sm text-gray-300'>Indent:</label>;
             </p>
           </div>
+
           {/* Settings Bar */}
           <Card className="p-6 bg-gray-800 border border-gray-700 mb-8">
             <div className="flex flex-wrap items-center justify-between gap-4">
@@ -496,6 +531,11 @@ import { Star } from 'lucide-react';
               </div>;
 
 
+                
+                <div className="flex items-center space-x-2">
+                  <input
+
+
                     type="checkbox"
                     id="compactMode"
                     checked={compactMode}
@@ -535,10 +575,9 @@ import { Star } from 'lucide-react';
                   size='sm'
                   className='border-gray-600 text-gray-300 hover:bg-gray-700'                  variant="outline"
                   size="sm"
-                  className="border-gray-600 text-gray-300 hover:bg-gray-700"
-                >
-                  <Upload className='w-4 h-4 mr-2' />                  Load Sample
-                </Button>
+                  className="border-gray-600 text-gray-300 hover:bg-gray-700">;
+                  <Upload className='w-4 h-4 mr-2' />                  Load Sample;
+                </Button>;
                 <Button
                   onClick={clearAll}
                   variant='outline'
@@ -557,6 +596,20 @@ import { Star } from 'lucide-react';
                   Input JSON
                 </h3>
                 <div className='flex items-center space-x-2'>
+                  Clear All;
+                </Button>;
+              </div>;
+            </div>;
+          </Card>;
+
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+            <Card className='p-8 bg-gray-800 border border-gray-700'>;
+              <div className='flex items-center justify-between mb-6'>;
+                <h3 className='text-2xl font-bold text-white flex items-center'>;
+                  <Code className='w-6 h-6 mr-3 text-teal-400' />;
+                  Input JSON;
+                </h3>;
+                <div className='flex items-center space-x-2'>;
                   <span
                     className={`px-2 py-1 rounded text-xs font-medium ${
                       isValid
@@ -592,17 +645,22 @@ import { Star } from 'lucide-react';
 
 
 
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
+
                     </div>
                   }`}>;
                   </span>;
                 </div>;
               </div>;
+
               <div className='space-y-4'>;
                 <div className='relative'>;
                   {showLineNumbers && (;
@@ -614,6 +672,10 @@ import { Star } from 'lucide-react';
                   )}
                   <textarea
                     value={inputJson}
+
+
+                    onChange={(e) => setInputJson(e.target.value)}
+                    placeholder="Paste your JSON data here..."
 
 
                     rows={15}
@@ -633,6 +695,9 @@ import { Star } from 'lucide-react';
 
 
 
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -640,6 +705,7 @@ import { Star } from 'lucide-react';
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                     <strong>Error:</strong> {errorMessage}
                   </div>;
@@ -761,6 +827,8 @@ import { Star } from 'lucide-react';
 
 
 
+
+
             {/* Output Section */}
             <Card className="p-8 bg-gray-800 border border-gray-700">
               <div className="flex items-center justify-between mb-6">
@@ -770,6 +838,8 @@ import { Star } from 'lucide-react';
                 </h3>
                 {formattedJson && (
                   <div className="flex items-center space-x-2">
+
+
 
 
                     <Button
@@ -837,6 +907,7 @@ import { Star } from 'lucide-react';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -844,12 +915,14 @@ import { Star } from 'lucide-react';
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
                 )}
               </div>
             </Card>
           </div>
         </div>
       </section>
+
 
 
 
@@ -868,6 +941,7 @@ import { Star } from 'lucide-react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -882,12 +956,14 @@ import { Star } from 'lucide-react';
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -897,7 +973,7 @@ import { Star } from 'lucide-react';
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
-              <div className='text-4xl mb-4'>✨</div>
+              <div className='text-4xl mb-4'></div>
               <h3 className='text-xl font-bold text-white mb-4'>
                 Smart Formatting
               </h3>
@@ -907,7 +983,7 @@ import { Star } from 'lucide-react';
               </p>
             </Card>
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
-              <div className='text-4xl mb-4'>✅</div>
+              <div className='text-4xl mb-4'></div>
               <h3 className='text-xl font-bold text-white mb-4'>
                 Real-time Validation
               </h3>
@@ -917,7 +993,7 @@ import { Star } from 'lucide-react';
               </p>
             </Card>
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
-              <div className='text-4xl mb-4'>📦</div>
+              <div className='text-4xl mb-4'></div>
               <h3 className='text-xl font-bold text-white mb-4'>
                 Minification
               </h3>
@@ -927,7 +1003,7 @@ import { Star } from 'lucide-react';
               </p>
             </Card>
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
-              <div className='text-4xl mb-4'>🔢</div>
+              <div className='text-4xl mb-4'></div>
               <h3 className='text-xl font-bold text-white mb-4'>
                 Line Numbers
               </h3>
@@ -937,7 +1013,7 @@ import { Star } from 'lucide-react';
               </p>
             </Card>
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
-              <div className='text-4xl mb-4'>💾</div>
+              <div className='text-4xl mb-4'></div>
               <h3 className='text-xl font-bold text-white mb-4'>
                 Export Options
               </h3>
@@ -947,14 +1023,16 @@ import { Star } from 'lucide-react';
               </p>
             </Card>
             <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
-              <div className='text-4xl mb-4'>⚙️</div>
+              <div className='text-4xl mb-4'></div>
               <h3 className='text-xl font-bold text-white mb-4'>
                 Customizable
               </h3>
               <p className='text-gray-400'>
                 Adjust indentation size, toggle compact mode, and customize
                 display options.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+
               <div className="text-4xl mb-4">⚙️</div>
+
               <h3 className="text-xl font-bold text-white mb-4">Customizable</h3>
               <p className="text-gray-400">
                 Adjust indentation size, toggle compact mode, and customize display options.
@@ -980,15 +1058,15 @@ import { Star } from 'lucide-react';
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">👨‍💻</div>
+              <div className="text-4xl mb-4"></div>
               <h3 className="text-2xl font-bold text-white mb-4">Developers</h3>
               <p className="text-gray-400 mb-6">
                 Format API responses, debug JSON data, and prepare configuration files with professional formatting.
               </p>
               <ul className="space-y-2 text-gray-300">
-                <li>• API development and testing</li>
-                <li>• Configuration file management</li>
-                <li>• Debug and troubleshooting</li>
+                <li> API development and testing</li>
+                <li> Configuration file management</li>
+                <li> Debug and troubleshooting</li>
               </ul>
             </Card>
 
@@ -1046,8 +1124,38 @@ import { Star } from 'lucide-react';
         </div>
       </section>
 
-
-
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-teal-600 to-cyan-600'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+          </h2>
+          <p className='text-xl text-teal-100 mb-8'>
+            Join thousands of developers and professionals who trust our JSON
+            formatter for their data needs.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <Button
+              href='/contact'
+              size='lg'
+              className='bg-white text-teal-600 hover:bg-gray-100'
+            >
+              Get Started Today
+              <ArrowRight className='w-5 h-5 ml-2' />
+            </Button>
+            <Button
+              href='/pricing'
+              variant='outline'
+              size='lg'
+              className='border-white text-white hover:bg-white hover:text-teal-600'            >              href="/pricing"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-teal-600"
+              View Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
 
 
                 {formattedJson && (;
@@ -1438,16 +1546,104 @@ import { Star } from 'lucide-react';
         </div>;
       </section>;
 
+      {/* Features */}
+      <section className='py-20 bg-gray-800'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='text-center mb-16'>;
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
+            </h2>;
+            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
+              Everything you need to work with JSON data efficiently and;
+              professionally.;
+            </p>;
+          </div>;
 
 
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
+            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
+              <div className='text-4xl mb-4'></div>;
+              <h3 className='text-xl font-bold text-white mb-4'>;
+                Smart Formatting;
+              </h3>;
+              <p className='text-gray-400'>;
+                Intelligent JSON formatting with customizable indentation and;
+                spacing options.;
+              </p>;
+            </Card>;
 
+            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
+              <div className='text-4xl mb-4'></div>;
+              <h3 className='text-xl font-bold text-white mb-4'>;
+                Real-time Validation;
+              </h3>;
+              <p className='text-gray-400'>;
+                Instant JSON validation with detailed error messages and syntax;
+                highlighting.;
+              </p>;
+            </Card>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
+              <div className='text-4xl mb-4'></div>;
+              <h3 className='text-xl font-bold text-white mb-4'>;
+                Minification;
+              </h3>;
+              <p className='text-gray-400'>;
+                Compress JSON data by removing unnecessary whitespace and;
+                formatting.;
+              </p>;
+            </Card>;
 
+            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
+              <div className='text-4xl mb-4'></div>;
+              <h3 className='text-xl font-bold text-white mb-4'>;
+                Line Numbers;
+              </h3>;
+              <p className='text-gray-400'>;
+                Optional line numbering for easier navigation and debugging of;
+                large JSON files.;
+              </p>;
+            </Card>;
 
+            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
+              <div className='text-4xl mb-4'></div>;
+              <h3 className='text-xl font-bold text-white mb-4'>;
+                Export Options;
+              </h3>;
+              <p className='text-gray-400'>;
+                Download formatted JSON files or copy to clipboard with a single;
+                click.;
+              </p>;
+            </Card>;
 
+            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>;
+              <div className='text-4xl mb-4'></div>;
+              <h3 className='text-xl font-bold text-white mb-4'>;
+                Customizable;
+              </h3>;
+              <p className='text-gray-400'>;
+                Adjust indentation size, toggle compact mode, and customize;
+                display options.              </p>            <Card className="text-center p-8 bg-gray-700 border border-gray-600">;
+              <div className="text-4xl mb-4"></div>;
+              <h3 className="text-xl font-bold text-white mb-4">Customizable</h3>;
+              <p className="text-gray-400">;
+                Adjust indentation size, toggle compact mode, and customize display options.;
+            </Card>;
+          </div>;
+        </div>;
+      </section>;
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+      {/* Use Cases */}
+      <section className='py-20 bg-gray-900'>;
+        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>;
+          <div className='text-center mb-16'>;
+            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
+              Perfect For Every JSON Need;
+            </h2>;
+            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
+}
+  );
+}
+}
+  );
+}
 

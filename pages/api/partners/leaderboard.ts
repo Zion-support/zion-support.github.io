@@ -6,6 +6,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -22,6 +23,7 @@ export default async function handler(
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
       "placeholder-key";
   try {
     if (usingPlaceholder) {
@@ -31,6 +33,7 @@ export default async function handler(
 
 
     }
+
 
     for (const row of data || []) {
       if (row && row.event !== "profile_completed") continue;
@@ -48,6 +51,7 @@ export default async function handler(
 
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message });
+
 
   }
 
@@ -86,6 +90,8 @@ export default async function handler(req, res) {
   }
 }
 ;
+
+
 
 
     const supabase = getServerSupabase();
@@ -142,7 +148,9 @@ export default async function handler(req, res) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
     return res.status(500).json({ error: e?.message });
@@ -152,7 +160,5 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

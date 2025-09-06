@@ -10,10 +10,12 @@
 
 
 
+
 import {Resend} from "npm: resend@1.0.0";
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+
 
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
@@ -27,7 +29,9 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 
@@ -190,13 +194,20 @@ serve(async (req: Request) => {
         message: "Reminder sent successfully",
         notification_id: notification}),
 
-
-
       {
-
-        status: 200,
-        headers: { "Content - Type": "application / json", ...cors_headers }}
-
+        status: 200
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+    )
+  } catch (error) {
+    console.error(error),
+    return new Response(
+      JSON.stringify({ error: "Internal server error", details: error.message }),
+      {
+        status: 500
+        headers: { "Content-Type": "application/json", ...corsHeaders }}
+    )
+  }
+});
 
 
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
@@ -316,16 +327,16 @@ serve(async (req: Request) => {;
       {;
         status: 200,;
         headers: { "Content-Type": "application/json", ...corsHeaders }}
-
-    );
+    )
   } catch (error) {
-    console.error (error);
-    return new Response (
-      JSON.stringify ({ error: "Internal server error", details: error.message });
+    console && console.error(error);
+    return new Response(
+      JSON && JSON.stringify({ error: "Internal server error", details: error && error.message });
       {
         status: 500,
         headers: { "Content - Type": "application / json", ...cors_headers }}
     );
+
 
 
 
@@ -340,6 +351,7 @@ serve(async (req: Request) => {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 });

@@ -5,6 +5,8 @@
 
 
 
+
+
 import React, { useState } from 'react';
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -12,13 +14,18 @@ import {Badge} from "@/components/ui/badge";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX} from '@/components/icons';
 
-
-
+import './video-call.css';
+import React, { useState } from 'react',
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX  } from '@/components/icons';
+import './video-call.css';
 
 interface Participant {
   id: string,
   name: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   avatar?: string;
   is_muted?: boolean;
   isVideoEnabled?: boolean;
@@ -86,9 +93,11 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
     const newVideoState = !isVideoEnabled;
     setIsVideoEnabled(newVideoState);
 
-
-
-
+    if (onToggleVideo) {
+      onToggleVideo(newVideoState)
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons',
+import './video-call.css',
 
 interface Participant {
   id: string,
@@ -99,6 +108,25 @@ interface Participant {
   isScreenSharing?: boolean,
   isHost?: boolean
 
+
+
+  const handleToggleScreenShare = () => {;
+
+
+    }
+
+
+    // If turning video back on, ensure we're not in audio-only mode;
+    if (newVideoState) {;
+      setIsAudioOnly(false);
+    }
+  };
+
+  const handleToggleVideo = () => {
+    const newVideoState = !isVideoEnabled;
+    setIsVideoEnabled(newVideoState);
+    if (onToggleVideo) {
+      onToggleVideo(newVideoState)
 
 import React, { useState } from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -168,11 +196,14 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
       onToggleVideo(newVideoState);
 
 
+
+
     }
     // If turning video back on, ensure we're not in audio-only mode
     if (newVideoState) {
       setIsAudioOnly(false)
     }
+
 
 
   }
@@ -183,6 +214,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -207,16 +239,13 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
       onLeave()
     }
 
-
-
-
-
+  }
+  };
 
   },;
   const handleToggleScreenShare = () => {;
     const newScreenShareState = !isScreenSharing,;
     setIsScreenSharing(newScreenShareState),;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (onToggleScreenShare) {;
       onToggleScreenShare(newScreenShareState);
     }
@@ -240,9 +269,12 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
       onLeave();
 
 
+
+
     }
 
   },
+
 
 
 
@@ -254,6 +286,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
+
 
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>;
       <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">;
@@ -469,10 +502,14 @@ if ( {) {
 
 
 
+
+
           <Button
             variant="outline"
             size="icon"
           
+
+
 
 
 
@@ -488,10 +525,10 @@ if ( {) {
             onClick={handleToggleVideo}>;
             {isVideoEnabled ? <Video /> : <VideoOff />}
 
-
-
-
-
+          </Button>
+          <Button
+            variant="outline"
+          
 
           <Button 
 
@@ -503,10 +540,10 @@ if ( {) {
             onClick={handleToggleScreenShare}>;
             {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
 
-
-
-
-
+          </Button>
+          <Button
+            variant="outline"
+          
 
           <Button 
 
@@ -520,11 +557,10 @@ if ( {) {
 
           </Button>
 
-
-
-
-
-
+          <Button
+            variant="destructive"
+          <Button 
+            variant="destructive" 
 
             size="icon"
             className="video-button video-button-danger rounded-full h-10 w-10"
@@ -536,6 +572,7 @@ if ( {) {
       </CardContent>
     </Card>
   )
+
 
 
 
@@ -563,5 +600,6 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

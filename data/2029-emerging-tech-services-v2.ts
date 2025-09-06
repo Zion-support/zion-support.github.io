@@ -1,4 +1,6 @@
 
+export interface EmergingTechService2029V2 {
+export interface EmergingTechService2029V2 {;
 
   id: string;
   name: string;
@@ -137,6 +139,7 @@
       email: 'kleber@ziontechgroup.com'
       website: 'https://ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
+
     }
   }
     id: 'quantum-financial-trading-platform'
@@ -208,12 +211,14 @@
     funding: 'Series C funding, $500M valuation'
     exit: 'IPO or financial acquisition'
     contact: {
+
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       website: 'https://ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
+
     id: 'quantum-creativity-studio'
     name: 'Quantum Creativity Studio'
     description:
@@ -273,6 +278,7 @@
     funding: 'Series A funding, $80M valuation'
     exit: 'Acquisition by major creative platform'
     contact: {
+
 
 ];      'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists'
 
@@ -365,6 +371,10 @@
 
       address: '364 E Main St STE 1008 Middletown DE 19709'
 
+    }
+  }
+];
+export interface EmergingTechService2029V2 {;
 
   id: string,;
   name: string,;
@@ -594,6 +604,8 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
       email: 'kleber@ziontechgroup.com',;
       website: 'https://ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709';
+
+
 
     }
   }

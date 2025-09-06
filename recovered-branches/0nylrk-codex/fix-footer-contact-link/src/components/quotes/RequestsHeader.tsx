@@ -23,21 +23,32 @@ import type { QuoteStatus } from "@/types/quotes",
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
 type RequestsHeaderProps = {
-  unreadCount: number,
-  statusFilter: QuoteStatus | 'all',
-  setStatusFilter: (value: QuoteStatus | 'all') => void,
-  archiveFilter: 'active' | 'archived' | 'all',
+  unreadCount: number
+  statusFilter: QuoteStatus | 'all'
+  setStatusFilter: (value: QuoteStatus | 'all') => void
+  archiveFilter: 'active' | 'archived' | 'all'
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
 },
 
 
-
-
+type RequestsHeaderProps = {
+  unreadCount: number
+  statusFilter: QuoteStatus | 'all'
+  setStatusFilter: (value: QuoteStatus | 'all') => void
+  archiveFilter: 'active' | 'archived' | 'all'
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
+}
+export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
+  unreadCount;
+  statusFilter;
+  setStatusFilter;
 
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
   unreadCount;
@@ -86,6 +97,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
 
 
 
+
   setArchiveFilter
 
 }) => {
@@ -109,6 +121,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
 
 
 
+
           onValueChange={(value) => setArchiveFilter(value as 'active' | 'archived' | 'all')}
         >
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">
@@ -124,11 +137,9 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
     </div>
   )
 
+}
 
-
-
-
-
+};
 
 },
 import React from "react",;
@@ -179,6 +190,26 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
         >;
           <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white w-[140px]">;
 
+    <div className="flex flex - col md:flex - row justify - between items - start md:items - center mb - 8">;
+      <div>;
+        <div className="flex items - center gap - 3">;
+          <h1 className="text - 3xl font - bold text - white">Hire Requests</h1>;
+          {unread_count > 0 && (
+            <Badge className="bg - blue - 500">;
+              {unread_count} New;
+            </Badge>)}
+        </div>;
+        <p className="text - zion - slate - light mt - 2">;
+          Manage client requests to hire your services;
+        </p>;
+      </div>;
+      <div className="flex gap - 3 mt - 4 md:mt - 0">;
+        <Select;
+          value={status_filter}
+          onValueChange={(value) => setStatusFilter (value as QuoteStatus | 'all')}
+        >;
+          <SelectTrigger className="bg - zion - blue - dark border - zion - blue - light text - white w-[140px]">;
+
             <SelectValue placeholder="All Statuses" />;
           </SelectTrigger>;
           <SelectContent>;
@@ -216,6 +247,7 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
 
 
 
+
 export default RequestsHeader;
 
 
@@ -223,5 +255,6 @@ export default RequestsHeader;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

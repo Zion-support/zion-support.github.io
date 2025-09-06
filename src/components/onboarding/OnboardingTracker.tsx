@@ -7,6 +7,7 @@
 
 
 
+
       {/* Steps list */}
       <div className="space-y-3">;
         {steps && steps.map((step,) => (;
@@ -52,6 +53,7 @@ export interface OnboardingStep {
 }
 
   action?: string
+
 }
 interface OnboardingTrackerProps {
 
@@ -97,6 +99,39 @@ export function OnboardingTracker({
 
   return (
 
+    <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-medium text-white">{title}</h3>
+        <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>
+      </div>
+      {/* Progress bar */}
+      <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
+        <div
+          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+          style={{ width: `${progress}%` }}
+        ></div>
+      </div>
+      
+      {/* Progress bar */}
+      <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
+        <div 
+          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+          style={{ width: `${progress}%` }}
+        ></div>
+      </div>
+;
+export function OnboardingTracker({;
+  steps,;
+  title = "Complete Your Profile",;
+  className;
+}: OnboardingTrackerProps) {;
+  const completedSteps = steps.filter(step => step.completed).length;
+  const progress = Math.round((completedSteps / steps.length) * 100);
+  return (;
+    <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>;
+      <div className="flex items-center justify-between mb-4">;
+        <h3 className="text-lg font-medium text-white">{title}</h3>;
+        <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>;
 
       </div>;
       {/* Progress bar */}
@@ -108,9 +143,11 @@ export function OnboardingTracker({
       </div>;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
 
@@ -144,18 +181,27 @@ export function OnboardingTracker({
     </div>
   )
 }></div> </div> {
-  /* Steps list */ "
-}<div className="space-y-3" > {
+  /* Steps list */ ";
+}<div className="space - y-3" > {
   steps.map ( (step) => (<div key= {
 
-
-
+  step.id "
+}className="flex items-center" > <div className="mr-3" > {"
+  step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>)
+}</div> </div> {"
+  !step.completed && step.action && (<Button asChild variant=" ghost"size=" sm"className=" text-zion-purple hover:text-zion-cyan hover:bg-zion-blue" > <Link href= {
+  step.link
+}> </Link> </Button>)
+}</div>) )
+}</div> </div>)
+}"}
 
   step.link 
 }> </Link> </Button>) 
 }</div>) ) ;
 }</div> </div>) ;
 }"};
+
 
 
 
@@ -179,3 +225,4 @@ export function OnboardingTracker({
 }"}
 }
 ;
+

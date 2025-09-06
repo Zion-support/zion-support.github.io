@@ -31,6 +31,16 @@ export default function GlowCard({
 import React from 'react';
 export default function GlowCard({ title, children }: { title: string, children: React.ReactNode }) {
 
+import React from "react";
+
+import React from "react";
+export default function GlowCard({
+  title,
+  children,
+}: {;
+  title: string;
+  children: React.ReactNode;
+}) {
 
   return (
     <div className="group relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-5 hover:bg-white/10 transition-colors">

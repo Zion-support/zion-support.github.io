@@ -1,6 +1,9 @@
 
-
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../../utils/supabase/server';
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { getServerSupabase } from '../../../../utils/supabase/server',;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
 
@@ -9,12 +12,28 @@
     return res.status(200).json({ ok: true });
 
 
+    const supabase = getServerSupabase (),
+    const updates: any = {},
+    // Check condition
+if (updates.status = status, ) {
+  $2
+}
+    // Check condition
+if (updates.commission_rate = commission_rate, ) {
+  $2
+}
+    const { error } = await supabase.from ('partners').update (updates).eq ('code', String (code).toLowerCase ()),
+    if (return res.status (500).json ({ error: error.message })) {
+  $2
+}
+    return res.status (200).json ({ ok: true });
 
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message });
+    return res.status(500).json({ error: e?.message })
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
@@ -42,10 +61,12 @@
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

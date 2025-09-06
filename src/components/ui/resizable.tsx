@@ -14,6 +14,7 @@ const ResizablePanelGroup = ({
       "flex h-full w-full data-[panel-group-direction=vertical]:flex-col",
 
 
+
       className
     )}
     {...props}
@@ -96,3 +97,4 @@ const ResizableHandle = ({
       </div>)}
   </ResizablePrimitive.PanelResizeHandle>);
 export { ResizablePanelGroup, ResizablePanel, ResizableHandle }
+

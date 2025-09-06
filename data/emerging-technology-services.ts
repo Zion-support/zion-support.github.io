@@ -2,6 +2,8 @@
 
 
 
+
+
   id: string,;
   name: string,;
   tagline: string,;
@@ -17,6 +19,7 @@
     address: string;
   }
 }
+
 
 
 
@@ -56,6 +59,7 @@ export const emergingTechnologyServices: EmergingTechnologyService[] = [
 
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
+
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -72,11 +76,15 @@ export const emergingTechnologyServices: EmergingTechnologyService[] = [
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
+
+
 

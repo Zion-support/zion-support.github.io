@@ -1,19 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 // Function to fix common syntax errors in test files
 function fixTestFile(filePath) {
   try {
@@ -60,20 +48,15 @@ files.forEach(file => {
   }
 });
 console.log(`Fixed ${fixedCount} out of ${files.length} test files`);
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
+
+
+
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
 // Function to fix malformed test files;
 function fixTestFile(filePath) {}
   try {}
@@ -163,89 +146,19 @@ files.forEach(file => {})
 });
 console.log(`Fixed ${fixedCount} malformed test files`);
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
-<<<<<<< HEAD
-=======
-=======
-}
-});
-`;`
-      fs.writeFileSync(filePath, fixedContent);
-      return true;
-    };
-    return false;
-  } catch (error) {}
-    console.error(`Error fixing file ${filePath}:`, error.message);
-    return false;
-  };
-};
-// Function to remove unused fireEvent imports;
-function removeUnusedFireEvent(filePath) {}
-  try {}
-    let content = fs.readFileSync(filePath, 'utf8');
-    // Check if fireEvent is imported but not used;
-    if (content.includes('fireEvent') && !content.includes('fireEvent(')) {}
-      console.log(`Removing unused fireEvent from: ${filePath}`);
-      // Remove fireEvent from import statement;
-      content = content.replace(/, fireEvent/g, '');
-      content = content.replace(/fireEvent, /g, '');
-      content = content.replace(/fireEvent/g, '');
-      fs.writeFileSync(filePath, content);
-      return true;
-    };
-    return false;
-  } catch (error) {}
-    console.error(`Error processing file ${filePath}:`, error.message);
-    return false;
-  };
-};
-// Get all test files;
-const testDir = path.join(__dirname, '__tests__');
-const files = fs.readdirSync(testDir);
-let fixedCount = 0;
-let fireEventCount = 0;
-files.forEach(file => {})
-  if (file.endsWith('.test.js')) {}
-    const filePath = path.join(testDir, file);
-    // Fix malformed files;
-    if (fixTestFile(filePath)) {}
-      fixedCount++;
-    };
-    // Remove unused fireEvent;
-    if (removeUnusedFireEvent(filePath)) {}
-      fireEventCount++;
-    };
-  };
-}
-});
-console.log(`Fixed ${fixedCount} malformed test files`);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-console.log(`Removed unused fireEvent from ${fireEventCount} files`);
-<<<<<<< HEAD
-=======
-console.log(`Removed unused fireEvent from ${fireEventCount} files`);
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> origin/main
-=======
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
+
+
+
 const { execSync } = require('child_process');
+
 class TestFileFixer {
   constructor() {
     this.fixedFiles = [];
     this.errors = [];
   }
+
   log(message) {
     console.log(`[${new Date().toISOString()}] ${message}`);
   }
@@ -255,19 +168,27 @@ class TestFileFixer {
       .replace(/[\s\S]*?
       .replace(/
       .replace(/') && !content.includes('>>>>>>>')) {
+
+      .replace(/<<<<<<< [^\n]+[\s\S]*?
+      .replace(/
+      .replace(/<<<<<<< [^\n]+[\s\S]*?
         // Check for other syntax issues
         if (!content.includes('.test') && !content.includes('interface') || content.includes('export default')) {
           return;
         }
       }
+
       this.log(`Processing: ${filePath}`);
       let fixed = this.fixMergeConflicts(content);
       fixed = this.fixTestFileSyntax(fixed, filePath);
+
       // Clean up extra whitespace and empty lines
       fixed = fixed
         .replace(/\n\s*\n\s*\n/g, '\n\n')
         .replace(/^\s+$/gm, '')
         .trim();
+
+
       if (fixed !== content) {
         fs.writeFileSync(filePath, fixed);
         this.fixedFiles.push(filePath);
@@ -278,36 +199,48 @@ class TestFileFixer {
       this.log(`Error processing ${filePath}: ${error.message}`);
     }
   }
+
   async fixAllTestFiles() {
     this.log('Starting test file cleanup...');
     // Find all test files
     const testFiles = [];
+
     try {
       const result = execSync('find . -name "*.test.*" -o -name "*.spec.*" | grep -v node_modules', { encoding: 'utf8' });
       testFiles.push(...result.trim().split('\n').filter(f => f));
     } catch (error) {
       this.log('Error finding test files: ' + error.message);
     }
+
+
     // Process each file
     for (const file of testFiles) {
       this.processFile(file);
     }
+
+
     // Summary
     this.log(`\n=== SUMMARY ===`);
     this.log(`Files processed: ${testFiles.length}`);
     this.log(`Files fixed: ${this.fixedFiles.length}`);
     this.log(`Errors: ${this.errors.length}`);
+
+
     if (this.fixedFiles.length > 0) {
       this.log('\nFixed files:');
       this.fixedFiles.forEach(f => this.log(`  - ${f}`));
     }
+
+
     if (this.errors.length > 0) {
       this.log('\nErrors:');
       this.errors.forEach(e => this.log(`  - ${e.file}: ${e.error}`));
     }
+
     return this.fixedFiles.length;
   }
 }
+
 if (require.main === module) {
   const fixer = new TestFileFixer();
   fixer.fixAllTestFiles().then(fixedCount => {
@@ -315,11 +248,7 @@ if (require.main === module) {
     process.exit(fixedCount > 0 ? 0 : 1);
   });
 }
-<<<<<<< HEAD
-module.exports = TestFileFixer;
-=======
 
-module.exports = TestFileFixer;
->>>>>>> cursor/automate-test-improve-and-merge-code-2480
->>>>>>> origin/automation-improvements-final
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+

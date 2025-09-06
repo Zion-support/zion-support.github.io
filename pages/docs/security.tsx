@@ -26,9 +26,7 @@ export default function SecurityDocRedirect(req, res) {
     </>);
 }
 
+;
 
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+;
 

@@ -44,7 +44,17 @@ import {
   ExternalLink,
   TrendingUp,
 
-
+  Shield,
+  Globe,;} from 'lucide-react';import { 
+  Shield,;
+  Globe,;} from 'lucide-react';import { ;
+  Brain;
+  MessageSquare
+  Image
+  Video
+  FileText
+  BarChart3
+  Users
 
 
 
@@ -56,7 +66,6 @@ import {
   FileText,
   BarChart3,
   Users,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Zap;
   ArrowRight;
   Star;
@@ -151,6 +160,7 @@ import {
       bestFor: 'Marketing teams, content creators, businesses'
     }
     {
+
 
 
 
@@ -268,6 +278,7 @@ function AIBusinessToolsPage() {
       pricing: '$30 - $89 / month',
       rating: 4.5,
       users: '50K+',
+
 
       name: 'Copy.ai',
       description: 'AI copywriting tool that generates marketing copy, product descriptions, and creative content for businesses.',
@@ -403,6 +414,22 @@ function AIBusinessToolsPage() {
         'Essential for content marketers, SEO specialists, and businesses that want to improve their search rankings.'
       pros: [
 
+        'Data-driven insights'
+        'Content optimization'
+        'Competitor analysis'
+        'Good support'
+      ]
+      cons: ['Expensive', 'Complex interface', 'Steep learning curve']
+      bestFor: 'SEO specialists, content marketers, businesses'
+    }
+        'Data-driven insights',
+        'Content optimization',
+        'Competitor analysis',
+        'Good support',
+      ],
+      cons: ['Expensive', 'Complex interface', 'Steep learning curve'],
+      bestFor: 'SEO specialists, content marketers, businesses',
+    },;
 
   ];
   const categories = [
@@ -738,16 +765,65 @@ export default function AIBusinessToolsPage() {;
                 href='#tools'
                 size='lg'
                 className='animate-scale-in shadow-2xl shadow-green-500/25 hover:shadow-green-500/40'
-                style={{ animationDelay: '0.2s' }}
-              >
-                Explore AI Tools
-                <ArrowRight className='w-5 h-5 ml-2' />
-              </Button>
+                style={{ animationDelay: '0 && 0.2s' }}>;
+                Explore AI Tools;
+                <ArrowRight className='w-5 h-5 ml-2' />;
+              </Button>;
               <Button
                 href='/contact'
                 variant='outline'
                 size='lg'
-                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0.4s' }}                href="/contact"
+                className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'                style={{ animationDelay: '0 && 0.4s' }}                href="/contact"
+
+  return (
+    <>
+      <Head>
+        <title>AI Business Tools - Zion Tech Group</title>
+        <meta name="description" content="Discover the best AI-powered business tools for automation, content creation, and productivity. Expert-curated selection of AI SaaS services." />
+        <meta property="og:title" content="AI Business Tools - Zion Tech Group" />
+        <meta property="og:description" content="Expert-curated selection of AI-powered business tools and SaaS services." />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(34,197,94,0.08),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(168,85,247,0.06),transparent_50%)]" />
+        </div>
+
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="mb-20 animate-fade-in">
+            <div className="mb-8">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6 animate-scale-in">
+                <Brain className="w-4 h-4 mr-2" />
+                AI-Powered Business Solutions
+              </div>
+            </div>
+            
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight">
+              AI Business Tools
+            </h1>
+            <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
+              Transform your business with cutting-edge AI tools. 
+              Expert-curated selection of the best AI-powered SaaS services for modern enterprises.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20">
+              <Button
+                href="#tools"
+                size="lg"
+                className="animate-scale-in shadow-2xl shadow-green-500/25 hover:shadow-green-500/40"
+                style={{ animationDelay: '0.2s' }}
+              >
+                Explore AI Tools
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+              <Button
+                href="/contact"
                 variant="outline"
                 size="lg"
 
@@ -770,6 +846,7 @@ export default function AIBusinessToolsPage() {;
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -783,6 +860,7 @@ export default function AIBusinessToolsPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                 {aiTools.length}+
@@ -1069,6 +1147,7 @@ export default function AIBusinessToolsPage() {;
 
 
 
+
           </div>;
         </div>;
       </section>;
@@ -1085,6 +1164,7 @@ export default function AIBusinessToolsPage() {;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
       {/* Tools Grid */}
       <section id='tools' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1098,7 +1178,9 @@ export default function AIBusinessToolsPage() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -1110,6 +1192,15 @@ export default function AIBusinessToolsPage() {;
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
+
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+              {selectedCategory === 'All';
+                ? 'Discover the most powerful AI tools that are transforming how businesses operate and create content.';
+                : `Explore the best ${selectedCategory && selectedCategory.toLowerCase()} tools to enhance your business capabilities.`}
+            </p>;
+          </div>;
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+            {filteredTools && filteredTools.map((tool, index) => (;
 
               <Card
                 key={index}
@@ -1148,6 +1239,8 @@ export default function AIBusinessToolsPage() {;
                     </p>
 
 
+
+
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -1157,13 +1250,56 @@ export default function AIBusinessToolsPage() {;
                           .slice(0, 4)
                           .map((feature, featureIndex) => (
 
+                      className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool && tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>;
+                      {tool && tool.icon}
+                    </div>;
+                  </div>;
+                  <div className='flex-1'>;
+                    <div className='flex items-center justify-between mb-2'>;
+                      <h3 className='text-2xl font-bold text-white group-hover:text-green-400 transition-colors duration-300'>;
+                        {tool && tool.name}
+                      </h3>;
+                      <div className='flex items-center space-x-2'>;
+                        <Star className='w-4 h-4 text-yellow-400 fill-current' />;
+                        <span className='text-sm text-gray-300'>;
+                          {tool && tool.rating}
+                        </span>;
+                      </div>;
+                    </div>;
+                    <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>;
+                      <span className='px-2 py-1 bg-gray-800 rounded-full'>;
+                        {tool && tool.category}
+                      </span>;
+                      <span>{tool && tool.users} users</span>;
+                      <span className='text-green-400'>{tool && tool.pricing}</span>;
+                    </div>;
+                    <p className='text-gray-400 leading-relaxed mb-4'>;
+                      {tool && tool.description}
+                    </p>;
+                    <div className='mb-4'>;
+                      <h4 className='text-sm font-semibold text-gray-300 mb-2'>;
+                        Key Features:;
+                      </h4>;
+                      <div className='grid grid-cols-2 gap-2'>;
+                        {tool && tool.features;
+                          .slice(0, 4);
+                          .map((feature, featureIndex) => (;
+                            <div
+                              key={featureIndex}
+                              className='flex items-center text-sm text-gray-400'>;
+                              <Check className='w-3 h-3 text-green-400 mr-2 flex-shrink-0' />;
+                              {feature}
+                            </div>;
+                          ))}
+
+
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
 
                       <Button
-                        href={tool.website}
+                        href={tool && tool.website}
                         variant='outline'
                         size='sm'
 
@@ -1192,11 +1328,14 @@ export default function AIBusinessToolsPage() {;
       </section>
 
 
+
+
       {/* AI Benefits Section */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+
 
 
 
@@ -1215,6 +1354,7 @@ export default function AIBusinessToolsPage() {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
               Why Choose AI Tools?
@@ -1302,6 +1442,8 @@ export default function AIBusinessToolsPage() {;
 
 
 
+
+
                         className='group-hover:border-green-500 group-hover:text-green-400'>;
                         Visit Website;
                         <ExternalLink className='w-4 h-4 ml-2' />;
@@ -1328,6 +1470,7 @@ export default function AIBusinessToolsPage() {;
           </div>;
         </div>;
       </section>;
+
       {/* AI Benefits Section */}
       <section className='py-24 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -1340,6 +1483,7 @@ export default function AIBusinessToolsPage() {;
               create content, and serve customers.;
             </p>;
           </div>;
+
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>;
             <Card className='text-center'>;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600'>;
@@ -1443,47 +1587,50 @@ export default function AIBusinessToolsPage() {;
               <div className='w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center bg - gradient - to - br from - green - 500 to - emerald - 600'>;
                 <TrendingUp className='w - 8 h - 8 text - white' />;
               </div>;
-              <h3 className='text - xl font - bold mb - 4 text - white'>;
-                Data - Driven Decisions;
+              <h3 className='text-xl font-bold mb-4 text-white'>;
+                Data-Driven Decisions;
               </h3>;
-              <p className='text - gray - 400'>;
-                AI analytics provide deep insights into customer behavior,
+              <p className='text-gray-400'>;
+                AI analytics provide deep insights into customer behavior,;
                 market trends, and business performance for better;
-                decision - making.;
+                decision-making.;
               </p>;
             </Card>;
-            <Card className='text - center'>;
-              <div className='w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center bg - gradient - to - br from - purple - 500 to - pink - 600'>;
-                <Users className='w - 8 h - 8 text - white' />;
+
+            <Card className='text-center'>;
+              <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>;
+                <Users className='w-8 h-8 text-white' />;
               </div>;
-              <h3 className='text - xl font - bold mb - 4 text - white'>;
+              <h3 className='text-xl font-bold mb-4 text-white'>;
                 Enhanced Customer Experience;
               </h3>;
-              <p className='text - gray - 400'>;
-                AI - powered chatbots, personalization, and automation create;
+              <p className='text-gray-400'>;
+                AI-powered chatbots, personalization, and automation create;
                 seamless, personalized experiences for your customers.              </p>              Why Choose AI Tools?;
             </h2>;
-            <p className="text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
-              AI - powered tools are revolutionizing how businesses operate, create content, and serve customers.;
+            <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">;
+              AI-powered tools are revolutionizing how businesses operate, create content, and serve customers.;
             </p>;
           </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-            <Card className="text - center">;
-              <div className="w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center bg - gradient - to - br from - blue - 500 to - indigo - 600">;
-                <Zap className="w - 8 h - 8 text - white" />;
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
+            <Card className="text-center">;
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-blue-500 to-indigo-600">;
+                <Zap className="w-8 h-8 text-white" />;
               </div>;
-              <h3 className="text - xl font - bold mb - 4 text - white">10x Productivity</h3>;
-              <p className="text - gray - 400">;
+              <h3 className="text-xl font-bold mb-4 text-white">10x Productivity</h3>;
+              <p className="text-gray-400">;
                 AI tools can automate repetitive tasks, generate content, and provide insights that would take humans hours or days to complete.;
               </p>;
             </Card>;
-            <Card className="text - center">;
-              <div className="w - 16 h - 16 mx - auto mb - 6 rounded - 2xl flex items - center justify - center bg - gradient - to - br from - green - 500 to - emerald - 600">;
-                <TrendingUp className="w - 8 h - 8 text - white" />;
+
+            <Card className="text-center">;
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600">;
+                <TrendingUp className="w-8 h-8 text-white" />;
               </div>;
-              <h3 className="text - xl font - bold mb - 4 text - white">Data - Driven Decisions</h3>;
-              <p className="text - gray - 400">;
-                AI analytics provide deep insights into customer behavior, market trends, and business performance for better decision - making.;
+              <h3 className="text-xl font-bold mb-4 text-white">Data-Driven Decisions</h3>;
+              <p className="text-gray-400">;
+                AI analytics provide deep insights into customer behavior, market trends, and business performance for better decision-making.;
               </p>;
             </Card>;
             <Card className="text - center">;
@@ -1509,13 +1656,10 @@ export default function AIBusinessToolsPage() {;
 
 
 
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  );
 }
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
+  );
+}
+  );
+}
 

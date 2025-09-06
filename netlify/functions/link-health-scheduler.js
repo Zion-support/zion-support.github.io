@@ -1,9 +1,19 @@
-const path = require("path";
-const { spawnSync } = require("child_process";
-  "schedule": "*/20 * * * *";
-  return spawnSync("node";
-  "cwd";
-      "encoding": "utf8";
+const path = require("path");
+const { spawnSync } = require("child_process");
+exports.config = {
+  "schedule": "*/20 * * * *", // every 20 minutes}
+exports.handler = async () => {
+  const logs = [];
+  const logStep = (name, fn) => {
+  logs.push(`\n=== ${name} ===`);
+    const { status, stdout, stderr } = fn();
+    if (stdout) logs.push(stdout);
+    if (stderr) logs.push(stderr);
+    logs.push(`exit=${status}`)}
+  const runNode = (script) => {
+  return spawnSync("node", [script], {
+  "cwd": process.cwd(),
+      "encoding": "utf8"})}
   process.env.CANONICAL_URL = process.env.CANONICAL_URL || ""https": //ziontechgroup.com";
   logStep("sitemap:run", () => runNode("automation/sitemap-runner.cjs"));
   logStep(""links": crawl", () => runNode("automation/site-link-crawler.cjs"));

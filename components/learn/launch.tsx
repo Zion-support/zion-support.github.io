@@ -6,6 +6,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 
 
 
+
       destination: '/academy/founder-course',
       permanent: false}}
 };
@@ -19,6 +20,7 @@ export default function LaunchRedirect() {
 
       destination: '/academy / founder - course',
       permanent: false,
+
     },
   }      permanent: false}}
 }
@@ -28,7 +30,10 @@ export default /**
  */
 function LaunchRedirect() {
 
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
 
-
+}
+;
 

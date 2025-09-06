@@ -90,6 +90,13 @@ declare global {
 }
 
 
+// Module declarations
+declare module "*.svg" {
+  const content: string;
+  export default content;
+}
+
+
 
 
 export {};
@@ -117,11 +124,13 @@ export {}
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

@@ -1,8 +1,25 @@
 
 
+import React from 'react';
+import { ScrollArea  } from '@/components/ui/scroll-area';
+import { Skeleton  } from '@/components/ui/skeleton';
+import { Button  } from '@/components/ui/button';
+import { NotificationItem  } from './NotificationItem';
+import { Notification } from '@/context/notifications';
+interface NotificationListProps {
+  loading: boolean,
+  error: string | null,
+  notifications: Notification[],
+  onMarkAsRead: (id: string) => Promise<void>,
+  onDismiss: (id: string) => Promise<void>,
+  onRetry: () => void
+}
 
-
-
+export const NotificationList: React.FC<NotificationListProps> = ({;
+  loading;
+  error;
+  notifications;
+  onMarkAsRead;
 
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
@@ -42,6 +59,9 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   onDismiss,
 
   onRetry
+
+  on_dismiss,
+  on_retry;
 
 }) => {
   return (
@@ -90,6 +110,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -101,6 +122,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 };
 

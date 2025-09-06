@@ -3,6 +3,10 @@ export function EmptyMatchesCard(): any ({;
   isProcessing,;
 }: EmptyMatchesCardProps) {;
 
+export function EmptyMatchesCard({
+  onRefresh
+  isProcessing
+}: EmptyMatchesCardProps) {
 
   return (
     <Card className='p-6 text-center border-dashed border-2 bg-muted/30'>
@@ -16,9 +20,11 @@ export function EmptyMatchesCard(): any ({;
       <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button 
         onClick = {onRefresh,}
         disabled = {isProcessing,}
+
   return (
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
 
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
@@ -30,6 +36,12 @@ export function EmptyMatchesCard(): any ({;
         Run AI matching to find talents that match this job&apos,s requirements.
       </p>
 
+      <Button onClick={onRefresh} disabled={isProcessing} className='mx-auto'>      <Button
+        onClick = {onRefresh,}
+        disabled = {isProcessing,}
+      <Button 
+        onClick={onRefresh} 
+        disabled={isProcessing}
 
       <Button 
         onClick={onRefresh} 
@@ -48,16 +60,18 @@ export function EmptyMatchesCard(): any ({;
             <Sparkles className='mr-2 h-4 w-4' />            Find AI Matches            <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
             <RefreshCcw className="mr-2 h-4 w-4 animate-spin" />
 
-
-
-
-            Processing...
+            <Sparkles className='mr-2 h-4 w-4' />            <Sparkles className="mr-2 h-4 w-4" />
+            Find AI Matches
           </>
-        ) : (
-          <>
+        )}
+      </Button>
+    </Card>
+  )
+}
 
 
->>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+}
 
             <Sparkles className="mr-2 h-4 w-4" />
             Find AI Matches
@@ -110,5 +124,7 @@ function EmptyMatchesCard() {
     </Card>);
 }
 ;
+
+
 
 

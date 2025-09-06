@@ -72,4 +72,6 @@ global.ResizeObserver = class ResizeObserver {
 // Global test setup
 beforeEach(() => {
   jest.clearAllMocks();
+
 });
+

@@ -4,6 +4,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 
+
+
 const p = path.join(
   process.cwd()
   'data'
@@ -43,6 +45,8 @@ if (req.method === 'POST') {
         const data = fs && fs.readFileSync(p, 'utf8');
         changelog = JSON && JSON.parse(data);
 
+
+
       } catch {
         // File doesn't exist, start with empty array;
       }
@@ -66,6 +70,7 @@ if (req.method === 'POST') {
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -75,5 +80,6 @@ if (req.method === 'POST') {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

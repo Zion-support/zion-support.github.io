@@ -1,5 +1,6 @@
 
 
+
 export interface Offer {;
 
 
@@ -13,10 +14,11 @@ export interface Offer {;
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
 
+
   id: string;
   createdAtIso: string;
-  clientId: string;
-  talentSlug: string;
+  client_id: string;
+  talent_slug: string;
   startDateIso: string;
 
   scopeSummary: string;
@@ -40,21 +42,33 @@ export interface PaymentTerms {
 export interface Project {
 
 
+export interface PaymentTerms {;
+  type: 'hourly' | 'fixed' | 'milestone';
+  amount?: number;
+  currency?: string;
+  milestones?: Array<{
+    title: string;
+    amount: number;
+    dueDateIso: string;
+  }>;
+}
 
-
-
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
+export interface Project {;
 
   id: string;
   title: string;
   summary: string;
-  clientId: string;
-  talentSlug: string;
+  client_id: string;
+  talent_slug: string;
   startDateIso: string;
+
+  status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
+  timeline: any[];
+  documents: ProjectDocument[];
+  notes: ProjectNote[];
+}
+export interface ProjectDocument {
+
 
 
   id: string;
@@ -70,4 +84,14 @@ export interface Project {
   createdAtIso: string;
 }
 
+
+
+
+export interface ProjectNote {;
+  id: string;
+  authorId: string;
+  authorRole: string;
+  content: string;
+  createdAtIso: string;
+}
 

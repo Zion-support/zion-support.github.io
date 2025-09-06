@@ -204,12 +204,14 @@ export function ComparisonSection() {
 
 
 
+
                   </TableRow>
 
                 ))}
               </TableBody>
             </Table>
           </div>
+
 
 
 
@@ -229,12 +231,14 @@ export function ComparisonSection() {
 
 
 
+
               Calculate Your Savings
 
             </Button>
           </div>
         </div>
       </div>
+
 
 
 
@@ -373,6 +377,7 @@ export function ComparisonSection() {;
                   Results may vary based on specific requirements and service;
                   levels;
                 </span>;
+
               </p>;
             </div>;
 
@@ -387,6 +392,7 @@ export function ComparisonSection() {;
             </div>;
             <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white whitespace - nowrap">;
 
+
             </Button>;
           </div>;
         </div>;
@@ -397,5 +403,7 @@ export function ComparisonSection() {;
 
 
 
+
     </section>);
 }
+

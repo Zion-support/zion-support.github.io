@@ -285,6 +285,16 @@ export default function AIServices() {
             </p>
           </div>
           <div className="text-center">
+
+
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Transform your business with cutting-edge AI solutions and
+              services.
+            </p>
+            <p className="text-gray-600">AI Services page is under construction.</p>
+          </div>
+          <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
 origin/automation-improvements-final
 

@@ -6,6 +6,7 @@
 
 
 
+
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Notification, FilterType, NotificationContextType} from './types';
@@ -57,9 +58,95 @@ if (throw error) {
   });
 
 
+
   const unreadCount = notifications && notifications.filter(n => !n && n.read).length;
 
 
+
+  }, [user_id]);
+;
+  const markAsRead = useCallback (async (id: string) => {
+    // Check condition
+if (return, ) {
+  $2
+}
+    try {
+      const { error } = await supabase;
+        .from ('notifications');
+        .update ({ read: true });
+        .eq ('id', id);
+        .eq ('user_id', user_id);
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      await fetch_notifications ();
+    } catch (err) {
+      console.error ('Error marking notification as read:', err);
+    }
+  }, [user_id, fetch_notifications]);
+;
+  const markAllAsRead = useCallback (async () => {
+    // Check condition
+if (return) {
+  $2
+}
+    try {
+      const { error } = await supabase;
+        .from ('notifications');
+        .update ({ read: true });
+        .eq ('user_id', user_id);
+        .eq ('read', false);
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      await fetch_notifications ();
+    } catch (err) {
+      console.error ('Error marking all notifications as read:', err);
+    }
+  }, [user_id, fetch_notifications]);
+;
+  const dismiss_notification = useCallback (async (id: string) => {
+    // Check condition
+if (return, ) {
+  $2
+}
+    try {
+      const { error } = await supabase;
+        .from ('notifications');
+        .delete ();
+        .eq ('id', id);
+        .eq ('user_id', user_id);
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      await fetch_notifications ();
+    } catch (err) {
+      console.error ('Error dismissing notification:', err);
+    }
+  }, [user_id, fetch_notifications]);
+;
+  const filtered_notifications = notifications.filter (notification => {
+    switch (filter) {
+      case 'unread':;
+        return !notification.read;
+      case 'messages':;
+        return notification.type === 'message';
+      case 'onboarding':;
+        return notification.type === 'onboarding';
+      case 'system':;
+        return notification.type === 'system';
+      default: return true;
+    }
+  });
+;
+  const unread_count = notifications.filter (number => !n.read).length;
+;
 
   return {
     notifications;
@@ -170,6 +257,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -179,8 +267,15 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
     setFilter;
     fetchNotifications}
 }
 
+
+    dismiss_notification;
+    set_filter;
+    fetch_notifications}
+}
+;
 

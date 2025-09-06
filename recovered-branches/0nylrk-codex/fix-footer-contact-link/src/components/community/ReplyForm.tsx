@@ -1,12 +1,53 @@
 
 
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
 
+
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormMessage
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+FormMessage,;
 } from "@/components/ui/form";
 
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
+interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>,
+  parentId?: string
+}
+interface ReplyFormValues {
+  content: string;
+}
+
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const form = useForm<ReplyFormValues>({
+    defaultValues: {
+      content: ""
+    }
+  });
+  const handleSubmit = async (values: ReplyFormValues) => {
+    setIsSubmitting(true);
+    try {
+      (await onSubmit(values.content), form.reset());
+    } finally {
+      setIsSubmitting(false);
+    }
+  }
+  };
+
 
 import { useState } from "react",
 import { useForm } from "react-hook-form",
@@ -50,12 +91,48 @@ import { Button  } from '@/components / ui / button';
 import { Textarea  } from '@/components / ui / textarea';
 import {
 
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+
+import { Button } from "@/components/ui/button";
+import { Textarea } from "@/components/ui/textarea";
+import {
+
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormMessage
+} from "@/components/ui/form";
+
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+interface ReplyFormProps {
+  onSubmit: (content: string) => Promise<void>;
+  parentId?: string
+}
+interface ReplyFormValues {
+
+interface ReplyFormValues {;
+  content: string;
+}
+
+export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {;
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const form = useForm<ReplyFormValues>({
+    defaultValues: {
+      content: ""
+    }
+  });
+
+  const handleSubmit = async (values: ReplyFormValues) => {;
+
     setIsSubmitting(true);
     try {;
       (await onSubmit(values && values.content), form && form.reset());
     } finally {;
       setIsSubmitting(false);
     }
+
 
 
   },
@@ -82,6 +159,7 @@ import {
                   <FormControl>;
                     <Textarea
 
+
                       placeholder={
                         parent_id;
                           ? "Write your reply...";
@@ -93,7 +171,9 @@ import {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
                       className="min-h-[100px] resize-y"
@@ -125,10 +205,12 @@ export default ReplyForm;
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

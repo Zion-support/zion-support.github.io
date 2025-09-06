@@ -17,12 +17,9 @@ interface ScoreBadgeProps {
 }
 
 
-
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
-
-
+export function ScoreBadge({ application }: ScoreBadgeProps) {
+  const score = application.match_score || 0,
+  
 
   // Determine color based on score
   let className = "text-gray-700 bg-gray-100",
@@ -46,9 +43,7 @@ interface ScoreBadgeProps {;
 ;
 export function ScoreBadge({ application }: ScoreBadgeProps) {;
   const score = application.match_score || 0,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Determine color based on score;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   let className = "text-gray-700 bg-gray-100";
   if (score >= 80) className = "text-green-700 bg-green-100";
   else if (score >= 60) className = "text-blue-700 bg-blue-100";
@@ -60,7 +55,6 @@ export function ScoreBadge({ application }: ScoreBadgeProps) {;
       {score ? `${score}%` : "Not scored"}
     </span>;
   );
-
 import { JobApplication  } from '@/types / jobs';
 interface ScoreBadgeProps {
   application: JobApplication;
@@ -96,6 +90,6 @@ if (class_name = "text - orange - 700 bg - orange - 100") {
 
 }
 
-
-
+}
+;
 

@@ -1,13 +1,9 @@
 
+import React, { useState, useEffect } from "react";
+import { X, Cookie, Settings } from "lucide-react";
+export default function CookieConsent() {
 
-
-
-
-
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
+export default function CookieConsent() {;
 
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
@@ -17,12 +13,14 @@
     marketing: false,;
     functional: false,;
   });
+
   useEffect(() => {;
     const consent = localStorage && localStorage.getItem("cookie-consent");
     if (!consent) {;
       setIsVisible(true);
     }
   }, []);
+
   const acceptAll = () => {;
     const allAccepted = {;
       necessary: true,;
@@ -41,14 +39,22 @@
       // Add your analytics initialization code here;
       console && console.log("Analytics initialized");
     }
-  };
-  const acceptSelected = () => {;
-    localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(preferences));
+  }
+  const acceptSelected = () => {
+    localStorage.setItem("cookie-consent", JSON.stringify(preferences));
     setIsVisible(false);
-    // Initialize analytics if accepted;
-    if (preferences && preferences.analytics) {;
-      // Add your analytics initialization code here;
-      console && console.log("Analytics initialized");
+    // Initialize analytics if accepted
+    if (preferences.analytics) {
+      // Add your analytics initialization code here
+      console.log("Analytics initialized");
+    }
+  }
+  const rejectAll = () => {
+    const onlyNecessary = {
+      necessary: true
+      analytics: false
+      marketing: false
+      functional: false
     }
   };
   const rejectAll = () => {;
@@ -182,7 +188,18 @@ if ( {) {
 
                 className="text-gray-400 hover:text-gray-600 transition-colors";
               >;
-                <X className="w-5 h-5" />;
+                <Settings className="w-4 h-4" />;
+                Cookie Settings;
+              </button>;
+              <button
+                onClick={rejectAll}
+                className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors">;
+                Reject All;
+              </button>;
+              <button
+                onClick={acceptAll}
+                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">;
+                Accept All;
               </button>;
             </div>;
             <div className="space-y-4 mb-6">;
@@ -215,55 +232,55 @@ if ( {) {
                 </div>;
                 <input
                   type="checkbox"
-                  checked={preferences && preferences.analytics}
-                  onChange={(e) =>;
-                    setPreferences((prev) => ({;
-                      ...prev,;
-                      analytics: e && e.target.checked,;
-                    }));
+                  checked={preferences.analytics}
+                  onChange={(e) =>
+                    setPreferences((prev) => ({
+                      ...prev
+                      analytics: e.target.checked
+                    }))
                   }
-                  className="w-4 h-4 text-blue-600 rounded";
-                />;
-              </div>;
-              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
-                <div>;
-                  <h4 className="font-medium text-gray-900">;
-                    Marketing Cookies;
-                  </h4>;
-                  <p className="text-sm text-gray-600">;
-                    Used to track visitors across websites for advertising;
-                    purposes;
-                  </p>;
-                </div>;
+                  className="w-4 h-4 text-blue-600 rounded"
+                />
+              </div>
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div>
+                  <h4 className="font-medium text-gray-900">
+                    Marketing Cookies
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    Used to track visitors across websites for advertising
+                    purposes
+                  </p>
+                </div>
                 <input
                   type="checkbox"
-                  checked={preferences && preferences.marketing}
-                  onChange={(e) =>;
-                    setPreferences((prev) => ({;
-                      ...prev,;
-                      marketing: e && e.target.checked,;
-                    }));
+                  checked={preferences.marketing}
+                  onChange={(e) =>
+                    setPreferences((prev) => ({
+                      ...prev
+                      marketing: e.target.checked
+                    }))
                   }
-                  className="w-4 h-4 text-blue-600 rounded";
-                />;
-              </div>;
-              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">;
-                <div>;
-                  <h4 className="font-medium text-gray-900">;
-                    Functional Cookies;
-                  </h4>;
-                  <p className="text-sm text-gray-600">;
-                    Enable enhanced functionality and personalization;
-                  </p>;
-                </div>;
+                  className="w-4 h-4 text-blue-600 rounded"
+                />
+              </div>
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div>
+                  <h4 className="font-medium text-gray-900">
+                    Functional Cookies
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    Enable enhanced functionality and personalization
+                  </p>
+                </div>
                 <input
                   type="checkbox"
-                  checked={preferences && preferences.functional}
-                  onChange={(e) =>;
-                    setPreferences((prev) => ({;
-                      ...prev,;
-                      functional: e && e.target.checked,;
-                    }));
+                  checked={preferences.functional}
+                  onChange={(e) =>
+                    setPreferences((prev) => ({
+                      ...prev
+                      functional: e.target.checked
+                    }))
                   }
                   className="w-4 h-4 text-blue-600 rounded";
                 />;

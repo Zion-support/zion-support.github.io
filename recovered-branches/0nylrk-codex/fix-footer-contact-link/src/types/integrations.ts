@@ -2,6 +2,8 @@
 
 
 
+
+
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
 ;
 export type IntegrationStatus = "connected" | "warning" | "disconnected";
@@ -15,6 +17,7 @@ export interface Integration {
   status: IntegrationStatus;
   lastSync?: string
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
+
 
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
 
@@ -64,6 +67,7 @@ export type AtsIntegrationEvents =
   | "applicant_created"
   | "candidate_status_changed"
   | "interview_scheduled"
+
 
   | "job_posted",
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",;

@@ -15,10 +15,10 @@ declare module 'd3-time';
 declare module 'd3-timer';
 declare module 'hoist-non-react-statics';
 declare module 'phoenix';
-declare module 'prop-types';
+declare module 'prop - types';
 declare module 'raf';
-declare module 'react-beautiful-dnd';
-declare module 'react-redux';
+declare module 'react - beautiful - dnd';
+declare module 'react - redux';
 declare module 'semver';
 declare module 'ws';
 declare module 'vite/client';
@@ -51,10 +51,12 @@ declare module 'react-router-dom',;
 
 
 
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

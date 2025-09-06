@@ -14,6 +14,7 @@ export const logEvent = (event: string) => {;
 
 
 
+
 };
 
 export const trackPerformance = () => {;
@@ -24,3 +25,4 @@ export const trackPerformance = () => {;
   console.log('Tracking performance...');
 
 };
+

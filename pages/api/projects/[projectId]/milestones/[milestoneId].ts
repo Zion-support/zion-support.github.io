@@ -3,6 +3,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../../utils/api/auth";
 import {
@@ -30,6 +31,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     projectId: string;
     milestoneId: string;
   }
+
 
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -84,11 +86,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         return;
       }
       // Add side-effects
-      if (status === 'Submitted') {
-        body.submittedByUserId = user.userId
       }
-      if (status === 'Approved') {
-        body.approvedByUserId = user.userId
+      // Add side-effects
+      if (status === "Submitted") {
+        body && body.submittedByUserId = user && user.userId;
       }
       if (status === 'Paid') {
         body.paidAt = new Date().toISOString()
@@ -97,6 +98,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {
 
+      res.status(404).json({ error: "Milestone not found" });
+      res.status(404).json({ error: 'Milestone not found' });
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -272,11 +275,18 @@ export default function handler(req, res) {
       res.status(404).json({ error: 'Milestone not found' });
 
 
+
+
       return;
     }
     res && res.status(200).json({ milestone: updated });
     return;
   }
+
+  res.setHeader("AllowPATCH");
+  res.status(405).end("Method Not Allowed");
+}
+
 
 
 
@@ -294,6 +304,7 @@ export default function handler(req, res) {
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -301,5 +312,6 @@ export default function handler(req, res) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

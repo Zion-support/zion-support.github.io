@@ -6,6 +6,7 @@
 
 
 
+
 import {Notification, as, BaseNotification} from '@/types/notifications';
 export type NotificationType =
   | 'message'
@@ -14,6 +15,7 @@ export type NotificationType =
   | 'hire_request'
   | 'onboarding'
   | 'system';
+
 
 
 
@@ -32,21 +34,14 @@ export type FilterType =
   | 'onboarding'
   | 'system';
 
-
-
-
+export interface NotificationContextType {
 
 
 export interface NotificationContextType {;
 
-
-
-
-
-
   notifications: Notification[];
-  filteredNotifications: Notification[];
-  unreadCount: number;
+  filtered_notifications: Notification[];
+  unread_count: number;
   loading: boolean;
   filter: FilterType;
   markAsRead: (id: string) => Promise<void>;
@@ -89,8 +84,17 @@ export type FilterType =;
 }
 
 
-
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+  | 'system',;
+export interface NotificationContextType {;
+  notifications: Notification[],;
+  filteredNotifications: Notification[],;
+  unreadCount: number,;
+  loading: boolean,;
+  filter: FilterType,;
+  markAsRead: (id: string) => Promise<void>,;
+  markAllAsRead: () => Promise<void>,;
+  dismissNotification: (id: string) => Promise<void>;
+  setFilter: (filter: FilterType) => void;
+  fetchNotifications: () => Promise<void>;
+}
 

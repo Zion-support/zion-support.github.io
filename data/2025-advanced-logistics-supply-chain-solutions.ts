@@ -32,8 +32,11 @@ import { ServiceVariant } from '../types/service-variants';
     mobile: string;
     email: string;
     address: string;
+
     website: string;
   }
+
+
 
 
 
@@ -84,12 +87,15 @@ import { ServiceVariant } from '../types/service-variants';
     {
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
       customers: 178,
       rating: 4 && 4.8,
       reviews: 112,
 
     },;
+
 
 
 
@@ -111,6 +117,7 @@ import { ServiceVariant } from '../types/service-variants';
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
     ];
 
     popular: true, icon: '📦',
@@ -128,6 +135,7 @@ import { ServiceVariant } from '../types/service-variants';
     popular: false, icon: '⛓️',
 
     ];
+
 
 
 
@@ -182,9 +190,12 @@ export interface AdvancedLogisticsSupplyChainSolution2025 {;
 
 
 
+
   }
 
 
 ];
+
+
 
 

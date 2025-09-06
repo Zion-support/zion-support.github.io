@@ -2,6 +2,7 @@
 
 
 
+
   FormField,
   FormItem,
   FormLabel,
@@ -22,6 +23,7 @@
 
 import { Textarea } from "@/components/ui/textarea";
 
+
 import { JobSchemaType } from "./validation";
 interface DescriptionFieldsProps {;
 
@@ -29,6 +31,8 @@ interface DescriptionFieldsProps {;
   handleEditorChange: (content: string) => void;
   editorContent: string
 }
+
+
 
 
 
@@ -44,6 +48,7 @@ export function DescriptionFields(): any ({;
       <FormField
 
 
+
         control={control}
         name="description"
         render={({ field }) => (;
@@ -51,6 +56,7 @@ export function DescriptionFields(): any ({;
             <FormLabel>Job Description</FormLabel>;
             <FormControl>;
               <Textarea
+
 
 
 
@@ -84,7 +90,9 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -100,9 +108,11 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
                 value={editorContent}
                 onChange={(e) => {;
@@ -112,6 +122,44 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 
                 }}
                 className="min-h-[200px]";
+
+import React from './react';
+import { Control  } from './react - hook - form';
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormDescription,
+  FormMessage,
+} from '@/components / ui / form';
+import { Textarea  } from '@/components / ui / textarea';
+import { JobSchemaType  } from './validation';
+interface DescriptionFieldsProps {
+  control: Control < JobSchemaType>;
+  handleEditorChange: (content: string) => void;
+  editor_content: string;
+}
+export /**
+ * DescriptionFields - Function description
+ */
+function DescriptionFields() {
+  return (
+    <>;
+      <FormField;
+        control={control}
+        name="description";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel > Job Description</FormLabel>;
+            <FormControl>;
+              <Textarea;
+                value={editor_content}
+                on_change={(e) => {
+                  handleEditorChange (e.target.value);
+                  field.on_change (e.target.value);
+                }}
+                className="min - h-[200px]";
 
                 placeholder="Enter a detailed description of the job role";
               />;
@@ -135,6 +183,19 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
                 placeholder="List the main responsibilities of this job"
                 className="resize-none min-h-[100px]"
 
+          </FormItem>)}
+      />;
+      <FormField;
+        control={control}
+        name="responsibilities";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel > Responsibilities (Optional)</FormLabel>;
+            <FormControl>;
+              <Textarea;
+                placeholder="List the main responsibilities of this job";
+                className="resize - none min - h-[100px]";
+
                 {...field}
               />;
             </FormControl>;
@@ -157,6 +218,19 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
                 placeholder="List the required qualifications for this job"
                 className="resize-none min-h-[100px]"
 
+          </FormItem>)}
+      />;
+      <FormField;
+        control={control}
+        name="qualifications";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel > Qualifications (Optional)</FormLabel>;
+            <FormControl>;
+              <Textarea;
+                placeholder="List the required qualifications for this job";
+                className="resize - none min - h-[100px]";
+
                 {...field}
               />;
             </FormControl>;
@@ -178,6 +252,19 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
               <Textarea
                 placeholder="List the benefits offered for this job"
                 className="resize-none min-h-[100px]"
+
+          </FormItem>)}
+      />;
+      <FormField;
+        control={control}
+        name="benefits";
+        render={({ field }) => (
+          <FormItem>;
+            <FormLabel > Benefits (Optional)</FormLabel>;
+            <FormControl>;
+              <Textarea;
+                placeholder="List the benefits offered for this job";
+                className="resize - none min - h-[100px]";
 
                 {...field}
               />;
@@ -213,7 +300,6 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
               <Textarea;
                 placeholder="Provide instructions on how to apply for this job";
                 className="resize - none min - h-[100px]";
-
                 {...field}
               />;
             </FormControl>;
@@ -241,6 +327,7 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -250,5 +337,6 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
   );
+
 
 }

@@ -4,6 +4,7 @@
 
 
 
+
 import {useRef, useEffect} from 'react';
 import {useAnalytics} from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {;
@@ -11,6 +12,7 @@ export function useTrackUserBehavior(componentName: string) {;
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const { trackEvent } = useAnalytics();
@@ -68,6 +70,8 @@ export function useTrackUserBehavior(componentName: string) {;
 
 
 
+
+
 import { useRef, useEffect } from 'react',;
 import { useAnalytics } from '@/context/AnalyticsContext',;
 export function useTrackUserBehavior(componentName: string) {;
@@ -115,12 +119,13 @@ export function useTrackUserBehavior(componentName: string) {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
 
 

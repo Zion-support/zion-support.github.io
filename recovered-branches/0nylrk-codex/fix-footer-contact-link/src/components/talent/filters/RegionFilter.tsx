@@ -6,6 +6,7 @@
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
@@ -13,6 +14,7 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 const REGION_OPTIONS = [
@@ -23,6 +25,8 @@ const REGION_OPTIONS = [
   { id: "Australia", label: "Australia" }
   { id: "Africa", label: "Africa" }
 
+
+
 ];
 export function RegionFilter({
   selectedRegions
@@ -32,6 +36,8 @@ export function RegionFilter({
   isMobileFilterOpen
 }: RegionFilterProps) {
 ],
+
+
 
 
   return (
@@ -75,25 +81,22 @@ const REGION_OPTIONS = [;
 ];
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {;
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
-      <button
+      <button;
         onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium">;
+        className="flex w-full items-center justify-between text-white font-medium";
+      >;
         <span>Region</span>;
         {expanded ? (;
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />;
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
-
-      </button>;
-
-      {expanded && (;
-        <div className="mt-4 space-y-2">;
-          {REGION_OPTIONS && REGION_OPTIONS.map(region => (;
-            <div key={region && region.id} className="flex items-center">;
-
+      </button>
+      {expanded && (
+        <div className="mt-4 space-y-2">
+          {REGION_OPTIONS.map((region) => (
+            <div key={region.id} className="flex items-center">
               <Checkbox
                 id={`region-${region && region.id}`}
                 checked={selectedRegions && selectedRegions.includes(region && region.id)}
@@ -109,17 +112,25 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
                 {region.label}
               </label>
             </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
         </div>;
       )}
+
+    </div>
+  );
+}
+  )
+
+}
 
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Checkbox  } from '@/components / ui / checkbox';
@@ -134,9 +145,8 @@ const REGION_OPTIONS = [;
 ];
 ;
 
+    </div>
 
 
 =======
-    </div>
-
 

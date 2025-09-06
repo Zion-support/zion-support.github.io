@@ -10,6 +10,7 @@ const redirectTo = options?.redirectTo |'/login'
 
 
 
+
       const redirectTo = options?.redirectTo || '/login';
       const returnUrl = options?.returnUrl || router && router.asPath;
           if (!requireAuth({ showToast: false })) return false,;
@@ -19,6 +20,7 @@ const redirectTo = options?.redirectTo |'/login'
     if (isLoading) return,
 
     const userRoles = user?.role ? [user && user.role] : [];
+
 
     requireAuth;
     requireRole;
@@ -45,5 +47,7 @@ const redirectTo = options?.redirectTo |'/login'
     is_loading}
 }
 ;
+
+
 
 

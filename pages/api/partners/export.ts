@@ -3,6 +3,7 @@
 
 
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -22,6 +23,7 @@ export default async function handler(
   if (!code) return res.status(400).json({ error: "Missing code" });
 
   const usingPlaceholder =
+
 
     (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
@@ -61,6 +63,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e?.message })
 
   }
+}
 
 }
   const using_placeholder =;
@@ -128,9 +131,11 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

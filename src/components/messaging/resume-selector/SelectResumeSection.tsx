@@ -1,9 +1,11 @@
 
+
 export function SelectResumeSection({
   resumeOptions;
   selectedResume;
   handleResumeSelect;
   handleDownloadResume;
+
 
   isLoading
 }: SelectResumeSectionProps) {
@@ -33,6 +35,7 @@ export function SelectResumeSection({
 
 
 
+
             >
               <div className="flex items-center">
                 <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
@@ -52,6 +55,7 @@ export function SelectResumeSection({
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
           {resumeOptions.map((option) => (
             <button
@@ -82,6 +86,7 @@ export function SelectResumeSection({
               resume={selectedResume.resume as Resume}
               onDownload={handleDownloadResume}
               isLoading={isLoading}
+
 
 
 
@@ -168,3 +173,4 @@ export const SelectResumeSection: React.FC<SelectResumeSectionProps> = ({
     </div>
   );
 };
+

@@ -24,6 +24,14 @@ import { useWhitelabel } from "@/context/WhitelabelContext";
 interface LogoProps {
   customLogo?: string;
 
+  customColor?: string;
+}
+
+
+
+
+  customColor?: string;
+}
 
 
 
@@ -37,7 +45,6 @@ interface LogoProps {
 
 
   if (logoToUse) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <Link to="/" className="flex items-center">;
         <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" />;
@@ -54,14 +61,12 @@ interface LogoProps {
       </div>
     </Link>
 
-
-
-
+  );
+  )
 
 }
 
   )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export /**
  * Logo - Function description

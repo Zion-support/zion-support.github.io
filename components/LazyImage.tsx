@@ -5,6 +5,7 @@ import LoadingSpinner from "./LoadingSpinner";
 ;
 
 interface LazyImageProps {
+
 interface LazyImageProps {;
   src: string;
   alt: string;
@@ -24,6 +25,21 @@ interface LazyImageProps {;
 }
 export default function LazyImage({
 
+  src
+  alt
+  width
+  height
+  className = ""
+  priority = false
+  placeholder = "empty"
+  blurDataURL
+  sizes
+  quality = 75
+  fill = false
+  style
+  onLoad
+  onError
+}: LazyImageProps) {
 
   src,
   alt,
@@ -44,10 +60,12 @@ export default function LazyImage({
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   const [isLoaded, setIsLoaded] = useState(false);
@@ -72,16 +90,16 @@ export default function LazyImage({
         rootMargin: "50px",;
       },;
     );
-    if (imgRef && imgRef.current) {;
-      observer && observer.observe(imgRef && imgRef.current);
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
     }
-    return () => observer && observer.disconnect();
+    return () => observer.disconnect();
   }, [priority]);
-  const handleLoad = () => {;
+  const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
-  };
-  const handleError = () => {;
+  }
+  const handleError = () => {
     setHasError(true);
     onError?.();
   };
@@ -93,7 +111,7 @@ export default function LazyImage({
         className={`flex items-center justify-center bg-gray-200 text-gray-500 ${className}`}
         style={style}>;
         <div className="text-center">;
-          <div className="text-4xl mb-2">📷</div>;
+          <div className="text-4xl mb-2"></div>;
           <div className="text-sm">Image failed to load</div>;
         </div>;
       </div>;
@@ -175,7 +193,7 @@ if ( {) {
         style={style}
       >;
         <div className="text - center">;
-          <div className="text - 4xl mb - 2">📷</div>;
+          <div className="text - 4xl mb - 2"></div>;
           <div className="text - sm">Image failed to load</div>;
         </div>;
       </div>);

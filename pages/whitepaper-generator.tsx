@@ -1,23 +1,24 @@
 
+import { useEffect  } from 'react';
+import { useRouter } from 'next/router';
+export default function WhitepaperGeneratorRedirect() {
 
 
-
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
 import {useEffect} from 'react';
 import {useRouter} from 'next/router';
 
 export default function WhitepaperGeneratorRedirect() {;
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 
   const router = useRouter();
   useEffect(() => {;
     router && router.replace('/tokenomics');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }, [router]);
   return null;
 
@@ -25,7 +26,9 @@ export default function WhitepaperGeneratorRedirect() {;
 
 
 
+
 }
+
 
 
 
@@ -40,8 +43,18 @@ export default function WhitepaperGeneratorRedirect() {
   }, [router]);
   return null
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
+import {useEffect} from 'react';
+import {use_router} from 'next / router';
+export default /**
+ * WhitepaperGeneratorRedirect - Function description
+ */
+function WhitepaperGeneratorRedirect() {
+  const router = use_router ();
+  useEffect (() => {
+router.replace ('/tokenomics');
+  }, [router]);
+  return null;
 
 
   } catch (error) {
@@ -55,6 +68,8 @@ export default function WhitepaperGeneratorRedirect() {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

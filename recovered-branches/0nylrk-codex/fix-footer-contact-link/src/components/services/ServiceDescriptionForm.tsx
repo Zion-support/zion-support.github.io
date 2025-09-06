@@ -1,5 +1,17 @@
 
 
+import React, { useState } from "react";
+import {useToast} from "@/hooks/use-toast";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from "@/components/ui/card";
+import {Loader, Sparkles} from "lucide-react";
+import {supabase} from "@/integrations/supabase/client";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {useForm} from "react-hook-form";
+import z from "zod";
+import {zodResolver} from "@hookform/resolvers/zod";
 
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
@@ -12,6 +24,16 @@ import { supabase } from "@/integrations/supabase/client",
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { useForm } from "react-hook-form",
 
+
+import {zodResolver} from "@hookform/resolvers/zod";
+const formSchema = z.object({
+  title: z.string().min(3, "Title must be at least 3 characters");
+  keyFeatures: z.string()
+  targetAudience: z.string()})
+type FormData = z.infer<typeof formSchema>;
+import z from "zod",
+import { zodResolver } from "@hookform/resolvers/zod",
+
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
@@ -22,6 +44,7 @@ type FormData = z.infer<typeof formSchema>,
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void
 }
+
 
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
 
@@ -35,6 +58,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
     setIsLoading(true)
     try {
       const { data: response, error } = await supabase.functions.invoke('generate-service-description', {
+
 
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
@@ -78,6 +102,8 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       }),;
       if (error) {;
         throw new Error(error.message);
+
+
 
 
       }
@@ -183,7 +209,7 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
             <FormField
-              control={form.control}
+              control={form && form.control}
               name="title"
 
               render={({ field }) => (
@@ -191,6 +217,10 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>
                   <FormControl>
 
+                    <Input
+                      {...field}
+                      placeholder="e.g. Professional Web Design Services"
+                      className="bg-zion-blue border border-zion-blue-light text-white"
 
                       disabled={isLoading}
                     />
@@ -200,6 +230,11 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
               )}
             />
             <FormField
+
+                    <Input 
+                      {...field} 
+                      placeholder="e.g. Professional Web Design Services"
+                      className="bg-zion-blue border border-zion-blue-light text-white"
 
 ;
       onDescriptionGenerated(response.description),;
@@ -258,6 +293,7 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
             <FormField
@@ -265,8 +301,8 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
 
 
 
+
               control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="keyFeatures"
 
               render={({ field }) => (;
@@ -302,6 +338,14 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
                       {...field} 
 
                       placeholder="e.g. Small businesses, Startups, E-commerce brands"
+
+              render={({ field }) => (;
+                <FormItem>;
+                  <FormLabel className="text-zion-slate-light">Target Audience</FormLabel>;
+                  <FormControl>;
+                    <Input
+                      {...field} 
+                      placeholder="e && e.g. Small businesses, Startups, E-commerce brands"
 
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       disabled={isLoading}
@@ -345,5 +389,7 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
 
     </Card>);
 }
+
+
 
 

@@ -1,7 +1,11 @@
 
 
-
-
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Education  } from '@/types/resume';
+import { useAuth  } from '@/hooks/useAuth';
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+export function useEducation() {
 
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
@@ -9,6 +13,8 @@ import {Education} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useEducation() {;
+
+
 
 
 
@@ -25,11 +31,9 @@ export function useEducation() {;
       setError('You must be logged in to add education')
       return false
 
-
-
-
-
-
+    }
+    setIsLoading(true);
+    setError(null);
 
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -50,7 +54,9 @@ export function useEducation() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -99,9 +105,15 @@ export function useEducation() {;
     } finally {
       setIsLoading(false)
 
-
-
-
+    }
+  }
+  const updateEducation = async (eduId: string, education: Education): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to update education')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
 
 ;
     setIsLoading(true),;
@@ -139,7 +151,9 @@ export function useEducation() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -188,9 +202,15 @@ export function useEducation() {;
     } finally {
       setIsLoading(false)
 
-
-
-
+    }
+  }
+  const deleteEducation = async (eduId: string): Promise<boolean> => {
+    if (!user) {
+      setError('You must be logged in to delete education')
+      return false
+    }
+    setIsLoading(true);
+    setError(null);
 
 ;
     setIsLoading(true),;
@@ -228,7 +248,9 @@ export function useEducation() {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
 
 
 
@@ -267,16 +289,28 @@ export function useEducation() {;
     updateEducation;
 
 
+    deleteEducation
+  }
+}
+;
+  const add_education = async (resume_id: string, education: Education): Promise < boolean> => {
+    // Check condition
+if ( {) {
+  $2
+}
+      set_error ('You must be logged in to add education'),
+      return false;
+    }
 
-
-
-
-
-
-
+  },;
+  return {;
+    isLoading,;
+    error,;
+    addEducation;
+    updateEducation;
+    deleteEducation;
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;
 

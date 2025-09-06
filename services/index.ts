@@ -15,6 +15,7 @@ export type {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -24,6 +25,7 @@ export type {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   PasswordOptions;
@@ -34,6 +36,7 @@ export type {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -43,6 +46,7 @@ export type {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   QRCodeOptions;
@@ -53,6 +57,7 @@ export type {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -62,6 +67,7 @@ export type {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   ConversionOptions;
@@ -73,6 +79,7 @@ export type {
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
@@ -82,6 +89,7 @@ export type {
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   TextAnalysisResult;
@@ -120,6 +128,7 @@ export const SERVICES_METADATA = {
 
 
 
+
   url_shortener: {
     name: 'URL Shortener',
 
@@ -128,8 +137,9 @@ export const SERVICES_METADATA = {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 
+
     description: 'Create short, trackable URLs with analytics';
-    icon: '🔗';
+    icon: '';
     category: 'UTILITIES';
     features: [;
       'Custom short codes_click tracking_analytics dashboard_expiration datesQR code generation';
@@ -142,7 +152,7 @@ export const SERVICES_METADATA = {
 
     name: 'Password Generator';
     description: 'Generate secure passwords with strength analysis';
-    icon: '🔐';
+    icon: '';
     category: 'UTILITIES';
     features: [;
       'Multiple generation modes_strength analysis_custom character sets_password history_security recommendations';
@@ -155,7 +165,7 @@ export const SERVICES_METADATA = {
   qrCodeGenerator: {
     name: 'QR Code Generator';
     description: 'Create QR codes for various purposes';
-    icon: '📱';
+    icon: '';
     category: 'UTILITIES';
     features: [;
       'Multiple QR code types_custom styling_logo integration_error correction_template library';
@@ -168,7 +178,7 @@ export const SERVICES_METADATA = {
 
     name: 'File Converter';
     description: 'Convert files between different formats';
-    icon: '🔄';
+    icon: '';
     category: 'MEDIA';
     features: [;
       'Multiple file formats_batch conversion_quality settings_metadata preservation_cloud processing';
@@ -180,9 +190,14 @@ export const SERVICES_METADATA = {
   }
   textAnalysis: {
 
+    pricing: 'Free (Basic) / $9.99 / month (Pro)',
+    api_endpoint: '/api / file - converter';
+  }
+  text_analysis: {
+
     name: 'Text Analysis';
     description: 'Analyze text for insights and optimization';
-    icon: '📊';
+    icon: '';
     category: 'ANALYSIS';
     features: [;
       'Readability metrics_sentiment analysis_keyword extraction_entity recognition_language detection';
@@ -196,7 +211,11 @@ export const SERVICES_METADATA = {
 // Service availability and status
 export const getServiceStatus = () => {
 
-
+  return {
+    urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+    passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+    qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+    fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
 
   return {;
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
@@ -204,13 +223,12 @@ export const getServiceStatus = () => {
     qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
 
-
-
-
-
-
-
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+    urlShortener: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
+    passwordGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
+    qrCodeGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
+    fileConverter: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
+    textAnalysis: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() }
 
   }
 }
@@ -222,9 +240,19 @@ export const getServiceStats = () => {
     averageResponseTime: 125
     services: {
 
+      urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 }
+      passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 }
+      qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 }
+      fileConverter: { users: 5430, requests: 234000, avgResponse: 234 }
+      textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
+    }
+  }
+}
 
-
-
+      urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 };
+      passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 };
+      qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 };
+      fileConverter: { users: 5430, requests: 234000, avgResponse: 234 };
 
 // Export all micro SaaS services;
 export { urlShortenerService } from './urlShortenerService',;
@@ -314,12 +342,13 @@ export const getServiceStats = () => {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
+
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
 };

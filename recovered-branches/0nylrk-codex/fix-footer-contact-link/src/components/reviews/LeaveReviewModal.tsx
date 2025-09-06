@@ -4,12 +4,16 @@
 
 
 
+
+
 import {useState, useEffect} from "react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {ReviewForm} from "./ReviewForm";
 import {useReviews} from "@/hooks/useReviews";
+
+
 
 
 
@@ -24,7 +28,71 @@ import {
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
+import { ReviewForm } from "./ReviewForm";
+import { useReviews } from "@/hooks/useReviews";
+interface LeaveReviewModalProps {
 
+
+
+
+  onClose: () => void
+}
+export function LeaveReviewModal({
+import { ReviewForm } from "./ReviewForm",
+import { useReviews } from "@/hooks/useReviews",
+
+interface LeaveReviewModalProps {
+  projectId: string,
+  revieweeId: string,
+  revieweeName: string,
+  isOpen: boolean,
+  onClose: () => void
+
+
+export function LeaveReviewModal({;
+  projectId;
+  revieweeId;
+  revieweeName;
+  isOpen;
+  onClose}: LeaveReviewModalProps) {
+  const { userReview, submitReview, updateReview, isSubmitting } = useReviews(projectId);
+  const [open, setOpen] = useState(isOpen);
+  useEffect(() => {
+    setOpen(isOpen)
+  }, [isOpen]);
+
+  const handleOpenChange = (open: boolean) => {
+    setOpen(open)
+    if (!open) {
+      onClose()
+    }
+  }
+  const handleSubmit = async (formValues: any) => {
+    if (userReview) {
+      // Update existing review
+      const { project_id, reviewee_id, ...updates } = formValues;
+      const success = await updateReview(userReview.id, updates);
+      if (success) {
+        handleOpenChange(false)
+      }
+      return success
+    } else {
+      // Create new review
+      const success = await submitReview(formValues);
+      if (success) {
+        handleOpenChange(false)
+import { useState, useEffect } from "react",
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger} from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { ReviewForm } from "./ReviewForm",
+import { useReviews } from "@/hooks/useReviews",
 interface LeaveReviewModalProps {
   projectId: string,
   revieweeId: string,
@@ -93,6 +161,7 @@ export function LeaveReviewModal(): any ({;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }
       return success;
@@ -119,6 +188,7 @@ export function LeaveReviewModal(): any ({;
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+
   
 
   return (
@@ -142,6 +212,17 @@ export function LeaveReviewModal(): any ({;
           onSubmit={handleSubmit}
           defaultValues={userReview |undefined}
           isSubmitting={isSubmitting}
+
+        />
+      </DialogContent>
+    </Dialog>
+  )
+}
+        />;
+      </DialogContent>;
+    </Dialog>;
+  );
+}
 
 import { useState, useEffect } from './react';
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';

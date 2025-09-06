@@ -1,5 +1,7 @@
 
 
+
+
 export const cuttingEdgeITServices2025 = [
   {
     id: 'quantum-cloud-infrastructure-platform'
@@ -418,6 +420,7 @@ export const cuttingEdgeITServices2025 = [
     compliance: [
 
 
+
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -431,6 +434,7 @@ export const cuttingEdgeITServices2025 = [
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 
 
@@ -649,7 +653,9 @@ export const cuttingEdgeITServices2025 = [;
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
   }
 ];

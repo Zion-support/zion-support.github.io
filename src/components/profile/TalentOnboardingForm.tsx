@@ -2,7 +2,12 @@ public_url;
 }= supabase.storage.from ('resumes') .getPublicUrl (file_name);
 return public_url;
 
-
+import React, { useState } from "react",
+import { useForm, useFieldArray } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { useRouter } from 'next/router',
+import {logErrorToProduction} from '@/utils/productionLogger',
 
 import {
   Form
@@ -54,6 +59,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Separator } from "@/components/ui/separator"
 import { toast } from "@/components/ui/use-toast"
 import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2 } from 'lucide-react'
+
 
 
 // Define the form schema with validation
@@ -118,10 +124,12 @@ import { useAuth } from "@/hooks/useAuth",
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentSchema)
     defaultValues: {
       basicInfo: {
+
 
 
 
@@ -173,6 +181,7 @@ import { useAuth } from "@/hooks/useAuth",
 
 
 
+
         availabilityType: "",
         timezone: "",
         hourlyRate: "",
@@ -198,16 +207,19 @@ import { useAuth } from "@/hooks/useAuth",
 
 
 
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
+
     // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
+
 
 
 
@@ -255,3 +267,4 @@ const form = useForm<TalentFormValues> ({
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
 }'}
 }
+

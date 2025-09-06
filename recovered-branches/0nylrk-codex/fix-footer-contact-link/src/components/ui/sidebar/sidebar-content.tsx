@@ -16,6 +16,16 @@ export const SidebarInput = React.forwardRef<
   React.ElementRef<typeof Input>
   React.ComponentProps<typeof Input>
 
+import * as React from &quot;react & quot;
+import { Input } from &quot;@/components / ui / input & quot;
+import { Separator } from &quot;@/components / ui / separator & quot;
+import { cn } from &quot;@/lib / utils & quot;
+import type { SafeRef } from &quot;../sidebar.types & quot;
+;
+export const SidebarInput = React.forward_ref<;
+  React.ElementRef < typeof Input>,
+  React.ComponentProps < typeof Input>;
+
 >((props, ref) => {
   return (
 
@@ -46,11 +56,13 @@ export const SidebarHeader = React.forwardRef<
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 >((props, ref) => {
   return (
@@ -73,11 +85,13 @@ export const SidebarFooter = React.forwardRef<
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 >((props, ref) => {
   return (
@@ -97,6 +111,14 @@ SidebarFooter.displayName = "SidebarFooter"
 export const SidebarSeparator = React.forwardRef<
   HTMLDivElement
   React.ComponentProps<typeof Separator>
+
+    />);
+});
+SidebarFooter.display_name = &quot;SidebarFooter & quot;
+;
+export const SidebarSeparator = React.forward_ref<;
+  HTMLDivElement,
+  React.ComponentProps < typeof Separator>;
 
 >((props, ref) => {
   return (
@@ -125,11 +147,13 @@ export const SidebarContent = React.forwardRef<
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 >((props, ref) => {
   return (
@@ -159,11 +183,13 @@ export const SidebarGroup = React.forwardRef<
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 
 >((props, ref) => {
   return (

@@ -1,6 +1,11 @@
 
-
-
+export type WatchlistMatch = {
+export type WatchlistMatch = {;
+  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
+  name: string;
+  score: number; // 0-1 match confidence
+  referenceId?: string;
+  detailsUrl?: string;
 
 }
 ;
@@ -13,10 +18,12 @@ export type AmlCheckResult = {;
 
 
 
+
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
   status: 'clear' | 'match' | 'review' | 'unknown';
@@ -24,11 +31,10 @@ export type AmlCheckResult = {;
   checked_at: string; // ISO;
   provider: 'mock' | 'remote';
 
-
-
-
-
-
+}
+export interface AmlProvider {
+};
+export interface AmlProvider {;
 
   checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult>;
   checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>;
@@ -54,6 +60,8 @@ class MockAmlProvider implements AmlProvider {
     return { status: 'clear' }
   }
 }
+
+
 
 
 
@@ -113,12 +121,19 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
   }
 }
 
+export function getAmlProvider(): AmlProvider {
+  return new MockAmlProvider();
+}
+
+
 export function getAmlProvider (): AmlProvider {
   return new MockAmlProvider ();
 }
 
 
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

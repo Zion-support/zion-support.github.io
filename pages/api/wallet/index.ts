@@ -1,4 +1,13 @@
 
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getWalletSummary } from "../../../utils/token/service";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import {getWalletSummary} from '../../../utils/token/service';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const { userId } = req.query;
+
+
 
 
 
@@ -8,6 +17,10 @@
     return res.status (200).json (summary);
   } catch (err: any) {
 
+    return res.status(500).json({ error: err.message |'Unknown error' });
+  }
+import type { NextApiRequest, NextApiResponse } from 'next';
+    return res.status(500).json({ error: err.message || 'Unknown error' });
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -86,11 +99,13 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
 
 
+
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

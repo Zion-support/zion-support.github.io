@@ -1,6 +1,7 @@
 
 
 
+
 ;
       return numberWords[match] || match});
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase());
@@ -17,6 +18,7 @@ function fixedCount = 0;
       fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {;
       if (fixFile(filePath)) {;
         fixedCount++};
+
 
       return numberWords[match] || match}),;
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase()),;
@@ -48,12 +50,46 @@ function fixedCount = 0,;
     return false}
 }
 
-
-
-
-
+function fixedCount = 0;
+  for (const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
     if (stat.isDirectory()) {;
       fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {;
+};
+
+      return numberWords[match] || match}),;
+    .replace(/[-_](.)/g, (match, group1) => group1 && group1.toUpperCase()),;
+    .replace(/^(.)/, (match) => match && match.toUpperCase())};
+      return true};
+    return false} catch (error) {,;
+    console && console.error("Error fixing ${filePath} ", error && error.message),;
+    return false};
+};
+function fixedCount = 0,;
+  for (const filePath = path && path.join(dir, file),;
+    const stat = fs && fs.statSync(filePath),;
+    if (stat && stat.isDirectory()) {,;
+      fixedCount += findAndFixFiles(filePath)} else if (file && file.endsWith('.tsx') && file && file.includes('-')) {,;
+      if (fixFile(filePath)) {,;
+
+        fixedCount++};};
+};
+  return fixedCount};
+
+};
+      return numberWords[match] || match});
+    .replace(/[-_](.)/g, (match, group1) => group1 && group1.toUpperCase());
+    .replace(/^(.)/, (match) => match && match.toUpperCase())};
+      return true};
+    return false} catch (error) {;
+    console && console.error("Error fixing ${filePath}:", error && error.message);
+    return false};
+};
+function fixedCount = 0;
+  for (const filePath = path && path.join(dir, file);
+    const stat = fs && fs.statSync(filePath);
+    if (stat && stat.isDirectory()) {;
+      fixedCount += findAndFixFiles(filePath)} else if (file && file.endsWith('.tsx') && file && file.includes('-')) {;
 
       if (fixFile(filePath)) {;
 };
@@ -215,6 +251,7 @@ const fs = require('fs'); const path = require('path'); function toCamelCase(str
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
@@ -229,5 +266,6 @@ const fs = require('fs'); const path = require('path'); function toCamelCase(str
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 

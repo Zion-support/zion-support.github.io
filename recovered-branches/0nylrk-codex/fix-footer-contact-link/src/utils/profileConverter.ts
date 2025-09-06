@@ -4,12 +4,14 @@
 
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
+
 
 
 export function convertProfileToTalentProfile(profile: ProfileData | any): TalentProfile {
@@ -20,7 +22,7 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
 
   }
   // Convert ProfileData to TalentProfile
-  return {;
+  return {
     id: profile.id;
     user_id: profile.id;
     full_name: profile.name;
@@ -53,7 +55,6 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     bio: profile.bio || '',;
     summary: profile.bio?.substring(0, 150),;
     profile_picture_url: profile.avatarUrl,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     years_experience: 3, // Default value;
     skills: profile.skills?.map ((skill: { name: string }) => skill.name) || [];
     availability_type: profile.availability?.status === 'available' ? 'full_time' :;
@@ -62,11 +63,11 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     hourly_rate: profile.hourly_rate || 0;
     rating_count: profile.review_count || 0,
     average_rating: profile.rating || 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
 }
 ;
+
 
 
 
@@ -78,4 +79,5 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4
 
 >>>>>>> origin/feature/merge-conflicts-and-improvements
+
 

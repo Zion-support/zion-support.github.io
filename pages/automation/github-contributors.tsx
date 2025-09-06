@@ -1,14 +1,13 @@
 
-
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
-
->>>>>>> origin/feature/merge-conflicts-and-improvements
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/github-contributors.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/github-contributors.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/github-contributors.json',
 
 export default function GithubContributorsPage() {
 
@@ -29,10 +28,16 @@ export default function GithubContributorsPage() {
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
 
-
-
-
-
+              <a className="font-medium underline" href={it.html_url} target="_blank" rel="noreferrer">{it.login}</a>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Contributions {it.contributions}</div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+  );
+};
+              <a className="font-medium underline" href={it.html_url} target="_blank" rel="noreferrer">{it.login}</Link>
 
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Contributions {it.contributions}</div>
             </li>
@@ -51,11 +56,13 @@ export default function GithubContributorsPage() {
   }
 
 
+
 }
 }
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 

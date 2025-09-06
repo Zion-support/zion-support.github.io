@@ -14,6 +14,7 @@ interface CategoryType {
 
 
 
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -96,6 +97,7 @@ const Categories: React.FC = () => {",;
               </a>,;
           ))}"lucide-react";&apos;&apos;
 
+
 const Categories: React.FC = () => {}
   const;const categories = [
     { name: &apos,AI Services&apos, icon: Brain, count: 25 } { name: &apos,Cloud Solutions&apos, icon: Cloud, count: 15 } { name: &apos,Cybersecurity&apos, icon: Shield, count: 12 } { name: &apos,Development&apos, icon: Code, count: 18 } { name: &apos,Data Analytics&apos, icon: Database, count: 10 } { name: &apos,Infrastructure&apos, icon: Network, count: 8 }
@@ -175,6 +177,7 @@ const Categories: React.FC = () => {}
 export default Categories"";
 ";
   )}
+
 
 
 
@@ -297,3 +300,4 @@ export: default Categories,
 export default Categories, " ];
 export default Categories"")))))))));
 }
+
