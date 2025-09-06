@@ -5,17 +5,36 @@ import { ContactInfo, AnimationState } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
 import PerformanceMonitor from '../components/PerformanceMonitor';
-export default function Home() {
+import { ToastProvider, useToastNotifications } from '../components/Toast';
+import { useResponsive } from '../hooks/useResponsive';
+import { useDebounce } from '../hooks/useDebounce';
+function HomeContent() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
     hasError: false
   });
+  
+  const { isMobile, isTablet, isDesktop } = useResponsive();
+  const toast = useToastNotifications();
+  const debouncedLoaded = useDebounce(animationState.isLoaded, 100);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimationState(prev => ({ ...prev, isLoaded: true }))
     }, 100);
     return () => clearTimeout(timer)
   }, []);
+
+  // Show welcome toast on first load
+  useEffect(() => {
+    if (debouncedLoaded) {
+      toast.success(
+        'Welcome to Zion Tech Group!',
+        'Discover our innovative technology solutions.',
+        { duration: 3000 }
+      );
+    }
+  }, [debouncedLoaded, toast]);
   if (animationState.hasError) {
     return (
       <div className="min-h-screen bg-slate-950 flex items-center justify-center">
@@ -23,13 +42,13 @@ export default function Home() {
           <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
           <button 
             onClick={() => window.location.reload()} 
-            className="px-4 py-2 bg-blue-600 rounded-lg hover: bg-blue-700"
+            className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700"
           >
             Reload Page
           </button>
         </div>
       </div>
-    ),
+    );
   }
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
@@ -98,11 +117,11 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <h1 
               id="hero-title"
-              className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              className={`${isMobile ? 'text-4xl' : isTablet ? 'text-5xl' : 'text-6xl'} font-extrabold tracking-tight mb-6 transition-all duration-1000 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             >
               Zion Tech Group
             </h1>
-            <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+            <p className={`${isMobile ? 'text-lg' : isTablet ? 'text-xl' : 'text-2xl'} text-slate-300 mb-8 transition-all duration-1000 delay-200 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
               Innovative Micro SaaS, AI Services & IT Solutions
             </p>
             <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${animationState.isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -252,5 +271,13 @@ export default function Home() {
         />
       </ErrorBoundary>
     </>
-  )
+  );
+}
+
+export default function Home() {
+  return (
+    <ToastProvider>
+      <HomeContent />
+    </ToastProvider>
+  );
 }
