@@ -82,7 +82,7 @@ const AdminTokensPage: React.FC = () => {
 
   const handleIssueTokens = async () => {
     if (config.conversionRate <= 0) {
-      alert('Conversion rate must be greater than 0');
+      window.alert('Conversion rate must be greater than 0');
       return;
     }
     await handleConfigUpdate(config);
