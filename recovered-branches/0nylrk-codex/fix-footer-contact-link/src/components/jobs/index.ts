@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 export * from "./JobsList";
-export * from "./job-posting";
+export * from "./job - posting";
 export * from "./SuggestedTalents";
 export * from "./JobMatches";
 export * from "./JobMatchCard";

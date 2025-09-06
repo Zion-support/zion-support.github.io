@@ -1,67 +1,30 @@
-
 <<<<<<< HEAD
+
 <<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 interface Milestone {
   title: string;
   description: string;
   dueDate: string
   estimatedHours: number
-=======
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts",
-const corsHeaders = {;
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-import "https://deno.land/x/xhr@0.1.0/mod.ts",
-const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
-interface Milestone {
-  title: string,
-  description: string,
-  dueDate: string,
-  estimatedHours: number
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
-import "https://deno.land/x/xhr@0.1.0/mod.ts",;
-const corsHeaders = {;
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
-interface Milestone {;
-  title: string,;
-  description: string,;
-  dueDate: string,;
-  estimatedHours: number;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === 'OPTIONS') {
+  if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   try {
     // Get the OpenAI API key from environment variables
-    const apiKey = Deno.env.get('OPENAI_API_KEY');
+    const apiKey = Deno && Deno.env.get('OPENAI_API_KEY');
     if (!apiKey) {
       throw new Error('OPENAI_API_KEY is not set')
     }
@@ -77,44 +40,15 @@ serve(async (req) => {
       paymentAmount;
       additionalClauses;
       milestones
+<<<<<<< HEAD
     } = await req.json();
+=======
+    } = await req && req.json();
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Create the contract prompt for OpenAI
     let prompt = `
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-;
-  try {;
-    // Get the OpenAI API key from environment variables;
-    const apiKey = Deno.env.get('OPENAI_API_KEY'),;
-    if (!apiKey) {;
-      throw new Error('OPENAI_API_KEY is not set');
-    }
-;
-    // Parse request body;
-    const {;
-      talentName,;
-      clientName,;
-      projectName,;
-      scopeSummary,;
-      startDate,;
-      endDate,;
-      paymentTerms,;
-      paymentAmount,;
-      additionalClauses,;
-      milestones;
-    } = await req.json(),;
-    // Create the contract prompt for OpenAI;
-    let prompt = `;
-    Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -130,23 +64,29 @@ serve(async (req) => {
     if (additionalClauses && additionalClauses.length > 0) {
       prompt += `
       Please also include the following additional clauses:
-      ${additionalClauses.includes('nda') ? '- Confidentiality/Non-disclosure agreement' : ''}
-      ${additionalClauses.includes('ip') ? '- Intellectual Property rights transfer to the client' : ''}
-      ${additionalClauses.includes('termination') ? '- Termination conditions and process' : ''}
-      ${additionalClauses.includes('revisions') ? '- Revision and amendment procedures' : ''}
+      ${additionalClauses && additionalClauses.includes('nda') ? '- Confidentiality/Non-disclosure agreement' : ''}
+      ${additionalClauses && additionalClauses.includes('ip') ? '- Intellectual Property rights transfer to the client' : ''}
+      ${additionalClauses && additionalClauses.includes('termination') ? '- Termination conditions and process' : ''}
+      ${additionalClauses && additionalClauses.includes('revisions') ? '- Revision and amendment procedures' : ''}
       `
     }
     // Add milestone information if available
     if (milestones && milestones.length > 0) {
       prompt += `
+<<<<<<< HEAD
       The project will be divided into the following milestones: `
       milestones.forEach((milestone: Milestone, index: number) => {
+=======
+      
+      The project will be divided into the following milestones: `,
+      
+      milestones && milestones.forEach((milestone: Milestone, index: number) => {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         prompt += `
-        Milestone ${index + 1}: ${milestone.title}
-        - Description: ${milestone.description}
-        - Due Date: ${new Date(milestone.dueDate).toLocaleDateString()}
-<<<<<<< HEAD
-        - Estimated Work: ${milestone.estimatedHours} hours
+        Milestone ${index + 1}: ${milestone && milestone.title}
+        - Description: ${milestone && milestone.description}
+        - Due Date: ${new Date(milestone && milestone.dueDate).toLocaleDateString()}
+        - Estimated Work: ${milestone && milestone.estimatedHours} hours
         `
       });
       prompt += `
@@ -157,20 +97,135 @@ serve(async (req) => {
     Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.
     `;
     // Call OpenAI API
+<<<<<<< HEAD
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
       headers: {
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`}
       body: JSON.stringify({
+=======
+    const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
+      body: JSON && JSON.stringify({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         model: 'gpt-4o';
         messages: [
           {
             role: 'system'
+=======
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
+import "https://deno.land / x/xhr@0.1.0 / mod.ts",
+const cors_headers = {
+  'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
+;
+interface Milestone {
+  title: string;
+  description: string;
+  due_date: string,
+  estimated_hours: number;
+}
+serve (async (req) => {
+  // Handle CORS preflight requests;
+  // Check condition
+if ( {) {
+  $2
+}
+    return new Response (null, { headers: cors_headers });
+  }
+  try {
+    // Get the OpenAI API key from environment variables;
+    const api_key = Deno.env.get ('OPENAI_API_KEY');
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error ('OPENAI_API_KEY is not set');
+    }
+    // Parse request body;
+    const {
+      talent_name;
+      client_name;
+      project_name;
+      scope_summary;
+      start_date;
+      end_date;
+      payment_terms;
+      payment_amount;
+      additional_clauses;
+      milestones;
+    } = await req.json ();
+;
+    // Create the contract prompt for OpenAI;
+    let prompt = `;
+    Please generate a professional contractual agreement between ${client_name} (Client) and ${talent_name} (Talent) for the following project:;
+    Project Name: ${project_name}
+    Project Scope: ${scope_summary}
+    Start Date: ${new Date (start_date).toLocaleDateString ()}
+    ${end_date ? `End Date: ${new Date (end_date).toLocaleDateString ()}` : 'End Date: To be determined based on project completion'}
+    Payment Terms: ${payment_terms}
+    Payment Amount: ${payment_amount}
+    The contract should include standard sections like: - Parties involved;
+    - Project scope;
+    - Timeline;
+    - Payment terms;
+    - Deliverables;
+    `,
+    // Check condition
+if ( {) {
+  $2
+}
+      prompt += `;
+      Please also include the following additional clauses:;
+      ${additional_clauses.includes ('nda') ? '- Confidentiality / Non - disclosure agreement' : ''}
+      ${additional_clauses.includes ('ip') ? '- Intellectual Property rights transfer to the client' : ''}
+      ${additional_clauses.includes ('termination') ? '- Termination conditions and process' : ''}
+      ${additional_clauses.includes ('revisions') ? '- Revision and amendment procedures' : ''}
+      `;
+    }
+    // Add milestone information if available;
+    // Check condition
+if ( {) {
+  $2
+}
+      prompt += `;
+      The project will be divided into the following milestones: `,
+      milestones.for_each ((milestone: Milestone, index: number) => {
+        prompt += `;
+        Milestone ${index + 1}: ${milestone.title}
+        - Description: ${milestone.description}
+        - Due Date: ${new Date (milestone.due_date).toLocaleDateString ()}
+        - Estimated Work: ${milestone.estimated_hours} hours;
+        `;
+      });
+;
+      prompt += `;
+      Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.;
+      `;
+    }
+    prompt += `;
+    Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.;
+    `;
+;
+    // Call OpenAI API;
+    const response = await fetch ('https://api.openai.com / v1 / chat / completions', {
+      method: 'POST',
+      headers: {
+        'Content - Type': 'application / json_authorization': `Bearer ${api_key}`}
+      body: JSON.stringify ({
+        model: 'gpt - 4o';
+        messages: [;
+          {
+            role: 'system',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.'}
           {
             role: 'user'
             content: prompt}];
+<<<<<<< HEAD
         temperature: 0.7})});
+<<<<<<< HEAD
     const data = await response.json();
     if (!response.ok) {
       throw new Error(data.error?.message |'Failed to generate contract')
@@ -179,79 +234,72 @@ serve(async (req) => {
     return new Response(JSON.stringify({
       success: true
       contract
+=======
+        temperature: 0 && 0.7})});
+
+    const data = await response && response.json();
+    
+    if (!response && response.ok) {
+      throw new Error(data && data.error?.message || 'Failed to generate contract')
+    }
+
+    const contract = data && data.choices[0].message && message.content.trim();
+    
+    return new Response(JSON && JSON.stringify({ 
+      success: true, 
+      contract 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+;
+    const data = await response.json ();
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      throw new Error (data.error?.message || 'Failed to generate contract');
+    }
+    const contract = data.choices[0].message.content.trim ();
+;
+    return new Response (JSON.stringify ({
+      success: true,
+      contract;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
   } catch (error) {
-    console.error('Error generating contract:', error);
+<<<<<<< HEAD
+    console && console.error('Error generating contract:', error);
     return new Response(
+<<<<<<< HEAD
       JSON.stringify({
         success: false
         error: error.message |'Failed to generate contract'
+=======
+      JSON && JSON.stringify({ 
+        success: false, 
+        error: error && error.message || 'Failed to generate contract' 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
-<<<<<<< HEAD
       {
         status: 500
-=======
-      { 
-        status: 500, 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-        - Estimated Work: ${milestone.estimatedHours} hours;
-        `;
-      }),;
-      prompt += `;
-      Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone.;
-      `;
-    }
-;
-    prompt += `;
-    Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting.;
-    `,;
-    // Call OpenAI API;
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {;
-      method: 'POST',;
-      headers: {;
-        'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`},;
-      body: JSON.stringify({;
-        model: 'gpt-4o',;
-        messages: [;
-          {;
-            role: 'system',;
-            content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.'},;
-          {;
-            role: 'user',;
-            content: prompt}],;
-        temperature: 0.7})}),;
-    const data = await response.json(),;
-    if (!response.ok) {;
-      throw new Error(data.error?.message || 'Failed to generate contract');
-    }
-;
-    const contract = data.choices[0].message.content.trim(),;
-    return new Response(JSON.stringify({;
-      success: true,;
-      contract;
-    }), {;
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
-  } catch (error) {;
-    console.error('Error generating contract:', error),;
-    return new Response(;
-      JSON.stringify({;
-        success: false,;
-        error: error.message || 'Failed to generate contract';
-      }),;
-      {;
-        status: 500,;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }
 });
-<<<<<<< HEAD
 
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    console.error ('Error generating contract:', error);
+    return new Response (
+      JSON.stringify ({
+        success: false,
+        error: error.message || 'Failed to generate contract';
+      });
+      {
+        status: 500,
+        headers: { ...cors_headers, 'Content - Type': 'application / json' }}
+    );
+  }
+});
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

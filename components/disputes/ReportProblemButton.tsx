@@ -1,21 +1,17 @@
 <<<<<<< HEAD
-=======
 import Link from "next/link";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+<<<<<<< HEAD
 import Link from "next/link";
 export default function ReportProblemButton({
-<<<<<<< HEAD
   projectId
   entityType
   entityId
 }: {
-=======
-  projectId,
-  entityType,
-  entityId,
-}: {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
   entityId?: string;
@@ -24,56 +20,116 @@ export default function ReportProblemButton({
     projectId
     ...(entityType ? { entityType } : {})
     ...(entityId ? { entityId } : {})
-  });
-<<<<<<< HEAD
-
 =======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function ReportProblemButton(): any ({;
+  projectId,;
+  entityType,;
+  entityId,;
+}: {;
+  projectId: string;
+  entityType?: "milestone" | "contract" | "thread";
+  entityId?: string;
+}) {;
+  const query = new URLSearchParams({;
+    projectId,;
+    ...(entityType ? { entityType } : {}),;
+    ...(entityId ? { entityId } : {}),;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  });
+
+  return (
+    <Link href={`/disputes/new?${query && query.toString()}`}>;
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">;
+        {" "}
+        Report a Problem;
+      </a>;
+    </Link>;
+  );
+}
+<<<<<<< HEAD
+export default function ReportProblemButton({
+  projectId
+  entityType
+  entityId
+}: {
+  projectId: string;
+  entityType?: "milestone" | "contract" | "thread";
+  entityId?: string;
+}) {
+  const query = new URLSearchParams({
+    projectId
+    ...(entityType ? { entityType } : {})
+    ...(entityId ? { entityId } : {})
+=======
+export default function ReportProblemButton(): any ({;
+  projectId,;
+  entityType,;
+  entityId,;
+}: {;
+  projectId: string;
+  entityType?: "milestone" | "contract" | "thread";
+  entityId?: string;
+}) {;
+  const query = new URLSearchParams({;
+    projectId,;
+    ...(entityType ? { entityType } : {}),;
+    ...(entityId ? { entityId } : {}),;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  });
+  return (
+    <Link href={`/disputes/new?${query && query.toString()}`}>;
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>;
+    </Link>;
+<<<<<<< HEAD
+=======
+  );
+}
+=======
+import Link from 'next/link';
+export default function ReportProblemButton({ projectId, entityType, entityId }: { projectId: string, entityType?: 'milestone' | 'contract' | 'thread', entityId?: string }) {
+  const query = new URLSearchParams({ projectId, ...(entityType ? { entityType } : {}), ...(entityId ? { entityId } : {}) });
   return (
     <Link href={`/disputes/new?${query.toString()}`}>
-      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover:bg-red-700 text-sm">
-        {" "}
+      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm">
         Report a Problem
       </a>
     </Link>
-<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
-export default function ReportProblemButton({
-  projectId
-  entityType
-  entityId
-}: {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
-<<<<<<< HEAD
-);
-}
-export default function ReportProblemButton({
-  projectId,
-  entityType,
-  entityId,
-}: {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  projectId: string;
-  entityType?: "milestone" | "contract" | "thread";
-  entityId?: string;
-}) {
-  const query = new URLSearchParams({
-    projectId
-    ...(entityType ? { entityType } : {})
-    ...(entityId ? { entityId } : {})
+import Link from './next / link';
+;
+export default /**
+ * ReportProblemButton - Function description
+ */
+function ReportProblemButton() {
+  const query = new URLSearchParams ({
+    project_id,
+    ...(entity_type ? { entity_type } : {}),
+    ...(entity_id ? { entity_id } : {}),
   });
   return (
-    <Link href={`/disputes/new?${query.toString()}`}>
-      <a className="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-red-600 text-white hover: bg-red-700 text-sm"></a>
-    </Link>
-<<<<<<< HEAD
-  );
+    <Link href={`/disputes / new?${query.to_string ()}`}>;
+      <a className="inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover:bg - red - 700 text - sm">;
+        {" "}
+        Report a Problem;
+      </a>;
+    </Link>);
 }
-=======
-  );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default /**
+ * ReportProblemButton - Function description
+ */
+function ReportProblemButton() {
+  const query = new URLSearchParams ({
+    project_id,
+    ...(entity_type ? { entity_type } : {}),
+    ...(entity_id ? { entity_id } : {}),
+  });
+  return (
+    <Link href={`/disputes / new?${query.to_string ()}`}>;
+      <a className="inline - flex items - center gap - 2 px - 3 py - 2 rounded - md bg - red - 600 text - white hover: bg - red - 700 text - sm"></a>;
+    </Link>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

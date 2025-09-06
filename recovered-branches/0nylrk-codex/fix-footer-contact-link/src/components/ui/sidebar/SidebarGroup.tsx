@@ -1,57 +1,52 @@
-
 <<<<<<< HEAD
+
 import React from "react";
 <<<<<<< HEAD
 import { cn } from "@/lib/utils";
-=======
-import React from "react",
-import { cn } from "@/lib/utils",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 =======
 import {cn} from "@/lib/utils";
-=======
-import React from "react",
-import { cn } from "@/lib/utils",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string,
-  children?: React.ReactNode
+interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  className?: string;
+  children?: React && React.ReactNode;
 }
+<<<<<<< HEAD
 export function SidebarGroup({
   className
   children
   ...props
 }: SidebarGroupProps) {
+=======
+
+export function SidebarGroup(): any ({ className, children, ...props }: SidebarGroupProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-    <div className={cn("mb-4", className)} {...props}>
-<<<<<<< HEAD
-      {children}
-    </div>
-<<<<<<< HEAD
-  );
-}
-=======
-  )
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import React from "react",;
-import { cn } from "@/lib/utils",;
-interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {;
-  className?: string;
-  children?: React.ReactNode;
-}
-;
-export function SidebarGroup({ className, children, ...props }: SidebarGroupProps) {;
-  return (;
     <div className={cn("mb-4", className)} {...props}>;
       {children}
+<<<<<<< HEAD
+    </div>
+  );
+}
+=======
     </div>;
   );
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import React from './react';
+import { cn  } from '@/lib / utils';
+interface SidebarGroupProps extends React.HTMLAttributes < HTMLDivElement> {
+  class_name?: string;
+  children?: React.ReactNode;
+}
+export /**
+ * SidebarGroup - Function description
+ */
+function SidebarGroup() {
+  return (
+    <div className={cn ("mb - 4", class_name)} {...props}>;
+      {children}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

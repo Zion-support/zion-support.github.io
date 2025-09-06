@@ -1,43 +1,35 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {defineConfig} from 'vitest/config';
 import path from 'node: path'
 
 export default defineConfig({
-<<<<<<< HEAD
   resolve: {
     alias: {
+<<<<<<< HEAD
       '@': path.resolve(__dirname, './src')}}
   test: {
     environment: 'jsdom';
 
     setupFiles: './tests/setup.ts'
+=======
+      '@': path ;
+  test: {
+    environment: 'jsdom';
+    setupFiles: './tests/setup && setup.ts',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     globals: true}});
 
 =======
-  resolve: {;
-    alias: {;
-      '@': path.resolve(__dirname, './src')}};
+import {define_config} from 'vitest / config';
+import path from 'node: path',
+export default define_config ({
+  resolve: {
+    alias: {
+      '@': path.resolve (__dirname, './src')}}
   test: {
     environment: 'jsdom';
-    setupFiles: './tests/setup.ts',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { defineConfig } from 'vitest/config',;
-import path from 'node: path',;
-export default defineConfig({;
-  resolve: {;
-    alias: {;
-      '@': path.resolve(__dirname, './src')}},;
-  test: {;
-    environment: 'jsdom',;
-    setupFiles: './tests/setup.ts';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    setup_files: './tests / setup.ts',
     globals: true}});
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

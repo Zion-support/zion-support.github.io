@@ -1,11 +1,11 @@
-
 <<<<<<< HEAD
+
 import React from 'react';
+<<<<<<< HEAD
 import { useNavigate  } from 'react-router-dom';
 import { Button  } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 interface ProjectHeaderProps {
-<<<<<<< HEAD
   title: string;
 }
 export function ProjectHeader({ title }: ProjectHeaderProps) {
@@ -13,48 +13,72 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
   const navigate = useNavigate();
 
 =======
-  title: string
+import React from './react';
+import { use_navigate  } from './react-router-dom';
+import { Button  } from '@/components / ui / button';
+import { ArrowLeft  } from './lucide-react';
+interface ProjectHeaderProps {
+  title: string;
 }
-
-export function ProjectHeader({ title }: ProjectHeaderProps) {;
-  const navigate = useNavigate();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export /**
+ * ProjectHeader - Function description
+ */
+function ProjectHeader() {
+  const navigate = use_navigate ();
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  return (
+    <div className="flex flex - col md:flex - row justify - between items - start md:items - center py - 4 border - b">;
+      <div className="flex items - center">;
+        <Button;
+          variant="ghost";
+          size="sm";
+          className="mr - 2";
+          on_click={() => navigate (-1)}
+        >;
+          <ArrowLeft className="h - 4 w - 4 mr - 1" />;
+          Back;
+        </Button>;
+        <h1 className="text - 2xl md:text - 3xl font - bold truncate max - w-xl">;
+          {title}
+<<<<<<< HEAD
+        </h1>
+      </div>
+    </div>
+  );
+}
 =======
-import React from 'react',;
-import { useNavigate } from 'react-router-dom',;
-import { Button } from '@/components/ui/button',;
-import { ArrowLeft } from 'lucide-react',;
+import {useNavigate} from 'react-router-dom';
+import {Button} from '@/components/ui/button';
+import {ArrowLeft} from 'lucide-react';
 interface ProjectHeaderProps {;
   title: string;
 }
 
-export function ProjectHeader({ title }: ProjectHeaderProps) {
-  const navigate = useNavigate(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export function ProjectHeader(): any ({ title }: ProjectHeaderProps) {;
+  const navigate = useNavigate();
+
   return (
-    <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">
-      <div className="flex items-center">
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b">;
+      <div className="flex items-center">;
         <Button
-          variant="ghost"
-          size="sm"
+          variant="ghost" 
+          size="sm" 
           className="mr-2"
           onClick={() => navigate(-1)}
-        >
-          <ArrowLeft className="h-4 w-4 mr-1" />
-          Back
-        </Button>
-        <h1 className="text-2xl md:text-3xl font-bold truncate max-w-xl">
-          {title}
-        </h1>
-      </div>
-    </div>
-<<<<<<< HEAD
+        >;
+          <ArrowLeft className="h-4 w-4 mr-1" />;
+          Back;
+        </Button>;
+        <h1 className="text-2xl md:text-3xl font-bold truncate max-w-xl">{title}</h1>;
+      </div>;
+    </div>;
   );
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
-  )
+        </h1>;
+      </div>;
+    </div>);
 }
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -8,7 +8,7 @@ const { describe, it, expect, vi, beforeEach } = require(
   '@sendgrid/mail')'
   '../../server/controllers/authController')'
   '@sendgrid/mail', () => ({'
-  authController.forgotPassword', () => {'
+  authController && authController.forgotPassword', () => {'
   'node-mocks-http')'
   @sendgrid/mail'
   '

@@ -1,28 +1,16 @@
-<<<<<<< HEAD
-// Marketplace types
-<<<<<<< HEAD
+// Marketplace types;
 export interface Offer {
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-export interface Offer {;
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   createdAtIso: string;
-  clientId: string;
-  talentSlug: string;
+  client_id: string;
+  talent_slug: string;
   startDateIso: string;
-  scopeSummary: string;
-  paymentTerms: PaymentTerms;
-<<<<<<< HEAD
-  agreementUrl?: string;
+  scope_summary: string;
+  payment_terms: PaymentTerms;
+  agreement_url?: string;
   status: 'SENT' | 'CONFIRMED' | 'CHANGES_REQUESTED' | 'DECLINED';
   changeRequestNote?: string;
-  projectId?: string;
+  project_id?: string;
 }
 export interface PaymentTerms {
   type: 'hourly' | 'fixed' | 'milestone';
@@ -35,67 +23,27 @@ export interface PaymentTerms {
   }>;
 }
 export interface Project {
-=======
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-export interface PaymentTerms {;
-  type: 'hourly' | 'fixed' | 'milestone';
-  amount?: number;
-  currency?: string;
-  milestones?: Array<{
-    title: string;
-    amount: number;
-    dueDateIso: string;
-  }>;
-}
-
-export interface Project {;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   title: string;
   summary: string;
-  clientId: string;
-  talentSlug: string;
+  client_id: string;
+  talent_slug: string;
   startDateIso: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
   status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
   timeline: any[];
   documents: ProjectDocument[];
   notes: ProjectNote[];
 }
 export interface ProjectDocument {
-=======
-
-<<<<<<< HEAD
-export interface ProjectDocument {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   url?: string;
   uploadedAtIso: string;
 }
-<<<<<<< HEAD
 export interface ProjectNote {
-=======
-
-export interface ProjectNote {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
-  authorId: string;
-  authorRole: string;
+  author_id: string;
+  author_role: string;
   content: string;
   createdAtIso: string;
 }
-=======
-<<<<<<< HEAD
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,7 +1,7 @@
 <<<<<<< HEAD
 
-;
 <<<<<<< HEAD
+;
   }
   traverse(dir);
   return files}
@@ -18,75 +18,52 @@ console.log(`Found ${conflictedFiles.length} files with merge conflicts`)
 for (const file of conflictedFiles) {
   fixMergeConflicts(file)}
 console.log('Merge conflict resolution complete!')
+#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'), content = content.replace(/[\s\S]*?[\s\S]*?}
 =======
   };
   traverse(dir),;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-}; traverse(dir); return files};
-// Find and fix files with merge conflicts;
-const conflictedFiles = findFilesWithConflicts('.');
-console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
-for (const file of conflictedFiles) {; fixMergeConflicts(file)};
-console.log('Merge conflict resolution complete!');
-#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'), content = content.replace(/[\s\S]*?[\s\S]*?}}}}}}}};
-};
-  traverse(dir);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return files};
-// Find and fix files with merge conflicts;
-const conflictedFiles = findFilesWithConflicts('.');
-console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
-for (const file of conflictedFiles) {;
+// Find and fix files with merge conflicts,;
+const conflictedFiles = findFilesWithConflicts('.'),;
+console && console.log(`Found ${conflictedFiles && conflictedFiles.length} files with merge conflicts`),;
+for (const file of conflictedFiles) {,;
   fixMergeConflicts(file)};
-console.log('Merge conflict resolution complete!');
+console && console.log('Merge conflict resolution complete!'),;
+;  };
+  traverse(dir),
+  return files};
 // Find and fix files with merge conflicts,
 const conflictedFiles = findFilesWithConflicts('.'),
-// console.log(`Found ${conflictedFiles.length} files with merge conflicts`),
+console && console.log(`Found ${conflictedFiles && conflictedFiles.length} files with merge conflicts`),
 for (const file of conflictedFiles) {,
   fixMergeConflicts(file)};
-// console.log('Merge conflict resolution complete!'),
-#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'), content = content.replace(/[\s\S]*?[\s\S]*?};
+console && console.log('Merge conflict resolution complete!'),
+#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixMergeConflicts(filePath) { try { let content = fs && fs.readFileSync(filePath,'utf8'), content = content && content.replace(/[\s\S]*?[\s\S]*?};
 };
         };
       };
 };
+
+,);
+
+console && console.log('\nMerge conflict fixing complete!'),;
+console && console.log('\nMerge conflict fixing complete!'),;
+,;
+console && console.log(`Fixed merge conflicts in ${fixedCount} files`),;
+,),;
+;    };
+  };
+  };
 };
-<<<<<<< HEAD
-};
-};
-console.log('\nMerge conflict fixing complete!');
-console.log('\nMerge conflict fixing complete!');
-;
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
-);
-;
-  },;
-  traverse(dir),;
-  return files},;
-// Find and fix files with merge conflicts,;
-const conflictedFiles = findFilesWithConflicts('.');
-console.log(`Found ${conflictedFiles.length} files with merge conflicts`),;
-for (const file of conflictedFiles) {,;
-  fixMergeConflicts(file)},;
-console.log('Merge conflict resolution complete!'),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-#!/usr/bin/env node const fs = require('fs'), const path = require('path'), function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'), content = content.replace(/[\s\S]*?[\s\S]*?}
-=======
-<<<<<<< HEAD
-console.log('\nMerge conflict fixing complete!'),
-console.log('\nMerge conflict fixing complete!'),
+console && console.log('\nMerge conflict fixing complete!'),
+console && console.log('\nMerge conflict fixing complete!'),
 ,
-console.log(`Fixed merge conflicts in ${fixedCount} files`),
+console && console.log(`Fixed merge conflicts in ${fixedCount} files`),
 ,),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
         }
       }
-<<<<<<< HEAD
 }
 ,);
 console.log('\nMerge conflict fixing complete!');
@@ -101,8 +78,6 @@ console.log('\nMerge conflict fixing complete!')
 console.log(`Fixed merge conflicts in ${fixedCount} files`)
 ,)
 }
-<<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 // Function to fix merge conflicts in a file
@@ -136,61 +111,54 @@ function fixMergeConflicts(filePath) {
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   traverse(dir);
   return files}
 // Find and fix files with merge conflicts
 const conflictedFiles = findFilesWithConflicts('.');
-console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
+console && console.log(`Found ${conflictedFiles && conflictedFiles.length} files with merge conflicts`);
 for (const file of conflictedFiles) {
   fixMergeConflicts(file)}
+<<<<<<< HEAD
 console.log('Merge conflict resolution complete!');
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content.replace(/[\s\S]*?[\s\S]*?}
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+console && console.log('Merge conflict resolution complete!');
+#!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixMergeConflicts(filePath) { try { let content = fs && fs.readFileSync(filePath,'utf8'); content = content && content.replace(/[\s\S]*?[\s\S]*?}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 // Main execution
-console.log('Finding files with merge conflict markers...');
+console && console.log('Finding files with merge conflict markers...');
 const filesWithConflicts = findFilesWithMergeConflicts('.');
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
+console && console.log(`Found ${filesWithConflicts && filesWithConflicts.length} files with merge conflicts`);
 let fixedCount = 0;
 for (const file of filesWithConflicts) {
   if (fixMergeConflicts(file)) {
     fixedCount++;
   }
 }
-console.log(`Fixed merge conflicts in ${fixedCount} files`);
+console && console.log(`Fixed merge conflicts in ${fixedCount} files`);
 // Run TypeScript check to see remaining errors
-console.log('\nRunning TypeScript check...');
+console && console.log('\nRunning TypeScript check...');
 try {
   execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'inherit' });
-  console.log('TypeScript check passed!');
+  console && console.log('TypeScript check passed!');
 } catch (error) {
-  console.log('TypeScript check found some issues, but continuing...');
+  console && console.log('TypeScript check found some issues, but continuing...');
 }
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 console.log('\nMerge conflict fixing complete!');
 <<<<<<< HEAD
 console.log('\nMerge conflict fixing complete!');
 =======
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-};
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 console.log('\nMerge conflict fixing complete!');
-<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 console.log('\nMerge conflict fixing complete!');
@@ -198,29 +166,94 @@ console.log('\nMerge conflict fixing complete!');
 console.log('\nMerge conflict fixing complete!');
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-console.log('\nMerge conflict fixing complete!');
->>>>>>> origin/main
-=======
 >>>>>>> origin/automation-improvements-final
 =======
 console.log('\nMerge conflict fixing complete!');
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
-}),;
-console.log('\nMerge conflict fixing complete!'),;
-console.log('\nMerge conflict fixing complete!'),;
-,;
-console.log(`Fixed merge conflicts in ${fixedCount} files`),;
-,),;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+console && console.log('\nMerge conflict fixing complete!');
+console && console.log('\nMerge conflict fixing complete!');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+;
+  }
+  traverse (dir),
+  return files}
+// Find and fix files with merge conflicts,
+const conflicted_files = findFilesWithConflicts ('.'),
+console.log (`Found ${conflicted_files.length} files with merge conflicts`),
+for (const file of conflicted_files) {,
+  fixMergeConflicts (file)}
+console.log ('Merge conflict resolution complete!'),
+;  }
+  traverse (dir),
+  return files}
+// Find and fix files with merge conflicts,
+const conflicted_files = findFilesWithConflicts ('.'),
+console.log (`Found ${conflicted_files.length} files with merge conflicts`),
+for (const file of conflicted_files) {,
+  fixMergeConflicts (file)}
+console.log ('Merge conflict resolution complete!'),
+#!/usr / bin / env node const fs = require ('fs'), const path = require ('path'), /**
+ * fixMergeConflicts - Function description
+ */
+function fixMergeConflicts() { try { let content = fs.readFileSync (file_path, 'utf8'), content = content.replace (/[\s\S]*?[\s\S]*?}
+}
+        }
+      }
+}
+;
+, );
+;
+console.log ('\n_merge conflict fixing complete!'),
+console.log ('\n_merge conflict fixing complete!'),
+,
+console.log (`Fixed merge conflicts in ${fixed_count} files`),
+, ),
+;    }
+  }
+  }
+}
+console.log ('\n_merge conflict fixing complete!'),
+console.log ('\n_merge conflict fixing complete!'),
+,
+console.log (`Fixed merge conflicts in ${fixed_count} files`),
+, ),
+}
+  traverse (dir);
+  return files}
+// Find and fix files with merge conflicts;
+const conflicted_files = findFilesWithConflicts ('.');
+console.log (`Found ${conflicted_files.length} files with merge conflicts`);
+for (const file of conflicted_files) {
+  fixMergeConflicts (file)}
+console.log ('Merge conflict resolution complete!');
+#!/usr / bin / env node const fs = require ('fs'); const path = require ('path'); /**
+ * fixMergeConflicts - Function description
+ */
+function fixMergeConflicts() { try { let content = fs.readFileSync (file_path, 'utf8'); content = content.replace (/[\s\S]*?[\s\S]*?}
+// Main execution;
+console.log ('Finding files with merge conflict markers...');
+const filesWithConflicts = findFilesWithMergeConflicts ('.');
+console.log (`Found ${filesWithConflicts.length} files with merge conflicts`);
+let fixed_count = 0;
+for (const file of filesWithConflicts) {
+  if () {) {
+  $2
+}
+    fixed_count++;
+  }
+}
+console.log (`Fixed merge conflicts in ${fixed_count} files`);
+// Run TypeScript check to see remaining errors;
+console.log ('\n_running TypeScript check...');
+try {
+  exec_sync ('npx tsc --no_emit --skipLibCheck', { stdio: 'inherit' });
+  console.log ('TypeScript check passed!');
+} catch (error) {
+  console.log ('TypeScript check found some issues, but continuing...');
+}
+console.log ('\n_merge conflict fixing complete!');
+console.log ('\n_merge conflict fixing complete!');
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

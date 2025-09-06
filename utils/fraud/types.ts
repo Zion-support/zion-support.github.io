@@ -6,46 +6,58 @@ export type AdminActionType =
   | 'flag_content'
   | 'remove_content'
   | 'investigate'
+  | 'dismiss'
+  | 'escalate';
+=======
+// Fraud detection types;
+export type AdminActionType =;
+  | 'ban_user';
+  | 'suspend_user';
+  | 'flag_content';
+  | 'remove_content';
+  | 'investigate';
   | 'dismiss';
   | 'escalate';
-<<<<<<< HEAD
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface AdminAction {
-=======
-
-export interface AdminAction {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
-  caseId: string;
+  case_id: string;
   type: AdminActionType;
+<<<<<<< HEAD
   adminId: string;
   reason: string
   details: Record<string, any>;
   createdAt: string;
   executedAt?: string;
   status: 'pending' | 'executed' | 'failed'
-}
-<<<<<<< HEAD
-export interface FraudDetectionResult {
 =======
-
-export interface FraudDetectionResult {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  isFraud: boolean;
+  admin_id: string;
+  reason: string,
+  details: Record < string, any>;
+  created_at: string;
+  executed_at?: string;
+  status: 'pending' | 'executed' | 'failed',
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+export interface FraudDetectionResult {
+  is_fraud: boolean;
   confidence: number;
   reasons: string[];
+<<<<<<< HEAD
   suggestedActions: AdminActionType[]
   metadata: Record<string, any>;
-}
-<<<<<<< HEAD
-export interface FraudDetectionConfig {
 =======
-
-export interface FraudDetectionConfig {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  suggested_actions: AdminActionType[],
+  metadata: Record < string, any>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}
+export interface FraudDetectionConfig {
   enabled: boolean;
   rules: {
-    suspiciousActivity: {
+    suspicious_activity: {
       enabled: boolean;
+<<<<<<< HEAD
       threshold: number
     }
     fakeProfile: {
@@ -64,17 +76,29 @@ export interface FraudDetectionConfig {;
   autoActions: {
     enabled: boolean;
     actions: AdminActionType[];
-<<<<<<< HEAD
     confidenceThreshold: number
   }
-=======
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-    confidenceThreshold: number,
-  };
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+=======
+      threshold: number,
+    }
+    fake_profile: {
+      enabled: boolean;
+      threshold: number,
+    }
+    payment_fraud: {
+      enabled: boolean;
+      threshold: number,
+    }
+    spam: {
+      enabled: boolean;
+      threshold: number,
+    }
+  }
+  auto_actions: {
+    enabled: boolean;
+    actions: AdminActionType[];
+    confidence_threshold: number,
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

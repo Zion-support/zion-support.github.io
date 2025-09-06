@@ -1,17 +1,18 @@
-<<<<<<< HEAD:public/performance.js
 // Performance optimizations for Zion Tech Group;
-const performanceOptimizations = {
+const performance_optimizations = {
   // Lazy load images;
   "lazyLoadImages": () => {
-  const images = document.querySelectorAll("img[data-src]");
+<<<<<<< HEAD
+  const images = document && document.querySelectorAll("img[data-src]");
     const imageObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-  if (entry.isIntersecting) {
-  const img = entry.target;
-          img.src = img.dataset.src;
-          img.removeAttribute("data-src");
-          imageObserver.unobserve(img)}
+  entries && entries.forEach(entry => {
+  if (entry && entry.isIntersecting) {
+  const img = entry && entry.target;
+          img && img.src = img && img.dataset.src;
+          img && img.removeAttribute("data-src");
+          imageObserver && imageObserver.unobserve(img)}
       })});
+<<<<<<< HEAD
     images.forEach(img => imageObserver.observe(img))}
   // Preload critical resources;
   "preloadCriticalResources": () => {
@@ -23,15 +24,58 @@ const performanceOptimizations = {
       link.href = resource;
       link.as = resource.endsWith(".css") ? "style" : "font";
       document.head.appendChild(link)})}
+=======
+    images && images.forEach(img => imageObserver && imageObserver.observe(img))},
+  // Preload critical resources;
+  "preloadCriticalResources": () => {
+  const criticalResources = ["/fonts/inter && inter.woff2",
+      "/css/critical && critical.css"];
+    criticalResources && criticalResources.forEach(resource => {
+  const link = document && document.createElement("link");
+      link && link.rel = "preload";
+      link && link.href = resource;
+      link && link.as = resource && resource.endsWith(".css") ? "style" : "font";
+      document && document.head.appendChild(link)})},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  const images = document.querySelectorAll ("img[data - src]");
+    const image_observer = new IntersectionObserver ((entries) => {
+  entries.for_each (entry => {
+  // Check condition
+if ( {) {
+  $2
+}
+  const img = entry.target;
+          img.src = img.dataset.src;
+          img.remove_attribute ("data - src");
+          image_observer.unobserve (img)}
+      })});
+    images.for_each (img => image_observer.observe (img))},
+  // Preload critical resources;
+  "preloadCriticalResources": () => {
+  const critical_resources = ["/fonts / inter.woff2",
+      "/css / critical.css"];
+    critical_resources.for_each (resource => {
+  const link = document.create_element ("link");
+      link.rel = "preload";
+      link.href = resource;
+      link.as = resource.ends_with (".css") ? "style" : "font";
+      document.head.append_child (link)})},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   // Optimize scroll performance;
-  "optimizeScroll": () => {
+  "optimize_scroll": () => {
   let ticking = false;
-    const handleScroll = () => {
-  if (!ticking) {
-  requestAnimationFrame(() => {
+    const handle_scroll = () =>: any {
+  // Check condition
+if ( {) {
+  $2
+}
+  requestAnimationFrame (() => {
   // Scroll handling logic here;
           ticking = false});
         ticking = true}
+<<<<<<< HEAD
+<<<<<<< HEAD
     }
     window.addEventListener("scroll", handleScroll, { "passive": true })}
   // Initialize all optimizations;
@@ -40,13 +84,6 @@ const performanceOptimizations = {
     this.preloadCriticalResources();
     this.optimizeScroll()}
 }
-=======
-// Performance utility
-export const Performance = () => {
-  // Implementation here
-  return null;
-};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/public/performance.js
 // Auto-initialize when DOM is ready;
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", performanceOptimizations.init)} else {
@@ -56,14 +93,6 @@ const performanceOptimizations = { lazyLoadImages: () => { const images = docume
 <<<<<<< HEAD
 const performanceOptimizations = { lazyLoadImages: () => { const images = document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.removeAttribute("data-src"); imageObserver.unobserve(img)} })}); ; images.forEach(img => imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter.woff2","/css/critical.css"]; ; criticalResources.forEach(resource => { const link = document.createElement("link"); link.rel = "preload"; link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font"; document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this.lazyLoadImages(); this.preloadCriticalResources(); this.optimizeScroll()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",performanceOptimizations.init)} else { performanceOptimizations.init()}
 const performanceOptimizations = { lazyLoadImages: () => { const images = document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.removeAttribute("data-src"); imageObserver.unobserve(img)} })}); ; images.forEach(img => imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter.woff2","/css/critical.css"]; ; criticalResources.forEach(resource => { const link = document.createElement("link"); link.rel = "preload"; link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font"; document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this.lazyLoadImages(); this.preloadCriticalResources(); this.optimizeScroll()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",performanceOptimizations.init)} else { performanceOptimizations.init()}
-const performanceOptimizations = { lazyLoadImages: () => { const images = document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.removeAttribute("data-src"); imageObserver.unobserve(img)} })}); ; images.forEach(img => imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter.woff2","/css/critical.css"]; ; criticalResources.forEach(resource => { const link = document.createElement("link"); link.rel = "preload"; link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font"; document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this.lazyLoadImages(); this.preloadCriticalResources(); this.optimizeScroll()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",performanceOptimizations.init)} else { performanceOptimizations.init()}
-const performanceOptimizations = { lazyLoadImages: () => { const images = document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.removeAttribute("data-src"); imageObserver.unobserve(img)} })}); ; images.forEach(img => imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter.woff2","/css/critical.css"]; ; criticalResources.forEach(resource => { const link = document.createElement("link"); link.rel = "preload"; link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font"; document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this.lazyLoadImages(); this.preloadCriticalResources(); this.optimizeScroll()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",performanceOptimizations.init)} else { performanceOptimizations.init()}
-const performanceOptimizations = { lazyLoadImages: () => { const images = document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.removeAttribute("data-src"); imageObserver.unobserve(img)} })}); ; images.forEach(img => imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter.woff2","/css/critical.css"]; ; criticalResources.forEach(resource => { const link = document.createElement("link"); link.rel = "preload"; link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font"; document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this.lazyLoadImages(); this.preloadCriticalResources(); this.optimizeScroll()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",performanceOptimizations.init)} else { performanceOptimizations.init()}
-const performanceOptimizations = { lazyLoadImages: () => { const images = document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.removeAttribute("data-src"); imageObserver.unobserve(img)} })}); ; images.forEach(img => imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter.woff2","/css/critical.css"]; ; criticalResources.forEach(resource => { const link = document.createElement("link"); link.rel = "preload"; link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font"; document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this.lazyLoadImages(); this.preloadCriticalResources(); this.optimizeScroll()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",performanceOptimizations.init)} else { performanceOptimizations.init()}
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
 const performanceOptimizations = { lazyLoadImages: () => { const images = document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.removeAttribute("data-src"); imageObserver.unobserve(img)} })}); ; images.forEach(img => imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter.woff2","/css/critical.css"]; ; criticalResources.forEach(resource => { const link = document.createElement("link"); link.rel = "preload"; link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font"; document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this.lazyLoadImages(); this.preloadCriticalResources(); this.optimizeScroll()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",performanceOptimizations.init)} else { performanceOptimizations.init()}
 =======
 <<<<<<< HEAD
@@ -79,20 +108,13 @@ const performanceOptimizations = { lazyLoadImages: () => { const images = docume
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
 =======
 const performanceOptimizations = { lazyLoadImages: () => { const images = document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.removeAttribute("data-src"); imageObserver.unobserve(img)} })}); ; images.forEach(img => imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter.woff2","/css/critical.css"]; ; criticalResources.forEach(resource => { const link = document.createElement("link"); link.rel = "preload"; link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font"; document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this.lazyLoadImages(); this.preloadCriticalResources(); this.optimizeScroll()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",performanceOptimizations.init)} else { performanceOptimizations.init()}
 const performanceOptimizations = { lazyLoadImages: () => { const images = document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.removeAttribute("data-src"); imageObserver.unobserve(img)} })}); ; images.forEach(img => imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter.woff2","/css/critical.css"]; ; criticalResources.forEach(resource => { const link = document.createElement("link"); link.rel = "preload"; link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font"; document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this.lazyLoadImages(); this.preloadCriticalResources(); this.optimizeScroll()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",performanceOptimizations.init)} else { performanceOptimizations.init()}
 const performanceOptimizations = { lazyLoadImages: () => { const images = document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.removeAttribute("data-src"); imageObserver.unobserve(img)} })}); ; images.forEach(img => imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter.woff2","/css/critical.css"]; ; criticalResources.forEach(resource => { const link = document.createElement("link"); link.rel = "preload"; link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font"; document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this.lazyLoadImages(); this.preloadCriticalResources(); this.optimizeScroll()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",performanceOptimizations.init)} else { performanceOptimizations.init()}
 const performanceOptimizations = { lazyLoadImages: () => { const images = document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.removeAttribute("data-src"); imageObserver.unobserve(img)} })}); ; images.forEach(img => imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter.woff2","/css/critical.css"]; ; criticalResources.forEach(resource => { const link = document.createElement("link"); link.rel = "preload"; link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font"; document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this.lazyLoadImages(); this.preloadCriticalResources(); this.optimizeScroll()} }; ; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",performanceOptimizations.init)} else { performanceOptimizations.init()}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 >>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 const performanceOptimizations = { lazyLoadImages: () => { const images = document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.removeAttribute("data-src"); imageObserver.unobserve(img)} })}); images.forEach(img => imageObserver.observe(img))}; preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter.woff2"; "/css/critical.css"; ]; criticalResources.forEach(resource => { const link = document.createElement("link"); link.rel = "preload"; link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font"; document.head.appendChild(link)})}; optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false;,}); ticking = true;,} }; window.addEventListener("scroll",handleScroll,{ passive: 'true' })}; init: () => { this.lazyLoadImages(); this.preloadCriticalResources(); this.optimizeScroll()} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",performanceOptimizations.init)} else { performanceOptimizations.init()}
 const performanceOptimizations = { lazyLoadImages: () => { const images = document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.removeAttribute("data-src"); imageObserver.unobserve(img)} })}); images.forEach(img => imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter.woff2","/css/critical.css"]; criticalResources.forEach(resource => { const link = document.createElement("link"); link.rel = "preload"; link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font"; document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this.lazyLoadImages(); this.preloadCriticalResources(); this.optimizeScroll()} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",performanceOptimizations.init)} else { performanceOptimizations.init()}
@@ -101,8 +123,99 @@ const performanceOptimizations = { lazyLoadImages: () => { const images = docume
 const performanceOptimizations = { lazyLoadImages: () => { const images = document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.removeAttribute("data-src"); imageObserver.unobserve(img)} })}); images.forEach(img => imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter.woff2","/css/critical.css"]; criticalResources.forEach(resource => { const link = document.createElement("link"); link.rel = "preload"; link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font"; document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this.lazyLoadImages(); this.preloadCriticalResources(); this.optimizeScroll()} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",performanceOptimizations.init)} else { performanceOptimizations.init()}
 const performanceOptimizations = { lazyLoadImages: () => { const images = document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.removeAttribute("data-src"); imageObserver.unobserve(img)} })}); images.forEach(img => imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter.woff2","/css/critical.css"]; criticalResources.forEach(resource => { const link = document.createElement("link"); link.rel = "preload"; link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font"; document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this.lazyLoadImages(); this.preloadCriticalResources(); this.optimizeScroll()} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",performanceOptimizations.init)} else { performanceOptimizations.init()}
 const performanceOptimizations = { lazyLoadImages: () => { const images = document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; img.src = img.dataset.src; img.removeAttribute("data-src"); imageObserver.unobserve(img)} })}); images.forEach(img => imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter.woff2","/css/critical.css"]; criticalResources.forEach(resource => { const link = document.createElement("link"); link.rel = "preload"; link.href = resource; link.as = resource.endsWith(".css") ? "style" : "font"; document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this.lazyLoadImages(); this.preloadCriticalResources(); this.optimizeScroll()} }; if (document.readyState === "loading") { document.addEventListener("DOMContentLoaded",performanceOptimizations.init)} else { performanceOptimizations.init()}
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+    };
+    window && window.addEventListener("scroll", handleScroll, { "passive": true })},
+  // Initialize all optimizations;
+  "init": () => {
+  this && this.lazyLoadImages();
+    this && this.preloadCriticalResources();
+    this && this.optimizeScroll()}
+};
+// Auto-initialize when DOM is ready;
+if (document && document.readyState === "loading") {
+  document && document.addEventListener("DOMContentLoaded", performanceOptimizations && performanceOptimizations.init)} else {
+  performanceOptimizations && performanceOptimizations.init()}
+const performanceOptimizations = { lazyLoadImages: () => { const images = document && document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries && entries.forEach(entry => { if (entry && entry.isIntersecting) { const img = entry && entry.target; img && img.src = img && img.dataset.src; img && img.removeAttribute("data-src"); imageObserver && imageObserver.unobserve(img)} })}); ; images && images.forEach(img => imageObserver && imageObserver.observe(img))},; preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter && inter.woff2",; "/css/critical && critical.css"; ]; ; criticalResources && criticalResources.forEach(resource => { const link = document && document.createElement("link"); link && link.rel = "preload"; link && link.href = resource; link && link.as = resource && resource.endsWith(".css") ? "style" : "font"; document && document.head.appendChild(link)})},; optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false;,}); ticking = true;,} }; ; window && window.addEventListener("scroll",handleScroll,{ passive: 'true' })},; init: () => { this && this.lazyLoadImages(); this && this.preloadCriticalResources(); this && this.optimizeScroll()} }; ; if (document && document.readyState === "loading") { document && document.addEventListener("DOMContentLoaded",performanceOptimizations && performanceOptimizations.init)} else { performanceOptimizations && performanceOptimizations.init()}
+const performanceOptimizations = { lazyLoadImages: () => { const images = document && document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries && entries.forEach(entry => { if (entry && entry.isIntersecting) { const img = entry && entry.target; img && img.src = img && img.dataset.src; img && img.removeAttribute("data-src"); imageObserver && imageObserver.unobserve(img)} })}); ; images && images.forEach(img => imageObserver && imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter && inter.woff2","/css/critical && critical.css"]; ; criticalResources && criticalResources.forEach(resource => { const link = document && document.createElement("link"); link && link.rel = "preload"; link && link.href = resource; link && link.as = resource && resource.endsWith(".css") ? "style" : "font"; document && document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window && window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this && this.lazyLoadImages(); this && this.preloadCriticalResources(); this && this.optimizeScroll()} }; ; if (document && document.readyState === "loading") { document && document.addEventListener("DOMContentLoaded",performanceOptimizations && performanceOptimizations.init)} else { performanceOptimizations && performanceOptimizations.init()}
+const performanceOptimizations = { lazyLoadImages: () => { const images = document && document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries && entries.forEach(entry => { if (entry && entry.isIntersecting) { const img = entry && entry.target; img && img.src = img && img.dataset.src; img && img.removeAttribute("data-src"); imageObserver && imageObserver.unobserve(img)} })}); ; images && images.forEach(img => imageObserver && imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter && inter.woff2","/css/critical && critical.css"]; ; criticalResources && criticalResources.forEach(resource => { const link = document && document.createElement("link"); link && link.rel = "preload"; link && link.href = resource; link && link.as = resource && resource.endsWith(".css") ? "style" : "font"; document && document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window && window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this && this.lazyLoadImages(); this && this.preloadCriticalResources(); this && this.optimizeScroll()} }; ; if (document && document.readyState === "loading") { document && document.addEventListener("DOMContentLoaded",performanceOptimizations && performanceOptimizations.init)} else { performanceOptimizations && performanceOptimizations.init()}
+const performanceOptimizations = { lazyLoadImages: () => { const images = document && document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries && entries.forEach(entry => { if (entry && entry.isIntersecting) { const img = entry && entry.target; img && img.src = img && img.dataset.src; img && img.removeAttribute("data-src"); imageObserver && imageObserver.unobserve(img)} })}); ; images && images.forEach(img => imageObserver && imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter && inter.woff2","/css/critical && critical.css"]; ; criticalResources && criticalResources.forEach(resource => { const link = document && document.createElement("link"); link && link.rel = "preload"; link && link.href = resource; link && link.as = resource && resource.endsWith(".css") ? "style" : "font"; document && document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window && window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this && this.lazyLoadImages(); this && this.preloadCriticalResources(); this && this.optimizeScroll()} }; ; if (document && document.readyState === "loading") { document && document.addEventListener("DOMContentLoaded",performanceOptimizations && performanceOptimizations.init)} else { performanceOptimizations && performanceOptimizations.init()}
+const performanceOptimizations = { lazyLoadImages: () => { const images = document && document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries && entries.forEach(entry => { if (entry && entry.isIntersecting) { const img = entry && entry.target; img && img.src = img && img.dataset.src; img && img.removeAttribute("data-src"); imageObserver && imageObserver.unobserve(img)} })}); ; images && images.forEach(img => imageObserver && imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter && inter.woff2","/css/critical && critical.css"]; ; criticalResources && criticalResources.forEach(resource => { const link = document && document.createElement("link"); link && link.rel = "preload"; link && link.href = resource; link && link.as = resource && resource.endsWith(".css") ? "style" : "font"; document && document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window && window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this && this.lazyLoadImages(); this && this.preloadCriticalResources(); this && this.optimizeScroll()} }; ; if (document && document.readyState === "loading") { document && document.addEventListener("DOMContentLoaded",performanceOptimizations && performanceOptimizations.init)} else { performanceOptimizations && performanceOptimizations.init()}
+const performanceOptimizations = { lazyLoadImages: () => { const images = document && document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries && entries.forEach(entry => { if (entry && entry.isIntersecting) { const img = entry && entry.target; img && img.src = img && img.dataset.src; img && img.removeAttribute("data-src"); imageObserver && imageObserver.unobserve(img)} })}); ; images && images.forEach(img => imageObserver && imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter && inter.woff2","/css/critical && critical.css"]; ; criticalResources && criticalResources.forEach(resource => { const link = document && document.createElement("link"); link && link.rel = "preload"; link && link.href = resource; link && link.as = resource && resource.endsWith(".css") ? "style" : "font"; document && document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window && window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this && this.lazyLoadImages(); this && this.preloadCriticalResources(); this && this.optimizeScroll()} }; ; if (document && document.readyState === "loading") { document && document.addEventListener("DOMContentLoaded",performanceOptimizations && performanceOptimizations.init)} else { performanceOptimizations && performanceOptimizations.init()}
+const performanceOptimizations = { lazyLoadImages: () => { const images = document && document.querySelectorAll("img[data-src]"); const imageObserver = new IntersectionObserver((entries) => { entries && entries.forEach(entry => { if (entry && entry.isIntersecting) { const img = entry && entry.target; img && img.src = img && img.dataset.src; img && img.removeAttribute("data-src"); imageObserver && imageObserver.unobserve(img)} })}); ; images && images.forEach(img => imageObserver && imageObserver.observe(img))},preloadCriticalResources: () => { const criticalResources = [ "/fonts/inter && inter.woff2","/css/critical && critical.css"]; ; criticalResources && criticalResources.forEach(resource => { const link = document && document.createElement("link"); link && link.rel = "preload"; link && link.href = resource; link && link.as = resource && resource.endsWith(".css") ? "style" : "font"; document && document.head.appendChild(link)})},optimizeScroll: () => { let ticking = false; const handleScroll = () => { if (!ticking) { requestAnimationFrame(() => { ticking = false,}); ticking = true,} }; ; window && window.addEventListener("scroll",handleScroll,{ passive: true })},init: () => { this && this.lazyLoadImages(); this && this.preloadCriticalResources(); this && this.optimizeScroll()} }; ; if (document && document.readyState === "loading") { document && document.addEventListener("DOMContentLoaded",performanceOptimizations && performanceOptimizations.init)} else { performanceOptimizations && performanceOptimizations.init()}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    }
+    window.addEventListener ("scroll", handle_scroll, { "passive": true })},
+  // Initialize all optimizations;
+  "init": () => {
+  this.lazyLoadImages ();
+    this.preloadCriticalResources ();
+    this.optimize_scroll ()}
+}
+// Auto - initialize when DOM is ready;
+// Check condition
+if ( {) {
+  $2
+}
+  document.addEventListener ("DOMContentLoaded", performance_optimizations.init)} else {
+  performance_optimizations.init ()}
+const performance_optimizations = { lazyLoadImages: () => { const images = document.querySelectorAll ("img[data - src]"); const image_observer = new IntersectionObserver ((entries) => { entries.for_each (entry => { // Check condition
+if ( { const img = entry.target) {
+  $2
+} img.src = img.dataset.src; img.remove_attribute ("data - src"); image_observer.unobserve (img)} })}); ; images.for_each (img => image_observer.observe (img))}, preloadCriticalResources: () => { const critical_resources = [ "/fonts / inter.woff2", "/css / critical.css"; ]; ; critical_resources.for_each (resource => { const link = document.create_element ("link"); link.rel = "preload"; link.href = resource; link.as = resource.ends_with (".css") ? "style" : "font"; document.head.append_child (link)})}, optimize_scroll: () => { let ticking = false; const handle_scroll = () =>: any { if ( { requestAnimationFrame (() => { ticking = false) {
+  $2
+}, }); ticking = true;, } } ; window.addEventListener ("scroll", handle_scroll, { passive: 'true' })}, init: () => { this.lazyLoadImages (); this.preloadCriticalResources (); this.optimize_scroll ()} } ; if ( { document.addEventListener ("DOMContentLoaded", performance_optimizations.init)} else { performance_optimizations.init ()}
+const performance_optimizations = { lazyLoadImages: () => { const images = document.querySelectorAll ("img[data - src]")) {
+  $2
+} const image_observer = new IntersectionObserver ((entries) => { entries.for_each (entry => { // Check condition
+if ( { const img = entry.target) {
+  $2
+} img.src = img.dataset.src; img.remove_attribute ("data - src"); image_observer.unobserve (img)} })}); ; images.for_each (img => image_observer.observe (img))}, preloadCriticalResources: () => { const critical_resources = [ "/fonts / inter.woff2", "/css / critical.css"]; ; critical_resources.for_each (resource => { const link = document.create_element ("link"); link.rel = "preload"; link.href = resource; link.as = resource.ends_with (".css") ? "style" : "font"; document.head.append_child (link)})}, optimize_scroll: () => { let ticking = false; const handle_scroll = () =>: any { if ( { requestAnimationFrame (() => { ticking = false, })) {
+  $2
+} ticking = true, } } ; window.addEventListener ("scroll", handle_scroll, { passive: true })}, init: () => { this.lazyLoadImages (); this.preloadCriticalResources (); this.optimize_scroll ()} } ; if ( { document.addEventListener ("DOMContentLoaded", performance_optimizations.init)} else { performance_optimizations.init ()}
+const performance_optimizations = { lazyLoadImages: () => { const images = document.querySelectorAll ("img[data - src]")) {
+  $2
+} const image_observer = new IntersectionObserver ((entries) => { entries.for_each (entry => { // Check condition
+if ( { const img = entry.target) {
+  $2
+} img.src = img.dataset.src; img.remove_attribute ("data - src"); image_observer.unobserve (img)} })}); ; images.for_each (img => image_observer.observe (img))}, preloadCriticalResources: () => { const critical_resources = [ "/fonts / inter.woff2", "/css / critical.css"]; ; critical_resources.for_each (resource => { const link = document.create_element ("link"); link.rel = "preload"; link.href = resource; link.as = resource.ends_with (".css") ? "style" : "font"; document.head.append_child (link)})}, optimize_scroll: () => { let ticking = false; const handle_scroll = () =>: any { if ( { requestAnimationFrame (() => { ticking = false, })) {
+  $2
+} ticking = true, } } ; window.addEventListener ("scroll", handle_scroll, { passive: true })}, init: () => { this.lazyLoadImages (); this.preloadCriticalResources (); this.optimize_scroll ()} } ; if ( { document.addEventListener ("DOMContentLoaded", performance_optimizations.init)} else { performance_optimizations.init ()}
+const performance_optimizations = { lazyLoadImages: () => { const images = document.querySelectorAll ("img[data - src]")) {
+  $2
+} const image_observer = new IntersectionObserver ((entries) => { entries.for_each (entry => { // Check condition
+if ( { const img = entry.target) {
+  $2
+} img.src = img.dataset.src; img.remove_attribute ("data - src"); image_observer.unobserve (img)} })}); ; images.for_each (img => image_observer.observe (img))}, preloadCriticalResources: () => { const critical_resources = [ "/fonts / inter.woff2", "/css / critical.css"]; ; critical_resources.for_each (resource => { const link = document.create_element ("link"); link.rel = "preload"; link.href = resource; link.as = resource.ends_with (".css") ? "style" : "font"; document.head.append_child (link)})}, optimize_scroll: () => { let ticking = false; const handle_scroll = () =>: any { if ( { requestAnimationFrame (() => { ticking = false, })) {
+  $2
+} ticking = true, } } ; window.addEventListener ("scroll", handle_scroll, { passive: true })}, init: () => { this.lazyLoadImages (); this.preloadCriticalResources (); this.optimize_scroll ()} } ; if ( { document.addEventListener ("DOMContentLoaded", performance_optimizations.init)} else { performance_optimizations.init ()}
+const performance_optimizations = { lazyLoadImages: () => { const images = document.querySelectorAll ("img[data - src]")) {
+  $2
+} const image_observer = new IntersectionObserver ((entries) => { entries.for_each (entry => { // Check condition
+if ( { const img = entry.target) {
+  $2
+} img.src = img.dataset.src; img.remove_attribute ("data - src"); image_observer.unobserve (img)} })}); ; images.for_each (img => image_observer.observe (img))}, preloadCriticalResources: () => { const critical_resources = [ "/fonts / inter.woff2", "/css / critical.css"]; ; critical_resources.for_each (resource => { const link = document.create_element ("link"); link.rel = "preload"; link.href = resource; link.as = resource.ends_with (".css") ? "style" : "font"; document.head.append_child (link)})}, optimize_scroll: () => { let ticking = false; const handle_scroll = () =>: any { if ( { requestAnimationFrame (() => { ticking = false, })) {
+  $2
+} ticking = true, } } ; window.addEventListener ("scroll", handle_scroll, { passive: true })}, init: () => { this.lazyLoadImages (); this.preloadCriticalResources (); this.optimize_scroll ()} } ; if ( { document.addEventListener ("DOMContentLoaded", performance_optimizations.init)} else { performance_optimizations.init ()}
+const performance_optimizations = { lazyLoadImages: () => { const images = document.querySelectorAll ("img[data - src]")) {
+  $2
+} const image_observer = new IntersectionObserver ((entries) => { entries.for_each (entry => { // Check condition
+if ( { const img = entry.target) {
+  $2
+} img.src = img.dataset.src; img.remove_attribute ("data - src"); image_observer.unobserve (img)} })}); ; images.for_each (img => image_observer.observe (img))}, preloadCriticalResources: () => { const critical_resources = [ "/fonts / inter.woff2", "/css / critical.css"]; ; critical_resources.for_each (resource => { const link = document.create_element ("link"); link.rel = "preload"; link.href = resource; link.as = resource.ends_with (".css") ? "style" : "font"; document.head.append_child (link)})}, optimize_scroll: () => { let ticking = false; const handle_scroll = () =>: any { if ( { requestAnimationFrame (() => { ticking = false, })) {
+  $2
+} ticking = true, } } ; window.addEventListener ("scroll", handle_scroll, { passive: true })}, init: () => { this.lazyLoadImages (); this.preloadCriticalResources (); this.optimize_scroll ()} } ; if ( { document.addEventListener ("DOMContentLoaded", performance_optimizations.init)} else { performance_optimizations.init ()}
+const performance_optimizations = { lazyLoadImages: () => { const images = document.querySelectorAll ("img[data - src]")) {
+  $2
+} const image_observer = new IntersectionObserver ((entries) => { entries.for_each (entry => { // Check condition
+if ( { const img = entry.target) {
+  $2
+} img.src = img.dataset.src; img.remove_attribute ("data - src"); image_observer.unobserve (img)} })}); ; images.for_each (img => image_observer.observe (img))}, preloadCriticalResources: () => { const critical_resources = [ "/fonts / inter.woff2", "/css / critical.css"]; ; critical_resources.for_each (resource => { const link = document.create_element ("link"); link.rel = "preload"; link.href = resource; link.as = resource.ends_with (".css") ? "style" : "font"; document.head.append_child (link)})}, optimize_scroll: () => { let ticking = false; const handle_scroll = () =>: any { if ( { requestAnimationFrame (() => { ticking = false, })) {
+  $2
+} ticking = true, } } ; window.addEventListener ("scroll", handle_scroll, { passive: true })}, init: () => { this.lazyLoadImages (); this.preloadCriticalResources (); this.optimize_scroll ()} } ; if ( { document.addEventListener ("DOMContentLoaded", performance_optimizations.init)} else { performance_optimizations.init ()}
+) {
+  $2
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

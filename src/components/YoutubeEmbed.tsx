@@ -1,13 +1,35 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import Image from 'next/image';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { Loader2 } from 'lucide-react'
 import { useState } from 'react';
-=======
-import { Loader2 } from 'lucide-react';
-<<<<<<< HEAD
-import { useState } from 'react'; import { useState } from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface YoutubeEmbedProps {
 
   videoId: string
@@ -26,112 +48,175 @@ export default function YoutubeEmbed({
   const [loaded, setLoaded] = useState(false)
   const src = `https://www.youtube.com/embed/${videoId}?mute=1&controls=1`
 =======
-<<<<<<< HEAD
 import { Loader2 } from 'lucide-react';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useState } from 'react',;
+import { useState } from 'react';import { useState } from 'react';
 interface YoutubeEmbedProps {;
   videoId: string,;
   title: string,;
   poster: string;
-}
+});
 
-export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedProps) {
-  const [loaded, setLoaded] = useState(false),
-  const src = `https://www.youtube.com/embed/${videoId}?mute=1&controls=1`,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default Component;
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface YoutubeEmbedProps {;
+  videoId: string;
+  title: string;
+  poster: string;
+
+const Component = React && React.memo(function YoutubeEmbed(): any ({;
+  videoId,;
+  title,;
+  poster,;
+}: YoutubeEmbedProps) {;
+  const [loaded, setLoaded] = useState(false);
+  const src = `https://www && www.youtube.com/embed/${videoId}?mute=1&controls=1`;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   return (
-    <div className="relative aspect-video max-w-3xl mx-auto">
-      {!loaded && (
-        <>
-<<<<<<< HEAD
+    <div className='relative aspect-video max-w-3xl mx-auto'>;
+      {!loaded && (;
+        <>;
           <Image
             src={poster}
             alt={`${title} poster`}
             fill
             className='object-cover rounded'
-          />
-          <div className='absolute inset-0 flex items-center justify-center bg-black/30'>
-            <Loader2 className='h-8 w-8 animate-spin text-white' />          </div>          <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />
-=======
-          <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />
+          />;
+          <div className='absolute inset-0 flex items-center justify-center bg-black/30'>;
+            <Loader2 className='h-8 w-8 animate-spin text-white' />          </div>          <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />;
+          <div className="absolute inset-0 flex items-center justify-center bg-black/30">;
+            <Loader2 className="h-8 w-8 animate-spin text-white" />;
+          </div>;
+        </>;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import { Loader2 } from 'lucide-react'
+import { useState } from 'react';
+=======
+import Image from 'next / image';
+import { Loader2 } from 'lucide-react';
+import { useState } from 'react'; import { useState } from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+interface YoutubeEmbedProps {
+  video_id: string,
+  title: string,
+  poster: string;
+}
+<<<<<<< HEAD
+
+export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedProps) {
+
+  const [ loaded, setLoaded ] = useState(false),
+  const src = `https://www.youtube.com/embed/${videoId}?mute=1&controls=1`;
+
+  return (
+    <div className="relative aspect-video max-w-3xl mx-auto">
+      {!loaded && (
+        <>
+          <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />
           <div className="absolute inset-0 flex items-center justify-center bg-black/30">
             <Loader2 className="h-8 w-8 animate-spin text-white" />
           </div>
         </>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       )}
       <iframe
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
-<<<<<<< HEAD
         src={src}
         title={title}
 <<<<<<< HEAD
-        loading='lazy'
-        onLoad={() => setLoaded(true)}
 =======
 <<<<<<< HEAD
-        src={src};
-        title={title};
-        loading='lazy';
-        onLoad={() => setLoaded(true)};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+        loading='lazy'
+        onLoad={() => setLoaded(true)}
+<<<<<<< HEAD
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'        allowFullScreen
       />
     </div>
   )
 }        loading="lazy"
+=======
+        allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'        allowFullScreen;
+      />;
+    </div>;
+  );
+}        loading="lazy";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         onLoad = {() => setLoaded(true),}
-        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
-        loading="lazy"
-        onLoad={() => setLoaded(true)}
-        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
+        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
+        loading="lazy";
 =======
+        loading="lazy"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+        onLoad={() => setLoaded(true)}
 <<<<<<< HEAD
-        loading="lazy"
-        onLoad={() => setLoaded(true)}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-        src={src}
-        title={title}
-        loading="lazy"
-        onLoad={() => setLoaded(true)}
-        allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         allowFullScreen
       />
     </div>
+<<<<<<< HEAD
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 =======
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-        loading="lazy";
-        onLoad={() => setLoaded(true)}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture";
         allowFullScreen;
       />;
     </div>;
   );
+
 }
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+interface YoutubeEmbedProps {
+  video_id: string;
+  title: string;
+  poster: string;
+export default /**
+ * YoutubeEmbed - Function description
+ */
+function YoutubeEmbed() {
+  const [loaded, set_loaded] = useState (false);
+  const src = `https://www.youtube.com / embed/${video_id}?mute = 1&controls = 1`;
+  return (
+    <div className='relative aspect - video max - w-3xl mx - auto'>;
+      {!loaded && (
+        <>;
+          <Image;
+            src={poster}
+            alt={`${title} poster`}
+            fill;
+            className='object - cover rounded';
+          />;
+          <div className='absolute inset - 0 flex items - center justify - center bg - black / 30'>;
+            <Loader2 className='h - 8 w - 8 animate - spin text - white' />          </div>          <Image src={poster} alt={`${title} poster`} fill className="object - cover rounded" />;
+          <div className="absolute inset - 0 flex items - center justify - center bg - black / 30">;
+            <Loader2 className="h - 8 w - 8 animate - spin text - white" />;
+          </div>;
+        </>)}
+      <iframe;
+        className={`absolute inset - 0 w - full h - full ${loaded ? 'visible' : 'invisible'}`}
+        src={src}
+        title={title}
+        loading='lazy';
+        on_load={() => set_loaded (true)}
+        allow='accelerometer; autoplay; clipboard - write; encrypted - media; gyroscope; picture - in - picture'        allowFullScreen;
+      />;
+    </div>);
+}        loading="lazy";
+        on_load = {() => set_loaded (true), }
+        allow="accelerometer, autoplay, clipboard - write, encrypted - media, gyroscope, picture - in - picture";
+        loading="lazy";
+        on_load={() => set_loaded (true)}
+        allow="accelerometer, autoplay, clipboard - write, encrypted - media, gyroscope, picture - in - picture";
+        allowFullScreen;
+      />;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

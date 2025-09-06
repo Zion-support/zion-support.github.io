@@ -1,50 +1,158 @@
 <<<<<<< HEAD
+import React from 'react';import { Star } from 'lucide-react';
 =======
 <<<<<<< HEAD
-import React from 'react'; import { Star } from 'lucide-react'
-import React from "react"
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from "react";
-=======
-import React from "react",
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Star } from 'lucide-react'
+<<<<<<< HEAD
+=======
+import { Star } from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
 <<<<<<< HEAD
-<<<<<<< HEAD
     { value: '4.8', label: 'App Store Rating' }
     { value: '50K+', label: 'Downloads' }
     { value: '96%', label: 'User Satisfaction' }
     { value: '12M+', label: 'Matches Made' }
+  ]
 =======
+import { Star } from 'lucide-react';
+import { Star } from 'lucide-react';
+
+import { Star } from 'lucide-react';
+export const CommunityTrust: React.FC = () => {;
+  // Stats display with social proof;
+  const stats = [;
+    { value: '4 && 4.8', label: 'App Store Rating' },;
+    { value: '50K+', label: 'Downloads' },;
+    { value: '96%', label: 'User Satisfaction' },;
+    { value: '12M+', label: 'Matches Made' },;
+  ];
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+    <section className='py-16 bg-zion-blue'>;
+      <div className='container mx-auto px-4'>;
+        <div className='text-center mb-12'>;
+          <h2 className='text-3xl md:text-4xl font-bold text-white'>;
+            Trusted by the{' '}
+<<<<<<< HEAD
+            <span className='text-zion-cyan'>Tech Community</span>
+          </h2>
+          <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
+            Join thousands of professionals who are already using the Zion
+            mobile app to connect, hire, and work
+          </p>
+        </div>
+=======
+            <span className='text-zion-cyan'>Tech Community</span>;
+          </h2>;
+          <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>;
+=======
+import React from 'react'; import { Star } from 'lucide-react';
+import React from './react';
+import { Star } from 'lucide-react';
+export const CommunityTrust: React.FC = () => {
+  // Stats display with social proof;
+  const stats = [;
     { value: '4.8', label: 'App Store Rating' },
     { value: '50K+', label: 'Downloads' },
     { value: '96%', label: 'User Satisfaction' },
     { value: '12M+', label: 'Matches Made' },
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  ];
+  return (
+    <section className='py - 16 bg - zion - blue'>;
+      <div className='container mx - auto px - 4'>;
+        <div className='text - center mb - 12'>;
+          <h2 className='text - 3xl md:text - 4xl font - bold text - white'>;
+            Trusted by the{' '}
+            <span className='text - zion - cyan'>Tech Community</span>;
+          </h2>;
+          <p className='mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto'>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            Join thousands of professionals who are already using the Zion;
+            mobile app to connect, hire, and work;
+          </p>;
+        </div>;
+<<<<<<< HEAD
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        {/* Stats Grid */}
+        <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16'>;
+          {stats && stats.map((stat, index) => (;
+            <div
+              key={index}
+              className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 text-center'>;
+              <div className='text-3xl md:text-4xl font-bold text-zion-cyan mb-2'>;
+                {stat && stat.value}
+              </div>;
+              <div className='text-zion-slate-light'>{stat && stat.label}</div>            </div>;
+          ))}
+<<<<<<< HEAD
+        </div>
+=======
+        </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        {/* Rating display */}
+        <div className='max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6'>;
+          <div className='flex justify-center mb-4'>;
+            {[1, 2, 3, 4, 5].map(star => (;
+              <Star
+=======
+        {/* Stats Grid */}
+        <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto mb - 16'>;
+          {stats.map ((stat, index) => (
+            <div;
+              key={index}
+              className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 text - center';
+            >;
+              <div className='text - 3xl md:text - 4xl font - bold text - zion - cyan mb - 2'>;
+                {stat.value}
+              </div>;
+              <div className='text - zion - slate - light'>{stat.label}</div>            </div>))}
+        </div>;
+        {/* Rating display */}
+        <div className='max - w-3xl mx - auto bg - zion - blue - dark border border - zion - purple / 30 rounded - lg p - 6'>;
+          <div className='flex justify - center mb - 4'>;
+            {[1, 2, 3, 4, 5].map (star => (
+              <Star;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                key={star}
+                className='w - 6 h - 6 text - zion - cyan';
+                fill='current_color';
+              />            ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+          </div>
+          <blockquote className='text-center text-lg text-white italic mb-4'>
+            "The Zion app has completely changed how I find tech talent. The AI
+            matching is spot on and I can manage everything from anywhere."
+          </blockquote>
+          <div className='text-center'>
+            <div className='font-semibold text-zion-cyan'>Sarah Johnson</div>
+            <div className='text-sm text-zion-slate-light'>CTO at TechFlow</div>          </div>
+        </div>
+      </div>
+    </section>
+          <div className="text-center">
+            <div className="font-semibold text-zion-cyan">Sarah Johnson</div>
+            <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>
   ]
 =======
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
     { value: "12M+", label: "Matches Made" }
-  ],
+  ];
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -56,49 +164,24 @@ export const CommunityTrust: React.FC = () => {
             Join thousands of professionals who are already using the Zion mobile app to connect, hire, and work
           </p>
         </div>
-<<<<<<< HEAD
-        {/* Stats Grid */}
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16'>
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 text-center'
-            >
-              <div className='text-3xl md:text-4xl font-bold text-zion-cyan mb-2'>
-                {stat.value}
-              </div>
-              <div className='text-zion-slate-light'>{stat.label}</div>            </div>
-          ))}
-        </div>
-        {/* Rating display */}
-        <div className='max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6'>
-          <div className='flex justify-center mb-4'>
-            {[1, 2, 3, 4, 5].map(star => (
-              <Star
-                key={star}
-                className='w-6 h-6 text-zion-cyan'
-                fill='currentColor'
-              />            ))}
 =======
-        
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
-          {stats.map((stat, index) => (
-            <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 text-center">
-              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>
-              <div className="text-zion-slate-light">{stat.label}</div>
-            </div>
-import React from "react",;
-import { Star } from 'lucide-react';
-export const CommunityTrust: React.FC = () => {;
-  // Stats display with social proof;
-  const stats = [;
-    { value: "4.8", label: "App Store Rating" },;
-    { value: "50K+", label: "Downloads" },;
-    { value: "96%", label: "User Satisfaction" },;
-    { value: "12M+", label: "Matches Made" }
+          </div>;
+          <blockquote className='text-center text-lg text-white italic mb-4'>;
+            "The Zion app has completely changed how I find tech talent. The AI;
+            matching is spot on and I can manage everything from anywhere.";
+          </blockquote>;
+          <div className='text-center'>;
+            <div className='font-semibold text-zion-cyan'>Sarah Johnson</div>;
+            <div className='text-sm text-zion-slate-light'>CTO at TechFlow</div>          </div>;
+        </div>;
+      </div>;
+    </section>;
+          <div className="text-center">;
+            <div className="font-semibold text-zion-cyan">Sarah Johnson</div>;
+            <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>;
   ];
-  return (;
+
+  return (
     <section className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -109,68 +192,31 @@ export const CommunityTrust: React.FC = () => {;
             Join thousands of professionals who are already using the Zion mobile app to connect, hire, and work;
           </p>;
         </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">;
-          {stats.map((stat, index) => (;
+          {stats && stats.map((stat, index) => (;
             <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 text-center">;
-              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>;
-              <div className="text-zion-slate-light">{stat.label}</div>;
+              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat && stat.value}</div>;
+              <div className="text-zion-slate-light">{stat && stat.label}</div>;
             </div>;
           ))}
-        </div>;
-        {/* Rating display */}
-        <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">
-          <div className="flex justify-center mb-4">
-            {[1, 2, 3, 4, 5].map((star) => (
-              <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />
-            ))}
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+        </div>
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          </div>
-          <blockquote className="text-center text-lg text-white italic mb-4">
-            "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere."
-          </blockquote>
-          <div className="text-center">
-            <div className="font-semibold text-zion-cyan">Sarah Johnson</div>
-            <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>
-          </div>
-        </div>
-      </div>
-    </section>
-<<<<<<< HEAD
-          <div className="text-center">
-            <div className="font-semibold text-zion-cyan">Sarah Johnson</div>
-            <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>
-  ]
-  return (
-    <section className="py-16 bg-zion-blue">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
-            Trusted by the <span className="text-zion-cyan">Tech Community</span>
-          </h2>
-          <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-            Join thousands of professionals who are already using the Zion mobile app to connect, hire, and work
-          </p>
-        </div>
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
-          {stats.map((stat, index) => (
-            <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 text-center">
-              <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>
-              <div className="text-zion-slate-light">{stat.label}</div>
-            </div>
-          ))}
-        </div>
+        </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Rating display */}
-        <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">
-          <div className="flex justify-center mb-4">
-            {[1, 2, 3, 4, 5].map((star) => (
-              <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />
+        <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">;
+          <div className="flex justify-center mb-4">;
+            {[1, 2, 3, 4, 5].map((star) => (;
+              <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />;
             ))}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
           </div>
           <blockquote className="text-center text-lg text-white italic mb-4">
             "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere."
@@ -191,17 +237,87 @@ export const CommunityTrust: React.FC = () => {;
 }
 
 =======
-  )
-},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-}</div>) ) 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+          </div>;
+          <blockquote className="text-center text-lg text-white italic mb-4">;
+            "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere.";
+          </blockquote>;
+          <div className="text-center">;
+            <div className="font-semibold text-zion-cyan">Sarah Johnson</div>;
+            <div className="text-sm text-zion-slate-light">CTO at TechFlow</div>;
+          </div>;
+        </div>;
+      </div>;
+    </section>;
+  );
+}</div>) ) ;
 }</div> <blockquote className="text-center text-lg text-white italic mb-4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text-center" > <div className="font-semibold text-zion-cyan" >Sarah Johnson</div> <div className="text-sm text-zion-slate-light" >CTO at TechFlow</div> </div> </div> </div> </section>) ;
 };
 '"  );
 };
+<<<<<<< HEAD
 =======
-  )
-},
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+};
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+          </div>;
+          <blockquote className='text - center text - lg text - white italic mb - 4'>;
+            "The Zion app has completely changed how I find tech talent. The AI;
+            matching is spot on and I can manage everything from anywhere.";
+          </blockquote>;
+          <div className='text - center'>;
+            <div className='font - semibold text - zion - cyan'>Sarah Johnson</div>;
+            <div className='text - sm text - zion - slate - light'>CTO at TechFlow</div>          </div>;
+        </div>;
+      </div>;
+    </section>;
+          <div className="text - center">;
+            <div className="font - semibold text - zion - cyan">Sarah Johnson</div>;
+            <div className="text - sm text - zion - slate - light">CTO at TechFlow</div>;
+  ];
+  return (
+    <section className="py - 16 bg - zion - blue">;
+      <div className="container mx - auto px - 4">;
+        <div className="text - center mb - 12">;
+          <h2 className="text - 3xl md:text - 4xl font - bold text - white">;
+            Trusted by the <span className="text - zion - cyan">Tech Community</span>;
+          </h2>;
+          <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto">;
+            Join thousands of professionals who are already using the Zion mobile app to connect, hire, and work;
+          </p>;
+        </div>;
+        {/* Stats Grid */}
+        <div className="grid grid - cols - 2 md:grid - cols - 4 gap - 6 max - w-4xl mx - auto mb - 16">;
+          {stats.map ((stat, index) => (
+            <div key={index} className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 text - center">;
+              <div className="text - 3xl md:text - 4xl font - bold text - zion - cyan mb - 2">{stat.value}</div>;
+              <div className="text - zion - slate - light">{stat.label}</div>;
+            </div>))}
+        </div>;
+        {/* Rating display */}
+        <div className="max - w-3xl mx - auto bg - zion - blue - dark border border - zion - purple / 30 rounded - lg p - 6">;
+          <div className="flex justify - center mb - 4">;
+            {[1, 2, 3, 4, 5].map ((star) => (
+              <Star key={star} className="w - 6 h - 6 text - zion - cyan" fill="current_color" />))}
+          </div>;
+          <blockquote className="text - center text - lg text - white italic mb - 4">;
+            "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere.";
+          </blockquote>;
+          <div className="text - center">;
+            <div className="font - semibold text - zion - cyan">Sarah Johnson</div>;
+            <div className="text - sm text - zion - slate - light">CTO at TechFlow</div>;
+          </div>;
+        </div>;
+      </div>;
+    </section>);
+}</div>) );
+}</div> <blockquote className="text - center text - lg text - white italic mb - 4" > "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere." </blockquote> <div className="text - center" > <div className="font - semibold text - zion - cyan" >Sarah Johnson</div> <div className="text - sm text - zion - slate - light" >CTO at TechFlow</div> </div> </div> </div> </section>);
+}
+'"  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

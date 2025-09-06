@@ -1,106 +1,142 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Button from './components/Button';
-import Card from './components/Card';
-import ServiceCard from './components/ServiceCard';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
-
-const Home = () => (
-  <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-    <div className="container mx-auto px-4 py-16">
-      <div className="text-center mb-12">
-        <h1 className="text-6xl font-extrabold mb-4 animate-fade-in">
-          Zion Tech Group
-        </h1>
-        <p className="text-2xl text-gray-300 mb-8 animate-slide-up">
-          Leading AI & Technology Solutions for a Smarter Future
-        </p>
-        <Button variant="primary" size="large" onClick={() => alert('Learn More!')}>
-          Explore Our Services
-        </Button>
-      </div>
-
 <<<<<<< HEAD
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <ServiceCard
-          title="AI Services"
-          description="Transform your business with cutting-edge AI solutions."
-          icon="✨"
-        />
-        <ServiceCard
-          title="Cybersecurity"
-          description="Protect your digital assets with advanced security solutions."
-          icon="🔒"
-        />
-        <ServiceCard
-          title="Cloud Infrastructure"
-          description="Scale your operations with robust cloud solutions."
-          icon="☁️"
-        />
-      </div>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { Suspense, lazy, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import Sidebar from './components/Sidebar';
+import { PerformanceMonitor } from './components/PerformanceMonitor';
+import ErrorBoundary from './components/ErrorBoundary';
 
-      <div className="mt-16 text-center">
-        <h2 className="text-4xl font-bold mb-8">Why Choose Us?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card title="Innovation" description="Pioneering the next generation of technology." />
-          <Card title="Expertise" description="Team of industry-leading professionals." />
-          <Card title="Reliability" description="Trusted solutions for critical operations." />
-          <Card title="Scalability" description="Solutions designed to grow with you." />
-          <Card title="Security" description="Robust protection for all your data." />
-          <Card title="Support" description="24/7 dedicated customer assistance." />
-        </div>
-      </div>
+// Lazy load pages
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Pricing = lazy(() => import('./pages/Pricing'));
+const Contact = lazy(() => import('./pages/Contact'));
+
+// Loading Component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+    <div className="text-center">
+      <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
     </div>
   </div>
 );
 
-function App() {
-  return (
-    <Router>
-      <div className="min-h-screen flex flex-col">
-        <Header />
-                    <main className="flex-1">
-                      <Routes>
-                        <Route path="/" element={<Home />} />
-                        <Route path="/about" element={<About />} />
-                        <Route path="/services" element={<Services />} />
-                        <Route path="/contact" element={<Contact />} />
-                      </Routes>
-                    </main>
-        <Footer />
-      </div>
-    </Router>
-  );
-}
+const App = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
-export default App;
 =======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Sidebar from './components/layout/Sidebar';
+import ErrorBoundary from './components/ErrorBoundary';
+// Import pages
+import HomePage from './pages/Home';
+import AboutPage from './pages/About';
+import ContactPage from './pages/Contact';
+import ServicesPage from './pages/Services';
+import PricingPage from './pages/Pricing';
 export default function App() {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <ErrorBoundary>
       <Router>
-        <div className="App">
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
           <Header />
-          <div className="main-content">
-            <Sidebar />
-            <main className="content">
+          <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+          
+          <main className="pt-20">
+            <Suspense fallback={<LoadingSpinner />}>
               <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/services" element={<ServicesPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="*" element={<NotFoundPage />} />
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/pricing" element={<Pricing />} />
+                <Route path="/contact" element={<Contact />} />
               </Routes>
-            </main>
-          </div>
+            </Suspense>
+          </main>
+          
           <Footer />
+          <PerformanceMonitor />
         </div>
       </Router>
     </ErrorBoundary>
   );
+<<<<<<< HEAD
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+<<<<<<< HEAD
+};
+
+export default App;
+=======
+export default function App() {;
+  return (;
+    <ErrorBoundary>;
+      <Router>;
+        <div className="min-h-screen bg-gray-50">;
+          <Header />;
+          <Sidebar />;
+          <main className="flex-1 lg: ml-80">, <Routes>,
+              <Route path="/" element={<HomePage />} />;
+              <Route path="/about" element={<AboutPage />} />;
+              <Route path="/contact" element={<ContactPage />} />;
+              <Route path="/services" element={<ServicesPage />} />;
+              <Route path="/pricing" element={<PricingPage />} />;
+            </Routes>;
+          </main>;
+          <Footer />;
+        </div>;
+      </Router>;
+    </ErrorBoundary>;
+  );
+import React from 'react',
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom',
+import { Header } from './components/Header',
+import { Footer } from './components/layout/Footer',
+import { Sidebar } from './components/layout/Sidebar',
+import { ErrorBoundary } from './components/ErrorBoundary',
+,
+// Import pages,
+import HomePage from '../pages/index',
+import AboutPage from '../pages/about',
+import ContactPage from '../pages/contact',
+import ServicesPage from '../pages/services',
+import PricingPage from '../pages/pricing',
+,
+export default function App() {,
+  return (,
+    <ErrorBoundary>,
+      <Router>,
+        <div className="min-h-screen bg-gray-50">,
+          <Header />,
+          <Sidebar />,
+          <main className="flex-1 lg: ml-80">,
+            <Routes>,
+              <Route path="/" element={<HomePage />} />,
+              <Route path="/about" element={<AboutPage />} />,
+              <Route path="/contact" element={<ContactPage />} />,
+              <Route path="/services" element={<ServicesPage />} />,
+              <Route path="/pricing" element={<PricingPage />} />,
+            </Routes>,
+          </main>,
+          <Footer />,
+        </div>,
+      </Router>,
+    </ErrorBoundary>,
+  ),
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

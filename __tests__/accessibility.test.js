@@ -3,7 +3,7 @@
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 const { test, expect } = require('@playwright/test')'
-test.describe('"Accessibility"
+test && test.describe('"Accessibility"
   test('"page"
     "await"
   test('"images"
