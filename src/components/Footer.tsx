@@ -1,53 +1,57 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const Footer: React.FC = () => {
+export function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-8">
-      <div className="container mx-auto px-4">
+    <footer className="bg-background border-t">
+      <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
-            <p className="text-gray-300">
-              Leading technology solutions provider for modern businesses.
-            </p>
-          </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Company</h3>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">AI Services</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">IT Solutions</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-white transition-colors">Cloud Services</Link></li>
+              <li><a href="#about" className="text-foreground/80 hover:text-primary">About</a></li>
+              <li><a href="#contact" className="text-foreground/80 hover:text-primary">Contact</a></li>
+              <li><a href="#careers" className="text-foreground/80 hover:text-primary">Careers</a></li>
             </ul>
           </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Services</h3>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-300 hover:text-white transition-colors">About</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
-              <li><Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</Link></li>
+              <li><a href="#services" className="text-foreground/80 hover:text-primary">Services</a></li>
+              <li><a href="#pricing" className="text-foreground/80 hover:text-primary">Pricing</a></li>
             </ul>
           </div>
-          
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <div className="space-y-2 text-gray-300">
-              <p>Email: kleber@ziontechgroup.com</p>
-              <p>Phone: +1 302 464 0950</p>
-              <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
+
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Support</h3>
+            <ul className="space-y-2">
+              <li><a href="#help" className="text-foreground/80 hover:text-primary">Help Center</a></li>
+              <li><a href="#docs" className="text-foreground/80 hover:text-primary">Documentation</a></li>
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Connect</h3>
+            <div className="flex space-x-4">
+              <a href="https://twitter.com/ziontechgroup" className="text-foreground/80 hover:text-primary" aria-label="Twitter">
+                <span className="text-lg">🐦</span>
+              </a>
+              <a href="https://linkedin.com/company/ziontechgroup" className="text-foreground/80 hover:text-primary" aria-label="LinkedIn">
+                <span className="text-lg">💼</span>
+              </a>
+              <a href="https://github.com/ziontechgroup" className="text-foreground/80 hover:text-primary" aria-label="GitHub">
+                <span className="text-lg">🐙</span>
+              </a>
             </div>
           </div>
         </div>
-        
-        <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+
+        <div className="border-t mt-8 pt-8 text-center">
+          <div className="text-foreground/60 text-sm">
+            © 2024 Zion Tech Group. All rights reserved.
+          </div>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

@@ -23,7 +23,8 @@ export default defineConfig({
   esbuild: {
     loader: 'tsx',
     include: /src\/.*\.[jt]sx?$/,
-    exclude: []
+    exclude: [],
+    jsx: 'automatic'
   },
   build: {
     target: 'esnext',
@@ -86,7 +87,7 @@ export default defineConfig({
         unsafe_math: true,
         unsafe_proto: true,
         unsafe_regexp: true,
-        unsafe_undefined: true
+        unsafe_undefined: true,
       },
       mangle: {
         safari10: true,
@@ -138,12 +139,6 @@ export default defineConfig({
     esbuildOptions: {
       target: 'esnext'
     }
-  },
-  css: {
-    devSourcemap: false
-  },
-  esbuild: {
-    jsx: 'automatic'
   },
   server: {
     port: 3000,
