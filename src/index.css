@@ -14,8 +14,6 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-<<<<<<< HEAD
-=======
 }
 
 .App {
@@ -102,5 +100,4 @@ code {
   .content {
     padding: 1rem;
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-7da4
 }
