@@ -1,5 +1,5 @@
 import React from 'react';
-import { FooterNewsletter } from '@/components/FooterNewsletter';
+import { FooterNewsletter } from './FooterNewsletter';
 import { 
   Twitter,
   Linkedin,

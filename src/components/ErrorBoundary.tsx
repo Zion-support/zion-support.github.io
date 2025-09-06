@@ -52,7 +52,7 @@ class ErrorBoundary extends Component<Props, State> {
             </div>
             <div className="mt-2">
               <p className="text-sm text-gray-500">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
+                We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
               </p>
             </div>
             <div className="mt-4">
