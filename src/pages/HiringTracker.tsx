@@ -1,5 +1,19 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { useState } from 'react'
+import { useRouter } from 'next/router'
+import { KanbanBoard } from '@/components/hiring-tracker/KanbanBoard'
+import { HiringAnalytics } from '@/components/hiring-tracker/HiringAnalytics'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { SEO } from '@/components/SEO'
+import { ProtectedRoute } from '@/components/ProtectedRoute'
+import { Briefcase } from 'lucide-react'
+function HiringTrackerContent() {
+=======
         title='Hiring Tracker | Zion AI Marketplace'
         description='Manage your candidate pipeline in the Zion AI Marketplace.'
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 import { useState } from "react",
@@ -23,10 +37,55 @@ import { Briefcase } from 'lucide-react'
               <Briefcase className="mr-2 h-6 w-6 text-primary" />
               Hiring Pipeline
             </h1>
+<<<<<<< HEAD
+            <p className='text-muted-foreground mt-1'>              Track and manage your candidates through the hiring process  const [activeTab, setActiveTab] = useState<string>("kanban")
+
+  return (
+    <>
+      <SEO
+        title="Hiring Tracker | Zion AI Marketplace"
+        description="Manage your candidate pipeline in the Zion AI Marketplace."
+      />
+      <main className="container mx-auto px-4 py-8">
+        <div className="flex justify-between items-center mb-8">
+          <div>
+            <h1 className="text-3xl font-bold flex items-center">
+              <Briefcase className="mr-2 h-6 w-6 text-primary" />
+              Hiring Pipeline
+            </h1>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+return (
+    <>;
+      <SEO
+        title='Hiring Tracker | Zion AI Marketplace'
+        description='Manage your candidate pipeline in the Zion AI Marketplace.'
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <p className="text-muted-foreground mt-1">
+<<<<<<< HEAD
+              Track and manage your candidates through the hiring process
             </p>
           </div>
         </div>
+<<<<<<< HEAD
+
+
+=======
+            </p>
+          </div>
+        </div>
+        <Tabs
+          defaultValue='kanban'
+          onValueChange={setActiveTab}
+          className='mb-8'
+        >
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+        <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
           <TabsList>
@@ -41,10 +100,30 @@ import { Briefcase } from 'lucide-react'
           </TabsContent>
 
           <TabsContent value="analytics" className="mt-6">
+<<<<<<< HEAD
+            <HiringAnalytics jobId={jobId} />
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           </TabsContent>
         </Tabs>
       </main>
     </>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  );
+}
+
+
+=======
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+export default function HiringTracker() {
+  return (
+    <ProtectedRoute>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <HiringTrackerContent />
     </ProtectedRoute>
 
@@ -61,6 +140,14 @@ import { Briefcase } from 'lucide-react'
 
   return (
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <HiringTrackerContent />;
     </ProtectedRoute>;
   );
@@ -81,6 +168,12 @@ function HiringTrackerContent() {;
   const [activeTab, setActiveTab] = useState<string>("kanban");
   return (;
     <>;
+<<<<<<< HEAD
+      <SEO
+        title="Hiring Tracker | Zion AI Marketplace" 
+        description="Manage your candidate pipeline in the Zion AI Marketplace." 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       />;
       <main className="container mx-auto px-4 py-8">;
         <div className="flex justify-between items-center mb-8">;
@@ -94,6 +187,32 @@ function HiringTrackerContent() {;
             </p>;
           </div>;
         </div>;
+<<<<<<< HEAD
+
+        <Tabs
+          defaultValue='kanban'
+          onValueChange={setActiveTab}
+          className='mb-8'>;
+          <TabsList>;
+            <TabsTrigger value='kanban'>Kanban Board</TabsTrigger>;
+            <TabsTrigger value='analytics'>Analytics</TabsTrigger>;
+          </TabsList>;
+
+          <TabsContent value='kanban' className='mt-6'>;
+            <KanbanBoard jobId={jobId} />;
+          </TabsContent>;
+
+          <TabsContent value='analytics' className='mt-6'>            <HiringAnalytics jobId={jobId} />          <TabsList>;
+            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>;
+            <TabsTrigger value="analytics">Analytics</TabsTrigger>;
+          </TabsList>;
+
+          <TabsContent value="kanban" className="mt-6">;
+            <KanbanBoard jobId={jobId} />;
+          </TabsContent>;
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <TabsContent value="analytics" className="mt-6">;
             <HiringAnalytics jobId={jobId} />;
           </TabsContent>;
@@ -102,8 +221,108 @@ function HiringTrackerContent() {;
     </>;
   );
 }
+<<<<<<< HEAD
+
+export default function HiringTracker() {;
+  return (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <ProtectedRoute>;
       <HiringTrackerContent />;
     </ProtectedRoute>;
   );
 }
+<<<<<<< HEAD
+
+  );
+}
+
+import { useState } from 'react';
+import { use_router } from 'next / router';
+import { KanbanBoard } from '@/components / hiring - tracker / KanbanBoard';
+import { HiringAnalytics } from '@/components / hiring - tracker / HiringAnalytics';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { SEO } from '@/components / SEO';
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+import { Briefcase } from 'lucide-react';
+/**
+ * HiringTrackerContent - Function description
+ */
+function HiringTrackerContent() {
+  const router = use_router ();
+  const job_id = router.query.job_id as string;
+  const [active_tab, setActiveTab] = useState < string>('kanban');
+  return (
+    <>;
+      <SEO;
+        title='Hiring Tracker | Zion AI Marketplace';
+        description='Manage your candidate pipeline in the Zion AI Marketplace.';
+      />;
+      <main className='container mx - auto px - 4 py - 8'>;
+        <div className='flex justify - between items - center mb - 8'>;
+          <div>;
+            <h1 className='text - 3xl font - bold flex items - center'>;
+              <Briefcase className='mr - 2 h - 6 w - 6 text - primary' />;
+              Hiring Pipeline;
+            </h1>;
+            <p className='text - muted - foreground mt - 1'>              Track and manage your candidates through the hiring process  const [active_tab, setActiveTab] = useState < string>("kanban");
+  return (
+    <>;
+      <SEO;
+        title="Hiring Tracker | Zion AI Marketplace";
+        description="Manage your candidate pipeline in the Zion AI Marketplace.";
+      />;
+      <main className="container mx - auto px - 4 py - 8">;
+        <div className="flex justify - between items - center mb - 8">;
+          <div>;
+            <h1 className="text - 3xl font - bold flex items - center">;
+              <Briefcase className="mr - 2 h - 6 w - 6 text - primary" />;
+              Hiring Pipeline;
+            </h1>;
+            <p className="text - muted - foreground mt - 1">;
+              Track and manage your candidates through the hiring process;
+            </p>;
+          </div>;
+        </div>;
+        <Tabs;
+          default_value='kanban';
+          onValueChange={setActiveTab}
+          className='mb - 8';
+        >;
+          <TabsList>;
+            <TabsTrigger value='kanban'>Kanban Board</TabsTrigger>;
+            <TabsTrigger value='analytics'>Analytics</TabsTrigger>;
+          </TabsList>;
+          <TabsContent value='kanban' className='mt - 6'>;
+            <KanbanBoard job_id={job_id} />;
+          </TabsContent>;
+          <TabsContent value='analytics' className='mt - 6'>            <HiringAnalytics job_id={job_id} />          <TabsList>;
+            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>;
+            <TabsTrigger value="analytics">Analytics</TabsTrigger>;
+          </TabsList>;
+          <TabsContent value="kanban" className="mt - 6">;
+            <KanbanBoard job_id={job_id} />;
+          </TabsContent>;
+          <TabsContent value="analytics" className="mt - 6">;
+            <HiringAnalytics job_id={job_id} />;
+          </TabsContent>;
+        </Tabs>;
+      </main>;
+    </>);
+}
+export default /**
+ * HiringTracker - Function description
+ */
+function HiringTracker() {
+  return (
+    <ProtectedRoute>;
+      <HiringTrackerContent />;
+    </ProtectedRoute>);
+}
+<<<<<<< HEAD
+;
+=======
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

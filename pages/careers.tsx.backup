@@ -102,7 +102,11 @@ import {
   Globe,
   CheckCircle,;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
@@ -127,7 +131,11 @@ const jobOpenings = [
     experience: "5+ years"
     description:
       "Lead the development of cutting-edge AI solutions and machine learning models for our clients."
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     requirements: [
       "Master's degree in Computer Science or related field"
       "5+ years experience in AI/ML development"
@@ -225,7 +233,11 @@ const jobOpenings = [
       "Remote work"
       "Certification support"
     ]
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 ];
 const benefits = [
@@ -414,7 +426,11 @@ import {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 } from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 const Careers: React.FC<CareersProps> = ({ className }) => {
@@ -774,7 +790,11 @@ const benefits = [;
 =======
     title: "Flexible Work",
     description: "Remote work options, flexible hours, and work - life balance",
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   {
     icon: Coffee,
@@ -801,7 +821,11 @@ const benefits = [;
 >>>>>>> main
   }
 =======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ];
 ;
 const values = [;
@@ -848,7 +872,11 @@ function CareersPage() {
       keywords="careers, jobs, employment, technology careers, AI jobs, software development";
     >;
       <div className="min - h-screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Hero Section */}
         <section className="relative bg - gradient - to - br from - blue - 900 via - purple - 900 to - indigo - 900 text - white py - 20 overflow - hidden">;
           <div className="absolute inset - 0">;
@@ -894,7 +922,11 @@ function CareersPage() {
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 =======
@@ -1341,7 +1373,11 @@ function CareersPage() {
                             </li>;
                           ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
@@ -1540,7 +1576,11 @@ function CareersPage() {
 =======
     </MainLayout>;
 
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
 =======
 =======

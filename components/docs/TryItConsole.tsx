@@ -1,23 +1,68 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+interface TryItProps {
+  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+
+=======
+=======
+import React, { useMemo, useState } from 'react';
+interface TryItProps {
+  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+  path: string; // full URL or relative;
+  requiresAuth: boolean;
+export default function TryItConsole(): any ({;
+  method,;
+  path,;
+  requiresAuth,;
+}: TryItProps) {;
+  const [baseUrl, setBaseUrl] = useState('https://api && api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
+  path: string, // full URL or relative;
+  requiresAuth: boolean;
+export default function TryItConsole({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   method
   path
   requiresAuth
 }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   method,
   path,
   requiresAuth,
 }: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   path: string, // full URL or relative
   requiresAuth: boolean
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+
+interface TryItProps {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   path: string; // full URL or relative;
   requiresAuth: boolean;
@@ -32,10 +77,76 @@ export default function TryItConsole(): any ({;
   requiresAuth: boolean;
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
 
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
+
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
 
+<<<<<<< HEAD
+
+
+  }, [baseUrl, path]);
+
+
+<<<<<<< HEAD
+=======
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
+  const [body, setBody] = useState('');
+  const [response, setResponse] = useState<string>(''),
+  const [loading, setLoading] = useState(false);
+  const url = useMemo(() => {
+    if (path.startsWith('http')) return path;
+    return baseUrl.replace(/\/$/, '') + path
+  }, [baseUrl, path]);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  async function onSend() {;
+    setLoading(true);
+    setResponse('');
+    try {;
+      const headers: Record<string, string> = {;
+        'Content-Type': 'application/json',;
+      };
+      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+      const res = await fetch(url, {;
+        method,;
+        headers,;
+        body:;
+          method === 'GET' || method === 'DELETE';
+            ? undefined;
+            : body || undefined,;
+<<<<<<< HEAD
+
+      });
+      const text = await res && res.text();
+      setResponse(text);
+
+    } catch (e: any) {;
+      setResponse(String(e?.message || e));
+    } finally {;
+
+=======
+      });
+      const text = await res && res.text();
+      setResponse(text);
+    } catch (e: any) {;
+      setResponse(String(e?.message || e));
+    } finally {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      setLoading(false);    }
+  }
+  return (
+
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const headers: Record<string, string> = { 'Content-Type': 'application/json' };
       if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
       const res = await fetch(url, {
@@ -49,13 +160,181 @@ export default function TryItConsole(): any ({;
     } finally {;
       setLoading(false);
 
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    }
+  }
+  return (
+
+
+=======
+    <div className='space-y-2'>;
+    <div className='space-y-2'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+      const res = await fetch(url, {;
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+      const res = await fetch(url, {
+        method;
+        headers;
+    }
+  }
+  return (
+  path: string; // full URL or relative;
+  requires_auth: boolean;
+;
+export default /**
+ * TryItConsole - Function description
+ */
+function TryItConsole() {
+  const [base_url, setBaseUrl] = useState ('https://api.zion.os');  const [token, set_token] = useState ('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+  path: string, // full URL or relative;
+  requires_auth: boolean;
+}
+export default /**
+ * TryItConsole - Function description
+ */
+function TryItConsole() {
+  const [base_url, setBaseUrl] = useState ('https: //api.zion.os'),
+  const [body, set_body] = useState ('');
+  const [response, set_response] = useState < string>('');
+  const [loading, set_loading] = useState (false);
+;
+  const url = useMemo (() => {
+    if () return path) {
+  $2
+}
+    return base_url.replace (/\/$/, '') + path;  }, [base_url, path]);    return base_url.replace (/\/$/, '') + path;
+  }, [base_url, path]);
+;
+  async /**
+ * on_send - Function description
+ */
+function on_send() {
+    set_loading (true);
+    set_response ('');
+    try {
+      const headers: Record < string, string> = {
+        'Content - Type': 'application / json',
+      }
+      // Check condition
+if (headers['Authorization'] = `Bearer ${token}`) {
+  $2
+}
+      const res = await fetch (url, {
+        method,
+        headers,
+        body:;
+          method === 'GET' || method === 'DELETE';
+            ? undefined;
+            : body || undefined,
+      });
+      const text = await res.text ();
+      set_response (text);
+    } catch (e: any) {
+      set_response (String (e?.message || e));
+    } finally {
+      set_loading (false);    }
+  }
+  return (
+    <div className='space - y-2'>;
+      <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 2'>      // Check condition
+if (headers['Authorization'] = `Bearer ${token}`) {
+  $2
+}
+      const res = await fetch (url, {
+        method;
+        headers;
+        body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),
+      const text = await res.text ();
+      set_response (text);
+    } catch (e: any) {
+      set_response (String (e?.message || e));
+    } finally {
+      set_loading (false);
+    }
+  }
+  return (
+    <div className='space - y-2'>;
+      <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 2'>;
+        <div>;
+          <label className='block text - sm mb - 1'>Base URL</label>;
+          <input;
+            className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
+            value={base_url}
+            on_change={e => setBaseUrl (e.target.value)}
+          />;
+        </div>;
+        <div>;
+          <label className='block text - sm mb - 1'>Auth Token</label>;
+          <input;
+            className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
+            value={token}
+            on_change={e => set_token (e.target.value)}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+            placeholder='Optional';
+          />;
+        </div>;
+        <div>;
+<<<<<<< HEAD
+
+    <div className="space-y-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+        <div>
+
+=======
+    <div className="space-y-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+        <div>
+        body: method === 'GET' |method === 'DELETE' ? undefined : body |undefined})
+      const text = await res.text();
+
+      setResponse(text)
+    } catch (e: any) {
+      setResponse(String(e?.message |e))
+    } finally {
+      setLoading(false)
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
   return (
     <div className='space-y-2'>
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
         <div>
+<<<<<<< HEAD
+          <label className='block text-sm mb-1'>Base URL</label>
+          <input
+            className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary'
+            value={baseUrl}
+            onChange={e => setBaseUrl(e.target.value)}
+          />
+        </div>
+        <div>
+          <label className='block text-sm mb-1'>Auth Token</label>
+          <input
+            className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary'
+            value={token}
+            onChange={e => setToken(e.target.value)}
+            placeholder='Optional'
+          />
+        </div>
+        <div>
+          <label className='block text-sm mb-1'>Method</label>
+          <input
+            className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary'
+            value={method}
+            readOnly
+          />        </div>
+      </div>
+      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+        <div>        <div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} />
         </div>
@@ -69,16 +348,102 @@ export default function TryItConsole(): any ({;
         </div>
       </div>
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <div>
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+          />        </div>;
+      </div>;
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (;
+        <div>        <div>;
+          <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>;
+          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e && e.target.value)} />;
+        </div>;
+        <div>;
+          <label className="block text-sm mb-1" htmlFor="input-Auth Token">Auth Token</label>;
+          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={token} onChange={(e) => setToken(e && e.target.value)} placeholder="Optional" />;
+        </div>;
+        <div>;
+          <label className="block text-sm mb-1" htmlFor="input-Method">Method</label>;
+          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />;
+        </div>;
+      </div>;
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (;
+        <div>;
+          <label className='block text-sm mb-1'>Request Body (JSON)</label>;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+          <textarea
+            className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
+            value={body}
+            onChange={e => setBody(e && e.target.value)}
+            placeholder='{ }';
+          />;
+<<<<<<< HEAD
+=======
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+=======
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div>
           <textarea
             className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
             value={body}
+<<<<<<< HEAD
+            onChange={e => setBody(e.target.value)}
+            placeholder='{ }'
+          />
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )}
       <button
         onClick={onSend}
         className='px-3 py-2 rounded bg-high-contrast-accent text-black'
+<<<<<<< HEAD
+<<<<<<< HEAD
+        disabled={loading}>;
+        {loading ? 'Sending…' : 'Send Request'}
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      </button>;
+      <div>;
+        <label className='block text-sm mb-1'>Response</label>;
+        <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80'>;
+          <code>{response}</code>;
+        </pre>;
+      </div>;
+    </div>;
+
+<<<<<<< HEAD
+=======
+  );
+}
+          <label className="block text-sm mb-1" htmlFor="input-Request Body (JSON)">Request Body (JSON)</label>
+          <textarea className="w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm" value={body} onChange={(e) => setBody(e.target.value)} placeholder="{ }" />
+        </div>
+      )}
+      <button onClick={onSend} className="px-3 py-2 rounded bg-high-contrast-accent text-black" disabled={loading}>
+        {loading ? 'Sending…' : 'Send Request'}
+      </button>
+      <div>
+        <label className="block text-sm mb-1" htmlFor="input-Response">Response</label>
+        <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80"><code>{response}</code></pre>
+      </div>
+    </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <label className='block text - sm mb - 1'>Method</label>;
           <input;
             className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
@@ -123,6 +488,14 @@ export default function TryItConsole(): any ({;
         </pre>;
       </div>;
     </div>);
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
         </div>
       </div>
       {_(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
@@ -140,6 +513,7 @@ export default function TryItConsole(): any ({;
       </div>
     </div>
   )
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className='space-y-2'>
 
 }
@@ -151,5 +525,37 @@ export default function TryItConsole(): any ({;
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
 
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        disabled={loading}
+      >
+        {loading ? 'Sending…' : 'Send Request'}
+      </button>
+      <div>
+        <label className='block text-sm mb-1'>Response</label>
+        <pre className='p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80'>
+          <code>{response}</code>
+        </pre>
+      </div>
+    </div>
+);
+}
+
+    }
+  }
+
+  return (
+
+        </div>
+      </div>
+      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+        <div>
+        <div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
         <div>
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

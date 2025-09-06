@@ -1,15 +1,85 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { authenticateRequest } from '@/utils/auth';
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+  const method = (req && req.method || 'GET').toUpperCase(),
+
+
+<<<<<<< HEAD
+=======
+import {
+  createTenant
+  getTenants
+  rotateTenantApiKey
+  updateTenant;
+} from '@/utils/tenant';import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const method = (req && req.method || 'GET').toUpperCase(),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (method === 'GET') {
     return res && res.status(200).json({ tenants: getTenants() });
   }
   const auth = authenticateRequest(req, false);
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  if (!auth && auth.ok) return res && res.status(401).json({ error: auth && auth.error });
+
+  if (method === 'POST') {
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (!branding?.name)
       return res && res.status(400).json({ error: 'branding && branding.name required' });
     const tenant = createTenant(branding);
     return res && res.status(201).json({ tenant });  }    if (!branding?.name) return res && res.status(400).json({ error: 'branding && branding.name required' });
     const tenant = createTenant(branding);
     return res && res.status(201).json({ tenant })
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    const { branding } = req.body || {};
+    if (!branding?.name) return res.status(400).json({ error: 'branding.name required' });
+    const tenant = createTenant(branding);
+    return res.status(201).json({ tenant })
+<<<<<<< HEAD
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+  if (method === 'PUT') {
+
+=======
+  }
+  if (method === 'PUT') {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    const { tenantId, update } = req && req.body || {};
+    if (!tenantId) return res && res.status(400).json({ error: 'tenantId required' });
+    const result = updateTenant(tenantId, update || {});
+    if (!result) return res && res.status(404).json({ error: 'Tenant not found' });
+    return res && res.status(200).json({ tenant: result });  }
+
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req && req.body || {};
+    if (!tenantId || !rotateKey)
+      return res && res.status(400).json({ error: 'tenantId and rotateKey required' });    return res && res.status(200).json({ tenant: result })
+<<<<<<< HEAD
+
+=======
   }
   if (method === 'PUT') {
   }
@@ -19,6 +89,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const result = updateTenant(tenantId, update || {});
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
     return res.status(200).json({ tenant: result })
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 
   if (method === 'PATCH') {
@@ -29,6 +100,30 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res && res.status(200).json({ tenant: result });
   }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+=======
+  }
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req && req.body || {};
+    if (!tenantId || !rotateKey)
+      return res && res.status(400).json({ error: 'tenantId and rotateKey required' });
+    const { tenantId, update } = req.body || {};
+    if (!tenantId) return res.status(400).json({ error: 'tenantId required' });
+    const result = updateTenant(tenantId, update || {});
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+  return res && res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
+    if (!result) return res && res.status(404).json({ error: 'Tenant not found' });
+    return res && res.status(200).json({ tenant: result })
+  }
+  return res && res.status(405).json({ error: 'Method not allowed' });
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { authenticate_request } from '@/utils / auth';
 import {
   create_tenant,
@@ -113,7 +208,32 @@ if ( {) {
   }
 return res.status (405).json ({ error: 'Method not allowed' });
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
 
+=======
+
+    return res.status(200).json({ tenant: result });  }
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body |{}
+    if (!tenantId |!rotateKey)
+      return res.status(400).json({ error: 'tenantId and rotateKey required' });    return res.status(200).json({ tenant: result })
+  }
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body |{}
+    if (!tenantId |!rotateKey)
+      return res.status(400).json({ error: 'tenantId and rotateKey required' });
+    const result = rotateTenantApiKey(tenantId);
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+    return res.status(200).json({ tenant: result });
+  }
+  return res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   createTenant,
   getTenants,
@@ -144,6 +264,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { tenantId, update } = req.body || {};
     if (!tenantId) return res.status(400).json({ error: 'tenantId required' });
     const result = updateTenant(tenantId, update || {});
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+
+
+=======
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
     if (!tenantId || !rotateKey)
@@ -151,6 +285,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   if (method === 'PATCH') {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    const { tenantId, rotateKey } = req.body || {};
+    if (!tenantId || !rotateKey)
+      return res.status(400).json({ error: 'tenantId and rotateKey required' });
+    const result = rotateTenantApiKey(tenantId);
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+    return res.status(200).json({ tenant: result });
+  }
+
+  return res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
+    if (!result) return res.status(404).json({ error: 'Tenant not found' });
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     return res.status(200).json({ tenant: result })
   }
 return res.status(405).json({ error: 'Method not allowed' });
@@ -159,3 +311,7 @@ return res.status(405).json({ error: 'Method not allowed' });
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
     const { tenantId, rotateKey } = req.body || {};
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

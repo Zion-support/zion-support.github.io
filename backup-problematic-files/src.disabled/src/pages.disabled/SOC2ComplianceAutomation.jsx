@@ -9,3 +9,7 @@ const SOC2ComplianceAutomation = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
+export default SOC2ComplianceAutomation;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

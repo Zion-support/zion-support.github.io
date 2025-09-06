@@ -3,14 +3,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 totalSize = getDirectorySize(buildDir);
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
 #!/usr/bin/env node;
@@ -303,12 +310,18 @@ const path = require('path')
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
 >>>>>>> origin/main
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     totalSize = getDirectorySize(buildDir);
     const recommendations = [];
     if ( { // > 1MB
@@ -342,7 +355,11 @@ if (require.main === module) {
 =======
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -374,6 +391,11 @@ module.exports = { runSimpleAutomation }) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+=======
 =======
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/simple-automation-runner.cjs
@@ -381,6 +403,7 @@ module.exports = { runSimpleAutomation }) {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
@@ -409,7 +432,18 @@ const { execSync } = require('child_process')
           "status"
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        "status"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+=======
+=======
 <<<<<<< HEAD:backup-problematic-files/scripts/simple-automation-runner.cjs
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
         "status"
 <<<<<<< HEAD
@@ -454,6 +488,11 @@ const { execSync } = require('child_process')
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+=======
 =======
         "status"
         "status"
@@ -462,3 +501,4 @@ const { execSync } = require('child_process')
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

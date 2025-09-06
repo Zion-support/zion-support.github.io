@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {  Dialog
@@ -28,6 +32,13 @@ Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+return (
+    <>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -56,8 +67,28 @@ export function RaiseDisputeButton({
   size,
   className 
 }: RaiseDisputeButtonProps) {
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  const [isDialogOpen, setIsDialogOpen] = useState(false)
+  const router = useRouter()
+  const handleDisputeCreated = (disputeId: string) => {
+    setIsDialogOpen(false)
+    router.push(`/dashboard/disputes/${disputeId}`)
+  }
+  return (
+    <>
+      <Button
+        variant={variant}
+        size={size}
+        className={className}
+        onClick={() => setIsDialogOpen(true)}      >
+        <ShieldAlert className='h-4 w-4 mr-2' />
+        Raise Dispute
+      </Button>
+=======
 
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isDialogOpen, setIsDialogOpen] = useState(false),
   const router = useRouter(),
   
@@ -78,6 +109,13 @@ export function RaiseDisputeButton({
         Raise Dispute
       </Button>
       
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        <DialogContent className="sm:max-w-[550px]">
+ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className='sm:max-w-[550px]'>
             <DialogTitle>Raise a Dispute</DialogTitle>
@@ -86,6 +124,22 @@ export function RaiseDisputeButton({
               this project.
             </DialogDescription>
           </DialogHeader>
+<<<<<<< HEAD
+      
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="sm:max-w-[550px]">
+          <DialogHeader>
+            <DialogTitle>Raise a Dispute</DialogTitle>
+            <DialogDescription>
+              Please provide details about the issue you're experiencing with this project.
+            </DialogDescription>
+          </DialogHeader>
+          <DisputeForm
+            projectId={projectId}
+            milestoneId={milestoneId}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         onClick={() => setIsDialogOpen(true)}      >;
         <ShieldAlert className='h-4 w-4 mr-2' />;
@@ -120,6 +174,10 @@ export function RaiseDisputeButton({
           <DisputeForm;
             project_id={project_id}
             milestone_id={milestone_id}
+<<<<<<< HEAD
+            projectId={projectId}
+
+=======
             onDisputeCreated={handleDisputeCreated}
             onCancel={() => setIsDialogOpen(false)}          />
         </DialogContent>
@@ -181,6 +239,10 @@ export function RaiseDisputeButton({;
             </DialogDescription>;
           </DialogHeader>;
           <DisputeForm;
+<<<<<<< HEAD
+            projectId={projectId}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
@@ -189,3 +251,11 @@ export function RaiseDisputeButton({;
       </Dialog>;
     </>;
   );
+<<<<<<< HEAD
+};
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}
+;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

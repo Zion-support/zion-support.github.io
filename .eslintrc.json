@@ -1,6 +1,11 @@
 {
 <<<<<<< HEAD
 <<<<<<< HEAD
+
+
+=======
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -11,6 +16,7 @@
 >>>>>>> origin/main
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
   "extends": ["next/core-web-vitals", "@typescript-eslint/recommended"],
 =======
@@ -45,6 +51,9 @@
 =======
 origin/automation-improvements-final
 <<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
@@ -54,12 +63,20 @@ origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint"],
   "env": {
     "browser": true,
     "node": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    "es6": true,
+    "jest": true
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -89,6 +106,7 @@ origin/automation-improvements-final
     "es6": true,
     "jest": true
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "es2021": true
   },
   "globals": {
@@ -100,6 +118,14 @@ origin/automation-improvements-final
     "alert": "readonly"
 <<<<<<< HEAD
 <<<<<<< HEAD
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -136,11 +162,20 @@ origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "warn",
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+    "react/no-unescaped-entities": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-console": "warn"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -175,11 +210,20 @@ origin/automation-improvements-final
     "react-hooks/exhaustive-deps": "warn",
     "no-console": "warn"
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "react-hooks/exhaustive-deps": "warn",
     "react/react-in-jsx-scope": "off",
     "no-undef": "error",
     "react/no-unescaped-entities": "off"
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -218,6 +262,7 @@ origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   "ignorePatterns": [
     "node_modules/",
@@ -292,8 +337,11 @@ origin/automation-improvements-final
     "pages-disabled/",
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     "pages.disabled_auto/"
 
@@ -302,8 +350,11 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "pages.disabled_auto/"
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
@@ -578,6 +629,9 @@ origin/automation-improvements-final
     "pages.disabled_auto/"
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 <<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
@@ -592,5 +646,6 @@ origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ]
 }

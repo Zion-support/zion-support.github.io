@@ -42,7 +42,11 @@ afterEach(() => {;
   resetAllMocks:vi.resetAllMocks.bind(vi),;
   restoreAllMocks:vi.restoreAllMocks.bind(vi),;
   clearAllMocks:vi.clearAllMocks.bind(vi),;
+<<<<<<< HEAD
+  // Snapshot placeholder (no-op) – Vitest has its own snapshot system.;
+=======
   // Snapshot placeholder (no-op)  Vitest has its own snapshot system.;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // We expose it so imports compile even if we don't use it.;
    ;
   SnapshotSerializer:() => {}};
@@ -53,3 +57,7 @@ export default function Setup({ }: SetupProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

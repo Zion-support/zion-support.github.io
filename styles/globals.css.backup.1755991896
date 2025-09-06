@@ -52,12 +52,19 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -79,7 +86,6 @@
 =======
 >>>>>>> origin/main
   
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   /* Revolutionary new effects */
   --quantum-holographic: 0 0 150px rgba(0, 255, 255, 0.2);
   --neural-quantum: 0 0 120px rgba(16, 185, 129, 0.3);
@@ -93,6 +99,9 @@
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 
 --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);
@@ -102,7 +111,11 @@
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);
 =======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
@@ -125,9 +138,13 @@
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 /* Base styles */
@@ -289,13 +306,20 @@ body::after {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);  top: 0;
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);  top: 0;
 <<<<<<< HEAD
@@ -316,10 +340,14 @@ body::after {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
   --neural-quantum-cyberpunk: 0 0 220px rgba(16, 185, 129, 0.2);  top: 0;
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   left: 0;
   width: 100%;
   height: 100%;
@@ -329,12 +357,19 @@ body::after {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -350,9 +385,13 @@ body::after {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     linear-gradient(rgba(0, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 255, 255, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -365,6 +404,8 @@ body::after {
 body::after {
   content: '';
   position: absolute;
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
     radial-gradient(2px 2px at 20px 30px, rgba(0, 255, 255, 0.8), transparent),
@@ -386,7 +427,25 @@ body::after {
 >>>>>>> origin/main
 
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+    radial-gradient(2px 2px at 20px 30px, rgba(0, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(139, 92, 246, 0.8), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(236, 73, 153, 0.8), transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(16, 185, 129, 0.8), transparent),
+    radial-gradient(2px 2px at 160px 30px, rgba(245, 158, 11, 0.8), transparent),
+    radial-gradient(1px 1px at 200px 60px, rgba(59, 130, 246, 0.8), transparent),
+    radial-gradient(2px 2px at 240px 90px, rgba(168, 85, 247, 0.8), transparent),
+    radial-gradient(1px 1px at 280px 20px, rgba(0, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 320px 50px, rgba(139, 92, 246, 0.8), transparent),
+    radial-gradient(1px 1px at 360px 80px, rgba(236, 73, 153, 0.8), transparent);
+  background-repeat: repeat;
+  background-size: 400px 100px;
+  pointer-events: none;
+  z-index: -1;
+  animation: particleFloat 30s linear infinite;
+}
+
 /* Enhanced Quantum Grid */
 .quantum-grid {
   position: fixed;
@@ -403,9 +462,13 @@ body::after {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   top: 0;
   left: 0;
   width: 100%;
@@ -416,12 +479,19 @@ body::after {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -441,9 +511,13 @@ body::after {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     radial-gradient(2px 2px at 20px 30px, #3b82f6, transparent),
     radial-gradient(2px 2px at 40px 70px, #8b5cf6, transparent),
     radial-gradient(1px 1px at 90px 40px, #06b6d4, transparent),
@@ -457,12 +531,19 @@ body::after {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -477,6 +558,10 @@ body::after {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  opacity: 0.3;
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
   opacity: 0.3;
 =======
@@ -491,7 +576,16 @@ body::after {
 >>>>>>> origin/main
 
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: -1;
+  animation: gridPulse 20s ease-in-out infinite;
+}
+
 /* Enhanced Holographic Matrix */
 .holographic-matrix {
   position: fixed;
@@ -600,9 +694,12 @@ body::after {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 /* Enhanced Animations */
@@ -610,6 +707,9 @@ body::after {
   opacity: 0.3;}
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
 =======
@@ -622,7 +722,11 @@ body::after {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> main
 
 /* Enhanced Animations */
@@ -649,12 +753,16 @@ body::after {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 
 /* Enhanced Animations */
 @keyframes backgroundFloat {
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   0%, 100% {
     transform: translateY(0px) rotate(0deg);
   }
@@ -1007,12 +1115,19 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1027,6 +1142,10 @@ h3 {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    background: rgba(0, 0, 0, 0.3);
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     background: rgba(0, 0, 0, 0.3);
 =======
@@ -1039,7 +1158,14 @@ h3 {
 >>>>>>> origin/main
 
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(1deg); }
+  50% { transform: translateY(-5px) rotate(-1deg); }
+  75% { transform: translateY(-15px) rotate(0.5deg); }
+}
+
 @keyframes particleFloat {
   0% { transform: translateY(0px); }
   100% { transform: translateY(-100px); }
@@ -1402,10 +1528,17 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
   
   .holographic-matrix {
@@ -1418,7 +1551,7 @@ h3 {
   
   .cyberpunk-elements {
     background-size: 100px 100px;
-
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
   }
 <<<<<<< HEAD
 =======
@@ -1428,7 +1561,11 @@ h3 {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
@@ -1451,9 +1588,13 @@ h3 {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 /* High Contrast Mode */
@@ -1478,6 +1619,9 @@ h3 {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
 =======
@@ -1493,7 +1637,11 @@ h3 {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1517,9 +1665,13 @@ h3 {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 /* Enhanced Focus States */
 .quantum-button:focus,
@@ -1558,12 +1710,19 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-9967
 =======
 <<<<<<< HEAD
@@ -1589,6 +1748,10 @@ h3 {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

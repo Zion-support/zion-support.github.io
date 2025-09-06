@@ -208,12 +208,19 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -238,9 +245,13 @@ h3 {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   25% { transform: translateY(-20px) rotate(90deg); }
   50% { transform: translateY(-40px) rotate(180deg); }
@@ -253,6 +264,9 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 
 .quantum-neural-bg {
@@ -260,7 +274,11 @@ h3 {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -291,9 +309,12 @@ h3 {
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+<<<<<<< HEAD
+=======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   background: 
     radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
@@ -301,6 +322,9 @@ h3 {
 .quantum-neural-bg {  background: 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
 =======
@@ -314,7 +338,11 @@ h3 {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> main
     radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
@@ -341,12 +369,16 @@ h3 {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
     radial-gradient(circle at 20% 50%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.3) 0%, transparent 50%),
     radial-gradient(circle at 40% 80%, rgba(120, 219, 255, 0.3) 0%, transparent 50%),
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     linear-gradient(45deg, #000000, #1a1a2e, #16213e, #0f3460);
   background-size: 200% 200%, 200% 200%, 200% 200%, 400% 400%;
   animation: quantumNeural 25s ease infinite;
@@ -439,12 +471,19 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -459,6 +498,10 @@ h3 {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+.futuristic-card {
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 .futuristic-card {
 =======
@@ -470,7 +513,13 @@ h3 {
 >>>>>>> origin/main
 
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+    linear-gradient(45deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
+  background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
+  animation: quantumHolographic 20s ease-in-out infinite;
+}
+
 @keyframes quantumHolographic {
   0%, 100% { 
     background-position: 0% 0%, 100% 100%, 0% 100%, 0% 0%;
@@ -609,10 +658,17 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   position: relative;
   background: linear-gradient(45deg, #06b6d4, #8b5cf6, #ec4899, #f97316);
   background-size: 400% 400%;
@@ -689,7 +745,7 @@ h3 {
 
 /* Enhanced Button States */
 .btn-futuristic {
-
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2873
   position: relative;
 <<<<<<< HEAD
 =======
@@ -699,7 +755,11 @@ h3 {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
@@ -722,9 +782,13 @@ h3 {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -732,6 +796,9 @@ h3 {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
 =======
@@ -745,7 +812,11 @@ h3 {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -775,9 +846,13 @@ h3 {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   position: absolute;
   top: 0;
   left: -100%;
@@ -797,11 +872,18 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -826,9 +908,13 @@ h3 {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 .futuristic-card:hover::before {
   left: 100%;
 }
@@ -982,6 +1068,9 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 
   background: #1f2937;
@@ -989,7 +1078,11 @@ h3 {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1008,10 +1101,17 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 /* Enhanced Card Hover Effects */
@@ -1051,7 +1151,7 @@ h3 {
   25% { background-position: 100% 50%; }
   50% { background-position: 100% 100%; }
   75% { background-position: 0% 100%; }
-
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2873
 }
 <<<<<<< HEAD
 =======
@@ -1060,7 +1160,11 @@ h3 {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
@@ -1083,9 +1187,13 @@ h3 {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 /* Enhanced Floating Elements */
 .float-animation {
@@ -1097,11 +1205,18 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1126,9 +1241,13 @@ h3 {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(45deg, #2563eb, #7c3aed);
 }
@@ -1205,11 +1324,20 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1223,6 +1351,10 @@ h3 {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+/* Reduced Motion */
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 /* Reduced Motion */
 =======
@@ -1239,7 +1371,13 @@ h3 {
 
 @media (prefers-reduced-motion: reduce) {
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
 /* Enhanced Pulse Effects */
 .pulse-glow {
   animation: pulseGlow 2s ease-in-out infinite alternate;
@@ -1327,9 +1465,13 @@ h3 {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
@@ -1346,11 +1488,18 @@ h3 {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1375,9 +1524,13 @@ h3 {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 /* Print Styles */
 @media print {
   .futuristic-bg,
@@ -1470,6 +1623,9 @@ h3 {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 =======
 <<<<<<< HEAD
@@ -1477,15 +1633,12 @@ h3 {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
 <<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
-}
-
-}
-
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
 /* Enhanced Print Styles */
 @media print {
   .no-print {
@@ -1497,9 +1650,6 @@ h3 {
     color: black !important;
   }
 }
-<<<<<<< HEAD
-
-=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-2873
 =======
 <<<<<<< HEAD
@@ -1532,6 +1682,10 @@ h3 {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

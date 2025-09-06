@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { useLocalStorage  } from '@/hooks';
+import { Header  } from '@/components/Header';
+import { SEO  } from '@/components/SEO';
+import { useAuth  } from '@/hooks/useAuth';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { useState } from 'react'
+import { useLocalStorage } from '@/hooks'
+import { Header } from '@/components/Header'
+import { SEO } from '@/components/SEO'
+import { useAuth } from '@/hooks/useAuth'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Wallet, Database, Save } from 'lucide-react'
 
 import {
@@ -75,6 +92,15 @@ export default function AccountSettings() {
       toast.success(
         `Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`
       )
+<<<<<<< HEAD
+<<<<<<< HEAD
+          <Card>
+            <CardHeader>
+=======
+toast.success (
+        `Wallet connected: ${address.slice (0, 6)}...${address.slice (-4)}`);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error: any) {
       toast.error (error.message || 'Failed to connect wallet');
     }
@@ -225,6 +251,30 @@ export default function AccountSettings() {;
     }
   },
 
+<<<<<<< HEAD
+  return (
+    <>
+      <SEO title="Account Settings" description="Manage your account" />
+    <>
+      <SEO title="Account Settings" description="Manage your account" />
+      <Header />
+      <main className='container mx-auto py-8 px-4'>
+        <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>
+        <div className='grid gap-6 md:grid-cols-2'>
+      <main className="container mx-auto py-8 px-4">
+        <h1 className="text-3xl font-bold mb-6 text-white">Account Settings</h1>
+        
+        <div className="grid gap-6 md:grid-cols-2">
+          <Card>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+              <CardTitle>Profile Settings</CardTitle>
+              <CardDescription>
+                Manage your personal information and privacy
+              </CardDescription>
+            </CardHeader>
+<<<<<<< HEAD
+=======
+=======
 
 
 
@@ -234,16 +284,52 @@ export default function AccountSettings() {;
     <>
       <SEO title='Account Settings' description='Manage your account' />
       <Header />
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
               <CardDescription>Manage your personal information and privacy</CardDescription>
             </CardHeader>
+<<<<<<< HEAD
+
+    <>;
+      <SEO title='Account Settings' description='Manage your account' />;
+      <Header />;
+      <main className='container mx-auto py-8 px-4'>;
+        <h1 className='text-3xl font-bold mb-6 text-white'>Account Settings</h1>;
+
+        <div className='grid gap-6 md:grid-cols-2'>;
+          <Card>;
+            <CardHeader>;
+              <CardTitle>Profile Settings</CardTitle>;
+    <>;
+      <SEO title='Account Settings' description='Manage your account' />;
+      <Header />;
+      <main className='container mx - auto py - 8 px - 4'>;
+        <h1 className='text - 3xl font - bold mb - 6 text - white'>Account Settings</h1>;
+        <div className='grid gap - 6 md:grid - cols - 2'>;
+          <Card>;
+            <CardHeader>;
+              <CardTitle > Profile Settings</CardTitle>;
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <CardDescription>;
                 Manage your personal information and privacy;
               </CardDescription>;
             </CardHeader>;
+<<<<<<< HEAD
+
+                />;
+              </div>;
+
+              <div className='space-y-2'>;
+                <Label htmlFor='didHandle'>Web3 Identity Handle</Label>;
+                <div className='flex gap-2'>;
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <Input
                     id='didHandle'
                     value={didHandle}
@@ -254,6 +340,39 @@ export default function AccountSettings() {;
                     variant='outline'
                     onClick={handleConnectWallet}
                     type='button'
+<<<<<<< HEAD
+
+            <CardContent className="space-y-6">
+              <div className="space-y-2">
+                <Label htmlFor="email">Email Address</Label>
+                <Input
+                  id='email'
+                  value={user?.email |''}                  disabled
+                  className='bg-gray-100'
+                />
+              </div>
+              <div className='space-y-2'>
+                <Label htmlFor='didHandle'>Web3 Identity Handle</Label>
+                <div className='flex gap-2'>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                  <Input
+                    id='didHandle'
+                    value={didHandle}
+                    onChange={e => setDidHandle(e && e.target.value)}
+                    placeholder='ENS / Lens / Ceramic / Farcaster';
+                  />;
+                  <Button
+                    variant='outline'
+                    onClick={handleConnectWallet}
+                    type='button'
+<<<<<<< HEAD
+                    Connect
+                  </Button>
+=======
+                    className='flex items-center gap-1'                  >
+                    <Wallet className='h-4 w-4' />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   id="email"
                   value={user?.email || ''}
                   disabled
@@ -284,11 +403,25 @@ export default function AccountSettings() {;
                 <Label htmlFor="email">Email Address</Label>
                 <Input
                     Connect
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 </div>
-                <p className="text-xs text-gray-500 mt-1">
+                <p className='text-xs text-gray-500 mt-1'>
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+              <div className='flex items-center justify-between'>
+                <div className='space-y-0.5'>
+                  <Label htmlFor='displayWeb3'>Display Web3 Identity</Label>
+                  <p className='text-xs text-gray-500'>
+                    Show your Web3 handle instead of email
+                  </p>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>
                 <Switch
                   id='displayWeb3'
@@ -296,36 +429,177 @@ export default function AccountSettings() {;
                   onCheckedChange={setDisplayWeb3}                />
               </div>
               <Separator />
+<<<<<<< HEAD
+              <div className='flex items-center justify-between'>
+                <div className='space-y-0.5'>
+                  <Label htmlFor='backup' className='flex items-center gap-1'>
+                    <Database className='h-4 w-4' />
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+              
+              <div className="flex items-center justify-between">
+                <div className="space-y-0.5">
+                  <Label htmlFor="displayWeb3">Display Web3 Identity</Label>
+                  <p className="text-xs text-gray-500">Show your Web3 handle instead of email</p>
+                </div>
+                <Switch
+                  id="displayWeb3"
+                  checked={displayWeb3}
+                  onCheckedChange={setDisplayWeb3}
+                />
+              </div>
+              
+              <Separator />
+              
+              <div className="flex items-center justify-between">
+                <div className="space-y-0.5">
+                  <Label htmlFor="backup" className="flex items-center gap-1">
+                    <Database className="h-4 w-4" />
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
                     Decentralized Backup
                   </Label>
+<<<<<<< HEAD
+                  <p className='text-xs text-gray-500'>
+=======
                   <p className="text-xs text-gray-500">
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     Backup your profile data to IPFS/Arweave
                   </p>
                 </div>
                 <Switch
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                    className='flex items-center gap-1'>;
+                    <Wallet className='h-4 w-4' />;
+                    Connect;
+                  </Button>;
+                </div>;
+                <p className='text-xs text-gray-500 mt-1'>;
+                  Link your decentralized identity to display on your profile;
+                </p>;
+              </div>;
+
+              <div className='flex items-center justify-between'>;
+                <div className='space-y-0 && 0.5'>;
+                  <Label htmlFor='displayWeb3'>Display Web3 Identity</Label>;
+                  <p className='text-xs text-gray-500'>;
+                    Show your Web3 handle instead of email;
+                  </p>;
+                </div>;
+                <Switch
+                  id='displayWeb3'
+                  checked={displayWeb3}
+                  onCheckedChange={setDisplayWeb3}                />;
+              </div>;
+
+              <Separator />;
+
+              <div className='flex items-center justify-between'>;
+                <div className='space-y-0 && 0.5'>;
+                  <Label htmlFor='backup' className='flex items-center gap-1'>;
+                    <Database className='h-4 w-4' />;
+                    Decentralized Backup;
+                  </Label>;
+                  <p className='text-xs text-gray-500'>;
+                    Backup your profile data to IPFS/Arweave;
+                  </p>;
+                </div>;
+                <Switch
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                  id='backup'
+                  checked={enableBackup}
+                  onCheckedChange={setEnableBackup}                />;
+              </div>;
+
+              {enableBackup && (;
+                <div className='rounded-md bg-amber-50 p-3 text-sm text-amber-800'>;
+                  Data will be backed up to decentralized storage. This feature;
+                  is in beta.;
+                </div>;
+
+<<<<<<< HEAD
+=======
+                  id='backup'
+                  checked={enableBackup}
+                  onCheckedChange={setEnableBackup}                />
+              </div>
+              {enableBackup && (
+                <div className='rounded-md bg-amber-50 p-3 text-sm text-amber-800'>
+                  Data will be backed up to decentralized storage. This feature
+                  is in beta.
+                </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               )}
               <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
+<<<<<<< HEAD
+=======
                 className='w-full'>;
 
+<<<<<<< HEAD
+                  id="backup"
+                  checked={enableBackup}
+                  onCheckedChange={setEnableBackup}
+                />
+              </div>
+              
+              {enableBackup && (
+                <div className="rounded-md bg-amber-50 p-3 text-sm text-amber-800">
+                  Data will be backed up to decentralized storage. This feature is in beta.
+                </div>
+              )}
+;
+              <Button;
+                onClick={handleSave}
+                disabled={isSubmitting}
+                className="w-full"
+              >
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className="ml-2 h-4 w-4" />}
               </Button>
             </CardContent>
           </Card>
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                {isSubmitting ? 'Saving...' : 'Save Settings'}
+                {!isSubmitting && <Save className='ml-2 h-4 w-4' />}
 
 
+          
+
+
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <Card>
+            <CardHeader>
+=======
+          
+          
+          <Card>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               <CardTitle>Web3 Features</CardTitle>
-              <CardDescription>Manage your Web3 connections and features</CardDescription>
+              <CardDescription>
+                Manage your Web3 connections and features
+              </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="space-y-2">
-                <h3 className="font-medium">Connected Wallet</h3>
+            <CardContent className='space-y-6'>
+              <div className='space-y-2'>
+                <h3 className='font-medium'>Connected Wallet</h3>
                 {didHandle ? (
+<<<<<<< HEAD
+=======
                   <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>
               <CardDescription>;
                 Manage your Web3 connections and features;
@@ -487,6 +761,9 @@ export default function AccountSettings() {;
                 <p className='text - xs text - gray - 500 mt - 1'>;
                   {enable_backup;
                     ? 'Restore your profile data from decentralized storage';
+<<<<<<< HEAD
+                    : 'Enable backup first to use this feature'}
+=======
                     </p>
                   </div>
                 </div>
@@ -504,6 +781,7 @@ export default function AccountSettings() {;
                 <p className="text-xs text-gray-500 mt-1">
                   {enableBackup 
                     ? 'Restore your profile data from decentralized storage' 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     : 'Enable backup first to use this feature'}
                 </p>;
               </div>;
@@ -511,5 +789,18 @@ export default function AccountSettings() {;
           </Card>;
         </div>;
       </main>;
+<<<<<<< HEAD
+;
+
+
+
+
+
+    </>);
 }
 ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

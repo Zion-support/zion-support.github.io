@@ -1,12 +1,30 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+// File system database utilities
+export const fsDb = {
+  // Add file system database functionality here
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   read: (path: string) => null
   write: (path: string, data: any) => null
   exists: (path: string) => false
   delete: (path: string) => null
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   read: (path: string) => null,
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
   delete: (path: string) => null;
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -18,11 +36,27 @@
   exists: (path: string) => false,
   delete: (path: string) => null;
 };
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { promises as fs } from 'fs';
 import path from 'path';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+export function readJson<T>(filePath: string, defaultValue: T): T {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
     const fullPath = path && path.join(DATA_DIR, filePath);
     const data = fs && fs.readFileSync(fullPath, 'utf8');
@@ -32,6 +66,14 @@ const DATA_DIR = path.join(process.cwd(), 'data');
   }
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function writeJson<T>(filePath: string, data: T): void {
   try {
     const fullPath = path && path.join(DATA_DIR, filePath);
@@ -61,6 +103,9 @@ export async function writeJsonAsync<T>(filePath: string, data: T): Promise<void
   } catch (error) {
     return defaultValue;
   }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 }
     const fullPath = path && path.join(DATA_DIR, filePath);
     const dir = path && path.dirname(fullPath);
@@ -75,6 +120,7 @@ export function writeJson<T>(relativePath: string, value: T): void {
   ensureDir(path.dirname(full));
   fs.writeFileSync(full, JSON.stringify(value, null, 2), 'utf-8');
 }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // File system database utilities;
 export const fs_db = {
   // Add file system database functionality here;
@@ -83,3 +129,16 @@ export const fs_db = {
   exists: (path: string) => false,
   delete: (path: string) => null;
 }
+<<<<<<< HEAD
+
+}
+
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

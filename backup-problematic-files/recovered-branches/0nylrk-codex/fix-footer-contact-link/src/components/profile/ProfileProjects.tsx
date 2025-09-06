@@ -53,3 +53,24 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {;
       </div>;
     </div>;
   ),;}
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/profile/ProfileProjects.tsx
+ import {;
+  {;
+  {;
+  FileText ;
+}from 'lucide-react' interface ProfileProjectsProps {;
+  projects: ProfileProject[] ;
+}export function ProfileProjects ({;
+  projects ;
+}: ProfileProjectsProps) {;
+  return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8" > <h3 className="text-xl font-bold text-white mb-4" >Projects</h3> grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"> {";"  projects.map ( (project) => (/> </AspectRatio>) : (<div className=" h-40 w-full flex items-center justify-center bg-zion-blue"> <FileText className=" text-zion-purple h-12 w-12 opacity-50" /> </div>) ;
+}</Badge>) ) ;
+}</div>) ;
+}</div> </CardContent> </Card>) ) ;
+:temp_broken_files/profile/ProfileProjects.tsx
+}</div> </div>) ;"}'"
+}</div> </div>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileProjects.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileProjects.tsx

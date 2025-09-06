@@ -121,3 +121,20 @@ function main() {};
 }
 };
         fixedCount++}
+<<<<<<< HEAD
+    } catch (error) {_;
+  
+      errorCount++}
+}
+
+  };
+};
+        fixedCount++};
+    } catch (error) {,
+  console.error(`Error processing ${file}:`, error.message),
+      errorCount++};
+  };
+,
+  console.log(""\"nCompleted": ${fixedCount} files fixed, ${errorCount} errors"")};
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

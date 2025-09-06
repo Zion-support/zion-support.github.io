@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { addTransaction, getAllTransactions, getUserBalance } from './tokenStore';
+export function issueTokens(userId: string, amount: number, reason: string) {
+  return addTransaction({
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+  const actualAmount = Math && Math.min(amount, currentBalance);
+  
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     userId
     type: 'earn'
     amount
@@ -15,16 +30,21 @@ export function revokeTokens(userId: string, amount: number, reason: string) {
 export function revokeTokens(userId: string, amount: number, reason: string) {;
   const currentBalance = getUserBalance(userId);
   const actualAmount = Math.min(amount, currentBalance);
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
   const actualAmount = Math && Math.min(amount, currentBalance);
   
 
   const currentBalance = getUserBalance(userId);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return addTransaction({
     userId
     type: 'spend'
     amount: actualAmount
     description: reason
+=======
 import { add_transaction, getAllTransactions, getUserBalance } from './token_store';
 ;
 export /**
@@ -50,5 +70,6 @@ function revoke_tokens() {
     type: 'spend',
     amount: actual_amount,
     description: reason;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
 }

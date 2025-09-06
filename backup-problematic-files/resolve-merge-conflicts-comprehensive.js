@@ -10,7 +10,11 @@ import fs from 'fs;
 import path from 'path';
 import { execSync } from child_process';
 ;
+<<<<<<< HEAD
+console.log('🔧 Resolving merge conflicts comprehensively...);
+=======
 console.log(' Resolving merge conflicts comprehensively...);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 // Get list of conflicted files,
 const getConflictedFiles = () => {,
@@ -83,6 +87,18 @@ const main = () => {,
       failedCount++
     };
   };
+<<<<<<< HEAD
+  console.log(`\n✅ Resolved: ${resolvedCount} files`),
+  console.log(`❌ Failed: ${failedCount} files`),
+,
+  if (resolvedCount > 0) {,
+    console.log('\n📝 Adding resolved files...),
+    try {,
+      execSync('git add .', { stdio: inherit' }),
+      console.log('✅ Files added to staging area)
+    } catch (error) {,
+      console.error('❌ Error adding files:', error.message)
+=======
   console.log(`\n Resolved: ${resolvedCount} files`),
   console.log(` Failed: ${failedCount} files`),
 ,
@@ -93,6 +109,7 @@ const main = () => {,
       console.log(' Files added to staging area)
     } catch (error) {,
       console.error(' Error adding files:', error.message)
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     };
   };
 };

@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { format } from 'date-fns';
+import { JobApplication } from '@/types/jobs';
+import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
+import { ClickableBadge } from '@/components/ui/clickable-badge'
+import {  Table,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import { format } from "date-fns",
+import { JobApplication } from "@/types/jobs",
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
+import { ClickableBadge } from "@/components/ui/clickable-badge",
+import { 
+  Table,
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   TableBody,
   TableCell,
   TableHead,
@@ -25,6 +44,55 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }) => 
   const [avatarError, setAvatarError] = useState(false),
   const talentName = application.talent_profile?.full_name || "Candidate",
 
+<<<<<<< HEAD
+
+import { format } from "date-fns",
+import { JobApplication } from "@/types/jobs",
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
+import { ClickableBadge } from "@/components/ui/clickable-badge",
+import { 
+  Table,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table'
+import { ApplicationActions } from './ApplicationActions'
+import { StatusBadge } from './StatusBadge'
+import { Briefcase, User } from 'lucide-react';
+import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal';
+import React, { useState } from 'react'; // Import React and useState
+import { toast } from '@/hooks/use-toast';
+import Image from 'next/image'; // Import next/image
+
+
+// Sub-component for avatar to handle its own error state
+const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
+  TableRow
+} from "@/components/ui/table",
+import { ApplicationActions } from "./ApplicationActions",
+import { StatusBadge } from "./StatusBadge",
+import { Briefcase, User } from 'lucide-react'
+import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",
+import React, { useState } from "react", // Import React and useState
+import { toast } from "@/hooks/use-toast",
+import Image from 'next/image', // Import next/image
+
+interface ApplicationsTableProps {
+  applications: JobApplication[],
+  processingId: string | null,
+  onViewApplication: (applicationId: string) => Promise<void>,
+  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,
+  onViewScore: (application: JobApplication) => void
+}
+
+// Sub-component for avatar to handle its own error state
+const ApplicationAvatar = ({ application }: { application: JobApplication }) => {
+  const talentName = application.talent_profile?.full_name || "Candidate",
+ursor/fix-website-loading-errors-and-merge-6662
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { format } from 'date-fns'
 import { JobApplication } from '@/types/jobs'
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
@@ -43,20 +111,165 @@ import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmat
 import React, { useState } from 'react'; // Import React and useState
 import { toast } from '@/hooks/use-toast'
 import Image from 'next/image'; // Import next/image
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import { format } from 'date-fns';
+import { JobApplication } from '@/types/jobs';
+import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed;
+import { ClickableBadge } from '@/components/ui/clickable-badge';
+import {  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow,;
+} from '@/components/ui/table';
+import { ApplicationActions } from './ApplicationActions';
+import { StatusBadge } from './StatusBadge';
+import { Briefcase, User } from 'lucide-react';
+import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmationModal';
+import React, { useState } from 'react'; // Import React and useState;
+import { toast } from '@/hooks/use-toast';
+import Image from 'next/image'; // Import next/image;
 
+interface ApplicationsTableProps {;
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   applications: JobApplication[];
   processingId: string | null;
   onViewApplication: (applicationId: string) => Promise<void>;
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
   onViewScore: (application: JobApplication) => void
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+import { format } from 'date - fns';
+import { JobApplication } from '@/types / jobs';
+import { Avatar as AvatarPrimitive } from '@/components / ui / avatar'; // Renamed;
+import { ClickableBadge } from '@/components / ui / clickable - badge';
+import {  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components / ui / table';
+import { ApplicationActions } from './ApplicationActions';
+import { StatusBadge } from './StatusBadge';
+import { Briefcase, User } from 'lucide-react';
+import { HireConfirmationModal } from '@/components / hiring - tracker / HireConfirmationModal';
+import React, { useState } from 'react'; // Import React and useState;
+import { toast } from '@/hooks / use - toast';
+import Image from 'next / image'; // Import next / image;
+interface ApplicationsTableProps {
+  applications: JobApplication[];
+  processing_id: string | null;
+  onViewApplication: (application_id: string) => Promise < void>;
+  onStatusChange: (application_id: string, new_status: string) => Promise < void>;
+  onViewScore: (application: JobApplication) => void;
+// Sub - component for avatar to handle its own error state;
+
+const ApplicationAvatar = ({
+  application
+}: {
+
+// Sub-component for avatar to handle its own error state;
+const ApplicationAvatar = ({;
+  application,;
+}: {;
+  application: JobApplication;
+}) => {;
+  const [avatarError, setAvatarError] = useState(false);
+  const talentName = application && application.talent_profile?.full_name || 'Candidate';
+interface ApplicationsTableProps {;
+  applications: JobApplication[],;
+  processingId: string | null,;
+  onViewApplication: (applicationId: string,) => Promise<void>,;
+  onStatusChange: (applicationId: string, newStatus: string,) => Promise<void>,;
+  onViewScore: (application: JobApplication,) => void;
+}
+
+// Sub-component for avatar to handle its own error state;
+const ApplicationAvatar = ({ application }: { application: JobApplication },) => {;
+  const [avatarError, setAvatarError] = useState(false),;
+  const talentName = application && application.talent_profile?.full_name || "Candidate",;
+
+=======
+// Sub-component for avatar to handle its own error state
+const ApplicationAvatar = ({
+  application
+}: {
+  application: JobApplication
+}) => {
+  const [avatarError, setAvatarError] = useState(false)
+  const talentName = application.talent_profile?.full_name |'Candidate'
+interface ApplicationsTableProps {
+  applications: JobApplication[]
+  processingId: string | null
+  onViewApplication: (applicationId: string,) => Promise<void>
+  onStatusChange: (applicationId: string, newStatus: string,) => Promise<void>
+  onViewScore: (application: JobApplication,) => void
+
+}
+// Sub-component for avatar to handle its own error state
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 const ApplicationAvatar = ({ application }: { application: JobApplication },) => {
   const [avatarError, setAvatarError] = useState(false)
   const talentName = application.talent_profile?.full_name |"Candidate"
   return (
+<<<<<<< HEAD
+    <AvatarPrimitive className='h-8 w-8'>;
+      {' '}
+      {/* Using Renamed AvatarPrimitive */}
+      {application && application.talent_profile?.profile_picture_url && !avatarError ? (;
+        <Image
+          src = {application && application.talent_profile.profile_picture_url,}
+          alt = {talentName,}
+          width={32} // for h-8 w-8
+          height={32} // for h-8 w-8
+<<<<<<< HEAD
+
+
+=======
+          className='rounded-full object-cover'
+          onError={() => setAvatarError(true)}
+          priority={false}        />
+        <User className="h-4 w-4" />
+          className='rounded-full object-cover'
+          onError={() => setAvatarError(true)}
+          priority={false}        />
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+          className="rounded-full object-cover"
+          onError={() => setAvatarError(true)}
+          priority={false}
+        />
+<<<<<<< HEAD
+
+
       ) : (
         <User className="h-4 w-4" />
+=======
+      ) : (
+        <User className="h-4 w-4" />
+}
+export function ApplicationsTable({
+}
+export function ApplicationsTable({
+  applications
+  processingId
+  onViewApplication
+  onStatusChange
+  onViewScore
+}: ApplicationsTableProps) {
+=======
+      ) : (
+        <User className="h-4 w-4" />
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )}
     </AvatarPrimitive>
   )
@@ -124,6 +337,8 @@ export function ApplicationsTable(): any ({;
     });
   };
 
+<<<<<<< HEAD
+=======
 export function ApplicationsTable({ 
   applications, 
   processingId, 
@@ -146,6 +361,7 @@ export function ApplicationsTable({
     })
   },
   
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>;
       <div className='rounded - md border'>;
@@ -232,15 +448,44 @@ export function ApplicationsTable({
           </TableHeader>
           <TableBody>
 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 <TableCell>
                   <div className="flex items-center gap-3">
                     <ApplicationAvatar application={application} /> {/* Use sub-component */}
                     <div>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+                      </div>
+            {applications.map(application => (              <TableRow key={application.id}>
+                  <div className="flex items-center gap-3">
+                    <ApplicationAvatar application={application} /> {/* Use sub-component */}
+            {applications.map(application => (              <TableRow key={application.id}>
+            {applications.map((application) => (
+              <TableRow key={application.id}>
+                <TableCell>
+                  <div className="flex items-center gap-3">
+                    <ApplicationAvatar application={application} /> {/* Use sub-component */}
+                    <div>
+                      <div className='font-medium'>
+                        {application.talent_profile?.full_name |'Candidate'}
+                      </div>
+                      <div className='text-xs text-muted-foreground mt-0.5'>
+                        {application.talent_profile?.professional_title |
+                          'Applicant'}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <div className="font-medium">
                         {application.talent_profile?.full_name || "Candidate"}
                       </div>
                       <div className="text-xs text-muted-foreground mt-0.5">
                         {application.talent_profile?.professional_title || "Applicant"}
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                       </div>
                     </div>
                   </div>
@@ -251,6 +496,20 @@ export function ApplicationsTable({
                 <TableCell className="hidden md:table-cell">
                   <StatusBadge status={application.status} />
                 </TableCell>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+                <TableCell className='hidden lg:table-cell'>
+                  {application.match_score !== undefined &&
+                  application.match_score !== null ? (
+                    <ClickableBadge
+                      variant='outline'
+                      className='cursor-pointer'
+                      onClick={() => onViewScore(application)}                    >
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 <TableCell className="hidden lg:table-cell">
                   {application.match_score !== undefined && application.match_score !== null ? (
                     <ClickableBadge 
@@ -265,6 +524,61 @@ export function ApplicationsTable({
                     <span className="text-muted-foreground text-sm">Not scored</span>
                   )}
                 </TableCell>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+}h-4 w-4"/>)
+}</AvatarPrimitive>)
+ursor/fix-website-loading-errors-and-merge-6662
+                <TableCell className='text-right'>
+                  <div className='flex items-center justify-end gap-2'>
+                    <ClickableBadge
+                      variant='outline'
+                      className='cursor-pointer bg-green-50 hover:bg-green-100 text-green-700'
+                      onClick={() => handleHireClick(application)}                    >
+                      <Briefcase className='h-3 w-3 mr-1' /> Hire
+                    </ClickableBadge>
+                    <ApplicationActions
+                      application = {application,}
+                      processingId = {processingId,}
+                      onViewApplication = {onViewApplication,}
+                      onStatusChange = {onStatusChange,}
+                    />
+                  </div>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+      <HireConfirmationModal
+        isOpen = {hireModalOpen,}
+        onClose = {() => setHireModalOpen(false),}
+        application = {selectedApplication |undefined,}
+        onConfirm = {handleHireConfirmed,}
+      />
+    </>
+  )
+  /* Using Renamed AvatarPrimitive */
+}{
+  application.talent profile?.profile picture url && !avatarError ? (<Image src= {
+  application.talent profile.profile picture url
+}alt= {
+  talentName
+}width= {
+  32
+}//for h-8 w-8 height= {
+  32 "
+}//for h-8 w-8 className="rounded-full object-cover" onError= {
+  () => setAvatarError (true)
+}priority= {
+  false "
+}h-4 w-4"/>)
+}</AvatarPrimitive>)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }h-4 w-4"/>) ;
 }</AvatarPrimitive>) ;
 
@@ -296,3 +610,222 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   handleHireConfirmed
 }/> </>)
 }'"}
+<<<<<<< HEAD
+<<<<<<< HEAD
+      />;
+    </>;
+  );
+
+  /* Using Renamed AvatarPrimitive */ ;
+}{;
+  application && application.talent profile?.profile picture url && !avatarError ? (<Imagesrc= {
+  application && application.talent profile && profile.profile picture url 
+                <TableCell className='hidden md:table - cell'>;
+                  {format (new Date (application.created_at), 'PP')}
+=======
+                <TableCell className="text-right">
+                  <div className="flex items-center justify-end gap-2">
+                    <ClickableBadge 
+                      variant="outline" 
+                      className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700"
+                      onClick={() => handleHireClick(application)}
+                    >
+                      <Briefcase className="h-3 w-3 mr-1" /> Hire
+                    </ClickableBadge>
+                    <ApplicationActions
+import { format } from "date-fns",;
+import { JobApplication } from "@/types/jobs",;
+import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed;
+import { ClickableBadge } from "@/components/ui/clickable-badge",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow;
+} from "@/components/ui/table",;
+import { ApplicationActions } from "./ApplicationActions",;
+import { StatusBadge } from "./StatusBadge",;
+import { Briefcase, User } from 'lucide-react';
+import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",;
+import React, { useState } from "react", // Import React and useState;
+import { toast } from "@/hooks/use-toast",;
+import Image from 'next/image', // Import next/image;
+interface ApplicationsTableProps {;
+  applications: JobApplication[],;
+  processingId: string | null,;
+  onViewApplication: (applicationId: string) => Promise<void>,;
+  onStatusChange: (applicationId: string, newStatus: string) => Promise<void>,;
+  onViewScore: (application: JobApplication) => void;
+}
+;
+// Sub-component for avatar to handle its own error state;
+const ApplicationAvatar = ({ application }: { application: JobApplication }) => {;
+  const [avatarError, setAvatarError] = useState(false),;
+  const talentName = application.talent_profile?.full_name || "Candidate",;
+  return (;
+    <AvatarPrimitive className="h-8 w-8"> {/* Using Renamed AvatarPrimitive */}
+      {application.talent_profile?.profile_picture_url && !avatarError ? (;
+        <Image;
+          src={application.talent_profile.profile_picture_url}
+          alt={talentName}
+          width={32} // for h-8 w-8;
+          height={32} // for h-8 w-8;
+          className="rounded-full object-cover";
+          onError={() => setAvatarError(true)}
+          priority={false}
+        />;
+      ) : (;
+        <User className="h-4 w-4" />;
+      )}
+    </AvatarPrimitive>;
+      />;
+    </>;
+  );
+},;
+export function ApplicationsTable({;
+  applications,;
+  processingId,;
+  onViewApplication,;
+  onStatusChange,;
+  onViewScore;
+}: ApplicationsTableProps) {;
+  const [hireModalOpen, setHireModalOpen] = useState(false),;
+  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),;
+  const handleHireClick = (application: JobApplication) => {;
+    setSelectedApplication(application),;
+    setHireModalOpen(true);
+  },;
+  const handleHireConfirmed = () => {;
+    toast({;
+      title: "Hiring process initiated";
+      description: "Offer has been sent to the talent.";
+    });
+  };
+  return (;
+    <>;
+      <div className="rounded-md border">;
+        <Table>;
+          <TableHeader>;
+            <TableRow>;
+              <TableHead>Candidate</TableHead>;
+              <TableHead className="hidden md:table-cell">Applied</TableHead>;
+              <TableHead className="hidden md:table-cell">Status</TableHead>;
+              <TableHead className="hidden lg:table-cell">Match Score</TableHead>;
+              <TableHead className="text-right">Actions</TableHead>;
+            </TableRow>;
+          </TableHeader>;
+          <TableBody>;
+            {applications.map((application) => (;
+              <TableRow key={application.id}>;
+                <TableCell>;
+                  <div className="flex items-center gap-3">;
+                    <ApplicationAvatar application={application} /> {/* Use sub-component */}
+                    <div>;
+                      <div className="font-medium">;
+                        {application.talent_profile?.full_name || "Candidate"}
+                      </div>;
+                      <div className="text-xs text-muted-foreground mt-0.5">;
+                        {application.talent_profile?.professional_title || "Applicant"}
+                      </div>;
+                    </div>;
+                  </div>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                </TableCell>;
+                <TableCell className='hidden md:table - cell'>;
+                  <StatusBadge status={application.status} />;
+                </TableCell>;
+                <TableCell className='hidden lg:table - cell'>;
+                  {application.match_score !== undefined &&;
+                  application.match_score !== null ? (
+                    <ClickableBadge;
+                      variant='outline';
+                      className='cursor - pointer';
+                      on_click={() => onViewScore (application)}                    >;
+                      {application.match_score}%;
+                    </ClickableBadge>) : (
+                    <span className='text - muted - foreground text - sm'>;
+                      Not scored;
+                    </span>)}
+                </TableCell>;
+                <TableCell className='text - right'>;
+                  <div className='flex items - center justify - end gap - 2'>;
+                    <ClickableBadge;
+                      variant='outline';
+                      className='cursor - pointer bg - green - 50 hover:bg - green - 100 text - green - 700';
+                      on_click={() => handleHireClick (application)}                    >;
+                      <Briefcase className='h - 3 w - 3 mr - 1' /> Hire;
+                    </ClickableBadge>;
+                    <ApplicationActions;
+                      application = {application, }
+                      processing_id = {processing_id, }
+                      onViewApplication = {onViewApplication, }
+                      onStatusChange = {onStatusChange, }
+                    />;
+                  </div>;
+                </TableCell>;
+              </TableRow>))}
+          </TableBody>;
+        </Table>;
+      </div>;
+      <HireConfirmationModal;
+        is_open = {hireModalOpen, }
+        on_close = {() => setHireModalOpen (false), }
+        application = {selected_application || undefined, }
+        on_confirm = {handleHireConfirmed, }
+      />;
+
+<<<<<<< HEAD
+  32;
+}//for h - 8 w - 8 height= {
+  32 ";
+}//for h - 8 w - 8 className="rounded - full object - cover" on_error= {
+  () => setAvatarError (true);
+}priority= {
+  false ";
+}h - 4 w - 4"/>);
+}</AvatarPrimitive>);
+}";
+return (<> <div className=" rounded - md border"> hidden md:table - cell" >Applied</TableHead> <TableHead className="hidden md:table - cell" >Status</TableHead> <TableHead className="hidden lg:table - cell" >Match Score</TableHead> <TableHead className="text - right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
+  applications.map ( (application) => (<TableRow key= {
+  application.id;
+}> <TableCell> </div> </div> </div> </TableCell> on_click={
+  () => onViewScore (application);
+}> {
+  application.match score ";
+}% </ClickableBadge>) : (<span className="text - muted - foreground text - sm" >Not scored</span>) ";
+}</TableCell> <TableCell className="text - right" > <div className="flex items - center justify - end gap - 2" > <ClickableBadge > <Briefcase className="h - 3 w - 3 mr - 1" /> Hire </ClickableBadge> <ApplicationActions application= {
+  application;
+}processing_id= {
+  processing_id;
+
+}onViewApplication= {
+  onViewApplication;
+}onStatusChange= {
+
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  onStatusChange;
+}/> </div> </TableCell> </TableRow>) );
+}</TableBody> </Table> </div> <HireConfirmationModal is_open= {
+  hireModalOpen;
+}on_close= {
+  () => setHireModalOpen (false);
+}application= {
+  selected_application || undefined;
+}on_confirm= {
+  handleHireConfirmed;
+}/> </>);
+}'"}
+<<<<<<< HEAD
+=======
+    </>;
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

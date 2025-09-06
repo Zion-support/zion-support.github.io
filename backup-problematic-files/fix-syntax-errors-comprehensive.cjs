@@ -14,12 +14,6 @@ const path = require('path');
 <<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
 ;
 function fixSyntaxErrors(filePath) {;
   try {;
@@ -167,6 +161,8 @@ function fixSyntaxErrors(filePath) {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
@@ -189,13 +185,18 @@ function fixSyntaxErrors(filePath) {;
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:fix-syntax-errors-comprehensive.cjs
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     content = content.replace(/\\:/g, ':');
     content = content.replace(/\\,/g, ',');
     content = content.replace(/\\;/g, ';');
@@ -213,7 +214,11 @@ function fixSyntaxErrors(filePath) {;
 =======
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     // Fix missing semicolons at end of statements;
     content = content.replace(/([^;}])\s*$/gm, '$1;');
@@ -355,6 +360,11 @@ function fixSyntaxErrors(content, filePath) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+=======
 =======
 =======
 ;
@@ -374,6 +384,7 @@ function fixSyntaxErrors(content, filePath) {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Fix malformed function declarations
     content = content.replace(/export\s+const\s+SEO:\s*Reac\s+t\.FC<[^>]+>\s*=\s*\(/g, 'export const SEO: React.FC<SEOProps> = (');
     // Fix malformed return statements in functions
@@ -410,6 +421,10 @@ function fixSyntaxErrors(content, filePath) {
     const openBraces = (content.match(/\{/g) || []).length;
     const closeBraces = (content.match(/\}/g) || []).length;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
@@ -421,6 +436,29 @@ function fixSyntaxErrors(content, filePath) {
     content = content.replace(/([^;}])\s*$/gm, '$1;');
     // Fix missing commas in objects
     content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    // Fix missing semicolons at end of statements
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+    // Fix missing commas in objects
+    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+    // Fix missing semicolons at end of statements
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+    content = content.replace(/([^;}])\s*$/gm, '$1;');
+    // Fix missing commas in objects
+    content = content.replace(/(\w+):\s*([^,}]+)\s*}/g, '$1: $2,}');
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     // Fix missing closing braces
     const openBraces = (content.match(/\{/g) || []).length;
@@ -578,6 +616,11 @@ fixFile('components/ErrorBoundary.tsx', 'ErrorBoundary class syntax', (content) 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+=======
 =======
 =======
 ;
@@ -589,6 +632,7 @@ fixFile('components/ErrorBoundary.tsx', 'ErrorBoundary class syntax', (content) 
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Function to process a single file
 function processFile(filePath) {
     try {
@@ -1274,6 +1318,11 @@ console.log(`Fixed ${fixedCount} files`);
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -1284,3 +1333,4 @@ console.log(`Fixed ${fixedCount} files`);
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

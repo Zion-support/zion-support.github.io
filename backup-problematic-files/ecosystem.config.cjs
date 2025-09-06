@@ -8,6 +8,10 @@ module.exports = {
       script: 'npm',
       args: 'run build',
       cwd: '/workspace',
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       instances: 1,
       autorestart: true,
       watch: false,
@@ -42,6 +46,56 @@ module.exports = {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+      name: 'auto-fix',
+      script: 'scripts/pm2/auto-fix.js',
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '1G',
+      env: {
+<<<<<<< HEAD
+        NODE_ENV: 'production',      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      error_file: './logs/automation-error.log',
+      out_file: './logs/automation-out.log',
+      log_file: './logs/automation-combined.log',
+      time: true,    },
+    {
+=======
+        NODE_ENV: 'production',
+      },
+      cron_restart: '0 0 * * *', // Daily restart
+      error_file: './logs/ci-cd-error.log',
+      out_file: './logs/ci-cd-out.log',
+      log_file: './logs/ci-cd-combined.log',
+      time: true,    },
+    {
+=======
+<<<<<<< HEAD
+      name: 'ci-cd-pipeline',
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+      name: 'continuous-automation',
+      script: 'node',
+      args: 'scripts/automation/automation-orchestrator.cjs',
+      cwd: '/workspace',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
@@ -62,6 +116,10 @@ module.exports = {
       log_file: './logs/automation-combined.log',
       time: true,    },
     {
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
       name: 'comprehensive-automation',
       script: 'node',
@@ -95,7 +153,11 @@ module.exports = {
 <<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       script: 'npm',
       args: 'run build',
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -424,7 +486,11 @@ module.exports = {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
@@ -833,7 +899,11 @@ module.exports = {}
 <<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       error_file: "automation/logs/build-monitor-error.log",
       out_file: "automation/logs/build-monitor-out.log",
@@ -848,7 +918,11 @@ module.exports = {}
 <<<<<<< HEAD
   ]
 };
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -865,4 +939,8 @@ module.exports = {}
 <<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

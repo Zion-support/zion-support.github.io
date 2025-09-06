@@ -1,6 +1,56 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+"use client",;
+import { useState, useEffect, useRef } from "react",;
+import Link from "next/link",;
+export function Navigation() {;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
+  const [isSearchOpen, setIsSearchOpen] = useState(false),;
+
+
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   return (;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+"use client",
+import { useState, useEffect, useRef  } from './react';,
+import Link from './next / link';,
+export /**
+ * Navigation - Function description
+ */
+function Navigation() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState (false),
+  const [isSearchOpen, setIsSearchOpen] = useState (false),
+  const [isServicesOpen, setIsServicesOpen] = useState (false);
+  const [is_scrolled, setIsScrolled] = useState (false);
+  return (
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+"use client";
+import { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+export function Navigation() {const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+"use client",;
+import { useState, useEffect, useRef } from "react",;
+import Link from "next/link",;
+export function Navigation() {;
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),;
+  const [isSearchOpen, setIsSearchOpen] = useState(false),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     <nav;
       className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
         is_scrolled;
@@ -176,6 +226,26 @@
                 <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M21 21l - 6-6m2 - 5a7 7 0 11 - 14 0 7 7 0 0114 0z" />;
               </svg>;
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          </div>;
+        )}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+          </div>)}
+
+
+;
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+;
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="lg:hidden animate - fade - in">;
@@ -252,3 +322,21 @@
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+    </nav>;
+  );
+}
+<<<<<<< HEAD
+
+=======
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

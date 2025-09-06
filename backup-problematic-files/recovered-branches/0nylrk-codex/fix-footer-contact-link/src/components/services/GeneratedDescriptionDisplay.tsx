@@ -96,3 +96,24 @@ setIsEditing (false);
 toast ({
   
 };
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/services/GeneratedDescriptionDisplay.tsx
+:temp_broken_files/services/GeneratedDescriptionDisplay.tsx
+
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/GeneratedDescriptionDisplay.tsx
+  isEditing ? (<> <Check className="h-4 w-4 mr-1" /> Done </>) : (<> <Pencil className="h-4 w-4 mr-1" /> Edit </>) ;
+}</Button> </CardTitle> </CardHeader> <CardContent> {;
+  isEditing ? (<Textarea value= {;
+  editedDescription ;
+}</div>) ;
+}</CardContent> {;
+:temp_broken_files/services/GeneratedDescriptionDisplay.tsx
+  isEditing && (<CardFooter> <Button onClick={;"  handleSave ";"}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) ;
+}</Card>) ;"}'"
+  isEditing && (<CardFooter> <Button onClick={;
+  handleSave ";
+}className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white" > Save Changes </Button> </CardFooter>) ;
+}</Card>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/GeneratedDescriptionDisplay.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/GeneratedDescriptionDisplay.tsx

@@ -36,6 +36,12 @@ echo "Pre-commit checks completed"
         'Run git push origin main to push changes'
       ]
     }
+<<<<<<< HEAD
+    fs.writeFileSync('git-workflow-report.json', JSON.stringify(report, null, 2));
+    console.log('Git workflow report generated')}
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 if (require.main === module) {
   const workflow = new GitWorkflow();
   workflow.createGitHooks();

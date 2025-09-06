@@ -1,26 +1,42 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+#!/usr/bin/env node
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 #!/usr/bin/env node
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 <<<<<<< HEAD
 #!/usr/bin/env node/usr/bin/env node/ Master Automation Orchestrator (clean version)const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class MasterOrchestrator { constructor() { this.projectRoot = process.cwd();" this.logsDir = path.join(this.projectRoot, "logs");" this.logFile = path.join(this.logsDir, "master-orchestrator.log"); this.startTime = Date.now(); this.results = {}; try { fs.mkdirSync(this.logsDir, { recursive: true }); } catch {} }" log(message, level = "INFO") { const line = `[${new Date().toISOString()}] [${level}] ${message}\n`; try { fs.appendFileSync(this.logFile, line); } catch {} process.stdout.write(line); } runCmd(cmd) { try {"" const out = execSync(cmd, { stdio: "pipe", encoding: "utf8" });" return { success: true, output: out }; } catch (e) { return {" success: false," error: e.message,"" output: e.stdout?.toString?.() | ""}; } } async runAllChecks() {" this.log("Starting comprehensive system check.");" const tasks = [["health", "node automation/health-check.cjs"]," ["security", "node automation/security-scanner.cjs"]," ["performance", "node scripts/performance-monitor.cjs"]," ["codeQuality", "node automation/code-quality-monitor.cjs"]," ["build", "npm run build"]," ["lint", "npm run lint"]," ["typeCheck", "npm run type-check"], ]; for (const [name, cmd] of tasks) {"` this.log(`Running: ${name}`); const res = this.runCmd(cmd);" this.results[name] = { success: res.success, error: res.error | null };" if (!res.success && name === "lint") {" this.log("Attempting lint auto-fix.");"" const fixRes = this.runCmd("npm run lint: fix"); this.results.lint.autoFixed = fixRes.success; } } const passed = Object.values(this.results).filter(r => r.success).length; const total = Object.keys(this.results).length; const durationMs = Date.now() - this.startTime; const summary = {" timestamp: new Date().toISOString(), durationMs, total, passed," failed: total - passed," status: passed === total" ? "HEALTHY" : passed >= Math.floor(total * 0.8)" ? "WARNING"" : "CRITICAL"}; try { fs.writeFileSync(" path.join(this.logsDir, "master-orchestrator-report.json")," JSON.stringify({ summary, results: this.results }, null, 2) ); } catch {} this.log("` `Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})` ); return passed === total; }}if (require.main === module) { const orchestrator = new MasterOrchestrator();" const command = process.argv[2] | "check"; switch (command) {" case check: orchestrator.runAllChecks().then(ok => process.exit(ok ? 0 : 1)); break; default:" console.log("Usage: node automation/master-orchestrator.cjs check"); process.exit(1); }}module.exports = MasterOrchestrator;""`"`
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
+<<<<<<< HEAD
+#!/usr/bin/env node
+=======
+#!/usr/bin/env node
+=======
 =======
 #!/usr/bin/env node
 >>>>>>> origin/main
 #!/usr/bin/env node
 #!/usr/bin/env node
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 // Master Automation Orchestrator (clean version)
       fs.mkdirSync(this.logsDir, { "recursive": true });
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch {}
   }
 
@@ -38,9 +54,19 @@
       return { success: true, output: out };
     } catch (e) {
       return {
+<<<<<<< HEAD
+        success: false,
+        error: e.message,
+        output: e.stdout?.toString?.() || ''
+      };
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
         "success": false,
         "error": e.message,
         "output": e.stdout?.toString?.() || ''};
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
     }
   }
 
@@ -78,23 +104,51 @@
       durationMs,
       total,
       passed,
+<<<<<<< HEAD
+      failed: total - passed,
+      status: passed === total ? 'HEALTHY' : passed >= Math.floor(total * 0.8) ? 'WARNING' : 'CRITICAL'
+    };
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       "failed": total - passed,
       "status": passed === total
           ? 'HEALTHY'
           : passed >= Math.floor(total * 0.8)
             ? 'WARNING'
             : 'CRITICAL'};
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       fs.writeFileSync(
         path.join(this.logsDir, 'master-orchestrator-report.json'),
         JSON.stringify({ summary, results: this.results }, null, 2)
       );
     } catch {}
+<<<<<<< HEAD
+    this.log(
+<<<<<<< HEAD
+      `Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})`
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
       `"Completed": ${passed}/${total} passed in ${durationMs}ms ("Status": ${summary.status})`
     );
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     this.log(`Completed: ${passed}/${total} passed in ${durationMs}ms (Status: ${summary.status})`);
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
     return passed === total;
   }
 }
@@ -107,6 +161,13 @@ if (require.main === module) {
     case 'check':
       orchestrator.runAllChecks().then(ok => process.exit(ok ? 0 : 1));
       break;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "default": 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-2480
     default:
       console.log('Usage: node automation/master-orchestrator.cjs check');
       process.exit(1);
@@ -115,6 +176,9 @@ if (require.main === module) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 module.exports = MasterOrchestrator;
 =======
 
@@ -123,10 +187,14 @@ module.exports = MasterOrchestrator;
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+const { execSync } = require('child_process');
+=======
 =======
 =======
 #!/usr/bin/env node
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
 =======
@@ -350,13 +418,24 @@ module.exports = MasterOrchestrator;
 module.exports = MasterOrchestrator;
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const { execSync } = require('child_process');
 >>>>>>> origin/main
 const fs = require('fs');
@@ -543,7 +622,11 @@ class MasterAutomationOrchestrator {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       summary: 'Master automation orchestrator completed successfully',
 >>>>>>> origin/main
     };
@@ -767,12 +850,19 @@ class MasterAutomationOrchestrator {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      summary: 'Master automation orchestrator completed successfully'
+    };
+
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
       summary: 'Master automation orchestrator completed successfully'
     };
 
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const reportPath = path.join(
       __dirname,
       '..',
@@ -800,6 +890,9 @@ class MasterAutomationOrchestrator {
   }
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
@@ -810,17 +903,39 @@ orchestrator.run().catch(console.error);
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
+// Run the orchestrator
+const orchestrator = new MasterAutomationOrchestrator();
+orchestrator.run().catch(console.error);
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+orchestrator.run().catch(console.error);
+=======
+orchestrator.run().catch(console.error);
+>>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
 =======
 >>>>>>> origin/main
 // Run the orchestrator
 const orchestrator = new MasterAutomationOrchestrator();
 orchestrator.run().catch(console.error);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 module.exports = MasterOrchestrator;
 <<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-2480
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -833,6 +948,10 @@ orchestrator.run().catch(console.error);
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

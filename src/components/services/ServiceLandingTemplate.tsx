@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import Image from "next/image";
+import React from 'react'
+import React from "react",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import Image from "next/image",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface Benefit {
   title: string;
   description: string;
@@ -5,10 +21,49 @@ export interface Benefit {
 }
 export interface Testimonial {
   name: string;
+<<<<<<< HEAD
+name: string;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   role?: string;
   text: string;
   avatar?: string
 }
+<<<<<<< HEAD
+interface ServiceLandingTemplateProps {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import Image from "next/image";
+import React from 'react'
+xport interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode
+<<<<<<< HEAD
+  ctaLink: string
+}
+export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
+
+  title
+  subtitle
+  description
+  benefits
+  features = []
+  stats = []
+  ctaText
+  ctaLink
+}) => {
+import React from "react",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter } from "@/components/ui/card",;
+import Image from "next/image",;
+export interface Benefit {;
+  title: string,;
+  description: string,;
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   title: string;
   subtitle: string;
   heroImage?: string;
@@ -16,6 +71,11 @@ export interface Testimonial {
   benefits: Benefit[];
   testimonials: Testimonial[];
   ctaText: string;
+<<<<<<< HEAD
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import Image from "next/image",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
@@ -34,10 +94,31 @@ export interface Benefit {
 export interface Testimonial {
   name: string,
   role?: string;
+<<<<<<< HEAD
+  text: string;
+  avatar?: string;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+}
+interface ServiceLandingTemplateProps {
+
+  title: string;
+  subtitle: string;
+  description: string;
+  benefits: Benefit[];
+  features?: string[];
+<<<<<<< HEAD
+  stats?: Array<{ label: string; value: string }>
+  ctaText: string
+  ctaLink: string
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
   text: string,
   avatar?: string
 }
 interface ServiceLandingTemplateProps {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -48,6 +129,10 @@ export interface Benefit {;
   description: string,;
   icon?: React.ReactNode;
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 import React from "react",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -58,6 +143,7 @@ export interface Benefit {;
   description: string,;
   icon?: React.ReactNode;
 }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 export interface Testimonial {;
   name: string,;
@@ -75,14 +161,90 @@ interface ServiceLandingTemplateProps {;
   testimonials: Testimonial[],;
   ctaText: string,;
   ctaLink: string;
+<<<<<<< HEAD
+  stats?: Array<{ label: string; value: string }>;
+  cta_text: string;
+  cta_link: string;
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+export const ServiceLandingTemplate: React.FC < ServiceLandingTemplateProps> = ({
+
+
+export interface Benefit {
+  title: string;
+  description: string;
+  icon?: React.ReactNode
+
+
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
+
+<<<<<<< HEAD
+=======
+}
+
+export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+
+export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   title,
   subtitle,
-  heroImage,
   description,
   benefits,
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
+  title,;
+  subtitle,;
+  description,;
+  benefits,;
+  features = [],;
+  stats = [],;
+  ctaText,;
+  ctaLink,;
+}) => {;
+
+  return (
+
+          </p>
+  testimonials,
+  ctaText,
+
+
+  return (
+    <div className="bg-background text-white">
+      <section className="bg-zion-blue py-16 px-4 text-center">
+        <div className="container mx-auto">
+          <GradientHeading level="h1" className="mb-4">
+            {title}
+          </GradientHeading>
+          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+            {subtitle}
+          </p>
+
+
+          {heroImage && (
+            <div className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl relative h-80">
+              <Image
+                src={heroImage}
+                alt={title}
+                className="object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+          )}
+=======
+  ctaLink}) => {
+  ctaLink,
+}) => {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   testimonials,
   ctaText,
   return (
@@ -94,9 +256,21 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           </GradientHeading>
           <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
             {subtitle}
+<<<<<<< HEAD
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          </p>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+        </div>
+      </section>
+
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
-
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             {description}
 
     <div className="min - h-screen bg - white">;
@@ -111,6 +285,119 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           </p>;
         </div>;
       </section>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+          </p>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          {heroImage && (
+            <div className="mx-auto mt-8 rounded-lg shadow-xl max-w-3xl relative h-80">
+              <Image
+                src={heroImage}
+                alt={title}
+                className="object-cover rounded-lg"
+                loading="lazy"
+              />
+            </div>
+          )}
+        </div>
+      </section>
+
+      <section className="py-12 px-4">
+        <div className="container mx-auto text-center">
+          <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
+            {description}
+          </p>
+        </div>
+      </section>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      {benefits.length > 0 && (
+        <section className="py - 16 px - 4">;
+          <div className="max - w-7xl mx - auto">;
+            <h2 className="text - 3xl font - bold text - center text - gray - 900 mb - 12">;
+              Benefits;
+            </h2>;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+              {benefits.map ((benefit, index) => (
+                <div key={index} className="bg - white p - 6 rounded - lg shadow - lg">;
+                  {benefit.icon && (
+                    <div className="mb - 4 text - blue - 600">;
+                      {benefit.icon}
+<<<<<<< HEAD
+
+          </p>;
+        </div>;
+      </section>;
+
+      {benefits && benefits.length > 0 && (;
+        <section className="py-16 px-4">;
+          <div className="max-w-7xl mx-auto">;
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">;
+              Benefits;
+            </h2>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {benefits && benefits.map((benefit, index) => (;
+                <div key={index} className="bg-white p-6 rounded-lg shadow-lg">;
+                  {benefit && benefit.icon && (;
+                    <div className="mb-4 text-blue-600">;
+                      {benefit && benefit.icon}
+                    </div>;
+
+=======
+                    </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                  )}
+                  <h3 className="text-xl font-semibold mb-3">{benefit && benefit.title}</h3>;
+                  <p className="text-gray-600">{benefit && benefit.description}</p>;
+                </div>;
+              ))}
+            </div>;
+          </div>;
+        </section>;
+      )}
+<<<<<<< HEAD
+
+
+      {features && features.length > 0 && (;
+        <section className="py-16 px-4 bg-gray-50">;
+          <div className="max-w-7xl mx-auto">;
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">;
+              Features;
+            </h2>;
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+              {features && features.map((feature, index) => (;
+                <div key={index} className="flex items-start">;
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3"></div>;
+                  <span className="text-gray-700">{feature}</span>;
+                </div>;
+
+=======
+      {features.length > 0 && (
+        <section className="py-16 px-4 bg-gray-50">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+              Features
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-start">
+                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3"></div>
+                  <span className="text-gray-700">{feature}</span>
+                </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+              ))}
+            </div>;
+          </div>;
+        </section>;
+      )}
+<<<<<<< HEAD
+
+                    </div>)}
+                  <h3 className="text - xl font - semibold mb - 3">{benefit.title}</h3>;
+                  <p className="text - gray - 600">{benefit.description}</p>;
+                </div>))}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>;
           </div>;
         </section>;
@@ -118,10 +405,76 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
               ))}
             </div>;
           </div>;
+<<<<<<< HEAD
+        </section>)}
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      {stats.length > 0 && (
+        <section className="py - 16 px - 4">;
+          <div className="max - w-7xl mx - auto">;
+            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 text - center">;
+              {stats.map ((stat, index) => (
+                <div key={index}>;
+                  <div className="text - 4xl font - bold text - blue - 600 mb - 2">;
+                    {stat.value}
+<<<<<<< HEAD
+
+
+      {stats && stats.length > 0 && (;
+        <section className="py-16 px-4">;
+          <div className="max-w-7xl mx-auto">;
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">;
+              {stats && stats.map((stat, index) => (;
+                <div key={index}>;
+                  <div className="text-4xl font-bold text-blue-600 mb-2">;
+                    {stat && stat.value}
+                  </div>;
+                  <div className="text-gray-600">{stat && stat.label}</div>;
+                </div>;
+
+=======
+                  </div>
+                  <div className="text-gray-600">{stat.label}</div>
+                </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+              ))}
+            </div>;
+          </div>;
+        </section>;
+      )}
+<<<<<<< HEAD
+
+
+      <section className="py-16 px-4 bg-blue-600">;
+        <div className="max-w-4xl mx-auto text-center">;
+          <h2 className="text-3xl font-bold text-white mb-4">;
+            Ready to Get Started?;
+          </h2>;
+          <p className="text-xl text-blue-100 mb-8">;
+            Contact us today to learn more about our services.;
+          </p>;
+
+=======
+      <section className="py-16 px-4 bg-blue-600">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8">
+            Contact us today to learn more about our services.
+          </p>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <a
             href={ctaLink}
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block">;
             {ctaText}
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           </a>;
         </div>;
@@ -129,12 +482,27 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
     </div>;
   );
 
+<<<<<<< HEAD
+
+      <section className="py-16 bg-zion-blue-light">
+=======
+          </a>
+=======
             {description}
           </p>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </div>
       </section>
 
+<<<<<<< HEAD
+
+};
+;
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
       <section className="py-16 bg-zion-blue-light">
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold text-white text-center mb-8">
             Benefits
@@ -148,6 +516,10 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                 {benefit.icon && (
                   <div className="mb-4 flex justify-center text-zion-cyan">
                     {benefit.icon}
+<<<<<<< HEAD
+                  </div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 )}
                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
                 <p className="text-zion-slate-light">{benefit.description}</p>
@@ -188,6 +560,13 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
                       {t.role && (
                         <p className="text-sm text-gray-400">{t.role}</p>
                       )}
+<<<<<<< HEAD
+                    </div>
+                  </div>
+                </CardFooter>
+              </Card>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             ))}
           </div>
         </div>
@@ -199,7 +578,47 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
           asChild
         >
+<<<<<<< HEAD
+          <a href={ctaLink}>{ctaText}</a>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         </Button>
       </section>
     </div>
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+},
+},
+
+
+                  </div>;
+                  <div className="text - gray - 600">{stat.label}</div>;
+                </div>))}
+            </div>;
+          </div>;
+        </section>)}
+      <section className="py - 16 px - 4 bg - blue - 600">;
+        <div className="max - w-4xl mx - auto text - center">;
+          <h2 className="text - 3xl font - bold text - white mb - 4">;
+            Ready to Get Started?;
+          </h2>;
+          <p className="text - xl text - blue - 100 mb - 8">;
+            Contact us today to learn more about our services.;
+          </p>;
+          <a;
+            href={cta_link}
+            className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors inline - block";
+          >;
+            {cta_text}
+          </a>;
+        </div>;
+      </section>;
+    </div>);
+}
+
+},
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

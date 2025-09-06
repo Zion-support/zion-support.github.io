@@ -1,5 +1,17 @@
 ;
 interface PerformanceMetrics {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  loadTime: number, firstContentfulPaint: number
+  largestContentfulPaint: number, firstInputDelay: number
+  cumulativeLayoutShift: number
+}
+export function usePerformanceMonitor() {
+
+export function usePerformanceMonitor() {;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isSupported, setIsSupported] = useState(false);
   useEffect(() => {
@@ -11,6 +23,13 @@ interface PerformanceMetrics {
   }
     setIsSupported(true);
     const observer = new PerformanceObserver((list) => {
+<<<<<<< HEAD
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === 'navigation') {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       const entries = list && list.getEntries();
       
@@ -22,9 +41,57 @@ interface PerformanceMetrics {
             loadTime: navEntry && navEntry.loadEventEnd - navEntry && navEntry.loadEventStart,
           }));
         }
+<<<<<<< HEAD
+        
+        if (entry && entry.entryType === 'paint') {
+<<<<<<< HEAD
+
           const paintEntry = entry as PerformancePaintTiming;
           if (paintEntry && paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
+
+=======
+          const paintEntry = entry as PerformancePaintTiming;
+          if (paintEntry && paintEntry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+              ...prev,
+              firstContentfulPaint: paintEntry && paintEntry.startTime,
+            }));
+          }
+        }
+        
+        if (entry && entry.entryType === 'largest-contentful-paint') {
+          const lcpEntry = entry as PerformanceEntry;
+          setMetrics(prev => ({
+            ...prev,
+            largestContentfulPaint: lcpEntry && lcpEntry.startTime,
+          }));
+        }
+        
+        if (entry && entry.entryType === 'first-input') {
+          const fidEntry = entry as PerformanceEventTiming;
+          setMetrics(prev => ({
+            ...prev,
+            firstInputDelay: fidEntry && fidEntry.processingStart - fidEntry && fidEntry.startTime,
+          }));
+        }
+        
+        if (entry && entry.entryType === 'layout-shift') {
+          const clsEntry = entry as PerformanceEntry & { value: number };
+          setMetrics(prev => ({
+            ...prev,
+            cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry && clsEntry.value,
+<<<<<<< HEAD
+
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+          const paintEntry = entry as PerformancePaintTiming;
+          if (paintEntry && paintEntry.name === 'first-contentful-paint') {
+            setMetrics(prev => ({
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   load_time: number, firstContentfulPaint: number,
   largestContentfulPaint: number, firstInputDelay: number,
   cumulativeLayoutShift: number,
@@ -107,14 +174,31 @@ if ( {) {
           set_metrics (prev => ({
             ...prev,
             cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + cls_entry.value,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }));
         }
       });
     });
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      observer && observer.disconnect();
+    };
+
+=======
+      observer && observer.disconnect();
+    };
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }, []);
   return { metrics, isSupported }
 }
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     // Observe different performance entry types;
     try {
@@ -129,3 +213,8 @@ if ( {) {
   }, []);
 ;
   return { metrics, is_supported }
+<<<<<<< HEAD
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -46,3 +46,21 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
     </div>;
   ),;}
  ];
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/talent/filters/AvailabilityFilter.tsx
+:temp_broken_files/talent/filters/AvailabilityFilter.tsx
+
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/AvailabilityFilter.tsx
+  toggleSection ;
+}className="flex w-full items-center justify-between text-white font-medium" > <span>Availability</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
+}</button> {;
+  AVAILABILITY OPTIONS.map (option => (<div key= {;"  option.id ";"}className="flex items-center" > <Checkbox > {;
+  option.label ;
+}</label> </div>) ) ;
+}</div>) ;
+:temp_broken_files/talent/filters/AvailabilityFilter.tsx
+}</div>) ;"}"
+}</div>) ;
+}"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/filters/AvailabilityFilter.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/filters/AvailabilityFilter.tsx

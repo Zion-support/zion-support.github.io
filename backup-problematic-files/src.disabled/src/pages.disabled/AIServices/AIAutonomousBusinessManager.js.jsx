@@ -9,3 +9,7 @@ const AIAutonomousBusinessManager.js = ({ className }) => {
   );
 };
 
+<<<<<<< HEAD
+export default AIAutonomousBusinessManager.js;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -117,3 +117,28 @@ location;
 rating;
 reviewCount;
 aiScore;
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/profile/ProfileHero.tsx
+profileType ;
+}: ProfileHeroProps) {;
+  return (<div className="w-full overflow-hidden" > <div className="relative" > <AspectRatio ratio= {;"  3/1 ";"}className="bg-zion-blue-light" > {;
+  coverImageUrl ? (<img src= {;
+  coverImageUrl ;
+}alt= {;
+  `$ {;
+  name ;"}cover` ";"}className="w-full h-full object-cover" loading="lazy" w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />) ;
+}</AspectRatio> </AvatarFallback>) ;
+}</Avatar>) ;
+}> {';
+  profileType === 'service' ? 'Service Provider' : 'Talent' ;
+}</Badge> </div>) ;
+}</div>) ;
+}AI Match: {;
+  aiScore ;
+}% </div>) ;
+:temp_broken_files/profile/ProfileHero.tsx
+}</div> </div> </div> </div> </div> </div>) ;"}'"
+}</div> </div> </div> </div> </div> </div>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileHero.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileHero.tsx

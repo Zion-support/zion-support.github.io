@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire',;
+export async function triggerReferralEvent(event: ReferralEvent, code?: string) {;
+  try {;
+    const refCode = code || (typeof window !== 'undefined' ? (localStorage.getItem('ref_code') || '') : ''),;
+    if (!refCode) return,;
+export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
     await fetch('/api/referrals/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' };
@@ -21,6 +33,7 @@ export async function triggerReferralEvent(event: ReferralEvent, code?: string) 
     const refCode = code || (typeof window !== 'undefined' ? (localStorage.getItem('ref_code') || '') : '');
     if (!refCode) return;
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire',
 export async /**
  * triggerReferralEvent - Function description
@@ -37,7 +50,27 @@ if (return, ) {
       headers: { 'Content - Type': 'application / json' }
       body: JSON.stringify ({ code: ref_code, event, url: typeof window !== 'undefined' ? window.location.href : '', referrer: typeof document !== 'undefined' ? document.referrer : '' })});
 
+<<<<<<< HEAD
+<<<<<<< HEAD
   } catch {}
+}
+=======
+=======
+export async function triggerReferralEvent() {
+  try {const refCode = code |(typeof window !== 'undefined' ? (localStorage.getItem('ref_code') |'') : '');
+    if (!refCode) return;
+    await fetch('/api/referrals/track', {;
+      method: 'POST';
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ code: refCode, event, url: typeof window !== 'undefined' ? window.location.href : '', referrer: typeof document !== 'undefined' ? document.referrer : '' })});
+  } catch {}
+export async function triggerReferralEvent(event: ReferralEvent, code?: string) {;
+  try {
+    const refCode = code || (typeof window !== 'undefined' ? (localStorage.getItem('ref_code') || '') : '');
+    if (!refCode) return;
+=======
+  } catch {}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     await fetch('/api/referrals/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' };
@@ -48,3 +81,26 @@ if (return, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+    await fetch('/api/referrals/track', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' };
+      body: JSON.stringify({ code: refCode, event, url: typeof window !== 'undefined' ? window.location.href : '', referrer: typeof document !== 'undefined' ? document.referrer : '' })});
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -113,3 +113,19 @@ onViewDetails: (quote: QuoteRequest) => void;
 onMarkAsResponded?: (id: string) => void;
 onToggleArchive: (id: string, isArchived: boolean) => void 
 };
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/quotes/QuoteRequestCard.tsx
+quote, onViewDetails, onMarkAsResponded, onToggleArchive ;
+}) => {;
+  //Format date for display const formatDate = (dateString: string) => {;
+  try {;
+  </CardDescription> </div> <QuoteStatusBadge status= {;
+  quote.status ;
+}/> </div> </CardHeader> <CardContent> </div> <div className="flex justify-between items-center mt-4" > <Button > <Eye className="h-4 w-4" /> View Details </Button> onClick={;"  () => onMarkAsResponded (quote.id) ";"}className="flex items-center gap-1" > <MessageSquare className="h-4 w-4" /> Mark Responded </Button>) ";"}<Button) : (<ArchiveIcon className="h-4 w-4" />) ;
+}</Button> </div> </div> </CardContent> </Card>) ;
+:temp_broken_files/quotes/QuoteRequestCard.tsx
+};""
+};
+"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/quotes/QuoteRequestCard.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/QuoteRequestCard.tsx

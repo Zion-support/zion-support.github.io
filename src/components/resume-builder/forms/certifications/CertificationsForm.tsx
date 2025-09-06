@@ -1,5 +1,19 @@
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { useForm  } from 'react-hook-form';
+import { Button  } from '@/components/ui/button';
+import { Form  } from '@/components/ui/form';
+import { Certification  } from '@/types/resume';
+<<<<<<< HEAD
+=======
+import { useForm } from 'react-hook-form'
+import { Button } from '@/components/ui/button'
+import { Form } from '@/components/ui/form'
+import { Certification } from '@/types/resume'
+=======
       )}
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Loader2 } from 'lucide-react'
 import { useResume  } from '@/hooks/useResume';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
@@ -74,6 +88,26 @@ export function CertificationsForm({
         setEditingId(null)
       }
     } catch (err: any) {
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { useForm  } from 'react-hook-form';
+import { Button  } from '@/components/ui/button';
+import { Form  } from '@/components/ui/form';
+import { Certification  } from '@/types/resume';
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      setError(err.message |'An error occurred')
+    }
+  }
+  const handleEdit = (cert: Certification) => {
+<<<<<<< HEAD
+=======
+      setError(err.message || 'An error occurred');
+    };
+  };
+  const handleEdit = (cert: Certification) => {;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     setEditingId(cert.id!);    form.reset({
       ...cert
   }
@@ -89,6 +123,14 @@ export function CertificationsForm({
       await deleteCertification(id)
     }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { Button } from '@/components/ui/button',;
@@ -172,6 +214,25 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
     }
   },
 
+<<<<<<< HEAD
+    <div className='space-y-6'>;
+      <div>;
+        <h2 className='text-xl font-semibold mb-2'>;
+          Certifications & Licenses;
+        </h2>;
+        <p className='text-muted-foreground'>;
+          Add any professional certifications, licenses, or credentials you have;
+          earned.;
+        </p>;
+      </div>;
+
+      {certifications && certifications.length > 0 && (;
+
+        <CertificationsList
+          certifications={certifications}
+          onEdit={handleEdit}
+          onDelete={handleDelete}        />;
+=======
   return (
     <div className="space-y-6">
       <div>
@@ -181,15 +242,64 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
         </p>
       </div>
       {certifications.length > 0 && (
+<<<<<<< HEAD
+return (
+
+      )}
+      <div className='bg-muted/40 p-6 rounded-lg'>
+        <h3 className='text-md font-medium mb-4'>
+        <CertificationsList
+          certifications={certifications}
+          onEdit={handleEdit}
+          onDelete={handleDelete}        />
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+      )}
+
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <CertificationsList 
           certifications={certifications} 
           onEdit={handleEdit} 
           onDelete={handleDelete} 
         />
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       )}
 
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
+<<<<<<< HEAD
+<<<<<<< HEAD
+          {editingId ? 'Update Certification' : 'Add Certification'}
+        </h3>
+=======
+
+      <div className="bg-muted/40 p-6 rounded-lg">
+        <h3 className="text-md font-medium mb-4">
+          {editingId ? 'Update Certification' : 'Add Certification'}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+        <Form {...form}>
+          <form
+            onSubmit={form.handleSubmit(handleAddOrUpdate)}
+            className='space-y-4'
+          >
+            <CertificationFormFields form={form} />
+<<<<<<< HEAD
+
+
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {editingId ? 'Update Certification' : 'Add Certification'}
         </h3>
         <Form {...form}>
@@ -201,6 +311,56 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
 
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
+<<<<<<< HEAD
+            <div className="flex justify-between pt-2">
+
+              <Button
+            <div className='flex justify-between pt-2'>
+            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+            <div className="flex justify-between pt-2">
+            {error && (
+              <Alert variant='destructive'>
+                <AlertDescription>{error}</AlertDescription>
+              </Alert>
+            )}
+            <div className='flex justify-between pt-2'>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+            {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
+
+
+            <div className="flex justify-between pt-2">
+<<<<<<< HEAD
+=======
+                    setEditingId(null)
+                    setEditingId(null)
+                    form.reset({
+                      name: ''
+                      issuing_organization: ''
+                      issue_date: ''
+                      expiration_date: ''
+                      credential_id: ''
+                      credential_url: ''
+                    })
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+              <Button
+                type='button'
+                variant='outline'
+                onClick={() => {
+                  if (editingId) {
+
+
+                    setEditingId(null),
+                    setEditingId(null),
+
+
+                    form.reset({
+<<<<<<< HEAD
+=======
+                    setEditingId(null),
+                    setEditingId(null),
+=======
             {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
 
             <div className="flex justify-between pt-2">
@@ -209,22 +369,132 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                 variant="outline"
                 onClick={() => {
                   if (editingId) {
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+                    form.reset({
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                      name: '',
+                      issuing_organization: '',
+                      issue_date: '',
+                      expiration_date: '',
+                      credential_id: '',
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+                    setEditingId(null),
+                    setEditingId(null),
                     form.reset({
                       name: '',
                       issuing_organization: '',
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
+                      credential_url: ''})
+=======
+                      credential_url: ''})
+                      credential_url: '',
+                    })
+ursor/fix-website-loading-errors-and-merge-6662
+                  } else {
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                   } else {
                     onBack()
+
+      <div className='bg-muted/40 p-6 rounded-lg'>;
+        <h3 className='text-md font-medium mb-4'>;
+          {editingId ? 'Update Certification' : 'Add Certification'}
+        </h3>;
+
+        <Form {...form}>;
+          <form
+            onSubmit={form && form.handleSubmit(handleAddOrUpdate)}
+            className='space-y-4'>;
+            <CertificationFormFields form={form} />;
+
+            {error && (;
+              <Alert variant='destructive'>;
+                <AlertDescription>{error}</AlertDescription>;
+              </Alert>;
+            )}
+
+            <div className='flex justify-between pt-2'>;
+              <Button
+                type='button'
+                variant='outline'
+                onClick={() => {;
+                  if (editingId) {;
+                    setEditingId(null);
+                    form && form.reset({;
+                      name: '',;
+                      issuing_organization: '',;
+                      issue_date: '',;
+                      expiration_date: '',;
+                      credential_id: '',;
+                      credential_url: '',;
+                    });
+                  } else {;
+                    onBack();
+<<<<<<< HEAD
+=======
+                      credential_url: ''})
+                      credential_url: '',
+                    })
+                      credential_url: ''})
+                  } else {
+                    onBack()
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  } else {
+                    onBack()
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }
                 }}
               >;
                 {editingId ? 'Cancel' : 'Back'}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
               </Button>
 
 
+              <div className="flex gap-2">
+                <Button type="submit" disabled={isLoading}>
+                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                  {editingId ? 'Update' : 'Add'} Certification
+                </Button>
+
+                <Button type="button" onClick={onComplete}>
+
+=======
+              </Button>
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
                   Next
+                </Button>
+=======
+              </Button>
+              <div className='flex gap-2'>
+                <Button type='submit' disabled={isLoading}>
+                  {isLoading && (
+                    <Loader2 className='mr-2 h-4 w-4 animate-spin' />
+                  )}
+                  {editingId ? 'Update' : 'Add'} Certification
+                </Button>
+                <Button type='button' onClick={onComplete}>
+
+              <div className="flex gap-2">
+                <Button type="submit" disabled={isLoading}>
+                  {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+                  {editingId ? 'Update' : 'Add'} Certification
+                </Button>
+
+                <Button type="button" onClick={onComplete}>
+
+
+                  Next
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
               </div>
             </div>
           </form>
@@ -232,6 +502,11 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       </div>
     </div>
   )
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       // Check condition
 if ( {) {
   $2
@@ -344,3 +619,8 @@ if ( {) {
 }'"}
 
 }
+<<<<<<< HEAD
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

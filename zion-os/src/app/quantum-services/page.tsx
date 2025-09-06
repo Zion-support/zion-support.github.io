@@ -1,4 +1,53 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+import Link from "next/link",;
+export const metadata = {;
+  title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",;
+  description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.",;
+  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"},;
+export default function QuantumServicesPage() {;
+  return (;
+
+
     <div className="min-h-screen">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import Link from './next / link';,
+export const metadata = {
+  title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",
+  description: "Transform your business with Zion Tech Group's cutting - edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.",
+  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"},
+export default /**
+ * QuantumServicesPage - Function description
+ */
+function QuantumServicesPage() {
+  return (
+    <div className="min - h-screen">;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import Link from "next/link";
+export const metadata = {title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions";
+  description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.";
+  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"}
+export default function QuantumServicesPage() {return (;
+import Link from "next/link",;
+export const metadata = {;
+  title: "Quantum Computing Services - Zion Tech Group | Advanced Quantum Solutions",;
+  description: "Transform your business with Zion Tech Group's cutting-edge quantum computing services. From algorithm optimization to quantum machine learning, unlock unprecedented computational power.",;
+  keywords: "quantum computing, quantum algorithms, quantum machine learning, quantum optimization, Zion Tech Group, quantum services"},;
+export default function QuantumServicesPage() {;
+  return (;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+    <div className="min-h-screen">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       {/* Hero Section */}
       <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto text - center">;
@@ -79,6 +128,32 @@
                   <path stroke_linecap="round" stroke_linejoin="round" stroke_width={2} d="M10 20l4 - 16m4 4l4 4 - 4 4M6 16l - 4-4 4 - 4" />;
                 </svg>;
               </div>;
+<<<<<<< HEAD
+
+              <h3 className="text - xl font - semibold mb - 3">Quantum Algorithm Development</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                Custom quantum algorithms designed for your specific business problems,
+
+<<<<<<< HEAD
+=======
+
+                Custom quantum algorithms designed for your specific business problems,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
+                Custom quantum algorithms designed for your specific business problems,;
+
+              <h3 className="text - xl font - semibold mb - 3">Quantum Algorithm Development</h3>;
+              <p className="text - gray - 400 mb - 4">;
+                Custom quantum algorithms designed for your specific business problems,
+              <h3 className="text-xl font-semibold mb-3">Quantum Algorithm Development</h3>;
+              <p className="text-gray-400 mb-4">;
+                Custom quantum algorithms designed for your specific business problems;
+                Custom quantum algorithms designed for your specific business problems,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 from optimization challenges to complex simulations.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;

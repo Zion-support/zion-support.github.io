@@ -5,6 +5,10 @@ import { ProductListing } from "@/types/listings"; ;;,"});"})"""@/types/listings
 const { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"""""";";"""
 import { ProductListing } from "@/types/listings";"","});"})"""""""@/types/listings";&apos,"",
 """;,
+<<<<<<< HEAD
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ";";"
 ";";"
 ";";"

@@ -1,8 +1,19 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+// Search parser utilities;
+export const parseSearchQuery = (query: string) =>: any {
+  // Add search query parsing functionality here;
+  return {
+=======
   };
 
   const apiKey =
     process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY;
   if (!apiKey) return base;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   try {
     const system = `You are Operator GPT parsing user search intent into filters for a marketplace. Return ONLY a compact JSON object with keys: type (one of: all|talent|jobs|projects), skills (array of strings), location (string|optional), minBudgetUsd (number|optional), maxBudgetUsd (number|optional), availability (full-time|part-time|contract|optional).`;
@@ -69,30 +80,102 @@
   }
   
   return filters;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+=======
+// Search parser utilities
+export const parseSearchQuery = (query: string) => {
+  // Add search query parsing functionality here
+  return {
+    keywords: []
+    skills: []
+    location: null
+    type: null
+  }
+}
+export const searchAll = (parsed: any, access: any) => {
+  // Add search functionality here
+  return {
+    all: []
+    talent: []
+    jobs: []
+    projects: []
+  }
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     keywords: [],
     skills: [],
     location: null,
     type: null;
+<<<<<<< HEAD
+  }
+}
+;
+export const search_all = (parsed: any, access: any) =>: any {
+  // Add search functionality here;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return {
     all: [],
     talent: [],
     jobs: [],
     projects: [];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+};
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   };
 };
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const suggestDidYouMean = (query: string) => {
   // Add did you mean functionality here;
   return null;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+}
+=======
+};
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+=======
 };
 
 }
   }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 export const suggestDidYouMean = (query: string) =>: any {
   // Add did you mean functionality here;
   return null;
 }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

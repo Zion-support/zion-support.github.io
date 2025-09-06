@@ -78,3 +78,18 @@ setTopCountries (top)
   const country = onsiteServicePricing.find (item => item.country === countryName) || null;
 onCountryChange (country) 
 };
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/services/CountrySelector.tsx
+return (<div className="mb-6" > <h3 className="text-xl font-semibold text-white mb-4 flex items-center" > <Globe className="mr-2 h-5 w-5 text-zion-cyan" /> {;
+  selectedCountry ? `IT Onsite Service in $ {;"  selectedCountry.country ";"}` : "Select Country for IT Onsite Service" ;
+}handleCountryChange ;
+:temp_broken_files/services/CountrySelector.tsx
+}value= {;"  selectedCountry?.country ";"}> <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white" > <SelectValue placeholder="Select a country" /> </SelectTrigger> </SelectItem>) ) ;
+}</div> </SelectContent> </Select> </div>) ;"}"
+}value= {;
+  selectedCountry?.country ";
+}> <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white" > <SelectValue placeholder="Select a country" /> </SelectTrigger> </SelectItem>) ) ;
+}</div> </SelectContent> </Select> </div>) ;
+}"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/CountrySelector.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/services/CountrySelector.tsx

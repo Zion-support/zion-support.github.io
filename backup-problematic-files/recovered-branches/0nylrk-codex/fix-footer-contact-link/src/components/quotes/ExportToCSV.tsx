@@ -94,3 +94,16 @@ quote.budget min
   quote.budget min 
 }` : 'Not specified');
 quote.timeline;
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/quotes/ExportToCSV.tsx
+quote.status;"new Date (quote.created at) .toLocaleDateString () ]);";"//Create CSV content //Create download link className="flex items-center gap-2" disabled= {;
+  quotes.length === 0 ;
+}> <Download size= {;
+  16 ;
+}/> Export CSV </Button>) ;
+:temp_broken_files/quotes/ExportToCSV.tsx
+};"'"
+};
+'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/quotes/ExportToCSV.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/ExportToCSV.tsx

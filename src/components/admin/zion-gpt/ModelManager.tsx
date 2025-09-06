@@ -1,8 +1,44 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+// If activating, deactivate all other models with the same purpose;
+      // Check condition
+if ( {) {
+  $2
+}
+
+      }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import { useState, useEffect  } from 'react';
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge";
+<<<<<<< HEAD
+=======
+
+        .order('createdAt', { ascending: false }),
+
+  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
+    try {
+      // If activating, deactivate all other models with the same purpose
+      if (!currentActive) {
+        await supabase
+          .from('model_versions')
+          .update({ active: false })
+          .eq('purpose', purpose)
+import { useState, useEffect } from 'react',
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+=======
 
 
       }
 
       // Update this model;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
 import { supabase  } from '@/integrations/supabase/client';
 import { ModelConfig  } from '@/utils/zion-gpt';
@@ -11,12 +47,104 @@ interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string
 }
+<<<<<<< HEAD
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+        .order('createdAt', { ascending: false })
+  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
+    try {
+      // If activating, deactivate all other models with the same purpose
+      if (!currentActive) {
+        await supabase
+          .from('model_versions')
+          .update({ active: false })
+          .eq('purpose', purpose)
+<<<<<<< HEAD
+=======
+;
+export function ZionGPTModelManager() {;
+  const [models, setModels] = useState<ModelVersionData[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),;
+  // Fetch model data on component mount;
+  useEffect(() => {;
+    fetchModels();
+  }, []),;
+  const fetchModels = async () => {;
+    try {;
+      setIsLoading(true),;
+      const { data, error } = await supabase;
+        .from('model_versions');
+        .select('*');
+        .order('createdAt', { ascending: false }),;
+      if (error) throw error,;
+      // Map the data to our component state;
+      setModels(data.map((model: any) => ({;
+        id: model.id,;
+        version: model.version,;
+        createdAt: model.created_at,;
+        baseModel: model.base_model,;
+        purpose: model.purpose,;
+        active: model.active,;
+        trainingStatus: model.training_status,;
+        errorMessage: model.error_message;
+      })));
+    } catch (error) {;
+      logErrorToProduction('Error fetching models:', { data: error });
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  const checkTrainingStatus = async (modelId: string) => {;
+    try {;
+      setActiveJobs(prev => ({ ...prev, [modelId]: true })),;
+      // Call an edge function that checks the OpenAI fine-tuning job status;
+      const { data, error } = await supabase.functions.invoke('check-training-status', {;
+        body: { modelId }
+      }),;
+      if (error) throw error,;
+      // Update the local model status;
+      setModels(prev =>;
+        prev.map(model =>;
+          model.id === modelId;
+            ? { ...model, trainingStatus: (data as any)?.status || 'failed', errorMessage: (data as any)?.error || 'Unknown error' } ;
+            : model;
+        );
+      ),;
+      // Also update in the database;
+      await supabase;
+        .from('model_versions');
+        .update({;
+          training_status: (data as any)?.status || 'failed',;
+          error_message: (data as any)?.error || 'Unknown error',;
+          // If training succeeded, automatically set to active;
+          ...((data as any)?.status === 'succeeded' ? { active: true } : {});
+        });
+        .eq('id', modelId);
+    } catch (error) {;
+      logErrorToProduction('Error checking status for model ${modelId}:', { data: error });
+    } finally {;
+      setActiveJobs(prev => ({ ...prev, [modelId]: false }));
+    }
+  },;
+  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {;
+    try {;
+      // If activating, deactivate all other models with the same purpose;
+      if (!currentActive) {;
+        await supabase;
+          .from('model_versions');
+          .update({ active: false });
+          .eq('purpose', purpose);
+
+=======
       await supabase;
         .from ('model_versions');
         .update ({ active: !current_active });
         .eq ('id', model_id),
       // Refresh the model list;
       fetch_models ();
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       }
       // Update this model
@@ -56,7 +184,66 @@ interface ModelVersionData extends ModelConfig {
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
   },;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
+  },
+
+
+<<<<<<< HEAD
+=======
+  return (
+    <Card className="w-full">;
+      <CardHeader className="flex flex-row items-center justify-between">;
+        <div>;
+          <CardTitle>ZionGPT Models</CardTitle>;
+          <CardDescription>;
+            Manage fine-tuned AI models for different platform features;
+          </CardDescription>;
+        </div>;
+        <Button onClick={fetchModels} variant="outline" size="sm">;
+          <RefreshCw className="h-4 w-4 mr-2" /> Refresh;
+        </Button>;
+      </CardHeader>;
+      <CardContent>;
+        {isLoading ? (;
+          <div className="flex items-center justify-center h-24">;
+            <Loader2 className="h-8 w-8 animate-spin text-primary" />;
+          </div>;
+        ) : (;
+          <Table>;
+            <TableHeader>;
+              <TableRow>;
+                <TableHead>Model ID</TableHead>;
+                <TableHead>Version</TableHead>;
+                <TableHead>Purpose</TableHead>;
+                <TableHead>Base Model</TableHead>;
+                <TableHead>Status</TableHead>;
+                <TableHead>Created</TableHead>;
+                <TableHead className="text-right">Actions</TableHead>;
+              </TableRow>;
+            </TableHeader>;
+            <TableBody>;
+              {models && models.map((model,) => (;
+                <TableRow key={model && model.id}>;
+                  <TableCell className="font-medium">{model && model.id}</TableCell>;
+                  <TableCell>v{model && model.version}</TableCell>;
+                  <TableCell>{model && model.purpose}</TableCell>;
+                  <TableCell>{model && model.baseModel}</TableCell>;
+                  <TableCell>;
+                    {model && model.trainingStatus === 'succeeded' ? (;
+                      <Badge className="bg-green-500">Ready</Badge>;
+                    ) : model && model.trainingStatus === 'failed' ? (;
+                      <Badge className="bg-red-500">Failed</Badge>;
+                    ) : model && model.trainingStatus === 'running' ? (;
+                      <Badge className="bg-blue-500">Training</Badge>;
+                    ) : (;
+                      <Badge className="bg-yellow-500">Queued</Badge>;
+  }
+  },
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Card className="w-full">
       <CardHeader className="flex flex-row items-center justify-between">
@@ -105,9 +292,18 @@ interface ModelVersionData extends ModelConfig {
                     ) : (
                       <Badge className="bg-yellow-500">Queued</Badge>
                     )}
+<<<<<<< HEAD
+                    {model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
+                  </TableCell>
+                  <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
+                  <TableCell className="text-right">
+                    {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       <Button
                         variant="ghost"
                         size="sm"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                         onClick = {(,) => checkTrainingStatus(model && model.id),}
                         disabled = {activeJobs[model && model.id],}
                       >;
@@ -115,12 +311,52 @@ interface ModelVersionData extends ModelConfig {
                           <Loader2 className="h-4 w-4 animate-spin" />;
                         ) : (;
                           <RefreshCw className="h-4 w-4" />;
+<<<<<<< HEAD
+
+                    {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
+                      <Button
+                        variant="ghost"
+                        size="sm"
+<<<<<<< HEAD
+
+                      >
+
+=======
+                        onClick={() => checkTrainingStatus(model.id)}
+                        disabled={activeJobs[model.id]}
+                        onClick = {(,) => checkTrainingStatus(model.id),}
+                        disabled = {activeJobs[model.id],}
+                        onClick={() => checkTrainingStatus(model.id)}
+                        disabled={activeJobs[model.id]}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
                         ) : (
                           <RefreshCw className="h-4 w-4" />
                         )}
+<<<<<<< HEAD
+                        <span className="ml-1">Check</span>;
+                      </Button>;
+                    ) : model && model.trainingStatus === 'succeeded' ? (;
+                      <Button
+                        variant = {model.active ? "outline" : "default",}
+                        size="sm"
+                        onClick = {(,) => toggleModelActive(model.id, model.active, model.purpose),}
+                        )}
+                        <span className="ml-1">Check</span>
+                      </Button>
+                    ) : model.trainingStatus === 'succeeded' ? (
+                      <Button
+                        variant = {model.active ? "outline" : "default",}
+                        size="sm"
+                        onClick = {(,) => toggleModelActive(model.id, model.active, model.purpose),}
+                        variant={model.active ? "outline" : "default"}
+                        size="sm"
+                        onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       >
                         {model.active ? (
                           <>
@@ -131,13 +367,27 @@ interface ModelVersionData extends ModelConfig {
                             <Play className="h-4 w-4 mr-1" /> Activate
                           </>
                         )}
+<<<<<<< HEAD
+                      </Button>;
+                    ) : (;
+                        )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </Button>
                     ) : (
                       <Button
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
+<<<<<<< HEAD
+                        title = {model.errorMessage |"Training failed",}
+                        title={model.errorMessage || "Training failed"}
+                        title = {model.errorMessage || "Training failed",}
+                        title={model.errorMessage || "Training failed"}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                         title = {model && model.errorMessage || "Training failed",}>;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
                       </Button>;
@@ -154,7 +404,47 @@ interface ModelVersionData extends ModelConfig {
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+                  </TableCell>;
+                </TableRow>;
+
+
+
+}
+
+=======
+                        title = {model.errorMessage |"Training failed",}
+                        title = {model.errorMessage || "Training failed",}
+                        title={model.errorMessage || "Training failed"}
+                        <AlertCircle className="h-4 w-4 mr-1" /> Error
+                      </Button>
+                    )}
+                  </TableCell>
+                </TableRow>
+            </TableBody>
+          </Table>
+                  </TableCell>;
+                </TableRow>;
+
+              ))}
+            </TableBody>;
+          </Table>;
+      </CardContent>;
+    </Card>;
+  );
+}
+
+
+
+                  </TableCell>
+                </TableRow>
+                  </TableCell>;
+                </TableRow>;
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               ))}
             </TableBody>
           </Table>
@@ -163,7 +453,14 @@ interface ModelVersionData extends ModelConfig {
     </Card>
   )
 }
+<<<<<<< HEAD
+}
+;
+main
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   return (
     <Card className="w - full">;
@@ -252,3 +549,7 @@ interface ModelVersionData extends ModelConfig {
       </CardContent>;
     </Card>);
 }
+<<<<<<< HEAD
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

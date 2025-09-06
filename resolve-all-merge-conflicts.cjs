@@ -3,6 +3,8 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+<<<<<<< HEAD
+=======
 class MergeConflictResolver {
   constructor() {
     this.resolvedFiles = [];
@@ -133,6 +135,7 @@ class MergeConflictResolver {
 const resolver = new MergeConflictResolver();
 resolver.resolveMergeConflicts().catch(console.error);
 module.exports = MergeConflictResolver;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 <<<<<<< HEAD
 // Function to resolve content conflicts by choosing main branch version
@@ -332,6 +335,10 @@ main();
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

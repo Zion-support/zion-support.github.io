@@ -1,4 +1,61 @@
 {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/main
+=======
+>>>>>>> origin/automation-improvements-final
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+  "timestamp": "2025-09-04T15:37:53.118Z",
+  "totalFiles": 1516,
+  "fixedFiles": 31,
+  "errors": 0,
+  "fixedFileList": [
+    "/workspace/src/components/Accessibility.js.jsx",
+    "/workspace/src/components/Accessibility.jsx",
+    "/workspace/src/components/AdvancedDataTable.jsx",
+    "/workspace/src/components/AdvancedForm.jsx",
+    "/workspace/src/components/BlockchainWeb3Dashboard.jsx",
+    "/workspace/src/components/EnhancedLoadingSpinner.tsx",
+    "/workspace/src/components/EnterpriseDashboard.jsx",
+    "/workspace/src/components/FuturisticServicesShowcase.jsx",
+    "/workspace/src/components/LinkMonitor.js.jsx",
+    "/workspace/src/components/LinkMonitor.jsx",
+    "/workspace/src/components/ModernDataTable.jsx",
+    "/workspace/src/components/ModernForm.jsx",
+    "/workspace/src/components/ModernLoadingSpinner.jsx",
+    "/workspace/src/components/ModernLoadingSpinner.tsx",
+    "/workspace/src/components/ModernTable.jsx",
+    "/workspace/src/components/ModernTable.tsx",
+    "/workspace/src/components/ModernTableWithPagination.jsx",
+    "/workspace/src/components/ModernTableWithPagination.tsx",
+    "/workspace/src/components/ModernTableWithPaginationAndSorting.jsx",
+    "/workspace/src/components/ModernTableWithPaginationAndSorting.tsx",
+    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFiltering.jsx",
+    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFiltering.tsx",
+    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearch.jsx",
+    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearch.tsx",
+    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearchAndExport.jsx",
+    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearchAndExport.tsx",
+    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearchAndExportAndImport.jsx",
+    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearchAndExportAndImport.tsx",
+    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearchAndExportAndImportAndPrint.jsx",
+    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearchAndExportAndImportAndPrint.tsx",
+    "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearchAndExportAndImportAndPrintAndShare.jsx"
+  ],
+  "summary": "Successfully fixed syntax errors in 31 files"
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "timestamp": "2025-09-06T00:33:39.754Z",
   "duration": "6853ms",
   "fixedFiles": 517,
@@ -522,6 +579,14 @@
     "/workspace/src/utils/seo-optimizer.ts",
     "/workspace/src/utils/serverless-polyfill.ts"
   ],
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  "errorDetails": []
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   "timestamp": "2025-09-04T15:37:53.118Z",
   "totalFiles": 1516,
   "fixedFiles": 31,
@@ -560,3 +625,50 @@
     "/workspace/src/components/ModernTableWithPaginationAndSortingAndFilteringAndSearchAndExportAndImportAndPrintAndShare.jsx"
   ],
   "summary": "Successfully fixed syntax errors in 31 files"
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+
+  "errorDetails": []}
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+}
+
+"errorDetails": []
+}
+
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+"errorDetails": []
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+  "errorDetails": []
+}
+
+  "errorDetails": []}
+}
+"errorDetails": []
+}
+"errorDetails": []
+}
+  "errorDetails": []}
+ursor/fix-lint-push-and-merge-to-main-ae4e
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+}
+"errorDetails": []
+}
+origin/main
+origin/automation-improvements-final
+"errorDetails": []
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

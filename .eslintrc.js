@@ -1,5 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -12,8 +14,20 @@
 >>>>>>> origin/main
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 /* eslint - env node */;
+module.exports = {
+
+=======
+<<<<<<< HEAD
+
+=======
+/* eslint-env node */
+module.exports = {
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,6 +71,7 @@ module.exports = {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 /* eslint-env node */
 module.exports = {
 <<<<<<< HEAD
@@ -64,6 +79,9 @@ module.exports = {
 
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 module && module.exports = {
 >>>>>>> origin/main
@@ -73,14 +91,18 @@ module && module.exports = {
 >>>>>>> origin/main
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   env: {
     node: true,
     es2021: true
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -98,6 +120,8 @@ module.exports = {
 =======
 
 
+<<<<<<< HEAD
+=======
 
 =======
 =======
@@ -112,6 +136,7 @@ module.exports = {
 module.exports = {
 <<<<<<< HEAD
 >>>>>>> cursor/merge-pull-requests-and-resolve-conflicts-52f5
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
@@ -154,6 +179,9 @@ export default {
   extends: ['next/core-web-vitals', 'next/typescript'],
 ursor/add-new-services-and-deploy-updates-0462
 <<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
@@ -166,6 +194,7 @@ ursor/add-new-services-and-deploy-updates-0462
 =======
 >>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -183,6 +212,15 @@ ursor/add-new-services-and-deploy-updates-0462
     'no-console': 'off',
     'no-undef': 'off',
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+
+    node: true,
+    browser: true,
+    es2021: true
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     'react/no-unescaped-entities': 'off',
     '@typescript-eslint/no-explicit-any': 'warn'
 <<<<<<< HEAD
@@ -210,63 +248,39 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
-  "plugins": [
-    "react",
-    "@typescript-eslint"
-  ],
-  "rules": {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": "warn",
-    "no-console": "off",
-    "no-undef": "off",
-    "react/no-unescaped-entities": "off",
-    "@typescript-eslint/no-explicit-any": "warn"
+
+=======
+
+
+
+  env: {
+    node: true,
+    es2021: true
   },
-  "env": {
-    "node": true,
-    "browser": true,
-    "es2021": true
-  },
-  "ignorePatterns": [
-    "pages._archive_corrupted/**",
-    "pages.disabled.full/**",
-    "pages.disabled_auto/**",
-    "pages_api.disabled/**",
-    "pages_backup_conflict/**",
-    "pages.blog.disabled/**",
-    "pages.corrupted.*/**",
-    "pages.broken/**",
-    "pages.bak/**",
-    "pages-quarantine/**",
-    "pages-disabled/**",
-    "pages.__backup/**",
-    "temp_backup/**",
-    "temp_broken_files/**",
-    "temp_working/**",
-    "tests.disabled/**",
-    "lib_backup/**",
-    "node_modules/**",
-    ".next/**",
-    "out/**",
-    "dist/**",
-    "build/**"
-  ]
-};
-module.exports = { extends: [ 'next/core-web-vitals','eslint:recommended','@typescript-eslint/recommended',],parser: '@typescript-eslint/parser',plugins: ['@typescript-eslint'],rules: { '@typescript-eslint/no-unused-vars': 'warn','@typescript-eslint/no-explicit-any': 'warn','no-console': 'off','react/no-unescaped-entities': 'warn','no-undef': 'off',},overrides: [{ files: ['*.ts','*.tsx'],rules: { 'no-undef': 'off' } }],env: { browser: true,node: true,es6: true,dom: true },globals: { KeyboardEvent: 'readonly',HTMLElement: 'readonly',HTMLButtonElement: 'readonly',HTMLAnchorElement: 'readonly',MutationObserver: 'readonly',RequestInit: 'readonly',AbortController: 'readonly',fs: 'readonly',CodeQualityChecker: 'readonly',},};
-module.exports = {
-  extends: [
-    'next/core-web-vitals',
-    '@typescript-eslint/recommended'
-  ],
+  extends: ['next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   rules: {
+<<<<<<< HEAD
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    'react-hooks/exhaustive-deps': 'warn',
+    'react/react-in-jsx-scope': 'off',
+    'no-undef': 'off',
+    'react/no-unescaped-entities': 'off',
+    '@next/next/no-html-link-for-pages': 'off',
+    '@next/next/no-img-element': 'off'
+  },
+
+=======
     'no-unused-vars': 'warn',
     'no-undef': 'error',
     'no-console': 'off',
@@ -281,21 +295,72 @@ module.exports = {
 =======
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 
 
 >>>>>>> pr-12166
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     node: true,
     browser: true,
     es2021: true
   },
 <<<<<<< HEAD
+  env: {
+    node: true,
+    es2021: true
+  },
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  rules: {
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "@next/next/no-img-element": "off"
+  },
+ursor/integrate-build-improve-and-re-verify-8f7d
+  env: {
+    node: true,
+    es2021: true
+  },
+  extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint"],
+  rules: {
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/react-in-jsx-scope": "off",
+    "no-undef": "off",
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "@next/next/no-img-element": "off"
+  },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-
 
 
 <<<<<<< HEAD
@@ -429,6 +494,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ignorePatterns: [
     'node_modules/',
     '.next/',
@@ -601,6 +667,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
     }
   extends: ['next/core-web-vitals'],
 <<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+origin/automation-improvements-final
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 origin/automation-improvements-final
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -614,6 +686,7 @@ origin/automation-improvements-final
 =======
 >>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   rules: {
 <<<<<<< HEAD
     "@typescript-eslint/no-unused-vars": "off",
@@ -624,6 +697,20 @@ origin/automation-improvements-final
     "react/no-unescaped-entities": "off",
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
+=======
+  extends: ["next / core - web - vitals", "plugin:@typescript - eslint / recommended"],
+  parser: "@typescript - eslint / parser",
+  plugins: ["@typescript - eslint"],
+  rules: {
+    "@typescript - eslint / no - unused - vars": "off",
+    "@typescript - eslint / no - explicit - any": "off",
+    "react - hooks / exhaustive - deps": "warn",
+    "react / react - in - jsx - scope": "off",
+    "no - undef": "off",
+    "react / no - unescaped - entities": "off",
+    "@next / next / no - html - link - for - pages": "off",
+    "@next / next / no - img - element": "off",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -668,11 +755,19 @@ origin/automation-improvements-final
   ignore_patterns: [;
 
   ignorePatterns: [
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  ignorePatterns: [
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
   ignorePatterns: [
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
   ignorePatterns: [
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "node_modules/",
     ".next/",
     "out/",
@@ -681,16 +776,25 @@ origin/automation-improvements-final
     "coverage/",
 <<<<<<< HEAD
 <<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "*.config.js",
     "*.config.cjs",
     "*.config.mjs",
     "fix - critical - files.js",
 <<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
     "*.config && config.js",
     "*.config && config.cjs",
@@ -701,6 +805,7 @@ origin/automation-improvements-final
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "fix-*.js",
     "fix-*.cjs",
     "*-fix*.cjs",
@@ -722,7 +827,13 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 
 =======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "ai - optimization - backups/",
     "optimization - reports/",
     "test - generation - reports/",
@@ -734,6 +845,9 @@ origin/automation-improvements-final
     "pages.disabled_auto/",
 <<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
     "ai-optimization-backups/",
     "optimization-reports/",
@@ -747,6 +861,7 @@ origin/automation-improvements-final
 >>>>>>> origin/main
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "zion_academy/",
     "pm2 - automation/",
     "scripts/",
@@ -758,9 +873,15 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 
 =======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "tests.disabled/",
     "pages.disabled/",
     "src.disabled/",
@@ -774,6 +895,9 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
     "tests && tests.disabled/",
     "pages && pages.disabled/",
     "src && src.disabled/",
@@ -786,6 +910,7 @@ origin/automation-improvements-final
 >>>>>>> origin/main
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "src_backup_temp/",
     "temp - backup/",
     "tests/",
@@ -794,9 +919,15 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 
 =======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "*.test.js",
     "*.test.ts",
     "*.test.tsx",
@@ -864,7 +995,29 @@ origin/automation-improvements-final
     "src.broken/",
     "src.corrupted/",
     "src.pages.disabled/",
+<<<<<<< HEAD
+    "performance - monitor.js",
+    "performance - optimization.js",
+    "playwright.config.ts",
+    "postcss.config - backup.js",
+    "public/",
+    "resolve - conflicts.js",
+    "resolve - merge - conflicts.js",
+    "run - automation - safely.js",
+    "run - automation.js",
+    "run - complete - automation.js",
+    "security - config.js",
+    "server/",
+    "setup_tests.ts",
+    "simple - test.js",
+    "src / components / layout/",
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "types/",
     "utils/",
     "pages_backup/",
@@ -872,10 +1025,16 @@ origin/automation-improvements-final
     "services/",
 <<<<<<< HEAD
 <<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "components.disabled_full/",
     "comprehensive - automation - runner.js",
     "comprehensive - automation.js",
@@ -888,6 +1047,11 @@ origin/automation-improvements-final
     "database/",
 <<<<<<< HEAD
 <<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
@@ -896,6 +1060,7 @@ origin/automation-improvements-final
 
 =======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "build-verification && verification.js",
     "check-syntax && syntax.js",
     "clean-conflicts && conflicts.js",
@@ -932,6 +1097,8 @@ origin/automation-improvements-final
 
 >>>>>>> origin/automation-improvements-final
 =======
+=======
+<<<<<<< HEAD
 =======
     "components && components.disabled_full/",
     "comprehensive-automation-runner && runner.js",
@@ -999,6 +1166,7 @@ origin/automation-improvements-final
 =======
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 };
 
@@ -1010,6 +1178,14 @@ origin/automation-improvements-final
   ],
 };
 };
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    "commit-and-push.js"
+  ]
+};
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+=======
 <<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
@@ -1034,6 +1210,7 @@ origin/automation-improvements-final
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "ecosystem.simple.js",
     "ecosystem.working.js",
     "execute-automation.js",
@@ -1116,6 +1293,8 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
 
 =======
 =======
@@ -1130,6 +1309,7 @@ origin/automation-improvements-final
 
 >>>>>>> origin/automation-improvements-final
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
     "build-verification.js",
     "check-syntax.js",
@@ -1193,7 +1373,11 @@ origin/automation-improvements-final
 };
 };
 ;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 /* eslint-env node */;
 /* eslint-disable no-undef */;
@@ -1242,6 +1426,13 @@ module.exports = {;
 >>>>>>> origin/main
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -1282,3 +1473,4 @@ module.exports = {;
 =======
 >>>>>>> 8577f26234444eec9ab61c5c4d5c0b5fb15ead7f
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

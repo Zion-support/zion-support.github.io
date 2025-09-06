@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import Link from "next/link",;
+export const metadata = {;
+  title: "AI Business Intelligence - Zion Tech Group",;
+  description: "Transform your business with AI-powered analytics, predictive insights, and intelligent decision-making solutions.",;
+  keywords: "AI business intelligence, predictive analytics, data insights, business analytics, Zion Tech Group"};
+export default function AIBusinessIntelligencePage() {;
+  return (;
+
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-7xl mx-auto">;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import Link from './next / link';,
 export const metadata = {
   title: "AI Business Intelligence - Zion Tech Group",
@@ -10,6 +31,27 @@ function AIBusinessIntelligencePage() {
   return (
     <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-7xl mx - auto">;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import Link from "next/link";
+export const metadata = {title: "AI Business Intelligence - Zion Tech Group";
+  description: "Transform your business with AI-powered analytics, predictive insights, and intelligent decision-making solutions.";
+  keywords: "AI business intelligence, predictive analytics, data insights, business analytics, Zion Tech Group"}
+export default function AIBusinessIntelligencePage() {return (;
+import Link from "next/link",;
+export const metadata = {;
+  title: "AI Business Intelligence - Zion Tech Group",;
+  description: "Transform your business with AI-powered analytics, predictive insights, and intelligent decision-making solutions.",;
+  keywords: "AI business intelligence, predictive analytics, data insights, business analytics, Zion Tech Group"};
+export default function AIBusinessIntelligencePage() {;
+  return (;
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
+      <div className="max-w-7xl mx-auto">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Hero Section */}
         <div className="text - center mb - 16">;
           <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;

@@ -1,3 +1,38 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+"use client",
+import { useEffect, useRef, useState  } from './react';,
+// Skip link component for keyboard navigation;
+export /**
+ * SkipLink - Function description
+ */
+function SkipLink() {
+  return (
+
+<<<<<<< HEAD
+=======
+
+=======
+"use client";
+import { useEffect, useRef, useState } from "react";
+// Skip link component for keyboard navigation;
+export function SkipLink({ targetId, children }: { targetId: string, children: React.ReactNode }) {return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+"use client",;
+import { useEffect, useRef, useState } from "react",;
+// Skip link component for keyboard navigation;
+export function SkipLink({ targetId, children }: { targetId: string, children: React.ReactNode }) {;
+  return (;
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <a;
       href={`#${target_id}`}
       className="sr - only focus:not - sr - only focus:absolute focus:top - 4 focus:left - 4 bg-[var (--accent)] text - white px - 4 py - 2 rounded z - 50";
@@ -5,6 +40,50 @@
       {children}
     </a>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+export /**
+ * LiveRegion - Function description
+ */
+function LiveRegion() {
+  return (
+
+<<<<<<< HEAD
+=======
+
+=======
+
+// Live region for screen reader announcements;
+export function LiveRegion({message;
+  role = "status";
+  "aria-live": ariaLive = "polite";
+}: {message: string;
+  role?: "status" | "alert" | "log";
+  "aria-live"?: "polite" | "assertive" | "off";
+}) {return (;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+;
+// Live region for screen reader announcements;
+export function LiveRegion({;
+  message,;
+  role = "status",;
+  "aria-live": ariaLive = "polite";
+}: {;
+  message: string,;
+  role?: "status" | "alert" | "log",;
+  "aria-live"?: "polite" | "assertive" | "off";
+}) {;
+  return (;
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div;
       role={role}
       aria - live={aria_live}
@@ -14,6 +93,28 @@
       {message}
     </div>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+;
+// Focus trap for modals and dialogs;
+export function useFocusTrap(enabled: boolean = true) {;
+  const containerRef = useRef<HTMLDivElement>(null),;
+  useEffect(() => {;
+    if (!enabled || !containerRef.current) return,;
+    const container = containerRef.current,;
+    const focusableElements = container.querySelectorAll(;
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    ),;
+    const firstElement = focusableElements[0] as HTMLElement,;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
@@ -30,6 +131,102 @@
     </div>;
   );
 }
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+;
+// Progress indicator component;
+export function ProgressIndicator({;
+  value,;
+  max,;
+  label;
+}: {;
+  value: number,;
+  max: number,;
+  label: string;
+}) {;
+  const percentage = Math.round((value / max) * 100),;
+
+
+  return (;
+    <div className="space-y-2">;
+      <div className="flex justify-between text-sm">;
+<<<<<<< HEAD
+=======
+export /**
+ * useFocusTrap - Function description
+ */
+function useFocusTrap() {
+  const container_ref = useRef < HTMLDivElement>(null),
+  useEffect (() => {
+    // Check condition
+if (return, ) {
+  $2
+}
+    const container = container_ref.current,
+    const focusable_elements = container.querySelectorAll (
+      'button, [href], input, select, textarea, [tabindex]:not ([tabindex="-1"])'),
+    const first_element = focusable_elements[0] as HTMLElement,
+    const last_element = focusable_elements[focusable_elements.length - 1] as HTMLElement,
+    const handleKeyDown = (e: KeyboardEvent) =>: any {
+      // Check condition
+if ( {) {
+  $2
+}
+        // Check condition
+if ( {) {
+  $2
+}
+          // Check condition
+if ( {) {
+  $2
+}
+            e.prevent_default (),
+            last_element.focus ();
+          }
+        } else {
+          // Check condition
+if ( {) {
+  $2
+}
+            e.prevent_default (),
+            first_element.focus ();
+          }
+        }
+      }
+    },
+    container.addEventListener ("keydown", handleKeyDown),
+    return () => container.removeEventListener ("keydown", handleKeyDown);
+  }, [enabled]),
+  return container_ref;
+=======
+// Focus trap for modals and dialogs;
+export function useFocusTrap(enabled: boolean = true) {const containerRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {;
+    if (!enabled |!containerRef.current) return;
+    const container = containerRef.current;
+    const focusableElements = container.querySelectorAll(;
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    );
+    const firstElement = focusableElements[0] as HTMLElement;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+;
+// Focus trap for modals and dialogs;
+export function useFocusTrap(enabled: boolean = true) {;
+  const containerRef = useRef<HTMLDivElement>(null),;
+  useEffect(() => {;
+    if (!enabled || !containerRef.current) return,;
+    const container = containerRef.current,;
+    const focusableElements = container.querySelectorAll(;
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    ),;
+    const firstElement = focusableElements[0] as HTMLElement,;
+    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
@@ -38,6 +235,15 @@
           }
         }
       }
+<<<<<<< HEAD
+    }
+    container.addEventListener("keydown", handleKeyDown);
+    return () => container.removeEventListener("keydown", handleKeyDown);
+  }, [enabled]);
+  return containerRef;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 // Keyboard navigation hook;
 export function useKeyboardNavigation (items: any[], on_select: (item: any) => void) {
@@ -89,6 +295,85 @@ if ( {) {
       }, 1000),
       return () => clear_timeout (timer);
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }, [message]),
+  return (
+    <div aria - live={priority} aria - atomic="true" className="sr - only">;
+      {announcements.map ((announcement, index) => (
+        <div key={index}>{announcement}</div>))}
+    </div>);
+}
+// Progress indicator component;
+export /**
+ * ProgressIndicator - Function description
+ */
+function ProgressIndicator() {
+  const percentage = Math.round ((value / max) * 100),
+  return (
+    <div className="space - y-2">;
+      <div className="flex justify - between text - sm">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  }, [message]);
+    },;
+    container.addEventListener("keydown", handleKeyDown),;
+    return () => container.removeEventListener("keydown", handleKeyDown);
+  }, [enabled]),;
+  return containerRef;
+}
+;
+// Keyboard navigation hook;
+export function useKeyboardNavigation(items: any[], onSelect: (item: any) => void) {;
+  const [selectedIndex, setSelectedIndex] = useState(-1),;
+  const handleKeyDown = (e: KeyboardEvent) => {;
+    switch (e.key) {;
+      case "ArrowDown": e.preventDefault(),;
+        setSelectedIndex(prev => (prev + 1) % items.length),;
+        break,;
+      case "ArrowUp":;
+        e.preventDefault(),;
+        setSelectedIndex(prev => (prev - 1 + items.length) % items.length),;
+        break,;
+      case "Enter":;
+      case " ":;
+        e.preventDefault(),;
+        if (selectedIndex >= 0) {;
+          onSelect(items[selectedIndex]);
+        }
+        break,;
+      case "Escape": setSelectedIndex(-1),;
+        break;
+    }
+  },;
+  useEffect(() => {;
+    document.addEventListener("keydown", handleKeyDown),;
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [items, selectedIndex, onSelect]),;
+  return { selectedIndex, setSelectedIndex }
+}
+;
+// Announcement component for screen readers;
+export function Announcement({;
+  message,;
+  priority = "polite";
+}: {;
+  message: string,;
+  priority?: "polite" | "assertive";
+}) {;
+  const [announcements, setAnnouncements] = useState<string[]>([]),;
+  useEffect(() => {;
+    if (message) {;
+      setAnnouncements(prev => [...prev, message]),;
+      // Clear announcement after a delay;
+      const timer = setTimeout(() => {;
+        setAnnouncements(prev => prev.slice(1));
+      }, 1000),;
+      return () => clearTimeout(timer);
+    }
+  }, [message]),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (;
     <div aria-live={priority} aria-atomic="true" className="sr-only">;
       {announcements.map((announcement, index) => (;
@@ -97,9 +382,33 @@ if ( {) {
     </div>;
   );
 }
+<<<<<<< HEAD
+// Progress indicator component;
+export function ProgressIndicator({value;
+  max;
+  label;
+}: {value: number;
+  max: number;
+  label: string;
+}) {const percentage = Math.round((value / max) * 100);
+;
+// Progress indicator component;
+export function ProgressIndicator({;
+  value,;
+  max,;
+  label;
+}: {;
+  value: number,;
+  max: number,;
+  label: string;
+}) {;
+  const percentage = Math.round((value / max) * 100),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (;
     <div className="space-y-2">;
       <div className="flex justify-between text-sm">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <span>{label}</span>;
         <span>{percentage}%</span>;
       </div>;
@@ -116,8 +425,67 @@ if ( {) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+;
+// Collapsible section component;
+export function CollapsibleSection({;
+  title,;
+  children,;
+  defaultExpanded = false;
+}: {;
+  title: string,;
+  children: React.ReactNode,;
+  defaultExpanded?: boolean;
+}) {;
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded),;
+  const contentRef = useRef<HTMLDivElement>(null),;
+
+
   return (;
     <div className="border border-[var(--border)] rounded-lg">;
+<<<<<<< HEAD
+=======
+export /**
+ * CollapsibleSection - Function description
+ */
+function CollapsibleSection() {
+  const [is_expanded, setIsExpanded] = useState (default_expanded),
+  const content_ref = useRef < HTMLDivElement>(null),
+  return (
+    <div className="border border-[var (--border)] rounded - lg">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+export function CollapsibleSection({title;
+  children;
+  defaultExpanded = false;
+}: {title: string;
+  children: React.ReactNode;
+  defaultExpanded?: boolean;
+}) {const [isExpanded, setIsExpanded] = useState(defaultExpanded);
+  const contentRef = useRef<HTMLDivElement>(null);
+;
+// Collapsible section component;
+export function CollapsibleSection({;
+  title,;
+  children,;
+  defaultExpanded = false;
+}: {;
+  title: string,;
+  children: React.ReactNode,;
+  defaultExpanded?: boolean;
+}) {;
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded),;
+  const contentRef = useRef<HTMLDivElement>(null),;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  return (;
+    <div className="border border-[var(--border)] rounded-lg">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <button;
         className="w - full px - 4 py - 3 text - left font - medium hover:bg-[var (--bg - secondary)] transition - colors flex items - center justify - between";
         on_click={() => setIsExpanded (!is_expanded)}
@@ -130,6 +498,32 @@ if ( {) {
         </span>;
       </button>;
       <div;
+<<<<<<< HEAD
+
+        id={`collapsible-${title.toLowerCase ().replace (/\s+/g, '-')}`}
+        ref={content_ref}
+        className={`overflow - hidden transition - all duration - 300 ${
+          is_expanded ? "max - h-96 opacity - 100" : "max - h-0 opacity - 0";
+
+<<<<<<< HEAD
+=======
+
+        className={`overflow-hidden transition-all duration-300 ${;
+          isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+        className={`overflow-hidden transition-all duration-300 ${;
+          isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
+
+        id={`collapsible-${title.toLowerCase().replace(/\s+/g, '-')}`}
+        ref={contentRef}
+        className={`overflow-hidden transition-all duration-300 ${isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
+        className={`overflow-hidden transition-all duration-300 ${;
+          isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }`}
         aria - hidden={!is_expanded}
       >;
@@ -139,8 +533,77 @@ if ( {) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+;
+// Tooltip component with proper accessibility;
+export function Tooltip({;
+  children,;
+  content,;
+  position = "top";
+}: {;
+  children: React.ReactNode,;
+  content: string,;
+  position?: "top" | "bottom" | "left" | "right";
+}) {;
+  const [isVisible, setIsVisible] = useState(false),;
+  const [tooltipId] = useState(() => `tooltip-${Math.random().toString(36).substr(2, 9)}`),;
+  const positionClasses = {;
+    top: "bottom-full left-1/2 transform -translate-x-1/2 mb-2",;
+    bottom: "top-full left-1/2 transform -translate-x-1/2 mt-2",;
+    left: "right-full top-1/2 transform -translate-y-1/2 mr-2";
+    right: "left-full top-1/2 transform -translate-y-1/2 ml-2";
+  };
+
+
   return (;
     <div className="relative inline-block">;
+<<<<<<< HEAD
+=======
+export /**
+ * Tooltip - Function description
+ */
+function Tooltip() {
+  const [is_visible, setIsVisible] = useState (false),
+  const [tooltip_id] = useState (() => `tooltip-${Math.random ().to_string (36).substr (2, 9)}`),
+  const position_classes = {
+    top: "bottom - full left - 1/2 transform -translate - x-1 / 2 mb - 2",
+    bottom: "top - full left - 1/2 transform -translate - x-1 / 2 mt - 2",
+    left: "right - full top - 1/2 transform -translate - y-1 / 2 mr - 2";
+    right: "left - full top - 1/2 transform -translate - y-1 / 2 ml - 2";
+  }
+  return (
+    <div className="relative inline - block">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+;
+// Tooltip component with proper accessibility;
+export function Tooltip({;
+  children,;
+  content,;
+  position = "top";
+}: {;
+  children: React.ReactNode,;
+  content: string,;
+  position?: "top" | "bottom" | "left" | "right";
+}) {;
+  const [isVisible, setIsVisible] = useState(false),;
+  const [tooltipId] = useState(() => `tooltip-${Math.random().toString(36).substr(2, 9)}`),;
+  const positionClasses = {;
+    top: "bottom-full left-1/2 transform -translate-x-1/2 mb-2",;
+    bottom: "top-full left-1/2 transform -translate-x-1/2 mt-2",;
+    left: "right-full top-1/2 transform -translate-y-1/2 mr-2";
+    right: "left-full top-1/2 transform -translate-y-1/2 ml-2";
+  };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+  return (;
+    <div className="relative inline-block">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div;
         onMouseEnter={() => setIsVisible (true)}
         onMouseLeave={() => setIsVisible (false)}

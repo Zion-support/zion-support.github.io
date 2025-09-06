@@ -74,6 +74,20 @@ function fixFile(filePath) {
     
     if (hasChanges) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
+<<<<<<< HEAD
+      console.log(`✅ Fixed syntax in ${filePath}`);
+      return true;
+    }
+    
+    return false;
+  } catch (error) {
+    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 async function main() {
   console.log(' Starting comprehensive syntax fixes...');
   
@@ -86,3 +100,31 @@ async function main() {
     'pages/**/*.ts'
   ];
   
+<<<<<<< HEAD
+  let totalFixed = 0;
+  
+  for (const pattern of patterns) {
+    const files = await glob(pattern, { cwd: process.cwd() });
+    
+    for (const file of files) {
+      if (fixFile(file)) {
+        totalFixed++;
+      }
+    }
+  }
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: '/\/ \/ \/ \/ \/ \/>/g',replacement: ' />' },{ pattern: /" \/ \/ \/ \/ \/ \/>/g,replacement: '" />' },{ pattern: /;;"/g,replacement: '' },{ pattern: /;\s*{/g,replacement: ' {' },{ pattern: /return\(/g,replacement: 'return (' },{ pattern: /<\/([^>]+)\s*\/\s*>/g,replacement: '</$1>' },{ pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: '/\[\s*\]\s*=\s*\[/g',replacement: '[] = [' },{ pattern: /(\w+):\s*(\w+)\s*(\w+)/g,replacement: '$1: $2 $3' } },{ pattern: /<(\w+)\s+([^>]*)\s*\/\s*>/g,replacement: '<$1 $2 />' } ]; function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; fixes.forEach(fix => { const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console.log(`\nFixed ${totalFixed} files`)} main().catch(console.error);
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /\/ \/ \/ \/ \/ \/>/g,replacement: ' />' },{ pattern: /" \/ \/ \/ \/ \/ \/>/g,replacement: '" />' },{ pattern: /;"";"/g,replacement: '' },{ pattern: /;\s*{/g,replacement: ' {' },{ pattern: /return\(/g,replacement: 'return (' },{ pattern: /<\/([^>]+)\s*\/\s*>/g,replacement: '</$1>' },{ pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: /\[\s*\]\s*=\s*\[/g,replacement: '[] = [' },{ pattern: /(\w+):\s*(\w+)\s*(\w+)/g,replacement: '$1: $2 $3' },{ pattern: /<(\w+)\s+([^>]*)\s*\/\s*>/g,replacement: '<$1 $2 />' } ]; function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; fixes.forEach(fix => { const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console.log(`\nFixed ${totalFixed} files`)} main().catch(console.error);
+
+  console.log(`\nFixed ${totalFixed} files`);
+}
+
+  console.log(`\nFixed ${totalFixed} files`)}
+main().catch(console.error);
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: '/\/ \/ \/ \/ \/ \/>/g',replacement: ' />' },{ pattern: /" \/ \/ \/ \/ \/ \/>/g,replacement: '" />' },{ pattern: /;;"/g,replacement: '' },{ pattern: /;\s*{/g,replacement: ' {' },{ pattern: /return\(/g,replacement: 'return (' },{ pattern: /<\/([^>]+)\s*\/\s*>/g,replacement: '</$1>' },{ pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: '/\[\s*\]\s*=\s*\[/g',replacement: '[] = [' },{ pattern: /(\w+):\s*(\w+)\s*(\w+)/g,replacement: '$1: $2 $3' } },{ pattern: /<(\w+)\s+([^>]*)\s*\/\s*>/g,replacement: '<$1 $2 />' } ]; function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; fixes.forEach(fix => { const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console.log(`\nFixed ${totalFixed} files`)} main().catch(console.error);
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /\/ \/ \/ \/ \/ \/>/g,replacement: ' />' },{ pattern: /" \/ \/ \/ \/ \/ \/>/g,replacement: '" />' },{ pattern: /;"";"/g,replacement: '' },{ pattern: /;\s*{/g,replacement: ' {' },{ pattern: /return\(/g,replacement: 'return (' },{ pattern: /<\/([^>]+)\s*\/\s*>/g,replacement: '</$1>' },{ pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: /\[\s*\]\s*=\s*\[/g,replacement: '[] = [' },{ pattern: /(\w+):\s*(\w+)\s*(\w+)/g,replacement: '$1: $2 $3' },{ pattern: /<(\w+)\s+([^>]*)\s*\/\s*>/g,replacement: '<$1 $2 />' } ]; function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; fixes.forEach(fix => { const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console.log(`\nFixed ${totalFixed} files`)} main().catch(console.error);
+  console.log(`\nFixed ${totalFixed} files`)}
+main().catch(console.error);
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: '/\/ \/ \/ \/ \/ \/>/g',replacement: ' />' },{ pattern: /" \/ \/ \/ \/ \/ \/>/g,replacement: '" />' },{ pattern: /;;"/g,replacement: '' },{ pattern: /;\s*{/g,replacement: ' {' },{ pattern: /return\(/g,replacement: 'return (' },{ pattern: /<\/([^>]+)\s*\/\s*>/g,replacement: '</$1>' },{ pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: '/\[\s*\]\s*=\s*\[/g',replacement: '[] = [' },{ pattern: /(\w+):\s*(\w+)\s*(\w+)/g,replacement: '$1: $2 $3' } },{ pattern: /<(\w+)\s+([^>]*)\s*\/\s*>/g,replacement: '<$1 $2 />' } ]; function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; fixes.forEach(fix => { const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console.log(`\nFixed ${totalFixed} files`)} main().catch(console.error);
+#!/usr/bin/env node import fs from 'fs'; import path from 'path'; import { glob } from 'glob'; const fixes = [ { pattern: /\/ \/ \/ \/ \/ \/>/g,replacement: ' />' },{ pattern: /" \/ \/ \/ \/ \/ \/>/g,replacement: '" />' },{ pattern: /;"";"/g,replacement: '' },{ pattern: /;\s*{/g,replacement: ' {' },{ pattern: /return\(/g,replacement: 'return (' },{ pattern: /<\/([^>]+)\s*\/\s*>/g,replacement: '</$1>' },{ pattern: /(\w+):\s*(\d+)([a-zA-Z]+)/g,replacement: '$1: $2$3' },{ pattern: /\[\s*\]\s*=\s*\[/g,replacement: '[] = [' },{ pattern: /(\w+):\s*(\w+)\s*(\w+)/g,replacement: '$1: $2 $3' },{ pattern: /<(\w+)\s+([^>]*)\s*\/\s*>/g,replacement: '<$1 $2 />' } ]; function fixFile(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let fixedContent = content; let hasChanges = false; fixes.forEach(fix => { const newContent = fixedContent.replace(fix.pattern,fix.replacement); if (newContent !== fixedContent) { fixedContent = newContent; hasChanges = true} }); if (hasChanges) { fs.writeFileSync(filePath,fixedContent,'utf8'); console.log(`Fixed: ${filePath}`); return true} return false} catch (error) { console.error(`Error fixing ${filePath}:`,error.message); return false} } async function main() { const patterns = [ 'src*.tsx','src*.ts','components*.tsx','components*.ts','pages*.tsx','pages*.ts' ]; let totalFixed = 0; for (const pattern of patterns) { const files = await glob(pattern,{ cwd: process.cwd() }); for (const file of files) { if (fixFile(file)) { totalFixed++} } } console.log(`\nFixed ${totalFixed} files`)} main().catch(console.error);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

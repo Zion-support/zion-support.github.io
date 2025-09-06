@@ -39,7 +39,10 @@ process.exit(0);
 #!/usr/bin/env node
 =======
 #!/usr/bin/env node/usr/bin/env node;const fs = require("fs");"const path = require("path");function fileExists(p) {; try {; return fs.existsSync(p);} catch {; return false;}};const required = [;" path.join(process.cwd(), "public", "index.html"),;" path.join(process.cwd(), "vite.config.ts"),;" path.join(process.cwd(), "package.json"),;];const missing = required.filter(p => !fileExists(p));if (missing.length > 0) {; console.warn(;" "[pre-build-health-check] Missing files: ",;" missing.map(p => path.relative(process.cwd(), p)).join(", "); ); process.exit(0); / do not block build;};"console.log("[pre-build-health-check] OK");process.exit(0)""#!/usr/bin/env node
+<<<<<<< HEAD
+=======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 // Minimal pre-build health check stub to unblock builds
 try {
@@ -61,12 +64,21 @@ try {
 =======
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
@@ -83,9 +95,13 @@ try {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node
 // Minimal pre-build health check to unblock CI builds.
 // Extensible: add real checks as needed.
@@ -97,6 +113,9 @@ try {
 	process.exit(0);
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/chore/resolve-conflicts-1756215853
 <<<<<<< HEAD
 =======
@@ -112,6 +131,11 @@ try {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -122,6 +146,10 @@ try {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

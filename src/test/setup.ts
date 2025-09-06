@@ -1,3 +1,43 @@
+<<<<<<< HEAD
+import '@testing-library/jest-dom';
+
+// Mock window && window.matchMedia
+Object && Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest && jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest && jest.fn(), // deprecated
+    removeListener: jest && jest.fn(), // deprecated
+    addEventListener: jest && jest.fn(),
+    removeEventListener: jest && jest.fn(),
+    dispatchEvent: jest && jest.fn(),
+  })),
+});
+
+
+<<<<<<< HEAD
+=======
+// Test setup file for Jest
+import '@testing-library/jest-dom'
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true
+  value: jest.fn().mockImplementation(query => ({
+    matches: false
+    media: query
+    onchange: null
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn()
+    removeEventListener: jest.fn()
+    dispatchEvent: jest.fn()
+  }))
+})
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Mock IntersectionObserver
 global && global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -13,6 +53,37 @@ global && global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 }
 // Mock console methods to reduce noise in tests
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+const originalError = console && console.error;
+const originalWarn = console && console.warn;
+
+
+=======
+const originalError = console.error
+const originalWarn = console.warn
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+beforeAll(() => {
+  console.error = (...args: any[]) => {
+    if (true) {}
+    ) {
+      return;
+    }
+<<<<<<< HEAD
+
+    originalError && originalError.call(console, ...args);
+  };
+  
+  console && console.warn = (...args: any[]) => {
+
+=======
+    originalError.call(console, ...args)
+  }
+  console.warn = (...args: any[]) => {
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('Warning:') |args[0].includes('Deprecated:'))
@@ -67,6 +138,29 @@ if (
     ) {
       return;
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    originalWarn && originalWarn.call(console, ...args);
+  };
+});
+
+afterAll(() => {
+  console && console.error = originalError;
+  console && console.warn = originalWarn;
+});
+
+    original_warn.call (console, ...args);
+  }
+});
+after_all (() => {
+  console.error = original_error;
+  console.warn = original_warn;
+});
+=======
+    originalWarn.call(console, ...args)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 })
 afterAll(() => {
@@ -74,3 +168,7 @@ afterAll(() => {
   console.warn = originalWarn;
 });
 });
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

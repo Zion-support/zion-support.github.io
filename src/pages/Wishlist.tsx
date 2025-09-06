@@ -1,8 +1,17 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+=======
+;
+;
+=======
 
 
 
 
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useFavorites } from '@/hooks/useFavorites',;
 import { X } from 'lucide-react';
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData',;
@@ -29,6 +38,33 @@ export default function WishlistPage() {;
     return null, // Or a loading spinner;
   }
 ;
+<<<<<<< HEAD
+}
+
+
+
+
+
+;
+
+export default /**
+ * WishlistPage - Function description
+ */
+function WishlistPage() {): any {): any {): any {} const { favorites, loading } = use_favorites (); const { user } = use_auth (); // Check condition
+if ( {}) {
+  $2
+} navigate ('/login'); return null} const addToCart: any = (item: { id: string; title?: string; price?: number   }) => {} let cart = stored ? JSON.parse (stored) : []; // Check condition
+if (existing.quantity += 1) {
+  $2
+}'; else cart.push ({ id: item.id, name: item.title || 'Item', price: item.price || 0, quantity: 1 });'; safe_storage.set_item ('guest_cart', JSON.stringify (cart))} return acc}, {}); return acc}, {}); return () <div className="container py - 8">""";" <h1 className="text - 3xl font - bold mb - 6">Wishlist</h1> {loading ? ( <p > Loading...</p>) : favorites.length === 0 ? (" <p > No items saved.</p>";" ) : (""";" <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6"> {favorites.map (fav => {} '; // Check condition
+if ( {}) {
+  $2
+} return talent ? ( <TalentCard; key={fav.item_id} talent={talent} onViewProfile={() => {}} onRequestHire={() => {}} is_authenticated={true} />) : null}" ";" return item ? (""";" <div key={fav.item_id} className="relative">";" <ProductListingCard listing={item} />""";" <Button size="sm" className="absolute bottom - 2 right - 2" on_click={() => addToCart (item)}>; Add to Cart </Button> </div>) : null})} </div>)} </div>;" )}";" '""";";
+}
+
+ursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { items, dispatch } = useCart(),;
   const addToCart = (item: { id: string, title?: string, price?: number }) => {;
     if (items.some(i => i.id === item.id)) return,;
@@ -43,22 +79,31 @@ export default function WishlistPage() {;
     }),
     toast.success(`1× ${item.title || 'Item'} added`)
   },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-  const productMap = MARKETPLACE_LISTINGS.reduce<Record<string any>>((acc, p) => {
-    acc[p.id] = p,
-    return acc
-  }, {}),
-  const talentMap = TALENT_PROFILES.reduce<Record<string any>>((acc, t) => {
-    acc[t.id] = t,
-    return acc
-  }, {}),
 
-  const sortedFavorites = [...favorites].sort(
-    (a, b) =>
-      new Date(b.created_at || '').getTime() -
-      new Date(a.created_at || '').getTime()
-  ),
 
+<<<<<<< HEAD
+
+;
+
+export default /**
+ * WishlistPage - Function description
+ */
+function WishlistPage() {): any {): any {): any {} const { favorites, loading } = use_favorites (); const { user } = use_auth (); // Check condition
+if ( {}) {
+  $2
+} navigate ('/login'); return null} const addToCart: any = (item: { id: string; title?: string; price?: number   }) => {} let cart = stored ? JSON.parse (stored) : []; // Check condition
+if (existing.quantity += 1) {
+  $2
+}'; else cart.push ({ id: item.id, name: item.title || 'Item', price: item.price || 0, quantity: 1 });'; safe_storage.set_item ('guest_cart', JSON.stringify (cart))} return acc}, {}); return acc}, {}); return () <div className="container py - 8">""";" <h1 className="text - 3xl font - bold mb - 6">Wishlist</h1> {loading ? ( <p > Loading...</p>) : favorites.length === 0 ? (" <p > No items saved.</p>";" ) : (""";" <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6"> {favorites.map (fav => {} '; // Check condition
+if ( {}) {
+  $2
+} return talent ? ( <TalentCard; key={fav.item_id} talent={talent} onViewProfile={() => {}} onRequestHire={() => {}} is_authenticated={true} />) : null}" ";" return item ? (""";" <div key={fav.item_id} className="relative">";" <ProductListingCard listing={item} />""";" <Button size="sm" className="absolute bottom - 2 right - 2" on_click={() => addToCart (item)}>; Add to Cart </Button> </div>) : null})} </div>)} </div>;" )}";" '""";";
+}
+
+;
+=======
   return (
     <div className="container py-8">
       <h1 className="text-3xl font-bold mb-6">Wishlist</h1>
@@ -127,3 +172,8 @@ export default function WishlistPage() {;
   );
 }
 ;
+<<<<<<< HEAD
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

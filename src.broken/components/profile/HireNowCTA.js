@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<<< HEAD:backup-problematic-files/src.broken/components/profile/HireNowCTA.js
+
+
+========
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 :src/components/profile/HireNowCTA.jsx
 import React, {useState} from 'react';
 import {Button} from "../ui/Button";
@@ -87,6 +99,16 @@ export function HireNowCTA("props": "any) {;
     </Card>)}
 ;
 export default HireNowCTA;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df:src.broken/components/profile/HireNowCTA.js
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react';
 import { Button } from '../ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/Card';
@@ -100,12 +122,34 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         budget: '',
         startDate: '',
         message: ''
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<<< HEAD:backup-problematic-files/src.broken/components/profile/HireNowCTA.js
+
+
+========
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 :src/components/profile/HireNowCTA.jsx
     }
     );
     const handleSubmit = (props: any) => {
     });
     const handleSubmit = (e) => {
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df:src.broken/components/profile/HireNowCTA.js
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         e.preventDefault();
         if (onHire) {
             onHire(formData);
@@ -115,6 +159,18 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
             projectDescription: '',
             budget: '',
             startDate: '',
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<<< HEAD:backup-problematic-files/src.broken/components/profile/HireNowCTA.js
+
+
+========
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 :src/components/profile/HireNowCTA.jsx
             message: ''}
     );
@@ -123,6 +179,16 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
         });
         setIsFormOpen(false);
     };
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df:src.broken/components/profile/HireNowCTA.js
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,
@@ -186,3 +252,20 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
           </form>)}
       </CardContent>
     </Card>);
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+<<<<<<<< HEAD:backup-problematic-files/src.broken/components/profile/HireNowCTA.js
+
+
+========
+}
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df:src.broken/components/profile/HireNowCTA.js
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,32 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+"use client",
+import Link from './next / link';,
+import { ReactNode  } from './react';,
+interface CTAButtonProps {
+  href: string,
+  variant?: "primary" | "secondary" | "outline",
+  size?: "small" | "medium" | "large",
+  children: ReactNode,
+  class_name?: string,
+  on_click?: () => void;
+<<<<<<< HEAD
+=======
+"use client";
+import Link from "next/link";
+import { ReactNode } from "react";
+interface CTAButtonProps {href: string;
+  variant?: "primary" | "secondary" | "outline";
+  size?: "small" | "medium" | "large";
+  children: ReactNode;
+  className?: string;
+  onClick?: () => void;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export /**
  * CTAButton - Function description
@@ -14,6 +43,21 @@ function CTAButton() {
     medium: "px - 6 py - 3 text - base",
     large: "px - 8 py - 4 text - lg";
   }
+<<<<<<< HEAD
+  const classes = `${base_classes} ${variant_classes[variant]} ${size_classes[size]} ${class_name}`;
+  return (
+
+    <Link;
+      href={href}
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -49,6 +93,13 @@ export function CTAButton({;
   return (;
     <Link;
       href={href} ;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       className={classes}
       on_click={on_click}
       role="button";

@@ -1,7 +1,32 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+interface SafeImageProps {
+  src: string;
+  alt: string;  width?: number;interface SafeImageProps {
+
+
+=======
+'use client',
+
+import Image from 'next/image';
+import { useState } from 'react';
+'use client'
+import Image from 'next/image'
+import { useState } from 'react'
+'use client'
+import Image from 'next/image'
+import { useState } from 'react'
+import { ImageIcon } from 'lucide-react'
+interface SafeImageProps {;
+  src: string;
+  alt: string;  width?: number;interface SafeImageProps {
+interface SafeImageProps {
+=======
 import { ImageIcon } from 'lucide-react'
 interface SafeImageProps {;
 import { ImageIcon } from 'lucide-react'
 interface SafeImageProps {;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
 
@@ -94,6 +119,12 @@ export function SafeImage({
       setHasError(true)
     } else if (!hasError) {
       setHasError(true)
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    }
+  }
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   // If we have an error and no fallback, show a placeholder
   if (hasError && (!fallbackSrc |currentSrc === fallbackSrc)) {
@@ -107,23 +138,201 @@ export function SafeImage({
         <ImageIcon className='w-6 h-6' />      </div>
     )
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+;
+    />;
+
+=======
+    />
+;
+    />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );        aria-label={alt}
 'use client',;
 import Image from 'next/image',;
 import { useState } from 'react',;
 import { ImageIcon } from 'lucide-react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+interface SafeImageProps {;
+  src: string;
+  alt: string;  width?: number;interface SafeImageProps {;
+  src: string,;
+  alt: string,;
+import { ImageIcon } from 'lucide-react';
+
+interface SafeImageProps {;
+  src: string,;
+  alt: string,;
+
+import { ImageIcon } from 'lucide-react'
+
+interface SafeImageProps {
+  src: string,
+  alt: string,
+
+  width?: number;
+  height?: number;
+  className?: string;
+  fallbackSrc?: string;
+  priority?: boolean;
+  sizes?: string;
+
+
+    }
+  }
+
+
+  // If we have an error and no fallback, show a placeholder;
+  if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {;
+
+        return (
+      <div
+        className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
+        style={{ width, height }}
+        role="img"
+
+  quality?: number
+}
+
+export function SafeImage({
+  src;
+  alt;
+  width;
+  height;
+  className = '',
+  fallbackSrc;
+  priority = false,
+  sizes;
+  quality = 75}: SafeImageProps) {
+
+  const [ hasError, setHasError ] = useState(false),
+  const [ currentSrc, setCurrentSrc ] = useState(src),
+
+
+  const handleError = () => {
+    if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {
+      setCurrentSrc(fallbackSrc);
+      setHasError(true)
+    } else if (!hasError && src.startsWith('/')) {
+      // Try serving the image directly through our custom API route
+      const fallbackUrl = `/api/image${src}`,
+      setCurrentSrc(fallbackUrl);
+      setHasError(true)
+    } else if (!hasError) {
+      setHasError(true)
+=======
+interface SafeImageProps {;
+  src: string,;
+  alt: string,;
+  width?: number,;
+  height?: number,;
+  className?: string,;
+  fallbackSrc?: string,;
+  priority?: boolean,;
+  sizes?: string,;
+  quality?: number;
+}
+;
+export function SafeImage({;
+  src,;
+  alt,;
+  width,;
+  height,;
+  className = '',;
+  fallbackSrc,;
+  priority = false,;
+  sizes,;
+  quality = 75}: SafeImageProps) {;
+  const [hasError, setHasError] = useState(false),;
+  const [currentSrc, setCurrentSrc] = useState(src),;
+  const handleError = () => {;
+    if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {;
+      setCurrentSrc(fallbackSrc),;
+      setHasError(true);
+    } else if (!hasError && src.startsWith('/')) {;
+      // Try serving the image directly through our custom API route;
+      const fallbackUrl = `/api/image${src}`,;
+      setCurrentSrc(fallbackUrl);
+      setHasError(true);
+    } else if (!hasError) {;
+      setHasError(true);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    }
+  };
+
+
+  // If we have an error and no fallback, show a placeholder
+  if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {
+    return (
+      <div 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
         style={{ width, height }}
         role="img"
         aria-label={alt}
+<<<<<<< HEAD
+<<<<<<< HEAD
 
       >
+        <ImageIcon className="w-6 h-6" />
       </div>
     )
   }
 
+
+
+
+
+=======
+ursor/fix-website-loading-errors-and-merge-6662
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+      >
+      </div>
+    )
+  }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     />
   ); return (
+        aria-label = {alt,}>;
+        <ImageIcon className='w-6 h-6' />      </div>;
+    );
+  }
+
+
+    />;
+  );        aria-label={alt}
+      >;
+        <ImageIcon className="w-6 h-6" />;
+      </div>;
+    );
+  }
+
+
+    />;
+  );  return (
+
+
+<<<<<<< HEAD
+=======
+
+    />
+  ); return (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+    />
+  ); return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Image
       src = {currentSrc,}
       alt = {alt,}
@@ -134,9 +343,54 @@ import { ImageIcon } from 'lucide-react';
       priority = {priority,}
       // Add unoptimized as fallback for problematic images
       unoptimized = {hasError,}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+} 
+
+}
+
+=======
+    />
+  )
+}
+;
+  return (;
+    <Image;
+      src={currentSrc}
+      alt={alt}
+      width={width}
+      height={height}
+      className={className}
+      onError={handleError}
+      priority={priority}
+      // Add unoptimized as fallback for problematic images;
+      unoptimized={hasError}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
 }
     />;
   );
+<<<<<<< HEAD
+
+
+=======
+} ;
+} ;
+
+
+} 
+
+}
+}
+;
+  return (;
+=======
+}
+    />;
+  );
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <Image;
       src={currentSrc}
       alt={alt}
@@ -150,3 +404,79 @@ import { ImageIcon } from 'lucide-react';
     />;
   );
 } ;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  src: string,
+  alt: string,
+interface SafeImageProps {
+  src: string,
+  alt: string,
+  width?: number;
+  height?: number;
+  class_name?: string;
+  fallback_src?: string;
+  priority?: boolean;
+  sizes?: string;
+  quality?: number;
+export /**
+ * SafeImage - Function description
+ */
+function SafeImage() {
+  const [has_error, setHasError] = useState (false);
+  const [current_src, setCurrentSrc] = useState (src);
+  const handle_error = () =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      setCurrentSrc (fallback_src);
+      setHasError (true);
+      // Try serving the image directly through our custom API route;
+      const fallback_url = `/api / image${src}`;
+      setCurrentSrc (fallback_url);
+      setHasError (true);
+    } else // Check condition
+if ( {) {
+  $2
+}
+      setHasError (true);
+    }
+  }
+  // If we have an error and no fallback, show a placeholder;
+  if () {) {
+  $2
+}
+        return (
+      <div;
+        className={`flex items - center justify - center bg - gray - 100 text - gray - 400 ${class_name}`}
+        style={{ width, height }}
+        role="img";
+        aria - label = {alt, }
+      >;
+        <ImageIcon className='w - 6 h - 6' />      </div>);
+  }
+    />);        aria - label={alt}
+      >;
+        <ImageIcon className="w - 6 h - 6" />;
+      </div>);
+  }
+    />); return (
+    <Image;
+      src = {current_src, }
+      alt = {alt, }
+      width = {width, }
+      height = {height, }
+      class_name = {class_name, }
+      on_error = {handle_error, }
+      priority = {priority, }
+      // Add unoptimized as fallback for problematic images;
+      unoptimized = {has_error, }
+    />);
+}
+<<<<<<< HEAD
+} ;
+=======
+} ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

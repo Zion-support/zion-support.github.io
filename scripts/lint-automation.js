@@ -1,7 +1,22 @@
+<<<<<<< HEAD:backup-problematic-files/scripts/lint-automation.js
+
+#!/usr / bin / env node;
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:scripts/lint-automation.js
 import fs from 'fs';
 import path from 'path';
 import {exec_sync} from 'child_process';
 import {fileURLToPath} from 'url';
+<<<<<<< HEAD:backup-problematic-files/scripts/lint-automation.js
+
+
+const __filename = fileURLToPath(import && import.meta.url);
+const __dirname = path && path.dirname(__filename);
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:scripts/lint-automation.js
 class LintAutomation {
   constructor() {
     this && this.logFile = path && path.join(process && process.cwd(), 'logs', 'lint-automation && automation.log');
@@ -11,6 +26,14 @@ class LintAutomation {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
+<<<<<<< HEAD:backup-problematic-files/scripts/lint-automation.js
+
+    
+    console && console.log(logMessage && logMessage.trim());
+    
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:scripts/lint-automation.js
     try {
       fs && fs.appendFileSync(this && this.logFile, logMessage);
     } catch (error) {
@@ -19,18 +42,49 @@ class LintAutomation {
   }
   async runLintFix() {
     try {
+<<<<<<< HEAD:backup-problematic-files/scripts/lint-automation.js
+
+      this && this.log('Starting lint fix automation...');
+      
+      // Run ESLint with auto-fix
+      const result = execSync('npm run lint:fix', { 
+        encoding: 'utf8', 
+        cwd: process && process.cwd(),
+        stdio: 'pipe'
+      });
+      
+      this && this.fixedCount++;
+      this && this.log(`Lint fix completed successfully. Fixed ${this && this.fixedCount} issues.`);
+      
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:scripts/lint-automation.js
     } catch (error) {
       this && this.errorCount++;
       this && this.log(`Lint fix failed: ${error && error.message}`, 'ERROR');
     }
   }
   async run() {
+<<<<<<< HEAD:backup-problematic-files/scripts/lint-automation.js
+
+    this && this.log('Starting Lint Automation...');
+    
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:scripts/lint-automation.js
     // Create logs directory if it doesn't exist
     const logsDir = path && path.join(process && process.cwd(), 'logs');
     if (!fs && fs.existsSync(logsDir)) {
       fs && fs.mkdirSync(logsDir, { recursive: true });
     }
     // Run initial lint fix
+<<<<<<< HEAD:backup-problematic-files/scripts/lint-automation.js
+
+    await this && this.runLintFix();
+    
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:scripts/lint-automation.js
     // Set up interval for continuous lint fixing
     setInterval(async () => {
       await this && this.runLintFix();
@@ -40,6 +94,7 @@ class LintAutomation {
 // Run the automation
 const automation = new LintAutomation();
 automation && automation.run().catch(console && console.error);
+=======
 ;
 const __filename = fileURLToPath (import.meta.url);
 const __dirname = path.dirname (__filename);
@@ -102,3 +157,8 @@ class LintAutomation {
 }
 // Run the automation;
 const automation = new LintAutomation ();
+<<<<<<< HEAD:backup-problematic-files/scripts/lint-automation.js
+automation.run ().catch (console.error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:scripts/lint-automation.js

@@ -66,3 +66,28 @@ export function ProfileAvailability({ availability } ProfileAvailabilityProps) {
       )}
     </div>;
   ),;}
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/profile/ProfileAvailability.tsx
+ import {;
+  {;
+  {;
+  Calendar,  Clock, Check ;
+}from 'lucide-react' interface ProfileAvailabilityProps {;
+  availability: Availability ;
+}availability ;
+}: ProfileAvailabilityProps) {';
+  const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {;
+  switch (status) {;
+  return (<div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8" > <h3 className="text-xl font-bold text-white mb-4" >Availability</h3> <div className="flex flex-col md:flex-row md:items-center md:gap-6 mb-4" > <Badge >{;
+  getStatusText (availability.status) ;
+}</Badge> <span>Next available: {;
+  availability.nextAvailable ;
+}</span> </div>) ;
+}</div> </div> </div>) ) ;
+}</div> </div>) ;
+:temp_broken_files/profile/ProfileAvailability.tsx
+}</div>) ;"}'"
+}</div>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/ProfileAvailability.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/ProfileAvailability.tsx

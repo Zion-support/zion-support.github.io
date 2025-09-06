@@ -71,3 +71,26 @@ export function SupportWidget() {;
   ),;}
  export function SupportWidget () {
   const [isOpen, setIsOpen] = useState (false);
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/support/SupportWidget.tsx
+const { ;
+  theme ;
+ } = useTheme ();
+const router = useRouter ();
+/* Fixed button in the bottom right */ ;
+}{;
+  !isOpen && (<Button onClick={;
+  () => setIsOpen (true) ;
+}size="icon" className="fixed bottom-6 right-6 h-14 w-14 rounded-full shadow-lg bg-zion-purple hover:bg-zion-purple-light text-white z-50" aria-label="Open support" > <MessageSquare className="h-6 w-6" /> </Button>) ;
+}{;
+  /* Support panel */ ;
+:temp_broken_files/support/SupportWidget.tsx
+}{;"  isOpen && (<div className= {";"  cn (Zion Support </h3> </div> <div className="flex items-center gap-2" > <Button > <Info className="h-5 w-5" /> </Button> <Button > <X className="h-5 w-5" /> </Button> </div> </div> <ChatBotPanel /> </div>) ;
+}</>) ;"}"
+}{;
+  isOpen && (<div className= {";
+  cn (Zion Support </h3> </div> <div className="flex items-center gap-2" > <Button > <Info className="h-5 w-5" /> </Button> <Button > <X className="h-5 w-5" /> </Button> </div> </div> <ChatBotPanel /> </div>) ;
+}</>) ;
+}"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/SupportWidget.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/SupportWidget.tsx

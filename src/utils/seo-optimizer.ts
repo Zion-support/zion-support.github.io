@@ -1,10 +1,49 @@
+<<<<<<< HEAD
+// SEO optimizer utilities;
+export const generateMetaTags = () =>: any {
+  console.log ('Generating meta tags...');
+}
+;
+export const optimize_headings = () =>: any {
+  console.log ('Optimizing headings...');
+}
+;
+
+<<<<<<< HEAD
+=======
+// SEO optimizer utilities
+export const generateMetaTags = () => {;
+  console.log('Generating meta tags...');
+}
+
+
+}
+export const optimizeHeadings = () => {
+  console.log('Optimizing headings...');
+}
+origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+// SEO optimizer utilities
+export const generateMetaTags = () => {;
+  console.log('Generating meta tags...');
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 };
 
 export const optimizeHeadings = () => {;
   console.log('Optimizing headings...');
 };
+<<<<<<< HEAD
+};
+=======
 
+<<<<<<< HEAD
+origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       telephone: '+1-555-0123',
       contactType: 'customer service'}};
 };
@@ -28,3 +67,8 @@ export const generateStructuredData = pageData => {;
       contactTyp: e: 'customer service';
     }
   }
+<<<<<<< HEAD
+};
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

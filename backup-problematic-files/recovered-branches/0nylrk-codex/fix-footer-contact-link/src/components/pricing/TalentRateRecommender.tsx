@@ -113,3 +113,21 @@ if (suggestion) {
 }
 }
 };
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/pricing/TalentRateRecommender.tsx
+return (<div className="space-y-4" > <div> {";"  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;"  generateSuggestion ";"}> <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion= {;
+  suggestion ;
+}isLoading= {;
+  isLoading ;
+}onApplySuggestion= {;
+  handleApplySuggestion ;
+}rateType= {;
+  rateType ;
+}/>) ;
+}</div> </div>) ;
+:temp_broken_files/pricing/TalentRateRecommender.tsx
+};"'"
+};
+'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/pricing/TalentRateRecommender.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/pricing/TalentRateRecommender.tsx

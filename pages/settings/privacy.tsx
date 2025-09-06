@@ -1,6 +1,52 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import React, { useEffect, useState } from 'react',
+import React, { useEffect, useState } from 'react',;
+;
+import React, { useEffect, useState } from 'react',
+
+
+export default function PrivacySettingsPage() {
+  const [userId, setUserId] = useState(''),
+  const [optOut, setOptOut] = useState(false),
+  const [loading, setLoading] = useState(false),
+  const [message, setMessage] = useState(''),
+  const load = async () => {
+
+    if (!userId) return;
+<<<<<<< HEAD
+    setLoading(true);
+    setMessage('');
+    const res = await fetch(`/api/fraud/settings/opt-out?userId=${encodeURIComponent(userId)}`);
+    const json = await res.json();
+    if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
+    else setMessage(json.error || 'Failed to load');
+    setLoading(false)
+  };
+
+
+=======
+
+  },
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  };
 import React, { useEffect, useState } from 'react';
 export default function PrivacySettingsPage() {
 
+
+  },
+
+=======
+import React, { useEffect, useState } from 'react';
+export default function PrivacySettingsPage() {
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [userId, setUserId] = useState('')
   const [optOut, setOptOut] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -24,11 +70,21 @@ export default function PrivacySettingsPage() {
     if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
     else setMessage(json.error || 'Failed to load');
     setLoading(false)
+<<<<<<< HEAD
+  }
+  },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const save = async () => {
     if (!userId) return
     setLoading(true)
     setMessage('')
     const res = await fetch('/api/fraud/settings/opt-out', {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -37,13 +93,70 @@ export default function PrivacySettingsPage() {
     if (res.ok) setMessage('Saved');
     else setMessage(json.error || 'Save failed');
     setLoading(false)
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  };
+
+  useEffect(() => {
+    const savedUser = localStorage.getItem('user-id');
+    if (savedUser) setUserId(savedUser)
+  }, []);
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const onSaveUser = () => {
     localStorage.setItem('user-id', userId);
 
     load()
+<<<<<<< HEAD
+<<<<<<< HEAD
+  }
+
+=======
+
+  },
+
+=======
+  };
+  useEffect(() => {
+    const savedUser = localStorage.getItem('user-id');
+    if (savedUser) setUserId(savedUser)
+  }, []);
+  const onSaveUser = () => {
+    localStorage.setItem('user-id', userId);
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify({ userId, optOut })})
+    const json = await res.json()
+    if (res.ok) setMessage('Saved')
+    else setMessage(json.error |'Save failed')
+    setLoading(false)
+  }
+  },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  useEffect(() => {
+    const savedUser = localStorage.getItem('user-id')
+    if (savedUser) setUserId(savedUser)
+  }, [])
+  }, []),
+  const onSaveUser = () => {
+    localStorage.setItem('user-id', userId)
+    load()
   }
 
   },
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  },
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+
+  },
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="p-6 max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Privacy Settings</h1>
@@ -57,7 +170,14 @@ export default function PrivacySettingsPage() {
           <label htmlFor="optout">Opt-out of GPT content analysis (basic heuristics still apply)</label>
         </div>
         <div className="flex items-center gap-2">
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
 
@@ -65,6 +185,8 @@ export default function PrivacySettingsPage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
+=======
   )
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
@@ -74,10 +196,16 @@ export default function PrivacySettingsPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   )
 
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from 'react',
 ;
 export default /**
@@ -149,7 +277,58 @@ if (return, ) {
           {message && <div>{message}</div>}
         </div>;
       </div>;
+<<<<<<< HEAD
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
+          <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
+          {message && <div>{message}</div>}
+
+          <button disabled={!userId |loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
+          <button disabled={!userId |loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
+          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
+          <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
+          {message && <div>{message}</div>}
+        </div>
+      </div>
+    </div>
+  )
+    </div>);
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
+          <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
+  );
+};
+          {message && <div>{message}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>;
+      </div>;
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

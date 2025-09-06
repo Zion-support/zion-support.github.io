@@ -62,6 +62,10 @@ export default function CloudServicesPage() {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+              transition={{ duration: 0.8 }}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               className="text-center""
             >;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">";
@@ -106,6 +110,52 @@ export default function CloudServicesPage() {
           </div>
         </section>
         {/* Services Section */}
+<<<<<<< HEAD
+        <section className="py-20">";
+          <div className="container mx-auto px-4">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",;
+              {cloudServices && cloudServices.map((service, index) => {}
+                const IconComponent = service && service.icon;
+                return (
+                  <motion&& motion.div)
+                    key={index}
+                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                    viewport={{ once: true }}>,;
+                    <div className="text-blue-600 mb-4">";
+                      <IconComponent className="w-10 h-10" />";
+                    </div>;
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">";
+                      {service && service.title}
+                    </h3>,;
+                    <p className="text-gray-600 mb-4">";
+                      {service && service.description}
+                    </p>,;
+                    <ul className="space-y-2">";
+                      {service && service.features.map((feature, featureIndex) => (,;
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">";
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />";
+                          {feature}
+                        </li>,;
+                      ))}
+                    </ul>,;
+                  </motion && motion.div>;
+                );
+              })}
+            </div>,;
+          </div>;
+        </section>;
+            </div>;
+          </div>;
+        </section>;
+            </div>
+          </div>
+        </section>
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* Services Grid */}
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -139,6 +189,12 @@ export default function CloudServicesPage() {
                   </Link>;
                 </motion && motion.div>;
               ))}
+<<<<<<< HEAD
+            </div>
+          </div>
+        </section>
+
+=======
                     key={index}
                     className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300""
                     initial={{ opacity: 0, y: 30 }}
@@ -147,6 +203,7 @@ export default function CloudServicesPage() {
                       <IconComponent className="w-10 h-10" />";
                     </div>;
                     <h3 className="text-xl font-bold text-gray-900 mb-4">";
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">";
           <div className="container mx-auto px-4 text-center">";
@@ -165,3 +222,16 @@ export default function CloudServicesPage() {
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
+    </Layout>;
+<<<<<<< HEAD
+  );
+};
+
+<<<<<<< HEAD
+export default Cloud;
+=======
+export default Cloud;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

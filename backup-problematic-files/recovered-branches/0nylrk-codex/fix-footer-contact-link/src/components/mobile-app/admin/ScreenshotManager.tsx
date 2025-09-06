@@ -169,9 +169,25 @@ const [isDragging, setIsDragging] = useState (false);
 const fileInputRef = useRef<HTMLInputElement> (null);
 if (e.target.files) {
   return;
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/mobile-app/admin/ScreenshotManager.tsx
+:temp_broken_files/mobile-app/admin/ScreenshotManager.tsx
+
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/admin/ScreenshotManager.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx
 }setScreenshots (prev => [...prev, ...newScreenshots]);
 }
 };
 return filtered;
 }) 
 };
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/mobile-app/admin/ScreenshotManager.tsx
+<CardHeader> <CardTitle className="text-lg" >App Screenshots</CardTitle> </CardHeader> <CardContent> <div className= {;"  `border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors $ {";"  isDragging > <Upload className="mx-auto h-8 w-8 text-gray-300 mb-2" /> <p className="text-sm mb-2" >Drag & drop screenshots here</p> <input > <Plus className="mr-2 h-4 w-4" /> Select Files </Button> </div> > <Trash2 className="h-3 w-3" /> </button> </div>) ) ;
+}</div> </CardContent> </Card>) ;
+:temp_broken_files/mobile-app/admin/ScreenshotManager.tsx
+};""
+};
+"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/mobile-app/admin/ScreenshotManager.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/mobile-app/admin/ScreenshotManager.tsx

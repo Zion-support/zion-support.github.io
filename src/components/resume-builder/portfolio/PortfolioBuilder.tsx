@@ -1,3 +1,32 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+
+
+  
+
+=======
+import { useState, useEffect  } from 'react';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { useState, useEffect  } from 'react';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { useState, useEffect } from 'react'
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { FilePlus, Loader2 } from 'lucide-react'; import { ProjectCard } from './ProjectCard'
+import { ProjectForm } from './ProjectForm'
+import { PortfolioProject } from '@/types/resume'
+import { usePortfolio } from '@/hooks/usePortfolio'
+import { FilePlus, Loader2 } from 'lucide-react'
+import { ProjectCard  } from './ProjectCard';
+import { ProjectForm  } from './ProjectForm';
+import { PortfolioProject  } from '@/types/resume';
+import { usePortfolio } from '@/hooks/usePortfolio';
+export function PortfolioBuilder() {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio()
   const [showAddProject, setShowAddProject] = useState(false)
@@ -55,6 +84,12 @@ export function PortfolioBuilder() {;
       </div>
     )
   }
+<<<<<<< HEAD
+  
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -62,12 +97,31 @@ export function PortfolioBuilder() {;
           <h1 className="text-2xl font-bold">Portfolio Projects</h1>
           <p className="text-muted-foreground">Showcase your best work and projects</p>
         </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+        <Button
+          onClick={() => setShowAddProject(true)}
+          className='gap-2'
+          disabled={showAddProject |!!editingProject}        >
+          <FilePlus className='h-4 w-4' />
+          Add Project
+        </Button>
+      </div>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
           disabled={showAddProject || !!editingProject}
         >
           <FilePlus className="h-4 w-4" />
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           Add Project
         </Button>
       </div>
@@ -79,13 +133,48 @@ export function PortfolioBuilder() {;
       {/* Edit or Add Form */}
       {(showAddProject |editingProject) && (
         <Card>
+<<<<<<< HEAD
+
+
+=======
+          Add Project
+        </Button>
+      </div>
+      
+          Add Project
+        </Button>
+      </div>
       {/* Edit or Add Form */}
       {(showAddProject |editingProject) && (
         <Card>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      {/* Edit or Add Form */}
+      {(showAddProject |editingProject) && (
+        <Card>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <CardContent className='pt-6'>
             <h2 className='text-xl font-semibold mb-6'>
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+            <ProjectForm              project={editingProject || undefined}
+
+
+=======
+          <CardContent className='pt-6'>
+            <h2 className='text-xl font-semibold mb-6'>
+              {editingProject ? 'Edit Project' : 'Add New Project'}
+            </h2>
+            <ProjectForm              project={editingProject |undefined}
+            <ProjectForm              project={editingProject |undefined}
+            <ProjectForm              project={editingProject || undefined}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
                 setShowAddProject(false)
@@ -98,12 +187,36 @@ export function PortfolioBuilder() {;
 
                 setEditingProject(null)
               }}
-            />
-          </CardContent>
-        </Card>
+            />;
+          </CardContent>;
+        </Card>;
       )}
       {/* Projects List */}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      {projects && projects.length > 0 ? (;
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
+          {projects && projects.map(project => (            <ProjectCard
+
+      {/* Projects List */}
+
+import { ProjectCard } from './ProjectCard';
+import { ProjectForm } from './ProjectForm';
+import { PortfolioProject } from '@/types/resume';
+=======
       {projects.length > 0 ? (
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+          {projects.map(project => (            <ProjectCard
+      {/* Projects List */}
+      {projects.length > 0 ? (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {projects.map((project) => (
+
+
+=======
+      {projects.length > 0 ? (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
@@ -117,22 +230,51 @@ export function PortfolioBuilder() {;
       {/* Edit or Add Form */}
       {(showAddProject || editingProject) && (
         <Card>
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
-            </h2>;
-            <ProjectForm;
+            </h2>
+            
+            <ProjectForm 
               project={editingProject || undefined}
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+<<<<<<< HEAD
+              onCancel={() => {
+                setShowAddProject(false);
+
+                setEditingProject(null)
+
+<<<<<<< HEAD
+=======
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {;
                 setShowAddProject(false);
                 setEditingProject(null);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+              onCancel={() => {;
+                setShowAddProject(false);
+                setEditingProject(null);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               }}
-            />;
-          </CardContent>;
-        </Card>;
+            />
+          </CardContent>
+        </Card>
       )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+      
+=======
 ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Projects List */}
       {projects && projects.length> 0 ? (;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
@@ -142,6 +284,11 @@ export function PortfolioBuilder() {;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
             <ProjectCard
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               key={project.id}
               project={project}
               onEdit={() => setEditingProject(project)}
@@ -157,6 +304,19 @@ export function PortfolioBuilder() {;
         </div>
       ) : (
         !showAddProject && (
+<<<<<<< HEAD
+          <Card className='text-center py-12'>
+ursor/fix-website-loading-errors-and-merge-6662
+              key={project.id}
+              key={project.id}
+              project={project}
+
+
+            <CardContent>
+          <Card className='text-center py-12'>
+          <Card className="text-center py-12">
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <CardContent>
               <div className="flex flex-col items-center gap-4">
                 <div className="bg-muted/50 p-6 rounded-full">
@@ -166,6 +326,23 @@ export function PortfolioBuilder() {;
                 <p className="text-muted-foreground max-w-md mx-auto">
                   Add your best work to showcase your skills and experience to potential employers.
                 </p>
+<<<<<<< HEAD
+                <Button
+                  onClick={() => setShowAddProject(true)}
+                  onClick={() => setShowAddProject(true)} 
+                <Button
+                  onClick={() => setShowAddProject(true)}
+                  className='mt-2'                >            <CardContent>
+              <div className="flex flex-col items-center gap-4">
+                <div className="bg-muted/50 p-6 rounded-full">
+                  <FilePlus className="h-12 w-12 text-muted-foreground" />
+                </div>
+                <h3 className="text-xl font-medium">No portfolio projects yet</h3>
+                <p className="text-muted-foreground max-w-md mx-auto">
+                  Add your best work to showcase your skills and experience to potential employers.
+                </p>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -180,6 +357,76 @@ export function PortfolioBuilder() {;
           </Card>
         )
       )}
+<<<<<<< HEAD
+    </div>
+  )
+}
+                  className='mt-2'                >            <CardContent>;
+              <div className="flex flex-col items-center gap-4">;
+                <div className="bg-muted/50 p-6 rounded-full">;
+                  <FilePlus className="h-12 w-12 text-muted-foreground" />;
+                </div>;
+                <h3 className="text-xl font-medium">No portfolio projects yet</h3>;
+                <p className="text-muted-foreground max-w-md mx-auto">;
+                  Add your best work to showcase your skills and experience to potential employers.;
+                </p>;
+                <Button
+                  onClick={() => setShowAddProject(true)} ;
+                  className="mt-2";
+              on_edit={() => setEditingProject (project)}
+              on_delete={handleDeleteProject}
+          {projects.map ((project, ) => (
+            <ProjectCard;
+              key = {project.id, }
+              project = {project, }
+              on_edit = {(, ) => setEditingProject (project), }
+              on_delete = {handleDeleteProject, }
+            />))}
+        </div>) : (
+        !showAddProject && (
+          <Card className='text - center py - 12'>;
+            <CardContent>;
+              <div className='flex flex - col items - center gap - 4'>;
+                <div className='bg - muted / 50 p - 6 rounded - full'>;
+                  <FilePlus className='h - 12 w - 12 text - muted - foreground' />;
+                </div>;
+                <h3 className='text - xl font - medium'>;
+                  No portfolio projects yet;
+                </h3>;
+                <p className='text - muted - foreground max - w-md mx - auto'>;
+                  Add your best work to showcase your skills and experience to;
+                  potential employers.;
+                </p>;
+                <Button;
+                  on_click={() => setShowAddProject (true)}
+                  className='mt - 2'                >            <CardContent>;
+              <div className="flex flex - col items - center gap - 4">;
+                <div className="bg - muted / 50 p - 6 rounded - full">;
+                  <FilePlus className="h - 12 w - 12 text - muted - foreground" />;
+                </div>;
+                <h3 className="text - xl font - medium">No portfolio projects yet</h3>;
+                <p className="text - muted - foreground max - w-md mx - auto">;
+                  Add your best work to showcase your skills and experience to potential employers.;
+                </p>;
+                <Button;
+                  on_click={() => setShowAddProject (true)}
+                  className="mt - 2";
+
+                >;
+                  Add Your First Project;
+                </Button>;
+              </div>;
+            </CardContent>;
+
+  );
+}
+
+          </Card>))}
+    </div>);
+}
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
 }
 }
@@ -189,3 +436,12 @@ export function PortfolioBuilder() {;
   );
 }
 ;
+<<<<<<< HEAD
+
+    </div>;
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

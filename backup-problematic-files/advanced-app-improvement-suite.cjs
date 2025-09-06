@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -23,7 +26,11 @@ class AdvancedAppImprovementSuite {}
 =======
 
 
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node
 
 const { execSync, spawn } = require("child_process");
@@ -85,17 +92,28 @@ class AdvancedAppImprovementSuite {
       fs.mkdirSync(this.reportsDir, { recursive: true });
 :backup-problematic-files/advanced-app-improvement-suite.cjs
     }  }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 :backup-problematic-files/advanced-app-improvement-suite.cjs
     }  }
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
     fs.appendFileSync(this.logFile, logMessage + "\n");
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 log(message) {
     const timestamp = new Date().toISOString(});
@@ -104,6 +122,9 @@ log(message) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -111,9 +132,13 @@ log(message) {
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async runCommand(command, description) {
     this.log(`Starting: ${description}`);
     try {
@@ -134,6 +159,9 @@ log(message) {
     const optimizations = [
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
     if (!fs.existsSync(this.reportsDir)) {}
@@ -177,10 +205,14 @@ log(message) {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       { command: "npm run analyze", description: "Bundle Analysis" },
       { command: "npm run build", description: "Production Build" }
     ];
@@ -250,6 +282,9 @@ log(message) {
     this.log(`Report saved to: ${reportFile}`);
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -262,12 +297,16 @@ log(message) {
 console.log(`[${timestamp}] ${message}`);
 
 };
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 console.log(`[${timestamp}] ${message}`);
 
 };
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async start() {}
     this.log("🚀 Starting Advanced App Improvement Suite...");
     try {}
@@ -293,6 +332,9 @@ module.exports = AdvancedAppImprovementSuite;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
     console.log(`[${timestamp}] ${message}`);
@@ -304,9 +346,13 @@ module.exports = AdvancedAppImprovementSuite;
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   }
 =======
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     console.log(`[${timestamp}] ${message}`);
 
@@ -329,6 +375,9 @@ module.exports = AdvancedAppImprovementSuite;
     } catch (error) {
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       this.log(`⚠️ Bundle analysis failed: ${error.message}`);
     }
   }
@@ -442,6 +491,9 @@ this.log(`Fatal error: ${error.message}`, 'ERROR');
       this.generateReport();
     }
   }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 this.log(`Fatal error: ${error.message}`, 'ERROR');
@@ -449,6 +501,7 @@ this.log(`Fatal error: ${error.message}`, 'ERROR');
     }
   }
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
 if (require.main === module) {
@@ -459,6 +512,9 @@ module.exports = AdvancedAppImprovementSuite;
 // Run the improvement suite
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
 <<<<<<< HEAD
@@ -482,6 +538,9 @@ suite.run().catch(console.error);
 const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
 
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 
@@ -489,6 +548,7 @@ const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
 
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     this.ensureDirectories();,
 }
 
@@ -983,6 +1043,9 @@ const suite = new AdvancedAppImprovementSuite();
 suite.run().catch(console.error);
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 >>>>>>> origin/main
 =======
@@ -993,7 +1056,11 @@ suite.run().catch(console.error);
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

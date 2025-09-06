@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+import React from 'react'
+import Link from 'next/link'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+return (
+=======
 export function ApiDocsHub() {
   const sections = [
     {
@@ -29,6 +38,7 @@ export function ApiDocsHub() {
       description: "Understanding API errors and rate limiting",
       icon: AlertCircle,
   return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <ApiDocsLayout>
       <div className="max-w-4xl">
         <h1 className="text-4xl font-bold text-white mb-6">Zion AI Marketplace API</h1>
@@ -224,6 +234,48 @@ export function ApiDocsHub() {
           our API as quickly as possible.;
         </p>;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+      path: '/developers/docs/errors',
+      color: 'from-red-500 to-rose-500',
+    },
+  ]
+    <ApiDocsLayout>
+      <div className="max-w-4xl">
+        <h1 className="text-4xl font-bold text-white mb-6">Zion AI Marketplace API</h1>
+        <p className="text-zinc-400 text-lg mb-12">
+          Welcome to the Zion AI Marketplace API documentation. Here you'll find comprehensive guides and documentation to help you start working with our API as quickly as possible.
+        </p>
+        <div className='grid gap-6 md:grid-cols-2'>
+          {sections.map(section => (
+            <Link
+              key={section.path}
+              href={section.path}
+              className='block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all'            >
+              <div
+                className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}
+              >
+                <section.icon className='h-6 w-6 text-white' />
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {sections.map((section) => (
+            <Link
+              key={section.path}
+              href={section.path}
+              className="block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all"
+            >
+              <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}>
+                <section.icon className="h-6 w-6 text-white" />
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </div>
               <h2 className="text-xl font-semibold text-white mb-2">{section.title}</h2>
               <p className="text-zinc-400 mb-4">{section.description}</p>
@@ -234,6 +286,20 @@ export function ApiDocsHub() {
             </Link>
           ))}
         </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+        <div className='mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800'>
+          <h2 className='text-xl font-semibold text-white mb-4'>
+            Ready to get started?
+          </h2>
+          <p className='text-zinc-400 mb-6'>
+            To use the Zion AI Marketplace API, you'll need an API key. Visit
+            your developer portal to create one.
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
         <div className="mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800">
           <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>
@@ -242,15 +308,36 @@ export function ApiDocsHub() {
 
           </p>
           <Link
+<<<<<<< HEAD
+            href='/developers/portal'
+            className='inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors'
+=======
             href="/developers/portal"
             className="inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover: bg-zion-purple/90 transition-colors"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           >
             Go to Developer Portal
-            <ArrowRight className="ml-2 h-4 w-4" />
+            <ArrowRight className='ml-2 h-4 w-4' />
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    </ApiDocsLayout>;
+  );
+export default ApiDocsHub;
+}
+    </ApiDocsLayout>
+  )
+export default ApiDocsHub
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
         </div>;
+<<<<<<< HEAD
+=======
+        </div>;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import React from "react",;
 import Link from "next/link",;
@@ -314,9 +401,34 @@ export function ApiDocsHub() {;
             </Link>;
           ))}
         </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+        <div className="mt-12 p-6 rounded-lg bg-zinc-900 border border-zinc-800">;
+          <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>;
+          <p className="text-zinc-400 mb-6">;
+            To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.;
+          </p>;
+          <Link
+            href='/developers/portal'
+            className='inline-flex items-center px-4 py-2 rounded-md bg-zion-purple text-white hover:bg-zion-purple/90 transition-colors'>;
+            Go to Developer Portal;
+            <ArrowRight className='ml-2 h-4 w-4' />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </Link>;
         </div>;
       </div>;
     </ApiDocsLayout>;
   );
 export default ApiDocsHub;
+<<<<<<< HEAD
+
+    </ApiDocsLayout>
+<<<<<<< HEAD
+  )
+=======
+  )
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

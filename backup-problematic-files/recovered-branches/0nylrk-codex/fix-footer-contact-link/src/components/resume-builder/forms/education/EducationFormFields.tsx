@@ -219,3 +219,24 @@ export function EducationFormFields({ ;
     </Form>;
   ),;}
  type EducationFormValues = z.infer<typeof educationSchema>;
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/resume-builder/forms/education/EducationFormFields.tsx
+</FormControl> <FormMessage /> </FormItem>) ;
+}/> <FormField </FormControl> <FormMessage /> </FormItem>) ;
+}/> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Start Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";"}/> <div className="space-y-4" > <FormField <FormControl> <Checkbox checked= {;
+  field.value ;
+}onCheckedChange= {;"  field.onChange ";"}/> </FormControl> <div className="space-y-1 leading-none" > <FormLabel>I am currently studying here</FormLabel> </div> </FormItem>) ;
+}/> {;
+  !form.watch ('is current') && (<FormField control= {;
+  form.control ;
+}<FormItem> <FormLabel>End Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ;
+}/>) ;
+}</div> </div> <FormField </FormControl> <FormMessage /> </FormItem>) ;"}/> <FormField <FormItem> <FormLabel>Description (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";"}/> <div className="flex justify-between pt-2" > <Button >{';
+  isEditing ? 'Cancel' : 'Back' ;
+:temp_broken_files/resume-builder/forms/education/EducationFormFields.tsx
+}</Button> </Button> </div> </form> </Form>) ;"}'"
+}</Button> </Button> </div> </form> </Form>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/resume-builder/forms/education/EducationFormFields.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/resume-builder/forms/education/EducationFormFields.tsx

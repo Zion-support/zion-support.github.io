@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import { Shield, Phone, Mail, MapPin, Check, ArrowRight } from 'lucide-react';
@@ -11,13 +12,37 @@ export default function ApiObservabilityPage() {
 
   return (
 <<<<<<< HEAD
+=======
+import React from 'react'
+import Head from 'next/head'
+import { Shield, Phone, Mail, MapPin, Check, ArrowRight } from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground'
+import Button from '../components/ui/Button'
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
+export default function ApiObservabilityPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/api-observability'))
+  if (!service) return null,
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+
+  return (
 <<<<<<< HEAD
+<<<<<<<< HEAD:pages/api-observability.tsx.backup.1755991722
+========
+<<<<<<< HEAD
+>>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:components/api-observability.tsx.backup.1755991612.backup.1756001149
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <UltraFuturisticBackground variant="holographic" intensity="high">
 =======
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-465f
+<<<<<<< HEAD
+=======
+<<<<<<<< HEAD:pages/api-observability.tsx.backup.1755991722
+========
 =======
 >>>>>>> origin/main
+>>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:components/api-observability.tsx.backup.1755991612.backup.1756001149
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <Head>
         <title>{service.name} - Zion Tech Group</title>
         <meta name="description" content={service.description} />
@@ -56,7 +81,14 @@ export default function ApiObservabilityPage() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </UltraFuturisticBackground>
   );
 }
 
+=======
+    </UltraAdvancedFuturisticBackground>
+  )
+}
+;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

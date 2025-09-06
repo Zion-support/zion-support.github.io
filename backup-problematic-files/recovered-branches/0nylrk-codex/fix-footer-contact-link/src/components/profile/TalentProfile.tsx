@@ -169,3 +169,29 @@ title: proj.title;
 description: proj.description;
 date: new Date () .toISOString () //Default date since we don't have this data 
 }) ) || [];
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/profile/TalentProfile.tsx
+return (</div> </div> {;
+  /* Projects Section */ ;
+}<ProfileProjects projects= {;
+  projectsArray ;
+}/> Reviews & Ratings </h2> <ProfileRatings userId= {;
+  profile.id ;
+}averageRating= {;
+  profile.average rating ;
+}ratingCount= {;
+  profile.rating count ;
+}/> </div> Connect with {;
+  profile.full name ;
+}for your next project and get started right away. {;
+  profile.hourly rate && `Rate starts at $$ {;
+  profile.hourly rate ;
+}/hour.` ;
+}</p> <div className="flex flex-wrap gap-4 justify-center" > <Button > <Handshake className="mr-2 h-5 w-5" /> Hire Now </Button> {";"  onMessageTalent && (<Button size="lg" variant="outline" className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" onClick={;"  onMessageTalent ";"}> <MessageSquare className="mr-2 h-5 w-5" /> Message </Button>) ;
+}</div> </div> </div>) ;
+:temp_broken_files/profile/TalentProfile.tsx
+}</div> </div> </div>) ;"}'"
+}</div> </div> </div>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/TalentProfile.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/TalentProfile.tsx

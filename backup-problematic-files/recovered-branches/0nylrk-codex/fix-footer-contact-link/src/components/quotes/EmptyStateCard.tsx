@@ -39,3 +39,13 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({
   type 
 }) => {
   const isActive = type === 'active';
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/quotes/EmptyStateCard.tsx
+bg-zion-blue-dark border border-zion-blue-light text-center py-12"> <CardContent> <div className=" mx-auto w-16 h-16 bg-zion-blue-light opacity-60 rounded-full flex items-center justify-center mb-4">{";"  isActive ? (<MessageSquare className=" h-8 w-8 text-white"/>) : (<ArchiveIcon className=" h-8 w-8 text-white" />) ;
+}</div> </p> </CardContent> </Card>) ;
+:temp_broken_files/quotes/EmptyStateCard.tsx
+};"'"
+};
+'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/quotes/EmptyStateCard.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/quotes/EmptyStateCard.tsx

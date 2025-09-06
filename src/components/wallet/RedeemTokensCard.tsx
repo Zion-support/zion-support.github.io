@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react'
+import { useWallet } from '@/hooks/useWallet'
+import React, { useState } from 'react'
+import { useWallet } from '@/hooks/useWallet'
+
+import React, { useState } from "react",
+import { useWallet } from "@/hooks/useWallet",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
+import {
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
+import {
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   Dialog,
   DialogContent,
   DialogDescription,
@@ -49,6 +77,13 @@ const REWARD_OPTIONS: RewardOption[] = [
     type: 'credit'
   }
 ],
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+return (
+    <Card>;
+      <CardHeader>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   return (
@@ -92,6 +127,14 @@ const REWARD_OPTIONS: RewardOption[] = [
 
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+export function RedeemTokensCard() {
+  const { wallet, spendTokens } = useWallet(),
+  const [open, setOpen] = useState(false),
+=======
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
 import {
@@ -107,6 +150,7 @@ import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, Exte
   DialogDescription,
   DialogHeader,
   DialogTitle,
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   Card
   CardContent
@@ -138,6 +182,9 @@ const REWARD_OPTIONS: RewardOption[] = [
     cost: 100,
     type: 'feature'
   },
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
   {
     id: 'resume-review',
     title: 'AI Resume Review',
@@ -160,6 +207,7 @@ const REWARD_OPTIONS: RewardOption[] = [
 
 
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   return (
     <Card>
@@ -178,6 +226,48 @@ const REWARD_OPTIONS: RewardOption[] = [
             <DialogHeader>
               <DialogTitle>Available Rewards</DialogTitle>
               <DialogDescription>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+                Exchange your tokens for these rewards. You currently have{' '}
+                {wallet?.balance |0} ZION$.
+              </DialogDescription>
+            </DialogHeader>
+            <div className='space-y-4 py-4'>
+              {REWARD_OPTIONS.map(option => (
+                <div
+                  key={option.id}
+                  className='flex justify-between items-center border-b pb-4'
+                >                  <div>
+                    <h3 className='font-medium'>{option.title}</h3>
+                    <p className='text-sm text-muted-foreground'>
+                      {option.description}
+                    </p>
+                  </div>
+                  <div className='flex flex-col items-end gap-1'>
+                    <span className='text-sm font-bold'>
+                      {option.cost} ZION$
+                    </span>
+                    <Button
+                      size='sm'
+                      variant={
+                        wallet && wallet.balance >= option.cost
+                          ? 'default'
+                          : 'outline'
+                      }
+                      disabled={!wallet |wallet.balance < option.cost}
+                      onClick={() => handleRedeem(option)}                    >
+                      Redeem <ArrowRight className='ml-1 h-3 w-3' />
+                Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
+              </DialogDescription>
+            </DialogHeader>
+                Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.
+              </DialogDescription>
+            </DialogHeader>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="space-y-4 py-4">
               {REWARD_OPTIONS.map((option) => (
                 <div key={option.id} className="flex justify-between items-center border-b pb-4">
@@ -194,6 +284,7 @@ const REWARD_OPTIONS: RewardOption[] = [
                       onClick={() => handleRedeem(option)}
                     >
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                     </Button>
                   </div>
                 </div>
@@ -209,6 +300,19 @@ const REWARD_OPTIONS: RewardOption[] = [
         </Dialog>
       </CardContent>
     </Card>
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+  );
+};
+}
+  );
+};
+  )
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -271,43 +375,99 @@ export function RedeemTokensCard() {;
         <Dialog open={open} onOpenChange={setOpen}>;
           <DialogTrigger asChild>;
             <Button className="w-full">View Available Rewards</Button>;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+        <Dialog open={open} onOpenChange={set_open}>;
+          <DialogTrigger as_child>;
+            <Button className='w - full'>View Available Rewards</Button>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
-              <DialogTitle>Available Rewards</DialogTitle>;
+              <DialogTitle > Available Rewards</DialogTitle>;
               <DialogDescription>;
-                Exchange your tokens for these rewards. You currently have {wallet?.balance || 0} ZION$.;
+                Exchange your tokens for these rewards. You currently have{' '}
+                {wallet?.balance || 0} ZION$.;
               </DialogDescription>;
             </DialogHeader>;
-            <div className="space-y-4 py-4">;
-              {REWARD_OPTIONS.map((option) => (;
-                <div key={option.id} className="flex justify-between items-center border-b pb-4">;
-                  <div>;
-                    <h3 className="font-medium">{option.title}</h3>;
-                    <p className="text-sm text-muted-foreground">{option.description}</p>;
+            <div className='space - y-4 py - 4'>;
+              {REWARD_OPTIONS.map (option => (
+                <div;
+                  key={option.id}
+                  className='flex justify - between items - center border - b pb - 4';
+                >                  <div>;
+                    <h3 className='font - medium'>{option.title}</h3>;
+                    <p className='text - sm text - muted - foreground'>;
+                      {option.description}
+                    </p>;
                   </div>;
-                  <div className="flex flex-col items-end gap-1">;
-                    <span className="text-sm font-bold">{option.cost} ZION$</span>;
+                  <div className='flex flex - col items - end gap - 1'>;
+                    <span className='text - sm font - bold'>;
+                      {option.cost} ZION$;
+                    </span>;
                     <Button;
-                      size="sm";
-                      variant={wallet && wallet.balance >= option.cost ? "default" : "outline"}
+                      size='sm';
+                      variant={
+                        wallet && wallet.balance >= option.cost;
+                          ? 'default';
+                          : 'outline';
+                      }
                       disabled={!wallet || wallet.balance < option.cost}
-                      onClick={() => handleRedeem(option)}
-                    >;
-                      Redeem <ArrowRight className="ml-1 h-3 w-3" />;
+                      on_click={() => handle_redeem (option)}                    >;
+                      Redeem <ArrowRight className='ml - 1 h - 3 w - 3' />;
                     </Button>;
                   </div>;
-                </div>;
-              ))}
+                </div>))}
             </div>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <div className='flex justify - between'>;
+              <Button;
+                variant='outline';
+                size='sm';
+                on_click={() => set_open (false)}
+
+              >;
+                Close;
+              </Button>;
+              <Button variant='ghost' size='sm'>;
+
+                Learn More <ExternalLink className='ml - 1 h - 3 w - 3' />;
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="flex justify-between">;
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>;
               <Button variant="ghost" size="sm">;
                 Learn More <ExternalLink className="ml-1 h-3 w-3" />;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               </Button>;
             </div>;
           </DialogContent>;
         </Dialog>;
       </CardContent>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  )
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
+
+    </Card>);
+<<<<<<< HEAD
+=======
+}
+
+  )
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 }
 ;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

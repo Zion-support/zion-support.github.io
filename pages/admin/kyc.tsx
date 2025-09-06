@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+
+
+
+
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
+import type { KycProfile } from '../../utils/kyc';
+export default function AdminKycPage() {
+
+=======
+
+=======
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
@@ -22,6 +40,47 @@ import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
 export default function AdminKycPage() {
+<<<<<<< HEAD
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  const [queue, setQueue] = useState<KycProfile[]>([]);
+  const [reason, setReason] = useState<string>('');
+  async function load() {
+    const res = await fetch('/api/admin/kyc-queue');
+    const data = await res.json();
+    if (data.ok) setQueue(data.queue);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  useEffect(() => {
+    load();
+  }, []);
+  async function act(userId: string, action: 'approve' | 'reject' | 'needs_more_info') {
+    const res = await fetch('/api/admin/kyc-queue', {
+
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId, action, reason: reason || undefined })}),
+    const data = await res.json();
+    if (data.ok) load()
+  }
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+    if (data.ok) load()
+  }
+
+}
+
+
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [queue, setQueue] = useState<KycProfile[]>([])
   const [reason, setReason] = useState<string>('')
   async function load() {
@@ -69,6 +128,10 @@ export default function AdminKycPage() {
   }
 
 }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <Head>
@@ -87,12 +150,41 @@ export default function AdminKycPage() {
             <div key={p.userId} className="border rounded p-4">
               <div className="flex items-center justify-between">
                 <div>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                  <div className="font-semibold">{p.fullLegalName || p.businessName || p.userId}</div>
+                  <div className="text-xs text-gray-500">Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
+                  {p.flags && p.flags.length > 0 && (
+                    <div className="text-xs mt-1">Flags: {p.flags.join()}</div>
+
+
+<<<<<<< HEAD
+=======
+                  <div className="font-semibold">{p.fullLegalName |p.businessName |p.userId}</div>
+                  <div className="text-xs text-gray-500">Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
+                  {p.flags && p.flags.length > 0 && (
+                    <div className="text-xs mt-1">Flags: {p.flags.join()}</div>
+                  )}
+                  <div className="font-semibold">{p.fullLegalName || p.businessName || p.userId}</div>
+                  <div className="text-xs text-gray-500">Role: {p.role} • Status: {p.status} • AML: {p.amlStatus}</div>
+                  {p.flags && p.flags.length > 0 && (
+                    <div className="text-xs mt-1">Flags: {p.flags.join()}</div>
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   )}
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 </div>
                 <div className="flex gap-2">
                   <button onClick={() => act(p.userId, 'approve')} className="px-3 py-1 rounded bg-green-600 text-white">Approve</button>
@@ -103,6 +195,22 @@ export default function AdminKycPage() {
               <div className="mt-3">
                 <div className="font-medium text-sm mb-1">Documents</div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+                  {(p.documents || []).map((d) => (
+
+
+=======
+                  {(p.documents || []).map((d) => (
+
+
+                  {(p.documents |[]).map((d) => (
+                  {(p.documents || []).map((d) => (
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <div key={d.id} className="border rounded p-2 text-xs">
                       <div>Kind: {d.kind}</div>
                       <div>Filename: {d.filename}</div>
@@ -116,12 +224,16 @@ export default function AdminKycPage() {
         </div>
       </main>
     </>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
   ),
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 }
 
@@ -207,3 +319,22 @@ function act() {
 }
 
 
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+
+
+
+  );
+};
+  ),
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

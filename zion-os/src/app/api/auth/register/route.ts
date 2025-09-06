@@ -1,8 +1,101 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import { NextRequest, NextResponse  } from './next / server';,
+import bcrypt from './bcryptjs';,
+import { prisma  } from '@/lib / prisma';,
+import { z  } from './zod';,
+const register_schema = z.object ({
+  name: z.string ().min (2, "Name must be at least 2 characters"),
+  email: z.string ().email ("Invalid email address"),
+  password: z.string ().min (8, "Password must be at least 8 characters")}),
+export async /**
+ * POST - Function description
+ */
+function POST() {
+  try {
+    const body = await request.json (),
+    const { name, email, password } = register_schema.parse (body),
+<<<<<<< HEAD
+=======
+import { NextRequest, NextResponse } from "next/server";
+import bcrypt from "bcryptjs";
+import { prisma } from "@/lib/prisma";
+import { z } from "zod";
+const registerSchema = z.object({name: z.string().min(2, "Name must be at least 2 characters");
+  email: z.string().email("Invalid email address");
+  password: z.string().min(8, "Password must be at least 8 characters")});
+export async function POST() {
+  try {const body = await request.json();
+    const { name, email, password } = registerSchema.parse(body);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    // Check if user already exists;
+    const existing_user = await prisma.user.find_unique ({
+      where: { email }}),
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // Check condition
 if ( {) {
   $2
 }
       return NextResponse.json (
+<<<<<<< HEAD
+        { error: "User with this email already exists" },
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+        { status: 400 }
+      );
+    }
+    // Hash password;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+    const hashed_password = await bcrypt.hash (password, 12),
+    // Create user;
+    const user = await prisma.user.create ({
+      data: {
+        name,
+        email,
+        password: hashed_password,
+        role: "user",
+        onboarding_completed: false}}),
+    // Remove password from response;
+    const { password: _, ...userWithoutPassword } = user,
+    return NextResponse.json (
+      {
+        message: "User created successfully",
+        user: userWithoutPassword;
+      },
+      { status: 201 }
+    );
+  } catch (error) {
+    // Check condition
+if ( {) {
+  $2
+}
+      return NextResponse.json (
+        { error: "Validation failed", details: error.errors },
+        { status: 400 }
+      );
+    }
+    console.error ("Registration error:", error);
+    return NextResponse.json (
+
+      { error: "Internal server error" }
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { NextRequest, NextResponse } from "next/server",;
 import bcrypt from "bcryptjs",;
 import { prisma } from "@/lib/prisma",;
@@ -55,6 +148,13 @@ export async function POST(request: NextRequest) {;
     console.error("Registration error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       { status: 500 }
     );
   }

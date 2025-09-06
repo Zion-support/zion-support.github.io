@@ -309,6 +309,11 @@ const path = require('path')
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+=======
 =======
 #!/usr/bin/env node;
 const fs = require('fs')
@@ -318,6 +323,7 @@ const path = require('path')
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const { execSync } = require('child_process')
 console.log(' Starting Advanced Monitoring System...')
     "status"
@@ -374,6 +380,11 @@ console.log(' Starting Advanced Monitoring System...')
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+<<<<<<< HEAD
+=======
 =======
   return { "status": 'success', "metrics": mockPerformance, "message"}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:scripts/advanced-monitoring-system.cjs
@@ -381,3 +392,4 @@ console.log(' Starting Advanced Monitoring System...')
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

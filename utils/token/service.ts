@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function getConfig() {
   return {
     tokenName: 'Zion Token',
@@ -6,6 +13,10 @@ export function getConfig() {
     totalSupply: 1000000
   };
 export interface TokenTransaction {;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  id: string;
+=======
   id: string;
   userId: string;
 
@@ -14,17 +25,38 @@ export interface TokenTransaction {;
   user_id: string;
 export interface TokenTransaction {
   id: string;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   user_id: string;
   amount: number;
   type: 'issue' | 'redeem' | 'transfer';
   reason: string;
   timestamp: number;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}
+// Mock data storage - replace with actual database;
+let transactions: TokenTransaction[] = [];
+<<<<<<< HEAD
+
+
+=======
+export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
+  const transaction: TokenTransaction = {
+
+
+=======
 
 
 
 }
 // Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount
@@ -32,6 +64,10 @@ let transactions: TokenTransaction[] = [];
     reason
     timestamp: Date.now()
   }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -40,6 +76,14 @@ let transactions: TokenTransaction[] = [];
     timestamp: Date.now();
   };
   
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   transactions.push(transaction);
   return transaction;
 }
@@ -48,6 +92,47 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+;
+export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
+  const transaction: TokenTransaction = {
+    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
+    user_id,
+    amount,
+    type: 'issue',
+    reason,
+    timestamp: Date.now ();
+  }
+;
+  transactions.push (transaction);
+  return transaction;
+}
+export function redeem_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
+  const transaction: TokenTransaction = {
+    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
+    user_id,
+    amount: -amount, // Negative for redemption;
+    type: 'redeem',
+    reason,
+    timestamp: Date.now ();
+  }
+;
+  transactions.push (transaction);
+
+=======
+=======
+    type: 'redeem'
+    reason
+    timestamp: Date.now()
+  }
+    type: 'redeem',
+    reason,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     type: 'redeem',
     reason,
     timestamp: Date.now();
@@ -60,6 +145,29 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     amount,
     reason,
     timestamp: Date && Date.now()
+<<<<<<< HEAD
+<<<<<<< HEAD
+  };
+  transactions && transactions.push(transaction);
+  return transaction;
+}
+
+  const current = tokenStore && tokenStore.getConfig();
+  tokenStore && tokenStore.setConfig({ ...current, ...partial });
+
+=======
+=======
+export function set_config (
+  partial: Partial < ReturnType < typeof get_config>>): void {
+  const current = get_config ();
+  // Update the configuration;
+  Object.assign (current, partial);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     timestamp: Date.now();
   };
 // Token service utilities
@@ -166,3 +274,9 @@ export function set_config (
   Object.assign (current, partial);
 }
 
+<<<<<<< HEAD
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,5 +1,22 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+}
+}
+
 ;
 
+=======
+
+
+
+
+}
+}
+;
+=======
+;
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useState } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams;
 import { Header } from '@/components/Header',;
@@ -104,6 +121,13 @@ export default function ProjectRoom() {;
     </>
   );
 }
+<<<<<<< HEAD
+
+}
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 }
 }
@@ -111,9 +135,14 @@ export default function ProjectRoom() {;
 ;
 }
 }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 ;
 }
 }
   )
 }
+<<<<<<< HEAD
+;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

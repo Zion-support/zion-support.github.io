@@ -1,9 +1,53 @@
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+interface ContractBuilderProps {
+  isOpen: boolean,
+  onClose: () => void,
+  talent: TalentProfile,
+  clientName: string,
+  onContractGenerated?: (contractContent: string,) => void
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+export function ContractBuilder({
+  isOpen
+  onClose
+  talent
+  clientName
+  onContractGenerated
+}: ContractBuilderProps) {
+  const [activeTab, setActiveTab] = useState<string>("form")
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null)
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
+    undefined
+  )
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false)
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false)
+  const handleLoadTemplate = (templateData: ContractFormValues,) => {
+    setFormValues(templateData)
+  }
+  const handleContractGenerated = (contract: string) => {;
+    setGeneratedContract(contract);
+    setActiveTab("preview");    if (onContractGenerated) {
+      onContractGenerated(contract)
+    }
+  }
+  if (showSmartContractBuilder) {
+    return (
+      <SmartContractBuilder
+        isOpen={isOpen}
+        onClose={() => {
+          setShowSmartContractBuilder(false);          onClose()
+=======
 isOpen;
   onClose;
   talent;
   clientName;
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }}
         talent = {talent,}
         clientName = {clientName,}
@@ -16,6 +60,48 @@ import { Save } from 'lucide-react'
 import { TalentProfile } from "@/types/talent",
 import { ContractForm, ContractFormValues } from "./components/ContractForm",
 import { ContractPreview } from "./components/ContractPreview",
+<<<<<<< HEAD
+import { TemplateManager } from "./templates/TemplateManager";
+import { SmartContractBuilder } from "./SmartContractBuilder";
+interface ContractBuilderProps {
+
+  isOpen: boolean
+  onClose: () => void
+  talent: TalentProfile
+  clientName: string
+  onContractGenerated?: (contractContent: string,) => void
+
+}
+export function ContractBuilder({
+  isOpen;
+<<<<<<< HEAD
+=======
+isOpen;
+  onClose;
+  talent;
+  clientName;
+  onContractGenerated
+}: ContractBuilderProps) {
+  const [activeTab, setActiveTab] = useState<string>("form")
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null)
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
+    undefined
+  ),
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
+  const handleLoadTemplate = null;
+          onClose()
+        }}
+        talent = {talent,}
+        clientName = {clientName,}
+        onContractGenerated = {onContractGenerated,}
+      />
+    )
+  }
+import { TemplateManager } from "./templates/TemplateManager",
+import { SmartContractBuilder } from "./SmartContractBuilder",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 
   return (
@@ -30,8 +116,25 @@ import { ContractPreview } from "./components/ContractPreview",
               <TabsTrigger value="form">Contract Details</TabsTrigger>
               <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
+  }
+
+<<<<<<< HEAD
+=======
+  return (
+
+
+            
+
+
+            
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div className="flex gap-2">
               <Button
                 variant="outline"
@@ -44,6 +147,7 @@ import { ContractPreview } from "./components/ContractPreview",
               </Button>
                 variant="outline" 
                 size="sm"
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 onClick = {(,) => setTemplateManagerOpen(true),}
                 className="flex gap-1";
               >;
@@ -54,10 +158,16 @@ import { ContractPreview } from "./components/ContractPreview",
 
 
               
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+=======
 
               <Button
                 variant="secondary"
                 size="sm"
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <Button
                 variant="secondary"
                 size="sm"
@@ -68,9 +178,32 @@ import { ContractPreview } from "./components/ContractPreview",
             </div>
           </div>
             <ContractForm
+<<<<<<< HEAD
+              <Button
+                variant="secondary"
+                size="sm"
+                onClick = {() => setShowSmartContractBuilder(true),}
+
+              >;
+                Smart Contract Builder;
+              </Button>;
+            </div>;
+          </div>;
+
+          <TabsContent value="form" className="pt-4">;
+
+            <ContractForm
+          <TabsContent value="form" className="pt-4">
+            <ContractForm
+            <ContractForm 
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
             <ContractForm 
               talent = {talent,}
+<<<<<<< HEAD
+=======
               clientName = {clientName,}
               initialValues = {formValues,}
               onFormValuesChange = {setFormValues,}
@@ -79,9 +212,42 @@ import { ContractPreview } from "./components/ContractPreview",
           </TabsContent>
           <TabsContent value="preview" className="pt-4">
             {generatedContract && (
+<<<<<<< HEAD
+            />;
+          </TabsContent>;
+
+          <TabsContent value="preview" className="pt-4">;
+            {generatedContract && (;
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <ContractPreview
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
               <ContractPreview 
+<<<<<<< HEAD
+
+                contractContent = {generatedContract,}
+<<<<<<< HEAD
+}
+;
+=======
+              <ContractPreview
+ursor/fix-website-loading-errors-and-merge-6662
+                talent = {talent,}
+                onClose = {onClose,}
+                status="ready"
+              />;
+            )}
+
+          </TabsContent>;
+        </Tabs>;
+
+
+              <ContractPreview
+              <ContractPreview 
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 contractContent = {generatedContract,}
                 talent = {talent,}
                 onClose = {onClose,}
@@ -155,3 +321,9 @@ import { ContractPreview } from "./components/ContractPreview",
   );
 }
 ;
+<<<<<<< HEAD
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

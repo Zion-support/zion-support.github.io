@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  const formattedRating = null;
+import { Star } from 'lucide-react'
+import { Progress } from "@/components/ui/progress",
+interface ReviewStatsProps {
+  averageRating: number,
+  totalReviews: number,
+  ratingDistribution?: Record<number number>
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
@@ -15,18 +28,83 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
     <div className="bg-card border rounded-lg p-4">
       <div className="flex items-center justify-between mb-4">
         <div>
+<<<<<<< HEAD
+  
+    <div className="bg-card border rounded-lg p-4">
+      <div className="flex items-center justify-between mb-4">
+        <div>
+          <h3 className='text-xl font-bold'>{formattedRating}</h3>
+          <div className='flex items-center'>
+            <div className='flex mr-2'>
+              {[1, 2, 3, 4, 5].map(i => (                <Star
+                  key = {i,}
+                  className={`h-4 w-4 ${
+                    i <= Math.round(averageRating)
+                      ? 'fill-yellow-400 text-yellow-400'
+                      : 'text-gray-300'                  }`}
+                />
+              ))}
+            </div>
+            <span className='text-sm text-muted-foreground'>
+              {totalReviews} {totalReviews === 1 ? 'review' : 'reviews'}            </span>
+          </div>
+        </div>
+      </div>
+                    i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
+          <h3 className="text-xl font-bold">{formattedRating}</h3>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+<h3 className="text-xl font-bold">{formattedRating}</h3>
+          <div className="flex items-center">
+            <div className="flex mr-2">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <Star
+                  key={i}
+                  className={`h-4 w-4 ${
+                    i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
+
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   }`}
                 />
               ))}
             </div>
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+            <span className="text-sm text-muted-foreground">
+
+=======
+            <span className="text-sm text-muted-foreground">
+
+
+            <span className='text-sm text-muted-foreground'>
+              {totalReviews} {totalReviews === 1 ? 'review' : 'reviews'}            <span className="text-sm text-muted-foreground">
+            <span className="text-sm text-muted-foreground">
+              {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
             </span>
           </div>
         </div>
       </div>
       {ratingDistribution && (
+<<<<<<< HEAD
+        <div className='space-y-2'>
+          {[5, 4, 3, 2, 1].map(rating => (
+            <div key={rating} className='flex items-center gap-2'>
+              <div className='w-6 text-sm text-right'>{rating}</div>
+              <Star className='h-3 w-3 text-yellow-400' />
+              <Progress
+                value={getPercentage(ratingDistribution[rating] |0)}
+                className='h-2'        <div className="space-y-2">
+          {[5, 4, 3, 2, 1].map((rating,) => (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             <div key={rating} className="flex items-center gap-2">
               <div className="w-6 text-sm text-right">{rating}</div>
               <Star className="h-3 w-3 text-yellow-400" />
@@ -141,3 +219,16 @@ if (return 0) {
   );
 }
 ;
+<<<<<<< HEAD
+
+}</div>) ;
+}</div>) ;
+}"};
+
+    </div>;
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -101,6 +101,9 @@ const sidebarItems: SidebarItem[] = [
     icon: <Shield className="w-5 h-5" />,
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     description: 'Enterprise solutions and infrastructure',
     children: [
       { name: 'Quantum-Secure Cloud', href: '/quantum-secure-cloud-infrastructure', description: 'Future-proof cloud security' },
@@ -127,8 +130,11 @@ const sidebarItems: SidebarItem[] = [
       { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },
       { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' }
 >>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-757c
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     ]
   },
   {

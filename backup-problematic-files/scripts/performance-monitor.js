@@ -43,6 +43,22 @@ try {
 } catch (error) {
   console && console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+  performanceChecks.bundleAnalysis = true;
+  console && console.log('✅ Bundle analysis completed');
+  performanceChecks && performanceChecks.bundleAnalysis = true;
+} catch (error) {
+<<<<<<< HEAD
+  console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
+=======
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+  console && console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)');
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   performanceChecks.bundleAnalysis = true} catch (error) {
   console.log('⚠️  Bundle analysis not available (install @next/bundle-analyzer)')}
   performanceChecks && performanceChecks.bundleAnalysis = true} catch (error) {

@@ -21,9 +21,19 @@ const { BundleAnalyzerPlugin } from "webpack-bundle-analyzer"; const withBundleA
 import React from 'react';
 interface BundleanalyzerProps {
   // Add props here as needed
+<<<<<<< HEAD
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Bundleanalyzer({ }: BundleanalyzerProps) {
   return (
     <div>
       <h1>Bundleanalyzer</h1>
       <p>This component is currently under development.</p>
     </div>
+<<<<<<< HEAD
+  );
+}
+}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

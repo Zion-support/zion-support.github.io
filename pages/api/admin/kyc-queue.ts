@@ -1,20 +1,86 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import type { KycProfile } from '../../../utils/kyc',;
+import fs from 'fs',;
+import path from 'path',;
+const DATA_DIR = path.join(process.cwd(), 'datakyc'),
+const FILE = path.join(DATA_DIR, 'profiles.json'),
+
+function load(): Record<string, KycProfile> {
+  try {
+    const raw = fs.readFileSync(FILE, 'utf8'),
+    return JSON.parse(raw)
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
+
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const DATA_DIR = path.join(process.cwd(), 'datakyc')
 const FILE = path.join(DATA_DIR, 'profiles.json')
 function load(): Record<string, KycProfile> {
   try {
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    const raw = fs.readFileSync(FILE, 'utf8')
+    return JSON.parse(raw)
+
+const DATA_DIR = path.join(process.cwd(), 'datakyc');
+const FILE = path.join(DATA_DIR, 'profiles.json');
+
+function load(): Record<string, KycProfile> {
+  try {
+    if (!fs.existsSync(FILE)) return {};
+    const raw = fs.readFileSync(FILE, 'utf8');
+    return JSON.parse(raw);
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } catch {
     return {};
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
 
 
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+function save(db: Record<string, KycProfile>) {
+
+
+  fs.writeFileSync(FILE, JSON.stringify(db, null, 2))
+}
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+=======
+
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const db = load()
   const db = load(),
   if (req.method === 'GET') {
@@ -70,3 +136,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

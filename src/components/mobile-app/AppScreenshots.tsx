@@ -1,3 +1,35 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import { Button } from "@/components/ui/button";
+// These would be replaced with actual screenshots
+
+const mockScreenshots = [
+  { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" }
+  { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" }
+  { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" }
+  { id: 4, alt: "Messaging screen", src: "/placeholder.svg" }
+  { id: 5, alt: "Profile screen", src: "/placeholder.svg" }]
+export const AppScreenshots: React.FC = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
+  const scroll = (direction: "left" | "right",) => {
+<<<<<<< HEAD
+import React, { useRef } from "react",
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+    }
+
+  },
+
+=======
+import { Button } from "@/components/ui/button"
+import React, { useRef } from "react",
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import { Button } from "@/components/ui/button",
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // These would be replaced with actual screenshots
 const mockScreenshots = [
   { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
@@ -11,6 +43,10 @@ export const AppScreenshots: React.FC = () => {
 
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
+<<<<<<< HEAD
+if (scrollContainerRef.current) {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       const scrollAmount = 300
       scrollContainerRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount
@@ -30,6 +66,7 @@ export const AppScreenshots: React.FC = () => {
         </div>;
 
         <div className="relative">;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
         
@@ -45,9 +82,24 @@ export const AppScreenshots: React.FC = () => {
         </div>
         <div className="relative">
           <Button
+<<<<<<< HEAD
+=======
             variant="ghost"
             size="icon"
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
+<<<<<<< HEAD
+
+            onClick={() => scroll("left")}
+
+        
+        <div className="relative">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
+            onClick={() => scroll("left")}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             aria-label="Scroll left"
           >
             <ChevronLeft className="h-6 w-6" />
@@ -58,6 +110,18 @@ export const AppScreenshots: React.FC = () => {
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>;
             {mockScreenshots && mockScreenshots.map((screenshot,) => (;
               <div
+<<<<<<< HEAD
+          <div
+            ref = {scrollContainerRef,}
+            className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {mockScreenshots.map((screenshot,) => (
+              <div
+                key = {screenshot.id,}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 key = {screenshot && screenshot.id,}
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30">;
 
@@ -71,6 +135,12 @@ export const AppScreenshots: React.FC = () => {
             ))}
           
           <div 
+<<<<<<< HEAD
+                className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30"
+'"},;
+
+};
+=======
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -89,10 +159,19 @@ export const AppScreenshots: React.FC = () => {
               </div>
             ))}
           </div>
+<<<<<<< HEAD
+          
+          
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
           <Button
             size="icon"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
+<<<<<<< HEAD
+            onClick={() => scroll("right")}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             aria-label="Scroll right"
           >
             <ChevronRight className="h-6 w-6" />
@@ -100,6 +179,19 @@ export const AppScreenshots: React.FC = () => {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
+  );
+};
+'"};
+};
+  )
+  )
+}
+'"}
+}
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 import React, { useRef } from "react",;
 import { ChevronLeft, ChevronRight } from 'lucide-react';
@@ -138,6 +230,11 @@ export const AppScreenshots: React.FC = () => {;
           <Button;
             variant="ghost";
             size="icon";
+<<<<<<< HEAD
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white";
+            onClick={() => scroll("right")}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             aria-label="Scroll right";
           >;
             <ChevronRight className="h-6 w-6" />;
@@ -147,9 +244,14 @@ export const AppScreenshots: React.FC = () => {;
     </section>;
   );
 };
+<<<<<<< HEAD
+  )
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 '"},;
 
 };
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 ;
 }

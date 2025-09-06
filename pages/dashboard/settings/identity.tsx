@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from 'react',;
 import Head from 'next/head',;
 import type { KycProfile } from '../../../utils/kyc',;
@@ -18,10 +26,126 @@ export default function IdentitySettingsPage() {
   const [profile, setProfile] = useState<KycProfile | null>(null)
   const [error, setError] = useState('')
   async function load() {
+<<<<<<< HEAD
+
+
+    try {
+      const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
+      const data = await res.json();
+      if (data.ok) setProfile(data.profile);
+<<<<<<< HEAD
+      else setError(data.error || 'Not found')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import React, { useEffect, useState } from 'react',
+import Head from 'next / head',
+import type { KycProfile } from '../../../utils / kyc',
+import { ProfileBadges } from '../../../components / ui / ProfileBadges',
+export default /**
+ * IdentitySettingsPage - Function description
+ */
+function IdentitySettingsPage() {
+  const [user_id, setUserId] = useState ('demo - user'),
+  const [profile, set_profile] = useState < KycProfile | null>(null),
+  const [error, set_error] = useState (''),
+  async /**
+ * load - Function description
+ */
+function load() {
+    try {
+      const res = await fetch (`/api / kyc / status?user_id=${encodeURIComponent (user_id)}`),
+      const data = await res.json (),
+      if (set_profile (data.profile), ) {
+  $2
+}
+      else set_error (data.error || 'Not found');
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import React, { useEffect, useState } from 'react',;
+import Head from 'next/head',;
+import type { KycProfile } from '../../../utils/kyc',;
+import { ProfileBadges } from '../../../components/ui/ProfileBadges',;
+export default function IdentitySettingsPage() {
+  const [userId, setUserId] = useState('demo-user'),
+  const [profile, setProfile] = useState<KycProfile | null>(null),
+  const [error, setError] = useState(''),
+
+import React, { useEffect, useState } from 'react';
+
+import Head from 'next/head';
+import type { KycProfile } from '../../../utils/kyc';
+import { ProfileBadges } from '../../../components/ui/ProfileBadges';
+export default function IdentitySettingsPage() {
+
+  const [userId, setUserId] = useState('demo-user')
+  const [profile, setProfile] = useState<KycProfile | null>(null)
+  const [error, setError] = useState('')
+  async function load() {
+    try {
+      const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`)
+      const data = await res.json()
+      if (data.ok) setProfile(data.profile)
+      else setError(data.error |'Not found')
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (e) {
       setError('Failed to fetch')
     }
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+  }, []),
+
+
+  return (
+    <>
+      <Head>
+        <title>Identity Settings - Zion</title>
+        <meta name="description" content="Manage your identity verification status" />
+      </Head>
+      <main className="max-w-3xl mx-auto px-4 py-8">
+        <h1 className="text-2xl font-bold mb-4">Identity</h1>
+        <div className="mb-4">
+
+=======
+}
+
+=======
+  useEffect (() => {
+    load (),
+    // eslint - disable - next - line react - hooks / exhaustive - deps;
+  }, []),
+  return (
+    <>;
+      <Head>;
+        <title > Identity Settings - Zion</title>;
+        <meta name="description" content="Manage your identity verification status" />;
+      </Head>;
+      <main className="max - w-3xl mx - auto px - 4 py - 8">;
+        <h1 className="text - 2xl font - bold mb - 4">Identity</h1>;
+        <div className="mb - 4">;
+          <ProfileBadges profile={profile || undefined} />;
+        </div>;
+        <div className="mb - 4 text - sm text - gray - 600">;
+          Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.aml_status : 'unknown'}
+        </div>;
+        <a href="/verify" className="inline - block rounded bg - blue - 600 text - white px - 4 py - 2">Go to verification</a>;
+        {error && <div className="mt - 3 text - sm text - red - 600">{error}</div>}
+      </main>;
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+=======
+}
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../../utils/kyc';
@@ -32,8 +156,11 @@ export default function IdentitySettingsPage(req, res) {
   const [profile, setProfile] = useState<KycProfile | null>(null);
   const [error, setError] = useState('');
   async function load() {;
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     try {
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
       const data = await res.json();
@@ -46,6 +173,38 @@ export default function IdentitySettingsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  useEffect(() => {
+    load()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  }, []),
+  return (
+    <>
+      <Head>
+        <title>Identity Settings - Zion</title>
+        <meta name="description" content="Manage your identity verification status" />
+      </Head>
+      <main className="max-w-3xl mx-auto px-4 py-8">
+        <h1 className="text-2xl font-bold mb-4">Identity</h1>
+        <div className="mb-4">
+          <ProfileBadges profile={profile |undefined} />
+        </div>
+        <div className="mb-4 text-sm text-gray-600">
+          Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'}
+        </div>
+        <a href="/verify" className="inline-block rounded bg-blue-600 text-white px-4 py-2">Go to verification</a>
+        {error && <div className="mt-3 text-sm text-red-600">{error}</div>}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <ProfileBadges profile={profile || undefined} />
         </div>
         <div className="mb-4 text-sm text-gray-600">
@@ -53,6 +212,14 @@ export default function IdentitySettingsPage(req, res) {
     </>
   );
 };
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -72,3 +239,18 @@ export default function IdentitySettingsPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+}
+
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

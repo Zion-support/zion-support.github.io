@@ -1,3 +1,32 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+"use client",
+import { create_context, useContext, useEffect, useState  } from './react';,
+import { use_session, sign_in, sign_out  } from './next - auth / react';,
+import { use_router  } from './next / navigation';,
+interface User {
+  id: string,
+  name?: string,
+  email: string,
+  role: string,
+  onboarding_completed: boolean;
+<<<<<<< HEAD
+=======
+"use client";
+import { createContext, useContext, useEffect, useState } from "react";
+import { useSession, signIn, signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
+interface User {id: string;
+  name?: string;
+  email: string;
+  role: string;
+  onboardingCompleted: boolean;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 interface AuthContextType {
   user: User | null,
@@ -126,6 +155,16 @@ if ( {) {
     throw new Error ("use_auth must be used within an AuthProvider");
 
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 import { useSession, signIn, signOut } from "next-auth/react",;
@@ -244,5 +283,16 @@ export function useAuth() {;
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
   return context;
 }
+=======
+  return context;
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  return context;
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

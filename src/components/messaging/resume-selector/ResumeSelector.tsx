@@ -1,3 +1,166 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { Button } from '@/components/ui/button';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Label } from '@/components/ui/label';
+import { Plus, Loader2 } from 'lucide-react';
+import { useResume } from '@/hooks/useResume';
+import { exportResumeToPDF } from '@/utils/pdfExport';
+import { toast } from '@/components/ui/use-toast';
+
+interface ResumeOption {
+  id: string;
+  title: string;
+  description: string;
+  lastModified: string;
+  fileSize: string;
+  url: string;
+}
+
+interface ResumeSelectorProps {
+  onResumeSelect: (resume: ResumeOption | null) => void;
+  selectedResume: ResumeOption | null;
+}
+
+export const ResumeSelector: React.FC<ResumeSelectorProps> = ({
+  onResumeSelect,
+  selectedResume,
+}) => {
+  const [resumes, setResumes] = useState<ResumeOption[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [uploading, setUploading] = useState(false);
+  const { resume, updateResume } = useResume();
+
+  useEffect(() => {
+    // Mock data - replace with actual API call
+    const mockResumes: ResumeOption[] = [
+      {
+        id: '1',
+        title: 'Software Engineer Resume',
+        description: 'Updated with latest projects',
+        lastModified: '2024-01-15',
+        fileSize: '2.1 MB',
+        url: '/resumes/software-engineer.pdf',
+      },
+      {
+        id: '2',
+        title: 'Product Manager Resume',
+        description: 'Senior PM experience',
+        lastModified: '2024-01-10',
+        fileSize: '1.8 MB',
+        url: '/resumes/product-manager.pdf',
+      },
+    ];
+    
+    setResumes(mockResumes);
+    setLoading(false);
+  }, []);
+
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploading(true);
+    try {
+      // Mock file processing
+      await new Promise(resolve => setTimeout(resolve, 2000));
+=======
+import React, { useState, useEffect } from 'react'
+import { Button } from "@/components/ui/button"
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { Label } from "@/components/ui/label"
+import { Plus, Loader2 } from 'lucide-react'import { useResume } from "@/hooks/useResume"
+import { exportResumeToPDF } from "@/utils/pdfExport"
+import { toast } from "@/components/ui/use-toast"
+import { ResumePreviewCard } from './ResumePreviewCard'
+import { UploadSection } from './UploadSection'
+import { SelectResumeSection } from './SelectResumeSection'
+import { ResumeOption, ResumeSelectorProps } from './types'
+import {logErrorToProduction} from '@/utils/productionLogger'
+export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
+
+  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent')
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null)
+  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([])
+  const [customFile, setCustomFile] = useState<File | null>(null)
+  const [isLoading, setIsLoading] = useState(false)
+  const { resume, fetchResume } = useResume()
+
+import React, { useState, useEffect } from 'react',
+import { Button } from "@/components/ui/button",
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
+import { Label } from "@/components/ui/label",
+import { Plus, Loader2 } from 'lucide-react'
+import { useResume } from "@/hooks/useResume",
+import { exportResumeToPDF } from "@/utils/pdfExport",
+// Fetch resume data when component mounts
+  useEffect((,) => {
+    const loadResumes = async () => {
+
+import React, { useState, useEffect } from 'react';
+import { Button  } from '@/components / ui / button';
+import { RadioGroup, RadioGroupItem  } from '@/components / ui / radio - group';
+import { Label  } from '@/components / ui / label';
+import { Plus, Loader2 } from 'lucide-react'import { use_resume  } from '@/hooks / use_resume';
+import { exportResumeToPDF  } from '@/utils / pdf_export';
+import { toast  } from '@/components / ui / use - toast';
+import { ResumePreviewCard } from './ResumePreviewCard';
+import { UploadSection } from './UploadSection';
+import { SelectResumeSection } from './SelectResumeSection';
+import { ResumeOption, ResumeSelectorProps } from './types';
+import {logErrorToProduction} from '@/utils / production_logger';
+export /**
+ * ResumeSelector - Function description
+ */
+function ResumeSelector() {
+  const [selected_option, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent');
+  const [selected_resume, setSelectedResume] = useState < ResumeOption | null>(null);
+  const [resume_options, setResumeOptions] = useState < ResumeOption[]>([]);
+  const [custom_file, setCustomFile] = useState < File | null>(null);
+  const [is_loading, setIsLoading] = useState (false);
+  const { resume, fetch_resume } = use_resume ();
+  // Fetch resume data when component mounts;
+  useEffect ((, ) => {
+    const load_resumes = async () => {
+      setIsLoading (true);
+
+
+      setIsLoading(true),
+
+      try {
+import { toast } from "@/components/ui/use-toast";
+import { ResumePreviewCard  } from './ResumePreviewCard';
+import { UploadSection  } from './UploadSection';
+import { SelectResumeSection  } from './SelectResumeSection';
+import { ResumeOption, ResumeSelectorProps  } from './types';
+import { logErrorToProduction } from '@/utils/productionLogger';
+export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
+
+  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent')
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null)
+  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([])
+  const [customFile, setCustomFile] = useState<File | null>(null)
+  const [isLoading, setIsLoading] = useState(false)
+  const { resume, fetchResume } = useResume()
+import { toast } from "@/components/ui/use-toast",
+import { ResumePreviewCard } from './ResumePreviewCard',
+import { UploadSection } from './UploadSection',
+import { SelectResumeSection } from './SelectResumeSection',
+import { ResumeOption, ResumeSelectorProps } from './types',
+import {logErrorToProduction} from '@/utils/productionLogger',
+export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
+
+  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent'),
+  const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null),
+  const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]),
+  const [customFile, setCustomFile] = useState<File | null>(null),
+  const [isLoading, setIsLoading] = useState(false),
+  
+  const { resume, fetchResume } = useResume(),
+  
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Fetch resume data when component mounts
   useEffect(() => {
     const loadResumes = async () => {
@@ -89,6 +252,10 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const file = e.target.files[0],
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       
       // Check if it's a PDF file
       if (file.type !== 'application/pdf') {
@@ -283,5 +450,20 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
         </Button>
       </div>
     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  );
+};
+=======
   )
 }
+;
+;
+
+
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  )
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

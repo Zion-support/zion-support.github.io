@@ -134,3 +134,27 @@ amount;
 status;
 dueDate;
 onApprove;
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/projects/milestones/MilestoneCard.tsx
+onReject ;
+}: MilestoneCardProps) {;
+  const { ;
+  isUnderDispute, disputeStatus ;
+ } = useDisputeCheck (projectId, id);
+switch (status) {';
+  case 'completed': return 'bg-green-500';';
+case 'in progress': return 'bg-blue-500';';
+case 'pending': return 'bg-yellow-500';';
+case 'rejected': ;"}return (<Card> <CardHeader className="pb-2" > <div className="flex justify-between items-start" > <div> </p>) ;
+}</div> isUnderDispute && disputeStatus && (<DisputeStatusBadge status= {;
+  disputeStatus ;"}/>) ";"}</div> </div> </CardHeader> </div> </CardContent> <CardFooter className="pt-2 flex justify-between" > <div> {';
+  status !== 'completed' && status !== 'rejected' && (<RaiseDisputeButton projectId= {;
+  projectId ;
+}/>) ;
+}</div> Actions frozen due to dispute </Button>) ;
+:temp_broken_files/projects/milestones/MilestoneCard.tsx
+}</div> </CardFooter> </Card>) ;"}'"
+}</div> </CardFooter> </Card>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/projects/milestones/MilestoneCard.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/projects/milestones/MilestoneCard.tsx

@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+export type UIKitKind = 'ios' | 'android' | 'web';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface TokenSet {
 
 export interface TokenSet {;
@@ -14,6 +21,51 @@ export interface UIKit {;
 export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   // Placeholder implementation
   return {
+<<<<<<< HEAD
+    colors: {
+      primary: '#007AFF'
+      secondary: '#5856D6'
+      success: '#34C759'
+      warning: '#FF9500'
+      error: '#FF3B30'
+    }
+    typography: {
+      heading1: { fontSize: 32, fontWeight: 'bold' }
+      heading2: { fontSize: 24, fontWeight: 'bold' }
+      body: { fontSize: 16, fontWeight: 'normal' }
+    }
+    spacing: {
+      xs: 4
+      sm: 8
+      md: 16
+      lg: 24
+      xl: 32
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+  tokens: TokenSet;
+}
+
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     
     return this.props.children;
@@ -157,6 +209,13 @@ export interface FigmaNode {
 }
 
   const tokens = await buildTokenSet(fileId);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export async function buildTokenSet (file_id: string): Promise < TokenSet> {
+  // Placeholder implementation;
+  return {
+=======
     };
   };
 }
@@ -164,6 +223,7 @@ export interface FigmaNode {
   getDesignSystem(id: string): DesignSystem | null {
     return this.designSystems.get(id) || null;
   }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
   addComponent(designSystemId: string, component: DesignElement): boolean {
     const designSystem = this.designSystems.get(designSystemId);
@@ -377,11 +437,57 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
           padding: tokens.spacing.md;
         }
       }
+<<<<<<< HEAD
+=======
+    }
+  }
+}
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
+    };
+  };
+}
+
+
+
+
+  };
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
   };
 
+<<<<<<< HEAD
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
+  const tokens = await buildTokenSet(fileId);
+  return {
+    components: {
+      button: {
+        primary: {
+          backgroundColor: tokens.colors.primary
+          padding: tokens.spacing.md
+        }
+      }
+    }
+    tokens
+  }
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 }
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     },
     tokens;
   }
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+  };
+
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

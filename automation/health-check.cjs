@@ -1,5 +1,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+#!/usr/bin/env node
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 <<<<<<< HEAD
 #!/usr/bin/env node
@@ -1306,6 +1310,10 @@ module.exports = HealthChecker;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const { execSync } = require('child_process');
 console.log('🏥 Running Health Check...');
 const checks = [
@@ -1314,6 +1322,7 @@ const checks = [
   { name: 'Lint Status', command: 'npm run lint:check' },
   { name: 'Type Check', command: 'npm run type-check' }
 ];
+
 checks.forEach(check => {
   try {
     execSync(check.command, { stdio: 'pipe' });
@@ -1321,10 +1330,14 @@ checks.forEach(check => {
   } catch (error) {
     console.log(`❌ ${check.name}: FAILED`);
   }
-<<<<<<< HEAD
 });
 =======
 });
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2197
@@ -1335,6 +1348,9 @@ checks.forEach(check => {
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2197
@@ -1342,3 +1358,4 @@ checks.forEach(check => {
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -232,6 +232,31 @@ export function DisputeDetail() {;
                           <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">2</Badge>;
                           <span>Under review</span>;
                         </li>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+                      )}
+                      ;
+                      {dispute.resolved_at && (;
+                        <li className="flex gap-2 items-center">;
+                          <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">;
+                            {dispute.status !== "open" ? "3" :"2"}
+                          </Badge>;
+                          <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
+                        </li>;
+                      )}
+=======
+                      )}
+                      ;
+                      {dispute.resolved_at && (;
+                        <li className="flex gap-2 items-center">;
+                          <Badge variant="outline" className="h-6 w-6 rounded-full p-0 flex items-center justify-center">;
+                            {dispute.status !== "open" ? "3" :"2"}
+                          </Badge>;
+                          <span>Resolved on {format(new Date(dispute.resolved_at), "MMM d, yyyy 'at' h:mm a")}</span>;
+                        </li>;
+                      )}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </ul>;
                   </div>;
                 </CardContent>;

@@ -11,6 +11,27 @@ export default function QuantumAICognitivePage() {;
   if (!service) {;
     return null,;
   }
+<<<<<<< HEAD:pages/quantum-ai-cognitive.tsx.backup.1755991918
+
+  const contactInfo = service.contactInfo;
+
+  return (
+<<<<<<< HEAD
+    <UltraAdvancedFuturisticBackground>
+=======
+    <UltraAdvancedFuturisticBackground intensity="high">
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-afd8
+      <Head>
+        <title>{service.name} - Zion Tech Group</title>
+        <meta name="description" content={service.description} />
+        <link rel="canonical" href="https://ziontechgroup.com/quantum-ai-cognitive" />
+      </Head>
+
+      <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-10">
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">
+=======
 ;
   const contactInfo = service.contactInfo,;
 ;
@@ -26,6 +47,7 @@ export default function QuantumAICognitivePage() {;
         <div className="max-w-6xl mx-auto">;
           <div className="text-center mb-10">;
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent">;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/temp_conflicts/pages/quantum-ai-cognitive.tsx
               {service.name}
             </h1>;
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service.tagline}</p>;

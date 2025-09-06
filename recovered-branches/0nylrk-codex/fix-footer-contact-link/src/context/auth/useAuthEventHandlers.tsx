@@ -1,3 +1,17 @@
+<<<<<<< HEAD
+
+
+
+<<<<<<< HEAD
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import {toast} from "@/hooks/use-toast";
+import type { UserProfile } from "@/types/auth";
+import {checkNewRegistration} from "@/utils/authUtils";
+import {useNavigate} from 'react-router-dom';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { toast } from "@/hooks/use-toast",
 import type { UserProfile } from "@/types/auth";
 import { checkNewRegistration } from "@/utils/authUtils";
@@ -5,6 +19,10 @@ import { useNavigate } from 'react-router-dom';
 import type { UserProfile } from "@/types/auth",
 import { checkNewRegistration } from "@/utils/authUtils",
 import { useNavigate } from 'react-router-dom',
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 /**
  * Custom hook for auth event handling
  */
@@ -23,6 +41,24 @@ export function useAuthEventHandlers(
     setTimeout(() => {
       if (mappedUser) {
         checkNewRegistration(mappedUser)
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+      }
+
+
+    // Check if user needs to complete onboarding
+    if (!mappedUser.profileComplete && navigate) {
+      setOnboardingStep('profile');
+<<<<<<< HEAD
+=======
+      };
+    }, 0);
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
     }, 0);
     }, 0),
@@ -30,21 +66,45 @@ export function useAuthEventHandlers(
     // Check if user needs to complete onboarding
     if (!mappedUser.profileComplete && navigate) {
       setOnboardingStep('profile'),
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({
         title: "Complete your profile"
         description: "Please complete your profile information to get started"
         variant: "default"})
       navigate('/onboarding')
     }
+<<<<<<< HEAD
+
+
+  },
+
+
+
+<<<<<<< HEAD
+=======
+  }
+  },
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleSignedOut = () => {
     toast({
       title: "Signed out"
       description: "You have been successfully logged out"
       variant: "default"})
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
 import { toast } from "@/hooks/use-toast",;
 import type { UserProfile } from "@/types/auth",;
 import { checkNewRegistration } from "@/utils/authUtils",;
 import { useNavigate } from 'react-router-dom',;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {checkNewRegistration} from "@/utils/authUtils";
 import {useNavigate} from 'react-router-dom';
 /**;
@@ -53,13 +113,46 @@ import {useNavigate} from 'react-router-dom';
 export function useAuthEventHandlers(): any (;
   setUser: React && React.Dispatch<React && React.SetStateAction<UserProfile | null>>,;
   setOnboardingStep: React && React.Dispatch<React && React.SetStateAction<string | null>>;
+<<<<<<< HEAD
+=======
+  }
+  return {
+    handleSignedIn;
+
+    handleSignedOut
+  },
+
+  return {
+    handleSignedIn,
+    handleSignedOut
+import { toast } from "@/hooks/use-toast",;
+import type { UserProfile } from "@/types/auth",;
+import { checkNewRegistration } from "@/utils/authUtils",;
+import { useNavigate } from 'react-router-dom',;
+/**;
+ * Custom hook for auth event handling;
+ */;
+export function useAuthEventHandlers(;
+  setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>,;
+  setOnboardingStep: React.Dispatch<React.SetStateAction<string | null>>;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ) {;
   const navigate = useNavigate(),;
 
   const handleSignedIn = (mappedUser: UserProfile) => {;
     toast({;
       title: "Welcome back!",;
+<<<<<<< HEAD
+<<<<<<< HEAD
       description: `You're now signed in as ${mappedUser && mappedUser.displayName || mappedUser && mappedUser.email}`,;
+=======
+      description: `You're now signed in as ${mappedUser.displayName || mappedUser.email}`,;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+      description: `You're now signed in as ${mappedUser && mappedUser.displayName || mappedUser && mappedUser.email}`,;
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       variant: "default"}),;
 
     // Check for new registration and send welcome email if needed;
@@ -67,19 +160,41 @@ export function useAuthEventHandlers(): any (;
       if (mappedUser) {;
         checkNewRegistration(mappedUser);
       }
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }, 0);
 
     // Check if user needs to complete onboarding;
     if (!mappedUser && mappedUser.profileComplete && navigate) {;
       setOnboardingStep('profile');
+<<<<<<< HEAD
+=======
+    }, 0),;
+    // Check if user needs to complete onboarding;
+    if (!mappedUser.profileComplete && navigate) {;
+      setOnboardingStep('profile'),;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       toast({;
         title: "Complete your profile",;
         description: "Please complete your profile information to get started",;
         variant: "default"}),;
       navigate('/onboarding');
     }
+<<<<<<< HEAD
+<<<<<<< HEAD
   };
 
+=======
+  },;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  };
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleSignedOut = () => {;
     toast({;
       title: "Signed out",;
@@ -90,7 +205,15 @@ export function useAuthEventHandlers(): any (;
   return {;
     handleSignedIn;
     handleSignedOut;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { toast } from '@/hooks / use - toast';
 import type { UserProfile } from "@/types / auth";
 import { checkNewRegistration } from '@/utils / auth_utils';
@@ -142,6 +265,14 @@ if ( {) {
   return {
     handleSignedIn;
     handleSignedOut;
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     handleSignedOut
   },
@@ -162,6 +293,14 @@ export function useAuthEventHandlers(): any (;
 ) {;
   const navigate = useNavigate(),;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 }
 
@@ -230,3 +369,7 @@ toast ({
 }
   }
 }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

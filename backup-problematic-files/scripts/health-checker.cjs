@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node;
 /**
  * Health Checker;
@@ -240,7 +243,10 @@ if (require.main === module) {}
   checker.run().catch(console.error)};
 module.exports = HealthChecker;
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -320,6 +326,10 @@ checker.checkPackageJson();
 checker.checkNodeModules();
 checker.generateReport();
 <<<<<<< HEAD
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

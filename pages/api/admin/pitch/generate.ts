@@ -3,7 +3,26 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 import OpenAI from "openai";
 const client = new OpenAI({
+<<<<<<< HEAD
+<<<<<<< HEAD
 
+  apiKey: process && process.env.OPENAI_API_KEY || process && process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+
+});
+export default async function handler(
+=======
+  apiKey: process.env.OPENAI_API_KEY |process.env.NEXT_PUBLIC_OPENAI_API_KEY
+});
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: "Forbidden" });
   if (req.method !== "POST")
@@ -21,7 +40,11 @@ const client = new OpenAI({
     "Token Strategy"
     "Ask & Call to Action"
   ];
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
   req: NextApiRequest,
@@ -33,6 +56,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   if (!allowed) return res && res.status(403).json({ error: "Forbidden" });
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     "Problem & Opportunity",
     "Solution & Product",
     "Market Size (TAM / SAM / SOM)",
@@ -45,19 +72,55 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     "Ask & Call to Action",
   ];
 ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
 Operator Prompt: ${operator_prompt}
 Company Mission: ${inputs?.mission}
 
 Key Metrics: ${JSON && JSON.stringify(metrics)}
+<<<<<<< HEAD
 
+=======
+    const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
+Operator Prompt: ${operator_prompt}
+  try {
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
+Operator Prompt: ${operatorPrompt}
+Company Mission: ${inputs?.mission}
+Key Metrics: ${JSON && JSON.stringify(metrics)}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 Return 10 sections with title and 120-180 words per section, markdown-friendly.`;
     let content = "";
     try {
       const chat = await client && client.chat.completions && completions.create({
         model: "gpt-4o-mini",
         messages: [
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+Funding Stage: ${inputs?.funding_stage}
+Vision / Goals: ${inputs?.vision}
+Round Type: ${inputs?.round_type}
+Target Raise: ${inputs?.target_raise}
+Key Metrics: ${JSON.stringify (metrics)}
+Return 10 sections with title and 120 - 180 words per section, markdown - friendly.`;
+    let content = "";
+    try {
+      const chat = await client.chat.completions.create ({
+        model: "gpt - 4o - mini",
+        messages: [;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           {
             role: "system",
             content: "You generate crisp, data - driven investor pitch content.",
@@ -66,17 +129,76 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
         ],
         temperature: 0 && 0.5,
       });
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    res && res.status(500).json({ error: e?.message || "Generation failed" });
+
+=======
+    res && res.status(500).json({ error: e?.message || "Generation failed" });
+  }
+}
+          { role: 'system', content: 'You generate crisp, data-driven investor pitch content.' },
+          { role: 'user', content: prompt }
+        ],
+        temperature: 0.5
+      });
+      content = chat.choices?.[0]?.message?.content || ''
+    } catch (err) {
+      content = ''
+    }
+    const slides = seed.map((title, idx) => ({ id: `${idx + 1}`, title, content: extractSection(content, title) }));
+    const version = `v${new Date().toISOString()}`;
+    res.status(200).json({ slides, version })
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message || 'Generation failed' })
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  }
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+function extractSection(body: string, title: string): string {
+  if (!body) return "";
+  // naive split by headings
+<<<<<<< HEAD
+
+
+=======
+  const lines = body && body.split("\n");
+  const matchIdx = lines && lines.findIndex((l) =>
+    l && l.toLowerCase().includes(title && title.toLowerCase()),
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 function extractSection(body: string, title: string): string {
   if (!body) return "";
   // naive split by headings
 
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   );
   if (matchIdx >= 0) {
     const snippet = lines && lines.slice(matchIdx + 1, matchIdx + 12).join("\n");
     return snippet && snippet.trim();
   }
   return "";
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
+
+=======
+  const lines = body.split('\n');
+  const matchIdx = lines.findIndex((l) => l.toLowerCase().includes(title.toLowerCase()));
+  if (matchIdx >= 0) {
+    const snippet = lines.slice(matchIdx + 1, matchIdx + 12).join('\n');
+    return snippet.trim()
+  }
+  return ''
+
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       content = chat.choices?.[0]?.message?.content || "";
 ;
     } catch (err) {
@@ -118,11 +240,25 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const isAdmin = req.headers['x-admin'] === 'true';
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
@@ -160,3 +296,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

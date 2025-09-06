@@ -189,3 +189,32 @@ isAuthenticated
 //Navigate directly to the talent profile navigate (`/talent/$ {
   talent.id 
 }`);
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/talent/TalentCard.tsx
+//Also call the onViewProfile callback if provided </div>) ;
+}</div> <span >{;
+  talent.availability type ;
+}</span> </div>) ;
+}</div> </div> </div> <span key= {;
+  index ;
+}className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light" >{;
+  skill ;
+}</span>) ) ;
+}+ {;
+  (talent.skills?.length || 0) - 5 ;
+}more </span>) ;
+}</div> </div>) ;
+:temp_broken_files/talent/TalentCard.tsx
+}$ {;"  talent.hourly rate ";"}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";"}</div> <Button size="sm" variant="secondary" onClick={;"  handleRequestHire ";"}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) ";"}<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) ;
+};""
+}$ {;
+  talent.hourly rate ";
+}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";
+}</div> <Button size="sm" variant="secondary" onClick={;
+  handleRequestHire ";
+}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) ";
+}<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) ;
+};
+"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/TalentCard.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/talent/TalentCard.tsx

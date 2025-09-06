@@ -1,7 +1,49 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState } from "react",
+import React, { useState } from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}
+
+
+  )
+}
+
+import React, { useState } from './react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components / ui / card';
+import { Button  } from '@/components / ui / button';
+import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
+<<<<<<< HEAD
+;
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {
   Tooltip;
   TooltipContent;
   TooltipProvider;
+<<<<<<< HEAD
+  TooltipTrigger} from "@/components/ui/tooltip",
+import { useToast } from "@/hooks/use-toast";
+import { useAuth } from "@/hooks/useAuth";
+import React, { useState } from "react"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react'
+import {
+  Tooltip
+  TooltipContent;
+  TooltipProvider;
+  TooltipTrigger} from "@/components/ui/tooltip"; import { useToast } from "@/hooks/use-toast"
+import { useAuth } from "@/hooks/useAuth"
+export function OnChainExport() {
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const [isConnected, setIsConnected] = useState(false)
   const [isExporting, setIsExporting] = useState(false)
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle')
@@ -283,3 +325,8 @@ export function OnChainExport() {;
   );
 }
 ;
+<<<<<<< HEAD
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

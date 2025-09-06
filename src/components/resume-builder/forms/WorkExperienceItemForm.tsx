@@ -1,3 +1,60 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+import { useState } from 'react'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useForm } from 'react-hook-form'
+import { z } from 'zod'
+import { WorkExperience } from '@/types/resume'
+import { Button } from '@/components/ui/button'
+import { Calendar } from '@/components/ui/calendar'
+import {
+  Form
+  FormControl
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+  Popover
+  PopoverContent
+  PopoverTrigger
+} from '@/components/ui/popover'
+import { Textarea } from '@/components/ui/textarea'
+import { cn } from '@/lib/utils'
+import { Switch } from '@/components/ui/switch'
+import { format } from 'date-fns'
+
+import { CalendarIcon, Loader2 } from 'lucide-react'
+import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
+import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
+import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton";
+import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog";
+import { AIEnhancementButton } from '@/components/ai-enhancement/AIEnhancementButton'
+import { AIEnhancementDialog } from '@/components/ai-enhancement/AIEnhancementDialog'
+import { useState } from 'react',
+import { zodResolver } from "@hookform/resolvers/zod",
+import { useForm } from "react-hook-form",
+import { z } from "zod",
+import { WorkExperience } from "@/types/resume",
+import { Button } from "@/components/ui/button",
+import { Calendar } from "@/components/ui/calendar",
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { Textarea } from "@/components/ui/textarea",
+import { cn } from "@/lib/utils",
+import { Switch } from "@/components/ui/switch",
+import { format } from "date-fns",
+import { CalendarIcon, Loader2 } from 'lucide-react'
+import { AIEnhancementButton } from "@/components/ai-enhancement/AIEnhancementButton",
+import { AIEnhancementDialog } from "@/components/ai-enhancement/AIEnhancementDialog",
+
+const formSchema = z.object({
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Define form schema
 
 const formSchema = z.object({
@@ -30,10 +87,37 @@ export function WorkExperienceItemForm({
   const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false),
 
   // Set up form
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+// Set up form
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema)
+    defaultValues: {
+<<<<<<< HEAD
+
+=======
+  const form = useForm<FormValues>({
+    resolver: zodResolver(formSchema)
+    defaultValues: {
+      company_name: initialData?.company_name |''
+      role_title: initialData?.role_title |''
+      start_date: initialData?.start_date
+        ? new Date(initialData.start_date)
+        : new Date()
+      end_date: initialData?.end_date
+        ? new Date(initialData.end_date)
+        : undefined
+      is_current: initialData?.is_current |false
+      description: initialData?.description |''
+      location: initialData?.location |''
+    }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema)
     defaultValues: {
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { use_form } from 'react - hook - form';
@@ -64,6 +148,16 @@ import { format } from 'date - fns';
       start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
       end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
       is_current: initialData?.is_current || false,
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+  return (
+=======
+      description: initialData?.description || '',
+      location: initialData?.location || '',
+    },
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   })
   const { isSubmitting } = form.formState
   const watchIsCurrent = form.watch('is_current')
@@ -137,19 +231,52 @@ import { format } from 'date - fns';
     setIsEnhancementDialogOpen(false)
   },
 
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
   return (
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleFormSubmit)} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+              name="company_name"
+              render={({ field }: { field: any }) => (
+                <FormItem>
+
+
+                  <FormLabel>Company Name</FormLabel>
+=======
+              name='company_name'
+              render={({ field }: { field: any }) => (                <FormItem>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <FormControl>
                     <Input placeholder="e.g. Acme Corporation" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+              )}
+            />
+            <FormField
+              control={form.control}
+              name='role_title'
+              render={({ field }: { field: any }) => (                <FormItem>
+ursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useState } from 'react',;
 import { zodResolver } from "@hookform/resolvers/zod",;
 import { useForm } from "react-hook-form",;
@@ -228,6 +355,72 @@ function WorkExperienceItemForm() {
     form.set_value ('description', content, { should_dirty: true });
     setIsEnhancementDialogOpen (false);
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+import { useState } from 'react';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { WorkExperience } from '@/types/resume';
+import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage,;
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import {;
+  Popover,;
+  PopoverContent,;
+  PopoverTrigger,;
+} from '@/components/ui/popover';
+import { Textarea } from '@/components/ui/textarea';
+import { cn } from '@/lib/utils';
+import { Switch } from '@/components/ui/switch';
+import { format } from 'date-fns';
+=======
+      company_name: initialData?.company_name || "",
+      role_title: initialData?.role_title || "",
+      start_date: initialData?.start_date ? new Date(initialData.start_date) : new Date(),
+      end_date: initialData?.end_date ? new Date(initialData.end_date) : undefined,
+      is_current: initialData?.is_current || false,
+      description: initialData?.description || "",
+      location: initialData?.location || ""}}),
+  
+  const { isSubmitting } = form.formState,
+  const watchIsCurrent = form.watch("is_current"),
+  const watchRoleTitle = form.watch("role_title"),
+  const watchCompanyName = form.watch("company_name"),
+
+  const handleFormSubmit = async (values: FormValues) => {
+    // Create a properly typed WorkExperience object with all required fields
+    const workExperience: WorkExperience = {
+      id: initialData?.id,
+      company_name: values.company_name,  // Required
+      role_title: values.role_title,      // Required
+      start_date: values.start_date,      // Required
+      end_date: values.end_date,          // Optional
+      is_current: values.is_current,      // Required
+      description: values.description,    // Optional
+      location: values.location,          // Optional
+    },
+    
+    await onSubmit(workExperience)
+  },
+
+  const handleAIEnhancement = (content: string) => {
+    form.setValue("description", content, { shouldDirty: true }),
+    setIsEnhancementDialogOpen(false)
+  },
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <>
       <Form {...form}>
@@ -241,6 +434,186 @@ function WorkExperienceItemForm() {
                   </FormControl>
                   <FormMessage />
                 </FormItem>
+<<<<<<< HEAD
+              )}
+            />
+            <FormField
+              control={form.control}
+              name='role_title'
+              render={({ field }: { field: any }) => (                <FormItem>
+import { useState } from 'react',;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { useForm } from "react-hook-form",;
+import { z } from "zod",;
+import { WorkExperience } from "@/types/resume",;
+import { Button } from "@/components/ui/button",;
+import { Calendar } from "@/components/ui/calendar",;
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
+import { Textarea } from "@/components/ui/textarea",;
+import { cn } from "@/lib/utils",;
+import { Switch } from "@/components/ui/switch",;
+import { format } from "date-fns",;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import { CalendarIcon, Loader2 } from 'lucide-react';
+import { AIEnhancementButton } from '@/components/ai-enhancement/AIEnhancementButton';
+import { AIEnhancementDialog } from '@/components/ai-enhancement/AIEnhancementDialog';
+// Define form schema;
+const formSchema = z && z.object({;
+  company_name: z && z.string().min(1, 'Company name is required'),;
+  role_title: z && z.string().min(1, 'Role title is required'),;
+  start_date: z && z.date({;
+    required_error: 'Start date is required',;
+  }),;
+  end_date: z && z.date().optional(),;
+  is_current: z && z.boolean().default(false),;
+  description: z && z.string().optional(),;
+  location: z && z.string().optional(),;
+});
+
+type FormValues = z && z.infer<typeof formSchema>;
+
+interface WorkExperienceItemFormProps {;
+  initialData?: WorkExperience;
+  onSubmit: (data: WorkExperience) => Promise<void>;
+  onCancel: () => void;
+export function WorkExperienceItemForm(): any ({;
+  initialData,;
+  onSubmit,;
+  onCancel,;
+}: WorkExperienceItemFormProps) {;
+  const [isEnhancementDialogOpen, setIsEnhancementDialogOpen] = useState(false);
+
+  // Set up form;
+  const form = useForm<FormValues>({;
+    resolver: zodResolver(formSchema),;
+    defaultValues: {;
+      company_name: initialData?.company_name || '',;
+      role_title: initialData?.role_title || '',;
+      start_date: initialData?.start_date;
+        ? new Date(initialData && initialData.start_date);
+        : new Date(),;
+      end_date: initialData?.end_date;
+        ? new Date(initialData && initialData.end_date);
+        : undefined,;
+      is_current: initialData?.is_current || false,;
+      description: initialData?.description || '',;
+      location: initialData?.location || '',;
+    },;
+  });
+
+  const { isSubmitting } = form && form.formState;
+  const watchIsCurrent = form && form.watch('is_current');
+  const watchRoleTitle = form && form.watch('role_title');
+  const watchCompanyName = form && form.watch('company_name');
+
+  const handleFormSubmit = async (values: FormValues,) => {;
+    // Create a properly typed WorkExperience object with all required fields;
+    const workExperience: WorkExperience = {;
+      id: initialData?.id,;
+      company_name: values && values.company_name, // Required;
+      role_title: values && values.role_title, // Required;
+      start_date: values && values.start_date, // Required;
+      end_date: values && values.end_date, // Optional;
+      is_current: values && values.is_current, // Required;
+      description: values && values.description, // Optional;
+      location: values && values.location, // Optional;
+    };
+
+    await onSubmit(workExperience);
+  };
+
+  const handleAIEnhancement = (content: string) => {;
+    form && form.setValue('description', content, { shouldDirty: true });
+    setIsEnhancementDialogOpen(false);
+  };
+  return (
+    <>;
+      <Form {...form}>;
+        <form
+          onSubmit={form && form.handleSubmit(handleFormSubmit)}
+          className='space-y-6'>;
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+            <FormField
+              control={form && form.control}
+              name='company_name'
+              render={({ field }: { field: any }) => (                <FormItem>;
+                  <FormLabel>Company Name</FormLabel>;
+                  <FormControl>;
+                    <Input placeholder='e && e.g. Acme Corporation' {...field} />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
+              )}
+<<<<<<< HEAD
+
+            />;
+
+
+            <FormField
+              control={form && form.control}
+              name='role_title'
+              render={({ field }: { field: any }) => (                <FormItem>;
+                  <FormLabel>Role Title</FormLabel>;
+                  <FormControl>;
+                    <Input placeholder='e && e.g. Senior Developer' {...field} />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>;
+              )}
+
+            />;
+          </div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+
+            <FormField
+              control={form && form.control}
+              name='location'
+              render={({ field }: { field: any }) => (                <FormItem>;
+                  <FormLabel>Location</FormLabel>;
+                  <FormControl>;
+                    <Input
+                      placeholder='e && e.g. New York, NY (Remote)'
+  return (
+    <>;
+      <Form {...form}>;
+        <form;
+          on_submit={form.handle_submit (handleFormSubmit)}
+          className='space - y-6';
+        >;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+            <FormField;
+              control={form.control}
+              name='company_name';
+              render={({ field }: { field: any }) => (                <FormItem>;
+                  <FormLabel > Company Name</FormLabel>;
+                  <FormControl>;
+                    <Input placeholder='e.g. Acme Corporation' {...field} />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>)}
+            />;
+            <FormField;
+              control={form.control}
+
+            />;
+              name="role_title"
+              render={({ field }: { field: any }) => (
+                <FormItem>
+
+
+=======
+            />;
+            <FormField;
+              control={form.control}
+              name="role_title"
+              render={({ field }: { field: any }) => (
+                <FormItem>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <FormLabel>Role Title</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. Senior Developer" {...field} />
@@ -249,6 +622,30 @@ function WorkExperienceItemForm() {
                 </FormItem>
               )}
             />
+<<<<<<< HEAD
+          </div>
+
+
+            <FormField
+<<<<<<< HEAD
+=======
+              control={form.control}
+              name='location'
+              render={({ field }: { field: any }) => (                <FormItem>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+                </FormItem>)}
+              control={form.control}
+              name="location"
+              render={({ field }: { field: any }) => (
+                <FormItem>
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                   <FormLabel>Location</FormLabel>
                   <FormControl>
                     <Input placeholder="e.g. New York, NY (Remote)" {...field} />
@@ -256,17 +653,79 @@ function WorkExperienceItemForm() {
                   <FormMessage />
                 </FormItem>
               )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+            />
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            <FormField
+              control={form.control}
+              name='location'
+              render={({ field }: { field: any }) => (                <FormItem>
+ursor/fix-website-loading-errors-and-merge-6662
+
+            <FormField
+
+                </FormItem>)}
+              control={form.control}
+              name="location"
+              render={({ field }: { field: any }) => (
+                <FormItem>
+
+
+                  <FormLabel>Location</FormLabel>
+                    <Input placeholder="e.g. New York, NY (Remote)" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+            <FormField
+              control={form.control}
+              name='is_current'
+              render={({ field }: { field: any }) => (
+                <FormItem className='flex flex-col'>                  <FormLabel>Current Position</FormLabel>
+                  <div className='flex items-center gap-2 h-10'>
+                    <Switch
+                      aria-label='Current position'
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                      id='current-position'                    />
+                    <label
+                      htmlFor='current-position'
+                      className='text-sm text-muted-foreground'
+                    >
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             />;
             <FormField;
               control={form.control}
-              name="is_current"
+              name='is_current';
               render={({ field }: { field: any }) => (
-                <FormItem className="flex flex-col">
-                  <FormLabel>Current Position</FormLabel>
-                  <div className="flex items-center gap-2 h-10">
-                    <Switch
-                      aria-label="Current position"
+                <FormItem className='flex flex - col'>                  <FormLabel > Current Position</FormLabel>;
+                  <div className='flex items - center gap - 2 h - 10'>;
+                    <Switch;
+                      aria - label='Current position';
                       checked={field.value}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                      onCheckedChange={field.onChange}
+                      id="current-position"
+                    />
+                    <label htmlFor="current-position" className="text-sm text-muted-foreground">
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       I currently work here
                     </label>
                   </div>
@@ -286,54 +745,355 @@ function WorkExperienceItemForm() {
                       <FormControl>
                         <Button
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+                          variant={"outline"}
+                          className={cn(
+                            "w-full pl-3 text-left font-normal",
+                            !field.value && "text-muted-foreground"
+                          )}
+                        >
+
+                          {field.value ? (
+                            format(field.value, 'MMM yyyy')
+                          ) : (
+=======
+                          {field.value ? (
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            <FormField
+              control={form.control}
+              name='start_date'
+              render={({ field }: { field: any }) => (
+                <FormItem className='flex flex-col'>                  <FormLabel>Start Date</FormLabel>
+
+                          {field.value ? (
+                            format(field.value, 'MMM yyyy')
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                            <span>Select date</span>
+                            'w-full pl-3 text-left font-normal',
+                            !field && field.value && 'text-muted-foreground'
+                          )}>;
+                          {field && field.value ? (;
+                            format(field && field.value, 'MMM yyyy');
+                          ) : (;
+                            <span>Select date</span>;
+                          )}
+
+                </FormItem>)}
+            />;
+          </div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+            <FormField;
+              control={form.control}
+              name='start_date';
+              render={({ field }: { field: any }) => (
+                <FormItem className='flex flex - col'>                  <FormLabel > Start Date</FormLabel>;
+                  <Popover>;
+                    <PopoverTrigger as_child>;
+                      <FormControl>;
+                        <Button;
+                          variant={'outline'}
+                          className={cn (
+                            'w - full pl - 3 text - left font - normal',
+                            !field.value && 'text - muted - foreground')}                        >;
+                          {field.value ? (
+                            format (field.value, 'MMM yyyy')) : (
+                            <span > Select date</span>)}
+                          <CalendarIcon;
+                            className='ml - auto h - 4 w - 4 opacity - 50';
+                            aria - hidden='true';
+
+                          />;
+                        </Button>;
+                      </FormControl>;
+                    </PopoverTrigger>;
+
+<<<<<<< HEAD
+=======
+                          variant={"outline"}
+                          className={cn(
+                            "w-full pl-3 text-left font-normal",
+                            !field.value && "text-muted-foreground"
+                          )}
+                        >
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           {field.value ? (
                             format(field.value, "MMM yyyy")
                           ) : (
                             <span>Select date</span>
                           )}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                           <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
                         </Button>
                       </FormControl>
                     </PopoverTrigger>
                     <PopoverContent className="w-auto p-0" align="start">
                       <Calendar
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                        mode="single"
+=======
+                        mode='single'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                        selected={field.value}
+                        onSelect={field.onChange}
+                        initialFocus
+                        captionLayout='dropdown-buttons'
+                        fromYear={1990}
+<<<<<<< HEAD
+                        toYear={new Date().getFullYear()}
+                      />;
+
+=======
+                        toYear={new Date().getFullYear()}                      />
+                    </PopoverContent>
+                  </Popover>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {!watchIsCurrent && (
+              <FormField
+                control={form.control}
+                name='end_date'
+                render={({ field }: { field: any }) => (
+                  <FormItem className='flex flex-col'>                    <FormLabel>End Date</FormLabel>
+                        mode="single"
+                        selected={field.value}
+                        onSelect={field.onChange}
+                        initialFocus
+                        captionLayout="dropdown-buttons"
+                        fromYear={1990}
+                        toYear={new Date().getFullYear()}
+                      />;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
                 </FormItem>;
               )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+            />;
+
+            {!watchIsCurrent && (;
+
+              <FormField
+                control={form && form.control}
+                name='end_date'
+                render={({ field }: { field: any }) => (;
+                  <FormItem className='flex flex-col'>                    <FormLabel>End Date</FormLabel>;
+                    <Popover>;
+                      <PopoverTrigger asChild>;
+                        <FormControl>;
+                          <Button
+                            variant={'outline'}
+                            className={cn(
+
+            />;
+            {!watchIsCurrent && (;
+              <FormField;
+                control={form.control}
+                name="end_date"
+                render={({ field }: { field: any }) => (
+                  <FormItem className="flex flex-col">
+                    <FormLabel>End Date</FormLabel>
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                     <Popover>
                       <PopoverTrigger asChild>
                         <FormControl>
                           <Button
                             className={cn(
+<<<<<<< HEAD
+=======
+            />;
+            {!watchIsCurrent && (;
+              <FormField;
+                control={form.control}
+                name="end_date"
+                render={({ field }: { field: any }) => (
+                  <FormItem className="flex flex-col">
+                    <FormLabel>End Date</FormLabel>
+                    <Popover>
+                      <PopoverTrigger asChild>
+                        <FormControl>
+                          <Button
+                            variant={'outline'}
+                            className={cn(
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               "w-full pl-3 text-left font-normal",
                               !field.value && "text-muted-foreground"
                             )}
                           >
 
                             {field.value ? (
+<<<<<<< HEAD
+                              format(field.value, 'MMM yyyy')
+<<<<<<< HEAD
+                            ) : (
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                              <span>Select date</span>
+                              'w-full pl-3 text-left font-normal',
+                              !field && field.value && 'text-muted-foreground'
+                            )}>;
+                            {field && field.value ? (;
+                              format(field && field.value, 'MMM yyyy');
+                            ) : (;
+                              <span>Select date</span>;
+                            )}
+
+                    <PopoverContent className='w - auto p - 0' align='start'>;
+                      <Calendar;
+                        mode='single';
+                        selected={field.value}
+                        on_select={field.on_change}
+                        initial_focus;
+                        caption_layout='dropdown - buttons';
+                        from_year={1990}
+                        to_year={new Date ().getFullYear ()}                      />;
+                    </PopoverContent>;
+                  </Popover>;
+                  <FormMessage />;
+                </FormItem>)}
+            />;
+            {!watchIsCurrent && (
+              <FormField;
+                control={form.control}
+                name='end_date';
+                render={({ field }: { field: any }) => (
+                  <FormItem className='flex flex - col'>                    <FormLabel > End Date</FormLabel>;
+                    <Popover>;
+                      <PopoverTrigger as_child>;
+                        <FormControl>;
+                          <Button;
+                            variant={'outline'}
+                            className={cn (
+                              'w - full pl - 3 text - left font - normal',
+                              !field.value && 'text - muted - foreground')}                          >;
+                            {field.value ? (
+                              format (field.value, 'MMM yyyy')) : (
+                              <span > Select date</span>)}
+                            <CalendarIcon;
+                              className='ml - auto h - 4 w - 4 opacity - 50';
+                              aria - hidden='true';
+
+                            />;
+                          </Button>;
+                        </FormControl>;
+                      </PopoverTrigger>;
+
+                          selected={field && field.value || undefined}
+                          onSelect={field && field.onChange}
+
+<<<<<<< HEAD
+=======
+                            variant={"outline"}
+                            className={cn(
+                              "w-full pl-3 text-left font-normal",
+                              !field.value && "text-muted-foreground"
+                            )}
+                          >
+                            {field.value ? (
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                               format(field.value, "MMM yyyy")
                             ) : (
                               <span>Select date</span>
                             )}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                          initialFocus
+                          captionLayout='dropdown-buttons'
+                          fromYear={1990}
+                          toYear={new Date().getFullYear()}
+                          disabled={date => date > new Date()}                        />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                             <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
                           </Button>
                         </FormControl>
                       </PopoverTrigger>
                       <PopoverContent className="w-auto p-0" align="start">
                         <Calendar
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+                          mode="single"
+                          selected={field.value || undefined}
+=======
+                          mode='single'
+                          selected={field.value |undefined}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                          onSelect={field.onChange}
+                          initialFocus
+                          captionLayout="dropdown-buttons"
+                          fromYear={1990}
+                          toYear={new Date().getFullYear()}
+<<<<<<< HEAD
+=======
+                          mode='single'
+                          selected={field.value |undefined}
+                          onSelect={field.onChange}
+                          initialFocus
+                          captionLayout='dropdown-buttons'
+                          fromYear={1990}
+                          toYear={new Date().getFullYear()}
+                          disabled={date => date > new Date()}                        />
+                      </PopoverContent>
+                    </Popover>
+                    <FormMessage />
+                  </FormItem>
+                          mode="single"
+                          selected={field.value || undefined}
+                          onSelect={field.onChange}
+                          initialFocus
+                          captionLayout="dropdown-buttons"
+                          fromYear={1990}
+                          toYear={new Date().getFullYear()}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                          disabled={(date) => date > new Date()}
+                        />;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       </PopoverContent>;
                     </Popover>;
                     <FormMessage />;
                   </FormItem>;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
 
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
                 )}
-              />
+              />;
             )}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+          </div>;
+
+
+=======
           </div>
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           <FormField
             control={form && form.control}
             name='description'
@@ -341,6 +1101,22 @@ function WorkExperienceItemForm() {
                 <div className='flex justify-between items-center'>;
                   <FormLabel>Description</FormLabel>;
                   <div className='flex gap-2'>;
+<<<<<<< HEAD
+                    <AIEnhancementButton
+                      options={{
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+                        enhancementType: 'work-description',
+                        content: field && field.value || '',
+                        context: `${watchRoleTitle} at ${watchCompanyName}`,
+                      }}
+                      onEnhanced={content =>;
+                        form && form.setValue('description', content, {;
+                          shouldDirty: true,;
+                        });
+
+=======
                 )}
               />
             )}
@@ -352,6 +1128,7 @@ function WorkExperienceItemForm() {
                         form.setValue('description', content, {
                           shouldDirty: true
                         })
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                       }
                       buttonText='Enhance with AI';
                     />;
@@ -444,6 +1221,20 @@ function WorkExperienceItemForm() {
                 </div>
                 <FormControl>
                   <Textarea
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+                    placeholder='Describe your responsibilities, achievements, and skills used in this role...'
+                    className='min-h-[150px]'
+                    {...field}
+                    placeholder='Describe your responsibilities, achievements, and skills used in this role...'
+                    className='min-h-[150px]'
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+                    placeholder="Describe your responsibilities, achievements, and skills used in this role..."
+                    className="min-h-[150px]"
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
                     {...field}
                   />
@@ -452,12 +1243,28 @@ function WorkExperienceItemForm() {
               </FormItem>
             )}
           />
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+          <div className='flex justify-end gap-2'>
+            <Button type='button' variant='outline' onClick={onCancel}>
+ursor/fix-website-loading-errors-and-merge-6662
+          <div className='flex justify-end gap-2'>
+            <Button type='button' variant='outline' onClick={onCancel}>
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+          
+          <div className="flex justify-end gap-2">
+            <Button type="button" variant="outline" onClick={onCancel}>
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               Cancel
             </Button>
-            <Button type="submit" disabled={isSubmitting}>
+            <Button type='submit' disabled={isSubmitting}>
               {isSubmitting ? (
                 <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  <Loader2 className='mr-2 h-4 w-4 animate-spin' />
                   Saving...
                 </>
               ) : (
@@ -467,6 +1274,52 @@ function WorkExperienceItemForm() {
           </div>
         </form>
       </Form>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        title='Enhance Work Experience Description'
+        onClose={() => setIsEnhancementDialogOpen(false)}
+        onApply={handleAIEnhancement}
+        title='Enhance Work Experience Description'
+        title="Enhance Work Experience Description"
+        isOpen={isEnhancementDialogOpen}
+        onClose={() => setIsEnhancementDialogOpen(false)}
+        onApply={handleAIEnhancement}
+        defaultOptions={{
+          enhancementType: 'work-description'
+          content: form.getValues('description') |''
+          context: `${watchRoleTitle} at ${watchCompanyName}`
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+          />;
+
+          <div className='flex justify-end gap-2'>;
+            <Button type='button' variant='outline' onClick={onCancel}>;
+              Cancel;
+            </Button>;
+            <Button type='submit' disabled={isSubmitting}>;
+              {isSubmitting ? (;
+                <>;
+                  <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
+                  Saving...;
+                </>;
+              ) : (;
+                <>Save</>;
+              )}
+              </FormItem>)}
+          />;
+          <div className='flex justify - end gap - 2'>;
+            <Button type='button' variant='outline' on_click={on_cancel}>;
+              Cancel;
+            </Button>;
+            <Button type='submit' disabled={is_submitting}>;
+              {is_submitting ? (
+                <>;
+                  <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />;
+                  Saving...;
+                </>) : (
+                <>Save</>)}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </Button>;
           </div>;
         </form>;
@@ -477,11 +1330,27 @@ function WorkExperienceItemForm() {
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
+<<<<<<< HEAD
+
+
+          enhancementType: 'work-description',
+          content: form.getValues('description') || '',
+          context: `${watchRoleTitle} at ${watchCompanyName}`,
+
+
+<<<<<<< HEAD
+=======
+          enhancementType: 'work-description',
+          content: form.getValues('description') || '',
+          context: `${watchRoleTitle} at ${watchCompanyName}`,
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
       <AIEnhancementDialog
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
         defaultOptions={{
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }}
         initialContent={form.getValues('description') |''}      />
 
@@ -495,6 +1364,104 @@ type FormValues = z.infer<typeof formSchema>
 //Create a properly typed WorkExperience object with all required fields const workExperience: WorkExperience = {
   await onSubmit (workExperience)
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+setIsEnhancementDialogOpen (false);
+}
+
+        defaultOptions={{;
+          enhancementType: 'work-description',;
+          content: form && form.getValues('description') || '',;
+          context: `${watchRoleTitle} at ${watchCompanyName}`,;
+        }}
+        initialContent={form && form.getValues('description') || ''}      />;
+    </>;
+  );
+
+is current: z && z.boolean () .default (false);
+description: z && z.string () .optional ();
+location: z && z.string () .optional () ;
+});
+type FormValues = z && z.infer<typeof formSchema>;
+//Create a properly typed WorkExperience object with all required fields const workExperience: WorkExperience = {;
+  await onSubmit (workExperience) ;
+};
+setIsEnhancementDialogOpen (false);
+};
+}/> <FormField </FormControl> <FormMessage /> </FormItem>) ;
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) ";
+}/> <FormField <FormLabel>Current Position</FormLabel> <div className="flex items-center gap-2 h-10" > <Switch /> <label htmlFor="current-position" className="text-sm text-muted-foreground" > I currently work here </label> </div> <FormMessage /> </FormItem>) ";
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Start Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) ";
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) ;
+}/> {;
+  !watchIsCurrent && (<FormFieldcontrol= {
+  form && form.control 
+}<FormLabel>End Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) ";
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) ;
+}/>) ";
+}</div> <FormField <FormLabel>Description</FormLabel> <div className="flex gap-2" > <AIEnhancementButton > AI Writer </Button> </div> </div> <FormControl> <Textareaplaceholder="Describe your responsibilities, achievements, and skills used in this role..." className="min-h-[150px]" {
+  ...field 
+}/> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) ;
+}</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) ;
+}";
+
+}
+}
+
+
+
+=======
+setIsEnhancementDialogOpen (false)
+}
+
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}/> <FormField </FormControl> <FormMessage /> </FormItem>);
+}/> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField </FormControl> <FormMessage /> </FormItem>) ";
+}/> <FormField <FormLabel > Current Position</FormLabel> <div className="flex items - center gap - 2 h - 10" > <Switch /> <label html_for="current - position" className="text - sm text - muted - foreground" > I currently work here </label> </div> <FormMessage /> </FormItem>) ";
+}/> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField <FormLabel > Start Date</FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button) : (<span > Select date</span>) ";
+}<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" aria - hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
+}/> {
+  !watchIsCurrent && (<FormField control= {
+  form.control;
+}<FormLabel > End Date</FormLabel> <Popover> <PopoverTrigger as_child> <FormControl> <Button) : (<span > Select date</span>) ";
+}<CalendarIcon className="ml - auto h - 4 w - 4 opacity - 50" aria - hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w - auto p - 0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>);
+}/>) ";
+}</div> <FormField <FormLabel > Description</FormLabel> <div className="flex gap - 2" > <AIEnhancementButton > AI Writer </Button> </div> </div> <FormControl> <Textarea placeholder="Describe your responsibilities, achievements, and skills used in this role..." className="min - h-[150px]" {
+  ...field;
+}/> </FormControl> <FormMessage /> </FormItem>) ";
+}/> <> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : (<>Save</>);
+}</Button> </div> </form> </Form> <AIEnhancementDialog /> </>);
+}";
+<<<<<<< HEAD
+}
+}
+
+=======
+}
+}
+
+          enhancementType: "work-description",
+}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>)
+}</Button> </div> </form> </Form> <AIEnhancementDialog /> </>)
+}"
+}
+}
+}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) 
+}</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) ;
+}";
+};
+};
+
+}/> <FormField </FormControl> <FormMessage /> </FormItem>)
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) "
+}/> <FormField <FormLabel>Current Position</FormLabel> <div className="flex items-center gap-2 h-10" > <Switch /> <label htmlFor="current-position" className="text-sm text-muted-foreground" > I currently work here </label> </div> <FormMessage /> </FormItem>) "
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Start Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) "
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
+}/> {
+  !watchIsCurrent && (<FormField control= {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   form.control
 }<FormLabel>End Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Select date</span>) "
 }<CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar /> </PopoverContent> </Popover> <FormMessage /> </FormItem>)
@@ -502,6 +1469,24 @@ type FormValues = z.infer<typeof formSchema>
 }</div> <FormField <FormLabel>Description</FormLabel> <div className="flex gap-2" > <AIEnhancementButton > AI Writer </Button> </div> </div> <FormControl> <Textarea placeholder="Describe your responsibilities, achievements, and skills used in this role..." className="min-h-[150px]" {
   ...field
 }/> </FormControl> <FormMessage /> </FormItem>) "
+<<<<<<< HEAD
+}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>)
+}</Button> </div> </form> </Form> <AIEnhancementDialog /> </>)
+}"
+}
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) 
+}</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) ;
+}";
+};
+};
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           enhancementType: "work-description",
           content: form.getValues("description") || "",
           context: `${watchRoleTitle} at ${watchCompanyName}`}}
@@ -510,3 +1495,11 @@ type FormValues = z.infer<typeof formSchema>
     </>
   )
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+;
+=======
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

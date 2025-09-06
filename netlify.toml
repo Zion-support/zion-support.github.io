@@ -5,6 +5,12 @@ publish = "dist"
 [build.environment]
 <<<<<<< HEAD
 <<<<<<< HEAD
+  NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,12 +21,16 @@ NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> origin/main
 =======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
 =======
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> origin/cursor/fix-website-loading-errors-and-merge-0cee
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 NODE_VERSION = "20"
@@ -30,6 +40,7 @@ NODE_OPTIONS = "--max-old-space-size=4096"
   NODE_VERSION = "20"
   NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> pr-12166
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -40,6 +51,13 @@ NODE_OPTIONS = "--max-old-space-size=4096"
 [[redirects]]
 <<<<<<< HEAD
 <<<<<<< HEAD
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 from = "/api/*"
 to = "/.netlify/functions/:splat"
@@ -69,6 +87,9 @@ status = 200
 >>>>>>> origin/main
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 from = "/api/*"
@@ -84,6 +105,7 @@ status = 200
 NODE_VERSION = "20"
 NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 # Security and caching headers for static assets
 [[headers]]
@@ -115,8 +137,13 @@ NODE_OPTIONS = "--max-old-space-size=4096"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+# Static redirects for exported site
+=======
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 # Static redirects to mirror Next.js redirects (since output: export)
 =======
@@ -146,6 +173,9 @@ NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> origin/automation-improvements-final
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 # Static redirects to mirror Next.js redirects (since output: export)
@@ -155,6 +185,7 @@ NODE_OPTIONS = "--max-old-space-size=4096"
 >>>>>>> pr-12166
 =======
 # SPA fallback for client-side routing
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 [[redirects]]
   from = "/*"
   to = "/index.html"
@@ -201,9 +232,14 @@ status = 301
 [[redirects]]
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   from = "/affiliate-attribution-suite"
   to = "/services/affiliate-attribution-suite/"
   status = 301
+=======
+<<<<<<< HEAD
 =======
   from = "/ai-customer-success-platform"
   to = "/services/ai-customer-success-platform/"
@@ -241,6 +277,7 @@ status = 301
 
 [[redirects]]
 <<<<<<< HEAD
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 from = "/affiliate-attribution-suite"
 to = "/services/affiliate-attribution-suite/"
@@ -276,6 +313,9 @@ status = 301
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 from = "/affiliate-attribution-suite"
@@ -292,3 +332,4 @@ status = 301
   to = "/services/affiliate-attribution-suite/"
   status = 301
 >>>>>>> origin/main
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

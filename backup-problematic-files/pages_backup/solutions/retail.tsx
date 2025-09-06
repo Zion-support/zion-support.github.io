@@ -30,6 +30,25 @@ const features = [;
     icon: Package,;
     title: 'Supply Chain Optimization,',;
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'';
+<<<<<<< HEAD
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  ShoppingCart, 
+  Users, 
+  BarChart3, 
+  Smartphone, 
+  CheckCircle, 
+  ArrowRight 
+} from 'lucide-react';
+
+const features = [
+  {
+    icon: ShoppingCart,
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     title: 'E-commerce Platform',
     description: 'Complete online shopping experience with advanced features'
   },
@@ -157,6 +176,17 @@ const benefits = [;
   'Streamlined operations',;
   'Mobile-first customer engagement';
 ];
+<<<<<<< HEAD
+export default function RetailSolutions() {
+    icon: Smartphone,
+    title: 'Mobile Commerce',
+    description: 'Mobile-optimized shopping experience'
+  }
+];
+
+export default function RetailSolutionsPage() {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <Layout
       title="Retail Solutions - Zion Tech Group"
@@ -464,6 +494,52 @@ export default function RetailSolutions() {
                 </button>;
                 <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
                   Download Retail Guide;
+<<<<<<< HEAD
+                </ul>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+        {/* Benefits Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Driving Retail Success
+                </h2>
+                <p className="text-xl text-gray-600 mb-8">
+                  Our retail solutions help businesses increase sales, improve customer experience,
+                  and optimize operations across all channels.
+                </p>
+                <ul className="space-y-4">
+                  {benefits.map((benefit, index) => (
+                    <li key={index} className="flex items-start">
+                      <CheckCircle className="w-6 h-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="bg-gradient-to-r from-purple-600 to-pink-700 p-8 rounded-xl text-white">
+                <h3 className="text-2xl font-bold mb-6">Ready to Transform Retail?</h3>
+                <p className="text-lg mb-6">
+                  Let our retail technology experts help you create engaging customer experiences
+                  and optimize your retail operations.
+                </p>
+                <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center">
+                  Schedule Demo
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </button>
+              </div>
+                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </motion.div>
+              ))}
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             </div>
           </div>
         </section>
@@ -492,3 +568,17 @@ export default function RetailSolutions() {
     </Layout>
     </Layout>
     </>
+<<<<<<< HEAD
+    </>
+<<<<<<< HEAD
+    </Layout>
+  );
+};
+
+<<<<<<< HEAD
+export default Retail;
+=======
+export default Retail;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

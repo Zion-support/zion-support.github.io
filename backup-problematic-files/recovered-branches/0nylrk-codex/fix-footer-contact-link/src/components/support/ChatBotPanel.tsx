@@ -327,6 +327,14 @@ id: `user-$ {
 }`;
 content: text;
 setIsLoading (true);
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/support/ChatBotPanel.tsx
+:temp_broken_files/support/ChatBotPanel.tsx
+
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatBotPanel.tsx
+  id: `bot-$ {;
+  Date.now () ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatBotPanel.tsx
 }`;
 //After 3 failed attempts, suggest escalation if (failedAttempts >= 2) {
   setFailedAttempts ( (prev) => prev + 1);
@@ -348,6 +356,12 @@ body: JSON.stringify ({
   
 }) 
 });
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/support/ChatBotPanel.tsx
+:temp_broken_files/support/ChatBotPanel.tsx
+
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatBotPanel.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatBotPanel.tsx
 }const data = await response.json ();
 return {
   success: true;
@@ -391,6 +405,16 @@ timestamp: new Date ()
 }]);
 //In a real implementation, this would trigger a live chat request 
 };
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/support/ChatBotPanel.tsx
+:temp_broken_files/support/ChatBotPanel.tsx
+
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatBotPanel.tsx
+  setMessages ( (prev) => [ ...prev, {;
+  id: `user-$ {;
+  Date.now () ;"}`;'";"content: "I'd like to email support",";"sender: "user",
+timestamp: new Date () ;
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/support/ChatBotPanel.tsx
 };
 timestamp: new Date () 
 }]) 

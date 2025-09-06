@@ -6,6 +6,33 @@ import {Card, CardContent} from "@/components/ui/card";
 import {useProjects} from "@/hooks/useProjects";
 import {Project} from "@/types/projects";
 export function ProjectOfferBanner() {;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  const navigate = useNavigate();
+  const { projects, isLoading } = useProjects();
+  const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
+  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+<<<<<<< HEAD
+
+
+
+
+  useEffect(() => {
+    if (projects && !isLoading) {
+      const offers = projects.filter(p => p.status === 'offer_sent');
+      setPendingOffers(offers)
+
+
+
+=======
+=======
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { Bell, Calendar, X } from "lucide-react",
@@ -23,6 +50,27 @@ export function ProjectOfferBanner() {
     if (projects && !isLoading) {
       const offers = projects.filter(p => p.status === 'offer_sent'),
       setPendingOffers(offers)
+<<<<<<< HEAD
+    }
+  }, [projects, isLoading]);
+  const handleDismiss = (projectId: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setDismissed(prev => {
+      const updated = new Set(prev);
+      updated.add(projectId)
+      return updated
+    })
+  }
+  const handleViewOffer = (projectId: string) => {
+    navigate(`/project/${projectId}`)
+  }
+  if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
+
+    return null
+  }
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { Bell, Calendar, X } from "lucide-react",;
@@ -54,8 +102,28 @@ export function ProjectOfferBanner() {;
   };
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
     return null;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+
   }
   
+<<<<<<< HEAD
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  }
+  
+  }
+  
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+  }
+  
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="mb-6 space-y-3">
       {pendingOffers
@@ -84,8 +152,147 @@ export function ProjectOfferBanner() {;
                 </Button>
                 <Button
                   size="sm"
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+                  variant="ghost"
+                  onClick={(e) => handleDismiss(offer.id, e)}
+                >
+                  <X className="h-4 w-4" />
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        ))}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+  useEffect(() => {;
+    if (projects && !isLoading) {;
+      const offers = projects && projects.filter(p => p && p.status === 'offer_sent');
+      setPendingOffers(offers);
+    }
+  }, [projects, isLoading]);
+
+  const handleDismiss = (projectId: string, e: React && React.MouseEvent) => {;
+    e && e.stopPropagation();
+    setDismissed(prev => {;
+      const updated = new Set(prev);
+      updated && updated.add(projectId),;
+      return updated;
+    });
+  };
+
+  const handleViewOffer = (projectId: string) => {;
+    navigate(`/project/${projectId}`);
+  };
+
+  if (isLoading || pendingOffers && pendingOffers.length === 0 || pendingOffers && pendingOffers.every(p => dismissed && dismissed.has(p && p.id))) {;
+    return null;
+  }
+
+  return (
+    <div className="mb-6 space-y-3">;
+      {pendingOffers;
+        .filter(offer => !dismissed && dismissed.has(offer && offer.id));
+        .map(offer => (;
+          <Card
+            key={offer && offer.id} 
+            className="border-2 border-primary bg-primary/5"
+            onClick={() => handleViewOffer(offer && offer.id)}
+<<<<<<< HEAD
+=======
+
+import { useEffect, useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { Bell, Calendar, X } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { useProjects } from "@/hooks/useProjects",;
+import { Project } from "@/types/projects",;
+;
+export function ProjectOfferBanner() {;
+  const navigate = useNavigate(),;
+  const { projects, isLoading } = useProjects(),;
+  const [pendingOffers, setPendingOffers] = useState<Project[]>([]),;
+  const [dismissed, setDismissed] = useState<Set<string>>(new Set()),;
+  ;
+  useEffect(() => {;
+    if (projects && !isLoading) {;
+      const offers = projects.filter(p => p.status === 'offer_sent'),;
+      setPendingOffers(offers),;
+    }
+  }, [projects, isLoading]),;
+  ;
+  const handleDismiss = (projectId:string, e:React.MouseEvent) => {;
+    e.stopPropagation(),;
+    setDismissed(prev => {;
+      const updated = new Set(prev),;
+      updated.add(projectId),;
+      return updated;
+    }),;
+  },;
+  ;
+  const handleViewOffer = (projectId:string) => {;
+    navigate(`/project/${projectId}`),;
+  },;
+  ;
+  if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {;
+    return null,;
+  }
+  ;
+  return (;
+    <div className="mb-6 space-y-3">;
+      {pendingOffers;
+        .filter(offer => !dismissed.has(offer.id));
+        .map(offer => (;
+          <Card ;
+            key={offer.id} ;
+            className="border-2 border-primary bg-primary/5";
+            onClick={() => handleViewOffer(offer.id)}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+          >;
+            <CardContent className="p-4 flex items-center justify-between">;
+              <div className="flex items-center gap-2">;
+                <div className="bg-primary/10 rounded-full p-2">;
+                  <Bell className="h-4 w-4 text-primary" />;
+                </div>;
+                <div>;
+                  <h4 className="font-semibold">🎉 New Project Offer!</h4>;
+                  <p className="text-sm text-muted-foreground">;
+<<<<<<< HEAD
+                    You've been selected for "{offer && offer.job?.title}". Review and accept to get started.;
+                  </p>;
+                </div>;
+              </div>;
+
+=======
+                    You've been selected for "{offer.job?.title}". Review and accept to get started.;
+                  </p>;
+                </div>;
+              </div>;
+              ;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+              <div className="flex items-center gap-2">;
+                <Button size="sm" className="whitespace-nowrap">;
+                  View Offer;
+                </Button>;
+<<<<<<< HEAD
+                <Button
+                  size="sm" 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   variant="ghost"
                   onClick={(e) => handleDismiss(offer && offer.id, e)}
+=======
+                <Button ;
+                  size="sm" ;
+                  variant="ghost";
+                  onClick={(e) => handleDismiss(offer.id, e)}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+                  variant="ghost"
+                  onClick={(e) => handleDismiss(offer && offer.id, e)}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 >;
                   <X className="h-4 w-4" />;
                 </Button>;
@@ -93,6 +300,16 @@ export function ProjectOfferBanner() {;
             </CardContent>;
           </Card>;
         ))}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+    </div>;
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { useEffect, useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { Bell, Calendar, X } from './lucide-react';
@@ -109,3 +326,117 @@ function ProjectOfferBanner() {
   const [pending_offers, setPendingOffers] = useState < Project[]>([]);
   const [dismissed, set_dismissed] = useState < Set < string>>(new Set ());
 ;
+<<<<<<< HEAD
+
+
+
+=======
+    </div>;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      const offers = projects.filter (p => p.status === 'offer_sent');
+      setPendingOffers (offers);
+    }
+  }, [projects, is_loading]);
+;
+  const handle_dismiss = (project_id: string, e: React.MouseEvent) =>: any {
+    e.stop_propagation ();
+    set_dismissed (prev => {
+      const updated = new Set (prev);
+      updated.add (project_id),
+      return updated;
+    });
+  }
+;
+  const handleViewOffer = (project_id: string) =>: any {
+    navigate (`/project/${project_id}`);
+  }
+;
+  if ()) {) {
+  $2
+}
+    return null;
+  }
+  return (
+    <div className="mb - 6 space - y-3">;
+      {pending_offers;
+        .filter (offer => !dismissed.has (offer.id));
+        .map (offer => (
+          <Card;
+            key={offer.id}
+            className="border - 2 border - primary bg - primary / 5";
+            on_click={() => handleViewOffer (offer.id)}
+          >;
+            <CardContent className="p - 4 flex items - center justify - between">;
+              <div className="flex items - center gap - 2">;
+                <div className="bg - primary / 10 rounded - full p - 2">;
+                  <Bell className="h - 4 w - 4 text - primary" />;
+                </div>;
+                <div>;
+                  <h4 className="font - semibold">🎉 New Project Offer!</h4>;
+                  <p className="text - sm text - muted - foreground">;
+                    You've been selected for "{offer.job?.title}". Review and accept to get started.;
+                  </p>;
+                </div>;
+              </div>;
+              <div className="flex items - center gap - 2">;
+                <Button size="sm" className="whitespace - nowrap">;
+                  View Offer;
+                </Button>;
+                <Button;
+                  size="sm";
+                  variant="ghost";
+                  on_click={(e) => handle_dismiss (offer.id, e)}
+                >;
+                  <X className="h - 4 w - 4" />;
+                </Button>;
+              </div>;
+            </CardContent>;
+          </Card>))}
+    </div>);
+  ),; export function ProjectOfferBanner () {
+  const navigate = useNavigate ();
+const {
+  projects, isLoading 
+}= useProjects ();
+const [pendingOffers, setPendingOffers] = useState<Project[]> ([]);
+const [dismissed, setDismissed] = useState<Set<string>> (new Set () );
+useEffect ( () => {
+  if (projects && !isLoading) {
+  const offers = projects.filter (p => p.status === 'offer sent');
+setPendingOffers (offers) 
+}
+}, [projects, isLoading]);
+const handleDismiss = (projectId: string, e: React.MouseEvent) => {
+  e.stopPropagation ();
+setDismissed (prev => {
+  const updated = new Set (prev);
+updated.add (projectId);
+return updated;
+}) 
+};
+const handleViewOffer = (projectId: string) => {
+  navigate (`/project/$ {
+  projectId 
+}`) 
+};
+if (isLoading || pendingOffers.length === 0 || pendingOffers.every (p => dismissed.has (p.id) ) ) {
+  return null;
+}return (<div className="mb-6 space-y-3" > {
+  pendingOffers offer.id 
+}> <CardContent className="p-4 flex items-center justify-between" > <div className="flex items-center gap-2" > <div className="bg-primary/10 rounded-full p-2" > <Bell className="h-4 w-4 text-primary" /> </div> <div> </p> </div> </div> <div className="flex items-center gap-2" > <Button size="sm" className="whitespace-nowrap" > View Offer </Button> <Button > <X className="h-4 w-4" /> </Button> </div> </CardContent> </Card>) ) 
+}</div>) 
+}
+    </div>
+  )
+}
+    </div>;
+  );
+}
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

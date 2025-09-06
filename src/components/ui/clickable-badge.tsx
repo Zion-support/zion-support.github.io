@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React from 'react'
+import { X } from 'lucide-react'
+import { cn } from '@/lib/utils'
+import { badgeVariants } from '@/components/ui/badge-variants'
+export interface ClickableBadgeProps
+  extends React.HTMLAttributes<HTMLDivElement> {
+  onRemove?: () => void
+  variant?: 'default' | 'secondary' | 'destructive' | 'outline'
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function ClickableBadge({
       >
@@ -47,6 +60,25 @@ export function ClickableBadge({
         >
           <X className="h-3 w-3" />
         </button>
+<<<<<<< HEAD
+        >
+          <X className="h-3 w-3" />
+        </button>
+      )}
+    </div>
+  )
+}
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+export function ClickableBadge({
+
+
+        >
+          <X className="h-3 w-3" />
+        </button>
+
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from "react",;
 import { X } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -57,6 +89,17 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
 }
   ...props;
 }: ClickableBadgeProps) {;
+<<<<<<< HEAD
+  return (
+    <div
+      className={cn(
+        badgeVariants({ variant })
+        "group flex items-center gap-1"
+        onRemove && "pl-2 && 2.5 pr-1 && 1.5 py-1"
+        className
+      )}
+
+=======
   return (;
     <div;
       className={cn(;
@@ -65,7 +108,11 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
         onRemove && "pl-2.5 pr-1.5 py-1";
         className;
       )}
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     </div>
   )
   )
@@ -73,8 +120,99 @@ export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement
             e.stopPropagation()
             onRemove()
           }}
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+          className="ml-1 rounded-full p-0.5 hover:bg-background/20";
+
+=======
+          className="ml-1 rounded-full p-0.5 hover:bg-background/20"
+          aria-label="Remove"
+        >
+          <X className="h-3 w-3" />
+        </button>
+      )}
+    </div>;
+  );
+};
+}
+          className="ml-1 rounded-full p-0.5 hover:bg-background/20";
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           aria-label="Remove";
         >;
           <X className="h-3 w-3" />;
         </button>;
       )}
+<<<<<<< HEAD
+
+
+import React from 'react';
+import { X } from 'lucide-react';
+import { cn } from '@/lib / utils';
+import { badge_variants } from '@/components / ui / badge - variants';
+export interface ClickableBadgeProps;
+  extends React.HTMLAttributes < HTMLDivElement> {
+  on_remove?: () => void;
+  variant?: 'default' | 'secondary' | 'destructive' | 'outline';
+export /**
+ * ClickableBadge - Function description
+ */
+function ClickableBadge() {
+      >;
+      <span>{children}</span>;
+      {on_remove && (
+        <button;
+          type='button';
+          on_click={e => {
+import React from './react';
+import { cn  } from '@/lib / utils';
+import { badge_variants  } from '@/components / ui / badge - variants';
+export interface ClickableBadgeProps extends React.HTMLAttributes < HTMLDivElement> {
+  on_remove?: () => void;
+  variant?: "default" | "secondary" | "destructive" | "outline";
+}
+export /**
+ * ClickableBadge - Function description
+ */
+function ClickableBadge() {
+  return (
+    <div;
+      className={cn (
+        badge_variants ({ variant });
+        "group flex items - center gap - 1";
+        on_remove && "pl - 2.5 pr - 1.5 py - 1";
+        class_name)}
+      {...props}
+      <span>{children}</span>;
+      {on_remove && (
+        <button;
+          type='button';
+          on_click={e => {
+            e.stop_propagation ();
+            on_remove () }}
+          className='ml - 1 rounded - full p - 0.5 hover:bg - background / 20';
+          aria - label='Remove';
+        >;
+          <X className='h - 3 w - 3' />;
+        </button>)}
+    </div>));
+}
+            e.stop_propagation ();
+            on_remove ();
+          }}
+          className="ml - 1 rounded - full p - 0.5 hover:bg - background / 20";
+          aria - label="Remove";
+        >;
+          <X className="h - 3 w - 3" />;
+        </button>)}
+    </div>);
+}
+<<<<<<< HEAD
+;
+=======
+;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

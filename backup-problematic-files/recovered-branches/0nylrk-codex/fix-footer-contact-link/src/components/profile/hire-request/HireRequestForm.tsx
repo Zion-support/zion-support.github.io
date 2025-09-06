@@ -94,3 +94,23 @@ onClose: onSubmitSuccess || onClose;
 initialJobTitle;
 userDetails 
 });
+<<<<<<< HEAD:backup-problematic-files/temp_broken_files/profile/hire-request/HireRequestForm.tsx
+return (<Form {;
+  ...form ;
+}> <form onSubmit= {;
+  form.handleSubmit (onSubmit) ;
+}className="space-y-6" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <PersonalInfoFields form= {;
+  form ;
+}/> form ;
+:temp_broken_files/profile/hire-request/HireRequestForm.tsx
+}/> <TimelineField form= {;"  form ";"}/> </div> <DialogFooter className="pt-4" > <Button > Cancel </Button> <Button >{";"  isSubmitting ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting... </>) : ('Submit Request') ;
+}</Button> </DialogFooter> </form> </Form>) ;"}'"
+}/> <TimelineField form= {;
+  form ";
+}/> </div> <DialogFooter className="pt-4" > <Button > Cancel </Button> <Button > {";
+  isSubmitting ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Submitting... </>) : ('Submit Request') ;
+}</Button> </DialogFooter> </form> </Form>) ;
+}'"
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/profile/hire-request/HireRequestForm.tsx
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a:backup-problematic-files/recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/profile/hire-request/HireRequestForm.tsx
