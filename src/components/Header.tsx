@@ -19,45 +19,29 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-<<<<<<< HEAD
-          <nav className="hidden md:flex items-center space-x-8 ml-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="text-gray-300 hover:text-white transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+              Home
+            </Link>
+            <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+              Services
+            </Link>
+            <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">
+              Pricing
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+              About
+            </Link>
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+              Contact
+            </Link>
+            <ThemeToggle />
+            <Button variant="outline" size="small">
+              Get Started
+            </Button>
           </nav>
 
-          {/* Mobile menu button */}
-=======
-                 <nav className="hidden md:flex items-center space-x-8">
-                   <Link to="/" className="text-gray-300 hover:text-white transition-colors">
-                     Home
-                   </Link>
-                   <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
-                     Services
-                   </Link>
-                   <Link to="/pricing" className="text-gray-300 hover:text-white transition-colors">
-                     Pricing
-                   </Link>
-                   <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
-                     About
-                   </Link>
-                   <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
-                     Contact
-                   </Link>
-                   <ThemeToggle />
-                   <Button variant="outline" size="small">
-                     Get Started
-                   </Button>
-                 </nav>
-
           {/* Mobile Menu Button */}
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
@@ -73,21 +57,6 @@ const Header: React.FC = () => {
         </div>
         {/* Mobile Navigation */}
         {isMenuOpen && (
-<<<<<<< HEAD
-          <div className="md:hidden absolute top-16 left-0 right-0 bg-slate-900 py-4 border-t border-slate-700">
-            <nav className="flex flex-col space-y-4 px-4">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="text-gray-300 hover:text-white transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </nav>
-=======
           <div className="md:hidden py-4 border-t border-slate-700">
             <nav className="flex flex-col space-y-4">
               <Link to="/" className="text-gray-300 hover:text-white transition-colors">
@@ -105,14 +74,13 @@ const Header: React.FC = () => {
               <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
                 Contact
               </Link>
-                 <div className="flex items-center justify-center space-x-4">
-                   <ThemeToggle />
-                   <Button variant="outline" size="small" className="flex-1">
-                     Get Started
-                   </Button>
-                 </div>
-               </nav>
->>>>>>> 2f757ef2558c16475e88c96592bc2d691c331671
+              <div className="flex items-center justify-center space-x-4">
+                <ThemeToggle />
+                <Button variant="outline" size="small" className="flex-1">
+                  Get Started
+                </Button>
+              </div>
+            </nav>
           </div>
         )}
       </div>
