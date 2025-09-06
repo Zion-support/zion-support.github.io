@@ -14,14 +14,15 @@ export class MemoryCache {
     return null;
   }
 
-  set(key, value, ttl = 3600000) { // 1 hour default
+  set(key, value, ttl = 3600000) {
+    // 1 hour default
     if (this.cache.size >= this.maxSize) {
       this.evictLRU();
     }
-    
+
     this.cache.set(key, value);
     this.accessTimes.set(key, Date.now());
-    
+
     if (ttl > 0) {
       setTimeout(() => this.del(key), ttl);
     }
@@ -35,14 +36,14 @@ export class MemoryCache {
   evictLRU() {
     let oldestKey = null;
     let oldestTime = Infinity;
-    
+
     for (const [key, time] of this.accessTimes) {
       if (time < oldestTime) {
         oldestTime = time;
         oldestKey = key;
       }
     }
-    
+
     if (oldestKey) {
       this.del(oldestKey);
     }
