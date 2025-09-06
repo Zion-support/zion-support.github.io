@@ -28,4 +28,3 @@ export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarP
     </Avatar>
   )
 }
-;

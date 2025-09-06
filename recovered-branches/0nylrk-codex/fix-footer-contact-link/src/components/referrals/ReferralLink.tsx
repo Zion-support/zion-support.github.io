@@ -88,4 +88,3 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
     </Card>
   )
 }
-;

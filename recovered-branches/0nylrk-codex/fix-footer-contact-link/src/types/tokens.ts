@@ -15,4 +15,3 @@ export interface TokenTransaction {
   reason: string | null,
   created_at: string
 }
-;

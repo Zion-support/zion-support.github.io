@@ -28,4 +28,3 @@ export function ClientOnboardingSteps() {
   
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
 }
-;

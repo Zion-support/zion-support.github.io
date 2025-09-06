@@ -27,4 +27,3 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
     </div>
   )
 }
-;

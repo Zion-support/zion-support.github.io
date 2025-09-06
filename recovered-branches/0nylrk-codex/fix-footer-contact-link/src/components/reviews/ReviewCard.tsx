@@ -173,4 +173,3 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
     </div>
   )
 }
-;

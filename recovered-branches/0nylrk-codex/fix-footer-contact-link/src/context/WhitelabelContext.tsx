@@ -72,4 +72,3 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
   )
 };
 
-;

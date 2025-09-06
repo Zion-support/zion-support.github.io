@@ -34,4 +34,3 @@ export function Logo({ customLogo, customColor }: LogoProps) {
     </Link>
   );
 }
-;

@@ -59,4 +59,3 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
     </div>
   )
 }
-;

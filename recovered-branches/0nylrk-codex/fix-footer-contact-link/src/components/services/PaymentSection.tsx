@@ -40,4 +40,3 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
     </div>
   )
 }
-;
