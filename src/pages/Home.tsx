@@ -1,1 +1,29 @@
-import React from 'react'; const Home = () => { return ( <div className="min-h-screen bg-gray-50"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"> <div className="text-center"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Welcome to Zion Tech Group </h1> <p className="text-xl text-gray-600 mb-8"> Leading technology solutions in AI,cybersecurity,cloud infrastructure,and digital transformation. </p> <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12"> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Solutions</h3> <p className="text-gray-600">Advanced artificial intelligence and machine learning services.</p> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Cybersecurity</h3> <p className="text-gray-600">Comprehensive security solutions to protect your business.</p> </div> <div className="bg-white p-6 rounded-lg shadow-md"> <h3 className="text-lg font-semibold text-gray-900 mb-2">Cloud Infrastructure</h3> <p className="text-gray-600">Scalable and secure cloud solutions for modern businesses.</p> </div> </div> </div> </div> </div> )}; export default Home;
+import React from 'react';
+
+const Home: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Welcome to Zion Tech Group
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Leading the future of technology with innovative solutions, AI services, 
+            and cutting-edge IT infrastructure.
+          </p>
+          <div className="space-x-4">
+            <button className="btn-primary">
+              Get Started
+            </button>
+            <button className="px-6 py-3 border border-gray-300 rounded-lg hover:bg-gray-50">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;

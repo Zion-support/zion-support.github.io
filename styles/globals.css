@@ -1,8 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-<<<<<<< HEAD
-=======
 
 @layer base {
   html {
@@ -35,4 +33,3 @@
     @apply flex flex-col sm:flex-row gap-4 justify-center;
   }
 }
->>>>>>> main
