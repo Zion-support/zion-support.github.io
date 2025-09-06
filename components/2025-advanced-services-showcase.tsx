@@ -21,7 +21,7 @@ const allServices = [
     description: 'Complete portfolio of advanced services'
   }
 =======
-import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect } from 'react';
 import SEO from '../components/SEO';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Grid, List, Star, CheckCircle, ArrowRight, Check;
@@ -91,21 +91,17 @@ const cuttingEdgeITInfrastructureServices = [
     rating: 4.8,
     tags: ["Cloud", "Infrastructure", "DevOps"],
     color: "from-orange-500 to-red-500",
-    icon: "☁️",
-  },
-];
+    icon: "☁️"}];
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-website: 'https://ziontechgroup.com',
-};
+website: 'https://ziontechgroup.com'};
 
 const allServices = [
   ...advancedEnterpriseServices2025,
   ...innovativeMicroSaasExpansion2025,
-  ...cuttingEdgeITInfrastructureServices,
-];
+  ...cuttingEdgeITInfrastructureServices];
 
 const categories = [
   {
@@ -113,37 +109,32 @@ const categories = [
     name: 'All Services',
 icon: <Grid className='w-6 h-6' />,
     color: 'from-gray-500 to-slate-500',
-    description: 'Complete portfolio of advanced services',
-  },
+    description: 'Complete portfolio of advanced services'},
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
   {
     id: 'enterprise',
     name: 'Enterprise Solutions',
     icon: <Building className='w-6 h-6' />,
     color: 'from-blue-500 to-purple-500',
-    description: 'Enterprise-grade AI and IT solutions',
-  },
+    description: 'Enterprise-grade AI and IT solutions'},
   {
     id: 'micro-saas',
     name: 'Micro SAAS',
     icon: <Globe className='w-6 h-6' />,
     color: 'from-green-500 to-emerald-500',
-    description: 'Innovative micro SAAS solutions',
-  },
+    description: 'Innovative micro SAAS solutions'},
   {
     id: 'infrastructure',
     name: 'IT Infrastructure',
     icon: <Shield className='w-6 h-6' />,
     color: 'from-orange-500 to-red-500',
-    description: 'Cutting-edge infrastructure services',
-  },
+    description: 'Cutting-edge infrastructure services'},
   {
     id: 'ai-ml',
     name: 'AI & Machine Learning',
     icon: <Brain className='w-6 h-6' />,
     color: 'from-purple-500 to-pink-500',
-    description: 'Advanced AI and ML platforms',
-  },
+    description: 'Advanced AI and ML platforms'},
   {
 <<<<<<< HEAD
     id: 'quantum'
@@ -161,7 +152,7 @@ import SEO from './seo/Seo';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Search, LayoutGrid, List, Star, CheckCircle, ArrowRight, Check,
-  Brain, Zap, Shield, Building, Globe,
+  Brain, Zap, Shield, Building, Globe;
   Users, TrendingUp, Award, Phone, Mail, MapPin
 } from 'lucide-react';
 
@@ -229,8 +220,7 @@ const categories = [
     name: 'Quantum Computing',
     icon: <Atom className='w-6 h-6' />,
     color: 'from-violet-500 to-indigo-500',
-    description: 'Quantum computing solutions',
-  },
+    description: 'Quantum computing solutions'},
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533
 ];
 
@@ -249,7 +239,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const allServices = [
   ...advancedEnterpriseServices2025
   ...innovativeMicroSaasExpansion2025
-  ...cuttingEdgeITInfrastructureServices,];  website: 'https://ziontechgroup.com'
+  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup.com'
 }
 const allServices = [
   ...advancedEnterpriseServices2025;
@@ -347,7 +337,7 @@ export default function AdvancedServicesShowcase() {
 const allServices = [;
   ...advancedEnterpriseServices2025,;
   ...innovativeMicroSaasExpansion2025,;
-  ...cuttingEdgeITInfrastructureServices,];  website: 'https://ziontechgroup && ziontechgroup.com';
+  ...cuttingEdgeITInfrastructureServices];  website: 'https://ziontechgroup && ziontechgroup.com';
 };
 const allServices = [;
   ...advancedEnterpriseServices2025;

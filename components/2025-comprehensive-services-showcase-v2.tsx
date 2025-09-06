@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 <<<<<<< HEAD
 import { 
   Brain, Zap, Shield, Circle, ArrowRight,
-  Check, Star, TrendingUp, Users,
+  Check, Star, TrendingUp, Users;
   Globe, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin
 } from 'lucide-react';
 
@@ -30,7 +30,7 @@ const staggerContainer = {
 export default function ComprehensiveServicesShowcase2025V2() {
   const allNewServices = [
     ...advancedMicroSaasExpansion2025V2,
-    ...advancedITServices2025,
+    ...advancedITServices2025;
     ...advancedAIServices2025
   ];
 
