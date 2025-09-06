@@ -1,116 +1,138 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
-  Search, LayoutGrid, List, Star, CheckCircle, ArrowRight, Check,
-  Brain, Zap, Shield, Building, Globe,
-  Users, TrendingUp, Award, Phone, Mail, MapPin
-} from 'lucide-react';
+  Search,
+  LayoutGrid,
+  List,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Check,
+  Brain,
+  Zap,
+  Shield,
+  Building,
+  Globe,
+  Users,
+  TrendingUp,
+  Award,
+  Phone,
+  Mail,
+  MapPin,
+} from "lucide-react";
 
 // Mock service data
 const advancedEnterpriseServices2025 = [
   {
-    id: 'enterprise-1',
-    title: 'Enterprise AI Solutions',
-    description: 'Comprehensive AI implementation for large enterprises',
-    category: 'enterprise',
-    price: '$50,000+',
+    id: "enterprise-1",
+    title: "Enterprise AI Solutions",
+    description: "Comprehensive AI implementation for large enterprises",
+    category: "enterprise",
+    price: "$50,000+",
     rating: 4.9,
-    tags: ['AI', 'Machine Learning', 'Enterprise'],
-    color: 'from-blue-500 to-purple-500',
-    icon: '🤖'
-  }
+    tags: ["AI", "Machine Learning", "Enterprise"],
+    color: "from-blue-500 to-purple-500",
+    icon: "🤖",
+  },
 ];
 
 const innovativeMicroSaasExpansion2025 = [
   {
-    id: 'micro-1',
-    title: 'Micro SaaS Platform',
-    description: 'Lightweight SaaS solutions for small businesses',
-    category: 'micro-saas',
-    price: '$99/month',
+    id: "micro-1",
+    title: "Micro SaaS Platform",
+    description: "Lightweight SaaS solutions for small businesses",
+    category: "micro-saas",
+    price: "$99/month",
     rating: 4.7,
-    tags: ['SaaS', 'Micro Services', 'Cloud'],
-    color: 'from-green-500 to-teal-500',
-    icon: '⚡'
-  }
+    tags: ["SaaS", "Micro Services", "Cloud"],
+    color: "from-green-500 to-teal-500",
+    icon: "⚡",
+  },
 ];
 
 const cuttingEdgeITInfrastructureServices = [
   {
-    id: 'infra-1',
-    title: 'Cloud Infrastructure',
-    description: 'Scalable cloud infrastructure solutions',
-    category: 'infrastructure',
-    price: '$5,000/month',
+    id: "infra-1",
+    title: "Cloud Infrastructure",
+    description: "Scalable cloud infrastructure solutions",
+    category: "infrastructure",
+    price: "$5,000/month",
     rating: 4.8,
-    tags: ['Cloud', 'Infrastructure', 'DevOps'],
-    color: 'from-orange-500 to-red-500',
-    icon: '☁️'
-  }
+    tags: ["Cloud", "Infrastructure", "DevOps"],
+    color: "from-orange-500 to-red-500",
+    icon: "☁️",
+  },
 ];
 
 const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  mobile: "+1 302 464 0950",
+  email: "kleber@ziontechgroup.com",
+  address: "364 E Main St STE 1008 Middletown DE 19709",
+  website: "https://ziontechgroup.com",
 };
 
 const allServices = [
   ...advancedEnterpriseServices2025,
   ...innovativeMicroSaasExpansion2025,
-  ...cuttingEdgeITInfrastructureServices
+  ...cuttingEdgeITInfrastructureServices,
 ];
 
 const categories = [
   {
-    id: 'all',
-    name: 'All Services',
+    id: "all",
+    name: "All Services",
     icon: <LayoutGrid className="w-6 h-6" />,
-    color: 'from-gray-500 to-slate-500',
-    description: 'Complete portfolio of advanced services'
+    color: "from-gray-500 to-slate-500",
+    description: "Complete portfolio of advanced services",
   },
   {
-    id: 'enterprise',
-    name: 'Enterprise Solutions',
+    id: "enterprise",
+    name: "Enterprise Solutions",
     icon: <Building className="w-6 h-6" />,
-    color: 'from-blue-500 to-purple-500',
-    description: 'Large-scale enterprise solutions'
+    color: "from-blue-500 to-purple-500",
+    description: "Large-scale enterprise solutions",
   },
   {
-    id: 'micro-saas',
-    name: 'Micro SaaS',
+    id: "micro-saas",
+    name: "Micro SaaS",
     icon: <Zap className="w-6 h-6" />,
-    color: 'from-green-500 to-teal-500',
-    description: 'Innovative micro SaaS solutions'
+    color: "from-green-500 to-teal-500",
+    description: "Innovative micro SaaS solutions",
   },
   {
-    id: 'infrastructure',
-    name: 'IT Infrastructure',
+    id: "infrastructure",
+    name: "IT Infrastructure",
     icon: <Shield className="w-6 h-6" />,
-    color: 'from-orange-500 to-red-500',
-    description: 'Cutting-edge infrastructure services'
-  }
+    color: "from-orange-500 to-red-500",
+    description: "Cutting-edge infrastructure services",
+  },
 ];
 
 export default function AdvancedServicesShowcase2025() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
-  const [viewMode, setViewMode] = useState('grid');
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [viewMode, setViewMode] = useState("grid");
   const [filteredServices, setFilteredServices] = useState(allServices);
 
   useEffect(() => {
     let filtered = allServices;
 
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
+    if (selectedCategory !== "all") {
+      filtered = filtered.filter(
+        (service) => service.category === selectedCategory,
+      );
     }
 
     if (searchTerm) {
-      filtered = filtered.filter(service =>
-        service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      filtered = filtered.filter(
+        (service) =>
+          service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          service.description
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase()) ||
+          service.tags.some((tag) =>
+            tag.toLowerCase().includes(searchTerm.toLowerCase()),
+          ),
       );
     }
 
@@ -122,9 +144,9 @@ export default function AdvancedServicesShowcase2025() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
@@ -133,9 +155,9 @@ export default function AdvancedServicesShowcase2025() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5
-      }
-    }
+        duration: 0.5,
+      },
+    },
   };
 
   return (
@@ -152,8 +174,9 @@ export default function AdvancedServicesShowcase2025() {
             Advanced Services Showcase 2025
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover our comprehensive portfolio of cutting-edge solutions designed to transform your business
-            and drive innovation in the digital age.
+            Discover our comprehensive portfolio of cutting-edge solutions
+            designed to transform your business and drive innovation in the
+            digital age.
           </p>
         </motion.div>
 
@@ -186,14 +209,16 @@ export default function AdvancedServicesShowcase2025() {
                   className={`p-4 rounded-xl transition-all duration-300 ${
                     selectedCategory === category.id
                       ? `bg-gradient-to-r ${category.color} text-white shadow-lg transform scale-105`
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                      : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
                 >
                   <div className="flex items-center space-x-3">
                     {category.icon}
                     <div className="text-left">
                       <div className="font-semibold">{category.name}</div>
-                      <div className="text-sm opacity-80">{category.description}</div>
+                      <div className="text-sm opacity-80">
+                        {category.description}
+                      </div>
                     </div>
                   </div>
                 </button>
@@ -207,17 +232,21 @@ export default function AdvancedServicesShowcase2025() {
               </div>
               <div className="flex space-x-2">
                 <button
-                  onClick={() => setViewMode('grid')}
+                  onClick={() => setViewMode("grid")}
                   className={`p-2 rounded-lg ${
-                    viewMode === 'grid' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-600'
+                    viewMode === "grid"
+                      ? "bg-blue-500 text-white"
+                      : "bg-gray-200 text-gray-600"
                   }`}
                 >
                   <LayoutGrid className="w-5 h-5" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
+                  onClick={() => setViewMode("list")}
                   className={`p-2 rounded-lg ${
-                    viewMode === 'list' ? 'bg-blue-500 text-white' : 'bg-gray-200 text-gray-600'
+                    viewMode === "list"
+                      ? "bg-blue-500 text-white"
+                      : "bg-gray-200 text-gray-600"
                   }`}
                 >
                   <List className="w-5 h-5" />
@@ -232,7 +261,11 @@ export default function AdvancedServicesShowcase2025() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+          className={
+            viewMode === "grid"
+              ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              : "space-y-6"
+          }
         >
           <AnimatePresence>
             {filteredServices.map((service) => (
@@ -241,26 +274,34 @@ export default function AdvancedServicesShowcase2025() {
                 variants={itemVariants}
                 layout
                 className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 ${
-                  viewMode === 'list' ? 'flex' : ''
+                  viewMode === "list" ? "flex" : ""
                 }`}
               >
-                <div className={`${viewMode === 'list' ? 'w-1/3' : 'w-full'} h-48 bg-gradient-to-br ${service.color} flex items-center justify-center`}>
-                  <div className="text-white text-6xl">
-                    {service.icon}
-                  </div>
+                <div
+                  className={`${viewMode === "list" ? "w-1/3" : "w-full"} h-48 bg-gradient-to-br ${service.color} flex items-center justify-center`}
+                >
+                  <div className="text-white text-6xl">{service.icon}</div>
                 </div>
-                
-                <div className={`${viewMode === 'list' ? 'w-2/3' : 'w-full'} p-6`}>
+
+                <div
+                  className={`${viewMode === "list" ? "w-2/3" : "w-full"} p-6`}
+                >
                   <div className="flex items-start justify-between mb-4">
-                    <h3 className="text-xl font-bold text-gray-900">{service.title}</h3>
+                    <h3 className="text-xl font-bold text-gray-900">
+                      {service.title}
+                    </h3>
                     <div className="flex items-center space-x-1">
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-sm text-gray-600">{service.rating}</span>
+                      <span className="text-sm text-gray-600">
+                        {service.rating}
+                      </span>
                     </div>
                   </div>
-                  
-                  <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
-                  
+
+                  <p className="text-gray-600 mb-4 line-clamp-3">
+                    {service.description}
+                  </p>
+
                   <div className="flex flex-wrap gap-2 mb-4">
                     {service.tags.slice(0, 3).map((tag, index) => (
                       <span
@@ -276,7 +317,7 @@ export default function AdvancedServicesShowcase2025() {
                       </span>
                     )}
                   </div>
-                  
+
                   <div className="flex items-center justify-between">
                     <div className="text-2xl font-bold text-gray-900">
                       {service.price}
@@ -299,11 +340,14 @@ export default function AdvancedServicesShowcase2025() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-20 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-white text-center"
         >
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to Transform Your Business?
+          </h2>
           <p className="text-xl mb-8 opacity-90">
-            Let's discuss how our advanced services can help you achieve your goals.
+            Let's discuss how our advanced services can help you achieve your
+            goals.
           </p>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div className="flex items-center justify-center space-x-3">
               <Phone className="w-6 h-6" />
@@ -318,7 +362,7 @@ export default function AdvancedServicesShowcase2025() {
               <span>{contactInfo.address}</span>
             </div>
           </div>
-          
+
           <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300">
             Get Started Today
           </button>
