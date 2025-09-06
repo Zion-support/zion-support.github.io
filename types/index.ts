@@ -118,7 +118,7 @@ export interface TeamMember {
   social: {
     linkedin?: string;
     twitter?: string;
-    github?: string;
+    github?: string,
   };
 }
 

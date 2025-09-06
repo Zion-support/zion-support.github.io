@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/enhanced-security-scanner.cjs
 =======
 #!/usr/bin/env node
@@ -152,6 +153,8 @@ async function main() {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/enhanced-security-scanner.cjs
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     log('info', `Total "checks": ${securityReport.summary.totalChecks}`);
     log('info', `Vulnerabilities "found": ${securityReport.summary.vulnerabilities}`);
     log('info', `High "severity": ${securityReport.summary.high}`);
@@ -185,6 +188,7 @@ async function main() {
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/enhanced-security-scanner.cjs
 main();#!/usr/bin/env node;
 =======
@@ -200,6 +204,9 @@ main();
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 #!/usr/bin/env node;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/enhanced-security-scanner.cjs
+=======
+main();#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages.disabled_full/index.tsx
 =======
 <<<<<<< HEAD
@@ -12,6 +13,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages.disabled_full/index.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 export default function Home() { return ( <main style={{ \"minHeight\": \'100vh\',\"display\": \'flex\',\"alignItems\": \'center\',\"justifyContent\": \'center\',\"fontFamily\": \'system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial\'}}> <div> <h1>Zion Tech Group</h1> <p>Site under maintenance. Core build is healthy.</p> </div> </main> )}
 module.exports = default function Home() { return ( <main style={{ minHeight: "100vh",display: "flex",alignItems: "center",justifyContent: "center",fontFamily: "system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial"}}> <div> <h1>Zion Tech Group</h1> <p>Site under maintenance. Core build is healthy.</p> </div> </main> )}'"'"
 import React from 'react';
@@ -27,6 +30,7 @@ export default function Index({ }: IndexProps) {
   );
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages.disabled_full/index.tsx
 <<<<<<< HEAD
@@ -39,3 +43,5 @@ export default function Index({ }: IndexProps) {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages.disabled_full/index.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

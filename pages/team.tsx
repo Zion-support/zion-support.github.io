@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -390,9 +391,11 @@ export default function TeamPage() {
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Brain, Cloud, Shield, Users } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Brain, Cloud, Shield, Users} from 'lucide-react';
 
 const teamMembers = [
   {
@@ -441,6 +444,7 @@ export default function TeamPage() {
       </div>
     </>
   );
+<<<<<<< HEAD
 =======
 import SEO from '../components/SEO';
 export default function TeamPage() {
@@ -463,3 +467,5 @@ export default function TeamPage() {
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

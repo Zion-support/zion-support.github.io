@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-=======
-import { useState } from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    
 import { useRouter } from 'next/router';
 import { useJobApplications } from "@/hooks/useJobApplications";
 import { useResume } from "@/hooks/useResume";
@@ -38,7 +33,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     e.preventDefault();
     
     if (!user) {
-      toast.error("You must be logged in to apply");
+      toast.error("You must be logged in to apply"),
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`);
       return
     }
@@ -66,7 +61,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         }
       }
     } catch (err: any) {
-      setError(err.message || "Failed to submit application");
+      setError(err.message || "Failed to submit application"),
       toast.error("Failed to submit application")
     } finally {
       setIsSubmitting(false);
@@ -188,7 +183,6 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       </div>
     </form>
   );
-<<<<<<< HEAD
   ;
 }setError (null);
 if (success) {;
@@ -214,11 +208,6 @@ handleSubmit ;
 }</Button> </div> </form>) ;
 }"
 =======
-
-<<<<<<< HEAD
-    
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

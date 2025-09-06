@@ -1,12 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
-import { Heart, Brain, Shield, Users, BarChart3, CheckCircle, ArrowRight, Phone, Mail, Calendar, Stethoscope, Activity, Database, Camera, FileText } from 'lucide-react';
+import {Heart,, Brain,, Shield,, Users,, BarChart3,, CheckCircle,, ArrowRight,, Phone,, Mail,, Calendar,, Stethoscope,, Activity,, Database,, Camera,, FileText} from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -15,10 +18,10 @@ import { Heart,
   Shield, 
   Users, 
   BarChart3, 
-=======
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 <<<<<<< HEAD
@@ -27,6 +30,8 @@ import { motion } from 'framer-motion';
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -66,6 +71,7 @@ import {
   FileText;
 } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 =======
 <<<<<<< HEAD
@@ -77,11 +83,14 @@ import {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import Layout from '../../components/Layout';';
 const services = [;
   {}
     title: 'AI-Powered Medical Diagnostics,',
     description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.,',
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 <<<<<<< HEAD
 =======
@@ -94,6 +103,8 @@ const services = [;
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -163,6 +174,7 @@ const services = [
     ];
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 =======
 <<<<<<< HEAD
@@ -174,6 +186,8 @@ const services = [
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 ;];
 const benefits = [;
   {}
@@ -190,9 +204,12 @@ const benefits = [;
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
     icon: Heart,
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 ];
 const benefits = [
   {
@@ -216,6 +233,7 @@ const benefits = [
     icon: Shield,
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 =======
 <<<<<<< HEAD
@@ -227,12 +245,15 @@ const benefits = [
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 ;];
 const caseStudies = [;
   {}
     title: 'AI Diagnostic System Implementation,',
     description: 'Reduced diagnostic time by 60% and improved accuracy by 25% for a major hospital network.,',
     results: ['60% faster diagnosis, '25% accuracy improvement', '40% cost reduction']',
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 <<<<<<< HEAD
 =======
@@ -245,6 +266,8 @@ const caseStudies = [;
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 ];
 const caseStudies = [
   {
@@ -263,6 +286,7 @@ const caseStudies = [
     results: ['15 facilities connected, '80% workflow improvement', '100% data accuracy']',
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 =======
 <<<<<<< HEAD
@@ -274,6 +298,8 @@ const caseStudies = [
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 ;];
 export default function HealthcarePage() {
   return (;
@@ -318,6 +344,7 @@ export default function HealthcarePage() {
             </motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 <<<<<<< HEAD
 =======
@@ -330,6 +357,8 @@ export default function HealthcarePage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 ];
 export default function HealthcarePage() {
   return (
@@ -385,6 +414,7 @@ export default function HealthcarePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 =======
 <<<<<<< HEAD
@@ -396,6 +426,8 @@ export default function HealthcarePage() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Healthcare Technology Services,
@@ -408,6 +440,7 @@ export default function HealthcarePage() {
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {services.map((service, index) => (,
                 <motion.div}),
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 <<<<<<< HEAD
 =======
@@ -420,6 +453,8 @@ export default function HealthcarePage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -438,6 +473,7 @@ export default function HealthcarePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 =======
 <<<<<<< HEAD
@@ -449,17 +485,20 @@ export default function HealthcarePage() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">";
                     <service.icon className="w-6 h-6 text-white" />";
-                  </div>;
+                  </div>,
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>"
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
                   <ul className="space-y-3">";
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 <<<<<<< HEAD
 =======
@@ -472,6 +511,8 @@ export default function HealthcarePage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-6">
@@ -490,6 +531,7 @@ export default function HealthcarePage() {
                 </motion.div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 =======
 <<<<<<< HEAD
@@ -515,6 +557,11 @@ export default function HealthcarePage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             </div>
           </div>
         </section>
@@ -525,6 +572,7 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 =======
@@ -537,6 +585,8 @@ export default function HealthcarePage() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Healthcare Solutions?,
@@ -549,6 +599,7 @@ export default function HealthcarePage() {
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {benefits.map((benefit, index) => (,
                 <motion.div}),
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 <<<<<<< HEAD
 =======
@@ -561,6 +612,8 @@ export default function HealthcarePage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -588,6 +641,7 @@ export default function HealthcarePage() {
                 </motion.div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 =======
 <<<<<<< HEAD
@@ -613,6 +667,11 @@ export default function HealthcarePage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             </div>
           </div>
         </section>
@@ -623,6 +682,7 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 =======
@@ -635,6 +695,8 @@ export default function HealthcarePage() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Healthcare Success Stories,
@@ -647,6 +709,7 @@ export default function HealthcarePage() {
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">",
               {caseStudies.map((study, index) => (,
                 <motion.div}),
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 <<<<<<< HEAD
 =======
@@ -659,6 +722,8 @@ export default function HealthcarePage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -677,6 +742,7 @@ export default function HealthcarePage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 =======
 <<<<<<< HEAD
@@ -688,6 +754,8 @@ export default function HealthcarePage() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300""
                 >;
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>"
@@ -696,6 +764,7 @@ export default function HealthcarePage() {
                     {study.results.map((result, resultIndex) => (,
                       <div key={resultIndex} className="flex items-center text-sm text-green-600">"
                         <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />";
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 <<<<<<< HEAD
 =======
@@ -708,6 +777,8 @@ export default function HealthcarePage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                   className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300"
                 >
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{study.title}</h3>
@@ -723,6 +794,7 @@ export default function HealthcarePage() {
                 </motion.div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 =======
 <<<<<<< HEAD
@@ -748,6 +820,11 @@ export default function HealthcarePage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+            </div>,
+          </div>;
+        </section>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             </div>
           </div>
         </section>
@@ -758,6 +835,7 @@ export default function HealthcarePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 =======
@@ -770,6 +848,8 @@ export default function HealthcarePage() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             >,
               <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Healthcare?,
               </h2>;
@@ -788,6 +868,7 @@ export default function HealthcarePage() {
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/industries/healthcare.tsx
 <<<<<<< HEAD
 =======
@@ -800,8 +881,10 @@ export default function HealthcarePage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/industries/healthcare.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">
                 Ready to Transform Healthcare?
               </h2>
               <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">
@@ -821,5 +904,5 @@ export default function HealthcarePage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

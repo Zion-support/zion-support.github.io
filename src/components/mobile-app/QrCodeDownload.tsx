@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { QrCode } from 'lucide-react';
-import { AppStoreButtons } from './AppStoreButtons';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+};
 
 import React from "react";
-import { QrCode } from 'lucide-react'
-import { AppStoreButtons } from "./AppStoreButtons";
+import {QrCode} from 'lucide-react'
+import {AppStoreButtons} from "./AppStoreButtons";
 export const QrCodeDownload: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#", // Replace with actual App Store URL
@@ -56,14 +50,7 @@ export const QrCodeDownload: React.FC = () => {
     </section>
   )
 };
-<<<<<<< HEAD
 "
 =======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

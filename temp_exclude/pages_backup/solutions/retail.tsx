@@ -1,17 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/retail.tsx
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/retail.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import Layout from '../../components/Layout';
-import { ShoppingCart, Users, BarChart, Smartphone, Package } from 'lucide-react';
+import {ShoppingCart,, Users,, BarChart,, Smartphone,, Package} from 'lucide-react';
 import React from 'react';
 import Layout from '../../components/Layout';';
-import { ShoppingCart, Users, BarChart, Smartphone, Package, CheckCircle, ArrowRight } from 'lucide-react';
+import {ShoppingCart,, Users,, BarChart,, Smartphone,, Package,, CheckCircle,, ArrowRight} from 'lucide-react';
 import Layout from '../../components/Layout';
-import { ShoppingCart, Users, BarChart3, Smartphone, CheckCircle, ArrowRight } from 'lucide-react';
+import {ShoppingCart,, Users,, BarChart3,, Smartphone,, CheckCircle,, ArrowRight} from 'lucide-react';
 const features = [;
   {}
     icon: ShoppingCart,
@@ -46,26 +49,23 @@ const features = [;
 =======
     description: 'End-to-end supply chain visibility and optimization using AI and machine learning.'',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/retail.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  ShoppingCart, 
-  Users, 
-  BarChart3, 
-  Smartphone, 
-  CheckCircle, 
-  ArrowRight 
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {ShoppingCart,, Users,, BarChart3,, Smartphone,, CheckCircle,, ArrowRight} from 'lucide-react';
 
 const features = [
   {
     icon: ShoppingCart,
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/retail.tsx
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -109,6 +109,8 @@ const features = [;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/retail.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     title: 'E-commerce Platform',
     description: 'Complete online shopping experience with advanced features'
   },
@@ -134,12 +136,15 @@ const features = [;
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/retail.tsx
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/retail.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     icon: ArrowRight,
     title: 'Omnichannel',
     description: 'Seamless integration across all sales channels'
@@ -205,10 +210,10 @@ export default function RetailSolutionsPage() {
             </div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => (,
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">"
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover: border-blue-500 transition-colors">"
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
                     <feature.icon className="w-6 h-6 text-white" />";
-                  </div>;
+                  </div>,
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
                   <p className="text-gray-300">{feature.description}</p>"
                 </div>;
@@ -221,6 +226,7 @@ const benefits = [
   'Mobile-first customer engagement'
 ];
 export default function RetailSolutions() {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/retail.tsx
 =======
 <<<<<<< HEAD
@@ -233,6 +239,8 @@ export default function RetailSolutions() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/retail.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     icon: Smartphone,
     title: 'Mobile Commerce',
     description: 'Mobile-optimized shopping experience'
@@ -241,10 +249,13 @@ export default function RetailSolutions() {
 
 export default function RetailSolutionsPage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/retail.tsx
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/retail.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   return (
     <Layout
       title="Retail Solutions - Zion Tech Group"
@@ -382,19 +393,20 @@ export default function RetailSolutions() {
                 Comprehensive solutions designed to enhance every aspect of your retail business.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/retail.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/retail.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages_backup/solutions/retail.tsx
 <<<<<<< HEAD
@@ -405,6 +417,8 @@ export default function RetailSolutions() {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/retail.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 =======
@@ -418,12 +432,15 @@ export default function RetailSolutions() {
                     <feature.icon className="w-6 h-6 text-purple-600" />
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/retail.tsx
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/retail.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -545,6 +562,7 @@ export default function RetailSolutions() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/retail.tsx
 =======
 <<<<<<< HEAD
@@ -557,10 +575,13 @@ export default function RetailSolutions() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/retail.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
                 </motion.div>
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/retail.tsx
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -696,12 +717,14 @@ export default function RetailSolutions() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/retail.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             </div>
           </div>
         </section>
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Retail Business?
             </h2>
@@ -721,16 +744,17 @@ export default function RetailSolutions() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/retail.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/retail.tsx
-    </Layout>
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     </Layout>
-=======
+    </Layout>
     </>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages_backup/solutions/retail.tsx
 <<<<<<< HEAD
@@ -746,4 +770,8 @@ export default function RetailSolutions() {
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
+=======
+    </>
+  ),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }

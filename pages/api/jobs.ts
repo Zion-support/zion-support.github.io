@@ -1,16 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { v4 as uuidv4 } from 'uuid';
-import { readJsonFile, writeJsonFile } from '../../utils/db';
+import {v4, as, uuidv4} from 'uuid';
+import {readJsonFile, writeJsonFile} from '../../utils/db';
 import type { Job } from '../../utils/types';
 import { rateLimit } from '../../utils/rateLimit';
+
 const FILE = 'jobs.json';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!rateLimit(req, res)) return;
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {  if (!rateLimit(req, res)) return;
+
   if (req.method === 'GET') {
     const jobs = readJsonFile<Job[]>(FILE, []);
     res.status(200).json({ jobs });
-    return
-  }
+    return;  }
 
   if (req.method === 'POST') {
     const {
@@ -21,12 +25,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       budgetMinUsd,
       budgetMaxUsd,
       deliveryDeadlineIso,
-      clientEmail
+      clientEmail,
     } = req.body || {};
     if (!title || !description || !clientEmail) {
       res.status(400).json({ error: 'Missing required fields' });
-      return;
-    }
+      return;    }
 
     const nowIso = new Date().toISOString();
     const job: Job = {
@@ -45,11 +48,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     };
     // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.
     if (!job.category) {
-      const skills = (job.requiredSkills || []).map((s) => s.toLowerCase());
-      if (skills.some((s) => s.includes('openai') || s.includes('langchain') || s.includes('rag'))) job.category = 'LLM App';
-      else if (skills.some((s) => s.includes('aws') || s.includes('kubernetes') || s.includes('terraform'))) job.category = 'Cloud';
-      else job.category = 'General';
-    }
+      const skills = (job.requiredSkills || []).map(s => s.toLowerCase());
+      if (
+        skills.some(
+          s =>
+            s.includes('openai') || s.includes('langchain') || s.includes('rag')
+        )
+      )
+        job.category = 'LLM App';
+      else if (
+        skills.some(
+          s =>
+            s.includes('aws') ||
+            s.includes('kubernetes') ||
+            s.includes('terraform')
+        )
+      )
+        job.category = 'Cloud';
+      else job.category = 'General';    }
 
     const jobs = readJsonFile<Job[]>(FILE, []);
     jobs.unshift(job);
@@ -58,6 +74,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return;
   }
 
-  res.setHeader('AllowGET, POST');
-  res.status(405).end('Method Not Allowed')
-}
+  res.setHeader('Allow', 'GET, POST');
+  res.status(405).end('Method Not Allowed');

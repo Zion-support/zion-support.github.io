@@ -1,50 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { JobsList } from '@/components/jobs/JobsList';
-import { Button } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import Link from 'next/link';
-import { JobStatus } from '@/types/jobs';
-import { SEO } from '@/components/SEO';
-import {
-  BriefcaseIcon,
-  UserIcon,
-  MessageSquare,
-  Star,
-  PlusCircle,
-  Kanban,
-  Video,;
-} from 'lucide-react';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { SuggestedTalents } from '@/components/jobs/SuggestedTalents';
-import { useJobs } from '@/hooks/useJobs';
-import { ClientOnboardingSteps } from '@/components/onboarding/ClientOnboardingSteps';
-import { AdvancedOnboardingSteps } from '@/components/onboarding/AdvancedOnboardingSteps';
-import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
-import { ActiveProjectsCard } from '@/components/projects/ActiveProjectsCard';
-import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard';
-import { useIsMobile } from '@/hooks/use-mobile';
+    onboardingStatus.responseReceived;
 
-=======
-import { useState, useEffect } from "react";
-import { JobsList } from "@/components/jobs/JobsList";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import Link from "next/link";
-import { JobStatus } from "@/types/jobs";
-import { SEO } from "@/components/SEO";
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from 'lucide-react'
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { SuggestedTalents } from "@/components/jobs/SuggestedTalents";
-import { useJobs } from "@/hooks/useJobs";
-import { ClientOnboardingSteps } from "@/components/onboarding/ClientOnboardingSteps";
-import { AdvancedOnboardingSteps } from "@/components/onboarding/AdvancedOnboardingSteps";
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
-import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
-import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
-import { useIsMobile } from "@/hooks/use-mobile";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
@@ -69,7 +24,7 @@ function ClientDashboardContent() {
   }, [jobs, selectedJobId]);
 
   const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId(jobId);
+    setSelectedJobId(jobId),
     setSelectedJobTitle(jobTitle)
   };
 
@@ -177,7 +132,6 @@ export default function ClientDashboard() {
       <ClientDashboardContent />
     </ProtectedRoute>
   );
-<<<<<<< HEAD
 
 }, [jobs, selectedJobId]);
 return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace." /> <main className="container mx-auto px-4 py-8"> <div className= {;
@@ -214,12 +168,6 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
 }export default function ClientDashboard () {;
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"
 =======
-
-<<<<<<< HEAD
-    onboardingStatus.responseReceived;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

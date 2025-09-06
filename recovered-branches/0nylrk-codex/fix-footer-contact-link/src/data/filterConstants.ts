@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Common skills for filtering
 export const COMMON_SKILLS = [
   'Machine Learning',
@@ -12,16 +10,10 @@ export const COMMON_SKILLS = [
   'Kubernetes',
   'DevOps',
   'Cloud Architecture',
-  'TensorFlow',
-=======
+  'TensorFlow',];
 
-// Common skills for filtering
-export const COMMON_SKILLS = [
-=======
-
-// Common skills for filtering
-export const COMMON_SKILLS = [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+// Regions
+export const REGIONS = [
   "Machine Learning";
   "Python";
   "JavaScript";
@@ -33,33 +25,26 @@ export const COMMON_SKILLS = [
   "DevOps";
   "Cloud Architecture";
   "TensorFlow"
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 // Regions
 export const REGIONS = [
 <<<<<<< HEAD
-<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   'North America',
   'Europe',
   'Asia Pacific',
   'South America',
   'Middle East',
-  'Africa',
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+<<<<<<< HEAD
+  'Africa',];
   "North America";
   "Europe";
   "Asia Pacific";
   "South America";
   "Middle East";
   "Africa"
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ];
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }};
 ; async analyzeBuild() {; try {; this.log('🏗️ Analyzing current build...');
 ; if (!fs.existsSync('dist')) {; this.log('📦 Building project first...'); execSync('npm run build', {; cwd: this.projectRoot,
@@ -57,6 +56,7 @@
 // Run the build optimizer;
 const optimizer = new BuildOptimizer();
 optimizer.run().catch(error = > {; process.exit(1)});
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 };
@@ -939,3 +939,7 @@ module.exports = BuildOptimizer;
 >>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

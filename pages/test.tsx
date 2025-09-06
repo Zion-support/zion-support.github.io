@@ -15,6 +15,7 @@ export default function TestPage() {
 import Head from 'next/head';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
@@ -50,3 +51,5 @@ export default function TestPage() {
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

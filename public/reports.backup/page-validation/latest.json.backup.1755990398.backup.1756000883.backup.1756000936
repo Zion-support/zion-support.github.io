@@ -3,24 +3,36 @@
     "totalFiles": 1,
     "filesWithIssues": 1,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "totalIssues": 3,
     "totalWarnings": 1,
     "buildBreakingFiles": 1,
     "canBuild": false
   },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   "results": [
     {
       "file": "pages/services-enhanced.tsx",
@@ -52,6 +64,9 @@
           "type": "WARNING",
           "code": "PAGE_TOO_SHORT",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
           "message": "Page content seems too short, may be incomplete",
 =======
@@ -74,9 +89,12 @@
 =======
           "message": "Page content seems too short, may be incomplete",          "line": 0,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
           "message": "Page content seems too short, may be incomplete",          "line": 0,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
           "severity": "warning"
         }
       ]
@@ -86,13 +104,26 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   "buildBreakingFiles": [
     "pages/services-enhanced.tsx"
   ],
-  "generatedAt": "2025-08-21T00:58:31.338Z"  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-21T00:58:31.338Z"
+=======
+  "results": [],
+  "buildBreakingFiles": [],
+  "generatedAt": "2025-08-21T03:41:49.504Z"
+>>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-4bf6
+=======
+  "buildBreakingFiles": [],
   "generatedAt": "2025-08-19T18:31:39.368Z"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> origin/cursor/automate-all-existing-automations-and-clean-up-494d
 =======
   "buildBreakingFiles": [
@@ -101,6 +132,9 @@
   "generatedAt": "2025-08-21T00:58:31.338Z"  "buildBreakingFiles": [],
   "generatedAt": "2025-08-19T18:31:39.368Z"
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 }

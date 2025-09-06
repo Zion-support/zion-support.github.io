@@ -1,7 +1,7 @@
 
 import React from "react";
-import { ClickableBadge } from "@/components/ui/clickable-badge";
-import { X } from "lucide-react";
+import {ClickableBadge} from "@/components/ui/clickable-badge";
+import {X} from "lucide-react";
 interface ActiveFiltersBarProps {
   selectedProductTypes: string[],
   selectedLocations: string[],

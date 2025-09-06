@@ -1,38 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,;
-} from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
-import { QuoteStatusBadge } from './QuoteStatusBadge';
-import type { QuoteRequest } from '@/types/quotes';
-import { format } from 'date-fns';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+};
 
 import React from "react";
-import { 
-  Dialog;
-  DialogContent, 
-  DialogHeader, 
-  DialogTitle, 
-  DialogDescription 
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react'
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { QuoteStatusBadge } from "./QuoteStatusBadge";
+import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Calendar, User, Mail, Clock, DollarSign} from 'lucide-react'
+import {Card, CardContent} from "@/components/ui/card";
+import {Separator} from "@/components/ui/separator";
+import {QuoteStatusBadge} from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
-import { format } from "date-fns";
+import {format} from "date-fns";
 interface QuoteDetailsProps {
   quote: QuoteRequest | null,
   isOpen: boolean,
@@ -132,7 +108,6 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     </Dialog>
   )
 };
-<<<<<<< HEAD
 
   (open) => !open && onClose () ;
 }> <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto" > <DialogHeader> <DialogTitle className="text-2xl flex items-center justify-between" > <span> {;
@@ -155,11 +130,5 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
 };
 '"
 =======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

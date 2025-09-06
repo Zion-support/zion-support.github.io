@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/enhanced-performance-monitor.cjs
 =======
 #!/usr/bin/env node
@@ -390,6 +391,8 @@ async function main() {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/enhanced-performance-monitor.cjs
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     log('info', `Average CPU "usage": ${performanceMetrics.summary.averageCpu}%`);
     log('info', `Peak CPU "usage": ${performanceMetrics.summary.peakCpu}%`);
     log('info', `Average memory "usage": ${performanceMetrics.summary.averageMemory}%`);
@@ -425,6 +428,7 @@ async function main() {
     process.exit(1)}
 }
 // Run the enhanced performance monitor
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/enhanced-performance-monitor.cjs
 <<<<<<< HEAD
 main();#!/usr/bin/env node;
@@ -441,6 +445,9 @@ main();
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 #!/usr/bin/env node;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/enhanced-performance-monitor.cjs
+=======
+main();#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

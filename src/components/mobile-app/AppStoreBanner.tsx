@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { safeStorage } from '@/utils/safeStorage';
-import { X } from 'lucide-react';
-import { useIsMobile } from '@/hooks/use-mobile';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+};
 
 import React, { useState, useEffect } from "react";
-import { safeStorage } from "@/utils/safeStorage";
-import { X } from 'lucide-react'
-import { useIsMobile } from "@/hooks/use-mobile";
+import {safeStorage} from "@/utils/safeStorage";
+import {X} from 'lucide-react'
+import {useIsMobile} from "@/hooks/use-mobile";
 export const AppStoreBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const isMobile = useIsMobile();
@@ -63,14 +56,7 @@ export const AppStoreBanner: React.FC = () => {
     </div>
   )
 };
-<<<<<<< HEAD
 '"
 =======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

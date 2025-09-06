@@ -1,7 +1,7 @@
 
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Check } from "lucide-react";
+import {Card, CardContent} from "@/components/ui/card";
+import {Check} from "lucide-react";
 export function FeatureHighlights() {
   const highlightsData = [
     {
@@ -11,7 +11,7 @@ export function FeatureHighlights() {
         "Verified profiles with skills validation and credential checking";
         "Transparent pricing and no hidden fees";
         "Direct communication with potential candidates";
-        "Secure payment protection and dispute resolution";
+        "Secure payment protection and dispute resolution",
         "Post jobs and receive AI-matched applicants"
       ]
     };
@@ -22,7 +22,7 @@ export function FeatureHighlights() {
         "Get matched with relevant projects that fit your expertise";
         "Secure payment processing with on-time disbursements";
         "Build your reputation through client reviews and ratings";
-        "Access to enterprise clients and high-value projects";
+        "Access to enterprise clients and high-value projects",
         "Professional development resources and community support"
       ]
     };
@@ -33,7 +33,7 @@ export function FeatureHighlights() {
         "Dedicated account management and priority support";
         "Custom talent pools and preferred provider networks";
         "Advanced analytics and reporting capabilities";
-        "API access for seamless integration with your HR systems";
+        "API access for seamless integration with your HR systems",
         "Customizable workflow and approval processes"
       ]
     }

@@ -1,16 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 ;
-<<<<<<< HEAD
 class TestAutomation {; constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/test-automation.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/test-report.json'); this.startTime = Date.now()};
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;
 ; try {; fs.appendFileSync(this.logFile, logMessage)} catch (error) {; console.error('Error writing to log file: ', error.message)}};
@@ -53,6 +56,7 @@ class TestAutomation {; constructor() {; this.projectRoot = process.cwd(); this.
 // Run the test automation;
 const testAutomation = new TestAutomation();
 testAutomation.run().catch(error = > {; process.exit(1)});
+<<<<<<< HEAD
 =======
 class TestAutomation {;
   constructor() {;
@@ -656,3 +660,7 @@ module.exports = TestAutomation;
 >>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

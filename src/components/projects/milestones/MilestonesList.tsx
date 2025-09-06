@@ -1,18 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+};
 import React, { useState } from 'react';
-import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones';
-import { useAuth } from '@/hooks/useAuth';
-import { MilestoneCard } from './MilestoneCard';
-import { AddMilestoneForm } from './AddMilestoneForm';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
+import {useAuth} from '@/hooks/useAuth';
+import {MilestoneCard} from './MilestoneCard';
+import {AddMilestoneForm} from './AddMilestoneForm';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent} from '@/components/ui/card';
 // lucide-react doesn't export PlusIcon, use our icon wrapper
-import { Plus } from 'lucide-react'
-import { EmptyState } from '@/components/ui/empty-state';
+import {Plus} from 'lucide-react'
+import {EmptyState} from '@/components/ui/empty-state';
 interface MilestonesListProps {
   milestones: Milestone[],
   activities: Record<string, MilestoneActivity[]>;
@@ -37,13 +33,13 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   onDeleteMilestone;
   onUploadDeliverable;
   isSubmitting;
-  onApprove;
+  onApprove,
   onReject
 }) => {
   const [showAddForm, setShowAddForm] = useState(false);
   
   const handleSubmit = async (data: any) => {
-    await onCreateMilestone(data);
+    await onCreateMilestone(data),
     setShowAddForm(false)
   };
 
@@ -124,14 +120,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
     </div>
   )
 };
-<<<<<<< HEAD
 "
 =======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

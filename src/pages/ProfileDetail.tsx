@@ -1,49 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from '@/hooks/use-toast';
-import { SEO } from '@/components/SEO';
-import { Header } from '@/components/Header';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import {
-  MapPin,
-  Clock,
-  Link as LinkIcon,
-  Github,
-  Twitter,
-  Linkedin,
-  CheckCircle2,
-  Mail,
-  Phone,
-  Globe,;
-} from 'lucide-react';
-import { HireNowCTA } from '@/components/profile/HireNowCTA';
 
-=======
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
-import { HireNowCTA } from "@/components/profile/HireNowCTA";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
@@ -80,7 +35,7 @@ export default function ProfileDetail() {
 
         setProfileData(data)
       } catch (err: any) {
-        setError(err.message || "Failed to fetch profile.");
+        setError(err.message || "Failed to fetch profile."),
         toast({
           title: "Error",
           description: err.message || "Failed to fetch profile.",
@@ -254,7 +209,7 @@ export default function ProfileDetail() {
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
-                hourly_rate: profileData?.hourly_rate || 0;
+                hourly_rate: profileData?.hourly_rate || 0,
               }}
             />
             {/* Contact Information */}
@@ -334,7 +289,6 @@ export default function ProfileDetail() {
       </div>
     </>
   );
-<<<<<<< HEAD
 
 };
 }, [profileId]);
@@ -369,11 +323,6 @@ export default function ProfileDetail() {
 }</div> </div> </div> </div> </div> </>) ;
 }'"
 =======
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

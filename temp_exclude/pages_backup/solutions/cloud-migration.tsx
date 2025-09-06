@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/cloud-migration.tsx
 =======
 <<<<<<< HEAD
@@ -10,10 +11,13 @@
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/cloud-migration.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings, Database, Globe, Lock, Smartphone, Brain } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/cloud-migration.tsx
 <<<<<<< HEAD
 =======
@@ -26,24 +30,14 @@ import { Cloud, Shield, Zap, CheckCircle, ArrowRight, BarChart3, Users, Settings
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/cloud-migration.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { Cloud, 
-  Shield, 
-  Zap, 
-  CheckCircle,
-  ArrowRight,
-  BarChart3,
-  Users,
-  Settings,
-  Database,
-  Globe,
-  Lock,
-  Smartphone,
-  Brain;
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Cloud,, Shield,, Zap,, CheckCircle,, ArrowRight,, BarChart3,, Users,, Settings,, Database,, Globe,, Lock,, Smartphone,, Brain,} from 'lucide-react';
 import Layout from "../../components/Layout";";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/cloud-migration.tsx
 =======
@@ -54,6 +48,8 @@ import Layout from "../../components/Layout";";
 
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/cloud-migration.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
@@ -291,12 +287,12 @@ export default function CloudMigrationPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8""
+                  className="bg-white rounded-2xl shadow-lg hover: shadow-2xl transition-all duration-300 p-8""
                 >;
                   <div className="flex items-center mb-6">";
                     <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4">";
                       <service.icon className="w-6 h-6 text-white" />";
-                    </div>;
+                    </div>,
                     <h3 className="text-2xl font-bold text-gray-900">{service.title}</h3>"
                   </div>;
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>"
@@ -363,6 +359,7 @@ export default function CloudMigrationPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/cloud-migration.tsx
 =======
 <<<<<<< HEAD
@@ -374,6 +371,8 @@ export default function CloudMigrationPage() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/cloud-migration.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             >,
               <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Move to the Cloud?,
               </h2>;
@@ -392,6 +391,7 @@ export default function CloudMigrationPage() {
         </section>;
       </div>;
     </Layout>;
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/cloud-migration.tsx
 <<<<<<< HEAD
 =======
@@ -404,8 +404,10 @@ export default function CloudMigrationPage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/cloud-migration.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">
                 Ready to Move to the Cloud?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
@@ -425,5 +427,5 @@ export default function CloudMigrationPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

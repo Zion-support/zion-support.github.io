@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function FiveHundred() {
   return (
     <div className='min-h-screen flex items-center justify-center'>
@@ -8,11 +6,7 @@ export default function FiveHundred() {
   );
 =======
 export default function FiveHundred(){
-  return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>,
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-export default function FiveHundred(){
   return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>;
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

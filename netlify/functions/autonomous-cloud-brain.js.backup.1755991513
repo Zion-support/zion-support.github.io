@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 exports.handler = async function(event, context) {
   const baseUrl = (process.env.SITE_URL || process.env.URL || process.env.DEPLOY_PRIME_URL || '').replace(/\/$/, '');
   const githubToken = process.env.GITHUB_TOKEN || '';
@@ -139,6 +145,9 @@ exports.handler = async function(event, context) {
     const heartbeat = { startAt, endAt: new Date().toISOString(), baseUrl, totals };
     const commitResult = await commitStamp(heartbeat);
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 =======
 // netlify/functions/autonomous-cloud-brain.js
@@ -339,16 +348,22 @@ exports.handler = async function() {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       body: JSON.stringify({ heartbeat, results: invoked, commitResult })
     };
   } catch (err) {
     log(String(err));
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
     return { statusCode: 500, body: JSON.stringify({ error: String(err) }) };
 =======
@@ -372,7 +387,10 @@ exports.handler = async function() {
 =======
     return { statusCode: 500, body: JSON.stringify({ error: String(err) }) };  }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     return { statusCode: 500, body: JSON.stringify({ error: String(err) }) };  }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 };

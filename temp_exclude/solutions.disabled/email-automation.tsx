@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:solutions.disabled/email-automation.tsx
 =======
 <<<<<<< HEAD
@@ -12,6 +13,8 @@
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/solutions.disabled/email-automation.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 interface EmailautomationProps {
   // Add props here as needed
@@ -23,10 +26,9 @@ export default function Emailautomation({ }: EmailautomationProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 =======
 <<<<<<< HEAD:solutions.disabled/email-automation.tsx
 <<<<<<< HEAD
@@ -39,3 +41,5 @@ export default function Emailautomation({ }: EmailautomationProps) {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/solutions.disabled/email-automation.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

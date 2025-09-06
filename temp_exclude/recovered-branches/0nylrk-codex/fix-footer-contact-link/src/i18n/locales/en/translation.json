@@ -20,20 +20,11 @@
     "marketplace": "Marketplace",
 <<<<<<< HEAD:public/locales/en-US/common.json
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    "micro-saas": "Micro SAAS",
-    "categories": "Categories",
->>>>>>> origin/chore/build-setup
     "services": "Services",
-=======
     "services": "Services",
     "micro-saas": "Micro SAAS",
     "categories": "Categories",
->>>>>>> origin/chore/cleanup-and-build
-=======
     "categories": "Categories",
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
     "talent": "Talent",
     "equipment": "Equipment",
     "dashboard": "Dashboard",
@@ -42,11 +33,6 @@
     "post_job": "Post Job",
     "analytics": "Analytics",
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    "faq": "FAQ",
-    "help": "Help Center",
->>>>>>> origin/chore/build-setup
 =======
 >>>>>>> origin/chore/cleanup-and-build
     "about": "About Us",
@@ -57,17 +43,11 @@
     "green-it": "Green IT",
     "developers": "Developer Portal",
     "api-docs": "API Documentation",
-<<<<<<< HEAD
     "sitemap": "Sitemap";
 },
 =======
-    "sitemap": "Sitemap"
-  },
->>>>>>> origin/chore/build-setup
-=======
     "post_job": "Post Job"
   },
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
   "auth": {
     "login": "Login",
     "signup": "Sign Up",
@@ -120,28 +100,8 @@
     "city": "City",
     "country": "Country",
     "subtotal": "Subtotal",
-<<<<<<< HEAD
     "pay": "Pay with Stripe (test)";
 },
-=======
-    "tool_chat_desc": "Get instant assistance from our AI-powered chat"
-  },
-  "jobs": {
-    "post_job_title": "Post a Job",
-    "post_job_description": "Fill out the form below to post your job and find the perfect talent",
-    "job_title": "Job Title",
-    "job_description": "Job Description",
-    "skills_required": "Skills Required",
-    "budget": "Budget",
-    "deadline": "Deadline",
-    "job_posted": "Job posted successfully",
-    "title_placeholder": "Enter job title",
-    "description_placeholder": "Describe the job in detail",
-    "requirements_placeholder": "List required skills and qualifications",
-    "submitting": "Submitting...",
-    "post_job_button": "Post Job"
-  },
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json
   "language": {
     "en": "English",
     "es": "Español",
@@ -169,14 +129,6 @@
     "missing_languages": "Missing in {{count}} languages",
     "edit": "Edit",
     "saved": "Saved",
-<<<<<<< HEAD:public/locales/en-US/common.json
-    "changes_saved": "Translation changes have been saved";
-},
-  "error_boundary": {
-    "message": "Something went wrong.",
-    "retry": "Retry";
-}
-=======
     "pay": "Pay with Stripe (test)"
   },
   "jobs": {
@@ -191,10 +143,7 @@
     "title_placeholder": "Enter job title",
     "description_placeholder": "Describe the job in detail"
   }
->>>>>>> origin/chore/build-setup
 }
-=======
     "changes_saved": "Translation changes have been saved"
   }
 }
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/i18n/locales/en/translation.json

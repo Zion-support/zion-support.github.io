@@ -1,9 +1,9 @@
 
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
-import { Link } from "react-router-dom";
-import { TalentProfile } from "@/types/talent";
+import {Button} from "@/components/ui/button";
+import {Card} from "@/components/ui/card";
+import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
+import {Link} from "react-router-dom";
+import {TalentProfile} from "@/types/talent";
 export interface TalentCardProps {
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
@@ -29,7 +29,7 @@ export function TalentCard({
 
   const handleRequestHire = (e: React.MouseEvent) => {
     e.preventDefault();
-    e.stopPropagation();
+    e.stopPropagation(),
     if (onRequestHire) {
       onRequestHire(talent)
     }
@@ -37,7 +37,7 @@ export function TalentCard({
 
   const handleToggleSave = (e: React.MouseEvent) => {
     e.preventDefault();
-    e.stopPropagation();
+    e.stopPropagation(),
     if (onToggleSave) {
       onToggleSave(talent.id, !isSaved)
     }

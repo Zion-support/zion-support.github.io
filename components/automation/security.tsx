@@ -1,57 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  
-=======
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-interface AuditReport {
-  generatedAt?: string;
-  metadata?: any;
-  vulnerabilities?: any;
-  error?: string;
-  raw?: string
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
-type Props = { report: AuditReport },
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
-    const file = path.join(process.cwd(), 'publicautomationsecurity-audit.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-    return { props: { report: data }, revalidate: 86400 }
-  } catch {
-    return { props: { report: { error: 'No audit report yet.' } }, revalidate: 86400 }
-  }
 };
-<<<<<<< HEAD
 </pre> </div>) 
-=======
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-interface AuditReport {
-  generatedAt?: string;
-  metadata?: any;
-  vulnerabilities?: any;
-  error?: string;
-  raw?: string
-}
-
-type Props = { report: AuditReport },
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
-    const file = path.join(process.cwd(), 'publicautomationsecurity-audit.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-    return { props: { report: data }, revalidate: 86400 }
-  } catch {
-    return { props: { report: { error: 'No audit report yet.' } }, revalidate: 86400 }
-  }
-};
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function SecurityAudit({ report }: Props) {
   return (
@@ -69,9 +20,6 @@ export default function SecurityAudit({ report }: Props) {
       </pre>
     </div>
   );
-<<<<<<< HEAD
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

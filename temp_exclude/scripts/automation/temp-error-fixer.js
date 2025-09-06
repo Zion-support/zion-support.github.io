@@ -1,11 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/automation/temp-error-fixer.js
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/automation/temp-error-fixer.js
-const originalLog = console.log;
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+const originalLog = console.log;
         const originalLog = console.log;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:scripts/automation/temp-error-fixer.js
 <<<<<<< HEAD
@@ -15,6 +18,8 @@ const originalLog = console.log;
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/automation/temp-error-fixer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
         const originalLog = console.log;
 =======
 const originalLog = console.log;
@@ -30,6 +35,7 @@ const originalLog = console.log;
             }
           }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/automation/temp-error-fixer.js
 =======
 <<<<<<< HEAD
@@ -41,6 +47,8 @@ const originalLog = console.log;
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/automation/temp-error-fixer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
           originalLog(...args);
         };
         try {
@@ -52,6 +60,7 @@ const originalLog = console.log;
           console.error('Script error:', error.message);
           process.exit(1);
         }
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/automation/temp-error-fixer.js
 <<<<<<< HEAD
 =======
@@ -64,6 +73,8 @@ const originalLog = console.log;
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/automation/temp-error-fixer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
           originalLog(...args)};
         try {
           // // require('/workspace/scripts/automation/console-error-fixer.cjs');
@@ -72,20 +83,25 @@ const originalLog = console.log;
           console.error('Script "error": ', error.message);
           process.exit(1)}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/automation/temp-error-fixer.js
 const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/automation/temp-error-fixer.js
 <<<<<<< HEAD
-const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
+const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:scripts/automation/temp-error-fixer.js
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/automation/temp-error-fixer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
 =======
 const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}

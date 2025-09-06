@@ -1,17 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/education.tsx
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/education.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import Layout from '../../components/Layout';
-import { GraduationCap, Users, BookOpen, Laptop, Globe } from 'lucide-react';
+import {GraduationCap,, Users,, BookOpen,, Laptop,, Globe} from 'lucide-react';
 import React from 'react';
 import Layout from '../../components/Layout';';
-import { GraduationCap, Users, BookOpen, Laptop, Globe, CheckCircle, ArrowRight } from 'lucide-react';
+import {GraduationCap,, Users,, BookOpen,, Laptop,, Globe,, CheckCircle,, ArrowRight} from 'lucide-react';
 import Layout from '../../components/Layout';
-import { GraduationCap, Users, BookOpen, CheckCircle, ArrowRight } from 'lucide-react';
+import {GraduationCap,, Users,, BookOpen,, CheckCircle,, ArrowRight} from 'lucide-react';
 const features = [;
   {}
     icon: GraduationCap,
@@ -26,23 +29,18 @@ const features = [;
 =======
     description: 'Comprehensive LMS platforms that support online and blended learning environments.'',
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/education.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  GraduationCap, 
-  Users, 
-  BookOpen, 
-  Laptop, 
-  Globe, 
-  CheckCircle, 
-  ArrowRight 
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {GraduationCap,, Users,, BookOpen,, Laptop,, Globe,, CheckCircle,, ArrowRight} from 'lucide-react';
 
 const features = [
   {
@@ -50,6 +48,7 @@ const features = [
     title: 'Learning Management System',
     description: 'Comprehensive LMS with course management and student tracking',
     benefits: ['Course creation', 'Student management', 'Progress tracking', 'Assessments']
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/education.tsx
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -73,6 +72,8 @@ const features = [;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/education.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   },
   {}
 <<<<<<< HEAD
@@ -87,10 +88,6 @@ const features = [;
   },
   {}
     icon: Laptop,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     title: 'Virtual Classrooms,',
     description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'',
   },
@@ -334,10 +331,10 @@ export default function EducationSolutionsPage() {
             </div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => (,
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">"
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover: border-blue-500 transition-colors">"
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
                     <feature.icon className="w-6 h-6 text-white" />";
-                  </div>;
+                  </div>,
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
                   <p className="text-gray-300">{feature.description}</p>"
                 </div>;
@@ -351,6 +348,7 @@ const benefits = [
 ];
 export default function EducationSolutions() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages_backup/solutions/education.tsx
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
@@ -358,6 +356,8 @@ export default function EducationSolutions() {
 =======
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     title: 'Virtual Classrooms',
     description: 'Online learning platform with video conferencing and collaboration',
     benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording']
@@ -366,8 +366,11 @@ export default function EducationSolutions() {
 
 export default function EducationSolutionsPage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/education.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   return (
     <Layout
       title="Education Solutions - Zion Tech Group"
@@ -410,19 +413,20 @@ export default function EducationSolutionsPage() {
                 and streamline educational operations.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/education.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/education.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages_backup/solutions/education.tsx
 <<<<<<< HEAD
@@ -433,6 +437,8 @@ export default function EducationSolutionsPage() {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/education.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 =======
@@ -446,12 +452,15 @@ export default function EducationSolutionsPage() {
                     <feature.icon className="w-6 h-6 text-indigo-600" />
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/education.tsx
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/education.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -573,6 +582,7 @@ export default function EducationSolutionsPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/education.tsx
 =======
 <<<<<<< HEAD
@@ -585,6 +595,8 @@ export default function EducationSolutionsPage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/education.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -597,6 +609,7 @@ export default function EducationSolutionsPage() {
                   </div>
                 </motion.div>
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/education.tsx
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -732,12 +745,14 @@ export default function EducationSolutionsPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/education.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             </div>
           </div>
         </section>
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Education?
             </h2>
@@ -757,16 +772,17 @@ export default function EducationSolutionsPage() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/education.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/education.tsx
-    </Layout>
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     </Layout>
-=======
+    </Layout>
     </>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages_backup/solutions/education.tsx
 <<<<<<< HEAD
@@ -782,4 +798,8 @@ export default function EducationSolutionsPage() {
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
+=======
+    </>
+  ),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }

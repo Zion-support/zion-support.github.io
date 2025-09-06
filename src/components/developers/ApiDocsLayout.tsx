@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { SearchSuggestion } from '@/types/search';
-import React, { useState } from 'react';
-=======
-
-import { SearchSuggestion } from "@/types/search";
-import React, { useState } from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  const currentPath = router.pathname;
+export default ApiDocsLayout;
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { Search } from 'lucide-react'
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { cn } from "@/lib/utils";
-import {
- getDocsSearchPath;
- docsSearchSuggestions
-} from "@/data/docsSearchData";
+import {useRouter} from 'next/router';
+import {Search} from 'lucide-react'
+import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
+import {cn} from "@/lib/utils";
+import {getDocsSearchPath, docsSearchSuggestions} from "@/data/docsSearchData";
 
 interface ApiDocsLayoutProps {
   children: React.ReactNode
@@ -35,7 +25,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
     const path = getDocsSearchPath(suggestion.text);
     if (path) {
-      router.push(path);
+      router.push(path),
       setSearchValue("")
     }
   };
@@ -44,7 +34,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
     e.preventDefault();
     const path = getDocsSearchPath(searchValue);
     if (path) {
-      router.push(path);
+      router.push(path),
       setSearchValue("")
     }
   };
@@ -99,7 +89,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   );
 }
 
-<<<<<<< HEAD
 };
 /* Sidebar */ ";
 }<div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto"> <Link href="/developers/docs"className="flex items-center mb-8"> <div className="bg-gradient-to-r from-zion-purple to-zion-cyan rounded-md w-8 h-8 mr-3 flex items-center justify-center"> <span className="text-white font-bold">Z</span> </div> <span className="font-bold text-white">API Docs</span> </Link> <div className="mb-6"> /> </form> </div>) ;
@@ -114,14 +103,6 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 }export default ApiDocsLayout;
 "
 =======
-
-<<<<<<< HEAD
-  const currentPath = router.pathname;
-<<<<<<< HEAD
-
-export default ApiDocsLayout;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default ApiDocsLayout;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

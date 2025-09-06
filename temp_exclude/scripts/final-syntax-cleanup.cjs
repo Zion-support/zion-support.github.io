@@ -1,10 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/final-syntax-cleanup.cjs
 =======
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/final-syntax-cleanup.cjs
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 #!/usr/bin/env node
 
 =======
@@ -89,12 +92,16 @@ class FinalSyntaxCleanup {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 const fs = require('fs');
 console.log('🔧 Final Syntax Cleanup');
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/final-syntax-cleanup.cjs
 console.log('=');
 <<<<<<< HEAD
 =======
 console.log('======================');
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/final-syntax-cleanup.cjs
+=======
+console.log('=');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 
 =======
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

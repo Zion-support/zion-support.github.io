@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')      return size}}
 
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 /**
@@ -237,16 +241,28 @@ async function runSimpleAutomation() {
       return size}}
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
     totalSize = getDirectorySize(buildDir);
+=======
+    totalSize = getDirectorySize(buildDir);
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     const recommendations = [];
     if ( { // > 1MB
       recommendations.push('Consider code splitting to reduce bundle size')}
     if (jsSize > 512 * 1024) { // > 512KB
       recommendations.push('JavaScript bundle is large, consider optimization')}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     return {) {
      { // > 1MB
       recommendations.push('Consider code splitting to reduce bundle size')}
     if (jsSize > 512 * 1024) { // > 512KB
       recommendations.push('JavaScript bundle is large, consider optimization')}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     return {}
       "totalSize": totalSize,
       "jsSize": jsSize,
@@ -254,6 +270,10 @@ async function runSimpleAutomation() {
       "recommendations": recommendations
     }}
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 if (require.main === module) {
   const runner = new SimpleAutomationRunner();
   runner.run().catch(error => {
@@ -262,6 +282,7 @@ if (require.main === module) {
   });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = SimpleAutomationRunner;
@@ -269,6 +290,13 @@ module.exports = SimpleAutomationRunner;
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
+=======
+
+module.exports = { runSimpleAutomation }) {
+     {
+  runSimpleAutomation().catch(console.error)}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 module.exports = { runSimpleAutomation }}
 const { execSync } = require('child_process')
   console.log(' Starting Simple Automation Runner...')
@@ -292,7 +320,11 @@ const { execSync } = require('child_process')
         return { "status": 'skipped', "message"}
     console.error(' Simple automation "failed")
 <<<<<<< HEAD
+<<<<<<< HEAD
         "status"
 =======
         "status"
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+        "status"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

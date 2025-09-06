@@ -1,23 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Label } from '@/components/ui/label';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
-=======
-import React, { useState } from "react";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { useAuth } from "@/context/auth/AuthProvider";
-import { AlertCircle } from 'lucide-react'
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
+import {useAuth} from "@/context/auth/AuthProvider";
+import {AlertCircle} from 'lucide-react'
+import {Alert, AlertDescription} from "@/components/ui/alert";
+import {PasswordStrengthMeter} from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function SignUpForm() {
 
@@ -43,7 +30,7 @@ export function SignUpForm() {
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError("");
+    setError(""),
     setFieldErrors({});
     setIsLoading(true);
 
@@ -253,7 +240,6 @@ export function SignUpForm() {
       </p>
     </div>
   );
-<<<<<<< HEAD
 
 }else {;
   const {;
@@ -288,11 +274,6 @@ if (error) {;
 }</Button> </form> <Link href="/login" className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer" > Sign In </Link> </p> </div>) ;
 }"
 =======
-
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

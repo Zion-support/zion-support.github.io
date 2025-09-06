@@ -7,46 +7,21 @@ export default function UNBridge() {
     type: 'Workforce Dev',
     regionalScope: 'Global South',
     budgetOrResolution: 'USD 3M over 24 months',
-<<<<<<< HEAD
     supportingMultiverses: 'Digital Labor, AI Ethics',
-<<<<<<< HEAD
     promptAssist:
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
     language: 'en',
-  });
-=======
-    promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
-    language: 'en'}),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    supportingMultiverses: 'Digital Labor, AI Ethics';
-    promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.';
-    language: 'en'}),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  const [loading, setLoading] = useState(false);
+  });  const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const onChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
     const { name, value } = e.target;
-    setForm(f => ({ ...f, [name]: value }));
-=======
-  const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setForm((f) => ({ ...f, [name]: value }))
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setForm((f) => ({ ...f, [name]: value }))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  };
+    setForm(f => ({ ...f, [name]: value }));  };
 
   async function generate() {
     setLoading(true);
@@ -55,8 +30,6 @@ export default function UNBridge() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-<<<<<<< HEAD
-<<<<<<< HEAD
           ...form,
           supportingMultiverses: form.supportingMultiverses
             .split(',')
@@ -68,52 +41,22 @@ export default function UNBridge() {
       setResult(data);
     } finally {
       setLoading(false);
-    }
-=======
-          ...form;
-          supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
-      const data = await res.json();
-      setResult(data)
-    } finally { setLoading(false) }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-          ...form;
-          supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
-      const data = await res.json();
-      setResult(data)
-    } finally { setLoading(false) }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  }
+    }  }
 
   async function translate(targetLanguage: string) {
     if (!result?.markdown) return;
-    setLoading(true);
+    setLoading(true),
     try {
       const res = await fetch('/api/proposals/translate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
         body: JSON.stringify({ markdown: result.markdown, targetLanguage }),
       });
       const data = await res.json();
       setTranslated(data.translated);
     } finally {
       setLoading(false);
-    }
-=======
-        body: JSON.stringify({ markdown: result.markdown, targetLanguage })});
-      const data = await res.json();
-      setTranslated(data.translated)
-    } finally { setLoading(false) }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        body: JSON.stringify({ markdown: result.markdown, targetLanguage })});
-      const data = await res.json();
-      setTranslated(data.translated)
-    } finally { setLoading(false) }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  }
+    }  }
 
   async function exportArtifacts() {
     if (!result?.meta?.id) return;
@@ -122,71 +65,56 @@ export default function UNBridge() {
       await fetch('/api/proposals/export', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
         body: JSON.stringify({ id: result.meta.id }),
       });
       // Refresh meta
       const list = await fetch('/api/proposals/list');
       const { proposals } = await list.json();
-      const updated = proposals.find((p: any) => p.id === result.meta.id);
+      const updated = proposals.find((p: any) => p.id === result.meta.id),
       setResult((r: any) => ({ ...r, meta: updated }));
     } finally {
       setLoading(false);
-    }
-=======
-        body: JSON.stringify({ id: result.meta.id })}),
-      // Refresh meta
-      const list = await fetch('/api/proposals/list');
-      const { proposals } = await list.json();
-      const updated = proposals.find((p: any) => p.id === result.meta.id),
-      setResult((r: any) => ({ ...r, meta: updated }))
-    } finally { setLoading(false) }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        body: JSON.stringify({ id: result.meta.id })}),
-      // Refresh meta
-      const list = await fetch('/api/proposals/list');
-      const { proposals } = await list.json();
-      const updated = proposals.find((p: any) => p.id === result.meta.id),
-      setResult((r: any) => ({ ...r, meta: updated }))
-    } finally { setLoading(false) }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  }
+    }  }
 
   async function submit(channels: string[]) {
     if (!result?.meta?.id) return;
-    setLoading(true);
+    setLoading(true),
     try {
       const res = await fetch('/api/proposals/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
         body: JSON.stringify({ id: result.meta.id, channels }),
       });
-=======
-        body: JSON.stringify({ id: result.meta.id, channels })});
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       const data = await res.json();
-      setResult((r: any) => ({ ...r, meta: data.meta }))
-    } finally { setLoading(false) }
+      setResult((r: any) => ({ ...r, meta: data.meta }));
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Global Outreach: UN Bridge</h1>
-      <div className="grid md:grid-cols-2 gap-6">
-        <div className="space-y-3">
-          <label className="block">
-            <span className="text-sm">Title</span>
-            <input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
+    <div className='space-y-6'>
+      <h1 className='text-2xl font-semibold'>Global Outreach: UN Bridge</h1>
+      <div className='grid md:grid-cols-2 gap-6'>
+        <div className='space-y-3'>
+          <label className='block'>
+            <span className='text-sm'>Title</span>
+            <input
+              name='title'
+              value={form.title}
+              onChange={onChange}
+              className='w-full border rounded p-2'
+            />
           </label>
-          <label className="block">
-            <span className="text-sm">Target institution</span>
-            <input name="targetInstitution" value={form.targetInstitution} onChange={onChange} className="w-full border rounded p-2" />
+          <label className='block'>
+            <span className='text-sm'>Target institution</span>
+            <input
+              name='targetInstitution'
+              value={form.targetInstitution}
+              onChange={onChange}
+              className='w-full border rounded p-2'
+            />
           </label>
-<<<<<<< HEAD
           <label className='block'>
             <span className='text-sm'>Type</span>
             <select
@@ -194,44 +122,12 @@ export default function UNBridge() {
               value={form.type}
               onChange={onChange}
               className='w-full border rounded p-2'
-            >
-=======
-        body: JSON.stringify({ id: result.meta.id, channels })});
-      const data = await res.json();
-      setResult((r: any) => ({ ...r, meta: data.meta }))
-    } finally { setLoading(false) }
-  }
-
-  return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Global Outreach: UN Bridge</h1>
-      <div className="grid md:grid-cols-2 gap-6">
-        <div className="space-y-3">
-          <label className="block">
-            <span className="text-sm">Title</span>
-            <input name="title" value={form.title} onChange={onChange} className="w-full border rounded p-2" />
-          </label>
-          <label className="block">
-            <span className="text-sm">Target institution</span>
-            <input name="targetInstitution" value={form.targetInstitution} onChange={onChange} className="w-full border rounded p-2" />
-          </label>
-          <label className="block">
-            <span className="text-sm">Type</span>
-            <select name="type" value={form.type} onChange={onChange} className="w-full border rounded p-2">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-          <label className="block">
-            <span className="text-sm">Type</span>
-            <select name="type" value={form.type} onChange={onChange} className="w-full border rounded p-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              <option>Workforce Dev</option>
+            >              <option>Workforce Dev</option>
               <option>AI Ethics</option>
               <option>Digital ID</option>
               <option>Education</option>
             </select>
           </label>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <label className='block'>
             <span className='text-sm'>Regional scope</span>
             <input
@@ -240,55 +136,115 @@ export default function UNBridge() {
               onChange={onChange}
               className='w-full border rounded p-2'
             />
-=======
-          <label className="block">
-            <span className="text-sm">Regional scope</span>
-            <input name="regionalScope" value={form.regionalScope} onChange={onChange} className="w-full border rounded p-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </label>
-          <label className="block">
-            <span className="text-sm">Budget / Resolution goals</span>
-            <input name="budgetOrResolution" value={form.budgetOrResolution} onChange={onChange} className="w-full border rounded p-2" />
+          <label className='block'>
+            <span className='text-sm'>Budget / Resolution goals</span>
+            <input
+              name='budgetOrResolution'
+              value={form.budgetOrResolution}
+              onChange={onChange}
+              className='w-full border rounded p-2'
+            />
           </label>
-          <label className="block">
-            <span className="text-sm">Supporting multiverse(s) (comma separated)</span>
-            <input name="supportingMultiverses" value={form.supportingMultiverses} onChange={onChange} className="w-full border rounded p-2" />
+          <label className='block'>
+            <span className='text-sm'>
+              Supporting multiverse(s) (comma separated)
+            </span>
+            <input
+              name='supportingMultiverses'
+              value={form.supportingMultiverses}
+              onChange={onChange}
+              className='w-full border rounded p-2'
+            />
           </label>
-          <label className="block">
-            <span className="text-sm">GPT Prompt Assist</span>
-            <textarea name="promptAssist" rows={5} value={form.promptAssist} onChange={onChange} className="w-full border rounded p-2" />
+          <label className='block'>
+            <span className='text-sm'>GPT Prompt Assist</span>
+            <textarea
+              name='promptAssist'
+              rows={5}
+              value={form.promptAssist}
+              onChange={onChange}
+              className='w-full border rounded p-2'
+            />
           </label>
-          <div className="flex gap-3">
-            <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working…' : 'Generate Proposal'}</button>
+          <div className='flex gap-3'>
+            <button
+              onClick={generate}
+              disabled={loading}
+              className='px-4 py-2 bg-black text-white rounded'
+            >
+              {loading ? 'Working…' : 'Generate Proposal'}
+            </button>
           </div>
         </div>
-        <div className="space-y-3">
-          <div className="text-sm opacity-70">Output</div>
-          <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
+        <div className='space-y-3'>
+          <div className='text-sm opacity-70'>Output</div>
+          <div className='border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50'>
             {result?.markdown || 'No draft yet'}
           </div>
-          <div className="flex items-center gap-2">
-            <button onClick={() => translate('fr')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate FR</button>
-            <button onClick={() => translate('es')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate ES</button>
-            <button onClick={() => translate('ar')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate AR</button>
+          <div className='flex items-center gap-2'>
+            <button
+              onClick={() => translate('fr')}
+              disabled={loading || !result}
+              className='px-3 py-2 border rounded'
+            >
+              Translate FR
+            </button>
+            <button
+              onClick={() => translate('es')}
+              disabled={loading || !result}
+              className='px-3 py-2 border rounded'
+            >
+              Translate ES
+            </button>
+            <button
+              onClick={() => translate('ar')}
+              disabled={loading || !result}
+              className='px-3 py-2 border rounded'
+            >
+              Translate AR
+            </button>
           </div>
           {translated && (
-            <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
+            <div className='border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50'>
               {translated}
             </div>
           )}
-          <div className="flex items-center gap-2">
-            <button onClick={exportArtifacts} disabled={loading || !result} className="px-3 py-2 border rounded">Export PDF + Sign + IPFS</button>
-            <button onClick={() => submit(['email'])} disabled={loading || !result} className="px-3 py-2 border rounded">Submit (Email)</button>
+          <div className='flex items-center gap-2'>
+            <button
+              onClick={exportArtifacts}
+              disabled={loading || !result}
+              className='px-3 py-2 border rounded'
+            >
+              Export PDF + Sign + IPFS
+            </button>
+            <button
+              onClick={() => submit(['email'])}
+              disabled={loading || !result}
+              className='px-3 py-2 border rounded'
+            >
+              Submit (Email)
+            </button>
           </div>
           {result?.meta && (
-            <div className="text-sm space-y-1">
-              <div><span className="font-medium">Status:</span> {result.meta.status}</div>
+            <div className='text-sm space-y-1'>
+              <div>
+                <span className='font-medium'>Status:</span>{' '}
+                {result.meta.status}
+              </div>
               {result.meta.artifacts?.markdownPath && (
-                <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</a></div>
+                <div>
+                  <a
+                    className='text-blue-600 underline'
+                    href={result.meta.artifacts.markdownPath}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    Markdown
+                  </a>
+                </div>
               )}
               {result.meta.artifacts?.pdfPath && (
-<<<<<<< HEAD
                 <div>
                   <a
                     className='text-blue-600 underline'
@@ -298,89 +254,17 @@ export default function UNBridge() {
                   >
                     PDF
                   </a>
-                </div>
-=======
-          <label className="block">
-            <span className="text-sm">Regional scope</span>
-            <input name="regionalScope" value={form.regionalScope} onChange={onChange} className="w-full border rounded p-2" />
-          </label>
-          <label className="block">
-            <span className="text-sm">Budget / Resolution goals</span>
-            <input name="budgetOrResolution" value={form.budgetOrResolution} onChange={onChange} className="w-full border rounded p-2" />
-          </label>
-          <label className="block">
-            <span className="text-sm">Supporting multiverse(s) (comma separated)</span>
-            <input name="supportingMultiverses" value={form.supportingMultiverses} onChange={onChange} className="w-full border rounded p-2" />
-          </label>
-          <label className="block">
-            <span className="text-sm">GPT Prompt Assist</span>
-            <textarea name="promptAssist" rows={5} value={form.promptAssist} onChange={onChange} className="w-full border rounded p-2" />
-          </label>
-          <div className="flex gap-3">
-            <button onClick={generate} disabled={loading} className="px-4 py-2 bg-black text-white rounded">{loading ? 'Working…' : 'Generate Proposal'}</button>
-          </div>
-        </div>
-        <div className="space-y-3">
-          <div className="text-sm opacity-70">Output</div>
-          <div className="border rounded p-3 h-96 overflow-auto whitespace-pre-wrap bg-gray-50">
-            {result?.markdown || 'No draft yet'}
-          </div>
-          <div className="flex items-center gap-2">
-            <button onClick={() => translate('fr')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate FR</button>
-            <button onClick={() => translate('es')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate ES</button>
-            <button onClick={() => translate('ar')} disabled={loading || !result} className="px-3 py-2 border rounded">Translate AR</button>
-          </div>
-          {translated && (
-            <div className="border rounded p-3 h-60 overflow-auto whitespace-pre-wrap bg-gray-50">
-              {translated}
-            </div>
-          )}
-          <div className="flex items-center gap-2">
-            <button onClick={exportArtifacts} disabled={loading || !result} className="px-3 py-2 border rounded">Export PDF + Sign + IPFS</button>
-            <button onClick={() => submit(['email'])} disabled={loading || !result} className="px-3 py-2 border rounded">Submit (Email)</button>
-          </div>
-          {result?.meta && (
-            <div className="text-sm space-y-1">
-              <div><span className="font-medium">Status:</span> {result.meta.status}</div>
-              {result.meta.artifacts?.markdownPath && (
-                <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</a></div>
-              )}
-              {result.meta.artifacts?.pdfPath && (
-                <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</a></div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</a></div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              )}
+                </div>              )}
               {result.meta.artifacts?.ipfsCid && (
                 <div>IPFS CID: {result.meta.artifacts.ipfsCid}</div>
               )}
               {result.meta.artifacts?.signature && (
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div>
                   Signature: {result.meta.artifacts.signature.slice(0, 30)}…
-                </div>
-=======
-                <div>Signature: {result.meta.artifacts.signature.slice(0, 30)}…</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                <div>Signature: {result.meta.artifacts.signature.slice(0, 30)}…</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              )}
+                </div>              )}
             </div>
           )}
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
-  )
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

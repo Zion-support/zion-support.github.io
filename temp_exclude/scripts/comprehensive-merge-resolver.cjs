@@ -38,18 +38,23 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 console.log('🚀 Comprehensive Merge Conflict Resolver');
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/comprehensive-merge-resolver.cjs
 console.log('==');
 <<<<<<< HEAD
 =======
 console.log('=====================================');
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/comprehensive-merge-resolver.cjs
+=======
+console.log('==');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 
 =======
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 // Function to remove merge conflict markers
 function removeMergeConflictMarkers(content) {
   return content
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/comprehensive-merge-resolver.cjs
     .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
     .replace(//g, '')
@@ -67,6 +72,11 @@ function removeMergeConflictMarkers(content) {
     .replace(/>>>>>>> [a-f0-9]+/g, '');
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/comprehensive-merge-resolver.cjs
+=======
+    .replace(/[\s\S]*?[\s\S]*?    .replace(/[\s\S]*?    .replace(/[\s\S]*?    .replace(//g, '')
+    .replace(//g, '')
+    .replace(/}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 
 =======
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
@@ -133,6 +143,7 @@ function processFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
     // Check for merge conflict markers
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:scripts/comprehensive-merge-resolver.cjs
@@ -213,6 +224,8 @@ function findFilesWithConflicts() {
           if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/comprehensive-merge-resolver.cjs
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             files.push(fullPath);
           }
         } catch (error) {

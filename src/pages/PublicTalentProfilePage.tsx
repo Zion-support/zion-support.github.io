@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from '@/components/ui/use-toast';
-import { SEO } from '@/components/SEO';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { HireNowCTA } from '@/components/profile/HireNowCTA';
-=======
 
-import { useState, useEffect } from "react";
-import { useRouter } from "next/router";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/components/ui/use-toast";
-import { SEO } from "@/components/SEO";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { HireNowCTA } from "@/components/profile/HireNowCTA";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
 import { Badge } from '@/components/ui/badge';
@@ -240,7 +218,7 @@ export default function ProfilePage() {
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
-                hourly_rate: profileData?.hourly_rate || 0;
+                hourly_rate: profileData?.hourly_rate || 0,
               }}
             />
             {/* Placeholder for other sidebar elements */}
@@ -249,7 +227,6 @@ export default function ProfilePage() {
       </div>
     </>
   );
-<<<<<<< HEAD
 
 };
 if (profileId) {;
@@ -291,9 +268,6 @@ if (isLoading) {";
 }</div> </div> </div> </>) ;
 }'"
 =======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

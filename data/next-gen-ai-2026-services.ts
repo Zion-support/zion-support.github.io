@@ -1,6 +1,4 @@
 export interface NextGenAi2026Service {
-<<<<<<< HEAD
-<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -10,94 +8,43 @@ export interface NextGenAi2026Service {
   link: string;
   category: string;
   realImplementation: boolean;
-=======
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  description: string,
-  features: string[],
-  link: string,
-  category: string,
-  realImplementation: boolean,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   contactInfo: {
-    mobile: string,
-    email: string,
-    address: string
-  }
-}
+    mobile: string;
+    email: string;
+    address: string;
+  };
 
 export const nextGenAI2026Services: NextGenAi2026Service[] = [
   {
-    id: "2026-next-gen-ai",
-    name: "2026 Next-Gen AI Platform",
-    tagline: "Next-generation AI for 2026",
-    price: "$299/month",
-    description: "Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.",
+    id: '2026-next-gen-ai',
+    name: '2026 Next-Gen AI Platform',
+    tagline: 'Next-generation AI for 2026',
+    price: '$299/month',
+    description:
+      'Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.',
     features: [
-      "Next-gen AI capabilities",
-      "Advanced algorithms",
-      "Future-ready features",
-      "Innovation platform",
-      "Expert support"
+      'Next-gen AI capabilities',
+      'Advanced algorithms',
+      'Future-ready features',
+      'Innovation platform',
+      'Expert support',
     ],
-    link: "/services/2026-next-gen-ai",
-    category: "Next-Gen AI 2026",
+    link: '/services/2026-next-gen-ai',
+    category: 'Next-Gen AI 2026',
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];
-=======
-  id: string,
-  name: string,
-  tagline: string,
-  price: string,
-  description: string,
-  features: string[],
-  link: string,
-  category: string,
-  realImplementation: boolean,
-  contactInfo: {
-    mobile: string,
-    email: string,
-    address: string
-  }
-}
-
-export const nextGenAI2026Services: NextGenAi2026Service[] = [
-  {
-    id: "2026-next-gen-ai",
-    name: "2026 Next-Gen AI Platform",
-    tagline: "Next-generation AI for 2026",
-    price: "$299/month",
-    description: "Advanced next-generation AI platform designed specifically for 2026 with cutting-edge capabilities.",
-    features: [
-      "Next-gen AI capabilities",
-      "Advanced algorithms",
-      "Future-ready features",
-      "Innovation platform",
-      "Expert support"
-    ],
-    link: "/services/2026-next-gen-ai",
-    category: "Next-Gen AI 2026",
-    realImplementation: true,
-    contactInfo: {
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
-<<<<<<< HEAD
 ],
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

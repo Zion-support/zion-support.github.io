@@ -1,145 +1,274 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket} from 'lucide-react';
 
 interface Service {
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
+  id: string,
+  name: string,
+  tagline: string,
+  description: string,
   price?: string | {
     monthly?: number;
     yearly?: number;
     currency?: string;
     trialDays?: number;
-    setupTime?: string;
+    setupTime?: string
   };
   period?: string;
   pricing?: any;
-  features: string[];
+  features: string[],
   popular?: boolean;
-  category?: string;
-  icon?: React.ReactNode;
-  badge?: string;
-  href?: string;
-  onClick?: () => void;
+  category: string,
+  icon: string,
+  marketPrice?: string;
+  competitors?: string[];
+  targetMarket?: string;
+  useCases?: string[];
+  integration?: string[];
+  benefits?: string[]
 }
 
-interface UltraFuturisticServiceCard2026Props {
-  service: Service;
-  className?: string;
-  onClick?: () => void;
+interface ServiceCardProps {
+  service: Service,
+  variant?: 'ai' | 'quantum' | 'space' | 'cybersecurity' | 'enterprise' | 'automation' | 'it' | 'emerging' | 'premium' | 'default'
 }
 
-const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Props> = React.memo(({ 
-  service, 
-  className = '', 
-  onClick 
-}) => {
-  const handleClick = () => {
-    if (onClick) {
-      onClick();
-    } else if (service.onClick) {
-      service.onClick();
+const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, variant = 'default' }) => {
+  const getVariantStyles = () => {
+    switch (variant) {
+      case 'ai':
+        return {
+          gradient: 'from-purple-600 via-pink-600 to-purple-700',
+          borderColor: 'border-purple-400/30',
+          textColor: 'text-purple-400',
+          iconBg: 'bg-purple-500/20',
+          iconBorder: 'border-purple-400/30'
+        };
+      case 'quantum':
+        return {
+          gradient: 'from-cyan-600 via-blue-600 to-cyan-700',
+          borderColor: 'border-cyan-400/30',
+          textColor: 'text-cyan-400',
+          iconBg: 'bg-cyan-500/20',
+          iconBorder: 'border-cyan-400/30'
+        };
+      case 'space':
+        return {
+          gradient: 'from-indigo-600 via-purple-600 to-indigo-700',
+          borderColor: 'border-indigo-400/30',
+          textColor: 'text-indigo-400',
+          iconBg: 'bg-indigo-500/20',
+          iconBorder: 'border-indigo-400/30'
+        };
+      case 'cybersecurity':
+        return {
+          gradient: 'from-red-600 via-orange-600 to-red-700',
+          borderColor: 'border-red-400/30',
+          textColor: 'text-red-400',
+          iconBg: 'bg-red-500/20',
+          iconBorder: 'border-red-400/30'
+        };
+      case 'enterprise':
+        return {
+          gradient: 'from-indigo-600 via-purple-600 to-indigo-700',
+          borderColor: 'border-indigo-400/30',
+          textColor: 'text-indigo-400',
+          iconBg: 'bg-indigo-500/20',
+          iconBorder: 'border-indigo-400/30'
+        };
+      case 'automation':
+        return {
+          gradient: 'from-green-600 via-emerald-600 to-green-700',
+          borderColor: 'border-green-400/30',
+          textColor: 'text-green-400',
+          iconBg: 'bg-green-500/20',
+          iconBorder: 'border-green-400/30'
+        };
+      case 'it':
+        return {
+          gradient: 'from-blue-600 via-indigo-600 to-blue-700',
+          borderColor: 'border-blue-400/30',
+          textColor: 'text-blue-400',
+          iconBg: 'bg-blue-500/20',
+          iconBorder: 'border-blue-400/30'
+        };
+      case 'emerging':
+        return {
+          gradient: 'from-yellow-600 via-orange-600 to-yellow-700',
+          borderColor: 'border-yellow-400/30',
+          textColor: 'text-yellow-400',
+          iconBg: 'bg-yellow-500/20',
+          iconBorder: 'border-yellow-400/30'
+        };
+      case 'premium':
+        return {
+          gradient: 'from-amber-600 via-yellow-600 to-amber-700',
+          borderColor: 'border-amber-400/30',
+          textColor: 'text-amber-400',
+          iconBg: 'bg-amber-500/20',
+          iconBorder: 'border-amber-400/30'
+        };
+      default:
+        return {
+          gradient: 'from-gray-600 via-gray-700 to-gray-800',
+          borderColor: 'border-gray-400/30',
+          textColor: 'text-gray-400',
+          iconBg: 'bg-gray-500/20',
+          iconBorder: 'border-gray-400/30'
+        }
     }
   };
 
-  const formatPrice = (price: any) => {
-    if (typeof price === 'string') return price;
-    if (typeof price === 'object' && price.monthly) {
-      return `$${price.monthly}/mo`;
-    }
-    return 'Contact Us';
+  const styles = getVariantStyles();
+
+  const getCategoryIcon = (category: string) => {
+    if (category.includes('AI')) return Brain;
+    if (category.includes('Quantum')) return Atom;
+    if (category.includes('Space')) return Rocket;
+    if (category.includes('Cybersecurity')) return Shield;
+    return TrendingUp
   };
+
+  const CategoryIcon = getCategoryIcon(service.category);
 
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      whileHover={{ y: -8, scale: 1.02 }}
-      transition={{ duration: 0.3, ease: 'easeOut' }}
-      className={`group relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-500 cursor-pointer ${className}`}
-      onClick={handleClick}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className="group relative"
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-      
-      {/* Content */}
-      <div className="relative z-10">
-        {/* Header */}
-        <div className="flex items-start justify-between mb-6">
-          <div className="flex-1">
-            <div className="flex items-center gap-3 mb-2">
-              {service.icon && (
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center text-white">
-                  {service.icon}
-                </div>
-              )}
-              <div>
-                <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-                  {service.name}
-                </h3>
-                <p className="text-cyan-400 text-sm font-medium">{service.tagline}</p>
-              </div>
-            </div>
-            
-            {service.badge && (
-              <span className="inline-block px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-semibold rounded-full">
-                {service.badge}
-              </span>
-            )}
+      <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm overflow-hidden">
+        {/* Enhanced Background Glow */}
+        <div className={`absolute inset-0 bg-gradient-to-br ${styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+        
+        {/* Popular Badge */}
+        {service.popular && (
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
+            className="absolute -top-3 left-6 px-4 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full shadow-lg"
+          >
+            <Star className="w-4 h-4 inline mr-1" />
+            Popular
+          </motion.div>
+        )}
+        
+        {/* Service Header */}
+        <div className="text-center mb-8 relative z-10">
+          <div className={`w-24 h-24 mx-auto mb-6 rounded-full ${styles.iconBg} flex items-center justify-center border ${styles.iconBorder} text-4xl backdrop-blur-sm`}>
+            {service.icon}
           </div>
           
-          {service.popular && (
-            <div className="flex items-center gap-1 text-yellow-400">
-              <Star className="w-4 h-4 fill-current" />
-              <span className="text-sm font-medium">Popular</span>
-            </div>
-          )}
+          <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-gray-100 transition-colors">
+            {service.name}
+          </h3>
+          
+          <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+            {service.tagline}
+          </p>
+          
+          <div className="text-4xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors">
+            {service.price}
+            <span className="text-lg text-gray-400 font-normal">/{service.period}</span>
+          </div>
+          
+          {/* Category Badge */}
+          <div className="inline-flex items-center space-x-2 px-3 py-1 bg-gray-800/50 border border-gray-600/30 rounded-full text-xs text-gray-300">
+            <CategoryIcon className="w-3 h-3" />
+            <span>{service.category}</span>
+          </div>
         </div>
-
-        {/* Description */}
-        <p className="text-slate-300 text-sm leading-relaxed mb-6 group-hover:text-slate-200 transition-colors duration-300">
-          {service.description}
-        </p>
-
-        {/* Features */}
-        <div className="space-y-3 mb-6">
-          {service.features.slice(0, 4).map((feature, index) => (
-            <div key={index} className="flex items-center gap-3">
-              <div className="w-5 h-5 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <Check className="w-3 h-3 text-white" />
-              </div>
-              <span className="text-slate-300 text-sm group-hover:text-slate-200 transition-colors duration-300">
-                {feature}
-              </span>
-            </div>
+        
+        {/* Features List */}
+        <div className="space-y-3 mb-8 relative z-10">
+          <h4 className="text-sm font-semibold text-gray-300 mb-4 flex items-center">
+            <Zap className="w-4 h-4 mr-2 text-cyan-400" />
+            Key Features
+          </h4>
+          {service.features.slice(0, 6).map((feature, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: idx * 0.1 }}
+              className="flex items-center space-x-3 text-sm text-gray-300 group-hover:text-gray-200 transition-colors"
+            >
+              <div className="w-2 h-2 bg-cyan-400 rounded-full group-hover:bg-cyan-300 transition-colors"></div>
+              <span>{feature}</span>
+            </motion.div>
           ))}
         </div>
-
-        {/* Price */}
-        <div className="mb-6">
-          <div className="text-3xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-            {formatPrice(service.price)}
+        
+        {/* Enhanced Market Information */}
+        {service.marketPrice && (
+          <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
+            <div className="flex items-center justify-between text-xs">
+              <span className="text-gray-400">Market Price:</span>
+              <span className="text-green-400 font-semibold">{service.marketPrice}</span>
+            </div>
+            
+            {service.competitors && (
+              <div className="text-xs text-gray-500">
+                Competes with: {service.competitors.slice(0, 2).join()}
+              </div>
+            )}
           </div>
-          {service.period && (
-            <div className="text-slate-400 text-sm">{service.period}</div>
-          )}
-        </div>
-
+        )}
+        
+        {/* Target Market & Use Cases */}
+        {service.targetMarket && (
+          <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
+            <div className="text-xs">
+              <div className="text-gray-400 mb-2">Target Market:</div>
+              <div className="text-gray-300">{service.targetMarket}</div>
+            </div>
+            
+            {service.useCases && (
+              <div className="text-xs mt-3">
+                <div className="text-gray-400 mb-2">Use Cases:</div>
+                <div className="text-gray-300">{service.useCases.slice(0, 3).join()}</div>
+              </div>
+            )}
+          </div>
+        )}
+        
+        {/* Benefits Section */}
+        {service.benefits && (
+          <div className="border-t border-white/10 pt-4 mb-6 relative z-10">
+            <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
+              <TrendingUp className="w-4 h-4 mr-2 text-green-400" />
+              Key Benefits
+            </h4>
+            <div className="space-y-2">
+              {service.benefits.slice(0, 3).map((benefit, idx) => (
+                <div key={idx} className="text-xs text-gray-400 flex items-start space-x-2">
+                  <Check className="w-3 h-3 text-green-400 mt-0.5 flex-shrink-0" />
+                  <span>{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+        
         {/* CTA Button */}
-        <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl blur-lg opacity-0 group-hover:opacity-50 transition-opacity duration-300"></div>
-          <button className="relative w-full py-3 px-6 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform group-hover:scale-105">
+        <div className="relative z-10">
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className={`w-full py-3 px-6 rounded-lg bg-gradient-to-r ${styles.gradient} text-white font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-${styles.textColor}/25 border border-white/20 hover:border-white/40`}
+          >
             Get Started
-          </button>
+          </motion.button>
         </div>
+        
+        {/* Enhanced Hover Effects */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
-      
-      {/* Enhanced Hover Effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover:from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
     </motion.div>
-  );
+  ),
 });
 
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';

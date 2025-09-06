@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/industry.tsx
 =======
 <<<<<<< HEAD
@@ -10,10 +11,13 @@
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/industry.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Heart, CreditCard, Globe, GraduationCap, Factory, Home } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/industry.tsx
 <<<<<<< HEAD
 =======
@@ -26,11 +30,14 @@ import { Heart, CreditCard, Globe, GraduationCap, Factory, Home } from 'lucide-r
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/industry.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {BarChart3,, Shield,, Users,, Globe,, ArrowRight,, CheckCircle,, Building,, Heart,, GraduationCap,, Factory,, Home,, CreditCard} from 'lucide-react';
 import Layout from "../../components/Layout";";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/industry.tsx
 =======
@@ -41,6 +48,8 @@ import Layout from "../../components/Layout";";
 
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/industry.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
@@ -192,9 +201,9 @@ export default function IndustrySolutionsPage() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300""
+                  className="bg-white rounded-2xl shadow-xl p-8 hover: shadow-2xl transition-shadow duration-300""
                 >;
-                  <div className="flex items-center mb-6">";
+                  <div className="flex items-center mb-6">",
                     <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-xl flex items-center justify-center mr-4`}>,
                       <industry.icon className="w-8 h-8 text-white" />";
                     </div>;
@@ -243,8 +252,8 @@ export default function IndustrySolutionsPage() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300""
-                >;
+                  className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 hover: shadow-lg transition-shadow duration-300""
+                >,
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{capability.title}</h3>"
                   <p className="text-gray-600">{capability.description}</p>"
                 </motion.div>;

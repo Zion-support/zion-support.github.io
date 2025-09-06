@@ -2,12 +2,18 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 function runNode(relativePath, args = []) {
   const absolutePath = path.resolve(__dirname, '..', '..', relativePath);
   const result = spawnSync('node', [absolutePath, ...args], { stdio: 'pipe', encoding: 'utf8' });
@@ -20,6 +26,9 @@ function nowMinute() {
 
 function shouldRunEvery(n) {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
   return nowMinute() % n === 0;
 =======
@@ -37,9 +46,12 @@ function now() {
 =======
   return nowMinute() % n === 0;}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   return nowMinute() % n === 0;}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 exports.config = {
   schedule: '*/5 * * * *',
@@ -48,6 +60,9 @@ exports.config = {
 exports.handler = async () => {
   const logs = [];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
   function logStep(name, fn) {
@@ -67,23 +82,32 @@ exports.handler = async () => {
     logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();    if (stdout) logs.push(stdout);
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   function logStep(name, fn) {
     logs.push(`\n=== ${name} ===`);
     const { status, stdout, stderr } = fn();    if (stdout) logs.push(stdout);
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     if (stderr) logs.push(stderr);
     logs.push(`exit=${status}`);
     return status;
   }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   // Always: light front/home refreshers
   logStep('front-index:auto-advertise', () => runNode('automation/front-index-auto-advertiser.cjs'));
   logStep('homepage:auto-advertiser', () => runNode('automation/homepage-auto-advertiser.cjs'));
@@ -111,6 +135,9 @@ exports.handler = async () => {
 
   return { statusCode: 200, body: logs.join('\n') };
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 };
 =======
@@ -151,6 +178,9 @@ exports.handler = async () => {
 =======
 };
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 };
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

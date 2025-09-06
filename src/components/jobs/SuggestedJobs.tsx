@@ -1,20 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useAuth } from '@/hooks/useAuth';
-import { Loader2 } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-import { useJobSuggestions } from '@/hooks/useJobSuggestions';
-import { JobMatchesCard } from './JobMatchesCard';
-import { NoJobsCard } from './NoJobsCard';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    updateJobMatchStatus, 
 
-import { useAuth } from "@/hooks/useAuth";
-import { Loader2 } from 'lucide-react'
-import { Badge } from "@/components/ui/badge";
-import { useJobSuggestions } from "@/hooks/useJobSuggestions";
-import { JobMatchesCard } from "./JobMatchesCard";
-import { NoJobsCard } from "./NoJobsCard";
+import {useAuth} from "@/hooks/useAuth";
+import {Loader2} from 'lucide-react'
+import {Badge} from "@/components/ui/badge";
+import {useJobSuggestions} from "@/hooks/useJobSuggestions";
+import {JobMatchesCard} from "./JobMatchesCard";
+import {NoJobsCard} from "./NoJobsCard";
 interface SuggestedJobsProps {
   talentId?: string;
 }
@@ -120,7 +111,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
       )}
     </div>
   );
-<<<<<<< HEAD
 
 }= useJobSuggestions (currentTalentId);
 const handleApply = (matchId: string, jobId: string) => {;
@@ -175,11 +165,6 @@ if (isLoading) {;
 }</div>) ;
 }'"
 =======
-
-<<<<<<< HEAD
-    updateJobMatchStatus, 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

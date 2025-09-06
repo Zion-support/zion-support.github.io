@@ -1,5 +1,8 @@
 const nextConfig = {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,8 +11,11 @@ const nextConfig = {
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   assetPrefix,
   poweredByHeader: false,
   trailingSlash: false,
@@ -68,6 +74,9 @@ const nextConfig = {
     // Disable profiling for faster builds
     swcTraceProfiling: false,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     
@@ -84,9 +93,12 @@ const nextConfig = {
 =======
       },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
       },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   images: {
     unoptimized: isNetlify, // Disable optimization on Netlify to prevent 404s
@@ -244,6 +256,9 @@ const nextConfig = {
   },
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/build-project-with-netlify-9d19
@@ -383,14 +398,20 @@ const nextConfig = {
     'lodash',
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     'lodash-es',
     'lodash/isPlainObject',
     'lodash/cloneDeep',
     'lodash/clone',
     'lodash/toPath',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/build-project-with-netlify-9d19
@@ -487,8 +508,11 @@ const nextConfig = {
       }
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
       // Alias react-router-dom to a lightweight stub to avoid build errors
       config.resolve.alias = {
@@ -739,6 +763,9 @@ const nextConfig = {
     ];
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -752,8 +779,11 @@ const nextConfig = {
 
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     // PHASE 2: Enhanced Bundle Splitting for Performance Optimization
     if (!isServer) {
       config.optimization = {
@@ -1072,13 +1102,23 @@ const nextConfig = {
 <<<<<<< HEAD
 =======
 =======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   async rewrites() {
     return [
+<<<<<<< HEAD
       {
         source: '/docs/zion-protocol.pdf',
         destination: '/api/zion-whitepaper-pdf?edition=full',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       },
 =======
       { source: '/main', destination: '/', permanent: true },
@@ -1149,9 +1189,12 @@ const nextConfig = {
         destination: '/api/zion-whitepaper-pdf?edition=full',
       },    ];
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
       },    ];
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   },
   
   // Skip ESLint during build for faster deployment  
@@ -1163,12 +1206,18 @@ const nextConfig = {
   swcMinify: true,
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 >>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 };
 
 module.exports = withSentryConfig(baseConfig);

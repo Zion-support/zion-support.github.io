@@ -10,7 +10,7 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
   
   switch (format) {
     case 'short':
-      return dateObj.toLocaleDateString();
+      return dateObj.toLocaleDateString(),
     case 'medium':
       return dateObj.toLocaleDateString(undefined, { 
         year: 'numeric', 
@@ -25,7 +25,7 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
       });
     case 'full':
       return dateObj.toLocaleDateString(undefined, { 
-        weekday: 'long';
+        weekday: 'long',
         year: 'numeric', 
         month: 'long', 
         day: 'numeric' 
@@ -59,7 +59,7 @@ export const timeAgo = (date: Date | string | number): string => {
   
   const seconds = Math.floor((now.getTime() - dateObj.getTime()) / 1000);
   
-  let interval = Math.floor(seconds / 31536000);
+  let interval = Math.floor(seconds / 31536000),
   if (interval >= 1) {
     return interval === 1 ? '1 year ago' : `${interval} years ago`
   }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/cloud-devops.tsx
 =======
 <<<<<<< HEAD
@@ -38,11 +39,13 @@ import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'l
 <<<<<<< HEAD:pages_backup/services/cloud-devops.tsx
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import Layout from '../../components/Layout';
-import { Cloud, Server, Database, Shield, Zap } from 'lucide-react';
+import {Cloud,, Server,, Database,, Shield,, Zap} from 'lucide-react';
 import React from 'react';
 import Layout from '../../components/Layout';';
-import { Cloud, Server, Database, Shield, Zap, ArrowRight, CheckCircle } from 'lucide-react';
+import {Cloud,, Server,, Database,, Shield,, Zap,, ArrowRight,, CheckCircle} from 'lucide-react';
 const features = [;
   {}
     icon: Cloud,
@@ -51,6 +54,7 @@ const features = [;
 import Layout from '../../components/Layout';
 import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -58,10 +62,19 @@ import { Cloud, Server, GitBranch, Shield, Zap, CheckCircle, ArrowRight } from '
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud-devops.tsx
+=======
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import {motion} from 'framer-motion';
+import {Cloud,, Server,, Database,, Shield,, Zap,, ArrowRight,, CheckCircle} from 'lucide-react';
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 const features = [
   {
     icon: Cloud,
     title: 'Cloud Migration',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/cloud-devops.tsx
 =======
@@ -69,6 +82,8 @@ const features = [
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud-devops.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     description: 'Seamless migration to cloud platforms with zero downtime'
   },
   {}
@@ -149,10 +164,10 @@ export default function CloudDevOpsPage() {
             </div>;
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => (,
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">"
+                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover: border-blue-500 transition-colors">"
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
                     <feature.icon className="w-6 h-6 text-white" />";
-                  </div>;
+                  </div>,
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>"
                   <p className="text-gray-300">{feature.description}</p>"
                 </div>;
@@ -202,11 +217,9 @@ export default function CloudDevOpsPage() {
     </Layout>;
     title: 'Infrastructure as Code',
     description: 'Automated infrastructure provisioning and management'
-<<<<<<< HEAD
-=======
-=======
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages_backup/services/cloud-devops.tsx
 <<<<<<< HEAD
@@ -215,6 +228,8 @@ export default function CloudDevOpsPage() {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud-devops.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     description: 'Seamless migration to cloud platforms with minimal downtime and maximum efficiency.',
     benefits: ['Zero-downtime migration', 'Cost optimization', 'Performance improvement', 'Scalability']
 =======
@@ -384,12 +399,15 @@ export default function CloudDevOpsPage() {
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/cloud-devops.tsx
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud-devops.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 const benefits = [
   'Reduced infrastructure costs by up to 50%',
   'Improved deployment speed and reliability',
@@ -399,6 +417,7 @@ const benefits = [
   'Faster time-to-market for applications'
 ];
 export default function CloudDevOpsServices() {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/cloud-devops.tsx
 =======
 <<<<<<< HEAD
@@ -411,6 +430,8 @@ export default function CloudDevOpsServices() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud-devops.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 
 const tools = [
   { name: 'AWS', description: 'Amazon Web Services cloud platform' },
@@ -424,6 +445,7 @@ const tools = [
 ];
 
 export default function CloudDevOpsPage() {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/cloud-devops.tsx
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -444,6 +466,8 @@ export default function CloudDevOpsServices() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud-devops.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   return (
     <Layout
       title="Cloud & DevOps Services - Zion Tech Group"
@@ -485,16 +509,17 @@ export default function CloudDevOpsServices() {
                 and accelerate your development processes.
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/cloud-devops.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud-devops.tsx
-            </div>
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             </div>
-=======
+            </div>
             </motion.div>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages_backup/services/cloud-devops.tsx
 <<<<<<< HEAD
@@ -504,6 +529,8 @@ export default function CloudDevOpsServices() {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud-devops.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             </motion.div>
 =======
             </div>
@@ -527,12 +554,15 @@ export default function CloudDevOpsServices() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/cloud-devops.tsx
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud-devops.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
         {/* Benefits Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -565,6 +595,7 @@ export default function CloudDevOpsServices() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/cloud-devops.tsx
 =======
 <<<<<<< HEAD
@@ -577,6 +608,8 @@ export default function CloudDevOpsServices() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud-devops.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 
         {/* Tools Section */}
         <section className="py-16 bg-white">
@@ -644,6 +677,7 @@ export default function CloudDevOpsServices() {
                   <p className="text-gray-600">{phase.description}</p>
                 </motion.div>
               ))}
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/cloud-devops.tsx
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -687,12 +721,14 @@ export default function CloudDevOpsServices() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud-devops.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             </div>
           </div>
         </section>
         {/* CTA Section */}
         <section className="py-20 bg-gray-900 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Infrastructure?
             </h2>
@@ -712,16 +748,17 @@ export default function CloudDevOpsServices() {
         </section>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/cloud-devops.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud-devops.tsx
-    </Layout>
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     </Layout>
-=======
+    </Layout>
     </>
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages_backup/services/cloud-devops.tsx
 <<<<<<< HEAD
@@ -737,4 +774,8 @@ export default function CloudDevOpsServices() {
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
   );
+=======
+    </>
+  ),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }

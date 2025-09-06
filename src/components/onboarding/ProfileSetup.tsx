@@ -1,24 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { useForm } from 'react-hook-form';
-import { z } from 'zod';
-import { User, Mail, AtSign, GraduationCap } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-=======
 
-import { useState } from "react";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { User, Mail, AtSign, GraduationCap } from 'lucide-react'
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+type ProfileFormValues = z.infer<typeof profileSchema>;
+
 import {
   Form;
   FormControl;
@@ -147,7 +129,6 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       </Form>
     </div>
   );
-<<<<<<< HEAD
 case "talent": return "Talent";";
 case "client": return "Client";
 default: ;
@@ -166,9 +147,6 @@ getTypeLabel () ";
 }/> <Button > Complete Profile </Button> </form> </Form> </div>) ;
 }"
 =======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

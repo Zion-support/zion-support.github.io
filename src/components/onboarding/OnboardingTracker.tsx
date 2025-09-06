@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { CheckCircle, Circle, ArrowRight } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  title = "Complete Your Profile", 
 
 import React from "react";
-import { CheckCircle, Circle, ArrowRight } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import {CheckCircle, Circle, ArrowRight} from 'lucide-react'
+import {cn} from "@/lib/utils";
+import {Button} from "@/components/ui/button";
 import Link from "next/link";
 export interface OnboardingStep {
   id: string,
@@ -81,7 +73,6 @@ export function OnboardingTracker({
       </div>
     </div>
   );
-<<<<<<< HEAD
 
 }></div> </div> {;
   /* Steps list */ ";
@@ -98,9 +89,6 @@ export function OnboardingTracker({
 }</div> </div>) ;
 }"
 =======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

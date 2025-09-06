@@ -1,1 +1,0 @@
- <div> <h1>Category</h1> <p>Component placeholder - needs implementation</p> </div> 

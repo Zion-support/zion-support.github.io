@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ApplicationStatus } from '@/types/jobs';
-import { Progress } from '@/components/ui/progress';
-import { CheckCircle2, Circle, CircleDot } from 'lucide-react';
-import { cn } from '@/lib/utils';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-import { ApplicationStatus } from "@/types/jobs";
-import { Progress } from "@/components/ui/progress";
-import { CheckCircle2, Circle, CircleDot } from 'lucide-react'
-import { cn } from "@/lib/utils";
+import {ApplicationStatus} from "@/types/jobs";
+import {Progress} from "@/components/ui/progress";
+import {CheckCircle2, Circle, CircleDot} from 'lucide-react'
+import {cn} from "@/lib/utils";
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
@@ -71,33 +63,14 @@ function StatusIcon({ status, current }: { status: ApplicationStatus, current: A
     interview: 4,
     hired: 5,
     rejected: 5},
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
 
-  if (currentRank < statusRank_) {
-    // This step is complete
-    return <CheckCircle2 className="h-4 w-4 text-green-500" />
-  } else if (currentRank === statusRank_) {
-    // This is the current step
-    return <CircleDot className="h-4 w-4 text-blue-500" />
-  } else {
-    // This step is upcoming
-<<<<<<< HEAD
-    return <Circle className='h-4 w-4 text-muted-foreground/50' />;
-  }
-
-}"
-=======
-<<<<<<< HEAD
-
-
-  const currentRank = statusRank[current],
-  const statusRank_ = statusRank[status];
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
     return <Circle className="h-4 w-4 text-muted-foreground/50" />;
   };
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

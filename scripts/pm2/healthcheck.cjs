@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 const fs = require('fs');
@@ -26,6 +27,8 @@ function pingPreview() {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 #!/usr/bin/env node;
 const fs = require('fs');
 const http = require('http');
@@ -44,6 +47,9 @@ function pingPreview() {}
 	if (!ok) {}
 		console.error('Healthcheck failed');
 		process.exit(1)};
+<<<<<<< HEAD
+	console.log('Healthy')})();    // Check disk space
+=======
 	console.log('Healthy')})();
 =======
 #!/usr/bin/env node
@@ -231,6 +237,7 @@ class HealthChecker {
     
 >>>>>>> cursor/automate-test-improve-and-merge-code-85f4
     // Check disk space
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     if (diskUsage.percentage) {
       const diskPercent = parseInt(diskUsage.percentage);
       if (diskPercent > 90) {
@@ -293,6 +300,7 @@ if (require.main === module) {
 
 module.exports = HealthChecker;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const http = require('http');
 const distOk = fs.existsSync('dist/index.html');
@@ -315,3 +323,5 @@ function pingPreview() {}
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

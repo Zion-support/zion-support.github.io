@@ -1,21 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useEffect, useState } from 'react';
-=======
-import { useEffect, useState } from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  const pageKey = `search-${routeKey}-${router.asPath}`;
+
 import { useRouter } from 'next/router';
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
 import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 import { SearchSuggestion } from "@/types/search";
 import {logErrorToProduction} from '@/utils/productionLogger';
-import {
-  Tabs;
-  TabsContent;
-  TabsList;
-  TabsTrigger} from "@/components/ui/tabs";
-import { Loader2 } from 'lucide-react'
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {Loader2} from 'lucide-react'
 
 interface SearchResult {
   id: string,
@@ -25,7 +17,7 @@ interface SearchResult {
 }
 
 function highlight(text: string, term: string) {
-  if (!term) return text;
+  if (!term) return text,
   const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const regex = new RegExp(`(${escaped})`, "gi");
   const parts = text.split(regex);
@@ -87,7 +79,7 @@ export default function SearchPage() {
 
   const fetchResults = async (term: string) => {
     if (!term.trim()) {
-      setResults([]);
+      setResults([]),
       return
     }
 
@@ -110,7 +102,7 @@ export default function SearchPage() {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (query.trim()) {
       router.push(`/search?q=${encodeURIComponent(query.trim())}`)
     }
@@ -245,7 +237,6 @@ export default function SearchPage() {
         )}
       </main>
     </div>
-<<<<<<< HEAD
   );
   setQuery (urlQuery) ;
 
@@ -315,13 +306,7 @@ router.push (`/search?q=$ {;
 }</main> </div>) ;
 }'"
 =======
-
-<<<<<<< HEAD
-  const pageKey = `search-${routeKey}-${router.asPath}`;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -39,7 +39,7 @@ class ComprehensiveSyntaxFixer {
   }
   // Check if file has merge conflicts
   hasMergeConflicts(content) {
-    return content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>');
+    return content.includes('<<<<<<<') || content.includes('') || content.includes('>>>>>>>');
   }
   // Check if file has syntax errors
   hasSyntaxErrors(content) {
@@ -61,10 +61,7 @@ class ComprehensiveSyntaxFixer {
   fixSyntaxErrors(content) {
     let fixed = content;
     // Fix merge conflicts by keeping the HEAD version
-<<<<<<< HEAD
-=======
-    fixed = fixed.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1\n');
-    
+    fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
     // Fix common syntax patterns
     fixed = fixed.replace(/,\s*"/g, ',\n  "');
     fixed = fixed.replace(/;\s*"/g, ';\n  "');
@@ -275,12 +272,15 @@ if (require.main === module) {
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/comprehensive-syntax-fixer.cjs
 =======
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/comprehensive-syntax-fixer.cjs
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');

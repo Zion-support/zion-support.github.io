@@ -1,16 +1,16 @@
 
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4";
-import { corsHeaders } from "../_shared/cors.ts";
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4",
+import {corsHeaders} from "../_shared/cors.ts";
 interface AnalyzeRequest {
   content: string;
-  contentType: string;
+  contentType: string,
   flagId?: string
 }
 
 interface AnalysisResult {
   classification: string;
-  explanation: string;
+  explanation: string,
   success: boolean
 }
 
@@ -72,15 +72,15 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST";
       headers: {
-        "Content-Type": "application/json";
+        "Content-Type": "application/json",
         "Authorization": `Bearer ${openaiApiKey}`};
       body: JSON.stringify({
-        model: "gpt-4o-mini";
+        model: "gpt-4o-mini",
         messages: [
           { role: "system", content: "You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse." };
           { role: "user", content: prompt }
         ];
-        temperature: 0.3;
+        temperature: 0.3,
         max_tokens: 150
       })
     });
@@ -120,17 +120,17 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
 // Update flag in database if flagId was provided
 const updateFraudFlag = async (
   supabase: ReturnType<typeof createClient>;
-  flagId: string;
+  flagId: string,
   classification: string, 
   explanation: string
 ): Promise<void> => {
-  if (!flagId) return;
+  if (!flagId) return,
   
   const { error } = await supabase
     .from("fraud_flags")
     .update({
       gpt_classification: classification.toLowerCase();
-      gpt_explanation: explanation;
+      gpt_explanation: explanation,
       updated_at: new Date().toISOString()
     })
     .eq("id", flagId);
@@ -177,7 +177,7 @@ serve(async (req) => {
     // Return the analysis result
     const result: AnalysisResult = {
       classification: classification.toLowerCase();
-      explanation;
+      explanation,
       success: true};
     
     console.log("Analysis completed successfully:", result);
@@ -193,7 +193,7 @@ serve(async (req) => {
     
     return new Response(
       JSON.stringify({ 
-        error: error.message || "An unexpected error occurred";
+        error: error.message || "An unexpected error occurred",
         success: false});
       { 
         status: statusCode, 

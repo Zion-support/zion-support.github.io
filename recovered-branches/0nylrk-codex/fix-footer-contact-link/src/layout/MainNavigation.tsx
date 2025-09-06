@@ -1,8 +1,8 @@
 
-import { Link, useLocation } from "react-router-dom";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { MessageSquare } from "lucide-react";
+import {Link, useLocation} from "react-router-dom";
+import {cn} from "@/lib/utils";
+import {useAuth} from "@/hooks/useAuth";
+import {MessageSquare} from "lucide-react";
 interface MainNavigationProps {
   isAdmin?: boolean;
   unreadCount?: number;

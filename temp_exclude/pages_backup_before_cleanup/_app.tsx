@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup_before_cleanup/_app.tsx
 =======
 <<<<<<< HEAD
@@ -12,6 +13,8 @@
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup_before_cleanup/_app.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import type { AppProps } from \'next/app\' import \'../styles/globals.css\' export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} /> }
 const type { AppProps } from "next/app" import "./styles/globals.css" export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} /> }''"
 import React from 'react';
@@ -27,6 +30,7 @@ export default function _app({ }: _appProps) {
   );
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages_backup_before_cleanup/_app.tsx
 <<<<<<< HEAD
@@ -39,3 +43,5 @@ export default function _app({ }: _appProps) {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup_before_cleanup/_app.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

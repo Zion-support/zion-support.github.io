@@ -1,27 +1,16 @@
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Button } from "@/components/ui/button";
-import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form";
-import { Textarea } from "@/components/ui/textarea";
-import {
-  Select;
-  SelectContent;
-  SelectItem;
-  SelectTrigger;
-  SelectValue} from "@/components/ui/select";
-import { Input } from "@/components/ui/input";
-import { DisputeReason, disputeReasonLabels } from "@/types/disputes";
-import { useDisputes } from "@/hooks/useDisputes";
-import { toast } from "sonner";
-import { FileText } from "lucide-react";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {z} from "zod";
+import {Button} from "@/components/ui/button";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {Textarea} from "@/components/ui/textarea";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Input} from "@/components/ui/input";
+import {DisputeReason, disputeReasonLabels} from "@/types/disputes";
+import {useDisputes} from "@/hooks/useDisputes";
+import {toast} from "sonner";
+import {FileText} from "lucide-react";
 const formSchema = z.object({
   reason_code: z.string()
     .min(1, { message: "Please select a reason for the dispute" }),
@@ -55,14 +44,14 @@ export function DisputeForm({
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
-      const newFiles = Array.from(e.target.files);
+      const newFiles = Array.from(e.target.files),
       setFiles(prev => [...prev, ...newFiles]);
       form.setValue("attachments", [...files, ...newFiles])
     }
   };
 
   const removeFile = (index: number) => {
-    const newFiles = [...files];
+    const newFiles = [...files],
     newFiles.splice(index, 1);
     setFiles(newFiles);
     form.setValue("attachments", newFiles)
@@ -70,7 +59,7 @@ export function DisputeForm({
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      setIsSubmitting(true);
+      setIsSubmitting(true),
       
       const dispute = await createDispute({
         project_id: projectId,

@@ -1,16 +1,10 @@
 
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormMessage
-} from "@/components/ui/form";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import {useState} from "react";
+import {useForm} from "react-hook-form";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {Form, FormControl, FormField, FormItem, FormMessage} from "@/components/ui/form";
+import {Card, CardContent, CardFooter} from "@/components/ui/card";
 
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>,
@@ -33,7 +27,7 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   const handleSubmit = async (values: ReplyFormValues) => {
     setIsSubmitting(true);
     try {
-      await onSubmit(values.content);
+      await onSubmit(values.content),
       form.reset()
     } finally {
       setIsSubmitting(false)

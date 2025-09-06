@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 #!/usr/bin/env node
 const fs = require('fs');
@@ -338,6 +339,8 @@ monitor.run().catch(error => {
 });
 #!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");"const fs = require("fs");const log = (message) => { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] Health Monitor: ${message}`);};const runCommand = (command, description) => { try {` log(`Starting: ${description}`); const output = execSync(command, { " encoding: "utf8", " stdio: "pipe", cwd: process.cwd() });` log(`Completed: ${description}`); return { success: true, output }; } catch (error) {` log(`Failed: ${description} - ${error.message}`); return { success: false, error: error.message }; }};const checkSystemHealth = () => {" log("Checking system health"); / Check if the application is running" const appCheck = runCommand("curl -f http:/localhost:3000 | echo "App not responding"", "Checking application health"); / Check disk space" const diskCheck = runCommand("df -h .", "Checking disk space"); / Check memory usage" const memoryCheck = runCommand("free -m", "Checking memory usage"); return { app: appCheck.success, disk: diskCheck.success, memory: memoryCheck.success, overall: appCheck.success && diskCheck.success && memoryCheck.success };};const generateHealthReport = (results) => { const report = { timestamp: new Date().toISOString(), system: results.system, overall: {" status: results.system.overall ? "HEALTHY" : "UNHEALTHY" } }; / Save report" const reportPath = "logs/pm2/health-report.json"; fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));` log(`Health report saved to ${reportPath}`); return report;};const main = async () => {" log("Starting Health Monitor Process"); / Check system health const systemResults = checkSystemHealth(); / Generate comprehensive report const results = { system: systemResults }; const report = generateHealthReport(results); " if (report.overall.status === "HEALTHY") {" log("System health check passed: All systems operational"); } else {" log("System health check failed: Issues detected"); } " log("Health Monitor Process completed");};/ Handle process termination"process.on("SIGINT", () => {" log("Health Monitor Process interrupted"); process.exit(0);});"process.on("SIGTERM", () => {" log("Health Monitor Process terminated"); process.exit(0);});/ Run the main functionmain().catch(error => {` log(`Health Monitor Process failed: ${error.message}`); process.exit(1);});'"`'"`
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 #!/usr/bin/env node;
 /**
  * Health Monitor Script for PM2;
@@ -345,6 +348,9 @@ monitor.run().catch(error => {
  * Runs every 5 minutes to monitor system health;
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -354,6 +360,7 @@ const log = (message) => {}
   
 };
 
+<<<<<<< HEAD
 =======
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -361,6 +368,8 @@ const log = (message) => {}
   const timestamp = new Date().toISOString();
 };
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 const runCommand = (command, description) => {}
   try {}
     log(`Starting: ${description}`);
@@ -378,6 +387,9 @@ const runCommand = (command, description) => {}
   };
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 
 const checkSystemHealth = () => {}
   log('Checking system health');
@@ -391,6 +403,7 @@ const checkSystemHealth = () => {}
   // Check memory usage;
   const memoryCheck = runCommand('free -m', 'Checking memory usage');
   
+<<<<<<< HEAD
 =======
 const checkSystemHealth = () => {}
   log('Checking system health');
@@ -401,6 +414,8 @@ const checkSystemHealth = () => {}
   // Check memory usage;
   const memoryCheck = runCommand('free -m', 'Checking memory usage');
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   return {}
     app: appCheck.success,
     disk: diskCheck.success,
@@ -409,9 +424,13 @@ const checkSystemHealth = () => {}
   };
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 const generateHealthReport = (results) => {}
   const report = {}
     timestamp: new Date().toISOString(),
@@ -421,14 +440,21 @@ const generateHealthReport = (results) => {}
     };
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
   
 =======
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   // Save report;
   const reportPath = 'logs/pm2/health-report.json';
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
   log(`Health report saved to ${reportPath}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   
   return report;
 };
@@ -439,6 +465,7 @@ const main = async () => {}
   // Check system health;
   const systemResults = checkSystemHealth();
   
+<<<<<<< HEAD
 =======
   return report;
 };
@@ -447,10 +474,13 @@ const main = async () => {}
   // Check system health;
   const systemResults = checkSystemHealth();
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   // Generate comprehensive report;
   const results = {}
     system: systemResults;
   };
+<<<<<<< HEAD
 <<<<<<< HEAD
   
   const report = generateHealthReport(results);
@@ -458,6 +488,11 @@ const main = async () => {}
 =======
   const report = generateHealthReport(results);
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+  
+  const report = generateHealthReport(results);
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   if (report.overall.status === 'HEALTHY') {}
     log('System health check passed: All systems operational');
   } else {}
@@ -466,9 +501,13 @@ const main = async () => {}
   log('Health Monitor Process completed');
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 // Handle process termination;
 process.on('SIGINT', () => {}
   log('Health Monitor Process interrupted');
@@ -476,25 +515,37 @@ process.on('SIGINT', () => {}
 }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 process.on('SIGTERM', () => {}
   log('Health Monitor Process terminated');
   process.exit(0);
 }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 // Run the main function;
 main().catch(error => {})
   log(`Health Monitor Process failed: ${error.message}`);
   process.exit(1);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 });});
 =======
 });
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+});});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

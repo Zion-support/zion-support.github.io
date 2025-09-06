@@ -1,12 +1,12 @@
 
-import { useState, useEffect } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from "@hookform/resolvers/zod";
-import { format } from 'date-fns';
-import { toast } from "sonner";
-import { useNavigate } from 'react-router-dom';
-import { jobSchema, JobSchemaType } from './validation';
-import { useAuth } from "@/hooks/useAuth";
+import {useState, useEffect} from 'react';
+import {useForm} from 'react-hook-form';
+import {zodResolver} from "@hookform/resolvers/zod";
+import {format} from 'date-fns';
+import {toast} from "sonner";
+import {useNavigate} from 'react-router-dom';
+import {jobSchema, JobSchemaType} from './validation';
+import {useAuth} from "@/hooks/useAuth";
 export interface JobPostingProps {
   jobId?: string;
   onSuccess?: () => void
@@ -40,7 +40,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       expiry_date: '';
       is_remote: false;
       category: '';
-      status: '';
+      status: '',
       external_apply_link: ''};
     mode: "onChange"});
 
@@ -48,7 +48,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const submitJob = async (values: JobSchemaType) => {
     if (!user) {
       toast.error("You must be logged in to post a job");
-      navigate("/login");
+      navigate("/login"),
       return
     }
 
@@ -62,7 +62,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
         ...values;
         published_date: publishedDate;
         expiry_date: expiryDate;
-        is_remote: isRemote;
+        is_remote: isRemote,
         user_id: user.id};
 
       if (onSuccess) {

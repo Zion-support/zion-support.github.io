@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 # Zion AI Marketplace – Assistant Widget
 
 An AI-powered chat assistant for the Zion AI Marketplace. It greets users, answers FAQs, and guides them through browsing listings, pricing/credits, integrations, and vendor onboarding. The widget is responsive and can be included on all pages.
@@ -53,6 +59,9 @@ If your site is hosted separately, deploy this server and set `ALLOWED_ORIGIN` a
 ## Notes
 - Default model is `gpt-4o-mini`. You can set `OPENAI_MODEL` to any GPT-4 family model available to your key.
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 - For enterprise usage, add authentication and stronger rate limiting.
 =======
@@ -68,6 +77,9 @@ Developer-ready SDKs, CLI, and boilerplates for launching, customizing, and exte
 =======
 - For enterprise usage, add authentication and stronger rate limiting.
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 - For enterprise usage, add authentication and stronger rate limiting.
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,16 +1,14 @@
-import { useEffect, useMemo, useState } from 'react';
+import {useEffect, useMemo, useState} from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 type Member = {
   id: string;
   name: string;
   email: string;
-  role: 'admin' | 'manager' | 'recruiter' | 'viewer';
+  role: 'admin' | 'manager' | 'recruiter' | 'viewer',
 };
 
-type Usage = { monthlyJobPosts: number; budgetCapUsd: number };
+type Usage = { monthlyJobPosts: number, budgetCapUsd: number };
 
 type Invoice = {
   id: string;
@@ -18,41 +16,19 @@ type Invoice = {
   amountUsd: number;
   periodStartIso: string;
   periodEndIso: string;
-  status: string;
+  status: string,
 };
-=======
-type Member = { id: string, name: string, email: string, role: 'admin' | 'manager' | 'recruiter' | 'viewer' },
-type Usage = { monthlyJobPosts: number, budgetCapUsd: number },
-type Invoice = { id: string, number: string, amountUsd: number, periodStartIso: string, periodEndIso: string, status: string },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-type Member = { id: string, name: string, email: string, role: 'admin' | 'manager' | 'recruiter' | 'viewer' },
-type Usage = { monthlyJobPosts: number, budgetCapUsd: number },
-type Invoice = { id: string, number: string, amountUsd: number, periodStartIso: string, periodEndIso: string, status: string },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
 const COMPANY_ID = 'cmp_acme';
 
 export default function CompanyAdmin() {
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>(
     'members'
-  );
-=======
-  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>('members');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  const [tab, setTab] = useState<'members' | 'usage' | 'activity' | 'billing'>('members');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  const [members, setMembers] = useState<Member[]>([]);
+  );  const [members, setMembers] = useState<Member[]>([]);
   const [usage, setUsage] = useState<Usage | null>(null);
   const [activity, setActivity] = useState<any[]>([]);
   const [invoices, setInvoices] = useState<Invoice[]>([]);
 
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
     fetch(`/api/enterprise/companies/${COMPANY_ID}/members`)
       .then(r => r.json())
       .then(setMembers);
@@ -64,26 +40,12 @@ export default function CompanyAdmin() {
       .then(setActivity);
     fetch(`/api/enterprise/companies/${COMPANY_ID}/billing/invoices`)
       .then(r => r.json())
-      .then(setInvoices);
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-    fetch(`/api/enterprise/companies/${COMPANY_ID}/members`).then(r => r.json()).then(setMembers);
-    fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`).then(r => r.json()).then(setUsage);
-    fetch(`/api/enterprise/companies/${COMPANY_ID}/activity`).then(r => r.json()).then(setActivity);
-    fetch(`/api/enterprise/companies/${COMPANY_ID}/billing/invoices`).then(r => r.json()).then(setInvoices)
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  }, []);
+      .then(setInvoices);  }, []);
 
   const seatsUsed = members.length;
 
   return (
     <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <header
         style={{
           marginBottom: 16,
@@ -94,25 +56,10 @@ export default function CompanyAdmin() {
       >
         <h1 style={{ margin: 0 }}>Company Admin</h1>
         <div style={{ marginLeft: 'auto' }}>
-          <Link href='/workspace/acme'>Go to Workspace</Link>
-=======
-      <header style={{ marginBottom: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
-        <h1 style={{ margin: 0 }}>Company Admin</h1>
-        <div style={{ marginLeft: 'auto' }}>
-          <Link href="/workspace/acme">Go to Workspace</Link>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-      <header style={{ marginBottom: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
-        <h1 style={{ margin: 0 }}>Company Admin</h1>
-        <div style={{ marginLeft: 'auto' }}>
-          <Link href="/workspace/acme">Go to Workspace</Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-        </div>
+          <Link href='/workspace/acme'>Go to Workspace</Link>        </div>
       </header>
 
       <nav style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
-<<<<<<< HEAD
-<<<<<<< HEAD
         {(['members', 'usage', 'activity', 'billing'] as const).map(t => (
           <button
             key={t}
@@ -126,16 +73,7 @@ export default function CompanyAdmin() {
             }}
           >
             {t}
-          </button>
-=======
-        {(['membersusageactivitybilling'] as const).map(t => (
-          <button key={t} onClick={() => setTab(t)} style={{ padding: '0.5rem 0.75rem', borderRadius: 8, border: '1px solid #e5e7eb', background: tab === t ? '#111827' : 'white', color: tab === t ? 'white' : '#111827' }}>{t}</button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        {(['membersusageactivitybilling'] as const).map(t => (
-          <button key={t} onClick={() => setTab(t)} style={{ padding: '0.5rem 0.75rem', borderRadius: 8, border: '1px solid #e5e7eb', background: tab === t ? '#111827' : 'white', color: tab === t ? 'white' : '#111827' }}>{t}</button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-        ))}
+          </button>        ))}
       </nav>
 
       {tab === 'members' && (
@@ -146,108 +84,55 @@ export default function CompanyAdmin() {
         <UsageTab usage={usage} setUsage={setUsage} seatsUsed={seatsUsed} />
       )}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       {tab === 'activity' && <ActivityTab events={activity} />}
-=======
-      {tab === 'activity' && (
-        <ActivityTab events={activity} />
-      )}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-      {tab === 'billing' && (
-        <BillingTab invoices={invoices} />
-      )}
+      {tab === 'billing' && <BillingTab invoices={invoices} />}
     </main>
-  )
-}
+  );
 
-<<<<<<< HEAD
 function MembersTab({
   members,
   setMembers,
 }: {
   members: Member[];
   setMembers: (m: Member[]) => void;
-}) {
-=======
-      {tab === 'activity' && (
-        <ActivityTab events={activity} />
-      )}
-
-      {tab === 'billing' && (
-        <BillingTab invoices={invoices} />
-      )}
-    </main>
-  )
-}
-
-function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m: Member[]) => void }) {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m: Member[]) => void }) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  const [name, setName] = useState('');
+}) {  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [role, setRole] = useState<Member['role']>('viewer');
 
   const add = async () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
     const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ name, email, role }),
     });
-=======
-    const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, email, role }) });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     const created = await r.json();
     setMembers([created, ...members]);
-    setName(''), setEmail(''), setRole('viewer')
+    setName('');
+    setEmail('');
+    setRole('viewer');
   };
 
   const remove = async (id: string) => {
-    await fetch(`/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`, { method: 'DELETE' }),
-    setMembers(members.filter(m => m.id !== id))
+    await fetch(
+      `/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`,
+      { method: 'DELETE' }
+    );
+    setMembers(members.filter(m => m.id !== id));
   };
 
   const changeRole = async (id: string, newRole: Member['role']) => {
-<<<<<<< HEAD
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ memberId: id, role: newRole }),
     });
-    setMembers(members.map(m => (m.id === id ? { ...m, role: newRole } : m)));
-=======
-    const r = await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ name, email, role }) });
-    const created = await r.json();
-    setMembers([created, ...members]);
-    setName(''), setEmail(''), setRole('viewer')
-  };
-
-  const remove = async (id: string) => {
-    await fetch(`/api/enterprise/companies/${COMPANY_ID}/members?memberId=${id}`, { method: 'DELETE' }),
-    setMembers(members.filter(m => m.id !== id))
-  };
-
-  const changeRole = async (id: string, newRole: Member['role']) => {
-    await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ memberId: id, role: newRole }) }),
-    setMembers(members.map(m => m.id === id ? { ...m, role: newRole } : m))
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    await fetch(`/api/enterprise/companies/${COMPANY_ID}/members`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ memberId: id, role: newRole }) }),
-    setMembers(members.map(m => m.id === id ? { ...m, role: newRole } : m))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  };
+    setMembers(members.map(m => (m.id === id ? { ...m, role: newRole } : m)));  };
 
   return (
     <section>
       <h2>Team members</h2>
       <div style={{ display: 'flex', gap: 8, margin: '12px 0' }}>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <input
           placeholder='Full name'
           value={name}
@@ -269,36 +154,11 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
         </select>
         <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>
           Add
-        </button>
-=======
-        <input placeholder="Full name" value={name} onChange={e => setName(e.target.value)} />
-        <input placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
-        <select value={role} onChange={e => setRole(e.target.value as Member['role'])}>
-          <option value="recruiter">Recruiter</option>
-          <option value="manager">Manager</option>
-          <option value="viewer">Viewer</option>
-          <option value="admin">Admin</option>
-        </select>
-        <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>Add</button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        <input placeholder="Full name" value={name} onChange={e => setName(e.target.value)} />
-        <input placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} />
-        <select value={role} onChange={e => setRole(e.target.value as Member['role'])}>
-          <option value="recruiter">Recruiter</option>
-          <option value="manager">Manager</option>
-          <option value="viewer">Viewer</option>
-          <option value="admin">Admin</option>
-        </select>
-        <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>Add</button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-      </div>
+        </button>      </div>
 
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <th
               style={{
                 textAlign: 'left',
@@ -334,38 +194,30 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
               }}
             >
               Actions
-            </th>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Name</th>
-            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Email</th>
-            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Role</th>
-            <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Actions</th>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-          </tr>
+            </th>          </tr>
         </thead>
         <tbody>
           {members.map(m => (
             <tr key={m.id}>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.name}</td>
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.email}</td>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
-                <select value={m.role} onChange={e => changeRole(m.id, e.target.value as Member['role'])}>
-                  <option value="recruiter">Recruiter</option>
-                  <option value="manager">Manager</option>
-                  <option value="viewer">Viewer</option>
-                  <option value="admin">Admin</option>
+                {m.name}
+              </td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+                {m.email}
+              </td>
+              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
+                <select
+                  value={m.role}
+                  onChange={e =>
+                    changeRole(m.id, e.target.value as Member['role'])
+                  }
+                >
+                  <option value='recruiter'>Recruiter</option>
+                  <option value='manager'>Manager</option>
+                  <option value='viewer'>Viewer</option>
+                  <option value='admin'>Admin</option>
                 </select>
               </td>
-<<<<<<< HEAD
               <td
                 style={{
                   padding: 8,
@@ -378,74 +230,39 @@ function MembersTab({ members, setMembers }: { members: Member[], setMembers: (m
                   style={{ color: '#b91c1c' }}
                 >
                   Remove
-                </button>
-=======
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.name}</td>
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{m.email}</td>
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
-                <select value={m.role} onChange={e => changeRole(m.id, e.target.value as Member['role'])}>
-                  <option value="recruiter">Recruiter</option>
-                  <option value="manager">Manager</option>
-                  <option value="viewer">Viewer</option>
-                  <option value="admin">Admin</option>
-                </select>
-              </td>
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
-                <button onClick={() => remove(m.id)} style={{ color: '#b91c1c' }}>Remove</button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
-                <button onClick={() => remove(m.id)} style={{ color: '#b91c1c' }}>Remove</button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              </td>
+                </button>              </td>
             </tr>
           ))}
         </tbody>
       </table>
     </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: Usage) => void, seatsUsed: number }) {
-  const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(usage.monthlyJobPosts);
+function UsageTab({
+  usage,
+  setUsage,
+  seatsUsed,
+}: {
+  usage: Usage;
+  setUsage: (u: Usage) => void;
+  seatsUsed: number;
+}) {
+  const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(
+    usage.monthlyJobPosts
+  );
   const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd);
 
   const save = async () => {
-<<<<<<< HEAD
     await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }),
     });
-    setUsage({ monthlyJobPosts, budgetCapUsd });
-=======
-  )
-}
-
-function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: Usage) => void, seatsUsed: number }) {
-  const [monthlyJobPosts, setMonthlyJobPosts] = useState<number>(usage.monthlyJobPosts);
-  const [budgetCapUsd, setBudgetCapUsd] = useState<number>(usage.budgetCapUsd);
-
-  const save = async () => {
-    await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }) });
-    setUsage({ monthlyJobPosts, budgetCapUsd })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    await fetch(`/api/enterprise/companies/${COMPANY_ID}/usage`, { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ monthlyJobPosts, budgetCapUsd }) });
-    setUsage({ monthlyJobPosts, budgetCapUsd })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  };
+    setUsage({ monthlyJobPosts, budgetCapUsd });  };
 
   return (
     <section>
       <h2>Usage limits</h2>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div
         style={{
           display: 'grid',
@@ -454,88 +271,53 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
           maxWidth: 600,
         }}
       >
-=======
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, maxWidth: 600 }}>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         <label>
           <div>Monthly job posts</div>
-          <input type="number" value={monthlyJobPosts} onChange={e => setMonthlyJobPosts(Number(e.target.value))} />
+          <input
+            type='number'
+            value={monthlyJobPosts}
+            onChange={e => setMonthlyJobPosts(Number(e.target.value))}
+          />
         </label>
         <label>
           <div>Budget cap (USD)</div>
-          <input type="number" value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
+          <input
+            type='number'
+            value={budgetCapUsd}
+            onChange={e => setBudgetCapUsd(Number(e.target.value))}
+          />
         </label>
       </div>
-      <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }}>
-        <button onClick={save} style={{ padding: '0.5rem 0.75rem' }}>Save limits</button>
+      <div
+        style={{
+          marginTop: 12,
+          display: 'flex',
+          alignItems: 'center',
+          gap: 12,
+        }}
+      >
+        <button onClick={save} style={{ padding: '0.5rem 0.75rem' }}>
+          Save limits
+        </button>
         <span>Seats used: {seatsUsed}</span>
       </div>
     </section>
-<<<<<<< HEAD
   );
-=======
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, maxWidth: 600 }}>
-        <label>
-          <div>Monthly job posts</div>
-          <input type="number" value={monthlyJobPosts} onChange={e => setMonthlyJobPosts(Number(e.target.value))} />
-        </label>
-        <label>
-          <div>Budget cap (USD)</div>
-          <input type="number" value={budgetCapUsd} onChange={e => setBudgetCapUsd(Number(e.target.value))} />
-        </label>
-      </div>
-      <div style={{ marginTop: 12, display: 'flex', alignItems: 'center', gap: 12 }}>
-        <button onClick={save} style={{ padding: '0.5rem 0.75rem' }}>Save limits</button>
-        <span>Seats used: {seatsUsed}</span>
-      </div>
-    </section>
-  )
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
 function ActivityTab({ events }: { events: any[] }) {
   return (
     <section>
       <h2>Team activity</h2>
       <ul>
-<<<<<<< HEAD
-<<<<<<< HEAD
         {events.map(e => (
           <li key={e.id}>
             <span style={{ color: '#6b7280' }}>
               {new Date(e.timestampIso).toLocaleString()} —{' '}
-            </span>
-=======
-        {events.map((e) => (
-          <li key={e.id}>
-            <span style={{ color: '#6b7280' }}>{new Date(e.timestampIso).toLocaleString()} — </span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        {events.map((e) => (
-          <li key={e.id}>
-            <span style={{ color: '#6b7280' }}>{new Date(e.timestampIso).toLocaleString()} — </span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-            <strong>{e.actorEmail}</strong> {e.action}
+            </span>            <strong>{e.actorEmail}</strong> {e.action}
           </li>
         ))}
       </ul>
     </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
-  )
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
 function BillingTab({ invoices }: { invoices: Invoice[] }) {
   return (
     <section>
@@ -543,8 +325,6 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <th
               style={{
                 textAlign: 'left',
@@ -589,26 +369,11 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
               }}
             >
               Actions
-            </th>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Invoice #</th>
-            <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Period</th>
-            <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Amount</th>
-            <th style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Status</th>
-            <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Actions</th>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-          </tr>
+            </th>          </tr>
         </thead>
         <tbody>
           {invoices.map(inv => (
             <tr key={inv.id}>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>
                 {inv.number}
               </td>
@@ -646,34 +411,10 @@ function BillingTab({ invoices }: { invoices: Invoice[] }) {
                   rel='noreferrer'
                 >
                   Download PDF
-                </a>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.number}</td>
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{inv.periodStartIso} → {inv.periodEndIso}</td>
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>${inv.amountUsd.toFixed(2)}</td>
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'center' }}>{inv.status}</td>
-              <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6', textAlign: 'right' }}>
-                <a href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`} target="_blank" rel="noreferrer">Download PDF</a>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              </td>
+                </a>              </td>
             </tr>
           ))}
         </tbody>
       </table>
     </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
-  )
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  )
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

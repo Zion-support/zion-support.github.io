@@ -1,11 +1,17 @@
 const path = require('path');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 const nextConfig = {
   // assetPrefix: process.env.NODE_ENV === 'production' ? 'https://ziontechgroup.com' : '',
@@ -18,6 +24,9 @@ const nextConfig = {
   images: {
     domains: ["localhost"],
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
     unoptimized: true,
 =======
@@ -47,9 +56,12 @@ const nextConfig = {
 =======
     unoptimized: true,  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     unoptimized: true,  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
   compiler: {
     removeConsole: process.env.NODE_ENV === "production",
@@ -102,6 +114,9 @@ const nextConfig = {
     });
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     // Polyfills for Node.js APIs
@@ -165,9 +180,12 @@ const nextConfig = {
 =======
     // Polyfills for Node.js APIs    config.resolve.fallback = {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     // Polyfills for Node.js APIs    config.resolve.fallback = {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       ...config.resolve.fallback,
       fs: false,
       net: false,

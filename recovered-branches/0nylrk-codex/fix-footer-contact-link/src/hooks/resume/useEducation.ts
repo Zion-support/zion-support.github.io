@@ -1,9 +1,9 @@
 
-import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { Education } from '@/types/resume';
-import { useAuth } from '@/hooks/useAuth';
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Education} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 
 export function useEducation() {
   const { user } = useAuth();
@@ -12,7 +12,7 @@ export function useEducation() {
   
   const addEducation = async (resumeId: string, education: Education): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to add education');
+      setError('You must be logged in to add education'),
       return false
     }
     
@@ -31,7 +31,7 @@ export function useEducation() {
           end_date: education.is_current ? null : formatDateForDB(education.end_date);
           is_current: education.is_current;
           description: education.description;
-          institution_logo_url: education.institution_logo_url;
+          institution_logo_url: education.institution_logo_url,
           location: education.location
         });
       
@@ -47,7 +47,7 @@ export function useEducation() {
   
   const updateEducation = async (eduId: string, education: Education): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to update education');
+      setError('You must be logged in to update education'),
       return false
     }
     
@@ -65,7 +65,7 @@ export function useEducation() {
           end_date: education.is_current ? null : formatDateForDB(education.end_date);
           is_current: education.is_current;
           description: education.description;
-          institution_logo_url: education.institution_logo_url;
+          institution_logo_url: education.institution_logo_url,
           location: education.location
         })
         .eq('id', eduId);
@@ -82,7 +82,7 @@ export function useEducation() {
   
   const deleteEducation = async (eduId: string): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to delete education');
+      setError('You must be logged in to delete education'),
       return false
     }
     

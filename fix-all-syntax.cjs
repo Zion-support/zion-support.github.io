@@ -2,10 +2,13 @@
 
 const fs = require('fs');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 const path = require('path');
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 // Read the file
 let content = fs.readFileSync('enhanced-automation-suite.cjs', 'utf8');
@@ -82,6 +85,8 @@ const fixes = [
   { from: /introductio:\s*n:/g, to: 'introduction:' },
 ];
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 console.log('🔧 Fixing all syntax errors...');
 const fixedCount = findAndFixFiles('.');
@@ -165,6 +170,7 @@ const fixes = [
 
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // Apply fixes
 fixes.forEach(fix => {
   content = content.replace(fix.from, fix.to);
@@ -175,7 +181,11 @@ fs.writeFileSync('enhanced-automation-suite.cjs', content);
 
 <<<<<<< HEAD
 console.log('✅ Fixed all syntax errors in enhanced-automation-suite.cjs');
+=======
+<<<<<<< HEAD
+console.log('✅ Fixed all syntax errors in enhanced-automation-suite.cjs');
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 console.log('✅ Fixed all syntax errors in enhanced-automation-suite.cjs');
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

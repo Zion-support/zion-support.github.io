@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // netlify/functions/autonomous-cloud-brain.js
 // An intelligent, ultra-fast orchestrator that selectively triggers key automations
 // and ensures repository sync via build hook or GitHub API, fully cloud-native.
@@ -193,6 +199,9 @@ exports.handler = async function() {
       syncResult = { method: 'none', ok: false, error: 'No NETLIFY_BUILD_HOOK_URL or GITHUB_TOKEN' };
     }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 =======
 exports.handler = async function(event, context) {
@@ -339,11 +348,14 @@ exports.handler = async function(event, context) {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     return {
       statusCode: 200,
       headers: { 'Content-Type': 'application/json' },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       body: JSON.stringify({
         ok: true,
         triggeredAt: new Date().toISOString(),
@@ -359,6 +371,9 @@ exports.handler = async function(event, context) {
   } catch (err) {
     log(String(err));
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
     return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ok: false, error: String(err) }) };
 =======
@@ -372,7 +387,10 @@ exports.handler = async function(event, context) {
 =======
     return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ok: false, error: String(err) }) };  }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     return { statusCode: 200, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ok: false, error: String(err) }) };  }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 };

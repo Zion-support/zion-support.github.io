@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { ShieldAlert } from 'lucide-react';
-=======
-
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { ShieldAlert } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface EmptyFraudStateProps {
   hasFilters: boolean,
@@ -16,7 +5,7 @@ interface EmptyFraudStateProps {
 }
 
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
-  hasFilters;
+  hasFilters,
   onResetFilters 
 }) => {
   return (
@@ -34,13 +23,11 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
     </div>
   )
 };
-<<<<<<< HEAD
 '"
-=======
 
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { ShieldAlert } from 'lucide-react'
+import {Button} from "@/components/ui/button";
+import {ShieldAlert} from 'lucide-react'
 
 interface EmptyFraudStateProps {
   hasFilters: boolean,
@@ -48,7 +35,7 @@ interface EmptyFraudStateProps {
 }
 
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
-  hasFilters;
+  hasFilters,
   onResetFilters 
 }) => {
   return (
@@ -65,9 +52,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       )}
     </div>
   )
-
 };
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

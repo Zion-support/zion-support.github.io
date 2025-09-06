@@ -1,14 +1,14 @@
 
-import { useState, useEffect } from "react";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { JobApplication, ApplicationStatus } from "@/types/jobs";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
-import { toast } from "@/hooks/use-toast";
-import { KanbanColumn } from "./KanbanColumn";
-import { useIsMobile } from "@/hooks/use-mobile";
+import {useState, useEffect} from "react";
+import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
+import {useJobApplications} from "@/hooks/useJobApplications";
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Skeleton} from "@/components/ui/skeleton";
+import {toast} from "@/hooks/use-toast";
+import {KanbanColumn} from "./KanbanColumn";
+import {useIsMobile} from "@/hooks/use-mobile";
 interface DnDLocation {
   droppableId: string,
   index: number

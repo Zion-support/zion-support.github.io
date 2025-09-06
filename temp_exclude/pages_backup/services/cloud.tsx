@@ -1,16 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/cloud.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
-import { motion } from 'framer-motion';
-import Layout from '../../components/Layout';
-import { Cloud, Server, Shield, Zap } from 'lucide-react';
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { Cloud, Server, Shield, Zap } from 'lucide-react';
+import { motion } from 'framer-motion';
+import Layout from '../../components/Layout';
+import { Cloud, Server, Shield, Zap } from 'lucide-react';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages_backup/services/cloud.tsx
 <<<<<<< HEAD
@@ -29,10 +31,13 @@ import { Cloud, Server, Shield, Zap } from 'lucide-react';
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
 import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/cloud.tsx
 =======
@@ -40,6 +45,8 @@ import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'l
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 export default function CloudServicesPage() {
   const cloudServices = [;
     {}
@@ -74,6 +81,7 @@ export default function CloudServicesPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/cloud.tsx
 =======
 <<<<<<< HEAD
@@ -86,6 +94,8 @@ export default function CloudServicesPage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 
 const cloudServices = [
   {
@@ -126,6 +136,7 @@ const cloudServices = [
 ];
 
 export default function CloudServicesPage() {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/cloud.tsx
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -171,6 +182,8 @@ export default function CloudServicesPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   return (
     <Layout
       title="Cloud Solutions - Zion Tech Group"
@@ -185,6 +198,7 @@ export default function CloudServicesPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/cloud.tsx
 =======
 <<<<<<< HEAD
@@ -198,6 +212,8 @@ export default function CloudServicesPage() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               className="text-center""
             >;
               <h1 className="text-4xl md: text-6xl font-bold mb-6">", Cloud Solutions,
@@ -210,6 +226,7 @@ export default function CloudServicesPage() {
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages_backup/services/cloud.tsx
 <<<<<<< HEAD
@@ -221,6 +238,8 @@ export default function CloudServicesPage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -234,12 +253,15 @@ export default function CloudServicesPage() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/cloud.tsx
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -281,6 +303,7 @@ export default function CloudServicesPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/services/cloud.tsx
 =======
 <<<<<<< HEAD
@@ -293,6 +316,8 @@ export default function CloudServicesPage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 
         {/* Services Grid */}
         <section className="py-16 px-4">
@@ -333,6 +358,7 @@ export default function CloudServicesPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages_backup/services/cloud.tsx
@@ -386,6 +412,8 @@ export default function CloudServicesPage() {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/services/cloud.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

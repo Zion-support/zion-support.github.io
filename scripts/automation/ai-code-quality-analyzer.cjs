@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * AI-Powered Code Quality Analyzer;
@@ -24,6 +23,9 @@ const { execSync } = require('child_process')
       const result = execSync('find . -name "*.test.js" -o -name "*.test.ts" -o -name "*.spec.js" -o -name "*.spec.ts")
       const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
       const result = execSync('find . -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
+<<<<<<< HEAD
+      const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
+=======
       const result = execSync('find src -name "*.js" -o -name "*.ts" -o -name "*.jsx" -o -name "*.tsx")
 =======
 #!/usr/bin/env node
@@ -265,3 +267,4 @@ class AICodeQualityAnalyzer {
 const analyzer = new AICodeQualityAnalyzer();
 analyzer.run().catch(console.error);
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

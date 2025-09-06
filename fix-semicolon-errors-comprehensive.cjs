@@ -113,8 +113,12 @@ class SemicolonFixer {
 <<<<<<< HEAD
       this.log(`\n📊 Semicolon Fix Summary: `),
 =======
+<<<<<<< HEAD
+      this.log(`\n📊 Semicolon Fix Summary: `),
+=======
       this.log(`\n📊 Semicolon Fix Summary:`);
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       this.log(`✅ Files fixed: ${this.fixedFiles.length}`);
       this.log(`❌ Errors: ${this.errors.length}`);
       this.log(`⏱️  Duration: ${duration}ms`);
@@ -123,8 +127,12 @@ class SemicolonFixer {
 <<<<<<< HEAD
         this.log(`\n📁 Fixed files: `),
 =======
+<<<<<<< HEAD
+        this.log(`\n📁 Fixed files: `),
+=======
         this.log(`\n📁 Fixed files:`);
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         this.fixedFiles.forEach(file => {
           this.log(`  - ${file}`);
         });
@@ -134,8 +142,12 @@ class SemicolonFixer {
 <<<<<<< HEAD
         this.log(`\n❌ Errors encountered: `),
 =======
+<<<<<<< HEAD
+        this.log(`\n❌ Errors encountered: `),
+=======
         this.log(`\n❌ Errors encountered:`);
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         this.errors.forEach(error => {
           this.log(`  - ${error.file}: ${error.error}`);
         });

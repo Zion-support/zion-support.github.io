@@ -1,10 +1,10 @@
 
-import { useEffect, useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { EmptyMatchesCard } from "./EmptyMatchesCard";
-import { JobMatchCard } from "./JobMatchCard";
+import {useEffect, useState} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {EmptyMatchesCard} from "./EmptyMatchesCard";
+import {JobMatchCard} from "./JobMatchCard";
 interface SuggestedTalentsProps {
   jobId: string,
   jobTitle?: string
@@ -22,7 +22,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
         .from("suggested_talents")
         .select(`
           *;
-          talent_profile:talent_id(
+          talent_profile: talent_id(
             id;
             user_id;
             full_name;
@@ -34,7 +34,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
             key_projects;
             skills;
             location;
-            category;
+            category,
             company_name
           )
         `)

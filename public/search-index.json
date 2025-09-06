@@ -8,86 +8,70 @@
       "title": "Home",
       "url": "/",
       "description": "Zion Tech Group - AI and Technology Solutions",
-<<<<<<< HEAD
       "keywords": [
         "AI",
         "technology",
         "solutions",
         "automation"
       ],
-=======
-      "keywords": ["AI", "technology", "solutions", "automation"],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 1
     },
     {
       "title": "About",
       "url": "/about",
       "description": "About Zion Tech Group - Leading AI and Technology Company",
-<<<<<<< HEAD
       "keywords": [
         "about",
         "company",
         "team",
         "mission"
       ],
-=======
-      "keywords": ["about", "company", "team", "mission"],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 2
     },
     {
       "title": "Services",
       "url": "/services",
       "description": "Our Services - AI Development, Automation, and Technology Solutions",
-<<<<<<< HEAD
       "keywords": [
         "services",
         "AI",
         "automation",
         "development"
       ],
-=======
-      "keywords": ["services", "AI", "automation", "development"],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 3
     },
     {
       "title": "Contact",
       "url": "/contact",
       "description": "Contact Us - Get in Touch with Zion Tech Group",
-<<<<<<< HEAD
       "keywords": [
         "contact",
         "support",
         "help"
       ],
-=======
-      "keywords": ["contact", "support", "help"],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 4
     },
     {
       "title": "Portfolio",
       "url": "/portfolio",
       "description": "Our Portfolio - AI and Technology Projects",
-<<<<<<< HEAD
       "keywords": [
         "portfolio",
         "projects",
         "work",
         "examples"
       ],
-=======
-      "keywords": ["portfolio", "projects", "work", "examples"],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       "id": 5
     },
     {
       "title": "Blog",
       "url": "/blog",
       "description": "Blog - Latest AI and Technology Insights",
-<<<<<<< HEAD
       "keywords": [
         "blog",
         "articles",
@@ -96,9 +80,6 @@
       ],
       "id": 6
     }
-=======
-      "keywords": ["blog", "articles", "insights", "news"],
-      "id": 6    }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   ]
 }

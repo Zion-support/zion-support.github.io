@@ -11,6 +11,9 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 class PerformanceOptimizer {
   constructor() {
     this.optimizations = [];
@@ -93,6 +96,8 @@ class PerformanceOptimizer {
       return { error: error.message };
     }
   }
+<<<<<<< HEAD
+=======
 =======
 function log(message, level = 'INFO') {
   const timestamp = new Date().toISOString();
@@ -194,6 +199,7 @@ const BundleAnalyzer: React.FC = () => {
     analyzeBundle()}, []);
 >>>>>>> 0c2e16b48bc8e3e612f083a473bfef415825ac30
 
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   getFilesRecursively(dir) {
     let files = [];
     const items = fs.readdirSync(dir);
@@ -221,9 +227,14 @@ const BundleAnalyzer: React.FC = () => {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
   }
 =======
+<<<<<<< HEAD
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  }
+=======
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]};
 >>>>>>> 0c2e16b48bc8e3e612f083a473bfef415825ac30
 
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   getBundleRecommendations(totalSize, fileCount) {
     const recommendations = [];
     
@@ -257,11 +268,16 @@ const BundleAnalyzer: React.FC = () => {
         totalSize += stats.size;
         
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
         // Check if image is already optimized (WebP, compressed)
         if (file.endsWith('.webp') || file.endsWith('.avif')) {
           optimizedCount++;
         }
       });
+<<<<<<< HEAD
+=======
 =======
         <div className="space-y-2">
           <div className="flex justify-between items-center p-2 bg-blue-50 rounded">
@@ -284,6 +300,7 @@ const BundleAnalyzer: React.FC = () => {
   )};
 >>>>>>> 0c2e16b48bc8e3e612f083a473bfef415825ac30
 
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       return {
         totalImages: imageFiles.length,
         optimizedImages: optimizedCount,
@@ -420,6 +437,9 @@ class PerformanceOptimizer {
   }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   getImageFiles(dir) {
     const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.avif', '.svg'];
     const files = this.getFilesRecursively(dir);
@@ -466,6 +486,62 @@ class PerformanceOptimizer {
       return { error: error.message };
     }
   }
+<<<<<<< HEAD
+
+  findUnusedDependencies(dependencies) {
+    // This is a simplified check - in a real scenario, you'd use tools like depcheck
+    const potentiallyUnused = [];
+    
+    // Check for common unused dependencies
+    const commonUnused = ['lodash', 'moment', 'jquery'];
+    commonUnused.forEach(dep => {
+      if (dependencies.includes(dep)) {
+        potentiallyUnused.push(dep);
+      }
+    });
+    
+    return potentiallyUnused;
+  }
+
+  getDependencyRecommendations(dependencies, devDependencies) {
+    const recommendations = [];
+    
+    if (dependencies.length > 20) {
+      recommendations.push('Consider removing unused dependencies to reduce bundle size');
+    }
+    
+    if (devDependencies.length > 30) {
+      recommendations.push('Review dev dependencies for unused packages');
+    }
+    
+    recommendations.push('Use npm audit to check for security vulnerabilities');
+    recommendations.push('Consider using lighter alternatives for heavy dependencies');
+    
+    return recommendations;
+  }
+
+  generateRecommendations() {
+    return [
+      'Implement code splitting for better performance',
+      'Use React.memo for expensive components',
+      'Implement lazy loading for routes and components',
+      'Optimize images and use modern formats (WebP, AVIF)',
+      'Enable gzip compression on your server',
+      'Use a CDN for static assets',
+      'Implement service workers for caching',
+      'Minimize and compress CSS and JavaScript',
+      'Use tree shaking to eliminate dead code',
+      'Implement proper error boundaries'
+    ];
+  }
+
+  saveReport(report) {
+    const reportFile = path.join(__dirname, '..', 'logs', 'performance-report.json');
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log(`Performance report saved to: ${reportFile}`);
+  }}
+
+=======
 
   findUnusedDependencies(dependencies) {
     // This is a simplified check - in a real scenario, you'd use tools like depcheck
@@ -561,12 +637,17 @@ function main() {
 }
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 // Run the optimizer
 const optimizer = new PerformanceOptimizer();
 optimizer.optimizePerformance().then(report => {
   if (report) {
     console.log('\n📊 Performance Optimization Report');
+<<<<<<< HEAD
+    console.log('==');
+=======
     console.log('=====================================');
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     console.log(`Bundle Size: ${report.bundleSize.totalSize || 'N/A'}`);
     console.log(`Gzipped Size: ${report.bundleSize.gzippedSize || 'N/A'}`);
     console.log(`Total Images: ${report.imageOptimization.totalImages || 0}`);

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * AI-Powered Security Intelligence System;
@@ -26,6 +25,9 @@ const { execSync } = require('child_process')
         const xssResult = execSync(`grep -r -i "dangerouslySetInnerHTML"`)
         const httpsCheck = execSync(`grep -r -i "https"`)
         const headersCheck = execSync(`grep -r -i "Content-Security-Policy\\|X-Frame-Options\\|X-Content-Type-Options"`)
+<<<<<<< HEAD
+        const validationCheck = execSync(`grep -r -i "validate\\|sanitize"`)
+=======
         const validationCheck = execSync(`grep -r -i "validate\\|sanitize"`)
 =======
 #!/usr/bin/env node
@@ -267,3 +269,4 @@ class AISecurityIntelligence {
 const security = new AISecurityIntelligence();
 security.run().catch(console.error);
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

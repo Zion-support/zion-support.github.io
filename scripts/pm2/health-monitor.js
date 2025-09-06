@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }};
 ; async checkSystemResources() {; try {; this.log('💻 Checking system resources...');
 ; const memInfo = execSync('free -m', { encoding: 'utf8' }); const diskInfo = execSync('df -h', { encoding: 'utf8' }); const cpuInfo = execSync('top -bn1 | grep "Cpu(s)"', { encoding: 'utf8' });
@@ -66,6 +65,7 @@
 // Run the health monitor;
 const healthMonitor = new HealthMonitor();
 healthMonitor.run().catch(error = > {; process.exit(1)});
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 };
@@ -1237,3 +1237,7 @@ module.exports = HealthMonitor;
 >>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

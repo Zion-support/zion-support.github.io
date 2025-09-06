@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { safeStorage } from '@/utils/safeStorage';
-import { X, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
-import { useIsMobile } from '@/hooks/use-mobile';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
+  
 
 import React, { useState, useEffect } from "react";
-import { safeStorage } from "@/utils/safeStorage";
-import { X, ArrowRight } from 'lucide-react'
+import {safeStorage} from "@/utils/safeStorage";
+import {X, ArrowRight} from 'lucide-react'
 import Link from "next/link";
-import { useIsMobile } from "@/hooks/use-mobile";
+import {useIsMobile} from "@/hooks/use-mobile";
 interface SmartAppBannerProps {
   appName?: string;
   appIconSrc?: string;
@@ -99,14 +92,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     </div>
   );
 };
-<<<<<<< HEAD
 '"
 =======
-
-<<<<<<< HEAD
-  const bannerLink = isIOS ? appStoreUrl : googlePlayUrl;
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

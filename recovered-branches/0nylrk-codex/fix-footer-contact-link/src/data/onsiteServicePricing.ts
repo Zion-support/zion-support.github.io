@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 export interface CountryPricing {
   country: string;
-  pricePerIncident: number
-}
+  pricePerIncident: number;
 
 export const onsiteServicePricing: CountryPricing[] = [
-<<<<<<< HEAD
   { country: 'Afghanistan', pricePerIncident: 131.04 },
   { country: 'Albania', pricePerIncident: 110.41 },
   { country: 'Algeria', pricePerIncident: 92.26 },
@@ -240,17 +234,7 @@ export const onsiteServicePricing: CountryPricing[] = [
   { country: 'Western Sahara', pricePerIncident: 142.18 },
   { country: 'Yemen', pricePerIncident: 320.66 },
   { country: 'Zambia', pricePerIncident: 62.01 },
-  { country: 'Zimbabwe', pricePerIncident: 60.5 },
-=======
-
-export interface CountryPricing {
-  country: string,
-  pricePerIncident: number
-}
-
-export const onsiteServicePricing: CountryPricing[] = [
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  { country: 'Zimbabwe', pricePerIncident: 60.5 },];
   { country: "Afghanistan", pricePerIncident: 131.04 };
   { country: "Albania", pricePerIncident: 110.41 };
   { country: "Algeria", pricePerIncident: 92.26 };
@@ -482,8 +466,6 @@ export const onsiteServicePricing: CountryPricing[] = [
   { country: "Yemen", pricePerIncident: 320.66 };
   { country: "Zambia", pricePerIncident: 62.01 };
   { country: "Zimbabwe", pricePerIncident: 60.50 }
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ];
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

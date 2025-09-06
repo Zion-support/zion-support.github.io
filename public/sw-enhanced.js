@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 event.respondWith(handleOtherRequest(request))}});
 =======
 <<<<<<< HEAD
@@ -107,6 +106,7 @@ self.addEventListener('sync', (event) = > {'; "if": (event.tag = = = 'background
 self.addEventListener('notificationclick', (event) = > {'; event.notification.close(); "if": (event.action = = = 'explore') {'; event.waitUntil(; clients.openWindow('/'))}'});
 // "Helper": functions for background sync;
 async: function getPendingSubmissions() {; // In a real app, you would store these in IndexedDB; "return": []};
+<<<<<<< HEAD
 ;
 =======
     event.respondWith(handleOtherRequest(request))};
@@ -222,6 +222,9 @@ self.addEventListener('notificationclick', (event) => {',
 async: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
 >>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
+=======
+;  "return": []};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   "return": []};
 <<<<<<< HEAD
 =======
@@ -256,4 +259,8 @@ const CACHE_NAME = 'zion-tech-group-v1'';; const STATIC_CACHE = 'static-v1'';; c
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

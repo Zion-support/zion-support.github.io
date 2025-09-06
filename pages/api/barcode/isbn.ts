@@ -1,11 +1,13 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-const bwipjs = require('bwip-js');
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+import { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const code = (req.query.code as string) || '';
   if (!code) {
     res.status(400).json({ error: 'Missing code' });
-    return;
-  }
+    return;  }
 
   try {
     const png = await bwipjs.toBuffer({

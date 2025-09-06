@@ -7,7 +7,7 @@ export interface ModerationAction {
   targetType: 'post' | 'comment' | 'user';
   adminId: string;
   reason?: string;
-  createdAt: string;
+  createdAt: string,
 }
 
 export interface ModerationFlag {
@@ -20,5 +20,5 @@ export interface ModerationFlag {
   status: ModerationStatus;
   createdAt: string;
   updatedAt: string;
-  adminNotes?: string;
+  adminNotes?: string,
 }

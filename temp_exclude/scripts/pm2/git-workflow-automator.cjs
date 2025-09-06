@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/pm2/git-workflow-automator.cjs
 =======
 #!/usr/bin/env node
@@ -320,8 +321,10 @@ class GitWorkflowAutomator {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/pm2/git-workflow-automator.cjs
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             // Simple conflict resolution - take the incoming change
-            const resolved = content.replace(/\n<<<<<<<[\s\S]*?=======[\s\S]*?>>>>>>>\n/g, '\n');
+            const resolved = content.replace(/\n<<<<<<<[\s\S]*?[\s\S]*?>>>>>>>\n/g, '\n');
             fs.writeFileSync(file, resolved);
             execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
             this.log(`✅ Auto-resolved conflicts in: ${file}`);
@@ -429,12 +432,16 @@ module.exports = GitWorkflowAutomator;
     automator.run()
   }
 
+<<<<<<< HEAD
 module.exports = GitWorkflowAutomator;
 =======
 =======
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 '
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/pm2/git-workflow-automator.cjs
+=======
+module.exports = GitWorkflowAutomator;'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
             "stdio"
         "encoding"

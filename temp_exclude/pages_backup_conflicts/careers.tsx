@@ -10,20 +10,25 @@ export default function Careers({ }: CareersProps) {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup_conflicts/careers.tsx
 }
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup_conflicts/careers.tsx
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }
+}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages_backup_conflicts/careers.tsx
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup_conflicts/careers.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }
 =======
 }

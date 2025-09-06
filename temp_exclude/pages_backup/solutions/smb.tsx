@@ -1,23 +1,20 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/smb.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/smb.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
-=======
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Layout from '../../components/Layout';
 import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
-=======
 import React from 'react';
 import Layout from "../../components/Layout";";
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
 export default function SMBSolutionsPage() {
   const smbServices = [;
@@ -53,13 +50,10 @@ export default function SMBSolutionsPage() {
     >;
       <div className="min-h-screen bg-gray-50">";
   ];
-<<<<<<< HEAD
-=======
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
@@ -88,6 +82,10 @@ import {
   CheckCircle, 
   ArrowRight 
 } from 'lucide-react';
+=======
+import {motion} from 'framer-motion';
+import {Building2,, Users,, DollarSign,, Zap,, CheckCircle,, ArrowRight} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 
 const smbServices = [
   {
@@ -113,6 +111,7 @@ const smbServices = [
 ];
 
 export default function SMBSolutionsPage() {
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/smb.tsx
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -159,6 +158,8 @@ export default function SMBSolutionsPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/smb.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   return (
     <Layout
       title="SMB Solutions - Zion Tech Group"
@@ -173,6 +174,7 @@ export default function SMBSolutionsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/smb.tsx
 =======
 <<<<<<< HEAD
@@ -186,6 +188,8 @@ export default function SMBSolutionsPage() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/smb.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               className="text-center""
             >;
               <h1 className="text-4xl md: text-6xl font-bold mb-6">", SMB Solutions,
@@ -198,6 +202,7 @@ export default function SMBSolutionsPage() {
           </div>;
         </section>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages_backup/solutions/smb.tsx
 <<<<<<< HEAD
@@ -209,6 +214,8 @@ export default function SMBSolutionsPage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/smb.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -222,12 +229,15 @@ export default function SMBSolutionsPage() {
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/smb.tsx
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/smb.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
@@ -269,6 +279,7 @@ export default function SMBSolutionsPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/smb.tsx
 =======
 <<<<<<< HEAD
@@ -281,6 +292,8 @@ export default function SMBSolutionsPage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/smb.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 
         {/* Services Section */}
         <section className="py-16 px-4">
@@ -316,6 +329,7 @@ export default function SMBSolutionsPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages_backup/solutions/smb.tsx
@@ -369,6 +383,8 @@ export default function SMBSolutionsPage() {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/smb.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

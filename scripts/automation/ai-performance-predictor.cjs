@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 /**
  * AI-Powered Performance Predictor;
@@ -26,6 +25,9 @@ const { execSync } = require('child_process')
           const result = execSync(`grep -r "${pattern}"`)
         const memoryOps = execSync(`grep -r "JSON\\.parse\\|JSON\\.stringify"`)
           const result = execSync(`grep -r "${pattern}"`)
+<<<<<<< HEAD
+          const result = execSync(`grep -r "${pattern}"`)
+=======
           const result = execSync(`grep -r "${pattern}"`)
 =======
 #!/usr/bin/env node
@@ -310,3 +312,4 @@ class AIPerformancePredictor {
 const predictor = new AIPerformancePredictor();
 predictor.run().catch(console.error);
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

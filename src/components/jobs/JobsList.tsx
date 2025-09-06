@@ -1,35 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
-import { Job, JobStatus } from '@/types/jobs';
-import { Button } from '@/components/ui/button';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Loader2, Edit, X, Eye } from 'lucide-react';
-import { format } from 'date-fns';
-import Link from 'next/link';
-import { logErrorToProduction } from '@/utils/productionLogger';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-import { useState, useEffect } from "react";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
-import { Job, JobStatus } from "@/types/jobs";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Loader2, Edit, X, Eye } from 'lucide-react'
-import { format } from "date-fns";
+
+import {useState, useEffect} from "react";
+import {useAuth} from "@/hooks/useAuth";
+import {supabase} from "@/integrations/supabase/client";
+import {Job, JobStatus} from "@/types/jobs";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Loader2, Edit, X, Eye} from 'lucide-react'
+import {format} from "date-fns";
 import Link from "next/link";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface JobsListProps {
@@ -100,7 +79,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       case "filled":
         return "bg-green-100 text-green-800";
       case "closed":
-        return "bg-gray-100 text-gray-800";
+        return "bg-gray-100 text-gray-800",
       default:
         return "bg-gray-100 text-gray-800"
     }
@@ -111,8 +90,8 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       {jobs.map((job) => (
         <Card 
           key={job.id} 
-          className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
-            onSelectJob ? "cursor-pointer" : "";
+          className={`overflow-hidden cursor-pointer transition-shadow hover: shadow-md ${
+            onSelectJob ? "cursor-pointer" : "",
           }`}
           onClick={() => onSelectJob?.(job.id, job.title)}
         >
@@ -173,7 +152,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       ))}
     </div>
   );
-<<<<<<< HEAD
 
 };";
 return (<div className="grid gap-6 md:grid-cols-2" > {;
@@ -197,9 +175,6 @@ return (<div className="grid gap-6 md:grid-cols-2" > {;
 }</div>) ;
 }'"
 =======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

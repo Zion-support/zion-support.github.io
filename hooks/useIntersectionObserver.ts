@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import {useEffect, useRef, useState} from 'react';
 interface UseIntersectionObserverProps {
   threshold?: number;
   root?: Element | null;

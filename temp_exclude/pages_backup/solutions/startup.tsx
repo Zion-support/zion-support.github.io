@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/startup.tsx
 =======
 <<<<<<< HEAD
@@ -10,10 +11,13 @@
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/startup.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Zap, DollarSign, TrendingUp, Users } from 'lucide-react';
+<<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/startup.tsx
 <<<<<<< HEAD
 =======
@@ -26,11 +30,14 @@ import { Zap, DollarSign, TrendingUp, Users } from 'lucide-react';
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/startup.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Rocket,, Zap,, DollarSign,, Users,, ArrowRight,, CheckCircle,, Clock,, Target,, TrendingUp} from 'lucide-react';
 import Layout from "../../components/Layout";";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:pages_backup/solutions/startup.tsx
 =======
@@ -41,6 +48,8 @@ import Layout from "../../components/Layout";";
 
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages_backup/solutions/startup.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
@@ -225,8 +234,8 @@ export default function StartupSolutionsPage() {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300""
-                >;
+                  className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 hover: shadow-lg transition-shadow duration-300""
+                >,
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>"
                   <p className="text-gray-600">{service.description}</p>"
                 </motion.div>;

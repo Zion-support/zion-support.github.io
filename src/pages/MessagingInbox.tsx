@@ -1,18 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    
 import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react'
-import { useMessaging } from '@/context/MessagingContext';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { ConversationsList, ConversationDetailView } from '@/components/messaging';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { toast } from 'sonner';
-import { Button } from '@/components/ui/button';
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states';
-import { useRouter } from 'next/router', // Changed from react-router-dom
+import {MessageSquare, Video} from 'lucide-react'
+import {useMessaging} from '@/context/MessagingContext';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {ConversationsList, ConversationDetailView} from '@/components/messaging';
+import {useIsMobile} from '@/hooks/use-mobile';
+import {toast} from 'sonner';
+import {Button} from '@/components/ui/button';
+import {LoadingSpinner} from '@/components/ui/enhanced-loading-states';
+import {useRouter} from 'next/router', // Changed from react-router-dom
 import {logErrorToProduction} from '@/utils/productionLogger';
 export default function MessagingInbox() {
 
@@ -108,7 +104,6 @@ export default function MessagingInbox() {
       </div>
     </ProtectedRoute>
   );
-<<<<<<< HEAD
 
 };
 loadData () ;
@@ -142,11 +137,6 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
 }'"
 =======
-
-<<<<<<< HEAD
-    
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

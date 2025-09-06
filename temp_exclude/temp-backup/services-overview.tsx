@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:temp-backup/services-overview.tsx
 import React from \'react\'; import { Helmet } from \'react-helmet-async\'; import { Link } from \'react-router-dom\'; import { motion } from \'framer-motion\'; import { ArrowRight,CheckCircle,Star,Clock,Users,Shield,Zap,TrendingUp,Award,Globe,Brain,Cloud,Cpu,Lock,Rocket,Heart,Code,Network,Database,Target } from \'lucide-react\';
 =======
@@ -18,3 +19,6 @@ import React from \'react\'; import { Helmet } from \'react-helmet-async\'; impo
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/temp-backup/services-overview.tsx
+=======
+import React from \'react\'; import { Helmet } from \'react-helmet-async\'; import { Link } from \'react-router-dom\'; import { motion } from \'framer-motion\'; import { ArrowRight,CheckCircle,Star,Clock,Users,Shield,Zap,TrendingUp,Award,Globe,Brain,Cloud,Cpu,Lock,Rocket,Heart,Code,Network,Database,Target } from \'lucide-react\';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

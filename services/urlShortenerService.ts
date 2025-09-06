@@ -5,7 +5,7 @@ export interface ShortUrl {
   shortUrl: string;
   createdAt: Date;
   expiresAt?: Date;
-  isActive: boolean;
+  isActive: boolean,
   userId?: string
 }
 
@@ -16,7 +16,7 @@ export interface UrlAnalytics {
   countries: string[];
   devices: string[];
   browsers: string[];
-  lastClicked: Date;
+  lastClicked: Date,
   clickHistory: ClickEvent[]
 }
 
@@ -29,14 +29,14 @@ export interface ClickEvent {
   country: string;
   city: string;
   device: string;
-  browser: string;
+  browser: string,
   os: string
 }
 
 export interface CreateShortUrlRequest {
   originalUrl: string;
   customCode?: string;
-  expiresAt?: Date;
+  expiresAt?: Date,
   userId?: string
 }
 
@@ -46,7 +46,7 @@ class UrlShortenerService {
   private clicks: Map<string, ClickEvent[]> = new Map();
 
   async createShortUrl(request: CreateShortUrlRequest): Promise<ShortUrl> {
-    const shortCode = request.customCode || this.generateShortCode();
+    const shortCode = request.customCode || this.generateShortCode(),
     
     if (this.urls.has(shortCode)) {
       throw new Error('Short code already exists')
@@ -55,11 +55,11 @@ class UrlShortenerService {
     const shortUrl: ShortUrl = {
       id: this.generateId();
       originalUrl: request.originalUrl;
-      shortCode;
+      shortCode,
       shortUrl: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://zion.app'}/s/${shortCode}`;
       createdAt: new Date();
       expiresAt: request.expiresAt;
-      isActive: true;
+      isActive: true,
       userId: request.userId
     };
 
@@ -71,7 +71,7 @@ class UrlShortenerService {
       countries: [];
       devices: [];
       browsers: [];
-      lastClicked: new Date();
+      lastClicked: new Date(),
       clickHistory: []
     });
     this.clicks.set(shortCode, []);
@@ -84,7 +84,7 @@ class UrlShortenerService {
     if (!url || !url.isActive) return null;
     
     if (url.expiresAt && url.expiresAt < new Date()) {
-      url.isActive = false;
+      url.isActive = false,
       return null
     }
 
@@ -96,7 +96,7 @@ class UrlShortenerService {
     if (!url) return;
 
     const clickEvent: ClickEvent = {
-      id: this.generateId();
+      id: this.generateId(),
       ...clickData
     };
 
@@ -165,14 +165,14 @@ class UrlShortenerService {
   async exportData(): Promise<any> {
     return {
       urls: Array.from(this.urls.entries());
-      analytics: Array.from(this.analytics.entries());
+      analytics: Array.from(this.analytics.entries()),
       clicks: Array.from(this.clicks.entries())
     }
   }
 
   async importData(data: any): Promise<void> {
     this.urls = new Map(data.urls);
-    this.analytics = new Map(data.analytics);
+    this.analytics = new Map(data.analytics),
     this.clicks = new Map(data.clicks)
   }
 }

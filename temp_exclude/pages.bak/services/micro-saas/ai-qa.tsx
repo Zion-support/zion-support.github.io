@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages.bak/services/micro-saas/ai-qa.tsx
 export default function AIQACopilot() { return ( <Article title=\"AI QA Copilot\" subtitle=\"Autogenerates tests from user flows and PR diffs\" price=\"from $99/mo\" bullets={[\'Watches PRs and generates Playwright/Cypress tests automatically\',\'Finds flaky tests; groups by root cause and suggests fixes\',\'CI integrations for GitHub Actions,GitLab,CircleCI\',\'Tracks coverage and critical-path user flows\' ]} links={{ \"website\": \'https: /> ) } function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }
 module.exports = default function AIQACopilot() { return ( <Article title="AI QA Copilot" subtitle="Autogenerates tests from user flows and PR diffs" price="from $99/mo" bullets={["Watches PRs and generates Playwright/Cypress tests automatically","Finds flaky tests; groups by root cause and suggests fixes","CI integrations for GitHub Actions,GitLab,CircleCI","Tracks coverage and critical-path user flows" ]} links={{ website: "https: /> ) } function Article({ title,subtitle,price,bullets,links }: { title: string; subtitle: string; price: string; bullets: string[]; links: { website: string; contact: string } }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }"""
@@ -22,6 +23,11 @@ module.exports = default function AIQACopilot() { return ( <Article title="AI QA
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages.bak/services/micro-saas/ai-qa.tsx
+=======
+export default function AIQACopilot() { return ( <Article title=\"AI QA Copilot\" subtitle=\"Autogenerates tests from user flows and PR diffs\" price=\"from $99/mo\" bullets={[\'Watches PRs and generates Playwright/Cypress tests automatically\',\'Finds flaky tests; groups by root cause and suggests fixes\',\'CI integrations for GitHub Actions,GitLab,CircleCI\',\'Tracks coverage and critical-path user flows\' ]} links={{ \"website\": \'https: /> ) } function Article({ title,subtitle,price,bullets,links }: { \"title\": string; subtitle: string, price: string, bullets: string[], links: { website: string, contact: string } }) { return ( <main style={{ \"fontFamily\": \'system-ui,sans-serif\',\"padding\": \'32\',\"maxWidth\": \'920\',\"margin\": \'0 auto\' }}> <h1 style={{ \"marginTop\": \'0\' }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>\"Pricing\": </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> \"Site\": <a href={links.website} target=\"_blank\" rel=\"noreferrer\">ziontechgroup.com</a> · \"Email\": <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }
+module.exports = default function AIQACopilot() { return ( <Article title="AI QA Copilot" subtitle="Autogenerates tests from user flows and PR diffs" price="from $99/mo" bullets={["Watches PRs and generates Playwright/Cypress tests automatically","Finds flaky tests; groups by root cause and suggests fixes","CI integrations for GitHub Actions,GitLab,CircleCI","Tracks coverage and critical-path user flows" ]} links={{ website: "https: /> ) } function Article({ title,subtitle,price,bullets,links }: { title: string, subtitle: string, price: string, bullets: string[], links: { website: string,
+    contact: string } }) { return ( <main style={{ fontFamily: "system-ui,sans-serif",padding: "32",maxWidth: "920",margin: "0 auto" }}> <h1 style={{ marginTop: "0" }}>{title}</h1> <p><strong>{subtitle}</strong></p> <p><strong>Pricing: </strong> {price}</p> <ul> {bullets.map((b) => ( <li key={b}>{b}</li> ))} </ul> <p> Site: <a href={links.website} target="_blank" rel="noreferrer">ziontechgroup.com</a> Email: <a href={links.contact}>kleber@ziontechgroup.com</a> </p> </main> ) }"""
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 interface AiqaProps {
   // Add props here as needed
@@ -34,20 +40,25 @@ export default function Aiqa({ }: AiqaProps) {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages.bak/services/micro-saas/ai-qa.tsx
 }
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages.bak/services/micro-saas/ai-qa.tsx
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }
+}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages.bak/services/micro-saas/ai-qa.tsx
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages.bak/services/micro-saas/ai-qa.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }
 =======
 }

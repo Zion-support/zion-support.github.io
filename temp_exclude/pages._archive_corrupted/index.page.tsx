@@ -1,16 +1,18 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/index.page.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/index.page.tsx
-import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import React from 'react';
+import Link from 'next/link';
+import Head from 'next/head';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/index.page.tsx
 <<<<<<< HEAD
@@ -29,6 +31,8 @@ import Head from 'next/head';
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/index.page.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 export default function HomePage() {
   return (
     <>
@@ -48,6 +52,7 @@ export default function HomePage() {
       </Head>
             <p>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/index.page.tsx
 =======
 <<<<<<< HEAD
@@ -61,10 +66,13 @@ export default function HomePage() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/index.page.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               Mobile: <a className=\"text-blue-700\" href=\"tel:+13024640950\">+1 302 464 0950</a> · Email:{\' \'}
               <a className=\"text-blue-700\" href=\""mailto\": kleber@ziontechgroup.com\">kleber@ziontechgroup.com</a> · Address: 364 E
               Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}
               <a className="text-blue-700" href=""mailto": kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/index.page.tsx
@@ -77,14 +85,17 @@ export default function HomePage() {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/index.page.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               Main St STE 1008 Middletown DE 19709
             </p>
           </div>
         </section>
       </main>
     </>
-  );
+  ),
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/index.page.tsx
 import React from 'react'; import Link from 'next/link'; import Head from 'next/head'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,IT Solutions</title> <meta name="description" content="AI solutions,Micro SaaS products,and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup.com" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <meta property="og:title" content="Zion Tech Group — AI,Micro SaaS,IT Solutions" /> <meta property="og:description" content="AI services,micro SaaS platforms,and enterprise-grade IT solutions." /> <meta property="og:type" content="website" /> <meta property="og:url" content="https: <meta name="twitter:card" content="summary_large_image" /> <link rel="canonical" href="https: </Head> <p> Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '} <a className="text-blue-700" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E Main St STE 1008 Middletown DE 19709 </p> </div> </section> </main> </> );
@@ -101,10 +112,13 @@ import React from 'react'; import Link from 'next/link'; import Head from 'next/
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 <<<<<<< HEAD
-import React from 'react'; import Link from 'next/link'; import Head from 'next/head'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,IT Solutions</title> <meta name="description" content="AI solutions,Micro SaaS products,and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup.com" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <meta property="og:title" content="Zion Tech Group — AI,Micro SaaS,IT Solutions" /> <meta property="og:description" content="AI services,micro SaaS platforms,and enterprise-grade IT solutions." /> <meta property="og:type" content="website" /> <meta property="og:url" content="https: <meta name="twitter:card" content="summary_large_image" /> <link rel="canonical" href="https: </Head> <p> Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '} <a className="text-blue-700" href="mailto: kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E Main St STE 1008 Middletown DE 19709 </p> </div> </section> </main> </> ),
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react'; import Link from 'next/link'; import Head from 'next/head'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,IT Solutions</title> <meta name="description" content="AI solutions,Micro SaaS products,and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup.com" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <meta property="og:title" content="Zion Tech Group — AI,Micro SaaS,IT Solutions" /> <meta property="og:description" content="AI services,micro SaaS platforms,and enterprise-grade IT solutions." /> <meta property="og:type" content="website" /> <meta property="og:url" content="https: <meta name="twitter:card" content="summary_large_image" /> <link rel="canonical" href="https: </Head> <p> Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '} <a className="text-blue-700" href="mailto: kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E Main St STE 1008 Middletown DE 19709 </p> </div> </section> </main> </> ),
+import React from 'react'; import Link from 'next/link'; import Head from 'next/head'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,IT Solutions</title> <meta name="description" content="AI solutions,Micro SaaS products,and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup.com" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <meta property="og:title" content="Zion Tech Group — AI,Micro SaaS,IT Solutions" /> <meta property="og:description" content="AI services,micro SaaS platforms,and enterprise-grade IT solutions." /> <meta property="og:type" content="website" /> <meta property="og:url" content="https: <meta name="twitter:card" content="summary_large_image" /> <link rel="canonical" href="https: </Head> <p> Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '} <a className="text-blue-700" href="mailto: kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E Main St STE 1008 Middletown DE 19709 </p> </div> </section> </main> </> ),
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/index.page.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

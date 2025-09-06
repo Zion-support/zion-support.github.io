@@ -1,8 +1,8 @@
 
 import React, { useState } from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import { CodeBlock } from "@/components/developers/CodeBlock";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {CodeBlock} from "@/components/developers/CodeBlock";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
@@ -31,7 +31,7 @@ export function ApiReference() {
       "category": "development";
       "budget": {
         "min": 5000;
-        "max": 10000;
+        "max": 10000,
         "currency": "USD"
       };
       "status": "open";
@@ -47,7 +47,7 @@ export function ApiReference() {
         "401": {
           description: "Unauthorized",
           example: `{
-  "error": "invalid_token";
+  "error": "invalid_token",
   "message": "The provided API key is invalid or expired"
 }`
         };
@@ -55,7 +55,7 @@ export function ApiReference() {
           description: "Rate limit exceeded",
           example: `{
   "error": "rate_limit_exceeded";
-  "message": "Rate limit exceeded. Please try again in 60 seconds";
+  "message": "Rate limit exceeded. Please try again in 60 seconds",
   "retry_after": 60
 }`
         }
@@ -86,7 +86,7 @@ export function ApiReference() {
   "category": "design";
   "budget": {
     "min": 3000;
-    "max": 5000;
+    "max": 5000,
     "currency": "USD"
   };
   "status": "open";
@@ -100,7 +100,7 @@ export function ApiReference() {
   "message": "Invalid input";
   "details": [
     {
-      "field": "title";
+      "field": "title",
       "error": "Title is required"
     }
   ]
@@ -117,7 +117,7 @@ export function ApiReference() {
     "category": "design";
     "budget": {
       "min": 3000;
-      "max": 5000;
+      "max": 5000,
       "currency": "USD"
     };
     "skills": ["Figma", "User Research", "Prototyping"];
@@ -145,7 +145,7 @@ export function ApiReference() {
     {
       "id": "talent-123";
       "full_name": "Jane Smith";
-      "professional_title": "Full Stack Developer";
+      "professional_title": "Full Stack Developer",
       "skills": ["React", "Node.js", "TypeScript"];
       "hourly_rate": 75;
       "availability": "full-time";

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/comprehensive-test-deploy.cjs
 =======
 #!/usr/bin/env node
@@ -148,6 +149,8 @@ class ComprehensiveTestDeploy {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/comprehensive-test-deploy.cjs
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     this.log(`Tests: ${this.results.tests.passed}/${this.results.tests.total} passed`);
     this.log(`Builds: ${this.results.builds.success} successful, ${this.results.builds.failed} failed`);
     this.log(`Errors: ${this.results.errors.length}`);
@@ -161,6 +164,7 @@ class ComprehensiveTestDeploy {
 }
 // Run the comprehensive suite
 const suite = new ComprehensiveTestDeploy();
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/comprehensive-test-deploy.cjs
 <<<<<<< HEAD
 suite.runComprehensiveSuite().catch(console.error);#!/usr/bin/env node;
@@ -177,6 +181,9 @@ suite.runComprehensiveSuite().catch(console.error);
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 #!/usr/bin/env node;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/comprehensive-test-deploy.cjs
+=======
+suite.runComprehensiveSuite().catch(console.error);#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

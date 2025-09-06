@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network} from 'lucide-react';
 import SEO from '../components/SEO';
 export default function QuantumSecureCloudInfrastructure() {
 	return(<ServiceLanding
@@ -29,7 +24,5 @@ export default function QuantumSecureCloudInfrastructure() {
 		/>
 	)
 }
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

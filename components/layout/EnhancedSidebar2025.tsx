@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  ] 
 }];
 ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const filteredServices = sidebarItems.flatMap (item => item.children?.filter (child => child.name.toLowerCase () .includes (searchQuery.toLowerCase () ) || child.description?.toLowerCase () .includes (searchQuery.toLowerCase () ) ) || []);
 </div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
   section.badge 
 }</span>) 
@@ -30,72 +27,7 @@
 }</motion.div>) 
 }</AnimatePresence> </div>) ) 
 }</div> </div> <span>Quick Links</span> </h3> <div className="space-y-2" > <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > Contact Us </div> <div className="text-xs text-gray-500" >Get in touch with our team</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > View Pricing </div> <div className="text-xs text-gray-500" >Explore our pricing plans</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > About Us </div> <div className="text-xs text-gray-500" >Learn about Zion Tech Group</div> </a> </div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-blue-400" >1000+</div> <div className="text-xs text-gray-400" >Clients</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-purple-400" >24/7</div> <div className="text-xs text-gray-400" >Support</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-green-400" >99.9%</div> <div className="text-xs text-gray-400" >Uptime</div> </div> </div> </div> <Link href="/contact" className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25" > <span>Get Started Today</span> <ArrowRight className="w-4 h-4 ml-2 inline" /> </a> </div> </div> </motion.aside>) 
-};
-=======
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  X, ChevronRight, Home, Star, Users, 
-  Settings, HelpCircle, Mail, Phone, MapPin;
-  Brain, Atom, Shield, Rocket, DollarSign;
-  Globe, Cpu, Database, Lock, Zap;
-  TrendingUp, Award, CheckCircle, Clock;
-  ArrowRight, Search, Menu, X as CloseIcon;
-  Target, BookOpen, Truck, BarChart3;
-  Sparkles, Eye, Lightbulb, Palette, Code
-} from 'lucide-react';
-
-interface SidebarItem {
-  name: string,
-  href: string,
-  icon?: React.ReactNode;
-  description?: string;
-  children?: SidebarItem[];
-  badge?: string;
-  isNew?: boolean;
-  isHot?: boolean
-}
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
-=======
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  X, ChevronRight, Home, Star, Users, 
-  Settings, HelpCircle, Mail, Phone, MapPin;
-  Brain, Atom, Shield, Rocket, DollarSign;
-  Globe, Cpu, Database, Lock, Zap;
-  TrendingUp, Award, CheckCircle, Clock;
-  ArrowRight, Search, Menu, X as CloseIcon;
-  Target, BookOpen, Truck, BarChart3;
-  Sparkles, Eye, Lightbulb, Palette, Code
-} from 'lucide-react';
-
-interface SidebarItem {
-  name: string,
-  href: string,
-  icon?: React.ReactNode;
-  description?: string;
-  children?: SidebarItem[];
-  badge?: string;
-  isNew?: boolean;
-  isHot?: boolean
-}
-
-const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
-};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+};export default EnhancedSidebar2025;
 
 const sidebarItems: SidebarItem[] = [
   {
@@ -306,7 +238,7 @@ const supportLinks = [
 ];
 
   const toggleSection = (title: string) => {
-    const newExpanded = new Set(expandedSections);
+    const newExpanded = new Set(expandedSections),
     if (newExpanded.has(title)) {
       newExpanded.delete(title)
     } else {
@@ -659,8 +591,6 @@ const supportLinks = [
   )
 };
 
-<<<<<<< HEAD
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default EnhancedSidebar2025;
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

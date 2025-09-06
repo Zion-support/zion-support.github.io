@@ -1,16 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useRouter } from 'next/router'; // Changed from useParams
-=======
-import { useRouter } from 'next/router', // Changed from useParams
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
+
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { NEW_PRODUCTS } from '@/data/newProductsData';
-import { useCart } from '@/context/CartContext';
-import { toast } from '@/hooks/use-toast';
-import { SEO } from '@/components/SEO';
+import {Button} from '@/components/ui/button';
+import {NEW_PRODUCTS} from '@/data/newProductsData';
+import {useCart} from '@/context/CartContext';
+import {toast} from '@/hooks/use-toast';
+import {SEO} from '@/components/SEO';
 import {logErrorToProduction} from '@/utils/productionLogger';
 export default function ProductPage() {
 
@@ -98,7 +94,6 @@ export default function ProductPage() {
       </div>
     </>
   );
-<<<<<<< HEAD
 
 };
 //Only fetch if id is available (from router) ;
@@ -125,13 +120,6 @@ product.title ;
 }/> </Button> </div> </>) ;
 }'
 =======
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

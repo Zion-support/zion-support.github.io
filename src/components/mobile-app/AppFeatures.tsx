@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Brain, Clock, Award, Zap } from 'lucide-react';
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,;
-} from '@/components/ui/card';
-=======
-
-import React from "react";
-import { Brain, Clock, Award, Zap } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+};
 
 const features = [
   {
@@ -67,7 +51,6 @@ export const AppFeatures: React.FC = () => {
     </section>
   )
 };
-<<<<<<< HEAD
 {";
   icon: <Clock className="h-10 w-10 text-zion-cyan" />;";
 title: "1-Click Hiring";";
@@ -98,11 +81,5 @@ export const AppFeatures: React.FC = () => {";
 };
 "
 =======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

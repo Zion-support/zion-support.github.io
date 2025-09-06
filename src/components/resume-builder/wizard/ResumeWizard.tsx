@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useResume } from '@/hooks/useResume';
@@ -13,14 +9,14 @@ import { AlertCircle, FilePlus, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button';
 import { Resume } from '@/types/resume';
 // Import components
-import { ResumeProgress } from './ResumeProgress';
-import { EmptyResumeState } from './EmptyResumeState';
-import { CreateResumeForm } from './CreateResumeForm';
-import { ResumeSteps } from './ResumeSteps';
-import { ResumeStepContent } from './ResumeStepContent';
-import { useResumeProgress } from './useResumeProgress';
-import { ResumeVersionSelector } from './ResumeVersionSelector';
-import { RESUME_STEPS } from './constants';
+import {ResumeProgress} from './ResumeProgress';
+import {EmptyResumeState} from './EmptyResumeState';
+import {CreateResumeForm} from './CreateResumeForm';
+import {ResumeSteps} from './ResumeSteps';
+import {ResumeStepContent} from './ResumeStepContent';
+import {useResumeProgress} from './useResumeProgress';
+import {ResumeVersionSelector} from './ResumeVersionSelector';
+import {RESUME_STEPS} from './constants';
 export function ResumeWizard() {
   const { user } = useAuth();
   const { 
@@ -152,7 +148,6 @@ export function ResumeWizard() {
       </Card>
     </div>
   );
-<<<<<<< HEAD
 
 };
 
@@ -190,11 +185,6 @@ export function ResumeWizard() {
 }</Tabs> </CardContent> </Card> </div>) ;
 }'"
 =======
-
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 #!/usr/bin/env node,;
@@ -277,11 +278,18 @@ module.exports = GitWorkflowAutomator,;
  * Automates git operations and workflow management;
  */;
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+=======
+#!/usr/bin/env node;
+/**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 ;
-<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 class GitWorkflowAutomator {; constructor() {; this.logFile = './logs/pm2/git-workflow.log'; this.errorFile = './logs/pm2/git-workflow-error.log'; this.workflowReport = './logs/git-workflow-report.json'; this.ensureLogDirectory()};
 ; ensureLogDirectory() {; const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) {; fs.mkdirSync(logDir, { recursive: true })}};
 ; log(message, level = 'INFO') {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`;
@@ -341,7 +349,9 @@ async function main() {; const automator = new GitWorkflowAutomator();
 ;
 if (require.main = = = module) {; main()};
 ;
+<<<<<<< HEAD
 module.exports = GitWorkflowAutomator;
+<<<<<<< HEAD
 =======
 class GitWorkflowAutomator {;
   constructor() {;
@@ -862,3 +872,7 @@ _console.log('Git workflow automation initialized');
 >>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

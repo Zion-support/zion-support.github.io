@@ -641,6 +641,9 @@
     "conflicts:cron:stop": "bash automation/merge-conflict-cron.sh stop",
     "conflicts:cron:status": "bash automation/merge-conflict-cron.sh status",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     "talent:optimize": "node automation/talent-profile-optimizer.cjs"
@@ -654,9 +657,12 @@
 =======
     "talent:optimize": "node automation/talent-profile-optimizer.cjs"  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "talent:optimize": "node automation/talent-profile-optimizer.cjs"  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
     "@google/generative-ai": "^0.24.1",
@@ -666,6 +672,9 @@
     "@modelcontextprotocol/server-memory": "^2025.8.4",
     "@modelcontextprotocol/server-sequential-thinking": "^2025.7.1",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     "@semaphore-protocol/contracts": "^4.13.0-beta.1",
@@ -681,11 +690,14 @@
     "@semaphore-protocol/identity": "^4.13.0-beta.1",
     "@semaphore-protocol/proof": "^4.13.0-beta.1",    "@supabase/ssr": "^0.6.1",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "@semaphore-protocol/contracts": "^4.13.0-beta.1",
     "@semaphore-protocol/identity": "^4.13.0-beta.1",
     "@semaphore-protocol/proof": "^4.13.0-beta.1",    "@supabase/ssr": "^0.6.1",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "@supabase/supabase-js": "^2.39.0",
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
@@ -696,6 +708,9 @@
     "chokidar": "^4.0.3",
     "cron-parser": "^5.3.0",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     "ethers": "^6.14.0",
@@ -706,9 +721,12 @@
 =======
     "ethers": "^6.14.0",    "events": "^3.3.0",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "ethers": "^6.14.0",    "events": "^3.3.0",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "formidable": "^3.5.4",
     "framer-motion": "^6.5.1",
     "fs": "^0.0.1-security",
@@ -722,6 +740,9 @@
     "next": "^11.1.4",
     "node-cron": "^4.2.1",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     "openai": "^5.12.2",
@@ -733,15 +754,21 @@
 =======
     "openai": "^5.12.2",    "path": "^0.12.7",
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "openai": "^5.12.2",    "path": "^0.12.7",
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     "pdfkit": "^0.13.0",
     "postcss": "^8.4.32",
     "react": "^17.0.2",
     "react-datepicker": "^8.4.0",
     "react-dom": "^17.0.2",
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     "react-json-view": "^1.21.3",
@@ -755,10 +782,13 @@
     "react-json-view": "^1.21.3",
     "uuid": "^11.1.0"  },
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     "react-json-view": "^1.21.3",
     "uuid": "^11.1.0"  },
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
@@ -804,13 +834,19 @@
       "eslint --fix"
     ]
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   "name": "zion-sdk-monorepo",
   "private": true,
   "version": "0.1.0",
@@ -830,6 +866,9 @@
   "devDependencies": {
     "rimraf": "^6.0.1"
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
   }
 =======
@@ -840,6 +879,9 @@
 =======
   }}
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   }}
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

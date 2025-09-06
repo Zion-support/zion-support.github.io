@@ -1,22 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-import { Bell, Calendar, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { useProjects } from '@/hooks/useProjects';
-import { Project } from '@/types/projects';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+  
 
-import { useEffect, useState } from "react";
-import { useRouter } from 'next/router';
-import { Bell, Calendar, X } from 'lucide-react'
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { useProjects } from "@/hooks/useProjects";
-import { Project } from "@/types/projects";
+import {useEffect, useState} from "react";
+import {useRouter} from 'next/router';
+import {Bell, Calendar, X} from 'lucide-react'
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {useProjects} from "@/hooks/useProjects";
+import {Project} from "@/types/projects";
 export function ProjectOfferBanner() {
   const router = useRouter();
   const { projects, isLoading } = useProjects();
@@ -34,7 +24,7 @@ export function ProjectOfferBanner() {
     e.stopPropagation();
     setDismissed(prev => {
       const updated = new Set(prev);
-      updated.add(projectId);
+      updated.add(projectId),
       return updated
     })
   };
@@ -87,7 +77,6 @@ export function ProjectOfferBanner() {
         ))}
     </div>
   );
-<<<<<<< HEAD
 
 }, [projects, isLoading]);
 const handleDismiss = (projectId: string, e: React.MouseEvent) => {;
@@ -111,11 +100,6 @@ if (isLoading || pendingOffers.length === 0 || pendingOffers.every (p => dismiss
 }</div>) ;
 }'"
 =======
-
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

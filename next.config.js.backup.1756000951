@@ -1,11 +1,17 @@
 const path = require('path');
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 
 let withSentryConfig = (cfg) => cfg;
 try {
@@ -15,6 +21,9 @@ try {
 } catch {}
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 const baseConfig = {
 =======
@@ -27,9 +36,12 @@ const nextConfig = {
 =======
 const baseConfig = {  poweredByHeader: false,
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 const baseConfig = {  poweredByHeader: false,
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   trailingSlash: false,
   reactStrictMode: true,
   bundlePagesRouterDependencies: true,

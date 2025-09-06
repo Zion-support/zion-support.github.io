@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() {  this.optimizations.push('Images optimized')} async optimizeCode() {  this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
 #!/usr/bin/env node
 const fs = require('fs');
@@ -58,8 +61,8 @@ if (require.main === module) {
   optimizer.generateReport();
 }
 module.exports = PerformanceOptimizer;
-=======
 #!/usr/bin/env node
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:scripts/performance-optimizer.js
 <<<<<<< HEAD
@@ -68,6 +71,8 @@ module.exports = PerformanceOptimizer;
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 #!/usr/bin/env node
 =======
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -139,6 +144,7 @@ class PerformanceOptimizer {
     this.srcDir = path.join(this.projectRoot, 'src');
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
 =======
 <<<<<<< HEAD
@@ -150,12 +156,15 @@ class PerformanceOptimizer {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     this.ensureDirectories();
   }
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
       fs.mkdirSync(this.reportsDir, { recursive: true });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
 <<<<<<< HEAD
 =======
@@ -168,6 +177,8 @@ class PerformanceOptimizer {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     this.ensureDirectories()}
   ensureDirectories() {
     if (!fs.existsSync(this.reportsDir)) {
@@ -176,6 +187,7 @@ class PerformanceOptimizer {
   log(message) {
     const timestamp = new Date().toISOString();
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
     console.log(`[${timestamp}] ${message}`);
   }
@@ -198,6 +210,10 @@ class PerformanceOptimizer {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+    console.log(`[${timestamp}] ${message}`);
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     console.log(`[${timestamp}] ${message}`)}
   async optimizePerformance() {
     this.log('⚡ Starting performance optimization');
@@ -229,6 +245,7 @@ class PerformanceOptimizer {
               'export default React.memo(function $1'
             );
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
             fileOptimizations++;
           }
@@ -251,12 +268,17 @@ class PerformanceOptimizer {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+            fileOptimizations++;
+          }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             fileOptimizations++}
           // Add useCallback to event handlers
           if (content.includes('onClick') && !content.includes('useCallback')) {
             // This is a complex optimization that would need more context
             // For now, we'll just log it as a potential optimization
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
             fileOptimizations++;
           }
@@ -279,6 +301,10 @@ class PerformanceOptimizer {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+            fileOptimizations++;
+          }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             fileOptimizations++}
           // Add useMemo to expensive calculations
           if (content.includes('useState') && content.includes('map(') && !content.includes('useMemo')) {
@@ -314,6 +340,7 @@ class PerformanceOptimizer {
         if (newContent !== content) {
           fs.writeFileSync(filePath, newContent, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
 =======
 <<<<<<< HEAD
@@ -325,6 +352,8 @@ class PerformanceOptimizer {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
           this.log(`✅ Optimized: ${file} (${fileOptimizations} optimizations)`);
         }
         results.processed++;
@@ -333,6 +362,7 @@ class PerformanceOptimizer {
         results.errors.push({ file, error: error.message });
         this.log(`❌ Error optimizing ${file}: ${error.message}`);
       }
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
 <<<<<<< HEAD
 =======
@@ -345,6 +375,8 @@ class PerformanceOptimizer {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
           this.log(`✅ "Optimized": ${file} (${fileOptimizations} optimizations)`)}
         results.processed++;
         results.optimizations += fileOptimizations} catch (error) {
@@ -364,6 +396,7 @@ class PerformanceOptimizer {
     const reportPath = path.join(this.reportsDir, 'performance-optimization-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
 =======
 <<<<<<< HEAD
@@ -375,10 +408,13 @@ class PerformanceOptimizer {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     this.log(`📊 Report generated: ${reportPath}`);
     this.log(`✅ Performance optimization completed: ${results.optimizations} optimizations applied to ${results.processed} files`);
     return report;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
 <<<<<<< HEAD
 =======
@@ -391,6 +427,8 @@ class PerformanceOptimizer {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     this.log(`📊 Report "generated": ${reportPath}`);
     this.log(`✅ Performance optimization "completed": ${results.optimizations} optimizations applied to ${results.processed} files`);
     return report}
@@ -403,6 +441,7 @@ class PerformanceMonitor {
   constructor() {
     this.metrics = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
 =======
 <<<<<<< HEAD
@@ -414,6 +453,8 @@ class PerformanceMonitor {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
       pageLoadTime: 0,
       firstContentfulPaint: 0,
       largestContentfulPaint: 0,
@@ -421,6 +462,7 @@ class PerformanceMonitor {
       firstInputDelay: 0
     };
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
 <<<<<<< HEAD
 =======
@@ -433,6 +475,8 @@ class PerformanceMonitor {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
       "pageLoadTime": 0,
       "firstContentfulPaint": 0,
       "largestContentfulPaint": 0,
@@ -462,13 +506,14 @@ class PerformanceMonitor {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
     this.metrics.pageLoadTime = performance.now(),
-    <<<<<<< HEAD
-<<<<<<< HEAD
-        this.reportMetrics()
+            this.reportMetrics()
   });
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
         this.reportMetrics()});
       // Monitor Web Vitals
       if ('PerformanceObserver' in window) {
@@ -493,6 +538,7 @@ class PerformanceMonitor {
           }
         });
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
         observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
       }
@@ -515,12 +561,17 @@ class PerformanceMonitor {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+        observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] });
+      }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
         observer.observe({ "entryTypes": ['paint', 'largest-contentful-paint', 'layout-shift', 'first-input'] })}
     }
   }
   reportMetrics() {
     if (process.env.NODE_ENV === 'development') {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
       console.log('Performance Metrics:', this.metrics);
     }
@@ -543,12 +594,17 @@ class PerformanceMonitor {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+      console.log('Performance Metrics:', this.metrics);
+    }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
       console.log('Performance "Metrics": ', this.metrics)}
     // Send to analytics in production
     if (typeof gtag !== 'undefined') {
       Object.entries(this.metrics).forEach(([key, value]) => {
         gtag('event', key, {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
 =======
 <<<<<<< HEAD
@@ -560,12 +616,15 @@ class PerformanceMonitor {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
           event_category: 'Performance',
           value: Math.round(value),
           non_interaction: true
         });
       });
     }
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
 <<<<<<< HEAD
 =======
@@ -578,6 +637,8 @@ class PerformanceMonitor {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
           "event_category": 'Performance',
           "value": Math.round(value),
           "non_interaction": true
@@ -589,6 +650,7 @@ export default PerformanceMonitor;";
     const utilsDir = path.dirname(scriptPath);
     if (!fs.existsSync(utilsDir)) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
 =======
 <<<<<<< HEAD
@@ -600,11 +662,14 @@ export default PerformanceMonitor;";
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
       fs.mkdirSync(utilsDir, { recursive: true });
     }
     fs.writeFileSync(scriptPath, monitoringScript);
     this.log(`✅ Performance monitoring script created: ${scriptPath}`);
   }
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
 <<<<<<< HEAD
 =======
@@ -617,6 +682,8 @@ export default PerformanceMonitor;";
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
       fs.mkdirSync(utilsDir, { "recursive": true })}
     fs.writeFileSync(scriptPath, monitoringScript);
     this.log(`✅ Performance monitoring script "created": ${scriptPath}`)}
@@ -632,20 +699,23 @@ if (require.main === module) {
   })
     .catch((error) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
       console.error('❌ Performance optimization failed:', error);
       process.exit(1);
     });
 }
 module.exports = PerformanceOptimizer;
-=======
       console.error('❌ Performance optimization "failed": ', error);
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/performance-optimizer.js
 =======
 <<<<<<< HEAD
@@ -656,10 +726,13 @@ module.exports = PerformanceOptimizer;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
       console.error('❌ Performance optimization "failed": ', error);
       process.exit(1)})}
 module.exports = PerformanceOptimizer;
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); class PerformanceOptimizer { constructor() { this.optimizations = []} async optimizeImages() { console.log('🖼️ Optimizing images...'); this.optimizations.push('Images optimized')} async optimizeCode() { console.log('💻 Optimizing code...'); this.optimizations.push('Code optimized')} async generateReport() { const report = { timestamp: new Date().toISOString(),optimizations: this.optimizations }; const reportPath = path.join(process.cwd(),'performance-reports','optimization-report.json'); if (!fs.existsSync(path.dirname(reportPath))) { fs.mkdirSync(path.dirname(reportPath),{ recursive: true })} fs.writeFileSync(reportPath,JSON.stringify(report,null,2))} } module.exports = PerformanceOptimizer;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:scripts/performance-optimizer.js
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
@@ -679,3 +752,5 @@ module.exports = PerformanceOptimizer;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/performance-optimizer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

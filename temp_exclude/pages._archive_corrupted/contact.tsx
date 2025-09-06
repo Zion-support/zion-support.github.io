@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
@@ -12,6 +13,8 @@
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 const SEO = dynamic(() => import(\'../src/components/SEO\'), { \"ssr\": false })
 const PageTransition = dynamic(() => import(\'../src/components/PageTransition\'), { \"ssr\": false })
 const \"ContactPage\": React.FC = () => {
@@ -19,23 +22,15 @@ import React from 'react'
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  ArrowRight, 
-  Send,
-  MessageCircle,
-  Globe
-} from 'lucide-react'
+import {motion} from 'framer-motion'
+import {Phone,, Mail,, MapPin,, Clock,, ArrowRight,, Send,, MessageCircle,, Globe} from 'lucide-react'
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import {Helmet} from 'react-helmet-async';
+import {Mail,, Phone,, MapPin,, Clock,, Send,, CheckCircle} from 'lucide-react';
 const SEO = dynamic(() => import('../src/components/SEO'), { "ssr": false })
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { "ssr": false })
 const "ContactPage": React.FC = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
@@ -48,6 +43,8 @@ const "ContactPage": React.FC = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   const contactInfo = [{
       icon: <Phone className=\"w-6 h-6\"  />,
       \"title\": \"Phone\",
@@ -74,6 +71,7 @@ const "ContactPage": React.FC = () => {
     }
   ]
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
@@ -87,6 +85,8 @@ const "ContactPage": React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   const services = [\"AI & Machine Learning Solutions\",
     \"IT Infrastructure & Support\",
     \"Micro SaaS Development\",
@@ -104,6 +104,7 @@ const "ContactPage": React.FC = () => {
     "Digital Transformation",
     "Consulting & Strategy"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 <<<<<<< HEAD
@@ -115,6 +116,8 @@ const "ContactPage": React.FC = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   ]
   return (
     <>
@@ -164,6 +167,7 @@ const "ContactPage": React.FC = () => {
             </div>
           </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
@@ -177,11 +181,14 @@ const "ContactPage": React.FC = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 const \"Contact\": NextPage = () => {
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
-import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import {Mail,, Phone,, MapPin,, Clock,, Send} from 'lucide-react';
 const "Contact": NextPage = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
@@ -194,6 +201,8 @@ const "Contact": NextPage = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   const contactInfo = [{
       icon: Mail,
       \"title\": \'Email Us\',
@@ -437,6 +446,7 @@ const "Contact": NextPage = () => {
             </p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
@@ -450,12 +460,15 @@ const "Contact": NextPage = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
           <div className=\"grid grid-cols-1 md:grid-cols-2 gap-8\">
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
@@ -468,6 +481,8 @@ const "Contact": NextPage = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                 What is your typical project timeline?
               </h3>
               <p className=\"text-gray-600\">
@@ -477,6 +492,7 @@ const "Contact": NextPage = () => {
               </p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
@@ -490,10 +506,13 @@ const "Contact": NextPage = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
@@ -506,6 +525,8 @@ const "Contact": NextPage = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                 Do you provide ongoing support?
               </h3>
               <p className=\"text-gray-600\">
@@ -515,6 +536,7 @@ const "Contact": NextPage = () => {
               </p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
@@ -528,10 +550,13 @@ const "Contact": NextPage = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
@@ -544,6 +569,8 @@ const "Contact": NextPage = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                 What technologies do you specialize in?
               </h3>
               <p className=\"text-gray-600\">
@@ -553,6 +580,7 @@ const "Contact": NextPage = () => {
               </p>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
@@ -566,10 +594,13 @@ const "Contact": NextPage = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
             <div className=\"bg-white rounded-lg shadow-lg p-6\">
               <h3 className=\"text-lg font-semibold text-gray-900 mb-3\">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
@@ -582,6 +613,8 @@ const "Contact": NextPage = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                 How do you ensure project quality?
               </h3>
               <p className=\"text-gray-600\">
@@ -613,16 +646,18 @@ const "Contact": NextPage = () => {
                 </p>
               </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
-              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
-              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
               <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+              <div className=\"grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8\">
+              <div className="grid grid-cols-1 md: gri d-cols-2 lg: gri d-cols-4 gap-8">
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 <<<<<<< HEAD
@@ -639,6 +674,8 @@ const "Contact": NextPage = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                 {contactInfo.map((info, index) => (
                   <motion.div
                     key={index}
@@ -687,16 +724,18 @@ const "Contact": NextPage = () => {
                 </p>
               </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
-              <div className=\"max-w-4xl mx-auto\">
-              <div className="max-w-4xl mx-auto">
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               <div className=\"max-w-4xl mx-auto\">
               <div className="max-w-4xl mx-auto">
+              <div className=\"max-w-4xl mx-auto\">
+              <div className="max-w-4xl mx-auto">
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 <<<<<<< HEAD
@@ -713,6 +752,8 @@ const "Contact": NextPage = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                 <motion.form
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -746,16 +787,18 @@ const "Contact": NextPage = () => {
                     </div>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
-                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
-                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                   <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
                   <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+                  <div className=\"grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6\">
+                  <div className="grid grid-cols-1 md: gri d-cols-2 gap-6 mb-6">
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 <<<<<<< HEAD
@@ -772,6 +815,8 @@ const "Contact": NextPage = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                     <div>
                       <label htmlFor=\"phone\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                         Phone Number
@@ -796,6 +841,7 @@ const "Contact": NextPage = () => {
                     </div>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
@@ -809,10 +855,13 @@ const "Contact": NextPage = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                   <div className=\"mb-6\">
                     <label htmlFor=\"service\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
@@ -825,6 +874,8 @@ const "Contact": NextPage = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                       Service Interest
                     </label>
                     <select
@@ -841,6 +892,7 @@ const "Contact": NextPage = () => {
                     </select>
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
@@ -854,10 +906,13 @@ const "Contact": NextPage = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                   <div className=\"mb-6\">
                     <label htmlFor=\"message\" className=\"block text-sm font-medium text-gray-700 mb-2\">
                   <div className="mb-6">
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
@@ -870,6 +925,8 @@ const "Contact": NextPage = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                       Message *
                     </label>
                     <textarea
@@ -892,16 +949,18 @@ const "Contact": NextPage = () => {
                   </motion.button>
                 </motion.form>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
       <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 <<<<<<< HEAD
@@ -918,6 +977,8 @@ const "Contact": NextPage = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
@@ -937,6 +998,7 @@ const "Contact": NextPage = () => {
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">
               {/* Contact Form */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
@@ -950,10 +1012,13 @@ const "Contact": NextPage = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
               <div className=\"bg-slate-800/50 rounded-2xl p-8 border border-slate-700\">
                 <h2 className=\"text-3xl font-bold text-white mb-6\">Send us a Message</h2>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
                 <h2 className="text-3xl font-bold text-white mb-6">Send us a Message</h2>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
@@ -966,6 +1031,8 @@ const "Contact": NextPage = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
@@ -1013,16 +1080,18 @@ const "Contact": NextPage = () => {
                       </div>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
-                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                     <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className=\"grid grid-cols-1 md:grid-cols-2 gap-6\">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 <<<<<<< HEAD
@@ -1039,6 +1108,8 @@ const "Contact": NextPage = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                       <div>
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
@@ -1129,16 +1200,18 @@ const "Contact": NextPage = () => {
                   </p>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
-                <div className=\"space-y-6\">
-                <div className="space-y-6">
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                 <div className=\"space-y-6\">
                 <div className="space-y-6">
+                <div className=\"space-y-6\">
+                <div className="space-y-6">
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 <<<<<<< HEAD
@@ -1155,6 +1228,8 @@ const "Contact": NextPage = () => {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
                   {contactInfo.map((info, index) => (
                     <div key={index} className=\"flex items-start space-x-4 p-4 bg-slate-800/30 rounded-lg border border-slate-700\">
                       <div className=\"w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0\">
@@ -1171,6 +1246,7 @@ const "Contact": NextPage = () => {
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
@@ -1184,6 +1260,8 @@ const "Contact": NextPage = () => {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
           </section>
           {/* Services Overview */}
           <section className="py-20">
@@ -1225,6 +1303,7 @@ const "Contact": NextPage = () => {
 }
 export default ContactPage
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 <<<<<<< HEAD
@@ -1236,6 +1315,8 @@ export default ContactPage
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
           </div>
         </section>
       </div>
@@ -1243,14 +1324,16 @@ export default ContactPage
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
-  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
 =======
-<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
   import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+  import React from 'react' import dynamic from 'next/dynamic' import Head from 'next/head' import Link from 'next/link' import { motion } from 'framer-motion' import { Phone,Mail,MapPin,Clock,ArrowRight,Send,MessageCircle,Globe } from 'lucide-react'  import React,{ useState } from 'react'; import { Helmet } from 'react-helmet-async'; import { Mail,Phone,MapPin,Clock,Send,CheckCircle } from 'lucide-react';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages._archive_corrupted/contact.tsx
 <<<<<<< HEAD
@@ -1265,3 +1348,5 @@ export default ContactPage
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages._archive_corrupted/contact.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

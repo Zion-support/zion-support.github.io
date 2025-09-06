@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { Textarea } from "@/components/ui/textarea";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import {Textarea} from "@/components/ui/textarea";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
 export interface MessageTabProps {
   message: string,
   setMessage: (message: string) => void,

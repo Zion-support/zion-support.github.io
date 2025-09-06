@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 
@@ -14,6 +13,9 @@ try {}
 	try { run('pm2 reload bolt-zion-app')} catch {};
 	console.log('Auto-fix run completed successfully.')} catch (e) {}
 	console.error('Auto-fix run "failed": ', e.message);
+<<<<<<< HEAD
+	process.exit(1)};
+=======
 	process.exit(1)};
 =======
 #!/usr/bin/env node
@@ -244,4 +246,8 @@ try {}
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

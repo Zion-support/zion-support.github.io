@@ -1,10 +1,10 @@
 
-import "https: //deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1";
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || '';
-const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '';
+const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',
 
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
@@ -13,7 +13,7 @@ const corsHeaders = {
 
 interface Service {
   id: string;
-  title: string;
+  title: string,
   category: string
 }
 
@@ -22,12 +22,12 @@ interface QuoteDetails {
   email: string;
   budget: string;
   timeframe: string;
-  startDate?: string;
+  startDate?: string,
   endDate?: string
 }
 
 interface RequestBody {
-  service: Service | null;
+  service: Service | null,
   quoteDetails: QuoteDetails
 }
 
@@ -63,7 +63,7 @@ serve(async (req) => {
     try {
       if (openAIApiKey) {
         const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
-          method: 'POST';
+          method: 'POST',
           headers: {
             'Authorization': `Bearer ${openAIApiKey}`;
             'Content-Type': 'application/json'};
@@ -71,11 +71,11 @@ serve(async (req) => {
             model: 'gpt-4o-mini';
             messages: [
               {
-                role: 'system';
+                role: 'system',
                 content: 'You are an AI assistant that helps analyze service requests and generate tags and summaries for them.'
               };
               {
-                role: 'user';
+                role: 'user',
                 content: `Analyze this service request and provide:
                 1. A concise summary (max 100 words)
                 2. 3-5 relevant tags for categorization
@@ -119,7 +119,7 @@ serve(async (req) => {
           timeframe: quoteDetails.timeframe;
           start_date: quoteDetails.startDate;
           end_date: quoteDetails.endDate;
-          ai_analysis: aiAnalysis;
+          ai_analysis: aiAnalysis,
           status: 'pending'
         }
       ])
@@ -132,7 +132,7 @@ serve(async (req) => {
   } catch (error) {
     console.error('Error in process-quote function:', error);
     return new Response(JSON.stringify({ success: false, error: error.message }), {
-      status: 500;
+      status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   }
 });

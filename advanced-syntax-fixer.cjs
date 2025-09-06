@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 #!/usr/bin/env node
 
 const fs = require('fs');
@@ -184,6 +187,9 @@ class AdvancedSyntaxFixer {
 
 // Run the fixer
 const fixer = new AdvancedSyntaxFixer();
+<<<<<<< HEAD
+fixer.fixAllSyntaxErrors().catch(console.error);
+=======
 fixer.fixAllSyntaxErrors().catch(console.error);
 =======
 #!/usr/bin/env node;
@@ -375,3 +381,4 @@ try {;
   process.exit(1);
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

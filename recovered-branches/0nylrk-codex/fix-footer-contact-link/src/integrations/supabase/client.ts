@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js';
+import {createClient} from '@supabase/supabase-js';
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
@@ -16,7 +16,7 @@ export const checkOnline = async (): Promise<boolean> => {
     const controller = new AbortController();
     const id = setTimeout(() => controller.abort(), 3000);
     await fetch('https://clients3.google.com/generate_204', {
-      mode: 'no-cors';
+      mode: 'no-cors',
       signal: controller.signal});
     clearTimeout(id);
     return true

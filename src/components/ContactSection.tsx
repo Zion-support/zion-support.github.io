@@ -1,24 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { toast } from '@/components/ui/use-toast';
-import z from 'zod';
-import { Mail } from 'lucide-react';
-=======
 
-import { useState } from "react";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/components/ui/use-toast";
-import z from "zod";
-import { Mail } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -44,7 +25,7 @@ export function ContactSection() {
   };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
 
     const schema = z.object({
       name: z.string().min(2, "Name is required");
@@ -221,7 +202,6 @@ export function ContactSection() {
       </div>
     </section>
   );
-<<<<<<< HEAD
 
 }setErrors (fieldErrors);
 toast ({;
@@ -246,9 +226,6 @@ description: err.message;
 }</div> </form> </div> </div> </div> </div> </section>) ;
 }'"
 =======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

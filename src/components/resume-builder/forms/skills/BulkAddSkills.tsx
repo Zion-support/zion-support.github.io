@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+          
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+};
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Loader2, Sparkles } from 'lucide-react'
@@ -97,18 +95,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
     </div>
   )
 };
-<<<<<<< HEAD
 '"
 =======
-
-<<<<<<< HEAD
-
-          
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

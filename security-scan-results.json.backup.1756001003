@@ -1,5 +1,8 @@
 {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
   "timestamp": "2025-08-23T23:56:48.588Z",
@@ -10,9 +13,12 @@
 =======
   "timestamp": "2025-08-23T23:56:48.588Z",  "issues": [],
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   "timestamp": "2025-08-23T23:56:48.588Z",  "issues": [],
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   "summary": {
     "totalIssues": 0,
     "severity": "CLEAN"

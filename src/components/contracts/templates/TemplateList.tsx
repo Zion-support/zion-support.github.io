@@ -1,41 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ContractTemplate } from '@/types/contracts';
-import { Button } from '@/components/ui/button';
-import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
-import { useContractTemplates } from '@/hooks/useContractTemplates';
-import { Card, CardContent } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,;
-} from '@/components/ui/tooltip';
-import { useAuth } from '@/hooks/useAuth';
-=======
 
-import { ContractTemplate } from "@/types/contracts";
-import { Button } from "@/components/ui/button";
-import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
-import { useContractTemplates } from "@/hooks/useContractTemplates";
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { useAuth } from "@/hooks/useAuth";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 // useRouter replaces the old useLocation hook from react-router
-import { useRouter } from 'next/router';
-import {
-  AlertDialog;
-  AlertDialogAction;
-  AlertDialogCancel;
-  AlertDialogContent;
-  AlertDialogDescription;
-  AlertDialogFooter;
-  AlertDialogHeader;
-  AlertDialogTitle} from "@/components/ui/alert-dialog";
-import { useState } from "react";
+import {useRouter} from 'next/router';
+import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
+import {useState} from "react";
 interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
@@ -67,7 +34,7 @@ export function TemplateList({
 
   const handleSetDefault = async (templateId: string) => {
     if (!user) {
-      const currentPath = router.asPath;
+      const currentPath = router.asPath,
       router.push(`/auth/login?returnTo=${encodeURIComponent(currentPath)}`);
       return
     }
@@ -188,7 +155,6 @@ export function TemplateList({
       </AlertDialog>
     </div>
   );
-<<<<<<< HEAD
 
 };
 const handleSetDefault = async (templateId: string) => {;
@@ -222,9 +188,6 @@ return ;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
 }'"
 =======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

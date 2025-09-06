@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages.bak/404.route.tsx
 export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
 module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
@@ -21,6 +22,10 @@ module.exports = default function NotFound(){return (<main style={{ padding: ""4
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages.bak/404.route.tsx
+=======
+export default function NotFound(){return (<main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>404 - Not Found</h1></main>)}\"
+module.exports = default function NotFound(){return (<main style={{ padding: ""40px"",fontFamily: "sans-serif" }}><h1>404 - Not Found</h1></main>)}"'"'"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 interface 404.routeProps {
   // Add props here as needed
@@ -33,20 +38,25 @@ export default function 404.route({ }: 404.routeProps) {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:pages.bak/404.route.tsx
 }
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages.bak/404.route.tsx
 <<<<<<< HEAD
-}
 =======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }
+}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD:pages.bak/404.route.tsx
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/pages.bak/404.route.tsx
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 }
 =======
 }

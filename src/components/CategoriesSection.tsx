@@ -1,20 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { GradientHeading } from './GradientHeading';
-import Link from 'next/link';
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
-import { HelpCircle } from 'lucide-react'; // Added HelpCircle for default icon
-import { cn } from '@/lib/utils';
-import { useTranslation } from 'react-i18next';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+        color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
+    : defaultCategories.map(cat => ({
+        ...cat;
 
-import { GradientHeading } from "./GradientHeading";
+import {GradientHeading} from "./GradientHeading";
 import Link from "next/link";
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
-import { cn } from "@/lib/utils";
-import { useTranslation } from "react-i18next";
+import {Briefcase, HardDrive, Lightbulb, Users} from 'lucide-react'
+import {HelpCircle} from 'lucide-react', // Added HelpCircle for default icon
+import {cn} from "@/lib/utils";
+import {useTranslation} from "react-i18next";
 // This is the type definition copied from Categories.tsx for consistency.
 // Ideally, this would be in a shared types file.
 interface CategoryType {
@@ -182,7 +175,6 @@ export function CategoriesSection({
       </div>
     </section>
   );
-<<<<<<< HEAD
   switch (iconName) {;
   ;
 
@@ -236,13 +228,6 @@ icon: getIcon (cat.iconName) ;
 }</Link> </div> </div> </section>) ;
 }'"
 =======
-
-<<<<<<< HEAD
-        color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
-    : defaultCategories.map(cat => ({
-        ...cat;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

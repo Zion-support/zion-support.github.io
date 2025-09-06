@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/bundle-analyzer.js
 =======
 <<<<<<< HEAD
@@ -12,6 +13,8 @@
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/bundle-analyzer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 const { BundleAnalyzerPlugin } from "webpack-bundle-analyzer"; const withBundleAnalyzer = (nextConfig = {}) => { return { .nextConfig,webpack: (config,{ dev,isServer }) => { if (process.env.ANALYZE === "true") { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: "false",reportFilename: isServer ? "server-bundle.html" : "client-bundle.html"}) )} if (nextConfig.webpack) { return nextConfig.webpack(config,{ dev,isServer })} return config}} } module.exports = withBundleAnalyzer;'"'"
 import React from 'react';
 interface BundleanalyzerProps {
@@ -24,10 +27,9 @@ export default function Bundleanalyzer({ }: BundleanalyzerProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+}
+}
 <<<<<<< HEAD
-}
-=======
-}
 =======
 <<<<<<< HEAD:scripts/bundle-analyzer.js
 <<<<<<< HEAD
@@ -40,3 +42,5 @@ export default function Bundleanalyzer({ }: BundleanalyzerProps) {
 =======
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/bundle-analyzer.js
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d

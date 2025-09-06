@@ -1,56 +1,55 @@
-<<<<<<< HEAD
 /**
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery
  * Handles automatic retry, cache clearing, and graceful degradation
  */
 
 import { logErrorToProduction } from './productionLogger';
+
 interface ChunkErrorStats {
   errorCount: number;
   lastErrorTime: number;
   userAgent: string;
-  url: string
-}
+  url: string;
 
 class ChunkErrorHandler {
   private errorStats: Map<string, ChunkErrorStats> = new Map();
   private readonly MAX_RETRIES = 3;
-  private readonly RETRY_DELAY = 1000, // 1 second
+  private readonly RETRY_DELAY = 1000; // 1 second
   private readonly CACHE_CLEAR_THRESHOLD = 2;
 
   constructor() {
-    this.initializeGlobalHandlers()
+    this.initializeGlobalHandlers();
   }
 
   private initializeGlobalHandlers(): void {
     if (typeof window === 'undefined') return;
 
     // Handle webpack chunk loading errors
-    window.addEventListener('error', (event) => {
-      this.handleScriptError(event)
+    window.addEventListener('error', event => {
+      this.handleScriptError(event);
     });
 
     // Handle unhandled promise rejections (async chunk loading)
-    window.addEventListener('unhandledrejection', (event) => {
-      this.handlePromiseRejection(event)
-    })
+    window.addEventListener('unhandledrejection', event => {
+      this.handlePromiseRejection(event);
+    });
   }
 
   private handleScriptError(event: ErrorEvent): void {
     const { error, filename } = event;
-    
+
     if (this.isChunkError(error, filename)) {
-      event.preventDefault(), // Prevent the error from bubbling up
-      this.handleChunkError(error, { filename, source: 'script' })
+      event.preventDefault(); // Prevent the error from bubbling up
+      this.handleChunkError(error, { filename, source: 'script' });
     }
   }
 
   private handlePromiseRejection(event: PromiseRejectionEvent): void {
     const error = event.reason;
-    
+
     if (this.isChunkError(error)) {
-      event.preventDefault(), // Prevent unhandled rejection
-      this.handleChunkError(error, { source: 'promise' })
+      event.preventDefault(); // Prevent unhandled rejection
+      this.handleChunkError(error, { source: 'promise' });
     }
   }
 
@@ -59,80 +58,101 @@ class ChunkErrorHandler {
 
     const errorMessage = error.message || String(error);
     const errorName = error.name || '';
-    
+
     const chunkErrorPatterns = [
-      'ChunkLoadErrorLoading chunkFailed to fetch dynamically imported moduleFailed to importchunk-vendors-'
+      'ChunkLoadError',
+      'Loading chunk',
+      'Failed to fetch dynamically imported module',
+      'Failed to import',
+      'chunk-',
+      'vendors-',
     ];
 
-    return chunkErrorPatterns.some(pattern => 
-      errorMessage.includes(pattern) || 
-      errorName.includes(pattern) ||
-      (filename && filename.includes(pattern))
+    return chunkErrorPatterns.some(
+      pattern =>
+        errorMessage.includes(pattern) ||
+        errorName.includes(pattern) ||
+        (filename && filename.includes(pattern))
     );
   }
 
-  private async handleChunkError(error: Error, context: { filename?: string, source: string }): Promise<void> {
+  private async handleChunkError(
+    error: Error,
+    context: { filename?: string; source: string }
+  ): Promise<void> {
     const sessionKey = this.getSessionKey();
     const stats = this.getOrCreateErrorStats(sessionKey);
-    
+
     stats.errorCount++;
     stats.lastErrorTime = Date.now();
 
     logErrorToProduction('ChunkLoadError detected', error, {
-      context: 'chunkErrorHandler';
-      errorCount: stats.errorCount;
-      retryAttempt: stats.errorCount;
-      source: context.source;
-      filename: context.filename;
-      userAgent: navigator.userAgent;
-      url: window.location.href
+      context: 'chunkErrorHandler',
+      errorCount: stats.errorCount,
+      retryAttempt: stats.errorCount,
+      source: context.source,
+      filename: context.filename,
+      userAgent: navigator.userAgent,
+      url: window.location.href,
     });
 
     // Attempt recovery based on error count
     if (stats.errorCount <= this.MAX_RETRIES) {
-      await this.attemptRecovery(stats.errorCount, context)
+      await this.attemptRecovery(stats.errorCount, context);
     } else {
-      this.showFatalErrorMessage()
+      this.showFatalErrorMessage();
     }
   }
 
-  private async attemptRecovery(attemptNumber: number, context: { filename?: string, source: string }): Promise<void> {
-    logErrorToProduction(`Attempting ChunkLoadError recovery #${attemptNumber}`, undefined, {
-      context: 'chunkErrorRecovery';
-      attemptNumber;
-      recoveryMethod: this.getRecoveryMethod(attemptNumber)
-    });
+  private async attemptRecovery(
+    attemptNumber: number,
+    context: { filename?: string; source: string }
+  ): Promise<void> {
+    logErrorToProduction(
+      `Attempting ChunkLoadError recovery #${attemptNumber}`,
+      undefined,
+      {
+        context: 'chunkErrorRecovery',
+        attemptNumber,
+        recoveryMethod: this.getRecoveryMethod(attemptNumber),
+      }
+    );
 
     switch (attemptNumber) {
-      case 1: // First attempt: Simple retry after short delay
+      case 1:
+        // First attempt: Simple retry after short delay
         await this.delay(this.RETRY_DELAY);
         this.reloadPage();
         break;
-        
+
       case 2:
         // Second attempt: Clear caches and retry
         await this.clearCaches();
         await this.delay(this.RETRY_DELAY * 2);
         this.reloadPage();
         break;
-        
+
       case 3:
         // Third attempt: Hard refresh with cache bypass
         this.hardRefresh();
         break;
-        
+
       default:
-        this.showFatalErrorMessage()
+        this.showFatalErrorMessage();
     }
   }
 
   private getRecoveryMethod(attemptNumber: number): string {
     switch (attemptNumber) {
-      case 1: return 'simple-retry';
-      case 2: return 'cache-clear-retry';
-      case 3: return 'hard-refresh';
-      default: return 'fatal-error'
-    };
+      case 1:
+        return 'simple-retry';
+      case 2:
+        return 'cache-clear-retry';
+      case 3:
+        return 'hard-refresh';
+      default:
+        return 'fatal-error';
+    }
   }
 
   private async clearCaches(): Promise<void> {
@@ -146,35 +166,35 @@ class ChunkErrorHandler {
       }
 
       // Clear localStorage items that might be stale
-      const keysToRemove = ['__NEXT_ROUTER_STATE____NEXT_ROUTE_INFO__'];
+      const keysToRemove = ['__NEXT_ROUTER_STATE__', '__NEXT_ROUTE_INFO__'];
       keysToRemove.forEach(key => {
         try {
-          localStorage.removeItem(key)
+          localStorage.removeItem(key);
         } catch (e) {
           // Ignore localStorage errors
         }
       });
 
       logErrorToProduction('Caches cleared successfully', undefined, {
-        context: 'chunkErrorRecovery';
-        action: 'cache-clear'
-      })
+        context: 'chunkErrorRecovery',
+        action: 'cache-clear',
+      });
     } catch (error) {
       logErrorToProduction('Failed to clear caches', error as Error, {
-        context: 'chunkErrorRecovery';
-        action: 'cache-clear-failed'
-      })
+        context: 'chunkErrorRecovery',
+        action: 'cache-clear-failed',
+      });
     }
   }
 
   private reloadPage(): void {
     // Use replace to avoid adding to history
-    window.location.replace(window.location.href)
+    window.location.replace(window.location.href);
   }
 
   private hardRefresh(): void {
     // Force a hard refresh bypassing all caches
-    window.location.href = window.location.href + '?_t=' + Date.now()
+    window.location.href = window.location.href + '?_t=' + Date.now();
   }
 
   private showFatalErrorMessage(): void {
@@ -196,9 +216,9 @@ class ChunkErrorHandler {
     `;
 
     errorDiv.innerHTML = `
-      <div style="text-align: center, padding: 2rem, max-width: 500px,">
-        <h2 style="margin-bottom: 1rem,">Connection Issue</h2>
-        <p style="margin-bottom: 1.5rem, line-height: 1.5,">
+      <div style="text-align: center; padding: 2rem; max-width: 500px;">
+        <h2 style="margin-bottom: 1rem;">Connection Issue</h2>
+        <p style="margin-bottom: 1.5rem; line-height: 1.5;">
           We're having trouble loading some parts of the application. 
           This might be due to a poor network connection or a temporary server issue.
         </p>
@@ -210,40 +230,10 @@ class ChunkErrorHandler {
           border-radius: 0.5rem;
           font-size: 1rem;
           cursor: pointer;
-          margin-right: 1rem;
-=======
-
-<<<<<<< HEAD
-
-    const errorName = error.name || '';
-    
-    const chunkErrorPatterns = [
-      'ChunkLoadErrorLoading chunkFailed to fetch dynamically imported moduleFailed to importchunk-vendors-'
-    ];
-
-
-      case 2:
-        // Second attempt: Clear caches and retry
-<<<<<<< HEAD
-        
-      case 3:
-        // Third attempt: Hard refresh with cache bypass
-<<<<<<< HEAD
-
-          cacheNames.map(cacheName => caches.delete(cacheName))
-        );
-<<<<<<< HEAD
-        <button onclick="window.location.reload()" style="
-          background: #0070f3, color: white,
-          border: none, padding: 0.75rem 1.5rem,
-          border-radius: 0.5rem, font-size: 1rem,
-          cursor: pointer, margin-right: 1rem,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-        ">
+          margin-right: 1rem;        ">
           Try Again
         </button>
         <button onclick="window.location.href='/'" style="
-<<<<<<< HEAD
           background: #666;
           color: white;
           border: none;
@@ -257,27 +247,27 @@ class ChunkErrorHandler {
       </div>
     `;
 
-    document.body.appendChild(errorDiv)
+    document.body.appendChild(errorDiv);
   }
 
   private delay(ms: number): Promise<void> {
-    return new Promise(resolve => setTimeout(resolve, ms))
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 
   private getSessionKey(): string {
-    return `${navigator.userAgent}_${window.location.origin}`
+    return `${navigator.userAgent}_${window.location.origin}`;
   }
 
   private getOrCreateErrorStats(sessionKey: string): ChunkErrorStats {
     if (!this.errorStats.has(sessionKey)) {
       this.errorStats.set(sessionKey, {
-        errorCount: 0;
-        lastErrorTime: 0;
-        userAgent: navigator.userAgent;
-        url: window.location.href
-      })
+        errorCount: 0,
+        lastErrorTime: 0,
+        userAgent: navigator.userAgent,
+        url: window.location.href,
+      });
     }
-    return this.errorStats.get(sessionKey)!
+    return this.errorStats.get(sessionKey)!;
   }
 
   // Public method to manually trigger recovery
@@ -291,28 +281,21 @@ class ChunkErrorHandler {
   public isInErrorState(): boolean {
     const sessionKey = this.getSessionKey();
     const stats = this.errorStats.get(sessionKey);
-    return stats ? stats.errorCount > 0 : false
+    return stats ? stats.errorCount > 0 : false;
   }
 
   // Public method to reset error state
   public resetErrorState(): void {
     const sessionKey = this.getSessionKey();
-    this.errorStats.delete(sessionKey)
+    this.errorStats.delete(sessionKey);
   }
-}
 
 // Create and export singleton instance
 export const chunkErrorHandler = new ChunkErrorHandler();
 
 // Export for manual usage
-<<<<<<< HEAD
 export default chunkErrorHandler;
-=======
-          background: #666, color: white,
-          border: none, padding: 0.75rem 1.5rem,
-          border-radius: 0.5rem, font-size: 1rem,
-          cursor: pointer,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 =======
 export default chunkErrorHandler;
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3

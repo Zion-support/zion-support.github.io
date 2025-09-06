@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/simple-app-improvements-fixed.cjs
 =======
 #!/usr/bin/env node
@@ -146,6 +147,8 @@ export default function SEO({ title, description, keywords, image }) {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/simple-app-improvements-fixed.cjs
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
     this.log(`Total improvements: ${this.improvements.length}`);
     this.log(`Total errors: ${this.errors.length}`);
     this.log(`Duration: ${duration}ms`);
@@ -166,6 +169,7 @@ export default function SEO({ title, description, keywords, image }) {
 }
 // Run the improvements
 const improvements = new SimpleAppImprovements();
+<<<<<<< HEAD
 <<<<<<< HEAD:scripts/simple-app-improvements-fixed.cjs
 <<<<<<< HEAD
 improvements.runAllImprovements().catch(console.error);#!/usr/bin/env node;
@@ -182,6 +186,9 @@ improvements.runAllImprovements().catch(console.error);
 >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 #!/usr/bin/env node;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/scripts/simple-app-improvements-fixed.cjs
+=======
+improvements.runAllImprovements().catch(console.error);#!/usr/bin/env node;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')

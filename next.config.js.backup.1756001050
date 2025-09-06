@@ -6,12 +6,18 @@ const nextConfig = {
   trailingSlash: false,
   reactStrictMode: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
   bundlePagesRouterDependencies: true,
   // Temporarily disable ESLint during build to handle unescaped entities
   eslint: {
@@ -21,6 +27,9 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
   },
 =======
@@ -57,9 +66,12 @@ const nextConfig = {
 =======
   },  modularizeImports: {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   },  modularizeImports: {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     'lucide-react': {
       transform: 'lucide-react/dist/esm/icons/{{kebabCase member}}',
       skipDefaultConversion: true,
@@ -87,6 +99,9 @@ const nextConfig = {
     largePageDataBytes: 128 * 1000, // Reduced to 128KB for better performance
     workerThreads: false, // Disable worker threads to reduce memory usage
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
     cpus: Math.min(2, 2), // Adaptive CPU limit
@@ -99,10 +114,13 @@ const nextConfig = {
     cpus: Math.min(2, 2), // Adaptive CPU limit
     // Bundle analysis optimizations moved to root level    // Disable profiling for faster builds
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
     cpus: Math.min(2, 2), // Adaptive CPU limit
     // Bundle analysis optimizations moved to root level    // Disable profiling for faster builds
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     swcTraceProfiling: false,
   },
 
@@ -142,6 +160,9 @@ const nextConfig = {
   ],
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
   webpack: (config, { dev, isServer }) => {
@@ -444,10 +465,13 @@ const nextConfig = {
   webpack: (config, { dev, isServer }) => {
     // Handle problematic packages    config.resolve.fallback = {
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
   webpack: (config, { dev, isServer }) => {
     // Handle problematic packages    config.resolve.fallback = {
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
       ...config.resolve.fallback,
       fs: false,
       net: false,
@@ -483,12 +507,18 @@ const nextConfig = {
     };
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     // Optimize bundle size for production
     if (!dev) {
       config.optimization = {
@@ -514,6 +544,9 @@ const nextConfig = {
           },
         },
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 <<<<<<< HEAD
       };
 =======
@@ -571,9 +604,12 @@ const nextConfig = {
 =======
       };    }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
 =======
       };    }
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
     
     return config;
   },
