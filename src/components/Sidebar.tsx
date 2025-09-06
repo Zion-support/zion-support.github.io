@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { X } from 'lucide-react';
+
 
 
 
@@ -12,6 +14,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
+
 
     <div className="fixed inset-0 z-50 lg:hidden">
       {/* Backdrop */}
@@ -49,44 +52,55 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <Link 
               to="/" 
               className="block text-gray-300 hover:text-white transition-colors"
+
               onClick={onClose}
             >
               Home
             </Link>
             <Link 
               to="/about" 
+
               className="block text-gray-300 hover:text-white transition-colors"
+
               onClick={onClose}
             >
               About
             </Link>
             <Link 
               to="/services" 
+
               className="block text-gray-300 hover:text-white transition-colors"
+
               onClick={onClose}
             >
               Services
             </Link>
             <Link 
               to="/pricing" 
+
               className="block text-gray-300 hover:text-white transition-colors"
+
               onClick={onClose}
             >
               Pricing
             </Link>
             <Link 
               to="/contact" 
+
               className="block text-gray-300 hover:text-white transition-colors"
+
               onClick={onClose}
             >
               Contact
             </Link>
+
 
           </div>
 
         </nav>
       </div>
     </div>
+
   );
 };
 
