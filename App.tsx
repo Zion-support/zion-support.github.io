@@ -1,10 +1,14 @@
-import React, { JSX } from 'react',
+import React, { JSX } from 'react';
+import { motion } from 'framer-motion';
+import AccessibilityProvider from './components/AccessibilityProvider';
+import SEOHead from './components/SEOHead';
+import Analytics from './components/Analytics';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 export default function App(): JSX.Element {
   return (
-    <main>
-      <h1>Hello App</h1>
-    </main>
     <AccessibilityProvider>
       <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
         <SEOHead 
