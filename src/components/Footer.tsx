@@ -1,7 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ChevronUp } from 'lucide-react';
 
 const Footer: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <footer className="bg-slate-900 text-gray-300">
       <div className="container mx-auto px-4 py-12">
@@ -95,11 +103,25 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="border-t border-slate-700 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
+        {/* Bottom Section */}
+        <div className="border-t border-slate-700 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
+          <div className="text-gray-400 text-sm">
             © 2024 Zion Tech Group. All rights reserved.
-          </p>
+          </div>
+          <div className="flex space-x-6 mt-4 sm:mt-0">
+            <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</Link>
+            <Link to="/terms" className="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</Link>
+            <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors text-sm">Cookie Policy</Link>
+          </div>
         </div>
+
+        {/* Back to Top Button */}
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 bg-cyan-600 hover:bg-cyan-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 z-50"
+        >
+          <ChevronUp className="w-5 h-5" />
+        </button>
       </div>
     </footer>
   );

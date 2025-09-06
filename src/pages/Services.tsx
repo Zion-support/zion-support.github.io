@@ -8,10 +8,10 @@ const Services: React.FC = () => {
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
-            Our Services
+            Our Cutting-Edge Services
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We deliver comprehensive technology solutions that empower businesses 
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
+            At Zion Tech Group, we offer a comprehensive suite of technology solutions designed to empower your business
             and drive innovation across all sectors.
           </p>
         </div>
@@ -34,67 +34,44 @@ const Services: React.FC = () => {
             icon="☁️"
           />
           <ServiceCard
+            title="DevOps & Automation"
+            description="Streamline your development and operations with continuous integration, delivery, and automated workflows."
+            icon="⚙️"
+          />
+          <ServiceCard
+            title="Blockchain Solutions"
+            description="Leverage decentralized technologies for secure transactions, smart contracts, and transparent operations."
+            icon="🔗"
+          />
+          <ServiceCard
             title="Data Analytics"
-            description="Unlock insights from your data with advanced analytics, business intelligence, and predictive modeling."
+            description="Unlock insights from your data with advanced analytics, business intelligence, and data visualization."
             icon="📊"
           />
-          <ServiceCard
-            title="Software Development"
-            description="Custom software solutions tailored to your business needs, from web applications to enterprise systems."
-            icon="💻"
-          />
-          <ServiceCard
-            title="Consulting"
-            description="Strategic technology consulting to help you make informed decisions and optimize your digital transformation."
-            icon="🎯"
-          />
         </div>
 
-        {/* Why Choose Us */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-8">Why Choose Zion Tech Group?</h2>
+        {/* Why Choose Our Services */}
+        <div className="mt-16 text-center">
+          <h2 className="text-4xl font-bold mb-8">Why Choose Zion Tech Group for Your Services?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card 
-              title="Expert Team" 
-              description="Our team consists of industry-leading professionals with decades of combined experience in cutting-edge technologies."
-            />
-            <Card 
-              title="Proven Track Record" 
-              description="We've successfully delivered hundreds of projects for clients across various industries, from startups to Fortune 500 companies."
-            />
-            <Card 
-              title="24/7 Support" 
-              description="Round-the-clock support ensures your systems run smoothly and any issues are resolved quickly and efficiently."
-            />
-            <Card 
-              title="Scalable Solutions" 
-              description="Our solutions are designed to grow with your business, ensuring long-term value and adaptability."
-            />
-            <Card 
-              title="Security First" 
-              description="We prioritize security in everything we do, implementing best practices and compliance standards."
-            />
-            <Card 
-              title="Innovation Focus" 
-              description="We stay ahead of technology trends to provide you with the most advanced and future-proof solutions."
-            />
+            <Card title="Expert Team" description="Our specialists are leaders in their respective fields." />
+            <Card title="Tailored Solutions" description="Custom services designed to meet your unique business needs." />
+            <Card title="Innovation Driven" description="Always at the forefront of technological advancements." />
+            <Card title="Reliable Support" description="Dedicated 24/7 support to ensure seamless operations." />
+            <Card title="Scalable & Secure" description="Solutions built for growth and robust security." />
+            <Card title="Proven Track Record" description="Successful implementations across diverse industries." />
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center bg-slate-800 rounded-2xl p-12">
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our technology solutions can drive your success and accelerate your growth.
+            Contact us today to discuss your project and discover how our expert services can drive your success.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
-              Get Started Today
-            </button>
-            <button className="border border-gray-300 hover:border-white text-white font-semibold py-3 px-8 rounded-lg transition-colors">
-              Learn More
-            </button>
-          </div>
+          <Button variant="primary" size="large" onClick={() => alert('Get a Free Consultation!')}>
+            Get a Free Consultation
+          </Button>
         </div>
       </div>
     </div>
