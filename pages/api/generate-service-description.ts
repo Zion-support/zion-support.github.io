@@ -85,3 +85,4 @@ Requirements:
     console.error('OpenAI generation error:', error);
     return res.status(500).json({ error: 'Failed to generate description' });
   }
+}

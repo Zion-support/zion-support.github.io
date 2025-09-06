@@ -13,6 +13,7 @@ function summarizeModules(
       .map(([k]) => `/${k}`),
   ];
   return active.length ? active.sort().join(', ') : 'None';
+}
 
 function missionParagraph(
   region: string,
@@ -126,3 +127,4 @@ export default async function handler(
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal error' });
   }
+}

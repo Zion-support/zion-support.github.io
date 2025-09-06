@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status($1).end(),
+  if (req.method !== 'POST') return res.status(405).end();
   const { responseId, rating, comment, pagePath, aiModel } = req.body || {};
   if (!responseId || !rating || !['up', 'down'].includes(rating)) {
     return res.status(400).json({ error: 'Missing responseId or rating' });
@@ -21,3 +21,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   rows.push(entry);
   writeAll(rows);
   return res.status(200).json({ ok: true });
+}

@@ -1,7 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 import { AdminActionType } from '../../../../utils/fraud/types';
-  }
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const { fraudId, action, reason, adminId } = req.body || {};
   if (!fraudId || !action) {
@@ -27,3 +28,4 @@ import { AdminActionType } from '../../../../utils/fraud/types';
   await store.updateEventStatus(fraudId, newStatus);
 
   res.status(200).json({ ok: true, status: newStatus });
+}

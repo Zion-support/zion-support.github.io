@@ -8,7 +8,7 @@ import {
   GptClassification,
   GptClassificationLabel,
   MonitoredSource,
-  StoredFraudRecord,;
+  StoredFraudRecord,
 } from '../../../utils/fraud/types';
 import { sendWarningEmail } from '../../../utils/email';
 
@@ -55,7 +55,7 @@ export default async function handler(
     // Privacy opt-out check for content analysis
     let gpt: GptClassification | undefined = undefined;
     if (content && userId) {
-      const privacy = await store.getPrivacySettings(userId),
+      const privacy = await store.getPrivacySettings(userId);
       if (!privacy.monitoringContentAnalysisOptOut) {
         gpt = await classifyWithGPT(content, source);
       }
@@ -104,3 +104,4 @@ export default async function handler(
       .status(500)
       .json({ error: 'Internal error', details: e?.message || String(e) });
   }
+}

@@ -43,3 +43,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ok: true,
     connection: updated.connections.find(c => c.providerId === providerId),
   });
+}

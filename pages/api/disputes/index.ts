@@ -7,11 +7,12 @@ import { generateCaseId } from '../../../utils/fsdb';
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
-) {  const user = parseUserFromRequest(req);
+) {
+  const user = parseUserFromRequest(req);
 
   if (req.method === 'GET') {
     const all = await readAllDisputes();
-    let filtered = all,
+    let filtered = all;
     if (user.role !== 'admin') {
       filtered = all.filter(
         d => d.clientUserId === user.id || d.talentUserId === user.id
@@ -65,3 +66,4 @@ export default async function handler(
 
   res.setHeader('Allow', 'GET,POST');
   return res.status(405).end('Method Not Allowed');
+}

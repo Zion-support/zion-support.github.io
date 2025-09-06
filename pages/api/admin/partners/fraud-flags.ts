@@ -42,7 +42,7 @@ export default async function handler(
       counts.set(key, (counts.get(key) || 0) + 1);
     }
 
-    const flags: any[] = [],
+    const flags: any[] = [];
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
         flags.push({

@@ -4,7 +4,7 @@ import {
   getZionDesignMap,
   buildTokenSet,
   buildUIKit,
-  UIKitKind,;
+  UIKitKind,
 } from '../../../utils/design-map';
 
 export default async function handler(
@@ -48,3 +48,4 @@ export default async function handler(
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Export failed' });
   }
+}

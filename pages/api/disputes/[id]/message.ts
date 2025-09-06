@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { getDisputeById, upsertDispute } from '../../../../utils/fsdb';
 import {
   parseUserFromRequest,
-  ensureInvolvedOrAdmin,;
+  ensureInvolvedOrAdmin,
 } from '../../../../utils/auth';
 
 export default async function handler(
@@ -44,3 +44,4 @@ export default async function handler(
 
   res.setHeader('Allow', 'POST');
   return res.status(405).end('Method Not Allowed');
+}
