@@ -1,4 +1,3 @@
-
     {
       \"title\": \'AI-Powered IT Operations\',
       \"description\": \'Intelligent IT operations with AI-driven automation and optimization\',
@@ -110,7 +109,6 @@
       \"category\": \'Environmental Services\'
     },
     {
-
   ];
   const benefits = [{
       \"title\": \'Reduced Downtime\',
@@ -350,5 +348,3 @@
     </PageTransition>
   )
 }
-
-

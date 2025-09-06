@@ -1,11 +1,3 @@
-
-
-
-  conversation: Conversation,
-  isActive: boolean,
-  onClick: () => void
-
-=======
 import React from 'react',;
 import { format } from 'date-fns',;
 import { cn } from '@/lib/utils',;
@@ -19,8 +11,19 @@ interface ConversationItemProps {;
 
 
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react',;
+import { format } from 'date-fns',;
+import { cn } from '@/lib/utils',;
+import { Conversation } from '@/types/messaging',;
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
+interface ConversationItemProps {;
+  conversation: Conversation,;
+  isActive: boolean,;
+  onClick: () => void;
+
+
+
+}
 
   conversation: Conversation
   isActive: boolean
@@ -34,7 +37,19 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
     <div 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react',;
+import { format } from 'date-fns',;
+import { cn } from '@/lib/utils',;
+import { Conversation } from '@/types/messaging',;
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
+interface ConversationItemProps {;
+  conversation: Conversation,;
+  isActive: boolean,;
+  onClick: () => void;
+
+
+
+}
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}
@@ -55,7 +70,7 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
         <div className="text-sm text-zion-slate truncate">
           {conversation.last_message?.content |'(No messages yet)'}
         </div>
-=======
+import React from 'react';
 import {format} from 'date - fns';
 import {cn} from '@/lib / utils';
 import {Conversation} from '@/types / messaging';
@@ -93,18 +108,14 @@ function ConversationItem() {
         <div className="text - sm text - zion - slate truncate">;
           {conversation.last_message?.content || '(No messages yet)'}
         </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {conversation.context_data?.title && (
           <div className="text - xs mt - 1 text - zion - cyan truncate">;
             Re: {conversation.context_data.title}
-
           </div>)}
       </div>;
-
       {conversation.unread_count > 0 && (
         <div className="bg - zion - purple text - white rounded - full h - 5 min - w-5 flex items - center justify - center text - xs">;
           {conversation.unread_count}
-
 import {format} from 'date-fns';
 import {cn} from '@/lib/utils';
 import {Conversation} from '@/types/messaging';
@@ -160,9 +171,6 @@ export function ConversationItem(): any ({ conversation, isActive, onClick }: Co
     </div>;
   );
 }
-
-=======
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

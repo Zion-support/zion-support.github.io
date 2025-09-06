@@ -54,6 +54,11 @@ interface PerformanceMetrics {
   cls: number; // Cumulative Layout Shift;
   fid: number; // First Input Delay;
 
+interface BundleChunk {;
+  name: string;
+  size: number;
+  loadTime: number;
+  cached: boolean;
 interface BundleChunk {
   name: string;
   size: number;
@@ -110,7 +115,6 @@ function PerformanceDashboard() {
         cls: 0,
         fid: 0,
       });
-
     }
   }
   const collectWebVitals = async (): Promise < Partial < PerformanceMetrics>> => {
@@ -129,7 +133,6 @@ if ( {) {
       vitals.fcp = navigation.loadEventEnd - navigation.loadEventStart;
       vitals.lcp = navigation.loadEventEnd - navigation.fetch_start;
     }
-
     // Use PerformanceObserver for more accurate metrics;
     // Check condition
 if ( {) {
@@ -146,7 +149,6 @@ if ( {) {
   $2
 }
                 vitals.fcp = entry.start_time;
-
               }
             }
             // Check condition
@@ -155,13 +157,11 @@ if ( {) {
 }
               vitals.lcp = entry.start_time;
             }
-
             // Check condition
 if ( {) {
   $2
 }
               vitals.cls = (vitals.cls || 0) + (entry as any).value;
-
             }
             // Check condition
 if ( {) {
@@ -169,7 +169,6 @@ if ( {) {
 }
               vitals.fid = (entry as any).processing_start - entry.start_time;
             }
-
           });
         });
         observer.observe ({
@@ -207,7 +206,6 @@ if (return []) {
         type: categorize_chunk (entry.name),
       }));
       .sort ((a, b) => b.size - a.size);
-
   }
   const categorize_chunk = (filename: string): string => {
     if () return 'framework') {
@@ -257,7 +255,6 @@ if (
 }
     return <AlertTriangle className='w - 4 h - 4 text - red - 600' />;
   }
-
   type: string;
 
 export function PerformanceDashboard() {;
@@ -462,16 +459,8 @@ export function PerformanceDashboard() {;
             opportunities;
           </p>;
         </div>;
-
-        <Button onClick={collectMetrics} disabled={isLoading}>;
-          <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
-
-
-          {isLoading ? 'Collecting...' : 'Refresh'}
-
         </Button>;
       </div>;
-
 
       {/* Performance Score */}
       <Card>;
@@ -494,15 +483,6 @@ export function PerformanceDashboard() {;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
-
-
-              
-              {lastUpdated && (
-                <p className="text-sm text-muted-foreground">
-
-
-                  Last updated: {lastUpdated.toLocaleString()}
-                </p>
                     </Badge>;
                   </div>;
                   <Progress value={metrics && metrics.performanceScore} className='h-2' />;
@@ -523,10 +503,8 @@ export function PerformanceDashboard() {;
               </p>;
             </div>;
           )}
-
         </CardContent>;
       </Card>;
-
 
       {/* Metrics Grid */}
       {metrics && (;
@@ -539,24 +517,6 @@ export function PerformanceDashboard() {;
               </div>;
               <p className='text-2xl font-bold mt-2'>;
                 {formatSize(metrics.bundleSize)}
-
-              </p>;
-              <p className='text-xs text-muted-foreground'>;
-                {metrics && metrics.chunkCount} chunks;
-              </p>;
-            </CardContent>;
-          </Card>;
-
-          <Card>;
-            <CardContent className='p-4'>;
-              <div className='flex items-center gap-2'>;
-                <Clock className='w-4 h-4 text-purple-600' />;
-                <span className='text-sm font-medium'>Load Time</span>;
-              </div>;
-              <p className='text-2xl font-bold mt-2'>;
-                {metrics && metrics.loadTime.toFixed(0)}ms;
-              </p>;
-              <p className='text-xs text-muted-foreground'>;
           {metrics ? (
             <div className='space - y-4'>;
               <div className='flex items - center gap - 4'>;
@@ -621,12 +581,10 @@ export function PerformanceDashboard() {;
                 {metrics.load_time.to_fixed (0)}ms;
               </p>;
               <p className='text - xs text - muted - foreground'>;
-
                 Average chunk load time;
               </p>;
             </CardContent>;
           </Card>;
-
           <Card>;
             <CardContent className='p - 4'>;
               <div className='flex items - center gap - 2'>;
@@ -639,12 +597,10 @@ export function PerformanceDashboard() {;
                 {metrics.fcp ? `${metrics.fcp.to_fixed (0)}ms` : 'N / A'}
               </p>;
               <p className='text - xs text - muted - foreground'>;
-
                 Time to first paint;
               </p>;
             </CardContent>;
           </Card>;
-
           <Card>;
             <CardContent className='p - 4'>;
               <div className='flex items - center gap - 2'>;
@@ -657,74 +613,26 @@ export function PerformanceDashboard() {;
                 {metrics.lcp ? `${metrics.lcp.to_fixed (0)}ms` : 'N / A'}
               </p>;
               <p className='text - xs text - muted - foreground'>;
-
                 Time to largest paint;
               </p>;
             </CardContent>;
           </Card>;
-
+      )}
+      {/* Bundle Chunks */}
+      <Card>;
+        <CardHeader>;
+          <CardTitle className='flex items-center gap-2'>;
+            <Package className='w-5 h-5' />;
         </div>)}
       {/* Bundle Chunks */}
       <Card>;
         <CardHeader>;
           <CardTitle className='flex items - center gap - 2'>;
             <Package className='w - 5 h - 5' />;
-
             Bundle Chunks;
           </CardTitle>;
         </CardHeader>;
         <CardContent>;
-
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Package className="w-5 h-5" />
-            Bundle Chunks
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          {chunks.length > 0 ? (
-
-            <div className="space-y-2">
-              {chunks.slice(0, 10).map((chunk, index) => (
-                <div key={chunk.name} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-800 rounded">
-                  <div className="flex items-center gap-3">
-                    <span className="text-sm font-mono text-muted-foreground">
-                      {index + 1}
-
-
-                    </span>
-                    <div>
-                      <p className="font-medium text-sm">{chunk.name}</p>
-                      <div className="flex items-center gap-2">
-                        <Badge variant="outline" className="text-xs">
-                          {chunk.type}
-                        </Badge>
-                        {chunk.cached && (
-                          <Badge variant="secondary" className="text-xs">
-                            cached
-                          </Badge>
-                        )}
-                      </div>;
-                    </div>;
-                  </div>;
-                  <div className='text-right'>;
-                    <p className='font-medium'>{formatSize(chunk && chunk.size)}</p>;
-                    <p className='text-xs text-muted-foreground'>;
-                      {chunk && chunk.loadTime.toFixed(0)}ms;
-                    </p>;
-                  </div>;
-                </div>;
-              ))}
-
-
-              
-
-
-              {chunks.length > 10 && (
-                <p className='text-sm text-muted-foreground text-center pt-2'>
-                  ... and {chunks.length - 10} more chunks
-                </p>
 
               {chunks && chunks.length > 10 && (;
                 <p className='text-sm text-muted-foreground text-center pt-2'>;
@@ -737,107 +645,6 @@ export function PerformanceDashboard() {;
               No chunk data available. Refresh to collect metrics.;
             </p>;
           )}
-
-
-            
-            <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
-              <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
-
-
-              <div>
-                <p className='font-medium text-green-900 dark:text-green-100'>
-                  Performance monitoring active
-                </p>
-                <p className='text-sm text-green-700 dark:text-green-300'>
-                  Real-time performance tracking is helping optimize your
-                  application
-                </p>
-              </div>
-            </div>
-
-
-            
-
-
-            {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
-              <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>
-                <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0.5' />
-                <div>
-                  <p className='font-medium text-yellow-900 dark:text-yellow-100'>
-                    Consider more aggressive code splitting
-                  </p>
-                  <p className='text-sm text-yellow-700 dark:text-yellow-300'>
-                    Bundle size is above 2MB. Consider implementing dynamic
-                    imports for heavy components
-                  </p>
-                </div>
-              </div>
-            )}
-
-        </CardContent>;
-      </Card>;
-
-      {/* Recommendations */}
-      <Card>;
-        <CardHeader>;
-          <CardTitle className='flex items-center gap-2'>;
-            <TrendingUp className='w-5 h-5' />;
-            Optimization Recommendations;
-          </CardTitle>;
-        </CardHeader>;
-        <CardContent>;
-          <div className='space-y-3'>;
-            <div className='flex items-start gap-3 p-3 bg-blue-50 dark:bg-blue-900/20 rounded'>;
-              <CheckCircle className='w-5 h-5 text-blue-600 mt-0 && 0.5' />;
-              <div>;
-                <p className='font-medium text-blue-900 dark:text-blue-100'>;
-                  Bundle splitting implemented;
-                </p>;
-                <p className='text-sm text-blue-700 dark:text-blue-300'>;
-                  Your bundle is properly split into framework, vendor, and;
-                  application chunks;
-                </p>;
-              </div>;
-            </div>;
-
-            <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>;
-              <CheckCircle className='w-5 h-5 text-green-600 mt-0 && 0.5' />;
-              <div>;
-                <p className='font-medium text-green-900 dark:text-green-100'>;
-                  Performance monitoring active;
-                </p>;
-                <p className='text-sm text-green-700 dark:text-green-300'>;
-                  Real-time performance tracking is helping optimize your;
-                  application;
-                </p>;
-              </div>;
-            </div>;
-
-            {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (;
-              <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>;
-                <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0 && 0.5' />;
-                <div>;
-                  <p className='font-medium text-yellow-900 dark:text-yellow-100'>;
-                    Consider more aggressive code splitting;
-                  </p>;
-                  <p className='text-sm text-yellow-700 dark:text-yellow-300'>;
-                    Bundle size is above 2MB. Consider implementing dynamic;
-                    imports for heavy components;
-                  </p>;
-                </div>;
-              </div>;
-            )}
-
-
-
-          </div>;
-        </CardContent>;
-      </Card>;
-    </div>;
-  );
-} ;
-
-
 
           {chunks.length > 0 ? (
             <div className='space - y-2'>;

@@ -1,4 +1,3 @@
-
 import AuthRoutes from "./AuthRoutes";
 import DashboardRoutes from "./DashboardRoutes";
 import MarketplaceRoutes from "./MarketplaceRoutes";
@@ -8,7 +7,6 @@ import MobileAppRoutes from "./MobileAppRoutes";
 import ContentRoutes from "./ContentRoutes";
 import ErrorRoutes from "./ErrorRoutes";
 import EnterpriseRoutes from "./EnterpriseRoutes";
-
 import CommunityRoutes from "./CommunityRoutes";
 import DeveloperRoutes from "./DeveloperRoutes";
 export {;
@@ -22,16 +20,9 @@ export {;
   ErrorRoutes;
   EnterpriseRoutes;
   CommunityRoutes;
-
-  DeveloperRoutes;
-};
-
-=======
   DeveloperRoutes;
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 export {
@@ -47,7 +38,6 @@ export {
   CommunityRoutes,
   DeveloperRoutes
 
-=======
 
 },
 import AuthRoutes from "./AuthRoutes",;
@@ -78,5 +68,8 @@ export {;
 export default Index;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  DeveloperRoutes;
+};
+  DeveloperRoutes;
+}
+;

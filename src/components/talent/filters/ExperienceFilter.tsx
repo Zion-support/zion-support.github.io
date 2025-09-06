@@ -1,5 +1,26 @@
-return (
 
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { Slider } from '@/components / ui / slider';
+import { ExperienceFilterProps } from '@/types / filters';
+export /**
+ * ExperienceFilter - Function description
+ */
+function ExperienceFilter() {
+  const handle_change = (values: number[]) =>: any {
+    setExperienceRange ([values[0] || 0, values[1] || 15]);
+  }
+export function ExperienceFilter(): any ({;
+  experienceRange,;
+  setExperienceRange,;
+  expanded,;
+  toggleSection,;
+  isMobileFilterOpen,;
+}: ExperienceFilterProps) {;
+  const handleChange = (values: number[]) => {;
+    setExperienceRange([values[0] || 0, values[1] || 15]);
+  };
+
+  return (
     <div className='mb - 6 border - b border - zion - blue - light pb - 6'>;
       <button;
         on_click={toggle_section}
@@ -26,7 +47,6 @@ export /**
 function ExperienceFilter() {
   const handle_change = (values: number[]) =>: any {
     setExperienceRange ([values[0] || 0, values[1] || 15]);
-
   }
       </button>;
 
@@ -97,22 +117,29 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
         ) : (;
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />;
         )}
+      </button>;
 
-
-          <Slider;
-            aria-label="Experience range";
-
+      {expanded && (;
+        <div className="mt-6">;
+          <div className="flex justify-between text-sm text-zion-slate-light mb-2">;
+            <span>{experienceRange[0]} years</span>;
+            <span>{experienceRange[1]} years</span>;
+          </div>;
+          <Slider
+            aria-label='Experience range'            aria-label="Experience range"
             value={[experienceRange[0], experienceRange[1]]}
             min={0}
             max={15}
             step={1}
             onValueChange={handleChange}
-
-
+            className='mt-6'          />            className="mt-6";
+            className="mt-6";
+          />;
+        </div>;
+      )}
     </div>;
   );
 }
-
             className="mt-6"
           />
         </div>
@@ -120,7 +147,6 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
     </div>
   );
 }
-
         <div className="mt - 6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
             <span>{experience_range[0]} years</span>;
@@ -139,5 +165,3 @@ export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, 
         </div>)}
     </div>);
 }
-
-;

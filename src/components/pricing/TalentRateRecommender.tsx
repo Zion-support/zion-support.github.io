@@ -1,22 +1,40 @@
-import { Sparkles } from 'lucide-react'
 interface TalentRateRecommenderProps {
-
   skills: string[],
   yearsExperience: number,
   location?: string,
-  onSuggestionApplied: (value: number,) => void,
-  rateType: "hourly" | "fixed"
-
-      // Track this suggestion application
-      if (user && user.id) {
-        trackPricingSuggestion({
-          userId: user.id
-          suggestionType: "talent"
-          suggestedMin: suggestion.minRate
-          suggestedMax: suggestion.maxRate
-          actualValue: suggestedRate
-          accepted: true
-        })
+  onSuggestionApplied: (value: number, ) => void,
+  rate_type: "hourly" | "fixed";
+}
+export const TalentRateRecommender: React.FC < TalentRateRecommenderProps> = ({
+  skills;
+  years_experience;
+  location;
+  onSuggestionApplied,
+  rate_type}) => {
+  const [is_loading, setIsLoading] = useState (false);
+  const [suggestion, set_suggestion] = useState < PricingSuggestion | null>(null);
+  const { user } = use_auth ();
+  const generate_suggestion = async () => {
+    // Check condition
+if ( {) {
+  $2
+}
+      return;
+    }
+    setIsLoading (true);
+    try {
+      const params: TalentRateParams = {
+        skills;
+        years_experience,
+        location}
+      const result = await getTalentRateSuggestion (params);
+      set_suggestion (result);
+    } catch (error) {
+      logErrorToProduction ('Error generating rate suggestion:', { data: error });
+    } finally {
+      setIsLoading (false);
+    }
+  }
 interface TalentRateRecommenderProps {;
   skills: string[],;
   yearsExperience: number,;
@@ -118,17 +136,6 @@ if ( {) {
 
 
   return (
-
-
-            onClick={generateSuggestion}
-            disabled={skills.length === 0 || yearsExperience <= 0}
-
-
-            className="w-full"
-          >
-            <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
-          </Button>
-        ) : (
             disabled = {skills && skills.length === 0 || yearsExperience <= 0,}
             className="w-full">;
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI;
@@ -150,13 +157,6 @@ if ( {) {
             rateType={rateType}
           />;
         )}
-
-      </div>;
-    </div>;
-  );
-};
-
-
 
     <div className="space - y-4">;
       <div>;

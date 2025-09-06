@@ -1,21 +1,18 @@
-
-
 import { 
   ArrowRight, CheckCircle, Globe;
   Search, Grid, List, Star as StarIcon;
   Phone, Mail, MapPin
-
-} from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion',;
-import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services',;
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion';
+import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services';
 export default function Comprehensive2025InnovativeServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
-  const [priceRange, setPriceRange] = useState<'all' | 'budget' | 'mid' | 'enterprise'>('all'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
+  const [priceRange, setPriceRange] = useState<'all' | 'budget' | 'mid' | 'enterprise'>('all');
 
   // Combine all services
   const allServices = [...comprehensiveInnovativeServices, ...specializedEnterpriseServices],
@@ -37,15 +34,6 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     { id: 'Neural Technology & BCI', name: 'Neural Tech', count: allServices.filter(s => s.category.includes('Neural')).length },
     { id: 'Advanced IoT & Edge Computing', name: 'Advanced IoT', count: allServices.filter(s => s.category.includes('Advanced IoT')).length },
     { id: 'Advanced Analytics & AI', name: 'Advanced Analytics', count: allServices.filter(s => s.category.includes('Advanced Analytics')).length }
-  ],
-
-  const getPriceRange = (price: string) => {
-    const numPrice = parseFloat(price.replace('$', '').replace(, '')),
-    if (numPrice < 1000) return 'budget',
-    if (numPrice < 5000) return 'mid',
-    return 'enterprise'
-
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -55,13 +43,11 @@ import {;
   Phone, Mail, MapPin;
 } from 'lucide-react',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion';
 import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services';
 
-=======
 
 export default function Comprehensive2025InnovativeServicesShowcase(req, res) {
   try {
@@ -73,6 +59,21 @@ export default function Comprehensive2025InnovativeServicesShowcase(req, res) {
   const [priceRange, setPriceRange] = useState<'all' | 'budget' | 'mid' | 'enterprise'>('all');
 
 
+  ]
+  const getPriceRange = (price: string) => {
+    const numPrice = parseFloat(price.replace('$', '').replace(, ''))
+    if (numPrice < 1000) return 'budget'
+    if (numPrice < 5000) return 'mid'
+    return 'enterprise'
+  };
+
+  const filteredServices = allServices
+    .filter(service => {
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
+      const matchesPrice = priceRange === 'all' || getPriceRange(service.price) === priceRange;
       return matchesSearch && matchesCategory && matchesPrice
     })
     .sort((a, b) => {
@@ -80,15 +81,15 @@ export default function Comprehensive2025InnovativeServicesShowcase(req, res) {
         case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
         case 'price':
-
-
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+        case 'rating':
+          return b.rating - a.rating;
+        case 'newest':
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
         default: return 0
       }
     })
   const containerVariants = {
-
-    hidden: { opacity: 0 }
-=======
 import React, { useState } from 'react',
 import Head from 'next / head',
 import { motion } from 'framer-motion',
@@ -166,60 +167,38 @@ if (return 'mid', ) {
     }),
   const container_variants = {
     hidden: { opacity: 0 },
-
     visible: {
       opacity: 1
       transition: {
         stagger_children: 0.1;
       }
     }
-
-
   };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1
       y: 0
-=======
   },
   const item_variants = {
     hidden: { opacity: 0, coordinate_y: 20 },
     visible: {
       opacity: 1,
       coordinate_y: 0,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       transition: {
-
-        duration: 0.5;
-      }
-    }
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-
-
   };
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     website: 'https://ziontechgroup.com'
   }
-=======
     website: 'https://ziontechgroup.com'
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -231,7 +210,6 @@ if (return 'mid', ) {
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />
       </Head>
       <EnhancedNavigation />
-
   },
   const contact_info = {
     mobile: '+1 302 464 0950',
@@ -250,25 +228,12 @@ if (return 'mid', ) {
         <link rel="canonical" href="https://ziontechgroup.com / comprehensive - 2025 - services - showcase" />;
       </Head>;
       <EnhancedNavigation />;
-
-      {/* Hero Section */}
-
-
-      {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
       <section className="relative py - 20 px - 6">;
         <div className="max - w-7xl mx - auto text - center">;
           <motion.div;
@@ -279,10 +244,16 @@ if (return 'mid', ) {
 
               Discover our extensive collection of cutting-edge micro SAAS services, AI solutions, 
 
+      {/* Hero Section */}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
+              2025 Comprehensive Services Showcase
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
+              Discover our extensive collection of cutting-edge micro SAAS services, AI solutions
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
             {/* Contact Information */}
-=======
               Discover our extensive collection of cutting-edge micro SAAS services, AI solutions,
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
@@ -294,7 +265,6 @@ if (return 'mid', ) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="flex flex-wrap justify-center gap-6 mb-8 text-white/70">
               <div className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
@@ -318,7 +288,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400">{allServices.length}+</div>
@@ -340,7 +309,6 @@ if (return 'mid', ) {
           </motion.div>
         </div>
       </section>
-
           >;
             <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent">;
               2025 Comprehensive Services Showcase;
@@ -386,20 +354,7 @@ if (return 'mid', ) {
           </motion.div>;
         </div>;
       </section>;
-
       {/* Search and Filters */}
-
-      <section className="px - 6 pb - 12">;
-        <div className="max - w-7xl mx - auto">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg - white / 5 backdrop - blur - xl rounded - 2xl p - 6 border border - white / 10";
-          >;
-            {/* Search Bar */}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="mb-6">
               <div className="relative max-w-2xl mx-auto">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
@@ -420,13 +375,10 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="w-full pl-12 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all duration-300"
                 />
               </div>
             </div>
-
-=======
             <div className="mb - 6">;
               <div className="relative max - w-2xl mx - auto">;
                 <Search className="absolute left - 4 top - 1/2 transform -translate - y-1 / 2 text - white / 50 w - 5 h - 5" />;
@@ -439,40 +391,9 @@ if (return 'mid', ) {
                 />;
               </div>;
             </div>;
-
             {/* Filters */}
             <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 4">;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               {/* Category Filter */}
-
-
-            {/* Filters */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              {/* Category Filter */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              <div>
-                <label className="block text-sm font-medium text-white/70 mb-2">Category</label>
-                <select
-                  value={selectedCategory  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  onChange={(e) => setSelectedCategory(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
                   {categories.map((category) => (
@@ -508,7 +429,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
                   <option value="all">All Prices</option>
@@ -539,7 +459,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50"
                 >
                   <option value="popularity">Popularity</option>
@@ -557,7 +476,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div>
                 <label className="block text-sm font-medium text-white/70 mb-2">View Mode</label>
                 <div className="flex gap-2">
@@ -566,9 +484,10 @@ if (return 'mid', ) {
                       viewMode === 'grid' 
                         ? 'bg-cyan-500 text-white' 
 
+                      viewMode === 'grid' 
+                        ? 'bg-cyan-500 text-white' 
                         : 'bg-white/10 text-white/70 hover:bg-white/20'
                     }`}
-=======
 
                     onClick={() => setViewMode('grid')  } catch (error) {
     console.error("Error:", error);
@@ -585,16 +504,16 @@ if (return 'mid', ) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   >
                     <Grid className="w-4 h-4" />
                   </button>
                   <button
-
-
+                    onClick={() => setViewMode('list')}
+                    className={`px-3 py-2 rounded-lg transition-all duration-300 ${
+                      viewMode === 'list' 
+                        ? 'bg-cyan-500 text-white' 
                         : 'bg-white/10 text-white/70 hover:bg-white/20'
                     }`}
-=======
 
                     onClick={() => setViewMode('list')  } catch (error) {
     console.error("Error:", error);
@@ -611,7 +530,6 @@ if (return 'mid', ) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   >
                     <List className="w-4 h-4" />
                   </button>
@@ -638,7 +556,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial="hidden"
             animate="visible"
             className="mb-8"
@@ -648,14 +565,6 @@ if (return 'mid', ) {
                 {filteredServices.length} Services Found
               </h2>
               <p className="text-white/60">
-
-                Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
-
-=======
-
-                Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
-
-=======
                 Showing results for "{searchTerm || 'all services'}" in {selectedCategory === 'all' ? 'all categories' : selectedCategory  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -663,8 +572,13 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                Showing results for "{searchTerm || 'all services'}" in {selectedCategory === 'all' ? 'all categories' : selectedCategory  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
               </p>
             </div>
             {filteredServices.length === 0 ? (
@@ -674,10 +588,6 @@ if (return 'mid', ) {
                 <p className="text-white/60 mb-6">Try adjusting your search criteria or filters</p>
                 <button
                   onClick={() => {
-
-                    setSearchTerm('');
-                    setSelectedCategory('all');
-
                     setPriceRange('all')
 
 
@@ -688,22 +598,18 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
                 >
                   Clear Filters
                 </button>
               </div>
             ) : (
-
-
+              <div className={viewMode === 'grid' 
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'
               }>
                 {filteredServices.map((service, index) => (
                   <motion.div
-
-=======
               <div>;
                 <label className="block text - sm font - medium text - white / 70 mb - 2">Category</label>;
                 <select;
@@ -756,7 +662,6 @@ if (return 'mid', ) {
                         ? 'bg - cyan - 500 text - white';
                         : 'bg - white / 10 text - white / 70 hover:bg - white / 20';
                     }`}
-=======
 
 
                   >;
@@ -817,87 +722,38 @@ if (return 'mid', ) {
               }>;
                 {filtered_services.map ((service, index) => (
                   <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     key={service.id}
                     variants={item_variants}
                     className={`group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl hover:border - cyan - 400 / 30 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl ${
                       view_mode === 'list' ? 'flex' : '';
                     }`}
                   >;
-
-                    {/* Service Card Content */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    <div className={`p-6 ${viewMode === 'list' ? 'flex-1' : ''}`}>;
-                      {/* Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="flex items-center gap-3">
-                          <div className={`text-3xl ${service.color.includes('from-') ? '' : service.color}`}>
-                            {service.icon  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          </div>
-                          <div>
-                            <h3 className="font-bold text-lg text-white group-hover:text-cyan-300 transition-colors duration-300">
-
-                              {service.name  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             </h3>
                             <p className="text-sm text-white/60">{service.tagline}</p>
                           </div>
                         </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {service.popular && (
 
+                    {/* Service Card Content */}
+                    <div className={`p - 6 ${view_mode === 'list' ? 'flex - 1' : ''}`}>;
+                      {/* Header */}
+                      <div className="flex items - start justify - between mb - 4">;
+                        <div className="flex items - center gap - 3">;
+                          <div className={`text - 3xl ${service.color.includes ('from-') ? '' : service.color}`}>;
+                            {service.icon}
+                          </div>;
+                          <div>;
+                            <h3 className="font - bold text - lg text - white group - hover:text - cyan - 300 transition - colors duration - 300">;
+                              {service.name}
+                            </h3>;
+                            <p className="text - sm text - white / 60">{service.tagline}</p>;
+                          </div>;
+                        </div>;
+                        {service.popular && (
                           <div className="bg - gradient - to - r from - yellow - 500 to - orange - 500 text - white text - xs px - 2 py - 1 rounded - full">;
                             Popular;
                           </div>)}
                       </div>;
-
-                      {/* Description */}
-
-
-                        )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </div>;
-                      {/* Description */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      <p className="text-white/80 text-sm mb-4 line-clamp-3">
-                        {service.description  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      </p>;
-                      {/* Features */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <div className="mb-4">
                         <h4 className="text-sm font-semibold text-white/70 mb-2">Key Features:</h4>
                         <div className="grid grid-cols-1 gap-1">
@@ -908,9 +764,17 @@ if (return 'mid', ) {
                       <p className="text - white / 80 text - sm mb - 4 line - clamp - 3">;
                         {service.description}
 
+                      {/* Description */}
+                      </p>;
+                      {/* Features */}
+                      <div className="mb - 4">;
+                        <h4 className="text - sm font - semibold text - white / 70 mb - 2">Key Features:</h4>;
+                        <div className="grid grid - cols - 1 gap - 1">;
+                          {service.features.slice (0, 3).map ((feature, idx) => (
+                            <div key={idx} className="flex items - center gap - 2 text - xs text - white / 60">;
+                              <CheckCircle className="w - 3 h - 3 text - green - 400" />;
                               {feature}
                             </div>))}
-=======
 
                               {feature  } catch (error) {
     console.error("Error:", error);
@@ -924,14 +788,22 @@ if (return 'mid', ) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {service.features.length > 3 && (
-
-
+                            <div className="text-xs text-white/40">
+                              +{service.features.length - 3} more features
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                            <div className="text - xs text - white / 40">;
+                              +{service.features.length - 3} more features;
+                            </div>)}
+                        </div>;
+                      </div>;
+                      {/* Price and Rating */}
+                      <div className="flex items - center justify - between mb - 4">;
+                        <div className="text - 2xl font - bold text - cyan - 400">;
                           {service.price}
-
-=======
                           <span className="text - sm text - white / 60">{service.period}</span>;
                         </div>;
                         <div className="flex items - center gap - 1">;
@@ -940,29 +812,10 @@ if (return 'mid', ) {
                           <span className="text - xs text - white / 50">({service.reviews})</span>;
                         </div>;
                       </div>;
-
                       {/* Action Buttons */}
                       <div className="flex gap - 2">;
                         <a;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           href={service.link}
-
-
-                      {/* Action Buttons */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                      <div className="flex gap-2">
-                        <a
-                          href={service.link  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           target="_blank"
                           rel="noopener noreferrer"
                           className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg text-white text-sm font-medium text-center transition-all duration-300 transform hover:scale-105"
@@ -979,7 +832,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           className="px-4 py-2 border border-white/20 hover:border-cyan-400/50 rounded-lg text-white text-sm font-medium transition-all duration-300 hover:bg-white/10"
                         >
                           Contact
@@ -994,7 +846,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <div className="mt-4 pt-4 border-t border-white/10">
                         <div className="grid grid-cols-2 gap-4 text-xs text-white/50">
                           <div>
@@ -1008,7 +859,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           </div>
                           <div>
                             <span className="block text-white/70">Trial:</span>
@@ -1027,7 +877,6 @@ if (return 'mid', ) {
                     </div>
                   </motion.div>
 
-=======
                           target="_blank";
                           rel="noopener noreferrer";
                           className="flex - 1 px - 4 py - 2 bg - gradient - to - r from - cyan - 500 to - blue - 500 hover:from - cyan - 600 hover:to - blue - 600 rounded - lg text - white text - sm font - medium text - center transition - all duration - 300 transform hover:scale - 105";
@@ -1068,7 +917,6 @@ if (return 'mid', ) {
           </motion.div>;
         </div>;
       </section>;
-
       {/* Contact CTA */}
       <section className="px - 6 pb - 20">;
         <div className="max - w-4xl mx - auto text - center">;
@@ -1077,53 +925,6 @@ if (return 'mid', ) {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-
-
-                ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </div>;
-            )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </motion.div>;
-        </div>;
-      </section>;
-      {/* Contact CTA */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      <section className="px-6 pb-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            transition={{ duration: 0.8 }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-            viewport={{ once: true }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/20"
           >
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -1147,7 +948,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2"
               >
                 Schedule Consultation
@@ -1163,7 +963,6 @@ if (return 'mid', ) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="px-8 py-4 border border-white/20 hover:border-cyan-400/50 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10 flex items-center justify-center gap-2"
               >
                 <Phone className="w-5 h-5" />
@@ -1183,11 +982,8 @@ if (return 'mid', ) {
       </section>
       <EnhancedFooter />
     </div>
-
-=======
+  )
 }
-
-=======
             className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 backdrop - blur - xl rounded - 3xl p - 12 border border - cyan - 400 / 20";
           >;
             <h2 className="text - 4xl font - bold text - white mb - 6">;
@@ -1227,9 +1023,5 @@ if (return 'mid', ) {
       <EnhancedFooter />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

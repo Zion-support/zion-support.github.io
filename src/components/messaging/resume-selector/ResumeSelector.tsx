@@ -1,7 +1,4 @@
-// Fetch resume data when component mounts
-  useEffect((,) => {
-    const loadResumes = async () => {
-
+import { toast } from "@/components/ui/use-toast";
 import React, { useState, useEffect } from 'react';
 import { Button  } from '@/components / ui / button';
 import { RadioGroup, RadioGroupItem  } from '@/components / ui / radio - group';
@@ -28,16 +25,16 @@ function ResumeSelector() {
   useEffect ((, ) => {
     const load_resumes = async () => {
       setIsLoading (true);
-
-
-      setIsLoading(true),
-
       try {
         await fetch_resume ();
       } catch (error) {
         logErrorToProduction ('Error loading resumes:', { data: error });
       } finally {
-
+        setIsLoading (false);
+      }
+    }
+            return;
+      }
 import { ResumePreviewCard } from './ResumePreviewCard';
 import { UploadSection } from './UploadSection';
 import { SelectResumeSection } from './SelectResumeSection';
@@ -101,8 +98,6 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
   );
 }
 
-
-  )
 }
-
-;
+  );
+}

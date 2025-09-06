@@ -33,7 +33,5 @@ export default function Careers(): any ({ }: CareersProps) {;
     </div>;
   );
 }
-
-
 }
 }

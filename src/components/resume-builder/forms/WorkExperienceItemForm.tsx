@@ -1,8 +1,3 @@
-// Set up form
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-
 import { useState } from 'react';
 import { zod_resolver } from '@hookform / resolvers / zod';
 import { use_form } from 'react - hook - form';
@@ -132,8 +127,6 @@ function WorkExperienceItemForm() {
     form.set_value ('description', content, { should_dirty: true });
     setIsEnhancementDialogOpen (false);
   }
-
-
 import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
@@ -249,9 +242,7 @@ export function WorkExperienceItemForm(): any ({;
                   <FormMessage />;
                 </FormItem>;
               )}
-
             />;
-
 
             <FormField
               control={form && form.control}
@@ -264,12 +255,10 @@ export function WorkExperienceItemForm(): any ({;
                   <FormMessage />;
                 </FormItem>;
               )}
-
             />;
           </div>;
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-
             <FormField
               control={form && form.control}
               name='location'
@@ -299,26 +288,45 @@ export function WorkExperienceItemForm(): any ({;
             />;
             <FormField;
               control={form.control}
-
+              name='role_title';
+              render={({ field }: { field: any }) => (                <FormItem>;
+                  <FormLabel > Role Title</FormLabel>;
+                  <FormControl>;
+                    <Input placeholder='e.g. Senior Developer' {...field} />;
+                  </FormControl>;
+                  <FormMessage />;
+                </FormItem>)}
             />;
-              name="role_title"
-              render={({ field }: { field: any }) => (
-                <FormItem>
-
-
-                  <FormLabel>Role Title</FormLabel>
-                  <FormControl>
-                    <Input placeholder="e.g. Senior Developer" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-
+          </div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
+            <FormField;
+              control={form.control}
+              name='location';
+              render={({ field }: { field: any }) => (                <FormItem>;
+                  <FormLabel > Location</FormLabel>;
+                  <FormControl>;
+                    <Input;
+                      placeholder='e.g. New York, NY (Remote)';
+                      {...field}
+                    />;
+                  </FormControl>;
+                  <FormMessage />;
+            />;
 
             <FormField
-
+              control={form && form.control}
+              name='is_current'
+              render={({ field }: { field: any }) => (;
+                <FormItem className='flex flex-col'>                  <FormLabel>Current Position</FormLabel>;
+                  <div className='flex items-center gap-2 h-10'>;
+                    <Switch
+                      aria-label='Current position'
+                      checked={field && field.value}
+                      onCheckedChange={field && field.onChange}
+                      id='current-position'                    />;
+                    <label
+                      htmlFor='current-position'
+                      className='text-sm text-muted-foreground'>;
                 </FormItem>)}
               control={form.control}
               name="location"
@@ -344,20 +352,16 @@ export function WorkExperienceItemForm(): any ({;
                     <Switch;
                       aria - label='Current position';
                       checked={field.value}
-
-                      onCheckedChange={field.onChange}
-                      id="current-position"
-                    />
-                    <label htmlFor="current-position" className="text-sm text-muted-foreground">
-
-
-                      I currently work here
-                    </label>
-                  </div>
-                  <FormMessage />
-                </FormItem>
-              )}
-
+                      onCheckedChange={field.on_change}
+                      id='current - position'                    />;
+                    <label;
+                      html_for='current - position';
+                      className='text - sm text - muted - foreground';
+                    >;
+                      I currently work here;
+                    </label>;
+                  </div>;
+                  <FormMessage />;
             />;
           </div>;
 
@@ -380,15 +384,6 @@ export function WorkExperienceItemForm(): any ({;
 
                           variant={"outline"}
                           className={cn(
-                            "w-full pl-3 text-left font-normal",
-                            !field.value && "text-muted-foreground"
-                          )}
-                        >
-
-                          {field.value ? (
-                            format(field.value, 'MMM yyyy')
-                          ) : (
-                            <span>Select date</span>
                             'w-full pl-3 text-left font-normal',
                             !field && field.value && 'text-muted-foreground'
                           )}>;
@@ -397,7 +392,9 @@ export function WorkExperienceItemForm(): any ({;
                           ) : (;
                             <span>Select date</span>;
                           )}
-
+                          <CalendarIcon
+                            className='ml-auto h-4 w-4 opacity-50'
+                            aria-hidden='true'
                 </FormItem>)}
             />;
           </div>;
@@ -421,38 +418,13 @@ export function WorkExperienceItemForm(): any ({;
                           <CalendarIcon;
                             className='ml - auto h - 4 w - 4 opacity - 50';
                             aria - hidden='true';
-
                           />;
                         </Button>;
                       </FormControl>;
                     </PopoverTrigger>;
-
-                          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" aria-hidden="true" />
-                        </Button>
-                      </FormControl>
-                    </PopoverTrigger>
-                    <PopoverContent className="w-auto p-0" align="start">
-                      <Calendar
-
-                        mode="single"
-                        selected={field.value}
-                        onSelect={field.onChange}
-                        initialFocus
-                        captionLayout="dropdown-buttons"
-                        fromYear={1990}
-                        toYear={new Date().getFullYear()}
-                      />;
-
-                    </PopoverContent>;
-                  </Popover>;
-                  <FormMessage />;
-                </FormItem>;
-              )}
-
             />;
 
             {!watchIsCurrent && (;
-
               <FormField
                 control={form && form.control}
                 name='end_date'
@@ -464,33 +436,6 @@ export function WorkExperienceItemForm(): any ({;
                           <Button
                             variant={'outline'}
                             className={cn(
-
-            />;
-            {!watchIsCurrent && (;
-              <FormField;
-                control={form.control}
-                name="end_date"
-                render={({ field }: { field: any }) => (
-                  <FormItem className="flex flex-col">
-                    <FormLabel>End Date</FormLabel>
-
-
-                    <Popover>
-                      <PopoverTrigger asChild>
-                        <FormControl>
-                          <Button
-
-                            variant={"outline"}
-                            className={cn(
-                              "w-full pl-3 text-left font-normal",
-                              !field.value && "text-muted-foreground"
-                            )}
-                          >
-
-                            {field.value ? (
-                              format(field.value, 'MMM yyyy')
-                            ) : (
-                              <span>Select date</span>
                               'w-full pl-3 text-left font-normal',
                               !field && field.value && 'text-muted-foreground'
                             )}>;
@@ -499,7 +444,9 @@ export function WorkExperienceItemForm(): any ({;
                             ) : (;
                               <span>Select date</span>;
                             )}
-
+                            <CalendarIcon
+                              className='ml-auto h-4 w-4 opacity-50'
+                              aria-hidden='true'
                     <PopoverContent className='w - auto p - 0' align='start'>;
                       <Calendar;
                         mode='single';
@@ -534,15 +481,12 @@ export function WorkExperienceItemForm(): any ({;
                             <CalendarIcon;
                               className='ml - auto h - 4 w - 4 opacity - 50';
                               aria - hidden='true';
-
                             />;
                           </Button>;
                         </FormControl>;
                       </PopoverTrigger>;
-
                           selected={field && field.value || undefined}
                           onSelect={field && field.onChange}
-
                           initialFocus
                           captionLayout='dropdown-buttons'
                           fromYear={1990}
@@ -574,9 +518,7 @@ export function WorkExperienceItemForm(): any ({;
                 )}
               />;
             )}
-
           </div>;
-
 
           <FormField
             control={form && form.control}
@@ -587,7 +529,6 @@ export function WorkExperienceItemForm(): any ({;
                   <div className='flex gap-2'>;
                     <AIEnhancementButton
                       options={{
-
                         enhancementType: 'work-description',
                         content: field && field.value || '',
                         context: `${watchRoleTitle} at ${watchCompanyName}`,
@@ -596,7 +537,6 @@ export function WorkExperienceItemForm(): any ({;
                         form && form.setValue('description', content, {;
                           shouldDirty: true,;
                         });
-
                       }
                       buttonText='Enhance with AI';
                     />;
@@ -653,84 +593,13 @@ export function WorkExperienceItemForm(): any ({;
                   </div>;
                 </div>;
                 <FormControl>;
-
                   <Textarea;
                     placeholder='Describe your responsibilities, achievements, and skills used in this role...';
                     className='min - h-[150px]';
-
                     {...field}
                   />;
                 </FormControl>;
                 <FormMessage />;
-
-
-          </div>;
-          <FormField;
-            control={form.control}
-            name="description"
-            render={({ field }: { field: any }) => (
-              <FormItem>
-                <div className="flex justify-between items-center">
-
-
-                  <FormLabel>Description</FormLabel>
-                  <div className="flex gap-2">
-                    <AIEnhancementButton
-                      options={{
-
-
-                      AI Writer
-                    </Button>
-                  </div>
-                </div>
-                <FormControl>
-                  <Textarea
-
-                    placeholder="Describe your responsibilities, achievements, and skills used in this role..."
-                    className="min-h-[150px]"
-
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-
-          
-          <div className="flex justify-end gap-2">
-            <Button type="button" variant="outline" onClick={onCancel}>
-
-              Cancel
-            </Button>
-            <Button type='submit' disabled={isSubmitting}>
-              {isSubmitting ? (
-                <>
-                  <Loader2 className='mr-2 h-4 w-4 animate-spin' />
-                  Saving...
-                </>
-              ) : (
-                <>Save</>
-              )}
-            </Button>
-          </div>
-        </form>
-      </Form>
-          />;
-
-          <div className='flex justify-end gap-2'>;
-            <Button type='button' variant='outline' onClick={onCancel}>;
-              Cancel;
-            </Button>;
-            <Button type='submit' disabled={isSubmitting}>;
-              {isSubmitting ? (;
-                <>;
-                  <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
-                  Saving...;
-                </>;
-              ) : (;
-                <>Save</>;
-              )}
               </FormItem>)}
           />;
           <div className='flex justify - end gap - 2'>;
@@ -748,33 +617,11 @@ export function WorkExperienceItemForm(): any ({;
           </div>;
         </form>;
       </Form>;
-
-
-        title="Enhance Work Experience Description"
-
-
+      <AIEnhancementDialog
+        title='Enhance Work Experience Description'
         isOpen={isEnhancementDialogOpen}
         onClose={() => setIsEnhancementDialogOpen(false)}
         onApply={handleAIEnhancement}
-
-
-          enhancementType: 'work-description',
-          content: form.getValues('description') || '',
-          context: `${watchRoleTitle} at ${watchCompanyName}`,
-
-
-        }}
-        initialContent={form.getValues('description') |''}      />
-
-    </>
-  )
-is current: z.boolean () .default (false)
-description: z.string () .optional ()
-location: z.string () .optional ()
-})
-type FormValues = z.infer<typeof formSchema>
-//Create a properly typed WorkExperience object with all required fields const workExperience: WorkExperience = {
-  await onSubmit (workExperience)
       <AIEnhancementDialog;
         title='Enhance Work Experience Description';
         is_open={isEnhancementDialogOpen}
@@ -797,7 +644,6 @@ type FormValues = z.infer < typeof form_schema>;
 }
 setIsEnhancementDialogOpen (false);
 }
-
         defaultOptions={{;
           enhancementType: 'work-description',;
           content: form && form.getValues('description') || '',;
@@ -834,11 +680,8 @@ setIsEnhancementDialogOpen (false);
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) ;
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) ;
 }";
-
 }
 }
-
-
 
 }/> <FormField </FormControl> <FormMessage /> </FormItem>);
 }/> </div> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4" > <FormField </FormControl> <FormMessage /> </FormItem>) ";
@@ -859,19 +702,3 @@ setIsEnhancementDialogOpen (false);
 }";
 }
 }
-
-}/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) 
-}</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) ;
-}";
-};
-};
-
-          enhancementType: "work-description",
-          content: form.getValues("description") || "",
-          context: `${watchRoleTitle} at ${watchCompanyName}`}}
-        initialContent={form.getValues("description") || ""}
-      />
-    </>
-  )
-}
-;

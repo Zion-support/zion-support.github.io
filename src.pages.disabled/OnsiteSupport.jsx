@@ -25,8 +25,6 @@ import React from 'react';
 interface OnsiteSupportProps {
   // Add props here as needed
 
-
-
 export default function OnsiteSupport({ }: OnsiteSupportProps) {
   return (
     <div>
@@ -34,11 +32,13 @@ export default function OnsiteSupport({ }: OnsiteSupportProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
 }
 
-=======
 
 
+:src.pages.disabled/OnsiteSupport.jsx
+}
+}
+}
+}
+}

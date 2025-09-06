@@ -1,4 +1,3 @@
-
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
@@ -21,7 +20,6 @@ export default function ListingDetail() {;
   const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
 
-=======
 
 
 
@@ -118,7 +116,6 @@ export default function ListingDetail() {;
   const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === id);
 
   if (!listing) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <AppLayout>;
         <div className="min-h-screen bg-zion-blue py-12 px-4">;
@@ -136,11 +133,9 @@ export default function ListingDetail() {;
     );
   }
 
-
   const handleContact = () => {;
     setIsContactDialogOpen(true);
   };
-
 
   return (
     <AppLayout>;
@@ -148,7 +143,6 @@ export default function ListingDetail() {;
         <div className="container mx-auto">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Column - Images */}
-
             <div className="lg:col-span-2">;
               <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">;
                 <div className="aspect-[16/9] w-full relative">;
@@ -156,7 +150,6 @@ export default function ListingDetail() {;
                     <img
                       src={listing && listing.images[selectedImageIndex]} 
                       alt={listing && listing.title} 
-
                       className="w-full h-full object-cover"
                       onError={(e) => {;
                         const target = e && e.target as HTMLImageElement;
@@ -168,13 +161,11 @@ export default function ListingDetail() {;
                       <span className="text-zion-slate-light">No image available</span>;
                     </div>;
                   )}
-
                 </div>;
 
                 {listing && listing.images && listing && listing.images.length > 1 && (;
                   <div className="flex p-4 gap-2 overflow-x-auto">;
                     {listing && listing.images.map((image, index) => (;
-
                       <div
                         key={index}
                         onClick={() => setSelectedImageIndex(index)}
@@ -182,17 +173,14 @@ export default function ListingDetail() {;
                           "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent";
                         )}
-
                       >;
                         <img
                           src={image} 
                           alt={`${listing && listing.title} - image ${index + 1}`} 
-
                           className="w-full h-full object-cover"
                           onError={(e) => {;
                             const target = e && e.target as HTMLImageElement;
                             target && target.src = "/placeholder && placeholder.svg";
-=======
                       >;
                         <img;
                           src={image} ;
@@ -202,20 +190,12 @@ export default function ListingDetail() {;
                             const target = e.target as HTMLImageElement,;
                             target.src = "/placeholder.svg";
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           }}
                         />;
                       </div>;
                     ))}
                   </div>;
                 )}
-
-
-                
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -240,7 +220,6 @@ export default function ListingDetail() {;
                     </div>
                   </div>
                 </div>
-=======
               </div>;
 
               {/* Description Section */}
@@ -273,7 +252,6 @@ export default function ListingDetail() {;
                   </div>;
                 </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Tags */}
                 <div className="mt-8">;
                   <h3 className="text-xl font-bold text-white mb-4">Tags</h3>;
@@ -283,12 +261,10 @@ export default function ListingDetail() {;
                         {tag}
                       </Badge>;
                     ))}
-
                   </div>;
                 </div>;
               </div>;
             </div>;
-
 
             {/* Right Column - Details */}
             <div className="lg:col-span-1">;
@@ -302,7 +278,6 @@ export default function ListingDetail() {;
                       Featured;
                     </Badge>;
                   )}
-
                 </div>;
 
                 <h1 className="text-2xl font-bold text-white mb-4">{listing && listing.title}</h1>;
@@ -311,7 +286,6 @@ export default function ListingDetail() {;
                   <div className="flex items-center gap-2 mb-6">;
                     <div className="flex items-center">;
                       {[...Array(5)].map((_, i) => (;
-
                         <Star
                           key={i}
                           className={cn(
@@ -321,7 +295,6 @@ export default function ListingDetail() {;
 
 
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           )}
                         />;
                       ))}
@@ -331,8 +304,6 @@ export default function ListingDetail() {;
                     </span>;
                   </div>;
                 )}
-
-
 
                 {/* Price */}
                 <div className="mb-6">;
@@ -345,9 +316,7 @@ export default function ListingDetail() {;
                       Custom Pricing;
                     </div>;
                   )}
-
                 </div>;
-
 
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">;
@@ -358,28 +327,9 @@ export default function ListingDetail() {;
                       providerId={listing && listing.author.id}
                       buttonText="Buy Now"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
-
-
-                <div className="space-y-3 mb-8">;
-                  {listing.price !== null ? (;
-                    <PaymentButton;
-                      amount={listing.price}
-                      serviceId={listing.id}
-                      providerId={listing.author.id}
-                      buttonText="Buy Now";
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
-                      onPaymentInitiated={() => {;
-                        toast({;
-                          title: "Payment Processing";
-                          description: "Redirecting to secure checkout...";
-                        });
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       }}
                     />
                   ) : (
-=======
                       onPaymentInitiated={() => {;
                         toast({;
                           title: "Payment Processing",;
@@ -388,7 +338,6 @@ export default function ListingDetail() {;
                       }}
                     />;
                   ) : (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <Button
                       onClick={handleContact}
                       disabled={isLoading}
@@ -396,13 +345,6 @@ export default function ListingDetail() {;
                       {isLoading ? "Processing..." : "Request Quote"}
                     </Button>;
                   )}
-
-
-                          const target = e.target as HTMLImageElement,
-
-
-                          target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
-=======
 
                   <Button
                     variant="outline" 
@@ -426,7 +368,6 @@ export default function ListingDetail() {;
                         onError={(e) => {;
                           const target = e && e.target as HTMLImageElement;
                           target && target.src = "https: //ui-avatars && avatars.com/api/?name=" + encodeURIComponent(listing && listing.author.name);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         }}
                       />;
                     ) : (;
@@ -434,64 +375,6 @@ export default function ListingDetail() {;
                         <span className="text-lg font-medium text-zion-purple">{listing && listing.author.name && name.charAt(0)}</span>;
                       </div>;
                     )}
-
-=======
-
-
-=======
-                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
-                    >;
-                      {isLoading ? "Processing..." : "Request Quote"}
-                    </Button>;
-                  )}
-;
-                  <Button;
-                    variant="outline";
-                    onClick={handleContact}
-                    disabled={isLoading}
-                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10";
-                  >;
-                    <MessageSquare className="h-4 w-4 mr-2" />;
-                    Contact Publisher;
-                  </Button>;
-                </div>;
-                {/* Publisher Info */}
-                <div className="border-t border-zion-blue-light pt-6">;
-                  <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>;
-                  <div className="flex items-center gap-3">;
-                    {listing.author.avatarUrl ? (;
-                      <img;
-                        src={listing.author.avatarUrl} ;
-                        alt={listing.author.name} ;
-                        className="h-12 w-12 rounded-full";
-                        onError={(e) => {;
-                          const target = e.target as HTMLImageElement;
-                          target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name);
-                        }}
-                      />;
-                    ) : (;
-                      <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">;
-                        <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span>;
-                      </div>;
-                    )}
-
-                    <div>;
-                      <p className="font-medium text-white">{listing && listing.author.name}</p>;
-                      <p className="text-xs text-zion-slate-light">Member since 2022</p>;
-                    </div>;
-                  </div>;
-                </div>;
-
-                {/* Additional Info */}
-                <div className="border-t border-zion-blue-light mt-6 pt-6">;
-                  <div className="flex justify-between mb-2">;
-                    <span className="text-zion-slate-light">Listed on</span>;
-                    <span className="text-white">{new Date(listing && listing.createdAt).toLocaleDateString()}</span>;
-                  </div>;
-                  <div className="flex justify-between mb-2">;
-                    <span className="text-zion-slate-light">ID</span>;
-                    <span className="text-white">{listing && listing.id}</span>;
-=======
 import { useState } from './react';
 import { use_params } from './react-router-dom';
 import { Badge } from '@/components / ui / badge';
@@ -730,7 +613,6 @@ if ( {) {
                   <div className="flex justify - between mb - 2">;
                     <span className="text - zion - slate - light">ID</span>;
                     <span className="text - white">{listing.id}</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </div>;
                 </div>;
               </div>;
@@ -738,14 +620,7 @@ if ( {) {
           </div>;
         </div>;
       </div>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       {/* Contact Dialog */}
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>;
         <DialogContent className="bg - zion - blue - dark border border - zion - blue - light text - white sm:max - w-md">;
@@ -761,4 +636,3 @@ if ( {) {
       </Dialog>;
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

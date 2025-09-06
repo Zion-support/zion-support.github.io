@@ -1,18 +1,13 @@
-
-
-
-=======
 import useSWR from 'swr',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import Link from 'next/link',
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
 export default function DisputesIndexPage() {
   const { data } = useSWR('/api/disputes', fetcher)
   const disputes = data?.disputes |[]
 
-=======
 import useSWR from 'swr',
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 import Link from 'next / link',
@@ -23,14 +18,7 @@ export default /**
 function DisputesIndexPage() {
   const { data } = useSWR ('/api / disputes', fetcher),
   const disputes = data?.disputes || [],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
-
-
-          <Link href="/disputes/new"><a className="text-sm text-blue-700 hover:underline">Raise Dispute</Link></Link>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>
         <div className="overflow-auto border rounded">
           <table className="min-w-full text-sm">
@@ -50,14 +38,12 @@ function DisputesIndexPage() {
                   <td className="px-3 py-2"><Link href={`/disputes/${encodeURIComponent(d.id)}`}><a className="text-blue-700 hover:underline">{d.id}</Link></Link></td>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <td className="px-3 py-2">{d.projectId}</td>
                   <td className="px-3 py-2">{new Date(d.createdAt).toLocaleString()}</td>
                   <td className="px-3 py-2">{d.status}</td>
                 </tr>
               ))}
               {disputes.length === 0 && (
-=======
     <EnhancedLayout>;
       <div className="max - w-4xl mx - auto">;
         <div className="flex items - center justify - between mb - 4">;
@@ -84,10 +70,19 @@ function DisputesIndexPage() {
                 </tr>))}
               {disputes.length === 0 && (
 
-=======
 }
 
-=======
+                <tr>
+                  <td colSpan={4} className="px-3 py-6 text-center text-sm text-gray-500">No disputes yet</td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </EnhancedLayout>
+  )
+}
                 <tr>;
                   <td col_span={4} className="px - 3 py - 6 text - center text - sm text - gray - 500">No disputes yet</td>;
                 </tr>)}
@@ -97,9 +92,5 @@ function DisputesIndexPage() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

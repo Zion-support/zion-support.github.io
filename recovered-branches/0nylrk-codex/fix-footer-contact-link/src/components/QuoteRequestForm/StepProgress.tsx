@@ -1,14 +1,3 @@
-
-
-
-import { QuoteRequestSteps } from "../QuoteRequestForm",
-import { CheckIcon } from "@/components/icons",
-import { cn } from "@/lib/utils",
-
-
-interface StepProgressProps {
-  currentStep: QuoteRequestSteps
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
     { id: "service", label: "Service" },
@@ -76,13 +65,10 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
                   status === "complete" ? "bg-zion-purple text-white" : 
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
 
-=======
-
                   "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors",
                   status === "complete" ? "bg-zion-purple text-white" : 
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   "bg-zion-blue-light text-zion-slate-light"
                 )}>;
                 {status === "complete" ? (;
@@ -90,20 +76,16 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
                 ) : (;
                   <span className="text-xs">{steps && steps.findIndex(s => s && s.id === step && step.id) + 1}</span>;
                 )}
-
               </div>;
               <span
                 className={cn(
                   "text-xs mt-2 font-medium"
-=======
 
 
-=======
                   "text-xs mt-2 font-medium",
 
                   status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   "text-zion-slate-light"
                 )}>;
                 {step && step.label}
@@ -111,14 +93,11 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
             </div>;
           );
         })}
-
       </div>;
     </div>;
   );
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { QuoteRequestSteps } from '../QuoteRequestForm';
 import { CheckIcon } from '@/components / icons';
 import { cn } from '@/lib / utils';
@@ -192,4 +171,3 @@ if (return "current", ) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

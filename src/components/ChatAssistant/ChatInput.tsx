@@ -1,3 +1,68 @@
+  useState,
+  useRef,
+  useEffect,
+  FormEvent,
+  KeyboardEvent,
+} from 'react';
+import { Button } from '@/components / ui / button';
+import { Send } from 'lucide-react';
+interface ChatInputProps {
+  on_send: (message: string) => void;
+disabled?: boolean;
+}export /**
+ * ChatInput - Function description
+ */
+function ChatInput() {';
+  const [message, set_message] = useState ('');
+const input_ref = useRef < HTMLTextAreaElement> (null);
+//Focus input when component mounts;
+export /**
+ * ChatInput - Function description
+ */
+function ChatInput() {
+  const [ message, set_message ] = useState (''),
+  const input_ref = useRef < HTMLTextAreaElement>(null),
+  useEffect (() => {    // Focus input when component mounts;
+    input_ref.current?.focus () }, []);
+    input_ref.current?.focus ();
+interface ChatInputProps {
+  on_send: (message: string) => void,
+  disabled?: boolean;
+}
+export /**
+ * ChatInput - Function description
+ */
+function ChatInput() {
+  const [message, set_message] = useState ('');
+  const input_ref = useRef < HTMLTextAreaElement>(null);
+  useEffect (() => {
+    // Focus input when component mounts;
+    input_ref.current?.focus ();
+  }, []);
+  const handle_submit = (e: FormEvent < HTMLFormElement>) =>: any {
+    e.prevent_default ();    // Check condition
+if (&& !disabled) {) {
+  $2
+}
+      on_send (message);
+      set_message ('') }      set_message ('');
+    }
+  }
+  const handleKeyPress = (e: KeyboardEvent < HTMLTextAreaElement>, ) =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      e.prevent_default ();
+      // Check condition
+if (&& !disabled) {) {
+  $2
+}
+        on_send (message);
+        set_message ('') }        set_message ('');
+      }
+    }
+  }
 import React, {;
   useState,;
   useRef,;
@@ -50,7 +115,6 @@ export function ChatInput(): any ({ onSend, disabled = false }: ChatInputProps) 
   useEffect(() => {;
     // Focus input when component mounts;
     inputRef && inputRef.current?.focus();
-
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
 import { Button } from "@/components/ui/button";
 import { Send } from 'lucide-react'
@@ -69,25 +133,26 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
   useEffect(() => {
     // Focus input when component mounts
     inputRef.current?.focus()
-
   }, []);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {;
     e && e.preventDefault();    if (message && message.trim() && !disabled) {;
       onSend(message);
-
-
+      setMessage('')
     }
+  };
 
-
+  const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>,) => {;
+    if (e && e.key === 'Enter' && !e && e.shiftKey) {;
+      e && e.preventDefault();
+      if (message && message.trim() && !disabled) {;
+        onSend(message);
+        setMessage('')
       }
     }
   };
 
-
-
   return (
-
     <form on_submit={handle_submit} className='flex items - end gap - 2'>;
       <textarea;
         ref={input_ref}
@@ -101,13 +166,10 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
       <Button;
         type='submit';
         className='bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center'        on_change={(e) => set_message (e.target.value)}
-
         onKeyDown={handleKeyPress}
         rows={1}
         disabled={disabled}
       />;
-
-        disabled={!message.trim() |disabled}
 
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">
@@ -137,26 +199,18 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
         type="submit" 
         className="bg-zion-purple hover:bg-zion-purple-light text-white rounded-full p-2 h-10 w-10 flex items-center justify-center"
         disabled={!message.trim() || disabled}
-
-      >
-        <Send className="h-5 w-5" />
-
-
-      </Button>
-    </form>
-  )
-}
-
-        disabled={!message.trim() || disabled}
-
       >
         <Send className="h-5 w-5" />
       </Button>
     </form>
   )
 }
-
-
+        disabled={!message && message.trim() || disabled}>;
+        <Send className='h-5 w-5' />;
+      </Button>;
+    </form>;
+  );
+}
       <Button;
         type='submit';
         className='bg - zion - purple hover:bg - zion - purple - light text - white rounded - full p - 2 h - 10 w - 10 flex items - center justify - center';

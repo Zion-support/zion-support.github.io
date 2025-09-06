@@ -30,7 +30,6 @@ export async function classifyWithGPT(_text: string, _source: MonitoredSource): 
 
   const _systemPrompt = 'You are a strict fraud/spam/phishing detector for a marketplace. Respond ONLY in strict JSON: {_"label":"SAFE|SUSPICIOUS|DANGEROUS", _"reason":"short", _"confidence":0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.';
   const _userPrompt = `Source: ${_source}\n\nText:\n${_text}\n\nAnalyze this message for signs of fraud, spam, or phishing. Respond: SAFE / SUSPICIOUS / DANGEROUS with a short reason.`;
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
   const _completion = await client.chat.completions.create({_model: process.env.FRAUD_GPT_MODEL || 'gpt-4o-mini', _messages: [
       { role: 'system', _content: systemPrompt},
@@ -49,6 +48,5 @@ export async function classifyWithGPT(_text: string, _source: MonitoredSource): 
     return { label, reason: parsed.reason || 'No reason provided', confidence } as GptClassification
   } catch {
     return { label: 'SUSPICIOUS', reason: 'Invalid JSON from GPT', confidence: 0.5 }
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
   }
 }

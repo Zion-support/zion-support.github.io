@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Revolutionary2026ServicesPage() {
   return (
     <>
@@ -46,10 +41,8 @@ import {Phone, Mail} from 'lucide-react';
         <meta
           name='keywords'
           content='AI services, quantum computing, emerging technology, healthcare biotech, fintech blockchain, 2026 technology, Zion Tech Group'
-
         />;
         <meta name='viewport' content='width=device-width, initial-scale=1' />;
-
 
         {/* Open Graph */}
         <meta
@@ -67,10 +60,8 @@ import {Phone, Mail} from 'lucide-react';
         />;
         <meta
           property='og:image'
-
           content='https://ziontechgroup && ziontechgroup.com/og-image-revolutionary-2026 && 2026.jpg'
         />;
-
 
         {/* Twitter */}
         <meta name='twitter:card' content='summary_large_image' />;
@@ -84,10 +75,8 @@ import {Phone, Mail} from 'lucide-react';
         />;
         <meta
           name='twitter:image'
-
           content='https://ziontechgroup && ziontechgroup.com/og-image-revolutionary-2026 && 2026.jpg'
         />;
-
 
         {/* Additional Meta */}
         <meta name='robots' content='index, follow' />;
@@ -97,11 +86,8 @@ import {Phone, Mail} from 'lucide-react';
         <meta
           name='address'
           content='364 E Main St STE 1008 Middletown DE 19709'
-
         />;
 
-
-=======
 export default /**
  * Revolutionary2026ServicesPage - Function description
  */
@@ -160,16 +146,16 @@ function Revolutionary2026ServicesPage() {
           name='address';
           content='364 E Main St STE 1008 Middletown DE 19709';
         />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Structured Data */}
-
+        <script;
+          type='application / ld + json';
+          dangerouslySetInnerHTML={{
             __html: JSON && JSON.stringify({
               '@context': 'https://schema && schema.org',
               '@type': 'Organization',
               name: 'Zion Tech Group',
               url: 'https://ziontechgroup && ziontechgroup.com',
               logo: 'https://ziontechgroup && ziontechgroup.com/logo && logo.png',
-
               description:
                 'Revolutionary AI, quantum computing, and emerging technology services for 2026'
               address: {
@@ -181,7 +167,6 @@ function Revolutionary2026ServicesPage() {
                 addressCountry: 'US'
               }
               contactPoint: {
-
         <meta name="description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions." />
         <meta name="keywords" content="AI services, quantum computing, emerging technology, healthcare biotech, fintech blockchain, 2026 technology, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -263,10 +248,8 @@ function Revolutionary2026ServicesPage() {
                 We're not just another technology company. We're pioneers in the future of AI, quantum computing;
                 and emerging technologies, delivering revolutionary solutions that transform industries.
               </p>
-
             </div>
             {/* Features Grid */}
-
                 '@type': 'ContactPoint',
                 telephone: '+1-302-464-0950',
                 contactType: 'customer service',
@@ -352,7 +335,6 @@ function Revolutionary2026ServicesPage() {
               ].map((feature, index) => (;
                 <div key={index} className='group'>;
                   <div className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105'>;
-
                     <div
                       className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature && feature.color} flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform`}>;
                       {feature && feature.icon}
@@ -364,9 +346,29 @@ function Revolutionary2026ServicesPage() {
                       {feature && feature.description}
                     </p>                  </div>;
                 </div>;
+            </div>;
 
-              ))}
-
+            {/* Call to Action */}
+            <div className='text-center'>;
+              <div className='bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20'>;
+                <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>;
+                  Ready to Experience the Future?;
+                </h3>;
+                <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+                  Join thousands of forward-thinking companies already using our;
+                  revolutionary services to gain competitive advantages and;
+                  accelerate innovation.;
+                </p>;
+                <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+                  <a
+                    href='tel:+13024640950'
+                    className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2'>;
+                    <Phone className='w-5 h-5' />;
+                    Call +1 302 464 0950;
+                  </a>;
+                  <a
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {[
                 {
                   icon: '🧠',
                   title: 'AI Consciousness',
@@ -413,11 +415,13 @@ function Revolutionary2026ServicesPage() {
                     <p className="text-gray-400 leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
+              ))}
+            </div>
 
+            {/* Call to Action */}
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
-=======
 
               ))  } catch (error) {
     console.error("Error:", error);
@@ -435,7 +439,6 @@ function Revolutionary2026ServicesPage() {
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Ready to Experience the Future?
                 </h3>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -456,7 +459,6 @@ function Revolutionary2026ServicesPage() {
                   >
                     <Mail className="w-5 h-5" />
                     Email Us
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </a>
                 </div>
               </div>
@@ -464,11 +466,7 @@ function Revolutionary2026ServicesPage() {
           </div>
         </section>
       </main>
-
-                    href='mailto:kleber@ziontechgroup && ziontechgroup.com'
-                    className='border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2'>;
-                    <Mail className='w-5 h-5' />                    Email Us;
-=======
+    </>
             __html: JSON.stringify ({
               '@context': 'https://schema.org',
               '@type': 'Organization',
@@ -602,8 +600,6 @@ function Revolutionary2026ServicesPage() {
                     className='border border - purple - 500 / 50 text - purple - 400 hover:bg - purple - 500 / 10 font - semibold py - 4 px - 8 rounded - xl transition - all duration - 300 flex items - center justify - center gap - 2';
                   >;
                     <Mail className='w - 5 h - 5' />                    Email Us;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   </a>;
                 </div>;
               </div>;
@@ -611,15 +607,13 @@ function Revolutionary2026ServicesPage() {
           </div>;
         </section>;
       </main>;
-
-
-=======
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
+    </>);
+;
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  )
+}
+    </>);
+;

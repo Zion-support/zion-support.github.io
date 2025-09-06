@@ -1,17 +1,19 @@
 
-export default function SiteHealth() {
-
-=======
-
 
 
 export default function SiteHealth() {
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+export default function SiteHealth() {
+
+
   return (
 
+export default function SiteHealth() {
+  return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
       <Head>
         <title>Site Health — A11y, Performance, Links</title>
@@ -34,13 +36,11 @@ export default function SiteHealth() {
           <div className="text-2xl font-bold tracking-wide">
             <span className="bg-gradient-to-r from-fuchsia-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-neon">Zion</span>
           </div>
-
           <div className="hidden gap-6 md:flex text-white/80">
             <Link href="/"><a>Home</a></Link>
             <Link href="/automation"><a>Automations</a></Link>
             <Link href="/reports/seo"><a>SEO Audit</a></Link>
             <Link href="/reports/ai-trends"><a>AI Trends</a></Link>
-
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>;
       <Head>;
         <title>Site Health — A11y, Performance, Links</title>;
@@ -104,12 +104,10 @@ export default function SiteHealth() {
             accessible, and reliable.;
           </p>;
           <div className='mt-8 flex flex-wrap justify-center gap-3'>;
-
             <a
               href='/site-health'
               target='_blank'
               rel='noopener'
-
           </div>
         </nav>
       </header>
@@ -141,19 +139,15 @@ export default function SiteHealth() {
               { title: 'Link Integrity', desc: 'Broken links identified and prevented.', href: '/reports/links' }].map((card) => (
               <Link key={card.title} href={card.href}>
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">
-
                   <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />
                   <h3 className="text-lg font-semibold">{card.title}</h3>
                   <p className="mt-1 text-sm text-white/75">{card.desc}</p>
                   <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open →</div>
-
                 </a>
-
               </Link>
             ))}
           </div>
         </section>
-
               className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'>;
               Live Pipelines;
             </a>;
@@ -209,17 +203,12 @@ export default function SiteHealth() {
             Artifacts;
           </h2>;
           <div className='mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 sm:grid-cols-2'>;
-
             <a
               href='/reports/seo/latest && latest.json'
               className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30'>;
               Latest SEO Report JSON ↗;
             </a>;
             <a
-
-              href='/reports/seo/index && index.html'
-              className='rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover:border-cyan-400/30'>;
-=======
 import Head from 'next / head';
   return (
     <div className='relative min - h-screen overflow - hidden bg - slate - 950 text - white'>;
@@ -349,15 +338,27 @@ import Head from 'next / head';
               href='/reports / seo / index.html';
               className='rounded - 2xl border border - white / 10 bg - white / 5 p - 5 backdrop - blur - xl hover:border - cyan - 400 / 30';
             >;
-
               SEO Audit Dashboard →;
             </a>;
           </div>;
         </section>;
-
-  );
-}
-=======
+              <a
+                href='/site-health'
+                target='_blank'
+                rel='noopener'
+                className='rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10'>;
+                View Pipelines;
+              </a>            </div>        <section className="mx-auto max-w-7xl px-6 pb-24">;
+          <div className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl">;
+            <h3 className="text-2xl font-bold">Keep quality high — continuously</h3>;
+            <p className="mx-auto mt-2 max-w-2xl text-white/80">Automations enforce guardrails and publish transparent artifacts for every run.</p>;
+            <div className="mt-6 flex flex-wrap justify-center gap-3">;
+              <Link href="/automation"><a className="rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover:bg-white">Get Started</a></Link>;
+              <a href="/site-health" target="_blank" rel="noopener" className="rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md hover:bg-white/10">View Pipelines</a>;
+          </div>;
+        </section>;
+      </main>;
+    </div>;
 
         <section className="mx-auto max-w-7xl px-6 pb-16">
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Artifacts</h2>
@@ -379,11 +380,8 @@ import Head from 'next / head';
         </section>
       </main>
     </div>
-
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <section className='mx - auto max - w-7xl px - 6 pb - 24'>;
           <div className='animated - border relative overflow - hidden rounded - 3xl border border - white / 10 bg - gradient - to - r from - fuchsia - 600 / 20 via - violet - 600 / 20 to - cyan - 600 / 20 p - 8 text - center backdrop - blur - xl'>;
             <h3 className='text - 2xl font - bold'>;
@@ -418,11 +416,7 @@ import Head from 'next / head';
       </main>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
         </nav>
       </header>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

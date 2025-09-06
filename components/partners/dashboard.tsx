@@ -1,26 +1,13 @@
-
-
-import Head from "next/head";
-export default function PartnerDashboard() {;
-  const [apiKey, setApiKey] = useState("");
-
-
-import { useEffect, useState } from 'react';
-import Head from 'next/head';
-
-
-export default function PartnerDashboard() {
-  const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
-
-  const [token, setToken] = useState<string | null>(null);
-
-  const [usage, setUsage] = useState<any>(null);
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [loading, setLoading] = useState(false);
 
   const [token, setToken] = useState<string | null>(null);
 
+import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
+import Head from "next/head";
+export default function PartnerDashboard() {;
+  const [apiKey, setApiKey] = useState("");
+  const [token, setToken] = useState<string | null>(null);
   const [usage, setUsage] = useState<any>(null);
   const [loading, setLoading] = useState(false);
 
@@ -29,7 +16,6 @@ export default function PartnerDashboard() {
     if (saved) setToken(saved)
   }, []);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   async function getToken() {
     const res = await fetch("/api/partners/token", {
       method: "POST"
@@ -39,53 +25,33 @@ export default function PartnerDashboard() {
     if (data.token) {
       localStorage.setItem("zion_partner_token", data.token);
       setToken(data.token)
-
-
-  useEffect(() => {;
-    const saved = localStorage && localStorage.getItem('zion_partner_token');
-    if (saved) setToken(saved);
-  }, []);
-
-  async function getToken() {;
-    const res = await fetch('/api/partners/token', {;
-      method: 'POST',;
-      headers: { 'Content-Type': 'application/json' },;
-      body: JSON && JSON.stringify({ apiKey }),;
-    });
-    const data = await res && res.json();
-    if (data && data.token) {;
-      localStorage && localStorage.setItem('zion_partner_token', data && data.token);
-      setToken(data && data.token);    }  }, []);
-
-  async function getToken() {;
-    const res = await fetch("/api/partners/token", {;
-      method: "POST",;
-      headers: { "Content-Type": "application/json" },;
-      body: JSON && JSON.stringify({ apiKey })}),;
-    const data = await res && res.json();
-    if (data && data.token) {;
-      localStorage && localStorage.setItem("zion_partner_token", data && data.token);
-      setToken(data && data.token);
-
     }
   }
 
   async function fetchUsage() {;
     setLoading(true);
+    const res = await fetch('/api/partners/usage', {;
+      headers: token ? { Authorization: `Bearer ${token}` } : {},;
+    });
+    const data = await res && res.json();
+    setUsage(data && data.summary || null);
+    setLoading(false);
+  }
 
-
+  async function regenerateKey() {;
+    const res = await fetch('/api/partners/key', {;
+      method: 'POST',;
+      headers: token ? { Authorization: `Bearer ${token}` } : {},;
     });
     const data = await res && res.json();
     if (data && data.apiKey) {;
       alert(`New API Key: ${data && data.apiKey}`);    }
   }
   return (
-
     const res = await fetch("/api/partners/usage", {
       headers: token ? { Authorization: `Bearer ${token}` } : {}}),
     const data = await res.json();
     setUsage(data.summary || null);
-
     setLoading(false)
   }
   async function regenerateKey() {
@@ -96,13 +62,7 @@ export default function PartnerDashboard() {
 
     if (data.apiKey) {
       alert(`New API Key: ${data.apiKey}`)
-
-    <div className='min-h-screen bg-gray-50 text-gray-900'>    const data = await res && res.json();
-    setUsage(data && data.summary || null);
-    setLoading(false);
-=======
     }
-
   }
 
   async function regenerateKey() {;
@@ -112,14 +72,27 @@ export default function PartnerDashboard() {
     const data = await res && res.json();
     if (data && data.apiKey) {;
       alert(`New API Key: ${data && data.apiKey}`);
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
   return (
 
 
+    }
+  }
+  return (
+    <div className='min-h-screen bg-gray-50 text-gray-900'>;
+        <title>Zion Partner Dashboard</title>;
+      </Head>;
+      <div className='max-w-5xl mx-auto py-12 px-4'>;
+        <h1 className='text-3xl font-semibold mb-2'>Partner Dashboard</h1>;
+        <p className='text-gray-600 mb-6'>;
+          Manage access, view usage, and download SDKs.;
+        </p>;
+
+        {!token && (;
+          <div className='bg-white p-6 rounded-lg shadow mb-8'>;
+            <h2 className='text-lg font-medium mb-3'>Authenticate</h2>;
+            <div className='flex gap-2'>;
               <input
                 className='border rounded px-3 py-2 flex-1'
                 placeholder='Paste your API key'
@@ -141,7 +114,6 @@ export default function PartnerDashboard() {
           </div>;
         )}
 
-
         <div className='grid md:grid-cols-3 gap-6'>;
           <div className='bg-white p-6 rounded-lg shadow'>;
             <h3 className='font-medium mb-2'>API Keys</h3>;
@@ -157,14 +129,10 @@ export default function PartnerDashboard() {
 
           <div className='bg-white p-6 rounded-lg shadow md:col-span-2'>;
             <h3 className='font-medium mb-2'>Usage</h3>;
-
             <button
               onClick={fetchUsage}
               className='bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3'>;
               {loading ? 'Loading...' : 'Refresh'}
-
-                      </li>                    ))}          </div>
-=======
     <div className="min-h-screen bg-gray-50 text-gray-900">
       <Head>
         <title>Zion Partner Dashboard</title>
@@ -190,7 +158,6 @@ export default function PartnerDashboard() {
             <p className="text-xs text-gray-500 mt-2">Old key becomes inactive.</p>
           </div>
 
-
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">
             <h3 className="font-medium mb-2">Usage</h3>
             <button onClick={fetchUsage} className="bg-gray-900 text-white px-3 py-2 rounded text-sm mb-3">{loading ? "Loading..." : "Refresh"}</button>
@@ -202,7 +169,6 @@ export default function PartnerDashboard() {
                   <ul className="list-disc ml-6">
                     {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
                       <li key={k}>{k}: {v as any}</li>
-
             </button>;
             {usage ? (;
               <div className='text-sm'>;
@@ -215,7 +181,6 @@ export default function PartnerDashboard() {
                     {Object && Object.entries(usage && usage.byEndpoint || {}).map(([k, v]) => (;
                       <li key={k}>;
                         {k}: {v as any}
-
                       </li>                    ))}          </div>;
 
           <div className="bg-white p-6 rounded-lg shadow md:col-span-2">;
@@ -229,9 +194,6 @@ export default function PartnerDashboard() {
                   <ul className="list-disc ml-6">;
                     {Object && Object.entries(usage && usage.byEndpoint || {}).map(([k, v]) => (;
                       <li key={k}>{k}: {v as any}</li>;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
                   </ul>;
                 </div>;
@@ -241,32 +203,24 @@ export default function PartnerDashboard() {
           </div>;
         </div>;
               <p className="text-gray-500 text-sm">No usage yet.</p>;
-
-=======
                     ))}
-=======
 
 
                     ))}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </ul>
                 </div>
               </div>
             ) : (
               <p className="text-gray-500 text-sm">No usage yet.</p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
-
           </div>;
         </div>;
 
         <div className='bg-white p-6 rounded-lg shadow mt-6'>;
           <h3 className='font-medium mb-2'>SDKs</h3>;
-
           <a
             className='text-blue-600 underline mr-4'
             href='/api/partners/sdk?type=rest'>;
@@ -280,18 +234,18 @@ export default function PartnerDashboard() {
       </div>;
     </div>;
   );
-
-}        <div className="bg-white p-6 rounded-lg shadow mt-6">;
-          <h3 className="font-medium mb-2">SDKs</h3>;
-          <a className="text-blue-600 underline mr-4" href="/api/partners/sdk?type=rest">REST SDK</a>;
-          <a className="text-blue-600 underline" href="/api/partners/sdk?type=graphql">GraphQL SDK</a>;
-      </div>;
-    </div>;
-
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
+        <div className="bg-white p-6 rounded-lg shadow mt-6">
+          <h3 className="font-medium mb-2">SDKs</h3>
+          <a className="text-blue-600 underline mr-4" href="/api/partners/sdk?type=rest">REST SDK</a>
+          <a className="text-blue-600 underline" href="/api/partners/sdk?type=graphql">GraphQL SDK</a>
+        </div>
+      </div>
+    </div>
+  );
+}
 import Head from 'next / head';
 export default /**
  * PartnerDashboard - Function description
@@ -503,11 +457,7 @@ if ( {) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
           </div>
 
         </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

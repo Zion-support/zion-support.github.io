@@ -29,19 +29,16 @@ function UserProfile() {
       set_user (session?.user ?? null);
       set_loading (false);
       onUserChange?.(session?.user ?? null);
-
     }
     getInitialSession ();
     // Listen for auth changes;
     const {
-
       data: { subscription },
     } = supabase.auth.onAuthStateChange (
       (event: AuthChangeEvent, session: Session | null) => {
         set_user (session?.user ?? null);
         set_loading (false);
         onUserChange?.(session?.user ?? null),
-
       }
     );
     return () => subscription.unsubscribe ();
@@ -78,7 +75,6 @@ interface UserProfileProps {;
         </CardContent>;
       </Card>);
   }
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -192,25 +188,6 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
     );
   }
   return (
-
-
-          Sign Out
-        </Button>;
-      </CardContent>;
-    </Card>;
-  );
-}
-}
-
-        
-        <Button onClick={handleSignOut} variant="outline" className="w-full">
-          <LogOut className="h-4 w-4 mr-2" />
-
-          Sign Out
-        </Button>
-      </CardContent>
-    </Card>
-
     <Card className='w-full max-w-sm'>;
       <CardHeader>;
         <CardTitle className='flex items-center gap-2'>;
@@ -245,11 +222,6 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
       </CardContent>;
     </Card>;
   );
-
-
-  )
-} 
-
   // Check condition
 if ( {) {
   $2

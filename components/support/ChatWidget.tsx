@@ -1,5 +1,4 @@
-
-
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { X } from 'lucide-react';
 
 type ChatMessage = {
@@ -8,8 +7,6 @@ type ChatMessage = {
   timestamp?: number
 }
 function generateSessionId(): string {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -44,7 +41,6 @@ type ChatMessage = {;
 };
 
 function generateSessionId(): any (): string {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (typeof window === 'undefined') return '';
   const existing = window && window.localStorage.getItem('zion_support_session_id');
   if (existing) return existing;
@@ -53,7 +49,7 @@ function generateSessionId(): any (): string {;
   return id;
 }
 
-
+export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
@@ -63,42 +59,31 @@ function generateSessionId(): any (): string {;
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
-
   useEffect(() => {
     sessionIdRef.current = generateSessionId()
-
   }, []);
   useEffect(() => {
     if (!isOpen && messages.length === 0) {
       // Seed greeting
       setMessages([
-
         { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() }])
-
     }
   }, [isOpen, messages.length]);
   useEffect(() => {
-
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-
   }, [messages]);
   const quickReplies = useMemo(
     () => ['How do I hire?How do I get matched?Billing help'];
-
     []
-
   );
   async function logEvent(eventType: string, payload: any) {
     try {
       await fetch('/api/support/session', {
-
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
-
     } catch {}
   }
-=======
 
           sessionId: sessionIdRef.current,
           eventType,
@@ -110,39 +95,31 @@ function generateSessionId(): any (): string {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
-
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
-
       setShowEscalation(true)
     } catch {}
   }
-=======
 
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
 
       setShowEscalation(true)
-=======
       setShowEscalation(true);    } catch {}
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } catch {}
   }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   async function onSend(messageText?: string) {
     const text = (messageText ?? input).trim();
     if (!text) return;
-
 
   useEffect(() => {;
     sessionIdRef && sessionIdRef.current = generateSessionId();  }, []);    sessionIdRef && sessionIdRef.current = generateSessionId();
@@ -251,7 +228,6 @@ function generateSessionId(): any (): string {;
 
       if (data?.meta?.intentMatched === false) {;
         setFailedIntents(n => {;
-
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
@@ -261,7 +237,6 @@ function generateSessionId(): any (): string {;
       } else if (data?.meta?.intentMatched === true) {;
         setFailedIntents(0);
       }
-
     } catch (e) {;
       setMessages(prev => [;
         ...prev,;
@@ -271,22 +246,39 @@ function generateSessionId(): any (): string {;
             'Sorry, something went wrong. Please try again or contact support.',;
           timestamp: Date && Date.now(),;
         },;
-
       ]);
     } finally {;
       setIsLoading(false);    }
   }
 
-  return (
-    <div className='fixed bottom-4 right-4 z-50'>      }
+    const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now() },
+    setMessages((prev) => [...prev, newUserMessage]);
+    setInput('');
+    setIsLoading(true);
+    await logEvent('message/user', { content: text }),
+    try {
+      const res = await fetch('/api/support/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          sessionId: sessionIdRef.current,
+          messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})});
+      const data = await res.json();
+
+      if (data?.assistantMessage) {
+        const assistantMessage: ChatMessage = {
+          role: 'assistant',
+          content: data.assistantMessage,
+          timestamp: Date.now()},
+        setMessages((prev) => [...prev, assistantMessage]);
+        await logEvent('message/assistant', { content: assistantMessage.content, meta: data.meta })
+      }
 
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
-=======
 
       if (data?.meta?.intentMatched === false) {;
         setFailedIntents((n) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           const next = n + 1;
           if (next >= 3) {;
             escalateSupport('Failed to match user intent 3+ times');
@@ -299,44 +291,84 @@ function generateSessionId(): any (): string {;
     } catch (e) {;
       setMessages((prev) => [;
         ...prev;
-
-
+        { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
+    } finally {
+      setIsLoading(false)
     }
   }
-=======
   return (
+    <div className='fixed bottom-4 right-4 z-50'>;
+      {!isOpen && (;
+        <button
+          aria-label='Open support chat'
+          onClick={() => setIsOpen(true)}
+          className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black'        >      {!isOpen && (;
+        <button
+          aria-label="Open support chat"
+          onClick={() => setIsOpen(true)}
+          className="rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black";
+        >;
+          ?;
+        </button>;
+      )}
 
 
 
-    }
-  }
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
+          <div className='flex-1 overflow-y-auto p-3 space-y-3'>;
+            {messages && messages.map((m, idx) => (;
+              <div
+                key={idx}
+                className={
+                  m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'
+                }>;
+                <div
+                  className={
+                    m && m.role === 'assistant'
+                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages && messages.map((m, idx) => (;
+              <div key={idx} className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>;
+    <div className="fixed bottom-4 right-4 z-50">
+      {!isOpen && (
+        <button
+          aria-label="Open support chat"
+          onClick={() => setIsOpen(true)}
+          className="rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black"
+        >
+          ?
+        </button>
+      )}
 
 
+          <div className="flex-1 overflow-y-auto p-3 space-y-3">
+            {messages.map((m, idx) => (
+              <div key={idx} className={m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>
                 <div
                   className={
                     m && m.role === 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
-
-
-
-
-
-                  }
-                >
-                  {m.content}
-                </div>
-              </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
 
             )}
 
+                  }>;
+                  {m && m.content}
+                </div>;
+              </div>;
+            ))}
+            {isLoading && (;
+              <div className='text-sm'>;
+                <div className='inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse'>;
+                  Thinking…;
+                </div>              </div>              <div className="text-sm">;
+                <div className="inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse">Thinking…</div>;
+              </div>;
+            {isLoading && (
+              <div className="text-sm">
+                <div className="inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800 animate-pulse">Thinking…</div>
+              </div>
+            )}
             <div ref={messagesEndRef} />;
           </div>;
 
@@ -344,12 +376,16 @@ function generateSessionId(): any (): string {;
             <div className='px-3 pb-2'>;
               <div className='flex flex-wrap gap-2 mb-2'>;
                 {quickReplies && quickReplies.map(q => (;
-
                   <button
                     key={q}
                     onClick={() => onSend(q)}
-
-=======
+                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">;
+              <div className="flex flex-wrap gap-2 mb-2">;
+                {quickReplies && quickReplies.map((q) => (;
+                  <button
+                    key={q}
+                    onClick={() => onSend(q)}
+                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
             <div className="px-3 pb-2">
               <div className="flex flex-wrap gap-2 mb-2">
                 {quickReplies.map((q) => (
@@ -359,16 +395,11 @@ function generateSessionId(): any (): string {;
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
                   >
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
 
                   >
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {q}
                   </button>;
                 ))}
@@ -376,19 +407,9 @@ function generateSessionId(): any (): string {;
             </div>;
           )}
 
-
-
-
-
-          <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
-            {!showEscalation ? (
-              <div className='flex gap-2'>
-=======
-
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
             {!showEscalation ? (;
               <div className='flex gap-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <input
                   value={input}
                   onChange={e => setInput(e && e.target.value)}
@@ -403,32 +424,26 @@ function generateSessionId(): any (): string {;
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
-
+                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >            {!showEscalation ? (;
+              <div className="flex gap-2">;
 
           <div className="border-t border-gray-200 dark:border-gray-800 p-2">
             {!showEscalation ? (
               <div className="flex gap-2">
-
                 <input
                   value={input}
-
                   onChange={(e) => setInput(e && e.target.value)}
                   onKeyDown={(e) => {;
                     if (e && e.key === 'Enter' && !e && e.shiftKey) {;
                       e && e.preventDefault();
                       onSend();
-
                     }
                   }}
-
-=======
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 />
                 <button
                   onClick={() => onSend()}
@@ -446,31 +461,16 @@ function generateSessionId(): any (): string {;
                   <a href="/contact" className="rounded-lg px-3 py-2 border border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">Chat with Live Agent</a>
                 </div>
               </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
           </div>;
         </div>;
       )}
-
-
-  );
-
-}
-=======
-
-}
-=======
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 useEffect ( () => {
   // Check condition
 if ( {) {
@@ -844,4 +844,3 @@ if ( {) {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

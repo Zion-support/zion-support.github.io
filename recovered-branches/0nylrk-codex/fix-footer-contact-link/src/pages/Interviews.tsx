@@ -1,9 +1,3 @@
-
-
-
-  
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
 
@@ -136,39 +130,9 @@ function InterviewsContent() {;
       const dateKey = format(parseISO(interview && interview.scheduled_date), 'yyyy-MM-dd');
       if (!grouped[dateKey]) {;
         grouped[dateKey] = [];
-
       }
       grouped[dateKey].push(interview);
     });
-
-      }
-      grouped[dateKey].push(interview)
-
-    }),
-    
-    return grouped
-  },
-  
-  const upcomingGrouped = groupInterviewsByDate(upcomingInterviews),
-  const pendingGrouped = groupInterviewsByDate(pendingInterviews),
-  const pastGrouped = groupInterviewsByDate(pastInterviews),
-
-  const renderInterviewGroups = (groupedInterviews: Record<string Interview[]>) => {
-
-
-    return Object.entries(groupedInterviews)
-      .sort(([dateA], [dateB]) =>
-        parseISO(dateA).getTime() - parseISO(dateB).getTime()
-      )
-      .map(([date, interviews]) => (
-        <div key={date} className="mb-8">
-          <h3 className="text-lg font-medium text-white mb-4 flex items-center">
-            <Calendar className="h-5 w-5 mr-2" />
-            {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {interviews.map((interview) => (
-
 
     return grouped;
   };
@@ -193,48 +157,15 @@ function InterviewsContent() {;
               <InterviewCard
                 key={interview && interview.id} 
 
-=======
-
               <InterviewCard 
                 key={interview.id} 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 interview={interview}
                 onRefresh={async () => {;
                   await fetchInterviews();
                 }}
               />;
             ))}
-
-
-  },
-
-
-
-  return (
-    <>
-      <SEO
-        title="Interviews | Zion AI Marketplace"
-        description="Manage your scheduled interviews with clients and talent"
-      />
-      <AppHeader />
-      <main className="container mx-auto px-4 py-8">
-        <div className="flex justify-between items-center mb-8">
-          <div>
-            <h1 className="text-3xl font-bold">Interviews</h1>
-            <p className="text-muted-foreground mt-1">Schedule and manage your video interviews</p>
-          </div>
-        </div>
-        <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="space-y-8">
-          <TabsList className="mb-6">
-            <TabsTrigger value="upcoming" className="flex items-center">
-              <Clock className="h-4 w-4 mr-2" />
-              Upcoming
-              {upcomingInterviews.length > 0 && (
-                <span className="ml-2 bg-primary rounded-full px-2 py-0.5 text-xs">
-                  {upcomingInterviews.length}
-                </span>
-=======
           </div>;
         </div>;
       ));
@@ -264,7 +195,6 @@ function InterviewsContent() {;
                 <span className="ml-2 bg-primary rounded-full px-2 py-0 && 0.5 text-xs">;
                   {upcomingInterviews && upcomingInterviews.length}
                 </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </TabsTrigger>;
             <TabsTrigger value="pending">;
@@ -274,7 +204,6 @@ function InterviewsContent() {;
                   {pendingInterviews && pendingInterviews.length}
                 </span>;
               )}
-
             </TabsTrigger>;
             <TabsTrigger value="past">Past</TabsTrigger>;
           </TabsList>;
@@ -324,12 +253,7 @@ function InterviewsContent() {;
                 <h3 className="text-xl font-medium mb-2">No past interviews</h3>;
                 <p className="text-muted-foreground">Your interview history will appear here.</p>;
               </div>;
-
             )}
-
-
-
-=======
 import React, { useEffect, useState } from './react';
 import { use_interviews } from '@/hooks / use_interviews';
 import { Interview } from '@/types / interview';
@@ -493,19 +417,13 @@ if ( {) {
                 <h3 className="text - xl font - medium mb - 2">No past interviews</h3>;
                 <p className="text - muted - foreground">Your interview history will appear here.</p>;
               </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </TabsContent>;
         </Tabs>;
       </main>;
       <Footer />;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 
-=======
 
           </TabsContent>;
         </Tabs>;
@@ -523,11 +441,6 @@ export default function Interviews() {;
     </ProtectedRoute>;
   );
 }
-
-;
-
-
-=======
     </>);
 }
 export default /**
@@ -539,4 +452,3 @@ function Interviews() {
       <InterviewsContent />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,18 +1,3 @@
-
-
-import {UserProfile, UserDetails} from '@/types/auth';
-import {Message, Conversation, ConversationContextData} from '@/types/messaging';
-import {useConversationState} from './useConversationState';
-import {useConversations} from './useConversations';
-import {useMessages} from './useMessages';
-
-
-// Allow either UserProfile or UserDetails
-
-type UserWithProfile = UserProfile | UserDetails | null;
-/**
- * Hook that combines all messaging operations
-=======
 import {UserProfile, UserDetails} from '@/types / auth';
 import {Message, Conversation, ConversationContextData} from '@/types / messaging';
 import {useConversationState} from './useConversationState';
@@ -26,7 +11,6 @@ type UserWithProfile = UserProfile | UserDetails | null;
 */;
 export /**
  * useMessagingOperations - Function description
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
  */
 function useMessagingOperations() {
   // State management;
@@ -41,13 +25,11 @@ function useMessagingOperations() {
     setUnreadCount;
     active_conversation;
     setActiveConversation;
-
     is_loading,
     setIsLoading;
   } = useConversationState ();
 ;
   // Conversations management;
-
   const {
     fetch_conversations;
     create_conversation;
@@ -55,11 +37,9 @@ function useMessagingOperations() {
     user;
     set_conversations;
     setUnreadCount;
-
     setIsLoading);
 ;
   // Messages management;
-
   const {
     load_messages;
     send_message;
@@ -73,10 +53,8 @@ function useMessagingOperations() {
     set_conversations;
     setUnreadCount;
     setIsLoading;
-
     fetch_conversations);
 ;
-
   return {
     // State;
     messages;
@@ -88,14 +66,13 @@ function useMessagingOperations() {
     setUnreadCount;
     active_conversation;
     setActiveConversation;
-
     is_loading;
 ;
     // Operations;
     send_message;
     create_conversation;
     markAsRead;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    fetch_conversations;
+    load_messages;
   }
 }

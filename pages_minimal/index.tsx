@@ -1,7 +1,5 @@
 
-
 export default function Home() {;
-
   return (
     <div>;
       <main>;
@@ -11,7 +9,6 @@ export default function Home() {;
       </main>;
     </div>;
   );
-=======
 import React from './react';
 import Link from './next / link';
 ;
@@ -27,5 +24,4 @@ function Home() {
         <Link href="/services">View Our Services</Link>;
       </main>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

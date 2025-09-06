@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function EnterprisePricingTable() {
 
   const plans = [
@@ -29,7 +24,6 @@ export function EnterprisePricingTable() {
       name: "Business",;
       price: "$1,999";
 
-=======
       name: "Business",
       price: "$1,999",
 
@@ -37,8 +31,6 @@ export function EnterprisePricingTable() {
       description: "Ideal for growing companies",
       users: "Up to 50 users",
       popular: true,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       features: [
         { name: "Private hiring portal", included: true }
         { name: "Dedicated talent pool", included: true }
@@ -92,7 +84,6 @@ import {Button} from "@/components/ui/button";
 import {Check, X} from "lucide-react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
-=======
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -180,10 +171,6 @@ export function EnterprisePricingTable() {;
                     <div className="flex flex-col items-center">;
                       {plan && plan.popular && (;
                         <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       )}
                       <span className="font-bold text-xl">{plan && plan.name}</span>;
                       <div className="flex items-baseline mt-1">;
@@ -221,7 +208,6 @@ export function EnterprisePricingTable() {;
                   ))}
                 </TableRow>;
               ))}
-
             </TableBody>;
           </Table>;
         </div>;
@@ -233,8 +219,6 @@ export function EnterprisePricingTable() {;
     </section>;
   );
 }
-
-=======
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Check, X } from './lucide-react';
@@ -356,4 +340,3 @@ function EnterprisePricingTable() {
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

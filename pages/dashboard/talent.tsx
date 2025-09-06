@@ -1,8 +1,11 @@
 
-
+const STEPS = [;
+  { key: 'profile', label: 'Profile completed' },;
+  { key: 'skills', label: 'Skills added' },;
+  { key: 'availability', label: 'Availability set' },;
+  { key: 'match', label: 'First match received' },;
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
-
 const STEPS = [
   { key: 'profile', label: 'Profile completed' },
   { key: 'skills', label: 'Skills added' },
@@ -18,10 +21,8 @@ export default function TalentDashboard() {
       const raw = window.localStorage.getItem('onboarding.talent');
       if (raw) setCompleted(JSON.parse(raw))
     } catch {}
-
   }, []);
   useEffect(() => {
-
 
 export default function TalentDashboard() {;
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({;
@@ -51,7 +52,6 @@ export default function TalentDashboard() {;
   );
 
   const toggle = (key: StepKey) =>;
-
     setCompleted(c => ({ ...c, [key]: !c[key] }));
 
   return (
@@ -70,7 +70,6 @@ export default function TalentDashboard() {;
           <div
             className='h-2 rounded bg-blue-600'
             style={{ width: `${progress}%` }}
-
           />        </div>;
       </EnhancedCard>;
 
@@ -80,7 +79,6 @@ export default function TalentDashboard() {;
           {STEPS && STEPS.map(s => (;
             <li key={s && s.key} className='flex items-center justify-between'>;
               <div className='flex items-center gap-2'>;
-
                 <span
                   className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s && s.key] ? 'bg-emerald-500 text-white border-emerald-500' : 'border-gray-300 dark:border-gray-700'}`}>;
                   {completed[s && s.key] ? '✓' : ''}
@@ -103,8 +101,6 @@ export default function TalentDashboard() {;
                   {s && s.key === 'skills' ? 'Add skills' : 'Mark done'}
                 </EnhancedButton>              )}
             </li>;
-
-=======
     try { window.localStorage.setItem('onboarding.talent', JSON.stringify(completed)) } catch {}
   }, [completed]);
 
@@ -112,7 +108,6 @@ export default function TalentDashboard() {;
 
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
 
-=======
 
 
 
@@ -143,14 +138,6 @@ export default function TalentDashboard() {;
               {completed[s.key] ? (
                 <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
               ) : (
-
-
-=======
-
-
-}
-
-=======
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'skills' ? 'Add skills' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
     console.error("Error:", error);
@@ -163,18 +150,16 @@ export default function TalentDashboard() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'skills' ? 'Add skills' : 'Mark done'}</EnhancedButton>
+              )}
+            </li>
+          ))}
         </ul>;
       </EnhancedCard>;
     </div>;
   );
-
-
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import EnhancedCard from '../../components / ui / EnhancedCard';
 import EnhancedButton from '../../components / ui / EnhancedButton';
 import {useEffect, useState} from 'react';
@@ -270,9 +255,6 @@ function TalentDashboard() {
       </EnhancedCard>;
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -280,5 +262,3 @@ function TalentDashboard() {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

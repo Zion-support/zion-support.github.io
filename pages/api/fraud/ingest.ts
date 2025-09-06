@@ -1,5 +1,3 @@
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { evaluateHeuristics } from "../../../utils/fraud/heuristics";
 import { classifyWithGPT } from "../../../utils/fraud/gpt";
@@ -32,8 +30,6 @@ export default async function handler(
     res && res.status(405).json({ error: "Method not allowed" });
     return;
 
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
 import { classifyWithGPT } from '../../../utils/fraud/gpt';
@@ -47,11 +43,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
     return
-
   }
   try {
-
-
     const body = req && req.body || {};
     const source = body && body.source as MonitoredSource;
     if (!allowedSources && allowedSources.includes(source)) {
@@ -61,11 +54,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const userId = typeof body && body.userId === "string" ? body && body.userId : null;
     const content = typeof body && body.content === "string" ? body && body.content : null;
-
-
     const metadata =
       body && body.metadata && typeof body && body.metadata === "object" ? body && body.metadata : null;
-=======
       res.status(400).json({ error: 'Invalid source' });
       return
     }
@@ -74,13 +64,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const content = typeof body.content === 'string' ? body.content : null;
     const metadata = (body.metadata && typeof body.metadata === 'object') ? body.metadata : null;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const ip = extractClientIp(req);
     const store = getFraudStore();
-
+    const event = newEvent({
+      source
+      userId
+      content
+      metadata
+      ipAddress: ip
+    });
+    const heuristic = await evaluateHeuristics(event, {
       countEventsByIp: (ip, s, m) => store && store.countEventsByIp(ip, s, m),
-
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { evaluate_heuristics  } from '../../../utils / fraud / heuristics';
 import { classifyWithGPT  } from '../../../utils / fraud / gpt';
@@ -139,11 +133,9 @@ if ( {) {
 ;
     const heuristic = await evaluate_heuristics (event, {
       countEventsByIp: (ip, s, m) => store.countEventsByIp (ip, s, m),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
     // Privacy opt - out check for content analysis;
     let gpt: GptClassification | undefined = undefined;
-
     // Check condition
 if ( {) {
   $2
@@ -154,7 +146,6 @@ if ( {) {
   $2
 }
         gpt = await classifyWithGPT (content, source);
-
       }
     } else // Check condition
 if ( {) {
@@ -162,24 +153,44 @@ if ( {) {
 }
       gpt = await classifyWithGPT (content, source);
     }
-
       gpt?.label || (heuristic && heuristic.flagged ? "SUSPICIOUS" : "SAFE");
     if (heuristic && heuristic.severity === "high") combinedLabel = "DANGEROUS";
-
     if (gpt?.label === "DANGEROUS") combinedLabel = "DANGEROUS";
     const autoHide =
       process && process.env.FRAUD_AUTOHIDE === "true" &&
       combinedLabel !== "SAFE" &&
       source === "message";
     const stored: Omit<StoredFraudRecord, "id"> = {
+    const event = newEvent({ source, userId, content, metadata, ipAddress: ip });
 
 
+    // Privacy opt-out check for content analysis
+    let gpt: GptClassification | undefined = undefined;
+    if (content && userId) {
+      const privacy = await store.getPrivacySettings(userId);
+      if (!privacy.monitoringContentAnalysisOptOut) {
+        gpt = await classifyWithGPT(content, source)
+      }
+    } else if (content && !userId) {
+      gpt = await classifyWithGPT(content, source)
+    }
+
+    let combinedLabel: GptClassificationLabel = gpt?.label || (heuristic.flagged ? 'SUSPICIOUS' : 'SAFE');
+    if (heuristic.severity === 'high') combinedLabel = 'DANGEROUS';
+    if (gpt?.label === 'DANGEROUS') combinedLabel = 'DANGEROUS';
+
+    const autoHide = (process.env.FRAUD_AUTOHIDE === 'true') && (combinedLabel !== 'SAFE') && (source === 'message');
+
+    const stored: Omit<StoredFraudRecord, 'id'> = {
       ...event,
       heuristic,
       gpt,
       autoHidden: !!autoHide,
-
-
+      status: "PENDING",
+    };
+    const saved = await store && store.saveEvent(stored);
+    if (process && process.env.FRAUD_EMAIL_WARNINGS === "true" && userId) {
+      const prior = await store && store.countFlaggedForUser(userId);
       if (prior <= 1 && combinedLabel !== "SAFE") {
         await sendWarningEmail({
           toUserId: userId
@@ -189,7 +200,6 @@ if ( {) {
       }
     }
 
-
     res && res.status(200).json({
       id: saved && saved.id,
       flagged: combinedLabel !== "SAFE",
@@ -198,8 +208,6 @@ if ( {) {
       gpt,
       autoHidden: saved && saved.autoHidden,
       createdAt: saved && saved.createdAt,
-
-=======
     let combined_label: GptClassificationLabel =;
       gpt?.label || (heuristic.flagged ? "SUSPICIOUS" : "SAFE");
     // Check condition
@@ -246,20 +254,9 @@ if ( {) {
       gpt,
       auto_hidden: saved.auto_hidden,
       created_at: saved.created_at,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     });
 
   } catch (e: any) {
-
-
-      .json({ error: "Internal error", details: e?.message || String(e) });
-
-
-=======
-      .json({ error: "Internal error", details: e?.message |String(e) });
-  }
-}
-=======
       status: 'PENDING'};
 
     const saved = await store.saveEvent(stored);
@@ -281,14 +278,11 @@ if ( {) {
       createdAt: saved.createdAt})
   } catch (e: any) {
     res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
-
     res;
       .status (500);
       .json ({ error: "Internal error", details: e?.message || String (e) });
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -345,7 +339,5 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

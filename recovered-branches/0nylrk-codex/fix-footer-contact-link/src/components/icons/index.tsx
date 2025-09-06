@@ -1,20 +1,5 @@
-
-
-    const LucideIcon = LucideIcons[iconName] as React.FC<IconProps>,
-    return <LucideIcon {...props} />;
-  };
-
-
-  IconComponent.displayName = aliasName;
-  return IconComponent
-}
-// Export all of our icon components
-const iconExports: Record<string, React.FC<IconProps>> = {}
-// Generate icon exports
-Object.entries(iconAliases).forEach(([alias, lucideName]) => {
-  if (LucideIcons[lucideName]) {
-    iconExports[alias] = createIconComponent(alias, lucideName)
-=======
+import React from 'react';
+import * as LucideIcons from 'lucide-react';
 // Alias for missing icons or for icons with different names;
 const icon_aliases: Record < string, keyof typeof LucideIcons> = {
   // Grid views;
@@ -124,18 +109,14 @@ if ( {) {
   $2
 }
     icon_exports[alias] = createIconComponent (alias, lucide_name);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } else {
     console.warn (`Icon '${lucide_name}' not found in lucide-react`);
     // Use a fallback icon;
     icon_exports[alias] = createIconComponent (alias, 'HelpCircle');
   }
 });
-
 ;
-
 export const {
-=======
 // Alias for missing icons or for icons with different names;
 const iconAliases: Record<string, keyof typeof LucideIcons> = {;
   // Grid views;
@@ -266,13 +247,10 @@ Object && Object.entries(iconAliases).forEach(([alias, lucideName]) => {;
 });
 
 export const {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 export const {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   LayoutGrid;
   List;
   Zap;
@@ -338,15 +316,10 @@ export const {;
   BookOpen;
   Key;
 
-
-
-=======
+// Also export all original icons from lucide-react;
+export * from 'lucide-react';
   Tag} = icon_exports;
 ;
 // Also export all original icons from lucide-react;
 export * from 'lucide-react';
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;

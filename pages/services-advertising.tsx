@@ -1,3 +1,5 @@
+import React from 'react';
+import SEO from '../components/SEO';
 
 
 export default function ServicesAdvertisingPage() {
@@ -12,7 +14,6 @@ export default function ServicesAdvertisingPage() {
 
 
   ],
-=======
   ],
 
 
@@ -27,7 +28,6 @@ export default function ServicesAdvertisingPage() {
 						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</Link></li>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 					</ul>
 				</section>
   const pricingRefs = [
@@ -211,7 +211,6 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</Link></li>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 					</ul>
 				</section>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -235,7 +234,6 @@ export default function ServicesAdvertisingPage(req, res) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
 
-=======
 
                 { name: 'API Security Scanner', price: '$299/mo', href: '/services/api-security-scanner', points: ['OWASP Top 10CI/CD checksPII detection'] },
                 { name: 'Email DMARC Analyzer', price: '$99/mo', href: '/services/email-dmarc-analyzer', points: ['DMARC/SPF/DKIMBIMI readinessWeekly reports'] },
@@ -247,7 +245,6 @@ export default function ServicesAdvertisingPage(req, res) {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
@@ -270,7 +267,6 @@ export default function ServicesAdvertisingPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </section>
           <section>
@@ -297,7 +293,6 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>Try: <a href="/services/browser-automation-cloud" className="text-cyan-400 underline">ziontechgroup.com/services/browser-automation-cloud</Link></li>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -311,7 +306,6 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>Try: <a href="/services/api-performance-testing" className="text-cyan-400 underline">ziontechgroup.com/services/api-performance-testing</Link></li>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -325,7 +319,6 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>Try: <a href="/services/email-deliverability-monitor" className="text-cyan-400 underline">ziontechgroup.com/services/email-deliverability-monitor</Link></li>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -339,7 +332,6 @@ export default function ServicesAdvertisingPage(req, res) {
 						<li>Try: <a href="/services/podcast-transcription-insights" className="text-cyan-400 underline">ziontechgroup.com/services/podcast-transcription-insights</Link></li>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 					</ul>
 				</section>
 				<section id="ai-evaluation-orchestrator" className="space-y-6">
@@ -446,7 +438,6 @@ export default function ServicesAdvertisingPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </section>
           <section>
@@ -541,7 +532,6 @@ export default function ServicesAdvertisingPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
             <div className="text-center mt-6">
               <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">More Market References</Button>
@@ -567,7 +557,6 @@ export default function ServicesAdvertisingPage(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </section>
           <section>
@@ -589,7 +578,6 @@ export default function ServicesAdvertisingPage(req, res) {
               </Link>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </section>
           <section>
@@ -610,16 +598,16 @@ export default function ServicesAdvertisingPage(req, res) {
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2">{o.name}</div>
-
-=======
-
-};
-
-
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+                </a>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+}
 import React from 'react',
 import SEO from '../components / SEO',
 const ext = (url: string) =>: any (
@@ -1006,9 +994,3 @@ return (
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
-
-
-
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

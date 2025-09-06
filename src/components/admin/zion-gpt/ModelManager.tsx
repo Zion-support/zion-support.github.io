@@ -1,4 +1,7 @@
-// If activating, deactivate all other models with the same purpose;
+        .order ('created_at', { ascending: false }),
+  const toggleModelActive = async (model_id: string, current_active: boolean, purpose: string, ) => {
+    try {
+      // If activating, deactivate all other models with the same purpose;
       // Check condition
 if ( {) {
   $2
@@ -11,7 +14,6 @@ if ( {) {
 
 
       }
-
       // Update this model;
       await supabase;
         .from ('model_versions');
@@ -19,12 +21,9 @@ if ( {) {
         .eq ('id', model_id),
       // Refresh the model list;
       fetch_models ();
-
     } catch (error) {
       logErrorToProduction ('Error toggling model active state:', { data: error });
     }
-
-
         .order('createdAt', { ascending: false }),;
 
 
@@ -51,9 +50,6 @@ if ( {) {
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
   },;
-
-  },
-
 
   return (
     <Card className="w-full">;
@@ -103,13 +99,11 @@ if ( {) {
                     ) : (;
                       <Badge className="bg-yellow-500">Queued</Badge>;
                     )}
-
                     {model && model.active && <Badge className="ml-2 bg-purple-500">Active</Badge>}
                   </TableCell>;
                   <TableCell>{new Date(model && model.createdAt).toLocaleDateString()}</TableCell>;
                   <TableCell className="text-right">;
                     {model && model.trainingStatus === 'queued' || model && model.trainingStatus === 'running' ? (;
-
                       <Button
                         variant="ghost"
                         size="sm"
@@ -159,11 +153,9 @@ if ( {) {
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
-
                         title = {model && model.errorMessage || "Training failed",}>;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
                       </Button>;
-
                     )}
                   </TableCell>;
                 </TableRow>;
@@ -187,9 +179,6 @@ if ( {) {
       </CardContent>;
     </Card>;
   );
-}
-
-
 }
 
   },

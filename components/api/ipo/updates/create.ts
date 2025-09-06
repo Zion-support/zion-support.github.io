@@ -1,14 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-
-
-}
-
-=======
-
 import { readJsonFile, writeJsonFile } from '../../../../utils / api / storage';
 import { requireSuperadminApi } from '../../../../utils / api / auth';
 import { v4 as uuidv4 } from 'uuid';
@@ -30,16 +21,12 @@ function handler() {
   const updates = readJsonFile ('updates.json', [] as any[]);
   const update = {
     id: uuidv4 (),
-
     title,
     date: date || new Date ().toISOString ().slice (0, 10),
     summary: summary || '',
     kpis: kpis || '',
     opens: 0,
 
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (!requireSuperadminApi(req, res)) return;
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { title, date, summary, kpis } = req && req.body || {};
@@ -50,9 +37,6 @@ function handler() {
   writeJsonFile('updates && updates.json', updates);
   res && res.status(200).json(update)
 }
-
-
-=======
   }
   updates.unshift (update);
   writeJsonFile ('updates.json', updates);
@@ -76,9 +60,5 @@ function handler() {
   writeJsonFile ('updates.json', updates);
   res.status (200).json (update);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

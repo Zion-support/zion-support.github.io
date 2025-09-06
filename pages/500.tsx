@@ -1,6 +1,25 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import Head from 'next/head';
+import Link from 'next/link';
+export default function Custom500() {
+  return (
+    <>
+      <Head>
+        <title>500 - Server Error | Zion Tech Group</title>
+        <meta name="description" content="Something went wrong on our end. We're working to fix it." />
+        <meta property="og: title" content="500 - Server Error" />
+        <meta property="og:description" content="Something went wrong on our end. We're working to fix it." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center px-4">
+        <div className="text-center">
+          <div className="mb-8">
+            <h1 className="text-9xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400 mb-4">
+              500
+            </h1>
+            <h2 className="text-3xl font-semibold text-white mb-4">
+              Server Error
+            </h2>
+            <p className="text-white/70 text-lg max-w-md mx-auto mb-8">
+              Something went wrong on our end. We&apos,re working to fix it.
               Please try again in a few moments.
             </p>
           </div>
@@ -44,11 +63,7 @@
       </div>
     </>
   )
-
-=======
 }
-
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -57,7 +72,6 @@ export default /**
  */
 function Custom500() {
   return (
-=======
 
 import React from 'react';
 import Head from 'next/head';
@@ -65,7 +79,6 @@ import Link from 'next/link';
 export default function Custom500(req, res) {
   try {
   return (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <>;
       <Head>;
         <title > 500 - Server Error | Zion Tech Group</title>;
@@ -119,6 +132,3 @@ export default function Custom500(req, res) {
       </div>;
     </>);
 }
-
-
-

@@ -1,71 +1,3 @@
-}
-export const QuotesTable: React.FC<QuotesTableProps> = ({
-
-
-
-
-  quotes
-  isArchived = false
-  isLoading
-  updateStatus
-  toggleArchive
-
-
-
-  quotes,
-  isArchived = false,
-  isLoading,
-  updateStatus,
-  toggleArchive,
-
-
-
-  deleteQuote,
-  onViewDetails
-},) => {
-  return (
-    <div className="overflow-x-auto">
-      <Table>
-        <TableHeader>
-          <TableRow className="border-zion-blue-light hover:bg-zion-blue">
-            <TableHead className="text-zion-slate-light">Talent</TableHead>
-            <TableHead className="text-zion-slate-light">Requester</TableHead>
-            <TableHead className="text-zion-slate-light">Project</TableHead>
-            <TableHead className="text-zion-slate-light">Budget</TableHead>
-            <TableHead className="text-zion-slate-light">Date</TableHead>
-            <TableHead className="text-zion-slate-light">Status</TableHead>
-            <TableHead className="text-zion-slate-light">Actions</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {isLoading ? (
-            <TableRow>
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
-                Loading quote requests...
-              </TableCell>
-            </TableRow>
-          ) : quotes.length === 0 ? (
-            <TableRow>
-              <TableCell colSpan={7} className="text-center py-10 text-zion-slate-light">
-                {isArchived
-                  ? "No archived quote requests found."
-                  : "No quote requests found."}
-              </TableCell>
-            </TableRow>
-          ) : (
-            quotes.map(quote => (
-
-
-              <TableRow 
-                key={quote.id}
-
-
-                className="border-zion-blue-light hover:bg-zion-blue"
-              >
-                <TableCell className="text-white">
-                  {quote.talent_name |'Unknown Talent'}
-                </TableCell>
-                <TableCell className="text-white">
   quotes;
   is_archived = false;
 import React from './react';
@@ -146,37 +78,6 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                   <div className="font - medium">{quote.project_name}</div>;
                   <div className="text - sm text - zion - slate - light truncate max - w-[200px]">;
                     {quote.project_summary}
-
-
-                    <Button 
-                      variant="ghost" 
-                      size="icon" 
-                      onClick={() => onViewDetails(quote)}
-
-
-                    >
-                      <Eye className="h-4 w-4" />
-                      <span className="sr-only">View Details</span>
-                    </Button>
-
-
-                    
-
-
-                    {isArchived ? (
-                      <>
-                        <Button
-                          variant="ghost"
-                          size="icon"
-                          onClick = {(,) => toggleArchive(quote.id, false),}
-                        >
-                          <Archive className="h-4 w-4" />
-                          <span className="sr-only">Unarchive</span>
-                        </Button>
-                        <Button
-                          variant="ghost"
-
-
   quotes;
   isArchived = false;
 import React from "react";
@@ -379,7 +280,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                               deleteQuote(quote && quote.id);
                             ,}
                           }}
-
                         >;
                           <Trash2 className="h-4 w-4" />;
                           <span className="sr-only">Delete</span>;
@@ -425,28 +325,13 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
-
                     )}
                   </div>;
                 </TableCell>;
               </TableRow>;
             ));
           )}
-
-
-  );
-};
-'";
-
-
-        </TableBody>;
-      </Table>;
-    </div>;
-  );
-};
-
 '"
-
 
                   </div>;
                 </TableCell>;

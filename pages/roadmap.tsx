@@ -1,17 +1,30 @@
-
 import Head from 'next / head',
 import React, { useMemo, useState } from 'react',
 ;
-
 type RoadmapInputs = {
-
+  milestones: string,
+  keywords: string,
+  priorities: string
+}
+type Stage = {
+  id: number
+  name: string
+  theme: string
+  objective: string
+  highlights: string[]
+  metrics: string[]
+}
+function generateStages({ milestones, keywords, priorities }: RoadmapInputs): Stage[] {
+  const keywordList = keywords
+    .split(/,|\n/)
+    .map((s) => s.trim())
+    .filter(Boolean);
 
   const priorityList = priorities
     .split(/,|\n/)
     .map((s) => s.trim())
     .filter(Boolean)
   const baseThemes = [
-
     'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces',
     'Governance & OwnershipGlobal Scale'
   ];
@@ -34,13 +47,11 @@ type RoadmapInputs = {
       index === 6 && 'Sovereign workspaces: contracts, IP, revenue share automations';
       index === 7 && 'Public APIs/SDKs, indexer services, client ecosystem';
       index === 8 && 'Progressive decentralization, contributor ownership, councils';
-
       index === 9 && 'Regionalization, localization, reliability, and performance']
       .filter(Boolean)
       .map((s) => String(s))
     const metrics: string[] = [
       'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-payRetention and NPS']
-=======
   priorities: string;
 },
 type Stage = {
@@ -84,11 +95,9 @@ function generate_stages ({ milestones, keywords, priorities }: RoadmapInputs): 
       .map ((s) => String (s)),
     const metrics: string[] = [;
       'Weekly active contributors_verified engagements (intros, briefs, scopes)On - chain / escrow settlement volume_time - to - hire and time - to - pay_retention and NPS'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return { id, name, theme, objective, highlights, metrics }
   });
 }
-
 
 function defaultOperatorPrompt(): string {
   return `You are Zion's Product Operator.
@@ -103,12 +112,8 @@ Goals:
 4) Include explicit risks and validation signals per stage
 5) Output concise, skimmable, exec-ready text
 Format:
-
-=======
 function defaultOperatorPrompt (): string {
-=======
 
-=======
 
 type RoadmapInputs = {
   milestones: string;
@@ -182,7 +187,6 @@ Goals:;
 4) Include explicit risks and validation signals per stage;
 5) Output concise, skimmable, exec - ready text;
 Format:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 Zion v{n} — {theme}
 Objective: ...;
 Highlights:;
@@ -194,22 +198,13 @@ Risks:;
 Validation:;
 - ...;
 `;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-
-    () => generateStages({ milestones, keywords, priorities });
-
     [milestones, keywords, priorities]
   )
   const operatorPrompt = useMemo(() => defaultOperatorPrompt(), [])
   const copyPrompt = async () => {
     try {
-
-      await navigator.clipboard.writeText(operatorPrompt);
-      setCopied(true);
-
       setTimeout(() => setCopied(false), 1500)
-=======
 export default function RoadmapPage (): JSX.Element {
   const [milestones, set_milestones] = useState ('MVP live, First 50 users, First 10 paid engagements'),
   const [keywords, set_keywords] = useState ('AI - native, trustless, talent - first, sovereign tools'),
@@ -224,13 +219,9 @@ export default function RoadmapPage (): JSX.Element {
       await navigator.clipboard.write_text (operator_prompt),
       set_copied (true),
       set_timeout (() => set_copied (false), 1500);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch {
-
       set_copied (false);
-
     }
-
   },
   return (
     <>;
@@ -253,7 +244,6 @@ export default function RoadmapPage (): JSX.Element {
               <div>;
                 <label className="block text - sm font - medium text - gray - 700">Milestones achieved so far</label>;
                 <textarea;
-
                   value={milestones}
                   on_change={(e) => set_milestones (e.target.value)}
                   rows={3}
@@ -274,45 +264,6 @@ export default function RoadmapPage (): JSX.Element {
                 <label className="block text - sm font - medium text - gray - 700">Upcoming priorities</label>;
                 <input;
                   value={priorities}
-
-
-                  value={milestones  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  onChange={(e) => setMilestones(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  rows={3  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-                  className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
-                  placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700">Vision keywords</label>
-                <input
-
-                  value={keywords  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  onChange={(e) => setKeywords(e.target.value)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., AI-native, trustless, talent-first, sovereign tools"
                 />
@@ -332,14 +283,13 @@ export default function RoadmapPage (): JSX.Element {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
                 />
               </div>
             </div>
           </section>
+
 
 
           <section className="mb-12">
@@ -355,7 +305,6 @@ export default function RoadmapPage (): JSX.Element {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
                 {copied ? 'Copied' : 'Copy'}
@@ -403,11 +352,14 @@ export default function RoadmapPage (): JSX.Element {
                     </ul>
                   </div>
                 </article>
-
-=======
+              ))}
+            </div>
+          </section>
+        </div>
+      </main>
+    </>
+  )
 }
-
-=======
                   on_change={(e) => set_priorities (e.target.value)}
                   className="mt - 1 w - full rounded - md border border - gray - 300 bg - white p - 3 shadow - sm focus:border - black focus:outline - none";
                   placeholder="e.g., governance, scale, regional expansion";
@@ -471,9 +423,5 @@ export default function RoadmapPage (): JSX.Element {
       </main>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

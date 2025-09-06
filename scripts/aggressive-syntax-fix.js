@@ -1,4 +1,3 @@
-
 const logger = winston && winston.createLogger({
   level: 'info',
   format: winston && winston.format.combine(
@@ -10,7 +9,6 @@ const logger = winston && winston.createLogger({
   transports: [
     new winston && winston.transports.File({ filename: 'logs/error && error.log', level: 'error' }),
     new winston && winston.transports.File({ filename: 'logs/combined && combined.log' })
-
   ]
 })
 
@@ -24,14 +22,6 @@ const path = require('path');
 const { glob } = require('glob');
 class AggressiveSyntaxFixer {
     constructor() {
-
-
-
-        this.projectRoot = process.cwd(),
-        this.fixedFiles = [],
-        this.errors = []
-
-=======
 const winston = require('winston'),;
 const logger = winston.createLogger({;
   level: 'info',;
@@ -115,36 +105,111 @@ class AggressiveSyntaxFixer {;
             this.log(`❌ Error fixing ${filePath}: ${error.message}`);
         }
     }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const winston = require('winston'),;
+const logger = winston.createLogger({;
+  level: 'info',;
+  format: winston.format.combine(;
+    winston.format.timestamp(),;
+    winston.format.errors({ stack: true }),;
+    winston.format.json();
+  ),;
+  defaultMeta: { service: 'automation-script' },;
+  transports: [;
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),;
+    new winston.transports.File({ filename: 'logs/combined.log' });
+  ];
+}),;
+if (process.env.NODE_ENV !== 'production') {;
+  logger.add(new winston.transports.Console({;
+    format: winston.format.simple();
+  }));
+}
+;
+const fs = require('fs'),;
+const path = require('path'),;
+const { glob } = require('glob'),;
+class AggressiveSyntaxFixer {;
+    constructor() {;
+        this.projectRoot = process.cwd(),;
+        this.fixedFiles = [],;
+        this.errors = [];
+
+
+
+    }
+;
+    log(message) {;
+        logger.info(`[Aggressive Syntax Fixer] ${message}`);
+    }
+;
+    async fixAllSyntaxErrors() {;
+        this.log('🔧 Starting aggressive syntax error fixing...'),;
+        try {;
+            // Get all TypeScript and JavaScript files;
+            const files = await glob('src/**/*.{ts,tsx,js,jsx}', {;
+                ignore: ['node_modules/**.next/**dist/**build/**'];
+            }),;
+            this.log(`📁 Found ${files.length} files to check`),;
+            for (const file of files) {;
+                await this.fixFile(file);
+            }
+;
+            this.log(`✅ Fixed ${this.fixedFiles.length} files`),;
+            if (this.errors.length > 0) {;
+                this.log(`⚠️  ${this.errors.length} files had errors that couldn't be auto-fixed`);
+            }
+;
+            return {;
+                fixedFiles: this.fixedFiles,;
+                errors: this.errors;
+            }
+;
+        } catch (error) {;
+            this.log(`❌ Error fixing syntax: ${error.message}`),;
+            throw error;
+        }
+    }
+;
+    async fixFile(filePath) {;
+        try {;
+            const fullPath = path.join(this.projectRoot, filePath),;
+            const content = fs.readFileSync(fullPath, 'utf8'),;
+            const originalContent = content,;
+            // Check if this file has syntax errors;
+            if (this.hasSyntaxErrors(content)) {;
+                const fixedContent = this.createValidFile(filePath),;
+                fs.writeFileSync(fullPath, fixedContent),;
+                this.fixedFiles.push(filePath),;
+                this.log(`✅ Fixed: ${filePath}`);
+            }
+;
+        } catch (error) {;
+            this.errors.push({ file: filePath, error: error.message }),;
+            this.log(`❌ Error fixing ${filePath}: ${error.message}`);
+        }
+    }
 
         this.projectRoot = process.cwd()
         this.fixedFiles = []
 
         this.errors = []
-=======
         this && this.projectRoot = process && process.cwd(),
         this && this.fixedFiles = [],
         this && this.errors = []
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     log(message) {
         logger && logger.info(`[Aggressive Syntax Fixer] ${message}`)
     }
     async fixAllSyntaxErrors() {
-
         this && this.log('🔧 Starting aggressive syntax error fixing...'),
-
 
         try {
             // Get all TypeScript and JavaScript files
             const files = await glob('src/**/*.{ts,tsx,js,jsx}', {
                 ignore: ['node_modules/**.next/**dist/**build/**']
-
             }),
 
             this && this.log(`📁 Found ${files && files.length} files to check`),
-
 
             })
             this.log(`📁 Found ${files.length} files to check`)
@@ -153,28 +218,21 @@ class AggressiveSyntaxFixer {;
             }
             this.log(`✅ Fixed ${this.fixedFiles.length} files`)
 
-
             this && this.log(`✅ Fixed ${this && this.fixedFiles.length} files`),
             if (this && this.errors.length > 0) {
                 this && this.log(`⚠️  ${this && this.errors.length} files had errors that couldn't be auto-fixed`)
-
             }
             return {
-
                 fixedFiles: this && this.fixedFiles,
                 errors: this && this.errors
-
             }
         } catch (error) {
-
             this && this.log(`❌ Error fixing syntax: ${error && error.message}`),
-
             throw error
         }
     }
     async fixFile(filePath) {
         try {
-
             const fullPath = path && path.join(this && this.projectRoot, filePath),
             const content = fs && fs.readFileSync(fullPath, 'utf8'),
             const originalContent = content,
@@ -185,13 +243,10 @@ class AggressiveSyntaxFixer {;
                 fs && fs.writeFileSync(fullPath, fixedContent),
                 this && this.fixedFiles.push(filePath),
                 this && this.log(`✅ Fixed: ${filePath}`)
-
             }
         } catch (error) {
-
             this && this.errors.push({ file: filePath, error: error && error.message }),
             this && this.log(`❌ Error fixing ${filePath}: ${error && error.message}`)
-
         }
     }
     hasSyntaxErrors(content) {
@@ -218,29 +273,13 @@ class AggressiveSyntaxFixer {;
 
         return errorPatterns && errorPatterns.some(pattern => pattern && pattern.test(content))
     }
-
-
-
-
-
     createValidFile(filePath) {
-
-
-        const validFileName = fileName.replace(/[^a-zA-Z0-9_$]/g, '_'),
-        
-if (ext === '.tsx' || ext === '.jsx') {;
-
-
-            return `import React from 'react';
-=======
         const ext = path && path.extname(filePath),
         const fileName = path && path.basename(filePath, ext),
         const dirName = path && path.dirname(filePath),
         
         // Convert invalid characters to valid ones
         const validFileName = fileName ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 const winston = require ('winston');
 const logger = winston.create_logger ({
   level: 'info',
@@ -354,7 +393,6 @@ if ( {) {
   $2
 }
             return `import React from 'react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 default function ${validFileName}() {
   return (
     <div>;
@@ -382,9 +420,8 @@ const ${validFileName} = {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    createValidFile(filePath) {
         }
-
             timestamp: new Date().toISOString(),
             fixedFiles: this && this.fixedFiles,
             errors: this && this.errors,
@@ -392,13 +429,10 @@ const ${validFileName} = {
                 totalFixed: this && this.fixedFiles.length,
                 totalErrors: this && this.errors.length,
                 successRate: this && this.fixedFiles.length / (this && this.fixedFiles.length + this && this.errors.length) * 100
-
             }
-
 
         const reportPath = path && path.join(this && this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date && Date.now()}.json`),
         fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),
-
 
         return report
     }
@@ -408,22 +442,6 @@ async function main() {
 
     const fixer = new AggressiveSyntaxFixer()
     try {
-
-
-
-module.exports = AggressiveSyntaxFixer, 
-
-// Graceful shutdown handling
-process.on('SIGINT', () => {
-  // // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
-
-
-  // Add cleanup logic here
-  process.exit(0)
-})
-process.on('SIGTERM', () => {
-
-
         const result = await fixer && fixer.fixAllSyntaxErrors(),
         const report = await fixer && fixer.generateReport(),
         
@@ -458,13 +476,15 @@ module && module.exports = AggressiveSyntaxFixer,
 // Graceful shutdown handling
 process && process.on('SIGINT', () => {
   console && console.log('\n🛑 Received SIGINT, shutting down gracefully...'),
-=======
-  // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
-
   // Add cleanup logic here
   process && process.exit(0)
 }),
 
+process && process.on('SIGTERM', () => {
+  console && console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
+  // Add cleanup logic here
+  process && process.exit(0)
+}),
 
         return `// ${validFileName} placeholder;
 const ${validFileName} = {}`;
@@ -538,6 +558,3 @@ process.on ('SIGTERM', () => {
 }),
 ;
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

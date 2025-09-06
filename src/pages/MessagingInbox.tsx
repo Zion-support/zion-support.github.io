@@ -1,3 +1,31 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+    import React, { useEffect, useState } from 'react';
+import { MessageSquare, Video } from 'lucide-react';
+
+import React, { useEffect, useState } from 'react';
+import { MessageSquare, Video } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react';
 import { use_messaging } from '@/context / MessagingContext';
@@ -5,9 +33,7 @@ import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { ConversationsList, ConversationDetailView } from '@/components / messaging';
 import { useIsMobile } from '@/hooks / use - mobile';
 import { toast } from 'sonner';
-
 import { useRouter } from 'next/router', // Changed from react-router-dom;
-
 import {logErrorToProduction} from '@/utils/productionLogger';
 export default function MessagingInbox() {;
 import { useRouter } from 'next/router'; // Changed from react-router-dom
@@ -30,12 +56,10 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 export default function MessagingInbox() {
 
 
-
   const { ;
     conversations;
     activeConversation, ;
     setActiveConversation, ;
-
     markAsRead;
     fetchConversations;
     isLoading;
@@ -44,13 +68,6 @@ export default function MessagingInbox() {
   const isMobile = useIsMobile();
   const router = useRouter(), // Changed from navigate;
   const [activeCall, setActiveCall] = useState<string | null>(null);
-
-  const { 
-    conversations,
-
-
-    // Fetch conversations when component mounts
-    const loadData = async () => {
 import { Button } from '@/components / ui / button';
 import { LoadingSpinner } from '@/components / ui / enhanced - loading - states';
 import { use_router } from 'next / router'; // Changed from react-router-dom;
@@ -77,58 +94,6 @@ function MessagingInbox() {
       try {
         await fetch_conversations ();
       } catch (error) {
-
-
-    };
-    
-    loadData()
-  }, [fetchConversations]);
-  
-  const startVideoCall = () => {
-    if (!activeConversation) {
-      toast.error("Please select a conversation first");
-      return;
-    }
-    
-    const roomId = `msg-${activeConversation.id}`;
-    setActiveCall(roomId);
-
-    },
-    
-    loadData()
-  }, [fetchConversations]),
-  
-
-  const startVideoCall = () => {
-    if (!activeConversation) {
-      toast.error("Please select a conversation first"),
-      return
-    }
-
-    
-    const roomId = `msg-${activeConversation.id}`,
-    setActiveCall(roomId),
-    
-    const roomId = `msg-${activeConversation.id}`,
-    setActiveCall(roomId),
-
-    
-    // Show toast notification
-    toast.success("Starting video call", {
-      description: "Initializing video call connection..."
-
-
-  
-  return (
-    <ProtectedRoute>
-      <div className="min-h-screen bg-zion-blue">
-        <div className="container mx-auto py-8 px-4">
-          <div className="flex justify-between items-center mb-6">
-            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold text-white flex items-center gap-2`}>
-              <MessageSquare className="h-6 w-6" />
-              Messages
-            </h1>
-
 
   useEffect((,) => {;
 
@@ -233,12 +198,10 @@ export default function MessagingInbox() {;
                 Start Call;
               </Button>;
             )}
-
           </div>;
 
           <div className="bg-zion-blue-light/10 rounded-lg shadow-lg border border-zion-purple/20 overflow-hidden">;
             <div className={`flex flex-col md:flex-row h-[${isMobile ? '85vh' : '75vh'}]`}>;
-
               {/* Conversations List */}
               {isLoading ? (;
                 <div className="flex-1 flex items-center justify-center p-8">;
@@ -252,21 +215,6 @@ export default function MessagingInbox() {;
                   markAsRead = {markAsRead,}
                 />;
               )}
-
-;
-
-
-
-              {/* Conversation Detail */}
-              <ConversationDetailView />
-            </div>
-          </div>
-        </div>
-        {/* Add extra bottom padding on mobile to account for the bottom nav */}
-        {isMobile && <div className="h-16"></div>}
-      </div>
-    </ProtectedRoute>
-
 
               {/* Conversation Detail */}
               <ConversationDetailView />;
@@ -306,7 +254,6 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
   setActiveConversation 
 }markAsRead= {
   markAsRead 
-
 }/>) ;
 }{/* Conversation Detail */ ;
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
@@ -412,9 +359,3 @@ return (<ProtectedRoute> <div className="min - h-screen bg - zion - blue" > <div
   /* Conversation Detail */ ;
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
 }'"}
-
-
-
-  )
-}
-;

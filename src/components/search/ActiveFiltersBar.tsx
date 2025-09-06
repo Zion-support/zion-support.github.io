@@ -1,3 +1,4 @@
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -87,7 +88,6 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 import { X } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-
 interface SearchFilters {;
   types: string[],;
   category: string,;
@@ -187,27 +187,8 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
 
   if (activeFilters && activeFilters.length === 0) {;
     return null;
-
   }
   return (
-
-
-        <Badge 
-          key = {filter.key,}
-
-      
-      {activeFilters.map(filter => (
-        <Badge 
-          key={filter.key} 
-
-
-
-          variant="secondary" 
-          className="flex items-center gap-1 pl-2 pr-1"
-        >
-          <span className="text-xs">
-            {filter.label}: {filter.value}
-          </span>
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>;
       <span className="text-sm font-medium text-muted-foreground">Active filters:</span>;
 
@@ -237,18 +218,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({;
       <Button
         variant="ghost"
         size="sm"
-
-
-        onClick={onClearAll}
-
-
-        className="text-xs h-6 px-2"
-      >
-        Clear all
-      </Button>
-    </div>
-  )
-
+        onClick = {onClearAll,}
 ;
 export default ActiveFiltersBar; import React from 'react';
 import { X } from 'lucide-react';
@@ -409,7 +379,12 @@ if ( {) {
 
 },
 export default ActiveFiltersBar,
-
+interface Filter {
+  key: string;
+  value: string;
+  label: string;
+}
+interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
         className="text-xs h-6 px-2">;
         Clear all;
       </Button>;
@@ -428,7 +403,6 @@ interface ActiveFiltersBarProps extends React && React.PropsWithChildren<{}> {;
 
   filters: Filter[];
   onRemoveFilter: key: string void;
-
   onClearAll: : unknown void}
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline"
       >

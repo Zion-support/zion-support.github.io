@@ -1,21 +1,9 @@
 
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {useRecordActivity} from './useRecordActivity';
-
-
-export const useUploadDeliverable = () => {;
-  const { user } = useAuth();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { recordMilestoneActivity } = useRecordActivity();
-
-=======
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -30,8 +18,20 @@ export const useUploadDeliverable = () => {
   const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
     if (!user || !projectId) return null,
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { useState } from 'react',
+import { supabase } from '@/integrations/supabase/client',
+import { useAuth } from '@/hooks/useAuth',
+import { toast } from 'sonner',
+import { useRecordActivity } from './useRecordActivity',
+export const useUploadDeliverable = () => {
+  const { user } = useAuth(),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const { recordMilestoneActivity } = useRecordActivity(),
+
+  
+  const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
+    if (!user || !projectId) return null,
+    
     try {
       setIsSubmitting(true)
       // Get the current milestone
@@ -50,13 +50,11 @@ export const useUploadDeliverable = () => {
       
       const deliverables = [...(milestone && milestone.deliverables || []), newDeliverable];
       
-
       const { error } = await supabase
         .from('project_milestones')
         .update({ deliverables })
         .eq('id', milestoneId);
       if (error) throw error;
-=======
 
         .single(),
       
@@ -84,10 +82,8 @@ export const useUploadDeliverable = () => {
       if (error) throw error,
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Create activity record
       await recordMilestoneActivity(
-
         milestoneId, 
         'deliverable_added', 
         milestone && milestone.status, 
@@ -101,9 +97,7 @@ export const useUploadDeliverable = () => {
     } catch (err: any) {
       console && console.error("Error uploading deliverable:", err);
       toast && toast.error("Failed to upload deliverable: " + err && err.message),
-
       return null
-=======
 export const useUploadDeliverable = () =>: any {
   const { user } = use_auth ();
   const [is_submitting, setIsSubmitting] = useState (false);
@@ -167,26 +161,9 @@ if (throw error) {
       console.error ("Error uploading deliverable:", err);
       toast.error ("Failed to upload deliverable: " + err.message),
       return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsSubmitting (false);
     }
-
-=======
-
-      ),
-      
-      toast.success("Deliverable added successfully"),
-      
-      return newDeliverable
-    } catch (err: any) {
-      console.error("Error uploading deliverable:", err),
-      toast.error("Failed to upload deliverable: " + err.message),
-      return null
-    } finally {
-      setIsSubmitting(false)
-
-
   }
 ;
   return {
@@ -195,4 +172,3 @@ if (throw error) {
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

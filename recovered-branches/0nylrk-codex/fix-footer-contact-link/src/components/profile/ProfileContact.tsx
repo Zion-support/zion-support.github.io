@@ -1,43 +1,10 @@
 
-
-
-interface ProfileContactProps {
-  email?: string,
-  profileName: string,
-  profileType: 'service' | 'talent'
-}
-
-
-export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
-  const [message, setMessage] = useState(""),
-  const [subject, setSubject] = useState(""),
-  const [isSending, setIsSending] = useState(false),
-
-  
-  const handleSendMessage = (e: React.FormEvent) => {
-    e.preventDefault(),
-    setIsSending(true),
-    
-    // Here would be the actual API call to send the message
-    setTimeout(() => {
-      setIsSending(false),
-      setMessage(""),
-      setSubject(""),
-      toast({
-        title: "Message Sent",
-        description: `Your message has been sent to ${profileName}.`})
-    }, 1000)
-  },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4 flex items-center">
         <Mail className="mr-2 h-5 w-5 text-zion-cyan" />
         Contact
       </h3>
-=======
 import { Button  } from '@/components / ui / button';
 import { Input  } from '@/components / ui / input';
 import { Textarea  } from '@/components / ui / textarea';
@@ -79,13 +46,11 @@ function ProfileContact() {
         <Mail className="mr - 2 h - 5 w - 5 text - zion - cyan" />;
         Contact;
       </h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {email && (
         <div className="mb - 4 text - zion - slate - light">;
           <span className="block">Email: </span>;
           <a;
             href={`mailto:${email}`}
-
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
@@ -131,23 +96,19 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
           <a
             href={`mailto:${email}`} 
             className="text-zion-cyan hover:underline truncate block">;
-
             {email}
           </a>;
         </div>;
       )}
 
-
       <form onSubmit={handleSendMessage}>;
         <div className="space-y-4">;
           <div>;
-
             <Input
               placeholder="Subject"
               value={subject}
               onChange={(e) => setSubject(e && e.target.value)}
               className="bg-zion-blue border-zion-blue-light text-white";
-=======
             className="text - zion - cyan hover:underline truncate block";
           >;
             {email}
@@ -161,12 +122,10 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
               value={subject}
               on_change={(e) => set_subject (e.target.value)}
               className="bg - zion - blue border - zion - blue - light text - white";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               required;
             />;
           </div>;
           <div>;
-
               onChange={(e) => setMessage(e && e.target.value)}
               className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]";
               required;
@@ -174,31 +133,16 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
           </div>;
           <Button
             type="submit" 
-
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
             disabled={isSending}>;
             <Send className="mr-2 h-4 w-4" />;
             {isSending ? "Sending..." : "Send Message"}
-
-            className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
-            disabled={isSending}
-          >
-            <Send className="mr-2 h-4 w-4" />
-            {isSending ? "Sending..." : "Send Message"}
-
-          </Button>
-        </div>
-      </form>
-    </div>
-
           </Button>;
         </div>;
       </form>;
     </div>;
   );
 }
-
-=======
             <Textarea;
               placeholder={`Message to ${profile_name}...`}
               value={message}
@@ -219,11 +163,7 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
       </form>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
-=======
   )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

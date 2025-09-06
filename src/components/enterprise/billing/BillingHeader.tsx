@@ -1,3 +1,5 @@
+
+
 export function BillingHeader() {
   return (
     <div className="space-y-2">
@@ -24,13 +26,12 @@ export function BillingHeader() {
           </Button>
         </div>
       </div>
-
       <p className="text-muted-foreground">
-
         Manage your subscription, view invoice history, and update payment methods.
       </p>
     </div>
-
+  )
+}
 export function BillingHeader() {;
   return (
     <div className='space-y-2'>;
@@ -137,8 +138,6 @@ function BillingHeader() {
           </Button>;
         </div>;
       </div>;
-
-
       <p className='text - muted - foreground'>;
         Manage your subscription, view invoice history, and update payment;
         methods.;
@@ -148,4 +147,3 @@ function BillingHeader() {
       </p>;
     </div>);
 }
-;

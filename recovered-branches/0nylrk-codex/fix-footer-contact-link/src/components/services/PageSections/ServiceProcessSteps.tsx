@@ -1,11 +1,3 @@
-
-=======
-
-
-=======
-export function ServiceProcessSteps() {;
-  return (;
-
     <div className="my-20">;
       <h2 className="text-2xl font-bold text-white text-center mb-12">How Our IT Onsite Service Works</h2>;
 
@@ -37,7 +29,6 @@ export function ServiceProcessSteps() {;
     </div>;
   );
 }
-
 export /**
  * ServiceProcessSteps - Function description
  */
@@ -69,9 +60,6 @@ function ServiceProcessSteps() {
       </div>;
     </div>);
 }
-
-=======
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

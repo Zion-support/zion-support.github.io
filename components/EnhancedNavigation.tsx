@@ -1,61 +1,7 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from 'react';
-
 import Link from 'next/link';
 
 import {motion} from 'framer-motion';
 import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
-
-
-    { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
-    { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' },
-    { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup.com/quantum-cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions' },
-    { name: 'Edge Computing', href: 'https://ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },
-    { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' },
-
-
-    { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
-  ];
-  const company = [
-    { name: 'About Us', href: '/about', icon: Users, description: 'Learn about our mission and team' }
-    { name: 'Our Work', href: '/portfolio', icon: Award, description: 'See our latest projects and achievements' }
-    { name: 'Content Hub', href: '/reports', icon: BookOpen, description: 'Access autonomous content and insights' }
-    { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' }
-    { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
-  ];
-
-
-
-
-
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
-  }
-  const closeAllDropdowns = () => {
-=======
 
 const EnhancedNavigation: React.FC = () => {;
   const [isOpen, setIsOpen] = useState(false);
@@ -93,22 +39,18 @@ const EnhancedNavigation: React.FC = () => {;
   };
 
   const closeAllDropdowns = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setActiveDropdown(null);
     setIsOpen(false);
   }
   return (
-
     <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' 
-
         : 'bg-transparent'
     }`}>;
       <div className="max-w-7xl mx-auto px-6">;
         <div className="flex items-center justify-between h-20">;
           {/* Logo */}
-
           <Link href="/" className="flex items-center space-x-3" onClick={closeAllDropdowns}>;
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">;
               <Brain className="w-6 h-6 text-white" />;
@@ -118,22 +60,14 @@ const EnhancedNavigation: React.FC = () => {;
             </span>;
           </Link>;
 
-
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">;
             {/* Services Dropdown */}
             <div className="relative">;
               <button
                 onClick={() => toggleDropdown('services')}
-
-
-              
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {activeDropdown === 'services' && (
                 <motion.div
-=======
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
               >;
                 <span>Services</span>;
@@ -142,7 +76,6 @@ const EnhancedNavigation: React.FC = () => {;
 
               {activeDropdown === 'services' && (;
                 <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
@@ -169,20 +102,17 @@ const EnhancedNavigation: React.FC = () => {;
                 </motion && motion.div>;
               )}
 
+
+
+
+
+
             </div>;
 
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Company Dropdown */}
             <div className="relative">;
               <button
                 onClick={() => toggleDropdown('company')}
-
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
               >;
                 <span>Company</span>;
@@ -191,7 +121,6 @@ const EnhancedNavigation: React.FC = () => {;
 
               {activeDropdown === 'company' && (;
                 <motion&& motion.div
-
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
@@ -215,7 +144,6 @@ const EnhancedNavigation: React.FC = () => {;
                   </div>;
                 </motion && motion.div>;
               )}
-
             </div>;
 
             {/* CTA Button */}
@@ -227,12 +155,11 @@ const EnhancedNavigation: React.FC = () => {;
           </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -240,16 +167,14 @@ const EnhancedNavigation: React.FC = () => {;
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 
+
+
+
+
+
           </button>;
         </div>;
 
-
-=======
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Mobile Menu */}
         {isOpen && (;
           <motion&& motion.div
@@ -275,10 +200,8 @@ const EnhancedNavigation: React.FC = () => {;
                       </div>;
                     </Link>;
                   ))}
-
                 </div>;
               </div>;
-
 
               {/* Mobile Company */}
               <div>;
@@ -297,10 +220,8 @@ const EnhancedNavigation: React.FC = () => {;
                       </div>;
                     </Link>;
                   ))}
-
                 </div>;
               </div>;
-
 
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-gray-200">;
@@ -308,7 +229,6 @@ const EnhancedNavigation: React.FC = () => {;
                   href="/contact"
                   className="block w-full text-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
                   onClick={closeAllDropdowns}>;
-=======
 import Link from 'next / link';
 import {motion} from 'framer-motion';
 import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
@@ -514,12 +434,10 @@ const EnhancedNavigation: React.FC = () => {
                   className="block w - full text - center px - 6 py - 3 bg - blue - 600 hover:bg - blue - 700 text - white rounded - lg font - semibold transition - colors";
                   on_click={closeAllDropdowns}
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   Get Started;
                 </Link>;
               </div>;
             </div>;
-
           </motion.div>)}
       </div>;
     </nav>);
@@ -527,15 +445,6 @@ const EnhancedNavigation: React.FC = () => {
 ;
 export default EnhancedNavigation;
 ;
-
-=======
-
 export default EnhancedNavigation;
-
-=======
 export default EnhancedNavigation;
-=======
 export default EnhancedNavigation;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,16 +1,5 @@
 
 
-
-import {
-  saveFeedbackFallback,
-  FeedbackRecord,
-} from "../../utils/feedback/store";
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
 import {
   saveFeedbackFallback
   FeedbackRecord
@@ -23,19 +12,6 @@ function bad(res: NextApiResponse, msg: string, code = 400) {
 }
 async function tryWriteToFirestore(doc: FeedbackRecord) {
   const { FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY } =
-
-    process && process.env as Record<string, string | undefined>;
-  if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY)
-    return false;
-  try {
-    const admin = require("firebase-admin");
-    if (admin && admin.apps.length === 0) {
-      admin && admin.initializeApp({
-        credential: admin && admin.credential.cert({
-          projectId: FIREBASE_PROJECT_ID,
-          clientEmail: FIREBASE_CLIENT_EMAIL,
-          privateKey: (FIREBASE_PRIVATE_KEY || "").replace(/\\n/g, "\n"),
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import {
@@ -77,35 +53,27 @@ if ( {) {
           project_id: FIREBASE_PROJECT_ID,
           client_email: FIREBASE_CLIENT_EMAIL,
           private_key: (FIREBASE_PRIVATE_KEY || "").replace (/\\n / g, "\n"),
-
         }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
-
     const db = admin.firestore ();
     await db.collection ("interaction_feedback").doc (doc.id).set (doc);
-
     return true;
   } catch (e) {
     return false;
   }
 }
-
   if (req && req.method !== "POST") return bad(res, "Method not allowed", 405);
   const { rating, comment, kind, context } = req && req.body || {};
-
   const r = Number(rating);
   if (!r |r < 1 |r > 5) return bad(res, "rating must be 1-5");
   const k: FeedbackRecord["kind"] =
     kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";
   const user = {
-
     id: (req && req.headers["x-demo-user-id"] as string) || undefined,
     role: (req && req.headers["x-demo-user-role"] as string) || undefined,
     talentSlug: (req && req.headers["x-demo-talent-slug"] as string) || undefined,
   };
-
 
   const doc: FeedbackRecord = {
     id: uuidv4()
@@ -122,11 +90,6 @@ if ( {) {
 }
 
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 export default async /**
  * handler - Function description
  */
@@ -139,7 +102,23 @@ function handler() {
   if (return bad (res, "rating must be 1 - 5")) {
   $2
 }
-
+  const key: FeedbackRecord["kind"] =;
+    kind === "bug" ? "bug" : kind === "feature" ? "feature" : "general";
+;
+  const user = {
+    id: (req.headers["x - demo - user - id"] as string) || undefined,
+    role: (req.headers["x - demo - user - role"] as string) || undefined,
+    talent_slug: (req.headers["x - demo - talent - slug"] as string) || undefined,
+  }
+;
+  const doc: FeedbackRecord = {
+    id: uuidv4 (),
+    createdAtIso: new Date ().toISOString (),
+    user,
+    rating: r,
+    comment: comment || undefined,
+    kind: k,
+    context: context || undefined,
   }
 ;
   const wrote = await tryWriteToFirestore (doc);
@@ -148,9 +127,6 @@ function handler() {
 }
   return ok (res, { id: doc.id });
 }
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 function bad(res: NextApiResponse, msg: string, code = 400) {
   return res.status(code).json({
     ok: false,
@@ -220,7 +196,6 @@ async function tryWriteToFirestore(req, res) {
     const admin = require("firebase-admin"),
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (admin.apps.length === 0) {
       admin.initializeApp({
         credential: admin.credential.cert({
@@ -234,4 +209,3 @@ async function tryWriteToFirestore(req, res) {
   if (!r || r < 1 || r > 5) return bad(res, "rating must be 1-5");
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

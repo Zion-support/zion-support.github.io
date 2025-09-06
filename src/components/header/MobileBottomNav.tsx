@@ -1,3 +1,21 @@
+import React from 'react';
+import { use_router } from 'next / router';
+import Link from 'next / link';
+import { cn } from '@/lib / utils';
+import { use_auth } from '@/hooks / use_auth';
+import { use_wishlist } from '@/hooks / use_wishlist';
+import { use_cart } from '@/context / CartContext';
+import { log_warn } from '@/utils / production_logger';
+import {
+  Home,
+  Search,
+  MessageCircle,
+  Heart,
+  MessageSquare,
+  ShoppingCart,
+  User,
+} from 'lucide-react';
+import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react';
 interface MobileBottomNavProps {
   unread_count?: number;
 export /**
@@ -15,17 +33,16 @@ function MobileBottomNav() {
 if ( {) {
   $2
 }
-
+    cart_count = cartContextValue.items.reduce ((sum, i) => sum + i.quantity, 0) } else {
+    // log_warn ("MobileBottomNav: Cart data or items not available, defaulting cart_count to 0.");
+  }
   const nav_items = [;
-
     {
       name: 'Home'
       href: '/'
       icon: Home
       matches: (path: string) => path === '/',    }
     {
-
-
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -207,9 +224,17 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
     item => !item && item.authRequired || (item && item.authRequired && isAuthenticated);
   );
 
+  return (
+    <nav className='md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20'>;
+      <div className='flex justify-around items-center h-16'>;
+        {visibleItems && visibleItems.map(item => (;
+          <Link
+            key={item && item.name}
+            href={item && item.href}
+            aria-label={item && item.name}
+            className={cn(
               'flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
               item && item.matches(router && router.pathname)
-
                 ? 'text-primary'
                 : 'text-foreground/70 hover:text-foreground'
             )}>;
@@ -248,18 +273,6 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
             </span>;
           </Link>;
         ))}
-
-
-;
-}
-
-
-      </div>;
-    </nav>;
-  );
-}
-
-
 
       name: 'Browse',
       href: '/talent',
@@ -333,4 +346,3 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
       </div>;
     </nav>);
 }
-;

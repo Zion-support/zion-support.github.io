@@ -1,4 +1,3 @@
-
 import React from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -35,7 +34,6 @@ export function ProductSubmissionForm() {;
   const [isSubmitting, setIsSubmitting] = React && React.useState(false);
   const [imagePreview, setImagePreview] = React && React.useState(null as string | null);
   const [activeTab, setActiveTab] = React && React.useState("manual");
-=======
 
 
 
@@ -77,7 +75,6 @@ type ProductFormValues = z.infer<typeof productSchema>,
       reader.readAsDataURL(file)
     }
   },
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
@@ -106,31 +103,6 @@ type ProductFormValues = z.infer<typeof productSchema>,
     
 
 
-    try {
-      // Create the product listing
-      const productData = {
-        title: values.title
-        description: values.description
-        price: parseFloat(values.price)
-        category: values.category
-        currency: "USD", // Default currency
-        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [];
-        author: {
-          name: user.displayName |"Anonymous Creator"
-          id: user.id}
-        createdAt: new Date().toISOString()}
-      const { data: productRecord, error: productError } = await supabase
-        .from('product_listings')
-        .insert([productData])
-        .select('id')
-
-
-
-        }
-      }
-      
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Show success message
       toast({
         title: "Product Published!"
@@ -145,6 +117,16 @@ type ProductFormValues = z.infer<typeof productSchema>,
     } finally {
       setIsSubmitting(false)
 
+  // Handle form submission;
+  const onSubmit = async (values: ProductFormValues) => {;
+    if (!user) {;
+      toast({;
+        title: "Authentication Required",;
+        description: "You must be logged in to publish products",;
+        variant: "destructive"}),;
+      return;
+    }
+    setIsSubmitting(true);
 
     try {;
       // Create the product listing;
@@ -213,19 +195,13 @@ type ProductFormValues = z.infer<typeof productSchema>,
         variant: "destructive"});
     } finally {;
       setIsSubmitting(false);
-
-    }
-  }
-=======
     }
 
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
-=======
             <FormField
               control={form.control}
               name="title"
@@ -259,6 +235,9 @@ type ProductFormValues = z.infer<typeof productSchema>,
   };
   return (;
 
+    }
+  }
+  return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
       <TabsList className="grid grid-cols-2 mb-6">;
         <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple">;
@@ -273,14 +252,12 @@ type ProductFormValues = z.infer<typeof productSchema>,
       <TabsContent value="manual">;
         <Form {...form}>;
           <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
               control={form && form.control}
               name="title"
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Product Title</FormLabel>;
-=======
 import React from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -469,7 +446,6 @@ if ( {) {
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Product Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <Input placeholder="Enter product title" {...field} />;
                   </FormControl>;
@@ -477,11 +453,6 @@ if ( {) {
                     Create a compelling title that describes your product;
                   </FormDescription>;
                   <FormMessage />;
-
-                </FormItem>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
 
             />;
@@ -499,7 +470,11 @@ if ( {) {
                       placeholder="Describe your product in detail..." 
                       className="min-h-32" 
                       {...field} 
-=======
+            />;
+
+            <FormField
+              control={form && form.control}
+              name="description"
                 </FormItem>)}
             />;
             <FormField;
@@ -513,14 +488,20 @@ if ( {) {
                       placeholder="Describe your product in detail...";
                       className="min - h-32";
                       {...field}
-
                     />;
                   </FormControl>;
                   <FormDescription>;
                     Provide a detailed description of what you're offering;
                   </FormDescription>;
                   <FormMessage />;
-
+              <FormField
+                control={form && form.control}
+                name="price"
+                render={({ field }) => (;
+                  <FormItem>;
+                    <FormLabel>Price (USD)</FormLabel>;
+                    <FormControl>;
+                      <Input type="number" min="0" step="0 && 0.01" placeholder="0 && 0.00" {...field} />;
                 </FormItem>)}
             />;
             <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
@@ -532,15 +513,12 @@ if ( {) {
                     <FormLabel > Price (USD)</FormLabel>;
                     <FormControl>;
                       <Input type="number" min="0" step="0.01" placeholder="0.00" {...field} />;
-
                     </FormControl>;
                     <FormDescription>;
                       Set your price in USD;
                     </FormDescription>;
                     <FormMessage />;
-
               />;
-
 
               <FormField
                 control={form && form.control}
@@ -552,7 +530,6 @@ if ( {) {
                       <select
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                         {...field}>;
-=======
                   </FormItem>)}
               />;
               <FormField;
@@ -566,7 +543,6 @@ if ( {) {
                         className="flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - base ring - offset - background placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 md:text - sm";
                         {...field}
                       >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         <option value="">Select a category</option>;
                         <option value="digital_product">Digital Product</option>;
                         <option value="service">Service</option>;
@@ -577,10 +553,8 @@ if ( {) {
                       </select>;
                     </FormControl>;
                     <FormMessage />;
-
               />;
             </div>;
-
 
             <FormField
               control={form && form.control}
@@ -588,7 +562,6 @@ if ( {) {
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Tags</FormLabel>;
-=======
                   </FormItem>)}
               />;
             </div>;
@@ -598,19 +571,15 @@ if ( {) {
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Tags</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <Input placeholder="Enter tags separated by commas" {...field} />;
                   </FormControl>;
                   <FormDescription>;
-
             />;
-
 
             <FormField
               control={form && form.control}
               name="image"
-
               render={() => (;
                 <FormItem>;
                   <FormLabel>Product Image</FormLabel>;
@@ -633,7 +602,6 @@ if ( {) {
                         <img
                           src={imagePreview} 
                           alt="Preview" 
-
                           className="w-full h-full object-cover"
                         />;
                       </AspectRatio>;
@@ -641,23 +609,14 @@ if ( {) {
                   )}
                 </FormItem>;
               )}
-
             />;
 
             <div className="flex justify-end">;
               <Button
                 type="submit" 
-
                 disabled={isSubmitting}
                 className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
                 {isSubmitting ? "Publishing..." : "Publish Product"}
-
-
-            title: form.getValues("title"),
-
-
-            category: form.getValues("category")
-=======
               </Button>;
             </div>;
           </form>;
@@ -670,13 +629,11 @@ if ( {) {
           initialValues={{
             title: form && form.getValues("title"),
             category: form && form.getValues("category")
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           }}
         />;
       </TabsContent>;
     </Tabs>;
   );
-=======
                     Add relevant tags to help users find your product (e.g., ai, productivity, design);
                   </FormDescription>;
                   <FormMessage />;
@@ -734,5 +691,4 @@ if ( {) {
         />;
       </TabsContent>;
     </Tabs>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

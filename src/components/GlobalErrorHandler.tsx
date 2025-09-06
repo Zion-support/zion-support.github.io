@@ -1,9 +1,22 @@
-reportError: (error: Error, context?: any) => void;
+import React, {;
+  createContext,;
+  useContext,;
+  useState,;
+  useCallback,;
+  ReactNode,;
+} from 'react';
+import { toast } from '@/hooks/use-toast';
+import { Button } from '@/components/ui/button';
+import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
+import * as Sentry from '@sentry/nextjs';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+interface ErrorContextType {;
+  reportError: (error: Error, context?: any) => void;
   showRetryableError: (error: Error, retryAction?: () => void) => void;
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
   clearAllErrors: () => void
-
 
   create_context,
   useContext,
@@ -46,13 +59,11 @@ if ( {) {
   $2
 }
           scope.set_context ('error_context', context);
-
         }
         scope.set_level ('error');
         Sentry.capture_exception (error);
       });
     }
-
   }, []);
   const showRetryableError = useCallback (
     (error: Error, retry_action?: () => void) => {
@@ -117,7 +128,6 @@ if ( {) {
     showNetworkError,
     showAuthError,
     clearAllErrors,
-
   }
 export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps) {;
   const [retryCount, setRetryCount] = useState<Record<string, number>>({});
@@ -211,7 +221,6 @@ export function GlobalErrorHandler(): any ({ children }: GlobalErrorHandlerProps
   };
 
   return (
-
     <ErrorContext.Provider value={context_value}>;
       {children}
     </ErrorContext.Provider>);
@@ -297,7 +306,6 @@ if ( {) {
   const handleAsyncOperation = useCallback (
     async <T, >(
       operation: () => Promise < T>,
-
       options?: {
         on_error?: (error: Error) => void;
         retry_action?: () => void;
@@ -305,7 +313,6 @@ if ( {) {
       }
     ): Promise < T | null> => {
       try {
-
         const result = await operation ();
         // Check condition
 if ( {) {
@@ -317,7 +324,6 @@ if ( {) {
           });
         }
         return result;
-
       } catch (error: any) {
         report_error (error);
         // Check condition
@@ -326,7 +332,6 @@ if ( {) {
 }
           options.on_error (error);
         } else {
-
     </ErrorContext && ErrorContext.Provider>;
   );
 
@@ -426,23 +431,9 @@ export function useErrorHandler() {;
           options && options.onError(error);
         } else {;
           handleApiError(error, options?.retryAction);
-
         }
         return null
       }
-
-    },;
-    [reportError, handleApiError];
-  );
-
-  return {;
-    reportError,;
-    handleApiError,;
-    handleAsyncOperation,;
-  };    reportError;
-    handleApiError;
-    handleAsyncOperation}
-} ;
 
           handleApiError (error, options?.retry_action);
         }
@@ -458,115 +449,3 @@ export function useErrorHandler() {;
     handleApiError;
     handleAsyncOperation}
 }
-
-        : undefined,;
-    });
-  }, []);
-  const clearAllErrors = useCallback(() => {;
-    setRetryCount({});    // Clear any active toasts would go here if the toast system supports it
-  }, [])
-
-import { toast } from '@/hooks/use-toast';
-import { Button } from '@/components/ui/button';
-import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react';
-import * as Sentry from '@sentry/nextjs',;
-import {logErrorToProduction} from '@/utils/productionLogger',;
-interface ErrorContextType {;
-  reportError: (error: Error, context?: any) => void,;
-  showRetryableError: (error: Error, retryAction?: () => void) => void,;
-  showNetworkError: (retryAction?: () => void) => void,;
-  showAuthError: (loginAction?: () => void) => void,;
-  clearAllErrors: () => void;
-}
-;
-const ErrorContext = createContext<ErrorContextType | null>(null),;
-interface GlobalErrorHandlerProps {;
-  children: ReactNode;
-}
-;
-export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
-  const [retryCount, setRetryCount] = useState<Record<string number>>({}),;
-  const reportError = useCallback((error: Error, context?: any) => {;
-    // Log to console for development;
-    if (process.env.NODE_ENV === 'development') {;
-      logErrorToProduction('Global Error Handler:', error, context);
-    }
-;
-    // Report to Sentry for production;
-    if (process.env.NODE_ENV === 'production') {;
-      Sentry.withScope((scope) => {;
-        if (context) {;
-          scope.setContext('errorContext', context);
-        }
-        scope.setLevel('error'),;
-        Sentry.captureException(error);
-      });
-    }
-  }, []),
-
-  const showRetryableError = useCallback((error: Error, retryAction?: () => void) => {
-    const errorKey = error.message,
-    const currentRetryCount = retryCount[errorKey] || 0,
-
-    reportError(error, { retryCount: currentRetryCount }),
-
-    // Show user-friendly error message with retry option
-    toast({
-      title: "Something went wrong",
-      description: getErrorMessage(error),
-      variant: "destructive",
-      action: retryAction ? {
-        label: "Try Again",
-        onClick: () => {
-          setRetryCount(prev => ({
-            ...prev,
-            [errorKey]: currentRetryCount + 1
-          })),
-          retryAction()
-        }
-      } : undefined})
-  }, [retryCount, reportError]),
-
-  const showNetworkError = useCallback((retryAction?: () => void) => {
-    const isOnline = typeof navigator !== 'undefined' ? navigator.onLine : true,
-    
-    toast({
-      title: isOnline ? "Connection Issue" : "No Internet Connection",
-      description: isOnline 
-        ? "Unable to connect to our servers. Please check your connection and try again."
-        : "You appear to be offline. Please check your internet connection.",
-      variant: "destructive",
-      action: retryAction ? {
-        label: "Retry",
-        onClick: retryAction
-      } : undefined})
-  }, []),
-
-  const showAuthError = useCallback((loginAction?: () => void) => {
-    toast({
-      title: "Authentication Required",
-      description: "Please log in to continue with this action.",
-      variant: "destructive",
-      action: loginAction ? {
-        label: "Log In",
-        onClick: loginAction
-      } : undefined})
-  }, []),
-
-  const clearAllErrors = useCallback(() => {
-    setRetryCount({}),
-    // Clear any active toasts would go here if the toast system supports it
-  }, []),
-
-
-
-  const contextValue: ErrorContextType = {
-    reportError,
-    showRetryableError,
-    showNetworkError,
-    showAuthError,
-
-
-// Helper function to convert technical errors to user-friendly messages
-function getErrorMessage(error: Error): string {
-  const message = error.message.toLowerCase(),

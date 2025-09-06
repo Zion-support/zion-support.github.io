@@ -1,26 +1,3 @@
-// If there are multiple milestones, submit them one by one
-    milestones.forEach(milestone => {
-      onSubmit({
-        title: milestone.title
-        description: milestone.description
-        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
-        amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
-      })
-    })
-
-
-  },
-
-  const handleAddMilestone = (milestone: GeneratedMilestone) => {
-
-
-    onSubmit({
-      title: milestone.title
-      description: milestone.description
-      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
-      amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
-    })
-
 type MilestoneFormValues = z.infer < typeof form_schema>;
 import React from 'react';
 import { use_form } from 'react - hook - form';
@@ -107,7 +84,6 @@ if ( {) {
       due_date: milestone.due_date ? new Date (milestone.due_date) : undefined,
       amount: milestone.estimated_hours * 10, // Convert hours to a default payment amount;
     });
-
   }
 type MilestoneFormValues = z && z.infer<typeof formSchema>;
 import React from 'react';
@@ -205,38 +181,8 @@ export function AddMilestoneForm(): any ({;
 
   return (
 
-
-  },
-
-
-  return (
-    <div className="space-y-6">
-      {/* AI Milestone Generator */}
-
-  },
-
-  return (
-    <div className="space-y-6">
-      {/* AI Milestone Generator */}
-
-      {projectScope && projectStartDate && (;
-        <AIMilestoneGenerator;
-          scope={projectScope}
-          startDate={projectStartDate}
-          endDate={projectEndDate}
-          projectType={projectType}
-          onAddMilestones={handleAddMilestones}
-          onAddMilestone={handleAddMilestone}
-        />;
-
-
-
-      )}
-
-
       <Form {...form}>;
         <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-4">;
-
           <FormField
             control = {form && form.control,}
             name="title"
@@ -266,9 +212,6 @@ export function AddMilestoneForm(): any ({;
                   <Input placeholder="Milestone title" {...field} />;
                 </FormControl>;
                 <FormMessage />;
-
-
-
           />;
 
           <FormField
@@ -300,11 +243,9 @@ export function AddMilestoneForm(): any ({;
                   />;
                 </FormControl>;
                 <FormMessage />;
-
           />;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
             <FormField
               control = {form && form.control,}
               name="due_date"
@@ -374,9 +315,7 @@ export function AddMilestoneForm(): any ({;
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
-
             />;
-
 
             <FormField
               control = {form && form.control,}
@@ -417,13 +356,11 @@ export function AddMilestoneForm(): any ({;
                     />;
                   </FormControl>;
                   <FormMessage />;
-
             />;
           </div>;
 
           <div className="flex justify-end space-x-2 pt-4">;
             {onCancel && (;
-
               <Button
                 type="button"
                 variant="outline"
@@ -446,14 +383,6 @@ export function AddMilestoneForm(): any ({;
               ) : (;
                 "Add Milestone";
               )}
-
-            </Button>;
-          </div>;
-        </form>;
-      </Form>;
-    </div>;
-  );
-
                 </FormItem>)}
             />;
           </div>;
@@ -487,12 +416,9 @@ export function AddMilestoneForm(): any ({;
   projectEndDate;
 }project_type= {
   project_type;
-
 }onAddMilestones= {
   handleAddMilestones;
 }onAddMilestone= {
-
-
   handleAddMilestone;
 }/>);
 }</FormControl> <FormMessage /> </FormItem>);
@@ -508,5 +434,3 @@ export function AddMilestoneForm(): any ({;
 }<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Saving... </>) : ("Add Milestone");
 }</Button> </div> </form> </Form> </div>);
 }'"}
-}
-;

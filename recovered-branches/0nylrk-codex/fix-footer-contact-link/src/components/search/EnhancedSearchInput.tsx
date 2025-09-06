@@ -1,8 +1,3 @@
-
-
-
-
-
 import React, { useState, useEffect, useRef } from "react";
 import {Search, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
@@ -11,11 +6,9 @@ import {SearchSuggestion} from "@/types/search";
 interface EnhancedSearchInputProps {;
   value: string,;
   onChange: (value: string) => void,;
-
   placeholder?: string;
   searchSuggestions: SearchSuggestion[];
 }
-
 
 export function EnhancedSearchInput(): any ({ ;
   value;
@@ -23,34 +16,10 @@ export function EnhancedSearchInput(): any ({ ;
   placeholder = "Search...", ;
   searchSuggestions ;
 }: EnhancedSearchInputProps) {;
-
   const [isFocused, setIsFocused] = useState(false);
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-
-interface EnhancedSearchInputProps {
-  value: string,
-  onChange: (value: string) => void,
-  placeholder?: string,
-  searchSuggestions: SearchSuggestion[]
-}
-
-
-export function EnhancedSearchInput({ 
-  value,
-
-  onChange, 
-  placeholder = "Search...", 
-  searchSuggestions 
-}: EnhancedSearchInputProps) {
-  const [isFocused, setIsFocused] = useState(false),
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),
-  const inputRef = useRef<HTMLInputElement>(null),
-  const containerRef = useRef<HTMLDivElement>(null),
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Filter suggestions based on input value
   useEffect(() => {
     if (!value) {
@@ -60,7 +29,6 @@ export function EnhancedSearchInput({
 
 
 
-=======
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
@@ -123,15 +91,12 @@ export function EnhancedSearchInput({;
     inputRef.current?.blur()
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="relative w-full" ref={containerRef}>
       <div className="relative">
         <Search
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate"
         />
-=======
 
   // Filter suggestions based on input value;
   useEffect(() => {;
@@ -179,7 +144,6 @@ export function EnhancedSearchInput({;
         <Search
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
         />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Input
           ref={inputRef}
           type="text"
@@ -205,16 +169,13 @@ export function EnhancedSearchInput({;
           type="text";
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           value={value}
           onChange={(e) => onChange(e && e.target.value)}
           onFocus={() => setIsFocused(true)}
           placeholder={placeholder}
-
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate";
         />;
         {value && (;
-
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
@@ -222,22 +183,17 @@ export function EnhancedSearchInput({;
             <X className="h-4 w-4" />;
           </button>;
         )}
-
       </div>;
-
 
       <AutocompleteSuggestions
         suggestions={filteredSuggestions}
         searchTerm={value}
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
-
       />;
     </div>;
   );
 }
-
-=======
 import React, { useState, useEffect, useRef } from './react';
 import { Search, X } from './lucide-react';
 import { Input } from '@/components / ui / input';
@@ -334,4 +290,3 @@ function handleClickOutside() {
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

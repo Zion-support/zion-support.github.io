@@ -1,4 +1,3 @@
-
 'use client',
 import { useState, useEffect } from 'react',
 import Link from 'next / link',
@@ -15,7 +14,6 @@ function Header() {
     window.addEventListener ('scroll', handle_scroll),
     return () => window.removeEventListener ('scroll', handle_scroll);
   }, []),
-=======
 
 'use client',;
 import { useState, useEffect } from 'react',;
@@ -54,7 +52,6 @@ export default function Header() {;
         is_scrolled;
           ? 'bg - black / 90 backdrop - blur - xl border - b border - white / 20 shadow - 2xl';
           : 'bg - black / 60 backdrop - blur - md border - b border - white / 10';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }`}
 
 
@@ -63,7 +60,6 @@ export default function Header() {;
         <div className="flex justify-between items-center py-4">
 
           {/* Logo */}
-
           <div className=&quot;flex items - center & quot;>;
             <Link href=&quot;/&quot; className=&quot;flex items - center space - x-3 group & quot; aria - label=&quot;Zion Tech Group Home & quot;>;
               <div className=&quot;w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - blue - 500 rounded - xl flex items - center justify - center group - hover:scale - 110 transition - transform duration - 300 shadow - lg & quot;>;
@@ -74,7 +70,6 @@ export default function Header() {;
               </span>;
             </Link>;
           </div>;
-
           {/* Desktop Navigation */}
           <nav className=&quot;hidden lg:flex items - center space - x-8 & quot; role=&quot;navigation & quot; aria - label=&quot;Main menu & quot;>;
             {navigation.map ((item) => (
@@ -85,11 +80,6 @@ export default function Header() {;
                 aria - label={`Navigate to ${item.name} page`}
               >;
                 {item.name}
-
-
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
-=======
-=======
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
 
 
@@ -104,8 +94,20 @@ export default function Header() {;
                 aria-expanded="false"
                 aria-haspopup="true"
                 aria-label="Services menu"
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
+
+
+              </Link>
+            ))}
+;
+            {/* Services Dropdown */}
+
+
+              <button 
+                className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group"
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Services menu"
               >
                 Services
                 <svg className=&quot;ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot; aria-hidden=&quot;true&quot;>
@@ -116,7 +118,6 @@ export default function Header() {;
                 <div className=&quot;p-6 grid grid-cols-1 gap-3&quot;>
                   {services.map((service) => (
                     <Link
-=======
 <span className=&quot;absolute -bottom - 1 left - 0 w - 0 h - 0.5 bg - gradient - to - r from - purple - 400 to - blue - 400 transition - all duration - 300 group - hover:w - full & quot;></span>;
               </Link>))}
             {/* Services Dropdown */}
@@ -136,7 +137,6 @@ export default function Header() {;
                 <div className=&quot;p - 6 grid grid - cols - 1 gap - 3&quot;>;
                   {services.map ((service) => (
                     <Link;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       key={service.name}
                       href={service.href}
                       className=&quot;text - gray - 300 hover:text - white p - 3 rounded - lg hover:bg - white / 10 transition - all duration - 200 group / item & quot;
@@ -173,13 +173,11 @@ export default function Header() {;
 
             className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-controls="mobile-menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {isMenuOpen ? (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M6 18L18 6M6 6l12 12 & quot; />) : (
                 <path stroke_linecap=&quot;round & quot; stroke_linejoin=&quot;round & quot; stroke_width={2} d=&quot;M4 6h16M4 12h16M4 18h16 & quot; />)}
@@ -187,21 +185,7 @@ export default function Header() {;
           </button>;
         </div>;
         {/* Mobile Navigation */}
-
-
-        {isMenuOpen && (
-          <div 
-            id="mobile-menu"
-            className="lg:hidden border-t border-white/10 animate-fade-in"
-            role="navigation"
-            aria-label="Mobile menu"
-
-
-          >
-            <div className=&quot;px-2 pt-2 pb-3 space-y-1&quot;>
-              {navigation.map((item) => (
-                <Link
-=======
+{isMenuOpen && (
           <div;
             id=&quot;mobile - menu & quot;
             className=&quot;lg:hidden border - t border - white / 10 animate - fade - in & quot;
@@ -211,7 +195,6 @@ export default function Header() {;
             <div className=&quot;px - 2 pt - 2 pb - 3 space - y-1 & quot;>;
               {navigation.map ((item) => (
                 <Link;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={item.name}
                   href={item.href}
                   className=&quot;block px - 3 py - 3 text - gray - 300 hover:text - white hover:bg - white / 5 rounded - lg transition - all duration - 200 & quot;
@@ -229,7 +212,7 @@ export default function Header() {;
 
                 {services.map((service) => (
                   <Link
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+{isMenuOpen && (
                     key={service.name}
                     href={service.href}
                     className=&quot;block px - 3 py - 2 text - gray - 300 hover:text - white hover:bg - white / 5 rounded - lg transition - all duration - 200 & quot;
@@ -257,7 +240,7 @@ export default function Header() {;
             </div>
           </div>
         )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+{isMenuOpen && (
       </div>;
     </header>);
 }

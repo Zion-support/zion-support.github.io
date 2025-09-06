@@ -1,4 +1,3 @@
-
 export type BookChapter = {
   title: string,
   content: string;
@@ -23,6 +22,5 @@ export type BookMeta = {
 export type BookProject = {
   meta: BookMeta,
   chapters: BookChapter[],
-
   visuals: Visuals;
 }

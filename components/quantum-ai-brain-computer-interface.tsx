@@ -1,31 +1,4 @@
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
-=======
-
 import React from 'react';
 
 import Head from 'next/head';
@@ -40,26 +13,25 @@ import {
   Brain,;
   Star,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import {;
+  Phone,;
+  Mail,;
+  MapPin,;
+  Check,;
+  ArrowRight,;
+  Brain,;
+  Star,;
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/quantum-ai-brain-computer-interface')
-=======
 
 export default function QuantumAIBCIPage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s =>;
     s && s.link.endsWith('/quantum-ai-brain-computer-interface');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );  if (!service) return null;import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -151,10 +123,6 @@ export default function QuantumAIBCIPage() {;
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>;
-
-  );
-}
-=======
 import { Phone, Mail, MapPin, Check, ArrowRight, Brain, Star } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
@@ -205,9 +173,8 @@ export default function QuantumAIBCIPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-
   );
-
+}
 import Head from 'next / head';
 import {
   Phone,
@@ -328,12 +295,6 @@ if (return null) {
     </UltraAdvancedFuturisticBackground>);
 }
 
-=======
-
-}
-
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+

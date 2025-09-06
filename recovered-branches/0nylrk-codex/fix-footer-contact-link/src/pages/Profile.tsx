@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -31,12 +30,9 @@ import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
 export default function Profile() {;
 
-  const { user, isLoading, logout } = useAuth();
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
 
@@ -45,7 +41,8 @@ export default function Profile() {;
 
 
   if (isLoading) {
-=======
+  const { user, isLoading, logout } = useAuth();
+
   useEffect(() => {;
     if (!isLoading && !user) {;
       toast && toast.error("Please log in to view your profile");
@@ -54,7 +51,6 @@ export default function Profile() {;
   }, [user, isLoading, navigate]);
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <>;
         <Header />;
@@ -66,7 +62,6 @@ export default function Profile() {;
     );
   }
 
-
   if (!user) {;
     return (
       <>;
@@ -75,7 +70,6 @@ export default function Profile() {;
           <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 max-w-md">;
             <h1 className="text-xl font-bold text-white mb-4">Please log in</h1>;
             <p className="text-zion-slate mb-4">You need to be logged in to view your profile.</p>;
-
             <Button
               onClick={() => navigate("/login?redirect=/profile")}
               className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white";
@@ -89,7 +83,6 @@ export default function Profile() {;
     );
   }
   return (
-
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue">;
@@ -105,38 +98,9 @@ export default function Profile() {;
               <div className="md:w-2/3">;
                 <h2 className="text-xl font-bold text-white">{user && user.displayName || "User"}</h2>;
                 <p className="text-zion-slate-light mb-4">{user && user.email}</p>;
-
                 <Button
                   onClick={() => {;
                     logout();
-
-                <Button
-                  onClick={() => {
-
-                    logout(),
-
-
-                    navigate("/")
-                  }}
-                  variant="outline"
-                  className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
-                >
-                  Logout
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-
-                    navigate("/");
-                  }}
-                  variant="outline";
-                  className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white";
-=======
 import React, { useEffect } from 'react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -158,7 +122,6 @@ if ( {) {
 }
       toast.error ("Please log in to view your profile");
       navigate ("/login?redirect=/profile");
-=======
 
 import React, { useEffect } from 'react',;
 import { Header } from "@/components/Header",;
@@ -236,7 +199,6 @@ if ( {) {
                   }}
                   variant="outline";
                   className="border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text - white";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 >;
                   Logout;
                 </Button>;
@@ -246,12 +208,9 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
+;
+
+;
 
     </>);
 }
-
-=======
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

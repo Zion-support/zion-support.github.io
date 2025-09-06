@@ -155,7 +155,5 @@ export const MilestonesList:React.FC<MilestonesListProps> = ({;
   onReject ;
 }/>) ) ;
 }</div> </div>) ;
-
 };
 "
-

@@ -1,4 +1,3 @@
-
 'use client',
 import React, { useState } from 'react',
 import Link from 'next / link',
@@ -17,7 +16,6 @@ export default /**
 function InteractiveCard() {
   const [is_hovered, setIsHovered] = useState (false),
   return (
-
     <Link;
       href={href}
       className={`group block p - 8 rounded - 2xl border border - white / 10 hover:border - white / 30 bg - black / 20 hover:bg - black / 40 transition - all duration - 500 transform hover:scale - 105 hover:shadow - 2xl backdrop - blur - sm hover - lift ${class_name}`}
@@ -26,7 +24,6 @@ function InteractiveCard() {
       aria - label={`Navigate to ${title} page`}
 >;
       <div className=&quot;relative & quot;>;
-=======
 
 'use client',;
 import React, { useState } from 'react',;
@@ -63,8 +60,6 @@ export default function InteractiveCard({;
     >
       <div className="relative">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Animated background */}
         <div;
           className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
@@ -80,25 +75,17 @@ export default function InteractiveCard({;
           <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {title}
           </h3>;
           <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
             {description}
           </p>;
           {/* Custom children or default arrow */}
-
-
-{children || (
-
-            <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
-=======
           {children || (
             <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <span>Learn More</span>
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
@@ -142,25 +129,19 @@ export default function InteractiveCard({;
           style={{
             background: `linear - gradient (45deg, var (--${color.split ('-')[1]}-500), var (--${color.split ('-')[3]}-500))`;
 
-=======
-
           style={{;
             background: `linear-gradient(45deg, var(--${color.split('-')[1]}-500), var(--${color.split('-')[3]}-500))`;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }}
         />;
       </div>;
     </Link>);
 }
-
 export /**
  * FeatureCard - Function description
  */
 function FeatureCard() {
   return (
-
-=======
 
 ;
 export function FeatureCard({;
@@ -173,7 +154,6 @@ export function FeatureCard({;
 }: InteractiveCardProps & { stats?: { label: string, value: string }[] }) {;
   return (;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <InteractiveCard;
       title={title}
       description={description}
@@ -193,7 +173,6 @@ export function FeatureCard({;
         </div>)}
     </InteractiveCard>);
 }
-
 export /**
  * TestimonialCard - Function description
  */
@@ -202,8 +181,6 @@ function TestimonialCard() {
     <div className={`bg - black / 30 backdrop - blur - sm border border - white / 10 rounded - 2xl p - 8 hover:bg - black / 50 transition - all duration - 300 transform hover:scale - 105 ${class_name}`}>;
       {/* Quote icon */}
 <div className=&quot;text - 4xl mb - 4&quot;>💬</div>;
-
-=======
 
 ;
 export function TestimonialCard({;
@@ -225,7 +202,6 @@ export function TestimonialCard({;
     <div className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}>;
       {/* Quote icon */}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Rating */}
       <div className=&quot;flex mb - 4&quot;>;
         {Array.from ({ length: rating }).map ((_, i) => (
@@ -234,17 +210,10 @@ export function TestimonialCard({;
           </svg>))}
       </div>;
       {/* Quote */}
-
-
-      <blockquote className="text-gray-300 text-lg leading-relaxed mb-6 italic">
-        "{quote}"
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </blockquote>
-=======
+<blockquote className=&quot;text - gray - 300 text - lg leading - relaxed mb - 6 italic & quot;>;
+        &quot;{quote}&quot;
       </blockquote>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Author info */}
       <div className=&quot;border - t border - white / 10 pt - 4&quot;>;
         <div className=&quot;font - semibold text - white & quot;>{author}</div>;

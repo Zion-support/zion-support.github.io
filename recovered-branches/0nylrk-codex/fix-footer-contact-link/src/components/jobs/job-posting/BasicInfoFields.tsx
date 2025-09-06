@@ -1,4 +1,3 @@
-
 import {;
   FormField,;
   FormItem,;
@@ -6,20 +5,16 @@ import {;
   FormControl,;
   FormMessage,;
 
-=======
-
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
 import { Card, CardContent } from "@/components/ui/card";
-
 import React, { useState } from './react';
 import { Control  } from './react - hook - form';
 import {
@@ -32,9 +27,6 @@ import {
 import { Input  } from '@/components / ui / input';
 import { ClientBudgetRecommender  } from '@/components / pricing / ClientBudgetRecommender';
 import { Card, CardContent  } from '@/components / ui / card';
-
-=======
-=======
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
 import { 
@@ -50,8 +42,21 @@ import { Card, CardContent } from "@/components/ui/card",
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useState } from "react",
+import { Control } from "react-hook-form",
+import { 
+  FormField,
+  FormItem, 
+  FormLabel, 
+  FormControl, 
+  FormMessage 
+} from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",
+import { Card, CardContent } from "@/components/ui/card",
+
+
+
 interface BasicInfoFieldsProps {
   control: Control < any>;
 }
@@ -85,6 +90,9 @@ import {;
 import { Input } from "@/components/ui/input",;
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",;
 import { Card, CardContent } from "@/components/ui/card",;
+interface BasicInfoFieldsProps {
+  control: Control < any>;
+}
 
 interface BasicInfoFieldsProps {;
   control: Control<any>;
@@ -100,7 +108,6 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
     (setMinBudget(min && min.toString()), setMaxBudget(max && max.toString()));
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="space-y-4">;
       <FormField
@@ -117,11 +124,8 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
           </FormItem>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
-
       />;
-
 
       <FormField
         control={control}
@@ -135,18 +139,13 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
             <FormMessage />;
           </FormItem>;
         )}
-
       />;
 
-
       <FormField
-=======
 
       />;
       <FormField;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         control={control}
         name="category"
         render={({ field }) => (;
@@ -156,7 +155,6 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
               <select
                 className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                 {...field}>;
-=======
 export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
   control,
 }) => {
@@ -204,7 +202,6 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                 className="flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - base ring - offset - background placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 md:text - sm";
                 {...field}
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 <option value="">Select a category</option>;
                 <option value="development">Development</option>;
                 <option value="design">Design</option>;
@@ -216,11 +213,9 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
               </select>;
             </FormControl>;
             <FormMessage />;
-
       />;
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
         <FormField
           control={control}
           name="budgetMin"
@@ -230,28 +225,21 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
               <FormControl>;
                 <Input
                   type="number"
-
                   placeholder="e && e.g. 30"
                   value={minBudget || rest && rest.value}
                   onChange={(e) => {;
                     setMinBudget(e && e.target.value);
-
-=======
-
-                  value={minBudget || rest.value}
-                  onChange={e => {;
-                    setMinBudget(e.target.value),;
-
-=======
                   value={minBudget || rest.value}
 
                   onChange={e => {;
                     setMinBudget(e.target.value),;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  value={minBudget || rest.value}
+
+                  onChange={e => {;
+                    setMinBudget(e.target.value),;
+
                     onChange(e);
-=======
           </FormItem>)}
       />;
       <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
@@ -269,15 +257,12 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                   on_change={(e) => {
                     setMinBudget (e.target.value);
                     on_change (e);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }}
                   {...rest}
                 />;
               </FormControl>;
               <FormMessage />;
-
         />;
-
 
         <FormField
           control={control}
@@ -288,27 +273,17 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
               <FormControl>;
                 <Input
                   type="number"
-
-
-                  value={maxBudget || rest.value}
-                  onChange={e => {;
-
-=======
                   value={maxBudget || rest.value}
 
                   onChange={e => {;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     setMaxBudget(e.target.value);
-=======
                   placeholder="e && e.g. 60"
                   value={maxBudget || rest && rest.value}
                   onChange={(e) => {;
                     setMaxBudget(e && e.target.value);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     onChange(e);
-=======
             </FormItem>)}
         />;
         <FormField;
@@ -325,16 +300,11 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                   on_change={(e) => {
                     setMaxBudget (e.target.value);
                     on_change (e);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }}
                   {...rest}
                 />;
               </FormControl>;
               <FormMessage />;
-
-
-
-=======
       
 
       <Card>
@@ -343,13 +313,18 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
             jobTitle={control._formValues.title || ""}
             category={control._formValues.category || ""}
             experienceLevel={control._formValues.experienceLevel || ""}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      
+
+      <Card>
+        <CardContent className="pt-4">
+          <ClientBudgetRecommender
+            jobTitle={control._formValues.title || ""}
+            category={control._formValues.category || ""}
+            experienceLevel={control._formValues.experienceLevel || ""}
             onSuggestionApplied={handleSuggestionApplied}
           />
         </CardContent>
       </Card>
-=======
         />;
       </div>;
 
@@ -364,7 +339,6 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
         </CardContent>;
       </Card>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <FormField
         control={control}
         name="location"
@@ -374,7 +348,6 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
             <FormControl>;
               <Input
                 placeholder="e && e.g. Remote, San Francisco, etc."
-=======
             </FormItem>)}
         />;
       </div>;
@@ -397,29 +370,28 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
             <FormControl>;
               <Input;
                 placeholder="e.g. Remote, San Francisco, etc.";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {...field}
               />;
             </FormControl>;
             <FormMessage />;
-
           </FormItem>)}
       />;
     </div>);
 }
 ;
-
-=======
-
-);
-
-=======
       />;
     </div>;
   );
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      />;
+    </div>;
+  );
+
+
+      />;
+    </div>;
+  );
+
+

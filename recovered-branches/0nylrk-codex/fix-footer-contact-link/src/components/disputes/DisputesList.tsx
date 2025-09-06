@@ -1,19 +1,3 @@
-
-
-
-
-
-import React, { useState } from "react";
-import {Dispute, DisputeStatus} from "@/types/disputes";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Skeleton} from "@/components/ui/skeleton";
-import {formatDistanceToNow} from "date-fns";
-import {ShieldAlert} from "lucide-react";
-import {Link} from "react-router-dom";
-
-=======
 import React, { useState } from "react",
 import { Dispute, DisputeStatus } from "@/types/disputes",
 import { Button } from "@/components/ui/button",
@@ -39,7 +23,6 @@ type DisputesListProps = {
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default";
@@ -49,7 +32,6 @@ type DisputesListProps = {
         return "outline", // Changed from "success" to "outline"
       case "closed":
 
-=======
         return "outline",
       default:
         return "default"
@@ -125,8 +107,6 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
       case "resolved":;
         return "outline", // Changed from "success" to "outline";
       case "closed":;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React, { useState } from './react';
 import { Dispute, DisputeStatus } from '@/types / disputes';
 import { Button } from '@/components / ui / button';
@@ -159,15 +139,10 @@ function DisputesList() {
       case "resolved":;
         return "outline", // Changed from './success'; to "outline";
       case "closed":;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         return "outline";
       default:;
         return "default";
     }
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
             </TableBody>;
           </Table>;
@@ -179,12 +154,12 @@ function DisputesList() {
 
   if (disputes && disputes.length === 0) {;
 
-=======
 
 
 
   if (disputes.length === 0) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  if (disputes && disputes.length === 0) {;
     return (
       <div className="text-center py-12 border rounded-md bg-muted/20">;
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />;
@@ -229,8 +204,6 @@ function DisputesList() {
         <Button
           variant={statusFilter === "closed" ? "default" : "outline"}
           onClick={() => setStatusFilter("closed")}
-
-=======
   }
 ;
   // Check condition
@@ -317,13 +290,11 @@ if ( {) {
         <Button;
           variant={status_filter === "closed" ? "default" : "outline"}
           on_click={() => setStatusFilter ("closed")}
-
           size="sm";
         >;
           Closed;
         </Button>;
       </div>;
-
       <div className="border rounded - md overflow - hidden">;
         <Table>;
           <TableHeader>;
@@ -352,21 +323,10 @@ if ( {) {
                     </span>;
                     <span>;
                       Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
-
                     </span>;
                   </div>;
                 </TableCell>;
                 <TableCell>;
-
-
-
-          </TableBody>;
-        </Table>;
-      </div>;
-    </div>;
-  );
-}
-
                   {formatDistanceToNow (new Date (dispute.created_at), { add_suffix: true })}
                 </TableCell>;
                 <TableCell>;
@@ -385,8 +345,5 @@ if ( {) {
       </div>;
     </div>);
 }
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

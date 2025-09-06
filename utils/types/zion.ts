@@ -1,7 +1,4 @@
 
-
-=======
-
 export interface Branding {;
 
   logoUrl?: string,;
@@ -18,7 +15,6 @@ export interface Branding {;
 export interface DeployModules {;
   marketplace: boolean;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -33,7 +29,6 @@ export interface DeployModules {;
 
 
 
-=======
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
   referralAmbassadors?: boolean,;
@@ -58,8 +53,6 @@ export interface DeployInput {;
 ;
 export interface DeployResult {;
   success: boolean;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
@@ -73,10 +66,8 @@ export interface Branding {
   primary_color?: string,
   secondary_color?: string,
   subdomain?: string;
-=======
 
 
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -84,7 +75,6 @@ export interface Branding {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export interface DeployModules {
   marketplace: boolean,
@@ -138,7 +128,6 @@ export interface DeployResult {
 }
 export interface AccessControlConfig {
   allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   adminKeyConfigured: boolean;
 
 

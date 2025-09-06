@@ -1,8 +1,3 @@
-
-
-
-
-
 import {ContractTemplate} from "@/types/contracts";
 import {Button} from "@/components/ui/button";
 import {Loader2, Edit, Trash, Star, StarOff} from "lucide-react";
@@ -37,7 +32,6 @@ export function TemplateList(): any ({;
       setTemplateToDelete(null);
     }
   };
-=======
 interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
@@ -50,7 +44,6 @@ interface TemplateListProps {
   const handleSetDefault = async (templateId: string) => {;
     await setDefaultTemplate && setDefaultTemplate.mutateAsync(templateId);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   if (isLoading) {;
     return (
@@ -60,9 +53,7 @@ interface TemplateListProps {
     );
   }
 
-
   if (!templates && templates.length) {;
-
     return (
       <div className="text-center py-8">;
         <p className="text-muted-foreground">No templates found.</p>;
@@ -82,66 +73,6 @@ interface TemplateListProps {
                   {template && template.is_default && (;
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
                   )}
-
-
-            <Button 
-              onClick={() => onSelect(template)} 
-              variant="outline" 
-
-
-              className="w-full"
-            >
-              Use This Template
-            </Button>
-          </CardContent>
-        </Card>
-      ))}
-      <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>Delete Template</AlertDialogTitle>
-            <AlertDialogDescription>
-              Are you sure you want to delete this template? This action cannot be undone.
-            </AlertDialogDescription>
-          </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction
-              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
-              onClick={handleDeleteConfirm}
-
-                </div>;
-                <p className="text-xs text-muted-foreground">;
-                  Last updated: {new Date(template && template.updated_at).toLocaleDateString()}
-                </p>;
-              </div>;
-
-              <div className="flex items-center gap-2">;
-                <Button variant="ghost" size="icon" onClick={() => onEdit(template)}>;
-                  <Edit className="h-4 w-4" />;
-                </Button>;
-                {!template && template.is_default ? (;
-                  <Button variant="ghost" size="icon" onClick={() => handleSetDefault(template && template.id)}>;
-                    <Star className="h-4 w-4" />;
-                  </Button>;
-                ) : (;
-                  <Button variant="ghost" size="icon" disabled>;
-                    <StarOff className="h-4 w-4" />;
-                  </Button>;
-                )}
-                <Button variant="ghost" size="icon" onClick={() => handleDeleteClick(template && template.id)}>;
-                  <Trash className="h-4 w-4 text-destructive" />;
-                </Button>;
-              </div>;
-            </div>;
-
-            <Separator className="my-3" />;
-
-            <Button
-              onClick={() => onSelect(template)} ;
-              variant="outline" ;
-              className="w-full";
-=======
 import { ContractTemplate } from '@/types / contracts';
 import { Button } from '@/components / ui / button';
 import { Loader2, Edit, Trash, Star, StarOff } from './lucide-react';
@@ -238,42 +169,31 @@ if ( {) {
               variant="outline";
               className="w - full";
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             >;
               Use This Template;
             </Button>;
           </CardContent>;
-
         </Card>))}
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete (null)}>;
         <AlertDialogContent>;
           <AlertDialogHeader>;
             <AlertDialogTitle > Delete Template</AlertDialogTitle>;
-
             <AlertDialogDescription>;
               Are you sure you want to delete this template? This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
           <AlertDialogFooter>;
-
             <AlertDialogCancel > Cancel</AlertDialogCancel>;
             <AlertDialogAction;
               className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
               on_click={handleDeleteConfirm}
             >;
-
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
         </AlertDialogContent>;
       </AlertDialog>;
+;
 
     </div>);
 }
-
-=======
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

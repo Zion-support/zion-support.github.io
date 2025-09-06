@@ -1,5 +1,3 @@
-
-
 import {;
   Dialog,;
   DialogContent,;
@@ -7,7 +5,6 @@ import {;
   DialogFooter,;
   DialogHeader,;
   DialogTitle,;
-
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,7 +14,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Switch } from "@/components/ui/switch";
 import { toast } from "sonner";
 interface Integration {;
-=======
 import React, { useState } from './react';
 import {
   Dialog,
@@ -34,21 +30,17 @@ import { Checkbox  } from '@/components / ui / checkbox';
 import { Switch  } from '@/components / ui / switch';
 import { toast  } from './sonner';
 interface Integration {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   name: string;
   description: string;
   logo_url?: string;
   status: "connected" | "warning" | "disconnected";
 
-
 interface IntegrationConnectionModalProps {;
-
   isOpen: boolean;
   onClose: () => void;
   integration: Integration
 }
-
 
 export function IntegrationConnectionModal(): any ({;
   isOpen,;
@@ -68,12 +60,10 @@ export function IntegrationConnectionModal(): any ({;
 
     // Simulate OAuth flow;
     setTimeout(() => {;
-
       setIsConnecting(false);
       toast && toast.success(`Connected to ${integration && integration.name} successfully`);
       onClose();
     }, 2000);
-
 
     // In a real application, this would open a popup for OAuth authentication;
     // window && window.open(`/api/oauth/${integration && integration.id}`, 'oauthwidth=600,height=600');
@@ -88,11 +78,9 @@ export function IntegrationConnectionModal(): any ({;
   const handleSaveSettings = () => {;
     // In a real application, this would save the sync settings;
     toast && toast.success("Integration settings saved");
-
     onClose();
   }
 
-=======
 
   const [syncSettings, setSyncSettings] = useState({
     autoCreateContacts: true,
@@ -127,8 +115,6 @@ export function IntegrationConnectionModal(): any ({;
     onClose()
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-md">;
@@ -140,28 +126,11 @@ export function IntegrationConnectionModal(): any ({;
             onError={(e) => {;
               (e && e.target as HTMLImageElement).src = "/placeholder && placeholder.svg";
             }}
-
-
-              {integration.status === "connected" || integration.status === "warning" 
-                ? "Manage your connection settings" 
-
-
-                : `Connect your ${integration.name} account`}
-            </DialogDescription>
-          </div>
-        </DialogHeader>
-
-
-        {integration.status === "connected" ||
-
-        integration.status === "warning" ? (
-=======
         
         {(integration.status === "connected" || integration.status === "warning") ? (
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
@@ -169,7 +138,6 @@ export function IntegrationConnectionModal(): any ({;
 
 
 
-=======
                 
 
                 <div className="flex items-center space-x-2">
@@ -178,8 +146,6 @@ export function IntegrationConnectionModal(): any ({;
                     checked={syncSettings.autoCreateContacts} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, autoCreateContacts: checked as boolean})
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     }
                   />
                   <Label htmlFor="autoCreateContacts">
@@ -189,7 +155,6 @@ export function IntegrationConnectionModal(): any ({;
 
 
 
-=======
                 
 
                 <div className="flex items-center space-x-2">
@@ -198,8 +163,6 @@ export function IntegrationConnectionModal(): any ({;
                     checked={syncSettings.pushNotes} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, pushNotes: checked as boolean})
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     }
                   />
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
@@ -207,7 +170,6 @@ export function IntegrationConnectionModal(): any ({;
 
 
 
-=======
                 
 
                 <div className="flex items-center space-x-2">
@@ -216,8 +178,6 @@ export function IntegrationConnectionModal(): any ({;
                     checked={syncSettings.syncJobDetails} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, syncJobDetails: checked as boolean})
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     }
                   />
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
@@ -225,7 +185,6 @@ export function IntegrationConnectionModal(): any ({;
 
 
 
-=======
                 
 
                 <div className="flex items-center space-x-2">
@@ -234,8 +193,6 @@ export function IntegrationConnectionModal(): any ({;
                     checked={syncSettings.syncApplicantData} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, syncApplicantData: checked as boolean})
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     }
                   />
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
@@ -246,11 +203,9 @@ export function IntegrationConnectionModal(): any ({;
               
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="space-y-2">
                 <h3 className="text-sm font-medium">API Details</h3>
                 <p className="text-xs text-muted-foreground">
-=======
           />;
           <div>;
             <DialogTitle>{integration && integration.name} Integration</DialogTitle>;
@@ -332,17 +287,10 @@ export function IntegrationConnectionModal(): any ({;
               <div className="space-y-2">;
                 <h3 className="text-sm font-medium">API Details</h3>;
                 <p className="text-xs text-muted-foreground">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   Last synced:{" "}
                   {integration && integration.lastSync;
                     ? new Date(integration && integration.lastSync).toLocaleString();
                     : "Never"}
-
-
-            
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <DialogFooter className="flex items-center justify-between">
               <Button
                 variant="outline"
@@ -367,7 +315,6 @@ export function IntegrationConnectionModal(): any ({;
               </p>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">What will be synced:</h3>
                 <ul className="list-disc pl-4 text-sm space-y-1">
@@ -383,7 +330,6 @@ export function IntegrationConnectionModal(): any ({;
             
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <DialogFooter>
               <Button onClick={handleConnectOAuth} disabled={isConnecting}>
                 {isConnecting
@@ -393,7 +339,6 @@ export function IntegrationConnectionModal(): any ({;
             </DialogFooter>
           </>
 
-=======
 
 ;
 export function IntegrationConnectionModal({ isOpen, onClose, integration }: IntegrationConnectionModalProps) {;
@@ -543,12 +488,10 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
               </Button>;
             </DialogFooter>;
           </>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         )}
       </DialogContent>;
     </Dialog>;
   );
-
   last_sync?: string;
 }
 interface IntegrationConnectionModalProps {
@@ -727,11 +670,10 @@ function IntegrationConnectionModal() {
           </>)}
       </DialogContent>;
     </Dialog>);
-
-}
-=======
 }
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+;
+
+}

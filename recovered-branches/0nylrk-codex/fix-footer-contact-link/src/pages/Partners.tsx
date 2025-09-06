@@ -1,4 +1,3 @@
-
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -12,21 +11,16 @@ import {PartnerResources} from "@/components/partners/PartnerResources";
 import {useAuth} from "@/hooks/useAuth";
 import {useNavigate} from "react-router-dom";
 export default function Partners() {;
-
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     return (
-
       <div className="container max-w-6xl py-10">;
         <div className="text-center mb-8">;
           <h1 className="text-4xl font-bold tracking-tight text-white mb-2">Zion AI Partner Program</h1>;
@@ -147,16 +141,13 @@ export default function Partners() {;
           <Button
             size="lg" 
             variant="outline" 
-
             className="text-zion-cyan border-zion-cyan"
-=======
 
           <Button 
             size="lg" 
             variant="outline" 
             className="text-zion-cyan border-zion-cyan"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             onClick={() => navigate('/login')}
           >;
             Partner Login;
@@ -165,75 +156,6 @@ export default function Partners() {;
       </div>;
     );
   }
-
-
-
-
-
-  // Authenticated user view - Partner Dashboard
-  return (
-    <div className="container max-w-7xl py-10">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight text-white">Partner Dashboard</h1>
-          <p className="text-zion-slate-light">Manage your referral links and track your performance</p>
-        </div>
-        <div className="flex gap-2">
-          <Button variant="outline" className="flex items-center gap-2" onClick={() => window.print()}>
-            <FileDown className="h-4 w-4" />
-            Export CSV
-          </Button>
-        </div>
-      </div>
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
-        <TabsList className="grid grid-cols-2 md:grid-cols-5 mb-4">
-          <TabsTrigger value="overview">Overview</TabsTrigger>
-          <TabsTrigger value="referrals">Referral Links</TabsTrigger>
-          <TabsTrigger value="earnings">Earnings</TabsTrigger>
-          <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>
-          <TabsTrigger value="resources">Resources</TabsTrigger>
-        </TabsList>
-        <TabsContent value="overview" className="space-y-4">
-          <PartnerDashboard />
-        </TabsContent>
-        <TabsContent value="referrals" className="space-y-4">
-          <PartnerReferralLinks />
-        </TabsContent>
-        <TabsContent value="earnings" className="space-y-4">
-          <Card>
-            <CardHeader>
-              <CardTitle>Earnings & Payouts</CardTitle>
-              <CardDescription>Track your earnings and manage payouts</CardDescription>
-            </CardHeader>
-            <CardContent>
-              {/* This will be implemented later */}
-              <p className="text-zion-slate-light">Earnings tracking and payout requests will be available soon.</p>
-            </CardContent>
-          </Card>
-        </TabsContent>
-        <TabsContent value="leaderboard" className="space-y-4">
-          <PartnerLeaderboard />
-        </TabsContent>
-        <TabsContent value="resources" className="space-y-4">
-          <PartnerResources />
-        </TabsContent>
-      </Tabs>
-    </div>
-  )
-
-
-  // Authenticated user view - Partner Dashboard;
-  return (
-    <div className="container max-w-7xl py-10">;
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">;
-        <div>;
-          <h1 className="text-3xl font-bold tracking-tight text-white">Partner Dashboard</h1>;
-          <p className="text-zion-slate-light">Manage your referral links and track your performance</p>;
-        </div>;
-        <div className="flex gap-2">;
-          <Button variant="outline" className="flex items-center gap-2" onClick={() => window && window.print()}>;
-            <FileDown className="h-4 w-4" />;
-=======
 import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
@@ -393,22 +315,18 @@ if ( {) {
         <div className="flex gap - 2">;
           <Button variant="outline" className="flex items - center gap - 2" on_click={() => window.print ()}>;
             <FileDown className="h - 4 w - 4" />;
-
             Export CSV;
           </Button>;
         </div>;
       </div>;
-
       <Tabs value={active_tab} onValueChange={setActiveTab} className="space - y-4">;
         <TabsList className="grid grid - cols - 2 md:grid - cols - 5 mb - 4">;
-
           <TabsTrigger value="overview">Overview</TabsTrigger>;
           <TabsTrigger value="referrals">Referral Links</TabsTrigger>;
           <TabsTrigger value="earnings">Earnings</TabsTrigger>;
           <TabsTrigger value="leaderboard">Leaderboard</TabsTrigger>;
           <TabsTrigger value="resources">Resources</TabsTrigger>;
         </TabsList>;
-
         <TabsContent value="overview" className="space - y-4">;
           <PartnerDashboard />;
         </TabsContent>;
@@ -437,9 +355,6 @@ if ( {) {
     </div>);
 }
 
-=======
-
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

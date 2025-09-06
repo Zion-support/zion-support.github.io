@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -35,17 +34,13 @@ export default function TalentOnboarding() {;
   if (!isLoading && !user) {;
     return <Navigate to="/login" replace />;
 
-=======
-
 
   // If not authenticated, redirect to login
   if (!isLoading && !user) {
     return <Navigate to="/login" replace />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return (
 
-=======
 
 import React from "react",;
 import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm",;
@@ -69,7 +64,8 @@ export default function TalentOnboarding() {;
           <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12">;
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">Join Our Talent Network</h1>;
             <p className="text-zion-slate-light max-w-2xl mx-auto">;
-=======
+  }
+  return (
 import React from './react';
 import { TalentOnboardingForm } from '@/components / profile / TalentOnboardingForm';
 import { Header } from '@/components / Header';
@@ -97,23 +93,17 @@ if ( {) {
           <div className="max - w-4xl mx - auto text - center mb - 8 md:mb - 12">;
             <h1 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">Join Our Talent Network</h1>;
             <p className="text - zion - slate - light max - w-2xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Showcase your skills to top clients and employers. Create a professional profile;
               to get discovered for AI and tech projects on the Zion Marketplace.;
             </p>;
           </div>;
-
-
           <TalentOnboardingForm />;
         </div>;
       </div>;
       <Footer />;
+;
+
+;
 
     </>);
 }
-
-=======
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

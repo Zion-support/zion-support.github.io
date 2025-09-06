@@ -1,10 +1,8 @@
-
 import {Link, useLocation} from "react-router-dom";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare} from "lucide-react";
 interface MainNavigationProps {;
-
   isAdmin?: boolean;
   unreadCount?: number;
   className?: string;
@@ -14,20 +12,6 @@ export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, class
   const { user } = useAuth();
   const isAuthenticated = !!user;
   const location = useLocation();
-
-
-
-
-interface MainNavigationProps {
-  isAdmin?: boolean,
-  unreadCount?: number,
-  className?: string
-}
-
-
-export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const links = [
     {
       name: "Home"
@@ -103,7 +87,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   }
 
 
-=======
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>
       <ul className="flex items-center gap-1">
@@ -183,31 +166,27 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
     });
   }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <nav className={cn("ml-6 hidden md:flex", className)}>;
       <ul className="flex items-center gap-1">;
-
-        {links.map((link) => (;
-          <li key={link.name}>;
-            <Link;
-              to={link.href}
-              className={cn(;
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors";
-                link.matches(location.pathname);
-                  ? "bg-zion-purple/20 text-zion-cyan";
-                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
-
-
-              )}
-            >
-              {link.name}
-            </Link>
-          </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
 
 
+
+        {links && links.map((link) => (;
+          <li key={link && link.name}>;
+            <Link
+              to={link && link.href}
+              className={cn(
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors"
+                link && link.matches(location && location.pathname)
+                  ? "bg-zion-purple/20 text-zion-cyan"
+                  : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
+              )}>;
+              {link && link.name}
+            </Link>;
+          </li>;
+        ))}
 
         {/* Messages link with unread counter */}
         {isAuthenticated && (;
@@ -215,16 +194,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
             <Link
               to="/messages"
               className={cn(
-
-
-                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative"
-                location && location.pathname === "/messages" || location && location.pathname === "/inbox"
-
-=======
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative",
                 location.pathname === "/messages" || location.pathname === "/inbox"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative"
+                location && location.pathname === "/messages" || location && location.pathname === "/inbox"
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}>;
@@ -243,15 +217,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
-
       </ul>;
     </nav>;
   );
 }
-
-=======
 import { Link, use_location } from './react-router-dom';
 import { cn } from '@/lib / utils';
 import { use_auth } from '@/hooks / use_auth';
@@ -362,4 +332,3 @@ if ( {) {
       </ul>;
     </nav>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

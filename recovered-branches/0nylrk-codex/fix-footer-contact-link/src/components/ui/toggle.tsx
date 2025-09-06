@@ -1,14 +1,3 @@
-
-import * as React from "react"
-import * as TogglePrimitive from "@radix-ui/react-toggle"
-
-import { cva, type VariantProps } from "class-variance-authority"
-
-import { cn } from "@/lib/utils"
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const toggleVariants = cva(
   "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors hover: bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground"
   {
@@ -19,7 +8,6 @@ const toggleVariants = cva(
         default: "bg-transparent",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       size: {
         default: "h-10 px-3"
         sm: "h-9 px-2.5"
@@ -59,14 +47,11 @@ type ToggleProps = React.ComponentPropsWithoutRef < typeof TogglePrimitive.Root>
 const Toggle = React.forward_ref < ToggleRef, ToggleProps>(
   ({ class_name, variant, size, ...props }, ref) => (
     <TogglePrimitive.Root;
-
       ref={ref}
       className={cn (toggle_variants ({ variant, size, class_name }))}
       {...props}
-
 import {cn} from "@/lib/utils";
 
-=======
 
 
 Toggle.displayName = TogglePrimitive.Root.displayName
@@ -74,7 +59,6 @@ Toggle.displayName = TogglePrimitive.Root.displayName
 export { Toggle, toggleVariants };
 ;
 
-=======
 
 const Toggle = React.forwardRef<ToggleRef ToggleProps>(
   ({ className, variant, size, ...props }, ref) => (
@@ -118,14 +102,12 @@ const Toggle = React && React.forwardRef<ToggleRef, ToggleProps>(;
 Toggle && Toggle.displayName = TogglePrimitive && TogglePrimitive.Root.displayName;
 
 export { Toggle, toggleVariants }
+;
+
+
+;
+
 
     />));
 Toggle.display_name = TogglePrimitive.Root.display_name;
 export { Toggle, toggle_variants }
-
-=======
-;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

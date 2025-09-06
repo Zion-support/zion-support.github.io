@@ -1,18 +1,7 @@
 
-
-=======
-
-import React from "react";
-
-
-import React from "react";
-export default function CertificatePreview({
-
   courseId,
   userId = "demo-user",
 }: {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   courseId: string;
   userId?: string;
 }) {;
@@ -32,13 +21,9 @@ export default function CertificatePreview({
       </div>;
       <a
         href={url}
-
-=======
 import React from 'react';
 export default function CertificatePreview({ courseId, userId = 'demo-user' }: { courseId: string, userId?: string }) {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
         className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded"
       >
         Download PDF
@@ -46,7 +31,13 @@ export default function CertificatePreview({ courseId, userId = 'demo-user' }: {
     </div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        className="mt-3 inline-block px-4 py-2 bg-indigo-600 text-white rounded">;
+        Download PDF;
+      </a>;
+    </div>;
+  );
+import React from 'react';
+export default function CertificatePreview({ courseId, userId = 'demo-user' }: { courseId: string, userId?: string }) {
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">;
@@ -64,12 +55,7 @@ export default function CertificatePreview({ courseId, userId = 'demo-user' }: {
       </a>;
     </div>;
   );
-
 }
-
-}
-
-=======
 import React from './react';
 ;
 export default /**
@@ -111,7 +97,4 @@ function CertificatePreview() {
       </a>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,11 +1,3 @@
-const handleEnhance = async () => {
-    if ((!options.content |options.content.trim().length < contentLength) &&
-        (!options.context |options.context.trim().length < contentLength)) {
-      toast({
-        title: "Not enough content"
-        description: `Please enter at least ${contentLength} characters before enhancing.`
-        variant: "destructive"
-
   import { useState } from 'react';
 import { Button } from '@/components / ui / button';
 
@@ -73,8 +65,6 @@ if ( {) {
     setShowActions (false);
     setGeneratedContent (null);
   }
-
-
   import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
@@ -151,8 +141,7 @@ export function AIEnhancementButton(): any ({;
   },
   
 
-
-  if (showActions) {
+  if (showActions) {;
     return (
       <div className="flex gap-2 items-center">;
         <Button
@@ -183,7 +172,6 @@ export function AIEnhancementButton(): any ({;
           variant="ghost"
           size="sm"
           onClick = {handleCancel,}
-
           className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20">;
           <X className="h-4 w-4 mr-1" />;
           Cancel;
@@ -191,7 +179,6 @@ export function AIEnhancementButton(): any ({;
       </div>;
     ),;
   }
-
 
   return (
     <Button
@@ -206,19 +193,6 @@ export function AIEnhancementButton(): any ({;
       ) : (;
         <Sparkles className="h-4 w-4" />;
       )}
-
-      <span className="text-xs">{buttonText}</span>;
-    </Button>;
-  );
-
-};";
-<Buttontype="button" variant="ghost" size="sm" onClick={
-  handleAccept "
-}className="text-green-500 hover:text-green-700 hover:bg-green-100/20"> <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) ";
-}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) ";
-}return (<Button) : (<Sparkles className=" h-4 w-4" />) ;
-}</Button>) ;
-}"}
 
   // Check condition
 if ( {) {
@@ -283,12 +257,3 @@ if ( {) {
 }return (<Button) : (<Sparkles className=" h - 4 w - 4" />);
 }</Button>);
 }"}
-
-
-    >
-      {isEnhancing ? (
-        <Loader2 className="h-4 w-4 animate-spin" />
-      ) : (
-        <Sparkles className="h-4 w-4" />
-      )}
-      <span className="text-xs">{buttonText}</span>

@@ -22,34 +22,27 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect, useState } from 'react';
+const Web3LoginModal = dynamic(() => import('./Web3LoginModal'), { ssr: false }),
+async function resolveDisplayName(addr: string): Promise<string | null> {
+  try {
 
+    const r = await fetch(`/api/did/get?address=${encodeURIComponent(addr)}`);
+    const { data } = await r.json();
 
-=======
 
 
 export default function Web3LoginButton() {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<{;
     address: string;
     chain: 'evm' | 'sol';
   } | null>(null);  const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
-
-    const did = data?.payload || {};
-    return did.lens || did.ens || null
-  } catch { return null };
-
-}
-export default function Web3LoginButton() {
-=======
 }
 
 
 export default function Web3LoginButton() {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [open, setOpen] = useState(false);
 
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
@@ -58,6 +51,16 @@ export default function Web3LoginButton() {;
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
   useEffect(() => {
 
+    const did = data?.payload || {};
+    return did.lens || did.ens || null
+  } catch { return null };
+}
+export default function Web3LoginButton() {
+  const [open, setOpen] = useState(false);
+  const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),
+  const [displayName, setDisplayName] = useState<string | null>(null);
+  const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
+  useEffect(() => {
 
   useEffect(() => {    return did && did.lens || did && did.ens || null;
   } catch { return null };
@@ -73,7 +76,6 @@ export default function Web3LoginButton() {;
     const saved =;
       typeof window !== 'undefined';
         ? window && window.localStorage.getItem('zion-web3-user');
-
         : null;
     if (saved) setUser(JSON && JSON.parse(saved));
     const pref =;
@@ -81,7 +83,6 @@ export default function Web3LoginButton() {;
         ? window && window.localStorage.getItem('zion-web3-display');
         : null;
     setDisplayWeb3(pref === 'true');  }, []);
-
 
   useEffect(() => {;
     (async () => {    const saved = typeof window !== 'undefined' ? window && window.localStorage.getItem('zion-web3-user') : null;
@@ -114,7 +115,6 @@ export default function Web3LoginButton() {;
   if (user) {;
     const base =;
       displayName || `${user && user.address.slice(0, 6)}…${user && user.address.slice(-4)}`;
-
     return (
       <div className='flex items-center gap-2'>;
         <span className='hidden sm:inline text-[10px] rounded bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 px-1 && 1.5 py-0 && 0.5'>;
@@ -158,8 +158,6 @@ export default function Web3LoginButton() {;
       )}
     </>;
   );      <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1 && 1.5 text-xs">Connect Wallet</button>;
-
-=======
     const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-user') : null;
     if (saved) setUser(JSON.parse(saved));
     const pref = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-display') : null;
@@ -199,15 +197,13 @@ export default function Web3LoginButton() {;
   return (
     <>
       <button onClick={() => setOpen(true)} className="rounded-md bg-black text-white dark:bg-white dark:text-black px-3 py-1.5 text-xs">Connect Wallet</button>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
 
     </>;
   );
 }
 
-=======
+      {open && <Web3LoginModal isOpen={open} onClose={() => setOpen(false)} onLoggedIn={onLoggedIn} />}
 import dynamic from 'next / dynamic';
 ;
 const Web3LoginModal = dynamic (() => import ('./Web3LoginModal'), {
@@ -338,9 +334,6 @@ if ( {) {
       {open && <Web3LoginModal is_open={open} on_close={() => set_open (false)} onLoggedIn={onLoggedIn} />}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

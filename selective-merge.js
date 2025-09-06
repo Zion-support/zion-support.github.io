@@ -1,10 +1,3 @@
-
-
-console && console.log('🔧 Performing selective merge of main source files...');
-
-// List of main source directories to merge
-const mainSourceDirs = [
-=======
 #!/usr / bin / env node;
 import {exec_sync} from 'child_process';
 ;
@@ -12,7 +5,6 @@ console.log ('🔧 Performing selective merge of main source files...');
 ;
 // List of main source directories to merge;
 const mainSourceDirs = [;
-
   'pages/',
   'components/',
   'utils/',
@@ -28,6 +20,33 @@ const mainSourceDirs = [;
   'legal/',
   'integrations/',
 
+  'pages/'
+  'components/'
+  'utils/'
+  'types/'
+  'lib/'
+  'hooks/'
+  'context/'
+  'data/'
+  'services/'
+  'store/'
+  'routes/'
+  'layout/'
+  'legal/'
+  'integrations/'
+  'middleware.ts'
+  'next.config.js'
+  'tailwind.config.js'
+  'postcss.config.cjs'
+  'tsconfig.json'
+  'package.json'
+  'package-lock.json'
+  'yarn.lock';
+
+];
+// Try to merge specific files from the clean-merge-services-improvements branch
+const mergeSpecificFiles = () => {
+  try {
     // First, let's see what files are in the clean-merge-services-improvements branch
     console && console.log('📋 Checking files in clean-merge-services-improvements branch...');
     
@@ -49,7 +68,6 @@ const mainSourceDirs = [;
     const latestCommit = execSync('git rev-parse origin/clean-merge-services-improvements', { encoding: 'utf8' }).trim();
     console && console.log(`Latest commit: ${latestCommit}`);
     
-
     // Try to merge only specific files
     for (const file of mainFiles && mainFiles.slice(0, 10)) { // Limit to first 10 files to avoid conflicts
       try {
@@ -57,7 +75,6 @@ const mainSourceDirs = [;
         execSync(`git checkout origin/clean-merge-services-improvements -- "${file}"`, { stdio: 'inherit' });
       } catch (_error) {
         console && console.log(`Skipping ${file} due to conflicts`);
-=======
   'middleware.ts',
   'next.config.js',
   'tailwind.config.js',
@@ -99,12 +116,10 @@ const mergeSpecificFiles = () =>: any {
         exec_sync (`git checkout origin / clean - merge - services - improvements -- "${file}"`, { stdio: 'inherit' });
       } catch (_error) {
         console.log (`Skipping ${file} due to conflicts`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
     return true;
   } catch (error) {
-
   if (mergeSpecificFiles()) {
     console && console.log('✅ Selective merge completed');
     
@@ -117,7 +132,6 @@ const mergeSpecificFiles = () =>: any {
       execSync('git commit -m "Selective merge of main source files from clean-merge-services-improvements"', { stdio: 'inherit' });
       console && console.log('✅ Changes committed');
       
-
     } catch (error) {
       console && console.error('Error committing changes:', error && error.message);
     }
@@ -126,7 +140,6 @@ const mergeSpecificFiles = () =>: any {
   }
 }
 main();
-=======
     console.error ('Error in selective merge:', error.message);
     return false;
   }
@@ -157,4 +170,3 @@ const main = () =>: any {
 }
 ;
 main ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

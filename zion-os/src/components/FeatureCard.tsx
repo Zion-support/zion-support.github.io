@@ -1,4 +1,3 @@
-
 "use client",;
 import Link from "next/link",;
 import { ReactNode } from "react",;
@@ -38,10 +37,8 @@ export function FeatureCard({;
       onClick={onClick}
       onKeyDown={(e) => {;
         if (e.key === 'Enter' || e.key === ' ') {;
-
           e.preventDefault();
           onClick();
-=======
 "use client",
 import Link from './next / link';,
 import { ReactNode  } from './react';,
@@ -80,7 +77,6 @@ if ( {) {
 }
           e.prevent_default ();
           on_click ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
       }}
       tab_index={0}

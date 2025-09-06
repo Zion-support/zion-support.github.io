@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -20,7 +19,6 @@ const features = [
     description: 'Comprehensive LMS with course management and student tracking',
     benefits: ['Course creation', 'Student management', 'Progress tracking', 'Assessments']
   },
-
   {}
     icon: Users,
     title: 'Student Information Systems,',
@@ -32,7 +30,6 @@ const features = [
     description: 'Platforms for creating, managing, and delivering educational content and resources.',
   },
   {}
-
     icon: Laptop,
     title: 'Virtual Classrooms',
     description: 'Online learning platform with video conferencing and collaboration',
@@ -41,7 +38,6 @@ const features = [
 ];
 
 export default function EducationSolutionsPage() {
-
   return (
     <Layout
       title="Education Solutions - Zion Tech Group"
@@ -73,7 +69,6 @@ export default function EducationSolutionsPage() {
         </section>
 
         {/* Features Section */}
-
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -99,14 +94,12 @@ export default function EducationSolutionsPage() {
                     {feature.benefits.map((benefit, benefitIndex) => (
                       <div key={benefitIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-
                         {benefit}
                       </div>
                     ))}
                   </div>
                 </motion.div>
               ))}
-
             </div>
           </div>
         </section>
@@ -134,6 +127,5 @@ export default function EducationSolutionsPage() {
       </div>
     </>
     </>
-
   );
 }

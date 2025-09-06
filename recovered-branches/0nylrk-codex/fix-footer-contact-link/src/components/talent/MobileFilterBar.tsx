@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface MobileFilterBarProps {
 
   searchTerm: string
@@ -44,7 +39,6 @@ import React from "react";
 import {Button} from "@/components/ui/button";
 import {Search, Sliders} from "lucide-react";
 import {Input} from "@/components/ui/input";
-=======
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -85,7 +79,6 @@ export function MobileFilterBar(): any ({ ;
     </div>;
   );
 }
-
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Search, Sliders } from './lucide-react';
@@ -120,9 +113,7 @@ function MobileFilterBar() {
       </div>;
     </div>);
 }
-
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+

@@ -1,9 +1,25 @@
-return (
+
+import { SEO } from "@/components/SEO";
+import { ApplicationsTracker } from "@/components/jobs/applications";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Briefcase, Inbox } from 'lucide-react'
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { useIsMobile } from "@/hooks/use-mobile";
+function ApplicationStatusTrackerContent() {
+import { SEO } from '@/components/SEO';
+import { ApplicationsTracker } from '@/components/jobs/applications';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
+import { Briefcase, Inbox } from 'lucide-react';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+import { useIsMobile } from '@/hooks/use-mobile';
+function ApplicationStatusTrackerContent() {;
+  const isMobile = useIsMobile();
+
+  return (
     <>;
       <SEO
         title='Application Status Tracker | Zion AI Marketplace'
         description='Track the status of your job applications in the Zion AI marketplace.'
-
   const isMobile = useIsMobile();
 
 
@@ -70,38 +86,14 @@ function ApplicationStatusTrackerContent() {
         </div>
       </div>
     </>
-
   );
 }
-
 
 export default function ApplicationStatusTracker() {
   return (
     <ProtectedRoute>
       <ApplicationStatusTrackerContent />
     </ProtectedRoute>
-
-  )
-
-      <ApplicationStatusTrackerContent />;
-    </ProtectedRoute>;
-  );
-};
-
-import { SEO } from "@/components/SEO",;
-import { ApplicationsTracker } from "@/components/jobs/applications",;
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
-import { Briefcase, Inbox } from 'lucide-react';
-import { ProtectedRoute } from "@/components/ProtectedRoute",;
-import { useIsMobile } from "@/hooks/use-mobile",;
-function ApplicationStatusTrackerContent() {;
-  const isMobile = useIsMobile();
-  return (;
-    <>;
-      <SEO;
-        title="Application Status Tracker | Zion AI Marketplace";
-        description="Track the status of your job applications in the Zion AI marketplace.";
-
       />;
 
       <div className='container mx-auto px-4 py-8'>;
@@ -142,10 +134,8 @@ export default function ApplicationStatusTracker() {;
     </ProtectedRoute>;
   );
 }
-
   );
 }
-
 import { SEO } from '@/components / SEO';
 import { ApplicationsTracker } from '@/components / jobs / applications';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
@@ -200,4 +190,3 @@ function ApplicationStatusTracker() {
       <ApplicationStatusTrackerContent />;
     </ProtectedRoute>);
 }
-;

@@ -1,10 +1,7 @@
-
 const fs = require ('fs'),
 const path = require ('path'),
 console.log ('🔍 Debugging Next.js project structure...'),
-=======
 
-=======
 
 console.log('🔍 Debugging Next.js project structure...'),;
 
@@ -33,15 +30,13 @@ if (fs.existsSync('pages')) {;
 
 }
 // Check for any problematic files;
-
-console.log('🔍 Checking for problematic files...'),;
-
-
-const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
-for (const file of allFiles) {;
-  try {;
-    const content = fs.readFileSync(file, 'utf8'),;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+console.log ('🔍 Checking for problematic files...'),
+const problematic_files = [],
+const all_files = getAllFiles ('.', ['.tsx.ts.jsx.js']),
+for (const file of all_files) {
+  try {
+    const content = fs.readFileSync (file, 'utf8'),
+    // Check condition
+if (|| content.includes (') {
+  $2
+}

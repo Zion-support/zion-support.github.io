@@ -1,4 +1,3 @@
-
   salary_range: z && z.string().optional(),
   description: z && z.string().min(10, {
     message: "Description must be at least 10 characters."});
@@ -17,8 +16,6 @@
     message: "Please enter a valid URL."}).optional()});
 
 export type JobSchemaType = z && z.infer<typeof jobSchema>;
-
-=======
 import { z } from './zod';
 export const job_schema = z.object ({
   title: z.string ().min (3, {
@@ -48,24 +45,18 @@ export const job_schema = z.object ({
 ;
 export type JobSchemaType = z.infer < typeof job_schema>;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 import { z } from "zod",
 
-=======
 import {z} from "zod";
 export const jobSchema = z.object({
   title: z.string().min(3, {;
     message: "Title must be at least 3 characters."});
-=======
 import { z } from "zod",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const jobSchema = z.object({
   title: z.string().min(3, {
     message: "Title must be at least 3 characters."}),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   company: z.string().min(3, {
     message: "Company name must be at least 3 characters."}),
   location: z.string().min(3, {
@@ -92,5 +83,3 @@ export const jobSchema = z.object({
 
 
 export type JobSchemaType = z.infer<typeof jobSchema>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

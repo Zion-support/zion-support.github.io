@@ -1,5 +1,33 @@
-
-
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+const QualityAssuranceTestingChat: NextPage = () => {;
+  return (
+    <div>;
+      <Head>;
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>;
+        <meta
+          name="description"
+          content="QualityAssuranceTestingChat service"
+        />{" "}
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const QualityAssuranceTestingChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
+        <meta name="description" content="QualityAssuranceTestingChat service" />
+      </Head>
+      
+      <main>
+        <h1>QualityAssuranceTestingChat</h1>
+        <p>Service details coming soon...</p>
+        <a href="/services">Back to Services</a>
+      </main>
+    </div>
+      </Head>;
 
       <main>;
         <h1>QualityAssuranceTestingChat</h1>;
@@ -7,26 +35,15 @@
         <a href="/services">Back to Services</a>;
       </main>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default QualityAssuranceTestingChat;
-
-
-=======
-
-
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const QualityAssuranceTestingChat: NextPage = () => {
   return (
     <div>
@@ -34,8 +51,12 @@ const QualityAssuranceTestingChat: NextPage = () => {
 
         <title>QualityAssuranceTestingChat - Zion Tech Solutions</title>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+
+
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -59,4 +80,3 @@ const QualityAssuranceTestingChat: NextPage = () => {
 ;
 export default QualityAssuranceTestingChat;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

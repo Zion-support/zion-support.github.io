@@ -1,4 +1,3 @@
-
 import NextAuth from './next - auth';,
 import CredentialsProvider from './next - auth / providers / credentials';,
 import { PrismaAdapter  } from '@auth / prisma - adapter';,
@@ -6,7 +5,6 @@ import { prisma  } from '@/lib / prisma';,
 import bcrypt from './bcryptjs';,
 const handler = NextAuth ({
   adapter: PrismaAdapter (prisma),
-=======
 
 import NextAuth from "next-auth",;
 import CredentialsProvider from "next-auth/providers/credentials",;
@@ -79,11 +77,8 @@ if ( {) {
         session.user.role = token.role;
       }
       return session;
-
-    }},;
-  pages: {;
-    signIn: "/auth/signin",;
-    signUp: "/auth/signup"}}),;
-export { handler as GET, handler as POST };
-
-
+    }},
+  pages: {
+    sign_in: "/auth / signin",
+    sign_up: "/auth / signup"}}),
+export { handler as GET, handler as POST }

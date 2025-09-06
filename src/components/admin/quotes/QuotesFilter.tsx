@@ -1,3 +1,25 @@
+import React from 'react';
+import { Calendar, RefreshCw } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue,;
+} from '@/components/ui/select';
+import {;
+  Popover,;
+  PopoverContent,;
+  PopoverTrigger,;
+} from '@/components/ui/popover';
+import { Button } from '@/components/ui/button';
+import { Calendar as CalendarComponent } from '@/components/ui/calendar';
+import { format } from 'date-fns';
+import type { DateRange } from 'react-day-picker';
+import type { QuoteStatus } from '@/types/quotes';
+
 interface QuotesFilterProps {;
 
 
@@ -23,7 +45,6 @@ interface QuotesFilterProps {
   setArchiveFilter: (value: 'active' | 'archived' | 'all') => void;
   dateRange: DateRange | undefined;
   setDateRange: (range: DateRange | undefined) => void;
-
   onReset: () => void;
 export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
   searchQuery,;
@@ -37,7 +58,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
   onReset,}) => {;
   onReset;
 },) => {;
-
   return (
     <Card className='mb-6 bg-zion-blue-dark border-zion-blue-light'>;
       <CardContent className='p-6'>;
@@ -47,19 +67,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({;
               placeholder='Search quotes...'
               className='pl-10 bg-zion-blue border-zion-blue-light text-white'
               value={searchQuery}
-
-              onChange={e => setSearchQuery(e && e.target.value)}            />;
-          </div>;
-
-          <div>;
-            <p className='text-zion-slate-light text-sm mb-2'>Status</p>;
-            <Select
-              value={statusFilter}
-              onValueChange={(value: any) => setStatusFilter(value)}
-            >;
-              <SelectTrigger className='bg-zion-blue border-zion-blue-light text-white'>;
-                <SelectValue placeholder='Status' />              </SelectTrigger>;
-              <SelectContent className='bg-zion-blue-dark border-zion-blue-light text-white'>;
 import React from 'react';
 import { Calendar, RefreshCw } from 'lucide-react';
 import { Card, CardContent } from '@/components / ui / card';
@@ -122,7 +129,6 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
               <SelectTrigger className='bg - zion - blue border - zion - blue - light text - white'>;
                 <SelectValue placeholder='Status' />              </SelectTrigger>;
               <SelectContent className='bg - zion - blue - dark border - zion - blue - light text - white'>;
-
                 <SelectItem value='all'>All Statuses</SelectItem>;
                 <SelectItem value='new'>New</SelectItem>;
                 <SelectItem value='in_review'>In Review</SelectItem>;
@@ -132,7 +138,6 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
               </SelectContent>;
             </Select>;
           </div>;
-
           <div>;
             <p className='text - zion - slate - light text - sm mb - 2'>Archive</p>;
             <Select;
@@ -142,14 +147,39 @@ export const QuotesFilter: React.FC < QuotesFilterProps> = ({
               <SelectTrigger className='bg - zion - blue border - zion - blue - light text - white'>;
                 <SelectValue placeholder='Archive Status' />              </SelectTrigger>;
               <SelectContent className='bg - zion - blue - dark border - zion - blue - light text - white'>;
-
                 <SelectItem value='active'>Active Only</SelectItem>;
                 <SelectItem value='archived'>Archived Only</SelectItem>;
                 <SelectItem value='all'>All Quotes</SelectItem>;
               </SelectContent>;
             </Select>;
           </div>;
-
+                <Button
+                  variant='outline'
+                  className='w-full justify-start text-left font-normal bg-zion-blue border-zion-blue-light text-white'>;
+                  <Calendar className='mr-2 h-4 w-4 text-zion-slate-light' />;
+                  {dateRange?.from ? (;
+                    dateRange && dateRange.to ? (;
+                      <>;
+                        {format(dateRange && dateRange.from, 'LLL dd, y')} -{' '}
+                        {format(dateRange && dateRange.to, 'LLL dd, y')}
+                      </>;
+                    ) : (;
+                      format(dateRange && dateRange.from, 'LLL dd, y')                    )                      format(dateRange && dateRange.from, "LLL dd, y");
+                    );
+                  ) : (;
+                    <span>Date range</span>;
+                  )}
+                </Button>;
+              </PopoverTrigger>;
+              <PopoverContent
+                className='w-auto p-0 bg-zion-blue-dark border-zion-blue-light'
+                align='start'>;
+                <CalendarComponent
+                  initialFocus
+                  mode='range'                  defaultMonth={dateRange?.from}              <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">;
+                <CalendarComponent
+                  initialFocus
+                  mode="range"
 import React from "react";
 import { Calendar, RefreshCw } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card";
@@ -256,7 +286,6 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                   initialFocus
                   mode="range"
                   defaultMonth={dateRange?.from}
-
                   selected={dateRange}
                   onSelect={setDateRange}
                   numberOfMonths={2}
@@ -264,13 +293,48 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                   selected = {dateRange,}
                   onSelect = {setDateRange,}
                   numberOfMonths = {2,}
+        
+        <div className="mt-4 flex justify-end">
+          <Button 
+            variant="outline" 
+            onClick={onReset}
+            className="border-zion-blue-light text-zion-slate-light"
+          >
+            <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters
+          </Button>
+        </div>
+      </CardContent>
+    </Card>
+  )
+                />;
+              </PopoverContent>;
+            </Popover>;
+          </div>;
+        </div>;
 
-
-  onReset: () => void
-
-
-}
-
+        <div className='mt-4 flex justify-end'>;
+          <Button
+            variant='outline'
+            onClick={onReset}
+            className='border-zion-blue-light text-zion-slate-light'>;
+            <RefreshCw className='mr-2 h-4 w-4' /> Reset Filters          </Button>;
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+};
+            <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters;
+            onClick={onReset}
+            className="border-zion-blue-light text-zion-slate-light";
+          >;
+            <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters;
+          </Button>;
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+};  );
+};
 };
           <div>;
             <p className='text - zion - slate - light text - sm mb - 2'>Date Range</p>;

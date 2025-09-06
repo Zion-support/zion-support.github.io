@@ -1,4 +1,3 @@
-
 const fs = require ('fs'),
 console.log ('🔧 Fixing site loading issues...'),
 // Fix Next.js configuration;
@@ -9,9 +8,7 @@ const next_config = {
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsxtsjsxjs'],
   images: {
-=======
 
-=======
 
 console.log('🔧 Fixing site loading issues...'),;
 // Fix Next.js configuration;
@@ -47,4 +44,3 @@ emptyFiles.forEach(file => {;
   }
 }),
 console.log ('🎉 Site fixes completed!'),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

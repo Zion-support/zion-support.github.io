@@ -1,10 +1,5 @@
 
-=======
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {useState, useEffect} from 'react';
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
@@ -18,16 +13,11 @@ import {Separator} from '@/components / ui / separator';
 import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
-
-
-
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-
 
   useEffect(() => {;
     try {;
@@ -37,10 +27,6 @@ import {toast} from 'sonner';
         setDisplayWeb3(!!parsed && parsed.displayWeb3);
         setDidHandle(parsed && parsed.didHandle || '');
         setEnableBackup(!!parsed && parsed.enableBackup);
-
-=======
-
-=======
 import { useState, useEffect } from 'react',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -60,7 +46,6 @@ export default function AccountSettings() {
   const [didHandle, setDidHandle] = useState(''),
   const [enableBackup, setEnableBackup] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   useEffect(() => {
     try {
@@ -72,16 +57,29 @@ export default function AccountSettings() {
         setEnableBackup(!!parsed.enableBackup)
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { useState, useEffect } from 'react',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { SEO } from '@/components/SEO',
+import { useAuth } from '@/hooks/useAuth',
+import { Button } from '@/components/ui/button',
+import { Input } from '@/components/ui/input',
+import { Wallet, Database, Save } from "lucide-react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
+import { Separator } from '@/components/ui/separator',
+import { Switch } from '@/components/ui/switch',
+import { Label } from '@/components/ui/label',
+import { toast } from 'sonner',
+export default function AccountSettings() {
+  const { user } = useAuth(),
+  const [displayWeb3, setDisplayWeb3] = useState(false),
+  const [didHandle, setDidHandle] = useState(''),
+  const [enableBackup, setEnableBackup] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
       }
     } catch (e) {;
       console && console.error('Error loading account settings', e);
     }
-
-
-  }, []),
-=======
-=======
   }, []),
 
 
@@ -89,13 +87,19 @@ export default function AccountSettings() {
   const handleSave = () => {
     setIsSubmitting(true),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }, []),
+
+
+
+  const handleSave = () => {
+    setIsSubmitting(true),
+
     // Simulate API call
     setTimeout(() => {
       try {
         localStorage.setItem(
 
+  }, []);
 
   const handleSave = () => {;
     setIsSubmitting(true);
@@ -104,7 +108,6 @@ export default function AccountSettings() {
     setTimeout(() => {;
       try {;
         localStorage && localStorage.setItem(;
-
           'account_settings';
           JSON && JSON.stringify({ displayWeb3, didHandle, enableBackup });
         );
@@ -116,62 +119,17 @@ export default function AccountSettings() {
       } finally {;
         setIsSubmitting(false);
       }
-
     }, 1000);
   };
 
   const handleConnectWallet = async () => {;
     try {;
       // Check if wallet is available;
-
       const ethereum = (window as any).ethereum;
       if (!ethereum) {;
         toast && toast.error('No wallet detected. Please install MetaMask or another compatible wallet.');
         return;
       }
-
-
-=======
-          'account_settings',
-          JSON.stringify({ displayWeb3, didHandle, enableBackup })
-        ),
-        // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup }),
-        toast.success('Account settings updated successfully')
-      } catch (e) {
-        console.error('Failed to save settings', e),
-        toast.error('Failed to save settings')
-      } finally {
-        setIsSubmitting(false)
-
-  }, []),;
-  const handleSave = () => {;
-    setIsSubmitting(true),;
-    // Simulate API call;
-    setTimeout(() => {;
-      try {;
-        localStorage.setItem(;
-          'account_settings',;
-          JSON.stringify({ displayWeb3, didHandle, enableBackup });
-        ),;
-        // // // console.log('Saved settings', { displayWeb3, didHandle, enableBackup }),;
-        toast.success('Account settings updated successfully');
-      } catch (e) {;
-        console.error('Failed to save settings', e),;
-        toast.error('Failed to save settings');
-      } finally {;
-        setIsSubmitting(false);
-      }
-    }, 1000);
-  },;
-  const handleConnectWallet = async () => {;
-    try {;
-      // Check if wallet is available;
-      const ethereum = (window as any).ethereum,;
-      if (!ethereum) {;
-        toast.error('No wallet detected. Please install MetaMask or another compatible wallet.'),;
-        return;
-      }
-;
 
       // Request accounts;
       const accounts = await ethereum && ethereum.request({ method: 'eth_requestAccounts' }),;
@@ -190,35 +148,24 @@ export default function AccountSettings() {
         const ensName = await provider && provider.lookupAddress(address);
         if (ensName) {;
           setDidHandle(ensName);
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       } catch (error) {;
         console && console.error('ENS lookup error:', error);
       }
 
-
       toast && toast.success(`Wallet connected: ${address && address.slice(0, 6)}...${address && address.slice(-4)}`);
     } catch (error: any) {;
       toast && toast.error(error && error.message || 'Failed to connect wallet');
-
     }
 
 
   },
 
-=======
   };
-=======
   },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
-
     <>;
       <SEO title="Account Settings" description="Manage your account" />;
       <Header />;
@@ -234,13 +181,11 @@ export default function AccountSettings() {
             <CardContent className="space-y-6">;
               <div className="space-y-2">;
                 <Label htmlFor="email">Email Address</Label>;
-
                 <Input
                   id="email"
                   value={user?.email |''}
                   disabled
                   className="bg-gray-100"
-
                 />;
               </div>;
 
@@ -272,12 +217,10 @@ export default function AccountSettings() {
                   <Label htmlFor="displayWeb3">Display Web3 Identity</Label>;
                   <p className="text-xs text-gray-500">Show your Web3 handle instead of email</p>;
                 </div>;
-
                 <Switch
                   id="displayWeb3"
                   checked={displayWeb3}
                   onCheckedChange={setDisplayWeb3}
-
                 />;
               </div>;
 
@@ -293,12 +236,10 @@ export default function AccountSettings() {
                     Backup your profile data to IPFS/Arweave;
                   </p>;
                 </div>;
-
                 <Switch
                   id="backup"
                   checked={enableBackup}
                   onCheckedChange={setEnableBackup}
-
                 />;
               </div>;
 
@@ -308,14 +249,12 @@ export default function AccountSettings() {
                 </div>;
               )}
 
-
               <Button
                 onClick={handleSave}
                 disabled={isSubmitting}
                 className="w-full">;
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className="ml-2 h-4 w-4" />}
-
               </Button>;
             </CardContent>;
           </Card>;
@@ -373,7 +312,6 @@ export default function AccountSettings() {
                   <div className="bg-gray-100 p-3 rounded-md">;
                     <p className="text-sm font-medium">Profile Data</p>;
                     <p className="text-xs text-gray-500">;
-
                       {enableBackup ? 'Backed up' : 'Not backed up'}
                     </p>;
                   </div>;
@@ -393,30 +331,6 @@ export default function AccountSettings() {
                     <p className="text-sm font-medium">Reviews</p>;
                     <p className="text-xs text-gray-500">;
                       {enableBackup ? 'Backed up' : 'Not backed up'}
-
-                    </p>;
-                  </div>;
-                </div>;
-              </div>;
-
-              <div>;
-                <h3 className="font-medium mb-2">Recovery Options</h3>;
-                <Button
-                  variant="outline" 
-                  className="w-full"
-                  disabled={!enableBackup}>;
-                  Restore Profile from Backup;
-                </Button>;
-                <p className="text-xs text-gray-500 mt-1">;
-                  {enableBackup ;
-                    ? 'Restore your profile data from decentralized storage' ;
-=======
-
-                  {enableBackup 
-                    ? 'Restore your profile data from decentralized storage' 
-
-                    : 'Enable backup first to use this feature'}
-=======
 export default /**
  * AccountSettings - Function description
  */
@@ -680,7 +594,6 @@ if ( {) {
                   {enable_backup;
                     ? 'Restore your profile data from decentralized storage';
                     : 'Enable backup first to use this feature'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </p>;
               </div>;
             </CardContent>;
@@ -688,11 +601,7 @@ if ( {) {
         </div>;
       </main>;
       <Footer />;
+;
 
     </>);
 }
-
-=======
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

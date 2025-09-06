@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Define the form schema with validation
 
 const talentSchema = z.object({
@@ -78,7 +73,6 @@ const talentSchema = z && z.object({;
 type TalentFormValues = z && z.infer<typeof talentSchema>;
 
 export function TalentOnboardingForm() {;
-
   const { user } = useAuth();
   const navigate = useNavigate();
   const [currentStep, setCurrentStep] = useState(1);
@@ -87,108 +81,13 @@ export function TalentOnboardingForm() {;
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccessScreen, setShowSuccessScreen] = useState(false);
 
-
-    ).min(1, "Add at least one key project"),
-    yearsOfExperience: z.string().min(1, "Years of experience is required")}),
-  
-  // Step 3: Skills & Tech Stack
-  skills: z.object({
-    skillsList: z.string().min(2, "Add at least one skill"),
-    toolsUsed: z.string().optional()}),
-  
-  // Step 4: Availability & Preferences
-  availability: z.object({
-    availabilityType: z.string().min(1, "Select your availability"),
-    timezone: z.string().min(1, "Timezone is required"),
-    hourlyRate: z.string().optional(),
-    portfolioLinks: z.array(
-      z.object({
-        url: z.string().url("Must be a valid URL").min(5, "URL is required")})
-    ).optional().default([]),
-    cv: z.any().optional()})}),
-
-type TalentFormValues = z.infer<typeof talentSchema>,
-
-
-
-  const form = useForm<TalentFormValues>({
-    resolver: zodResolver(talentSchema)
-    defaultValues: {
-      basicInfo: {
-        fullName: user?.displayName |""
-        professionalTitle: ""
-        profilePicture: undefined}
-      experience: {
-        bio: ""
-        keyProjects: [{ title: "", description: "" }]
-        yearsOfExperience: ""}
-      skills: {
-        skillsList: ""
-        toolsUsed: ""}
-      availability: {
-        availabilityType: ""
-        timezone: ""
-        hourlyRate: ""
-        portfolioLinks: [{ url: "" }]
-        cv: undefined}}
-    mode: "onChange"})
-  const { fields: projectFields, append: appendProject, remove: removeProject } =
-    useFieldArray({
-      name: "experience.keyProjects"
-      control: form.control})
-  const { fields: linkFields, append: appendLink, remove: removeLink } =
-    useFieldArray({
-      name: "availability.portfolioLinks"
-      control: form.control})
-  // Handle profile picture upload
-  const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-
-
-    const file = e.target.files?.[0],
-    if (!file) return,
-    
-
-
-    // Preview the image
-    const reader = new FileReader()
-    reader.onloadend = () => {
-      setProfilePictureUrl(reader.result as string)
-
-
-    },
-    reader.readAsDataURL(file),
-    
-    // Store the file in the form data
-    form.setValue("basicInfo.profilePicture", file)
-  },
-
-
-
-  // Handle CV upload
-  const handleCvUpload = async (file: File) => {
-    const fileName = `cv-${user?.id}-${Date.now()}`;
-    const { error: cvError } = await supabase.storage
-      .from('resumes')
-
-
-      .upload(fileName, file),
-      
-
-
-    if (cvError) {
-      console.error("Error uploading CV:", cvError);
-      throw new Error("Failed to upload CV")
-
-
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
 
   const totalSteps = 4;
 
-=======
 
 };
 
-=======
 import React, { useState } from "react",;
 import { useForm, useFieldArray } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -327,8 +226,6 @@ export function TalentOnboardingForm() {;
   // [Previous implementation continues...];
 
   return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React, { useState } from './react';
 import { use_form, useFieldArray } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -465,9 +362,4 @@ if ( {) {
   // Rest of the file remains unchanged...;
   // [Previous implementation continues...];
   return null;
-
-
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

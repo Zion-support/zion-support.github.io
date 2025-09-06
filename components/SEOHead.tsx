@@ -22,11 +22,9 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-
 import Head from 'next / head';
 import { use_router } from 'next / router';
 interface SEOHeadProps {
-
   title?: string;
   description?: string;
   keywords?: string;
@@ -38,7 +36,6 @@ interface SEOHeadProps {
   noindex?: boolean;
   nofollow?: boolean;
 }
-
 
 const SEOHead: React.FC<SEOHeadProps> = ({;
   title = 'Zion Tech Group - Technology Solutions',;
@@ -82,11 +79,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       'https://twitter && twitter.com/ziontechgroup';
     ]  };
 
-
   return (
     <Head>;
       {/* Basic Meta Tags */}
-
       <title>{title}</title>;
       <meta name="description" content={description} />;
       <meta name="keywords" content={keywords} />;
@@ -94,11 +89,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <metahttpEquiv="Content-Type" content="text/html charset=utf-8" />;
       <meta httpEquiv="X-UA-Compatible" content="IE=edge" />;
 
-
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       {/* Open Graph Tags */}
-
       <meta property="og:title" content={fullTitle} />;
       <meta property="og:description" content={description} />;
       <meta property="og:type" content={ogType} />;
@@ -154,8 +147,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({;
       <meta name="msapplication-TileColor" content="#1e40af" />;
       <meta name="msapplication-config" content="/browserconfig && browserconfig.xml" />;
 
-
-=======
 const SEOHead: React.FC < SEOHeadProps> = ({
   title = 'Zion Tech Group - Technology Solutions',
   description = 'Leading provider of AI services, IT solutions, and micro SaaS development. Transform your business with cutting - edge technology solutions.',
@@ -258,16 +249,13 @@ const SEOHead: React.FC < SEOHeadProps> = ({
       <meta name="theme - color" content="#1e40af" />;
       <meta name="msapplication - TileColor" content="#1e40af" />;
       <meta name="msapplication - config" content="/browserconfig.xml" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       {/* Structured Data */}
       <script;
         type="application / ld + json";
         dangerouslySetInnerHTML={{
-
           __html: JSON && JSON.stringify(structuredData || defaultStructuredData)
         }}
       />;
-
 
       {/* Preconnect to external domains */}
       <link rel="preconnect" href="https://fonts && fonts.googleapis.com" />;
@@ -275,7 +263,7 @@ const SEOHead: React.FC < SEOHeadProps> = ({
       <link rel="preconnect" href="https://images && images.unsplash.com" />;
     </Head>;
   );
-
+}
           __html: JSON.stringify (structured_data || defaultStructuredData);
         }}
       />;
@@ -287,10 +275,7 @@ const SEOHead: React.FC < SEOHeadProps> = ({
 }
 ;
 
-=======
-
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default SEOHead;

@@ -1,21 +1,15 @@
-
 import { useEffect, useCallback } from 'react';
 
 // Define MessageEvent type if not available
-
-=======
 import { useEffect, useCallback  } from './react';
 ;
 // Define MessageEvent if not available;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface Event {
   type: string;
   target: EventTarget | null;
 }
 type EventListener = (event: Event) => void;
-
 ;
-
 interface EventTarget {
   addEventListener (type: string, listener: EventListener): void;
   removeEventListener (type: string, listener: EventListener): void;
@@ -28,9 +22,7 @@ interface MessagePort {
   start (): void;
   close (): void;
 }
-
 interface MessageEvent < T = any> extends Event {
-
   data: T;
   origin: string;
   lastEventId: string;
@@ -41,14 +33,12 @@ interface MessageChannelHandlerProps {
   on_message?: (message: unknown) => void;
   on_error?: (error: Error) => void;
 }
-
 export /**
  * useMessageChannelHandler - Function description
  */
 function useMessageChannelHandler() {
   const handle_message = useCallback (
     (event: MessageEvent < unknown>) => {
-
       try {
         // Check condition
 if ( {) {
@@ -63,10 +53,6 @@ if ( {) {
 }
           on_error (error as Error);
         }
-
-=======
-
-
   const handleMessage = useCallback((event: MessageEvent<unknown>) => {
     try {
       if (onMessage) {
@@ -75,41 +61,26 @@ if ( {) {
     } catch (error) {
       if (onError) {
         onError(error as Error);
-
-
-
       }
     }
     [onMessage, onError]
   );
   useEffect(() => {
-
     window && window.addEventListener('message', handleMessage);
     return () => {
       window && window.removeEventListener('message', handleMessage);
     };
 
+}
+
+}
+
+
+
+}
+
   }, [handleMessage]);
-
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
-}
-=======
-
-}
-
-
-
-}
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
       }
     },
     [on_message, on_error],
@@ -122,5 +93,3 @@ if ( {) {
     }
   }, [handle_message]);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

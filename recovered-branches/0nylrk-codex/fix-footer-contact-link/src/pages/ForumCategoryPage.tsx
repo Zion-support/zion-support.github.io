@@ -1,23 +1,3 @@
-
-
-
-
-
-import {useState} from "react";
-import {useParams, Link} from "react-router-dom";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {SEO} from "@/components/SEO";
-import {AppLayout} from "@/layout/AppLayout";
-import PostCard from "@/components/community/PostCard";
-import {ForumPost, ForumCategoryInfo} from "@/types/community";
-import {Badge} from "@/components/ui/badge";
-import {useAuth} from "@/hooks/useAuth";
-import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
-
-
-
-=======
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -49,8 +29,37 @@ const categoriesInfo: Record<string ForumCategoryInfo> = {
     adminOnly: false,
     icon: "Briefcase"
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { useState } from "react",
+import { useParams, Link } from "react-router-dom",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { SEO } from "@/components/SEO",
+import { AppLayout } from "@/layout/AppLayout",
+import PostCard from "@/components/community/PostCard",
+import { ForumPost, ForumCategoryInfo } from "@/types/community",
+import { Badge } from "@/components/ui/badge",
+import { useAuth } from "@/hooks/useAuth",
+import {
+  MessageSquare,
+  Briefcase,
+  Code,
+  FileText,
+  Megaphone,
+  Search
+} from "@/components/icons",
+
+// Mock category data
+const categoriesInfo: Record<string ForumCategoryInfo> = {
+  "getting-hired": {
+    id: "getting-hired",
+    name: "Getting Hired",
+    description: "Tips, strategies, and questions about getting hired on the platform.",
+
+
+
+    adminOnly: false,
+    icon: "Briefcase"
+  },
   "project-help": {
 
     id: "project-help"
@@ -175,13 +184,11 @@ const postsByCategory: Record < string, ForumPost[]> = {
       reply_count: 8,
       is_pinned: true,
       is_featured: true;
-
     }
     {
       id: "6"
       title: "Portfolio pieces that clients actually care about"
       content: "After submitting dozens of applications, I've found that these types of projects tend to get the most attention...";
-
       author_id: "user6",
       author_name: "James Wilson",
       category_id: "getting - hired",
@@ -191,8 +198,6 @@ const postsByCategory: Record < string, ForumPost[]> = {
       upvotes: 19,
       downvotes: 2,
       reply_count: 6;
-
-=======
       id: "2",
       title: "How to build an effective AI talent profile?",
       content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
@@ -223,15 +228,10 @@ const postsByCategory: Record < string, ForumPost[]> = {
       downvotes: 2,
 
       replyCount: 6
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   ];
   "project - help": [;
     {
-
-=======
-
-
       id: "3",
       title: "Looking for feedback on my automated testing approach",
       content: "I've set up a CI / CD pipeline with the following testing strategy...",
@@ -257,19 +257,12 @@ const postsByCategory: Record < string, ForumPost[]> = {
       updated_at: "2025 - 04 - 08T10:20:00Z",
       upvotes: 24,
       downvotes: 0,
-
-      replyCount: 7,
-
-      isAnswered: true
-
+      reply_count: 7,
+      is_answered: true;
     }
   ];
   "ai - tools": [;
     {
-
-=======
-
-
       id: "1",
       title: "Best practices for AI model fine - tuning",
       content: "I've been working on fine - tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
@@ -299,18 +292,11 @@ const postsByCategory: Record < string, ForumPost[]> = {
       updated_at: "2025 - 04 - 05T16:40:00Z",
       upvotes: 31,
       downvotes: 0,
-
-
-      replyCount: 9
-
+      reply_count: 9;
     }
   ];
   "feedback": [;
     {
-
-=======
-
-
       id: "4",
       title: "Feature request: Team collaboration tools",
       content: "It would be really helpful if we could have built - in tools for team collaboration...",
@@ -336,15 +322,11 @@ const postsByCategory: Record < string, ForumPost[]> = {
       updated_at: "2025 - 04 - 04T08:10:00Z",
       upvotes: 17,
       downvotes: 3,
-
-
-      replyCount: 5
-
+      reply_count: 5;
     }
   ];
   "announcements": [;
     {
-
 
 // Mock category data;
 const categoriesInfo: Record<string, ForumCategoryInfo> = {;
@@ -553,10 +535,6 @@ const postsByCategory: Record<string, ForumPost[]> = {;
 
 const iconMap = {;
 
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       id: "9",
       title: "Platform Update: New AI Matching Algorithm",
       content: "We're excited to announce the launch of our new and improved AI matching algorithm...",
@@ -588,7 +566,14 @@ const iconMap = {;
       reply_count: 2,
       is_pinned: true;
     }
-
+  ];
+}
+;
+const icon_map = {
+  "Briefcase": Briefcase;
+  "MessageSquare": MessageSquare;
+  "Code": Code;
+  "FileText": FileText;
   "Megaphone": Megaphone;
 };
 
@@ -600,8 +585,6 @@ export default function ForumCategoryPage() {;
   const [searchQuery, setSearchQuery] = useState("");
 
   if (!categoryId || !categoriesInfo[categoryId]) {;
-
-=======
   ]
 },
 
@@ -618,7 +601,6 @@ const iconMap = {
 export default function ForumCategoryPage() {
   // useParams is typed as `any` in this environment due to missing type
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <AppLayout>;
         <div className="container py-8">;
@@ -631,73 +613,10 @@ export default function ForumCategoryPage() {
     );
   }
 
-
-  
-  const category = categoriesInfo[categoryId],
-  const IconComponent = iconMap[category.icon as keyof typeof iconMap] || MessageSquare,
-  const posts = postsByCategory[categoryId] || [],
-  
-
-
-  // Filter posts based on search query
-  const filteredPosts = searchQuery
-    ? posts.filter(post =>
-        post.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-        post.content.toLowerCase().includes(searchQuery.toLowerCase()) |
-        post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-      )
-
-
-    : posts,
-  
-  // For announcements, check if user is admin
-  const canCreatePost = categoryId !== "announcements" || (user?.userType === 'admin' || user?.role === 'admin'),
-  
-
-
-  return (
-    <AppLayout>
-      <SEO
-        title={`${category.name} | Community Forum | Zion AI Marketplace`}
-        description={category.description}
-        keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`}
-      />
-      <div className="container py-8">
-        <div className="flex items-center gap-3 mb-6">
-          <Link to="/community" className="text-sm text-muted-foreground hover:text-foreground">
-            Forum
-          </Link>
-          <span className="text-muted-foreground">/</span>
-          <span className="font-medium">{category.name}</span>
-        </div>
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-8 gap-4">
-          <div className="flex items-center gap-4">
-            <div className="p-3 bg-zion-purple/10 rounded-full">
-              <IconComponent className="h-8 w-8 text-zion-purple" />
-            </div>
-            <div>
-              <h1 className="text-3xl font-bold">{category.name}</h1>
-              <p className="text-muted-foreground mt-1">{category.description}</p>
-            </div>
-          </div>
-          {canCreatePost && (
-            <Button asChild>
-              <Link to={user ? `/community/create?category=${categoryId}` : `/login?next=/community/create?category=${categoryId}`}>
-                Create New Post
-              </Link>
-            </Button>
-          )}
-        </div>
-        <div className="mb-6">
-          <div className="relative">
-            <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-
-
   const category = categoriesInfo[categoryId];
   const IconComponent = iconMap[category && category.icon as keyof typeof iconMap] || MessageSquare;
   const posts = postsByCategory[categoryId] || [];
 
-=======
             <Input
               placeholder="Search posts in this category..."
               className="pl-10"
@@ -1005,15 +924,12 @@ export default function ForumCategoryPage() {;
         <div className="mb-6">;
           <div className="relative">;
             <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />;
-
-            <Input;
-              placeholder="Search posts in this category...";
-              className="pl-10";
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               value={searchQuery}
 
+            <Input
+              placeholder="Search posts in this category..."
+              className="pl-10"
+              value={searchQuery}
               onChange={(e) => setSearchQuery(e && e.target.value)}
             />;
           </div>;
@@ -1036,20 +952,113 @@ export default function ForumCategoryPage() {;
                   Create New Post;
                 </Link>;
               </Button>;
-
             )}
           </div>;
         )}
-
       </div>;
     </AppLayout>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   "Megaphone": Megaphone;
 }
 ;
-
-
-
+export default /**
+ * ForumCategoryPage - Function description
+ */
+function ForumCategoryPage() {
+  // use_params is typed as `any` in this environment due to missing type;
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const { category_id } = use_params ();
+  const { user } = use_auth ();
+  const [search_query, setSearchQuery] = useState ("");
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <AppLayout>;
+        <div className="container py - 8">;
+          <h1 > Category not found</h1>;
+          <Button as_child className="mt - 4">;
+            <Link to="/community">Back to Community</Link>;
+          </Button>;
+        </div>;
+      </AppLayout>);
+  }
+  const category = categories_info[category_id];
+  const IconComponent = icon_map[category.icon as keyof typeof icon_map] || MessageSquare;
+  const posts = postsByCategory[category_id] || [];
+;
+  // Filter posts based on search query;
+  const filtered_posts = search_query;
+    ? posts.filter (post =>;
+        post.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        post.content.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        post.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ())));
+    : posts;
+;
+  // For announcements, check if user is admin;
+  const canCreatePost = category_id !== "announcements" || (user?.user_type === 'admin' || user?.role === 'admin');
+;
+  return (
+    <AppLayout>;
+      <SEO;
+        title={`${category.name} | Community Forum | Zion AI Marketplace`}
+        description={category.description}
+        keywords={`community, forum, ${category.id}, discussion, AI marketplace, questions, answers`}
+      />;
+      <div className="container py - 8">;
+        <div className="flex items - center gap - 3 mb - 6">;
+          <Link to="/community" className="text - sm text - muted - foreground hover:text - foreground">;
+            Forum;
+          </Link>;
+          <span className="text - muted - foreground">/</span>;
+          <span className="font - medium">{category.name}</span>;
+        </div>;
+        <div className="flex flex - col md:flex - row items - start md:items - center justify - between mb - 8 gap - 4">;
+          <div className="flex items - center gap - 4">;
+            <div className="p - 3 bg - zion - purple / 10 rounded - full">;
+              <IconComponent className="h - 8 w - 8 text - zion - purple" />;
+            </div>;
+            <div>;
+              <h1 className="text - 3xl font - bold">{category.name}</h1>;
+              <p className="text - muted - foreground mt - 1">{category.description}</p>;
+            </div>;
+          </div>;
+          {canCreatePost && (
+            <Button as_child>;
+              <Link to={user ? `/community / create?category=${category_id}` : `/login?next=/community / create?category=${category_id}`}>;
+                Create New Post;
+              </Link>;
+            </Button>)}
+        </div>;
+        <div className="mb - 6">;
+          <div className="relative">;
+            <Search className="absolute left - 3 top - 3 h - 4 w - 4 text - muted - foreground" />;
+            <Input;
+              placeholder="Search posts in this category...";
+              className="pl - 10";
+              value={search_query}
+              on_change={(e) => setSearchQuery (e.target.value)}
+            />;
+          </div>;
+        </div>;
+        {posts.length > 0 ? (
+          <div className="space - y-4">;
+            {filtered_posts.map ((post) => (
+              <PostCard key={post.id} post={post} />))}
+          </div>) : (
+          <div className="text - center py - 16">;
+            <h2 className="text - xl font - medium mb - 2">No posts yet</h2>;
+            <p className="text - muted - foreground mb - 6">Be the first to start a discussion in this category!</p>;
+            {canCreatePost && (
+              <Button as_child>;
+                <Link to={user ? `/community / create?category=${category_id}` : `/login?next=/community / create?category=${category_id}`}>;
+                  Create New Post;
+                </Link>;
+              </Button>)}
+          </div>)}
+      </div>;
+    </AppLayout>);
+}

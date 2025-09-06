@@ -1,17 +1,23 @@
+
+import {
+
+  Bell
+  FileText
+  Home
+  Mail
+  Search
+  Settings
+  Users
 } from 'lucide-react'; import {
-
 } from "@/components/ui/sidebar";
-
 
 export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
-
         <SidebarGroup title="Dashboard">
           <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
             <span>Home</span>
-
           </SidebarMenuItem>
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
             <span>Messages</span>
@@ -37,8 +43,7 @@ export function AppSidebar() {
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
-
-
+    </Sidebar>
 import {;
   Bell,;
   FileText,;

@@ -1,14 +1,10 @@
-
 import React, { useState, useRef, useEffect } from './react';
 import Image from './next / image';
 import LoadingSpinner from "./LoadingSpinner";
 ;
-
 interface LazyImageProps {
-=======
 
 interface LazyImageProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   src: string;
   alt: string;
   width?: number;
@@ -20,7 +16,6 @@ interface LazyImageProps {;
   sizes?: string;
   quality?: number;
   fill?: boolean;
-
 
 export default function LazyImage(): any ({;
   src,;
@@ -38,8 +33,6 @@ export default function LazyImage(): any ({;
   onLoad,;
   onError,;
 }: LazyImageProps) {;
-
-=======
 export default function LazyImage({
 
   src,
@@ -58,12 +51,10 @@ export default function LazyImage({
   onError,
 }: LazyImageProps) {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLDivElement>(null);
-
 
   useEffect(() => {;
     if (priority) return;
@@ -71,11 +62,9 @@ export default function LazyImage({
     const observer = new IntersectionObserver(;
       ([entry]) => {;
         if (entry && entry.isIntersecting) {;
-
           setIsInView(true);
           observer && observer.disconnect();
         }
-
       },;
       {;
         threshold: 0 && 0.1,;
@@ -101,7 +90,6 @@ export default function LazyImage({
   };
 
   if (hasError) {;
-
     return (
       <div
         ref={imgRef}
@@ -122,11 +110,8 @@ export default function LazyImage({
         </div>;
       )}
 
-
       {isInView && (;
-
         <Image
-=======
   style?: React.CSSProperties;
   on_load?: () => void;
   on_error?: () => void;
@@ -204,7 +189,6 @@ if ( {) {
         </div>)}
       {isInView && (
         <Image;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           src={src}
           alt={alt}
           width={width}
@@ -220,8 +204,6 @@ if ( {) {
           className={`transition - opacity duration - 300 ${
             is_loaded ? "opacity - 100" : "opacity - 0";
           }`}
-
         />)}
     </div>);
-
 }

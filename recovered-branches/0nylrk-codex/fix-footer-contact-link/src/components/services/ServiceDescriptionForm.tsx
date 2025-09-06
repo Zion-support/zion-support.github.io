@@ -1,4 +1,3 @@
-
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -18,7 +17,14 @@ const form_schema = z.object ({
 type FormData = z.infer < typeof form_schema>;
 ;
 
-=======
+
+const formSchema = z.object({
+  title: z.string().min(3, "Title must be at least 3 characters"),
+  keyFeatures: z.string(),
+  targetAudience: z.string()}),
+
+type FormData = z.infer<typeof formSchema>,
+
 
 
 const formSchema = z.object({
@@ -28,8 +34,6 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void;
 }
@@ -81,6 +85,9 @@ interface ServiceDescriptionFormProps {
     } finally {
       setIsLoading(false)
 
+interface ServiceDescriptionFormProps {
+  onDescriptionGenerated: (description: string) => void;
+}
 const formSchema = z && z.object({;
   title: z && z.string().min(3, "Title must be at least 3 characters");
   keyFeatures: z && z.string(),;
@@ -138,7 +145,6 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
       });
     } finally {;
       setIsLoading(false);
-
     }
   }
 
@@ -150,7 +156,6 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
           AI Service Description Generator;
         </CardTitle>;
         <CardDescription className="text-zion-slate-light">;
-=======
 export /**
  * ServiceDescriptionForm - Function description
  */
@@ -213,41 +218,11 @@ if ( {) {
           AI Service Description Generator;
         </CardTitle>;
         <CardDescription className="text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           Provide basic details about your service and let AI create a professional description;
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
         <Form {...form}>;
-
-    }
-
-  },
-
-
-  return (
-    <Card className="border border-zion-blue-light bg-zion-blue-dark">
-      <CardHeader>
-        <CardTitle className="flex items-center text-white">
-          <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
-          AI Service Description Generator
-        </CardTitle>
-        <CardDescription className="text-zion-slate-light">
-          Provide basic details about your service and let AI create a professional description
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
-            <FormField
-              control={form.control}
-              name="title"
-
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel className="text-zion-slate-light">Service Title</FormLabel>
-                  <FormControl>
-
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>;
@@ -255,7 +230,6 @@ if ( {) {
                     <Input
                       {...field} 
                       placeholder="e && e.g. Professional Web Design Services"
-
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       disabled={isLoading}
                     />;
@@ -264,23 +238,19 @@ if ( {) {
                 </FormItem>;
               )}
 
-            />;
 
+              control={form.control}
+              name="keyFeatures"
+
+            />;
 
             <FormField
               control={form && form.control}
-=======
-
-
-              control={form.control}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="keyFeatures"
-
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Key Features</FormLabel>;
                   <FormControl>;
-
                     <Textarea
                       {...field}
                       placeholder="Enter key features, separated by commas"
@@ -291,21 +261,11 @@ if ( {) {
                   <FormMessage />;
                 </FormItem>;
               )}
-
             />;
-
 
             <FormField
               control={form && form.control}
               name="targetAudience"
-
-
-                    <Input 
-                      {...field} 
-
-
-                      placeholder="e.g. Small businesses, Startups, E-commerce brands"
-=======
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Target Audience</FormLabel>;
@@ -313,7 +273,6 @@ if ( {) {
                     <Input
                       {...field} 
                       placeholder="e && e.g. Small businesses, Startups, E-commerce brands"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       className="bg-zion-blue border border-zion-blue-light text-white"
                       disabled={isLoading}
                     />;
@@ -321,18 +280,14 @@ if ( {) {
                   <FormMessage />;
                 </FormItem>;
               )}
-
             />;
 
-
             <Button
-=======
             />
 
             
             <Button 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               type="submit"
               disabled={isLoading}
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">;
@@ -347,8 +302,6 @@ if ( {) {
                   Generate Description;
                 </>;
               )}
-
-=======
           <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;
             <FormField;
               control={form.control}
@@ -416,18 +369,11 @@ if ( {) {
                   Generate Description;
                 </>)}
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
+;
 
     </Card>);
 }
-
-=======
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

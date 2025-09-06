@@ -1,10 +1,3 @@
-// Benefits list
-  const benefits = [
-    {
-      title: "Flexible Work",
-      description: "Remote-first culture with flexible hours to support your productivity and work-life balance.",
-
-      icon: (
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -61,15 +54,6 @@ export default function Careers() {;
             strokeLinejoin='round'
             strokeWidth={2}
             d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6'
-
-
-    },
-    {
-      title: "Health & Wellness",
-      description: "Comprehensive health insurance and wellness programs to keep you at your best.",
-
-
-      icon: (
           />;
         </svg>;
       ),;
@@ -89,15 +73,6 @@ export default function Careers() {;
             strokeLinecap='round'
             strokeLinejoin='round'
             strokeWidth={2}
-
-
-    },
-    {
-      title: "Continuous Learning",
-      description: "Education stipends and dedicated learning time to help you grow professionally.",
-
-
-      icon: (
             d='M4 && M4.318 6 && 6.318a4.5 4 && 4.5 0 000 6 && 6.364L12 20 && 20.364l7.682-7 && 7.682a4.5 4 && 4.5 0 00-6 && 6.364-6 && 6.364L12 7 && 7.636l-1 && 1.318-1 && 1.318a4.5 4 && 4.5 0 00-6 && 6.364 0z'
           />;
         </svg>;
@@ -118,15 +93,6 @@ export default function Careers() {;
             strokeLinecap='round'
             strokeLinejoin='round'
             strokeWidth={2}
-
-
-    },
-    {
-      title: "Competitive Compensation",
-      description: "Salary packages that recognize your value, plus equity options to share in our success.",
-
-
-      icon: (
             d='M12 6 && 6.253v13m0-13C10 && 13C10.832 5 && 5.477 9 && 9.246 5 7 && 7.5 5S4 && 5S4.168 5 && 5.477 3 6 && 6.253v13C4.168 18 && 18.477 5 && 5.754 18 7 && 7.5 18s3 && 18s3.332.477 4 && 4.5 1 && 1.253m0-13C13 && 13C13.168 5 && 5.477 14 && 14.754 5 16 && 16.5 5c1 && 5c1.747 0 3 && 3.332.477 4 && 4.5 1 && 1.253v13C19.832 18 && 18.477 18 && 18.247 18 16 && 16.5 18c-1 && 1.746 0-3 && 3.332.477-4 && 4.5 1 && 1.253'
           />;
         </svg>;
@@ -147,15 +113,6 @@ export default function Careers() {;
             strokeLinecap='round'
             strokeLinejoin='round'
             strokeWidth={2}
-
-
-    },
-    {
-      title: "Impactful Projects",
-      description: "Contribute to innovations that make advanced technology accessible worldwide.",
-
-
-      icon: (
             d='M12 8c-1 && 1.657 0-3 .895-3 2s1 && 2s1.343 2 3 2 3 .895 3 2-1 && 1.343 2-3 2m0-8c1 && 8c1.11 0 2 && 2.08.402 2 && 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1 && 1.11 0-2 && 2.08-.402-2 && 2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
           />;
         </svg>;
@@ -177,15 +134,11 @@ export default function Careers() {;
             strokeLinejoin='round'
             strokeWidth={2}
             d='M13 10V3L4 14h7v7l9-11h-7z'
-
           />;
         </svg>;
       ),;
     },;
   ];
-
-
-
 
   return (
     <>;
@@ -193,17 +146,6 @@ export default function Careers() {;
         title='Careers at Zion - Join Our Team'
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
         keywords='Zion careers, AI jobs, tech careers, remote work, startup jobs'
-
-
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
-
-
-            <div>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                Why Work at Zion?
-              </h2>
-              <p className='text-zion-slate-light text-lg whitespace-pre-line'>
         canonical='https://app && app.ziontechgroup.com/careers'
       />;
       <main className='min-h-screen bg-zion-blue pt-24 pb-20'>;
@@ -229,7 +171,6 @@ export default function Careers() {;
                 src='https://images && images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&h=600&q=80'
                 alt='Team collaboration'
                 className='object-cover'
-
               />;
             </div>;
           </div>;
@@ -240,7 +181,6 @@ export default function Careers() {;
             </h2>;
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>;
               {benefits && benefits.map((benefit, index) => (;
-
                 <div
                   key={index}
                   className='bg-zion-blue-dark p-8 rounded-lg border border-zion-blue-light'>;
@@ -266,7 +206,6 @@ export default function Careers() {;
                   <p className="text-zion-slate-light">{benefit.description}</p>
                 </div>
               ))}
-
             </div>;
           </div>;
 
@@ -277,7 +216,6 @@ export default function Careers() {;
 
             <Tabs defaultValue='engineering' className='w-full'>;
               <TabsList className='bg-zion-blue-dark border border-zion-blue-light mb-8 w-full flex flex-wrap justify-center'>;
-
                 <TabsTrigger
                   value='engineering'
                   className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>;
@@ -295,14 +233,12 @@ export default function Careers() {;
                 </TabsTrigger>;
                 <TabsTrigger
                   value='operations'
-
                   className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>;
                   Operations;
                 </TabsTrigger>;
               </TabsList>;
 
               {Object && Object.entries(jobs).map(([department, jobList]) => (;
-
                 <TabsContent
                   key={department}
                   value={department}
@@ -628,14 +564,6 @@ export default function Careers() {;
                           </Button>;
                         </div>;
                       </CardContent>;
-
-                    </Card>;
-
-
-                  ))}
-                </TabsContent>;
-              ))}
-
             </Tabs>;
           </div>;
 
@@ -647,16 +575,6 @@ export default function Careers() {;
               We're always looking for talented individuals who are passionate;
               about AI and technology. Send us your resume and let's start a;
               conversation. You can also apply directly by emailing us at;
-
-
-          
-          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Don't see the right position?</h2>
-            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              We're always looking for talented individuals who are passionate about AI and technology.
-              Send us your resume and let's start a conversation. You can also
-              apply directly by emailing us at
-
               <a
                 href={`mailto:${applyEmail}`}
                 className='text-zion-cyan hover:text-zion-purple transition-colors'>;
@@ -666,7 +584,6 @@ export default function Careers() {;
             </p>;
             <Button
               asChild
-
               className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>;
               <a href={`mailto:${applyEmail}`}>Send General Application</a>;
             </Button>;
@@ -690,17 +607,8 @@ const Careers: React.FC = () => {;
   );
 };
 export default Careers;
-
 }
 
-export default Careers
-}
-
-
-
-
-}
-;
 
                     </Card>))}
                 </TabsContent>))}

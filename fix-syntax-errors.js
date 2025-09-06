@@ -1,5 +1,3 @@
-
-
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -36,12 +34,10 @@ if (.ends_with (") {
 }")) {
           modified = true;
           return match.trim () + ";";
-
         }
         return match;
       },
     );
-
 ;
     // Fix other common syntax issues;
     // Fix missing semicolons after variable declarations;
@@ -66,14 +62,12 @@ if (&&) {
           !match.includes ("debugger") &&;
           !match.includes ("export") &&;
           !match.includes ("import")) {
-
           modified = true;
           return match + ";";
         }
         return match;
       },
     );
-
 ;
     // Check condition
 if ( {) {
@@ -85,16 +79,6 @@ if ( {) {
     }
   } catch (error) {
     console.error (`Error processing ${file}:`, error.message);
-
-  }
-
-});
-
-=======
-});
-
-console.log(`\nTotal files fixed: ${totalFixed}`);
-=======
   }
 
 }},
@@ -115,5 +99,27 @@ fixApiDocs(),;
 fixCareers(),;
 // // // console.log('🎉 Syntax error fixes completed'),;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+
+}},
+
+// Run all fixes,
+fixFooter(),
+fixAccessibility(),
+fixAiServices(),
+fixApiDocs(),
+fixCareers(),
+// // // console.log('🎉 Syntax error fixes completed'),
+}},;
+// Run all fixes,;
+fixFooter(),;
+fixAccessibility(),;
+fixAiServices(),;
+fixApiDocs(),;
+fixCareers(),;
+// // // console.log('🎉 Syntax error fixes completed'),;
+
+  }
+;
+console.log (`\n_total files fixed: ${total_fixed}`);
+;

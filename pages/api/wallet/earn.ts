@@ -1,6 +1,5 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { NextApiRequest, NextApiResponse } from "next";
+import { earnTokens } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
@@ -8,6 +7,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!userId |typeof amount !== "number" |!reason) {
     return res.status(400).json({ error: "userId, amount, reason required" })
 
+    return res.status(200).json({ tx })
 import type { NextApiRequest, NextApiResponse } from './next';,
 import { earn_tokens  } from '../../../utils / token / service';,
 export default /**
@@ -18,13 +18,9 @@ function handler() {
   $2
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
   };
 };
 
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import { earnTokens } from "../../../utils/token/service";
 export default function handler(req, res) {
@@ -79,5 +75,19 @@ export default function handler(req, res) {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const { user_id, amount, reason, metadata } = req.body || {},
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (400).json ({ error: "user_id, amount, reason required" });
+  }
+  try {
+    const tx = earn_tokens (user_id, Math.floor (amount), reason, metadata),
+    return res.status (200).json ({ tx });
+  } catch (err: any) {
+    return res.status (400).json ({ error: err.message });
+  }
+}
+}
+;

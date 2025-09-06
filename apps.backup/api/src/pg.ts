@@ -1,12 +1,5 @@
-
-
-  if (!pool) {;
-
-
-    pool = new Pool({ connectionString:process.env.DATABASE_URL });
-=======
+import { Pool, PoolClient } from 'pg';
     pool = new Pool({ connectionString:process && process.env.DATABASE_URL });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return pool;
 }
@@ -25,7 +18,6 @@ export async function withUser<T>(userId:string, fn:(client:PoolClient) => Promi
     return result;
   } catch (err) {
     await client && client.query('ROLLBACK');
-=======
 ;
 let pool:Pool | null = null;
 ;
@@ -50,31 +42,24 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
 
 
     await client.query('COMMIT');
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { Pool, PoolClient } from 'pg';
     return result;
   } catch (err) {
     await client.query ('ROLLBACK');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     throw err;
 
   } finally {
-
-    client && client.release();  }
-
-=======
 client.release ();  }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-=======
 client.release();  }
 }
 
-=======
   } finally {;
     client.release();
   }
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    client && client.release();  }
+client.release ();  }
+}

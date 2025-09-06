@@ -1,22 +1,3 @@
-
-
-
-const defaultContext: MessagingContextType = {
-  messages: [],
-  conversations: [],
-  unreadCount: 0,
-  activeConversation: null,
-  activeMessages: [],
-  isLoading: false,
-  sendMessage: async () => {},
-  createConversation: async () => {},
-  markAsRead: async () => {},
-  setActiveConversation: () => {},
-  fetchConversations: async () => {},
-  loadMessages: async () => {}
-};
-
-=======
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { MessagingContextType } from '@/types/messaging',;
@@ -39,7 +20,6 @@ const defaultContext: MessagingContextType = {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 const defaultContext: MessagingContextType = {
   messages: []
@@ -91,11 +71,9 @@ const MessagingContext = createContext(;
 // Hook for using the messaging context;
 export function useMessaging(): any (): MessagingContextType {;
   // Cast to avoid type errors when React type definitions are missing;
-
   const context = useContext(MessagingContext) as MessagingContextType;
   if (context === undefined) {;
     throw new Error('useMessaging must be used within a MessagingProvider');
-=======
 
 ),
 
@@ -108,11 +86,9 @@ export function useMessaging(): MessagingContextType {
 
   if (context === undefined) {
     throw new Error('useMessaging must be used within a MessagingProvider')
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return context;
 }
-
 import React, { create_context, useContext, useEffect, ReactNode } from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {MessagingContextType} from '@/types / messaging';
@@ -158,23 +134,18 @@ export /**
 function MessagingProvider() {
   const { user } = use_auth ();
 ;
-
   const {
-=======
 
 // Provider component;
 export function MessagingProvider(): any ({ children }: { children: ReactNode }) {;
-=======
 
 
 
 // Provider component
 export function MessagingProvider({ children }: { children: ReactNode }) {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { user } = useAuth();
 
   const {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     messages;
     active_messages;
     setActiveMessages;
@@ -191,16 +162,18 @@ export function MessagingProvider({ children }: { children: ReactNode }) {;
 
 
 
+  // Fetch conversations when user changes;
+  useEffect(() => {;
+    if (user) {;
+      fetchConversations();
+    } else {;
       setConversations([]);
       setUnreadCount(0);
     }
   }, [user, fetchConversations, setConversations, setUnreadCount]);
 
-
   // Create context value with all the methods and states;
   const contextValue: MessagingContextType = {;
-
-=======
     fetch_conversations;
     load_messages;
   } = useMessagingOperations (user);
@@ -234,7 +207,6 @@ if ( {) {
 ;
   // Create context value with all the methods and states;
   const context_value: MessagingContextType = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     messages;
     active_messages;
     conversations;
@@ -245,19 +217,14 @@ if ( {) {
     create_conversation;
     markAsRead;
     setActiveConversation;
-
     fetchConversations,;
     loadMessages;
   };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {children}
-
     </MessagingContext && MessagingContext.Provider>;
   );
 }
-
-=======
     fetch_conversations,
     load_messages;
   }
@@ -267,4 +234,3 @@ if ( {) {
       {children}
     </MessagingContext.Provider>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

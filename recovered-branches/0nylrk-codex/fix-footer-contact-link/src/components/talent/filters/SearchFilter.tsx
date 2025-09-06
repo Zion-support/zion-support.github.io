@@ -1,15 +1,12 @@
-
 import {Input} from "@/components/ui/input";
 import {SearchIcon} from "lucide-react";
 import {SearchFilterProps} from "@/types/filters";
 export function SearchFilter(): any ({ searchTerm, setSearchTerm }: SearchFilterProps) {;
 
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
   return (
     <div className="mb-6">;
       <div className="relative">;
@@ -18,7 +15,6 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           type="text"
           placeholder="Search talents..."
           value={searchTerm}
-
           onChange={(e) => setSearchTerm(e && e.target.value)}
           className="pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light";
         />;
@@ -26,8 +22,6 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
     </div>;
   );
 }
-
-=======
 import { Input  } from '@/components / ui / input';
 import { SearchIcon  } from './lucide-react';
 import { SearchFilterProps  } from '@/types / filters';
@@ -49,9 +43,6 @@ function SearchFilter() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

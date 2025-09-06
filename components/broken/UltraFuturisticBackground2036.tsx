@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react',
 interface UltraFuturisticBackground2036Props {
   variant?: 'default' | 'quantum' | 'space' | 'ai' | 'cyber',
@@ -91,11 +90,9 @@ if (return, ) {
       gradient.addColorStop (1, 'rgba (0, 0, 0, 0.8)'),
       ctx.fill_style = gradient,
       ctx.fill_rect (0, 0, canvas.width, canvas.height),
-
       // Update and draw particles;
       particles.for_each ((particle, index) => {
         // Update position;
-
         particle.x += particle.vx,
         particle.y += particle.vy,
         // Wrap around edges;
@@ -259,13 +256,10 @@ if ( {) {
   $2
 }
         cancelAnimationFrame (animation_ref.current);
-
       }
       window.removeEventListener ('resize', resize_canvas);
     }
-
 }, [variant, intensity]),
-
   return (
     <div className=&quot;fixed inset - 0 -z - 10 overflow - hidden & quot;>;
       <canvas;
@@ -277,9 +271,7 @@ if ( {) {
 <div className=&quot;absolute inset - 0 pointer - events - none & quot;>;
         {/* Grid overlay for cyber variant */}
         {variant === 'cyber' && (
-
           <div className=&quot;absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:50px_50px]&quot; />)}
-
         {/* Quantum field lines */}
 {variant === 'quantum' && (
           <div className=&quot;absolute inset - 0&quot;>;
@@ -288,7 +280,6 @@ if ( {) {
                 key={i}
                 className=&quot;absolute w - px h - full bg - gradient - to - b from - transparent via - cyan - 400 / 30 to - transparent & quot;
                 style={{
-
                   left: `${(i + 1) * 12.5}%`,
                   transform: 'translate_x (-50%)';
                 }}
@@ -300,7 +291,6 @@ if ( {) {
                   delay: i * 0.5}}
               />))}
           </div>)}
-
         {/* AI neural network overlay */}
 {variant === 'ai' && (
           <div className=&quot;absolute inset - 0&quot;>;
@@ -310,19 +300,15 @@ if ( {) {
                 className=&quot;absolute w - full h - px bg - gradient - to - r from - transparent via - green - 400 / 20 to - transparent & quot;
                 style={{
                   top: `${(i + 1) * 16.67}%`}}
-
                 animate={{
                   opacity: [0.2, 0.6, 0.2]}}
                 transition={{
                   duration: 4,
                   repeat: Infinity,
-
                   delay: i * 0.8}}
               />))}
           </div>)}
       </div>;
-
     </div>);
-
 }
 export default UltraFuturisticBackground2036;

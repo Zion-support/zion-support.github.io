@@ -1,5 +1,5 @@
-
-
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 export default function PostJobPage() {
   const router = useRouter()
   const [title, setTitle] = useState('')
@@ -13,13 +13,6 @@ export default function PostJobPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   async function handleSubmit(e: React.FormEvent) {
-
-    e.preventDefault();
-    setError(null);
-
-    if (!title || !description || !category || !clientEmail) {
-      setError('Please fill in all required fields.');
-
       return
     }
     try {
@@ -28,20 +21,29 @@ export default function PostJobPage() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+          title;
+          description;
+          category;
+          requiredSkills: skills
+            .split()
+            .map((s) => s.trim())
+            .filter(Boolean);
+          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,
+          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,
+          deliveryDeadlineIso: deliveryDeadlineIso || undefined,
+          clientEmail})});
 
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Failed to post job');
 
       router.push(`/client/dashboard`)
     } catch (err: any) {
       setError(err.message |'Something went wrong')
     } finally {
-
-      setIsSubmitting(false),
-
     }
 
 
 
-=======
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 export default function PostJobPage(req, res) {
@@ -111,7 +113,6 @@ export default function PostJobPage(req, res) {
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium">Project Title *</label>
@@ -149,23 +150,13 @@ export default function PostJobPage(req, res) {
         </div>
         <div className="pt-2">
           <button type="submit" className="px-4 py-2 rounded bg-black text-white disabled:opacity-50" disabled={isSubmitting}>
-
-
-  );
-};
-
-=======
-            {isSubmitting ? 'Posting…' : 'Post Job'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
+            {isSubmitting ? 'Posting…' : 'Post Job'}
+          </button>
+        </div>
+      </form>
+    </div>
+  )
 }
-
-=======
-}
-
-=======
 import { useState } from 'react',
 import { use_router } from 'next / router',
 export default /**
@@ -278,6 +269,3 @@ if ( {) {
   }
 
 }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

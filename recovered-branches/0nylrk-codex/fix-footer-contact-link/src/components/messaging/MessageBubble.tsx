@@ -1,10 +1,3 @@
-
-
-
-  message: Message,
-  isUserMessage: boolean
-
-=======
 import React from 'react',;
 import { format } from 'date-fns',;
 import { PaperclipIcon } from 'lucide-react',;
@@ -17,8 +10,18 @@ interface MessageBubbleProps {;
 
 
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react',;
+import { format } from 'date-fns',;
+import { PaperclipIcon } from 'lucide-react',;
+import { cn } from '@/lib/utils',;
+import { Message } from '@/types/messaging',;
+interface MessageBubbleProps {;
+  message: Message,;
+  isUserMessage: boolean;
+
+
+
+}
 
   message: Message
 
@@ -64,7 +67,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
     </div>
   )
 }
-=======
+import React from 'react';
 import {format} from 'date-fns';
 import {PaperclipIcon} from 'lucide-react';
 import {cn} from '@/lib/utils';
@@ -106,8 +109,6 @@ export function MessageBubble(): any ({ message, isUserMessage }: MessageBubbleP
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import {format} from 'date - fns';
 import {PaperclipIcon} from 'lucide-react';
 import {cn} from '@/lib / utils';
@@ -146,4 +147,3 @@ function MessageBubble() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

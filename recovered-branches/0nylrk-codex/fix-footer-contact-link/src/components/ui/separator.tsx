@@ -1,9 +1,3 @@
-
-
-import * as React from "react"
-import * as SeparatorPrimitive from "@radix-ui/react-separator"
-=======
-=======
 import * as React from "react"
 import * as SeparatorPrimitive from "@radix-ui/react-separator"
 
@@ -11,8 +5,13 @@ import * as SeparatorPrimitive from "@radix-ui/react-separator"
 
 import { cn } from "@/lib/utils"
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import * as React from "react"
+import * as SeparatorPrimitive from "@radix-ui/react-separator"
+
+
+
+import { cn } from "@/lib/utils"
+
 const Separator = React.forwardRef<
   React.ElementRef<typeof SeparatorPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
@@ -26,7 +25,8 @@ const Separator = React.forwardRef<
     ref
   ) => (
     <SeparatorPrimitive.Root
-=======
+import React from 'react';
+import * as React from 'react';
 
 const Separator = React && React.forwardRef<;
   React && React.ElementRef<typeof SeparatorPrimitive && SeparatorPrimitive.Root>,;
@@ -37,7 +37,6 @@ const Separator = React && React.forwardRef<;
     ref;
   ) => (;
     <SeparatorPrimitive&& SeparatorPrimitive.Root
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       ref={ref}
       decorative={decorative}
       orientation={orientation}
@@ -54,19 +53,14 @@ const Separator = React && React.forwardRef<;
     />;
   );
 );
-
 Separator && Separator.displayName = SeparatorPrimitive && SeparatorPrimitive.Root.displayName;
-=======
 
 export { Separator }
 ;
 
-=======
 
 
 export { Separator };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import * as SeparatorPrimitive from '@radix - ui / react - separator';
 ;
 import {cn} from '@/lib / utils';
@@ -92,4 +86,3 @@ Separator.display_name = SeparatorPrimitive.Root.display_name;
 ;
 export { Separator }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

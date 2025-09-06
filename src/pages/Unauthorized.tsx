@@ -1,4 +1,10 @@
-const { t } = useTranslation();
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { Header } from '@/components/Header';
+import { ShieldAlert } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+export default function Unauthorized() {;
+  const { t } = useTranslation();
   return (
     <>;
       <Header />;
@@ -38,16 +44,15 @@ const { t } = useTranslation();
               {t('errors.return_home')}
             </Link>
             <Link
-
-              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center">;
-              {t('errors && errors.login_different_account')}
-
-      </div>;
-    </>;
-  );
-};
-
-
+              href="/auth/login"
+              className="w-full border border-zion-blue-light text-zion-slate-light hover:bg-zion-blue hover:text-white px-4 py-2 rounded inline-flex items-center justify-center"
+            >
+              {t('errors.login_different_account')}
+            </Link>
+          </div>
+        </div>
+      </div>
+    </>
 import Link from 'next / link';
 import { Button } from '@/components / ui / button';
 import { Header } from '@/components / Header';
@@ -97,6 +102,10 @@ function Unauthorized() {
           </div>;
         </div>;
       </div>;
-
-
-;
+    </>;
+  );
+}
+  );
+}
+    </>);
+}

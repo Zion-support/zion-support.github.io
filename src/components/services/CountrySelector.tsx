@@ -1,40 +1,3 @@
-const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
-  onCountryChange: (country: CountryPricing | null,) => void
-
-  selectedCountry: CountryPricing | null
-}
-  // Set top/popular countries
-  useEffect(() => {
-
-
-
-
-    const popular = [
-      'United States'
-      'United Kingdom'
-      'Canada'
-      'Germany'
-      'Australia'
-      'Japan'
-      'Singapore'
-    ]
-    const top = onsiteServicePricing
-      .filter(item => popular.includes(item.country))
-      .sort((a, b) => a.country.localeCompare(b.country))
-
-    const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"],
-    const top = onsiteServicePricing.filter(item => 
-      popular.includes(item.country)
-    ).sort((a, b) => a.country.localeCompare(b.country)),
-
-
-
-    setTopCountries(top)
-  }, [])
-  // Handle country selection
-  const handleCountryChange = (countryName: string) => {
-
-
 import { useState, useEffect } from 'react';
 import { Globe } from 'lucide-react';
 import {;
@@ -86,9 +49,7 @@ export function CountrySelector(): any ({;
     onCountryChange(country);
   };
   return (
-
       </h3>;
-
 
       <Select
         onValueChange={handleCountryChange}
@@ -134,12 +95,8 @@ export function CountrySelector(): any ({;
                 {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
               </SelectItem>;
             ))}
-
-        </SelectContent>;
-      </Select>;
-    </div>;
-
-  return (
+  );
+}
     <div className="mb-6">
       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
         <Globe className="mr-2 h-5 w-5 text-zion-cyan" />
@@ -177,7 +134,12 @@ export function CountrySelector(): any ({;
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}
-
+          </div>
+        </SelectContent>
+      </Select>
+    </div>
+  );
+}
 import { useState, useEffect } from 'react';
 import { Globe } from 'lucide-react';
 import {
@@ -277,14 +239,3 @@ function CountrySelector() {
       </Select>;
     </div>);
 }
-
-
-;
-
-          </div>;
-        </SelectContent>;
-      </Select>;
-    </div>;
-  );
-}
-;

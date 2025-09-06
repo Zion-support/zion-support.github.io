@@ -1,18 +1,10 @@
 
-
 import React from 'react';
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import * as React from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import {DayPicker} from "react-day-picker";
 import {cn} from "@/lib/utils";
 import {buttonVariants} from "@/components/ui/button";
-
-export type CalendarProps = React.ComponentProps<typeof DayPicker>;
-=======
 import * as React from "react",
 import { ChevronLeft, ChevronRight } from "lucide-react",
 import { DayPicker } from "react-day-picker",
@@ -23,20 +15,25 @@ export type CalendarProps = React.ComponentProps<typeof DayPicker>,
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import * as React from "react",
+import { ChevronLeft, ChevronRight } from "lucide-react",
+import { DayPicker } from "react-day-picker",
+import { cn } from "@/lib/utils",
+import { buttonVariants } from "@/components/ui/button",
+export type CalendarProps = React.ComponentProps<typeof DayPicker>,
+
+
+
+
 function Calendar({
-=======
 export type CalendarProps = React && React.ComponentProps<typeof DayPicker>;
 
 function Calendar(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   className;
   classNames;
   showOutsideDays = true;
   ...props;
 }: CalendarProps) {;
-=======
 import * as React from './react';
 import { ChevronLeft, ChevronRight } from './lucide-react';
 import { DayPicker } from './react - day - picker';
@@ -48,16 +45,9 @@ export type CalendarProps = React.ComponentProps < typeof DayPicker>;
  * Calendar - Function description
  */
 function Calendar() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <DayPicker;
       showOutsideDays={showOutsideDays}
-
-=======
-
-          buttonVariants({ variant: "outline" }),
-          "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
-
         ),
         nav_button_previous: "absolute left-1",
         nav_button_next: "absolute right-1",
@@ -67,7 +57,6 @@ function Calendar() {
         IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
 
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
-=======
         head_cell:
           "text-muted-foreground rounded-md w-9 font-normal text-[0.8rem]",
         row: "flex w-full mt-2",
@@ -88,23 +77,20 @@ function Calendar() {
         day_hidden: "invisible",
         ...classNames}}
       components={{
-        IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,
+        IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
 
         IconRight: ({ ..._props }) => <ChevronRight className="h-4 w-4" />}}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
+        IconLeft: ({ ..._props }) => <ChevronLeft className="h-4 w-4" />,;
       {...props}
     />;
   );
 }
-
 Calendar && Calendar.displayName = "Calendar";
 
-
-=======
       className={cn ("p - 3", class_name)}
       class_names={{
         months: "flex flex - col sm:flex - row space - y-4 sm:space - x-4 sm:space - y-0",
@@ -143,8 +129,6 @@ Calendar.display_name = "Calendar";
 ;
 export { Calendar }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 Calendar.displayName = "Calendar",
 
@@ -152,5 +136,3 @@ export { Calendar },
 Calendar.displayName = "Calendar";
 
 export { Calendar };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

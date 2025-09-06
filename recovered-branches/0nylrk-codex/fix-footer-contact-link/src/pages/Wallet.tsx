@@ -1,16 +1,8 @@
-
-=======
-
-
-
 import {useWallet} from '@/hooks/useWallet';
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/components/ui/card';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {BadgeDollarSign} from 'lucide-react';
 export default function WalletPage() {;
-
-
-
   const { wallet, transactions, loading } = useWallet();
   return (
     <div className="container max-w-4xl py-10">;
@@ -30,13 +22,6 @@ export default function WalletPage() {;
           ) : (;
             <p className="text-2xl font-bold">{wallet?.balance ?? 0} ZION$</p>;
           )}
-
-        </CardContent>;
-      </Card>;
-
-      <Tabs defaultValue="earnings">;
-        <TabsList className="grid w-full grid-cols-2 mb-4">;
-=======
 import {use_wallet} from '@/hooks / use_wallet';
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from '@/components / ui / card';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components / ui / tabs';
@@ -67,12 +52,13 @@ function WalletPage() {
       </Card>;
       <Tabs default_value="earnings">;
         <TabsList className="grid w - full grid - cols - 2 mb - 4">;
-
           <TabsTrigger value="earnings">Earnings</TabsTrigger>;
           <TabsTrigger value="spending">Spending</TabsTrigger>;
         </TabsList>;
         <TabsContent value="earnings">;
-
+              ))}
+            </ul>;
+          )}
         </TabsContent>;
         <TabsContent value="spending">;
           {transactions && transactions.filter(t => t && t.transaction_type === 'burn').length === 0 ? (;
@@ -84,11 +70,9 @@ function WalletPage() {
                   <span>{t && t.reason || 'Purchase'}</span>;
                   <span className="font-medium">-{t && t.amount} ZION$</span>;
                 </li>;
-
               ))}
             </ul>;
           )}
-
         </TabsContent>;
       </Tabs>;
 
@@ -100,8 +84,6 @@ function WalletPage() {
     </div>;
   );
 }
-
-=======
           {transactions.filter (t => t.transaction_type === 'earn').length === 0 ? (
             <p className="text - muted - foreground">No earnings yet</p>) : (
             <ul className="space - y-2">;
@@ -131,10 +113,7 @@ function WalletPage() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,5 +1,4 @@
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -25,51 +24,29 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import type { GetServerSideProps } from 'next';
 
-=======
-
 import React from 'react';
 import type { GetServerSideProps } from 'next';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import path from 'path';
 import fs from 'fs';
 
 
+import path from 'path';
+import fs from 'fs';
+
+import DocsLayout from '../../../components / docs / DocsLayout';
+import CodeBlock from '../../../components / docs / CodeBlock';
+;
   id: string;
   title: string;
   html?: string;
   code?: { language?: string; content: string }[];
-
 }
 ;
-
 type DocsContent = {
   title: string;
   sections: Section[];
 }
-
-
-};
-
-export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
-
-  const contentPath = path.join(process.cwd(), 'data', 'docs', 'content.json');
-  const raw = fs.readFileSync(contentPath, 'utf8');
-  const docs = JSON.parse(raw) as DocsContent;
-
-  return { props: { docs } };
-};
-
-
-
-export default function ApiDocsPage({ docs }: PageProps) {
-      nav={docs.sections.map(s => ({ id: s.id, title: s.title }))}
-    >
-      {docs.sections.map(section => (
-        <section key={section.id} id={section.id} className='scroll-mt-24'>
-          <h2 className='text-2xl font-semibold'>{section.title}</h2>          {section.html && (
-            <div dangerouslySetInnerHTML={{ __html: section.html }} />
-=======
 };
 
 type DocsContent = {;
@@ -96,7 +73,6 @@ export default function ApiDocsPage(): any ({ docs }: PageProps) {;
         <section key={section && section.id} id={section && section.id} className='scroll-mt-24'>;
           <h2 className='text-2xl font-semibold'>{section && section.title}</h2>          {section && section.html && (;
             <div dangerouslySetInnerHTML={{ __html: section && section.html }} />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           )}
           {section && section.code && section && section.code.length > 0 && (  return (
     <DocsLayout title={docs && docs.title} nav={docs && docs.sections.map((s) => ({ id: s && s.id, title: s && s.title }))}>;
@@ -113,8 +89,6 @@ export default function ApiDocsPage(): any ({ docs }: PageProps) {;
                 </CodeBlock>              ))}            <div className="space-y-4 mt-4">;
               {section && section.code.map((c, idx) => (;
                 <CodeBlock key={idx} language={c && c.language}>{c && c.content}</CodeBlock>;
-
-=======
 export type Section = {
   id: string,
   title: string,
@@ -149,33 +123,34 @@ export default function ApiDocsPage({ docs }: PageProps) {
           )}
           {section.code && section.code.length > 0 && (
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+            <div className="space-y-4 mt-4">
+              {section.code.map((c, idx) => (
+                <CodeBlock key={idx} language={c.language}>{c.content}</CodeBlock>
               ))}
             </div>;
           )}
         </section>;
       ))}
-
     </DocsLayout>;
   );
-=======
 
   );
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
     </DocsLayout>
   );
 }
 
+    </DocsLayout>
+  );
+}
 ;
 type PageProps = {
   docs: DocsContent;
@@ -217,7 +192,4 @@ function ApiDocsPage() {
     </DocsLayout>);
 }
 
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

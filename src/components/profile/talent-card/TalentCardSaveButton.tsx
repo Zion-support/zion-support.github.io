@@ -1,22 +1,9 @@
-}
-    setLocalIsSaved(!localIsSaved)
-    if (onToggleSave) {
-      onToggleSave(profileId, !localIsSaved)
-    }
-
-
-
-
-
-    toast({
-      title: localIsSaved ? 'Removed from favorites' : 'Added to favorites'
-      description: localIsSaved
-        ? `${profileName} has been removed from your favorites`
-        : `${profileName} has been added to your favorites`
-      variant: 'default'
-    })
-  }
-    >
+import { useRouter } from 'next/router';
+interface TalentCardSaveButtonProps {;
+  profileId: string;
+  profileName: string;
+  isSaved: boolean;
+  onToggleSave?: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean;
 export function TalentCardSaveButton(): any ({;
   profileId,;
@@ -64,33 +51,18 @@ export function TalentCardSaveButton(): any ({;
         className={cn(
           'h-4 w-4 transition-colors'
           localIsSaved ? 'fill-red-500 text-red-500' : 'text-zion-slate'
-
         )}      />;
     </button>;
   );
 
-
     </button>
   )
-
-
-}variant: "default" 
-}) 
-};
-}/> </button>) ;
-}";
-};
-
-    
-    toast({
-      title: localIsSaved ? "Removed from favorites" : "Added to favorites",
-      description: localIsSaved 
-        ? `${profileName} has been removed from your favorites` 
-        : `${profileName} has been added to your favorites`,
-      variant: "default"
-    })
-  },
-
+}variant: "default"
+})
+}
+}/> </button>)
+}"
+}
 
 
 import React from 'react';
@@ -155,6 +127,3 @@ if ( {) {
 }/> </button>);
 }";
 }
-
-
-;

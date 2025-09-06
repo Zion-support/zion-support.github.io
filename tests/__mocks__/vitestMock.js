@@ -1,4 +1,3 @@
-
 // Re - export Jest globals so tests written for Vitest compile under Jest;
 // eslint - disable - next - line @typescript - eslint / no - require - imports;
 const jest_globals = require ('@jest / globals'),
@@ -16,4 +15,3 @@ module.exports = {
   describe: jest_globals.describe,
   before_each: jest_globals.before_each,
   after_each: jest_globals.after_each}
-

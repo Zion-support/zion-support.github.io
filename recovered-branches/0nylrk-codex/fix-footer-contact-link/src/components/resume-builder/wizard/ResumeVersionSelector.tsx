@@ -1,8 +1,3 @@
-
-=======
-
-
-
 import {useState} from 'react';
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
 import {Button} from '@/components/ui/button';
@@ -18,16 +13,12 @@ interface ResumeVersionSelectorProps {
   onResumeChange: (resumeId: string) => void
 }
 
-
-export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
-
-
+export function ResumeVersionSelector(): any ({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
   const [newResumeTitle, setNewResumeTitle] = useState('');
   const [existingResumes, setExistingResumes] = useState<Resume[]>([]),
   const [isLoading, setIsLoading] = useState(false);
-
 
   const handleCreateNewVersion = async () => {;
     if (newResumeTitle && newResumeTitle.trim()) {;
@@ -38,16 +29,13 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
         setNewResumeTitle('');
-
       }
       setIsLoading(false);
     }
   }
-=======
 
         setNewResumeTitle('')
 
-=======
 import { useState } from 'react',;
 import {;
   DropdownMenu,;
@@ -84,65 +72,13 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         setNewResumeTitle('');
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       setIsLoading(false);
     }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
-
-
-            <Button 
-              variant="outline" 
-              onClick={() => setSaveDialogOpen(false)}
-            >;
-              Cancel;
-            </Button>;
-            <Button;
-              onClick={handleCreateNewVersion}
-              disabled={!newResumeTitle.trim() || isLoading}
-
-
-              className="gap-2"
-            >
-              {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
-              <Save className="h-4 w-4" />
-              Save
-            </Button>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
-    </div>
-
-    <div className="flex items-center gap-2">;
-      <span className="text-sm text-muted-foreground">Resume:</span>;
-      <DropdownMenu>;
-        <DropdownMenuTrigger asChild>;
-          <Button variant="outline" size="sm" className="gap-2">;
-            {currentResume?.basic_info?.title || 'My Resume'}
-            <ChevronDown className="h-4 w-4" />;
-          </Button>;
-        </DropdownMenuTrigger>;
-        <DropdownMenuContent align="end">;
-          {existingResumes && existingResumes.map((resume) => (;
-            <DropdownMenuItem
-              key={resume && resume.id}
-              onClick={() => onResumeChange(resume && resume.id!)}
-              className="cursor-pointer";
-            >;
-              {resume && resume.basic_info.title}
-            </DropdownMenuItem>;
-          ))}
-          <DropdownMenuSeparator />;
-          <DropdownMenuItem
-            onClick={() => setSaveDialogOpen(true)}
-            className="cursor-pointer";
-          >;
-            <Plus className="h-4 w-4 mr-2" />;
-=======
 import { useState  } from './react';
 import {
   DropdownMenu,
@@ -221,12 +157,10 @@ if ( {) {
             className="cursor - pointer";
           >;
             <Plus className="h - 4 w - 4 mr - 2" />;
-
             Save as new version;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
-
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>;
         <DialogContent className="sm:max - w-md">;
           <DialogHeader>;
@@ -250,19 +184,14 @@ if ( {) {
             >;
               {is_loading && <Loader2 className="h - 4 w - 4 animate - spin" />}
               <Save className="h - 4 w - 4" />;
-
               Save;
             </Button>;
           </DialogFooter>;
         </DialogContent>;
       </Dialog>;
 
-    </div>);
-}
-
-=======
-
   )
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </div>);
+}

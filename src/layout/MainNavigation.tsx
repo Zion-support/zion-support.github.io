@@ -1,7 +1,3 @@
-interface MainNavigationProps {
-  isAdmin?: boolean
-  unreadCount?: number
-  className?: string
 
 import Link from 'next / link';
 import { use_router } from 'next / router';
@@ -57,7 +53,6 @@ if ( {) {
       e.prevent_default ();
       setLoginOpen (true);
       return;
-
     }
     setIsMobileMenuOpen (false);
   }
@@ -67,7 +62,6 @@ if ( {) {
       href: '/'
       matches: (path: string) => path === '/',    }
     {
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -207,7 +201,6 @@ export function MainNavigation(): any ({;
       matches: (path: string) => path && path.startsWith('/analytics'),;
     });  }
 
-
   return (
     <>;
       <button
@@ -234,30 +227,6 @@ export function MainNavigation(): any ({;
                   aria-label={link.name}
 
                   onClick={() => setIsMobileMenuOpen(false)}
-
-
-                    'nav-link',
-                    'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',
-
-
-                    link.matches(router.pathname)
-                      ? 'bg-zion-purple/20 text-zion-cyan'
-                      : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
-                  )}                >
-
-                    "nav-link",
-                    "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
-                    link.matches(router.pathname)
-                      ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-                  )}
-                >;
-
-
-
-                  {link.name}
-                </Link>
-              </li>
                   className={cn(;
                     'nav-link',;
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;
@@ -269,7 +238,13 @@ export function MainNavigation(): any ({;
                 </Link>;
               </li>;
             ))}
-
+            {/* Wishlist link */}
+            {isAuthenticated && (;
+              <li className='nav-item'>;
+                <Link
+                  href='/wishlist'
+                  aria-label='Wishlist'
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(;
                     'nav-link',;
                     'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;
@@ -280,7 +255,6 @@ export function MainNavigation(): any ({;
                   <Heart className='w-4 h-4' />;
                   {count > 0 && (;
                     <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>;
-
                       {count}
                     </span>;
                   )}
@@ -294,7 +268,6 @@ export function MainNavigation(): any ({;
                   href='/wallet'
                   aria-label='Wallet'
                   onClick={() => setIsMobileMenuOpen(false)}
-
                   className={cn(;
                     'nav-link',;
                     'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;
@@ -305,7 +278,6 @@ export function MainNavigation(): any ({;
                   <Wallet className='w-4 h-4' />;
                 </Link>;
               </li>;
-
             )}
             {/* Messages link */}
             {isAuthenticated && (;
@@ -314,7 +286,6 @@ export function MainNavigation(): any ({;
                   href='/messages'
                   aria-label='Messages'
                   onClick={() => setIsMobileMenuOpen(false)}
-
                   className={cn(;
                     'nav-link',;
                     'relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;
@@ -325,7 +296,6 @@ export function MainNavigation(): any ({;
                   <MessageSquare className='w-4 h-4' />;
                   {unreadCount > 0 && (;
                     <span className='absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center'>;
-
                       {unreadCount > 9 ? '9+' : unreadCount}
                     </span>;
                   )}
@@ -341,10 +311,8 @@ export function MainNavigation(): any ({;
                     aria-label={t('nav && nav.cart')}
                     onClick={handleCartClick}
                     className={cn(
-
                       'nav-link',
                       'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',                      router && router.pathname.startsWith('/cart')
-
                         ? 'bg-zion-purple/20 text-zion-cyan'
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                     ),}>;
@@ -353,7 +321,6 @@ export function MainNavigation(): any ({;
                     {cartCount > 0 && (;
                       <span className='absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center'>;
                         {cartCount}
-
       key: 'marketplace',
       href: '/marketplace',
       matches: (path: string) => path.starts_with ('/marketplace'),    },
@@ -592,11 +559,9 @@ function Page() { []);
       name: 'About',
       matches: (path: string)  => path.starts_with ('/about');
 },
-
     {
       matches: (path: string)  => path.starts_with ('/contact');
 }
-
       key: 'contact',
       href: '/contact',
       name: 'Contact',
@@ -608,13 +573,11 @@ function Page() { []);
       </div>)}
   return ();
     <nav class_name = {`${class_name}`}>;
-
       {/* Desktop Navigation */}
       <div className="hidden lg: flex items - center space - x-1">;
         {base_links.map ((link (
           <div key={link.key}>;
             {link.children ? (
-
                       </span>;
 import { ChevronDown, Menu, X, Home, Settings, Users, Building, Globe, Zap, Brain, Shield, Cloud, Code, BarChart3'  } from 'lucide-react';
 export default function Page() {; []);
@@ -720,23 +683,19 @@ export default function Page() {; []);
             ) : (;
               <Link
                 to={link && link.href}`
-
                 className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${isActive(link)
                     ? 'bg-zion-cyan text-white''
                     : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
 }`}
 
-
                 {link && link.name}
               </Link>;
-
             )}
           </div>
         ))}
       </div>
       {/* Mobile Menu Button */}
       <button
-
               render_dropdown ();
                 link,
                 link.key === 'services' ? isServicesOpen : isCompOpen,
@@ -772,7 +731,6 @@ export default function Page() {; []);
             exit = {
   { opacity: 0,
   coordinate_x: '100%';
-
 }}
             transition={{ duration: 0.3 }}";
             className="lg:hidden fixed inset - y-0 right - 0 w - 80 bg - zion - slate - dark border - l border - white / 10 shadow - xl z - 50";
@@ -797,109 +755,6 @@ export default function Page() {; []);
                               ? 'bg - zion - cyan text - white'';
                               : 'text - zion - slate - light hover:text - white hover:bg - white / 10'`;
 }`}
-
-
-;
-            {/* Wishlist link */}
-            {isAuthenticated && (
-              <li className="nav-item">
-                <Link 
-                  href="/wishlist"
-                  aria-label="Wishlist"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={cn(
-                    "nav-link",
-                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
-                    router.pathname === "/wishlist"
-                      ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-                  )}
-                >
-                  <Heart className="w-4 h-4" />
-                  {count > 0 && (
-                    <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
-                      {count}
-                    </span>;
-                  )}
-                </Link>;
-              </li>;
-            )}
-;
-            {/* Wallet link */}
-            {isAuthenticated && (
-              <li className="nav-item">
-                <Link 
-                  href="/wallet"
-                  aria-label="Wallet"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={cn(
-                    "nav-link",
-                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
-                    router.pathname === "/wallet"
-                      ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-                  )}
-                >
-                  <Wallet className="w-4 h-4" />
-                </Link>
-              </li>
-            )}
-;
-            {/* Messages link */}
-            {isAuthenticated && (
-              <li className="nav-item">
-                <Link 
-                  href="/messages"
-                  aria-label="Messages"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={cn(
-                    "nav-link",
-                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
-                    router.pathname === "/messages"
-                      ? "bg-zion-purple/20 text-zion-cyan"
-                      : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
-                  )}
-                >
-                  <MessageSquare className="w-4 h-4" />
-                  {unreadCount > 0 && (
-                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
-                      {unreadCount > 9 ? '9+' : unreadCount}
-                    </span>;
-                  )}
-                </Link>;
-              </li>;
-            )}
-;
-            {/* Cart icon with badge */}
-            <li className="nav-item">
-              <HoverCard openDelay={100}>
-                <HoverCardTrigger asChild>
-                  <Link
-                    href="/cart"
-                    aria-label={t('nav.cart')}
-                    onClick={handleCartClick}
-                    className={cn(;
-                      'nav-linkinline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary';
-                      router.pathname.startsWith('/cart');
-                        ? 'bg-zion-purple/20 text-zion-cyan';
-                        : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan';
-                    )}
-
-
-                  >
-                    <ShoppingCart className="w-4 h-4 mr-1" />
-                    {t('nav.cartCart')}
-                    {cartCount > 0 && (
-
-}`};
-;
-                          {link.name}'`;
-                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;
-
-                        {activeDropdown === link.key && (;"
-                          <div className="ml-4 mt-2 space-y-1">
-                            {link.children.map((child: unknown (
-                              <Link
                           {link.name}'`;
                           <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === link.key ? 'rotate - 180' : ''}`}  />                        </button>;
                         {active_dropdown === link.key && (";
@@ -910,7 +765,6 @@ export default function Page() {; []);
                                 to={child.href}`;
                                 className={`block px - 4 py - 2 text - sm text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors ${is_active (child) ? 'text - zion - cyan bg - zion - cyan / 10' : ''`;
 }`}
-
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}";
         className="lg:hidden p-2 text-zion-slate-light hover:text-white hover:bg-white/10 rounded-md transition-colors";
 ";
@@ -974,54 +828,18 @@ export default function Page() {; []);
 
                                 {child && child.name}
                               </Link>;
-
                             ))}
                           </div>
                         )}
-
                       </div>;
                     ) : (;
                       <Link
                         to={link && link.href}`
-
                         className={`block px-4 py-3 text-sm font-medium rounded-md transition-colors ${isActive(link)
                             ? 'bg-zion-cyan text-white''
                             : 'text-zion-slate-light hover:text-white hover:bg-white/10'`
 }`}
                         onClick={: unknown setIsMobileMenuOpen(false)}
-
-                      <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                  >;
-                    <ShoppingCart className="w-4 h-4 mr-1" />;
-                    {t('nav.cartCart')}
-                    {cartCount > 0 && (;
-                      <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
-                        {cartCount}
-                      </span>;
-
-
-
-                    )}
-                  </Link>
-                </HoverCardTrigger>
-                <HoverCardContent>
-                  <MiniCartPreview />
-                </HoverCardContent>
-              </HoverCard>
-            </li>
-          </ul>
-          <div className='flex items-center gap-2 mt-4 md:mt-0 md:ml-auto'>
-            <LanguageSelector />
-          </div>
-        </div>
-      </nav>
-      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-    </>
-
-
-                        {link && link.name}
-                      </Link>;
-                    )}
                                 on_click={: unknown setIsMobileMenuOpen (false)}
                                 {child.name}
                               </Link>))}
@@ -1036,7 +854,6 @@ export default function Page() {; []);
                         on_click={: unknown setIsMobileMenuOpen (false)}
                         {link.name}
                       </Link>)}
-
                   </Link>;
                 </HoverCardTrigger>;
                 <HoverCardContent>;
@@ -1045,23 +862,12 @@ export default function Page() {; []);
               </HoverCard>;
             </li>;
           </ul>;
-
           <div className='flex items - center gap - 2 mt - 4 md:mt - 0 md:ml - auto'>;
-
             <LanguageSelector />;
           </div>;
         </div>;
       </nav>;
 
-
-
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>));
 }
-
-;
-}
-
-  )
-}
-;

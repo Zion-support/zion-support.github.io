@@ -1,29 +1,3 @@
-
-
-
-import {useState, useMemo} from "react";
-import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
-import {Input} from "@/components/ui/input";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Globe, Search, ArrowUpDown} from "lucide-react";
-import {Button} from "@/components/ui/button";
-export function ITServicePricingTable() {;
-  const [searchQuery, setSearchQuery] = useState("");
-
-=======
-import { useState, useMemo } from "react",
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
-import { Input } from "@/components/ui/input",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Globe, Search, ArrowUpDown } from "lucide-react",
-import { Button } from "@/components/ui/button",
-
-
-
-export function ITServicePricingTable() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [sortConfig, setSortConfig] = useState<{
-=======
 import { useState, useMemo  } from './react';
 import {
   onsiteServicePricing,
@@ -46,27 +20,9 @@ export /**
 function ITServicePricingTable() {
   const [search_query, setSearchQuery] = useState ("");
   const [sort_config, setSortConfig] = useState<{
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     key: keyof CountryPricing;
     direction: "ascending" | "descending"
   }>({
-
-
-    let filteredData = [...onsiteServicePricing],
-    
-
-
-    // Filter by search query
-    if (searchQuery) {
-      filteredData = filteredData.filter((item) =>
-        item.country.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
-    // Sort data
-    filteredData.sort((a, b) => {
-      if (a[sortConfig.key] < b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? -1 : 1;
-=======
     key: "country",
     direction: "ascending",
   });
@@ -90,7 +46,6 @@ if ( {) {
   $2
 }
         return sort_config.direction === "ascending" ? -1 : 1;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
       // Check condition
 if ( {) {
@@ -98,7 +53,8 @@ if ( {) {
 }
         return sort_config.direction === "ascending" ? 1 : -1;
       }
-
+      return 0;
+    });
 import {useState, useMemo} from "react";
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {Input} from "@/components/ui/input";
@@ -147,8 +103,6 @@ export function ITServicePricingTable() {;
           : "ascending"});
   };
 
-=======
-
       return 0
     }),
     
@@ -164,7 +118,6 @@ export function ITServicePricingTable() {;
           : "ascending"})
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
@@ -174,9 +127,7 @@ export function ITServicePricingTable() {;
           <Input
             placeholder="Search by country..."
             value={searchQuery}
-
             onChange={(e) => setSearchQuery(e && e.target.value)}
-=======
 
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
@@ -282,7 +233,6 @@ export function ITServicePricingTable() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
           </TableBody>;
         </Table>;
@@ -290,8 +240,6 @@ export function ITServicePricingTable() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 ;
     return filtered_data;
   }, [onsiteServicePricing, search_query, sort_config]);
@@ -373,4 +321,3 @@ export function ITServicePricingTable() {;
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,16 +1,4 @@
 
-
-
-import { useState } from "react",
-import { Link, Navigate } from "react-router-dom",
-import { useForm, type UseFormReturn } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -45,7 +33,6 @@ const signupSchema = z;
   .refine(data => data && data.password === data && data.confirmPassword, {;
     message: "Passwords do not match",;
     path: ["confirmPassword"]}),;
-=======
 
       .regex(/[0-9]/, "Password must contain at least one number"),
     confirmPassword: z.string(),
@@ -58,24 +45,11 @@ const signupSchema = z;
 
 type SignupFormValues = z && z.infer<typeof signupSchema>;
 
-
-
-
-  // Initialize react-hook-form
-  const form = useForm({
-    resolver: zodResolver(signupSchema)
-    defaultValues: {
-      displayName: ""
-      email: ""
-      password: ""
-      confirmPassword: ""
-      termsAccepted: false}}) as UseFormReturn<SignupFormValues>
-  // Form submission handler
-  const onSubmit = async (data: SignupFormValues) => {
-    if (isSubmitting) return, // Prevent multiple submissions
-
-
-=======
+export default function Signup() {;
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
     
     setIsSubmitting(true),
@@ -194,7 +168,6 @@ export default function Signup() {;
   const onSubmit = async (data: SignupFormValues) => {;
     if (isSubmitting) return, // Prevent multiple submissions;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsSubmitting(true);
     try {;
       await signup(data && data.email, data && data.password, data && data.displayName);
@@ -208,12 +181,9 @@ export default function Signup() {;
     return <Navigate to="/" />;
   }
 
-
   // Redirect to onboarding if user is authenticated but hasn't completed profile;
   if (isAuthenticated && !user?.profileComplete) {;
     return <Navigate to="/onboarding" />;
-
-=======
 import { useState } from './react';
 import { Link, Navigate } from './react-router-dom';
 import { use_form, type, UseFormReturn } from './react - hook - form';
@@ -291,14 +261,10 @@ if ( {) {
   $2
 }
     return <Navigate to="/onboarding" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
   return (
     <>;
       <Header />;
-
-                <Link to="/login" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
-=======
       <div className="flex min - h-screen bg - zion - blue">;
         <div className="flex - 1 flex flex - col justify - center px - 4 py - 12 sm:px - 6 lg:flex - none lg:px - 20 xl:px - 24">;
           <div className="mx - auto w - full max - w-sm lg:w - 96">;
@@ -309,19 +275,37 @@ if ( {) {
               <p className="mt - 2 text - sm text - zion - slate - light">;
                 Already have an account?{" "}
                 <Link to="/login" className="font - medium text - zion - cyan hover:text - zion - cyan - light">;
-
                   Sign in;
                 </Link>;
               </p>;
             </div>;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
 
                   />;
 
+
+                  <FormField
+                    control={form && form.control}
+                    name="displayName"
+                    render={({ field }) => (;
+                      <FormItem>;
+                        <FormLabel className="text-zion-slate-light">Full Name</FormLabel>;
+                        <FormControl>;
+                          <div className="relative">;
+                            <Input
+                              placeholder="John Doe"
+                              className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                              {...field}
+                              aria-autocomplete="none"
+                              autoComplete="off"
+                            />;
+                            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+                          </div>;
+                        </FormControl>;
+                        <FormMessage className="text-red-400" />;
+                      </FormItem>;
+                    )}
+                  />;
 
                   <FormField
                     control={form && form.control}
@@ -345,9 +329,7 @@ if ( {) {
                         <FormMessage className="text-red-400" />;
                       </FormItem>;
                     )}
-
                   />;
-
 
                   <FormField
                     control={form && form.control}
@@ -379,7 +361,6 @@ if ( {) {
                               )}
                               <span className="sr-only">;
                                 {showPassword ? "Hide password" : "Show password"}
-=======
             <div className="bg - zion - blue - dark rounded - lg p - 6">;
               <Form {...form}>;
                 <form on_submit={form.handle_submit (on_submit)} className="space - y-6" no_validate>;
@@ -454,14 +435,11 @@ if ( {) {
                                 <Eye className="h - 4 w - 4" />)}
                               <span className="sr - only">;
                                 {show_password ? "Hide password" : "Show password"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                               </span>;
                             </Button>;
                           </div>;
                         </FormControl>;
-
                   />;
-
 
                   <FormField
                     control={form && form.control}
@@ -472,7 +450,6 @@ if ( {) {
                         <FormControl>;
                           <div className="relative">;
                             <Input
-=======
                         <FormMessage className="text - red - 400" />;
                       </FormItem>)}
                   />;
@@ -485,12 +462,10 @@ if ( {) {
                         <FormControl>;
                           <div className="relative">;
                             <Input;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                               type={showConfirmPassword ? "text" : "password"}
                               placeholder="••••••••";
                               className="bg - zion - blue pl - 10 text - white border - zion - blue - light focus:border - zion - purple";
                               {...field}
-
                               auto_complete="new - password";
                             />;
                             <Lock className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" />;
@@ -505,15 +480,12 @@ if ( {) {
                                 <EyeOff className="h - 4 w - 4" />) : (
                                 <Eye className="h - 4 w - 4" />)}
                               <span className="sr - only">;
-
                                 {showConfirmPassword ? "Hide password" : "Show password"}
                               </span>;
                             </Button>;
                           </div>;
                         </FormControl>;
-
                   />;
-
 
                   <FormField
                     control={form && form.control}
@@ -542,7 +514,6 @@ if ( {) {
                         </div>;
                       </FormItem>;
                     )}
-
                   />;
 
                   <Button
@@ -565,13 +536,11 @@ if ( {) {
                 </div>;
 
                 <div className="mt-6 grid grid-cols-3 gap-3">;
-
                   <Button
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
                     onClick={() => loginWithGoogle()}
-
                     disabled={isLoading || isSubmitting}
                   >;
                     <span className="sr-only">Sign in with Google</span>;
@@ -582,30 +551,21 @@ if ( {) {
                       <path d="M12 && M12.0004 24C15 && 24C15.2404 24 17 && 17.9654 22 && 22.935 19 && 19.9454 21 && 21.095L16.0804 18 && 18.095C15.0054 18 && 18.82 13 && 13.6204 19 && 19.245 12 && 12.0004 19 && 19.245C8.8704 19 && 19.245 6 && 6.21537 17 && 17.135 5 && 5.2654 14 && 14.29L1.27539 17 && 17.385C3.25539 21 && 21.31 7 && 7.3104 24 12 && 12.0004 24Z" fill="#34A853" />;
                     </svg>;
                   </Button>;
-
                   <Button
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
                     onClick={() => loginWithFacebook()}
-
                     disabled={isLoading || isSubmitting}
                   >;
                     <span className="sr-only">Sign in with Facebook</span>;
                     <Facebook className="h-5 w-5" />;
                   </Button>;
-
                   <Button
                     type="button"
                     variant="outline"
                     className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
                     onClick={() => loginWithTwitter()}
-
-                    disabled={isLoading || isSubmitting}
-                  >;
-                    <span className="sr-only">Sign in with Twitter</span>;
-                    <Twitter className="h-5 w-5" />;
-=======
                         <FormMessage className="text - red - 400" />;
                       </FormItem>)}
                   />;
@@ -689,21 +649,18 @@ if ( {) {
                   >;
                     <span className="sr - only">Sign in with Twitter</span>;
                     <Twitter className="h - 5 w - 5" />;
-
                   </Button>;
                 </div>;
               </div>;
             </div>;
           </div>;
         </div>;
-
         <div className="hidden lg:block relative w - 0 flex - 1">;
           <div className="absolute inset - 0 h - full w - full object - cover bg - gradient - to - br from - zion - blue - dark via - zion - cyan to - zion - purple opacity - 80">;
             <div className="flex flex - col justify - center items - center h - full px - 8">;
               <div className="max - w-md text - center">;
                 <h3 className="text - 3xl font - bold text - white mb - 4">Join the Future of AI Marketplace</h3>;
                 <p className="text - lg text - white / 80">;
-
                   Create your profile, showcase your AI services, find jobs, and connect with professionals worldwide.;
                 </p>;
               </div>;
@@ -713,12 +670,8 @@ if ( {) {
       </div>;
       <Footer />;
 
-    </>);
-}
-
-=======
-
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </>);
+}

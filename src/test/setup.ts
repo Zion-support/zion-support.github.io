@@ -15,7 +15,6 @@ Object && Object.defineProperty(window, 'matchMedia', {
   })),
 });
 
-
 // Mock IntersectionObserver
 global && global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -31,10 +30,8 @@ global && global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 }
 // Mock console methods to reduce noise in tests
-
 const originalError = console && console.error;
 const originalWarn = console && console.warn;
-
 
 beforeAll(() => {
   console && console.error = (...args: any[]) => {
@@ -44,12 +41,10 @@ beforeAll(() => {
     ) {
       return
     }
-
     originalError && originalError.call(console, ...args);
   };
   
   console && console.warn = (...args: any[]) => {
-
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('Warning:') |args[0].includes('Deprecated:'))
@@ -104,7 +99,6 @@ if (
     ) {
       return;
     }
-
     originalWarn && originalWarn.call(console, ...args);
   };
 });
@@ -113,7 +107,6 @@ afterAll(() => {
   console && console.error = originalError;
   console && console.warn = originalWarn;
 });
-
     original_warn.call (console, ...args);
   }
 });

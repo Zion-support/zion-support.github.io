@@ -1,9 +1,7 @@
-
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
 import {SkillsFilterProps} from "@/types/filters";
-=======
 
 
 
@@ -61,18 +59,14 @@ import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
 import { Checkbox } from "@/components/ui/checkbox",;
 import { SkillsFilterProps } from "@/types/filters",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Common skills in AI and tech;
 const POPULAR_SKILLS = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { ChevronDown, ChevronUp } from './lucide-react';
 import { Button } from '@/components / ui / button';
 import { Checkbox } from '@/components / ui / checkbox';
 import { SkillsFilterProps } from '@/types / filters';
 // Common skills in AI and tech;
 const POPULAR_SKILLS = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   "Machine Learning";
   "Deep Learning";
   "Python";
@@ -90,14 +84,12 @@ const POPULAR_SKILLS = [;
   "DevOps";
   "Security";
 ];
-
       </button>;
 
       {expanded && (;
         <div className="mt-4 space-y-2">;
           {POPULAR_SKILLS && POPULAR_SKILLS.map(skill => (;
             <div key={skill} className="flex items-center">;
-
               <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills && selectedSkills.includes(skill)}
@@ -111,19 +103,15 @@ const POPULAR_SKILLS = [;
               >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {skill}
               </label>;
             </div>;
           ))}
         </div>;
       )}
-
     </div>;
   );
 }
-
-=======
 ;
 export /**
  * SkillsFilter - Function description
@@ -160,10 +148,7 @@ function SkillsFilter() {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 };
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

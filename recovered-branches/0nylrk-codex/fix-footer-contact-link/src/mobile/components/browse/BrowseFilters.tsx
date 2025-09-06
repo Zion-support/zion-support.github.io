@@ -1,4 +1,3 @@
-
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Slider } from '@/components / ui / slider';
@@ -9,20 +8,6 @@ import { X, Filter } from './lucide-react';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from '@/components / ui / sheet';
 import { Badge } from '@/components / ui / badge';
 import { Label } from '@/components / ui / label';
-
-interface BrowseFiltersProps {
-  type: "jobs" | "talents";
-}
-
-
-
-  
-  const removeFilter = (filter: string) => {
-    setActiveFilters(activeFilters.filter(f => f !== filter))
-  },
-  
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-3">
       <div className="flex justify-between items-center px-4">
@@ -76,7 +61,9 @@ interface BrowseFiltersProps {
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
-=======
+interface BrowseFiltersProps {
+  type: "jobs" | "talents";
+}
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Slider} from "@/components/ui/slider";
@@ -160,7 +147,6 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
                         defaultValue={[0, 10]} 
                         max={20} 
                         step={1} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         className="my-4"
                       />;
                       <div className="flex justify-between text-xs text-muted-foreground">;
@@ -170,11 +156,6 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
                     </div>;
                   </>;
                 )}
-
-
-                <div className="space-y-2">;
-                  <Label>Location</Label>;
-=======
 export /**
  * BrowseFilters - Function description
  */
@@ -255,7 +236,6 @@ function BrowseFilters() {
                   </>)}
                 <div className="space - y-2">;
                   <Label > Location</Label>;
-
                   <Select>;
                     <SelectTrigger>;
                       <SelectValue placeholder="Select location" />;
@@ -268,7 +248,6 @@ function BrowseFilters() {
                     </SelectContent>;
                   </Select>;
                 </div>;
-
                 <div className="space - y-2">;
                   <Label > Salary Range</Label>;
                   <div className="flex gap - 4 items - center">;
@@ -301,7 +280,6 @@ function BrowseFilters() {
           </Sheet>;
           <Select>;
             <SelectTrigger className="w-[120px] h - 8">;
-
               <SelectValue placeholder="Sort By" />;
             </SelectTrigger>;
             <SelectContent>;
@@ -310,7 +288,10 @@ function BrowseFilters() {
               <SelectItem value="salary">Highest Pay</SelectItem>;
             </SelectContent>;
           </Select>;
-
+              variant="secondary"
+              className="flex items-center gap-1">;
+              {filter}
+              <X
                 className="h-3 w-3 cursor-pointer" 
                 onClick={() => removeFilter(filter)} ;
               />;
@@ -321,8 +302,6 @@ function BrowseFilters() {
     </div>;
   );
 }
-
-=======
           {active_filters.map ((filter) => (
             <Badge;
               key={filter}
@@ -339,4 +318,3 @@ function BrowseFilters() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

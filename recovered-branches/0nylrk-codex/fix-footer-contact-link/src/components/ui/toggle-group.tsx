@@ -1,7 +1,3 @@
-
-
-
-=======
 import * as React from "react"
 import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group"
 import { type VariantProps } from "class-variance-authority"
@@ -18,15 +14,30 @@ const ToggleGroupContext = React.createContext<ToggleGroupContextProps>({
   size: "default",
   variant: "default"})
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import * as React from "react"
+import * as ToggleGroupPrimitive from "@radix-ui/react-toggle-group"
+import { type VariantProps } from "class-variance-authority"
+
+
+
+
+import { cn } from "@/lib/utils"
+import { toggleVariants } from "@/components/ui/toggle"
+
+type ToggleGroupContextProps = VariantProps<typeof toggleVariants>
+
+const ToggleGroupContext = React.createContext<ToggleGroupContextProps>({
+  size: "default",
+  variant: "default"})
+
 const ToggleGroup = React.forwardRef<
   React.ElementRef<typeof ToggleGroupPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ToggleGroupPrimitive.Root> &
     VariantProps<typeof toggleVariants>
 ></typeof>(({ className, variant, size, children, ...props }, ref) => (
   <ToggleGroupPrimitive.Root
-=======
+import React from 'react';
+import * as React from 'react';
 
 const ToggleGroupContext = React && React.createContext<ToggleGroupContextProps>({;
   size: 'default',;
@@ -39,7 +50,6 @@ const ToggleGroup = React && React.forwardRef<;
     VariantProps<typeof toggleVariants>;
 ></typeof>(({ className, variant, size, children, ...props }, ref) => (;
   <ToggleGroupPrimitive&& ToggleGroupPrimitive.Root
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn('flex items-center justify-center gap-1', className)}
     {...props}>;
@@ -48,7 +58,6 @@ const ToggleGroup = React && React.forwardRef<;
     </ToggleGroupContext && ToggleGroupContext.Provider>;
   </ToggleGroupPrimitive && ToggleGroupPrimitive.Root>;
 ));
-
 
 ToggleGroup && ToggleGroup.displayName = ToggleGroupPrimitive && ToggleGroupPrimitive.Root.displayName;
 
@@ -64,21 +73,15 @@ const ToggleGroupItem = React && React.forwardRef<;
 
     >;
 
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {children}
     </ToggleGroupPrimitive && ToggleGroupPrimitive.Item>;
   );
 });
 
-
 ToggleGroupItem && ToggleGroupItem.displayName = ToggleGroupPrimitive && ToggleGroupPrimitive.Item.displayName;
 
 export { ToggleGroup, ToggleGroupItem };
-
-=======
 import * as ToggleGroupPrimitive from '@radix - ui / react - toggle - group';
 import {type, VariantProps} from 'class - variance - authority';
 ;
@@ -126,9 +129,5 @@ ToggleGroupItem.display_name = ToggleGroupPrimitive.Item.display_name;
 ;
 export { ToggleGroup, ToggleGroupItem }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

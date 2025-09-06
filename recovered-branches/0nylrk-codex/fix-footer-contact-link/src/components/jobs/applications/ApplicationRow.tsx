@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ApplicationRowProps {
 
   application: JobApplication
@@ -31,25 +26,22 @@ interface ApplicationRowProps {;
 }
 
 export function ApplicationRow(): any ({;
-
   application;
   processingId;
   onViewApplication;
   onStatusChange;
   onViewScore;
 }: ApplicationRowProps) {;
-=======
 }
 
 
 
   onViewScore
 }: ApplicationRowProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
+  return (
     <TableRow key={application && application.id}>;
-=======
         )}
       </TableCell>
       <TableCell className="text-right">
@@ -134,12 +126,10 @@ export function ApplicationRow({;
           </Button>;
         ) : (;
           <span className="text-muted-foreground text-sm">No resume</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         )}
       </TableCell>;
       <TableCell className="text-right">;
         <ApplicationActions
-=======
 import { formatDistanceToNow } from './date - fns';
 import { Link } from './react-router-dom';
 import { Calendar, User, FileText, BarChart } from './lucide-react';
@@ -209,31 +199,21 @@ function ApplicationRow() {
             <a href={application.resume.file_url || "#"} target="_blank" rel="noopener noreferrer">;
               <FileText className="h - 4 w - 4 mr - 1" /> View;
             </a>;
-
-          </Button>;
-        ) : (;
-          <span className="text-muted-foreground text-sm">No resume</span>;
-        )}
-      </TableCell>
-      <TableCell className="text-right">
-        <ApplicationActions
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          </Button>) : (
+          <span className="text - muted - foreground text - sm">No resume</span>)}
+      </TableCell>;
+      <TableCell className="text - right">;
+        <ApplicationActions;
           application={application}
           processing_id={processing_id}
           onViewApplication={onViewApplication}
           onStatusChange={onStatusChange}
-
         />;
       </TableCell>;
     </TableRow>;
   );
 }
-
-=======
         />;
       </TableCell>;
     </TableRow>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

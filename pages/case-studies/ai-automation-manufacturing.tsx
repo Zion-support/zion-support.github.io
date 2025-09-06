@@ -1,7 +1,3 @@
-
-    id: 'ai-automation-manufacturing',
-    title: 'AI-Powered Manufacturing Automation',
-=======
 import React from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -12,17 +8,20 @@ function CaseStudyPage() {
   const case_study = {
     id: 'ai - automation - manufacturing',
     title: 'AI - Powered Manufacturing Automation',
-
     company: 'Global Manufacturing Corp',
     industry: 'Manufacturing',
     challenge: 'Inefficient production processes, high downtime, and quality control issues',
     solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization',
 
-
-=======
-
   },
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    results: [
+      '40% increase in production efficiency60% reduction in unplanned downtime35% improvement in product quality25% reduction in operational costs'
+    ]
+    technologies: ['Machine LearningComputer VisionIoT SensorsPredictive Analytics']
+    duration: '6 months'
+    teamSize: '8 engineers'
+    featured: true
+  };
 
   return (
     <>
@@ -43,7 +42,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <nav className="mb-8">
               <Link href="/case-studies" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 ← Back to Case Studies
@@ -66,7 +64,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </span>
               </div>
               <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
@@ -85,7 +82,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-red-400">The Challenge</h2>
               <div className="bg-red-500/10 rounded-lg p-6 border border-red-500/20">
@@ -101,7 +97,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Our Solution</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
@@ -117,7 +112,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Technologies Used</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -141,7 +135,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-yellow-400">Results Achieved</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -170,7 +163,6 @@ function CaseStudyPage() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Achieve Similar Results?</h2>
@@ -200,11 +192,8 @@ function CaseStudyPage() {
         </main>
       </div>
     </>
-
-=======
+  )
 }
-
-=======
     results: [;
       '40% increase in production efficiency60% reduction in unplanned downtime35% improvement in product quality25% reduction in operational costs';
     ],
@@ -311,9 +300,5 @@ function CaseStudyPage() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,40 +1,3 @@
-
-
-
-  const { projectId } = useParams() as { projectId: string },;
-
-
-  const [activeTab, setActiveTab] = useState('chat');
-  const [isInCall, setIsInCall] = useState(false);
-  const [callParticipants, setCallParticipants] = useState<Array<{
-    id: string
-    name: string
-
-    avatar?: string;
-    isMuted?: boolean;
-    isVideoEnabled?: boolean;
-    isScreenSharing?: boolean;
-    isHost?: boolean
-  }>>([
-    {
-
-      id: 'user-1'
-      name: 'You'
-      isHost: true
-      isVideoEnabled: true
-      isMuted: false
-    }
-  ]);
-  const startVideoCall = () => {
-=======
-import {useParams} from 'react-router-dom';
-import {Header} from '@/components/Header';
-import {Footer} from '@/components/Footer';
-import {SEO} from '@/components/SEO';
-import {Button} from '@/components/ui/button';
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
-import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
-=======
 import React, { useState } from 'react';
 import {use_params} from 'react-router-dom';
 import {Header} from '@/components / Header';
@@ -43,17 +6,9 @@ import {SEO} from '@/components / SEO';
 import {Button} from '@/components / ui / button';
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components / ui / card';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components / ui / tabs';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {MessageSquare, FileText, Video, Calendar, Users, Settings, X} from 'lucide-react';
 import {VideoCallRoom} from '@/components / video / VideoCallRoom';
 import {toast} from 'sonner';
-
-  ]),
-
-
-
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const startVideoCall = () => {
     setIsInCall(true),
     toast.success("Video call started", {
@@ -67,13 +22,20 @@ import {toast} from 'sonner';
   },
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const endVideoCall = () => {
     setIsInCall(false);
     toast.info("Video call ended", {
       description: "Call duration and participants will be logged"
     })
 
+    setIsInCall(true);
+    toast && toast.success("Video call started", {;
+      description: "Others can join with the project room link";
+    });
+    // Switch to video tab if not already there;
+    if (activeTab !== 'video') {;
+      setActiveTab('video');
+    }
   };
 
   const endVideoCall = () => {;
@@ -94,15 +56,14 @@ import {toast} from 'sonner';
     const randomUser = mockUsers[Math && Math.floor(Math && Math.random() * mockUsers && mockUsers.length)];
 
     if (!callParticipants && callParticipants.find(p => p && p.id === randomUser && randomUser.id)) {;
-
       setCallParticipants(prev => [...prev, randomUser]);
       toast(`${randomUser && randomUser.name} joined the call`);
     }
+  };
 
   };
 
 
-=======
 
   },
   
@@ -113,8 +74,6 @@ import {toast} from 'sonner';
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />;
@@ -129,7 +88,6 @@ import {toast} from 'sonner';
                 End Call;
               </Button>;
             )}
-
             <Button variant="outline">Invite Team Member</Button>;
           </div>;
         </div>;
@@ -205,19 +163,14 @@ import {toast} from 'sonner';
               <CardContent className="min-h-[400px] p-4">;
                 {isInCall ? (;
                   <div className="space-y-4">;
-
                     <VideoCallRoom
-=======
 
                     <VideoCallRoom 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
-
                     />;
-
 
                     {/* This button is just for demo/testing purposes */}
                     <div className="flex justify-center mt-4">;
@@ -241,21 +194,6 @@ import {toast} from 'sonner';
                     </div>;
                   </div>;
                 )}
-
-              </CardContent>;
-            </Card>;
-          </TabsContent>;
-
-          <TabsContent value="calendar" className="space-y-4">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle>Project Calendar</CardTitle>;
-                <CardDescription>Schedule and manage events</CardDescription>;
-              </CardHeader>;
-              <CardContent className="h-[400px]">;
-                <div className="flex items-center justify-center h-full">;
-                  <p className="text-muted-foreground">Calendar will be implemented soon</p>;
-=======
 export default /**
  * ProjectRoom - Function description
  */
@@ -377,12 +315,10 @@ if ( {) {
               <CardContent className="h-[400px]">;
                 <div className="flex items - center justify - center h - full">;
                   <p className="text - muted - foreground">Chat functionality will be implemented soon</p>;
-
                 </div>;
               </CardContent>;
             </Card>;
           </TabsContent>;
-
           <TabsContent value="files" className="space - y-4">;
             <Card>;
               <CardHeader>;
@@ -392,12 +328,10 @@ if ( {) {
               <CardContent className="h-[400px]">;
                 <div className="flex items - center justify - center h - full">;
                   <p className="text - muted - foreground">File management will be implemented soon</p>;
-
                 </div>;
               </CardContent>;
             </Card>;
           </TabsContent>;
-
           <TabsContent value="video" className="space - y-4">;
             <Card>;
               <CardHeader>;
@@ -470,7 +404,6 @@ if ( {) {
               <CardContent className="h-[400px]">;
                 <div className="flex items - center justify - center h - full">;
                   <p className="text - muted - foreground">Settings will be implemented soon</p>;
-
                 </div>;
               </CardContent>;
             </Card>;
@@ -479,11 +412,7 @@ if ( {) {
       </main>;
       <Footer />;
 
+}
+
     </>);
 }
-
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

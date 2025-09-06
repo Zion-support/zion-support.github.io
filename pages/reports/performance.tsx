@@ -1,20 +1,18 @@
 import React from 'react';
 
-import Head from 'next / head';
-import Link from 'next / link';
-;
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const PerformancePage: React.FC = () => {
   const performance_metrics = [;
     {
 
-=======
 
 
+import Head from 'next / head';
+import Link from 'next / link';
+;
+const PerformancePage: React.FC = () => {
+  const performance_metrics = [;
+    {
       category: 'System Performance',
       metrics: [;
         { name: 'Response Time', value: '45ms', status: 'excellent', trend: '+12%' },
@@ -72,10 +70,8 @@ const PerformancePage: React.FC = () => {
 
 
   ];
-
-
-
-  const getStatusColor = (status: string) => {
+;
+  const getStatusColor = (status: string) =>: any {
     switch (status) {
       case 'excellent': return 'text-green-400';
       case 'good': return 'text-yellow-400';
@@ -86,20 +82,10 @@ const PerformancePage: React.FC = () => {
   };
 
 
-=======
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-  };
-  const getTrendColor = (trend: string) => {
-    return trend.startsWith('+') ? 'text-green-400' : 'text-red-400';
-  };
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
       <Head>
@@ -117,7 +103,6 @@ const PerformancePage: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="mb-8">
           <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
             ← Back to Home
@@ -138,7 +123,6 @@ const PerformancePage: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
             <h3 className="text-xl font-semibold mb-4 text-cyan-400">Overall Score</h3>
@@ -200,7 +184,6 @@ const PerformancePage: React.FC = () => {
             <p className="text - gray - 300 text - sm mt - 2">Real - time monitoring</p>;
           </div>;
         </div>;
-
         {/* Performance Metrics */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Performance Metrics</h2>;
@@ -218,7 +201,6 @@ const PerformancePage: React.FC = () => {
                         </span>;
                         <span className={`text - sm ${getTrendColor (metric.trend)}`}>;
                           {metric.trend}
-
                         </span>;
                       </div>;
                     </div>))}
@@ -226,7 +208,6 @@ const PerformancePage: React.FC = () => {
               </div>))}
           </div>;
         </div>;
-
         {/* Recent Reports */}
         <div className="mb - 8">;
           <h2 className="text - 2xl font - bold mb - 6 text - white">Recent Reports</h2>;
@@ -237,64 +218,6 @@ const PerformancePage: React.FC = () => {
                   <h3 className="text - lg font - semibold text - white">{report.title}</h3>;
                   <span className="px - 2 py - 1 bg - green - 500 / 20 text - green - 400 text - xs rounded - full">;
                     {report.status}
-
-
-        {/* Performance Metrics */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {performanceMetrics.map((section, sectionIndex) => (
-              <div key={sectionIndex} className="bg-white/10 rounded-xl p-6 border border-white/20">
-                <h3 className="text-xl font-semibold mb-4 text-cyan-400">{section.category}</h3>
-                <div className="space-y-4">
-                  {section.metrics.map((metric, metricIndex) => (
-                    <div key={metricIndex} className="flex justify-between items-center">
-                      <span className="text-gray-300">{metric.name}</span>
-                      <div className="flex items-center space-x-3">
-                        <span className={`font-semibold ${getStatusColor(metric.status)}`}>
-
-                          {metric.value  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        </span>
-                        <span className={`text-sm ${getTrendColor(metric.trend)}`}>
-                          {metric.trend  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        </span>
-                      </div>
-                    </div>
-                  ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </div>
-              </div>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        </div>
-        {/* Recent Reports */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Recent Reports</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -310,8 +233,6 @@ const PerformancePage: React.FC = () => {
   }
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </span>
                 </div>
                 <p className="text-gray-300 text-sm mb-4">{report.summary}</p>
@@ -321,7 +242,6 @@ const PerformancePage: React.FC = () => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors"
                   >
                     View Report →
@@ -344,7 +264,6 @@ const PerformancePage: React.FC = () => {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Trends</h2>
           <div className="bg-white/10 rounded-xl p-8 border border-white/20">
@@ -356,13 +275,9 @@ const PerformancePage: React.FC = () => {
 
                 Our automated systems continuously monitor and optimize performance,
 
-=======
                 Our automated systems continuously monitor and optimize performance, 
-=======
                 Our automated systems continuously monitor and optimize performance,
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ensuring consistent improvement across all metrics.
               </p>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
@@ -391,7 +306,6 @@ const PerformancePage: React.FC = () => {
         <div className="flex flex-wrap gap-4 justify-center">
           <Link 
 
-=======
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -402,8 +316,6 @@ const PerformancePage: React.FC = () => {
           <Link
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             href="/reports"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
           >
@@ -505,9 +417,6 @@ const PerformancePage: React.FC = () => {
 }
 ;
 
-=======
-
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default PerformancePage;

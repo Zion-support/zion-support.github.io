@@ -1,16 +1,28 @@
+import fs from 'fs';
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface Node { id: string, tokens: string[] }
+interface Edge { source: string, target: string, weight: number, terms: string[] }
+interface Report { generatedAt: string, nodes: Node[], edges: Edge[], topTerms: { term: string, count: number }[] }
 
+type Props = { report: Report | null },
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  try {
+    const file = path.join(process.cwd(), 'publicautomationknowledge-graph.json');
+    const raw = fs.readFileSync(file, 'utf8');
+    const data = JSON.parse(raw);
+    return { props: { report: data }, revalidate: 86400 }
+  } catch {
+    return { props: { report: null }, revalidate: 86400 }
+  }
+};
 
 export default function KnowledgeGraph({ report }: Props) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 ) ) ;
 }</ul> </section> <section>) ) ;
 }</ul> </section> </div>) ;
 export default function KnowledgeGraph(): any ({ report }: Props) {;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   if (!report) return <div>No knowledge graph yet.</div>;
 
   return (
@@ -40,14 +52,6 @@ export default function KnowledgeGraph(): any ({ report }: Props) {;
           {report && report.edges.slice(0, 200).map((e, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{e && e.source} ⇄ {e && e.target}</span><span className="text-gray-500 truncate">{e && e.terms.join(', ')}</span></li>;
           ))}
-
-        </ul>;
-      </section>;
-    </div>;
-  );
-}
-
-=======
 }
 ) );
 }</ul> </section> <section>) );
@@ -89,10 +93,7 @@ if (return <div > No knowledge graph yet.</div>) {
       </section>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

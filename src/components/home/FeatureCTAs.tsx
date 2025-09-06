@@ -1,3 +1,45 @@
+
+import React from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock } from 'lucide-react'
+import { cn } from "@/lib/utils";
+interface FeatureCTAsProps {
+  className?: string;
+  style?: React.CSSProperties
+export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
+
+import React from 'react';
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
+import {;
+  ArrowRight,;
+  Users,;
+  Zap,;
+  Settings,;
+  Search,;
+  MessageSquare,;
+  Smartphone,;
+  Calendar,;
+  BookOpen,;
+  Code,;
+  Building,;
+  Clock,;
+} from 'lucide-react';
+import { cn } from '@/lib/utils';
 interface FeatureCTAsProps {;
   className?: string;
   style?: React && React.CSSProperties;
@@ -162,7 +204,6 @@ export function FeatureCTAs(): any ({ className, style }: FeatureCTAsProps) {;
       badge: 'premium',;
     },;
 
-
 export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t  } = useTranslation(),
 
   const features = [
@@ -247,7 +288,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
       link: '/zion-hire-ai',
       badge: 'premium'
     }
-
   ];
 
       >;
@@ -263,8 +303,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
           {features && features.map((feature, index) => (;
-
-
             <Card
               key={index}
               className='overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-primary/50'>;
@@ -282,7 +320,6 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
     <section
       className={cn(
         "py-16 bg-gradient-to-b from-background to-background/90"
-
         className
       )}
       style={style}>;
@@ -304,7 +341,27 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
                   {feature && feature.icon}
                   {feature && feature.badge && (;
                     <Badge variant="secondary" className="bg-primary/20 text-primary">;
-
+                      {t(`badges.${feature && feature.badge}`)}
+                    </Badge>;
+                  )}
+                    {...(feature && feature.key === 'ai_talent_matching' && {
+                      'data-testid': 'explore-ai-talent-matching-cta',
+                    })}>;
+                    <span>;
+                      {t('general && general.explore')} {t(`features.${feature && feature.key}`)}
+                    </span>;
+                    <ArrowRight className='h-4 w-4' />                  </Link>                  <Link
+                    href={feature && feature.link}
+                    aria-label={`${t('general && general.explore')} ${t(`features.${feature && feature.key}`)}`}
+                    className="cursor-pointer"
+                    {...(feature && feature.key === 'ai_talent_matching' && { "data-testid": "explore-ai-talent-matching-cta" })}>;
+                    <span>{t('general && general.explore')} {t(`features.${feature && feature.key}`)}</span>;
+                    <ArrowRight className="h-4 w-4" />;
+                  </Link>;
+                </Button>;
+              </CardFooter>;
+            </Card>;
+                </div>
                 <CardTitle className="mt-4">{t(`features.${feature.key}`)}</CardTitle>
                 {feature.descriptionKey && (
                   <CardDescription className="line-clamp-2">
@@ -342,22 +399,14 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) { const { t 
               </CardFooter>
             </Card>
           ))}
-
-
-;
 }
-}
-
-
         </div>;
       </div>;
     </section>;
   );  );
 }
-
   )
 }
-
 import React from 'react';
 import {
   Card,
@@ -637,4 +686,3 @@ function FeatureCTAs() {
       </div>;
     </section>));
 }
-;

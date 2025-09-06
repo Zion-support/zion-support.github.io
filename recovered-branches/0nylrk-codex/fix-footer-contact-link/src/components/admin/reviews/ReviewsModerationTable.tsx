@@ -1,18 +1,3 @@
-
-
-
-
-import {useState} from "react";
-import {useMutation} from "@tanstack/react-query";
-import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
-import {format} from "date-fns";
-import {toast} from "@/hooks/use-toast";
-import {supabase} from "@/integrations/supabase/client";
-import {Review, ReviewStatus} from "@/types/reviews";
-
-
-
-=======
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
@@ -46,8 +31,39 @@ import {
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { useState } from "react",
+import { useMutation } from "@tanstack/react-query",
+import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
+import { format } from "date-fns",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { Review, ReviewStatus } from "@/types/reviews",
+
+
+
+
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle} from "@/components/ui/dialog",
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
 interface ReviewsModerationTableProps {
   reviews: Review[]
   isLoading: boolean
@@ -78,7 +94,6 @@ interface ReviewsModerationTableProps {
         .from("reviews")
         .update({ status })
 
-=======
 
         .eq("id", reviewId),
 
@@ -172,7 +187,6 @@ interface ReviewsModerationTableProps {
           />
 
 
-=======
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
@@ -226,11 +240,9 @@ export function ReviewsModerationTable(): any ({;
       const { error } = await supabase;
         .from("reviews");
         .update({ status });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         .eq("id", reviewId);
       if (error) throw error;
       return { reviewId, status }
-
     };
     onSuccess: (data) => {;
       toast({;
@@ -265,7 +277,6 @@ export function ReviewsModerationTable(): any ({;
   };
 
   if (isLoading) {;
-
     return (
       <div className="space-y-4">;
         <div className="h-12 w-full bg-muted rounded animate-pulse" />;
@@ -276,9 +287,7 @@ export function ReviewsModerationTable(): any ({;
     );
   }
 
-
   if (reviews && reviews.length === 0) {;
-
     return (
       <div className="py-10 text-center">;
         <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>;
@@ -288,7 +297,6 @@ export function ReviewsModerationTable(): any ({;
       </div>;
     );
   }
-
 
   const handleApprove = (reviewId: string) => {;
     updateReviewStatus({ reviewId, status: "approved" });
@@ -304,7 +312,6 @@ export function ReviewsModerationTable(): any ({;
   };
 
   const renderStars = (rating: number) => {;
-
     return (
       <div className="flex">;
         {[1, 2, 3, 4, 5].map((star) => (;
@@ -313,13 +320,10 @@ export function ReviewsModerationTable(): any ({;
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />;
         ))}
-
       </div>;
     );
   };
 
-
-=======
 import { useState } from './react';
 import { use_mutation } from '@tanstack / react - query';
 import { Check, X, User, Star, MoreHorizontal } from './lucide-react';
@@ -444,19 +448,11 @@ if ( {) {
       </div>);
   }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <>;
       <Table>;
         <TableHeader>;
           <TableRow>;
-
-                    {review.reviewer_profile?.avatar_url ? (;
-                      <AvatarImage;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
                       />
@@ -464,7 +460,6 @@ if ( {) {
                       <AvatarFallback>
                         {review.reviewer_profile?.display_name
                           ? getInitials(review.reviewer_profile.display_name)
-=======
                         src={review && review.reviewer_profile.avatar_url}
                         alt={review && review.reviewer_profile.display_name || ""}
                       />;
@@ -472,11 +467,9 @@ if ( {) {
                       <AvatarFallback>;
                         {review && review.reviewer_profile?.display_name;
                           ? getInitials(review && review.reviewer_profile.display_name);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                           : <User className="h-4 w-4" />}
                       </AvatarFallback>;
                     )}
-
                   </Avatar>;
                   <div>;
                     {review && review.is_anonymous ? (;
@@ -485,7 +478,6 @@ if ( {) {
                       <span className="text-sm font-medium">;
                         {review && review.reviewer_profile?.display_name || "User"}
                       </span>;
-
                     )}
                   </div>;
                 </div>;
@@ -555,7 +547,6 @@ if ( {) {
                           Mark as approved;
                         </DropdownMenuItem>;
                       )}
-
             <TableHead > Reviewer</TableHead>;
             <TableHead > Rating</TableHead>;
             <TableHead > Date</TableHead>;
@@ -653,18 +644,10 @@ if ( {) {
                           Mark as approved;
                         </DropdownMenuItem>)}
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
               </TableCell>;
-
-            </TableRow>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
 
         </TableBody>;
@@ -694,11 +677,9 @@ if ( {) {
                       <AvatarFallback>;
                         {selectedReview && selectedReview.reviewer_profile?.display_name;
                           ? getInitials(selectedReview && selectedReview.reviewer_profile.display_name);
-
                           : <User className="h-4 w-4" />}
                       </AvatarFallback>;
                     )}
-
                   </Avatar>;
                   <div>;
                     <div className="font-medium">;
@@ -725,7 +706,6 @@ if ( {) {
                     <Badge variant="outline">;
                       Communication: {selectedReview && selectedReview.communication_rating}/5;
                     </Badge>;
-
                   )}
                   {selectedReview && selectedReview.quality_rating && (;
                     <Badge variant="outline">;
@@ -744,7 +724,6 @@ if ( {) {
                       {selectedReview && selectedReview.would_work_again ? "Would work again" : "Would not work again"}
                     </Badge>;
                   )}
-
                 </div>;
               </div>;
 
@@ -761,7 +740,6 @@ if ( {) {
             <DialogFooter>;
               {selectedReview && selectedReview.status === "pending" && (;
                 <>;
-
                   <Button
                     variant="destructive"
                     onClick={() => handleReject(selectedReview && selectedReview.id)}
@@ -800,7 +778,6 @@ if ( {) {
       )}
     </>;
   );
-=======
             </TableRow>))}
         </TableBody>;
       </Table>;
@@ -913,5 +890,4 @@ if ( {) {
           </DialogContent>;
         </Dialog>)}
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

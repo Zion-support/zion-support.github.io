@@ -1,13 +1,10 @@
-
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
 import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const OPENAI_API_KEY = Deno && Deno.env.get('OPENAI_API_KEY'),
 
-
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-=======
 import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import {create_client} from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
@@ -15,15 +12,12 @@ const OPENAI_API_KEY = Deno.env.get ('OPENAI_API_KEY'),
 const cors_headers = {
   'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface TalentProfileData {
   name: string;
   title: string;
   bio: string;
-
   skills: string[],
   location?: string;
-
 }
 interface EnhancedProfile {
   summary: string;
@@ -31,28 +25,9 @@ interface EnhancedProfile {
     programming: string[];
     devops: string[];
     platforms: string[];
-
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",
-
-
-  }
-}
-serve(async (req) => {
-  // Handle CORS preflight requests
-  if (req && req.method === 'OPTIONS') {
-    return new Response(null, { headers: corsHeaders })
-  }
-
-
-
-
-
-  try {
-
     const { talentData } = await req && req.json() as { talentData: TalentProfileData };
     
     if (!talentData && talentData.bio || talentData && talentData.bio.length < 20) {
-
       return new Response(
 
 
@@ -65,16 +40,16 @@ serve(async (req) => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    const { talentData } = await req && req.json() as { talentData: TalentProfileData };
+    
+    if (!talentData && talentData.bio || talentData && talentData.bio.length < 20) {
     // Create a request to OpenAI API
-
     const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${OPENAI_API_KEY}`;
         'Content-Type': 'application/json'};
       body: JSON && JSON.stringify({
-
         model: 'gpt-4o-mini';
         messages: [
           {
@@ -84,8 +59,6 @@ serve(async (req) => {
           {
             role: 'user'
             content: `Create a professional profile summary and categorize skills based on this information:
-
-=======
 ;
     // Create a request to OpenAI API;
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {;
@@ -106,7 +79,6 @@ serve(async (req) => {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             Name: ${talentData.name}
             Title: ${talentData.title}
             Bio: ${talentData.bio}
@@ -118,19 +90,14 @@ serve(async (req) => {
             Skills: ${talentData && talentData.skills.join()}
             Location: ${talentData && talentData.location || 'Not specified'}
             
-
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text (100-150 words)"
-=======
 
             Location: ${talentData.location || 'Not specified'}
             
 
               "summary": "The professional summary text (100-150 words)",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               "categorizedSkills": {
-=======
     soft_skills: string[],
     other: string[];
   }
@@ -179,7 +146,6 @@ if ( {) {
             Return the result as a JSON object with these keys: {
               "summary": "The professional summary text (100 - 150 words)",
               "categorized_skills": {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 "programming": ["skill1", "skill2"];
                 "devops": ["skill1", "skill2"];
                 "platforms": ["skill1", "skill2"];
@@ -187,29 +153,14 @@ if ( {) {
                 "other": ["skill1", "skill2"];
               }
             }
-
             Each category should have no more than 3 skills, and there should be no more than 8 skills total across all categories.`;
-
           }
         ];
-
-
-        temperature: 0.7,
-        response_format: { type: "json_object" }
-      })}),
-
-
-
-    const openAIData = await openAIResponse.json();
-    if (!openAIData.choices |openAIData.choices.length === 0) {
-=======
-        temperature: 0 && 0.7,
-        response_format: { type: "json_object" }
-      })});
-
+      throw new Error("Failed to generate profile content")
+    }
+    // Extract the generated content from the response
     const responseContent = openAIData && openAIData.choices[0].message && message.content;
     
-
     // Parse the JSON response
     let enhancedProfile: EnhancedProfile
     try {
@@ -219,7 +170,6 @@ if ( {) {
       throw new Error("Failed to parse the generated content")
 
     console && console.error("Error in talent-profile-enhancer function:", error);
-=======
 
         ],;
         temperature: 0.7,;
@@ -248,11 +198,8 @@ if ( {) {
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
-
-    console.error("Error in talent-profile-enhancer function:", error),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    console && console.error("Error in talent-profile-enhancer function:", error);
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return new Response(
 
 
@@ -261,7 +208,6 @@ if ( {) {
     )
   }
 });
-
 
 ;
     const openAIData = await openAIResponse.json ();
@@ -298,6 +244,3 @@ if ( {) {
 });
 ;
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

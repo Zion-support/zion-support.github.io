@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -22,10 +21,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
@@ -42,7 +38,6 @@ import {SEO} from "@/components/SEO";
 import {useNavigate} from "react-router-dom";
 import {cn} from "@/lib/utils";
 
-=======
 import React, { useState } from 'react',
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -83,21 +78,14 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
     default:
       return <Bell className={cn(className, "text-gray-500")} />
   }
-
-},
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
     case 'message':
-=======
 };
 
 const getNotificationTypeBadge = (type: NotificationType) => {;
   switch (type) {;
     case 'message':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return <Badge className="bg-blue-500">Message</Badge>;
     case 'quote_request':;
       return <Badge className="bg-purple-500">Quote Request</Badge>;
@@ -107,7 +95,6 @@ const getNotificationTypeBadge = (type: NotificationType) => {;
       return <Badge className="bg-zion-purple">Hire Request</Badge>;
     case 'onboarding':;
       return <Badge className="bg-zion-cyan">Onboarding</Badge>;
-
 import React, { useState } from 'react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -160,7 +147,6 @@ const getNotificationTypeBadge = (type: NotificationType) =>: any {
   }
 }
 ;
-
 const NotificationCard: React.FC<{
   notification: {
     id: string
@@ -170,47 +156,6 @@ const NotificationCard: React.FC<{
     read: boolean
     created_at: string
     action_url?: string;
-
-
-import React, { useState } from 'react',;
-import { AppHeader } from "@/layout/AppHeader",;
-import { Footer } from "@/components/Footer",;
-import { useNotifications } from "@/context/notifications/NotificationContext",;
-import {;
-  NotificationType,;
-  NotificationContextType;
-} from "@/context/notifications",;
-import { formatDistanceToNow } from "date-fns",;
-import {;
-  Bell, Check, Trash2, ChevronRight, CheckCircle,;
-  AlertCircle, MessageCircle, Briefcase, UserCheck, Settings;
-} from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",;
-import { Badge } from "@/components/ui/badge",;
-import { Skeleton } from "@/components/ui/skeleton",;
-import { SEO } from "@/components/SEO",;
-import { useNavigate } from "react-router-dom",;
-import { cn } from "@/lib/utils",;
-const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {;
-  switch (type) {;
-    case 'message':;
-      return <MessageCircle className={cn(className, "text-blue-500")} />,;
-    case 'quote_request':;
-      return <Briefcase className={cn(className, "text-purple-500")} />,;
-    case 'booking_confirmation':;
-      return <CheckCircle className={cn(className, "text-green-500")} />,;
-    case 'hire_request':;
-      return <UserCheck className={cn(className, "text-zion-purple")} />,;
-    case 'onboarding':;
-      return <Settings className={cn(className, "text-zion-cyan")} />,;
-    case 'system':;
-      return <AlertCircle className={cn(className, "text-yellow-500")} />,;
-    default:;
-      return <Bell className={cn(className, "text-gray-500")} />;
-
-  }
-=======
     case 'system':;
       return <Badge className="bg-yellow-500">System</Badge>,;
     default:;
@@ -240,24 +185,20 @@ const NotificationCard: React.FC<{;
       onMarkAsRead(notification.id);
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
     if (notification && notification.action_url) {;
       navigate(notification && notification.action_url);
     }
 
-
-  },
-=======
-  };
-=======
   },
 
 
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  },
+
+
+  
   return (
     <divclassName={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors"
@@ -279,13 +220,11 @@ const NotificationCard: React.FC<{;
                 {!notification && notification.read && (;
                   <Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs">New</Badge>;
                 )}
-
               </div>;
             </div>;
 
             <div className="flex items-center gap-2">;
               {!notification && notification.read && (;
-
                 <Button
                   variant="ghost"
                   size="sm"
@@ -300,7 +239,6 @@ const NotificationCard: React.FC<{;
                 variant="ghost"
                 size="sm"
                 className="h-8 w-8 p-0"
-
                 onClick={() => onDismiss(notification && notification.id)}
               >;
                 <Trash2 className="h-4 w-4 text-red-400" />;
@@ -312,7 +250,6 @@ const NotificationCard: React.FC<{;
           <p className="text-zion-slate-light mb-3">{notification && notification.message}</p>;
 
           {notification && notification.action_url && notification && notification.action_text && (;
-
             <Button
               variant="outline"
               size="sm"
@@ -322,7 +259,6 @@ const NotificationCard: React.FC<{;
               <ChevronRight className="ml-1 h-4 w-4" />;
             </Button>;
           )}
-
         </div>;
       </div>;
     </div>;
@@ -331,10 +267,8 @@ const NotificationCard: React.FC<{;
 
 export default function NotificationsPage() {;
   const {;
-
     filteredNotifications;
     unreadCount;
-=======
     action_text?: string;
   }
   onMarkAsRead: (id: string) => Promise < void>,
@@ -423,36 +357,11 @@ function NotificationsPage() {
   const {
     filtered_notifications;
     unread_count;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     markAsRead;
     markAllAsRead;
     dismiss_notification;
     loading;
     filter;
-
-
-},
-
-
-export default function NotificationsPage() {
-
-  const {
-    filteredNotifications,
-    unreadCount,
-    markAsRead,
-    markAllAsRead,
-    dismissNotification,
-    loading,
-    filter,
-
-    setFilter
-
-  } = useNotifications() as NotificationContextType,
-  
-
-
-  return (
-
     <>;
       <SEO
         title="Notifications | Zion AI Marketplace" 
@@ -472,7 +381,6 @@ export default function NotificationsPage() {
           </div>;
 
           {unreadCount > 0 && (;
-
             <Button
               variant="outline"
               onClick={() => markAllAsRead()}
@@ -481,7 +389,6 @@ export default function NotificationsPage() {
               Mark all as read;
             </Button>;
           )}
-
         </div>;
 
         <div className="mb-8">;
@@ -505,7 +412,6 @@ export default function NotificationsPage() {
                   <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30" />;
                   <h3 className="text-xl font-medium">No notifications found</h3>;
                   <p className="text-muted-foreground mt-1">;
-
                     {filter === 'all' ? "You don't have any notifications yet" : `You don't have any ${filter} notifications`}
                   </p>;
                 </div>;
@@ -521,8 +427,6 @@ export default function NotificationsPage() {
                   ))}
                 </div>;
               )}
-
-=======
     set_filter;
   } = use_notifications () as NotificationContextType;
 ;
@@ -585,19 +489,12 @@ export default function NotificationsPage() {
                     />))}
                 </div>)}
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </TabsContent>;
           </Tabs>;
         </div>;
       </main>;
       <Footer />;
+;
 
     </>);
 }
-
-=======
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

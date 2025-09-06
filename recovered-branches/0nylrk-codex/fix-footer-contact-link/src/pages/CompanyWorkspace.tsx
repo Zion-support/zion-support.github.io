@@ -1,30 +1,3 @@
-
-
-
-
-  if (isLoading) {
-    return (
-
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan"></div>
-      </div>
-    )
-  }
-  if (error |!company) {
-    return <Navigate to="/not-found" />
-  }
-  // In white-label mode, use the tenant's theme instead of the company's theme
-  const effectiveTheme = isWhitelabel ? {
-    primaryColor: tenant?.primary_color |company.theme?.primaryColor
-    backgroundColor: company.theme?.backgroundColor |'var(--background)'
-    textColor: company.theme?.textColor |'var(--foreground)'
-  } : company.theme;
-
-  // Check if user has access to this company workspace
-  const hasAccess = true, // For demo purposes, always grant access
-  if (!hasAccess) {
-    return <Navigate to="/unauthorized" />
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -58,11 +31,9 @@ import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
 import {useWhitelabel} from "@/context/WhitelabelContext";
-=======
 
       <SEO 
 
-=======
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -104,17 +75,7 @@ export default function CompanyWorkspace() {;
 
   if (!hasAccess) {;
     return <Navigate to="/unauthorized" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
-
-;
-  return (;
-    <ProtectedRoute>;
-      <SEO;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
       />
@@ -129,6 +90,7 @@ export default function CompanyWorkspace() {;
     </ProtectedRoute>
   )
 
+  return (
     <ProtectedRoute>;
       <SEO
         title={`${company && company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
@@ -145,8 +107,6 @@ export default function CompanyWorkspace() {;
     </ProtectedRoute>;
   );
 }
-
-=======
 import React from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -212,9 +172,6 @@ if ( {) {
       <Footer />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,12 +1,3 @@
-
-
-
-import { Fragment } from "react",
-import { Route, Routes } from "react-router-dom",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Admin Pages
 import QuoteManager from "@/pages/admin/QuoteManager",
 import ReviewsModeration from "@/pages/admin/ReviewsModeration",
@@ -22,7 +13,6 @@ import IntegrationsPage from "@/pages/admin/IntegrationsPage",
 
 
 const AdminRoutes = () => {
-=======
 // Admin Pages;
 import QuoteManager from "@/pages/admin/QuoteManager";
 import ReviewsModeration from "@/pages/admin/ReviewsModeration";
@@ -34,7 +24,6 @@ import FraudDetection from "@/pages/admin/FraudDetection";
 import TokenManager from "@/pages/admin/TokenManager";
 import IntegrationsPage from "@/pages/admin/IntegrationsPage";
 const AdminRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       <Route
@@ -44,9 +33,7 @@ const AdminRoutes = () => {;
             <QuoteManager />;
           </ProtectedRoute>;
         }
-
       />;
-
 
       <Route
         path="/admin/reviews"
@@ -55,9 +42,7 @@ const AdminRoutes = () => {;
             <ReviewsModeration />;
           </ProtectedRoute>;
         }
-
       />;
-
 
       <Route
         path="/admin/whitelabel"
@@ -66,9 +51,7 @@ const AdminRoutes = () => {;
             <WhitelabelManager />;
           </ProtectedRoute>;
         }
-
       />;
-
 
       <Route
         path="/admin/partners"
@@ -77,9 +60,7 @@ const AdminRoutes = () => {;
             <PartnerManager />;
           </ProtectedRoute>;
         }
-
       />;
-
 
       <Route
         path="/admin/app-metadata"
@@ -88,9 +69,7 @@ const AdminRoutes = () => {;
             <AppMetadataManager />;
           </ProtectedRoute>;
         }
-
       />;
-
 
       <Route
         path="/admin/support-requests"
@@ -99,9 +78,7 @@ const AdminRoutes = () => {;
             <SupportRequests />;
           </ProtectedRoute>;
         }
-
       />;
-
 
       <Route
         path="/admin/fraud-detection"
@@ -110,9 +87,7 @@ const AdminRoutes = () => {;
             <FraudDetection />;
           </ProtectedRoute>;
         }
-
       />;
-
 
       <Route
         path="/admin/tokens"
@@ -121,27 +96,25 @@ const AdminRoutes = () => {;
             <TokenManager />;
           </ProtectedRoute>;
         }
-
       />;
-
 
       <Route
         path="/admin/integrations"
         element={
-
+          <ProtectedRoute adminOnly={true}>;
+            <IntegrationsPage />;
+          </ProtectedRoute>;
+        }
       />;
     </Routes>;
   );
 };
 
-
 export default AdminRoutes;
 
-=======
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
-=======
           <ProtectedRoute adminOnly={true}>
             <IntegrationsPage />
           </ProtectedRoute>
@@ -149,7 +122,6 @@ import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { Fragment } from "react",;
 import { Route, Routes } from "react-router-dom",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Admin Pages;
 import QuoteManager from "@/pages / admin / QuoteManager";
 import ReviewsModeration from "@/pages / admin / ReviewsModeration";
@@ -243,4 +215,3 @@ const AdminRoutes = () =>: any {
 
 export default AdminRoutes;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

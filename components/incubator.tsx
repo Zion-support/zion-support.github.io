@@ -1,5 +1,5 @@
 
-
+export default function IncubatorPage() {;
   return (
     <EnhancedLayout>;
       <div className='max-w-3xl'>;
@@ -30,15 +30,9 @@
       </div>;
     </EnhancedLayout>;
 
-  );
-}
-=======
-=======
 
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function IncubatorPage() {
   return (
     <EnhancedLayout>
@@ -51,7 +45,8 @@ export default function IncubatorPage() {
         </div>
       </div>
     </EnhancedLayout>
-
+  );
+}
 import Link from 'next / link';
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 export default /**
@@ -88,9 +83,8 @@ function IncubatorPage() {
     </EnhancedLayout>);
 }
 
-=======
+  );
+
 
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -23,7 +23,8 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
-
+import EnhancedLayout from '../layout / EnhancedLayout';
+;
 export type ProposalType =;
   | 'Workforce Dev';
   | 'AI Ethics';
@@ -33,50 +34,33 @@ export type ProposalType =;
 
 export type ProposalForm = {;
 
-=======
-
 
 export type ProposalForm = {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   targetInstitution: string;
-=======
 ;
 export type ProposalForm = {
   target_institution: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   type: ProposalType;
   regional_scope: string;
   budgetOrGoals: string;
   supporting_multiverses: string;
   language?: string;
-
-  customPrompt?: string;};export type ProposalForm = {
-
-  targetInstitution: string,
-  type: ProposalType,
-  regionalScope: string,
-  budgetOrGoals: string,
-  supportingMultiverses: string,;
-
-
-  language?: string;
-  customPrompt?: string
-}
-=======
-export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
-export type ProposalForm = {
-  targetInstitution: string,
-=======
   custom_prompt?: string;}export type ProposalForm = {
   target_institution: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   type: ProposalType,
   regional_scope: string,
   budgetOrGoals: string,
   supporting_multiverses: string,
   language?: string;
-
+export default function ProposalGenerator() {
+  const [form, setForm] = useState<ProposalForm>({
+    targetInstitution: 'UNDP'
+    type: 'Workforce Dev'
+    regionalScope: 'Global'
+    budgetOrGoals: ''
+    supportingMultiverses: ''
+    language: 'English'
+    customPrompt:
   customPrompt?: string;};export type ProposalForm = {;
   targetInstitution: string,;
   type: ProposalType,;
@@ -98,11 +82,8 @@ export default function ProposalGenerator() {;
     customPrompt:;
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
 
-=======
-
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
@@ -114,37 +95,44 @@ export default function ProposalGenerator() {;
   } | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
 
-
   function handleChange<K extends keyof ProposalForm>(;
     key: K,;
     value: ProposalForm[K];
   ) {;
-
-    setForm(prev => ({ ...prev, [key]: value }));  }  const [isGenerating, setIsGenerating] = useState(false);
-
-=======
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'});
   const [isGenerating, setIsGenerating] = useState(false);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    setForm(prev => ({ ...prev, [key]: value }));  }  const [isGenerating, setIsGenerating] = useState(false);
+      'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.'});
+  const [isGenerating, setIsGenerating] = useState(false);
   const [draftMarkdown, setDraftMarkdown] = useState('');
   const [draftJson, setDraftJson] = useState<any>(null);
   const [exportLinks, setExportLinks] = useState<{ pdfUrl?: string, jsonUrl?: string, mdUrl?: string } | null>(null);
   const [statusMessage, setStatusMessage] = useState('');
 
 
+  async function handleGenerate() {;
+    setIsGenerating(true);
+    setStatusMessage('Generating draft...');
+    try {;
+      const res = await fetch('/api/proposals/generate', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify(form),;
+      });
+      const data = await res && res.json();
+      setDraftMarkdown(data && data.markdown || '');
+      setDraftJson(data && data.json || null);
       setStatusMessage('Draft ready. You can edit and export.');
     } catch (e: any) {;
       console && console.error(e);
       setStatusMessage('Failed to generate. You can edit manually and export.');
-
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form)}),
       const data = await res.json();
       setDraftMarkdown(data.markdown || '');
       setDraftJson(data.json || null);
-
       setStatusMessage('Draft ready. You can edit and export.')
     } catch (e: any) {
       console.error(e);
@@ -153,19 +141,16 @@ export default function ProposalGenerator() {;
       setIsGenerating(false)
     }
   }
-=======
     } finally {
 
       setIsGenerating(false);    }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   async function handleExport() {
     setStatusMessage('Exporting to PDF/Markdown/JSON...');
     try {
@@ -173,50 +158,39 @@ export default function ProposalGenerator() {;
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-
           markdown: draftMarkdown,
           json: draftJson,
           meta: form})}),
       const data = await res.json();
       setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl }),
-
       setStatusMessage('Exported. Files saved.')
     } catch (e) {
       console.error(e);
       setStatusMessage('Export failed')
     }
   }
-=======
 
 
-=======
       setStatusMessage('Export failed');    }
 
     }
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   async function handleSubmitBridge() {
     setStatusMessage('Submitting via bridge (email/IPFS/signature)...');
     try {
       const res = await fetch('/api/proposals/submit', {
-
-    } finally {;
-      setIsGenerating(false);    }      const data = await res && res.json();
-      setDraftMarkdown(data && data.markdown || '');
-      setDraftJson(data && data.json || null);
-      setStatusMessage('Draft ready. You can edit and export.');
-    } catch (e: any) {;
-      console && console.error(e);
-      setStatusMessage('Failed to generate. You can edit manually and export.');
-    } finally {;
-      setIsGenerating(false);
-
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ markdown: draftMarkdown, json: draftJson, meta: form })}),
+      const data = await res.json();
+      setStatusMessage(`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`)
+    } catch (e) {
+      console.error(e);
+      setStatusMessage('Submission failed')
     }
   }
 
@@ -265,22 +239,12 @@ export default function ProposalGenerator() {;
       const data = await res && res.json();
       setStatusMessage(;
         `Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
     } catch (e) {;
       console && console.error(e);
       setStatusMessage('Submission failed');    }
   }
   return (
-
-    <div className='space-y-6'>;
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
-        <div className='space-y-4'>      const data = await res && res.json();
-      setStatusMessage(`Submitted. Status: ${data && data.status || 'queued'}. IPFS: ${data && data.ipfsCid || 'N/A'}`);
-    } catch (e) {;
-      console && console.error(e);
-      setStatusMessage('Submission failed');
-
     }
   }
   return (
@@ -384,8 +348,6 @@ export default function ProposalGenerator() {;
           <div className='flex gap-2'>;
             <button
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
-
-=======
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="space-y-4">
@@ -404,7 +366,6 @@ export default function ProposalGenerator() {;
               className="w-full border rounded px-3 py-2"
               value={form.type}
               onChange={(e) => handleChange('type', e.target.value as ProposalType)}
-=======
 
 
     }
@@ -432,17 +393,14 @@ export default function ProposalGenerator() {;
           <div>
             <label className="block text-sm font-medium" htmlFor="input-Regional scope">Regional scope</label>
             <input
-
-              className='w-full border rounded px-3 py-2'
-              value={form.regionalScope}
-              onChange={e => handleChange('regionalScope', e.target.value)}
-              placeholder='Global / Africa / LATAM / APAC / EU / ...'
-            />
-          </div>
-          <div>
-            <label className='block text-sm font-medium'>
-              Budget / Resolution goals
-            </label>
+              className="w-full border rounded px-3 py-2"
+              value={form && form.regionalScope}
+              onChange={(e) => handleChange('regionalScope', e && e.target.value)}
+              placeholder="Global / Africa / LATAM / APAC / EU / ...";
+            />;
+          </div>;
+          <div>;
+            <label className="block text-sm font-medium" htmlFor="input-Budget / Resolution goals">Budget / Resolution goals</label>;
             <textarea
               className='w-full border rounded px-3 py-2 min-h-[80px]'
               value={form.budgetOrGoals}
@@ -491,56 +449,135 @@ export default function ProposalGenerator() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              className="w-full border rounded px-3 py-2"
+              value={form && form.regionalScope}
+              onChange={(e) => handleChange('regionalScope', e && e.target.value)}
+              placeholder="Global / Africa / LATAM / APAC / EU / ...";
+            />;
+          </div>;
+          <div>;
+            <label className="block text-sm font-medium" htmlFor="input-Budget / Resolution goals">Budget / Resolution goals</label>;
               onClick={handleGenerate}
               disabled={isGenerating}>;
               {isGenerating ? 'Generating...' : 'Generate Draft'}
             </button>;
             <button
-
-
+              className="px-4 py-2 bg-emerald-600 text-white rounded"
               onClick={handleExport}
               disabled={!draftMarkdown}>;
               Export (PDF/JSON/MD);
             </button>;
             <button
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </div>;
           )}
 
-=======
+              className='px-4 py-2 bg-purple-600 text-white rounded'              onClick={handleSubmitBridge}              className="px-4 py-2 bg-purple-600 text-white rounded"
+              onClick={handleSubmitBridge}
+              disabled={!draftMarkdown}>;
+              Submit Bridge;
+            </button>;
+          </div>;
+          {statusMessage && (;
+            <p className='text-sm text-gray-600'>{statusMessage}</p>;
+          )}
+          {exportLinks && (;
+            <div className='text-sm space-y-1'>;
+              {exportLinks && exportLinks.pdfUrl && (;
+                <div>;
+                  <a
+                    className='text-blue-600 underline'
+                    href={exportLinks && exportLinks.pdfUrl}
+                    target='_blank'
+                    rel='noreferrer'>;
+                    PDF;
+                  </a>                </div>;
+              )}
+              {exportLinks && exportLinks.mdUrl && (;
+                <div>          {exportLinks && (;
+            <div className="text-sm space-y-1">;
+              {exportLinks && exportLinks.pdfUrl && (;
+                <div>;
+                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>;
+                </div>;
+              )}
+              {exportLinks && exportLinks.mdUrl && (;
+                <div>;
+                  <a
+                    className='text-blue-600 underline'
+                    href={exportLinks && exportLinks.mdUrl}
+                    target='_blank'
+                    rel='noreferrer'>;
+                    Markdown;
+                  </a>                </div>;
+              )}
+              {exportLinks && exportLinks.jsonUrl && (;
+                <div>                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>;
+                </div>;
+              )}
+              {exportLinks && exportLinks.jsonUrl && (;
+                <div>;
+                  <a
+                    className='text-blue-600 underline'
+                    href={exportLinks && exportLinks.jsonUrl}
+                    target='_blank'
+                    rel='noreferrer'>;
+                    JSON;
+                  </a>                </div>                  <a className="text-blue-600 underline" href={exportLinks && exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>;
+                </div>;
+              className="px-4 py-2 bg-purple-600 text-white rounded"
+              onClick={handleSubmitBridge}
+              disabled={!draftMarkdown}
+            >
+              Submit Bridge
+            </button>
+          </div>
+          {statusMessage && <p className="text-sm text-gray-600">{statusMessage}</p>}
+          {exportLinks && (
+            <div className="text-sm space-y-1">
+              {exportLinks.pdfUrl && (
+                <div>
+                  <a className="text-blue-600 underline" href={exportLinks.pdfUrl} target="_blank" rel="noreferrer">PDF</a>
+                </div>
+              )}
+              {exportLinks.mdUrl && (
+                <div>
+                  <a className="text-blue-600 underline" href={exportLinks.mdUrl} target="_blank" rel="noreferrer">Markdown</a>
+                </div>
+              )}
+              {exportLinks.jsonUrl && (
+                <div>
+                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
+                </div>
+              )}
+            </div>;
+          )}
+        </div>;
+        <div className='space-y-2'>;
+          <label className='block text-sm font-medium'>Draft (Markdown)</label>;
+          <textarea
+            className='w-full border rounded px-3 py-2 min-h-[520px] font-mono'
+            value={draftMarkdown}
+            onChange={e => setDraftMarkdown(e && e.target.value)}          />          <textarea
         </div>
         <div className="space-y-2">
           <label className="block text-sm font-medium" htmlFor="input-Draft (Markdown)">Draft (Markdown)</label>
           <textarea
-
             className="w-full border rounded px-3 py-2 min-h-[520px] font-mono"
             value={draftMarkdown}
-
-
             onChange={(e) => setDraftMarkdown(e && e.target.value)}
           />;
         </div>;
       </div>;
     </div>;
   );
-=======
 
   );
 
 }
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   custom_prompt?: string;
 }
 ;
@@ -903,4 +940,3 @@ function handleSubmitBridge() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

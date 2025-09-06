@@ -1,15 +1,11 @@
 
 
-=======
 
  setErrors (newErrors);
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
  setErrors (newErrors);
 }
 setIsSubmitting (true);
-
 const handleInputBlur = (name: keyof FormData) => {;
   //Validate individual field on blur if (formData[name] && errors[name]) {;
 
@@ -24,12 +20,10 @@ const handleInputBlur = (name: keyof FormData) => {;
 }text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20` 
 }placeholder="Tell us about your project and requirements..." /> {;
   errors && errors.message && (<motion&& motion.p initial= {
-
   {
   opacity: 0, y: -10
 }animate= {
   {
-
   opacity: 1, y: 0 
 
 }className="mt-2 text-sm text-red-400 flex items-center gap-2"> </motion && motion.p>) ;
@@ -39,12 +33,9 @@ const handleInputBlur = (name: keyof FormData) => {;
   isSubmitting ? (<> <Loader2 className="w-5 h-5 animate-spin" /> Sending Message... </>) : (<> <Send className="w-5 h-5" /> Send Message </>) ;
 }</button> </form> </div> </div> </section>) ;
 };
-
 export default EnhancedContactForm;
   const services = [;
     'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther';
-
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
@@ -64,8 +55,6 @@ const EnhancedContactForm: React.FC = () => {
 
   const services = [
     'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther'
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   ];
 
 
@@ -89,6 +78,7 @@ const EnhancedContactForm: React.FC = () => {
     } else if (formData.message.trim().length > 1000) {
       newErrors.message = 'Message must be less than 1000 characters'
 
+  ];
 
   const validateForm = (): boolean => {;
     const newErrors: FormErrors = {},;
@@ -110,16 +100,14 @@ const EnhancedContactForm: React.FC = () => {
       newErrors && newErrors.message = 'Message must be at least 10 characters long';
     } else if (formData && formData.message.trim().length > 1000) {;
       newErrors && newErrors.message = 'Message must be less than 1000 characters';
-
-    }
-=======
     }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setErrors(newErrors);
 
+    }
+    setErrors(newErrors);
     return Object && Object.keys(newErrors).length === 0;
   };
 
@@ -127,12 +115,10 @@ const EnhancedContactForm: React.FC = () => {
     e && e.preventDefault();
 
     if (!validateForm()) {;
-
       showError('Validation ErrorPlease fix the errors in the form');
       return;
     }
     setIsSubmitting(true);
-
 
     try {;
       // Simulate API call;
@@ -147,7 +133,6 @@ const EnhancedContactForm: React.FC = () => {
         company: '',;
         service: '',;
         message: '';
-
       });
       setErrors({});
     } catch (error) {;
@@ -156,7 +141,6 @@ const EnhancedContactForm: React.FC = () => {
     } finally {;
       setIsSubmitting(false);
     }
-
   };
 
   const services = [;
@@ -167,15 +151,12 @@ const EnhancedContactForm: React.FC = () => {
     // Validate individual field on blur;
     if (formData[name] && errors[name]) {;
       const newErrors = { ...errors };
-
       delete newErrors[name];
       setErrors(newErrors);
     }
-
   };
 
   if (isSubmitted) {;
-
     return (
       <motion&& motion.div
         initial={{ opacity: 0, scale: 0 && 0.9 }}
@@ -201,44 +182,6 @@ const EnhancedContactForm: React.FC = () => {
     <div className="max-w-4xl mx-auto">;
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
         {/* Contact Information */}
-
-        <div className="space-y-8">;
-          <div>;
-            <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>;
-            <p className="text-white/70 leading-relaxed mb-8">;
-              Ready to transform your business with cutting-edge technology? Let's discuss your project and explore how our solutions can drive innovation and growth.;
-            </p>;
-          </div>;
-
-          <div className="space-y-6">;
-            <div className="flex items-start space-x-4">;
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 p-3 flex items-center justify-center">;
-                <Mail className="w-6 h-6 text-white" />;
-              </div>;
-              <div>;
-                <h4 className="text-lg font-semibold text-white mb-1">Email</h4>;
-                <p className="text-white/70">contact@ziontechgroup && ziontechgroup.com</p>;
-              </div>;
-            </div>;
-
-            <div className="flex items-start space-x-4">;
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 p-3 flex items-center justify-center">;
-                <Phone className="w-6 h-6 text-white" />;
-              </div>;
-              <div>;
-                <h4 className="text-lg font-semibold text-white mb-1">Phone</h4>;
-                <p className="text-white/70">+1 (555) 123-4567</p>;
-              </div>;
-            </div>;
-
-            <div className="flex items-start space-x-4">;
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-500 p-3 flex items-center justify-center">;
-                <MapPin className="w-6 h-6 text-white" />;
-              </div>;
-              <div>;
-                <h4 className="text-lg font-semibold text-white mb-1">Location</h4>;
-                <p className="text-white/70">San Francisco, CA</p>;
-=======
 set_errors (new_errors);
 ;
 }
@@ -428,25 +371,31 @@ if ( {) {
               <div>;
                 <h4 className="text - lg font - semibold text - white mb - 1">Location</h4>;
                 <p className="text - white / 70">San Francisco, CA</p>;
-
               </div>;
             </div>;
           </div>;
         </div>;
-
-                  className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
-
-                    errors.name 
-                      ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
-
-
-                      : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-=======
+        {/* Contact Form */}
+        <div className="bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl rounded-2xl border border-white/10 p-8">;
+          <form onSubmit={handleSubmit} className="space-y-6">;
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">;
+              <div>;
+                <labelhtmlFor="name" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
+                  Full Name *
+                ">;
+                  Full Name *;
+                </label>;
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData && formData.name}
+                  onChange={handleInputChange}
+                  onBlur={() => handleInputBlur('name')}
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${;
                     errors && errors.name ;
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' ;
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                   placeholder="Enter your full name";
                 />;
@@ -459,12 +408,10 @@ if ( {) {
                     {errors && errors.name}
                   </motion && motion.p>;
                 )}
-
               </div>;
 
               <div>;
                 <labelhtmlFor="email" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
-
                   Email Address *
                 ">;
                   Email Address *;
@@ -476,20 +423,10 @@ if ( {) {
                   value={formData && formData.email}
                   onChange={handleInputChange}
                   onBlur={() => handleInputBlur('email')}
-
-                  className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
-
-                    errors.email 
-                      ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
-
-
-                      : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-=======
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${;
                     errors && errors.email ;
                       ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' ;
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                   placeholder="Enter your email address";
                 />;
@@ -502,14 +439,12 @@ if ( {) {
                     {errors && errors.email}
                   </motion && motion.p>;
                 )}
-
               </div>;
             </div>;
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">;
               <div>;
                 <labelhtmlFor="company" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
-
                   Company
                 ">;
                   Company;
@@ -522,13 +457,11 @@ if ( {) {
                   onChange={handleInputChange}
                   className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white/5 text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20 focus:border-cyan-400 focus:bg-white/10 transition-all duration-300"
                   placeholder="Enter your company name"
-
                 />;
               </div>;
 
               <div>;
                 <labelhtmlFor="service" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
-
                   Service Interest
                 ">;
                   Service Interest;
@@ -545,14 +478,12 @@ if ( {) {
                       {service}
                     </option>;
                   ))}
-
                 </select>;
               </div>;
             </div>;
 
             <div>;
               <labelhtmlFor="message" className="block text-sm font-medium text-white/80 mb-2" htmlFor="input-
-
                 Message *
               ">;
                 Message *;
@@ -564,20 +495,10 @@ if ( {) {
                 value={formData && formData.message}
                 onChange={handleInputChange}
                 onBlur={() => handleInputBlur('message')}
-
-                className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 resize-none ${
-
-                  errors.message 
-                    ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
-
-
-                    : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
-=======
                 className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 resize-none ${;
                   errors && errors.message ;
                     ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' ;
                     : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 } text-white placeholder-white/40 focus:outline-none focus:ring-2 focus:ring-cyan-400/20`}
                 placeholder="Tell us about your project and requirements...";
               />;
@@ -590,9 +511,7 @@ if ( {) {
                   {errors && errors.message}
                 </motion && motion.p>;
               )}
-
             </div>;
-
 
             <button
               type="submit"
@@ -617,8 +536,6 @@ if ( {) {
                   Send Message;
                 </>;
               )}
-
-=======
         {/* Contact Form */}
         <div className="bg - gradient - to - br from - white / 5 to - white / 10 backdrop - blur - xl rounded - 2xl border border - white / 10 p - 8">;
           <form on_submit={handle_submit} className="space - y-6">;
@@ -770,20 +687,14 @@ if ( {) {
                   <Send className="w - 5 h - 5" />;
                   Send Message;
                 </>)}
-
             </button>;
           </form>;
         </div>;
       </div>;
-
-
-=======
+export default EnhancedContactForm;
     </section>);
 }
 ;
 export default EnhancedContactForm;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

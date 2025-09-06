@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,8 +31,6 @@ import {;
   Car,;
   Star,;
 
-=======
-
 
 import React from "react";
 import Head from "next/head";
@@ -47,21 +44,16 @@ import {
   Car,
   Star,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
 
+    s.link.endsWith("/autonomous-vehicle-ai-platform"),;
+
 export default function AutonomousVehicleAIPage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>;
     s && s.link.endsWith("/autonomous-vehicle-ai-platform"),;
-
-=======
-
-    s.link.endsWith("/autonomous-vehicle-ai-platform"),;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
   if (!service) return null;
 
@@ -129,7 +121,30 @@ export default function AutonomousVehicleAIPage() {;
                 href="/contact"
                 variant="quantum"
                 size="lg"
-
+                className="w-full">;
+                Schedule a Pilot;
+                <ArrowRight className="w-5 h-5 ml-2" />;
+              </Button>;
+              <div className="mt-6 space-y-3 text-sm text-slate-300">;
+                <div className="flex items-center space-x-2">;
+                  <Phone className="w-4 h-4 text-cyan-400" />;
+                  <span>{service && service.contactInfo.mobile}</span>;
+                </div>;
+                <div className="flex items-center space-x-2">;
+                  <Mail className="w-4 h-4 text-purple-400" />;
+                  <span>{service && service.contactInfo.email}</span>;
+                </div>;
+                <div className="flex items-center space-x-2">;
+                  <MapPin className="w-4 h-4 text-green-400" />;
+                  <span className="text-xs">{service && service.contactInfo.address}</span>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>;
+  );
 import React from './react';
 import Head from './next / head';
 import {
@@ -154,7 +169,6 @@ function AutonomousVehicleAIPage() {
   // Check condition
 if (return null) {
   $2
-=======
                 className="w-full"
               >
                 Schedule a Pilot
@@ -182,7 +196,6 @@ if (return null) {
   );
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -269,5 +282,4 @@ if (return null) {
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

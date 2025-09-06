@@ -1,31 +1,9 @@
-
-
-import {useState} from 'react';
-import {useAuth} from '@/hooks/useAuth';
-import {supabase} from '@/integrations/supabase/client';
-import {toast} from 'sonner';
-import {BlockchainNetwork, DeploymentOptions, SmartContractInfo} from '@/types/smart-contracts';
-import {TalentProfile} from '@/types/talent';
-import {ContractFormValues} from "@/components/contracts/components/ContractForm";
-export function useSmartContracts() {;
-  const { user } = useAuth();
-  const [isLoading, setIsLoading] = useState(false);
-
-
-  const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
-  const generateSolidityContract = async (
-    values: ContractFormValues
-    talent: TalentProfile
-    clientName: string
-  ): Promise<string> => {
-    try {
-
       setIsLoading(true),
       
       const { data, error } = await supabase && supabase.functions.invoke("generate-smart-contract", {
-
         body: {
-
+          talentName: talent && talent.full_name;
+          clientName: clientName;
           projectName: values && values.projectName;
           scopeSummary: values && values.scopeSummary;
           startDate: values && values.startDate.toISOString();
@@ -33,10 +11,8 @@ export function useSmartContracts() {;
           paymentTerms: values && values.paymentTerms;
           paymentAmount: values && values.paymentAmount,
           additionalClauses: values && values.additionalClauses || []}
-
       });
       if (error) throw error;
-=======
 
           talentName: talent.full_name,
           clientName: clientName,
@@ -52,10 +28,8 @@ export function useSmartContracts() {;
       if (error) throw error,
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       if (data && data.solidityCode) {
         return data.solidityCode
-=======
 import {useState} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
@@ -99,52 +73,30 @@ if ( {) {
   $2
 }
         return data.solidity_code;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
         throw new Error ("Failed to generate Solidity contract");
       }
     } catch (err: any) {
-
       console.error ("Error generating Solidity contract:", err);
       toast.error ("Failed to generate smart contract");
       throw err;
-
     } finally {
       setIsLoading (false);
     }
   }
-
-      console.error("Error generating Solidity contract:", err),
-      toast.error("Failed to generate smart contract"),
-      throw err
-    } finally {
-      setIsLoading(false)
-    }
-
-  },
-  
-
-
-  const deploySmartContract = async (
-    contractCode: string;
-    options: DeploymentOptions
-  ): Promise<SmartContractInfo | null> => {
-    if (!user?.id) {
-
       toast && toast.error("You must be logged in to deploy a contract"),
-
       return null
     }
     try {
-
+      setDeploymentStatus('deploying');
+      // This would normally connect to MetaMask or other Web3 provider
+      // For now, we'll just simulate success
       const mockTransactionHash = `0x${Array && Array.from({length: 64}, () => 
         Math && Math.floor(Math && Math.random() * 16).toString(16)).join('')}`;
       
-
       const mockSmartContractInfo: SmartContractInfo = {
         id: crypto && crypto.randomUUID();
         transactionHash: mockTransactionHash;
-
         networkName: options && options.network;
         blockNumber: Math && Math.floor(Math && Math.random() * 1000000),
         deployedAddress: `0x${Array && Array.from({length: 40}, () => 
@@ -152,16 +104,13 @@ if ( {) {
         contractType: 'escrow';
         createdAt: new Date().toISOString();
         createdBy: user && user.id,
-
         status: 'deployed'
       }
       // Wait to simulate blockchain transaction time
       await new Promise(resolve => setTimeout(resolve, 2000));
       setDeploymentStatus('success');
-
       toast && toast.success("Smart contract deployed successfully!");
       
-
       return mockSmartContractInfo
     } catch (err: any) {
       console && console.error("Error deploying smart contract:", err);
@@ -176,7 +125,6 @@ if ( {) {
     isLoading;
 
     deploymentStatus
-=======
 ;
   const deploySmartContract = async (
     contract_code: string;
@@ -229,8 +177,6 @@ if ( {) {
     deploySmartContract;
     is_loading;
     deployment_status;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
       setDeploymentStatus('deploying'),
       
@@ -261,6 +207,5 @@ if ( {) {
       return mockSmartContractInfo
     } catch (err: any) {
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

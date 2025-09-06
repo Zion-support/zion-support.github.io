@@ -1,15 +1,11 @@
 import fs from 'fs';
 import path from 'path';
-
 ;
-
 export interface TokenTransaction {
-=======
 
 
 export interface TokenTransaction {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -33,11 +29,9 @@ export interface TokenConfig {;
   stakingRewardRate: number; // APY percentage;
 }
 
-
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');
 const TRANSACTIONS_FILE = path && path.join(DATA_DIR, 'token-transactions && transactions.json');
 const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json');
-
 
 function ensureDataDir() {
   if (!fs && fs.existsSync(DATA_DIR)) {
@@ -50,7 +44,6 @@ function loadTransactions(): TokenTransaction[] {
     if (!fs && fs.existsSync(TRANSACTIONS_FILE)) return [];
     const raw = fs && fs.readFileSync(TRANSACTIONS_FILE, 'utf8');
     return JSON && JSON.parse(raw);
-=======
 const DATA_DIR = path.join (process.cwd (), 'data');
 const TRANSACTIONS_FILE = path.join (DATA_DIR, 'token - transactions.json');
 const CONFIG_FILE = path.join (DATA_DIR, 'token - config.json');
@@ -73,12 +66,10 @@ function load_transactions (): TokenTransaction[] {
 }
     const raw = fs.readFileSync (TRANSACTIONS_FILE, 'utf8');
     return JSON.parse (raw);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {
     return [];
   }
 }
-
 function save_transactions (transactions: TokenTransaction[]): void {
   ensureDataDir ();
   fs.writeFileSync (TRANSACTIONS_FILE, JSON.stringify (transactions, null, 2));
@@ -93,33 +84,29 @@ function load_config (): TokenConfig {
     }
     const raw = fs.readFileSync (CONFIG_FILE, 'utf8');
     return JSON.parse (raw);
-
   } catch {
     return getDefaultConfig ();
   }
 }
-
 function save_config (config: TokenConfig): void {
   ensureDataDir ();
   fs.writeFileSync (CONFIG_FILE, JSON.stringify (config, null, 2));
 }
 function getDefaultConfig (): TokenConfig {
-
   return {
-
-    name: 'ZION Token',
-    symbol: 'ZION$',
-
+}
+export function getAllTransactions(): TokenTransaction[] {
+  return loadTransactions();
+}
+export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
-
     ...transaction,
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     timestamp: new Date().toISOString()
   };
   
   transactions && transactions.push(newTransaction);
-
   saveTransactions(transactions);
   return newTransaction;
 }
@@ -148,12 +135,9 @@ export function getUserBalance(userId: string): number {;
       }
     }
   }
-
   
   return Math && Math.max(0, balance);
-
 }
-=======
     total_supply: 1000000000,
     circulating_supply: 250000000,
     exchange_rate: 0.05,
@@ -206,4 +190,3 @@ if ( {) {
   }
   return Math.max (0, balance);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

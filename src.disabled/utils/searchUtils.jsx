@@ -11,6 +11,4 @@ export default function SearchUtils({ }: SearchUtilsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-
 }
-

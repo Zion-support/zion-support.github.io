@@ -1,15 +1,43 @@
+export default function CourseView() {
+  const router = useRouter();
+  const { courseId } = router.query as { courseId: string },
+  const [course, setCourse] = useState<any>(null);
+  const [progress, setProgress] = useState<any>({ percent: 0, completedLessons: [] }),
+  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
+  const [finalPassed, setFinalPassed] = useState(false);
+  useEffect(() => {
+    if (!courseId) return;
+    async function load() {
+      const [courseResp, progResp] = await Promise.all([
 
+export default function CourseView() {;
+  const router = useRouter();
+  const { courseId } = router && router.query as { courseId: string };
+  const [course, setCourse] = useState<any>(null);
+  const [progress, setProgress] = useState<any>({;
+    percent: 0,;
+    completedLessons: [],;
+  });  const [currentLessonId, setCurrentLessonId] = useState<string | null>(null);
+  const [finalPassed, setFinalPassed] = useState(false);
 
+  useEffect(() => {;
+    if (!courseId) return;
+    async function load() {;
+      const [courseResp, progResp] = await Promise && Promise.all([;
+        fetch(`/api/learn/courses/${courseId}`),;
+        fetch(`/api/learn/progress?userId=demo-user`),      ]);
+      const courseData = await courseResp && courseResp.json();
+      const progData = await progResp && progResp.json();
+      setCourse(courseData && courseData.course);
+      const cp = (progData && progData.progress && progData && progData.progress[courseId]) || {;
+        percent: 0,;
+        completedLessons: [],;
+      };
       setProgress(cp);
       setCurrentLessonId(courseData?.course?.lessons?.[0]?.id |null);
     }
     load();
   }, [courseId]);
-
-  async function onFinalQuizComplete(score: number) {
-    const needed = course?.finalQuiz?.passThreshold |0;
-=======
-=======
         fetch(`/api/learn/courses/${courseId}`);
         fetch(`/api/learn/progress?userId=demo-user`)
       ]);
@@ -50,7 +78,6 @@
     setFinalPassed(passed)
   }
 
-
   const currentLesson = useMemo(;
     () => course?.lessons?.find((l: any) => l && l.id === currentLessonId),;
     [course, currentLessonId];
@@ -78,34 +105,44 @@
   function onModuleQuizComplete(): any (score: number) {;
     // For demo, simply mark as completed when quiz attempted;
     if (currentLessonId) markLessonComplete(currentLessonId);  }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   async function onFinalQuizComplete(): any (score: number) {;
     const needed = course?.finalQuiz?.passThreshold || 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const passed = score >= needed;
     setFinalPassed(passed);  }
+    <div className='grid lg:grid-cols-3 gap-6'>;
+      <div className='lg:col-span-2 space-y-4'>;
+        <div>;
+          <h1 className='text-2xl font-semibold'>{course && course.title}</h1>;
+          <div className='text-gray-500 text-sm'>;
+            {course && course.category} • {course && course.level}
+          </div>;
+          <div className='mt-3'>;
+            <ProgressBar value={progress && progress.percent || 0} />;
+            <div className='text-xs text-gray-500 mt-1'>;
+              Progress: {progress && progress.percent || 0}%;
+            </div>;
+          </div>;
+        </div>;
 
-  if (!course) return <div>Loading...</div>;
-
-  return (
-
+        <div className='grid lg:grid-cols-5 gap-4'>;
+          <aside className='lg:col-span-2 border rounded p-3 h-max'>;
+            <div className='font-medium mb-2'>Lessons</div>;
+            <ul className='space-y-2'>;
+              {course && course.lessons?.map((l: any) => (;
+                <li key={l && l.id}>;
                   <button
                     className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l && l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
                     onClick={() => setCurrentLessonId(l && l.id)}
                   >                    {l && l.title}
                   </button>;
                 </li>;
-
-=======
     <div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
         <div>
-=======
 
 import {useEffect, useMemo, useState} from 'react';
 import {useRouter} from 'next/router';
-=======
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -129,7 +166,17 @@ import CoachWidget from '../../components/learn/CoachWidget';
           </div>
         </div>
 
-
+        <div className="grid lg:grid-cols-5 gap-4">
+          <aside className="lg:col-span-2 border rounded p-3 h-max">
+            <div className="font-medium mb-2">Lessons</div>
+            <ul className="space-y-2">
+              {course.lessons?.map((l: any) => (
+                <li key={l.id}>
+                  <button className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`} onClick={() => setCurrentLessonId(l.id)}>
+                    {l.title}
+                  </button>
+                </li>
+              ))}
             </ul>;
           </aside>;
 
@@ -142,7 +189,6 @@ import CoachWidget from '../../components/learn/CoachWidget';
                 </div>;
                 {currentLesson && currentLesson.quiz?.questions?.length ? (;
                   <div className='mt-4'>;
-
                     <Quiz
                       questions={currentLesson && currentLesson.quiz.questions}
                       onComplete={onModuleQuizComplete}
@@ -161,11 +207,9 @@ import CoachWidget from '../../components/learn/CoachWidget';
               <div className='text-sm text-gray-500'>Select a lesson</div>;
             )}
 
-
             {course && course.finalQuiz?.questions?.length ? (;
               <div className='border rounded p-4'>;
                 <div className='font-medium mb-2'>Final Certification Quiz</div>;
-
                 <Quiz
                   questions={course && course.finalQuiz.questions}
                   onComplete={onFinalQuizComplete}
@@ -176,24 +220,6 @@ import CoachWidget from '../../components/learn/CoachWidget';
                   </div>                )}
               </div>;
             ) : null}
-
-
-            {finalPassed && <CertificatePreview courseId={courseId} />}          </section>;
-        </div>;
-      </div>;
-
-      <div className='space-y-4'>;
-        <CoachWidget />;
-        <div className='border rounded p-3'>;
-          <div className='font-medium'>Profile Boost</div>;
-          <div className='text-sm text-gray-600 mt-1'>;
-            Opt-in to boost your visibility in matches when certified skills;
-            apply.;
-          </div>;
-          <button
-            className='mt-2 px-3 py-2 bg-indigo-600 text-white rounded'
-            onClick={() => alert('Preference saved (demo)')}
-=======
 import {useEffect, useMemo, useState} from 'react';
 import {use_router} from 'next / router';
 import ProgressBar from '../../components / learn / ProgressBar';
@@ -358,19 +384,13 @@ if (return <div > Loading...</div>) {
           <button;
             className='mt - 2 px - 3 py - 2 bg - indigo - 600 text - white rounded';
             on_click={() => alert ('Preference saved (demo)')}
-
           >;
             Enable Boost;
           </button>;
         </div>;
       </div>;
 
-
-=======
-
           <section className="lg:col-span-3 space-y-4">
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {currentLesson ? (
               <div className="border rounded p-4">
                 <div className="font-medium">{currentLesson.title}</div>
@@ -430,7 +450,6 @@ if (return <div > Loading...</div>) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <CoachWidget />
         <div className="border rounded p-3">
           <div className="font-medium">Profile Boost</div>
@@ -444,17 +463,10 @@ if (return <div > Loading...</div>) {
 
 }
 
-=======
 
   )
 }
 
+
     </div>);
 ;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

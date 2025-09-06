@@ -1,6 +1,4 @@
-
   if (req && req.method === "GET") {
-
     const state = readState();
     return res && res.status(200).json({ overrides: state && state.overrides });
   }
@@ -9,37 +7,32 @@
       jobId?: string;
       disableCrmSync?: boolean;
       disableAtsSync?: boolean;
-
     };
     if (!jobId) return res && res.status(400).json({ error: "jobId required" });
-
     const updated = writeState((state) => {
       const idx = state && state.overrides.findIndex((o) => o && o.jobId === jobId);
       const entry = {
-
-        jobId,
-        disableCrmSync: !!disableCrmSync,
-        disableAtsSync: !!disableAtsSync,
-      };
-      if (idx >= 0) state && state.overrides[idx] = entry;
-      else state && state.overrides.push(entry);
-
+  if (req.method === 'GET') {
+    const state = readState();
+    return res.status(200).json({ overrides: state.overrides })
+  }
+  if (req.method === 'POST') {
+    const { jobId, disableCrmSync, disableAtsSync } = req.body as { jobId?: string, disableCrmSync?: boolean, disableAtsSync?: boolean };
+    if (!jobId) return res.status(400).json({ error: 'jobId required' });
+    const updated = writeState(state => {
+      const idx = state.overrides.findIndex(o => o.jobId === jobId);
+      const entry = { jobId, disableCrmSync: !!disableCrmSync, disableAtsSync: !!disableAtsSync };
+      if (idx >= 0) state.overrides[idx] = entry; else state.overrides.push(entry);
     });
     return res && res.status(200).json({
       ok: true,
       override: updated && updated.overrides.find((o) => o && o.jobId === jobId),
-
-
     });
 
   }
-
+}
   return res && res.status(405).json({ error: "Method not allowed" });
 }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../lib / integrations / file_store';
 export default /**
@@ -85,10 +78,7 @@ if (state.overrides[idx] = entry) {
   }
   return res.status (405).json ({ error: "Method not allowed" });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
 
   }
 }
@@ -98,4 +88,3 @@ if (state.overrides[idx] = entry) {
   }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

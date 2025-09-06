@@ -1,4 +1,3 @@
-
 import { supabase } from './client',
 export type TalentOnboarding = {
   profile_complete: boolean,
@@ -57,12 +56,10 @@ if ( {) {
 if (return q) {
   $2
 }
-
     }
   } catch {}
   return null;
 }
-
 export async function fetchOnboardingProgress (user_id: string, role: 'talent' | 'client'): Promise < OnboardingRecord | null> {
   try {
     const { data, error } = await supabase;
@@ -95,7 +92,6 @@ export function fallbackTalentProgress (): TalentOnboarding {
 export function fallbackClientProgress (): ClientOnboarding {
   return {
     job_posted: true,
-
     talent_invited: false;
     quote_received: false;
     first_hire_complete: false}

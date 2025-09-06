@@ -1,10 +1,8 @@
 import React, { create_context, useCallback, useContext, useMemo, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 export type ToastVariant = 'default' | 'success' | 'error' | 'info';
-
 export type Toast = {
   id: string;
-
   title?: string;
   description?: string;
   variant?: ToastVariant;
@@ -13,20 +11,15 @@ export type Toast = {
   duration_ms?: number;
 }
 
-
-
 export type ToastContextValue = {
-=======
-;
-export type ToastContextValue = {;
-=======
+
+
+  toasts: Toast[];
 
 export type ToastContextValue = {
 
 
   toasts: Toast[];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/ui/ToastProvider.tsx
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   addToast: (toast: Omit<Toast, 'id'>) => string;
   removeToast: (id: string) => void;
   clearToasts: () => void;
@@ -46,7 +39,6 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {cons
   const addToast = useCallback((toast: Omit<Toast, 'id'>) => {;
     const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`;
 
-=======
 
 const ToastContext = createContext<ToastContextValue | undefined>(undefined)
 
@@ -62,11 +54,9 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
     setToasts(prev => [...prev, item]);
     if (item.durationMs && item.durationMs > 0) {setTimeout(() => removeToast(id), item.durationMs);
-=======
 export type ToastContextValue = {
   toasts: Toast[];
   add_toast: (toast: Omit < Toast, 'id'>) => string;
@@ -91,7 +81,6 @@ if ( {) {
   $2
 }
       set_timeout (() => remove_toast (id), item.duration_ms);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     return id;
   }, [remove_toast]);
@@ -108,16 +97,13 @@ if ( {) {
         <AnimatePresence>
           {toasts.map(t => (
             <motion.div
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               key={t.id}
               initial={{ opacity: 0, coordinate_y: 16, scale: 0.98 }}
               animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
               exit={{ opacity: 0, coordinate_y: 8, scale: 0.98 }}
               transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-
               className={`rounded - md border shadow - lg p - 3 backdrop - blur bg - white / 80 dark:bg - black / 60 ${
                 t.variant === 'success' ? 'border - emerald - 400 / 40' : t.variant === 'error' ? 'border - rose - 400 / 40' : t.variant === 'info' ? 'border - sky - 400 / 40' : 'border - gray - 300 / 40 dark:border - gray - 700 / 40';
-
               }`}
 
 
@@ -140,11 +126,13 @@ if ( {) {
                 </div>
                 <button onClick={() => removeToast(t.id)} className="text-xs opacity-60 hover:opacity-100">×</button>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              className={`rounded - md border shadow - lg p - 3 backdrop - blur bg - white / 80 dark:bg - black / 60 ${
+                t.variant === 'success' ? 'border - emerald - 400 / 40' : t.variant === 'error' ? 'border - rose - 400 / 40' : t.variant === 'info' ? 'border - sky - 400 / 40' : 'border - gray - 300 / 40 dark:border - gray - 700 / 40';
               </div>
             </motion.div>
           ))}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              className={`rounded - md border shadow - lg p - 3 backdrop - blur bg - white / 80 dark:bg - black / 60 ${
+                t.variant === 'success' ? 'border - emerald - 400 / 40' : t.variant === 'error' ? 'border - rose - 400 / 40' : t.variant === 'info' ? 'border - sky - 400 / 40' : 'border - gray - 300 / 40 dark:border - gray - 700 / 40';
         </AnimatePresence>;
       </div>;
     </ToastContext.Provider>);
@@ -157,7 +145,5 @@ function use_toast() {
   if (throw new Error ('use_toast must be used within ToastProvider')) {
   $2
 }
-
-
   return ctx;
 }

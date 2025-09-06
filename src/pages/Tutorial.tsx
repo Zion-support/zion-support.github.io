@@ -1,10 +1,3 @@
-tutorial?: TutorialType
-}
-export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProps) {
-
-  const router = useRouter()
-  const slug = router.query.slug as string | undefined
-  const tutorial = initialTutorial |TUTORIALS.find((t,) => t.slug === slug)
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -55,7 +48,6 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
 
   if (!tutorial) {;
     return (
-
       <div className='min-h-screen bg-zion-blue flex items-center justify-center text-white'>;
   }
   return (
@@ -134,13 +126,6 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
             </p>;
           )}
 
-        </div>;
-      </div>;
-    </>;
-  );
-
-}
-
 import Link from 'next / link';
 import { use_router } from 'next / router';
 import { TUTORIALS } from '@/data / tutorials';
@@ -208,4 +193,3 @@ if ( {) {
       </div>;
     </>);
 }
-;

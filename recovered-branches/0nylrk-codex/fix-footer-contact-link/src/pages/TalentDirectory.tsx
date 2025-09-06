@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -38,11 +37,9 @@ export default function TalentDirectory() {;
 
   // Use our custom hook to manage state;
   const {;
-
     filteredTalents;
     isLoading;
     searchTerm;
-=======
 import React, { useState } from './react';
 import { use_navigate } from './react-router-dom';
 import { AppLayout } from '@/layout / AppLayout';
@@ -65,7 +62,6 @@ function TalentDirectory() {
     filtered_talents;
     is_loading;
     search_term;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     setSearchTerm;
     selected_skills;
     selected_availability;
@@ -82,58 +78,6 @@ function TalentDirectory() {
     setIsHireModalOpen;
     selected_talent;
     setSelectedTalent;
-
-
-
-
-
-  const navigate = useNavigate();
-  // Use our custom hook to manage state
-  const {
-
-    filteredTalents,
-    isLoading,
-    searchTerm,
-    setSearchTerm,
-    selectedSkills,
-    selectedAvailability,
-    selectedRegions,
-    priceRange,
-    setPriceRange,
-    experienceRange,
-    setExperienceRange,
-    sortOption,
-    setSortOption,
-    isMobileFilterOpen,
-    setIsMobileFilterOpen,
-    isHireModalOpen,
-    setIsHireModalOpen,
-    selectedTalent,
-    setSelectedTalent,
-    expandedSections,
-    isAuthenticated,
-    savedTalents,
-    toggleSkill,
-    toggleAvailability,
-    toggleRegion,
-    clearFilters,
-    toggleSection,
-    handleToggleSave} = useTalentDirectory(),
-  
-
-  const handleRequestHire = (talent: TalentProfile) => {
-    setSelectedTalent(talent)
-    setIsHireModalOpen(true)
-
-  },
-  
-  const viewProfile = (id: string) => {
-    // Navigate to the talent profile page
-    navigate(`/talent/${id}`)
-  },
-  
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -146,7 +90,6 @@ function TalentDirectory() {
           </div>
 
 
-=======
           {/* Main content */}
           <div className="flex flex-col lg:flex-row gap-6">
             {/* Sidebar - Desktop */}
@@ -218,7 +161,12 @@ export default function TalentDirectory() {;
             </p>;
           </div>;
 
-
+          {/* Main content */}
+          <div className="flex flex-col lg:flex-row gap-6">;
+            {/* Sidebar - Desktop */}
+            <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
+              <FilterSidebar
+                searchTerm={searchTerm}
     expanded_sections;
     is_authenticated;
     saved_talents;
@@ -255,7 +203,6 @@ export default function TalentDirectory() {;
             <div className="w - full lg:w - 64 shrink - 0 hidden lg:block">;
               <FilterSidebar;
                 search_term={search_term}
-
                 setSearchTerm={setSearchTerm}
                 selected_skills={selected_skills}
                 toggle_skill={toggle_skill}
@@ -271,22 +218,13 @@ export default function TalentDirectory() {;
                 toggle_section={toggle_section}
                 sort_option={sort_option}
                 setSortOption={setSortOption}
-
               />;
             </div>;
 
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">;
               <Button
                 onClick={() => setIsMobileFilterOpen(true)}
-
-                variant="outline";
-                className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light";
-=======
                 clear_filters={clear_filters}
               />;
             </div>;
@@ -296,19 +234,16 @@ export default function TalentDirectory() {;
                 on_click={() => setIsMobileFilterOpen (true)}
                 variant="outline";
                 className="w - full border - zion - blue - light text - zion - purple hover:bg - zion - blue - light";
-
               >;
                 Filter & Sort;
               </Button>;
             </div>;
 
+            
 
-=======
 
             
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Results */}
             <TalentResults;
               filtered_talents={filtered_talents}
@@ -317,7 +252,8 @@ export default function TalentDirectory() {;
               handleRequestHire={handleRequestHire}
               saved_talents={saved_talents}
               handleToggleSave={handleToggleSave}
-
+              is_authenticated={is_authenticated}
+              activeFiltersProps={{
                 selected_skills;
                 toggle_skill;
                 selected_availability;
@@ -325,10 +261,6 @@ export default function TalentDirectory() {;
                 selected_regions;
                 toggle_region;
                 price_range;
-
-                setPriceRange;
-                experience_range;
-=======
               isAuthenticated={isAuthenticated}
 
               activeFiltersProps={{;
@@ -341,11 +273,24 @@ export default function TalentDirectory() {;
                 priceRange,;
                 setPriceRange,;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 experienceRange;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              isAuthenticated={isAuthenticated}
+
+              activeFiltersProps={{;
+                selectedSkills,;
+                toggleSkill,;
+                selectedAvailability,;
+                toggleAvailability,;
+                selectedRegions,;
+                toggleRegion,;
+                priceRange,;
+                setPriceRange,;
+
                 setExperienceRange;
 
+                setPriceRange;
+                experience_range;
+                setExperienceRange;
                 selectedSkills
                 toggleSkill
                 selectedAvailability
@@ -358,7 +303,6 @@ export default function TalentDirectory() {;
                 setExperienceRange
                 clearFilters}}
             />;
-
 
             {/* Mobile filter sidebar */}
             {isMobileFilterOpen && (;
@@ -378,7 +322,6 @@ export default function TalentDirectory() {;
                   </div>;
                   <FilterSidebar
                     searchTerm={searchTerm}
-=======
                 clear_filters}}
             />;
             {/* Mobile filter sidebar */}
@@ -399,7 +342,6 @@ export default function TalentDirectory() {;
                   </div>;
                   <FilterSidebar;
                     search_term={search_term}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     setSearchTerm={setSearchTerm}
                     selected_skills={selected_skills}
                     toggle_skill={toggle_skill}
@@ -419,15 +361,17 @@ export default function TalentDirectory() {;
                     isMobileFilterOpen={isMobileFilterOpen}
                   />;
                 </div>;
-
+          </div>;
+        </div>;
+      </div>;
+    </AppLayout>;
+  );
+}
               </div>)}
           </div>;
         </div>;
       </div>;
     </AppLayout>);
 }
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

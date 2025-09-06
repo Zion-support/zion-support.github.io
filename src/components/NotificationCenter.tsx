@@ -1,4 +1,9 @@
-unreadCount, ;
+    unread_count,
+    markAsRead,
+  const handleFilterChange = (new_filter: FilterType, ) =>: any {
+    set_filter (new_filter as any);
+  }
+    unreadCount, ;
     markAsRead, ;
 
   const handleFilterChange = (newFilter: FilterType,) => {;
@@ -62,11 +67,6 @@ export const NotificationCenter: React.FC = () => {
   };
 
   return (
-
-
-
-          )}
-
         </Button>;
       </PopoverTrigger>;
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
@@ -80,7 +80,6 @@ export const NotificationCenter: React.FC = () => {
           onFilterChange = {handleFilterChange,}
         />;
 
-
         <NotificationList
           loading = {loading,}
           error = {error,}
@@ -88,14 +87,6 @@ export const NotificationCenter: React.FC = () => {
           onMarkAsRead = {markAsRead,}
           onDismiss = {dismissNotification,}
           onRetry = {fetchNotifications,}
-
-        />;
-
-        <NotificationFooter onClose={() => setOpen(false)} />;
-      </PopoverContent>;
-    </Popover>;
-  );
-},;
 
     <Popover open={open} onOpenChange={(v, ) => set_open (v ?? false)}>;
       <PopoverTrigger as_child>;
@@ -129,5 +120,3 @@ export const NotificationCenter: React.FC = () => {
     </Popover>);
 },
 ;
-
-        <NotificationHeader

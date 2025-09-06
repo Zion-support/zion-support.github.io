@@ -1,11 +1,3 @@
-
-
-import { useLocation } from "react-router-dom",
-import { useEffect } from "react",
-=======
-import {useLocation} from "react-router-dom";
-import {useEffect} from "react";
-=======
 import { useLocation } from "react-router-dom",
 import { useEffect } from "react",
 
@@ -13,8 +5,13 @@ import { useEffect } from "react",
 const NotFound = () => {
   const location = useLocation(),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { useLocation } from "react-router-dom",
+import { useEffect } from "react",
+
+
+const NotFound = () => {
+  const location = useLocation(),
+
   useEffect(() => {
     console.error(
       "404 Error: User attempted to access non-existent route:"
@@ -59,8 +56,6 @@ const NotFound = () => {
   );
 };
 
-
-=======
 import { use_location } from './react-router-dom';
 import { useEffect } from './react';
 const NotFound = () =>: any {
@@ -84,12 +79,9 @@ const NotFound = () =>: any {
     </div>);
 }
 ;
-=======
 
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default NotFound;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,3 +1,17 @@
+import React, { useState } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import {;
+  Bookmark,;
+  BookmarkCheck,;
+  ChevronRight,;
+  MapPin,;
+  Clock,;
+  DollarSign,;
+} from 'lucide-react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
+
 interface BrowseItem {;
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components / ui / card';
@@ -22,7 +36,6 @@ interface BrowseItem {
   price?: string;
   image?: string;
   match?: number;
-
   timePosted?: string;
 
 interface BrowseCardsProps {;
@@ -38,7 +51,6 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
       prev && prev.includes(id) ? prev && prev.filter(itemId => itemId !== id) : [...prev, id];
     );
   };
-
 
   return (
     <div className='space-y-4 pb-24'>;
@@ -66,7 +78,6 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                       <span className='text-primary font-semibold'>JOB</span>;
                     </div>;
                   )}
-
                   <div>;
                     <h3 className='font-medium'>{item && item.title}</h3>;
                     <p className='text-sm text-muted-foreground'>;
@@ -74,7 +85,6 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                     </p>;
                   </div>;
                 </div>;
-
 
                 <button
                   className='h-8 w-8 flex items-center justify-center'
@@ -84,13 +94,11 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                   ) : (;
                     <Bookmark className='h-5 w-5 text-muted-foreground' />;
                   )}
-
                 </button>;
               </div>;
 
               <div className='mt-3 flex flex-wrap gap-1'>;
                 {item && item.badges.map((badge, index) => (;
-
                   <Badge
                     key={index}
                     variant='outline'
@@ -101,7 +109,6 @@ export function BrowseCards(): any ({ items, type, onViewDetails }: BrowseCardsP
                     <div className="h-12 w-12 rounded-md bg-primary/10 flex items-center justify-center">;
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
-
 
 import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -166,13 +173,11 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                       <span className="text-primary font-semibold">JOB</span>
                     </div>
                   )}
-
                   <div>;
                     <h3 className="font-medium">{item && item.title}</h3>;
                     <p className="text-sm text-muted-foreground">{item && item.subtitle}</p>;
                   </div>;
                 </div>;
-
 
                 <button
                   className="h-8 w-8 flex items-center justify-center"
@@ -183,86 +188,24 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                   ) : (;
                     <Bookmark className="h-5 w-5 text-muted-foreground" />;
                   )}
-
                 </button>;
               </div>;
 
               <div className="mt-3 flex flex-wrap gap-1">;
                 {item && item.badges.map((badge, index) => (;
-
                   <Badge
                     key = {index,}
                     variant="outline"
                     className="text-xs font-normal"
-
-
-                  {savedItems.includes(item.id) ? (
-                    <BookmarkCheck className="h-5 w-5 text-primary" />
-                  ) : (
-                    <Bookmark className="h-5 w-5 text-muted-foreground" />
-                  )}
-                </button>
-              </div>
-
-                  )}
-                  <div>
-                    <h3 className="font-medium">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.subtitle}</p>
-                  </div>
-                </div>
-                <button 
-                  className="h-8 w-8 flex items-center justify-center"
-                  onClick={() => toggleSaved(item.id)}
-                >
-                  {savedItems.includes(item.id) ? (
-                    <BookmarkCheck className="h-5 w-5 text-primary" />
-                  ) : (
-                    <Bookmark className="h-5 w-5 text-muted-foreground" />
-                  )}
-                </button>
-              </div>
-
-              
-              <div className="mt-3 flex flex-wrap gap-1">
-                {item.badges.map((badge, index) => (
-                  <Badge 
-                    key={index} 
-                    variant="outline" 
-                    className="text-xs font-normal"
-
-
-                  )}
-                  <div>
-                    <h3 className="font-medium">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground">{item.subtitle}</p>
-                  </div>
-                </div>
-                <button
-                  className="h-8 w-8 flex items-center justify-center"
-                  onClick={() => toggleSaved(item.id)}
-                >
-                  {savedItems.includes(item.id) ? (
-                    <BookmarkCheck className="h-5 w-5 text-primary" />
-                  ) : (
-                    <Bookmark className="h-5 w-5 text-muted-foreground" />
-                  )}
-
-                </button>;
-              </div>;
-              <div className="mt-3 flex flex-wrap gap-1">;
-                {item.badges.map((badge, index) => (;
-                  <Badge;
-                    key={index} ;
-                    variant="outline";
-                    className="text-xs font-normal";
-                  >;
-
+                  >
                     {badge}
                   </Badge>;
                 ))}
               </div>
-
-
+              
+              <p className="mt-3 text-sm line-clamp-2">{item.description}</p>
+              
+              <div className="mt-3 flex flex-wrap gap-3 text-xs text-muted-foreground">
                 {item.location && (
                   <div className="flex items-center gap-1">
                     <MapPin className="h-3 w-3" />
@@ -301,8 +244,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 )}
               </div>
             </div>
-
-
               </div>;
 
               <p className='mt-3 text-sm line-clamp-2'>{item && item.description}</p>;
@@ -374,9 +315,9 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
             </div>;
           </CardContent>;
         </Card>;
-
-      ))}
-
+    </div>;
+  );
+}
             
             <div className="border-t border-border p-3 flex justify-end">
               <Button 
@@ -392,7 +333,10 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
             </div>
           </CardContent>
         </Card>
-
+      ))}
+    </div>
+  );
+}
   time_posted?: string;
 interface BrowseCardsProps {
   items: BrowseItem[];
@@ -536,13 +480,3 @@ function BrowseCards() {
         </Card>))}
     </div>);
 }
-
-
-      ))}
-
-    </div>;
-  );
-};
-}
-
-;

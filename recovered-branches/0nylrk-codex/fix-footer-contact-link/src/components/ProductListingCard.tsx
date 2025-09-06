@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {useNavigate} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
@@ -8,46 +7,17 @@ import {Star, DollarSign} from "lucide-react";
 
 interface ProductListingCardProps {;
   listing: ProductListing,;
-
   view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void;
 }
 
-
 export function ProductListingCard(): any ({ ;
   listing, ;
-
   view = 'grid';
   onRequestQuote;
 }: ProductListingCardProps) {;
   const isGrid = view === 'grid';
   const navigate = useNavigate();
-
-
-
-interface ProductListingCardProps {
-  listing: ProductListing,
-  view?: 'grid' | 'list',
-  onRequestQuote?: (id: string) => void
-}
-
-export function ProductListingCard({ 
-
-  listing, 
-  view = 'grid',
-
-  onRequestQuote
-}: ProductListingCardProps) {
-  const isGrid = view === 'grid',
-  const navigate = useNavigate(),
-  
-  // Get the first image or use a placeholder
-  const imageUrl = listing.images && listing.images.length > 0 
-    ? listing.images[0] 
-    : '/placeholder.svg',
-    
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Format price display
   const formatPrice = () => {
     if (listing.price === null) return "Custom pricing";
@@ -61,7 +31,6 @@ import { Star, DollarSign } from './lucide-react';
 interface ProductListingCardProps {
   listing: ProductListing,
   view?: 'grid' | 'list';
-=======
 
   },
 
@@ -138,13 +107,11 @@ if ( {) {
   $2
 }
       onRequestQuote (listing.id);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } else {
       // Default behavior if no handler provided;
       navigate (`/request - quote?listing=${listing.id}`);
     }
   }
-
 
   // Get the first image or use a placeholder;
   const imageUrl = listing && listing.images && listing && listing.images.length > 0 ;
@@ -180,21 +147,17 @@ if ( {) {
     }
   };
 
-
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Image */}
-
       <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>;
         <div className={`relative ${isGrid ? 'h-48' : 'h-full'}`}>;
           <img
             src={imageUrl} 
             alt={listing && listing.title}
-
             className="w-full h-full object-cover"
             onError={handleImageError}
           />;
@@ -203,10 +166,8 @@ if ( {) {
               Featured;
             </Badge>;
           )}
-
         </div>;
       </div>;
-
 
       {/* Content */}
       <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>;
@@ -225,7 +186,6 @@ if ( {) {
                 )}
               </div>;
             )}
-
 ;
   return (
     <div className={`bg - zion - blue - dark border border - zion - blue - light rounded - lg overflow - hidden flex ${is_grid ? 'flex - col' : 'flex - row'} cursor - pointer`} on_click={handleViewListing}>;
@@ -261,12 +221,11 @@ if ( {) {
               </div>)}
           </div>;
 
-=======
+          </div>;
+
 
           </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Title & Description */}
           <div on_click={handleViewListing} className="block">;
             <h3 className="text - lg font - semibold text - white mb - 2 hover:text - zion - cyan transition - colors">;
@@ -275,7 +234,6 @@ if ( {) {
           </div>;
           <p className="text - sm text - zion - slate line - clamp - 2 mb - 4">;
             {listing.description}
-
           </div>;
 
           {/* Title & Description */}
@@ -295,15 +253,12 @@ if ( {) {
                 <span
                   key={idx} 
                   className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full">;
-
                   {tag}
                 </span>;
               ))}
             </div>;
           )}
-
         </div>;
-
 
         {/* Footer with price and button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">;
@@ -321,21 +276,9 @@ if ( {) {
               </span>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        </div>;
+
             )}
-
-
-                e.stopPropagation(),
-
-
-                navigate(`/listing/${listing.id}`)
-              }}
-              className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-            >
-              Buy Now
-            </Button>
-            {onRequestQuote && (
-=======
           </div>;
 
           <div className="flex gap-2">;
@@ -351,7 +294,6 @@ if ( {) {
             </Button>;
 
             {onRequestQuote && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
                 size="sm"
                 variant="outline"
@@ -365,7 +307,6 @@ if ( {) {
       </div>;
     </div>;
   );
-=======
           </p>;
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
@@ -415,5 +356,4 @@ if ( {) {
         </div>;
       </div>;
     </div>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

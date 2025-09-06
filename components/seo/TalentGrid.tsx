@@ -1,20 +1,62 @@
 
-
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React from "react";
 import { TALENT_PROFILES } from "../../data/talent";
 import type { TalentProfile } from "../../data/talent";
 type Props = {;
   region?: string;
   service?: string;
-
-
+import React from 'react';
+import { TALENT_PROFILES } from '../../data/talent';
+import type { TalentProfile } from '../../data/talent';
+type Props = {
+  region?: string;
+  service?: string
 };
 
 function matchesRegion(): any (profile: TalentProfile, region?: string) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!region) return true;
+  const r = region && region.toLowerCase();
+  return profile && profile.location.toLowerCase().includes(r);
+}
 
+function matchesService(): any (profile: TalentProfile, service?: string) {;
+  if (!service) return true;
+  const s = service && service.toLowerCase();
+  return (
+    profile && profile.title.toLowerCase().includes(s) ||;
+    profile && profile.skills.some((sk) => sk && sk.toLowerCase().includes(s));
+  );
+}
 
+export default function TalentGrid(): any ({ region, service }: Props) {;
+  const items = React && React.useMemo(;
+    () =>;
+      TALENT_PROFILES && TALENT_PROFILES.filter(;
+        (p) => matchesRegion(p, region) && matchesService(p, service),;
+      ),;
+    [region, service],;
   );
 
   if (items && items.length === 0) {;
@@ -57,8 +99,6 @@ function matchesRegion(): any (profile: TalentProfile, region?: string) {;
             ${p && p.hourlyRateUsd}/hr • {p && p.availability}
           </div>;
         </div>;
-
-=======
   const r = region.toLowerCase();
   return profile.location.toLowerCase().includes(r)
 }
@@ -98,8 +138,6 @@ export default function TalentGrid({ region, service }: Props) {
           </div>
           <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr • {p.availability}</div>
         </div>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       ))}
     </div>;
   );
@@ -108,7 +146,10 @@ export default function TalentGrid({ region, service }: Props) {
 
 }
 
-=======
+      ))}
+    </div>;
+  );
+}
 import React from './react';
 import { TALENT_PROFILES  } from '../../data / talent';
 import type { TalentProfile } from "../../data / talent";
@@ -198,7 +239,4 @@ if ( {) {
         </div>))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

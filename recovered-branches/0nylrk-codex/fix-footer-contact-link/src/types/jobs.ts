@@ -1,4 +1,3 @@
-
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 ;
 export type JobCategory =;
@@ -14,10 +13,8 @@ export interface JobBudget {
   min: number;
   max: number,
   currency: string;
-
 }
 export interface Job {
-=======
 
 export type JobCategory = 
   | 'development' 
@@ -38,7 +35,6 @@ export interface JobBudget {;
 
 export interface Job {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   client_id: string;
   title: string;
@@ -48,30 +44,24 @@ export interface Job {;
   budget: JobBudget;
   deadline: string;
   status: JobStatus;
-
   created_at: string,
   updated_at: string;
-
 }
 export interface JobFormData {
-=======
 }
 
 
 export interface JobFormData {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   title: string;
   description: string;
   category: JobCategory;
   skills: string;
-
   budget_min: number;
   budget_max: number,
   deadline: Date;
 }
 // Add JobMatch interface to be shared across components;
-
 export interface JobMatch {
   id: string;
   job_id: string;
@@ -94,10 +84,8 @@ export interface JobMatch {
     key_projects: any[];
     skills: string[];
     location?: string;
-
     category?: string,
     company_name?: string;
-
   }
 }
 
@@ -111,20 +99,16 @@ export interface ResumeAttachment {;
   type: 'ai_resume' | 'custom_upload';
   file_url?: string;
   resume_id?: string;
-
   summary?: string,
   skills?: string[];
 }
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
 ;
-
 export interface JobApplication {
-=======
 
 
 export interface JobApplication {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   job_id: string;
   talent_id: string;
@@ -141,10 +125,8 @@ export interface JobApplication {;
     full_name: string;
     professional_title: string;
     profile_picture_url?: string;
-
     bio: string,
     skills: string[];
-
   }
   resume?: ResumeAttachment;
   // New fields for resume scoring;
@@ -153,12 +135,9 @@ export interface JobApplication {;
   match_breakdown?: {
     skills_match?: {
       score: number;
-
       matching: string[],
-=======
 
 
-=======
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed',;
 export type JobCategory =;
   | 'development';
@@ -280,11 +259,4 @@ export interface JobApplication {;
   match_suggestion?: string;
   scored_at?: string;
   notes?: string,  // New field for client notes;
-
-
-
-
 }
-;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

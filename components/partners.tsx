@@ -23,13 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-
-export default function PartnersPage() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
 export default function PartnersPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
       <Head>;
@@ -37,7 +31,6 @@ export default function PartnersPage() {;
         <meta
           name='description'
           content='Technology and go-to-market partners powering our customer outcomes.'
-
         />;
         <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/partners' />;
       </Head>;
@@ -56,7 +49,6 @@ export default function PartnersPage() {;
           <li>Security: Wiz, Prisma Cloud, HashiCorp Vault</li>;
         </ul>;
         <div className='pt-4 text-slate-300'>;
-
           Partner with us:{' '}
           <a className='text-cyan-400' href='mailto:kleber@ziontechgroup && ziontechgroup.com'>;
             kleber@ziontechgroup && ziontechgroup.com;
@@ -65,10 +57,8 @@ export default function PartnersPage() {;
       </div>;
     </div>;
   );	return (
-
 export default function PartnersPage() {
 	return (
-
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>Partners | Zion Tech Group</title>
@@ -87,7 +77,8 @@ export default function PartnersPage() {
 				<div className="pt-4 text-slate-300">Partner with us: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
 			</div>
 		</div>
-
+	)
+}
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
 			<Head>;
 				<title>Partners | Zion Tech Group</title>;
@@ -108,10 +99,6 @@ export default function PartnersPage() {
 		</div>;
 	),;
 }
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Head from 'next / head';
 export default /**
  * PartnersPage - Function description
@@ -168,10 +155,7 @@ function PartnersPage() {
   </div>;
   </div>),
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 	),
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

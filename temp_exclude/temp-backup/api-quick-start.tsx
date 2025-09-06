@@ -1,6 +1,4 @@
-
 import React from 'react';
-
 
 interface ApiquickstartProps {
   // Add props here as needed
@@ -15,5 +13,3 @@ export default function Apiquickstart({ }: ApiquickstartProps) {
   );
 }
 }
-
-

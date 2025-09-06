@@ -1,28 +1,3 @@
-const [activeTab, setActiveTab] = useState<string>("documentation"),
-  
-  // Define the tabs
-  const tabs: TabDefinition[] = [
-
-
-    { id: "documentation", label: "Documentation", icon: BookOpen },
-    { id: "api-keys", label: "API Keys", icon: Key },
-    { id: "webhooks", label: "Webhooks", icon: Webhook },
-    { id: "logs", label: "Logs", icon: List }],
-
-
-  return (
-    <div className="w-full max-w-7xl mx-auto p-4 md:p-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-white flex items-center">
-          <Terminal className="mr-3" size={32} />
-
-          Developer Portal
-        </h1>
-        <p className='text-zinc-400 mt-2'>
-          Access the Zion API, manage your API keys, and set up webhooks.
-        </p>
-      </div>
-
 
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
@@ -136,8 +111,6 @@ function DeveloperPortal() {
                 {tab.label}
               </button>);
           })}
-
-
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import {;
@@ -205,7 +178,11 @@ export function DeveloperPortal() {;
       </div>;
 
       {/* Tab content */}
-
+      <div>;
+        {activeTab === 'documentation' && <ApiDocumentation />}
+        {activeTab === 'api-keys' && <ApiKeysManager />}
+        {activeTab === 'webhooks' && <WebhooksManager />}
+        {activeTab === 'logs' && <ApiLogs />}
         </div>;
       </div>;
       {/* Tab content */}
@@ -219,11 +196,9 @@ export function DeveloperPortal() {;
                 on_click={() => setActiveTab (tab.id)}
               >;
                 <Icon size={16} className="mr - 2" />;
-
                 {tab.label}
               </button>);
           })}
-
       </div>;
     </div>;
   );
@@ -237,7 +212,6 @@ export function DeveloperPortal() {;
         </div>;
       </div>;
 
-
       {/* Tab content */}
       <div>;
       <div>
@@ -247,17 +221,11 @@ export function DeveloperPortal() {;
         {activeTab === "webhooks" && <WebhooksManager />}
         {activeTab === "logs" && <ApiLogs />}
 
-
-
-
-
-
 export default function ProtectedDeveloperPortal() {
   return (
     <ProtectedRoute>
       <DeveloperPortal />
     </ProtectedRoute>
-
       </div>;
     </div>;
   );
@@ -282,10 +250,8 @@ export default function ProtectedDeveloperPortal() {;
 }
   )
 }
-
   );
 }
-
         </div>;
       </div>;
       {/* Tab content */}
@@ -309,4 +275,3 @@ function ProtectedDeveloperPortal() {
 }
   );
 }
-;

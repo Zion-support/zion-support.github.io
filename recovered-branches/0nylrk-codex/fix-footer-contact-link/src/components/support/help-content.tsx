@@ -1,19 +1,3 @@
-
-
-
-import React from "react",
-import { HelpCategory } from "./types",
-import { 
-  HelpCircle,
-  CreditCard, 
-  Users, 
-  Calendar, 
-  Briefcase 
-} from "lucide-react",
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const HELP_CATEGORIES: HelpCategory[] = [
   {
     id: "getting-started"
@@ -316,8 +300,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\nBy following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.";
         lastUpdated: "2023-12-05",;
         tags: ["prevention", "best practices", "communication"];
-
-=======
 import React from './react';
 import { HelpCategory } from './types';
 import { HelpCircle, CreditCard, Users, Calendar, Briefcase } from './lucide-react';
@@ -472,10 +454,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         content: "The best way to handle disputes is to prevent them from happening. Here are some best practices:\n\n1. Always create clear, detailed contracts with specific deliverables\n2. Break large projects into smaller milestones with clear acceptance criteria\n3. Maintain regular communication through the platform's messaging system\n4. Address concerns immediately rather than letting them accumulate\n5. Document all important decisions and changes to the original agreement\n6. Use the platform's time tracking tools for hourly projects\n7. Provide and request feedback throughout the project, not just at the end\n\n_by following these guidelines, you can significantly reduce the risk of disputes and ensure a smooth working relationship.";
         last_updated: "2023 - 12 - 05",
         tags: ["prevention", "best practices", "communication"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     ];
-=======
 
         id: "file-dispute",
         title: "How to file a dispute",
@@ -494,9 +474,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         id: "dispute-prevention",
         title: "Tips for preventing disputes",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ];
-
 ;
-

@@ -14,7 +14,6 @@ interface OptimizedImageProps {
   priority?: boolean;
   quality?: number;
   sizes?: string;}
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
 const: OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,

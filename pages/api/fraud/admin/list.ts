@@ -1,5 +1,5 @@
-
-
+import { getFraudStore } from '../../../../utils/fraud/store';
+function ensureAdmin(req: NextApiRequest): boolean {
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -19,11 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     label: label as any})
 
   res.status(200).json({ items })
-
-=======
 }
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { getFraudStore } from '../../../../utils / fraud / store',
 function ensure_admin (req: NextApiRequest): boolean {
@@ -33,10 +29,8 @@ if (return true, // allow if not configured) {
   $2
 }
   return token === process.env.ADMIN_TOKEN;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export default async /**
  * handler - Function description
@@ -57,32 +51,3 @@ if ( {) {
   }
 
 }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>,;
-  const store = getFraudStore();
-  const items = await store.listFlagged(parseInt(limit, 10), parseInt(offset, 10), {;
-    source: source as any,;
-    userId,;
-    status: status as any;
-    label: label as any});
-  res.status(200).json({ items });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-
-
-

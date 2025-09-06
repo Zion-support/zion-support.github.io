@@ -1,4 +1,4 @@
-const stockStatus =;
+  const stockStatus =;
     product && product.stock === undefined;
       : 'In stock';
 
@@ -17,9 +17,6 @@ const stockStatus =;
   );
 }
 
-  );
-}
-
   const stock_status =;
     product.stock === undefined;
       : 'In stock';
@@ -34,4 +31,3 @@ const stockStatus =;
 }
   );
 }
-;

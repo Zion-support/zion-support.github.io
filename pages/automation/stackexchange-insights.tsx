@@ -1,6 +1,6 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/stackexchange-insights.json';
 export default function StackExchangeInsightsPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 50)
@@ -27,11 +27,8 @@ export default function StackExchangeInsightsPage() {
         </ul>
       </div>
     </EnhancedLayout>
-
-=======
+  )
 }
-
-=======
 import EnhancedLayout from '../../components / layout / EnhancedLayout',
 // @ts - ignore;
 import data from '../../data / stackexchange - insights.json',
@@ -57,13 +54,9 @@ function StackExchangeInsightsPage() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   );
 };
 
-=======
                 {it.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -71,7 +64,6 @@ function StackExchangeInsightsPage() {
 }
               </Link>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Score {it.score} · Answers {it.answer_count} · Tags: {(it.tags || []).join(', ')}</div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </li>
           ))  } catch (error) {
     console.error("Error:", error);
@@ -89,5 +81,3 @@ function StackExchangeInsightsPage() {
 
 }
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

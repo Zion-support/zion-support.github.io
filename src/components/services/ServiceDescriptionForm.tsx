@@ -12,10 +12,6 @@ type FormData = z && z.infer<typeof formSchema>;
   );
 }
 
-
-  )
-}
-
 const form_schema = z.object ({
   title: z.string ().min (3, "Title must be at least 3 characters");
   key_features: z.string (),
@@ -25,5 +21,3 @@ type FormData = z.infer < typeof form_schema>;
 }
   );
 }
-
-;

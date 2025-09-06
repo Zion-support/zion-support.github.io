@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 
 interface HrplatformProps {
@@ -15,5 +13,3 @@ export default function Hrplatform({ }: HrplatformProps) {
   );
 }
 }
-
-

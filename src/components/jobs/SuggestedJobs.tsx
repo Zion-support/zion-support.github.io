@@ -1,7 +1,12 @@
+    updateJobMatchStatus,
+import { use_auth  } from '@/hooks / use_auth';
+import { Loader2 } from 'lucide-react'import { Badge  } from '@/components / ui / badge';
+import { useJobSuggestions  } from '@/hooks / useJobSuggestions';
+import { JobMatchesCard  } from './JobMatchesCard';
+import { NoJobsCard  } from './NoJobsCard';
 interface SuggestedJobsProps {
   talent_id?: string;
 }
-
 export /**
  * SuggestedJobs - Function description
  */
@@ -19,37 +24,19 @@ function SuggestedJobs() {
   } = useJobSuggestions (currentTalentId);
   const handle_apply = (match_id: string, job_id: string) =>: any {
     updateJobMatchStatus (match_id, 'applied');    // In a real app, this might redirect to application form or open a modal;
-
   }
   const handle_decline = (match_id: string) =>: any {
     updateJobMatchStatus (match_id, 'declined');
   }
-
-  const { user } = useAuth(),
-  const currentTalentId = talentId || user?.id,
-  const { user } = useAuth()
-  const currentTalentId = talentId || user?.id
-  const { user } = useAuth(),
-  const currentTalentId = talentId || user?.id,
-
-
-  const { 
-    isLoading,
-    updateJobMatchStatus, 
-    categorizedMatches: { 
-
-
-
-
-
-  if (isLoading) {
   // Check condition
 if ( {) {
   $2
 }
     return (
-
-
+      <div className="flex items - center justify - center p - 6">;
+        <Loader2 className="w - 6 h - 6 animate - spin text - primary" />;
+      </div>);
+  }
     updateJobMatchStatus, ;
 import { useAuth } from "@/hooks/useAuth";
 import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge";
@@ -111,7 +98,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
   return (
     <div className="space-y-6">;
       {/* New Matches Section */}
-
       {newMatches && newMatches.length > 0 && (;
         <div className="space-y-4">;
           <div className="flex items-center justify-between">;
@@ -125,7 +111,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
             {newMatches && newMatches.map(match => (;
               <JobMatchesCard
                 key = {match && match.id,}
-
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
@@ -146,20 +131,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
         </div>;
       )}
 
-
-;
-
-      
-;
-
-      {/* Previously Viewed Section */}
-      {viewedMatches.length > 0 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium">Previously Viewed</h3>
-          </div>
-
-
       {/* Previously Viewed Section */}
       {viewedMatches && viewedMatches.length > 0 && (;
         <div className="space-y-4">;
@@ -171,7 +142,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
             {viewedMatches && viewedMatches.map(match => (;
               <JobMatchesCard
                 key = {match && match.id,}
-
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
@@ -191,25 +161,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-
-
-;
-
-      
-;
-
-      {/* Applied Jobs Section */}
-      {appliedMatches.length > 0 && (
-        <div className="space-y-4">
-          <div className="flex items-center justify-between">
-            <h3 className="text-lg font-medium">Applied Jobs</h3>
-          </div>
-
-
-              <JobMatchesCard 
-
-
-                key = {match.id,}
 
       {/* Applied Jobs Section */}
       {appliedMatches && appliedMatches.length > 0 && (;
@@ -235,11 +186,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
           </div>;
         </div>;
       )}
-
-    </div>;
-  );
-
-
 
   // Check condition
 if ( {) {
@@ -360,5 +306,3 @@ if ( {) {
 }</div> </div>);
 }</div>);
 }'"}
-}
-;

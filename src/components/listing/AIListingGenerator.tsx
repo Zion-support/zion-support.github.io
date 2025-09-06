@@ -4,12 +4,10 @@ interface GeneratedContent {
   suggested_price: {
     min: number,
     max: number;
-
   }
   key_points: string[];
 }
 interface AIListingGeneratorProps {
-
 
 interface GeneratedContent {;
   description: string,;
@@ -24,14 +22,12 @@ interface GeneratedContent {;
 interface AIListingGeneratorProps {;
   onApplyGenerated?: (content: GeneratedContent,) => void,;
   initialValues?: {;
-
     title?: string;
     category?: string;
     keyFeatures?: string;
     targetAudience?: string;
   }
 }
-
 
   onApplyGenerated?: (content: GeneratedContent, ) => void,
   initial_values?: {
@@ -58,7 +54,6 @@ function AIListingGenerator() {
     category: string,
     key_features: string,
     target_audience: string;
-
   }) => {
     setIsLoading (true);
     try {
@@ -71,21 +66,6 @@ if ( {) {
 }
         throw new Error (error.message);
       }
-
-
-
-
-      toast({
-        title: "Content Generated"
-        description: "AI has created optimized listing content for you."
-      })
-    } catch (error) {
-      logErrorToProduction('Error generating content:', { data: error })
-      toast({
-        title: "Generation Failed"
-        description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
-        variant: "destructive"
-      })
       // Check condition
 if (.error) {) {
   $2
@@ -107,20 +87,7 @@ if (.error) {) {
     } finally {
       setIsLoading (false);
     }
-
-
-  },
-
-  const handleApply = () => {
-    if (generatedContent && onApplyGenerated) {
-      onApplyGenerated(generatedContent),
-
-
-      toast({
-        title: "Content Applied"
-        description: "The generated content has been applied to your listing."
-      })
-
+  }
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
@@ -175,7 +142,6 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
         title: "Content Applied",;
         description: "The generated content has been applied to your listing.";
       });
-
   const handle_apply = () =>: any {
     // Check condition
 if ( {) {
@@ -197,7 +163,6 @@ if ( {) {
 
 
   return (
-
     <div className="space-y-6">;
       <Card className="border border-zion-blue-light bg-zion-blue-dark">;
         <CardHeader>;
@@ -210,21 +175,10 @@ if ( {) {
           </p>;
         </CardHeader>;
         <CardContent>;
-
           <AIListingForm
             onSubmit = {handleGenerate,}
             isLoading = {isLoading,}
             initialValues = {initialValues,}
-
-
-          <AIListingForm 
-
-
-      {isLoading && <LoadingContentSkeleton />}
-      {generatedContent && !isLoading && (
-        <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
-      )}
-
     <div className="space - y-6">;
       <Card className="border border - zion - blue - light bg - zion - blue - dark">;
         <CardHeader>;
@@ -264,12 +218,10 @@ target_audience;
 category: string;
 key_features: string;
 target_audience: string;
-
 }) => {
   setIsLoading (true);
 try {
   const {
-
   data, error;
 }= await supabase.functions.invoke ('ai - listing - generator', {
   body: {
@@ -286,11 +238,9 @@ if (.error) {) {
 }
   throw new Error ( (data as any) .error);
 }setGeneratedContent ( (data as any) ?.generated || null);
-
 toast ({
 }catch (error) {';
   logErrorToProduction ('Error generating content:', {
-
           />;
         </CardContent>;
       </Card>;
@@ -369,7 +319,6 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }/>) ;
 }</div>) ;
 }'";
-
   data: error;
 });
 toast ({
@@ -377,24 +326,20 @@ toast ({
   setIsLoading (false);
 }
 
-const handle_apply = () =>: any {
-  // Check condition
-if ( {) {
-  $2
-}
-  onApplyGenerated (generated_content);
-toast ({
-}
-
+return (<div className="space - y-6" > <Card className="border border - zion - blue - light bg - zion - blue - dark" > <CardHeader> <CardTitle className="flex items - center text - white" > <Sparkles className="h - 5 w - 5 mr - 2 text - zion - cyan" /> AI Listing Optimizer </CardTitle> <p className="text - sm text - zion - slate - light" > Provide basic information and let AI generate optimized, SEO - friendly content for your listing </p> </CardHeader> <CardContent> <AIListingForm on_submit= {
+  handle_generate;
+}is_loading= {
+  is_loading;
+}initial_values= {
+  initial_values;
+}/> </CardContent> </Card> {
+  is_loading && <LoadingContentSkeleton />;
+}{
+  generated_content && !is_loading && (<GeneratedContentDisplay content= {
+  generated_content;
+}on_apply= {
+  handle_apply;
+}/>);
+}</div>);
 }'";
 }
-
-}
-}
-}
-}
-
-    </div>;
-  );
-}
-;

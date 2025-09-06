@@ -1,68 +1,6 @@
-
-
-
-
-  const copyLinkToClipboard = () => {
-    navigator.clipboard.writeText(window.location.href)
-      .then(() => {
-        toast({
-          title: "Link Copied!"
-          description: "The link has been copied to your clipboard"})
-      })
-      .catch(() => {
-        toast({
-          title: "Failed to copy"
-          description: "Please try again or copy the URL manually"
-          variant: "destructive"
-        })
-      })
-
-
-  },
-
-
-
-  const shareLinks = [
-    {
-      name: "Twitter"
-      icon: <Twitter className="h-5 w-5" />
-      color: "bg-[#1DA1F2] hover:bg-[#1DA1F2]/80"
-      onClick: shareToTwitter
-
-
-    },
-
-
-    {
-      name: "Facebook"
-      icon: <Facebook className="h-5 w-5" />
-      color: "bg-[#4267B2] hover:bg-[#4267B2]/80"
-      onClick: shareToFacebook
-
-
-    },
-
-
-    {
-      name: "LinkedIn"
-      icon: <Linkedin className="h-5 w-5" />
-      color: "bg-[#0077B5] hover:bg-[#0077B5]/80"
-      onClick: shareToLinkedIn
-
-
-    },
-
-
-    {
-      name: "Copy Link"
-      icon: <Link className="h-5 w-5" />
-      color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80"
-      onClick: copyLinkToClipboard
-
 import {Button} from "./ui/button";
 import {Twitter, Facebook, Linkedin, Link} from "@/components/icons";
 import {toast} from "./ui/use-toast";
-=======
     }],
 
   return (
@@ -81,7 +19,6 @@ import {toast} from "./ui/use-toast";
                 size="sm"
 
 
-=======
 import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
 import { toast } from "./ui/use-toast",;
@@ -144,8 +81,6 @@ export function SocialShareSection() {;
       icon: <Link className="h-5 w-5" />,;
       color: "bg-zion-blue-dark hover:bg-zion-blue-dark/80",;
       onClick: copyLinkToClipboard;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Button } from './ui / button';
 import { Twitter, Facebook, Linkedin, Link } from '@/components / icons';
 import { toast } from './ui / use - toast';
@@ -210,27 +145,16 @@ function SocialShareSection() {
       icon: <Link className="h - 5 w - 5" />,
       color: "bg - zion - blue - dark hover:bg - zion - blue - dark / 80",
       on_click: copyLinkToClipboard;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }];
 ;
   return (
-
-            {shareLinks.map((link, index) => (;
-              <Button;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-=======
           </div>;
         </div>;
       </div>;
     </section>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     <section className="py - 12 bg - zion - blue">;
       <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-4xl mx - auto flex flex - col md:flex - row items - center justify - between gap - 6 bg - zion - blue - light border border - zion - purple / 20 rounded - lg p - 6">;
@@ -254,4 +178,3 @@ function SocialShareSection() {
       </div>;
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

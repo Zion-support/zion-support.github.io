@@ -1,4 +1,3 @@
-
 import type { BookChapter } from './book_types',
 export const default_chapters: BookChapter[] = [;
   { title: 'Intro: Founder's Story', content: '' },
@@ -8,5 +7,4 @@ export const default_chapters: BookChapter[] = [;
   { title: 'Chapter 4: The Multiverse & Digital Nations', content: '' },
   { title: 'Chapter 5: ZionDAO + The Constitution', content: '' },
   { title: 'Chapter 6: Building a Post - Platform World', content: '' }
-
   { title: 'Appendix: Protocol Maps + Timelines', content: '' }];

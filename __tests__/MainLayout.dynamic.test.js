@@ -1,15 +1,4 @@
 
-
-import React from 'react';
-
-
-
-
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -19,10 +8,9 @@ describe('MainLayoutdynamic'
 
 });
 
-=======
+import React from 'react';
+});
     expect(screen && screen.getByTestId('mainlayout ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import MainLayoutdynamic from "./components/MainLayout ; describe('MainLayoutdynamic', () => { test("renders without crashing",() => { render(<MainLayoutdynamic />); expect(screen && screen.getByTestId("mainlayout && mainlayout.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<MainLayoutdynamic />)}); test("handles user interactions",() => { render(<MainLayoutdynamic />)}); test("applies correct styling"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 describe('MainLayout', () => {
   test('renders without crashing', () => {
@@ -45,8 +33,6 @@ describe('MainLayout', () => {
     // Add styling tests here
   });
 });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
-=======
 import { render, screen } from '@testing - library / react';
 import '@testing - library / jest - dom';
 import MainLayout from '../components / MainLayout.dynamic';
@@ -58,4 +44,3 @@ describe ('MainLayout', () => {
   test ('displays correct content', () => {
     // Test content display;
 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

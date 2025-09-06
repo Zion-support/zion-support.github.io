@@ -1,4 +1,3 @@
-
   const contactInfo = [{
       icon: <Phone className=\"w-6 h-6\"  />,
       \"title\": \"Phone\",
@@ -95,7 +94,6 @@
       \"title\": \'Business Hours\',
       \"details\": \'Mon-Fri: 9AM-6PM PST\',
       \"link\": null
-
     }
   ];
   const offices = [{
@@ -307,7 +305,6 @@
         </div>
       </section>
       {/* FAQ Section */}
-
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -352,7 +349,6 @@
         </div>
       </section>
     </MainLayout>
-
   );
 };
           {/* Contact Information */}
@@ -361,7 +357,6 @@
               <motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
-
                 transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
                 className=\"text-center mb-16\"
               >
@@ -374,7 +369,6 @@
               </motion.div>
                 {contactInfo.map((info, index) => (
                   <motion.div
-
                     key={index}
                     initial={{ \"opacity\": 0, \"y\": 20 }}
                     animate={{ \"opacity\": 1, \"y\": 0 }}
@@ -410,7 +404,6 @@
               <motion.div
                 initial={{ opacity: 0, \"y\": 20 }}
                 animate={{ \"opacity\": 1, \"y\": 0 }}
-
                 transition={{ \"duration\": 0.6 }}
                 className=\"text-center mb-16\"
               >
@@ -422,7 +415,6 @@
                 </p>
               </motion.div>
                 <motion.form
-
                   initial={{ opacity: 0, \"y\": 20 }}
                   animate={{ \"opacity\": 1, \"y\": 0 }}
                   transition={{ \"duration\": 0.6, \"delay\": 0.2 }}
@@ -450,7 +442,6 @@
                         name=\"email\"
                         required
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
-
                         placeholder=\"your.email@example.com\"
                        />
                     </div>
@@ -460,7 +451,6 @@
                         Phone Number
                       </label>
                       <input type=\"tel\"
-
                         id=\"phone\"
                         name=\"phone\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
@@ -476,13 +466,11 @@
                         name=\"company\"
                         className=\"w-full px-4 py-3 border border-gray-300 rounded-lg focus: rin g-2 focus: rin g-blue-500 focus: borde r-transparent\"
                         placeholder=\"Your company name\"
-
                        />
                     </div>
                   </div>
                       Service Interest
                     </label>
-
                     <select
                       id=\"service\"
                       name=\"service\"
@@ -494,12 +482,10 @@
                           {service}
                         </option>
                       ))}
-
                     </select>
                   </div>
                       Message *
                     </label>
-
                     <textarea
                       id=\"message\"
                       name=\"message\"
@@ -511,7 +497,6 @@
                   </div>
                   <motion.button
                     type=\"submit\"
-
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ \"scale\": 0.98 }}
                     className=\"w-full bg-blue-600 text-white py-4 rounded-lg font-semibold flex items-center justify-center gap-2 \"hover\": b g-blue-700 transition-colors\"
@@ -520,7 +505,6 @@
                     Send Message
                   </motion.button>
                 </motion.form>
-
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
@@ -539,13 +523,11 @@
           <div className=\"max-w-7xl mx-auto\">
             <div className=\"grid grid-cols-1 \"lg\": grid-cols-2 gap-12\">
               {/* Contact Form */}
-
                 {isSubmitted ? (
                   <div className=\"text-center py-12\">
                     <CheckCircle className=\"w-16 h-16 text-green-500 mx-auto mb-4\" />
                     <h3 className=\"text-2xl font-semibold text-white mb-2\">Message Sent!</h3>
                     <p className=\"text-gray-300 mb-6\">Thank you for reaching out. We\'ll get back to you within 24 hours.</p>
-
                     <button
                       onClick={() => setIsSubmitted(false)}
                       className=\"inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-cyan-500 to-blue-500 \"hover\": from-cyan-600 hover:to-blue-600 transition-all duration-300\"
@@ -583,7 +565,6 @@
                           value={formData.email}
                           onChange={handleInputChange}
                           className=\"w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 \"focus\": ring-2 focus:ring-cyan-500 focus:border-transparent\"
-
                           placeholder=\"your@email.com\"
                         />
                       </div>
@@ -592,7 +573,6 @@
                         <label htmlFor=\"company\" className=\"block text-sm font-medium text-gray-300 mb-2\">
                           Company
                         </label>
-
                         <input
                           type=\"text\"
                           id=\"company\"
@@ -671,7 +651,6 @@
                 )}
               </div>
               {/* Contact Information */}
-
               <div className=\"space-y-8\">
                 <div>
                   <h2 className=\"text-3xl font-bold text-white mb-6\">Contact Information</h2>
@@ -700,4 +679,3 @@
     </>
   );
 }
-

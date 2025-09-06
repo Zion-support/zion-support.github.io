@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: ""
     description: ""
@@ -275,51 +270,10 @@ export default function CategoryDetail() {;
         createdAt: new Date().toISOString(),;
         rating: Math && Math.floor(Math && Math.random() * 5) + 1,;
         reviewCount: Math && Math.floor(Math && Math.random() * 100);
-
       }));
     setListings(listingsToShow);
     setIsLoading(false);
   }, [slug]);
-
-
-        },
-        images: [`/placeholder.svg`],
-        createdAt: new Date().toISOString(),
-        rating: Math.floor(Math.random() * 5) + 1,
-        reviewCount: Math.floor(Math.random() * 100)
-      })),
-
-    setListings(listingsToShow),
-    setIsLoading(false)
-  }, [slug]),
-
-
-
-  // Handle requesting a quote
-  const handleRequestQuote = (listingId: string) => {
-    const listing = listings.find(item => item.id === listingId)
-    if (listing) {
-      toast({
-        title: "Quote Requested"
-        description: `Your quote request for ${listing.title} has been sent.`
-
-
-      }),
-      
-
-
-      // Navigate to the quote request page with the listing information
-      navigate("/request-quote", {
-        state: {
-          serviceType: listing.category
-          specificItem: {
-            id: listing.id
-            title: listing.title
-            category: listing.category
-            image: listing.images?.[0]
-
-
-=======
 
 import { useParams, Link } from "react-router-dom",;
 import { Header } from "@/components/header/Header",;
@@ -458,7 +412,10 @@ export default function CategoryDetail() {;
         state: { ;
           serviceType: listing && listing.category,;
           specificItem: {;
-
+            id: listing && listing.id,;
+            title: listing && listing.title,;
+            category: listing && listing.category,;
+            image: listing && listing.images?.[0];
 import { use_params, Link } from './react-router-dom';
 import { Header } from '@/components / header / Header';
 import { Footer } from '@/components / Footer';
@@ -611,33 +568,28 @@ if ( {) {
             title: listing.title,
             category: listing.category,
             image: listing.images?.[0];
-
-=======
             id: listing.id,;
             title: listing.title,;
             category: listing.category;
             image: listing.images?.[0];
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            id: listing.id,;
+            title: listing.title,;
+            category: listing.category;
+            image: listing.images?.[0];
+
           }
         }
       });
     }
-
+  },
 
   },
 
-=======
-  };
-=======
-  },
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
+  }
 ;
   return (
     <>;
@@ -652,7 +604,6 @@ if ( {) {
           <div className="text - center mb - 12">;
             <div className="flex justify - center mb - 6">;
               <div className="text - zion - cyan p - 4 bg - zion - blue - dark rounded - full">;
-
                 {category.icon}
               </div>;
             </div>;
@@ -661,16 +612,6 @@ if ( {) {
             </GradientHeading>;
             <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
               {category.description}
-
-
-                <ProductListingCard 
-                  key={listing.id} 
-
-
-                  listing={listing}
-                  onRequestQuote={handleRequestQuote}
-                />
-=======
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue">;
@@ -707,18 +648,15 @@ if ( {) {
                   listing={listing}
                   onRequestQuote={handleRequestQuote} 
                 />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               ))}
             </div>;
           )}
-
         </div>;
       </div>;
       <Footer />;
     </>;
   );
 }
-
             </p>;
           </div>;
           {is_loading ? (
@@ -738,8 +676,5 @@ if ( {) {
       <Footer />;
     </>);
 }
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

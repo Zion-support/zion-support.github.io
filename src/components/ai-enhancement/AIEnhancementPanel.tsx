@@ -22,7 +22,6 @@ interface AIEnhancementPanelProps {;
   onApply: (content: string) => void;
   onClose?: () => void;
   showInstructions?: boolean;
-
 import React, { useState } from 'react';
 import {
   Card,
@@ -74,7 +73,6 @@ if ( {) {
       ...options,
       [field]: e.target.value,
     });
-
   }
   const handle_apply = () =>: any {
     on_apply (generated_content);
@@ -113,10 +111,20 @@ export function AIEnhancementPanel(): any ({;
   };
 
 
+  const handleApply = () => {;
+    onApply(generatedContent);
+    if (onClose) onClose();
+  };
+
+  const handleCopy = () => {;
+    navigator && navigator.clipboard.writeText(generatedContent);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+  return (
             value={options && options.content}
             onChange={e => handleInputChange(e, 'content')}          />;
         </div>;
-
 
         {/* Context input */}
         <div className='space-y-2'>;
@@ -124,54 +132,8 @@ export function AIEnhancementPanel(): any ({;
           <Textarea
             placeholder='Add any relevant context to guide the AI...'
             className='min-h-[60px]'
-
             value={options && options.context}
             onChange={e => handleInputChange(e, 'context')}          />;
-        </div>;
-
-
-
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    field: keyof AIEnhancementOptions
-  ) => {
-    setOptions({
-
-      ...options,
-
-
-
-
-  return (
-    <Card className="w-full max-w-2xl mx-auto">
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Sparkles className="h-5 w-5 text-primary" />
-          {title}
-        </CardTitle>
-      </CardHeader>
-      <CardContent className="space-y-4">
-        {/* Input area */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Content to enhance</label>
-          <Textarea
-
-            placeholder="Enter your content to enhance..."
-            className="min-h-[100px]"
-            value={options.content}
-            onChange={(e) => handleInputChange(e, 'content')}
-          />;
-        </div>;
-        {/* Context input */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium">Context (optional)</label>
-          <Textarea
-            placeholder="Add any relevant context to guide the AI..."
-            className="min-h-[60px]"
-            value={options.context}
-            onChange={(e) => handleInputChange(e, 'context')}
-          />;
         </div>;
 
         {/* Instructions input (optional) */}
@@ -193,26 +155,9 @@ export function AIEnhancementPanel(): any ({;
         )}
 
         {/* Generate button */}
-        <Button 
-          onClick={handleGenerate} 
-          className="w-full" 
-          disabled={isEnhancing || !options.content && !options.context}
-        >
-
-
-
-          {isEnhancing ? (
-            <>
-              <Loader2 className='mr-2 h-4 w-4 animate-spin' />
-              Enhancing...
-            </>
-          ) : (
-            <>
-              <Sparkles className='mr-2 h-4 w-4' />
-              Generate Enhanced Content
-            </>
-          )}
-        </Button>
+        <Button
+          onClick={handleGenerate}
+          className='w-full'
           disabled={isEnhancing || (!options && options.content && !options && options.context)}>;
           {isEnhancing ? (;
             <>;
@@ -262,17 +207,6 @@ export function AIEnhancementPanel(): any ({;
             </div>
           </div>
         )}
-
-
-      
-
-
-      {generatedContent && (
-        <CardFooter className='flex justify-between'>
-          {onClose && (
-            <Button variant='outline' onClick={onClose}>
-              Cancel
-            </Button>
       </CardContent>;
 
       {generatedContent && (;
@@ -282,10 +216,9 @@ export function AIEnhancementPanel(): any ({;
               Cancel;
             </Button>;
           )}
-
-    </Card>;
-  );
-}
+          <Button onClick={handleApply}>Apply to Form</Button>;
+        </CardFooter>;
+      )}
 
     <Card className='w - full max - w-2xl mx - auto'>;
       <CardHeader>;
@@ -376,18 +309,3 @@ export function AIEnhancementPanel(): any ({;
         </CardFooter>)}
     </Card>);
 }
-
-      )};
-    </Card>;
-  );
-};
-
-          <Button onClick={handleApply}>;
-            Apply to Form;
-          </Button>;
-        </CardFooter>;
-      )}
-    </Card>;
-  );
-}
-;

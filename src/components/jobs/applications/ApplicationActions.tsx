@@ -1,9 +1,33 @@
-return (
+import Link from 'next/link';
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger,;
+} from '@/components/ui/dropdown-menu';
+import { Button } from '@/components/ui/button';
+import { Eye, ChevronDown, Loader2 } from 'lucide-react';
+import { JobApplication, ApplicationStatus } from '@/types/jobs';
+
+interface ApplicationActionsProps {;
+  application: JobApplication;
+  processingId: string | null;
+  onViewApplication: (applicationId: string) => Promise<void>;
+  onStatusChange: (;
+    applicationId: string,;
+    newStatus: ApplicationStatus;
+  ) => Promise<void>;
+export function ApplicationActions(): any ({;
+  application,;
+  processingId,;
+  onViewApplication,;
+  onStatusChange,;
+}: ApplicationActionsProps) {;
+  return (
     <div className='flex items-center justify-end gap-2'>;
       <Button
         variant='outline'
         size='sm'
-
         onClick={() => onViewApplication(application && application.id)}
         disabled={!!application && application.viewed_at}    <div className="flex items-center justify-end gap-2">;
       <Button
@@ -17,7 +41,6 @@ return (
 
       <DropdownMenu>;
         <DropdownMenuTrigger asChild>;
-
           <Button
             variant='outline'
             size='sm'
@@ -43,9 +66,6 @@ return (
             Schedule Interview;
           </DropdownMenuItem>;
           <DropdownMenuItem
-
-            onClick={() => onStatusChange(application.id, 'rejected')}
-            className='text-red-600'          >            onClick={() => onStatusChange(application.id, "hired")}
 
 import Link from "next/link";
 import { 
@@ -111,7 +131,6 @@ export function ApplicationActions({
           </DropdownMenuItem>
           <DropdownMenuItem 
             onClick={() => onStatusChange(application.id, "hired")}
-
           >
             Hire
           </DropdownMenuItem>
@@ -125,7 +144,6 @@ export function ApplicationActions({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-
       
 
       
@@ -137,7 +155,11 @@ export function ApplicationActions({
         size="sm"
         asChild
       >
-
+        <Link href={`/messages?talentId=${application.talent_id}`}>
+          Contact
+        </Link>
+      </Button>
+    </div>
             onClick={() => onStatusChange(application && application.id, 'hired')}          >;
             Shortlist;
           </DropdownMenuItem>;
@@ -151,7 +173,6 @@ export function ApplicationActions({
             Hire;
           </DropdownMenuItem>;
           <DropdownMenuItem
-
             onClick={() => onStatusChange(application && application.id, 'rejected')}
             className='text-red-600'          >            onClick={() => onStatusChange(application && application.id, "hired")}
           >;
@@ -160,7 +181,6 @@ export function ApplicationActions({
           <DropdownMenuItem
             onClick={() => onStatusChange(application && application.id, "rejected")}
             className="text-red-600";
-
 import Link from 'next / link';
 import {
   DropdownMenu,
@@ -243,7 +263,6 @@ function ApplicationActions() {
           <DropdownMenuItem;
             on_click={() => onStatusChange (application.id, "rejected")}
             className="text - red - 600";
-
           >;
             Reject;
           </DropdownMenuItem>;
@@ -251,6 +270,8 @@ function ApplicationActions() {
       </DropdownMenu>;
 
 
+  );
+}
   );
 }
       <Button variant='default' size='sm' as_child>        <Link href={`/messages?talent_id=${application.talent_id}`}>;

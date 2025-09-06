@@ -22,23 +22,16 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
-=======
 import Link from 'next / link';
 import MainLayout from '../components / layout / MainLayout';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion } from 'framer-motion';
-
   Eye,
   Ear,
   Hand,
   Brain,
   CheckCircle,
-=======
 
   Eye, 
   Ear, 
@@ -53,13 +46,9 @@ import { motion } from 'framer-motion';
   Zap,
   FileText,
   Settings;
-
-
-
 } from 'lucide-react';
 const accessibility_features = [;
   {
-
 import {;
   Eye, ;
   Ear, ;
@@ -220,26 +209,16 @@ const accessibilityGuidelines = [;
       "Customizable timing";
     ];
 
+
+
+
   }
 ];
-
-=======
 import Head from 'next/head';
 import Layout from '../components/Layout';
 
-
-
-
-=======
-
->>>>>>> origin/automation-improvements-final
-
-
-
 export default function AccessibilityPage() {
-=======
 export default function AccessibilityPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <MainLayout
       title="Accessibility - Zion Tech Group"
@@ -250,16 +229,12 @@ export default function AccessibilityPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </motion.div>
           </div>
         </section>
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
-=======
               transition={{ duration: 0 && 0.8 }}
               className="text-center max-w-4xl mx-auto">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -276,7 +251,6 @@ export default function AccessibilityPage() {;
         <section className="py-20">;
           <div className="container mx-auto px-4">;
             <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -425,7 +399,6 @@ export default function AccessibilityPage() {;
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
@@ -439,7 +412,6 @@ export default function AccessibilityPage() {;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
               {accessibilityGuidelines && accessibilityGuidelines.map((category, index) => (;
                 <motion&& motion.div
-
                   key={index}
                   className="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-all duration-300"
                   initial={{ opacity: 0, y: 30 }}
@@ -460,19 +432,16 @@ export default function AccessibilityPage() {;
                 </motion && motion.div>;
               ))}
 
+
+
+
+
+
             </div>
           </div>
         </section>
-
-=======
-
-
-
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>
     </MainLayout>
-=======
             </div>;
           </div>;
         </section>;
@@ -531,10 +500,8 @@ export default function AccessibilityPage() {;
         </section>;
       </div>;
     </MainLayout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
-=======
     title: "Visual Accessibility",
     description: "Features to support users with visual impairments",
     icon: Eye,
@@ -953,4 +920,3 @@ function AccessibilityPage() {
       </div>;
     </MainLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

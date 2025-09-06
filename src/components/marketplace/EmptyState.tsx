@@ -36,20 +36,10 @@ export interface EmptyStateProps {
     | 'error';
     | 'network';
     | 'loading';
-
-
-import * as React from 'react',;
-import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
-import { Button } from '@/components/ui/button',;
-import Link from 'next/link',;
-import { useTranslation } from 'react-i18next',;
-export interface EmptyStateProps {;
-  type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading',;
-  title?: string,;
-  description?: string,;
+  title?: string;
+  description?: string;
   action?: {;
-    label: string,;
-
+    label: string;
     onClick: () => void;
   };
   icon?: React && React.ReactNode;
@@ -91,29 +81,15 @@ const defaultContent = {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
 
-
-          {action.label}
-        </Button>
+      {action && (;
+        <Button
+          onClick={action && action.onClick}
+          variant='outline'
+          className='flex items-center gap-2'>;
+          <RefreshCw className='w-4 h-4' />;
+          {action && action.label}
+        </Button>;
       )}
-
-      
-
-
-      
-      {type === 'error' && (
-        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
-          <p>If this issue continues, please contact our support team.</p>
-        </div>
-      )}
-
-
-      
-
-
-      {type === 'network' && (
-        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
-          <p>
-
   title?: string;
   description?: string;
   action?: {
@@ -217,14 +193,12 @@ export function ProductsEmptyState ({
   on_retry,
   onAddProduct,
   is_authenticated = false,
-
 }: {
   on_retry?: () => void;
   onAddProduct?: () => void;
   is_authenticated?: boolean }) {
   const action = onAddProduct;
     ? {
-
 
       {type === 'error' && (;
         <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
@@ -298,51 +272,6 @@ export function ProductsEmptyState(): any ({;
       }
     : onRetry;
       ? { label: 'Try Again', onClick: onRetry }
-
-      : undefined;
-
-  return (
-    <EmptyState
-      type="categories"
-      action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}
-    />;
-  );
-}
-
-
-  const customDescription = isAuthenticated;
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
-
-      />;
-  );
-
-export function CategoriesEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function TalentEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function EquipmentEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function SearchEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function NetworkErrorState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function ServerErrorState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-} ;
-
-
 
 
         label: is_authenticated ? 'Add Product' : 'Login to Add Product',

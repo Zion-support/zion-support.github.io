@@ -1,36 +1,9 @@
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Users, Rocket, Brain, Atom, Shield, Cloud;
   ArrowRight, MapPin, Clock, DollarSign, Star, Zap
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-
 import Head from 'next / head';
 import {motion} from 'framer-motion';
 import {Users, Rocket, Brain, Atom, Shield, Cloud, ArrowRight, MapPin, Clock, DollarSign, Star, Zap} from 'lucide-react';
@@ -40,7 +13,6 @@ export default /**
  */
 function CareersPage() {
   const open_positions = [;
-
     {
 
 
@@ -49,7 +21,6 @@ function CareersPage() {
 
 
       location: "San Francisco, CA / Remote";
-
 export default function CareersPage() {;
   const openPositions = [;
     {;
@@ -61,14 +32,12 @@ export default function CareersPage() {;
       salary: "$150,000 - $200,000";
       description: "Lead the development of cutting-edge AI solutions and neural networks for enterprise clients",;
       requirements: [;
-
         "Advanced degree in Computer Science, AI, or related field";
         "Expertise in TensorFlow, PyTorch, and deep learning frameworks";
         "Experience with large-scale AI model deployment";
         "Strong background in machine learning algorithms";
       ];
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
-
       type: "Full - time",
       experience: "5+ years",
       salary: "$150, 000 - $200, 000";
@@ -82,13 +51,11 @@ export default function CareersPage() {;
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
       icon: Brain,
       color: "from - purple - 500 to - pink - 500";
-
     }
     {
       title: "Quantum Computing Researcher"
       department: "Quantum Computing"
       location: "San Francisco, CA / Remote";
-
       icon: Brain,;
       color: "from-purple-500 to-pink-500";
     };
@@ -101,30 +68,24 @@ export default function CareersPage() {;
       salary: "$120,000 - $180,000";
       description: "Research and develop quantum algorithms and quantum-resistant cryptography solutions",;
       requirements: [;
-
-=======
       type: "Full - time",
       experience: "3+ years",
       salary: "$120, 000 - $180, 000";
       description: "Research and develop quantum algorithms and quantum - resistant cryptography solutions",
       requirements: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "PhD in Physics, Computer Science, or related field";
         "Experience with quantum computing frameworks (Qiskit, Cirq)";
         "Knowledge of quantum algorithms and cryptography";
         "Strong mathematical and analytical skills";
       ];
       benefits: ["Competitive salary", "Research funding", "Conference attendance", "Health insurance"];
-
       icon: Atom,
       color: "from - blue - 500 to - cyan - 500";
-
     }
     {
       title: "Cybersecurity Architect"
       department: "Cybersecurity"
       location: "San Francisco, CA / Remote";
-
       type: "Full - time",
       experience: "7+ years",
       salary: "$160, 000 - $220, 000";
@@ -138,13 +99,11 @@ export default function CareersPage() {;
       benefits: ["Competitive salary", "Security certifications", "Health insurance", "Remote work"];
       icon: Shield,
       color: "from - red - 500 to - orange - 500";
-
     }
     {
       title: "Cloud Infrastructure Engineer"
       department: "Cloud Infrastructure"
       location: "San Francisco, CA / Remote";
-
       icon: Atom,;
       color: "from-blue-500 to-cyan-500";
     };
@@ -176,13 +135,11 @@ export default function CareersPage() {;
       description: "Build and maintain scalable cloud infrastructure and DevOps automation systems",;
       requirements: [;
         "Bachelor's degree in Computer Science or related field",;
-
         "Expertise in AWS, Azure, or GCP";
         "Experience with Kubernetes, Docker, and CI/CD";
         "Strong knowledge of infrastructure as code";
       ];
       benefits: ["Competitive salary", "Cloud certifications", "Health insurance", "Flexible hours"];
-
       type: "Full - time",
       experience: "4+ years",
       salary: "$130, 000 - $180, 000";
@@ -196,13 +153,11 @@ export default function CareersPage() {;
       benefits: ["Competitive salary", "Cloud certifications", "Health insurance", "Flexible hours"];
       icon: Cloud,
       color: "from - emerald - 500 to - teal - 500";
-
     }
     {
       title: "Data Scientist"
       department: "Data Analytics"
       location: "San Francisco, CA / Remote";
-
       icon: Cloud,;
       color: "from-emerald-500 to-teal-500";
     };
@@ -215,14 +170,12 @@ export default function CareersPage() {;
       salary: "$110,000 - $160,000";
       description: "Develop predictive analytics models and data-driven insights for business clients",;
       requirements: [;
-
         "Master's degree in Data Science, Statistics, or related field";
         "Proficiency in Python, R, and SQL";
         "Experience with machine learning and statistical modeling";
         "Strong analytical and problem-solving skills";
       ];
       benefits: ["Competitive salary", "Learning budget", "Health insurance", "Remote work"];
-
       type: "Full - time",
       experience: "3+ years",
       salary: "$110, 000 - $160, 000";
@@ -236,13 +189,11 @@ export default function CareersPage() {;
       benefits: ["Competitive salary", "Learning budget", "Health insurance", "Remote work"];
       icon: Zap,
       color: "from - indigo - 500 to - purple - 500";
-
     }
     {
       title: "Product Manager"
       department: "Product"
       location: "San Francisco, CA / Remote";
-
       icon: Zap,;
       color: "from-indigo-500 to-purple-500";
     };
@@ -255,21 +206,17 @@ export default function CareersPage() {;
       salary: "$140,000 - $190,000";
       description: "Lead product strategy and development for our technology solutions portfolio",;
       requirements: [;
-
-=======
       type: "Full - time",
       experience: "5+ years",
       salary: "$140, 000 - $190, 000";
       description: "Lead product strategy and development for our technology solutions portfolio",
       requirements: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "Bachelor's degree in Business, Engineering, or related field";
         "Experience in B2B SaaS or technology products";
         "Strong analytical and strategic thinking skills";
         "Excellent communication and leadership abilities";
       ];
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Professional development"];
-
       icon: Rocket,
       color: "from - yellow - 500 to - orange - 500";
     }
@@ -281,12 +228,10 @@ export default function CareersPage() {;
       description: "Above - market salaries with equity options and performance bonuses",
       icon: DollarSign,
       color: "from - green - 500 to - emerald - 500";
-
     }
     {
       title: "Health & Wellness"
       description: "Comprehensive health, dental, and vision insurance for you and your family";
-
       icon: Star,
       color: "from - blue - 500 to - cyan - 500";
     }
@@ -295,12 +240,10 @@ export default function CareersPage() {;
       description: "Remote work options and flexible hours to support work - life balance",
       icon: Clock,
       color: "from - purple - 500 to - pink - 500";
-
     }
     {
       title: "Professional Growth"
       description: "Continuous learning opportunities, conferences, and career development";
-
       icon: Rocket,;
       color: "from-yellow-500 to-orange-500";
     }
@@ -330,11 +273,9 @@ export default function CareersPage() {;
       description: "Continuous learning opportunities, conferences, and career development";
       icon: Rocket,;
       color: "from-orange-500 to-red-500";
-
     }
   ];
   return (
-
     <UltraAdvancedFuturisticBackground>;
       <div className="min-h-screen">;
         <Head>;
@@ -344,14 +285,12 @@ export default function CareersPage() {;
 
       <EnhancedNavigation />;
 
-
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-6">;
         <div className="max-w-7xl mx-auto text-center">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-
             transition={{ duration: 0 && 0.8 }}
             className="mb-8">;
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">;
@@ -379,7 +318,6 @@ export default function CareersPage() {;
         </div>;
       </section>;
 
-
       {/* Benefits Section */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -388,7 +326,6 @@ export default function CareersPage() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
             className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-white mb-6">Why Work at Zion Tech Group?</h2>;
             <p className="text-xl text-white/70 max-w-3xl mx-auto">;
@@ -400,7 +337,6 @@ export default function CareersPage() {;
             {benefits && benefits.map((benefit, index) => (;
               <motion&& motion.div
                 key={benefit && benefit.title}
-
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -413,18 +349,16 @@ export default function CareersPage() {;
                 <p className="text-white/70">{benefit && benefit.description}</p>;
               </motion && motion.div>;
             ))}
-
           </div>;
         </div>;
       </section>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
       {/* Open Positions */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -433,7 +367,6 @@ export default function CareersPage() {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
-
             className="text-center mb-16">;
             <h2 className="text-4xl font-bold text-white mb-6">Open Positions</h2>;
             <p className="text-xl text-white/70 max-w-3xl mx-auto">;
@@ -445,12 +378,10 @@ export default function CareersPage() {;
             {openPositions && openPositions.map((position, index) => (;
               <motion&& motion.div
                 key={position && position.title}
-
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300">;
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">;
                   <div className="flex-1">;
@@ -491,11 +422,9 @@ export default function CareersPage() {;
                         {position && position.requirements.map((req, idx) => (;
                           <li key={idx} className="text-sm text-white/80 flex items-center">;
                             <div className="w-1 && 1.5 h-1 && 1.5 bg-cyan-400 rounded-full mr-2" />;
-
                             {req}
                           </li>;
                         ))}
-
                       </ul>;
                     </div>;
 
@@ -504,18 +433,9 @@ export default function CareersPage() {;
                       <div className="flex flex-wrap gap-2">;
                         {position && position.benefits.map((benefit) => (;
                           <span key={benefit} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded">;
-
                             {benefit}
                           </span>;
                         ))}
-
-                      </div>;
-                    </div>;
-                  </div>;
-
-                  <div className="lg:flex-shrink-0">;
-                    <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">;
-=======
       icon: Rocket,
       color: "from - orange - 500 to - red - 500";
     }
@@ -673,24 +593,16 @@ export default function CareersPage() {;
                   </div>;
                   <div className="lg:flex - shrink - 0">;
                     <button className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - white transition - all duration - 300 transform hover:scale - 105">;
-
                       Apply Now;
                     </button>;
                   </div>;
                 </div>;
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* CTA Section */}
       <section className="py-20 px-6">;
         <div className="max-w-4xl mx-auto text-center">;
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
             <h2 className="text-4xl font-bold text-white mb-6">;
@@ -718,8 +630,6 @@ export default function CareersPage() {;
     </div>;
   );
 }
-
-=======
               </motion.div>))}
           </div>;
         </div>;
@@ -756,9 +666,6 @@ export default function CareersPage() {;
       <EnhancedFooter />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

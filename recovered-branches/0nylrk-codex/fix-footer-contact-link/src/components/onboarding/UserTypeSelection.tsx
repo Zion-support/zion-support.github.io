@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface UserTypeOption {
 
   id: "serviceProvider" | "talent" | "client"
@@ -27,7 +22,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       description: "I want to offer services on the platform",
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
 
       id: "talent"
@@ -82,18 +76,16 @@ export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSe
       name: "Client",;
       description: "I want to discover and hire talent or services",;
       icon: User;
-
-    }
-  ];
-=======
     }
 
   ],
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
+    }
+  ];
+  return (
 import { useState } from './react';
 import { Briefcase, Star, User } from './lucide-react';
 import { Button } from '@/components / ui / button';
@@ -145,18 +137,14 @@ function UserTypeSelection() {
           const Icon = type.icon;
           const is_selected = selected_type === type.id,
 
-=======
-
           const Icon = type.icon,
           const isSelected = selectedType === type.id,
           
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           return (
             <Button;
               key={type.id}
 
-=======
               }`}
             >
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
@@ -167,7 +155,6 @@ function UserTypeSelection() {
                 <p className="text-sm text-zion-slate-light mt-1">
 
 
-=======
 import { useState } from "react",;
 import { Briefcase, Star, User } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -206,6 +193,9 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
   ],;
   return (;
 
+          return (
+            <Button;
+              key={type.id}
     <div className="space-y-6">;
       <div className="text-center mb-6">;
         <h3 className="text-2xl font-bold text-white">Choose your role</h3>;
@@ -228,7 +218,6 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
                 isSelected ;
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple" ;
                   : "border-zion-blue-light hover:border-zion-cyan/50 text-white";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               }`}
             >;
               <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>;
@@ -243,14 +232,11 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
             </Button>;
           );
         })}
-
       </div>;
     </div>;
   );
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
               on_click={() => on_select (type.id)}
               variant="outline";
               className={`h - auto flex flex - col items - center justify - center p - 6 space - y-3 border ${
@@ -273,4 +259,3 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

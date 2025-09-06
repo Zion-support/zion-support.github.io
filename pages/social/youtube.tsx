@@ -23,8 +23,10 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect } from 'react';
 
-
-=======
+export default function YouTubeRedirect() {;
+  useEffect(() => {;
+    if (typeof window !== 'undefined') {;
+      window && window.location.replace('https: //youtube && youtube.com/@ziontechgroup'),;
 import Head from 'next / head';
 export default /**
  * YouTubeRedirect - Function description
@@ -36,26 +38,15 @@ if ( {) {
   $2
 }
       window.location.replace ('https: //youtube.com/@ziontechgroup'),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
-=======
 
       window.location.replace('https: //youtube.com/@ziontechgroup'),
     };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }, []);
   return (
     <>;
       <Head>;
-
-=======
-
-
-}
-
-
-=======
 export default function YouTubeRedirect() {
 	useEffect(() => {
 		if (typeof window !== 'undefined') {
@@ -78,7 +69,6 @@ export default function YouTubeRedirect() {
 		</>
 	)
 }
-
         <title > YouTube | Zion Tech Group</title>;
         <link rel='canonical' href='https: //youtube.com/@ziontechgroup' />;
         <meta;
@@ -98,9 +88,4 @@ export default function YouTubeRedirect() {
     </>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

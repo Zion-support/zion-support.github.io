@@ -1,5 +1,12 @@
-const getBenefits = (t: any) => [
 
+import { GradientHeading } from "./GradientHeading";
+import { FeatureCard } from "./FeatureCard";
+import { Bot, Clock, Globe, TrendingDown } from 'lucide-react'
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
+interface BenefitsSectionProps {
+  className?: string;
+  style?: React.CSSProperties
 
   {
 
@@ -101,7 +108,8 @@ export function BenefitsSection(): any ({ className, style }: BenefitsSectionPro
 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>          {benefits && benefits.map((benefit, index) => (        ;
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">;
-
+          {benefits && benefits.map((benefit, index) => (;
+            <FeatureCard
 import { GradientHeading } from './GradientHeading';
 import { FeatureCard } from './FeatureCard';
 import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
@@ -150,19 +158,8 @@ function BenefitsSection() {
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8 max - w-5xl mx - auto">;
           {benefits.map ((benefit, index) => (
             <FeatureCard;
-
-          {benefits.map((benefit, index) => (;
-            <FeatureCard;
-
-
               key={index}
-
-              title={benefit.title}
-              description={benefit.description}
-              icon={benefit.icon}
-
           ))}
-
               className='bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300'            />              className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
               className="bg - zion - blue hover:bg - zion - blue - dark transition - all duration - 300";
             />))}
@@ -172,7 +169,6 @@ function BenefitsSection() {
 }
 import React, { useState } from 'react';
 export /**;
-
 export default BenefitsSection }}}}</motion.div></motion.div></motion.div>}
 import { GradientHeading } from './ui / GradientHeading';
 export default /**
@@ -180,23 +176,6 @@ export default /**
  */
 function Page() {
   {
-
-
-      "Direct provider connections",";
-      "Competitive pricing",";
-      "Bulk discount options",";
-      "Transparent cost structure" ];
-
-              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
-            />
-          ))}
-
-        </div>;
-      </div>;
-    </section>;
-  );
-
-
   );
 }
 ";
@@ -223,5 +202,3 @@ function Page() {
       "Competitive pricing", ";
       "Bulk discount options", ";
       "Transparent cost structure" ];
-}
-;

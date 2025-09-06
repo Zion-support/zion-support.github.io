@@ -1,7 +1,4 @@
 
-=======
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,20 +21,12 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
 
-=======
 
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
-=======
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 import React from 'react';
 import Link from 'next/link';
@@ -1522,7 +1511,6 @@ export default function Services() {;
 			</section>;
 
 			{/* CTA Section */}
-
 			<section className='bg-gradient-to-r from-blue-600 to-purple-600 py-24 sm: py-32'>;
 				<div className='mx-auto max-w-7xl px-6 lg:px-8'>;
 					<div className='mx-auto max-w-2xl text-center'>;
@@ -1533,7 +1521,6 @@ export default function Services() {;
 							Let&aposs discuss your project requirements and how we can help you achieve your goals.;
 						</p>;
 						<div className='mt-10 flex items-center justify-center gap-x-6'>;
-
 							<Link
 								href='/contact'
 								className='group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105'
@@ -1544,7 +1531,6 @@ export default function Services() {;
 							<Link
 								href='/'
 								className='text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group'
-
 								aria-label='Back to homepage'>;
 								Back to Home <span aria-hidden='true' className='group-hover:translate-x-1 transition-transform inline-block'>→</span>;
 							</Link>;
@@ -1556,22 +1542,10 @@ export default function Services() {;
 		</Layout>;
 	),;
 
-}
->>>>>>> origin/chore/merge-open-prs
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-
 
 }
 
 
 
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}

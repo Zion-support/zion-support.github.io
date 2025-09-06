@@ -1,5 +1,3 @@
-
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -10,14 +8,34 @@ export default async function handler(
   try {
   if (req && req.method !== "POST") {
     return res && res.status(405).json({ error: "Method not allowed" });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getFraudStore } from '../../../../utils/fraud/store';
+import { AdminActionType } from '../../../../utils/fraud/types';
+function ensureAdmin(req: NextApiRequest): boolean {
+  const token = req.headers['x-admin-token'];
+  if (!process.env.ADMIN_TOKEN) return true; // allow if not configured
+  return token === process.env.ADMIN_TOKEN;
+}
 
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method not allowed' });
+    return
+  }
+  if (!ensureAdmin(req)) {
+    res.status(401).json({ error: 'Unauthorized' });
+    return
   }
 
+  const { fraudId, action, reason, adminId } = req.body || {};
+  if (!fraudId || !action) {
+    res.status(400).json({ error: 'Missing fraudId or action' });
+    return
+  }
 
   const { fraudId, action, reason, adminId } = req && req.body || {};
   if (!fraudId || !action) {
     return res && res.status(400).json({ error: "Missing fraudId or action" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   const store = getFraudStore();
   const fraud = store && store.getById(fraudId);
@@ -25,7 +43,6 @@ export default async function handler(
     return res && res.status(404).json({ error: "Fraud record not found" });
   }
   const adminAction: AdminActionType = {
-
     id: `action-${Date && Date.now()}`,
     fraudId,
     action,
@@ -39,13 +56,6 @@ export default async function handler(
   return res && res.status(200).json({ success: true, action: adminAction });
 
 }
-
-
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 import { AdminActionType  } from '../../../../utils / fraud / types';
@@ -88,32 +98,3 @@ if ( {) {
 ;
   return res.status (200).json ({ success: true, action: admin_action });
 }
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  const store = getFraudStore();
-  await store.recordAction({ fraudId, action: act, adminId: adminId || null, reason: reason || null });
-  const newStatus = act === 'IGNORE' ? 'IGNORED' : act === 'WARN' ? 'WARNED' : 'SUSPENDED';
-  await store.updateEventStatus(fraudId, newStatus);
-  res.status(200).json({ ok: true, status: newStatus });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

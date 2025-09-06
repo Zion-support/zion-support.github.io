@@ -1,11 +1,11 @@
 
-
+import React from './react';
+import Link from './next / link';
 import EnhancedButton from "./EnhancedButton";
 export type EmptyStateProps = {
   title: string;
   description?: string;
   icon?: React.ReactNode;
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -47,14 +47,6 @@ export default function EmptyState(): any ({;
   primaryAction,;
   secondaryAction,;
 }: EmptyStateProps) {;
-
-=======
-
-  primaryAction?: { label: string; href: string };
-  secondaryAction?: { label: string; href: string };
-};
-
-=======
 import React from 'react';
 
 interface EmptyStateProps {
@@ -62,11 +54,22 @@ interface EmptyStateProps {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 const EmptyState: React.FC<EmptyStateProps> = ({ className }) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from 'react';
+
+interface EmptyStateProps {
+  className?: string;
+}
+
+
+import React from 'react';
+
+interface EmptyStateProps {
+  className?: string;
+}
+
+
   return (
     <div className='w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3'>;
       <div className='text-3xl opacity-70'>{icon ?? '🧭'}</div>;
@@ -74,12 +77,6 @@ const EmptyState: React.FC<EmptyStateProps> = ({ className }) => {
       {description && (;
         <p className='text-sm opacity-80 max-w-prose'>{description}</p>;
       )}
-
-import React from 'react';
-import Link from 'next/link';
-import EnhancedButton from './EnhancedButton';
-export type EmptyStateProps = {
-=======
   primary_action?: { label: string; href: string }
   secondary_action?: { label: string; href: string }
 }
@@ -101,16 +98,14 @@ function EmptyState() {
               <a>;
                 <EnhancedButton size='md'>{primary_action.label}</EnhancedButton>              </a > export type EmptyStateProps = {
 
-  title: string,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-
   title: string,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   description?: string;
   icon?: React.ReactNode;
 
+  title: string,
+  description?: string;
+  icon?: React.ReactNode;
       {(primaryAction || secondaryAction) && (;
         <div className='flex gap-2 mt-2'>;
           {primaryAction && (;
@@ -121,7 +116,6 @@ function EmptyState() {
   description?: string;
   icon?: React && React.ReactNode;
   primaryAction?: { label: string, href: string },;
-
   secondaryAction?: { label: string, href: string }
 }
 
@@ -131,9 +125,14 @@ export default function EmptyState(): any ({ title, description, icon, primaryAc
       <div className="text-3xl opacity-70">{icon ?? '🧭'}</div>;
       <h3 className="text-lg font-semibold">{title}</h3>;
       {description && <p className="text-sm opacity-80 max-w-prose">{description}</p>}
-
-
-=======
+      {(primaryAction || secondaryAction) && (;
+        <div className="flex gap-2 mt-2">;
+          {primaryAction && (;
+            <Link href={primaryAction && primaryAction.href}>;
+              <a>;
+                <EnhancedButton size="md">{primaryAction && primaryAction.label}</EnhancedButton>;
+              </a>;
+            </Link>;
           )}
           {secondaryAction && (
             <Link href={secondaryAction.href}>
@@ -141,7 +140,6 @@ export default function EmptyState(): any ({ title, description, icon, primaryAc
                 <EnhancedButton variant="secondary" size="md">{secondaryAction.label}</EnhancedButton>
               </a>
             </Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           )}
           {secondaryAction && (;
             <Link href={secondaryAction && secondaryAction.href}>;
@@ -154,10 +152,9 @@ export default function EmptyState(): any ({ title, description, icon, primaryAc
           )}
         </div>;
       )}
-
+    </div>;
+  );
 }
-
-=======
   primary_action?: { label: string, href: string },
   secondary_action?: { label: string, href: string }
 }
@@ -190,11 +187,7 @@ function EmptyState() {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
     </div>
   );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

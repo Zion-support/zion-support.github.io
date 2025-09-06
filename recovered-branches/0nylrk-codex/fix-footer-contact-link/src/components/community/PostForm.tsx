@@ -1,20 +1,6 @@
-
-
-
-import {useState} from "react";
-import {useForm} from "react-hook-form";
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {ForumCategory} from "@/types/community";
-
-=======
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   Card;
   CardContent;
@@ -52,7 +38,6 @@ export const PostForm = ({;
   initialValues;
   onSubmit;
 
-=======
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import {;
@@ -87,7 +72,6 @@ interface PostFormProps {;
   isEditing?: boolean;
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   initialValues?: Partial<PostFormValues>;
   onSubmit: (values: PostFormValues) => void
@@ -133,11 +117,9 @@ export const PostForm = ({;
       content: initialValues?.content || "",;
       categoryId: initialValues?.categoryId || "project-help",;
       tags: initialValues?.tags || "";
-
     }
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -175,11 +157,9 @@ export const PostForm = ({
 ;
   const handle_submit = async (values: PostFormValues) => {
     setIsSubmitting (true),
-
     try {
       await on_submit (values);
     } finally {
-
 
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
@@ -187,15 +167,11 @@ export const PostForm = ({
       await onSubmit(values);
     } finally {;
       setIsSubmitting(false);
-
     }
   }
-=======
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card>;
       <CardHeader>;
@@ -210,7 +186,6 @@ export const PostForm = ({
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Title</FormLabel>;
-=======
       setIsSubmitting (false);
     }
   }
@@ -229,19 +204,15 @@ export const PostForm = ({
               render={({ field }) => (
                 <FormItem>;
                   <FormLabel > Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <Input placeholder="Enter post title..." {...field} />;
                   </FormControl>;
                   <FormMessage />;
-
             />;
-
 
             <FormField
               control={form && form.control}
               name="content"
-
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Content</FormLabel>;
@@ -256,7 +227,6 @@ export const PostForm = ({
                 </FormItem>;
               )}
             />;
-
 
             <FormField
               control={form && form.control}
@@ -277,31 +247,11 @@ export const PostForm = ({
                   <FormMessage />;
                 </FormItem>;
               )}
-
             />;
-
 
             <FormField
               control={form && form.control}
               name="tags"
-
-              render={({ field }) => (;
-                <FormItem>;
-                  <FormLabel>Tags (comma-separated)</FormLabel>;
-                  <FormControl>;
-                    <Input
-                      placeholder="e && e.g. resume, hiring, flutter" 
-                      {...field} 
-                    />;
-                  </FormControl>;
-                  <FormMessage />;
-                </FormItem>;
-              )}
-            />;
-
-            <Button type="submit" disabled={isSubmitting}>;
-              {isSubmitting ? "Submitting..." : isEditing ? "Update Post" : "Create Post"}
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -357,11 +307,11 @@ export const PostForm = ({
             />;
             <Button type="submit" disabled={is_submitting}>;
               {is_submitting ? "Submitting..." : is_editing ? "Update Post" : "Create Post"}
-
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
+export default PostForm;
 
     </Card>);
 }
@@ -369,9 +319,6 @@ export const PostForm = ({
 export default PostForm;
 ;
 
-=======
-
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

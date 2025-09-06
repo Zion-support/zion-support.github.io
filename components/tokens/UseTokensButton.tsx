@@ -1,11 +1,32 @@
-
-
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from "react";
+import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 
 }: {;
   serviceId?: string;
   defaultType?: RedemptionType;
 }) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -20,16 +41,15 @@
         onClose={() => setOpen(false)}
         serviceId={serviceId}
         defaultType={defaultType}
-
-=======
 export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
       />
     </>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      />;
+    </>;
+  );
+export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -47,12 +67,7 @@ export default function UseTokensButton({ serviceId, defaultType }: { serviceId?
       />;
     </>;
   );
-
 }
-
-}
-
-=======
 import React, { useState } from './react';
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 ;
@@ -93,7 +108,4 @@ function UseTokensButton() {
       />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

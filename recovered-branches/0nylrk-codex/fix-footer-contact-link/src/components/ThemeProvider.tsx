@@ -1,42 +1,8 @@
-
-
-
-import { createContext, useContext, useEffect, useState } from "react"
-
-type Theme = "dark" | "light" | "system"
-
-
-
-type ThemeProviderProps = {
-  children: React.ReactNode
-  defaultTheme?: Theme
-}
-
-
-;
-type ThemeProviderState = {;
-  theme: Theme;
-
-  setTheme: (theme: Theme) => void;
-}
-const initialState: ThemeProviderState = {
-
-  theme: "system",
-
-  setTheme: () => null}
-const ThemeProviderContext = createContext<ThemeProviderState>(initialState)
-export function ThemeProvider({
-
-  children,;
-  defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
-
-=======
   children,
   defaultTheme = "system"}: ThemeProviderProps) {
 
   const [theme, setTheme] = useState<Theme>(
     () => (localStorage.getItem("theme") as Theme) || defaultTheme
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   )
   useEffect(() => {
     const root = window.document.documentElement
@@ -50,7 +16,11 @@ export function ThemeProvider({
         : "light"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  children,
+  defaultTheme = "system"}: ThemeProviderProps) {
+
+  const [theme, setTheme] = useState<Theme>(
+    () => (localStorage.getItem("theme") as Theme) || defaultTheme
       root.classList.add(systemTheme)
       return
     }
@@ -68,7 +38,6 @@ export function ThemeProvider({
 
 
   return (;
-=======
 import { create_context, useContext, useEffect, useState } from &quot;react & quot;
 ;
 type Theme = &quot;dark & quot; | &quot;light & quot; | &quot;system & quot;
@@ -115,12 +84,10 @@ if ( {) {
       set_theme (theme);
     }}
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     <ThemeProviderContext.Provider value={value}>;
       {children}
     </ThemeProviderContext.Provider>);
 }
-
 export const use_theme = () =>: any {
   const context = useContext (ThemeProviderContext);
   // Check condition
@@ -130,9 +97,6 @@ if (
 }use_theme must be used within a ThemeProvider & quot);
   return context;
 
+
+
 }
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

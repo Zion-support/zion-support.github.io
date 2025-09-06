@@ -29,4 +29,3 @@ export function assertTalentOrClientForOffer(req: NextApiRequest, offer: { clien
   err.statusCode = 403,
   throw err
 }
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231

@@ -1,11 +1,3 @@
-interface ServiceStatus {
-
-  name: string
-  status: 'operational' | 'degraded' | 'outage' | 'maintenance'
-  description: string
-  lastChecked: string
-}
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -97,6 +89,3 @@ function Status() { const [last_updated, setLastUpdated] = useState (new Date ()
 }
   );
 }
-
-
-;

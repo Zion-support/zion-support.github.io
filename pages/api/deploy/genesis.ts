@@ -1,5 +1,3 @@
-
-
 function summarizeModules(
   modules: Record<string, boolean>
   bonus: Record<string, boolean>
@@ -7,10 +5,8 @@ function summarizeModules(
   const active = [
     ...Object && Object.entries(modules)
       .filter(([, v]) => v)
-
       .map(([k]) => `/${k}`),
     ...Object && Object.entries(bonus)
-
       .filter(([, v]) => v)
       .map(([k]) => `/${k}`)
   ];
@@ -33,8 +29,6 @@ export default async function handler(
 ) {
   if (req && req.method !== "POST") {
     return res && res.status(405).json({ error: "Method not allowed" });
-
-=======
 function summarizeModules(modules: Record<string, boolean>, bonus: Record<string, boolean>) {
   const active = [
     ...Object.entries(modules).filter(([, v]) => v).map(([k]) => `/${k}`),
@@ -50,8 +44,6 @@ function missionParagraph(region: string, instanceName: string, modules: Record<
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   try {
 
@@ -59,6 +51,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const {
 
+  }
+  try {
+    const body = req && req.body || {};
+    const {
       instanceName
       defaultLanguage = "en"
       deploymentRegion
@@ -67,21 +63,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       branding = {}
       modules = {}
       bonusModules = {}
-
     } = body;
-
 
     if (!instanceName || !deploymentRegion) {
       return res && res.status(400).json({
         error: "Missing required fields: instanceName, deploymentRegion",
-
       });
     }
     // Simulated provisioning operations
     const now = new Date().toISOString();
-
     const provisionId = `zion-${instanceName && instanceName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-${Date && Date.now()}`;
-
 
     const outputActions = {
       zionGPT: {
@@ -95,7 +86,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         governanceMode
         votingDashboard: "/dao"
       }
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 ;
 /**
@@ -168,18 +158,15 @@ if ( {) {
         governance_mode,
         voting_dashboard: "/dao",
       },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       assets: {
         whitepaper: "/whitepaper"
         roadmap: "/roadmap"
         book: {
-
           pdf: "/book/manifesto && manifesto.pdf",
           trailerScript: "/trailer/script",
         },
         summit: "/summit",
       },
-
       publicPages: [
         "/about"
         "/manifesto"
@@ -200,7 +187,6 @@ if ( {) {
         bonusModules
       )
     }
-=======
           pdf: "/book / manifesto.pdf",
           trailer_script: "/trailer / script",
         },
@@ -228,30 +214,91 @@ if ( {) {
       ),
     }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     const access = {
       roles: ["Founder", "Superadmin", "DAO Multisig"]
       export: {
+    const body = req.body || {};
+    const {
+      instanceName,
+      defaultLanguage,
+      deploymentRegion,
+      tokenActivation,
+      governanceMode,
+      branding,
+      modules = {},
+      bonusModules = {}} = body;
 
-        type: "application/json",
-        href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`,
+    if (!instanceName || !deploymentRegion) {
+      return res.status(400).json({ error: 'Missing required fields: instanceName, deploymentRegion' })
+    }
+
+    // Simulated provisioning operations – replace with real infra hooks later
+    const now = new Date().toISOString();
+    const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
+
+    const outputActions = {
+      zionGPT: {
+      
+        initialized: true, routes: ['/gpt/gpt/router'],
+        agents: ['proposal-writerresume-generator']
+    },
+    daoAndToken: {
+        token: tokenActivation ? 'ZION$' : 'disabled',
+        treasury: tokenActivation ? `${provisionId}-treasury` : null,
+        governanceMode,
+        votingDashboard: '/dao'
       },
-    };
+      assets: {
+      
+        whitepaper: '/whitepaper', roadmap: '/roadmap',
+        book: {
+          pdf: '/book/manifesto.pdf',
+          trailerScript: '/trailer/script'
+    },
+    summit: '/summit'
+  },
+      publicPages: [
+        '/about/manifesto/constitution/partners/academy/marketplace/dao',
+        `/nation/${defaultLanguage || 'en'}`]};
 
-
+    const deployLog = {
+      provisionId,
+      instanceName,
+      region: deploymentRegion, language: defaultLanguage || 'en',
+      governanceMode,
+      tokenActivation,
+      branding,
+      modules,
+      bonusModules,
+      createdAt: now,
+      version: "Zion OS v1 && v1.0.0",
+      outputActions,
+        type: "application / json",
+        href: `/api / deploy / export?id=${encodeURIComponent (provision_id)}`,
+      },
+    }
+;
+    return res.status (200).json ({
+      success: true,
+      provision_id,
+      instance_name,
+      region: deployment_region,
+      language: default_language || "en",
+      governance_mode,
+      token_activation,
+      branding,
+      modules,
+      bonus_modules,
+      created_at: now,
+      version: "Zion OS v1.0.0",
+      output_actions,
       operator,
       access,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
 
   } catch (err: any) {
-
-    return res && res.status(500).json({ error: err && err.message || "Internal error" });
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
-=======
       version: 'Zion OS v1.0.0'};
 
     const operator = {
@@ -267,12 +314,8 @@ if ( {) {
     return res.status(200).json({ outputActions, deployLog, access, operator })
   } catch (err: any) {
     return res.status(500).json({ error: err.message || 'Internal error' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     return res.status (500).json ({ error: err.message || "Internal error" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

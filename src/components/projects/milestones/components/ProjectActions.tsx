@@ -1,6 +1,31 @@
-onAddMilestone
-}: ProjectActionsProps) {
 
+import React from 'react';
+import { ShieldAlert } from 'lucide-react'
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+interface ProjectActionsProps {;
+  projectId: string;
+  isUnderDispute: boolean;
+  disputeId?: string;
+  isTalent: boolean;
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import { ShieldAlert } from 'lucide-react'
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+interface ProjectActionsProps {
+  projectId: string,
+  isUnderDispute: boolean,
+  disputeId?: string;
+  isTalent: boolean,
+  onAddMilestone: () => void
+export function ProjectActions({
+
+  projectId
+  isUnderDispute
+  disputeId
+  isTalent
+
+  onAddMilestone
+}: ProjectActionsProps) {
   onAddMilestone: () => void;
 
 export function ProjectActions(): any ({;
@@ -10,7 +35,6 @@ export function ProjectActions(): any ({;
   isTalent,;
   onAddMilestone,;
 }: ProjectActionsProps) {;
-
   return (
     <div className='flex gap-2'>;
       {isUnderDispute && disputeId ? (;
@@ -28,7 +52,6 @@ export function ProjectActions(): any ({;
         <RaiseDisputeButton projectId={projectId} variant='outline' />;
       {isTalent && !isUnderDispute && (;
         <Button onClick={onAddMilestone}>Add Milestone</Button>;
-
   return (
     <div className="flex gap-2">
       {isUnderDispute && disputeId ? (
@@ -39,14 +62,19 @@ export function ProjectActions(): any ({;
           </Link>
         </Button>
       ) : (
-
-
-
+        <RaiseDisputeButton 
+          projectId={projectId}
+          variant="outline"
+        />
+      )}
+      {isTalent && !isUnderDispute && (
+        <Button onClick={onAddMilestone}>
+          Add Milestone
+        </Button>
+      )}
     </div>;
   );
 };
-
-
 
       )}
       {isTalent && !isUnderDispute && (;
@@ -54,11 +82,6 @@ export function ProjectActions(): any ({;
           Add Milestone;
         </Button>;
       )}
-
-    </div>;
-  );
-}
-
 import React from 'react';
 import {Button} from '@/components / ui / button';
 import Link from 'next / link';
@@ -99,4 +122,3 @@ function ProjectActions() {
         </Button>)}
     </div>);
 }
-;

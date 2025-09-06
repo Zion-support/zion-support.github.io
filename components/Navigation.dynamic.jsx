@@ -1,5 +1,4 @@
 import React from 'react';
-
 ;
 const Navigation.dynamic = () => {
   return (
@@ -8,5 +7,4 @@ const Navigation.dynamic = () => {
     </div>);
 }
 ;
-
 export default Navigation.dynamic;

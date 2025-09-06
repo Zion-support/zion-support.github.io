@@ -1,5 +1,11 @@
-
-
+import Document, {;
+  Html,;
+  Head,;
+  Main,;
+  NextScript,;
+  DocumentContext,;
+} from 'next/document';
+export default function Document() {;
   return (
     <Html lang='en'>;
       <Head>;
@@ -24,7 +30,6 @@
         <link rel="preconnect" href="https: //fonts && fonts.googleapis.com" />;
         <link rel="preconnect" href="https://fonts && fonts.gstatic.com" crossOrigin="" />;
         <link href="https://fonts && fonts.googleapis.com/css2?family=Inter:wght@400,500,600,700,800,900&family=JetBrains+Mono:wght@400,600&display=swap" rel="stylesheet" />;
-=======
   Html,
   Head,
   Main,
@@ -59,17 +64,11 @@ function Document() {
         <link rel="preconnect" href="https: //fonts.googleapis.com" />;
         <link rel="preconnect" href="https://fonts.gstatic.com" cross_origin="" />;
         <link href="https://fonts.googleapis.com / css2?family = Inter:wght@400, 500, 600, 700, 800, 900 & family = JetBrains + Mono:wght@400, 600 & display = swap" rel="stylesheet" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       <body>;
         <Main />;
         <NextScript />;
       </body>;
-
-  );
-}
-=======
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-=======
 
 
 import Document, {
@@ -100,14 +99,10 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 
+}
+
+}
     </Html>);
 }
-
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

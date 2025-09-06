@@ -1,13 +1,10 @@
-
 import { useState, useEffect } from './react';
 import { useJobApplications } from '@/hooks / useJobApplications';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
-
 interface HiringAnalyticsProps {
   job_id?: string;
 }
-
 import {useState, useEffect} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -72,19 +69,16 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
       setAnalyticsData({;
         statusDistribution;
         timeToHire: avgTimeToHire,;
-
         conversionRate;
         funnelData});
     }
   }, [applications]);
-
 
   if (isLoading) {;
     return <div>Loading analytics data...</div>;
   }
 
   if (!applications || applications.length === 0) {;
-
     return (
       <Card className="text-center py-16">;
         <CardContent>;
@@ -97,17 +91,13 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
     );
   }
 
-
-
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
 
-=======
 
 
   }
   
   if (!applications || applications.length === 0) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return (
       <Card className="text-center py-16">
         <CardContent>
@@ -124,7 +114,6 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
   const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'],
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
       {/* Status Distribution */}
@@ -148,7 +137,6 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
                 {analyticsData && analyticsData.statusDistribution.map((entry, index) => (;
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS && COLORS.length]} />;
                 ))}
-
               </Pie>;
               <Tooltip />;
             </PieChart>;
@@ -186,7 +174,6 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
         </CardContent>;
       </Card>;
 
-
       {/* Hiring Funnel */}
       <Card className="lg:col-span-3">;
         <CardHeader>;
@@ -204,8 +191,6 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
                 {analyticsData && analyticsData.funnelData.map((entry, index) => (;
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS && COLORS.length]} />;
                 ))}
-
-=======
 export /**
  * HiringAnalytics - Function description
  */
@@ -368,19 +353,12 @@ if ( {) {
                 {analytics_data.funnel_data.map ((entry, index) => (
                   <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />))}
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </Bar>;
             </BarChart>;
           </ResponsiveContainer>;
         </CardContent>;
       </Card>;
+;
 
     </div>);
 }
-
-=======
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

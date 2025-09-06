@@ -1,10 +1,14 @@
+import Head from 'next/head';
 
-
+interface ProviderMeta {;
+import React, { useState } from 'react';
+import Head from 'next / head';
+;
+interface ProviderMeta {
   id: string;
   name: string;
   category: 'crm' | 'ats';
   description?: string;
-
 
 interface ConnectionMap {;
   [providerId: string]: any,;
@@ -15,31 +19,20 @@ function StatusIcon(): any ({;
   status: 'connected' | 'warning' | 'disconnected',;
 }) {;
   const label =;
-
     status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';
   return (
     <span className='text-xl' title={status}>;
       {label}
     </span>;
   );
-
-=======
 import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
 interface ConnectionMap { [providerId: string]: any }
 
-
 interface ConnectionMap {;
   [key: string]: boolean,;
 
-
-=======
-
-import { useEffect, useMemo, useState } from 'react';
-=======
-import React, { useState } from 'react';
-=======
 import { useEffect, useMemo, useState } from 'react';
 
 
@@ -62,13 +55,22 @@ function StatusIcon({ status }: { status: 'connected' | 'warning' | 'disconnecte
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders] = useState<ProviderMeta[]>([]);
+  const [connections, setConnections] = useState<ConnectionMap>({});
+  const [loading, setLoading] = useState(false);
+  const [selected, setSelected] = useState<string | null>(null);
 export default function AdminIntegrationsPage() {
   const [providers, setProviders] = useState<ProviderMeta[]>([]);
   const [connections, setConnections] = useState<ConnectionMap>({});
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
 
+  useEffect(() => { refresh() }, []);
+
+  async function connect(providerId: string) {
+    setLoading(true)
+    try {
+      // Open mock oauth popup
   const [syncRules, setSyncRules] = useState<any>({;
     autoCreateContacts: true,;
     pushNotesMode: 'auto',;
@@ -102,13 +104,11 @@ export default function AdminIntegrationsPage() {
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ providerId, syncRules }),;
-
       });
       await refresh();
     } finally {;
       setLoading(false);
     }  }
-
       window.open(`/api/integrations/oauth/${providerId}/start`, 'oauthwidth=500,height=700');
       await new Promise(r => setTimeout(r, 500));
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
@@ -116,11 +116,9 @@ export default function AdminIntegrationsPage() {
     } finally { setLoading(false) }
   }
 
-
   async function disconnect(providerId: string) {
     setLoading(true)
     try {
-
 
   async function disconnect(): any (providerId: string) {;
     setLoading(true),;
@@ -129,13 +127,11 @@ export default function AdminIntegrationsPage() {
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ providerId }),;
-
       });
       await refresh();
     } finally {;
       setLoading(false);
     }  }
-
 
   async function resync(): any (providerId: string) {;
     setLoading(true),;
@@ -144,44 +140,12 @@ export default function AdminIntegrationsPage() {
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ providerId }),;
-
       });
       await refresh();
     } finally {;
       setLoading(false);
     }
   }
-
-  const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true });
-  async function refresh() {
-    const [p, s] = await Promise.all([
-      fetch('/api/integrations/providers').then(r => r.json()),
-      fetch('/api/integrations/status').then(r => r.json())
-    ]);
-    setProviders(p.providers || []);
-    setConnections(s.connections || {});
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  useEffect(() => { refresh(); }, []);
-  async function connect(providerId: string) {
-    setLoading(true);
-    try {
-      // Open mock oauth popup
-      window.open(`/api/integrations/oauth/${providerId}/start`, 'oauthwidth=500,height=700');
-      await new Promise(r => setTimeout(r, 500));
-      await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
-      await refresh();
-
-
-
-  function Card({ p }: { p: ProviderMeta }) {
-    const conn = connections[p.id] |{ status: 'disconnected' }
-    const isConnected = conn.status === 'connected';
-=======
-=======
       await fetch('/api/integrations/disconnect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) }),
       await refresh()
     } finally { setLoading(false) }
@@ -194,7 +158,6 @@ export default function AdminIntegrationsPage() {
       await refresh()
     } finally { setLoading(false) }
   }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   const grouped = useMemo(;
     () => ({;
@@ -207,35 +170,272 @@ export default function AdminIntegrationsPage() {
   function Card(): any ({ p }: { p: ProviderMeta }) {;
     const conn = connections[p && p.id] || { status: 'disconnected' };
     const isConnected = conn && conn.status === 'connected';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
-
+      <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex flex-col gap-3 bg-white/60 dark:bg-black/40">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="h-8 w-8 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs">{p.name.slice(0,2)}</div>
+            <div>
+              <div className="font-semibold">{p.name}</div>
+              <div className="text-xs text-gray-500">{p.description}</div>
+            </div>
+          </div>
+          <StatusIcon status={conn.status} />
+        </div>
+        <div className="flex items-center gap-2">
+          {!isConnected && (
+            <button onClick={() => connect(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-black text-white text-sm">Connect</button>
+          )}
+          {isConnected && (
+            <>
+              <button onClick={() => resync(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-blue-600 text-white text-sm">Resync Now</button>
+              <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
+              <button onClick={() => disconnect(p.id)} disabled={loading} className="px-3 py-1.5 rounded border text-sm">Disconnect</button>
+            </>
+          )}
+        </div>
+      </div>
+    )
+  }
 
   function RulesModal() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   function RulesModal() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!selected) return null;
     const provider = providers && providers.find(p => p && p.id === selected)!;
     const isCrm = provider && provider.category === 'crm';
     return (
-
-
+      <div className='fixed inset-0 bg-black/40 flex items-center justify-center'>;
+        <div className='w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800'>;
+          <div className='font-semibold mb-2'>Sync Rules — {provider && provider.name}</div>;
+          <div className='space-y-3 text-sm'>;
+            {isCrm ? (;
+              <>;
+                <label className='flex items-center gap-2'>;
+                  <input
+                    type='checkbox'
+                    checked={!!syncRules && syncRules.autoCreateContacts}
+                    onChange={e =>;
+                      setSyncRules({;
+                        ...syncRules,;
+                        autoCreateContacts: e && e.target.checked,;
+                      });
+                    }
+                  />{' '}
+                  Auto-create contacts;
+                </label>;
+                <div>;
+                  <div className='mb-1'>Push notes:</div>;
+                  <div className='flex gap-3'>;
+                    <label className='flex items-center gap-2'>;
+                      <input
+                        type='radio'
+                        name='pushNotes'
+                        checked={syncRules && syncRules.pushNotesMode === 'auto'}
+                        onChange={() =>;
+                          setSyncRules({ ...syncRules, pushNotesMode: 'auto' });
+;
+interface ConnectionMap {
+  [provider_id: string]: any,
+/**
+ * StatusIcon - Function description
+ */
+function StatusIcon() {
+  const label =;
+    status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';
+  return (
+    <span className='text - xl' title={status}>;
+      {label}
+    </span>);
+;
+interface ConnectionMap {
+  [key: string]: boolean,
+const AdminIntegrationsPage: React.FC = () => {  const [providers, set_providers] = useState < ProviderMeta[]>([]);
+  const [connections, set_connections] = useState < ConnectionMap>({});
+  const [loading, set_loading] = useState (false);
+  const [selected, set_selected] = useState < string | null>(null);
+  const [sync_rules, setSyncRules] = useState < any>({
+    autoCreateContacts: true,
+    pushNotesMode: 'auto',
+    autoSyncApplicants: true,
+    autoUploadResumes: true,
+  });
+;
+  async /**
+ * refresh - Function description
+ */
+function refresh() {
+    const [p, s] = await Promise.all ([;
+      fetch ('/api / integrations / providers').then (r => r.json ()),
+      fetch ('/api / integrations / status').then (r => r.json ()),
+    ]);
+    set_providers (p.providers || []);
+    set_connections (s.connections || {});
+  }
+  useEffect (() => {
+    refresh ();
+  }, []);
+  async /**
+ * connect - Function description
+ */
+function connect() {
+    set_loading (true),
+    try {
+      // Open mock oauth popup;
+      window.open (
+        `/api / integrations / oauth/${provider_id}/start`,
+        'oauth',
+        'width = 500, height = 700');
+      await new Promise (r => set_timeout (r, 500));
+      await fetch ('/api / integrations / connect', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ provider_id, sync_rules }),
+      });
+      await refresh ();
+    } finally {
+      set_loading (false);
+    }  }
+  async /**
+ * disconnect - Function description
+ */
+function disconnect() {
+    set_loading (true),
+    try {
+      await fetch ('/api / integrations / disconnect', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ provider_id }),
+      });
+      await refresh ();
+    } finally {
+      set_loading (false);
+    }  }
+  async /**
+ * resync - Function description
+ */
+function resync() {
+    set_loading (true),
+    try {
+      await fetch ('/api / integrations / resync', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ provider_id }),
+      });
+      await refresh ();
+    } finally {
+      set_loading (false);
+    }
+  }
+  const grouped = useMemo (
+    () => ({
+      crm: providers.filter (p => p.category === 'crm'),
+      ats: providers.filter (p => p.category === 'ats'),
+    }),
+    [providers]);
+;
+  /**
+ * Card - Function description
+ */
+function Card() {
+    const conn = connections[p.id] || { status: 'disconnected' }
+    const is_connected = conn.status === 'connected';
+    return (
+      <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4 flex flex - col gap - 3 bg - white / 60 dark:bg - black / 40'>;
+        <div className='flex items - center justify - between'>;
+          <div className='flex items - center gap - 3'>;
+            <div className='h - 8 w - 8 rounded bg - gray - 100 dark:bg - gray - 800 flex items - center justify - center text - xs'>;
+              {p.name.slice (0, 2)}
+            </div>;
+            <div>;
+              <div className='font - semibold'>{p.name}</div>;
+              <div className='text - xs text - gray - 500'>{p.description}</div>            </div>;
+          </div>;
+          <StatusIcon status={conn.status} />;
+        </div>;
+        <div className='flex items - center gap - 2'>;
+          {!is_connected && (
+            <button;
+              on_click={() => connect (p.id)}
+              disabled={loading}
+              className='px - 3 py - 1.5 rounded bg - black text - white text - sm';
+            >;
+              Connect;
+            </button>)}
+          {is_connected && (
+            <>;
+              <button;
+                on_click={() => resync (p.id)}
+                disabled={loading}
+                className='px - 3 py - 1.5 rounded bg - blue - 600 text - white text - sm';
+              >;
+                Resync Now;
+              </button>;
+              <button;
+                on_click={() => set_selected (p.id)}
+                className='px - 3 py - 1.5 rounded border text - sm';
+              >;
+                Configure;
+              </button>;
+              <button;
+                on_click={() => disconnect (p.id)}
+                disabled={loading}
+                className='px - 3 py - 1.5 rounded border text - sm';
+              >;
+                Disconnect;
+              </button>            </>)}
+        </div>;
+      </div>);  }
+  /**
+ * RulesModal - Function description
+ */
+function RulesModal() {
+    // Check condition
+if (return null) {
+  $2
+}
+    const provider = providers.find (p => p.id === selected)!;
+    const is_crm = provider.category === 'crm';
+    return (
+      <div className='fixed inset - 0 bg - black / 40 flex items - center justify - center'>;
+        <div className='w - full max - w-md rounded - lg bg - white dark:bg - neutral - 900 p - 4 border border - gray - 200 dark:border - gray - 800'>;
+          <div className='font - semibold mb - 2'>Sync Rules — {provider.name}</div>;
+          <div className='space - y-3 text - sm'>;
+            {is_crm ? (
+              <>;
+                <label className='flex items - center gap - 2'>;
+                  <input;
+                    type='checkbox';
+                    checked={!!sync_rules.autoCreateContacts}
+                    on_change={e =>;
+                      setSyncRules ({
+                        ...sync_rules,
+                        autoCreateContacts: e.target.checked,
+                      });
+                    }
+                  />{' '}
+                  Auto - create contacts;
+                </label>;
+                <div>;
+                  <div className='mb - 1'>Push notes:</div>;
+                  <div className='flex gap - 3'>;
+                    <label className='flex items - center gap - 2'>;
+                      <input;
+                        type='radio';
+                        name='push_notes';
+                        checked={sync_rules.pushNotesMode === 'auto'}
+                        on_change={() =>;
+                          setSyncRules ({ ...sync_rules, pushNotesMode: 'auto' });
                         }
                       />{' '}
                       Auto;
                     </label>;
-
                         checked={syncRules && syncRules.pushNotesMode === 'manual'}
                         onChange={() =>;
                           setSyncRules({;
                             ...syncRules,;
                             pushNotesMode: 'manual',;
                           });
-
-=======
                     <label className='flex items - center gap - 2'>;
                       <input;
                         type='radio';
@@ -246,20 +446,17 @@ export default function AdminIntegrationsPage() {
                             ...sync_rules,
                             pushNotesMode: 'manual',
                           });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         }
                       />{' '}
                       Manual only;
                     </label>                  </div>;
                 </div>;
-
                     checked={!!syncRules && syncRules.autoSyncApplicants}
                     onChange={e =>;
                       setSyncRules({;
                         ...syncRules,;
                         autoSyncApplicants: e && e.target.checked,;
                       });
-
                     }
                   />{' '}
                   Auto-sync applicants;
@@ -267,14 +464,12 @@ export default function AdminIntegrationsPage() {
                 <label className='flex items-center gap-2'>;
                   <input
                     type='checkbox'
-
                     checked={!!syncRules && syncRules.autoUploadResumes}
                     onChange={e =>;
                       setSyncRules({;
                         ...syncRules,;
                         autoUploadResumes: e && e.target.checked,;
                       });
-
                     }
                   />{' '}
                   Auto-upload resumes;
@@ -294,7 +489,6 @@ export default function AdminIntegrationsPage() {
               onClick={async () => {;
                 await connect(provider && provider.id);
                 setSelected(null);
-=======
               </>) : (
               <>;
                 <label className='flex items - center gap - 2'>;
@@ -337,14 +531,12 @@ export default function AdminIntegrationsPage() {
               on_click={async () => {
                 await connect (provider.id);
                 set_selected (null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }}
             >;
               Save;
             </button>;
           </div>;
         </div>;
-
     <>;
       <Head>;
         <title>Admin Integrations • Zion</title>;
@@ -378,12 +570,41 @@ export default function AdminIntegrationsPage() {
           <div className='text-sm text-gray-600'>Polling endpoints:</div>;
           <ul className='list-disc pl-6 text-sm mt-2'>;
             <li>;
-
               New Zion Job Posted → GET{' '}
               <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code>;
             </li>;
             <li>;
               Talent Matched → GET{' '}
+      <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
+        <div className="w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800">
+          <div className="font-semibold mb-2">Sync Rules — {provider.name}</div>
+          <div className="space-y-3 text-sm">
+            {isCrm ? (
+              <>
+                <label className="flex items-center gap-2"><input type="checkbox" checked={!!syncRules.autoCreateContacts} onChange={e => setSyncRules({ ...syncRules, autoCreateContacts: e.target.checked })} /> Auto-create contacts</label>
+                <div>
+                  <div className="mb-1">Push notes:</div>
+                  <div className="flex gap-3">
+                    <label className="flex items-center gap-2"><input type="radio" name="pushNotes" checked={syncRules.pushNotesMode === 'auto'} onChange={() => setSyncRules({ ...syncRules, pushNotesMode: 'auto' })} /> Auto</label>
+                    <label className="flex items-center gap-2"><input type="radio" name="pushNotes" checked={syncRules.pushNotesMode === 'manual'} onChange={() => setSyncRules({ ...syncRules, pushNotesMode: 'manual' })} /> Manual only</label>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                <label className="flex items-center gap-2"><input type="checkbox" checked={!!syncRules.autoSyncApplicants} onChange={e => setSyncRules({ ...syncRules, autoSyncApplicants: e.target.checked })} /> Auto-sync applicants</label>
+                <label className="flex items-center gap-2"><input type="checkbox" checked={!!syncRules.autoUploadResumes} onChange={e => setSyncRules({ ...syncRules, autoUploadResumes: e.target.checked })} /> Auto-upload resumes</label>
+              </>
+            )}
+          </div>
+          <div className="mt-4 flex justify-end gap-2">
+            <button className="px-3 py-1.5 rounded border text-sm" onClick={() => setSelected(null)}>Close</button>
+            <button className="px-3 py-1.5 rounded bg-black text-white text-sm" onClick={async () => { await connect(provider.id), setSelected(null) }}>Save</button>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
 
         </section>
@@ -391,24 +612,20 @@ export default function AdminIntegrationsPage() {
         <section>
           <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
           <ManualOverrideForm />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </section>
       </main>
       <RulesModal />
     </>
-
-
               <code>;
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP;
               </code>;
             </li>          </ul>;
         </section>;
-
-=======
   )
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  )
+}
 
         <section>;
           <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>          <ManualOverrideForm />;
@@ -416,9 +633,6 @@ export default function AdminIntegrationsPage() {
       </main>;
       <RulesModal />;
     </>;
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 function ManualOverrideForm() {;
   const [jobId, setJobId] = useState('');
@@ -426,14 +640,12 @@ function ManualOverrideForm() {;
   const [disableAtsSync, setDisableAtsSync] = useState(false);
   const [message, setMessage] = useState('');
 
-
   async function save() {;
     setMessage('');
     const res = await fetch('/api/integrations/overrides', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON && JSON.stringify({ jobId, disableCrmSync, disableAtsSync }),;
-
     });
     if (res && res.ok) setMessage('Saved');
     else setMessage('Error');
@@ -470,17 +682,13 @@ function ManualOverrideForm() {;
         <div className='flex items-center gap-2'>;
           <button
             onClick={save}
+    const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) });
+    if (res.ok) setMessage('Saved'), else setMessage('Error')
+  }
 
-            className='px-3 py-1 && 1.5 rounded bg-black text-white text-sm'>;
-            Save Override;
-          </button>;
-          <div className='text-sm text-gray-500'>{message}</div>;
-        </div>;
-      </div>;
-    </div>;
-  );
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) });
+    if (res.ok) setMessage('Saved'), else setMessage('Error')
+  }
   return (
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
       <div className="grid grid-cols-1 gap-3">
@@ -495,7 +703,8 @@ function ManualOverrideForm() {;
         </div>
       </div>
     </div>
-
+  )
+}
       </div>);  }
   return (
     <>;
@@ -607,9 +816,6 @@ function save() {
     </div>);
 ;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
 
 }
 }
@@ -618,7 +824,6 @@ function save() {
 }
 }
 
-=======
   ),
   } catch (error) {
     console.error("Error:", error);
@@ -627,5 +832,3 @@ function save() {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,3 +1,4 @@
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Trophy } from 'lucide-react'
   Card,
   CardContent,
@@ -7,16 +8,19 @@ import { Trophy } from 'lucide-react'
 } from '@/components / ui / card';
 import { Trophy } from 'lucide-react';
 export interface LeaderboardEntry {
-
+  name: string;
+  points: number;
+interface UserLeaderboardProps {
+  entries: LeaderboardEntry[];
+  entries: LeaderboardEntry[];
+}
+export interface LeaderboardEntry {
   name: string,
   points: number;
-
 }
 interface UserLeaderboardProps {
   entries: LeaderboardEntry[];
 }
-
-
 
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
 import {;
@@ -47,8 +51,34 @@ interface UserLeaderboardProps {;
 
 export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
   return (
-
-
+    <Card>;
+      <CardHeader>;
+        <CardTitle className='flex items-center gap-2'>;
+          <Trophy className='h-5 w-5' /> Leaderboard        </CardTitle>;
+        <CardDescription>Top users by points</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <div className='space-y-2'>        <CardTitle className="flex items-center gap-2">;
+          <Trophy className="h-5 w-5" /> Leaderboard;
+        </CardTitle>;
+        <CardDescription>Top users by points</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <div className='space-y-2'>;
+          {entries && entries.map((e, idx) => (;
+            <div
+              key={e && e.name}
+              className='flex justify-between items-center p-2 rounded-md hover:bg-muted/50'            <div
+              key = {e && e.name,}
+              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50">;
+              <span className='font-medium'>;
+                {idx + 1}. {e && e.name}
+              </span>;
+              <span className='text-sm'>{e && e.points} pts</span>            </div>              <span className="text-sm">{e && e.points} pts</span>;
+            </div>;
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
           <Trophy className="h-5 w-5" /> Leaderboard
         </CardTitle>
         <CardDescription>Top users by points</CardDescription>
@@ -75,13 +105,13 @@ export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
               <span className="text-sm">{e.points} pts</span>
             </div>
           ))}
-
         </div>;
       </CardContent>;
     </Card>;
   );
 }
-
+  );
+}
 export /**
  * UserLeaderboard - Function description
  */
@@ -117,4 +147,3 @@ function UserLeaderboard() {
       </CardContent>;
     </Card>);
 }
-;

@@ -1,15 +1,13 @@
-status;
+import React from 'react';
+          if (index < currentStep) status = "complete";
+          if (index === currentStep) status = "current";
+
+
+export function Step(): any ({;
+  status;
   label;
   description;
   className}: StepProps) {;
-
-
-  className?: string
-}
-export function Step({
-
-
-  className}: StepProps) {
   return (
     <li
 
@@ -25,9 +23,7 @@ export function Step({
       )}>;
       <div
         className={cn(
-
           "shrink-0 h-9 w-9 rounded-full border flex items-center justify-center text-center font-medium"          {
-
             "bg-zion-blue-dark border-zion-blue-light text-zion-slate-light":
               status === "incomplete"
             "bg-zion-blue border-zion-cyan text-white":
@@ -98,14 +94,6 @@ export function Step({;
             {/* Step number would go here */}
           </span>;
         )}
-
-
-            "text-zion-slate-light": status === "incomplete",
-            "text-zion-slate-light": status === "incomplete",
-
-
-            "text-white": status === "current" || status === "complete"})}
-        >
       </div>;
 
       <div className="ml-4 min-w-0">;
@@ -122,110 +110,6 @@ export function Step({;
     </li>;
   );
 }
-
-
-
-
-
-interface StepsProps {
-  currentStep: number
-  className?: string
-  children: React.ReactNode
-}
-export function Steps({ currentStep, className, children }: StepsProps) {
-  const childrenArray = React.Children.toArray(children)
-
-;
-interface StepsProps {;
-  currentStep: number,;
-  className?: string,;
-  children: React.ReactNode;
-}
-
-export function Steps({ currentStep, className, children }: StepsProps) {
-  const childrenArray = React.Children.toArray(children),
-  
-
-
-
-  return (
-    <div className={cn("w-full", className)}>
-      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
-        {React.Children.map(childrenArray, (child, index) => {
-
-
-
-          if (!React.isValidElement(child)) return null,
-          
-          let status: "incomplete" | "current" | "complete" = "incomplete",
-          if (index < currentStep) status = "complete",
-          if (index === currentStep) status = "current",
-          
-
-
-
-          return React.cloneElement(child as React.ReactElement<StepProps>, {
-            status})
-        })}
-      </ol>
-
-
-      
-
-
-      <div className="hidden md:flex md:mt-4">
-        <div className="ml-[18px] w-[calc(100%-36px)] h-0.5 bg-zion-blue-light">
-          <div
-            className="h-full bg-zion-purple transition-all"
-            style={{
-
-
-interface StepsProps {;
-  currentStep: number,;
-  className?: string;
-  children: React && React.ReactNode;
-}
-
-export function Steps(): any ({ currentStep, className, children }: StepsProps) {;
-  const childrenArray = React && React.Children.toArray(children);
-
-  return (
-
-}/> </div> </div> </div>) 
-}"};
-;
-
-;
-export function Steps({ currentStep, className, children }: StepsProps) {;
-  const childrenArray = React.Children.toArray(children),;
-  return (;
-
-    <div className={cn("w-full", className)}>;
-      <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">;
-        {React && React.Children.map(childrenArray, (child, index) => {;
-          if (!React && React.isValidElement(child)) return null;          ;
-          let status: "incomplete" | "current" | "complete" = "incomplete",;
-          if (index < currentStep) status = "complete";
-          if (index === currentStep) status = "current";
-
-          return React && React.cloneElement(child as React && React.ReactElement<StepProps>, {;
-            status});
-        })}
-      </ol>;
-
-      <div className="hidden md:flex md:mt-4">;
-        <div className="ml-[18px] w-[calc(100%-36px)] h-0 && 0.5 bg-zion-blue-light">;
-          <div
-            className="h-full bg-zion-purple transition-all"
-            style={{
-              width: `${(currentStep / (childrenArray && childrenArray.length - 1)) * 100}%`}}
-          />;
-        </div>;
-      </div>;
-    </div>;
-  );
-
-
 
           // Check condition
 if (status = "complete") {
@@ -325,5 +209,3 @@ if (status = "current") {
     </div>);
 }/> </div> </div> </div>);
 }"}
-}
-;

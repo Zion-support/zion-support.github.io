@@ -49,8 +49,6 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
     </div>;
   ),;}
  ];
-
-
   toggleSection ;
 }className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
 }</button> {;
@@ -58,7 +56,5 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
   region.label ;
 }</label> </div>) ) ;
 }</div>) ;
-
 }</div>) ;
 }"
-

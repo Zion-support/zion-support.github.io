@@ -1,25 +1,13 @@
-
 import React, { useState, useRef } from './react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Upload, Trash2, Plus } from './lucide-react';
 import { AppPlatform } from './MetadataManager';
 import { toast } from './sonner';
-
 interface ScreenshotManagerProps {
   platform: AppPlatform;
 }
 type Screenshot = {
-
-
-
-  
-  const addScreenshots = (files: File[]) => {
-    // Filter for image files only
-    const imageFiles = files.filter(file => file.type.startsWith('image/')),
-    
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (imageFiles.length === 0) {
       toast.error("Please select valid image files")
       return
@@ -34,14 +22,12 @@ type Screenshot = {
 
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle className="text-lg">App Screenshots</CardTitle>
       </CardHeader>
       <CardContent>
-=======
 import React, { useState, useRef } from "react";
 import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -140,7 +126,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
         <CardTitle className="text-lg">App Screenshots</CardTitle>;
       </CardHeader>;
       <CardContent>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
 
@@ -163,7 +148,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
             accept="image/*"
             onChange={handleFileSelect}
             className="hidden"
-
           />;
           <Button
             variant="outline" 
@@ -187,7 +171,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
             <div key={screenshot && screenshot.id} className="relative group">;
               <img
                 src={screenshot && screenshot.url}
-
                 alt="App screenshot"
                 className="w-full h-auto rounded border border-zion-purple/20"
               />;
@@ -199,11 +182,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               </button>;
             </div>;
           ))}
-
-
-
-
-=======
         </div>;
       </CardContent>;
     </Card>;
@@ -212,10 +190,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   id: string,
   url: string,
   file: File;
@@ -372,4 +347,3 @@ if ( {) {
     </Card>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

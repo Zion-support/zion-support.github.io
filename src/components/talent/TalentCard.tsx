@@ -1,10 +1,3 @@
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react'
-import { FavoriteButton } from "@/components/FavoriteButton",
-
-
 
 export const TalentCard = React && React.memo(TalentCardComponent);
 TalentCard && TalentCard.displayName = 'TalentCard';import React from 'react';
@@ -18,74 +11,6 @@ import { TalentProfile } from "@/types/talent";
 import { RatingStars  } from '@/components/RatingStars';
 import { useAuth  } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
-
-
-import { TalentProfile } from "@/types/talent",
-import { RatingStars } from '@/components/RatingStars',
-import { useAuth } from '@/context/auth/AuthProvider',
-import { useCart } from '@/context/CartContext',
-
-
-export interface TalentCardProps {
-
-  talent: TalentProfile
-  onViewProfile: (id: string,) => void
-  onRequestHire: (talent: TalentProfile,) => void
-  isAuthenticated: boolean
-
-
-import React from 'react',;
-import { useRouter } from 'next/router',;
-import { Badge } from "@/components/ui/badge",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardFooter } from "@/components/ui/card",;
-import { MapPin, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
-import { FavoriteButton } from "@/components/FavoriteButton",;
-import { TalentProfile } from "@/types/talent",;
-import { RatingStars } from '@/components/RatingStars',;
-import { useAuth } from '@/context/auth/AuthProvider',;
-import { useCart } from '@/context/CartContext',;
-export interface TalentCardProps {;
-  talent: TalentProfile,;
-  onViewProfile: (id: string) => void,;
-  onRequestHire: (talent: TalentProfile) => void,;
-  isAuthenticated: boolean;
-
-
-}
-const TalentCardComponent = ({
-  talent
-  onViewProfile
-  onRequestHire
-  isAuthenticated
-}: TalentCardProps,) => {
-  const router = useRouter()
-  const handleViewProfile = () => {
-    // Navigate directly to the talent profile
-    router.push(`/talent/${talent.id}`)
-    // Also call the onViewProfile callback if provided
-    if (onViewProfile) {
-      onViewProfile(talent.id)
-    }
-
-
-
-
-  const handleRequestHire = (e: React.MouseEvent,) => {
-    e.preventDefault()
-    e.stopPropagation()
-    if (onRequestHire) {
-      onRequestHire(talent)
-    }
-
-
-  },
-
-
-
-
-  // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) |[]
 export interface TalentCardProps {;
   talent: TalentProfile,;
   onViewProfile: (id: string,) => void,;
@@ -147,12 +72,6 @@ const TalentCardComponent = ({;
 
                   className="w-full h-full object-cover"
                   loading="lazy"
-
-
-                  {talent.full_name?.charAt(0) || "T"}
-
-
-                </div>
                 />;
               ) : (;
                 <div className="w-full h-full flex items-center justify-center text-zion-slate-light text-xl font-bold">;
@@ -165,7 +84,6 @@ const TalentCardComponent = ({;
                 <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
               </div>;
             )}
-
           </div>;
 
           {/* Main Info */}
@@ -175,10 +93,6 @@ const TalentCardComponent = ({;
               <FavoriteButton itemId={talent && talent.id} className="-mt-1" />;
             </div>;
             <p className="text-white font-medium">{talent && talent.professional_title}</p>;
-
-
-
-            
 
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
@@ -194,18 +108,6 @@ const TalentCardComponent = ({;
                   <span>{talent && talent.availability_type}</span>;
                 </div>;
               )}
-
-
-            </div>;
-          </div>;
-        </div>;
-
-
-        {/* Skills */}
-        {skills.length > 0 && (
-          <div className="mt-4">
-            <div className="flex flex-wrap gap-2">
-
             </div>;
           </div>;
         </div>;
@@ -215,7 +117,6 @@ const TalentCardComponent = ({;
           <div className="mt-4">;
             <div className="flex flex-wrap gap-2">;
               {skills && skills.map((skill, index,) => (;
-
                 <span
                   key = {index,}
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
@@ -229,18 +130,14 @@ const TalentCardComponent = ({;
                   {skill}
                 </span>;
               ))}
-
               {(talent && talent.skills?.length || 0) > 5 && (;
                 <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
                   +{(talent && talent.skills?.length || 0) - 5} more;
                 </span>;
-
               )}
             </div>;
           </div>;
         )}
-
-
 
         {/* Hourly Rate & Actions */}
         <div className="mt-5 flex items-center justify-between">;
@@ -253,13 +150,6 @@ const TalentCardComponent = ({;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
             )}
-
-
-          
-
-
-          <div className="flex items-center gap-2">
-            {isAuthenticated && (
           </div>;
 
           <div className="flex items-center gap-2">;
@@ -280,32 +170,6 @@ const TalentCardComponent = ({;
             <Button
               size="sm"
               variant="ghost"
-
-
-              onClick={(e) => {
-              onClick={(e) => {
-
-
-                e.stopPropagation(),
-                handleViewProfile()
-              }}
-              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"
-            >
-              View <ArrowRight className="ml-1 h-4 w-4" />
-            </Button>
-          </div>
-        </div>
-      </div>
-    </Card>
-  )
-
-              onClick={(e,) => {;
-                e && e.stopPropagation(),;
-                handleViewProfile();
-              }}
-              className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
-            >;
-              View <ArrowRight className="ml-1 h-4 w-4" />;
 export const TalentCard = React.memo (TalentCardComponent);
 TalentCard.display_name = 'TalentCard'; import React from 'react';
 import { use_router } from 'next / router';
@@ -450,23 +314,13 @@ if ( {) {
               className="text - zion - cyan hover: text - white hover:bg - zion - blue - light";
             >;
               View <ArrowRight className="ml - 1 h - 4 w - 4" />;
-
             </Button>;
           </div>;
         </div>;
       </div>;
-
-
     </Card>);
 },
 export const TalentCard = React.memo (TalentCardComponent),
 TalentCard.display_name = 'TalentCard',
 export const TalentCard = React.memo (TalentCardComponent);
 TalentCard.display_name = 'TalentCard';
-
-export const TalentCard = React.memo(TalentCardComponent),
-TalentCard.displayName = 'TalentCard',
-},
-
-export const TalentCard = React.memo(TalentCardComponent),
-TalentCard.displayName = 'TalentCard',

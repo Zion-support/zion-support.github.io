@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -18,12 +17,10 @@ interface InterviewCardProps {;
 }
 
 export function InterviewCard(): any ({ interview, onRefresh }: InterviewCardProps) {;
-
   const { user } = useAuth();
   const { respondToInterview, cancelInterview } = useInterviews();
   const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
 
 import React, { useState } from './react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -72,29 +69,14 @@ function InterviewCard() {
   $2
 }
       return `Took place ${formatDistanceToNow (interview_date)} ago`;
-
     } else {
       return `Starts in ${formatDistanceToNow (interview_date)}`;
     }
   }
-
-
-
-
-  const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
-    setIsLoading(true),
-    const success = await respondToInterview(interview.id, { 
-      interview_id: interview.id, 
-      status 
-    }),
-    
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (success) {
       toast({
         title: `Interview ${status}`
         description: `You have successfully ${status} the interview request.`
-=======
 ;
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading (true),
@@ -110,31 +92,14 @@ if ( {) {
       toast ({
         title: `Interview ${status}`,
         description: `You have successfully ${status} the interview request.`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
       setIsResponseDialogOpen (false);
       await on_refresh ();
     } else {
-
-
-  },
-
-  const handleCancelInterview = async () => {
-    setIsLoading(true),
-    const success = await cancelInterview(interview.id),
-    
-
-
-    if (success) {
-      toast({
-        title: "Interview cancelled"
-        description: "The interview has been cancelled successfully."
-=======
       toast ({
         title: "Error",
         description: "Failed to respond to the interview request. Please try again.",
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
     }
     setIsLoading (false);
@@ -154,18 +119,6 @@ if ( {) {
       });
       await on_refresh ();
     } else {
-
-
-  },
-
-
-
-  const getStatusBadge = () => {
-    switch (interview.status) {
-      case 'requested':
-        return <Badge className="bg-amber-500">Pending</Badge>;
-      case 'confirmed':
-
   const isClient = user?.id === interview && interview.client_id;
   const isTalent = user?.id === interview && interview.talent_id;
 
@@ -192,7 +145,6 @@ if ( {) {
     }
   };
 
-=======
 
         return isInterviewLive ? 
           <Badge className="bg-green-500 animate-pulse">Live Now</Badge> : 
@@ -211,7 +163,6 @@ if ( {) {
 
   };
 
-=======
   },;
 
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {;
@@ -265,7 +216,6 @@ if ( {) {
       case 'confirmed':;
         return isInterviewLive ? ;
           <Badge className="bg-green-500 animate-pulse">Live Now</Badge> : ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Badge className="bg-green-600">Confirmed</Badge>;
       case 'declined':;
         return <Badge variant="destructive">Declined</Badge>;
@@ -278,7 +228,6 @@ if ( {) {
       default:;
         return <Badge>{interview && interview.status}</Badge>;
     }
-
   };
 
   const getOtherPartyName = () => {;
@@ -286,14 +235,12 @@ if ( {) {
       return interview && interview.talent_name || 'Talent';
     } else {;
       return interview && interview.client_name || 'Client';
-
     }
 
   },
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
@@ -304,57 +251,6 @@ if ( {) {
         <CardTitle className="text-lg">{interview && interview.title}</CardTitle>;
         <p className="text-sm text-muted-foreground">;
           with {getOtherPartyName()}
-
-        </p>;
-      </CardHeader>;
-
-      <CardContent className="pt-2">;
-        <div className="space-y-3">;
-          <div className="flex items-start gap-3">;
-            <Clock className="h-4 w-4 mt-0 && 0.5 text-muted-foreground" />;
-            <div>;
-              <p className="font-medium">{formattedDate}</p>;
-              <p className="text-sm text-muted-foreground">;
-                {formattedTime} - {formattedEndTime} ({interview && interview.duration_minutes} minutes);
-              </p>;
-              <p className="text-xs text-muted-foreground mt-1">;
-                {getRelativeTime()}
-              </p>;
-            </div>;
-          </div>;
-
-          {interview && interview.meeting_platform && (;
-            <div className="flex items-center gap-3">;
-              <Video className="h-4 w-4 text-muted-foreground" />;
-              <div>;
-                <p className="font-medium capitalize">{interview && interview.meeting_platform}</p>;
-              </div>;
-            </div>;
-          )}
-
-          {interview && interview.notes && (;
-            <div className="flex items-start gap-3">;
-              <MessageSquare className="h-4 w-4 mt-0 && 0.5 text-muted-foreground" />;
-              <p className="text-sm line-clamp-2">{interview && interview.notes}</p>;
-            </div>;
-          )}
-        </div>;
-      </CardContent>;
-
-      <CardFooter className="pt-2">;
-        <div className="grid grid-cols-1 gap-2 w-full">;
-          {/* For clients with pending requests */}
-          {isClient && isInterviewPending && (;
-            <AlertDialog>;
-              <AlertDialogTrigger asChild>;
-                <Button variant="outline" size="sm" className="w-full">;
-                  <X className="h-4 w-4 mr-2" /> Cancel Request;
-                </Button>;
-              </AlertDialogTrigger>;
-              <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
-                <AlertDialogHeader>;
-                  <AlertDialogTitle>Cancel Interview Request</AlertDialogTitle>;
-=======
       toast ({
         title: "Error",
         description: "Failed to cancel the interview. Please try again.",
@@ -448,38 +344,27 @@ if ( {) {
               <AlertDialogContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
                 <AlertDialogHeader>;
                   <AlertDialogTitle > Cancel Interview Request</AlertDialogTitle>;
-
                   <AlertDialogDescription>;
                     Are you sure you want to cancel this interview request? This action cannot be undone.;
                   </AlertDialogDescription>;
                 </AlertDialogHeader>;
                 <AlertDialogFooter>;
-
+                    disabled={isLoading}
+                    className="bg-destructive text-destructive-foreground hover:bg-destructive/90">;
                   <AlertDialogCancel > Go Back</AlertDialogCancel>;
                   <AlertDialogAction;
                     on_click={handleCancelInterview}
                     disabled={is_loading}
                     className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
                   >;
-
                     Cancel Interview;
                   </AlertDialogAction>;
                 </AlertDialogFooter>;
               </AlertDialogContent>;
-
-
-
-=======
-
+;
+;
 ;
 
-=======
-          
-=======
-;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* For talents with pending requests */}
           {isTalent && isInterviewPending && (;
             <div className="grid grid-cols-2 gap-2">;
@@ -491,7 +376,6 @@ if ( {) {
               </Button>;
             </div>;
           )}
-
             </AlertDialog>)}
           {/* For talents with pending requests */}
           {is_talent && isInterviewPending && (
@@ -503,12 +387,10 @@ if ( {) {
                 Decline;
               </Button>;
             </div>)}
-
           {/* For confirmed interviews */}
           {isInterviewConfirmed && !isInterviewPast && (
             <>;
               {interview.meeting_link ? (
-
 
           {/* For confirmed interviews */}
           {isInterviewConfirmed && !isInterviewPast && (;
@@ -525,12 +407,11 @@ if ( {) {
                 <Button className="w-full" disabled={!isInterviewLive}>;
                   <Video className="h-4 w-4 mr-2" /> ;
 
-=======
+                  <Video className="h-4 w-4 mr-2" /> 
+
 
                   <Video className="h-4 w-4 mr-2" /> 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>;
               )}
@@ -556,7 +437,6 @@ if ( {) {
                     <AlertDialogCancel>Go Back</AlertDialogCancel>
                     <AlertDialogAction
                       onClick={handleCancelInterview}
-=======
 
               <AlertDialog>;
                 <AlertDialogTrigger asChild>;
@@ -567,7 +447,9 @@ if ( {) {
                 <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">;
                   <AlertDialogHeader>;
                     <AlertDialogTitle>Cancel Confirmed Interview</AlertDialogTitle>;
-=======
+                  {isInterviewLive ? 'Join Now' : 'Join Meeting'}
+                </Button>;
+              )}
                 <Button className="w - full" as_child disabled={!isInterviewLive}>;
                   <a href={interview.meeting_link} target="_blank" rel="noopener noreferrer">;
                     <Video className="h - 4 w - 4 mr - 2" />;
@@ -588,26 +470,24 @@ if ( {) {
                 <AlertDialogContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
                   <AlertDialogHeader>;
                     <AlertDialogTitle > Cancel Confirmed Interview</AlertDialogTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     <AlertDialogDescription>;
                       Are you sure you want to cancel this interview? This action cannot be undone and the other party will be notified.;
                     </AlertDialogDescription>;
                   </AlertDialogHeader>;
                   <AlertDialogFooter>;
-
+                      disabled={isLoading}
+                      className="bg-destructive text-destructive-foreground hover:bg-destructive/90">;
                     <AlertDialogCancel > Go Back</AlertDialogCancel>;
                     <AlertDialogAction;
                       on_click={handleCancelInterview}
                       disabled={is_loading}
                       className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
                     >;
-
                       Cancel Interview;
                     </AlertDialogAction>;
                   </AlertDialogFooter>;
                 </AlertDialogContent>;
               </AlertDialog>;
-
         </div>;
       </CardFooter>;
 
@@ -617,25 +497,20 @@ if ( {) {
           <DialogHeader>;
             <DialogTitle>Respond to Interview Request</DialogTitle>;
           </DialogHeader>;
-
           <InterviewResponseForm
-=======
 
           <InterviewResponseForm 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             interview={interview}
             onConfirm={() => handleRespondToInterview('confirmed')}
             onClose={() => setIsResponseDialogOpen(false)}
             isLoading={isLoading}
-
           />;
         </DialogContent>;
       </Dialog>;
     </Card>;
   );
 }
-
             </>)}
         </div>;
       </CardFooter>;
@@ -655,8 +530,5 @@ if ( {) {
       </Dialog>;
     </Card>);
 }
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

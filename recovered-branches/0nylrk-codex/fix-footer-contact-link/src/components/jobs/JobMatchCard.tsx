@@ -1,10 +1,3 @@
-
-
-
-
-
-import React from 'react';
-
   return (
     <Card className="overflow-hidden">;
       <CardContent className="p-0">;
@@ -16,7 +9,6 @@ import React from 'react';
           </div>;
           <Badge variant="outline" className="bg-background">;
             {formatDistanceToNow(postedDate, { addSuffix: true })}
-
           </Badge>;
         </div>;
 
@@ -58,11 +50,9 @@ import React from 'react';
           <div className="flex flex-wrap gap-1 mb-4">;
             {skills?.slice(0, 5).map((skill) => (;
               <Badge key={skill} variant="secondary" className="text-xs">;
-
                 {skill}
               </Badge>;
             ))}
-
           </div>;
 
           <div className="flex gap-2 justify-end">;
@@ -70,7 +60,6 @@ import React from 'react';
               <Button onClick={handleInvite} variant="default" size="sm">;
                 Invite;
               </Button>;
-
             )}
             {onViewDetails && (;
               <Button onClick={handleViewDetails} variant="outline" size="sm">;
@@ -82,11 +71,6 @@ import React from 'react';
                 Apply Now;
               </Button>;
             )}
-
-
-
-
-=======
           </div>;
         </div>;
       </CardContent>;
@@ -96,10 +80,7 @@ import React from 'react';
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -221,4 +202,3 @@ if ( {) {
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

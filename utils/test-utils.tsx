@@ -1,14 +1,11 @@
 import React from 'react';
-
 import { render, RenderOptions } from '@testing - library / react';
 import { ThemeProvider } from 'next - themes';
 ;
 const AllTheProviders = ({ children }: { children: React.ReactNode }) =>: any {
-
   return (
     <ThemeProvider attribute="class" default_theme="light">;
       {children}
-
     </ThemeProvider>);
 }
 ;
@@ -36,7 +33,6 @@ export const mockNextRouter = () =>: any ({
   default_locale: 'en',
   domain_locales: [],
   is_preview: false;
-=======
 
   },
   isFallback: false,
@@ -50,7 +46,6 @@ export const mockNextRouter = () =>: any ({
 export const createMockProps = (overrides = {}) => ({
 
 
-=======
     </ThemeProvider>;
   );
 },;
@@ -82,8 +77,4 @@ export const mockNextRouter = () => ({;
 ;
 export const createMockProps = (overrides = {}) =>: any ({
   ...overrides;
-
-
-
-
 });

@@ -1,9 +1,6 @@
-
 const { spawn } = require ('child_process'),
 console.log ('🚀 Starting development server...'),
-=======
 
-=======
 
 console.log('🚀 Starting development server...'),;
 
@@ -29,4 +26,3 @@ process.on ('SIGTERM', () => {
   dev_process.kill ('SIGTERM'),
   process.exit (0);
 }),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

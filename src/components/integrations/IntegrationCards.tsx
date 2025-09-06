@@ -1,12 +1,3 @@
-interface IntegrationCardProps {
-  title: string
-  description: string
-  icon: React.ReactNode
-  status?: 'connected' | 'disconnected' | 'pending'
-  href?: string
-  onConnect?: () => void
-
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -35,16 +26,14 @@ interface IntegrationCardProps {;
   href?: string;
   onConnect?: () => void;
 
-
-
-
-export function IntegrationCard({
-  title,
-  description,
-  icon,
-  status = "disconnected",
-  href,
-  onConnect}: IntegrationCardProps) {
+export function IntegrationCard(): any ({;
+  title,;
+  description,;
+  icon,;
+  status = 'disconnected',;
+  href,;
+  onConnect,;
+}: IntegrationCardProps) {;
   return (
     <Card className='overflow-hidden'>;
       <CardHeader className='pb-2'>;
@@ -84,7 +73,6 @@ export function IntegrationCard({
               target='_blank'
               rel='noopener noreferrer'
 
-
 import React from "react";
 import { logDebug } from '@/utils/productionLogger';
 import { Button } from "@/components/ui/button";
@@ -93,7 +81,6 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-
 
 interface IntegrationCardProps {
   title: string
@@ -128,20 +115,15 @@ interface IntegrationCardProps {;
   status?: "connected" | "disconnected" | "pending";
   href?: string;
   onConnect?: () => void;
-
-
-
 }
 
 export function IntegrationCard(): any ({;
   title;
   description;
   icon;
-
   status = "disconnected";
   href;
   onConnect}: IntegrationCardProps) {;
-
   return (
     <Card className="overflow-hidden">;
       <CardHeader className="pb-2">;
@@ -164,8 +146,6 @@ export function IntegrationCard(): any ({;
           ) : (;
             <Badge variant="outline">Not Connected</Badge>;
           )}
-
-
         </div>;
       </CardHeader>;
       <CardContent className="pb-4">;
@@ -184,7 +164,8 @@ export function IntegrationCard(): any ({;
         ) : (;
           <Button variant="default" className="w-full" onClick={onConnect}>;
             <span>Connect</span>;
-
+            <ArrowRight className="ml-1 && 1.5 h-3 && 3.5 w-3 && 3.5" />;
+          </Button>;
         </div>
       </CardHeader>
       <CardContent className="pb-4">
@@ -203,25 +184,25 @@ export function IntegrationCard(): any ({;
             <span>Connect</span>
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
           </Button>
-
         )}
-
-            <ArrowRight className="ml-1.5 h-3.5 w-3.5" />;
-          </Button>;
-        )}
-
       </CardFooter>;
     </Card>;
   );
 
-
-
-
-export function IntegrationCards() {
+export function IntegrationCards() {;
   return (
     <div className='grid md:grid-cols-3 gap-6'>;
       <IntegrationCard
-
+        title='Slack'
+        description='Send notifications and interact with Zion from Slack.'
+        icon={<Slack className='h-5 w-5' />}
+        onConnect={() => logDebug('Connect Slack clicked')}
+      />;
+      <IntegrationCard
+        title='Salesforce'
+        description='Sync leads and opportunities with Salesforce.'
+        icon={<Briefcase className='h-5 w-5' />}
+        onConnect={() => logDebug('Connect Salesforce clicked')}      />;
   );
 }
 
@@ -239,14 +220,13 @@ export function IntegrationCards() {
       <IntegrationCard
         title="Salesforce"
         description="Sync leads and opportunities with Salesforce."
-
-        icon={<Briefcase className="h-5 w-5" />}
-
-
-        onConnect={() => logDebug('Connect Salesforce clicked')}
-      />
-    </div>
-  )
+        icon = {<Briefcase className="h-5 w-5" />,}
+        onConnect = {() => logDebug('Connect Salesforce clicked'),}
+      />;
+      <IntegrationCard
+        title='Microsoft Teams'
+        description='Receive updates through Microsoft Teams.'
+        icon={<Users className='h-5 w-5' />}        onConnect={() => logDebug('Connect Teams clicked')}
       />;
     </div>;
   );
@@ -258,19 +238,14 @@ export function IntegrationCards() {
         description="Receive updates through Microsoft Teams."
         icon={<Users className="h-5 w-5" />}
         onConnect={() => logDebug('Connect Teams clicked')}
-
-
-}
-
-
+        icon = {<Users className="h-5 w-5" />,}
+        onConnect = {() => logDebug('Connect Teams clicked'),}
       />;
     </div>;
   );
 }
-
   );
 }
-
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import {
@@ -436,4 +411,3 @@ function IntegrationCards() {
       />;
     </div>);
 }
-;

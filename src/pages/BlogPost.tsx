@@ -1,38 +1,74 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import { SEO } from '@/components/SEO';
+import JsonLd from '@/components/JsonLd';
+import { Button } from '@/components/ui/button';
+import ImageWithRetry from '@/components/ui/ImageWithRetry';
+import {;
+  ArrowLeft,;
+  Calendar,;
+  Clock,;
+  ChevronLeft,;
+  ChevronRight,;
+  Share2,;
+  Facebook,;
+  Twitter,;
+  Linkedin,;
+} from 'lucide-react';
+import type { BlogPost as BlogPostType } from '@/types/blog';
+import { Separator } from '@/components/ui/separator';
+import ReactMarkdown from 'react-markdown';
+import { logErrorToProduction } from '@/utils/productionLogger';
+
+// Importing the sample blog posts - in a real app, you would fetch this from an API;
+import { BLOG_POSTS } from '@/data/blog-posts';
+import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
+import { fetchWithRetry } from '@/utils/fetchWithRetry';
+
+export default function BlogPost() {;
+  const router = useRouter();
+  const { slug } = router && router.query as { slug: string };
+  const [post, setPost] = useState<BlogPostType | null>(null);
+  const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
+  const [showShareMenu, setShowShareMenu] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const timedOut = useSkeletonTimeout(20000);
+
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
-
 import {logErrorToProduction} from '@/utils/productionLogger';
 // Importing the sample blog posts - in a real app, you would fetch this from an API;
-
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 export default function BlogPost() {;
-
-import { BLOG_POSTS } from "@/data/blog-posts"
-
-import { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import Link from 'next/link',
-import { SEO } from "@/components/SEO",
-import JsonLd from "@/components/JsonLd",
-import { Button } from "@/components/ui/button",
-import ImageWithRetry from '@/components/ui/ImageWithRetry',
-import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
-import type { BlogPost as BlogPostType } from "@/types/blog",
-import { Separator } from "@/components/ui/separator",
-import ReactMarkdown from 'react-markdown',
-import {logErrorToProduction} from '@/utils/productionLogger',
-// Importing the sample blog posts - in a real app, you would fetch this from an API
-import { BLOG_POSTS } from "@/data/blog-posts",
-import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
-import { fetchWithRetry } from '@/utils/fetchWithRetry',
-
-
-export default function BlogPost() {
-
 
 import { useState, useEffect } from 'react';
 import { use_router } from 'next / router';
@@ -108,28 +144,10 @@ function BlogPost() {
               p.tags.some (tag => data.tags.includes (tag)))).slice (0, 3);
         setRelatedPosts (related);
         setIsLoading (false);
-
         return } catch (err) {
         logErrorToProduction ('Failed to fetch blog post', { data: err });
         set_error ('Failed to load article');
       }
-
-
-        logErrorToProduction('Failed to fetch blog post', { data: err });
-        setError('Failed to load article');
-      };
-
-
-      const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
-        setPost(currentPost)
-        const related = BLOG_POSTS.filter(
-          p =>
-            p.id !== currentPost.id &&
-            (p.category === currentPost.category |
-              p.tags.some(tag => currentPost.tags.includes(tag)))
-        ).slice(0, 3)
-        setRelatedPosts(related) } else {
-        router.replace('/blog')
       const current_post = BLOG_POSTS.find (p => p.slug === slug);      // Check condition
 if ( {) {
   $2
@@ -242,7 +260,6 @@ export default function BlogPost() {;
       </div>
     )
   }
-  if (!post && (error |timedOut)) {
   if () {) {
   $2
 }
@@ -252,29 +269,17 @@ export default function BlogPost() {;
         <Button on_click={(, ) => router.reload ()}>Retry</Button>;
       </div>);
   }
-
   // If post is still null after loading, show not found;
   // Check condition
 if ( {) {
   $2
 }
-
     return (
       <div className='min - h-screen bg - zion - blue text - white p - 8 flex flex - col justify - center items - center space - y-4'>;
         <p > Article not found.</p>;
         <Button on_click={(, ) => router.push ('/blog')}>Back to Blog</Button>;
       </div>);
   }
-
-
-
-
-
-  // Helper function to get share URL
-  const getShareUrl = (platform: string) => {
-    if (!post) return ''
-    const url = encodeURIComponent(window.location.href)
-    const title = encodeURIComponent(post.title)
   // Helper function to get share URL;
   const getShareUrl = (platform: string) =>: any {
     // Check condition
@@ -286,7 +291,6 @@ if (return '') {
     switch (platform) {
       case 'facebook':        return `https://www.facebook.com / sharer / sharer.php?u=${url}`;
     switch (platform) {
-
       case 'facebook':;
         return `https://www.facebook.com / sharer / sharer.php?u=${url}`;
       case 'twitter':;
@@ -303,7 +307,6 @@ if (return '') {
     description: post.excerpt,
     image: post.featured_image,
     date_published: post.published_date,
-
     author: {
       '@type': 'Person'
       name: post.author.name
@@ -399,29 +402,21 @@ if (return '') {
       case 'facebook':;
 
 
+  const articleLd = {;
+    '@context': 'https://schema && schema.org',;
+    '@type': 'BlogPosting',;
+    headline: post && post.title,;
+    description: post && post.excerpt,;
+    image: post && post.featuredImage,;
+    datePublished: post && post.publishedDate,;
+    author: {;
+      '@type': 'Person',;
+      name: post && post.author.name,;
+    },;
+  };
 
-
-
-  const articleLd = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    headline: post.title,
-    description: post.excerpt,
-    image: post.featuredImage,
-    datePublished: post.publishedDate,
-    author: {
-
-
-      />
-      <JsonLd data={articleLd} />
-      <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
-        <div className="container mx-auto">
-          {/* Back to blog button */}
-          <div className='mb-8'>;
-            <Button
-              variant='outline'
-              className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
-
+  return (
+    <>;
       <SEO;
         title={post.title}
         description={post.excerpt}
@@ -444,10 +439,6 @@ if (return '') {
               </Link>;
             </Button>;
           </div>;
-
-
-          
-
           {/* Article header */}
           <div className='mb - 8 max - w-4xl mx - auto'>;
             <span className='text - sm text - zion - cyan bg - zion - blue - dark px - 3 py - 1 rounded - full inline - block mb - 4'>;
@@ -455,7 +446,6 @@ if (return '') {
             </span>;
             <h1 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
               {post.title}
-
               asChild>;
               <Link href='/blog'>;
                 <ArrowLeft className='mr-2 h-4 w-4' />;
@@ -474,7 +464,6 @@ if (return '') {
             </h1>;
             <p className='text-xl text-zion-slate-light mb-8'>{post && post.excerpt}</p>;
 
-
             {/* Author and metadata */}
             <div className='flex flex-col sm:flex-row sm:items-center justify-between mb-8'>;
               <div className='flex items-center mb-4 sm:mb-0'>;
@@ -482,7 +471,6 @@ if (return '') {
                   src={post && post.author.avatarUrl}
                   alt={post && post.author.name}
                   className='w-12 h-12 rounded-full mr-3'
-
                   fallbackSrc='/images/blog-placeholder && placeholder.svg'                />;
                 <div>;
                   <p className='text-white font-medium'>{post && post.author.name}</p>;
@@ -502,12 +490,10 @@ if (return '') {
                   <span className='text-sm'>{post && post.readTime}</span>;
                 </div>;
                 <div className='relative'>;
-
                   <Button
                     variant='ghost'
                     size='sm'
                     className='text-zion-slate-light hover:text-white hover:bg-zion-blue-dark'
-
                     onClick={() => setShowShareMenu(!showShareMenu)}                  >;
                     <Share2 className='h-4 w-4 mr-1' />;
                     <span className='text-sm'>Share</span>;
@@ -515,7 +501,6 @@ if (return '') {
 
                   {showShareMenu && (;
                     <div className='absolute right-0 top-full mt-2 bg-zion-blue-dark border border-zion-blue-light rounded-md p-2 z-10'>;
-
                       <a
                         href={getShareUrl('facebook')}
                         target='_blank'
@@ -548,7 +533,6 @@ if (return '') {
                       </a>;
                     </div>;
                   )}
-
             </h1>;
             <p className='text - xl text - zion - slate - light mb - 8'>{post.excerpt}</p>;
             {/* Author and metadata */}
@@ -617,12 +601,14 @@ if (return '') {
                         <span > LinkedIn</span>;
                       </a>;
                     </div>)}
-
                 </div>;
               </div>;
             </div>;
           </div>;
-
+          {/* Featured image */}
+          <div className='mb-12 max-w-5xl mx-auto'>;
+            <div className='aspect-[21/9] rounded-lg overflow-hidden'>;
+              <ImageWithRetry
                 src={post && post.featuredImage}
                 alt={post && post.featuredImageAlt || post && post.title}
                 className='object-cover w-full h-full'
@@ -729,11 +715,9 @@ if (return '') {
                   #{tag}
                 </span>;
               ))}
-
             </div>;
 
             <Separator className='my-12 bg-zion-blue-light' />;
-
 
             {/* Related articles */}
             {relatedPosts && relatedPosts.length > 0 && (;
@@ -750,9 +734,7 @@ if (return '') {
                         <ImageWithRetry
                           src={relatedPost && relatedPost.featuredImage}
                           alt={
-
                             relatedPost && relatedPost.featuredImageAlt || relatedPost && relatedPost.title
-
                           }
                           className='object-cover w-full h-full'
                           fallbackSrc='/images/blog-placeholder && placeholder.svg'                        />;
@@ -803,10 +785,8 @@ if (return '') {
               </div>;
             )}
 
-
             <div className='mt-12 text-center'>;
               <p className='text-zion-slate-light'>;
-
                 Ready to put these ideas into action? Explore our{' '}
                 <Link href='/services' className='text-zion-cyan underline'>;
                   AI services;
@@ -815,21 +795,6 @@ if (return '') {
                 <Link href='/talent' className='text-zion-cyan underline'>;
                   talent;
                 </Link>{' '}
-
-
-
-
-
-
-
-                Ready to put these ideas into action? Explore our{' '}
-                <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
-                or browse expert{' '}
-
-                <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
-
-              </p>
-            </div>
                 to accelerate your projects.;
               </p>;
             </div>;
@@ -839,7 +804,6 @@ if (return '') {
               <Button
                 variant='outline'
                 className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
-
           {/* Featured image */}
           <div className='mb - 12 max - w-5xl mx - auto'>;
             <div className='aspect-[21 / 9] rounded - lg overflow - hidden'>;
@@ -942,7 +906,88 @@ if (return '') {
                 </Link>;
               </Button>;
             </div>;
-
+          </div>;
+        </div>;
+      </div>;
+    </>);
+}
+outline"className=" border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white"as_child > <Link href=" /blog"> <ArrowLeft className=" mr - 2 h - 4 w - 4"/> Back to all articles </Link> </Button> </div> </div> <div className=" relative"> <Button > <Share2 className=" h - 4 w - 4 mr - 1"/> <span className=" text - sm">Share</span> </Button> <a href= {';
+  getShareUrl ('facebook') ";
+}target=" blank"rel=" noopener noreferrer"className=" flex items - center p - 2 hover:bg - zion - blue rounded transition - colors text - zion - slate - light hover:text - white"aria - label=" Share on Facebook"title=" Share on Facebook"> <Facebook className=" h - 4 w - 4 mr - 2"/> <span > Facebook</span> </Link> <a > <Twitter className=" h - 4 w - 4 mr - 2"/> <span > Twitter</span> </Link> <a > <Linkedin className=" h - 4 w - 4 mr - 2"/> <span > LinkedIn</span> </Link> </div>);
+}</div> </div> </div> </div> /> </div> </div> <ReactMarkdown> {
+  post.content;
+}</ReactMarkdown> </div> <span key= {
+  tag ";
+}className=" text - xs text - zion - slate - light bg - zion - blue - dark px - 3 py - 1 rounded - full"> # {
+  tag;
+}</span>) ) ";
+}</div> <Separator className=" my - 12 bg - zion - blue - light"/> > <div className=" aspect-[16 / 9] relative"> <ImageWithRetry </div> </Link>) );
+}</div> </div>) ";
+}<Button as_child > <Link href=" /blog"> <ChevronLeft className=" mr - 2 h - 4 w - 4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>);
+}'"import React from 'react';
+import { SEO } from '@/components / SEO';
+export default /**
+ * Page - Function description
+ */
+function Page() {
+    ], ,
+}
+  const format_date = (date_string: string) =>: any {
+    return new Date (date_string) .toLocaleDateString ('en - US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric', ,
+});
+}
+  const getCategoryIcon = (category: string) =>: any {
+    const category_icons: { [key: string]: any } = {
+      ai: Brain,
+      quantum: Cpu,
+      security: Shield,
+      cloud: Cloud,
+      business: TrendingUp,
+      iot: Network,
+      emerging: Zap, ,
+}
+    return category_icons[category] || BookOpen;
+}
+  const getCategoryName = (category: string) =>: any {
+    const category_names: { [key: string]: string } = {
+      ai: 'Artificial Intelligence',
+      quantum: 'Quantum Computing',
+      security: 'Cybersecurity',
+      cloud: 'Cloud & DevOps',
+      business: 'Business Insights',
+      iot: 'IoT & Edge',
+      emerging: 'Emerging Tech', ,
+}
+    return category_names[category] || 'Uncategorized';
+}
+  return (<div className="min - h - screen bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate -900">;
+      <SEO;
+        title={`${blog_post.title} - Zion Tech Group Blog`}
+        description={blog_post.excerpt}
+      />;
+      {/* Navigation */}
+      <section className="py - 6 bg - slate -800 / 50">;
+        <div className="container mx - auto px - 4">;
+          <Link;
+            to="/blog";
+            className="inline - flex items - center space - x - 2 text - cyan - 400 hover:text - cyan - 300 transition - colors duration -200">;
+            <ArrowLeft className="w - 4 h - 4" />;
+            <span > Back to Blog</span>;
+          </Link>;
+        </div>;
+      </section>;
+      {/* Article Header */}
+      <section className="py - 12">;
+        <div className="container mx - auto px - 4">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max - w - 4xl mx -auto">;
+            {/* Category and Featured Badge */}
                 asChild>;
                 <Link href='/blog'>;
                   <ChevronLeft className='mr-2 h-4 w-4' />;
@@ -1042,7 +1087,6 @@ export default function Page() {;
               </span>;
               {blogPost && blogPost.featured && (<span className="px-4 py-2 bg-yellow-500 / 20 text-yellow-400 text-sm rounded-full font -medium">;
                   Featured Article;
-
             <div className="flex items - center space - x - 3 mb - 6">;
               <span className="px - 4 py - 2 bg - cyan - 500 / 20 text - cyan - 400 text - sm rounded - full font - medium flex items - center space - x - 2">;
                 {React.create_element (getCategoryIcon (blog_post.category) , {
@@ -1055,11 +1099,9 @@ export default function Page() {;
                 </span>) }
             </div>;
             {/* Title */}
-
             <h1 className="text - 4xl md:text - 5xl font - bold text - white mb - 6 leading -tight">;
               {blog_post.title}
             </h1>;
-
             {/* Excerpt */}
             <p className="text - xl text - gray - 300 mb - 8 leading -relaxed">;
               {blog_post.excerpt}
@@ -1114,19 +1156,12 @@ export default function Page() {;
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
 
-            <h1 className="text-4xl md:text-5xl font - bold text-white mb-6 leading -tight">;
-              {blogPost && blogPost.title}
-            </h1>;
-
-
             {/* Excerpt */}
             <p className="text-xl text-gray - 300 mb-8 leading -relaxed">;
               {blogPost && blogPost.excerpt}
             </p>;
 
-
               className="prose prose - invert prose - lg max - w - none">;
-
               {/* Featured Image */}
               <div className="w - full h - 64 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded - 2xl border border - cyan - 400 / 30 flex items - center justify - center mb - 12">;
                 <div className="text - center">;
@@ -1135,7 +1170,6 @@ export default function Page() {;
                 </div>;
               </div>;
               {/* Article Content */}
-
                 // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: blogPost && blogPost.content }}
               />;
             </motion && motion.div>;
@@ -1152,7 +1186,6 @@ export default function Page() {;
               <span className="text-white font -medium">Tags:</span>;
               <div className="flex flex - wrap gap-2">;
                 {blogPost && blogPost.tags.map(tag => (<span
-
               <div;
                 className="text - gray - 300 leading -relaxed";
                 // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: blog_post.content }}
@@ -1180,14 +1213,12 @@ export default function Page() {;
         </div>;
       </section>;
       {/* Author Bio */}
-
       <section className="py - 12">;
         <div className="container mx - auto px - 4">;
           <div className="max - w - 4xl mx -auto">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
-
               transition={{ duration: 0.8 }}
               className="bg - slate - 800 / 50 p - 8 rounded - 2xl border border - slate -700 / 50">;
               <h3 className="text - 2xl font - bold text - white mb - 4">;
@@ -1268,7 +1299,6 @@ export default function Page() {;
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
-
       <section className="py-12">;
         <div className="container mx - auto px-4">;
           <div className="max - w-4xl mx -auto">;
@@ -1387,7 +1417,16 @@ export default function Page() {;
       </section>;
     </div>) ;
 }
-
+export default function BlogPost() {return (";
+    <div className = "min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">";
+      <SEO title="BlogPost - Zion Tech Group" description="Professional BlogPost services by Zion Tech Group"  />";
+      <div className="container mx-auto px-4 py-20">";
+        <h1 className="text-4xl font-bold text-white mb-8">BlogPost</h1>";
+        <p className="text-gray-300 text-lg">;
+          Professional BlogPost services to help your business grow.;
+        </p>;
+      </div>;
+  );
             className="text - center max - w - 4xl mx -auto">;
             <h2 className="text - 4xl font - bold text - white mb - 6">;
               Ready to Transform Your Business?;
@@ -1411,7 +1450,6 @@ export default function Page() {;
         </div>;
       </section>;
     </div>);
-
 }
 export default /**
  * BlogPost - Function description
@@ -1428,7 +1466,4 @@ function BlogPost() {return (";
 }
 }
 
-
-
 }
-;

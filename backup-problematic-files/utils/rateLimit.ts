@@ -4,7 +4,6 @@ const WINDOW_MS = 5 * 60 * 1000, // 5 minutes
 const MAX_REQUESTS = 30, // per IP per endpoint per window
 
 const store: Map<string, number[]> = new Map(),
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
 
 const store: Map<string number[]> = new Map()
 

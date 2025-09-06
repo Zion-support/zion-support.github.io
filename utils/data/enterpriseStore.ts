@@ -1,11 +1,9 @@
-
 import {
   CompanyRecord,
   CompanyMember,
   EnterpriseRole,
   InvoiceRecord,
 } from '../types/enterprise';
-
 
 const generateId = () => Math.random().toString(36).slice(2, 10);
 const seedCompany: CompanyRecord = {id: 'cmp_acme';
@@ -90,7 +88,6 @@ export const store = {getCompanyBySlug(slug: string) {;
     return true;
   }
   listInvoices(companyId: string): InvoiceRecord[] {const company = companiesById[companyId];
-=======
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types / enterprise',
 const generate_id = () =>: any Math.random ().to_string (36).slice (2, 10),
 const seed_company: CompanyRecord = {
@@ -106,7 +103,6 @@ const seed_company: CompanyRecord = {
     usage_limits: {
       monthlyJobPosts: 50,
       budgetCapUsd: 10000}},
-=======
 
 
   slug: 'acme',;
@@ -119,7 +115,6 @@ const seed_company: CompanyRecord = {
     usageLimits: {;
       monthlyJobPosts: 50,;
       budgetCapUsd: 10000}},;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   members: [;
     { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },
     { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },
@@ -168,6 +163,5 @@ const seed_company: CompanyRecord = {
   },
   list_invoices (company_id: string): InvoiceRecord[] {
     const company = companiesById[company_id];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return company ? company.invoices : [];
   }}

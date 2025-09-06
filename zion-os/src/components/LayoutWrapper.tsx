@@ -1,15 +1,3 @@
-
-
-"use client",;
-import { useWalkthroughTarget } from "./OnboardingWalkthrough",;
-import { useAuth } from "@/contexts/AuthContext",;
-import Link from "next/link",;
-export function LayoutWrapper({ children }: { children: React.ReactNode }) {;
-  const { user, isAuthenticated, logout } = useAuth();
-
-
-  return (;
-=======
 "use client",
 import { useWalkthroughTarget  } from './OnboardingWalkthrough';,
 import { use_auth  } from '@/contexts / AuthContext';,
@@ -20,7 +8,6 @@ export /**
 function LayoutWrapper() {
   const { user, is_authenticated, logout } = use_auth ();
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     <>;
       <nav className="border - b border - white / 10 sticky top - 0 z - 50 bg - zinc - 900 / 50 backdrop - blur" {...useWalkthroughTarget ("nav - menu")}>;
         <div className="max - w-6xl mx - auto px - 4 py - 3 flex items - center justify - between">;
@@ -48,15 +35,11 @@ function LayoutWrapper() {
                   Dashboard;
                 </Link>;
 
+                    Welcome, {user?.name || user?.email}
+
                 <div className="flex items - center gap - 3">;
                   <span className="text - sm text - zinc - 400">;
                     Welcome, {user?.name || user?.email}
-
-=======
-
-                    Welcome, {user?.name || user?.email}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </span>;
                   <button;
                     on_click={logout}

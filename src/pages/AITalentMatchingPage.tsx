@@ -1,3 +1,32 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from "react";
+import React from "react";
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
+import { Bot, Users, TrendingUp } from 'lucide-react'
+import { Star } from 'lucide-react';
+
 export default function AITalentMatchingPage() {;
   const benefits = [;
     {;
@@ -16,17 +45,6 @@ export default function AITalentMatchingPage() {;
       description: "Monitor performance and success rates of placements";
     }
   ];
-
-
-import React from "react",
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
-import { Bot, Users, TrendingUp } from 'lucide-react'
-
-export default function AITalentMatchingPage() {
-  const benefits = [
-    {
-
-
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
       icon: <Bot className = "h-8 w-8" />},
@@ -109,14 +127,9 @@ function AITalentMatchingPage() {
       benefits={benefits}
       features={features}
       stats={stats}
-
-    />;
-  );
-
+}
+}
       cta_text="Start Matching Talent";
       cta_link="/contact";
     />);
 }
-
-}
-;

@@ -1,11 +1,7 @@
-
   createTree: (leaves: string[]) => null,
   getProof: (tree: any, leaf: string) => [],
   verifyProof: (proof: any[], leaf: string, root: string) => false;
 };
-
-=======
-
 import crypto from 'crypto';
 
 export interface MerkleNode {
@@ -131,8 +127,5 @@ export function createMerkleTree(data: any[]): MerkleTree {
 export function verifyMerkleProof(leafData: any, proof: string[], rootHash: string): boolean {
   const tree = new MerkleTree([leafData]);
   return tree.verifyProof(leafData, proof, rootHash);
-
-
 }
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}

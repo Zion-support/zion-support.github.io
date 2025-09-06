@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface SmartContractBuilderProps {
 
   isOpen: boolean
@@ -35,7 +30,6 @@ interface SmartContractBuilderProps {;
 }
 
 export function SmartContractBuilder(): any ({;
-
   isOpen;
   onClose;
   talent;
@@ -45,47 +39,6 @@ export function SmartContractBuilder(): any ({;
 }: SmartContractBuilderProps) {;
   const [activeTab, setActiveTab] = useState<string>("form");
   const [generatedContract, setGeneratedContract] = useState<string | null>(null);
-
-}
-
-
-
-  onDeploy
-}: SmartContractBuilderProps) {
-  const [activeTab, setActiveTab] = useState<string>("form"),
-  const [generatedContract, setGeneratedContract] = useState<string | null>(null),
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
-    undefined
-  ),
-
-  const [templateManagerOpen, setTemplateManagerOpen] = useState(false),
-
-
-  const [deployOptions, setDeployOptions] = useState<DeploymentOptions>({
-
-    network: 'ethereum'
-    useEscrow: true
-
-    deployToChain: false
-
-
-  }),
-  const [deployStatus, setDeployStatus] = useState<string>(''),
-  const [deploymentInfo, setDeploymentInfo] = useState<SmartContractInfo | null>(null),
-  
-  const { generateSolidityContract, deploySmartContract, deploymentStatus } = useSmartContracts(),
-
-  const handleLoadTemplate = (templateData: ContractFormValues) => {
-    setFormValues(templateData)
-  },
-
-
-
-  // Convert ContractFormValues to contract content string
-  const handleContractGenerated = async (formValues: ContractFormValues) => {
-    if (!formValues) return
-    try {
-
   const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
     undefined;
   );
@@ -108,13 +61,11 @@ export function SmartContractBuilder(): any ({;
   const handleContractGenerated = async (formValues: ContractFormValues) => {;
     if (!formValues) return,;
     try {;
-
       const generatedContractText = await generateSolidityContract(formValues, talent, clientName);
       setGeneratedContract(generatedContractText);
       setActiveTab("preview");
       if (onContractGenerated) {;
         onContractGenerated(generatedContractText);
-=======
 import { useState } from './react';
 import { Dialog, DialogContent } from '@/components / ui / dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components / ui / tabs';
@@ -173,36 +124,7 @@ if ( {) {
   $2
 }
         onContractGenerated (generatedContractText);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
-
-      const generatedContractText = await generateSolidityContract(formValues, talent, clientName),
-      setGeneratedContract(generatedContractText),
-      setActiveTab("preview"),
-      if (onContractGenerated) {
-        onContractGenerated(generatedContractText)
-      }
-    } catch (error) {
-      console.error("Error generating contract:", error),
-      toast.error("Failed to generate smart contract")
-    }
-
-  },
-  
-  const handleDeployContract = async () => {
-    if (!generatedContract) return,
-    
-    try {
-      setDeployStatus('deploying'),
-      const contractInfo = await deploySmartContract(generatedContract, deployOptions),
-      
-
-
-      if (contractInfo) {
-        setDeploymentInfo(contractInfo);
-        setDeployStatus('deployed');
-        toast.success("Smart contract deployed successfully!")
-=======
 ;
   const handleDeployContract = async () => {
     // Check condition
@@ -220,7 +142,6 @@ if ( {) {
         setDeploymentInfo (contract_info);
         setDeployStatus ('deployed');
         toast.success ("Smart contract deployed successfully!");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
         setDeployStatus ('error');
         toast.error ("Failed to deploy smart contract");
@@ -230,7 +151,6 @@ if ( {) {
 
   };
 
-=======
       console.error("Error deploying contract:", error),
       setDeployStatus('error'),
       toast.error("Failed to deploy smart contract")
@@ -294,40 +214,6 @@ export function SmartContractBuilder({;
       console.error("Error generating contract:", error),;
       toast.error("Failed to generate smart contract");
     }
-  },;
-  const handleDeployContract = async () => {;
-    if (!generatedContract) return,;
-    try {;
-      setDeployStatus('deploying'),;
-      const contractInfo = await deploySmartContract(generatedContract, deployOptions),;
-      if (contractInfo) {;
-        setDeploymentInfo(contractInfo),;
-        setDeployStatus('deployed'),;
-        toast.success("Smart contract deployed successfully!");
-      } else {;
-        setDeployStatus('error'),;
-        toast.error("Failed to deploy smart contract");
-      }
-    } catch (error) {;
-      console.error("Error deploying contract:", error),;
-      setDeployStatus('error'),;
-      toast.error("Failed to deploy smart contract");
-    }
-  },;
-  // Modified to match the expected interface;
-  const handleFormSubmit = (contract: string) => {;
-    // This should be a function that takes a string (contract content);
-    // Since we need to adapt the interface, we'll implement the simplest solution that works;
-    if (onContractGenerated) {;
-      onContractGenerated(contract);
-    }
-    setGeneratedContract(contract),
-    setActiveTab("preview")
-  },
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -409,7 +295,7 @@ export function SmartContractBuilder({;
                 className="flex gap-1";
               >;
                 <Save className="h-4 w-4" />;
-=======
+  }
 ;
   // Modified to match the expected interface;
   const handleFormSubmit = (contract: string) =>: any {
@@ -442,20 +328,16 @@ if ( {) {
                 className="flex gap - 1";
               >;
                 <Save className="h - 4 w - 4" />;
-
                 Templates;
               </Button>;
             </div>;
           </div>;
 
-          <TabsContent value="form" className="pt - 4">;
-            <ContractForm;
-
-=======
-
             <ContractForm 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <ContractForm
+          <TabsContent value="form" className="pt - 4">;
+            <ContractForm;
               talent={talent}
               client_name={client_name}
               initial_values={form_values}
@@ -463,31 +345,25 @@ if ( {) {
               onContractGenerated={handleFormSubmit}
               deploy_options={deploy_options}
               onDeployOptionsChange={setDeployOptions}
-
             />;
           </TabsContent>;
 
           <TabsContent value="preview" className="pt-4">;
             {generatedContract && (;
               <div>;
-
                 <ContractPreview
-=======
 
                 <ContractPreview 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   generatedContract={generatedContract}
                   talent={talent}
                   onClose={onClose}
                   deployStatus={deployStatus}
                   deploymentInfo={deploymentInfo}
-
                 />;
 
                 {!deploymentInfo && deployOptions && deployOptions.deployToChain && (;
                   <div className="mt-6 flex justify-center">;
-
                     <Button
                       onClick={handleDeployContract}
                       disabled={deployStatus === 'deploying'}
@@ -498,23 +374,19 @@ if ( {) {
                 )}
               </div>;
             )}
-
           </TabsContent>;
         </Tabs>;
-
 
         <TemplateManager
           isOpen={templateManagerOpen}
           onClose={() => setTemplateManagerOpen(false)}
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
-
         />;
       </DialogContent>;
     </Dialog>;
   );
 }
-
             />;
           </TabsContent>;
           <TabsContent value="preview" className="pt - 4">;
@@ -549,8 +421,5 @@ if ( {) {
       </DialogContent>;
     </Dialog>);
 }
-
-=======
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

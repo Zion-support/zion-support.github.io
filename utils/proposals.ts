@@ -1,4 +1,3 @@
-
 export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
 export type ProposalIndexItem = {
   id: string,
@@ -8,5 +7,4 @@ export type ProposalIndexItem = {
   type: string,
   status: ProposalStatus,
   created_at: string;
-
 }

@@ -1,5 +1,4 @@
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -27,46 +26,36 @@ import React from "react";
 import Head from "next/head";
 
 
-=======
+
 
 import React from "react";
 import Head from "next/head";
+import Head from "next/head";
+import { useRouter } from "next/router";
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-
-
-=======
 import React from './react';
 import Head from './next / head';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface SEOProps {
-=======
 interface SEOProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title?: string;
   description?: string;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   keywords?: string;
 }
 
+  keywords?: string;
+}
 const SEO: React.FC < SEOProps> = ({
   title = "Zion Tech Group - Technology Solutions",
   description = "Leading provider of AI services, IT solutions, and micro SaaS development.",
   keywords = "AI services, IT solutions, micro SaaS, technology consulting",
-
 }) => {
-=======
 
 const SEO: React.FC<SEOProps> = ({;
   title = "Zion Tech Group - Technology Solutions",;
   description = "Leading provider of AI services, IT solutions, and micro SaaS development.",;
   keywords = "AI services, IT solutions, micro SaaS, technology consulting",;
 }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Head>;
       <title>{title}</title>;
@@ -76,43 +65,8 @@ const SEO: React.FC<SEOProps> = ({;
     </Head>;
   );
 
-
-};
-
-export default SEO;
-
-
-=======
-}
-=======
-  image?: string;
-  url?: string;
-  type?: string;
-
-export default function SEO({
-  title = "Zion Tech Group - Advanced AI Solutions",
-  description = "Leading provider of AI-powered automation, blockchain solutions, and enterprise software development.",
-  image = "/og-image.jpg",
-  url,
-  type = "website",
-}: SEOProps) {
-  const router = useRouter();
-  const canonicalUrl = url || `https://zion.app${router.asPath}`;
-
-  return (
-
-
 }
 export default SEO;
-
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
-}
-export default SEO;
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
     <Head>;
       <title>{title}</title>;
       <meta name="description" content={description} />;
@@ -123,4 +77,3 @@ export default SEO;
 ;
 export default SEO;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

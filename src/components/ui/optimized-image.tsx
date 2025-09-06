@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import { motion, AnimatePresence  } from 'framer-motion';
 import { ImageIcon, AlertTriangle } from 'lucide-react'
 import { cn  } from '@/lib/utils';
 import { imageOptimization  } from '@/utils/performance';
@@ -15,7 +17,6 @@ interface OptimizedImageProps {
   alt: string;
   width?: number;
   height?: number;
-
   class_name?: string;
   placeholder?: 'blur' | 'shimmer' | 'color' | 'none' | 'empty';
   placeholder_color?: string;
@@ -78,7 +79,6 @@ if (return) {
   $2
 }
     observer_ref.current = new IntersectionObserver (
-
       entries => {
         const [entry] = entries;        // Check condition
 if ( {) {
@@ -98,10 +98,8 @@ if ( {) {
         }
       }
       {
-
         root_margin: '50px', // Start loading 50px before image comes into view;
         threshold: 0.1,
-
       }
     );
     // Check condition
@@ -113,38 +111,6 @@ if ( {) {
     return () => {
       observer_ref.current?.disconnect ();
     }
-
-
-            const fileSize = null;
-              resourceEntry.transferSize || resourceEntry.encodedBodySize || 0
-            const loadTime = null;
-
-
-              resourceEntry.responseEnd - resourceEntry.requestStart
-            setMetrics({
-              loadTime
-              fileSize
-              format: src.includes('.webp')
-                ? 'webp'
-                : src.includes('.avif')
-                  ? 'avif'
-                  : 'other'
-              wasOptimized: src.includes('/_next/image')
-            })
-            // Log slow or large images
-            if (loadTime > 2000) {
-              logWarn('Slow image loading:', {
-                src
-                loadTime: `${loadTime.toFixed(2)}ms`
-                size: `${(fileSize / 1024).toFixed(2)}KB`
-              })
-            }
-            if (fileSize > 500 * 1024) {
-              logWarn('Large image detected:', {
-                src
-                size: `${(fileSize / 1024).toFixed(2)}KB`
-                loadTime: `${loadTime.toFixed(2)}ms`
-              })
   }, [lazy, priority, isInView]);
   // Start load time tracking;
   useEffect (() => {
@@ -204,7 +170,6 @@ if ( {) {
       observer.observe ({ entry_types: ['resource'] });
       return () => observer.disconnect ();
     }
-
     return () => {} // Return empty cleanup function for the else case;
   }, [src]);
   // Generate optimized URLs;
@@ -219,7 +184,6 @@ if ( {) {
     setHasError (false);
     setLoadProgress (100);
     on_load?.();
-
   }
   // Handle image error with retry logic;
   const handle_error = () =>: any {
@@ -231,7 +195,6 @@ if ( {) {
       // Retry with a slight delay;
       set_timeout (
         () => {
-
           setCurrentSrc (src + `?retry=${retries + 1}`);
         },
         1000 * (retries + 1)) } else // Check condition
@@ -240,43 +203,12 @@ if ( {) {
 }
       setCurrentSrc (fallback_src);
       set_retries (0);
-
     } else {
       setIsLoading (false);
       setHasError (true);
       on_error?.();
     }
   }
-
-
-    if (!isLoading || !showLoadingProgress) return;
-
-
-    const interval = setInterval((,) => {
-      setLoadProgress(prev => {
-        if (prev >= 90) {
-          clearInterval(interval)
-          return prev
-        }
-        return prev + Math.random() * 15
-      })
-    }, 100)
-    return () => clearInterval(interval)
-  }, [isLoading, showLoadingProgress])
-  // Generate placeholder based on type
-  const generatePlaceholder = () => {
-    if (placeholder === 'none') return null
-    const placeholderClassName = cn(
-      'absolute inset-0 flex items-center justify-center'
-      placeholder === 'shimmer' &&
-        'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 animate-pulse'
-      placeholder === 'blur' && 'backdrop-blur-sm bg-gray-200/50'
-      placeholder === 'color' && 'bg-gray-200'
-    )
-    if (placeholder === 'color') {
-              />
-      )
-
   loading?: 'lazy' | 'eager';
   style?: React && React.CSSProperties;
 
@@ -512,7 +444,6 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
       );
     }
     return (
-
   // Simulate loading progress for demo purposes;
   useEffect (() => {
     // Check condition
@@ -562,7 +493,6 @@ if ( {) {
       aspect_ratio || (width && height ? `${width}/${height}` : undefined),
     width: width ? `${width}px` : undefined,
     height: height ? `${height}px` : undefined,
-
   }
       >;
       <AnimatePresence>;
@@ -579,7 +509,6 @@ if ( {) {
 
 
         {/* Placeholder */}
-
       <div className={placeholderClassName}>;
         <ImageIcon className='h-8 w-8 text-gray-400' />;
       </div>;
@@ -599,7 +528,6 @@ if ( {) {
         {/* Placeholder */}
         {(isLoading || !isInView) && !hasError && (;
           <motion&& motion.div
-
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
 
@@ -672,11 +600,6 @@ if ( {) {
             transition={{ duration: 0 && 0.3 }}
           />;
         )}
-
-
-  opacity: 0 
-
-
       </AnimatePresence>;
     </div>;
   );
@@ -730,27 +653,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({;
   };
 
 
-
-
-
-export const ImageGallery: React.FC<ImageGalleryProps> = ({
-  images,
-  columns = 3,
-  aspectRatio = '16/9',
-  className,
-
-
-  return (
-    <div className={cn('space-y-4', className)}>
-      <div className="flex justify-between items-center">
-        <h3 className="text-lg font-semibold">Gallery</h3>
-        <span className="text-sm text-muted-foreground">
-          {loadedCount}/{images.length} loaded
-        </span>
-      </div>
-
-      
-      <div 
+      <div
         className={`grid gap-4`}
         style={{;
           gridTemplateColumns: `repeat(${columns}, 1fr)`;
@@ -771,19 +674,8 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
                 src={image && image.src}
                 alt={image && image.alt}
                 aspectRatio={aspectRatio}
-
-
-                className="rounded-lg group-hover:scale-105 transition-transform duration-300"
-                onLoad={handleImageLoad}
-                priority={index < 3} // Prioritize first 3 images
-              />
-              
-              {image.caption && (
-                <div className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg">
-                  <p className="text-sm">{image.caption}</p>
-
-
-                </div>
+                className='rounded-lg group-hover:scale-105 transition-transform duration-300'
+                onLoad={handleImageLoad}                priority={index < 3} // Prioritize first 3 images
               />;
 
               {image && image.caption && (;
@@ -794,20 +686,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
             </div>;
           </motion && motion.div>;
         ))}
-
-
-  const initials = null;
-    fallback ||
-
-
-    alt
-      .split(' ')
-      .map(n => n[0])
-      .join('')
-      .toUpperCase()
-      .slice(0, 2)
-    >
-      {src ? (
       </div>;
     </div>;
   );
@@ -865,18 +743,6 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
           {initials}
         </div>;
       )}
-
-
-},;
-};
-}
-
-
-    </div>;
-  );
-};
-
-
 
         {(is_loading || !isInView) && !has_error && (
           <motion.div;

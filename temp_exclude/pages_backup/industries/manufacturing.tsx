@@ -1,12 +1,9 @@
-
-
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-
 import {
   Settings,
   Brain,
@@ -21,7 +18,6 @@ import {
   FileText,
   Users;
 } from 'lucide-react';
-
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -90,8 +86,6 @@ const services = [
       'Scenario planning'';
     ];
   }
-
-
 ];
 const benefits = [
   {
@@ -114,8 +108,6 @@ const benefits = [
     description: 'Optimized operations and reduced waste lower manufacturing costs.,',
     icon: BarChart3,
   }
-
-
 ];
 export default function ManufacturingPage() {
   return (
@@ -126,7 +118,6 @@ export default function ManufacturingPage() {
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
-
         <section className="relative bg-gradient-to-br from-blue-900 via-cyan-900 to-teal-900 text-white py-20 overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
@@ -273,5 +264,4 @@ export default function ManufacturingPage() {
       </div>
     </Layout>
   );
-
 }

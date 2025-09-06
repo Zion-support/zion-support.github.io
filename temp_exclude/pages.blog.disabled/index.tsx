@@ -33,7 +33,5 @@ export default function Index(): any ({ }: IndexProps) {;
     </div>;
   );
 }
-
-
 }
 }

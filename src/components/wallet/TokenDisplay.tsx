@@ -1,5 +1,27 @@
-const { wallet, loading } = useWallet();
+import React from 'react';
+import { BadgeDollarSign } from 'lucide-react';
+import { useWallet } from '@/hooks/useWallet';
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardHeader,;
+  CardTitle,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import Skeleton from '@/components/ui/skeleton';
+export function TokenDisplay() {;
+  const { wallet, loading } = useWallet();
   return (
+
+import React from "react";
+import { BadgeDollarSign } from 'lucide-react'
+import { useWallet } from "@/hooks/useWallet";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Skeleton from "@/components/ui/skeleton";
+
+export function TokenDisplay() { const { wallet, loading  } = useWallet(),
 
 
   return (
@@ -32,26 +54,14 @@ const { wallet, loading } = useWallet();
 
 
             <div className="mt-2">
-
-
               <Button variant="outline" size="sm">
                 View Wallet
               </Button>
             </div>
           </div>
-
-
-
-
-import React from "react",;
-import { BadgeDollarSign } from 'lucide-react';
-import { useWallet } from "@/hooks/useWallet",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import Skeleton from "@/components/ui/skeleton",;
-export function TokenDisplay() {;
-  const { wallet, loading } = useWallet();
-  return (;
+        )}
+      </CardContent>
+    </Card>
     <Card>;
       <CardHeader className='flex flex-row items-center justify-between pb-2'>;
         <div>;
@@ -75,7 +85,6 @@ export function TokenDisplay() {;
             </p>;
             <div className='mt-2'>;
               <Button variant='outline' size='sm'>                View Wallet            <div className="mt-2">;
-
 import React from 'react';
 import { BadgeDollarSign } from 'lucide-react';
 import { use_wallet } from '@/hooks / use_wallet';
@@ -116,13 +125,19 @@ function TokenDisplay() {
             </p>;
             <div className='mt - 2'>;
               <Button variant='outline' size='sm'>                View Wallet            <div className="mt - 2">;
-
               <Button variant="outline" size="sm">;
                 View Wallet;
               </Button>;
             </div>;
-
-
-
+          </div>;
+        )}
+      </CardContent>;
+    </Card>;
+  );
 }
-;
+  );
+}
+          </div>)}
+      </CardContent>;
+    </Card>);
+}

@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -16,19 +15,20 @@ export default function ProfileDetail() {;
   // useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;
 
-  const { profileId } = useParams();
-  const [profileData, setProfileData] = useState<any>(null),
-  const [isLoading, setIsLoading] = useState(true);
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 
 
   useEffect(() => {;
     const fetchProfile = async () => {;
 
+  const { profileId } = useParams();
+  const [profileData, setProfileData] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {;
+    const fetchProfile = async () => {;
       setIsLoading(true);
       setError(null);
       try {;
@@ -36,17 +36,6 @@ export default function ProfileDetail() {;
           setError("Profile ID is missing.");
           return;
         }
-
-
-          .single(),
-
-
-
-        if (error) {
-          throw new Error(error.message)
-        }
-        if (!data) {
-=======
 
         const { data, error } = await supabase;
           .from("talent_profiles");
@@ -59,11 +48,9 @@ export default function ProfileDetail() {;
         }
 
         if (!data) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           setError("Profile not found.");
           return;
         }
-
 import { useState, useEffect } from './react';
 import { use_params } from './react-router-dom';
 import { supabase } from '@/integrations / supabase / client';
@@ -126,13 +113,10 @@ if ( {) {
           title: "Error",
           description: err.message || "Failed to fetch profile.",
           variant: "destructive"});
-
       } finally {
         setIsLoading (false);
       }
-
-
-=======
+    }
 
     },
 
@@ -233,7 +217,6 @@ export default function ProfileDetail() {;
   }, [profileId]);
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <p>Loading profile...</p>;
@@ -241,9 +224,7 @@ export default function ProfileDetail() {;
     );
   }
 
-
   if (error) {;
-
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <p>Error: {error}</p>;
@@ -251,9 +232,7 @@ export default function ProfileDetail() {;
     );
   }
 
-
   if (!profileData) {;
-
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <p>Profile not found.</p>;
@@ -264,28 +243,17 @@ export default function ProfileDetail() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  if (!profileData) {;
   return (
     <>;
       <SEO
-
-        title={`${profileData.full_name} | Zion AI Marketplace`}
-
-        description={profileData.bio || "Check out this talent's profile on Zion!"}
-
-
-      />
-      <Header />
-      <div className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-12 gap-6">
-=======
         title={`${profileData && profileData.full_name} | Zion AI Marketplace`}
         description={profileData && profileData.bio || "Check out this talent's profile on Zion!"}
       />;
       <Header />;
       <div className="container mx-auto px-4 py-8">;
         <div className="grid grid-cols-12 gap-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Main Content */}
           <div className="col-span-12 lg:col-span-8">;
             {/* Profile Header */}
@@ -307,7 +275,6 @@ export default function ProfileDetail() {;
                       )}
                     </CardTitle>;
                     <CardDescription className="text-zion-cyan">{profileData && profileData.professional_title}</CardDescription>;
-=======
 ;
     fetch_profile ();
   }, [profile_id]);
@@ -366,19 +333,10 @@ if ( {) {
                         <CheckCircle2 className="w - 5 h - 5 text - zion - cyan" />)}
                     </CardTitle>;
                     <CardDescription className="text - zion - cyan">{profile_data.professional_title}</CardDescription>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </div>;
                 </div>;
               </CardHeader>;
               <CardContent>;
-
-
-                </div>;
-              </CardContent>;
-            </Card>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -421,7 +379,6 @@ if ( {) {
                 )}
               </CardContent>
             </Card>
-=======
                 </div>;
               </CardContent>;
             </Card>;
@@ -471,7 +428,6 @@ if ( {) {
               </CardContent>;
             </Card>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Portfolio Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
               <CardHeader>;
@@ -486,28 +442,22 @@ if ( {) {
                         href={link && link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-
                         className="text-zion-cyan hover:text-white flex items-center gap-2">;
                         <LinkIcon className="h-4 w-4" />;
                         {link && link.title || link && link.url}
                       </a>;
 
-=======
-
                         {link.title || link.url}
                       </Link>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
                   </div>;
                 ) : (;
                   <p className="text-zion-slate-light">No portfolio links provided.</p>;
                 )}
-
               </CardContent>;
             </Card>;
           </div>;
-
 
           {/* Sidebar with HireNowCTA */}
           <div className="col-span-4 lg:col-span-1">;
@@ -547,13 +497,9 @@ if ( {) {
                     </a>;
                   </div>;
                 )}
-
               </div>;
             </div>;
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
               <h3 className="text-xl font-bold mb-4">Social</h3>;
@@ -576,8 +522,6 @@ if ( {) {
                     LinkedIn;
                   </a>;
                 )}
-
-=======
                 <div className="flex flex - wrap gap - 4 text - sm">;
                   {profile_data.location && (
                     <div className="flex items - center text - zion - slate - light">;
@@ -711,8 +655,6 @@ if ( {) {
                     <Linkedin className="h - 4 w - 4" />;
                     LinkedIn;
                   </a>)}
-
-=======
                 {profileData.linkedin_url && (
                   <a href={profileData.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">
                     <Linkedin className="h-4 w-4" />
@@ -720,19 +662,15 @@ if ( {) {
 
                   </Link>
                 )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
       <Footer />;
+;
+
+;
 
     </>);
 }
-
-=======
-;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

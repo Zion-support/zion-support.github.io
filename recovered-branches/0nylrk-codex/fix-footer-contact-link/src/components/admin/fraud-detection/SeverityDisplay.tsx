@@ -1,5 +1,3 @@
-
-
 import React from './react';
 import { SeverityIndicator  } from '@/components / ui / severity - indicator';
 interface SeverityDisplayProps {
@@ -7,16 +5,12 @@ interface SeverityDisplayProps {
 }
 export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
   severity,
-
 }) => {
-=======
 
 export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({;
   severity,;
 }) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-
     <SeverityIndicator;
       severity={severity as "safe" | "suspicious" | "dangerous"}
       show_icon={true}
@@ -25,16 +19,17 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({;
 }
 ;
 
-=======
 
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface SeverityDisplayProps {
   severity: string
 }
 
 
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
+
+
+

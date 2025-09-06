@@ -1,17 +1,6 @@
 
 
-'),
 
-
-      if (parts.length > 1) {
-        // Take the content after the conflict resolution
-        backupContent = parts[1].split('>>>>>>>')[0]
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     }
     // Clean up the content
@@ -39,7 +28,6 @@
       backupUsed: backupPath
 
       corruptedBackup: corruptedBackupPath
-=======
 '),
       // Check condition
 if ( {) {
@@ -62,64 +50,24 @@ if ( {) {
     const corruptedBackupPath = `${page_path}.corrupted.${timestamp}`,
     fs.writeFileSync (corruptedBackupPath, current_content),
     // Restore the page;
-
-    fs.writeFileSync(pagePath, backupContent),;
-    return {;
-      restored: true,;
-      backupUsed: backupPath,;
-      corruptedBackup: corruptedBackupPath;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    fs.writeFileSync (page_path, backup_content),
+    return {
+      restored: true,
+      backup_used: backup_path,
+      corrupted_backup: corruptedBackupPath;
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
   }
 }
-
-
-
-
-// Function to fix specific corrupted pages
-function fixSpecificPages() {
-  const results = {
-
-    total: corruptedPages.length
-    restored: 0
-    failed: 0
-    details: []
-
-
-  },
-
-
-  for (const pagePath of corruptedPages) {
-    if (!fs.existsSync(pagePath)) {
-      console.log(`⚠️  Page not found: ${pagePath}`)
-      results.failed++
-
-      results.details.push({
-        file: pagePath
-        restored: false
-        reason: 'Page not found'
-
-      })
-      continue
-    }
-
-
-    // // // console.log(`\n🔍 Checking: ${pagePath}`),
-=======
-    
-    console.log(`\n🔍 Checking: ${pagePath}`),
-=======
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
 
 
     const result = restorePage(pagePath),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    // // // console.log(`\n🔍 Checking: ${pagePath}`),
+
+
+    const result = restorePage(pagePath),
     if (result.restored) {
       results.restored++
       console.log(`✅ Restored: ${pagePath}`)
@@ -202,7 +150,6 @@ if ( {) {
 }
   fixSpecificPages ();
 }
-=======
 
 ;
 module.exports = {;
@@ -210,21 +157,16 @@ module.exports = {;
   fixSpecificPages,;
   findBestBackup;
 };
-=======
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 module.exports = {
   restore_page,
   fixSpecificPages,
   findBestBackup;
 
 
-};
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+},
+;

@@ -1,13 +1,3 @@
-import * as React from "react"
-import { PanelLeft } from 'lucide-react'
-
-
-export const SidebarTrigger = React.forwardRef<
-  React.ElementRef<typeof Button>
-  React.ComponentProps<typeof Button>
->((props, ref) => {
-  const { toggleSidebar } = useSidebar()
-
 import * as React from &quot;react & quot;
 import { PanelLeft } from 'lucide-react';
 import { Button } from &quot;@/components / ui / button & quot;
@@ -19,7 +9,6 @@ export const SidebarTrigger = React.forward_ref<;
   React.ComponentProps < typeof Button>;
 >((props, ref) => {
   const { toggle_sidebar } = use_sidebar ();
-
   return (
     <Button;
       ref={ref}
@@ -44,7 +33,6 @@ export const SidebarTrigger = React.forward_ref<;
         toggleSidebar()
       }}
       {...props}
-
     >;
       <PanelLeft />;
       <span className=&quot;sr - only & quot;>Toggle Sidebar</span>;
@@ -52,6 +40,3 @@ export const SidebarTrigger = React.forward_ref<;
 });
 SidebarTrigger.display_name = &quot;SidebarTrigger & quot;
 ;
-
-
-SidebarTrigger.displayName = "SidebarTrigger"

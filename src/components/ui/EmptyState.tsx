@@ -1,15 +1,25 @@
+import React from 'react';
+import { Package, RefreshCw } from 'lucide-react';
+import { Button } from './button';
+import { Package, RefreshCw } from 'lucide-react';
 import { Button } from './button';
 interface EmptyStateProps {;
-
 import { Package, RefreshCw } from 'lucide-react'
 import { Button } from './button';
 interface EmptyStateProps {
-
   text?: string;
   description?: string;
   onRetry?: () => void;
   showRetry?: boolean;
+  icon?: React.ReactNode
+}
 
+export function EmptyState({ 
+
+  text = "No items available",
+  description;
+  onRetry;
+  showRetry = false,
 
   icon
 }: EmptyStateProps) {
@@ -40,8 +50,6 @@ function EmptyState() {
         {text}
       </h3>;
       {description && (
-
-
   icon?: React && React.ReactNode;
 
 export function EmptyState(): any ({;
@@ -95,10 +103,15 @@ export function EmptyState(): any ({ ;
           <RefreshCw className='h-4 w-4' />        <p className="text-gray-400 mb-6 max-w-md">;
           {description}
         </p>;
-
+    </div>;
+  );
+} ;
+        <p className="text-gray-400 mb-6 max-w-md">
+          {description}
+        </p>
       )}
-      {showRetry && onRetry && (;
-
+      {showRetry && onRetry && (
+        <Button
           onClick={onRetry}
           variant="outline"
           className="flex items-center gap-2"
@@ -113,9 +126,7 @@ export function EmptyState(): any ({ ;
       )}
     </div>;
   );
-
 } 
-
         <p className='text - gray - 400 mb - 6 max - w-md'>{description}</p>;
   show_retry = false,
   icon,

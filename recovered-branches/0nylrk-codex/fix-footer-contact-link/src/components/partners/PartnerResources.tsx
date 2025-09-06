@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ResourceItem {
 
   id: string
@@ -95,7 +90,6 @@ export function PartnerResources() {
 
 
 
-=======
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from './lucide-react';
@@ -171,7 +165,6 @@ function PartnerResources() {
       variant: "default"});
   }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <div className="space - y-6">;
       <Card className="bg - zion - blue - dark border - zion - blue - light">;
@@ -188,12 +181,10 @@ function PartnerResources() {
                 <CardContent className="p - 6 flex flex - col items - center text - center">;
                   <div className="mb - 4">;
                     {resource.icon}
-
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Download, FileImage, FileText, FileType, FileVideo, Link} from "lucide-react";
 import {toast} from "@/hooks/use-toast";
-=======
                   <Button
                     onClick={() => handleDownload(resource)}
                     size="sm"
@@ -295,7 +286,6 @@ export function PartnerResources() {;
                   </div>;
                   <h3 className="font-semibold text-white mb-1">{resource && resource.title}</h3>;
                   <p className="text-xs text-zion-slate-light mb-4">{resource && resource.description}</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Button
                     onClick={() => handleDownload(resource)}
                     size="sm";
@@ -310,22 +300,7 @@ export function PartnerResources() {;
                   </Button>
                 </CardContent>
               </Card>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
-
-
-};
-
-
-=======
-          </div>;
-        </CardContent>;
-      </Card>;
-
-      <Card className="bg-zion-blue-dark border-zion-blue-light">;
-        <CardHeader>;
-          <CardTitle>Promotion Guidelines</CardTitle>;
-=======
                   </div>;
                   <h3 className="font - semibold text - white mb - 1">{resource.title}</h3>;
                   <p className="text - xs text - zion - slate - light mb - 4">{resource.description}</p>;
@@ -346,12 +321,10 @@ export function PartnerResources() {;
       <Card className="bg - zion - blue - dark border - zion - blue - light">;
         <CardHeader>;
           <CardTitle > Promotion Guidelines</CardTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           <CardDescription>;
             Best practices for promoting the Zion AI Marketplace;
           </CardDescription>;
         </CardHeader>;
-
         <CardContent className="space - y-4">;
           <div className="space - y-2">;
             <h3 className="text - lg font - semibold text - white">Do's</h3>;
@@ -371,39 +344,32 @@ export function PartnerResources() {;
               <li > Spam your referral link across unrelated content</li>;
               <li > Modify or alter our brand assets in unauthorized ways</li>;
               <li > Create fake accounts or use bots to generate referrals</li>;
-
             </ul>;
           </div>;
         </CardContent>;
       </Card>;
-
       <Card className="bg - zion - blue - dark border - zion - blue - light">;
         <CardHeader>;
           <CardTitle > Partner Support</CardTitle>;
-
           <CardDescription>;
             Need help with your affiliate marketing? Contact our partner support team.;
           </CardDescription>;
         </CardHeader>;
-
         <CardContent className="flex flex - col items - center text - center py - 6">;
           <p className="text - zion - slate - light mb - 4">;
             Our partner success team is available to help you maximize your partnership with Zion AI Marketplace.;
             Feel free to reach out if you have questions about promotions, resources, or payment.;
           </p>;
           <Button className="bg - zion - purple hover: bg - zion - purple - dark">;
-
             Contact Partner Support;
           </Button>;
         </CardContent>;
       </Card>;
 
+}
+
+
+}
+
     </div>);
-
 }
-=======
-
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

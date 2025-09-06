@@ -23,26 +23,26 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState, useRef, useEffect } from 'react';
 
+
+
 import Link from 'next / link';
 ;
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
 }
 const SearchBar: React.FC = () => {
-=======
 
 interface SearchResult {;
   title: string, description: string,;
   url: string, type: 'service' | 'page' | 'category',;
 }
-
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const searchRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 const SearchBar: React.FC = () => {
   const [query, set_query] = useState ('');
   const [results, set_results] = useState < SearchResult[]>([]);
@@ -71,7 +71,6 @@ const SearchBar: React.FC = () => {
       url: '/it - services',
       type: 'category',
     },
-
     {
       title: 'Cloud Cost Guard'
       description: 'FinOps Assistant for anomaly detection and cost optimization'
@@ -91,7 +90,6 @@ const SearchBar: React.FC = () => {
       type: 'page'
     }
   ];
-
 
   // Mock search data - in a real app, this would come from an API;
   const searchData: SearchResult[] = [;
@@ -138,10 +136,8 @@ const SearchBar: React.FC = () => {
       setResults([]);
       setIsOpen(false);
       return,;
-
     }
     setIsLoading(true);
-
 
     // Simulate API delay;
     await new Promise(resolve => setTimeout(resolve, 300));
@@ -149,12 +145,10 @@ const SearchBar: React.FC = () => {
     const filteredResults = searchData && searchData.filter(item =>;
       item && item.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||;
       item && item.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase());
-
     );
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
-
   };
 
   const handleInputChange = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
@@ -186,7 +180,6 @@ const SearchBar: React.FC = () => {
     return () => {;
       document && document.removeEventListener('mousedown', handleClickOutside);
     };
-
   }, []);
   return (
     <div ref={searchRef} className="relative w-full max-w-md">;
@@ -219,9 +212,7 @@ const SearchBar: React.FC = () => {
             <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-500"></div>;
           </div>;
         )}
-
       </div>;
-
 
       {/* Search Results Dropdown */}
       {isOpen && (;
@@ -262,7 +253,7 @@ const SearchBar: React.FC = () => {
       )}
     </div>;
   );
-
+}
 ;
   const handle_search = async (search_query: string) => {
     if () {) {
@@ -392,10 +383,7 @@ if ( {) {
 }
 ;
 
-=======
-
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default SearchBar;

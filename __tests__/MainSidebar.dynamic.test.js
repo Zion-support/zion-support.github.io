@@ -1,15 +1,4 @@
 
-
-import React from 'react';
-
-
-
-
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -19,10 +8,9 @@ describe('MainSidebardynamic'
 
 });
 
-=======
+import React from 'react';
+});
     expect(screen && screen.getByTestId('mainsidebar ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import MainSidebardynamic from "./components/MainSidebar ; describe('MainSidebardynamic', () => { test("renders without crashing",() => { render(<MainSidebardynamic />); expect(screen && screen.getByTestId("mainsidebar && mainsidebar.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<MainSidebardynamic />)}); test("handles user interactions",() => { render(<MainSidebardynamic />)}); test("applies correct styling"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 describe('MainSidebar', () => {
   test('renders without crashing', () => {
@@ -45,8 +33,6 @@ describe('MainSidebar', () => {
     // Add styling tests here
   });
 });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
-=======
 import { render, screen } from '@testing - library / react';
 import '@testing - library / jest - dom';
 import MainSidebar from '../components / MainSidebar.dynamic';
@@ -58,4 +44,3 @@ describe ('MainSidebar', () => {
   test ('displays navigation items', () => {
     // Test navigation items;
 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

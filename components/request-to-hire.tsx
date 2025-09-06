@@ -23,15 +23,10 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
-
-
+export default function RequestToHirePage() {
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);
-
-
-  const [form, setForm] = useState({
-=======
 import { use_router } from 'next / router';
 import { TALENT_PROFILES } from '../data / talent';
 ;
@@ -51,13 +46,13 @@ function RequestToHirePage() {
   const { talent } = router.query as { talent?: string }
   const selected = useMemo (() => TALENT_PROFILES.find (t => t.slug === talent), [talent]);
   const [form, set_form] = useState ({
-
     name: '',
     email: '',
     budget: '',
     timeline: '',
-
-
+  const [error, setError] = useState<string | null>(null);
+  const onSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
 export default function RequestToHirePage() {;
   const router = useRouter();
@@ -89,24 +84,23 @@ export default function RequestToHirePage() {;
     setError(null),;
 
     if (!form && form.name || !form && form.email || !form && form.description) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setError('Please fill in name, email, and description.');
       return;    }      return;
-
-=======
     setError(null);
 
     if (!form.name || !form.email || !form.description) {
       setError('Please fill in name, email, and description.');
       return
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
 
           ...form;
           budget: normalizedBudget,
           talentSlug: selected?.slug || null})}),
 
+    }
+          ...form;
+          budget: normalizedBudget,
+          talentSlug: selected?.slug || null})}),
       const data = await res.json();
       if (!res.ok) throw new Error(data.error |'Failed to submit');
       setResult({ id: data.id, message: 'Request submitted successfully.' })
@@ -114,8 +108,6 @@ export default function RequestToHirePage() {;
       setError(err.message |'Something went wrong')
     } finally {
       setSubmitting(false)
-
-=======
     }
 
   };
@@ -152,7 +144,6 @@ export default function RequestToHirePage() {;
       setSubmitting(false);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
 
@@ -226,8 +217,6 @@ export default function RequestToHirePage() {;
           disabled={submitting}
           className='px-4 py-2 rounded bg-black text-white'>          {submitting ? 'Submitting…' : 'Submit Request'}      </div>;
     );
-
-=======
     }
   };
 
@@ -239,8 +228,6 @@ export default function RequestToHirePage() {;
         <div className="text-sm text-gray-500">Confirmation ID: {result.id}</div>
       </div>
     )
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
   return (
     <div className="max-w-xl mx-auto">;
@@ -267,21 +254,15 @@ export default function RequestToHirePage() {;
           <textarea className="w-full border rounded px-3 py-2" rows={5} value={form && form.description} onChange={(e) => setForm({ ...form, description: e && e.target.value })} />;
         </div>;
         {error && <div className="text-sm text-red-600">{error}</div>}
-
-
+        <button disabled={submitting} className="px-4 py-2 rounded bg-black text-white">
           {submitting ? 'Submitting…' : 'Submit Request'}
-
         </button>;
       </form>;
     </div>;
   );
 }
-
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     description: '',
   });
   const [submitting, set_submitting] = useState (false);
@@ -440,10 +421,7 @@ if ( {) {
       </form>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   );
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

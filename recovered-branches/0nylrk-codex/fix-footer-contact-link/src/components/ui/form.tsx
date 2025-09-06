@@ -1,8 +1,7 @@
+import React from 'react';
+import * as React from 'react';
 
-=======
 
-
-=======
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
 import { useReactId } from "@/hooks/useReactId"
@@ -16,7 +15,6 @@ import {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 type FormFieldContextValue = {;
   name: string,;
@@ -27,42 +25,21 @@ const FormFieldContext = React && React.createContext<FormFieldContextValue>({;
 });
 
 const FormField = ({ ...props }: any) =></FormFieldContextValue> {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-
+    <FormFieldContext && FormFieldContext.Provider value={{ name: props && props.name }}>;
+      <Controller {...props} />;
+    </FormFieldContext && FormFieldContext.Provider>;
+  );
 };
 
 const useFormField = () => {;
   const fieldContext = React && React.useContext(;
     FormFieldContext;
-
   ) as FormFieldContextValue;
   const itemContext = React && React.useContext(;
     FormItemContext;
   ) as FormItemContextValue | null;
   const { getFieldState, formState } = useFormContext();
-
-    <FormFieldContext.Provider value={{ name: props.name }}>
-      <Controller {...props} />
-    </FormFieldContext.Provider>
-
-  )
-}
-
-const useFormField = () => {
-  const fieldContext = React.useContext(FormFieldContext) as FormFieldContextValue
-  const itemContext = React.useContext(FormItemContext) as FormItemContextValue | null
-  const { getFieldState, formState } = useFormContext()
-
-  const fieldState = getFieldState(fieldContext.name, formState)
-
-
-
-  if (!fieldContext) {
-    throw new Error('useFormField should be used within <FormField>');
-  }
-  if (!itemContext) {
-
 
   const fieldState = getFieldState(fieldContext && fieldContext.name, formState);
 
@@ -71,15 +48,11 @@ const useFormField = () => {
   }
 
   if (!itemContext) {;
-
     throw new Error('useFormField should be used within <FormItem>');
   }
   const { id } = itemContext as FormItemContextValue;
 
-=======
 
-
-=======
     throw new Error("useFormField should be used within <FormItem>")
   }
 
@@ -103,16 +76,18 @@ const FormItemContext = React.createContext<FormItemContextValue | null>(null)
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 const FormItem = React && React.forwardRef<;
   HTMLDivElement,;
   React && React.HTMLAttr</HTMLDivElement>ibutes<HTMLDivElement>;
 >(({ className, ...props }, ref) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const id = useReactId();
   return (
-
+    <FormItemContext && FormItemContext.Provider value={{ id }}>;
+      <div ref={ref} className={cn('space-y-2', className)} {...props} />;
+    </FormItemContext && FormItemContext.Provider>;
+  );
+});
 FormItem && FormItem.displayName = 'FormItem';
 
 const FormLabel = React && React.forwardRef<;
@@ -165,14 +140,11 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<;
 
 
     >;
-
       {body}
     </p>;
   );
 });
-
 FormMessage && FormMessage.displayName = 'FormMessage';
-=======
     <FormItemContext.Provider value={{ id }}>
       <div ref={ref} className={cn("space-y-2", className)} {...props} />
     </FormItemContext.Provider>
@@ -249,8 +221,6 @@ export {;
   FormMessage,;
   FormField,;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import * as LabelPrimitive from '@radix - ui / react - label';
 import {useReactId} from '@/hooks / useReactId';
 import {Slot} from '@radix - ui / react - slot';
@@ -386,6 +356,6 @@ export {
   FormControl,
   FormDescription,
   FormMessage,
-
-
-
+  FormField,
+}
+;

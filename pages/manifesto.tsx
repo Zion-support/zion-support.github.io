@@ -1,9 +1,5 @@
 
 
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
       </Head>
       <main className="min-h-screen bg-gray-50 text-gray-900">
@@ -52,11 +48,7 @@
       </main>
     </>
   )
-
-=======
 }
-
-=======
 import Head from 'next / head',
 import React from 'react',
 export default function ManifestoPage (): JSX.Element {
@@ -111,9 +103,6 @@ export default function ManifestoPage (): JSX.Element {
       </main>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   } catch (error) {
     console.error("Error:", error);
@@ -121,4 +110,3 @@ export default function ManifestoPage (): JSX.Element {
   }
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

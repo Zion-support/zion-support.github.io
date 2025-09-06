@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { render, screen } from '@testing - library / react';
 import '@testing - library / jest - dom';
 ;
@@ -11,6 +10,5 @@ describe ('Simple Test', () => {
 ;
   test ('basic math works', () => {
     expect (2 + 2).to_be (4);
-
   });
 });

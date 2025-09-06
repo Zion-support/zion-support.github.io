@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
@@ -62,10 +57,8 @@ import {HeroSection} from "@/components/HeroSection";
 import {QuickAccess} from "@/components/home/QuickAccess";
 import {FeatureCTAs} from "@/components/home/FeatureCTAs";
 import {FeatureHighlights} from "@/components/home/FeatureHighlights";
-=======
 
 
-=======
 import React from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -99,7 +92,6 @@ export default function Home() {;
 
       <FeatureHighlights />;
 
-=======
 import React from 'react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -130,19 +122,14 @@ function Home() {
       <QuickAccess />;
       <FeatureCTAs />;
       <FeatureHighlights />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       <CategoriesSection />;
       <BenefitsSection />;
       <HowItWorksSection />;
       <FeaturedListingsSection />;
       <NewsletterSection />;
       <Footer />;
-
-    </div>);
-}
-
-=======
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </div>);
+}

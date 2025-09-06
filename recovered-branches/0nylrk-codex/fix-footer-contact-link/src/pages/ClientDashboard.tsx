@@ -1,4 +1,3 @@
-
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -17,7 +16,6 @@ import {ActiveProjectsCard} from "@/components/projects/ActiveProjectsCard";
 import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
 import {useIsMobile} from "@/hooks/use-mobile";
 function ClientDashboardContent() {;
-
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
 
@@ -25,43 +23,13 @@ function ClientDashboardContent() {;
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
 
-
   // Set the first job as selected when jobs are loaded (if any);
   useEffect(() => {;
     if (jobs && jobs.length > 0 && !selectedJobId) {;
-
       setSelectedJobId(jobs[0].id);
       setSelectedJobTitle(jobs[0].title);
     }
   }, [jobs, selectedJobId]);
-
-
-
-function ClientDashboardContent() {
-  const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
-  const { jobs, isLoading } = useJobs(),
-  const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
-  const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
-  const isMobile = useIsMobile(),
-
-
-  // Set the first job as selected when jobs are loaded (if any)
-  useEffect(() => {
-    if (jobs.length > 0 && !selectedJobId) {
-      setSelectedJobId(jobs[0].id),
-      setSelectedJobTitle(jobs[0].title)
-    }
-
-  }, [jobs, selectedJobId]),
-
-
-  const handleJobSelect = (jobId: string, jobTitle: string) => {
-    setSelectedJobId(jobId)
-    setSelectedJobTitle(jobTitle)
-
-  },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <>
@@ -124,7 +92,6 @@ function ClientDashboardContent() {
             <div className="sticky top-4 space-y-6">
 
 
-=======
 
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader",;
@@ -228,7 +195,6 @@ function ClientDashboardContent() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
 
@@ -250,9 +216,7 @@ function ClientDashboardContent() {;
                       Select a job to see AI-matched talent suggestions;
                     </p>;
                   </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
-=======
 import { useState, useEffect } from './react';
 import { AppHeader } from '@/layout / AppHeader';
 import { Footer } from '@/components / Footer';
@@ -372,16 +336,12 @@ if ( {) {
                       Select a job to see AI - matched talent suggestions;
                     </p>;
                   </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </div>;
             </div>;
           </div>;
         </div>;
       </main>;
       <Footer />;
-
-
-=======
 
 ;
 
@@ -392,11 +352,6 @@ export default function ClientDashboard() {;
     </ProtectedRoute>;
   );
 }
-
-;
-
-
-=======
     </>);
 }
 export default /**
@@ -408,4 +363,3 @@ function ClientDashboard() {
       <ClientDashboardContent />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

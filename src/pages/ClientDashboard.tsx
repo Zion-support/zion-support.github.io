@@ -1,3 +1,4 @@
+    onboardingStatus && onboardingStatus.responseReceived;
 function ClientDashboardContent() {;
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
@@ -105,9 +106,6 @@ if ( {) {
             </Button>;
           </div>;
         </div>;
-
-
-
         {/* New Onboarding Steps */}
         <div className="mb-8">;
           <ClientOnboardingSteps />;
@@ -116,29 +114,6 @@ if ( {) {
               <AdvancedOnboardingSteps />;
             </div>;
           )}
-
-
-              
-
-
-              <TabsContent value="all" className="mt-0">
-                <JobsList onSelectJob={handleJobSelect} />
-              </TabsContent>
-              <TabsContent value="new" className="mt-0">
-                <JobsList filter="new" onSelectJob={handleJobSelect} />
-              </TabsContent>
-              <TabsContent value="in_progress" className="mt-0">
-                <JobsList filter="in_progress" onSelectJob={handleJobSelect} />
-              </TabsContent>
-              <TabsContent value="filled" className="mt-0">
-                <JobsList filter="filled" onSelectJob={handleJobSelect} />
-              </TabsContent>
-              <TabsContent value="closed" className="mt-0">
-                <JobsList filter="closed" onSelectJob={handleJobSelect} />
-              </TabsContent>
-            </Tabs>
-          </div>
-
         {/* New Onboarding Steps */}
         <div className="mb - 8">;
           <ClientOnboardingSteps />;
@@ -186,7 +161,6 @@ if ( {) {
                   <BriefcaseIcon className="mr - 2 h - 5 w - 5 text - primary" />;
                   AI Talent Suggestions;
                 </h2>;
-
                 {selectedJobId ? (
                   <SuggestedTalents job_id={selectedJobId} />) : (
                   <div className="bg - muted / 30 border rounded - lg p - 6 text - center">;
@@ -201,87 +175,6 @@ if ( {) {
       </main>;
     </>);
 }
-
-        </div>;
-
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
-          <div className="lg:col-span-2">;
-            <Tabs defaultValue="all" onValueChange={(value,) => setActiveTab(value as JobStatus | "all")}>;
-              <TabsList className={`mb-6 ${isMobile ? 'w-full' : ''}`}>;
-                <TabsTrigger value="all" className={isMobile ? 'flex-1' : ''}>All</TabsTrigger>;
-                <TabsTrigger value="new" className={isMobile ? 'flex-1' : ''}>New</TabsTrigger>;
-                <TabsTrigger value="in_progress" className={isMobile ? 'flex-1' : ''}>Active</TabsTrigger>;
-                <TabsTrigger value="filled" className={isMobile ? 'flex-1' : ''}>Filled</TabsTrigger>;
-                <TabsTrigger value="closed" className={isMobile ? 'flex-1' : ''}>Closed</TabsTrigger>;
-              </TabsList>;
-
-              <TabsContent value="all" className="mt-0">;
-                <JobsList onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="new" className="mt-0">;
-                <JobsList filter="new" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="in_progress" className="mt-0">;
-                <JobsList filter="in_progress" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="filled" className="mt-0">;
-                <JobsList filter="filled" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-              <TabsContent value="closed" className="mt-0">;
-                <JobsList filter="closed" onSelectJob={handleJobSelect} />;
-              </TabsContent>;
-            </Tabs>;
-          </div>;
-
-          <div>;
-            <div className="sticky top-4 space-y-6">;
-
-  return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"};
-;
-
-          
-          <div>
-            <div className="sticky top-4 space-y-6">
-
-              {/* Active Projects Card */}
-              <ActiveProjectsCard />;
-
-              {/* Upcoming Interviews Card */}
-              <UpcomingInterviewsCard />;
-
-              {/* AI Talent Suggestions */}
-              <div>;
-                <h2 className="text-xl font-semibold mb-4 flex items-center">;
-                  <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />;
-                  AI Talent Suggestions;
-                </h2>;
-
-                {selectedJobId ? (;
-                  <SuggestedTalents jobId={selectedJobId} />;
-                ) : (;
-                  <div className="bg-muted/30 border rounded-lg p-6 text-center">;
-                    <p className="text-muted-foreground">;
-                      Select a job to see AI-matched talent suggestions;
-                    </p>;
-                  </div>;
-                )}
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </main>;
-    </>;
-  );
-}
-
-export default function ClientDashboard() {;
-  return (
-    <ProtectedRoute>;
-      <ClientDashboardContent />;
-    </ProtectedRoute>;
-  );
-
-
 
 export default /**
  * ClientDashboard - Function description
@@ -328,5 +221,3 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
  */
 function ClientDashboard() {
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}
-}
-;

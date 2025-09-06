@@ -1,31 +1,4 @@
-
-
-
-          headline: values.headline,
-          subtitle: values.subtitle,
-          cta: values.cta};
-      };
-      
-
-
-      // Submit to Supabase
-      const { data, error } = await supabase
-        .from('whitelabel_tenants')
-        .insert(tenantData)
-        .select()
-        .single();
-      if (error) throw error;
-      toast({
-        title: 'White-label tenant created!'
-        description: `${values.brand_name} has been set up with subdomain ${values.subdomain}`})
-      // Reset form
-      form.reset()
-    } catch (error: any) {
-      toast({
-        variant: 'destructive'
-        title: 'Error creating tenant'
-        description: error.message |'Something went wrong'})
-
+import React from 'react';
 import {useForm} from 'react-hook-form';
 import {z} from 'zod';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -37,12 +10,10 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
 import {toast} from '@/hooks/use-toast';
 import {supabase} from '@/integrations/supabase/client';
-=======
     }
 
   };
 
-=======
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { z } from 'zod',;
@@ -120,20 +91,17 @@ export function WhitelabelRequestForm() {;
         variant: 'destructive',;
         title: 'Error creating tenant',;
         description: error && error.message || 'Something went wrong'});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <Card className="w-full max-w-2xl">;
       <CardHeader>;
         <CardTitle>Create White-Label Instance</CardTitle>;
-=======
 import {use_form} from 'react - hook - form';
 import {z} from 'zod';
 import {zod_resolver} from '@hookform / resolvers / zod';
@@ -218,14 +186,12 @@ if (throw error) {
     <Card className="w - full max - w-2xl">;
       <CardHeader>;
         <CardTitle > Create White - Label Instance</CardTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         <CardDescription>;
           Create a customized version of the platform for your client or partner.;
         </CardDescription>;
       </CardHeader>;
       <CardContent>;
         <Form {...form}>;
-
           <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
             <div className="space - y-4">;
               <FormField;
@@ -234,14 +200,11 @@ if (throw error) {
                 render={({ field }) => (
                   <FormItem>;
                     <FormLabel > Brand Name</FormLabel>;
-
                     <FormControl>;
                       <Input placeholder="Acme AI Solutions" {...field} />;
                     </FormControl>;
                     <FormMessage />;
-
               />;
-
 
               <FormField
                 control={form && form.control}
@@ -258,9 +221,7 @@ if (throw error) {
                     <FormMessage />;
                   </FormItem>;
                 )}
-
               />;
-
 
               <FormField
                 control={form && form.control}
@@ -274,9 +235,7 @@ if (throw error) {
                     <FormMessage />;
                   </FormItem>;
                 )}
-
               />;
-
 
               <FormField
                 control={form && form.control}
@@ -293,9 +252,7 @@ if (throw error) {
                     <FormMessage />;
                   </FormItem>;
                 )}
-
               />;
-
 
               <FormField
                 control={form && form.control}
@@ -304,7 +261,6 @@ if (throw error) {
                   <FormItem>;
                     <FormLabel>Theme Preset</FormLabel>;
                     <Select onValueChange={field && field.onChange} defaultValue={field && field.value}>;
-=======
                   </FormItem>)}
               />;
               <FormField;
@@ -356,7 +312,6 @@ if (throw error) {
                   <FormItem>;
                     <FormLabel > Theme Preset</FormLabel>;
                     <Select onValueChange={field.on_change} default_value={field.value}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       <FormControl>;
                         <SelectTrigger>;
                           <SelectValue placeholder="Select a theme" />;
@@ -371,12 +326,10 @@ if (throw error) {
                       </SelectContent>;
                     </Select>;
                     <FormMessage />;
-
               />;
 
               <div className="border rounded-md p-4 space-y-4">;
                 <h3 className="text-sm font-medium">Landing Page Copy</h3>;
-
 
                 <FormField
                   control={form && form.control}
@@ -384,7 +337,6 @@ if (throw error) {
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>Headline</FormLabel>;
-=======
                   </FormItem>)}
               />;
               <div className="border rounded - md p - 4 space - y-4">;
@@ -395,14 +347,11 @@ if (throw error) {
                   render={({ field }) => (
                     <FormItem>;
                       <FormLabel > Headline</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       <FormControl>;
                         <Input placeholder="AI Marketplace" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-
                 />;
-
 
                 <FormField
                   control={form && form.control}
@@ -410,7 +359,6 @@ if (throw error) {
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>Subtitle</FormLabel>;
-=======
                     </FormItem>)}
                 />;
                 <FormField;
@@ -419,14 +367,11 @@ if (throw error) {
                   render={({ field }) => (
                     <FormItem>;
                       <FormLabel > Subtitle</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       <FormControl>;
                         <Input placeholder="Find the best AI talent" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-
                 />;
-
 
                 <FormField
                   control={form && form.control}
@@ -434,7 +379,6 @@ if (throw error) {
                   render={({ field }) => (;
                     <FormItem>;
                       <FormLabel>CTA Button Text</FormLabel>;
-=======
                     </FormItem>)}
                 />;
                 <FormField;
@@ -443,45 +387,29 @@ if (throw error) {
                   render={({ field }) => (
                     <FormItem>;
                       <FormLabel > CTA Button Text</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       <FormControl>;
                         <Input placeholder="Get Started" {...field} />;
                       </FormControl>;
                       <FormMessage />;
-
-                />;
-              </div>;
-            </div>;
-
-            <Button type="submit" className="w-full" size="lg">;
-              Create White-Label Instance;
-=======
                     </FormItem>)}
                 />;
               </div>;
             </div>;
             <Button type="submit" className="w - full" size="lg">;
               Create White - Label Instance;
-
             </Button>;
           </form>;
         </Form>;
       </CardContent>;
-
       <CardFooter className="bg - muted / 50 text - xs text - muted - foreground">;
-
         <p>;
           After creating the tenant, you must upload a logo via the tenant management dashboard.;
           DNS verification for custom domains must be completed before they can be used.;
         </p>;
       </CardFooter>;
 
-    </Card>);
-}
-
-=======
-
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </Card>);
+}

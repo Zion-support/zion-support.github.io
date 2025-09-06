@@ -1,15 +1,4 @@
 
-
-
-import { useState } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { LogIn, User, Eye, EyeOff } from "lucide-react",
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -42,7 +31,6 @@ type LoginFormValues = z.infer<typeof loginSchema>,
     } finally {
       setIsSubmitting(false)
 
-=======
     }
 
   },
@@ -118,16 +106,13 @@ export function LoginForm() {;
       await login(data && data.email, data && data.password);
     } finally {;
       setIsSubmitting(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
   return (
-
     <Form {...form}>;
       <form
         onSubmit={form && form.handleSubmit(onSubmit)} 
-
         className="space-y-6"
         autoComplete="off" // Disable browser autofill>;
         <FormField
@@ -152,11 +137,11 @@ export function LoginForm() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    <Form {...form}>;
+      <form
+        onSubmit={form && form.handleSubmit(onSubmit)} 
           )}
-
         />;
-
 
         <FormField
           control={form && form.control}
@@ -195,13 +180,6 @@ export function LoginForm() {;
               <FormMessage className="text-red-400" />;
             </FormItem>;
           )}
-
-        />;
-
-        <div className="flex items-center justify-between">;
-          <div className="text-sm">;
-            <Link to="/forgot-password" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
-=======
 import { useState } from './react';
 import { use_form } from './react - hook - form';
 import { zod_resolver } from '@hookform / resolvers / zod';
@@ -311,12 +289,10 @@ if (return) {
         <div className="flex items - center justify - between">;
           <div className="text - sm">;
             <Link to="/forgot - password" className="font - medium text - zion - cyan hover:text - zion - cyan - light">;
-
               Forgot your password?;
             </Link>;
           </div>;
         </div>;
-
         <Button;
           type="submit";
           className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white";
@@ -328,9 +304,6 @@ if (return) {
     </Form>);
 }
 
-=======
-
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

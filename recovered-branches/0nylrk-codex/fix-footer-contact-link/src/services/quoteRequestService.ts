@@ -1,14 +1,5 @@
-
-
-import {supabase} from "@/integrations/supabase/client";
-
-
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-
-
 import { supabase } from '@/integrations / supabase / client';
 import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
-
 export const quoteRequestService = {
   // Get all quote requests (for admin);
   get_all: async () => {
@@ -16,10 +7,8 @@ export const quoteRequestService = {
       .from ('quote_requests');
       .select (`;
         *;
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const quoteRequestService = {
   // Get all quote requests (for admin)
   getAll: async () => {
@@ -29,11 +18,12 @@ export const quoteRequestService = {
       .select(`
         *,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
         talent:talent_id (
 
+        talent:talent_id (
     return data && data.map((item: any) => ({
-=======
 
       .order('created_at', { ascending: false }),
     
@@ -46,9 +36,6 @@ export const quoteRequestService = {
       talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   };
   
-
-
-
   // Get quote requests for a specific talent
   getByTalentId: async (talentId: string) => {
     const { data, error } = await supabase
@@ -66,7 +53,6 @@ export const quoteRequestService = {
 
 
   // Get a single quote request by id
-=======
           display_name);
       `);
       .order ('created_at', { ascending: false });
@@ -97,18 +83,15 @@ if (throw error) {
   }
 ;
   // Get a single quote request by id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   getById: async (id: string) => {
     const { data, error } = await supabase;
       .from ('quote_requests');
       .select (`;
         *;
         talent:talent_id (
-
       talent_name: data && data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
   };
   
-
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status }
@@ -123,11 +106,9 @@ if (throw error) {
         .select('viewed_at')
         .eq('id', id)
         .single();
-
       
       if (!data && data.viewed_at) {
         updates && updates.viewed_at = new Date().toISOString()
-
       }
     }
     const { data, error } = await supabase
@@ -159,7 +140,6 @@ if (throw error) {
   }
 }
 
-=======
           display_name);
       `);
       .eq ('id', id);
@@ -214,7 +194,6 @@ if (throw error) {
   $2
 }
     return data[0] as QuoteRequest;
-=======
 
       .single(),
     
@@ -233,7 +212,6 @@ if (throw error) {
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ;
   // Archive / Unarchive a quote request;
@@ -266,4 +244,3 @@ if (throw error) {
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

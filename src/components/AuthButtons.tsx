@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Facebook } from 'lucide-react';
@@ -10,12 +11,10 @@ export /**
  */
 function AuthButtons() {
   const [loading_provider, setLoadingProvider] = useState < string | null>(null);
-
   const handleSignIn = async (provider: Provider) => {
     setLoadingProvider (provider);
     await sign_in (provider);
   }
-
 type Provider = 'google' | 'github' | 'facebook' | 'credentials';
 interface AuthButtonsProps {;
   providers?: Provider[];
@@ -30,13 +29,6 @@ export function AuthButtons(): any ({;
     await signIn(provider);
   };
   const gridCols = `grid-cols-${providers && providers.length}`;
-
-
-
-  const gridCols = `grid-cols-${providers.length}`,
-
-
-
 
   return (
     <div className={`mt-6 grid ${gridCols} gap-3`}>;
@@ -109,10 +101,18 @@ export function AuthButtons(): any ({;
       )}
       {providers && providers.includes('credentials') && (;
         <Button
-
-    </div>;
-  );
-}
+          type='button'
+          variant='outline'
+          className='col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
+          onClick={() => handleSignIn('credentials')}
+          disabled={loadingProvider !== null}        >;
+          {loadingProvider === 'credentials' ? (;
+            <svg className='h-5 w-5 animate-spin' viewBox='0 0 24 24' />;
+          ) : (;
+            <>Email Login</>;
+          )}
+        </Button>;
+      )}
 
   const grid_cols = `grid - cols-${providers.length}`;
   return (
@@ -194,35 +194,3 @@ export function AuthButtons(): any ({;
         </Button>)}
     </div>);
 }
-
-          ) : (
-            <>Email Login</>
-          )}
-        </Button>
-      )};
-    </div>;
-  );
-};
-}
-
-          type="button"
-          variant="outline"
-          className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
-          onClick={() => handleSignIn('credentials')}
-          disabled={loadingProvider !== null}
-        >
-          {loadingProvider === 'credentials' ? (
-            <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
-
-
-          ) : (
-            <>Email Login</>
-          )}
-        </Button>;
-      )}
-
-
-    </div>;
-  );
-}
-;

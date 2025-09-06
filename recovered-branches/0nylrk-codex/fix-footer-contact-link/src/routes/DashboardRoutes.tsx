@@ -1,17 +1,9 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const DashboardRoutes = () => {
-=======
 const DashboardRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Dashboard Routes */}
       <Route
-
         path="/dashboard" 
         element={
           <ProtectedRoute>;
@@ -29,13 +21,11 @@ const DashboardRoutes = () => {;
       />;
       <Route
         path="/talent-dashboard" 
-
         element={
           <ProtectedRoute>;
             <TalentDashboard />;
           </ProtectedRoute>;
         }
-
       />;
       <Route
         path="/creator-dashboard" 
@@ -61,7 +51,6 @@ const DashboardRoutes = () => {;
           </ProtectedRoute>;
         } ;
       />;
-
       <Route
         path="/project/:id"
         element={
@@ -81,7 +70,6 @@ const DashboardRoutes = () => {;
       <Route
         path="/messages"
         element={
-
           <ProtectedRoute>;
             <MessagingInbox />;
           </ProtectedRoute>;
@@ -151,7 +139,6 @@ const DashboardRoutes = () => {;
           </ProtectedRoute>;
         } ;
       />;
-
       <Route
         path="/developers"
         element={
@@ -171,15 +158,6 @@ const DashboardRoutes = () => {;
       <Route
         path="/dashboard/api-access"
         element={
-
-          <ProtectedRoute>;
-            <DeveloperPortal />;
-          </ProtectedRoute>;
-        } ;
-      />;
-      <Route
-        path="/contract-builder"
-=======
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
@@ -368,20 +346,12 @@ const DashboardRoutes = () =>: any {
       />;
       <Route;
         path="/contract - builder";
-
         element={
           <ProtectedRoute>;
             <ContractBuilder />;
           </ProtectedRoute>;
-
-
-},
-
-
-
 export default DashboardRoutes;
 
-=======
         }
       />;
     </Routes>);
@@ -389,4 +359,3 @@ export default DashboardRoutes;
 ;
 export default DashboardRoutes;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

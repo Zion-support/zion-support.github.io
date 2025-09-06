@@ -1,6 +1,4 @@
 
-
-
 export function ContractHeader(): any ({ onCreateClick }: ContractHeaderProps) {;
   return (
     <div className="flex justify-between items-center mb-8">;
@@ -14,7 +12,6 @@ export function ContractHeader(): any ({ onCreateClick }: ContractHeaderProps) {
       <Button size="lg" onClick={onCreateClick}>;
         Create New Contract;
       </Button>;
-=======
 
 import { Button } from "@/components/ui/button";
 interface ContractHeaderProps {
@@ -25,9 +22,7 @@ interface ContractHeaderProps {
 
 
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-
 import { Button  } from '@/components / ui / button';
 interface ContractHeaderProps {
   onCreateClick: () => void;
@@ -48,10 +43,7 @@ function ContractHeader() {
         Create New Contract;
       </Button>;
     </div>);
-
-}
-=======
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}

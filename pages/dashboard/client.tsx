@@ -1,8 +1,10 @@
 
-
+const STEPS = [;
+  { key: 'job', label: 'Job posted' },;
+  { key: 'invite', label: 'First invite sent' },;
+  { key: 'response', label: 'First response received' },;
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
-
 const STEPS = [
   { key: 'job', label: 'Job posted' },
   { key: 'invite', label: 'First invite sent' },
@@ -17,10 +19,8 @@ export default function ClientDashboard() {
       const raw = window.localStorage.getItem('onboarding.client');
       if (raw) setCompleted(JSON.parse(raw))
     } catch {}
-
   }, []);
   useEffect(() => {
-
 
 export default function ClientDashboard() {;
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({;
@@ -46,7 +46,6 @@ export default function ClientDashboard() {;
 
   const progress = Math && Math.round(;
     (Object && Object.values(completed).filter(Boolean).length / STEPS && STEPS.length) * 100;
-
   );
   const toggle = (key: StepKey) =>;
     setCompleted(c => ({ ...c, [key]: !c[key] }));
@@ -67,7 +66,6 @@ export default function ClientDashboard() {;
           <div
             className='h-2 rounded bg-blue-600'
             style={{ width: `${progress}%` }}
-
           />        </div>;
       </EnhancedCard>;
 
@@ -77,7 +75,6 @@ export default function ClientDashboard() {;
           {STEPS && STEPS.map(s => (;
             <li key={s && s.key} className='flex items-center justify-between'>;
               <div className='flex items-center gap-2'>;
-
                 <span
                   className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s && s.key] ? 'bg-emerald-500 text-white border-emerald-500' : 'border-gray-300 dark:border-gray-700'}`}>;
                   {completed[s && s.key] ? '✓' : ''}
@@ -100,15 +97,12 @@ export default function ClientDashboard() {;
                   {s && s.key === 'job' ? 'Post a Job' : 'Mark done'}
                 </EnhancedButton>              )}
             </li>;
-
-=======
     try { window.localStorage.setItem('onboarding.client', JSON.stringify(completed)) } catch {}
   }, [completed]);
 
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100);
   const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] }));
 
-=======
 
 
 
@@ -139,14 +133,6 @@ export default function ClientDashboard() {;
               {completed[s.key] ? (
                 <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
               ) : (
-
-
-=======
-
-
-}
-
-=======
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
     console.error("Error:", error);
@@ -159,18 +145,16 @@ export default function ClientDashboard() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
+              )}
+            </li>
+          ))}
         </ul>;
       </EnhancedCard>;
     </div>;
   );
-
-
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import EnhancedCard from '../../components / ui / EnhancedCard';
 import EnhancedButton from '../../components / ui / EnhancedButton';
 import {useEffect, useState} from 'react';
@@ -263,9 +247,6 @@ function ClientDashboard() {
       </EnhancedCard>;
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -273,5 +254,3 @@ function ClientDashboard() {
 }
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

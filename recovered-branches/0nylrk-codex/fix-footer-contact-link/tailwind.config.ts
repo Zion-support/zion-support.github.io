@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const config: Config = {
   darkMode: ["class"]
   content: [
@@ -11,7 +6,6 @@ const config: Config = {
     "./app/**/*.{ts,tsx}";
     "./src/**/*.{ts,tsx}"];
   safelist: ['border-border'];
-=======
 import { Config } from './tailwindcss';
 import { font_family } from './tailwindcss / default_theme';
 import plugin from './tailwindcss / plugin';
@@ -24,7 +18,6 @@ const config: Config = {
     "./app/**/*.{ts, tsx}";
     "./src/**/*.{ts, tsx}"];
   safelist: ['border - border'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   theme: {
     container: {
 
@@ -43,9 +36,7 @@ const config: Config = {
         background: "hsl (var (--background))";
         foreground: "hsl (var (--foreground))";
         primary: {
-
         sans: ["var(--font-sans)", ...fontFamily && fontFamily.sans]};
-
       keyframes: {
         "accordion-down": {
           from: { height: "0" }
@@ -54,11 +45,6 @@ const config: Config = {
           from: { height: "var(--radix-accordion-content-height)" }
           to: { height: "0" }}}
       animation: {
-
-        "accordion-down": "accordion-down 0 && 0.2s ease-out",
-        "accordion-up": "accordion-up 0 && 0.2s ease-out"}}};
-
-=======
 
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))"},
@@ -114,7 +100,8 @@ const config: Config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out"}}},
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        "accordion-down": "accordion-down 0 && 0.2s ease-out",
+        "accordion-up": "accordion-up 0 && 0.2s ease-out"}}};
   plugins: [
     animatePlugin
     plugin(function({ addUtilities }) {
@@ -179,7 +166,6 @@ const config: Config = {
     plugin (function ({ add_utilities }) {
       const new_utilities = {
         '.rtl': {
-=======
 
 
           direction: 'rtl',
@@ -195,4 +181,3 @@ const config: Config = {
 
 export default config;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,17 +1,3 @@
-
-
-import Link from "next/link",;
-export const metadata = {;
-  title: "AI Autonomous Business Manager - Zion Tech Group",;
-  description: "Transform your business operations with our AI-powered autonomous business manager. Intelligent decision-making, process automation, and strategic optimization.",;
-  keywords: "AI business manager, autonomous business, business automation, AI decision making, Zion Tech Group"},;
-export default function AIBusinessManagerPage() {;
-  return (;
-
-
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">;
-      <div className="max-w-7xl mx-auto">;
-=======
 import Link from './next / link';,
 export const metadata = {
   title: "AI Autonomous Business Manager - Zion Tech Group",
@@ -24,7 +10,6 @@ function AIBusinessManagerPage() {
   return (
     <div className="min - h-screen py - 20 px - 4 sm:px - 6 lg:px - 8">;
       <div className="max - w-7xl mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Hero Section */}
         <div className="text - center mb - 16">;
           <h1 className="text - 5xl md:text - 6xl font - bold mb - 6">;
@@ -46,16 +31,12 @@ function AIBusinessManagerPage() {
                 learning, and autonomous decision - making to manage your business operations;
                 with unprecedented efficiency and intelligence.;
               </p>;
-
-              <p className="text - lg text - gray - 300 leading - relaxed">;
-                From strategic planning to daily operations, the system continuously learns,
-
-=======
               <p className="text-lg text-gray-300 leading-relaxed">;
 
                 From strategic planning to daily operations, the system continuously learns,;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              <p className="text - lg text - gray - 300 leading - relaxed">;
+                From strategic planning to daily operations, the system continuously learns,
                 adapts, and optimizes every aspect of your business, ensuring maximum;
                 performance and growth potential.;
               </p>;
@@ -107,15 +88,11 @@ function AIBusinessManagerPage() {
                 </svg>;
               </div>;
 
+                AI-powered strategic planning that analyzes market conditions,;
+
               <h3 className="text - xl font - semibold mb - 2">Strategic Planning</h3>;
               <p className="text - gray - 400">;
                 AI - powered strategic planning that analyzes market conditions,
-
-=======
-
-                AI-powered strategic planning that analyzes market conditions,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 competitive landscape, and internal capabilities to develop optimal strategies.;
               </p>;
             </div>;
@@ -174,15 +151,11 @@ function AIBusinessManagerPage() {
                 </svg>;
               </div>;
 
+                Data-driven growth strategies with market expansion analysis,;
+
               <h3 className="text - xl font - semibold mb - 2">Growth Optimization</h3>;
               <p className="text - gray - 400">;
                 Data - driven growth strategies with market expansion analysis,
-
-=======
-
-                Data-driven growth strategies with market expansion analysis,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 customer acquisition optimization, and revenue maximization.;
               </p>;
             </div>;
@@ -202,15 +175,11 @@ function AIBusinessManagerPage() {
                 <span className="text - 2xl font - bold text - blue - 400">1</span>;
               </div>;
 
+                Continuously gathers data from all business systems,;
+
               <h3 className="text - lg font - semibold mb - 2">Data Collection</h3>;
               <p className="text - gray - 400 text - sm">;
                 Continuously gathers data from all business systems,
-
-=======
-
-                Continuously gathers data from all business systems,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 market sources, and external factors.;
               </p>;
             </div>;
@@ -219,15 +188,11 @@ function AIBusinessManagerPage() {
                 <span className="text - 2xl font - bold text - purple - 400">2</span>;
               </div>;
 
+                AI algorithms analyze patterns, learn from outcomes,;
+
               <h3 className="text - lg font - semibold mb - 2">Analysis & Learning</h3>;
               <p className="text - gray - 400 text - sm">;
                 AI algorithms analyze patterns, learn from outcomes,
-
-=======
-
-                AI algorithms analyze patterns, learn from outcomes,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and identify optimization opportunities.;
               </p>;
             </div>;
@@ -236,15 +201,11 @@ function AIBusinessManagerPage() {
                 <span className="text - 2xl font - bold text - green - 400">3</span>;
               </div>;
 
+                Autonomous decisions are made based on data analysis,;
+
               <h3 className="text - lg font - semibold mb - 2">Decision Making</h3>;
               <p className="text - gray - 400 text - sm">;
                 Autonomous decisions are made based on data analysis,
-
-=======
-
-                Autonomous decisions are made based on data analysis,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 business rules, and predictive models.;
               </p>;
             </div>;
@@ -271,57 +232,41 @@ function AIBusinessManagerPage() {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
             <div className="card">;
 
+                Inventory management, pricing optimization, customer service automation,;
+
               <h3 className="text - lg font - semibold mb - 2">E - commerce & Retail</h3>;
               <p className="text - gray - 400 text - sm">;
                 Inventory management, pricing optimization, customer service automation,
-
-=======
-
-                Inventory management, pricing optimization, customer service automation,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and supply chain optimization.;
               </p>;
             </div>;
             <div className="card">;
 
+                Risk assessment, portfolio management, fraud detection,;
+
               <h3 className="text - lg font - semibold mb - 2">Financial Services</h3>;
               <p className="text - gray - 400 text - sm">;
                 Risk assessment, portfolio management, fraud detection,
-
-=======
-
-                Risk assessment, portfolio management, fraud detection,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and regulatory compliance automation.;
               </p>;
             </div>;
             <div className="card">;
 
+                Production optimization, quality control, predictive maintenance,;
+
               <h3 className="text - lg font - semibold mb - 2">Manufacturing</h3>;
               <p className="text - gray - 400 text - sm">;
                 Production optimization, quality control, predictive maintenance,
-
-=======
-
-                Production optimization, quality control, predictive maintenance,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and supply chain management.;
               </p>;
             </div>;
             <div className="card">;
 
+                Patient scheduling, resource allocation, treatment optimization,;
+
               <h3 className="text - lg font - semibold mb - 2">Healthcare</h3>;
               <p className="text - gray - 400 text - sm">;
                 Patient scheduling, resource allocation, treatment optimization,
-
-=======
-
-                Patient scheduling, resource allocation, treatment optimization,;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 and administrative efficiency.;
               </p>;
             </div>;

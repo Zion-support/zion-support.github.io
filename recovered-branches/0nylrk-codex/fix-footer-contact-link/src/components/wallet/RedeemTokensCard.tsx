@@ -1,16 +1,3 @@
-
-
-
-
-
-import React, { useState } from "react";
-import {useWallet} from "@/hooks/useWallet";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Gift, ArrowRight, ExternalLink} from "lucide-react";
-import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
-
-=======
 import React, { useState } from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -27,8 +14,22 @@ import {
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useState } from "react",
+import { useWallet } from "@/hooks/useWallet",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Gift, ArrowRight, ExternalLink } from "lucide-react",
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger} from "@/components/ui/dialog",
+
+
+
+
 type RewardOption = {
   id: string
   title: string
@@ -122,7 +123,6 @@ const REWARD_OPTIONS: RewardOption[] = [
                       disabled={!wallet |wallet.balance < option.cost}
 
 
-=======
                       onClick={() => handleRedeem(option)}
                     >
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />
@@ -144,7 +144,6 @@ const REWARD_OPTIONS: RewardOption[] = [
   )
 
 
-=======
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -234,7 +233,6 @@ export function RedeemTokensCard() {;
                       size="sm" 
                       variant={wallet && wallet.balance>= option && option.cost ? "default" : "outline"}
                       disabled={!wallet || wallet.balance < option && option.cost}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       onClick={() => handleRedeem(option)}
                     >;
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />;
@@ -242,13 +240,6 @@ export function RedeemTokensCard() {;
                   </div>;
                 </div>;
               ))}
-
-            </div>;
-            <div className="flex justify-between">;
-              <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>;
-              <Button variant="ghost" size="sm">;
-                Learn More <ExternalLink className="ml-1 h-3 w-3" />;
-=======
 import React, { useState } from './react';
 import { use_wallet } from '@/hooks / use_wallet';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
@@ -348,20 +339,11 @@ if (return, ) {
               <Button variant="outline" size="sm" on_click={() => set_open (false)}>Close</Button>;
               <Button variant="ghost" size="sm">;
                 Learn More <ExternalLink className="ml - 1 h - 3 w - 3" />;
-
               </Button>;
             </div>;
           </DialogContent>;
         </Dialog>;
       </CardContent>;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

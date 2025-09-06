@@ -1,40 +1,3 @@
-
-
-
-
-  // Filter listings based on current search query and filters
-  const filteredListings = useMemo(() => {
-    return MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => {
-      // Search query filter
-
-
-      const matchesSearch = !searchQuery || 
-        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
-      
-      // Product type filter
-      const matchesProductType = selectedProductTypes.length === 0 || 
-        selectedProductTypes.includes(listing.category),
-      
-      // Location filter
-      const matchesLocation = selectedLocations.length === 0 || 
-        (listing.location && selectedLocations.includes(listing.location)),
-      
-      // Availability filter
-      const matchesAvailability = selectedAvailability.length === 0 || 
-        (listing.availability && selectedAvailability.includes(listing.availability)),
-      
-
-
-      // Rating filter
-      const matchesRating = selectedRating === null |
-        (listing.rating !== undefined && listing.rating >= selectedRating)
-      return matchesSearch &&
-        matchesProductType &&
-        matchesLocation &&
-        matchesAvailability &&
-=======
       const matchesSearch = !searchQuery || 
         listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
         listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
@@ -60,7 +23,6 @@
         matchesProductType && 
         matchesLocation && 
         matchesAvailability && 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         matchesRating
     })
 
@@ -84,7 +46,8 @@
         break;
       case 'availability':
         setSelectedAvailability((prev: string[]) =>
-
+          prev && prev.includes(value) ? prev && prev.filter(a => a !== value) : [...prev, value]
+        );
 import { useState, useMemo } from './react';
 import { ProductListing } from '@/types / listings';
 import { SearchSuggestion, FilterOptions } from '@/types / search';
@@ -156,12 +119,10 @@ function useMarketplaceSearch() {
       case 'availability':;
         setSelectedAvailability ((prev: string[]) =>;
           prev.includes (value) ? prev.filter (array => a !== value) : [...prev, value]);
-
         break;
       default: break;
     }
   }
-
 ;
   // Clear all filters;
   const clearAllFilters = () =>: any {
@@ -172,7 +133,6 @@ function useMarketplaceSearch() {
     setSelectedRating (null);
   }
 ;
-
   return {
     search_query;
     setSearchQuery;
@@ -185,10 +145,6 @@ function useMarketplaceSearch() {
     filtered_listings;
     handleFilterChange;
     clearAllFilters;
-
-    filter_options;
-
-=======
           prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]
         ),
         break,
@@ -222,6 +178,6 @@ function useMarketplaceSearch() {
     clearAllFilters,
     filterOptions
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    filter_options;
   }
 }

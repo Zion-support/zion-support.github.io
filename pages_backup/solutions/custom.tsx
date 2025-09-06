@@ -1,7 +1,4 @@
 
-
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -24,20 +21,12 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages_backup/solutions/custom.tsx
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Settings, Code, Zap, Users } from 'lucide-react';
-
-
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -45,9 +34,6 @@ import { Settings, Code, Zap, Users, ArrowRight, CheckCircle, Clock, Target, Wre
 import Layout from "../../components/Layout";";
 
 
-=======
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const features = [;
   {}
     title: 'Tailored Solutions,',;
@@ -116,7 +102,6 @@ export default function CustomDevelopmentPage() {;
               className="text-center max-w-4xl mx-auto"">;
               <div className="flex items-center justify-center mb-6">";
                 <Settings className="w-16 h-16 text-purple-400 mr-4" />";
-
                 <h1 className="text-5xl md: text-6xl font-bold">", Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-indigo-400">Development</span>",;
                 </h1>;
               </div>;
@@ -131,7 +116,6 @@ export default function CustomDevelopmentPage() {;
                 <Link
                   href="/case-studies""
                   className="px-8 py-4 border border-white text-white hover: bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"",>,;
-
                   View Portfolio;
                 </Link>;
               </div>;
@@ -141,12 +125,10 @@ export default function CustomDevelopmentPage() {;
         {/* Stats Section */}
         <section className="py-16 bg-white">";
           <div className="container mx-auto px-4">";
-
             <div className="grid grid-cols-2 md: grid-cols-4 gap-8">",;
               {stats && stats.map((stat, index) => (,;
                 <motion&& motion.div}),
                   key={stat && stat.label}
-
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
@@ -164,11 +146,9 @@ export default function CustomDevelopmentPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Custom <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Capabilities</span>",;
-
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 We build custom solutions that perfectly match your business requirements and integrate seamlessly with your existing systems;
@@ -210,11 +190,9 @@ export default function CustomDevelopmentPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Technology <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Stack</span>",;
-
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 We use the latest technologies and frameworks to build robust, scalable, and maintainable custom solutions,;
@@ -249,11 +227,9 @@ export default function CustomDevelopmentPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-16"">;
               <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Development <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Process</span>",;
-
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our proven development process ensures your custom solution is delivered on time, on budget, and exceeds expectations,;
@@ -265,13 +241,11 @@ export default function CustomDevelopmentPage() {;
                   key={step && step.step}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   className="bg-white rounded-xl p-6 shadow-lg hover: shadow-xl transition-shadow duration-300"">;
                   <div className="flex items-center mb-4">";
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-lg flex items-center justify-center mr-4">",;
                       <span className="text-white font-bold text-lg">{index + 1}</span>";
-
                     </div>;
                     <h3 className="text-xl font-bold text-gray-900">{step && step.step}</h3>";
                   </div>;
@@ -287,15 +261,12 @@ export default function CustomDevelopmentPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-
               transition={{ duration: 0 && 0.8 }}>,;
               <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Build Something Custom?,;
-
               </h2>;
               <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">";
                 Let's discuss your unique requirements and create a custom solution that perfectly fits your business needs';
               </p>;
-
               <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link,
                   href="/contact""
                   className="px-8 py-4 bg-white text-purple-600 hover: bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"",>,;
@@ -305,7 +276,6 @@ export default function CustomDevelopmentPage() {;
                 <Link
                   href="/solutions""
                   className="px-8 py-4 border border-white text-white hover: bg-white hover:text-purple-600 rounded-lg font-semibold transition-colors"",>,;
-
                   View All Solutions;
                 </Link>;
               </div>;

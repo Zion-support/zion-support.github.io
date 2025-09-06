@@ -1,6 +1,4 @@
 
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,14 +30,13 @@ export default function EnhancedCard(): any ({;
   children: React && React.ReactNode;
   className?: string;
 }) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
   return (
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
-
+}
 import React from 'react';
 export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
   return (
@@ -48,8 +45,6 @@ export default function EnhancedCard({ children, className = '' }: { children: R
     </div>
   );
 }
-
-=======
 import React from './react';
 ;
 export default /**
@@ -61,9 +56,6 @@ function EnhancedCard() {
   return (
     <div className={["card - base p - 4", class_name].join (" ")}>{children}</div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

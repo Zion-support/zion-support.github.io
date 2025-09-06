@@ -1,9 +1,41 @@
-export default function ForumPostPage() {
-  // Using `useParams` without type arguments avoids issues when TypeScript
-  // can't determine the generic type for the helper from React Router.
-  // Cast the result instead to provide the expected shape.
-
-
+import { useState } from './react';
+import Link from './next / link';
+import { use_router  } from './next / router';
+import { SEO  } from '@/components / SEO';
+import { Button  } from '@/components / ui / button';
+import { Avatar, AvatarFallback, AvatarImage  } from '@/components / ui / avatar';
+import { Badge  } from '@/components / ui / badge';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Separator  } from '@/components / ui / separator';
+import { Alert, AlertDescription  } from '@/components / ui / alert';
+import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from 'lucide-react'import { formatDistanceToNow, format  } from './date - fns';
+import { ForumPost, ForumReply  } from '@/types / community';
+import { use_auth  } from '@/hooks / use_auth';
+import ReplyCard from "@/components / community / ReplyCard";
+import ReplyForm from "@/components / community / ReplyForm";
+import { use_toast } from '@/hooks / use - toast';
+// Mock data for a forum post;
+const mock_post: ForumPost = {
+  id: "1",
+  title: "Best practices for AI model fine - tuning",
+  content: "I've been working on fine - tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\n_first, it's important to carefully prepare your training data. Clean, well - structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine - tuning process.\n\n_second, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm - up period tends to yield more stable results.\n\n_third, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\n_finally, evaluating your fine - tuned model requires looking beyond standard metrics. I always test with diverse real - world examples to ensure the model generalizes well.\n\n_what has been your experience with fine - tuning? Any techniques you've found particularly effective?";
+  author_id: "user1",
+  author_name: "Alex Johnson",
+  author_avatar: "https://i.pravatar.cc / 150?img = 3",
+  author_role: "Verified Talent",
+  category_id: "ai - tools",
+  tags: ["machine - learning", "fine - tuning", "gpt"];
+  created_at: "2025 - 04 - 01T12:00:00Z",
+  updated_at: "2025 - 04 - 01T12:00:00Z",
+  upvotes: 48,
+  downvotes: 2,
+  reply_count: 4,
+  is_answered: true,
+  is_featured: true;
+}
+// Mock data for replies;
+const mock_replies: ForumReply[] = [;
+  {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -308,11 +340,6 @@ export default function ForumPostPage() {;
 }
   );
 }
-
-
-  )
-}
-
     id: "reply1",
     post_id: "1",
     content: "Great post! I've had similar experiences with data preparation being the key to successful fine - tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",
@@ -397,5 +424,3 @@ if (return) {
 }
   );
 }
-
-;

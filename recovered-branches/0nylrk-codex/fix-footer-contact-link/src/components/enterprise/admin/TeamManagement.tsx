@@ -1,19 +1,3 @@
-
-
-
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {Badge} from "@/components/ui/badge";
-import {PlusCircle, Trash, Mail, UserPlus} from "lucide-react";
-import {toast} from "@/hooks/use-toast";
-export function TeamManagement() {;
-  const [isAddingMember, setIsAddingMember] = useState(false);
-  const [newMemberEmail, setNewMemberEmail] = useState("");
-
-=======
 import React, { useState } from "react",
 import {
   Table,
@@ -30,7 +14,6 @@ import {
   DialogHeader,
   DialogTitle,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -46,7 +29,22 @@ export function TeamManagement() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React, { useState } from "react",
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+
   // Mock team members data
 
   const teamMembers = [
@@ -191,11 +189,8 @@ export function TeamManagement() {;
       description: `A new invitation has been sent to ${memberEmail}`});
   };
 
-=======
-
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
     <div className="space-y-6">;
@@ -205,7 +200,6 @@ export function TeamManagement() {;
           <DialogTrigger asChild>;
             <Button className="gap-2">;
               <UserPlus className="h-4 w-4" />;
-=======
 import React, { useState } from './react';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';
@@ -293,26 +287,19 @@ if ( {) {
           <DialogTrigger as_child>;
             <Button className="gap - 2">;
               <UserPlus className="h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Add Team Member;
             </Button>;
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
-
               <DialogTitle > Add Team Member</DialogTitle>;
-
               <DialogDescription>;
                 Send an invitation to join your workspace. They'll receive an email with instructions.;
               </DialogDescription>;
             </DialogHeader>;
-
-                  className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">;
-=======
             <div className="grid gap - 4 py - 4">;
               <div className="grid grid - cols - 4 items - center gap - 4">;
                 <Label html_for="email" className="text - right">;
-=======
                           .join("")}
                       </span>
                     </div>
@@ -474,7 +461,6 @@ export function TeamManagement() {;
                   id="role";
                   className="col - span - 3 flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - sm ring - offset - background file:border - 0 file:bg - transparent file:text - sm file:font - medium placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50";
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <option value="admin">Admin</option>;
                   <option value="recruiter">Recruiter</option>;
                   <option value="manager">Manager</option>;
@@ -483,17 +469,21 @@ export function TeamManagement() {;
               </div>;
             </div>;
             <DialogFooter>;
-
               <Button variant="outline" on_click={() => setIsAddingMember (false)}>;
                 Cancel;
               </Button>;
               <Button on_click={handleAddMember}>Send Invitation</Button>;
-
             </DialogFooter>;
           </DialogContent>;
         </Dialog>;
       </div>;
-
+                          .join("")}
+                      </span>;
+                    </div>;
+                    <div>;
+                      <div className="font-medium">{member && member.name}</div>;
+                      <div className="text-sm text-muted-foreground">;
+                        {member && member.email}
       <div className="rounded - md border">;
         <Table>;
           <TableHeader>;
@@ -522,20 +512,16 @@ export function TeamManagement() {;
                       <div className="font - medium">{member.name}</div>;
                       <div className="text - sm text - muted - foreground">;
                         {member.email}
-
                       </div>;
                     </div>;
                   </div>;
                 </TableCell>;
-
           </TableBody>;
         </Table>;
       </div>;
     </div>;
   );
 }
-
-=======
                 <TableCell>{member.role}</TableCell>;
                 <TableCell>;
                   <Badge;
@@ -570,4 +556,3 @@ export function TeamManagement() {;
     </div>
   )
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ChatMessageProps {
 
   message: string
@@ -26,7 +21,6 @@ interface ChatMessageProps {
           </>
         ) : (
           <>
-=======
 import React from "react";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {cn} from "@/lib/utils";
@@ -51,7 +45,6 @@ export function ChatMessage(): any ({ message, isUser, timestamp }: ChatMessageP
           </>;
         ) : (;
           <>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <AvatarImage
               src="https://placehold && placehold.co/40x40?text=AI"
               alt="Zion Support"
@@ -59,20 +52,6 @@ export function ChatMessage(): any ({ message, isUser, timestamp }: ChatMessageP
             <AvatarFallback className="bg-zion-purple text-white">Z</AvatarFallback>;
           </>;
         )}
-
-
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
-        isUser 
-          ? "bg-zion-purple text-white" 
-
-
-          : theme === "dark"
-            ? "bg-zion-blue-light text-white"
-            : "bg-gray-100 text-gray-800"
-      )}>
-        <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
-        <div className={cn(
-
       </Avatar>;
 
       <divclassName={cn(
@@ -89,13 +68,10 @@ export function ChatMessage(): any ({ message, isUser, timestamp }: ChatMessageP
           isUser 
             ? "text-white/70" 
 
-=======
-
           "text-xs mt-1",
           isUser 
             ? "text-white/70" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             : theme === "dark"
               ? "text-gray-300"
               : "text-gray-500"
@@ -108,24 +84,6 @@ export function ChatMessage(): any ({ message, isUser, timestamp }: ChatMessageP
 }
 
 
-  ),
-  
-
-
-  // Replace help center references like [Getting Started]
-  const helpCenterRegex = /\[([^\]]+)\]/g
-  formattedMessage = formattedMessage.replace(
-    helpCenterRegex
-    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
-  )
-
-  return formattedMessage
-
-
-=======
-
-
-=======
 import React from "react",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { cn } from "@/lib/utils",;
@@ -203,10 +161,7 @@ function formatMessageWithLinks(): any (message: string): string {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { cn } from '@/lib / utils';
@@ -274,4 +229,3 @@ function formatMessageWithLinks (message: string): string {
     '<a href="/help/$1" class="text - zion - cyan underline hover: text - zion - cyan / 80">$1</a>'),
   return formatted_message;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

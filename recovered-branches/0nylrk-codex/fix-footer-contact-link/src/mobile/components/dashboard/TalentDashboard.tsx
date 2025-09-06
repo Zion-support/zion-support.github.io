@@ -1,8 +1,3 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function TalentDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -145,10 +140,8 @@ import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {ChevronRight, FileText, Image, Clock, Zap, BookOpen} from "lucide-react";
 import {Link} from "react-router-dom";
-=======
 
 
-=======
 import React from "react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -189,7 +182,6 @@ export function TalentDashboard() {;
                 </div>;
               </div>;
               <div className="flex gap-2 mt-3">;
-=======
 import React from './react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -231,13 +223,11 @@ function TalentDashboard() {
                 </div>;
               </div>;
               <div className="flex gap - 2 mt - 3">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 <Button size="sm">Apply Now</Button>;
                 <Button size="sm" variant="outline">View Details</Button>;
               </div>;
             </CardContent>;
           </Card>;
-
           <Card>;
             <CardContent className="p - 4">;
               <div className="flex justify - between items - start">;
@@ -257,7 +247,6 @@ function TalentDashboard() {
                 </div>;
               </div>;
               <div className="flex gap - 2 mt - 3">;
-
                 <Button size="sm">Apply Now</Button>;
                 <Button size="sm" variant="outline">View Details</Button>;
               </div>;
@@ -265,7 +254,6 @@ function TalentDashboard() {
           </Card>;
         </div>;
       </section>;
-
       <section>;
         <h2 className="text - lg font - medium mb - 4">Application Tracker</h2>;
         <Card>;
@@ -289,13 +277,11 @@ function TalentDashboard() {
               </div>;
             </div>;
             <Button variant="outline" className="w - full mt - 4">;
-
               View All Applications;
             </Button>;
           </CardContent>;
         </Card>;
       </section>;
-
       <section>;
         <h2 className="text - lg font - medium mb - 4">Quick Actions</h2>;
         <div className="grid grid - cols - 2 gap - 4">;
@@ -321,12 +307,10 @@ function TalentDashboard() {
         <div className="flex items - center justify - between mb - 4">;
           <h2 className="text - lg font - medium">Learning Hub</h2>;
           <Button variant="ghost" size="sm" className="h - 8">;
-
             View all;
           </Button>;
         </div>;
         <Card>;
-
           <CardContent className="p - 4">;
             <div className="flex items - center gap - 3">;
               <div className="bg - primary / 10 p - 3 rounded - full">;
@@ -335,18 +319,13 @@ function TalentDashboard() {
               <div>;
                 <h3 className="font - medium">Improve your profile visibility</h3>;
                 <p className="text - sm text - muted - foreground">5 tips for getting noticed by clients</p>;
-
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       </section>;
-
-    </div>);
-}
-
-=======
 ;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </div>);
+}

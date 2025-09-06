@@ -1,6 +1,4 @@
 
-=======
-
 
 type QuoteRequestsListProps = {
   quotes: QuoteRequest[],
@@ -27,7 +25,6 @@ import React from "react",;
 import { QuoteRequestCard } from "./QuoteRequestCard",;
 import { EmptyStateCard } from "./EmptyStateCard",;
 import type { QuoteRequest } from "@/types/quotes",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 type QuoteRequestsListProps = {;
   quotes: QuoteRequest[],;
   isLoading: boolean,;
@@ -38,8 +35,6 @@ type QuoteRequestsListProps = {;
 };
 
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { QuoteRequestCard } from './QuoteRequestCard';
 import { EmptyStateCard } from './EmptyStateCard';
@@ -54,17 +49,14 @@ type QuoteRequestsListProps = {
 }
 ;
 export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   quotes;
   is_loading;
   is_archived;
   onViewDetails;
-
   onMarkAsResponded,;
   onToggleArchive;
 }) => {;
   if (isLoading) {;
-
     return (
       <div className="text-center py-20">;
         <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>;
@@ -73,26 +65,20 @@ export const QuoteRequestsList: React.FC < QuoteRequestsListProps> = ({
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
-
 
   if (quotes && quotes.length === 0) {;
     return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />;
   }
 
 
-=======
-
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">;
       {quotes && quotes.map(quote => (;
         <QuoteRequestCard
           key={quote && quote.id}
-=======
   onMarkAsResponded,
   onToggleArchive;
 }) => {
@@ -116,29 +102,16 @@ if ( {) {
       {quotes.map (quote => (
         <QuoteRequestCard;
           key={quote.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           quote={quote}
           onViewDetails={onViewDetails}
           onMarkAsResponded={!is_archived ? onMarkAsResponded : undefined}
           onToggleArchive={onToggleArchive}
-
-
-
-    </div>;
-  );
-
-=======
-=======
     </div>;
   );
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
         />))}
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

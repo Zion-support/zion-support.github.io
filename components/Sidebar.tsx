@@ -24,37 +24,6 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
-
-
-import { 
-  X, 
-  Building2, 
-  Code, 
-  Smartphone, 
-  Cloud, 
-  Shield, 
-  Zap,
-  ShoppingCart,
-  Heart,
-  GraduationCap,
-  Factory,
-  Truck,
-  CreditCard,
-  Phone,
-  Mail,
-  ExternalLink;
-
-
-} from 'lucide-react';
-interface SidebarProps {
-  isOpen: boolean, onClose: () => void
-}
-const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDropdowns, setOpenDropdowns] = useState<string[]>([]);
-  const handleDropdownToggle = (title: string) => {
-    setOpenDropdowns(prev =>
-      prev.includes(title)
-        ? prev.filter(item => item !== title)
-=======
 import { ;
   X, ;
   Building2, ;
@@ -85,10 +54,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
     setOpenDropdowns(prev =>;
       prev && prev.includes(title);
         ? prev && prev.filter(item => item !== title);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         : [...prev, title];
     );
-
 
   const navigation = {;
     'Services': [;
@@ -122,7 +89,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
     { name: 'Contact', href: '/contact' },;
   ];
 
-
   ];
   return (
     <AnimatePresence>;
@@ -135,20 +101,16 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
-
           />;
 
           <motion&& motion.div
-
             initial={{ x: -300 }}
             animate={{ x: 0 }}
             exit={{ x: -300 }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
 
-
             <div className="p-6">;
-
               {/* Header */}
               <div className="flex items-center justify-between mb-8">;
                 <div className="flex items-center space-x-2">;
@@ -160,11 +122,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                 <button
                   onClick={onClose}
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-
                   <X className="w-6 h-6" />;
                 </button>;
               </div>;
-
 
               {/* Navigation */}
               <nav className="space-y-4">;
@@ -172,14 +132,12 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                   <div key={title}>;
                     <button
                       onClick={() => handleDropdownToggle(title)}
-
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover: text-blue-600 transition-colors";
 
               <div className="mt-8 pt-8 border-t border-gray-200">;
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>;
                 <div className="space-y-2">;
                   {quickLinks && quickLinks.map((link) => (;
-
                     <Link
                       key={link && link.name}
                       href={link && link.href}
@@ -188,10 +146,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                       {link && link.name}
                     </Link>;
                   ))}
-
                 </div>;
               </div>;
-
 
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">;
@@ -221,7 +177,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
       )}
     </AnimatePresence>;
   );
-
+}
+export default Sidebar;
 import {
   X,
   Building2,
@@ -372,10 +329,7 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
 export default Sidebar;
 ;
 
-=======
-
 };
 
 export default Sidebar;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -38,14 +37,11 @@ import {useIsMobile} from "@/hooks/use-mobile";
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {useTranslationService} from "@/hooks/useTranslationService";
 export default function TranslationManager() {;
-
   const { t, i18n } = useTranslation();
 
   const isMobile = useIsMobile();
   const { supportedLanguages } = useLanguage();
   const { translateContent, isTranslating } = useTranslationService();
-
-
 
   const [selectedNamespace, setSelectedNamespace] = useState("translation");
   const [searchQuery, setSearchQuery] = useState("");
@@ -54,17 +50,6 @@ export default function TranslationManager() {;
   const [editingKey, setEditingKey] = useState<string | null>(null);
   const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({});
   const [isSaving, setIsSaving] = useState(false);
-
-
-
-
-    supportedLanguages.forEach(lang => {
-      const res = i18n.getResourceBundle(lang.code, selectedNamespace);
-      if (res) {
-        // Flatten nested objects for easier management
-        const flattenObject = (obj: any, prefix = '') => {
-          return Object.keys(obj).reduce((acc, key) => {
-=======
 import React, { useState, useEffect } from 'react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -111,7 +96,6 @@ if ( {) {
         // Flatten nested objects for easier management;
         const flatten_object = (obj: any, prefix = '') =>: any {
           return Object.keys (obj).reduce ((acc, key) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             const pre = prefix.length ? `${prefix}.` : '';
             // Check condition
 if ( {) {
@@ -119,7 +103,8 @@ if ( {) {
 }
               Object.assign (acc, flatten_object (obj[key], `${pre}${key}`));
             } else {
-
+              acc[`${pre}${key}`] = obj[key];
+            }
 
   // Simulated translation data - in a real app, this would come from your backend;
   useEffect(() => {;
@@ -135,11 +120,9 @@ if ( {) {
             const pre = prefix && prefix.length ? `${prefix}.` : '';
             if (typeof obj[key] === 'object' && obj[key] !== null) {;
               Object && Object.assign(acc, flattenObject(obj[key], `${pre}${key}`));
-=======
               acc[`${pre}${key}`] = obj[key]
 
 
-=======
 import React, { useState, useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -186,6 +169,17 @@ export default function TranslationManager() {;
             }
             return acc;
 
+        currentTranslations[lang && lang.code] = flattenObject(res);
+      }
+    });
+
+    setTranslations(currentTranslations);
+
+    // Get all unique keys across all languages;
+    const allKeys = new Set<string>();
+    Object && Object.values(currentTranslations).forEach(langTranslations => {;
+      Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
+    });
 
     setFilteredKeys(Array && Array.from(allKeys));
   }, [selectedNamespace, i18n]);
@@ -194,7 +188,6 @@ export default function TranslationManager() {;
   useEffect(() => {;
     if (!searchQuery && searchQuery.trim()) {;
       // Get all unique keys across all languages;
-
       const allKeys = new Set<string>();
       Object && Object.values(translations).forEach(langTranslations => {;
         Object && Object.keys(langTranslations).forEach(key => allKeys && allKeys.add(key));
@@ -202,81 +195,6 @@ export default function TranslationManager() {;
       setFilteredKeys(Array && Array.from(allKeys));
       return;
     }
-
-          }, {} as Record<string string>);
-        },;
-        currentTranslations[lang.code] = flattenObject(res);
-      }
-    }),;
-    setTranslations(currentTranslations),;
-    // Get all unique keys across all languages;
-    const allKeys = new Set<string>(),;
-    Object.values(currentTranslations).forEach(langTranslations => {;
-      Object.keys(langTranslations).forEach(key => allKeys.add(key));
-    }),;
-    setFilteredKeys(Array.from(allKeys));
-  }, [selectedNamespace, i18n]),;
-  // Filter keys based on search query;
-  useEffect(() => {;
-    if (!searchQuery.trim()) {;
-      // Get all unique keys across all languages;
-      const allKeys = new Set<string>(),;
-      Object.values(translations).forEach(langTranslations => {;
-        Object.keys(langTranslations).forEach(key => allKeys.add(key));
-      }),;
-      setFilteredKeys(Array.from(allKeys)),;
-      return;
-    }
-;
-    const query = searchQuery.toLowerCase().trim(),;
-    const filtered: string[] = [],;
-    // Search in keys and values;
-    Object.values(translations).forEach(langTranslations => {;
-      Object.entries(langTranslations).forEach(([key, value]) => {;
-        if (;
-          key.toLowerCase().includes(query) ||;
-          (typeof value === 'string' && value.toLowerCase().includes(query));
-        ) {;
-          filtered.push(key);
-        }
-      });
-    }),;
-    setFilteredKeys([...new Set(filtered)]);
-  }, [searchQuery, translations]),;
-  const handleEdit = (key: string) => {;
-    setEditingKey(key),;
-    // Initialize edited translations for this key;
-    const initialEdits: Record<SupportedLanguage string> = {} as Record<SupportedLanguage string>,;
-    supportedLanguages.forEach(lang => {;
-      initialEdits[lang.code] = translations[lang.code]?.[key] || '';
-    }),;
-    setEditedTranslations({;
-      ...editedTranslations,;
-      [key]: initialEdits;
-    });
-  },;
-  const handleSave = (key: string) => {;
-    setIsSaving(true),;
-    // In a real application, you would save these to your backend;
-    setTimeout(() => {;
-      // Update translations with edited values;
-      const updatedTranslations = { ...translations },;
-      supportedLanguages.forEach(lang => {;
-        if (!updatedTranslations[lang.code]) {;
-
-
-
-          updatedTranslations[lang.code] = {}
-        }
-        updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
-      }),
-      
-      setTranslations(updatedTranslations),
-      setEditingKey(null),
-      setIsSaving(false),
-      
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       toast({
         title: t("translation.saved")
         description: t("translation.changes_saved")})
@@ -294,7 +212,6 @@ export default function TranslationManager() {;
 
     for (const lang of supportedLanguages.map(l => l.code)) {
       if (translations[lang]?.[key]) {
-=======
 
     const query = searchQuery && searchQuery.toLowerCase().trim();
     const filtered: string[] = [],;
@@ -361,28 +278,11 @@ export default function TranslationManager() {;
 
     for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
       if (translations[lang]?.[key]) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         sourceLanguage = lang;
         sourceText = translations[lang][key];
         break;
       }
     }
-
-
-      ),
-      
-
-
-      if (error) {
-        toast({
-          title: t('translation.translation_failed')
-          description: error
-          variant: "destructive"})
-        return
-      }
-      // Update edited translations with auto-translated content
-      setEditedTranslations({
-
 
     if (!sourceText) {;
       toast({;
@@ -409,33 +309,6 @@ export default function TranslationManager() {;
 
       // Update edited translations with auto-translated content;
       setEditedTranslations({;
-
-        ...editedTranslations;
-        [key]: translatedText;
-      });
-
-        ...editedTranslations,
-        [key]: translatedText
-
-      }),
-      
-
-
-      toast({
-        title: t('translation.translation_success')
-        description: t('translation.content_translated')})
-    } catch (error) {
-      console.error(`Error translating key ${key}:`, error);
-      toast({
-        title: t('translation.translation_failed')
-        description: error instanceof Error ? error.message : t('translation.unknown_error')
-        variant: "destructive"})
-
-
-      <SEO 
-        title={t('translation.manager_title')} 
-
-=======
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
       }),;
       setTranslations(updatedTranslations),;
@@ -520,7 +393,6 @@ export default function TranslationManager() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         description={t('translation.manager_description')}
       />
       <Header />
@@ -531,7 +403,9 @@ export default function TranslationManager() {;
           </CardHeader>
           <CardContent>
             <div className="space-y-6">
-=======
+        ...editedTranslations;
+        [key]: translatedText;
+      });
 
       toast({;
         title: t('translation && translation.translation_success'),;
@@ -579,7 +453,6 @@ export default function TranslationManager() {;
           </CardHeader>;
           <CardContent>;
             <div className="space-y-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Search and filter */}
               <div className="flex flex-col sm:flex-row gap-4">;
                 <div className="relative flex-1">;
@@ -589,12 +462,6 @@ export default function TranslationManager() {;
                     placeholder={t('translation && translation.search_placeholder')}
                     className="pl-8"
                     value={searchQuery}
-
-
-              
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">
@@ -634,7 +501,6 @@ export default function TranslationManager() {;
                                       onChange={(e) => handleChange(lang.code, key, e.target.value)}
                                       dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
                                     />
-=======
                     onChange={(e) => setSearchQuery(e && e.target.value)}
                   />;
                 </div>;
@@ -691,22 +557,17 @@ export default function TranslationManager() {;
                                       onChange={(e) => handleChange(lang && lang.code, key, e && e.target.value)}
                                       dir={lang && lang.code === 'ar' ? 'rtl' : 'ltr'}
                                     />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                                   )}
                                 </div>;
                               ))}
-
                             </div>;
                             <div className="flex gap-2 mt-4">;
                               <Button
                                 size="sm" 
 
-=======
-
                               <Button 
                                 size="sm" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                                 onClick={() => handleSave(key)}
                                 disabled={isSaving}
                               >;
@@ -721,10 +582,8 @@ export default function TranslationManager() {;
                                     {t('general && general.save')}
                                   </>;
                                 )}
-
                               </Button>;
                               <Button
-=======
 
                               </Button>
                               <Button 
@@ -734,7 +593,6 @@ export default function TranslationManager() {;
                                 onClick={handleCancel}>;
                                 {t('general && general.cancel')}
                               </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                               <Button
 
 
@@ -749,7 +607,6 @@ export default function TranslationManager() {;
                                 ) : (;
                                   <Globe className="mr-2 h-4 w-4" />;
                                 )}
-
                                 {t('translation && translation.auto_translate')}
                               </Button>;
                             </div>;
@@ -766,7 +623,6 @@ export default function TranslationManager() {;
                                     {translations[lang && lang.code]?.[key] || t('translation && translation.missing')}
                                   </span>;
                                 </div>;
-
                               ))}
                               {getMissingLanguages(key).length > 0 && (;
                                 <div className="flex items-center gap-2 text-sm text-zion-purple">;
@@ -792,8 +648,6 @@ export default function TranslationManager() {;
                     ))}
                   </div>;
                 )}
-
-=======
             return acc;
           }, {} as Record < string, string>);
         }
@@ -1108,20 +962,13 @@ if ( {) {
                       </div>))}
                   </div>)}
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>;
             </div>;
           </CardContent>;
         </Card>;
       </main>;
       <Footer />;
+;
 
     </>);
 }
-
-=======
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

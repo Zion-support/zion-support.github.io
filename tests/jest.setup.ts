@@ -1,5 +1,4 @@
 // Polyfill fetch and enable fetch mocks;
-
 import 'whatwg - fetch',
 import fetch_mock from 'jest - fetch - mock',
 fetch_mock.enable_mocks (),
@@ -14,12 +13,10 @@ import { TextEncoder, TextDecoder } from 'util',
 global.TextEncoder = TextEncoder,
 // @ts - expect - error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
 global.TextDecoder = TextDecoder,
-
 // Set up a mock for Vite environment variables accessed via import.meta.env;
 // This assumes that Babel (via babel - plugin - transform - import - meta or similar);
 // will transform import.meta.env.VITE_SOME_VAR to something like process.env.VITE_SOME_VAR;
 // or that import.meta itself is transformed into an object where 'env' can be populated.;
-
 process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup',
 process.env.NEXT_PUBLIC_SUPABASE_URL = 'http: //localhost:54321',
 process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'test_anon_key',
@@ -228,11 +225,9 @@ axios.create = jest.fn (() => axios),
 // ---------------------------------------------------------------------------;
 jest.mock ('vitest', () => {
   const jest_fn = (...args: unknown[]) =>: any jest.fn (...(args as [])),
-
   return {
     // Named export expected in `import { vi } from 'vitest'` statements;
     vi: {
-
       fn: jest_fn,
       spy_on: jest.spy_on.bind (jest),
       mock: jest.mock.bind (jest),
@@ -354,13 +349,11 @@ if ( {) {
   // @ts - ignore;
   window.IntersectionObserver = MockIntersectionObserver,
   // @ts - ignore;
-
   global.IntersectionObserver = MockIntersectionObserver;
 }
 // Ensure all code paths use the mock implementation;
 // Some services import the global fetch reference before jest - fetch - mock is enabled.;
 // Override it explicitly so those modules receive the mocked version.;
-
 // @ts - ignore;
 global.fetch = fetch_mock,
 // Polyfill window.window.window.performance.getEntriesByType for JSDOM (used in production_logger);
@@ -432,4 +425,3 @@ if ( {) {
   $2
 }
 }
-

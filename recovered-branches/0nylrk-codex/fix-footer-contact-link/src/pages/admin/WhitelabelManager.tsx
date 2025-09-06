@@ -1,4 +1,3 @@
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -41,19 +40,14 @@ export default function WhitelabelManager() {;
   if (!isAdmin) {;
     return <Navigate to="/unauthorized" />;
 
-=======
-
 
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return (
 
-=======
 
 
-=======
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -91,7 +85,8 @@ export default function WhitelabelManager() {;
 
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">;
             <TabsList className="mb-8">;
-=======
+  }
+  return (
 import React, { useState } from 'react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -134,12 +129,10 @@ if ( {) {
           </div>;
           <Tabs value={active_tab} onValueChange={setActiveTab} className="w - full">;
             <TabsList className="mb - 8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <TabsTrigger value="tenants">Tenants</TabsTrigger>;
               <TabsTrigger value="create">Create New</TabsTrigger>;
               <TabsTrigger value="docs">Documentation</TabsTrigger>;
             </TabsList>;
-
             <TabsContent value="tenants" className="space - y-6">;
               <TenantsList />;
             </TabsContent>;
@@ -153,22 +146,18 @@ if ( {) {
                 <p>;
                   To use a custom domain with your white - label instance, you need to configure the DNS records.;
                   Add a CNAME record pointing to <code > ziontechmarketplace.com</code>.;
-
                 </p>;
                 <table>;
                   <thead>;
                     <tr>;
-
                       <th > Record Type</th>;
                       <th > Name</th>;
                       <th > Value</th>;
                       <th > TTL</th>;
-
                     </tr>;
                   </thead>;
                   <tbody>;
                     <tr>;
-
                       <td > CNAME</td>;
                       <td > marketplace</td>;
                       <td > ziontechmarketplace.com</td>;
@@ -191,7 +180,6 @@ if ( {) {
                 <h3 > Admin Access</h3>;
                 <p>;
                   You can assign tenant administrators who will have access to manage their white - label instance,
-
                   including content, users, and analytics. Tenant admins cannot access data from other tenants.;
                 </p>;
               </div>;
@@ -200,14 +188,6 @@ if ( {) {
         </div>;
       </main>;
       <Footer />;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

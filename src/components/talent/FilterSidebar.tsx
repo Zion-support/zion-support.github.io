@@ -1,12 +1,3 @@
-import { Filter } from 'lucide-react'
-import { SearchFilter } from "./filters/SearchFilter",
-import { SortFilter } from "./filters/SortFilter",
-import { SkillsFilter } from "./filters/SkillsFilter",
-import { AvailabilityFilter } from "./filters/AvailabilityFilter",
-import { RegionFilter } from "./filters/RegionFilter",
-import { ExperienceFilter } from "./filters/ExperienceFilter",
-
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Filter } from 'lucide-react';
@@ -41,10 +32,19 @@ export function FilterSidebar(): any ({;
     <>;
       {/* Filter header */}
 
-      <div className='flex items-center justify-between mb-6'>;
-        <h3 className='text-lg font-semibold text-white flex items-center'>;
-          <Filter className='h-4 w-4 mr-2 text-zion-purple' />  searchTerm;
-
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Filter } from 'lucide-react'
+import { SearchFilter } from "./filters/SearchFilter";
+import { SortFilter } from "./filters/SortFilter";
+import { SkillsFilter } from "./filters/SkillsFilter";
+import { AvailabilityFilter } from "./filters/AvailabilityFilter";
+import { RegionFilter } from "./filters/RegionFilter";
+import { ExperienceFilter } from "./filters/ExperienceFilter";
+import { PriceFilter } from "./filters/PriceFilter";
+import { FilterSidebarProps } from "@/types/filters";
+export function FilterSidebar({
+  searchTerm;
   setSearchTerm;
   selectedSkills;
   toggleSkill;
@@ -61,16 +61,23 @@ export function FilterSidebar(): any ({;
   sortOption;
   setSortOption;
   clearFilters;
-
-
+  isMobileFilterOpen
+}: FilterSidebarProps) {
   return (
     <>;
       {/* Filter header */}
-
+      <div className='flex items-center justify-between mb-6'>;
+        <h3 className='text-lg font-semibold text-white flex items-center'>;
+          <Filter className='h-4 w-4 mr-2 text-zion-purple' />;
+          Filters;
+        </h3>;
+        <Button
+          variant='ghost'
+          size='sm'
+          onClick={clearFilters}
       <div className="flex items-center justify-between mb-6">
         <h3 className="text-lg font-semibold text-white flex items-center">
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />
-
           Filters
         </h3>
         <Button
@@ -141,63 +148,6 @@ export function FilterSidebar({
           Clear All
         </Button>
       </div>
-
-
-      
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Filter } from 'lucide-react';
-import { SearchFilter } from "./filters/SearchFilter",;
-import { SortFilter } from "./filters/SortFilter",;
-import { SkillsFilter } from "./filters/SkillsFilter",;
-import { AvailabilityFilter } from "./filters/AvailabilityFilter",;
-import { RegionFilter } from "./filters/RegionFilter",;
-import { ExperienceFilter } from "./filters/ExperienceFilter",;
-import { PriceFilter } from "./filters/PriceFilter",;
-import { FilterSidebarProps } from "@/types/filters",;
-export function FilterSidebar({;
-  searchTerm,;
-  setSearchTerm,;
-  selectedSkills,;
-  toggleSkill,;
-  selectedAvailability,;
-  toggleAvailability,;
-  selectedRegions,;
-  toggleRegion,;
-  priceRange,;
-  setPriceRange,;
-  experienceRange,;
-  setExperienceRange,;
-  expandedSections,;
-  toggleSection,;
-  sortOption,;
-  setSortOption;
-  clearFilters;
-  isMobileFilterOpen;
-}: FilterSidebarProps) {;
-  return (;
-    <>;
-      {/* Filter header */}
-      <div className="flex items-center justify-between mb-6">;
-        <h3 className="text-lg font-semibold text-white flex items-center">;
-          <Filter className="h-4 w-4 mr-2 text-zion-purple" />;
-          Filters;
-        </h3>;
-        <Button;
-          variant="ghost";
-          size="sm";
-          onClick={clearFilters}
-          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent";
-        >;
-          Clear All;
-        </Button>;
-      </div>;
-
-
-      {/* Search */}
-      <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
-      {/* Sorting */}
-      <SortFilter sortOption={sortOption} setSortOption={setSortOption} />
           className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
           Clear All;
         </Button>;
@@ -226,9 +176,7 @@ export function FilterSidebar({;
         toggleSkill={toggleSkill}
         expanded={expandedSections && expandedSections.skills}
         toggleSection={() => toggleSection('skills')}
-
         isMobileFilterOpen={isMobileFilterOpen}      />;
-
 
       {/* Availability */}
       <AvailabilityFilter
@@ -236,9 +184,7 @@ export function FilterSidebar({;
         toggleAvailability={toggleAvailability}
         expanded={expandedSections && expandedSections.availability}
         toggleSection={() => toggleSection('availability')}
-
         isMobileFilterOpen={isMobileFilterOpen}      />;
-
 
       {/* Region */}
       <RegionFilter
@@ -246,9 +192,7 @@ export function FilterSidebar({;
         toggleRegion={toggleRegion}
         expanded={expandedSections && expandedSections.region}
         toggleSection={() => toggleSection('region')}
-
         isMobileFilterOpen={isMobileFilterOpen}      />;
-
 
       {/* Years of Experience */}
       <ExperienceFilter
@@ -256,9 +200,7 @@ export function FilterSidebar({;
         setExperienceRange={setExperienceRange}
         expanded={expandedSections && expandedSections.experience}
         toggleSection={() => toggleSection('experience')}
-
         isMobileFilterOpen={isMobileFilterOpen}      />;
-
 
       {/* Price Range */}
       <PriceFilter
@@ -266,16 +208,13 @@ export function FilterSidebar({;
         setPriceRange={setPriceRange}
         expanded={expandedSections && expandedSections.price}
         toggleSection={() => toggleSection('price')}
-
         isMobileFilterOpen={isMobileFilterOpen}      />;
 
       {isMobileFilterOpen && (;
-
         <Button
           onClick={() =>;
             window && window.dispatchEvent(new CustomEvent('closeMobileFilter'));
           }
-
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Filter } from 'lucide-react';
@@ -367,26 +306,17 @@ function FilterSidebar() {
         expanded={expanded_sections.region}
         toggle_section={() => toggle_section ('region')}
         isMobileFilterOpen={isMobileFilterOpen}      />;
-
       {/* Years of Experience */}
       <ExperienceFilter;
         experience_range={experience_range}
         setExperienceRange={setExperienceRange}
-
         expanded={expanded_sections.experience}
         toggle_section={() => toggle_section ('experience')}
         isMobileFilterOpen={isMobileFilterOpen}      />;
-
       {/* Price Range */}
       <PriceFilter;
         price_range={price_range}
         setPriceRange={setPriceRange}
-
-      
-
-        <Button 
-
-
         expanded={expanded_sections.price}
         toggle_section={() => toggle_section ('price')}
         isMobileFilterOpen={isMobileFilterOpen}      />;
@@ -411,19 +341,46 @@ function FilterSidebar() {
         toggle_section={() => toggle_section ('skills')}
         isMobileFilterOpen={isMobileFilterOpen}
       />;
-
-      {isMobileFilterOpen && (;
-        <Button;
-
-
-
+      {/* Availability */}
+      <AvailabilityFilter;
+        selected_availability={selected_availability}
+        toggle_availability={toggle_availability}
+        expanded={expanded_sections.availability}
+        toggle_section={() => toggle_section ('availability')}
+        isMobileFilterOpen={isMobileFilterOpen}
+      />;
+      {/* Region */}
+      <RegionFilter;
+        selected_regions={selected_regions}
+        toggle_region={toggle_region}
+        expanded={expanded_sections.region}
+        toggle_section={() => toggle_section ('region')}
+        isMobileFilterOpen={isMobileFilterOpen}
+      />;
+      {/* Years of Experience */}
+      <ExperienceFilter;
+        experience_range={experience_range}
+        setExperienceRange={setExperienceRange}
+        expanded={expanded_sections.experience}
+        toggle_section={() => toggle_section ('experience')}
+        isMobileFilterOpen={isMobileFilterOpen}
+      />;
+      {/* Price Range */}
+      <PriceFilter;
+        price_range={price_range}
+        setPriceRange={setPriceRange}
+        expanded={expanded_sections.price}
+        toggle_section={() => toggle_section ('price')}
+        isMobileFilterOpen={isMobileFilterOpen}
+      />;
+      {isMobileFilterOpen && (
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
         >
           Apply Filters
         </Button>
       )}
-
+    </>
           className='w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4'        >;
         <Button
           onClick = {(,) => window && window.dispatchEvent(new CustomEvent('closeMobileFilter')),}
@@ -490,7 +447,6 @@ function FilterSidebar() {
     </>;
   );
 }
-
   );
 }
         <Button;
@@ -501,10 +457,3 @@ function FilterSidebar() {
         </Button>)}
     </>);
 }
-
-
-    </>;
-  );
-
-}
-;

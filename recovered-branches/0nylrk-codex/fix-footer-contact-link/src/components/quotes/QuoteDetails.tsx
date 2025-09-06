@@ -1,9 +1,3 @@
-
-
-
-import {format} from "date-fns";
-
-=======
 import React from "react",
 import { 
   Dialog,
@@ -22,18 +16,15 @@ import { format } from "date-fns",
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface QuoteDetailsProps {
   quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void
 
 import {format} from "date-fns";
-=======
 
   };
 
-=======
 import React from "react",;
 import {;
   Dialog,;
@@ -54,12 +45,10 @@ interface QuoteDetailsProps {;
   quote: QuoteRequest | null,;
   isOpen: boolean,;
   onClose: () => void;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
   if (!quote) return null;
-
 import React from './react';
 import {
   Dialog,
@@ -90,30 +79,21 @@ if (return null) {
 if (return "Not specified") {
   $2
 }
-
     try {
       return format (new Date (date_string), "PPP");
     } catch (e) {
-
 
   const formatDate = (dateString?: string) => {;
     if (!dateString) return 'Not specified';
     try {;
       return format(new Date(dateString), 'PPP');
     } catch (e) {;
+  return (
 
       return dateString;
     }
-
-  },
-
-
-
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
   return (
-
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>;
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
@@ -194,8 +174,6 @@ if (return "Not specified") {
     </Dialog>;
   );
 };
-
-=======
       return date_string;
     }
   }
@@ -275,9 +253,6 @@ if (return "Not specified") {
     </Dialog>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,5 +1,33 @@
-
-
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+const TechnicalWritingChat: NextPage = () => {;
+  return (
+    <div>;
+      <Head>;
+        <title>TechnicalWritingChat - Zion Tech Solutions</title>;
+        <meta
+          name="description"
+          content="TechnicalWritingChat blog post"
+        />{" "}
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const TechnicalWritingChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>TechnicalWritingChat - Zion Tech Solutions</title>
+        <meta name="description" content="TechnicalWritingChat blog post" />
+      </Head>
+      
+      <main>
+        <h1>TechnicalWritingChat</h1>
+        <p>Blog content coming soon...</p>
+        <a href="/blog">Back to Blog</a>
+      </main>
+    </div>
+      </Head>;
 
       <main>;
         <h1>TechnicalWritingChat</h1>;
@@ -7,26 +35,15 @@
         <a href="/blog">Back to Blog</a>;
       </main>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default TechnicalWritingChat;
-
-
-=======
-
-
-import type { NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const TechnicalWritingChat: NextPage = () => {
   return (
     <div>
@@ -34,8 +51,12 @@ const TechnicalWritingChat: NextPage = () => {
 
         <title>TechnicalWritingChat - Zion Tech Solutions</title>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+
+
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';
@@ -59,4 +80,3 @@ const TechnicalWritingChat: NextPage = () => {
 ;
 export default TechnicalWritingChat;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,4 +1,3 @@
-
 /** @type {import ('next').NextConfig} */;
 const next_config = {
   reactStrictMode: true,
@@ -16,8 +15,6 @@ const next_config = {
 module.exports = next_config;
 ;
 
-=======
-
     domains: ["localhost", "ziontechgroup.com"],
   },
   output: 'standalone',
@@ -25,4 +22,3 @@ module.exports = next_config;
   distDir: '.next',
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

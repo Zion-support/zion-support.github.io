@@ -1,8 +1,3 @@
-
-
-
-
-
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -26,7 +21,6 @@ interface GeneratedContent {;
 interface AIListingGeneratorProps {;
   onApplyGenerated?: (content: GeneratedContent) => void,;
   initialValues?: {;
-
     title?: string;
     category?: string;
     keyFeatures?: string;
@@ -36,23 +30,6 @@ interface AIListingGeneratorProps {;
 
 export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast();
-
-interface GeneratedContent {
-  description: string,
-  tags: string[],
-  suggestedPrice: {
-    min: number,
-    max: number
-  },
-  keyPoints: string[]
-
-
-
-  const handleInputChange = (e: { target: { value: string } }, field: string) => {
-    switch(field) {
-      case 'title':
-        setTitle(e.target.value);
-=======
   const [title, setTitle] = useState(initialValues && initialValues.title || "");
   const [category, setCategory] = useState(initialValues && initialValues.category || "");
   const [keyFeatures, setKeyFeatures] = useState(initialValues && initialValues.keyFeatures || "");
@@ -64,7 +41,6 @@ interface GeneratedContent {
     switch(field) {;
       case 'title':;
         setTitle(e && e.target.value);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         break;
       case 'category':;
         setCategory(e && e.target.value);
@@ -75,47 +51,6 @@ interface GeneratedContent {
       case 'targetAudience':;
         setTargetAudience(e && e.target.value),;
         break;
-
-
-  },
-
-
-
-  const handleGenerate = async () => {
-    if (!title |!category) {
-      toast({
-        title: "Missing required fields"
-        description: "Please provide at least a title and category."
-        variant: "destructive"
-
-=======
-
-      }),
-      return
-;
-export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
-  const { toast } = useToast(),;
-  const [title, setTitle] = useState(initialValues.title || ""),;
-  const [category, setCategory] = useState(initialValues.category || ""),;
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),;
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),;
-  const handleInputChange = (e: { target: { value: string } }, field: string) => {;
-    switch(field) {;
-      case 'title':;
-        setTitle(e.target.value),;
-        break,;
-      case 'category':;
-        setCategory(e.target.value),;
-        break,;
-      case 'keyFeatures':;
-        setKeyFeatures(e.target.value),;
-        break,;
-      case 'targetAudience':;
-        setTargetAudience(e.target.value),;
-        break;
-
     }
   };
 
@@ -125,11 +60,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         title: "Missing required fields",;
         description: "Please provide at least a title and category.",;
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
     }
-
+    setIsLoading(true);
 import React, { useState } from './react';
 import { use_toast } from '@/hooks / use - toast';
 import { Button } from '@/components / ui / button';
@@ -201,23 +135,10 @@ if ( {) {
     }
     setIsLoading (true);
 ;
-
     try {
       const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
         body: { title, category, key_features, target_audience }
       });
-
-;
-    setIsLoading(true),;
-    try {;
-      const { data, error } = await supabase.functions.invoke('ai-listing-generator', {;
-        body: { title, category, keyFeatures, targetAudience }
-      }),;
-      if (error) {;
-        throw new Error(error.message);
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       if (data.error) {
         throw new Error(data.error)
@@ -265,28 +186,10 @@ if ( {) {
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive";
       });
-
     } finally {
       setIsLoading (false);
     }
   }
-
-    } finally {
-      setIsLoading(false)
-    }
-
-  },
-
-
-
-  const handleApply = () => {
-    if (generatedContent && onApplyGenerated) {
-      onApplyGenerated(generatedContent);
-      toast({
-        title: "Content Applied"
-        description: "The generated content has been applied to your listing."
-      })
-
 
     try {;
       const { data, error } = await supabase && supabase.functions.invoke('ai-listing-generator', {;
@@ -302,7 +205,6 @@ if ( {) {
       }
 
       setGeneratedContent(data && data.generated);
-=======
     }
 
   },
@@ -365,7 +267,6 @@ if ( {) {
 
           <Button 
 
-=======
 ;
       setGeneratedContent(data.generated),;
 
@@ -392,7 +293,6 @@ if ( {) {
         title: "Content Applied",;
         description: "The generated content has been applied to your listing.";
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
 
@@ -451,14 +351,6 @@ if ( {) {
               placeholder="e && e.g. Developers, Marketers, Startups";
               className="bg-zion-blue border border-zion-blue-light text-white";
               disabled={isLoading}
-
-            />;
-          </div>;
-          <Button;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             onClick={handleGenerate}
             disabled={isLoading |!title |!category}
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
@@ -484,7 +376,6 @@ if ( {) {
             <div className="flex flex-wrap gap-2">
               {[...Array(5)].map((_, i) => (
                 <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />
-=======
             />;
           </div>;
           <Button
@@ -513,7 +404,6 @@ if ( {) {
             <div className="flex flex-wrap gap-2">;
               {[...Array(5)].map((_, i) => (;
                 <Skeleton key={i} className="h-6 w-16 bg-zion-blue-light/20" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               ))}
             </div>;
             <Skeleton className="h-8 w-1/3 bg-zion-blue-light/20" />;
@@ -525,39 +415,6 @@ if ( {) {
           </CardContent>;
         </Card>;
       )}
-
-
-
-
-
-      {generatedContent && !isLoading && (
-        <Card className="border border-zion-blue-light bg-zion-blue-dark">
-          <CardHeader>
-            <CardTitle className="text-white">Generated Content</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
-            <div>
-              <h3 className="text-sm font-medium text-zion-slate-light mb-2">Description</h3>
-              <p className="text-white">{generatedContent.description}</p>
-            </div>
-            <div>
-              <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
-              <div className="flex flex-wrap gap-2">
-                {generatedContent.tags.map((tag, index) => (
-                  <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">{tag}</Badge>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
-              <p className="text-white">${generatedContent.suggestedPrice.min.toFixed(2)} - ${generatedContent.suggestedPrice.max.toFixed(2)}</p>
-            </div>
-            <div>
-              <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
-              <ul className="list-disc pl-5 text-white space-y-1">
-                {generatedContent.keyPoints.map((point, index) => (
-                  <li key={index}>{point}</li>
-=======
 
       {generatedContent && !isLoading && (;
         <Card className="border border-zion-blue-light bg-zion-blue-dark">;
@@ -589,9 +446,7 @@ if ( {) {
               <ul className="list-disc pl-5 text-white space-y-1">;
                 {generatedContent && generatedContent.keyPoints.map((point, index) => (;
                   <li key={index}>{point}</li>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 ))}
-=======
 ;
   const handle_apply = () =>: any {
     // Check condition
@@ -721,12 +576,10 @@ if ( {) {
               <ul className="list - disc pl - 5 text - white space - y-1">;
                 {generated_content.key_points.map ((point, index) => (
                   <li key={index}>{point}</li>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </ul>;
             </div>;
           </CardContent>;
           <CardFooter>;
-
             <Button;
               on_click={handle_apply}
               className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white";
@@ -737,5 +590,4 @@ if ( {) {
           </CardFooter>;
         </Card>)}
     </div>);
-
 }

@@ -1,4 +1,3 @@
-
   const products = [{
       title: \'ZionAI Platform\',
       \"description\": \'Enterprise-grade AI platform for building, deploying, and managing machine learning models at scale.\',
@@ -109,7 +108,6 @@
       \"href\": \'/products/blockchain-suite\'
     }
   ];
-
   ];
   const benefits = [{
       \"title\": \'Enterprise Ready\',
@@ -169,7 +167,6 @@
         </div>
       </section>
       {/* Products Grid */}
-
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -208,13 +205,10 @@
                     {product.features.slice(0, 3).map((feature) => (
                       <li key={feature} className=\"flex items-center text-sm text-gray-600\">
                         <div className=\"w-2 h-2 bg-blue-600 rounded-full mr-3\"></div>
-
                         {feature}
                       </li>
                     ))}
-
                   </ul>
-
                     <Link
                       href={product.href}
                       className=\"flex-1 bg-blue-600 \"hover\": bg-blue-700 text-white py-2 px-4 rounded-lg font-medium text-center transition-colors flex items-center justify-center\"
@@ -233,7 +227,6 @@
         </div>
       </section>
       {/* Benefits Section */}
-
       <section className=\"py-20 bg-gray-50\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -256,13 +249,11 @@
                   {benefit.description}
                 </p>
               </div>
-
             ))}
           </div>
         </div>
       </section>
       {/* Pricing Comparison */}
-
       <section className=\"py-20\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -313,7 +304,6 @@
                   \'White-label Options\',
                   \'On-site Training\'
                 ]
-
               }
             ].map((plan) => (
               <div
@@ -329,7 +319,6 @@
                     </span>
                   </div>
                 )}
-
                   </div>
                   <p className=\"text-gray-600\">{plan.description}</p>
                 </div>
@@ -341,7 +330,6 @@
                       <CheckCircle className=\"h-5 w-5 text-green-500 mr-3\" />
                       <span className=\"text-gray-700\">{feature}</span>
                     </li>
-
                   ))}
                 </ul>
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
@@ -386,5 +374,3 @@
   );
 };
 export default Products;
-
-

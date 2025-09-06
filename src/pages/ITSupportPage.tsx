@@ -1,9 +1,3 @@
-import { Phone, ShieldCheck, Clock } from 'lucide-react'
-export default function ITSupportPage() {
-  const benefits = [
-    {import React from "react"
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
-
 import React from 'react';
 import { ServiceLandingTemplate } from '@/components / services / ServiceLandingTemplate';
 import { Phone, ShieldCheck, Clock } from 'lucide-react';
@@ -40,7 +34,6 @@ function ITSupportPage() {
     },
   ];
   const testimonials = [;
-
     {
       name: 'Lisa Wong'
       role: 'Operations Manager'
@@ -48,7 +41,6 @@ function ITSupportPage() {
       avatar: '/placeholder.svg'
     }
     {
-
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
@@ -77,7 +69,6 @@ export default function ITSupportPage() {
       name: "Carlos Diaz",
       role: "IT Lead",
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -173,8 +164,6 @@ export default function ITSupportPage() {;
 
     return (
 
-
-
     <ServiceLandingTemplate
       title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."
@@ -187,13 +176,6 @@ export default function ITSupportPage() {;
     />;
   );      benefits={benefits}
       testimonials={testimonials}
-
-      ctaText="Get IT Support";
-      ctaLink="/request-quote";
-    />;
-  );
-}
-
       name: 'Carlos Diaz',
       role: 'IT Lead',
       text: 'Professional and responsive. Their technicians feel like an extension of our own team.',
@@ -216,4 +198,3 @@ export default function ITSupportPage() {;
       cta_link="/request - quote";
     />);
 }
-;

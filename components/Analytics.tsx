@@ -22,14 +22,11 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect } from 'react';
-
 import Head from 'next / head';
 ;
-
 interface AnalyticsProps {
   tracking_id?: string;
 }
-
 
 interface AnalyticsProps {;
   trackingId?: string;
@@ -49,11 +46,9 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       window && window.dataLayer = window && window.dataLayer || [];
       function gtag(): any (...args: unknown[]) {;
         window && window.dataLayer.push(args),;
-
       }
       window && window.gtag = gtag;
       gtag('js', new Date());
-
       gtag('config', trackingId, {;
         page_title: document && document.title,;
         page_location: window && window.location.href,;
@@ -120,9 +115,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
 
   // Expose tracking functions globally for use in other components;
   if (typeof window !== 'undefined') {;
-
     (window as any).trackEvent = trackEvent;
-=======
 const Analytics: React.FC < AnalyticsProps> = ({ tracking_id = 'G - XXXXXXXXXX' }) => {
   useEffect (() => {
     // Google Analytics 4;
@@ -219,14 +212,12 @@ if ( {) {
   $2
 }
     (window as any).track_event = track_event;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     (window as any).trackButtonClick = trackButtonClick;
     (window as any).trackFormSubmission = trackFormSubmission;
     (window as any).trackExternalLink = trackExternalLink;
   }
   return (
     <Head>;
-
       <script;
         dangerouslySetInnerHTML={{
           __html: `;
@@ -251,32 +242,21 @@ if ( {) {
                         name: 'load',
                         value: Math.round (load_time),
 
-=======
-
                         name: 'load',
                         value: Math.round(loadTime),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       });
-=======
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart
                     if (window && window.gtag) {
                       window && window.gtag('event', 'timing_complete', {
                         name: 'load',
                         value: Math && Math.round(loadTime),
                       })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     }
                   }
                 }, 0)
               })
             }
-
-    </Head>);
-}
-;
-
-=======
 
           `,
 
@@ -288,5 +268,10 @@ if ( {) {
 };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          `
+        }}
+      />;
+    </Head>);
+}
+;
 export default Analytics;

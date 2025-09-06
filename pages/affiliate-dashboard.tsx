@@ -1,22 +1,39 @@
+import { useEffect, useMemo, useState } from 'react';
+function getRefCode(): string {
 
+  if (typeof window === 'undefined') return ''
+  return localStorage.getItem('ref_code') |''
+}
+export default function AffiliateDashboard() {
+  const [code, setCode] = useState<string>('')
+  const [metrics, setMetrics] = useState<any>(null)
+  const [amount, setAmount] = useState<string>('')
+  const [msg, setMsg] = useState<string>('')
+  useEffect(() => {
+    const c = getRefCode()
+    setCode(c)
+  }, []);
 
   useEffect(() => {
     if (!code) return
     (async () => {
       try {
-
+        const res = await fetch(`/api/partners/metrics?code=${encodeURIComponent(code)}`);
+        const json = await res.json();
+        setMetrics(json)
+      } catch {}
+    })()
+  }, [code]);
 
   async function requestPayout() {
     setMsg('')
     try {
       const res = await fetch('/api/partners/request-payout', {
-
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ code, amount: amount ? Number(amount) : undefined })}),
       const json = await res.json();
       if (!res.ok) throw new Error(json.error || 'Failed');
-
       setMsg('Payout requested')
     } catch (e: any) {
       setMsg(e?.message |'Error')
@@ -24,7 +41,6 @@
   }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
 
-=======
 
 
   }
@@ -77,8 +93,6 @@ export default function AffiliateDashboard(req, res) {
   }
 }
   const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code]),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!code) {
     return (
       <div className="space-y-4">
@@ -126,7 +140,6 @@ export default function AffiliateDashboard(req, res) {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>
     </div>
   )
@@ -137,11 +150,8 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
       <div className="text-2xl font-semibold">{value}</div>
     </div>
-
-=======
+  )
 }
-
-=======
 import { useEffect, useMemo, useState } from 'react',
 ;
 function getRefCode (): string {
@@ -241,9 +251,5 @@ function Stat() {
       <div className="text - 2xl font - semibold">{value}</div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

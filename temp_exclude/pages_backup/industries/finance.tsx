@@ -1,12 +1,9 @@
-
-
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-
 import {
   DollarSign,
   Brain,
@@ -21,7 +18,6 @@ import {
   FileText,
   Users;
 } from 'lucide-react';
-
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -90,8 +86,6 @@ const services = [
       'Compliance dashboards'';
     ];
   }
-
-
 ];
 const benefits = [
   {
@@ -114,8 +108,6 @@ const benefits = [
     description: 'Built-in compliance tools ensure adherence to financial regulations.,',
     icon: FileText,
   }
-
-
 ];
 export default function FinancePage() {
   return (
@@ -169,7 +161,6 @@ export default function FinancePage() {
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -199,25 +190,21 @@ export default function FinancePage() {
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-
                         {feature}
                       </li>,
                     ))}
                   </ul>,
                 </motion.div>;
               ))}
-
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
@@ -233,7 +220,6 @@ export default function FinancePage() {
               {benefits.map((benefit, index) => (
                 <motion.div
                   key={benefit.title}
-
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -246,18 +232,15 @@ export default function FinancePage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
             <motion.div;
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -281,5 +264,4 @@ export default function FinancePage() {
       </div>
     </Layout>
   );
-
 }

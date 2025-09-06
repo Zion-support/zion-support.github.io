@@ -1,17 +1,6 @@
 
 
-'),
 
-
-      if (parts.length > 1) {
-        // Take the content after the conflict resolution
-        backupContent = parts[1].split('>>>>>>>')[0]
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     }
     // Clean up the content
@@ -39,7 +28,6 @@
       backupUsed: backupPath
 
       corruptedBackup: corruptedBackupPath
-=======
 '),
       // Check condition
 if ( {) {
@@ -62,53 +50,16 @@ if ( {) {
     const corruptedBackupPath = `${page_path}.corrupted.${timestamp}`,
     fs.writeFileSync (corruptedBackupPath, current_content),
     // Restore the page;
-
-    fs.writeFileSync(pagePath, backupContent),;
-    return {;
-      restored: true,;
-      backupUsed: backupPath,;
-      corruptedBackup: corruptedBackupPath;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    fs.writeFileSync (page_path, backup_content),
+    return {
+      restored: true,
+      backup_used: backup_path,
+      corrupted_backup: corruptedBackupPath;
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
   }
 }
-
-
-
-
-
-// Function to scan and restore all corrupted pages
-function restoreAllCorruptedPages() {
-  const pagesDir = path.join(process.cwd(), 'pages')
-  const results = {
-
-    total: 0
-    restored: 0
-    failed: 0
-    details: []
-  }
-  function scanDirectory(dir) {
-    const entries = fs.readdirSync(dir, { withFileTypes: true })
-    for (const entry of entries) {
-      const fullPath = path.join(dir, entry.name)
-
-      if (entry.isDirectory()) {
-        if ({
-          scanDirectory(fullPath)
-        }
-
-
-      } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
-        results.total++,
-        
-        console.log(`\n🔍 Checking: ${fullPath}`),
-
-=======
 ;
 // Function to scan and restore all corrupted pages;
 function restoreAllCorruptedPages() {;
@@ -134,8 +85,31 @@ function restoreAllCorruptedPages() {;
 
 
         const result = restorePage(fullPath),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+// Function to scan and restore all corrupted pages;
+function restoreAllCorruptedPages() {;
+  const pagesDir = path.join(process.cwd(), 'pages'),;
+  const results = {;
+    total: 0;
+    restored: 0,;
+    failed: 0,;
+    details: [];
+  },;
+  function scanDirectory(dir) {;
+    const entries = fs.readdirSync(dir, { withFileTypes: true }),;
+    for (const entry of entries) {;
+      const fullPath = path.join(dir, entry.name);
+      if (entry.isDirectory()) {;
+        if (entry.name !== 'node_modules' && entry.name !== '.git' && entry.name !== '.next') {;
+          scanDirectory(fullPath);
+        }
+      } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
+        results.total++,
+        // // // console.log(`\n🔍 Checking: ${fullPath}`),
+
+
+
+        const result = restorePage(fullPath),
         if (result.restored) {
           results.restored++
           console.log(`✅ Restored: ${fullPath}`)
@@ -145,7 +119,6 @@ function restoreAllCorruptedPages() {;
 
 
           results.failed++,
-=======
           results.failed++,
 
 
@@ -162,10 +135,8 @@ function restoreAllCorruptedPages() {;
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
   // Generate summary
-=======
   
   console.log('🚀 Starting page restoration process...'),
-=======
   // // // console.log('🚀 Starting page restoration process...'),
 
   scanDirectory(pagesDir),
@@ -199,7 +170,6 @@ function restoreAllCorruptedPages() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 // Run the restoration if this script is executed directly
 if ({
@@ -281,7 +251,6 @@ if ( {) {
 }
   restoreAllCorruptedPages ();
 }
-=======
 
 ;
 module.exports = {;
@@ -289,21 +258,16 @@ module.exports = {;
   restoreAllCorruptedPages,;
   findBestBackup;
 };
-=======
 
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 module.exports = {
   restore_page,
   restoreAllCorruptedPages,
   findBestBackup;
 
 
-};
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+},
+;

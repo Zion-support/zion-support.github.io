@@ -1,9 +1,15 @@
-
-
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 export default function AdminWeb3Page() {
-
+  const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([])
+  useEffect(() => {
+    const raw = typeof window !== 'undefined' ? window.localStorage.getItem('zion-web3-users') : null
+    setUsers(raw ? JSON.parse(raw) : [])
+  }, [])
+  const save = (list: any) => {
+    if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', JSON.stringify(list))
+    setUsers(list)
+  };
 
   const metrics = {
     total: users.length,
@@ -11,9 +17,6 @@ export default function AdminWeb3Page() {
     sol: users.filter(u => u.chain === 'sol').length,
     enabled: users.filter(u => u.enabled).length,
     disabled: users.filter(u => !u.enabled).length},
-
-
-
   return (
     <>
       <Head><title>Admin — Web3</title></Head>
@@ -34,7 +37,6 @@ export default function AdminWeb3Page() {
 }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <ul className="space-y-2">
             {users.map((u, i) => (
               <li key={i} className="flex items-center justify-between">
@@ -46,11 +48,13 @@ export default function AdminWeb3Page() {
                   }} />
                 </label>
               </li>
-
-=======
+            ))}
+          </ul>
+        </div>
+      </div>
+    </>
+  )
 }
-
-=======
 import React, { useEffect, useState } from 'react',
 import Head from 'next / head',
 export default /**
@@ -102,9 +106,5 @@ function AdminWeb3Page() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

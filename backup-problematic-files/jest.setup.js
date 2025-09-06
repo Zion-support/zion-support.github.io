@@ -19,8 +19,6 @@ jest.mock("next/router", () => ({
         off: jest.fn(),
         emit: jest.fn()
       },
-
-
     };
   },
 }));
@@ -32,16 +30,12 @@ jest.mock("next/image", () => {
   };
 });
 
-
-
 // Mock Next.js Link component
 jest.mock('next/link', () => ({
   __esModule: true,
   default: ({ children, href, ...props }) => {
 
-
   },
-
 }));
 
 // Mock window.matchMedia
@@ -73,7 +67,4 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-
 };
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

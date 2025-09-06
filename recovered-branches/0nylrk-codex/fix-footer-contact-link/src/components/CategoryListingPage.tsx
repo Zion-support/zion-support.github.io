@@ -1,8 +1,3 @@
-
-
-
-
-
 import React from 'react';
 import {useState} from "react";
 import {Header} from "@/components/Header";
@@ -20,8 +15,6 @@ interface Listing {;
   title: string,;
   description: string,;
   category: string,;
-
-=======
 import { useState } from './react';
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
@@ -32,31 +25,21 @@ import { Input } from '@/components / ui / input';
 import { Select, SelectTrigger, SelectContent, SelectItem } from '@/components / ui / select';
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from './lucide-react';
 // Example listing type;
-=======
 // Example listing type
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface Listing {
   id: string,
   title: string,
   description: string,
   category: string,
-
-
-=======
-  subcategory?: string,
-  image?: string,
-  tags?: string[],
-  author?: string,
-  authorImage?: string,
-  aiScore?: number,
-  rating?: number,
-  reviewCount?: number,
-  price?: number | null,
-  createdAt: string
-
-
-}
-;
+  subcategory?: string;
+  image?: string;
+  tags?: string[];
+  author?: string;
+  author_image?: string;
+  ai_score?: number;
+  rating?: number;
+  review_count?: number;
+  price?: number | null;
 
 interface CategoryListingPageProps {;
   title: string,;
@@ -69,11 +52,37 @@ interface CategoryListingPageProps {;
 
 
 
+      return matchesSearch;
+    });
+    .sort((a, b) => {;
+      // Apply sorting;
+      switch (selectedSort) {;
+        case 'newest':;
+          return new Date(b && b.createdAt).getTime() - new Date(a && a.createdAt).getTime();
+        case 'oldest':;
+          return new Date(a && a.createdAt).getTime() - new Date(b && b.createdAt).getTime();
+        case 'rating-high':;
+          return (b && b.rating || 0) - (a && a.rating || 0);
+        case 'ai-match':;
+          return (b && b.aiScore || 0) - (a && a.aiScore || 0);
+        case 'a-z':;
+          return a && a.title.localeCompare(b && b.title);
+        case 'z-a':;
+          return b && b.title.localeCompare(a && a.title);
+        default: return 0;
+      }
+    });
+  return (
+    <>;
+      <Header />;
+      <div className="min-h-screen bg-zion-blue py-12 px-4">;
+        <div className="container mx-auto">;
+          <div className="text-center mb-12">;
+            <GradientHeading>{title}</GradientHeading>;
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
               {description}
-
             </p>;
           </div>;
-
 
           {/* Filters and Search */}
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">;
@@ -84,50 +93,6 @@ interface CategoryListingPageProps {;
                   type="text"
                   placeholder="Search listings..."
                   value={searchQuery}
-
-                  onChange={(e: React && React.ChangeEvent<HTMLInputElement>) => setSearchQuery(e && e.target.value)}
-                  className="pl-10 bg-zion-blue border border-zion-blue-light text-white";
-                />;
-              </div>;
-
-              <Select value={selectedSort} onValueChange={setSelectedSort}>;
-                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
-                  <div className="flex items-center">;
-                    {selectedSort === 'a-z' ? (;
-                      <ArrowDownAZ className="mr-2 h-4 w-4" />;
-                    ) : selectedSort === 'z-a' ? (;
-                      <ArrowUpZA className="mr-2 h-4 w-4" />;
-                    ) : null}
-                    <span>;
-                      {sortOptions && sortOptions.find(option => option && option.value === selectedSort)?.label || 'Sort By'}
-                    </span>;
-                  </div>;
-                </SelectTrigger>;
-                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
-                  {sortOptions && sortOptions.map((option) => (;
-                    <SelectItem key={option && option.value} value={option && option.value} className="text-white">;
-                      {option && option.label}
-                    </SelectItem>;
-                  ))}
-                </SelectContent>;
-              </Select>;
-
-              <Select value={selectedFilter} onValueChange={setSelectedFilter}>;
-                <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">;
-                  <div className="flex items-center">;
-                    <Filter className="mr-2 h-4 w-4" />;
-                    <span>;
-                      {filterOptions && filterOptions.find(option => option && option.value === selectedFilter)?.label || 'Filter'}
-                    </span>;
-                  </div>;
-                </SelectTrigger>;
-                <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
-                  {filterOptions && filterOptions.map((option) => (;
-                    <SelectItem key={option && option.value} value={option && option.value} className="text-white">;
-                      {option && option.label}
-                    </SelectItem>;
-                  ))}
-=======
   created_at: string;
 }
 interface CategoryListingPageProps {
@@ -243,23 +208,20 @@ if (return matches_search) {
                     <SelectItem key={option.value} value={option.value} className="text - white">;
                       {option.label}
                     </SelectItem>))}
-
                 </SelectContent>;
               </Select>;
             </div>;
           </div>;
-
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Listings Grid */}
           {processedListings.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {processedListings.map((listing) => (
                 <ListingScoreCard
-=======
+          {/* Results Count */}
+          <div className="mb-6">;
+            <p className="text-zion-slate-light">;
+              Showing {processedListings && processedListings.length} results;
+              {searchQuery && ` for "${searchQuery}"`}
           {/* Results Count */}
           <div className="mb - 6">;
             <p className="text - zion - slate - light">;
@@ -272,7 +234,6 @@ if (return matches_search) {
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
               {processed_listings.map ((listing) => (
                 <ListingScoreCard;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   key={listing.id}
                   title={listing.title}
                   description={listing.description}
@@ -283,7 +244,6 @@ if (return matches_search) {
                   author_image={listing.author_image}
                   ai_score={listing.ai_score}
                   rating={listing.rating}
-
             </p>;
           </div>;
 
@@ -305,7 +265,6 @@ if (return matches_search) {
                   reviewCount={listing && listing.reviewCount}
                 />;
               ))}
-=======
 
                   setSearchQuery(""),
 
@@ -328,7 +287,6 @@ if (return matches_search) {
                 onClick={() => {;
                   setSearchQuery("");
                   setSelectedFilter(filterOptions[0].value);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }}
 
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -338,14 +296,12 @@ if (return matches_search) {
             </div>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         </div>;
       </div>;
       <Footer />;
     </>;
   );
-=======
                   review_count={listing.review_count}
                 />))}
             </div>) : (
@@ -367,5 +323,4 @@ if (return matches_search) {
       </div>;
       <Footer />;
     </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

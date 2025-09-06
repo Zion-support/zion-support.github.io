@@ -1,30 +1,3 @@
-
-
-import {useState} from 'react';
-import {useAuth} from "@/hooks/useAuth";
-import {supabase} from '@/integrations/supabase/client';
-import {Interview, InterviewRequest, InterviewResponse} from '@/types/interview';
-import {toast} from '@/components/ui/use-toast';
-export function useInterviews() {;
-  const [interviews, setInterviews] = useState<Interview[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
-
-  const { user } = useAuth();
-  // Request an interview as a client
-
-  const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
-    if (!user) {
-      toast({
-
-
-        title: "Authentication required",
-        description: "You must be logged in to request interviews",
-
-
-        variant: "destructive"
-=======
 import {useState} from 'react';
 import { use_auth } from '@/hooks / use_auth';
 import {supabase} from '@/integrations / supabase / client';
@@ -49,24 +22,9 @@ if ( {) {
         title: "Authentication required";
         description: "You must be logged in to request interviews",
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
       return null;
     }
-
-
-
-    setIsLoading(true),
-    setError(null),
-
-
-
-    try {
-      // Insert the interview into the database
-      const { data, error: insertError } = await supabase
-        .from('interviews')
-        .insert({
-
           client_id: interviewRequest && interviewRequest.client_id;
           talent_id: interviewRequest && interviewRequest.talent_id;
           scheduled_date: interviewRequest && interviewRequest.scheduled_date;
@@ -76,11 +34,9 @@ if ( {) {
           meeting_platform: interviewRequest && interviewRequest.meeting_platform;
           interview_type: interviewRequest && interviewRequest.interview_type;
           title: interviewRequest && interviewRequest.title,
-
           status: 'requested'})
         .select('*')
         .single();
-=======
 
           client_id: interviewRequest.client_id,
           talent_id: interviewRequest.talent_id,
@@ -96,7 +52,6 @@ if ( {) {
         .single(),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       if (insertError) {
         console && console.error("Error requesting interview:", insertError);
         setError(insertError && insertError.message);
@@ -119,7 +74,6 @@ if ( {) {
       console && console.error("Error in requestInterview:", err);
       setError(err && err.message);
       return null
-=======
     setIsLoading (true);
     set_error (null);
 ;
@@ -161,35 +115,10 @@ if ( {) {
       console.error ("Error in request_interview:", err);
       set_error (err.message);
       return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-
-=======
-      setIsLoading(false)
-
-
-=======
-import { useState } from 'react',;
-import { useAuth } from "@/hooks/useAuth",;
-import { supabase } from '@/integrations/supabase/client',;
-import { Interview, InterviewRequest, InterviewResponse } from '@/types/interview',;
-import { toast } from '@/components/ui/use-toast',;
-export function useInterviews() {;
-  const [interviews, setInterviews] = useState<Interview[]>([]),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [error, setError] = useState<string | null>(null),;
-  const { user } = useAuth(),;
-  // Request an interview as a client;
-  const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {;
-    if (!user) {;
-      toast({;
-        title: "Authentication required",;
-        description: "You must be logged in to request interviews",;
-        variant: "destructive";
-      }),;
-      return null;
+      setIsLoading (false);
     }
-
+  }
 ;
   // Fetch interviews for the current user (as client or talent);
   const fetch_interviews = async (): Promise < Interview[]> => {
@@ -200,36 +129,15 @@ if ( {) {
       set_interviews ([]);
       return [];
     }
-
-
-
-
-
-    setIsLoading(true),
-    setError(null),
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    setIsLoading (true);
+    set_error (null);
+;
     try {
       // Get interviews where the user is either the client or the talent;
       const { data, error: fetch_error } = await supabase;
         .from ('interviews');
         .select (`;
           *;
-
-        .or(`client_id.eq.${user.id},talent_id.eq.${user.id}`)
-
-        .order('scheduled_date', { ascending: true }),
-
-
-
-      if (fetchError) {
-        console && console.error("Error fetching interviews:", fetchError);
-        setError(fetchError && fetchError.message);
-        return []
-      }
-      // Transform the data to match Interview type
-
           clients:client_id (id, display_name, avatar_url);
           talents:talent_id (id, full_name, profile_picture_url);
         `);
@@ -246,7 +154,6 @@ if ( {) {
       }
       // Transform the data to match Interview type;
       const formatted_interviews = data.map ((interview: any): Interview => ({
-
         id: interview.id;
         client_id: interview.client_id;
         talent_id: interview.talent_id;
@@ -265,7 +172,6 @@ if ( {) {
         talent_name: interview.talents?.full_name;
         client_avatar: interview.clients?.avatar_url
         talent_avatar: interview.talents?.profile_picture_url}));
-
       const formattedInterviews = data && data.map((interview: any): Interview => ({
         id: interview && interview.id;
         client_id: interview && interview.client_id;
@@ -286,9 +192,7 @@ if ( {) {
         client_avatar: interview && interview.clients?.avatar_url,
         talent_avatar: interview && interview.talents?.profile_picture_url}));
 
-
       setInterviews(formattedInterviews);
-=======
       const formattedInterviews = data.map((interview: any): Interview => ({
 
         id: interview.id,
@@ -312,13 +216,11 @@ if ( {) {
 
       setInterviews(formattedInterviews),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return formattedInterviews
     } catch (err: any) {
       console && console.error("Error in fetchInterviews:", err);
       setError(err && err.message);
       return []
-=======
 ;
       set_interviews (formatted_interviews);
       return formatted_interviews;
@@ -326,14 +228,12 @@ if ( {) {
       console.error ("Error in fetch_interviews:", err);
       set_error (err.message);
       return [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
-
+  }
 ;
   // Respond to an interview request (as talent);
-
   const respondToInterview = async (
     interview_id: string;
     response: InterviewResponse): Promise < boolean> => {
@@ -343,47 +243,12 @@ if ( {) {
 }
       toast ({
         title: "Authentication required";
-
-
-  },
-
-
-  // Respond to an interview request (as talent)
-  const respondToInterview = async (
-    interviewId: string,
-    response: InterviewResponse
-  ): Promise<boolean> => {
-    if (!user?.id) {
-      toast({
-
-        title: "Authentication required",
-        description: "You must be logged in to respond to interviews",
-
-
-        variant: "destructive"
-=======
         description: "You must be logged in to respond to interviews",
         variant: "destructive";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       });
       return false;
     }
-
-
-
-    setIsLoading(true),
-    setError(null),
-
-
-
-    try {
-      // Update the interview status
-      const { error: updateError } = await supabase
-        .from('interviews')
-        .update({
-
           status: response && response.status,
-
           updated_at: new Date().toISOString()
         })
 
@@ -402,7 +267,14 @@ if ( {) {
         .from('interviews')
         .select('*')
         .eq('id', interviewId)
-
+        .single();
+      if (fetchError) {
+        console && console.error("Error fetching interview:", fetchError);
+        setError(fetchError && fetchError.message);
+        return false
+      }
+      // Create notification for client
+      let notificationType = 'interview_confirmed';
     setIsLoading (true);
     set_error (null);
 ;
@@ -441,29 +313,21 @@ if ( {) {
       }
       // Create notification for client;
       let notification_type = 'interview_confirmed';
-
       let title = 'Interview Confirmed';
-
       let message = `Your interview request for ${interview && interview.scheduled_date} has been confirmed`;
 
       if (response && response.status === 'declined') {
-
         notificationType = 'interview_declined';
         title = 'Interview Declined';
         message = `Your interview request has been declined`
       } else if (response && response.status === 'rescheduled') {
         notificationType = 'interview_rescheduled';
         title = 'Interview Rescheduled';
-
         message = `Your interview has been rescheduled to ${response && response.alternative_date || 'a new time'}`
-
       }
-=======
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       await createInterviewNotification(
         interview && interview.client_id;
         notificationType;
@@ -483,7 +347,6 @@ if ( {) {
       console && console.error("Error in respondToInterview:", err);
       setError(err && err.message);
       return false
-
 ;
       // Check condition
 if ( {) {
@@ -514,15 +377,12 @@ if ( {) {
       console.error ("Error in respondToInterview:", err);
       set_error (err.message);
       return false;
-
     } finally {
       setIsLoading (false);
     }
   }
-
 ;
   // Helper function to create interview notifications;
-
   const createInterviewNotification = async (
     user_id: string;
     type: string;
@@ -530,30 +390,6 @@ if ( {) {
     message: string;
     related_id: string) => {
     try {
-
-    } finally {
-      setIsLoading(false)
-    }
-
-  },
-
-
-  // Helper function to create interview notifications
-  const createInterviewNotification = async (
-    userId: string,
-    type: string,
-    title: string,
-    message: string,
-    relatedId: string
-  ) => {
-    try {
-      await supabase.from('notifications').insert({
-
-
-      }
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Check if user is part of this interview
       if (interview && interview.client_id !== user && user.id && interview && interview.talent_id !== user && user.id) {
         setError("You don't have permission to cancel this interview");
@@ -563,12 +399,6 @@ if ( {) {
         ? interview && interview.talent_id
         : interview && interview.client_id;
 
-
-=======
-
-
-
-=======
 ;
       // Check if user is part of this interview;
       if (interview.client_id !== user.id && interview.talent_id !== user.id) {;
@@ -591,14 +421,55 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Determine who to notify
       const notifyUserId = interview.client_id === user.id
         ? interview.talent_id
         : interview.client_id,
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+;
+      // Check if user is part of this interview;
+      if (interview.client_id !== user.id && interview.talent_id !== user.id) {;
+        setError("You don't have permission to cancel this interview"),;
+        return false;
+      }
+;
+      // Update the interview status;
+      const { error: updateError } = await supabase;
+        .from('interviews');
+        .update({;
+          status: 'cancelled',;
+          updated_at: new Date().toISOString();
+        });
+        .eq('id', interviewId),;
+      if (updateError) {;
+        setError(updateError.message),;
+        return false;
+      }
+
+
+
+;
+      // Check if user is part of this interview;
+      if (interview.client_id !== user.id && interview.talent_id !== user.id) {;
+        setError("You don't have permission to cancel this interview"),;
+        return false;
+      }
+;
+      // Update the interview status;
+      const { error: updateError } = await supabase;
+        .from('interviews');
+        .update({;
+          status: 'cancelled',;
+          updated_at: new Date().toISOString();
+        });
+        .eq('id', interviewId),;
+      if (updateError) {;
+        setError(updateError.message),;
+        return false;
+      }
+
+
+
       // Create notification for the other party
       await createInterviewNotification(
         notifyUserId;
@@ -618,7 +489,6 @@ if ( {) {
       console && console.error("Error in cancelInterview:", err);
       setError(err && err.message);
       return false
-
       await supabase.from ('notifications').insert ({
         user_id: user_id;
         type;
@@ -629,7 +499,6 @@ if ( {) {
       console.error ("Error creating notification:", error);
     }
   }
-=======
     } finally {
       setIsLoading(false)
 
@@ -701,20 +570,17 @@ if ( {) {
       console.error ("Error in cancel_interview:", err);
       set_error (err.message);
       return false;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
-
+  }
 ;
-
   return {
     interviews;
     is_loading;
     error;
     request_interview;
     fetch_interviews;
-=======
   },;
   return {;
     interviews,;
@@ -722,17 +588,23 @@ if ( {) {
     error,;
     requestInterview,;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     fetchInterviews;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  },;
+  return {;
+    interviews,;
+    isLoading,;
+    error,;
+    requestInterview,;
+
     respondToInterview;
 
     cancel_interview}
 
 }
-=======
 
 }
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    respondToInterview;
+    cancel_interview}
+}

@@ -1,7 +1,24 @@
-default:
-        return <Badge variant="outline">{status}</Badge>
+import Link from "next/link";
+import { useState  } from './react';
+import { useJobApplications  } from '@/hooks / useJobApplications';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components / ui / card';
+import { Badge  } from '@/components / ui / badge';
+import { Button  } from '@/components / ui / button';
+import { Loader2, MessageSquare, ExternalLink } from 'lucide-react'import { formatDistanceToNow  } from './date - fns';
+import Link from './next / link';
+import { ApplicationStatus } from '@/types / jobs';
+export /**
+ * MyApplications - Function description
+ */
+function MyApplications() {
+  const { applications, is_loading, error } = useJobApplications ();
+  const getStatusBadge = (status: ApplicationStatus, ) =>: any {
+    switch (status) {
+      case "new": return <Badge variant="secondary">New</Badge>;
+        return <Badge className="bg - red - 100 text - red - 800">Rejected</Badge>;
+      default:;
+        return <Badge variant="outline">{status}</Badge>;
     }
-
 import {ApplicationStatus} from "@/types/jobs";
     return (
       <div className="flex justify-center items-center p-8">
@@ -84,9 +101,7 @@ export function MyApplications() {;
     );
   }
 
-
   if (error) {;
-
     return (
       <div className="text-center p-6 border rounded-md bg-red-50 text-red-800">;
         <p>{error}</p>;
@@ -94,9 +109,7 @@ export function MyApplications() {;
     );
   }
 
-
   if (applications && applications.length === 0) {;
-
     return (
       <Card className="bg-muted/30">;
         <CardContent className="pt-6 text-center">;
@@ -110,47 +123,6 @@ export function MyApplications() {;
       </Card>;
     );
   }
-
-;
-  return (;
-    <div className="grid gap-4 md:grid-cols-2">;
-      {applications.map((application) => (;
-        <Card key={application.id}>;
-          <CardHeader className="pb-2">;
-            <div className="flex justify-between items-start">;
-              <CardTitle className="text-lg">;
-                {application.job?.title || "Unknown Job"}
-              </CardTitle>;
-              {getStatusBadge(application.status)}
-            </div>;
-            <p className="text-sm text-muted-foreground">;
-              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
-            </p>;
-          </CardHeader>;
-          <CardContent>;
-            <div className="space-y-3">;
-              {application.cover_letter && (;
-                <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
-
-
-                  {application.cover_letter}
-                </p>
-              )}
-
-              
-              <div className="flex justify-between items-center">
-                <Button 
-                  variant="outline" 
-                  size="sm" 
-
-                  className="text-xs"
-                  asChild
-                >
-                  <Link href={`/jobs/${application.job_id}`}>
-                    <ExternalLink className="h-3 w-3 mr-1" /> View Job
-                  </Link>
-                </Button>
-
 
   return (
     <div className="grid gap-4 md:grid-cols-2">;
@@ -205,11 +177,6 @@ export function MyApplications() {;
           </CardContent>;
         </Card>;
       ))}
-
-    </div>;
-  );
-}
-
   },
   // Check condition
 if ( {) {
@@ -293,14 +260,3 @@ if ( {) {
         </Card>))}
     </div>);
 }
-
-    </div>;
-  );
-}
-;
-
-    </div>;
-  );
-
-}
-;

@@ -1,14 +1,4 @@
 
-
-
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
-
-
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-=======
-
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
@@ -16,9 +6,11 @@ const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
@@ -40,18 +32,16 @@ serve(async (req: Request) => {
       supabaseUrl;
       supabaseServiceKey
 
-    const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
-    
-
-=======
-
     ),
     
     // Run the database function to create scheduled reminders
     const { data, error } = await supabase.rpc("create_scheduled_reminders"),
     
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    );
+    // Run the database function to create scheduled reminders
+    const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
+    
     if (error) {
       console && console.error("Failed to create scheduled reminders:", error);
       return new Response(
@@ -97,19 +87,12 @@ serve(async (req: Request) => {
           {
             method: "POST";
             headers: {
-
-=======
-
-
               "Content-Type": "application/json",
               "Authorization": `Bearer ${supabaseServiceKey}`};
             body: JSON && JSON.stringify(job && job.payload)}
         );
         
-
-
-        if (reminderResponse.ok) {
-
+        if (reminderResponse && reminderResponse.ok) {
           // Update job status to completed
           const { error: updateError } = await supabase
             .from("scheduled_jobs")
@@ -117,15 +100,11 @@ serve(async (req: Request) => {
               status: "completed"
               completed_at: new Date().toISOString()})
 
-            .eq("id", job && job.id);
-          
-
-=======
-
             .eq("id", job.id),
           
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            .eq("id", job && job.id);
+          
           if (updateError) {
             console && console.error("Failed to update job status:", updateError)
           } else {
@@ -143,18 +122,16 @@ serve(async (req: Request) => {
       }
     }
     return new Response(
-
+      JSON && JSON.stringify({
+        message: "Reminders processed successfully";
         processed_jobs: processedJobs && processedJobs.length,
-
         job_ids: processedJobs});
-=======
       JSON.stringify({
 
         message: "Reminders processed successfully",
         processed_jobs: processedJobs.length,
         job_ids: processedJobs}),
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {
         status: 200
         headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -179,10 +156,8 @@ const cors_headers = {
     "authorization, x - client - info, apikey, content - type"}
 ;
 serve (async (req: Request) => {
-=======
 
 
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
@@ -312,8 +287,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

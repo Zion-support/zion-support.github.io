@@ -1,4 +1,3 @@
-
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Filter} from "lucide-react";
@@ -11,7 +10,6 @@ import {ExperienceFilter} from "./filters/ExperienceFilter";
 import {PriceFilter} from "./filters/PriceFilter";
 import {FilterSidebarProps} from "@/types/filters";
 export function FilterSidebar(): any ({;
-
   searchTerm;
   setSearchTerm;
   selectedSkills;
@@ -31,7 +29,6 @@ export function FilterSidebar(): any ({;
   clearFilters;
   isMobileFilterOpen;
 }: FilterSidebarProps) {;
-=======
 
 
 export function FilterSidebar({
@@ -52,67 +49,11 @@ export function FilterSidebar({
   sortOption,
   setSortOption,
   clearFilters,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   isMobileFilterOpen
 }: FilterSidebarProps) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>;
       {/* Filter header */}
-
-
-      
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Filter } from "lucide-react",;
-import { SearchFilter } from "./filters/SearchFilter",;
-import { SortFilter } from "./filters/SortFilter",;
-import { SkillsFilter } from "./filters/SkillsFilter",;
-import { AvailabilityFilter } from "./filters/AvailabilityFilter",;
-import { RegionFilter } from "./filters/RegionFilter",;
-import { ExperienceFilter } from "./filters/ExperienceFilter",;
-import { PriceFilter } from "./filters/PriceFilter",;
-import { FilterSidebarProps } from "@/types/filters",;
-export function FilterSidebar({;
-  searchTerm,;
-  setSearchTerm,;
-  selectedSkills,;
-  toggleSkill,;
-  selectedAvailability,;
-  toggleAvailability,;
-  selectedRegions,;
-  toggleRegion,;
-  priceRange,;
-  setPriceRange,;
-  experienceRange,;
-  setExperienceRange,;
-  expandedSections,;
-  toggleSection,;
-  sortOption,;
-  setSortOption;
-  clearFilters;
-  isMobileFilterOpen;
-}: FilterSidebarProps) {;
-  return (;
-    <>;
-      {/* Filter header */}
-      <div className="flex items-center justify-between mb-6">;
-        <h3 className="text-lg font-semibold text-white flex items-center">;
-          <Filter className="h-4 w-4 mr-2 text-zion-purple" />;
-          Filters;
-        </h3>;
-        <Button;
-          variant="ghost";
-          size="sm";
-          onClick={clearFilters}
-          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent";
-        >;
-          Clear All;
-        </Button>;
-      </div>;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
@@ -168,7 +109,6 @@ export function FilterSidebar({;
     </>
   )
 }
-=======
       <div className="flex items-center justify-between mb-6">;
         <h3 className="text-lg font-semibold text-white flex items-center">;
           <Filter className="h-4 w-4 mr-2 text-zion-purple" />;
@@ -245,8 +185,6 @@ export function FilterSidebar({;
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import React from './react';
 import { Button } from '@/components / ui / button';
 import { Filter } from './lucide-react';
@@ -332,4 +270,3 @@ function FilterSidebar() {
         </Button>)}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

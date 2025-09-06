@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { render, screen } from '@testing - library / react';
 import { MemoryRouter } from 'react-router-dom';
@@ -10,7 +9,6 @@ describe ('EquipmentPage', () => {
         <EquipmentPage />;
       </MemoryRouter>);
     expect (screen.getByText ('Equipment')).toBeInTheDocument ();
-
   });
   const [selectedService, setSelectedService] = useState('');
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {

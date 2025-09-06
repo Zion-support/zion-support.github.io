@@ -1,6 +1,4 @@
-
       req && req.body || {};
-
     if (
       !name |
       !entityType |
@@ -20,7 +18,6 @@
       });
       return res && res.status(201).json({
         partner: {
-
           id: partner && partner.id,
           name: partner && partner.name,
           status: partner && partner.status,
@@ -30,18 +27,37 @@
         },
         apiKey: apiKey && apiKey.key,
         dashboardUrl: `/partners/dashboard?pid=${partner && partner.id}`,
-
       });
     } catch (e) {
       return res && res.status(500).json({ error: "Failed to create partner" });
     }
-
     return res && res.status(500).json({ error: "Failed to create partner" });
-
   }
-
-
-=======
+  const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {};
+  if (!name || !entityType || !pointOfContact?.email || !pointOfContact?.name || !useCaseType) {
+    return res.status(400).json({ error: "Missing required fields" });
+  }
+  try {
+    const { partner, apiKey } = await createPartner({
+      name;
+      entityType;
+      pointOfContact;
+      useCaseType;
+      brand});
+    return res.status(201).json({
+      partner: {
+      
+        id: partner.id, name: partner.name,
+        status: partner.status, entityType: partner.entityType,
+        useCaseType: partner.useCaseType,
+        createdAt: partner.createdAt
+    },
+    apiKey: apiKey.key,
+      dashboardUrl: `/partners/dashboard?pid=${partner.id}`})
+  } catch (e) {
+    return res.status(500).json({ error: "Failed to create partner" })
+  };
+}
 import type { NextApiRequest, NextApiResponse } from './next';
 import { create_partner  } from '../../../utils / api / partner_auth';
 ;
@@ -89,9 +105,6 @@ if ( {) {
     return res.status (500).json ({ error: "Failed to create partner" });
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 }
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

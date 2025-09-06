@@ -1,23 +1,34 @@
 
-
-import Head from 'next/head';
-
-import Head from 'next/head';
+import React from 'react';
 
 import React from 'react';
 
-=======
-import React from 'react',
-=======
-import React from 'react';
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function Update202508150404() {
-=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import Head from 'next/head';
 import React from 'react',;
 export default function Update202508150404() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <Head>;
@@ -33,11 +44,6 @@ export default function Update202508150404() {;
         <meta
           property='og:description'
           content="Autonomous update from Zion Tech Group's AI systems."
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <h2 className='text-2xl font-bold mb-4 text-green-400'>
                 Quality Metrics
               </h2>
@@ -98,13 +104,11 @@ export default function Update202508150404() {;
                   <p className='text-blue-400'>✓ Lighthouse CI active</p>;
                   <p className='text-sm text-white/70 mt-2'>;
                     Real-time performance tracking;
-=======
 
 };
 ;
 
 
-=======
 import Head from 'next / head';
 import React from 'react',
 export default /**
@@ -161,12 +165,10 @@ function Update202508150404() {
                   <p className='text - blue - 400'>✓ Lighthouse CI active</p>;
                   <p className='text - sm text - white / 70 mt - 2'>;
                     Real - time performance tracking;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </p>;
                 </div>;
               </div>;
             </div>;
-
             <div className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8 mb - 8'>;
               <h2 className='text - 2xl font - bold mb - 4 text - fuchsia - 400'>;
                 Infrastructure Improvements;
@@ -177,36 +179,30 @@ function Update202508150404() {
                   <div>;
                     <h4 className='font - semibold'>Netlify Integration</h4>;
                     <p className='text - white / 70'>;
-
                       Enhanced deployment pipeline with automatic healing;
                     </p>;
                   </div>;
                 </li>;
-
                 <li className='flex items - start'>;
                   <span className='text - cyan - 400 mr - 3'>•</span>;
                   <div>;
                     <h4 className='font - semibold'>Content Delivery</h4>;
                     <p className='text - white / 70'>;
-
                       Global CDN optimization for faster loading;
                     </p>;
                   </div>;
                 </li>;
-
                 <li className='flex items - start'>;
                   <span className='text - cyan - 400 mr - 3'>•</span>;
                   <div>;
                     <h4 className='font - semibold'>Database Optimization</h4>;
                     <p className='text - white / 70'>;
-
                       Query performance improvements implemented;
                     </p>;
                   </div>;
                 </li>;
               </ul>;
             </div>;
-
             <div className='bg - white / 10 backdrop - blur - xl rounded - 2xl p - 8'>;
               <h2 className='text - 2xl font - bold mb - 4 text - green - 400'>;
                 Quality Metrics;
@@ -223,21 +219,15 @@ function Update202508150404() {
                 <div className='text - center'>;
                   <div className='text - 3xl font - bold text - green - 400'>100%</div>;
                   <div className='text - sm text - white / 70'>Uptime SLA</div>;
-
                 </div>;
               </div>;
             </div>;
           </section>;
         </main>;
       </div>;
-
-
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </>);
+}

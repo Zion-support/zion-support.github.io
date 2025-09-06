@@ -1,17 +1,6 @@
-
-
-
-import {Button} from "@/components/ui/button";
-import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
-import {DisputeForm} from "./DisputeForm";
-import {useNavigate} from "react-router-dom";
-import {ShieldAlert} from "lucide-react";
-
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { 
   Dialog;
   DialogContent;
@@ -29,46 +18,11 @@ import {useNavigate} from "react-router-dom";
 import {ShieldAlert} from "lucide-react";
 interface RaiseDisputeButtonProps {;
   projectId: string,;
-
   milestoneId?: string;
   variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link";
   size?: "default" | "sm" | "lg" | "icon";
   className?: string;
 }
-
-
-import { useNavigate } from "react-router-dom",
-import { ShieldAlert } from "lucide-react",
-
-interface RaiseDisputeButtonProps {
-  projectId: string,
-  milestoneId?: string,
-  variant?: "default" | "outline" | "secondary" | "destructive" | "ghost" | "link",
-  size?: "default" | "sm" | "lg" | "icon",
-  className?: string
-}
-
-
-export function RaiseDisputeButton({ 
-  projectId,
-
-  milestoneId, 
-  variant = "outline", 
-  size,
-  className 
-}: RaiseDisputeButtonProps) {
-  const [isDialogOpen, setIsDialogOpen] = useState(false),
-  const navigate = useNavigate(),
-  
-
-  const handleDisputeCreated = (disputeId: string) => {
-    setIsDialogOpen(false)
-    navigate(`/dashboard/disputes/${disputeId}`)
-
-  },
-  
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <Button
@@ -121,7 +75,6 @@ export function RaiseDisputeButton(): any ({ ;
         <DialogContent className="sm:max-w-[550px]">;
           <DialogHeader>;
             <DialogTitle>Raise a Dispute</DialogTitle>;
-=======
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay } from '@/components / ui / dialog';
@@ -162,32 +115,21 @@ function RaiseDisputeButton() {
         <DialogContent className="sm:max - w-[550px]">;
           <DialogHeader>;
             <DialogTitle > Raise a Dispute</DialogTitle>;
-
             <DialogDescription>;
               Please provide details about the issue you're experiencing with this project.;
             </DialogDescription>;
           </DialogHeader>;
-
-
-          
-          <DisputeForm 
-=======
-          <DisputeForm 
-
-
+          <DisputeForm
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}
             onCancel={() => setIsDialogOpen(false)}
-
           />;
         </DialogContent>;
       </Dialog>;
     </>;
   );
 }
-
-=======
           <DisputeForm;
             project_id={project_id}
             milestone_id={milestone_id}
@@ -198,4 +140,3 @@ function RaiseDisputeButton() {
       </Dialog>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

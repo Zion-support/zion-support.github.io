@@ -24,15 +24,15 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 
+export default function OrgChartGovernancePage() {;
+  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),;
+export default function OrgChartGovernancePage() {;
   return <OrgChartPage />;
 }
-=======
 const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
 export default function OrgChartGovernancePage() {
   return <OrgChartPage />;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import dynamic from 'next / dynamic';
 ;
 const OrgChartPage = dynamic (
@@ -51,12 +51,8 @@ export default /**
 function OrgChartGovernancePage() {
   return <OrgChartPage />;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
 export default function OrgChartGovernancePage() {;
   return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
