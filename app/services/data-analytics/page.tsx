@@ -1,106 +1,106 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "IT Services | Zion Tech Group",
-  description: "Comprehensive IT services including cloud migration, DevOps, cybersecurity, and infrastructure management for enterprise-scale solutions.",
+  title: "Data Analytics & BI | Zion Tech Group",
+  description: "Advanced data analytics, business intelligence, and machine learning solutions to transform raw data into actionable insights.",
 };
 
-export default function ITServicesPage() {
+export default function DataAnalyticsPage() {
   return (
     <div className="animate-fade-in">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          IT Services
+          Data Analytics & Business Intelligence
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Comprehensive IT solutions designed to modernize your infrastructure, enhance security, and drive operational efficiency. From cloud migration to DevOps automation, we deliver enterprise-grade IT services.
+          Transform your raw data into actionable insights with our advanced Data Analytics and Business Intelligence solutions. We empower your business with predictive modeling, real-time dashboards, and data-driven decision-making.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Our IT Solutions</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Capabilities</h2>
           <div className="space-y-4">
             <FeatureItem
-              icon="☁️"
-              title="Cloud Migration & Management"
-              description="Seamlessly migrate your infrastructure to AWS, Azure, or GCP with zero downtime and optimized performance."
-              benefits={["Zero-downtime migration", "Cost optimization", "Multi-cloud support", "24/7 monitoring"]}
-            />
-            <FeatureItem
-              icon="⚙️"
-              title="DevOps & SRE"
-              description="Implement CI/CD pipelines, infrastructure as code, and site reliability engineering practices."
-              benefits={["Automated deployments", "Infrastructure as Code", "Performance monitoring", "Incident response"]}
-            />
-            <FeatureItem
-              icon="🔒"
-              title="Cybersecurity & Compliance"
-              description="Comprehensive security solutions including threat detection, vulnerability management, and compliance."
-              benefits={["Threat detection", "Security audits", "Compliance management", "Incident response"]}
-            />
-            <FeatureItem
-              icon="🖥️"
-              title="Infrastructure Management"
-              description="End-to-end infrastructure management including servers, networks, and data centers."
-              benefits={["Server management", "Network optimization", "Data center operations", "Capacity planning"]}
-            />
-            <FeatureItem
               icon="📊"
-              title="IT Consulting & Strategy"
-              description="Strategic IT consulting to align technology with business objectives and drive digital transformation."
-              benefits={["Technology strategy", "Digital transformation", "IT governance", "Change management"]}
+              title="Advanced Data Modeling"
+              description="Design and implement robust data models that support complex analytics and reporting requirements."
+              benefits={["Scalable data architecture", "High data accuracy", "Optimized query performance", "Custom data schemas"]}
+            />
+            <FeatureItem
+              icon="📈"
+              title="Business Intelligence Dashboards"
+              description="Create interactive and intuitive BI dashboards that provide real-time insights into key performance indicators (KPIs)."
+              benefits={["Real-time data visualization", "Customizable reports", "User-friendly interface", "Cross-device access"]}
+            />
+            <FeatureItem
+              icon="🧠"
+              title="Predictive Analytics & ML"
+              description="Leverage machine learning models to forecast future trends, predict customer behavior, and identify new opportunities."
+              benefits={["95% prediction accuracy", "Fraud detection", "Churn prediction", "Demand forecasting"]}
+            />
+            <FeatureItem
+              icon="🔍"
+              title="Data Warehousing & Lakes"
+              description="Build and manage scalable data warehouses and data lakes for efficient storage and processing of large datasets."
+              benefits={["Centralized data storage", "Big data processing", "Data governance", "Cloud-native solutions"]}
+            />
+            <FeatureItem
+              icon="🧹"
+              title="Data Integration & Quality"
+              description="Integrate data from disparate sources and ensure high data quality through cleansing, validation, and transformation processes."
+              benefits={["Unified data view", "Automated data pipelines", "Error reduction", "Improved data reliability"]}
             />
           </div>
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Zion for IT?</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Benefits of Data-Driven Decisions</h2>
           <div className="space-y-6">
             <BenefitCard
               icon="🚀"
-              title="Proven Track Record"
-              description="Successfully delivered 500+ IT projects with 99.9% uptime and 300% average ROI for our clients."
+              title="Accelerate Growth"
+              description="Identify new market opportunities, optimize product offerings, and drive revenue growth with data-backed strategies."
             />
             <BenefitCard
-              icon="🔧"
-              title="Expert Team"
-              description="Certified professionals with deep expertise in cloud platforms, DevOps, and enterprise technologies."
+              icon="💡"
+              title="Enhance Decision-Making"
+              description="Make informed, strategic decisions based on accurate, real-time data and predictive insights."
             />
             <BenefitCard
-              icon="⚡"
-              title="Rapid Implementation"
-              description="Fast deployment and implementation with minimal disruption to your business operations."
+              icon="💰"
+              title="Optimize Operations"
+              description="Streamline business processes, reduce operational costs, and improve efficiency across all departments."
             />
             <BenefitCard
-              icon="🛡️"
-              title="Enterprise Security"
-              description="Bank-grade security measures and compliance with industry standards and regulations."
+              icon="🎯"
+              title="Improve Customer Experience"
+              description="Understand customer needs and preferences better, leading to personalized experiences and increased satisfaction."
             />
           </div>
         </div>
       </div>
 
       <div className="text-center mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our IT Service Process</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Data Analytics Process</h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-          We follow a proven methodology to deliver successful IT solutions and transformations.
+          We follow a comprehensive process to deliver impactful data solutions.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <ProcessStep
             step="1"
-            title="Assessment & Planning"
-            description="Analyze current infrastructure, identify gaps, and create a comprehensive IT strategy."
+            title="Data Strategy & Discovery"
+            description="Define business objectives, data sources, and analytics requirements."
           />
           <ProcessStep
             step="2"
-            title="Implementation & Migration"
-            description="Execute the plan with minimal disruption, ensuring smooth transitions and optimal performance."
+            title="Data Engineering & Modeling"
+            description="Collect, clean, transform, and model data for analysis."
           />
           <ProcessStep
             step="3"
-            title="Management & Optimization"
-            description="Provide ongoing support, monitoring, and continuous optimization for peak performance."
+            title="Analysis & Visualization"
+            description="Apply analytical techniques, build dashboards, and generate insights."
           />
         </div>
       </div>
@@ -154,10 +154,10 @@ function CTA() {
   return (
     <div className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl p-8 text-center">
       <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Modernize Your IT Infrastructure?
+        Ready to Unlock the Power of Your Data?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Contact us today for a free IT consultation and discover how our services can transform your technology landscape.
+        Contact us today for a free data analytics consultation and discover how insights can transform your business.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a

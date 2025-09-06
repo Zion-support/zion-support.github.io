@@ -1,107 +1,106 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Micro SaaS Development | Zion Tech Group",
-  description: "Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.",
-  keywords: "micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence"
+  title: "AI Automation Suite | Zion Tech Group",
+  description: "Intelligent automation solutions including RPA, workflow automation, and process optimization for maximum efficiency and productivity.",
 };
 
-export default function MicroSAASPage() {
+export default function AIAutomationSuitePage() {
   return (
     <div className="animate-fade-in">
       <div className="text-center mb-16">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
-          Micro SaaS Development
+          AI Automation Suite
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Build and launch successful micro SaaS products that solve specific business problems. From concept to revenue, we help you create scalable, profitable software solutions.
+          Streamline your operations, reduce manual effort, and boost productivity with our advanced AI Automation Suite. From Robotic Process Automation (RPA) to intelligent workflow orchestration, we deliver solutions that transform your business.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Our Micro SaaS Services</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
           <div className="space-y-4">
             <FeatureItem
-              icon="🚀"
-              title="Full-Stack Development"
-              description="Complete end-to-end development of micro SaaS applications with modern tech stacks and best practices."
-              benefits={["React/Next.js frontend", "Node.js/Python backend", "Database design", "API development"]}
+              icon="🤖"
+              title="Robotic Process Automation (RPA)"
+              description="Automate repetitive, rule-based tasks across various applications and systems without human intervention."
+              benefits={["80% task reduction", "24/7 operation", "Error-free execution", "Rapid deployment"]}
             />
             <FeatureItem
-              icon="💳"
-              title="Payment Integration"
-              description="Seamless payment processing with Stripe, PayPal, and other payment gateways for subscription billing."
-              benefits={["Subscription management", "Payment processing", "Billing automation", "Revenue tracking"]}
-            />
-            <FeatureItem
-              icon="🔐"
-              title="Authentication & Security"
-              description="Robust user authentication, authorization, and security measures to protect your users and data."
-              benefits={["User management", "Role-based access", "Data encryption", "Security compliance"]}
+              icon="⚡"
+              title="Intelligent Workflow Orchestration"
+              description="Design, manage, and optimize complex business workflows with AI-driven decision-making and adaptive processes."
+              benefits={["300% productivity increase", "Dynamic routing", "Real-time monitoring", "Seamless integration"]}
             />
             <FeatureItem
               icon="📊"
-              title="Analytics & Monitoring"
-              description="Comprehensive analytics, user tracking, and performance monitoring to optimize your SaaS product."
-              benefits={["User analytics", "Performance metrics", "Error tracking", "Business intelligence"]}
+              title="Process Mining & Optimization"
+              description="Analyze existing business processes to identify bottlenecks, inefficiencies, and opportunities for automation."
+              benefits={["Data-driven insights", "Cost reduction", "Improved compliance", "Enhanced efficiency"]}
             />
             <FeatureItem
-              icon="☁️"
-              title="Cloud Deployment"
-              description="Scalable cloud deployment on AWS, Azure, or GCP with automated CI/CD pipelines and monitoring."
-              benefits={["Cloud infrastructure", "Auto-scaling", "CI/CD pipelines", "24/7 monitoring"]}
+              icon="🧠"
+              title="Cognitive Automation"
+              description="Automate tasks requiring human-like perception and judgment, such as data extraction from unstructured documents and sentiment analysis."
+              benefits={["Advanced data processing", "Intelligent decision-making", "Scalable operations", "Reduced human error"]}
+            />
+            <FeatureItem
+              icon="🔗"
+              title="Seamless Integrations"
+              description="Connect with your existing enterprise systems (CRM, ERP, HRIS) to create a unified automation ecosystem."
+              benefits={["Unified data flow", "Reduced silos", "Faster data exchange", "Custom API support"]}
             />
           </div>
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Why Choose Zion for Micro SaaS?</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">Benefits of AI Automation</h2>
           <div className="space-y-6">
             <BenefitCard
-              icon="💰"
-              title="Revenue-Focused Development"
-              description="We build products that generate revenue from day one, with proven monetization strategies and pricing models."
-            />
-            <BenefitCard
-              icon="⚡"
-              title="Rapid Time-to-Market"
-              description="Launch your micro SaaS product in 8-12 weeks with our proven development process and pre-built components."
-            />
-            <BenefitCard
               icon="📈"
-              title="Scalable Architecture"
-              description="Built to scale from MVP to enterprise, ensuring your product can grow with your business and user base."
+              title="Boost Productivity"
+              description="Free up your workforce from mundane tasks, allowing them to focus on strategic initiatives and innovation."
             />
             <BenefitCard
-              icon="🛠️"
-              title="Ongoing Support"
-              description="Complete maintenance, updates, and feature additions to keep your micro SaaS product competitive and profitable."
+              icon="💰"
+              title="Reduce Operational Costs"
+              description="Significantly lower labor costs and operational expenses by automating high-volume, repetitive processes."
+            />
+            <BenefitCard
+              icon="🎯"
+              title="Improve Accuracy & Compliance"
+              description="Eliminate human error and ensure consistent adherence to regulatory requirements and internal policies."
+            />
+            <BenefitCard
+              icon="🚀"
+              title="Accelerate Business Growth"
+              description="Scale your operations rapidly and respond to market demands faster with agile and efficient automated processes."
             />
           </div>
         </div>
       </div>
 
       <div className="text-center mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Micro SaaS Development Process</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Automation Process</h2>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-          We follow a proven methodology to deliver successful micro SaaS products that generate revenue.
+          We follow a proven methodology to implement successful automation solutions.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <ProcessStep
             step="1"
-            title="Discovery & Strategy"
-            description="Market research, user personas, feature planning, and monetization strategy development."
+            title="Assessment & Strategy"
+            description="Analyze current processes, identify automation opportunities, and define ROI."
           />
           <ProcessStep
             step="2"
-            title="Development & Testing"
-            description="Agile development with regular testing, user feedback, and iterative improvements."
+            title="Development & Implementation"
+            description="Design, build, and integrate automation bots and workflows."
           />
           <ProcessStep
             step="3"
-            title="Launch & Growth"
-            description="Product launch, marketing support, user onboarding, and ongoing optimization."
+            title="Monitoring & Optimization"
+            description="Continuously monitor performance, refine processes, and scale automation."
           />
         </div>
       </div>
@@ -155,10 +154,10 @@ function CTA() {
   return (
     <div className="bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-200 rounded-xl p-8 text-center">
       <h3 className="text-2xl font-bold text-gray-900 mb-4">
-        Ready to Build Your Micro SaaS?
+        Ready to Automate Your Business?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Contact us today for a free consultation and let's turn your micro SaaS idea into a profitable reality.
+        Contact us today for a free consultation and discover how AI automation can revolutionize your operations.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a

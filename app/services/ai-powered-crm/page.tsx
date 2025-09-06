@@ -17,7 +17,7 @@ interface FeatureCardProps {
   benefits: string[];
 }
 
-function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {
+function FeatureCardComponent({ icon, title, description, benefits }: FeatureCardProps) {
   return (
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow">
       <div className="text-3xl mb-4">{icon}</div>
@@ -128,7 +128,7 @@ export default function AIPoweredCRMPage() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <FeatureCard
+            <FeatureCardComponent
             icon="🎯"
             title="AI Lead Scoring"
             description="Machine learning algorithms analyze customer behavior, engagement patterns, and demographic data to score leads with 95% accuracy."
@@ -139,7 +139,7 @@ export default function AIPoweredCRMPage() {
               "Custom scoring models"
             ]}
           />
-          <FeatureCard
+            <FeatureCardComponent
             icon="🤖"
             title="Automated Follow-ups"
             description="AI-powered email sequences and call scheduling based on customer behavior and optimal timing predictions."
@@ -150,7 +150,7 @@ export default function AIPoweredCRMPage() {
               "A/B testing for optimization"
             ]}
           />
-          <FeatureCard
+            <FeatureCardComponent
             icon="📊"
             title="Predictive Analytics"
             description="Advanced analytics predict customer lifetime value, churn risk, and sales opportunities with actionable insights."
@@ -161,7 +161,7 @@ export default function AIPoweredCRMPage() {
               "Revenue forecasting"
             ]}
           />
-          <FeatureCard
+            <FeatureCardComponent
             icon="💬"
             title="AI Chat Assistant"
             description="Intelligent chatbot handles initial customer inquiries, qualifies leads, and schedules meetings automatically."
@@ -172,7 +172,7 @@ export default function AIPoweredCRMPage() {
               "Multi-language support"
             ]}
           />
-          <FeatureCard
+            <FeatureCardComponent
             icon="📈"
             title="Sales Intelligence"
             description="AI analyzes sales calls, emails, and meetings to provide insights on customer sentiment and deal progression."
@@ -183,7 +183,7 @@ export default function AIPoweredCRMPage() {
               "Performance insights"
             ]}
           />
-          <FeatureCard
+            <FeatureCardComponent
             icon="🔄"
             title="Workflow Automation"
             description="Smart automation handles repetitive tasks, data entry, and follow-up processes to increase team productivity."
