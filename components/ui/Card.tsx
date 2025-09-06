@@ -3,58 +3,65 @@ import React from 'react';
 interface CardProps {
   children: React.ReactNode;
   className?: string;
-  style?: React.CSSProperties;
-  onClick?: () => void;
-  hover?: boolean;
+}
 
-const Card: React.FC<CardProps> = ({
-  children,
-  className = '',
-  style,
-  onClick,
-  hover = true,
-}) => {
-  const baseClasses =
-    'bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 transition-all duration-300 relative overflow-hidden';
-  const hoverClasses = hover
-    ? 'hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-1 hover:bg-gray-900/80 focus-within:border-blue-500/50 focus-within:shadow-lg focus-within:shadow-blue-500/20'
-    : '';
-  const clickableClasses = onClick
-    ? 'cursor-pointer focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black'
-    : '';
+export const Card: React.FC<CardProps> = ({ children, className = '' }) => (
+  <div className={`bg-white rounded-lg shadow-md border border-gray-200 ${className}`}>
+    {children}
+  </div>
+);
 
-  const classes = `${baseClasses} ${hoverClasses} ${clickableClasses} ${className}`;
+interface CardHeaderProps {
+  children: React.ReactNode;
+  className?: string;
+}
 
-  return (
-    <div className={classes} style={style} onClick={onClick}>
-      {/* Subtle background pattern */}
-      <div className='absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300' />
+export const CardHeader: React.FC<CardHeaderProps> = ({ children, className = '' }) => (
+  <div className={`px-6 py-4 border-b border-gray-200 ${className}`}>
+    {children}
+  </div>
+);
 
-      {/* Content wrapper */}
-      <div className='relative z-10'>{children}</div>
+interface CardContentProps {
+  children: React.ReactNode;
+  className?: string;
+}
 
-      {/* Hover glow effect */}
-      {hover && (
-        <div className='absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none' />
-      )}
-    </div>
-  );
-};
+export const CardContent: React.FC<CardContentProps> = ({ children, className = '' }) => (
+  <div className={`px-6 py-4 ${className}`}>
+    {children}
+  </div>
+);
 
-export default Card;
-=======
-const CardFooter = React.forwardRef<
-  HTMLDivElement;
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn("flex items-center p-6 pt-0", className)}
-    {...props}
-  />
-)),
-CardFooter.displayName = "CardFooter";
+interface CardFooterProps {
+  children: React.ReactNode;
+  className?: string;
+}
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+export const CardFooter: React.FC<CardFooterProps> = ({ children, className = '' }) => (
+  <div className={`px-6 py-4 border-t border-gray-200 ${className}`}>
+    {children}
+  </div>
+);
+
+interface CardTitleProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const CardTitle: React.FC<CardTitleProps> = ({ children, className = '' }) => (
+  <h3 className={`text-lg font-semibold text-gray-900 ${className}`}>
+    {children}
+  </h3>
+);
+
+interface CardDescriptionProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export const CardDescription: React.FC<CardDescriptionProps> = ({ children, className = '' }) => (
+  <p className={`text-sm text-gray-600 ${className}`}>
+    {children}
+  </p>
+);

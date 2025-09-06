@@ -27,12 +27,12 @@ interface UltraAdvancedFuturisticBackgroundProps {
 }
 
 const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps> = ({
-  intensity = 'high';
-  colorScheme = 'quantum-fusion';
-  particleCount = 300;
-  animationSpeed = 1.5;
-  enableHolographic = true;
-  enableQuantumEffects = true;
+  intensity = 'high',
+  colorScheme = 'quantum-fusion',
+  particleCount = 300,
+  animationSpeed = 1.5,
+  enableHolographic = true,
+  enableQuantumEffects = true,
   children
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 }) => {
