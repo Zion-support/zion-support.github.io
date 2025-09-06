@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { writeState } from '../../../lib/integrations/fileStore',
 import { getProviderById } from '../../../lib/integrations/registry',
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

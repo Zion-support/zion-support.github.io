@@ -1,10 +1,11 @@
+import React from 'react';
 
-import { GradientHeading } from "./GradientHeading",
-import Link from "next/link",
-import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
-import { HelpCircle } from 'lucide-react', // Added HelpCircle for default icon
-import { cn } from "@/lib/utils",
-import { useTranslation } from "react-i18next",
+import { GradientHeading } from "./GradientHeading";,
+import Link from "next/link";,
+import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
+import { HelpCircle } from 'lucide-react';, // Added HelpCircle for default icon
+import { cn } from "@/lib/utils";,
+import { useTranslation } from "react-i18next";,
 // This is the type definition copied from Categories.tsx for consistency.
 // Ideally, this would be in a shared types file.
 interface CategoryType {
@@ -101,7 +102,7 @@ export function CategoriesSection({
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
     return (
-      <section className={cn("py-20 bg-zion-blue text-center", className)} style={style}>
+      <section className="{cn("py-20" bg-zion-blue text-center", className)} style={style}>
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-semibold text-white mb-4">{t('home.no_categories_title')}</h2>
           <p className="text-zion-slate-light text-lg mb-2">
@@ -116,7 +117,7 @@ export function CategoriesSection({
   }
 
   return (
-    <section className={cn("py-20 bg-zion-blue", className)} style={style}>
+    <section className="{cn("py-20" bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
         {showTitle && (
           <div className="text-center mb-16">
@@ -135,7 +136,7 @@ export function CategoriesSection({
               className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             >
               <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
-                <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className="{`rounded-full" w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <div className="text-white">
                     {category.icon}
                   </div>

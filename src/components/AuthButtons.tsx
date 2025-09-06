@@ -1,7 +1,7 @@
-import { useState } from 'react',
-import { Button } from '@/components/ui/button',
-import { Facebook } from 'lucide-react'
-import { signIn } from 'next-auth/react',
+import { useState } from 'react';,
+import { Button } from '@/components/ui/button';,
+import { Facebook } from 'lucide-react';
+import { signIn } from 'next-auth/react';,
 type Provider = 'google' | 'github' | 'facebook' | 'credentials',
 
 interface AuthButtonsProps {
@@ -19,7 +19,7 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
   const gridCols = `grid-cols-${providers.length}`,
 
   return (
-    <div className={`mt-6 grid ${gridCols} gap-3`}>
+    <div className="{`mt-6" grid ${gridCols} gap-3`}>
       {providers.includes('google') && (
         <Button
           type="button"

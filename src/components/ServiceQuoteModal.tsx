@@ -1,20 +1,21 @@
-import { useState } from 'react',
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Label } from "@/components/ui/label",
-import { Slider } from "@/components/ui/slider",
-import { Calendar } from "@/components/ui/calendar",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { format } from "date-fns",
-import { CalendarIcon } from 'lucide-react'
-import { cn } from "@/lib/utils",
-import { ProductListing } from "@/types/listings",
-import { toast } from '@/hooks/use-toast',
-import { supabase } from "@/integrations/supabase/client",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React from 'react';
+import { useState } from 'react';,
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";,
+import { Button } from "@/components/ui/button";,
+import { Input } from "@/components/ui/input";,
+import { Textarea } from "@/components/ui/textarea";,
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";,
+import { Label } from "@/components/ui/label";,
+import { Slider } from "@/components/ui/slider";,
+import { Calendar } from "@/components/ui/calendar";,
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";,
+import { format } from "date-fns";,
+import { CalendarIcon } from 'lucide-react';
+import { cn } from "@/lib/utils";,
+import { ProductListing } from "@/types/listings";,
+import { toast } from '@/hooks/use-toast';,
+import { supabase } from "@/integrations/supabase/client";,
+import {logErrorToProduction} from '@/utils/productionLogger';,
 interface ServiceQuoteModalProps {
   open: boolean,
   onOpenChange: (open: boolean) => void,
@@ -189,7 +190,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                     <PopoverTrigger asChild>
                       <Button
                         variant={"outline"}
-                        className={cn(
+                        className="{cn("
                           "justify-start text-left font-normal w-full",
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}
@@ -216,7 +217,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                     <PopoverTrigger asChild>
                       <Button
                         variant={"outline"}
-                        className={cn(
+                        className="{cn("
                           "justify-start text-left font-normal w-full",
                           "bg-zion-blue-dark border-zion-blue-light text-white"
                         )}
@@ -302,7 +303,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
               </Button>
             )}
             
-            <div className={cn("flex gap-2", currentStep === 'details' && "ml-auto")}>
+            <div className="{cn("flex" gap-2", currentStep === 'details' && "ml-auto")}>
               <Button
                 type="button"
                 variant="outline"

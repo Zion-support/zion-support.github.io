@@ -1,6 +1,6 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra',
-import path from 'path',
+import path from 'path';
 const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json'),
 
 async function ensureStore() {

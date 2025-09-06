@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { store } from '../../../../../utils/data/enterpriseStore',
 import type { EnterpriseRole } from '../../../../../utils/types/enterprise',
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

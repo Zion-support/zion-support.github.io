@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store',
 function ensureAdmin(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'],

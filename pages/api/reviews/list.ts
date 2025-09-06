@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { readReviews, readProjects } from '../../../utils/dataStore',
 import type { PublicReview, ReviewsSummary } from '../../../types/reviews',
 import { TALENT_PROFILES } from '../../../data/talent',

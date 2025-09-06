@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { AccessToken } from 'livekit-server-sdk',
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '',
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || '',

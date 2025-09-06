@@ -1,9 +1,9 @@
-import React, { useState, useRef } from 'react',
-import { Input } from '@/components/ui/input',
-import { Button } from '@/components/ui/button',
-import { useToast } from '@/hooks/use-toast',
-import { Loader2 } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useState, useRef } from 'react';,
+import { Input } from '@/components/ui/input';,
+import { Button } from '@/components/ui/button';,
+import { useToast } from '@/hooks/use-toast';,
+import { Loader2 } from 'lucide-react';
+import {logErrorToProduction} from '@/utils/productionLogger';,
 export function FooterNewsletter(): React.ReactElement {
   const [email, setEmail] = useState(''),
   const [honeypot, setHoneypot] = useState(''),

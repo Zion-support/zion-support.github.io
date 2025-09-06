@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { getSessionFromReq, isInternalAgentRequest } from '@/utils/adminAuth',
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

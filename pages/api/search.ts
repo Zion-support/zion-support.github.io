@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import type { AccessLevel } from '../../utils/search/filter',
 import { parseQueryToFilters } from '../../utils/search/parser',
 import { searchAll, suggestDidYouMean } from '../../utils/search/filter',

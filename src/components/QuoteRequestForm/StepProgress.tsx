@@ -1,7 +1,7 @@
 
-import { QuoteRequestSteps } from "../QuoteRequestForm",
-import { CheckIcon } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import { QuoteRequestSteps } from "../QuoteRequestForm";,
+import { CheckIcon } from 'lucide-react';
+import { cn } from "@/lib/utils";,
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
 }
@@ -41,7 +41,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
           return (
             <div key={step.id} className="flex flex-col items-center relative">
               <div 
-                className={cn(
+                className="{cn("
                   "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors",
                   status === "complete" ? "bg-zion-purple text-white" : 
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
@@ -55,7 +55,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                 )}
               </div>
               <span 
-                className={cn(
+                className="{cn("
                   "text-xs mt-2 font-medium",
                   status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : 

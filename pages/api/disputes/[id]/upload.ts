@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import path from 'path',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import path from 'path';
 import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb',
 import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth',
 

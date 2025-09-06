@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react',
-import { useRouter } from 'next/router',
-import { useAuth } from '@/hooks/useAuth',
-import { toast } from '@/hooks/use-toast',
-import { Loader2, Shield } from 'lucide-react'
+import React, { useEffect } from 'react';,
+import { useRouter } from 'next/router';,
+import { useAuth } from '@/hooks/useAuth';,
+import { toast } from '@/hooks/use-toast';,
+import { Loader2, Shield } from 'lucide-react';
 
 interface AuthGuardProps {
   children: React.ReactNode,
@@ -113,7 +113,7 @@ export function AuthGuard({
 }
 
 // Higher-order component for easy wrapping
-export function withAuthGuard<P extends object>(
+export function withAuthGuard<P extends object>(;
   Component: React.ComponentType<P>,
   guardOptions?: Omit<AuthGuardProps, 'children'>
 ) {

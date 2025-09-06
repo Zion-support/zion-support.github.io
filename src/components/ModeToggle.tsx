@@ -1,13 +1,13 @@
-import { Moon, Sun } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
-import { toast } from "@/hooks/use-toast"
-import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+import { Moon, Sun } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { toast } from "@/hooks/use-toast";
+import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages";
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';,
 // Use the ThemeProvider hook directly to ensure no conflicts
-import { useTheme } from "@/components/ThemeProvider"
-import { logIssue } from "@/utils/logIssue"
-import { useEffect, useState } from "react"
+import { useTheme } from "@/components/ThemeProvider";
+import { logIssue } from "@/utils/logIssue";
+import { useEffect, useState } from "react";
 
 export function ModeToggle() {
 
@@ -112,7 +112,7 @@ export function ModeToggle() {
             )}
             
             {/* Enhanced visual indicator */}
-            <div className={`absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 ${
+            <div className="{`absolute" -bottom-0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 ${
               isDarkMode 
                 ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50' 
                 : 'bg-slate-600 dark:bg-slate-400'

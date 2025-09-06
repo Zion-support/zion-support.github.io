@@ -1,12 +1,12 @@
 
-import { format } from "date-fns",
-import { Calendar } from "@/components/ui/calendar",
-import { Button } from "@/components/ui/button",
-import { Label } from "@/components/ui/label",
-import { CalendarIcon } from 'lucide-react'
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { cn } from "@/lib/utils",
-import { QuoteFormData } from "@/types/quotes",
+import { format } from "date-fns";,
+import { Calendar } from "@/components/ui/calendar";,
+import { Button } from "@/components/ui/button";,
+import { Label } from "@/components/ui/label";,
+import { CalendarIcon } from 'lucide-react';
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";,
+import { cn } from "@/lib/utils";,
+import { QuoteFormData } from "@/types/quotes";,
 interface TimelineStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -21,7 +21,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
         <div className="space-y-4">
           <div className="flex items-center space-x-4">
             <div 
-              className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
+              className="{`flex-1" p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === "fixed" 
                   ? "bg-zion-purple/20 border-zion-purple" 
                   : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
@@ -33,7 +33,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
             </div>
             
             <div 
-              className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
+              className="{`flex-1" p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === "flexible" 
                   ? "bg-zion-purple/20 border-zion-purple" 
                   : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
@@ -53,7 +53,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                   <PopoverTrigger asChild>
                     <Button
                       variant="outline"
-                      className={cn(
+                      className="{cn("
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
                         !formData.startDate && "text-zion-slate-light"
                       )}
@@ -80,7 +80,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                   <PopoverTrigger asChild>
                     <Button
                       variant="outline"
-                      className={cn(
+                      className="{cn("
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
                         !formData.endDate && "text-zion-slate-light"
                       )}

@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { writeState } from '../../../lib/integrations/fileStore',
 import { getProviderById } from '../../../lib/integrations/registry',
 import { ProviderConnection, SyncRules } from '../../../lib/integrations/types',

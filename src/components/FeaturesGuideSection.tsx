@@ -1,9 +1,9 @@
-import Link from "next/link",
-import { GradientHeading } from "./GradientHeading",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Button } from "./ui/button",
-import { fireEvent } from '@/lib/analytics',
-import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react'
+import Link from "next/link";,
+import { GradientHeading } from "./GradientHeading";,
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";,
+import { Button } from "./ui/button";,
+import { fireEvent } from '@/lib/analytics';,
+import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, Plus, HelpCircle } from 'lucide-react';
 
 export function FeaturesGuideSection() {
   const features = [

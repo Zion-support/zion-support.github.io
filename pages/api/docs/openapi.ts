@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1',
 import { EndpointSpec } from '../../../data/api-docs/types',
 function toOpenApi() {

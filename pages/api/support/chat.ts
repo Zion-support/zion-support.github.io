@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai',
 import { readJson } from '../../../utils/fsDb',
 import { HelpArticle, matchIntent } from '../../../utils/support',

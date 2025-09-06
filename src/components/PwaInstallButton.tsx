@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react',
-import { Button } from '@/components/ui/button',
-import { Loader2 } from 'lucide-react'
-import { toast } from 'sonner',
-import { safeStorage } from '@/utils/safeStorage',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import React, { useEffect, useState } from 'react';,
+import { Button } from '@/components/ui/button';,
+import { Loader2 } from 'lucide-react';
+import { toast } from 'sonner';,
+import { safeStorage } from '@/utils/safeStorage';,
+import {logErrorToProduction} from '@/utils/productionLogger';,
 const DISMISS_KEY = 'pwaDismissed',
 const DISMISS_MS = 7 * 24 * 60 * 60 * 1000, // 7 days
 
@@ -70,4 +70,4 @@ export const PwaInstallButton: React.FC = () => {
   )
 },
 
-export default PwaInstallButton,
+export default PwaInstallButton,;

@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { createDispute, readAllDisputes } from '../../../utils/fsdb',
 import { parseUserFromRequest } from '../../../utils/auth',
 import { DisputeCase, DisputeReason } from '../../../types/disputes',

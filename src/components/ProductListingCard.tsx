@@ -1,18 +1,18 @@
-import React, { useState } from 'react',
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-import { useRouter } from 'next/router',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { ProductListing } from "@/types/listings",
-import { DollarSign } from 'lucide-react'
-import { RatingStars } from "@/components/RatingStars",
-import { FavoriteButton } from "@/components/FavoriteButton",
-import { useDispatch } from 'react-redux',
-import type { AppDispatch } from '@/store',
-import { addItem } from '@/store/cartSlice',
-import { toast } from '@/hooks/use-toast',
-import { useCurrency } from '@/hooks/useCurrency',
-import Image from 'next/image', // Import next/image
+import React, { useState } from 'react';,
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';,
+import { useRouter } from 'next/router';,
+import { Badge } from "@/components/ui/badge";,
+import { Button } from "@/components/ui/button";,
+import { ProductListing } from "@/types/listings";,
+import { DollarSign } from 'lucide-react';
+import { RatingStars } from "@/components/RatingStars";,
+import { FavoriteButton } from "@/components/FavoriteButton";,
+import { useDispatch } from 'react-redux';,
+import type { AppDispatch } from '@/store';,
+import { addItem } from '@/store/cartSlice';,
+import { toast } from '@/hooks/use-toast';,
+import { useCurrency } from '@/hooks/useCurrency';,
+import Image from 'next/image';, // Import next/image
 
 interface ProductListingCardProps {
   listing: ProductListing,
@@ -120,7 +120,7 @@ const ProductListingCardComponent = ({
   return (
     <div
       data-testid="equipment-link"
-      className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
+      className="{`bg-card/70" backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
       onClick={handleViewListing}
       tabIndex={0}
       role="button"
@@ -133,7 +133,7 @@ const ProductListingCardComponent = ({
     >
       {/* Image */}
       <div
-        className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
+        className="{isGrid" ? 'block w-full' : 'block w-48 flex-shrink-0'}
         onClick={handleViewListing} // Keep existing onClick for navigation
         role="button"
         tabIndex={-1} // Remove from tab order as parent is focusable
@@ -144,7 +144,7 @@ const ProductListingCardComponent = ({
           }
         }}
       >
-        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
+        <div className="{`relative" ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
           <Image
             src={imageSrc}
             alt={listing.title}
@@ -172,7 +172,7 @@ const ProductListingCardComponent = ({
       </div>
       
       {/* Content */}
-      <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>
+      <div className="{`flex" flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>
         <div>
           {/* Category & Rating */}
           <div className="flex justify-between items-center mb-2">
@@ -286,5 +286,5 @@ const ProductListingCardComponent = ({
   )
 },
 
-export const ProductListingCard = React.memo(ProductListingCardComponent),
+export const ProductListingCard = React.memo(ProductListingCardComponent),;
 ProductListingCard.displayName = 'ProductListingCard',

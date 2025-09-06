@@ -1,15 +1,15 @@
-import { useEffect, useState } from "react",
-import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes",
-import { Input } from "@/components/ui/input",
-import { Card } from "@/components/ui/card",
-import { Search } from 'lucide-react'
-import { ListingScoreCard } from "@/components/ListingScoreCard",
-import { captureException } from "@/utils/sentry",
-import Skeleton from "@/components/ui/skeleton",
-import { useDebounce } from "@/hooks/useDebounce",
-import { useIsMounted } from "@/hooks/useIsMounted",
-import { z } from "zod",
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useEffect, useState } from "react";,
+import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";,
+import { Input } from "@/components/ui/input";,
+import { Card } from "@/components/ui/card";,
+import { Search } from 'lucide-react';
+import { ListingScoreCard } from "@/components/ListingScoreCard";,
+import { captureException } from "@/utils/sentry";,
+import Skeleton from "@/components/ui/skeleton";,
+import { useDebounce } from "@/hooks/useDebounce";,
+import { useIsMounted } from "@/hooks/useIsMounted";,
+import { z } from "zod";,
+import {logErrorToProduction} from '@/utils/productionLogger';,
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
@@ -114,7 +114,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
         <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Card 
-            className={`p-4 cursor-pointer border-2 transition-colors ${
+            className="{`p-4" cursor-pointer border-2 transition-colors ${
               formData.serviceType === "service" 
                 ? "bg-zion-purple/20 border-zion-purple" 
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
@@ -126,7 +126,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           </Card>
           
           <Card 
-            className={`p-4 cursor-pointer border-2 transition-colors ${
+            className="{`p-4" cursor-pointer border-2 transition-colors ${
               formData.serviceType === "talent" 
                 ? "bg-zion-purple/20 border-zion-purple" 
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
@@ -138,7 +138,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
           </Card>
           
           <Card 
-            className={`p-4 cursor-pointer border-2 transition-colors ${
+            className="{`p-4" cursor-pointer border-2 transition-colors ${
               formData.serviceType === "equipment" 
                 ? "bg-zion-purple/20 border-zion-purple" 
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
@@ -181,7 +181,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                 <div
                   key={item.id}
                   onClick={() => handleItemSelect(item)}
-                  className={`cursor-pointer transition-all ${
+                  className="{`cursor-pointer" transition-all ${
                     formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : ""
                   }`}
                 >

@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../utils/api/auth',
 import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects',
 import { Milestone } from '../../../../utils/types/milestones',

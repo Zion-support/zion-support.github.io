@@ -1,7 +1,7 @@
-import { FooterNewsletter } from "@/components/FooterNewsletter",
-import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
-import Link from "next/link", // Changed from react-router-dom
-import { FeedbackWidget } from "@/components/feedback/FeedbackWidget",
+import { FooterNewsletter } from "@/components/FooterNewsletter";,
+import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react';
+import Link from "next/link";, // Changed from react-router-dom
+import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";,
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
     return fallback

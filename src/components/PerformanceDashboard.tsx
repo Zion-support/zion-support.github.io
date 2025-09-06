@@ -1,8 +1,8 @@
-import React, { useState } from 'react',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { Button } from '@/components/ui/button',
-import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
+import React, { useState } from 'react';,
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';,
+import { Badge } from '@/components/ui/badge';,
+import { Button } from '@/components/ui/button';,
+import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react';
 
 interface PerformanceMetrics {
   buildSize: string,
@@ -187,7 +187,7 @@ const PerformanceDashboard: React.FC = () => {
                       {improvement.title}
                     </h3>
                     <div className="flex items-center space-x-2">
-                      <Badge className={getImpactColor(improvement.impact)}>
+                      <Badge className="{getImpactColor(improvement.impact)}">
                         {improvement.impact} impact
                       </Badge>
                       {getStatusIcon(improvement.status)}
@@ -218,4 +218,4 @@ const PerformanceDashboard: React.FC = () => {
   )
 },
 
-export default PerformanceDashboard, 
+export default PerformanceDashboard, ;

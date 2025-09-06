@@ -1,24 +1,25 @@
-import { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import { GradientHeading } from "@/components/GradientHeading",
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+import React from 'react';
+import { useState, useEffect } from "react";,
+import { useRouter } from 'next/router';,
+import { GradientHeading } from "@/components/GradientHeading";,
+import { ProductListingCard } from "@/components/ProductListingCard";,
+import { Button } from "@/components/ui/button";,
+import { Input } from "@/components/ui/input";,
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';,
 import {
   Select,
   SelectValue,
   SelectTrigger,
   SelectContent,
   SelectItem} from "@/components/ui/select",
-import { Checkbox } from "@/components/ui/checkbox",
-import Skeleton from "react-loading-skeleton",
+import { Checkbox } from "@/components/ui/checkbox";,
+import Skeleton from "react-loading-skeleton";,
 import "react-loading-skeleton/dist/skeleton.css",
-import { Slider } from "@/components/ui/slider",
-import { ProductListing, ListingView } from "@/types/listings",
-import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-import { captureException } from "@/utils/sentry",
+import { Slider } from "@/components/ui/slider";,
+import { ProductListing, ListingView } from "@/types/listings";,
+import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react';
+import { toast } from "@/hooks/use-toast";,
+import { captureException } from "@/utils/sentry";,
 interface PriceRange {
   min: number,
   max: number
@@ -352,7 +353,7 @@ export function DynamicListingPage({
                         setSelectedRating(rating)
                       }}
                       aria-pressed={selectedRating === rating}
-                      className={`{
+                      className="{`{"
                         selectedRating === rating
                           ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
                           : "border-zion-blue-light text-zion-slate-light"
@@ -452,7 +453,7 @@ export function DynamicListingPage({
 
             {isLoading ? (
               <div
-                className={
+                className="{"
                   view === "grid"
                     ? "grid grid-cols-1 md:grid-cols-2 gap-6"
                     : "flex flex-col gap-6"
@@ -479,7 +480,7 @@ export function DynamicListingPage({
               </div>
             ) : filteredListings.length > 0 ? (
               <div
-                className={
+                className="{"
                   view === "grid"
                     ? "grid grid-cols-1 md:grid-cols-2 gap-6"
                     : "flex flex-col gap-6"

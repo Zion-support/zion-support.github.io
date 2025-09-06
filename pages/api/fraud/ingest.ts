@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { evaluateHeuristics } from '../../../utils/fraud/heuristics',
 import { classifyWithGPT } from '../../../utils/fraud/gpt',
 import { getFraudStore, newEvent } from '../../../utils/fraud/store',

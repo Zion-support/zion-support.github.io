@@ -1,12 +1,13 @@
-import { useState } from "react",
-import { toast } from "@/hooks/use-toast",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { AIMatchingResults } from "@/components/AIMatchingResults",
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
-import { Textarea } from "@/components/ui/textarea",
-import { Sparkles, Search } from 'lucide-react'
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+import React from 'react';
+import { useState } from "react";,
+import { toast } from "@/hooks/use-toast";,
+import { Button } from "@/components/ui/button";,
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";,
+import { AIMatchingResults } from "@/components/AIMatchingResults";,
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking";,
+import { Textarea } from "@/components/ui/textarea";,
+import { Sparkles, Search } from 'lucide-react';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';,
 
 
 interface AIMatchmakerProps {
@@ -76,7 +77,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const matchItems = matches.map(match => match.item),
   
   return (
-    <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className || ""}`}>
+    <Card className="{`border" border-zion-blue-light bg-zion-blue-dark ${className || ""}`}>
       <CardHeader className="pb-2">
         <CardTitle className="flex items-center text-white">
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
