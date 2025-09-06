@@ -78,6 +78,9 @@ function QuickAccess() {
               key={index}
               href={link.link}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               </p>;
               <div className='flex items - center text - zion - cyan text - xs mt - auto'>;
@@ -102,6 +105,9 @@ export default function Page() {";
     { name: "Innovation", count: 10, color: "from-green-500 to-teal-500" },";
     { name: "Business", count: 14, color: "from-indigo-500 to-purple-500" };      scale: 1,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       transition: {
         duration: 0.5, ";
@@ -497,6 +503,9 @@ export default function Page() {;";
                 className="mt-auto">
                 <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   to={link && link.path}`
                   className={`inline-flex items-center justify-center w-full px-4 py-3 bg-gradient-to-r ${link && link.color} text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-zion-cyan/25`}>;
                   Explore {link && link.title}";
@@ -532,6 +541,9 @@ export default QuickAccess;}
 
 export default QuickAccess;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

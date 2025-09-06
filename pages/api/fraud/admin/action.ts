@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
@@ -26,6 +30,9 @@ export default async function handler(
   }
   const adminAction: AdminActionType = {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     id: `action-${Date && Date.now()}`,
     fraudId,
@@ -41,6 +48,7 @@ export default async function handler(
 
 }
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -64,6 +72,17 @@ function ensureAdmin(req: NextApiRequest): boolean {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { getFraudStore  } from '../../../../utils / fraud / store';
+import { AdminActionType  } from '../../../../utils / fraud / types';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 export default async /**
  * handler - Function description
@@ -128,3 +147,10 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

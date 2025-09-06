@@ -45,6 +45,7 @@ export interface ComprehensiveService {
 
 ;
 const contact = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -56,6 +57,20 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   website: 'https://ziontechgroup.com',};
 
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
+=======
+=======
+
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }
+;
+export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -105,6 +120,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {
+<<<<<<< HEAD
     id: 'ai-powered-code-review-assistant'
     name: 'AI-Powered Code Review Assistant'
     tagline:
@@ -142,6 +158,10 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Code quality scoring and metrics',
       'Best practice recommendations',
       'Integration with GitHub/GitLab',
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'Custom rule configuration',
       'Team performance analytics',
       'Automated PR comments',
@@ -150,6 +170,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     ],
     popular: true,
     icon: '🔍',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -166,6 +187,23 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     realService: true,
     technology: ['AI/ML, Static Analysis, Security Scanning'],
     integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],
+=======
+
+    color: 'from-blue-600 to-indigo-700',
+    textColor: 'text-blue-400',
+    link: 'https://ziontechgroup.com/ai-code-review-assistant',
+    marketPosition:;
+      'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.',
+    targetAudience: 'Development teams, DevOps engineers, CTOs',
+    trialDays: 14,
+    setupTime: '2 hours',
+    category: 'Development & DevOps',
+    realService: true,
+    technology: ['AI/ML, Static Analysis, Security Scanning'],
+    integrations: ['GitHub, GitLab, Bitbucket, Jira, Slack'],
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     useCases: [
       'Code quality improvement, Security compliance, Team productivity'
     ]
@@ -1683,6 +1721,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
 
     reviews: 178
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 
@@ -2380,6 +2419,26 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [;
     customers: 234,;
     rating: 4.8;
     reviews: 178;
+=======
+  }
+];
+
+
+=======
+    rating: 4.8
+    reviews: 178
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    rating: 4.8,
+    reviews: 178;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 ;

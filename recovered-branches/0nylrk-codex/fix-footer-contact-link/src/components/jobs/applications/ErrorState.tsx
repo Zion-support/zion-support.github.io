@@ -1,17 +1,23 @@
 
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card";
 import { Card, CardContent } from "@/components/ui/card";
 
 
 <<<<<<< HEAD
+=======
 
-import { Card, CardContent } from "@/components/ui/card",
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+
+<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card",
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ErrorStateProps {
   error: string;
 }
@@ -61,6 +67,7 @@ function ErrorState() {
         <p className="text-muted-foreground">{error}</p>
       </CardContent>
     </Card>
+<<<<<<< HEAD
   );
 }
   )
@@ -80,3 +87,12 @@ export function ErrorState({ error }: ErrorStateProps) {;
   );
 }
 ;
+=======
+
+    </Card>;
+  );
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

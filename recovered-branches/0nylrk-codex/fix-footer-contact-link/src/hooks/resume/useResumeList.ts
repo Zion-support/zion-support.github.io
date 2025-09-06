@@ -1,14 +1,23 @@
 
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume  } from '@/types/resume';
 import { useAuth } from '@/hooks/useAuth';
 export function useResumeList() {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 export function useResumeList() {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -140,6 +149,7 @@ if ( {) {
     error;
     resumes;
 
+<<<<<<< HEAD
     fetchResumes
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -209,5 +219,9 @@ export function useResumeList() {;
     error;
     resumes;
     fetchResumes;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }

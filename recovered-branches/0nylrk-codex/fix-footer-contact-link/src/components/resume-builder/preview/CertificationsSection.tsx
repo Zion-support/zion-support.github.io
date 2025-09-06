@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Certification  } from '@/types/resume';
 import { format } from 'date-fns';
 interface CertificationsSectionProps {
@@ -18,10 +19,33 @@ import {Certification} from '@/types/resume';
 import {format} from 'date-fns';
 interface CertificationsSectionProps {
   certifications: Certification[]
+=======
+import {Certification} from '@/types / resume';
+import {format} from 'date - fns';
+
+interface CertificationsSectionProps {
+  certifications: Certification[];
+}
+
+
+
+import {Certification} from '@/types/resume';
+import {format} from 'date-fns';
+interface CertificationsSectionProps {
+  certifications: Certification[]
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Certification } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface CertificationsSectionProps {;
   certifications: Certification[];
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 export function CertificationsSection({ certifications }: CertificationsSectionProps) {;

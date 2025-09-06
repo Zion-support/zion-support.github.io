@@ -22,6 +22,7 @@ interface PerformanceMetrics {;
   bundleSize: number;
   loadTime: number;
   performanceScore: number;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -53,6 +54,8 @@ interface PerformanceMetrics {
   loadTime: number
   performanceScore: number
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   chunkCount: number;
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -427,6 +430,7 @@ export function PerformanceDashboard() {;
       });    }
 
 
+<<<<<<< HEAD
     return scriptEntries.map(entry => ({
       name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
       size: entry.transferSize || entry.encodedBodySize || 0,
@@ -471,6 +475,8 @@ export function PerformanceDashboard() {;
     return () => clearInterval(interval)
   }, []),
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -573,6 +579,9 @@ export function PerformanceDashboard() {;
         <Button onClick={collectMetrics} disabled={isLoading}>;
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           {isLoading ? 'Collecting...' : 'Refresh'}
@@ -608,6 +617,9 @@ export function PerformanceDashboard() {;
               {lastUpdated && (
                 <p className="text-sm text-muted-foreground">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                   Last updated: {lastUpdated.toLocaleString()}
@@ -807,6 +819,11 @@ export function PerformanceDashboard() {;
                   <div className="flex items-center gap-3">
                     <span className="text-sm font-mono text-muted-foreground">
                       {index + 1}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </span>
                     <div>
                       <p className="font-medium text-sm">{chunk.name}</p>
@@ -876,6 +893,9 @@ export function PerformanceDashboard() {;
             <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
               <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <div>
@@ -890,6 +910,9 @@ export function PerformanceDashboard() {;
             </div>
             
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
@@ -907,6 +930,9 @@ export function PerformanceDashboard() {;
               </div>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         </CardContent>;
       </Card>;
@@ -971,6 +997,9 @@ export function PerformanceDashboard() {;
   );
 } ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

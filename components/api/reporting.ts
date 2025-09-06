@@ -22,8 +22,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { byTenant: {} }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   const method = (req.method |'GET').toUpperCase()
   const method = (req.method || 'GET').toUpperCase(),;
+=======
+
+
+  const method = (req.method || 'GET').toUpperCase(),;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const auth = authenticateRequest(req, method === 'GET');
   if (!auth.ok) return res.status(401).json({ error: auth.error });
   const tenantId = auth.tenantId!;
@@ -49,8 +57,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   }
   if (method === 'POST') {
+<<<<<<< HEAD
     const { funnel, timeToHireDays, costPerHireUsd } = req.body |{}
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
+=======
+
+    const { funnel, timeToHireDays, costPerHireUsd } = req && req.body || {};
+
+=======
+
+    const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const updated = updateJsonFile<ReportingData>(
       FILE
       curr => {
@@ -174,3 +193,10 @@ return res.status (405).json ({ error: 'Method not allowed' });
 =======
 =======
     const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

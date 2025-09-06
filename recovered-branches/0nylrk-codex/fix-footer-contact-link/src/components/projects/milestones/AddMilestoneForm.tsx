@@ -30,11 +30,24 @@ interface AddMilestoneFormProps {;
   projectEndDate?: string;
   projectType?: string;
 }
+<<<<<<< HEAD
 export function AddMilestoneForm({
+=======
+
+
+export function AddMilestoneForm(): any ({;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 export function AddMilestoneForm({;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onSubmit;
   isSubmitting;
   onCancel;
@@ -45,7 +58,13 @@ export function AddMilestoneForm({;
 =======
       });
       return
+<<<<<<< HEAD
     }
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -119,6 +138,14 @@ export function AddMilestoneForm({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
       return;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 
     // If there are multiple milestones, submit them one by one

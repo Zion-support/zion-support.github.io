@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
@@ -5,6 +6,10 @@ import { Label  } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
 import { Skill  } from '@/types/resume';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Input} from '@/components/ui/input';
@@ -12,14 +17,28 @@ import {Label} from '@/components/ui/label';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
 import {Skill} from '@/types/resume';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface AddSkillFormProps {
 
   resumeId: string
   onAddSkill: (skill: Skill) => Promise<boolean>
 }
+<<<<<<< HEAD
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
 
 export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
+=======
+
+
+
+export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [skillName, setSkillName] = useState('');
   const [skillCategory, setSkillCategory] = useState('');
   const [proficiency, setProficiency] = useState<number>(3);
@@ -30,6 +49,7 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       name: skillName.trim()
       category: skillCategory |'Other'
       proficiency: proficiency}
+<<<<<<< HEAD
     const success = await onAddSkill(newSkill);
     if (success) {
       setSkillName('');
@@ -40,6 +60,13 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
     setSkillCategory(enhancedCategory)
   }
   };
+=======
+=======
+import React from 'react';
+import {useState} from 'react';
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Input } from '@/components/ui/input',;
@@ -69,6 +96,12 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       setProficiency(3);
     }
   },
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   const handleEnhanceSkill = (enhancedCategory: string) => {
     setSkillCategory(enhancedCategory)
@@ -211,6 +244,7 @@ if ( {) {
               min={1}
               max={5}
               value={proficiency}
+<<<<<<< HEAD
               onChange={(e) => setProficiency(Number(e.target.value))}
               className="w-20"
             />
@@ -225,3 +259,18 @@ if ( {) {
 },
 };
 },
+=======
+              on_change={(e) => set_proficiency (Number (e.target.value))}
+              className="w - 20";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            />;
+            <Button type="submit">Add</Button>;
+          </div>;
+        </div>;
+      </div>;
+
+    </form>);
+}
+;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

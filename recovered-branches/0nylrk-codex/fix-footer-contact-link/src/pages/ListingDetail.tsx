@@ -1,10 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 import {Badge} from "@/components/ui/badge";
@@ -26,6 +29,7 @@ export default function ListingDetail() {;
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+<<<<<<< HEAD
 import { useState } from "react",
 import { useParams } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
@@ -48,6 +52,10 @@ export default function ListingDetail() {
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   // Find the listing from our shared data source - now also checking equipment listings
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -236,6 +244,12 @@ export default function ListingDetail() {;
                           onError={(e) => {;
                             const target = e.target as HTMLImageElement,;
                             target.src = "/placeholder.svg";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           }}
                         />;
                       </div>;
@@ -248,6 +262,12 @@ export default function ListingDetail() {;
                 <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
                 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -349,6 +369,11 @@ export default function ListingDetail() {;
                           className={cn(
                             "h-5 w-5";
                             "h-5 w-5",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           )}
@@ -405,6 +430,12 @@ export default function ListingDetail() {;
                           title: "Payment Processing";
                           description: "Redirecting to secure checkout...";
                         });
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       }}
                     />
                   ) : (
@@ -455,6 +486,7 @@ export default function ListingDetail() {;
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
 
+<<<<<<< HEAD
                           const target = e.target as HTMLImageElement,
                           target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
                         }}
@@ -502,6 +534,12 @@ export default function ListingDetail() {;
     </AppLayout>
   )
 }
+=======
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6";
                     >;
                       {isLoading ? "Processing..." : "Request Quote"}
@@ -822,7 +860,11 @@ if ( {) {
           />;
         </DialogContent>;
       </Dialog>;
+<<<<<<< HEAD
     </AppLayout>;
   );
+=======
+    </AppLayout>);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

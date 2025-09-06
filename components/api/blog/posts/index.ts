@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { v4 as uuidv4  } from 'uuid';
 import { BlogPost  } from '@/utils/types/blog';
 import { readPosts, writePosts } from '@/utils/data/blogStore';
@@ -7,6 +8,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method === 'GET') {
   if (req.method === 'GET') {;
+=======
+
+
+  if (req.method === 'GET') {
+=======
+
+  if (req.method === 'GET') {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const { status, topic, tag, author, limit, offset } = req.query;
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
@@ -127,6 +138,7 @@ return res.status(405).end();
     return res.status (201).json (post);
   }
 
+<<<<<<< HEAD
   return res.status(405).end();
 return res.status(405).end();
 }
@@ -134,3 +146,8 @@ return res.status(405).end();
 }
 }
   return res.status(405).end();
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

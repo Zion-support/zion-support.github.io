@@ -1,7 +1,12 @@
 export const metadata = { 
+<<<<<<< HEAD
   title: 'Data Analytics Services | Zion Tech Group',
   description: 'Comprehensive data analytics services including business intelligence, data visualization, predictive analytics, and data science solutions for data-driven decision making.',
   keywords: 'data analytics, business intelligence, data visualization, predictive analytics, data science, machine learning, data consulting'
+=======
+  title: 'Data Analytics Solutions | Zion Tech Group',
+  description: 'Advanced data analytics solutions including business intelligence, data visualization, predictive analytics, and data engineering. Turn data into actionable insights.'
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 
 export default function DataAnalyticsPage() {
@@ -152,6 +157,7 @@ export default function DataAnalyticsPage() {
       </section>
 
       <Pricing />
+<<<<<<< HEAD
       
       <section className="mt-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Our Data Analytics Services?</h2>
@@ -190,11 +196,18 @@ export default function DataAnalyticsPage() {
       </section>
 
       <CTASection />
+=======
+      <ContactSection />
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </div>
   );
 }
 
+<<<<<<< HEAD
 function DataAnalyticsServiceCard({ title, description, features, price, icon }: { 
+=======
+function DataServiceCard({ title, description, features, price, icon }: { 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   title: string; 
   description: string; 
   features: string[]; 
@@ -205,6 +218,7 @@ function DataAnalyticsServiceCard({ title, description, features, price, icon }:
     <div className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
+<<<<<<< HEAD
       <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
       <div className="mb-4">
         <div className="text-2xl font-bold text-blue-600 mb-2">{price}</div>
@@ -220,6 +234,109 @@ function DataAnalyticsServiceCard({ title, description, features, price, icon }:
       <a 
         href="tel:+13024640950" 
         className="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+=======
+      <p className="text-gray-600 mb-4">{description}</p>
+      <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
+      <ul className="space-y-2">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center text-sm text-gray-600">
+            <span className="text-green-500 mr-2">✓</span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function Item({ title, details }: { title: string; details: string[] }) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-6">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <ul className="space-y-2">
+        {details.map((detail, index) => (
+          <li key={index} className="flex items-start text-gray-600">
+            <span className="text-blue-500 mr-2 mt-1">•</span>
+            {detail}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function Pricing() {
+  return (
+    <section className="py-12">
+      <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Data Analytics Packages</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Plan 
+          name="Data Assessment" 
+          price="$8k–$20k" 
+          duration="3–6 weeks"
+          features={[
+            "Data quality assessment",
+            "Analytics opportunity identification",
+            "Technology stack recommendations",
+            "ROI analysis and business case",
+            "Implementation roadmap",
+            "Pilot project design"
+          ]} 
+        />
+        <Plan 
+          name="Analytics Implementation" 
+          price="$25k–$100k" 
+          duration="10–20 weeks"
+          features={[
+            "End-to-end analytics solution",
+            "Data pipeline development",
+            "Dashboard and visualization creation",
+            "Machine learning model development",
+            "Testing and validation",
+            "User training and documentation"
+          ]} 
+        />
+        <Plan 
+          name="Managed Analytics" 
+          price="$5k+/mo" 
+          duration="Ongoing"
+          features={[
+            "Continuous data monitoring",
+            "Model maintenance and updates",
+            "Performance optimization",
+            "Regular reporting and insights",
+            "Data quality management",
+            "Scalability and growth support"
+          ]} 
+        />
+      </div>
+    </section>
+  );
+}
+
+function Plan({ name, price, duration, features }: { 
+  name: string; 
+  price: string; 
+  duration: string;
+  features: string[]; 
+}) {
+  return (
+    <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
+      <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-blue-600 mb-2">{price}</div>
+      <div className="text-gray-600 mb-6">{duration}</div>
+      <ul className="space-y-3 mb-8">
+        {features.map((feature, index) => (
+          <li key={index} className="flex items-center text-gray-600">
+            <span className="text-green-500 mr-3">✓</span>
+            {feature}
+          </li>
+        ))}
+      </ul>
+      <a 
+        href="tel:+13024640950" 
+        className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       >
         Get Started
       </a>
@@ -227,11 +344,15 @@ function DataAnalyticsServiceCard({ title, description, features, price, icon }:
   );
 }
 
+<<<<<<< HEAD
 function DataAnalyticsProcessStep({ step, title, description }: { 
   step: string; 
   title: string; 
   description: string; 
 }) {
+=======
+function ContactSection() {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="text-center p-6">
       <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
@@ -322,6 +443,7 @@ function Pricing() {
         />
       </div>
     </section>
+<<<<<<< HEAD
   );
 }
 
@@ -389,5 +511,7 @@ function CTASection() {
         <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
       </div>
     </div>
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }

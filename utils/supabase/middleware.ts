@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {const { pathname } = request.nextUrl;
@@ -33,6 +34,32 @@ export function middleware(request: NextRequest) {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+import { NextResponse } from 'next / server',
+import type { NextRequest } from 'next / server',
+export /**
+ * middleware - Function description
+ */
+function middleware() {
+  const { pathname } = request.next_url,
+  // Check condition
+if ( {) {
+  $2
+}
+    const role = request.cookies.get ('user_role')?.value || 'talent',
+    const target = role === 'client' ? '/dashboard / client' : '/dashboard / talent';
+    return NextResponse.redirect (new URL (target, request.url));
+  }
+  return NextResponse.next ();
+}
+export const config = {
+  matcher: ['/dashboard / dashboard/']}
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 export const config = {;
   matcher: ['/dashboard/dashboard/']};

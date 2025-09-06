@@ -1,15 +1,19 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
 import {TalentProfile} from "@/types/talent";
 import {SmartContractInfo} from "@/types/smart-contracts";
+<<<<<<< HEAD
 import React from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -17,6 +21,43 @@ import { TalentProfile } from "@/types/talent";
 import { SmartContractInfo } from "@/types/smart-contracts";
 import { TalentProfile } from "@/types/talent",
 import { SmartContractInfo } from "@/types/smart-contracts",
+=======
+interface ContractPreviewProps {;
+  contractContent?: string;
+  generatedContract?: string, // Added to support both naming conventions;
+=======
+import React from './react';
+import { Badge } from '@/components / ui / badge';
+import { Button } from '@/components / ui / button';
+import { TalentProfile } from '@/types / talent';
+import { SmartContractInfo } from '@/types / smart - contracts';
+interface ContractPreviewProps {
+  contract_content?: string;
+  generated_contract?: string, // Added to support both naming conventions;
+
+  status?: 'draft' | 'ready' | 'pending';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  talent?: TalentProfile;
+
+  on_deploy?: () => void;
+  on_sign?: () => void;
+  on_close?: () => void;
+  deploy_status?: string;
+  deployment_info?: SmartContractInfo | null;
+}
+export /**
+ * ContractPreview - Function description
+ */
+function ContractPreview() {
+  // Use either contract_content or generated_contract, whichever is provided;
+  const display_content = contract_content || generated_contract || "";
+;
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ContractPreviewProps {
   contractContent?: string,
   generatedContract?: string, // Added to support both naming conventions
@@ -143,6 +184,13 @@ export function ContractPreview({;
           </Badge>;
         ) : (;
           <Badge variant="outline">Draft</Badge>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         )}
 
       </div>;

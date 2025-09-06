@@ -106,4 +106,9 @@ i18n.on ('language_changed', (lng) => {
   // This will be implemented in the LanguageContext;
 
 }),;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default i18n;

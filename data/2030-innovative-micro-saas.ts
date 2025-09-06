@@ -43,6 +43,7 @@ export interface InnovativeMicroSaas2030 {
     price: '$2,999'
     period: '/month'
     description:
+<<<<<<< HEAD
       'Revolutionary 2030 platform for AI-powered business intelligence, providing real-time insights, predictive analytics, and autonomous decision-making.'
       'AI-powered analytics'
       'Real-time insights'
@@ -353,6 +354,8 @@ export interface InnovativeMicroSaas2030 {
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup && ziontechgroup.com',
@@ -383,6 +386,9 @@ export interface InnovativeMicroSaas2030 {
 
     reviews: 52
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   id: string, name: string,
   tagline: string, price: string,
@@ -580,6 +586,7 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
 =======
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   }
@@ -587,6 +594,8 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeMicroSaas2030 {;
@@ -850,5 +859,12 @@ export const innovativeMicroSaas2030: InnovativeMicroSaas2030[] = [;
     customers: 89,;
     rating: 4.7;
     reviews: 52;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];

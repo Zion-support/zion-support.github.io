@@ -53,6 +53,12 @@ interface QuoteDetails {;
   timeframe: string,;
   startDate?: string,;
   endDate?: string;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 interface RequestBody {
   service: Service | null
@@ -64,6 +70,13 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   try {
 
@@ -96,6 +109,13 @@ serve(async (req) => {
         const { data: { user }, error } = await supabase.auth.getUser(token),;
         if (!error && user) {;
           userId = user.id;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       }
     } catch (authError) {
@@ -125,9 +145,17 @@ serve(async (req) => {
                 1. A concise summary (max 100 words)
                 2. 3-5 relevant tags for categorization
                 3. An estimated complexity level (Low, Medium, High)
+<<<<<<< HEAD
                 Service: ${service?.title |'Custom Service'}
                 Category: ${service?.category |'N/A'}
                 
+=======
+
+
+                
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch (authError) {;
       // // // console.log("Auth error:", authError),;
       // Continue without user identity;
@@ -155,6 +183,12 @@ serve(async (req) => {
                 1. A concise summary (max 100 words);
                 2. 3-5 relevant tags for categorization;
                 3. An estimated complexity level (Low, Medium, High);
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 Service: ${service?.title || 'Custom Service'}
                 Category: ${service?.category || 'N/A'}
                 Description: ${quoteDetails.description}
@@ -177,6 +211,12 @@ serve(async (req) => {
         const aiResult = await openAIResponse.json(),;
         if (!aiResult.error && aiResult.choices && aiResult.choices.length > 0) {;
           aiAnalysis = aiResult.choices[0].message.content;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       }
     } catch (openAIError) {
@@ -268,6 +308,7 @@ if ( {) {
       status: 500,
 
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
+<<<<<<< HEAD
 =======
     console.error('Error in process-quote function:', error);
     return new Response(JSON.stringify({ success: false, error: error.message }), {
@@ -278,6 +319,39 @@ if ( {) {
   }
 });
 
+=======
+  }
+});
+
+=======
+          description: quote_details.description;
+          email: quote_details.email;
+          budget: quote_details.budget;
+          timeframe: quote_details.timeframe;
+          start_date: quote_details.start_date;
+          end_date: quote_details.end_date;
+          ai_analysis: ai_analysis,
+          status: 'pending';
+        }
+      ]);
+      .select ();
+;
+    // Check condition
+if (throw error) {
+  $2
+}
+    return new Response (JSON.stringify ({ success: true, data }), {
+      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+  } catch (error) {
+    console.error ('Error in process - quote function:', error);
+    return new Response (JSON.stringify ({ success: false, error: error.message }), {
+      status: 500,
+      headers: { ...cors_headers, 'Content - Type': 'application / json' }});
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch (openAIError) {;
       console.error("OpenAI error:", openAIError),;
       // Continue without AI analysis;
@@ -311,5 +385,12 @@ if ( {) {
     return new Response(JSON.stringify({ success: false, error: error.message }), {;
       status: 500,;
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });

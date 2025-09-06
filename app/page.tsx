@@ -67,6 +67,27 @@ export default function HomePage() {
             href="/services/data-analytics"
             description="Business intelligence, predictive analytics and data science solutions."
             icon="📊"
+<<<<<<< HEAD
+=======
+          />
+          <Card
+            title="Digital Transformation"
+            href="/services/digital-transformation"
+            description="Complete digital transformation solutions and legacy system modernization."
+            icon="🔄"
+          />
+          <Card
+            title="Cybersecurity"
+            href="/services/cybersecurity"
+            description="Comprehensive security solutions, threat detection, and compliance management."
+            icon="🔒"
+          />
+          <Card
+            title="Cloud Services"
+            href="/services/cloud-services"
+            description="Cloud migration, architecture, and optimization across AWS, Azure, and GCP."
+            icon="☁️"
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           />
         </div>
       </section>

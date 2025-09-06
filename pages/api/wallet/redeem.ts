@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { redeemToCredits } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -12,11 +13,31 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     res.status(200).json({ result: 'redeemed' });
   } catch (err: any) {
+=======
+
+
+  } catch (err: any) {
+
+}
+
+=======
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     res.status(400).json({
       error: err.message
     });
 import type { NextApiRequest, NextApiResponse } from "next",
 import { redeemToCredits } from "../../../utils/token/service",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const { userId, amount } = req.body || {},
@@ -26,6 +47,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json(result)
   } catch (err: any) {
     return res.status(400).json({ error: err.message })
+<<<<<<< HEAD
   };
 };
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -67,3 +89,8 @@ export default function handler(req, res) {
 }
   }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

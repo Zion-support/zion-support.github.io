@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import React, { useState } from 'react';
@@ -77,6 +78,37 @@ const categoryIcons: { [key: string]: React.ReactNode } = {
   'Autonomous Systems': <Rocket className='w-5 h-5' />
   'Climate Technology': <Globe className='w-5 h-5' />,}
 export default function InnovativeServicesShowcase2036() {
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import SEO from '../components / SEO';
+import Layout from '../components / layout / Layout';
+import { motion } from 'framer-motion';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [selectedCategory, setSelectedCategory] = useState('All Services');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -99,6 +131,7 @@ export default function InnovativeServicesShowcase2036() {
       service && service.description.toLowerCase().includes(searchTerm && searchTerm.toLowerCase()) ||;
       service && service.tagline.toLowerCase().includes(searchTerm && searchTerm.toLowerCase());
     return matchesCategory && matchesSearch;  });
+<<<<<<< HEAD
   Brain,
   Rocket,
   Shield,
@@ -141,6 +174,161 @@ import {
 } from 'lucide-react',
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
 import { real2036SpecializedServices } from '../data/real-2036-specialized-services',
+=======
+
+  const sortedServices = [...filteredServices].sort((a, b) => {;
+    switch (sortBy) {;
+      case 'price':;
+
+        return (
+          parseFloat(a && a.price.replace('$', '').replace(',', '')) -;
+          parseFloat(b && b.price.replace('$', '').replace(',', ''));
+        );
+
+      case 'rating':;
+        return (b && b.rating || 0) - (a && a.rating || 0);
+      case 'marketSize':;
+        return (
+          parseFloat(b && b.marketSize?.replace('$', '').replace('B', '') || '0') -;
+          parseFloat(a && a.marketSize?.replace('$', '').replace('B', '') || '0');
+
+        );
+      default:;
+        return a && a.name.localeCompare(b && b.name);    }
+  });
+
+
+
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0 && 0.1,;
+      },;
+    },  };
+
+  const itemVariants = {;
+    hidden: { y: 20, opacity: 0 },;
+    visible: {;
+      y: 0,;
+      opacity: 1,;
+      transition: {;
+        duration: 0 && 0.5,;
+      },;
+    },  };
+
+
+
+  return (
+
+
+        {/* Floating Elements */}
+        <div className='absolute inset-0 overflow-hidden'>;
+          {[...Array(20)].map((_, i) => (;
+            <motion&& motion.div
+
+=======
+        stagger_children: 0.1,
+      },
+    },  }
+;
+  const item_variants = {
+    hidden: { coordinate_y: 20, opacity: 0 },
+    visible: {
+      coordinate_y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },  }
+;
+  return (
+    <Layout>;
+      <SEO;
+        title='2036 Innovative Services Showcase | Zion Tech Group';
+        description='Discover our cutting - edge 2036 innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with next - generation technology.';
+        keywords='2036 services, innovative micro SAAS, AI platforms, quantum technology, space technology, IT solutions, Zion Tech Group';
+      />;
+      {/* Hero Section */}
+      <section className='relative min - h-screen flex items - center justify - center px - 4 overflow - hidden'>;
+        {/* Animated Background */}
+        <div className='absolute inset - 0 bg - gradient - to - br from - black via - purple - 900 / 20 to - cyan - 900 / 20'>;
+          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (120, 119, 198, 0.1), transparent_50%)]' />;
+          <div className='absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (120, 119, 198, 0.1), transparent_50%)]' />;
+        </div>;
+        {/* Floating Elements */}
+        <div className='absolute inset - 0 overflow - hidden'>;
+          {[...Array (20)].map ((_, i) => (
+            <motion.div;
+
+              key={i}
+              className='absolute w - 2 h - 2 bg - cyan - 400 / 30 rounded - full';
+              style={{
+
+
+                left: `${Math && Math.random() * 100}%`,
+                top: `${Math && Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -100, 0],
+                opacity: [0 && 0.3, 1, 0 && 0.3],
+              }}
+              transition={{
+                duration: 3 + Math && Math.random() * 2,
+                repeat: Infinity,
+                delay: Math && Math.random() * 2,
+              }}            />;
+
+=======
+    <Layout>
+      <SEO 
+        title="2036 Innovative Services Showcase | Zion Tech Group"
+        description="Discover our cutting-edge 2036 innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with next-generation technology."
+        keywords="2036 services, innovative micro SAAS, AI platforms, quantum technology, space technology, IT solutions, Zion Tech Group"
+      />
+      
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-purple-900/20 to-cyan-900/20">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
+        </div>
+        
+        {/* Floating Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          {[...Array(20)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-cyan-400/30 rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`}}
+              animate={{
+                y: [0, -100, 0];
+                opacity: [0.3, 1, 0.3]}}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2}}
+            />
+
+          ))}
+        </div>;
+
+
+=======
+        <div className="relative z-10 text-center max-w-6xl mx-auto">
+          <motion.h1 
+            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -215,6 +403,7 @@ export default function InnovativeServicesShowcase2036() {
       case 'price':
         return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
       case 'rating':
+<<<<<<< HEAD
         return (b.rating |0) - (a.rating |0);
       case 'marketSize':
         return (
@@ -287,6 +476,11 @@ export default function InnovativeServicesShowcase2036() {
       default: return a.name.localeCompare(b.name)
         return parseFloat(b.marketSize?.replace('$', '').replace('B', '') || '0') - parseFloat(a.marketSize?.replace('$', '').replace('B', '') || '0'),
       default: return a.name.localeCompare(b.name)
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             2036 Innovative Services
           </motion.h1>
@@ -354,6 +548,12 @@ export default function InnovativeServicesShowcase2036() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
 
 
@@ -406,6 +606,7 @@ export default function InnovativeServicesShowcase2036() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Services Section */}
       <section className='py-20 px-4'>
         <div className='max-w-7xl mx-auto'>
@@ -449,6 +650,10 @@ export default function InnovativeServicesShowcase2036() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
 
 
@@ -468,6 +673,7 @@ export default function InnovativeServicesShowcase2036() {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Revolutionary Services
             </h2>
+<<<<<<< HEAD
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover our comprehensive portfolio of innovative micro SAAS
               services, AI platforms, and cutting-edge technology solutions
@@ -549,6 +755,29 @@ export default function InnovativeServicesShowcase2036() {
               </div>
               <div className='flex gap-4 items-center'>
               <div className="flex gap-4 items-center">
+=======
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our comprehensive portfolio of innovative micro SAAS services,
+              AI platforms, and cutting-edge technology solutions designed for the future.
+            </p>
+          </motion.div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+          </motion.div>
+          {/* Filters and Controls */}
+
+          <motion.div 
+            className="mb-12 space-y-6"
+            initial={{ opacity: 0, y: 20 }}
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}
+            viewport={{ once: true }}>;
+            {/* Search and View Controls */}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
@@ -565,6 +794,11 @@ export default function InnovativeServicesShowcase2036() {
                   >
                     <Grid className='w-5 h-5' />                  </button>
                 <div className="flex bg-gray-800/50 border border-gray-700 rounded-lg p-1">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <button
                     onClick={() => setViewMode('grid')  } catch (error) {
     console.error("Error:", error);
@@ -589,6 +823,7 @@ export default function InnovativeServicesShowcase2036() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
             {/* Category Filters */}
             <div className='flex flex-wrap gap-3 justify-center'>
               {categories.map(category => (                <button
@@ -649,6 +884,12 @@ export default function InnovativeServicesShowcase2036() {
                             {service.period}
                           </span>
                         )}
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Category Filters */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -765,6 +1006,7 @@ export default function InnovativeServicesShowcase2036() {
             }          >;
             {sorted_services.map ((service, index) => (
               <motion.div;
+<<<<<<< HEAD
                 key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -798,6 +1040,55 @@ export default function InnovativeServicesShowcase2036() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+                key={service.id}
+                variants={item_variants}
+                className={`bg - gradient - to - br from - gray - 900 / 80 to - gray - 800 / 80 border border - gray - 700 rounded - xl p - 6 hover:border - cyan - 400 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl hover:shadow - cyan - 500 / 20 ${
+                  view_mode === 'list' ? 'flex gap - 6' : '';
+                }`}
+              >;
+                {view_mode === 'list' && (
+                  <div className='flex - shrink - 0'>;
+                    <div className='w - 16 h - 16 bg - gradient - to - br from - cyan - 500 to - blue - 600 rounded - lg flex items - center justify - center text - 2xl'>;
+                      {category_icons[service.category] || (
+                        <Star className='w - 8 h - 8' />)}
+                    </div>;
+                  </div>)}
+                <div className='flex - 1'>;
+                  {/* Service Header */}
+                  <div className='mb - 4'>;
+                    <div className='flex items - start justify - between mb - 2'>;
+                      <h3 className='text - xl font - bold text - white mb - 2'>;
+                        {service.name}
+                      </h3>;
+                      <div className='flex items - center gap - 2'>;
+                        <span className='text - cyan - 400 font - semibold'>;
+                          {service.price}
+                        </span>;
+                        {service.period && (
+                          <span className='text - gray - 400 text - sm'>;
+                            {service.period}
+                          </span>)}
+                      </div>;
+                    </div>;
+                    <p className='text - cyan - 400 font - medium mb - 2'>;
+
+                      {service.tagline}
+                    </p>;
+                    <p className='text - gray - 300 text - sm leading - relaxed'>;
+                      {service.description}
+
+                      </div>;
+                    </div>;
+                    <p className='text-cyan-400 font-medium mb-2'>;
+                      {service && service.tagline}
+                    </p>;
+                    <p className='text-gray-300 text-sm leading-relaxed'>;
+                      {service && service.description}
+                    </p>;
+                  </div>;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <div className="flex-1">
                   {/* Service Header */}
                   <div className="mb-4">
@@ -815,6 +1106,7 @@ export default function InnovativeServicesShowcase2036() {
                     <p className="text-cyan-400 font-medium mb-2">{service.tagline}</p>
                     <p className="text-gray-300 text-sm leading-relaxed">{service.description}</p>
                   </div>
+<<<<<<< HEAD
                   {/* Service Details */}
                   <div className='space-y-4'>
                     {/* Category and Rating */}
@@ -865,6 +1157,9 @@ export default function InnovativeServicesShowcase2036() {
                         </span>                      </div>
                     )}
 <<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -925,6 +1220,13 @@ export default function InnovativeServicesShowcase2036() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <div>
                       <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                       <div className="grid grid-cols-1 gap-1">
@@ -949,6 +1251,12 @@ export default function InnovativeServicesShowcase2036() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         {service.features.length > 4 && (
                           <div className="text-xs text-gray-500 mt-1">
                             +{service.features.length - 4} more features
@@ -999,6 +1307,7 @@ export default function InnovativeServicesShowcase2036() {
                         <h4 className="text-sm font-semibold text-gray-300 mb-2">Competitive Advantage:</h4>
                         <p className="text-sm text-gray-400">{service.competitiveAdvantage}</p>
                       </div>
+<<<<<<< HEAD
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1011,6 +1320,9 @@ export default function InnovativeServicesShowcase2036() {
   }
 }
                     <div className="mt-6">
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <a
                         href={service.link  } catch (error) {
     console.error("Error:", error);
@@ -1137,6 +1449,12 @@ export default function InnovativeServicesShowcase2036() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Transform Your Business?
@@ -1164,11 +1482,21 @@ export default function InnovativeServicesShowcase2036() {
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
 )
 }
 ),
 
 };
+=======
+
+
+),
+
+};
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const itemVariants = {
   hidden: {
   y: 20, opacity: 0
@@ -1380,3 +1708,36 @@ visible: {
   duration: 0.5;
 }
 ;
+<<<<<<< HEAD
+=======
+
+  {
+
+  duration: 0 && 0.6 
+
+}viewport= {
+  {
+  once: true 
+
+}> <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Join the future of technology with our innovative services. Contact us today to discuss how we can help you achieve your goals. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a > Get Started Today </Link> <a ;
+
+=======
+  opacity: 0, coordinate_y: 20;
+}whileInView= {
+  {
+  opacity: 1, coordinate_y: 0;
+}transition= {
+  {
+  duration: 0.6;
+}viewport= {
+  {
+  once: true;
+}> <h2 className="text - 3xl md:text - 4xl font - bold mb - 6 bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent" > Ready to Transform Your Business? </h2> <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto" > Join the future of technology with our innovative services. Contact us today to discuss how we can help you achieve your goals. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <a > Get Started Today </Link> <a;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

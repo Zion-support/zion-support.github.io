@@ -1,6 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
@@ -28,11 +33,19 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 ...innovativeITServicesExpansion2025V3;
 ...innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices;
 ...innovative2025AIAutonomousServices ];
+<<<<<<< HEAD
 //Filter services by category //Animation variants const containerVariants = {
   hidden: {
   opacity: 0
 }
   opacity: 0 
+=======
+
+
+  opacity: 0 
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 
 interface EnhancedHomepageProps {
@@ -46,6 +59,12 @@ const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 visible: {
   opacity: 1, transition: {
@@ -435,6 +454,7 @@ if (return allRevolutionaryServices) {
           animate="visible">;
           <div className="relative z-10 text-center max-w-6xl mx-auto">;
             {/* Main Heading */}
+<<<<<<< HEAD
             <motion.h1
               className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
               variants={itemVariants}
@@ -443,6 +463,13 @@ if (return allRevolutionaryServices) {
             </motion.h1>
             <motion.p
             
+=======
+
+
+            
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <motion.p 
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               variants={itemVariants}
@@ -451,6 +478,9 @@ if (return allRevolutionaryServices) {
               Quantum Computing, and Autonomous Solutions
             </motion.p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             <motion&& motion.h1 
               className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
@@ -463,6 +493,7 @@ if (return allRevolutionaryServices) {
               Pioneering the Future of Technology with Revolutionary AI Consciousness,;
               Quantum Computing, and Autonomous Solutions;
             </motion && motion.p>;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -471,6 +502,8 @@ if (return allRevolutionaryServices) {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 
@@ -555,6 +588,7 @@ if (return allRevolutionaryServices) {
             <motion&& motion.h2 
               className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
 <<<<<<< HEAD
+<<<<<<< HEAD
               variants={itemVariants}>;
               Explore Our Revolutionary Services;
             </motion && motion.h2>;
@@ -603,6 +637,14 @@ if (return allRevolutionaryServices) {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+              variants={itemVariants}>;
+              Explore Our Revolutionary Services;
+            </motion && motion.h2>;
+
+            <motion&& motion.div 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
             
@@ -888,10 +930,18 @@ if ( {) {
                 </Link>;
               </motion && motion.div>;
             )}
+<<<<<<< HEAD
           </div>
         </motion.section>
         {/* Featured Service Showcase */}
         <motion.section
+=======
+
+
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         {/* Featured Service Showcase */}
         <motion.section 
@@ -908,6 +958,9 @@ if ( {) {
               Explore Our Revolutionary Services
             </motion.h2>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           </div>;
         </motion && motion.section>;
@@ -932,6 +985,11 @@ if ( {) {
 =======
 
             <motion.div 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
               variants={itemVariants}>;
               <AnimatePresence mode="wait">;
@@ -964,8 +1022,15 @@ if ( {) {
                         </span>
                       ))}
                     </div>
+<<<<<<< HEAD
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug |featuredServices[currentServiceIndex]?.id}`}>
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
+=======
+
+                    <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
@@ -1005,8 +1070,16 @@ if ( {) {
             >
               Ready to Transform Your Business?
             </motion.h2>
+<<<<<<< HEAD
             <motion.p
             <motion.p 
+=======
+
+
+            <motion.p 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="text-xl text-gray-300 mb-8"
               variants={itemVariants}
             >
@@ -1014,6 +1087,9 @@ if ( {) {
               Get started today and experience the power of AI consciousness and quantum computing.
             </motion.p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     </div>;
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>;
@@ -1102,6 +1178,11 @@ if ( {) {
 =======
 
             <motion.div 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               variants={itemVariants}>;
               <Link href="/quote">;
@@ -1130,6 +1211,16 @@ if ( {) {
         </motion.section>
       </UltraFuturisticBackground>
 
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Performance Monitor */}
       <AnimatePresence>;
         {showPerformanceMonitor && (;

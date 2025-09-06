@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {X} from "lucide-react";
@@ -7,6 +8,12 @@ import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { X } from "lucide-react";
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { X } from "lucide-react",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ActiveFiltersBarProps {
 
   selectedProductTypes: string[]
@@ -19,6 +26,7 @@ interface ActiveFiltersBarProps {
 
   onClearSearch: () => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function ActiveFiltersBar({;
@@ -68,6 +76,12 @@ export function ActiveFiltersBar({
 import React from "react",;
 import { ClickableBadge } from "@/components/ui/clickable-badge",;
 import { X } from "lucide-react",;
+=======
+
+import React from "react";
+import {ClickableBadge} from "@/components/ui/clickable-badge";
+import {X} from "lucide-react";
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ActiveFiltersBarProps {;
   selectedProductTypes: string[],;
   selectedLocations: string[],;
@@ -127,8 +141,20 @@ export function ActiveFiltersBar(): any ({;
       <span className="text-sm text-zion-slate-light">Active filters:</span>;
 
       {searchQuery && (;
+<<<<<<< HEAD
         <ClickableBadge;
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
+=======
+
+        <ClickableBadge
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+          onClick={onClearSearch}>;
+=======
+
+        <ClickableBadge 
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           onClick={onClearSearch}
         >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

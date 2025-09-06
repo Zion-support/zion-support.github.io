@@ -1,5 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useEffect } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -24,6 +31,12 @@ const RegisterPage = () => {
     } else {
       router.push('/auth/login?registrationSuccess=true')
     }
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -61,6 +74,15 @@ const RegisterPage = () => {;
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
+
+      router.push ('/auth / login?registration_success = true');
+
+    }
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },
   return (
     <>
@@ -100,6 +122,11 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
               Create your account
@@ -111,6 +138,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Link
                 href="/auth/login"
                 className="font-medium text-blue-600 hover:text-blue-500 underline"
@@ -126,6 +159,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -161,6 +200,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
                 Privacy Policy
               </Link>
@@ -173,6 +218,7 @@ if ( {) {
 }
 export default RegisterPage;
 
+<<<<<<< HEAD
 },
 
 export default RegisterPage,;
@@ -233,13 +279,30 @@ export default RegisterPage,
   }
 }
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">;
+=======
+=======
+              <Link href="/legal / privacy" className="text - blue - 600 hover: text - blue - 500">;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 Privacy Policy;
               </Link>;
             </p>;
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </>;
   );
 },;
 export default RegisterPage;
+=======
+    </>);
+},
+export default RegisterPage,
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+},
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

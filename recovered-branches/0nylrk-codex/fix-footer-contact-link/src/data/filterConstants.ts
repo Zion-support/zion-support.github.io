@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Common skills for filtering
 export const COMMON_SKILLS = [
   'Machine Learning',
@@ -11,6 +12,10 @@ export const COMMON_SKILLS = [
   'DevOps',
   'Cloud Architecture',;
   'TensorFlow',];
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export const COMMON_SKILLS = [
   'Machine Learning'
@@ -80,6 +85,7 @@ export const COMMON_SKILLS = [
   "Cloud Architecture",
   "TensorFlow"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Regions
 export const REGIONS = [
@@ -129,3 +135,7 @@ export const REGIONS = [;
   "Middle East",;
   "Africa";
 ];
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

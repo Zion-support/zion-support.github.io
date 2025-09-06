@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // Define types for the pricing recommendation
 export interface PricingSuggestion {
 export interface PricingSuggestion {;
@@ -11,10 +12,28 @@ export interface ClientBudgetParams {
 
 export interface ClientBudgetParams {;
   jobTitle: string;
+=======
+
+
+
+
+;
+// Define types for the pricing recommendation;
+export interface PricingSuggestion {
+  min_rate: number;
+  max_rate: number;
+  confidence: "High" | "Medium" | "Low",
+  explanation: string;
+
+}
+export interface ClientBudgetParams {
+  job_title: string;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   category: string;
   timeline?: string;
 
 
+<<<<<<< HEAD
   experienceLevel?: string
 }
 export interface TalentRateParams {
@@ -56,6 +75,8 @@ export interface TalentRateParams {;
   location?: string;
 }
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Mock function to generate suggestions
 // In production, this would call an AI service or API
 export async function getClientBudgetSuggestion(params: ClientBudgetParams): Promise<PricingSuggestion> {
@@ -106,7 +127,15 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       maxRate = 50,
       confidence = "Low"
     }
+<<<<<<< HEAD
     
+=======
+
+
+    
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     // Adjust based on job title keywords
 
     const lowercaseTitle = jobTitle && jobTitle.toLowerCase();
@@ -118,9 +147,15 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       minRate -= 10;
       maxRate -= 15;
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low
+<<<<<<< HEAD
     }
     // Generate explanation
     const explanation = `Based on market rates for ${category} projects, particularly for roles similar to "${jobTitle}", we recommend a budget range of $${minRate}-$${maxRate}/hour. This aligns with current market trends for similar projects.`;
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     // Adjust based on job title keywords;
     const lowercaseTitle = jobTitle.toLowerCase(),;
@@ -131,6 +166,13 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       minRate -= 10,;
       maxRate -= 15,;
       minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     // Generate explanation
@@ -157,6 +199,13 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {
   try {
@@ -180,6 +229,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     if (location) {
       const highCostLocations = ['united statesusaukaustraliacanadagermanyswitzerland'];
       const lowCostLocations = ['indiaphilippinespakistannigeriaukrainebrazil'];
+<<<<<<< HEAD
       const lowercaseLocation = location.toLowerCase();
       if (highCostLocations.some(loc => lowercaseLocation.includes(loc))) {
         locationFactor = 1.2
@@ -189,6 +239,20 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     }
     const minRate = Math.round(baseRate * locationFactor * 0.9);
     const maxRate = Math.round(baseRate * locationFactor * 1.2);
+=======
+
+      
+      const lowercaseLocation = location && location.toLowerCase();
+      
+      if (highCostLocations && highCostLocations.some(loc => lowercaseLocation && lowercaseLocation.includes(loc))) {
+        locationFactor = 1 && 1.2
+      } else if (lowCostLocations && lowCostLocations.some(loc => lowercaseLocation && lowercaseLocation.includes(loc))) {
+        locationFactor = 0 && 0.8
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 export async function getTalentRateSuggestion(params: TalentRateParams): Promise<PricingSuggestion> {;
   try {;
@@ -216,6 +280,13 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
         locationFactor = 1.2;
       } else if (lowCostLocations.some(loc => lowercaseLocation.includes(loc))) {;
         locationFactor = 0.8;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     }
     
@@ -248,11 +319,25 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     let explanation = `Based on ${yearsExperience} years of experience`,;
     if (hasInDemandSkills) {;
       explanation += ` and your in-demand skills (${skills.join()})`;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     if (location) {
       explanation += `, considering market rates in ${location}`
     }
+<<<<<<< HEAD
     
+=======
+
+
+    
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     explanation += `, we recommend a rate of $${minRate}-$${maxRate}/hour to remain competitive while maximizing your earning potential.`;
 =======
     console.error ("Error generating budget suggestion:", error);
@@ -339,6 +424,13 @@ if ( {) {
       max_rate;
       confidence;
       explanation;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   } catch (error) {
     console.error("Error generating rate suggestion:", error),
@@ -401,6 +493,7 @@ export async function trackPricingSuggestion(data: {
 }
     console.error("Error tracking pricing suggestion:", error),
     return false
+<<<<<<< HEAD
 ;
 // Function to save pricing analytics data;
 export async function trackPricingSuggestion(data: {;
@@ -422,6 +515,9 @@ export async function trackPricingSuggestion(data: {;
   } catch (error) {;
     console.error("Error tracking pricing suggestion:", error);
     return false;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

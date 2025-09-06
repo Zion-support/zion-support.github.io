@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import { format  } from 'date-fns';
 import { MessageSquare  } from 'lucide-react';
@@ -10,6 +11,10 @@ import { useAuth  } from '@/hooks/useAuth';
 import { MessageBubble  } from './MessageBubble';
 import { DateDivider } from './DateDivider';
 export function ConversationDetailView() {
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {format} from 'date-fns';
 import {MessageSquare} from 'lucide-react';
 import {useMessaging} from '@/context/MessagingContext';
@@ -20,6 +25,11 @@ import {useAuth} from '@/hooks/useAuth';
 import {MessageBubble} from './MessageBubble';
 import {DateDivider} from './DateDivider';
 export function ConversationDetailView() {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const {
     activeConversation;
@@ -35,6 +45,7 @@ export function ConversationDetailView() {;
       loadMessages(activeConversation.id)
     }
   }, [activeConversation?.id, loadMessages]);
+<<<<<<< HEAD
   useEffect(() => {
     scrollToBottom()
   }, [activeMessages]);
@@ -72,6 +83,30 @@ export function ConversationDetailView() {;
       loadMessages(activeConversation.id);
     }
   }, [activeConversation?.id, loadMessages]),
+=======
+
+import {format} from 'date-fns';
+=======
+
+
+
+=======
+import {format} from 'date - fns';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import {MessageSquare} from 'lucide-react';
+import {use_messaging} from '@/context / MessagingContext';
+import {Button} from '@/components / ui / button';
+import {Avatar, AvatarFallback, AvatarImage} from '@/components / ui / avatar';
+import {AspectRatio} from '@/components / ui / aspect - ratio';
+import {use_auth} from '@/hooks / use_auth';
+import {MessageBubble} from './MessageBubble';
+import {DateDivider} from './DateDivider';
+
+  }, [activeConversation?.id, loadMessages]),
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   useEffect(() => {
     scrollToBottom()
@@ -101,7 +136,15 @@ export function ConversationDetailView() {;
       </div>;
     );
   }
+<<<<<<< HEAD
   
+=======
+
+
+  
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Group messages by date
   const groupedMessages: { date: string, messages: any[] }[] = []
   activeMessages.forEach(message => {
@@ -116,8 +159,17 @@ export function ConversationDetailView() {;
       })
     }
   });
+<<<<<<< HEAD
   const hasContextData = activeConversation.context_data &&
     (activeConversation.context_data.title |activeConversation.context_data.description);
+=======
+
+
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 
   // Group messages by date;
@@ -137,6 +189,12 @@ export function ConversationDetailView() {;
     }
 
   }),
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   const hasContextData = activeConversation.context_data && 
     (activeConversation.context_data.title || activeConversation.context_data.description),
@@ -354,6 +412,7 @@ if ( {) {
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea
             value={messageText}
+<<<<<<< HEAD
             onChange={(e) => setMessageText(e.target.value)}
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan"
@@ -369,6 +428,14 @@ if ( {) {
     </div>
   )
 }
+=======
+
+            onChange={(e) => setMessageText(e && e.target.value)}
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
           <textarea;
@@ -450,7 +517,15 @@ if ( {) {
           </Button>;
         </form>;
       </div>;
+<<<<<<< HEAD
     </div>;
   );
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

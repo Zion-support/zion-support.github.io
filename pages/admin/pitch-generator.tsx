@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -31,10 +32,15 @@ function SlidePreview({
 export const getServerSideProps: GetServerSideProps = async ctx => {
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const result = await requireAdminRole(ctx);
   // @ts-ignore;
   if ('redirect' in result) return result;
   return result;
+<<<<<<< HEAD
 }
 export default function PitchGenerator() {
   const [builder, setBuilder] = useState<BuilderState>({
@@ -44,12 +50,33 @@ export default function PitchGenerator() {
     roundType: ''
     targetRaise: ''
     assets: []
+=======
+
+};
+
+export default function PitchGenerator() {;
+  const [builder, setBuilder] = useState<BuilderState>({;
+    mission: '',;
+    fundingStage: '',;
+    vision: '',;
+    roundType: '',;
+    targetRaise: '',;
+    assets: [],;
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     mission: '',
     fundingStage: '',
     vision: '',
     roundType: '',
     targetRaise: '',
     assets: [],;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   });  const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -147,6 +174,7 @@ export default function PitchGenerator() {
 
   );
   const autoFetchMetrics = useCallback(async () => {;
+<<<<<<< HEAD
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/metrics');
@@ -156,6 +184,11 @@ export default function PitchGenerator() {
       return {}
     } finally {
       setLoading(false);    }
+=======
+=======
+    const files = Array.from(e.dataTransfer.files || []);
+    setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }, []);
 
   const prevent = (e: React.DragEvent) => {
@@ -345,6 +378,12 @@ if (return) {
 }
   }, [slides]),;
   const addSlide = useCallback(async () => {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     setLoading(true);
     try {;
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
@@ -431,6 +470,7 @@ if (return) {
     } finally {
       setLoading(false);    }
   }, [slides, versionTag]);
+<<<<<<< HEAD
   const updateActiveSlide = (updates: Partial<Slide>) => {
     setSlides(arr =>
       arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s))
@@ -459,6 +499,42 @@ if (return) {
   const renderChartPreview = (slide: Slide) => {
     if (!slide.chart) return null,
     const { type, data } = slide.chart,
+=======
+
+  const exportGoogleSlides = useCallback(async () => {;
+    setLoading(true);
+    try {;
+      const res = await fetch('/api/admin/pitch/export', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({;
+          slides,;
+          format: 'gslides',;
+          version: versionTag,;
+        }),;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      });
+      const json = await res && res.json();
+      if (json && json.url) {;
+        window && window.open(json.url, '_blank');
+      }
+    } catch (e) {;
+    } finally {;
+      setLoading(false);    }
+  }, [slides, versionTag]);
+
+
+
+  const updateActiveSlide = (updates: Partial<Slide>) => {;
+    setSlides(arr =>;
+      arr && arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s));
+    );  };
+
+  const renderChartPreview = (slide: Slide) => {;
+    if (!slide && slide.chart) return null,;
+    const { type, data } = slide && slide.chart;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return (
 
 
@@ -497,6 +573,12 @@ if (return) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {type === 'timeline' && (
             <div className="text-xs grid grid-cols-4 gap-2 w-full">
               {data.map((d) => (
@@ -504,14 +586,202 @@ if (return) {
                   <div className="font-medium">{d.label}</div>
                   <div>{d.value}</div>
                 </div>
+<<<<<<< HEAD
               ))}
             </div>
           )}
+=======
+
+              disabled={loading || slides && slides.length === 0}
+              className='px-3 py-2 rounded bg-gray-900 text-white disabled:opacity-50'>;
+              Download PDF;
+            </button>;
+            <button
+              onClick={exportGoogleSlides}
+              disabled={loading || slides && slides.length === 0}
+              className='px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50'>;
+=======
+              : s));
+      } catch (e) {
+      } finally {
+        set_loading (false);
+      }
+    },
+    [slides]);
+  const add_slide = useCallback (async () => {
+    set_loading (true);
+    try {
+      const res = await fetch ('/api / admin / pitch / add - slide', { method: 'POST' });
+      const json = await res.json ();
+      set_slides (arr => [;
+        ...arr,
+        {
+          id: uid (),
+          title: json.title || 'New Slide',
+          content: json.content || '',
+        },
+      ]);
+      setActiveIndex (slides.length);
+    } catch (e) {
+    } finally {
+      set_loading (false);    }
+  }, [slides.length]);
+;
+  const export_pdf = useCallback (async () => {
+    set_loading (true);
+    try {
+      const res = await fetch ('/api / admin / pitch / export', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ slides, format: 'pdf', version: version_tag }),
+      });      const blob = await res.blob ();
+      const url = URL.createObjectURL (blob);
+      const array = document.create_element ('a');
+      a.href = url;
+      a.download = `pitch - deck-${version_tag || 'draft'}.pdf`;
+      a.click ();
+      URL.revokeObjectURL (url);
+    } catch (e) {
+    } finally {
+      set_loading (false);    }
+  }, [slides, version_tag]);
+;
+  const exportGoogleSlides = useCallback (async () => {
+    set_loading (true);
+    try {
+      const res = await fetch ('/api / admin / pitch / export', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({
+          slides,
+          format: 'gslides',
+          version: version_tag,
+        }),
+      });
+      const json = await res.json ();
+      // Check condition
+if ( {) {
+  $2
+}
+        window.open (json.url, '_blank');
+      }
+    } catch (e) {
+    } finally {
+      set_loading (false);    }
+  }, [slides, version_tag]);
+;
+  const updateActiveSlide = (updates: Partial < Slide>) =>: any {
+    set_slides (arr =>;
+      arr.map ((s, i) => (index === active_index ? { ...s, ...updates } : s)));  }
+;
+  const renderChartPreview = (slide: Slide) =>: any {
+    // Check condition
+if (return null, ) {
+  $2
+}
+    const { type, data } = slide.chart;
+    return (
+      <div className='mt - 3'>;
+        <div className='text - xs text - gray - 500 dark:text - gray - 400'>;
+          Chart preview: {type}
+        </div>;
+        <div className='flex gap - 2 items - end h - 24 mt - 2'>;
+          {type === 'bar' &&;
+            data.map (d => (
+              <div;
+                key={d.label}
+                className='bg - blue - 500 w - 6';
+                style={{ height: `${Math.max (4, d.value)}px` }}
+                title={`${d.label}: ${d.value}`}
+              />))}
+          {type === 'funnel' && (
+            <div className='w - full'>;
+              <div className='flex flex - col gap - 1'>;
+                {data.map ((d, idx) => (
+                  <div;
+                    key={d.label}
+                    className='bg - purple - 500 text - white text - xs px - 2 py - 1';
+                    style={{ width: `${100 - idx * 12}%` }}
+                  >;
+                    {d.label}: {d.value}
+                  </div>                ))}
+              </div>;
+            </div>)}
+          {type === 'timeline' && (
+            <div className='text - xs grid grid - cols - 4 gap - 2 w - full'>;
+              {data.map (d => (
+                <div key={d.label} className='border p - 1 rounded'>;
+                  <div className='font - medium'>{d.label}</div>                  <div>{d.value}</div>;
+                </div>))}
+            </div>)}
+        </div>;
+      </div>);
+  }
+;
+  return (
+    <>;
+      <Head>;
+        <title > Pitch Generator - Admin</title>;
+        <meta name="description" content="Generate pitch decks and presentations" />;
+      </Head>;
+      <div className='space - y-6'>;
+        <div className='flex items - center justify - between'>;
+          <h1 className='text - 2xl font - semibold'>Pitch Generator</h1>;
+          <div className='flex gap - 2'>;
+            <button;
+              on_click={build_deck}
+              disabled={loading}
+              className='px - 3 py - 2 rounded bg - blue - 600 text - white disabled:opacity - 50';
+            >;
+              Generate Deck;
+            </button>;
+            <button;
+              on_click={export_pdf}
+              disabled={loading || slides.length === 0}
+              className='px - 3 py - 2 rounded bg - gray - 900 text - white disabled:opacity - 50';
+            >;
+              Download PDF;
+            </button>;
+            <button;
+              on_click={exportGoogleSlides}
+              disabled={loading || slides.length === 0}
+              className='px - 3 py - 2 rounded bg - green - 600 text - white disabled:opacity - 50';
+            >;
+
+              Export to Google Slides;
+            </button>;
+          </div>;
+        </div>;
+
+                className='w-full border rounded px-2 py-1 bg-transparent';
+              />;
+
+
+              <div
+                onDrop={onAssetDrop}
+                onDragOver={prevent}
+                onDragEnter={prevent}
+
+                className='px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm'
+              >
+                Refresh
+              </button>
+              <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>
       </div>
     )
   };
 
+<<<<<<< HEAD
+=======
+  return (
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -523,6 +793,12 @@ if (return) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>
       </div>
     )
@@ -706,6 +982,13 @@ if (return) {
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
               <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
                 <li>Active users (30d)</li>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
                 <li>Global reach</li>
@@ -713,11 +996,19 @@ if (return) {
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
+<<<<<<< HEAD
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>History</div>
               <div className='text-xs text-gray-500 dark:text-gray-400'>
                 Version: {versionTag |'—'}
                 Version: {versionTag || '—'}
+=======
+
+
+                Version: {versionTag || '—'}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
@@ -1051,6 +1342,7 @@ if (return) {
               </div>
 
             )}
+<<<<<<< HEAD
           </div>
         </div>
 </main>
@@ -1064,6 +1356,17 @@ if (return) {
     </>
   );
 <<<<<<< HEAD
+=======
+
+
+=======
+
+
+}
+}
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -1217,3 +1520,10 @@ if (return) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

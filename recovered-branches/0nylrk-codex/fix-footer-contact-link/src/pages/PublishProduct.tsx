@@ -1,4 +1,30 @@
 
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -8,6 +34,7 @@ import {Navigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
 export default function PublishProduct() {;
   const { isAuthenticated, isLoading } = useAuth();
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -22,6 +49,15 @@ import { SEO } from "@/components/SEO",
 export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth(),
   
+=======
+
+  // Show loading while checking authentication;
+  if (isLoading) {;
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Show loading while checking authentication
   if (isLoading) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -41,6 +77,7 @@ export default function PublishProduct() {
 
   }
   return (
+<<<<<<< HEAD
     <div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO
         title="Publish Your Product"
@@ -63,6 +100,13 @@ export default function PublishProduct() {
     </div>
   )
 }
+=======
+
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -159,7 +203,15 @@ if ( {) {
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
     </div>;
   );
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

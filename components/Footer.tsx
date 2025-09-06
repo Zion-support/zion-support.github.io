@@ -38,6 +38,7 @@ import {;
 =======
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -47,6 +48,8 @@ import {
   Instagram
   ArrowRight
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Phone,
   Mail,
   MapPin,
@@ -54,6 +57,7 @@ import {
   Twitter,
   Linkedin,
   Instagram,
+<<<<<<< HEAD
   ArrowRight,;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -112,6 +116,23 @@ export default function Footer() {;
       { name: "AI Services", href: "/ai-services" },
       { name: "IT Services", href: "/it-services" },
       { name: "Micro SaaS", href: "/micro-saas" },
+=======
+  ArrowRight,
+} from './lucide-react';
+;
+export default /**
+ * Footer - Function description
+ */
+function Footer() {
+  const current_year = new Date ().getFullYear ();
+;
+  const footer_links = {
+    services: [;
+      { name: "AI Services", href: "/ai - services" },
+      { name: "IT Services", href: "/it - services" },
+      { name: "Micro SaaS", href: "/micro - saas" },
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       { name: "Blockchain", href: "/blockchain" },
       { name: "IoT Solutions", href: "/iot" },
       { name: "Cybersecurity", href: "/cybersecurity" },
@@ -235,6 +256,7 @@ export default function Footer() {;
       <div className="container mx-auto px-4 py-12">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">;
           {/* Company Info */}
+<<<<<<< HEAD
           <div className="lg:col-span-2">
             <Link href="/" className="text-2xl font-bold text-white mb-4 block">
               Zion Tech Group
@@ -244,6 +266,21 @@ export default function Footer() {;
               cybersecurity, cloud infrastructure, quantum computing,
               blockchain, IoT, and digital transformation services.
             </p>
+=======
+
+          <div className="lg:col-span-2">;
+            <Link href="/" className="text-2xl font-bold text-white mb-4 block">;
+              Zion Tech Group;
+            </Link>;
+            <p className="text-gray-300 mb-6 max-w-md">;
+              Leading technology solutions provider specializing in AI,;
+              cybersecurity, cloud infrastructure, quantum computing,;
+              blockchain, IoT, and digital transformation services.;
+            </p>;
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
               quantum computing, blockchain, IoT, and digital transformation services.
@@ -254,6 +291,10 @@ origin/automation-improvements-final
               cybersecurity, cloud infrastructure, quantum computing
               blockchain, IoT, and digital transformation services.
             </p>
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
@@ -399,6 +440,7 @@ origin/automation-improvements-final
                   </Link>
                 </li>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -408,6 +450,9 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 
@@ -479,6 +524,13 @@ origin/automation-improvements-final
               ))}
             </ul>;
           </div>;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Solutions */}
           <div>;
             <h3 className="text-lg font-semibold mb-4">Solutions</h3>;
@@ -529,10 +581,14 @@ origin/automation-improvements-final
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 
 origin/main
 origin/automation-improvements-final
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
                     href={link && link.href}
@@ -559,10 +615,13 @@ origin/automation-improvements-final
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Company & Resources */}
           <div>;
             <h3 className="text-lg font-semibold mb-4">Company</h3>;
@@ -591,6 +650,7 @@ origin/automation-improvements-final
               ))}
             </ul>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -606,6 +666,12 @@ origin/automation-improvements-final
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2">
               {footerLinks.resources.map((link) => (

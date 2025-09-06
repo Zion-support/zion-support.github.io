@@ -34,6 +34,7 @@ interface TalentCardAvailabilityProps {
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
   // Format availability status
 
+<<<<<<< HEAD
   const getAvailabilityColor = (status: string) => {    switch (status) {
       case 'full-time':
         return 'bg-green-500/20 text-green-400'
@@ -44,10 +45,16 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       default:
         return 'bg-gray-500/20 text-gray-400'
     }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         return 'bg-blue-500/20 text-blue-400',;
       default:;
         return 'bg-gray-500/20 text-gray-400';
     };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }; return 'bg-gray-500/20 text-gray-400'
     }
   }
@@ -70,6 +77,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
   // Format availability label
   const getAvailabilityLabel = (status: string) => {
 
+<<<<<<< HEAD
 =======
   const getAvailabilityColor = (status: string) => {    switch (status) {
       case 'full-time':
@@ -93,6 +101,8 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
   }
   const getAvailabilityLabel = (status: string,) => {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     switch (status) {
       case 'full-time':
         return 'Full-time'
@@ -102,9 +112,12 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
         return 'Project'
       default:
         return status
+<<<<<<< HEAD
   }
     >
       <Clock className='h-3 w-3' />
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React from 'react';
 
@@ -169,6 +182,9 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <span>{getAvailabilityLabel(availabilityType)}</span>

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2"
@@ -15,6 +16,26 @@ import {Resend} from "npm: resend@2.0.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { Resend } from "npm: resend@2.0.0",
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
+import {Resend} from "npm: resend@2 ;
+=======
+
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
+import {Resend} from "npm: resend@2.0.0";
+
+=======
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+import { Resend } from "npm: resend@2.0.0",
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -155,13 +176,18 @@ if ( {) {
               `});
             results.push(`Reminder sent to talent: ${talentEmail}`)
           } catch (emailError) {
+<<<<<<< HEAD
             console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
+=======
+            console && console.error(`Error sending reminder to talent ${talentEmail}:`, emailError)
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
         }
         // Mark the interview as reminder sent
         await supabase
           .from('interviews')
           .update({ reminder_sent: new Date().toISOString() })
+<<<<<<< HEAD
           .eq('id', interview.id)
       }
     }
@@ -261,6 +287,14 @@ serve(async (req) => {;
           .from('interviews');
           .update({ reminder_sent: new Date().toISOString() });
           .eq('id', interview.id);
+=======
+          .eq('id', interview && interview.id)
+      }
+    }
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     }
     
@@ -277,6 +311,7 @@ serve(async (req) => {;
 
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
+<<<<<<< HEAD
 ;
     return new Response(JSON.stringify({ success: true, results }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
@@ -286,5 +321,9 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });

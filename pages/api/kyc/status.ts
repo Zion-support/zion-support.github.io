@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { KycProfile } from "../../../utils/kyc";
@@ -37,6 +41,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     optionalDocuments: getOptionalDocuments(profile.role)
   });
 }
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -100,6 +105,8 @@ function load (): Record < string, KycProfile> {
   try {
     const raw = fs.readFileSync (FILE, "utf8");
     return JSON.parse (raw);
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {
     return {}
@@ -108,6 +115,11 @@ function load (): Record < string, KycProfile> {
 }
 
 
+<<<<<<< HEAD
   });
 
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

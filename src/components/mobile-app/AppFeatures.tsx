@@ -1,5 +1,6 @@
 {
     icon: <Award className="h - 10 w - 10 text - zion - cyan" />,
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -65,11 +66,20 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
   },
   }
   },
+=======
+    title: "Resume Builder",
+
+    description: "Create professional, AI-enhanced resumes that highlight your skills and increase your chances of getting hired."
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   {
     icon: <Zap className="h - 10 w - 10 text - zion - cyan" />,
     title: "Real - time Notifications",
     description: "Get instant alerts about new job opportunities, messages, and hiring requests.";
   }
+<<<<<<< HEAD
 ],
 
 ]
@@ -89,6 +99,12 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const AppFeatures: React.FC = () => {
   return (
     <section className="py-16 bg-zion-blue">
@@ -108,6 +124,9 @@ export const AppFeatures: React.FC = () => {
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover:border-zion-cyan transition-colors duration-300">
               <CardHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 <div className="mb-4">{feature.icon}</div>
@@ -132,6 +151,9 @@ export const AppFeatures: React.FC = () => {
 ";
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React from "react",;
 import { Brain, Clock, Award, Zap } from 'lucide-react';
@@ -186,6 +208,9 @@ export const AppFeatures: React.FC = () => {;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 "
 

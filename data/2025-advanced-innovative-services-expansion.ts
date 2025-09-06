@@ -100,6 +100,7 @@ const contact = {
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [
   // Advanced AI & Machine Learning Services
   {
+<<<<<<< HEAD
     id: 'ai-autonomous-devops-orchestrator'
     name: 'AI Autonomous DevOps Orchestrator'
     tagline:
@@ -1349,6 +1350,21 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    ];
+    market_advantage: 'Most advanced AI climate prediction platform with research - grade accuracy';
+=======
+
+      'Most advanced AI climate prediction platform with research-grade accuracy',
+  },;
+];      'AI climate modelingEnvironmental monitoringWeather forecastingSustainability analyticsCustom model development'
+    ];
+    marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy'
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedInnovativeService {;
   id: string,;
@@ -1861,9 +1877,16 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [;
     ];
     marketAdvantage: 'Most advanced AI climate prediction platform with research-grade accuracy';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

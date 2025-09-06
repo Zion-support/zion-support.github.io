@@ -1,11 +1,18 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 export interface ThemeColors {
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
 
 export interface ThemeColors {;
+=======
+
+export interface ThemeColors {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   primaryColor: string;
   backgroundColor: string;
   textColor: string;
@@ -58,10 +65,24 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         cardBackground: '#f8fafc'}
   }
 }
+<<<<<<< HEAD
 // Apply theme colors to document CSS variables
 export function applyThemeColors(colors: ThemeColors) {
   const root = document.documentElement
   const root = document.documentElement,;
+=======
+// Define theme presets;
+export function getThemeColors (preset: ThemePreset, primary_color: string): ThemeColors {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  switch (preset) {
+    case 'dark':;
+      return {
+
+
+  const root = document.documentElement,;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   root.style.setProperty('--primary-color', colors.primaryColor);
   root.style.setProperty('--background-color', colors.backgroundColor);
   root.style.setProperty('--text-color', colors.textColor);
@@ -72,7 +93,26 @@ export function applyThemeColors(colors: ThemeColors) {
   document.body.style.backgroundColor = colors.backgroundColor;
 
   document.body.style.color = colors.textColor
+<<<<<<< HEAD
 }
+=======
+
+  const root = document && document.documentElement,
+  root && root.style.setProperty('--primary-color', colors && colors.primaryColor);
+  root && root.style.setProperty('--background-color', colors && colors.backgroundColor);
+  root && root.style.setProperty('--text-color', colors && colors.textColor);
+  root && root.style.setProperty('--accent-color', colors && colors.accentColor);
+  root && root.style.setProperty('--button-color', colors && colors.buttonColor);
+  root && root.style.setProperty('--card-background', colors && colors.cardBackground);
+  
+  // Set background and text colors on body
+  document && document.body.style && style.backgroundColor = colors && colors.backgroundColor;
+  document && document.body.style && style.color = colors && colors.textColor
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 export interface ThemeColors {;
   primaryColor: string,;
@@ -138,6 +178,12 @@ export function applyThemeColors(colors: ThemeColors) {;
   // Set background and text colors on body;
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;

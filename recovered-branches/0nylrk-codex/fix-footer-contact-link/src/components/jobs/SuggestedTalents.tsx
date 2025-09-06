@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
@@ -19,15 +20,23 @@ interface SuggestedTalentsProps {
   jobId: string,
   jobTitle?: string
 }
+=======
+
+
+export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsProps) {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
   const [talents, setTalents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
+<<<<<<< HEAD
 export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   const [talents, setTalents] = useState([]),
   const [isLoading, setIsLoading] = useState(true),
   const [isProcessing, setIsProcessing] = useState(false),
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const fetchSuggestedTalents = async () => {
     setIsLoading(true),
@@ -276,6 +285,7 @@ if ( {) {
     }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
+<<<<<<< HEAD
       fetchSuggestedTalents()
 import { useEffect, useState } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -366,6 +376,10 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
       matchPercent: talent.match_score || 85;
       skills: talent.talent_profile?.skills || []}
   }),
+=======
+;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       title: "Invite Talent",
       description: `Inviting talent: ${talentId}`})
@@ -391,6 +405,12 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
         <CardTitle>{jobTitle ? `Talents for ${jobTitle}` : 'Suggested Talents'}</CardTitle>
       </CardHeader>
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <CardContent className="pt-6">
         {isLoading ? (
           <div>Loading suggested talents...</div>
@@ -478,3 +498,9 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {;
   );
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

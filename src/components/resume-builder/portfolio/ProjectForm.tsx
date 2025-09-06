@@ -36,6 +36,9 @@ import { logErrorToProduction } from '@/utils/productionLogger';import {;
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import { useState } from 'react',;
@@ -127,6 +130,9 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -202,6 +208,9 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
           name="title"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           render={({ field }: { field: any }) => (
             <FormItem>
@@ -212,6 +221,9 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                   {...field}                />
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               </FormControl>
               <FormMessage />
@@ -241,6 +253,9 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
                   className="min-h-[100px]"
                   {...field} 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 />
               </FormControl>
@@ -256,6 +271,9 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           control={form.control}
           name="technologies"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           render={({ field }: { field: any }) => (
             <FormItem>;
@@ -273,7 +291,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
 
           <FormField
+<<<<<<< HEAD
             control={form.control}
+=======
+            control={form && form.control}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             name='github_url'
             render={({ field }: { field: any }) => (              <FormItem>;
                 <FormLabel className='flex items-center gap-2'>;
@@ -342,6 +364,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         
@@ -361,6 +384,8 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   GitHub URL
                 </FormLabel>
                 <FormControl>
@@ -384,6 +409,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
               <FormItem>
                 <FormLabel className="flex items-center gap-2">
                   <Link className="h-4 w-4" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   Demo URL
                 </FormLabel>
                 <FormControl>
@@ -418,6 +448,11 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
             <FormItem>
               <FormLabel className="flex items-center gap-2">
                 <FileImage className="h-4 w-4" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 Screenshot URL
               </FormLabel>
               <FormControl>
@@ -436,6 +471,9 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             Cancel
           </Button>

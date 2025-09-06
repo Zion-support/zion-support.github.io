@@ -1,16 +1,25 @@
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Education  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useEducation() {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Education} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useEducation() {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -19,9 +28,16 @@ export function useEducation() {;
     if (!user) {
       setError('You must be logged in to add education')
       return false
+<<<<<<< HEAD
     }
     setIsLoading(true);
     setError(null);
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Education } from '@/types/resume',;
@@ -35,6 +51,12 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to add education'),;
       return false;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     setIsLoading(true),
@@ -75,6 +97,7 @@ export function useEducation() {;
       return handleResumeError(e, 'Could not add education')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
     }
   }
   const updateEducation = async (eduId: string, education: Education): Promise<boolean> => {
@@ -84,6 +107,12 @@ export function useEducation() {;
     }
     setIsLoading(true);
     setError(null);
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     setError(null),;
@@ -114,6 +143,12 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to update education'),;
       return false;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     setIsLoading(true),
@@ -154,6 +189,7 @@ export function useEducation() {;
       return handleResumeError(e, 'Could not update education')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
     }
   }
   const deleteEducation = async (eduId: string): Promise<boolean> => {
@@ -163,6 +199,12 @@ export function useEducation() {;
     }
     setIsLoading(true);
     setError(null);
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     setError(null),;
@@ -193,6 +235,12 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to delete education'),;
       return false;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     setIsLoading(true),
@@ -221,9 +269,28 @@ export function useEducation() {;
     addEducation;
     updateEducation;
 
+<<<<<<< HEAD
     deleteEducation
   }
 }
+=======
+
+
+
+=======
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+import {Education} from '@/types / resume';
+import {use_auth} from '@/hooks / use_auth';
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
+export /**
+ * use_education - Function description
+ */
+function use_education() {
+  const { user } = use_auth ();
+  const [is_loading, setIsLoading] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   const add_education = async (resume_id: string, education: Education): Promise < boolean> => {
     // Check condition
@@ -241,6 +308,12 @@ if ( {) {
     addEducation;
     updateEducation;
     deleteEducation;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

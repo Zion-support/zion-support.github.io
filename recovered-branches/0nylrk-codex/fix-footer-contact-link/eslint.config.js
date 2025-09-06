@@ -8,6 +8,12 @@ import globals from "globals",
 import reactHooks from "eslint-plugin-react-hooks",
 import reactRefresh from "eslint-plugin-react-refresh",
 import tseslint from "typescript-eslint",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default tseslint.config(
   { ignores: ["dist"] }
   {
@@ -41,6 +47,7 @@ export default tseslint && tseslint.config(
 )
 
 ),
+<<<<<<< HEAD
 ;
 import js from "@eslint/js",;
 import globals from "globals",;
@@ -65,3 +72,7 @@ export default tseslint.config(;
         { allowConstantExport: true }];
       "@typescript-eslint/no-unused-vars": "off"}}
 );
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

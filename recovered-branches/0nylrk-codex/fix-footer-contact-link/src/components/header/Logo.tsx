@@ -22,6 +22,7 @@ import { Link } from "react-router-dom";
 import { useWhitelabel } from "@/context/WhitelabelContext";
 interface LogoProps {
   customLogo?: string;
+<<<<<<< HEAD
   customColor?: string;
 }
 
@@ -42,6 +43,9 @@ interface LogoProps {;
 export function Logo({ customLogo, customColor }: LogoProps) {
   const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel(),
   
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Use the white-label logo if available and no specific customLogo is provided
   const logoToUse = customLogo || (isWhitelabel ? logoUrl : null),
   // Use the white-label color if available and no specific customColor is provided
@@ -62,8 +66,16 @@ export function Logo({ customLogo, customColor }: LogoProps) {
         {isWhitelabel ? brandName : 'Zion'}<span className="text-zion-cyan">AI</span>
       </div>
     </Link>
+<<<<<<< HEAD
   );
   )
+=======
+
+=======
+  )
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   )
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

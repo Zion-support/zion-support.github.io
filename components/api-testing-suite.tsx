@@ -50,6 +50,7 @@ import { Zap, Star } from 'lucide-react';
   ArrowRight,
   Play,
   AlertTriangle,
+<<<<<<< HEAD
   Clock,;
   Database,;
 } from 'lucide-react';
@@ -60,6 +61,13 @@ import { Zap, Star } from 'lucide-react';
 export default function APITestingSuitePage() {;
 } from 'lucide-react';
 
+=======
+
+=======
+import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function APITestingSuitePage() {
   const [isTesting, setIsTesting] = useState(false);
   const [testResults, setTestResults] = useState(null);
@@ -492,6 +500,7 @@ function APITestingSuitePage() {
       });
       setIsTesting(false)
     }, 3000)
+<<<<<<< HEAD
   }
   return (
     <>
@@ -532,6 +541,42 @@ function APITestingSuitePage() {
             suite. Functional, performance, and security testing for REST
             GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and
             secure.
+=======
+
+
+  return (
+    <>;
+      <Head>;
+        <title>;
+          API Testing Suite - Zion Tech Group | Comprehensive API Testing &;
+          Monitoring Tool;
+        </title>;
+
+        />;
+        <meta name='twitter:card' content='summary_large_image' />;
+      </Head>;
+
+      {/* Hero Section */}
+      <section className='relative section-padding bg-gradient-cursor overflow-hidden'>;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0 && 0.08),transparent_50%)]' />;
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0 && 0.06),transparent_50%)]' />;
+        <div className='absolute inset-0 bg-grid opacity-10' />;
+
+        <div className='relative z-10 container-cursor text-center'>;
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6'>;
+            <Code className='w-4 h-4 mr-2' />;
+            Professional API Testing;
+          </div>;
+          <h1 className='text-responsive-xl font-black mb-8 gradient-text text-shadow-lg'>;
+            API Testing Suite;
+          </h1>;
+          <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'>;
+            Test, monitor, and optimize your APIs with our comprehensive testing;
+            suite. Functional, performance, and security testing for REST,;
+            GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and;
+            secure.;
+          </p>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -590,9 +635,14 @@ function APITestingSuitePage() {
             secure.
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </p>
           {/* API Testing Form */}
           <div className='max-w-3xl mx-auto mb-8'>;
@@ -867,6 +917,7 @@ href="/contact"
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -874,6 +925,8 @@ href="/contact"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </p>
                   </div>
                 </div>
@@ -885,12 +938,28 @@ href="/contact"
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Test Types Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Comprehensive Testing Coverage
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1000,6 +1069,7 @@ href="/contact"
               <Card
                 key={index}
                 className="card-hover border-gradient-indigo"
+<<<<<<< HEAD
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <h3 className="text-xl font-bold mb-4 text-white">{type.name}</h3>
@@ -1008,6 +1078,10 @@ href="/contact"
                   {type.tests.map((test, testIndex) => (
                     <li key={testIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-indigo-400 mr-3 flex-shrink-0" />
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       {test}
                     </li>
                   ))}
@@ -1018,6 +1092,14 @@ href="/contact"
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Demo Test Results */}
       {testResults && (
 
@@ -1157,6 +1239,12 @@ href="/contact"
 
                       </div>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1164,6 +1252,14 @@ href="/contact"
                 </div>
               </Card>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Performance Metrics */}
               <Card className='border-gradient-indigo'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -1176,6 +1272,14 @@ href="/contact"
                       {testResults.responseTime}
                     </span>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Throughput</span>
@@ -1237,6 +1341,12 @@ href="/contact"
 
                   </div>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 ))}
               </div>
             </Card>
@@ -1251,6 +1361,7 @@ href="/contact"
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1258,6 +1369,8 @@ href="/contact"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1544,6 +1657,9 @@ href="/contact"
                   </div>
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 <div className='text-center mb-8'>;
@@ -1558,6 +1674,7 @@ href="/contact"
                   </div>;
                   <p className='text-gray-400'>{plan && plan.description}</p>;
                 </div>;
+<<<<<<< HEAD
                 <ul className='space-y-4 mb-8'>;
                   {plan && plan.features.map((feature, featureIndex) => (;
 =======
@@ -1581,6 +1698,11 @@ href="/contact"
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <li
                       key={featureIndex}
                       className='flex items-center text-gray-300'>;
@@ -1593,10 +1715,21 @@ href="/contact"
                       <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0" />;
 
                       {feature}
+<<<<<<< HEAD
 
 
                       {feature}
 
+=======
+                    </li>;
+=======
+
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </li>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
@@ -1639,6 +1772,7 @@ href="/contact"
 
                 </Button>
 
+<<<<<<< HEAD
               </Card>
             ))}
           </div>
@@ -1665,6 +1799,24 @@ href="/contact"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              </Card>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1672,6 +1824,11 @@ href="/contact"
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
 
             Ready to Test Your APIs?
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </h2>
           <p className='text-responsive-md text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers and businesses using our API testing
@@ -1690,6 +1847,7 @@ href="/contact"
               href='/contact'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'            >              href="/contact"
               variant="outline"
               size="lg"
@@ -1701,11 +1859,25 @@ href="/contact"
       </section>
     </>
 );
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              Schedule Demo;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     </>);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 );
@@ -1742,3 +1914,7 @@ href="/contact"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

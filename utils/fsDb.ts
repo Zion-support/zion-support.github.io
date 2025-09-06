@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // File system database utilities
 export const fsDb = {
   // Add file system database functionality here
@@ -5,12 +6,38 @@ export const fsDb = {
   write: (path: string, data: any) => null
   exists: (path: string) => false
   delete: (path: string) => null
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   read: (path: string) => null,
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
   delete: (path: string) => null;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+import { promises as fs } from 'fs';
+import path from 'path';
+
+const DATA_DIR = path && path.join(process && process.cwd(), 'data');
+
+
+
+  try {
+    const fullPath = path && path.join(DATA_DIR, filePath);
+    const data = fs && fs.readFileSync(fullPath, 'utf8');
+    return JSON && JSON.parse(data);
+  } catch (error) {
+    return defaultValue;
+  }
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 =======
@@ -28,6 +55,7 @@ const DATA_DIR = path.join(process.cwd(), 'data');
 
 
 
+<<<<<<< HEAD
   try {
     const fullPath = path.join(DATA_DIR, filePath);
     const data = fs.readFileSync(fullPath, 'utf8');
@@ -50,3 +78,7 @@ export async function writeJsonAsync<T>(filePath: string, data: T): Promise<void
   }
 }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

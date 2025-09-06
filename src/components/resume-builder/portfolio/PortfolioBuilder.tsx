@@ -1,5 +1,6 @@
 }
 
+<<<<<<< HEAD
 import { useState, useEffect } from 'react',;
 import { Card, CardContent } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -38,6 +39,11 @@ export function PortfolioBuilder() {;
     )
   }
   
+=======
+
+  
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -45,6 +51,7 @@ export function PortfolioBuilder() {;
           <h1 className="text-2xl font-bold">Portfolio Projects</h1>
           <p className="text-muted-foreground">Showcase your best work and projects</p>
         </div>
+<<<<<<< HEAD
         <Button
           onClick={() => setShowAddProject(true)}
           className='gap-2'
@@ -53,6 +60,9 @@ export function PortfolioBuilder() {;
           Add Project
         </Button>
       </div>
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
@@ -64,6 +74,9 @@ export function PortfolioBuilder() {;
       </div>
       
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           Add Project
         </Button>
@@ -78,8 +91,16 @@ export function PortfolioBuilder() {;
             <h2 className='text-xl font-semibold mb-6'>
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
+<<<<<<< HEAD
             <ProjectForm              project={editingProject |undefined}
             <ProjectForm              project={editingProject || undefined}
+=======
+
+
+            <ProjectForm              project={editingProject || undefined}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
                 setShowAddProject(false)
@@ -184,10 +205,13 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           {projects.map((project) => (
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
@@ -201,6 +225,12 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
       {/* Edit or Add Form */}
       {(showAddProject || editingProject) && (
         <Card>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
@@ -226,6 +256,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
           {projects.map((project) => (
             <ProjectCard
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               key={project.id}
               project={project}
@@ -244,6 +275,13 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
         !showAddProject && (
           <Card className='text-center py-12'>
           <Card className="text-center py-12">
+=======
+
+              key={project.id}
+              project={project}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <CardContent>
               <div className="flex flex-col items-center gap-4">
                 <div className="bg-muted/50 p-6 rounded-full">
@@ -254,10 +292,14 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
                   Add your best work to showcase your skills and experience to potential employers.
                 </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                 <Button
@@ -280,6 +322,8 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Button 
                   onClick={() => setShowAddProject(true)} 
                   className="mt-2"
@@ -357,6 +401,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
     </div>);
 }
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     </div>
@@ -365,11 +410,16 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 }
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     </div>;
   );

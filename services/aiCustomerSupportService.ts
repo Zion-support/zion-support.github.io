@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface Attachment {
 export interface Attachment {;
   id: string;
@@ -6,15 +7,21 @@ export interface Attachment {;
   mimeType: string;
   size: number;
   url: string;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   uploaded_at: Date,
   uploaded_by: string;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface SupportTicket {
 
 export interface SupportTicket {;
+=======
+export interface SupportTicket {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   title: string;
   description: string;
@@ -35,9 +42,13 @@ export interface SupportTicket {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface TicketMessage {
 
 export interface TicketMessage {;
+=======
+export interface TicketMessage {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   content: string;
 
@@ -49,9 +60,13 @@ export interface TicketMessage {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Customer {
 
 export interface Customer {;
+=======
+export interface Customer {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   name: string;
   email: string;
@@ -67,18 +82,29 @@ export interface Customer {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface SupportAgent {
 
 export interface SupportAgent {;
+=======
+export interface SupportAgent {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   name: string;
   email: string;
   role: 'tier1' | 'tier2' | 'tier3' | 'supervisor';
   skills: string[];
 
+<<<<<<< HEAD
   maxTickets: number
 
   performance: AgentPerformance
+=======
+  is_available: boolean;
+  current_tickets: number;
+  max_tickets: number,
+  performance: AgentPerformance;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export interface AgentPerformance {
   tickets_resolved: number,
@@ -309,6 +335,7 @@ class AICustomerSupportService {
           {
             id: 'msg_002'
             content: 'Hi John, I can help you with this API integration issue. Let me investigate the error.';
+<<<<<<< HEAD
             senderType: 'agent';
             senderId: 'agent_001';
             isInternal: false;
@@ -836,6 +863,13 @@ class AICustomerSupportService {;
             senderId: 'agent_001',;
             isInternal: false,;
             createdAt: new Date('2025-01-10T10:15:00Z'),;
+=======
+
+            sender_type: 'agent';
+            sender_id: 'agent_001';
+            is_internal: false;
+            created_at: new Date ('2025 - 01 - 10T10:15:00Z'),
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             attachments: [];
           }
         ];
@@ -846,6 +880,7 @@ class AICustomerSupportService {;
     ];
 ;
     // Initialize knowledge base;
+<<<<<<< HEAD
     this.knowledgeBase = [;
       {;
         id: 'kb_001',;
@@ -858,10 +893,40 @@ class AICustomerSupportService {;
         notHelpful: 12,;
         lastUpdated: new Date('2025-01-05'),;
         createdBy: 'agent_001';
+=======
+    this.knowledge_base = [;
+
+      {
+        id: 'kb_001';
+        title: 'Getting Started with API Integration';
+        content: 'Learn how to integrate our API with your existing systems...';
+        category: 'API Documentation';
+        tags: ['apiintegrationgetting - started'];
+        views: 1250;
+        helpful: 89;
+
+        not_helpful: 12;
+        last_updated: new Date ('2025 - 01 - 05'),
+        created_by: 'agent_001';
+
+      }
+    ];
+  }
+
+
+export interface Attachment {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     ]
   }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
     const ticket: SupportTicket = {
       id: `ticket_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
@@ -934,6 +999,13 @@ class AICustomerSupportService {;
         ticket.resolvedAt = new Date(),;
         if (ticket.createdAt && ticket.resolvedAt) {;
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60);
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       }
       this.updateAnalytics()
@@ -953,6 +1025,13 @@ class AICustomerSupportService {;
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
@@ -1161,21 +1240,43 @@ if ( {) {
       const intent = this.detectIntent(message.content),;
       session.intent = intent.intent,;
       session.confidence = intent.confidence;
+<<<<<<< HEAD
     }
     return message
   }
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase();
     if (lowerMessage.includes('login') |lowerMessage.includes('password')) {
+=======
+
+
+
+    }
+    return message
+  }
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase();
     
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   private detectIntent(message: string): { intent: string, confidence: number } {;
     const lowerMessage = message.toLowerCase(),;
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
@@ -1254,6 +1355,13 @@ if ( {) {
     }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
     const session = this && this.chatbotSessions.find(s => s && s.id === sessionId);
@@ -1306,6 +1414,7 @@ if ( {) {
     },;
     this.knowledgeBase.push(article),;
     return article;
+<<<<<<< HEAD
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
     const lowerQuery = query.toLowerCase()
@@ -1316,6 +1425,29 @@ if ( {) {
     ).sort((a, b) => b.views - a.views)
   }
 
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+  async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
+
+    const lowerQuery = query && query.toLowerCase(),
+    return this && this.knowledgeBase.filter(article => 
+      article && article.title.toLowerCase().includes(lowerQuery) ||
+      article && article.content.toLowerCase().includes(lowerQuery) ||
+      article && article.tags.some(tag => tag && tag.toLowerCase().includes(lowerQuery))
+    ).sort((a, b) => b && b.views - a && a.views)
+
+  }
+=======
+  }
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   async getAIRecommendations(): Promise<AIRecommendation[]> {
     const recommendations: AIRecommendation[] = [];
     // Ticket prioritization recommendation
@@ -1479,10 +1611,22 @@ if ( {) {
           'Review and update low-performing articlesImprove article discoverabilityConsider consolidating similar articles';
         ];
       });
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     return recommendations
   }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   private updateAnalytics(): void {
 
     const totalTickets = this && this.tickets.length;
@@ -1647,6 +1791,13 @@ if ( {) {
       chatbotResolutionRate,;
       topCategories,;
       agentPerformance;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
 
@@ -1681,8 +1832,19 @@ if ( {) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
+=======
+
+
+
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const aiCustomerSupportService = new AICustomerSupportService();
 
 ;

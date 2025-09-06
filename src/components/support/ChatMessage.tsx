@@ -1,4 +1,5 @@
 import { useTheme } from "@/hooks/useTheme";
+<<<<<<< HEAD
 interface ChatMessageProps {
   message: string;
   isUser: boolean;
@@ -23,6 +24,13 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
     () => ({ __html: formatMessageWithLinks(message) }),
     [message]
   ),
+=======
+interface ChatMessageProps {;
+  message: string;
+  isUser: boolean;
+
+  timestamp: Date;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export const ChatMessage: React.FC<ChatMessageProps> = ({;
   message,;
@@ -61,6 +69,9 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
       <div
         className={cn(
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
       </Avatar>
 
@@ -76,6 +87,9 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
         )}
       >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       
@@ -101,7 +115,12 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 },
 
 
@@ -110,6 +129,9 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
@@ -117,6 +139,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 // before we perform our link replacements below.
 function escapeHtml(unsafe: string): string {
   return unsafe
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -152,6 +175,11 @@ function formatMessageWithLinks(message: string): string {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     .replace(/&/g, "&amp,")
     .replace(/</g, "<")
     .replace(/>/g, ">")

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
@@ -15,6 +16,12 @@ import { ActionButtons } from "./ActionButtons";
 import { EmptyFraudState } from "./EmptyFraudState";
 import { ActionButtons } from "./ActionButtons",
 import { EmptyFraudState } from "./EmptyFraudState",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface FraudFlagsTableProps {
 
   flags: FraudFlag[]
@@ -25,6 +32,7 @@ interface FraudFlagsTableProps {
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
   flags;
@@ -34,6 +42,11 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({
   flags;
   isLoading;
   hasFilters;
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   flags,
@@ -78,6 +91,12 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
         <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-purple"></div>;
       </div>;
     );
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   if (flags.length === 0) {
     return <EmptyFraudState hasFilters={hasFilters} onResetFilters={resetFilters} />
@@ -167,6 +186,7 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
                   : flag && flag.status === 'ignored'
                   ? 'outline'
                   : 'default'
+<<<<<<< HEAD
               }>
                 {flag.status}
               </Badge>
@@ -188,4 +208,34 @@ export const FraudFlagsTable: React.FC<FraudFlagsTableProps> = ({;
       </TableBody>;
     </Table>;
   );
+=======
+
+              }>;
+                {flag && flag.status}
+              </Badge>;
+            </TableCell>;
+            <TableCell>;
+              <ActionButtons
+                flagId={flag && flag.id} 
+                status={flag && flag.status} 
+                onAction={onAction} 
+              />;
+            </TableCell>;
+          </TableRow>;
+        ))}
+      </TableBody>;
+    </Table>;
+  );
+=======
+
+
+=======
+      </TableBody>;
+    </Table>;
+  );
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

@@ -15,6 +15,9 @@ export function PageHero() {
           <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
             <Map className="h-8 w-8 text-zion-cyan" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           </div>
@@ -29,6 +32,9 @@ export function PageHero() {
           <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
             <Clock className="h-8 w-8 text-zion-cyan" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           </div>
@@ -70,6 +76,9 @@ export function PageHero() {
             <DollarSign className="h-8 w-8 text-zion-cyan" />
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -81,9 +90,15 @@ export function PageHero() {
   );
 };
     </div>
+<<<<<<< HEAD
   )
 }
 import { GradientHeading } from "@/components/GradientHeading";
+=======
+
+
+import { GradientHeading } from '@/components/GradientHeading';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Clock, Map, DollarSign } from 'lucide-react';
 export function PageHero() {;
   return (

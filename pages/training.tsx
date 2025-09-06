@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,6 +18,15 @@ export default function Training() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+import React from 'react';
+
+export default function Training() {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Layout
       title="Training & Education - Zion Tech Group"
@@ -34,11 +44,29 @@ export default function Training() {
             <p className="text-gray-600">Training page is under construction.</p>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
     </Layout>
   );
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+import React from 'react';
+import Layout from '../components/Layout';
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default function Training() {
+
+
+=======
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -284,10 +312,16 @@ export default function TrainingPage() {
 
   const getCategoryColor = (category: string) => {
     const colors = {
+<<<<<<< HEAD
       'ai-consciousness': 'cyan',
       'quantum-computing': 'purple',
       'autonomous-ops': 'green',
       'enterprise-it': 'blue',
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
     };
     return colors[category as keyof typeof colors] || 'gray'
@@ -349,6 +383,7 @@ export default function TrainingPage() {
   )
 };
 
+<<<<<<< HEAD
 export default Training;
 };export default Training;
         </section>
@@ -1095,6 +1130,22 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default Training;
 };export default Training;
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+      </div>
+    </Layout>
+
+
+}
+
+  )
+
+=======
+=======
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   {
   opacity: 0, y: 20 
@@ -1210,3 +1261,9 @@ export default Training,
 }
 ;
 export default Training;
+<<<<<<< HEAD
+=======
+}export default Training;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

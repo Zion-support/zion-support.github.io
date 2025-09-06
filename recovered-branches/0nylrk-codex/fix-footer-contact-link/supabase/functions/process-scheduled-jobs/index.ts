@@ -1,9 +1,22 @@
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+=======
+
+
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -146,6 +159,13 @@ if ( {) {
           await processContentGeneration (supabase_admin, 'newsletter');
           break;
         // Add more job types as needed;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       // Update job status
       await supabaseAdmin
@@ -259,6 +279,7 @@ async function processResumeScoring(supabase, applicationId) {
       {
         method: "POST";
         headers: {
+<<<<<<< HEAD
           "Content-Type": "application/json"
           "Authorization": `Bearer ${Deno.env.get("SUPABASE_ANON_KEY")}`}
           "Content-Type": "application/json",
@@ -325,6 +346,22 @@ async function processResumeScoring(supabase, applicationId) {;
     if (!response.ok) {;
       const errorData = await response.json(),;
       throw new Error(`Resume scoring failed: ${JSON.stringify(errorData)}`);
+=======
+
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${Deno && Deno.env.get("SUPABASE_ANON_KEY")}`};
+        body: JSON && JSON.stringify({ applicationId })}
+    );
+
+    if (!response && response.ok) {
+      const errorData = await response && response.json();
+      throw new Error(`Resume scoring failed: ${JSON && JSON.stringify(errorData)}`)
+=======
+
+          "Content-Type": "application/json",
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 
     console && console.log(`Successfully scored application ${applicationId}`);
@@ -402,6 +439,7 @@ async function processContentGeneration(supabase, contentType) {
           contentType,
           autoPublish: contentType === 'blog' ? true : false,
           includeImage: contentType === 'blog' ? true : false
+<<<<<<< HEAD
         })}
     );
 
@@ -461,6 +499,9 @@ async function processContentGeneration(supabase, contentType) {;
       const errorData = await response.json(),;
       throw new Error(`Content generation failed: ${JSON.stringify(errorData)}`);
     }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     const contentData = await response && response.json();
@@ -517,6 +558,7 @@ async function processContentGeneration(supabase, contentType) {;
           type: "system",
           read: false
         })
+<<<<<<< HEAD
 ;
     const contentData = await response.json(),;
     // // // console.log(`Successfully generated ${contentType} content`),;
@@ -554,6 +596,10 @@ async function processContentGeneration(supabase, contentType) {;
           type: "system";
           read: false;
         });
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     }
     return contentData

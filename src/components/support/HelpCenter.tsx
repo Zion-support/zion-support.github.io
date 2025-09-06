@@ -53,6 +53,9 @@ function HelpCenter() {
     setSelectedArticle (article_id);
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleBackToCategories = () =>: any {
     setSelectedCategory (null);
     setSelectedArticle (null);
@@ -206,12 +209,24 @@ export default function HelpCenter() {;
                 <HelpCategoryList;
                   categories={HELP_CATEGORIES} ;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
                   onCategorySelect={handleCategorySelect}
                   searchQuery={searchQuery}                />
               )}
 <<<<<<< HEAD
+=======
+
+
+                  onCategorySelect={handleCategorySelect}
+                  searchQuery={searchQuery}                />;
+              )}
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               {selectedCategory && !selectedArticle && (
                 <>
@@ -266,6 +281,12 @@ export default function HelpCenter() {;
                     onClick={handleBackToArticles}
                     className="mb-4"
                   >
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     ← Back to Articles
                   </Button>
                   <HelpArticleView articleId={selectedArticle} />
@@ -273,6 +294,9 @@ export default function HelpCenter() {;
               )}
             </TabsContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             
@@ -289,6 +313,9 @@ export default function HelpCenter() {;
                   </div>
                   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                   <div>
@@ -298,6 +325,11 @@ export default function HelpCenter() {;
                     </p>
                   </div>
                   
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">What are the payment terms?</h3>
                     <p className="text-zion-slate-light">
@@ -306,6 +338,9 @@ export default function HelpCenter() {;
                   </div>
                   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">How do I contact support?</h3>
@@ -443,6 +478,11 @@ export default function HelpCenter() {;
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
                           <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                           <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </svg>
                       </div>
                       <a href="mailto:support@ziontechgroup.com" className="text-zion-cyan hover:underline">
@@ -464,6 +504,9 @@ export default function HelpCenter() {;
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">
                           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                         </svg>
@@ -498,6 +541,9 @@ export default function HelpCenter() {;
                   
                   <form className="space-y-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                     <div>
@@ -520,6 +566,9 @@ export default function HelpCenter() {;
                     
                     <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                       Submit Feedback
@@ -530,6 +579,7 @@ export default function HelpCenter() {;
             </TabsContent>
           </Tabs>
         </div>
+<<<<<<< HEAD
       </div>;
     </>;
   );
@@ -597,6 +647,11 @@ export default function HelpCenter() {;
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">;
                           <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />;
                           <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />;
+=======
+
+                          fill='currentColor'>;
+                          <path d='M2 3a1 1 0 011-1h2 && 1h2.153a1 1 0 01 && 01.986.836l && 836l.74 4 && 4.435a1 1 0 01-.54 1 && 1.06l-1 && 1.548.773a11 && 773a11.037 11 && 11.037 0 006 && 006.105 6 && 6.105l.774-1 && 1.548a1 1 0 011 && 011.059-.54l4 && 54l4.435.74a1 1 0 01 && 01.836.986V17a1 1 0 01-1 1h-2C7 && 2C7.82 18 2 12 && 12.18 2 5V3z' />;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </svg>;
                       </div>;
                       <span className='text-zion-slate-light'>;

@@ -1,4 +1,26 @@
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+interface TranslatableJobFormProps {
+
+  onSubmit: (formData: any) => void
+  isSubmitting?: boolean
+}
+
+
+
+
+
+  // Auto translate content when language tab changes
+  const handleTabChange = async (tab: SupportedLanguage) => {
+    if (tab !== activeTab) {
+      setActiveTab(tab)
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -10,6 +32,7 @@ import {useTranslation} from "react-i18next";
 import {useTranslationService} from "@/hooks/useTranslationService";
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {toast} from "@/components/ui/use-toast";
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -160,6 +183,12 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         break
       }
     }
+=======
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
@@ -261,6 +290,14 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
         content = requirements[lang];
         sourceLanguage = lang;
         break;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     }
     
@@ -298,6 +335,12 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
           description: error,;
           variant: "destructive"}),;
         return;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       if (field === 'title') {
         setTitle(translations)
@@ -346,6 +389,12 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     // Title translations;
     if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {;
       promises.push(autoTranslate('title'));
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     // Description translations
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
@@ -358,11 +407,23 @@ export function TranslatableJobForm(): any ({ onSubmit, isSubmitting = false }: 
     if (promises.length) {
       await Promise.all(promises)
     }
+<<<<<<< HEAD
   }
 
   },
+=======
+
+
+  },
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
   },
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   return (
     <form onSubmit={handleSubmit} className="space-y-6">

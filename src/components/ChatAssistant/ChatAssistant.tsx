@@ -153,6 +153,7 @@ if ( {) {
         setDisplayGuestMessages (storedGuestMessages);
       }
     }
+<<<<<<< HEAD
   }, [
     isGuest
     initialMessages
@@ -183,6 +184,14 @@ if ( {) {
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
       const newMessages = null;
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
+=======
+
+
+      const newMessages = null;
+        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setLoggedInMessages(newMessages)
     }
   }
@@ -464,6 +473,9 @@ export function ChatAssistant(): any ({;
             onClick = {onClose,}
             onClick={onClose}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             aria-label="Close chat"
@@ -508,6 +520,9 @@ export function ChatAssistant(): any ({;
                       onClick={() => handleSendMessage(q)}
                     >;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                       {q}
@@ -552,6 +567,11 @@ export function ChatAssistant(): any ({;
                 variant="outline"
                 onClick = {handleModalCancel,}
                 onClick={handleModalCancel}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
@@ -560,6 +580,9 @@ export function ChatAssistant(): any ({;
                 onClick = {handleModalSendConfirm,}
                 onClick={handleModalSendConfirm}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >

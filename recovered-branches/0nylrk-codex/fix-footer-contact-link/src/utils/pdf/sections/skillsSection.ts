@@ -1,12 +1,21 @@
 
+<<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
 import { Skill  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addSkillsSection(
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addSkillsSection(;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   doc: jsPDF;
   skills: Skill[];
   colors: PdfThemeColors;
@@ -38,6 +47,7 @@ export function addSkillsSection(;
     return acc
   }, {} as Record<string, typeof skills>);
 
+<<<<<<< HEAD
     yPos += (skillLines.length * 5) + 10
 import { jsPDF } from 'jspdf',;
 import { Skill } from '@/types/resume',;
@@ -76,6 +86,10 @@ export function addSkillsSection(;
     const skillLines = doc.splitTextToSize(skillsText, 160);
     doc.text(skillLines, 30, yPos + 5);
     yPos += (skillLines.length * 5) + 10;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   return yPos + 5
 =======

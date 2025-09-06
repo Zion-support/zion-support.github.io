@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ComprehensiveItSolution {
 export interface ComprehensiveItSolution {;
   id: string;
@@ -30,6 +31,26 @@ export interface ComprehensiveItSolution {;
     address: string;
   }
 }
+=======
+
+
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    }
+  }
+];
+=======
+  id: string, name: string,
+  tagline: string, price: string,
+  description: string, features: string[],
+  link: string, category: string,
+  realImplementation: boolean,
+  contactInfo: {
+    mobile: string, email: string,
+    address: string
+  }
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
   {
 <<<<<<< HEAD
@@ -55,6 +76,7 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
     link: "/services/full-stack-development", category: "IT Solutions",
     realImplementation: true,
     contactInfo: {
+<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',
@@ -112,6 +134,10 @@ export const comprehensiveITSolutions: ComprehensiveItSolution[] = [
       email: "kleber@ziontechgroup.com",
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

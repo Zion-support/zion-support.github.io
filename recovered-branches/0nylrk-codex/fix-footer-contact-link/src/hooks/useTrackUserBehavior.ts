@@ -1,10 +1,19 @@
 
+<<<<<<< HEAD
 import { useRef, useEffect  } from 'react';
 import { useAnalytics } from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {
 import {useRef, useEffect} from 'react';
 import {useAnalytics} from '@/context/AnalyticsContext';
 export function useTrackUserBehavior(componentName: string) {;
+=======
+
+import {useRef, useEffect} from 'react';
+import {useAnalytics} from '@/context/AnalyticsContext';
+export function useTrackUserBehavior(componentName: string) {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { trackEvent } = useAnalytics();
 
   const componentRef = useRef<HTMLDivElement>(null);
@@ -55,7 +64,23 @@ export function useTrackUserBehavior(componentName: string) {;
   }, [trackEvent, componentName]);
 
   return componentRef
+<<<<<<< HEAD
 }
+=======
+
+import {useRef, useEffect} from 'react';
+import {use_analytics} from '@/context / AnalyticsContext';
+export /**
+ * useTrackUserBehavior - Function description
+ */
+function useTrackUserBehavior() {
+  const { track_event } = use_analytics ();
+  const component_ref = useRef < HTMLDivElement>(null);
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useRef, useEffect } from 'react',;
 import { useAnalytics } from '@/context/AnalyticsContext',;
 export function useTrackUserBehavior(componentName: string) {;
@@ -97,6 +122,12 @@ export function useTrackUserBehavior(componentName: string) {;
     }
   }, [trackEvent, componentName]);
   return componentRef;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;

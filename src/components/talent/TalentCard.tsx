@@ -23,6 +23,9 @@ import { RatingStars } from '@/components/RatingStars',
 import { useAuth } from '@/context/auth/AuthProvider',
 import { useCart } from '@/context/CartContext',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export interface TalentCardProps {
@@ -48,6 +51,9 @@ export interface TalentCardProps {;
   onRequestHire: (talent: TalentProfile) => void,;
   isAuthenticated: boolean;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 }
@@ -65,6 +71,7 @@ const TalentCardComponent = ({
     if (onViewProfile) {
       onViewProfile(talent.id)
     }
+<<<<<<< HEAD
   }
   },;
   const handleRequestHire = (e: React.MouseEvent) => {;
@@ -93,6 +100,12 @@ const TalentCardComponent = ({
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleRequestHire = (e: React.MouseEvent,) => {
     e.preventDefault()
     e.stopPropagation()
@@ -152,6 +165,11 @@ const TalentCardComponent = ({;
       tabIndex = {0,}
       onClick={handleViewProfile}
       tabIndex={0}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     >
       <div className="p-6">
         <div className="flex items-start">
@@ -165,6 +183,9 @@ const TalentCardComponent = ({;
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                   className="w-full h-full object-cover"
@@ -202,6 +223,9 @@ const TalentCardComponent = ({;
 
             
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
@@ -224,6 +248,9 @@ const TalentCardComponent = ({;
           </div>;
         </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         {/* Skills */}
@@ -243,6 +270,9 @@ const TalentCardComponent = ({;
                 <span
                   key = {index,}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
 
               {skills.map((skill, index) => (
@@ -280,6 +310,9 @@ const TalentCardComponent = ({;
           </div>
           
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <div className="flex items-center gap-2">
@@ -293,6 +326,11 @@ const TalentCardComponent = ({;
                 variant="secondary"
                 onClick = {handleRequestHire,}
                 onClick={handleRequestHire}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
@@ -301,10 +339,19 @@ const TalentCardComponent = ({;
             <Button
               size="sm"
               variant="ghost"
+<<<<<<< HEAD
               onClick={(e,) => {
                 e.stopPropagation()
               onClick={(e) => {
               onClick={(e) => {
+=======
+
+
+              onClick={(e) => {
+              onClick={(e) => {
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 e.stopPropagation(),
                 handleViewProfile()
               }}
@@ -317,6 +364,7 @@ const TalentCardComponent = ({;
       </div>
     </Card>
   )
+<<<<<<< HEAD
 }
 export const TalentCard = React.memo(TalentCardComponent)
 TalentCard.displayName = 'TalentCard'
@@ -359,6 +407,11 @@ TalentCard.displayName = 'TalentCard';
               variant="ghost";
               onClick={(e) => {;
                 e.stopPropagation(),;
+=======
+
+              onClick={(e,) => {;
+                e && e.stopPropagation(),;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 handleViewProfile();
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
@@ -514,6 +567,9 @@ if ( {) {
         </div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     </Card>);

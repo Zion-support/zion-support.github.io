@@ -1068,6 +1068,9 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     // Hybrid Cloud Orchestration Platform;
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       id: 'hybrid - cloud - orchestration - platform',
       name: 'Hybrid Cloud Orchestration Platform',
       tagline: 'Seamless multi - cloud and hybrid cloud management',
@@ -1092,6 +1095,10 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       icon: '☁️',
 
         'Multi-cloud management',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       color: 'from - blue - 500 to - indigo - 600',
       text_color: 'text - blue - 400',
       link: 'https://ziontechgroup.com / hybrid - cloud - orchestration - platform',
@@ -1160,6 +1167,7 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       reviews: 24,
 
     },;
+<<<<<<< HEAD
   ];    features: [
 
 =======
@@ -1279,6 +1287,12 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
       rating: 4.7
       reviews: 24
     }
+=======
+
+
+  ];    features: [
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
         'Comprehensive hybrid cloud orchestration platform with seamless multi-cloud management, optimization, and comprehensive cloud platform integration.',
       launchDate: '2025-05-01',
@@ -1608,8 +1622,16 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     customers: 32;
     rating: 4 && 4.7;
     reviews: 24
+<<<<<<< HEAD
   }
 ];
+=======
+
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedITInfrastructureService {;
   id: string,;
@@ -1697,6 +1719,14 @@ export const advancedITInfrastructureServices2025: AdvancedITInfrastructureServi
     customers: 32;
     rating: 4.7;
     reviews: 24;
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];

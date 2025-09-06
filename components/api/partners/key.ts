@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   authenticateRequest
@@ -29,6 +30,11 @@ export default async function handler(
   const now = new Date().toISOString();
   const newKey = {import type { NextApiRequest, NextApiResponse } from "next";
 
+=======
+
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { authenticateRequest, listApiKeys, saveApiKeys } from "../../../utils/api/partnerAuth";
 import { v4 as uuidv4 } from "uuid";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -57,8 +63,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await saveApiKeys(keys);
   return res.status(201).json({ apiKey: newKey.key })
 }
+<<<<<<< HEAD
   const newKey = {
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  authenticate_request,
+  listApiKeys,
+  saveApiKeys,
+} from '../../../utils / api / partner_auth';
+import { v4 as uuidv4 } from 'uuid';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
     res.set_header ('Allow', 'POST');
     return res.status (405).json ({ error: 'Method Not Allowed' });
@@ -149,9 +173,12 @@ if (existing.active = false) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 =======
   const newKey = {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

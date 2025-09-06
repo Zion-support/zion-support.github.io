@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -7,6 +8,12 @@ import { Button } from "@/components/ui/button";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button",
 import { GradientHeading } from "@/components/GradientHeading",
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function EnterpriseHero() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -140,6 +147,7 @@ function EnterpriseHero() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </section>
   );
 }
@@ -200,3 +208,9 @@ export function EnterpriseHero() {;
   );
 }
 ;
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

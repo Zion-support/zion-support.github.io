@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState  } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import Link from 'next/link';
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -10,6 +11,9 @@ import Link from 'next/link';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Simple icons using inline SVG to avoid external assets
 
 function StarIcon({
@@ -435,6 +439,22 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
     </div>
   );
 
+<<<<<<< HEAD
+=======
+
+            >;
+              ✕;
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
   'https://apps.apple.com/app/id0000000000';
@@ -461,6 +481,7 @@ const testimonials = [
       'I love tracking milestones on the go. Clear visibility and fewer meetings.'
   }
 ];
+<<<<<<< HEAD
 export default function MobileLaunchPage() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<
@@ -469,6 +490,10 @@ export default function MobileLaunchPage() {
   { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' }
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }]
 export default function MobileLaunchPage() {
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
@@ -478,6 +503,11 @@ export default function MobileLaunchPage() {;
   { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
 export default function MobileLaunchPage() {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
   // Auto-rotate testimonial index
@@ -595,6 +625,9 @@ export default function MobileLaunchPage() {
     } catch (err: any) {;
       setStatus('error');
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       setError(err?.message || 'Something went wrong.');    }      if (!res && res.ok) throw new Error(await res && res.text());
 
@@ -605,10 +638,21 @@ export default function MobileLaunchPage() {
       setEmail('');
     } catch (err: any) {;
       setStatus('error');
+<<<<<<< HEAD
       setError(err?.message |'Something went wrong.')
 
       setError(err?.message || 'Something went wrong.')
       setError(err?.message || 'Something went wrong.');    }
+=======
+
+      setError(err?.message || 'Something went wrong.');
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    }
+  }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     }
   }
@@ -702,6 +746,7 @@ export default function MobileLaunchPage() {
           <button
             type="submit"
             disabled={status === 'loading'}
+<<<<<<< HEAD
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
 =======
 
@@ -710,6 +755,22 @@ export default function MobileLaunchPage() {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+          >
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {status === 'loading' ? 'Submitting…' : 'Notify me'}
+          </button>;
+        </form>;
+        {status === 'success' && (;
+          <div className='mt-2 text-sm text-emerald-600'>;
+            Thanks! You’re on the list.;
+          </div>;
+        )}
+
+            className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>
@@ -864,3 +925,9 @@ export default function MobileLaunchPage() {
   status === 'loading' ? 'Submitting…' : 'Notify me'
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

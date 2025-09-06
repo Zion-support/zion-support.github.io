@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -16,6 +17,14 @@ import { useAuth } from "@/hooks/useAuth",
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
+=======
+
+
+export function AnalyticsContainer(): any ({ children }: AnalyticsContainerProps) {;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface AnalyticsContainerProps {
   children: React.ReactNode
 }
@@ -23,10 +32,14 @@ interface AnalyticsContainerProps {
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {;
   const { isAuthenticated, isLoading, user } = useAuth();
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function AnalyticsContainer({ children }: AnalyticsContainerProps) {
   const { isAuthenticated, isLoading, user } = useAuth();
   // Check if user is admin (using either role or userType)
@@ -200,3 +213,9 @@ if ( {) {
 =======
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

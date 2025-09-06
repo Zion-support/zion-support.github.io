@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Slider} from "@/components/ui/slider";
 import {PriceFilterProps} from "@/types/filters";
@@ -53,6 +54,12 @@ import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Slider } from "@/components/ui/slider",;
 import { PriceFilterProps } from "@/types/filters",;
 export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {;
+=======
+import {ChevronDown, ChevronUp} from "lucide-react";
+import {Slider} from "@/components/ui/slider";
+import {PriceFilterProps} from "@/types/filters";
+export function PriceFilter(): any ({ priceRange, setPriceRange, expanded, toggleSection, isMobileFilterOpen }: PriceFilterProps) {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleChange = (values: number[]) => {;
     setPriceRange([values[0], values[1]]);
   };
@@ -83,7 +90,17 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             <span>${priceRange[0]}/hr</span>;
             <span>${priceRange[1]}/hr</span>;
           </div>;
+<<<<<<< HEAD
           <Slider;
+=======
+
+          <Slider
+=======
+
+          <Slider 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             value={[priceRange[0], priceRange[1]]}
             min={50}
             max={200}

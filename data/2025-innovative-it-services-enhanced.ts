@@ -887,10 +887,15 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },
     realImplementation: true, implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.',
     launchDate: '2024-09-01', customers: 123,
     rating: 4.8,
+<<<<<<< HEAD
     reviews: 52,
   },;
 ];      mobile: '+1 302 464 0950';
@@ -898,17 +903,25 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [
       address: '364 E Main St STE 1008 Middletown DE 19709'
       website: 'https://ziontechgroup.com'
     }
+=======
+    reviews: 52;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     realImplementation: true;
     implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.';
     launchDate: '2024-09-01';
     customers: 123;
 
+<<<<<<< HEAD
     rating: 4.8
 
     reviews: 52
   }
 ];
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeITService2025 {;
   id: string,;
@@ -1963,5 +1976,12 @@ export const innovativeITServicesEnhanced2025: InnovativeITService[] = [;
     customers: 123,;
     rating: 4.8;
     reviews: 52;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];

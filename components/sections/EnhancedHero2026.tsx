@@ -20,6 +20,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   ArrowRight
   Star
@@ -30,6 +31,18 @@ import {
   Brain
   Rocket
   CheckCircle;
+=======
+
+
+} from 'lucide-react';
+
+interface EnhancedHero2026Props {;
+  contactInfo: {;
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ArrowRight,
   Star,
   TrendingUp,
@@ -40,7 +53,10 @@ import {
 
   Rocket,;
   CheckCircle,;
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 } from 'lucide-react';
@@ -81,11 +97,19 @@ interface EnhancedHero2026Props {
     visible: {
       opacity: 1,
       transition: {
+<<<<<<< HEAD
         staggerChildren: 0.2
       }
         staggerChildren: 0.2,
       },;
     },  };        staggerChildren: 0.2
+=======
+
+        stagger_children: 0.2,
+      },
+    },  }        stagger_children: 0.2;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     }
   }
@@ -224,6 +248,9 @@ export default function EnhancedHero2026(): any ({;
               scale: [1, 1.5, 1],            }}
             transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`,
@@ -290,6 +317,7 @@ export default function EnhancedHero2026(): any ({;
               scale: [1, 1.5, 1];
 =======
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -299,11 +327,14 @@ export default function EnhancedHero2026(): any ({;
               delay: Math.random() * 2,            }}  }
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               ease: 'easeInOut',
               delay: Math.random() * 2,            }}  };
 
+<<<<<<< HEAD
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Enhanced Background Elements */}
@@ -323,6 +354,10 @@ export default function EnhancedHero2026(): any ({;
               y: [0, -30, 0];
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.5, 1]
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             }}
             transition={{
               duration: 3 + Math.random() * 2
@@ -334,6 +369,7 @@ export default function EnhancedHero2026(): any ({;
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
 
+<<<<<<< HEAD
             }}
             transition={{
               duration: 3 + Math.random() * 2,
@@ -375,6 +411,10 @@ export default function EnhancedHero2026(): any ({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           />
 
         ))}
@@ -581,6 +621,7 @@ export default function EnhancedHero2026(): any ({;
                 whileHover={{ scale: 1 && 1.05, y: -5 }}
                 className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 hover:border-slate-600/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'>;
                 <div
+<<<<<<< HEAD
                   className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}
                 >
                   <stat.icon className='w-6 h-6 text-white' />
@@ -601,11 +642,34 @@ export default function EnhancedHero2026(): any ({;
 
                   {stat.label}
 
+=======
+                  className={`w-12 h-12 bg-gradient-to-r ${stat && stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>;
+                  <stat && stat.icon className='w-6 h-6 text-white' />;
+                </div>;
+                <div className='text-2xl md:text-3xl font-bold text-white mb-1'>;
+                  {stat && stat.value.toLocaleString()}+;
+                </div>;
+                <div className='text-xs text-gray-400 leading-tight'>                  {stat && stat.label}              >;
+                <div className={`w-12 h-12 bg-gradient-to-r ${stat && stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>;
+                  <stat && stat.icon className="w-6 h-6 text-white" />;
+                </div>;
+                <div className="text-2xl md:text-3xl font-bold text-white mb-1">;
+                  {stat && stat.value.toLocaleString()}+;
+                </div>;
+                <div className="text-xs text-gray-400 leading-tight">;
+                  {stat && stat.label}
+                </div>;
+              </motion && motion.div>;
+            ))}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </div>
               </motion.div>
             ))}
           </motion.div>
 
+<<<<<<< HEAD
           {/* Enhanced CTA Section */}
           <motion.div variants={itemVariants} className='space-y-6'>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -625,6 +689,24 @@ export default function EnhancedHero2026(): any ({;
                 href="/contact"
               <Button 
                 href="/contact" 
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          {/* Enhanced CTA Section */}
+
+              
+              <Button 
+                href="/contact" 
+
+=======
+
+              <Button 
+                href="/contact" 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 variant="secondary"
                 size="xl"
                 className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
@@ -681,6 +763,48 @@ export default function EnhancedHero2026(): any ({;
             </div>
           </motion.div>
 
+<<<<<<< HEAD
+=======
+                className='text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl'>;
+                <span className='flex items-center'>;
+                  <Shield className='mr-3 w-7 h-7' />                  Get Expert Consultation                <span className="flex items-center">;
+                  <Shield className="mr-3 w-7 h-7" />;
+                  Get Expert Consultation;
+                </span>;
+              </Button>;
+            </div>;
+
+            {/* Trust Indicators */}
+            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400'>;
+              <div className='flex items-center space-x-2'>;
+                <CheckCircle className='w-5 h-5 text-green-400' />;
+                <span>5000+ Happy Customers</span>;
+              </div>                <span>5000+ Happy Customers</span>;
+              </div>;
+              <div className="flex items-center space-x-2">;
+                <CheckCircle className="w-5 h-5 text-green-400" />;
+                <span>99 && 99.9% Uptime Guarantee</span>;
+              </div>;
+              <div className='flex items-center space-x-2'>;
+                <CheckCircle className='w-5 h-5 text-green-400' />;
+                <span>99 && 99.9% Uptime Guarantee</span>;
+              </div>;
+              <div className='flex items-center space-x-2'>;
+                <CheckCircle className='w-5 h-5 text-green-400' />                <span>24/7 Expert Support</span>              <div className="flex items-center space-x-2">;
+                <CheckCircle className="w-5 h-5 text-green-400" />;
+                <span>24/7 Expert Support</span>;
+              </div>;
+            </div>;
+          </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Contact Information */}
 
           <motion.div 
@@ -831,3 +955,9 @@ export default function EnhancedHero2026(): any ({;
 =======
 
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,5 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -55,6 +62,12 @@ export default function ComprehensivePricing2029() {
   const getPrice = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, '')),
     return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -179,6 +192,10 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },
   return (
     <div className="min-h-screen bg-black text-white relative">
@@ -196,6 +213,7 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
       <section className="relative overflow-hidden py-32">
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
@@ -232,6 +250,29 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      <section className="relative overflow-hidden py-32">
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+=======
+      <section className="relative overflow - hidden py - 32">;
+        <div className="relative z - 10 container mx - auto px - 4 text - center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div className="flex items-center justify-center gap-4 mb-12">
               <span className="text-gray-400">Monthly</span>
               <button
@@ -284,6 +325,12 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <section className="py-12 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
@@ -371,14 +418,27 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Service Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+<<<<<<< HEAD
               {filteredServices.length} cutting-edge services available to transform your business.
               {filteredServices.length} cutting-edge services available to transform your business. 
               {filteredServices.length} cutting-edge services available to transform your business.
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Each service includes comprehensive features, support, and implementation.
             </p>
           </motion.div>
@@ -421,6 +481,12 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <div className="text-center mb-6">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mb-4">
                       <Brain className="w-8 h-8 text-white" />
@@ -444,6 +510,12 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </div>
                     <div className="text-sm text-gray-400">
                       {billingCycle === 'annual' && (
@@ -464,6 +536,12 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <div className="flex flex-wrap gap-2 mb-6 justify-center">
                     {service.category.slice(0, 3).map((cat, catIndex) => (
                       <span
@@ -490,6 +568,12 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
                     <ul className="space-y-2">
@@ -514,6 +598,12 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Benefits</h4>
                     <ul className="space-y-2">
@@ -538,6 +628,12 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <div className="grid grid-cols-2 gap-4 mb-6 text-center">
                     <div>
                       <div className="text-gray-400 text-xs mb-1">Market Size</div>
@@ -554,6 +650,12 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <div className="flex gap-3">
                     <Link
                       href={`/services/${service.id}`} className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-sm">
@@ -584,6 +686,7 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -614,6 +717,84 @@ export default function ComprehensivePricing2029(req, res) {
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
               Need a custom solution or enterprise package? We offer tailored solutions 
               Need a custom solution or enterprise package? We offer tailored solutions
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+=======
+=======
+                      </span>))}
+                  </div>;
+                  {/* Key Features */}
+                  <div className="mb - 6">;
+                    <h4 className="text - lg font - semibold text - white mb - 3">Key Features</h4>;
+                    <ul className="space - y-2">;
+                      {service.features.slice (0, 4).map ((feature, feature_index) => (
+                        <li key={feature_index} className="flex items - center gap - 2 text - gray - 300 text - sm">;
+                          <CheckCircle className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
+                          <span>{feature}</span>;
+                        </li>))}
+                    </ul>;
+                  </div>;
+                  {/* Key Benefits */}
+                  <div className="mb - 6">;
+                    <h4 className="text - lg font - semibold text - white mb - 3">Key Benefits</h4>;
+                    <ul className="space - y-2">;
+                      {service.benefits.slice (0, 2).map ((benefit, benefit_index) => (
+                        <li key={benefit_index} className="flex items - center gap - 2 text - gray - 300 text - sm">;
+                          <Star className="w - 4 h - 4 text - yellow - 400 flex - shrink - 0" />;
+                          <span>{benefit}</span>;
+                        </li>))}
+                    </ul>;
+                  </div>;
+                  {/* Market Info */}
+                  <div className="grid grid - cols - 2 gap - 4 mb - 6 text - center">;
+                    <div>;
+                      <div className="text - gray - 400 text - xs mb - 1">Market Size</div>;
+                      <div className="text - sm font - semibold text - blue - 400">{service.market_size}</div>;
+                    </div>;
+                    <div>;
+                      <div className="text - gray - 400 text - xs mb - 1">ROI</div>;
+                      <div className="text - sm font - semibold text - green - 400">{service.roi}</div>;
+                    </div>;
+                  </div>;
+                  {/* CTA Buttons */}
+                  <div className="flex gap - 3">;
+                    <Link;
+                      href={`/services/${service.id}`} className="flex - 1 inline - flex items - center justify - center px - 4 py - 3 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white font - semibold rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 text - sm">;
+                      Learn More;
+                    </Link>;
+                    <Link;
+                      href="/contact" className="flex - 1 inline - flex items - center justify - center px - 4 py - 3 border border - purple - 500 text - purple - 400 font - semibold rounded - lg hover:bg - purple - 500 hover:text - white transition - all duration - 300 text - sm">;
+                      Get Started;
+                    </Link>;
+                  </div>;
+                </div>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      {/* Enterprise Solutions */}
+      <section className="py - 20 bg - gradient - to - br from - purple - 900 / 20 via - black to - blue - 900 / 20">;
+        <div className="container mx - auto px - 4 text - center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               for large organizations with specific requirements.
             </p>
             <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -673,6 +854,7 @@ export default function ComprehensivePricing2029(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -703,6 +885,88 @@ export default function ComprehensivePricing2029(req, res) {
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
               Contact our team to discuss your specific needs and get a personalized quote 
               Contact our team to discuss your specific needs and get a personalized quote
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+=======
+=======
+          >;
+            <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
+              Enterprise Solutions;
+            </h2>;
+            <p className="text - xl text - gray - 300 mb - 12 max - w-3xl mx - auto">;
+              Need a custom solution or enterprise package? We offer tailored solutions;
+              for large organizations with specific requirements.;
+            </p>;
+            <div className="grid md:grid - cols - 3 gap - 8 mb - 12">;
+              <div className="bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 rounded - 2xl p - 8">;
+                <div className="w - 16 h - 16 bg - gradient - to - r from - purple - 600 to - blue - 600 rounded - 2xl mx - auto mb - 6 flex items - center justify - center">;
+                  <Users className="w - 8 h - 8 text - white" />;
+                </div>;
+                <h3 className="text - 2xl font - bold text - white mb - 4">Custom Development</h3>;
+                <p className="text - gray - 300 mb - 6">;
+                  Tailored solutions built specifically for your business needs and requirements.;
+                </p>;
+                <div className="text - 2xl font - bold text - purple - 400 mb - 4">Custom Pricing</div>;
+                <Link;
+                  href="/contact" className="inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white font - semibold rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300">;
+                  Contact Sales;
+                </Link>;
+              </div>;
+              <div className="bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 rounded - 2xl p - 8">;
+                <div className="w - 16 h - 16 bg - gradient - to - r from - purple - 600 to - blue - 600 rounded - 2xl mx - auto mb - 6 flex items - center justify - center">;
+                  <Shield className="w - 8 h - 8 text - white" />;
+                </div>;
+                <h3 className="text - 2xl font - bold text - white mb - 4">Enterprise Security</h3>;
+                <p className="text - gray - 300 mb - 6">;
+                  Advanced security features and compliance for enterprise environments.;
+                </p>;
+                <div className="text - 2xl font - bold text - purple - 400 mb - 4">Custom Pricing</div>;
+                <Link;
+                  href="/contact" className="inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white font - semibold rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300">;
+                  Contact Sales;
+                </Link>;
+              </div>;
+              <div className="bg - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 rounded - 2xl p - 8">;
+                <div className="w - 16 h - 16 bg - gradient - to - r from - purple - 600 to - blue - 600 rounded - 2xl mx - auto mb - 6 flex items - center justify - center">;
+                  <Globe className="w - 8 h - 8 text - white" />;
+                </div>;
+                <h3 className="text - 2xl font - bold text - white mb - 4">Global Deployment</h3>;
+                <p className="text - gray - 300 mb - 6">;
+                  Multi - region deployment and global support for international organizations.;
+                </p>;
+                <div className="text - 2xl font - bold text - purple - 400 mb - 4">Custom Pricing</div>;
+                <Link;
+                  href="/contact" className="inline - flex items - center px - 6 py - 3 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white font - semibold rounded - lg hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300">;
+                  Contact Sales;
+                </Link>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      {/* Contact CTA */}
+      <section className="py - 20 bg - gradient - to - br from - purple - 900 / 20 via - black to - blue - 900 / 20">;
+        <div className="container mx - auto px - 4 text - center">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               for our revolutionary 2029 services.
             </p>
             <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -747,9 +1011,17 @@ export default function ComprehensivePricing2029(req, res) {
       </section>
       <UltraFuturisticFooter2029 />
     </div>
+<<<<<<< HEAD
   );
 };
   )
+=======
+
+=======
+}
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >;
             <h2 className="text - 5xl md:text - 6xl font - bold bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent mb - 6">;
               Ready to Get Started?;
@@ -797,6 +1069,7 @@ export default function ComprehensivePricing2029(req, res) {
         </div>;
       </section>;
       <UltraFuturisticFooter2029 />;
+<<<<<<< HEAD
     </div>;
   );
   } catch (error) {
@@ -805,3 +1078,13 @@ export default function ComprehensivePricing2029(req, res) {
   }
 }
 }
+=======
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

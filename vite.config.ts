@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
+=======
+import { defineConfig } from 'vite';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
 
@@ -20,11 +24,17 @@ export default defineConfig({
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@types': path.resolve(__dirname, './src/types'),
       '@styles': path.resolve(__dirname, './src/styles'),
+<<<<<<< HEAD
       '@assets': path.resolve(__dirname, './src/assets'),
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      '@assets': path.resolve(__dirname, './src/assets')
+    }
+  },
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   build: {
     target: 'esnext',
     minify: 'terser',
@@ -32,13 +42,17 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           'react-vendor': ['react', 'react-dom'],
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
+<<<<<<< HEAD
 
           'react-vendor': ['react', 'react-dom']
         }
@@ -124,6 +138,14 @@ export default defineConfig({
         safari10: true,
         properties: {
           regex: /^_/
+=======
+        assetFileNames: (assetInfo) => {
+          const name = assetInfo.name || '';
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(name)) return 'images/[name]-[hash].[ext]';
+          if (/\.(woff2?|eot|ttf|otf)$/.test(name)) return 'fonts/[name]-[hash].[ext]';
+          if (/\.(css)$/.test(name)) return 'css/[name]-[hash].[ext]';
+          return 'assets/[name]-[hash].[ext]';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       }
     },
@@ -138,6 +160,7 @@ export default defineConfig({
       'lucide-react',
       'clsx',
       'tailwind-merge'
+<<<<<<< HEAD
     ]
     exclude: ['@radix-ui/react-icons']
   }
@@ -326,6 +349,8 @@ export default defineConfig({
       '@radix-ui/react-toast',
       '@radix-ui/react-toggle',
       '@radix-ui/react-tooltip',
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ],
     exclude: ['@radix-ui/react-icons'],
     esbuildOptions: {
@@ -340,6 +365,7 @@ export default defineConfig({
     host: true, 
     open: true 
   },
+<<<<<<< HEAD
   server: {
     port: 3000,
     host: true,
@@ -372,4 +398,11 @@ export default defineConfig({
       }
     },
   },
+=======
+  preview: { 
+    port: 4173, 
+    host: true, 
+    open: true 
+  }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 });

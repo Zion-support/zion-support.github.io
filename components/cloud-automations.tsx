@@ -1,4 +1,20 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
+=======
+
+
+
+
+
+=======
+export default function CloudAutomationsPage() {;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default function CloudAutomationsPage() {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function CloudAutomationsPage() {;
   const [data, setData] = useState<any>(null);
@@ -10,6 +26,10 @@ export default function CloudAutomationsPage() {;
       .then(setData);
       .catch(() => setData({ ok: false }));
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function CloudAutomationsPage() {
   const [data, setData] = useState<any>(null);
   useEffect(() => {

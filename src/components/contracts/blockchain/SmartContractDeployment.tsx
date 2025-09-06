@@ -102,6 +102,9 @@ export function SmartContractDeployment({;
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   return (
@@ -115,6 +118,7 @@ export function SmartContractDeployment({;
           Deploy your agreement as a smart contract for enhanced security and automation
         </CardDescription>
       </CardHeader>
+<<<<<<< HEAD
       
       <CardContent className="space-y-6">
         <div className="space-y-4">
@@ -131,6 +135,51 @@ export function SmartContractDeployment({;
               onCheckedChange={(checked) => setDeploymentOptions({
                 ...deploymentOptions;                deployToChain: checked
   },;
+=======
+
+
+import React, { useState } from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Switch } from "@/components/ui/switch";
+import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts";
+import { Loader2, ShieldCheck, Download } from 'lucide-react'import { toast } from "sonner";
+import {logErrorToProduction} from '@/utils/productionLogger';
+interface SmartContractDeploymentProps {;
+  solidityCode: string,;
+  onDeploy: (options: DeploymentOptions,) => Promise<void>,;
+  isDeploying: boolean;
+}
+
+export function SmartContractDeployment(): any ({ ;
+  solidityCode;
+  onDeploy;
+  isDeploying;
+}: SmartContractDeploymentProps) {;
+  const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({;
+    network: 'none',;
+    useEscrow: true,;
+    deployToChain: false,;
+    walletAddress: '';
+  });
+
+  const handleDeployContract = async () => {;
+    if (deploymentOptions && deploymentOptions.deployToChain && !deploymentOptions && deploymentOptions.walletAddress) {;
+      toast && toast.error("Please enter a wallet address for blockchain deployment");
+      return;
+    }
+
+    try {;
+      await onDeploy(deploymentOptions);
+    } catch (error) {;
+      logErrorToProduction('Deployment error:', { data: error });
+    }
+  };
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleDownloadSolidity = () => {;
     // Create a blob from the Solidity code;
     const blob = new Blob([solidityCode], { type: 'text/plain' }),;
@@ -182,6 +231,9 @@ export function SmartContractDeployment({;
         </CardDescription>;
       </CardHeader>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       
@@ -201,22 +253,33 @@ export function SmartContractDeployment({;
           </div>
           
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           {deploymentOptions.deployToChain && (
             <>
               <div className="space-y-2">
                 <Label>Select blockchain network</Label>
+<<<<<<< HEAD
                 <RadioGroup
                   defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({
                     ...deploymentOptions;                    network: value as BlockchainNetwork
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <RadioGroup 
                   defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({;
                     ...deploymentOptions,;
                     network: value as BlockchainNetwork;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                   onValueChange={(value) => setDeploymentOptions({;
@@ -239,6 +302,9 @@ export function SmartContractDeployment({;
                 </RadioGroup>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -250,6 +316,9 @@ export function SmartContractDeployment({;
                   placeholder="0x..." 
                   value={deploymentOptions.walletAddress || ''}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <div className="flex items-center space-x-2">
@@ -257,8 +326,11 @@ export function SmartContractDeployment({;
                   id="use-escrow"
                   aria-label="Use escrow"
                   checked={deploymentOptions.useEscrow}
+<<<<<<< HEAD
                   onCheckedChange={(checked) => setDeploymentOptions({
                     ...deploymentOptions;                    useEscrow: checked
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             />;
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>;
@@ -284,6 +356,9 @@ export function SmartContractDeployment({;
                     ...deploymentOptions;
                     useEscrow: checked;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -337,6 +412,9 @@ export function SmartContractDeployment({;
       </CardContent>
       
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <CardFooter className="flex justify-between">
@@ -346,6 +424,9 @@ export function SmartContractDeployment({;
         </Button>
         
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         <Button onClick={handleDeployContract} disabled={isDeploying}>

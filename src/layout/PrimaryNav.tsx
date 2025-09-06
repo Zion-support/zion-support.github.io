@@ -34,6 +34,9 @@ import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigati
 import { MobileMenu } from '@/components/header/MobileMenu'
 import { MobileBottomNav } from '@/components/header/MobileBottomNav'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { Menu, X } from 'lucide-react'
 import { useTranslation  } from 'react-i18next';
@@ -83,13 +86,22 @@ function PrimaryNav() {
   } catch {
 
     // context not available
+<<<<<<< HEAD
   }
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
 ;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault();
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const trimmed = query.trim();    if (trimmed) {
       logDebug('PrimaryNav search submit:', { query: trimmed })
       router
@@ -185,6 +197,9 @@ export function PrimaryNav() {;
           </div>
           
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           {/* Actions container with responsive layout */}
           <div className="hidden lg:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
@@ -352,6 +367,11 @@ if ( {) {
               <CartDrawer />
             </div>
             
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
@@ -397,6 +417,9 @@ if ( {) {
                     }}
                   >;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                     {t('auth.login')}
@@ -425,6 +448,11 @@ if ( {) {
           {/* Tablet view (md to lg) - simplified controls */}
 
           <div className="hidden md: flex lg:hidden items-center gap-2 order-2">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <ModeToggle />
             <LanguageSelector />
             {!isLoggedIn && (
@@ -457,6 +485,9 @@ if ( {) {
                 }}
               >;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 {t('auth.login')}
               </Link>
@@ -531,6 +562,11 @@ if ( {) {
             aria-expanded={mobileMenuOpen}
             aria-label={t('general.toggle_mobile_menu')}
           >
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {mobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
@@ -598,9 +634,17 @@ setLoginOpen (true)
 }{
   isMobile && <MobileBottomNav unreadCount= {
 <<<<<<< HEAD
+<<<<<<< HEAD
   unreadCount
 
   unreadCount 
+=======
+  unreadCount
+
+  unreadCount 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }/>
 }<LoginModal isOpen= {
   loginOpen
@@ -626,6 +670,7 @@ setLoginOpen (true)
               <X className='h - 6 w - 6' />) : (
               <Menu className='h - 6 w - 6' />)}
           </button>;
+<<<<<<< HEAD
 =======
 }}
               transition={{ duration: 0.3 }}"
@@ -702,6 +747,8 @@ setLoginOpen (true)
             />;
           </div>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>;
       </header>;
       {mobileMenuOpen && (

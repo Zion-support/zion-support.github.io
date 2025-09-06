@@ -4,6 +4,7 @@ import { useRouter } from 'next/router', // Changed from useNavigate
 import { CheckCircle2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next';
 export default function PaymentSuccess() {
+<<<<<<< HEAD
   const router = null;
 import React from 'react';
 import { Button } from '@/components/ui/button';
@@ -19,6 +20,12 @@ export default function PaymentSuccess() {;
 
 
 
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -144,6 +151,7 @@ export default function PaymentSuccess() {
             variant='outline'
             onClick={() => router.push('/')} // Changed to router.push
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'          >  return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
         <div className="inline-flex h-12 w-12 rounded-full bg-green-100 mb-4 items-center justify-center">
@@ -162,6 +170,13 @@ export default function PaymentSuccess() {
           </Button>
           <Button
           <Button 
+=======
+
+
+          <Button 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             variant="outline"
             onClick={() => router.push('/')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
@@ -172,6 +187,9 @@ export default function PaymentSuccess() {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">;
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">;

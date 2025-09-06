@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 import type {
   GrantApplication
   UpdateGrantPayload;
@@ -23,6 +24,8 @@ function grantPath(id: string) {
 }
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 function ensureDir() {
@@ -86,8 +89,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   const { id } = req.query as { id: string }
   const { id } = req.query as { id: string };
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return

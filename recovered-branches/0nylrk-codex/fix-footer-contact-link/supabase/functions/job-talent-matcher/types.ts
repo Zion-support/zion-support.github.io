@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export interface JobData {
 export interface JobData {;
   id: string;
@@ -18,6 +19,15 @@ export interface JobData {;
 export interface TalentProfile {
 
 export interface TalentProfile {;
+=======
+    min: number,
+    max: number;
+  }
+  deadline: string;
+
+}
+export interface TalentProfile {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   full_name: string;
   professional_title: string;
@@ -30,9 +40,13 @@ export interface TalentProfile {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface TalentMatch {
 
 export interface TalentMatch {;
+=======
+export interface TalentMatch {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   talent_id: string;
   job_id: string;
   match_score: number;
@@ -42,16 +56,22 @@ export interface TalentMatch {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface MatchResult {
 
 export interface MatchResult {;
   talentId: string;
+=======
+export interface MatchResult {
+  talent_id: string;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   score: number;
 
   matchedSkills: string[]
 
   reason?: string
 }
+<<<<<<< HEAD
 export interface JobData {;
   id: string,;
   title: string,;
@@ -92,3 +112,11 @@ export interface MatchResult {;
 
 }
 ;
+=======
+=======
+
+
+export interface JobData {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

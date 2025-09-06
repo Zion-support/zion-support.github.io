@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { DynamicListingPage } from "@/components/DynamicListingPage";
 import { ProductListing } from "@/types/listings";
 // Sample talent listings
@@ -17,6 +18,20 @@ import {DynamicListingPage} from "@/components/DynamicListingPage";
 import {ProductListing} from "@/types/listings";
 import { DynamicListingPage } from "@/components/DynamicListingPage",
 import { ProductListing } from "@/types/listings",
+=======
+
+
+import { DynamicListingPage } from "@/components/DynamicListingPage",
+import { ProductListing } from "@/types/listings",
+=======
+import {DynamicListingPage} from "@/components/DynamicListingPage";
+import {ProductListing} from "@/types/listings";
+=======
+import { DynamicListingPage } from "@/components/DynamicListingPage",
+import { ProductListing } from "@/types/listings",
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [
   {
@@ -186,6 +201,7 @@ export default function TalentsPage() {
       title="AI & Tech Talent"
       description="Connect with highly skilled professionals in AI, software development, data science, and more."
       categorySlug="talents"
+<<<<<<< HEAD
       listings={TALENT_LISTINGS}
       categoryFilters={TALENT_FILTERS}
       initialPrice={{ min: 100, max: 200 }}
@@ -318,3 +334,7 @@ export default function TalentsPage() {;
   );
 }
 ;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

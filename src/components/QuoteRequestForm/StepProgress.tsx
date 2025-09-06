@@ -4,6 +4,11 @@ return (
         <div
           className='absolute h-full bg-zion-purple transition-all duration-500'
           style={{
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   currentStep: QuoteRequestSteps;
 export function StepProgress({ currentStep }: StepProgressProps) {;
   const steps: { id: QuoteRequestSteps; label: string }[] = [
@@ -13,6 +18,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     { id: 'budget', label: 'Budget' },
     { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import { QuoteRequestSteps } from "../QuoteRequestForm",
@@ -32,12 +40,17 @@ export function StepProgress({ currentStep }: StepProgressProps) {
   ],
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {
+<<<<<<< HEAD
     const stepOrder = steps.findIndex(s => s.id === stepId)
     const currentStepOrder = steps.findIndex(s => s.id === currentStep)
     if (stepOrder < currentStepOrder) return 'complete'
     if (stepOrder === currentStepOrder) return 'current'
     return 'upcoming'
   const getStepStatus = (stepId: QuoteRequestSteps,) => {
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const stepOrder = steps.findIndex(s => s.id === stepId),
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),
     
@@ -85,6 +98,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
                   "bg-zion-blue-light text-zion-slate-light"
                 )}
+<<<<<<< HEAD
               >
                 {status === "complete" ? (
                   <CheckIcon className="h-4 w-4" />
@@ -92,6 +106,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
                 )}
               </div>
+=======
+              </div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <span
                 className={cn(
                   'text-xs mt-2 font-medium'
@@ -111,6 +128,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
                   "text-zion-slate-light"
+<<<<<<< HEAD
                 ),}
               >
                 {step.label}
@@ -125,6 +143,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 }%`
   (steps.findIndex (s => s.id === currentStep) / (steps.length - 1) ) * 100 
 }%` 
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }/> </div>
 }className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {
   steps.findIndex (s => s.id === step.id) + 1
@@ -142,6 +163,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 ),}>;

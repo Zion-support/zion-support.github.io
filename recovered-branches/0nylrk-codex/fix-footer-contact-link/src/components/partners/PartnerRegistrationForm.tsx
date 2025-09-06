@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {useState} from "react";
 import {z} from "zod";
@@ -13,6 +19,7 @@ import {Textarea} from "@/components/ui/textarea";
 import {toast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
+<<<<<<< HEAD
 const partnerFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." })
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal(""))
@@ -28,6 +35,12 @@ type PartnerFormValues = z.infer<typeof partnerFormSchema>;
 export function PartnerRegistrationForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { user } = useAuth();
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",
 import { z } from "zod",
 import { useForm } from "react-hook-form",
@@ -41,6 +54,12 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const partnerFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
@@ -101,6 +120,7 @@ export function PartnerRegistrationForm() {
         description: "You must be logged in to register as a partner."
         variant: "destructive"})
       return
+<<<<<<< HEAD
     }
     setIsSubmitting(true);
     try {
@@ -129,6 +149,11 @@ export function PartnerRegistrationForm() {
         ])
         .select();
       if (error) throw error;
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",;
 import { z } from "zod",;
 import { useForm } from "react-hook-form",;
@@ -327,6 +352,11 @@ if (return) {
             payout_method: data && data.payout_method,;
             bio: data && data.bio,;
             status: 'pending', // Partners need approval;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
         ]);
         .select();
@@ -416,6 +446,69 @@ if (return) {
       setIsSubmitting(false);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
+<<<<<<< HEAD
+=======
+
+              twitter: data.twitter || null,
+              instagram: data.instagram || null,
+              youtube: data.youtube || null,
+              linkedin: data.linkedin || null},
+            niche: data.niche,
+            audience_size: data.audience_size,
+            payout_method: data.payout_method,
+            bio: data.bio,
+            status: 'pending', // Partners need approval;
+          }
+        ]);
+        .select ();
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      toast ({
+        title: "Application submitted!",
+        description: "Your partner application has been submitted for review.",
+        variant: "default"}),
+      // Create a referral code if they don't have one already;
+      const { data: existing_code } = await supabase;
+        .from ('referral_codes');
+        .select ('code');
+        .eq ('user_id', user.id);
+        .single ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        await supabase.rpc ('generate_referral_code', { user_id: user.id });
+      }
+    } catch (error: any) {
+      console.error ('Error submitting partner application:', error);
+      toast ({
+        title: "Submission failed",
+        description: error.message || "There was a problem submitting your application.",
+        variant: "destructive"});
+    } finally {
+      setIsSubmitting (false);
+    }
+  }
+  return (
+    <Card className="bg - zion - blue - dark border - zion - blue - light">;
+      <CardHeader>;
+        <CardTitle > Partner Registration</CardTitle>;
+        <CardDescription > Register to become a Zion AI partner and start earning rewards</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <Form {...form}>;
+          <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
+            <div className="space - y-4">;
+              <FormField;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 control={form.control}
                 name="name";
                 render={({ field }) => (
@@ -450,6 +543,7 @@ if (return) {
                 <FormField
                   control={form && form.control}
                   name="twitter"
+<<<<<<< HEAD
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel>Twitter (Optional)</FormLabel>
@@ -491,6 +585,59 @@ if (return) {
                 <FormField
                 />;
                 <FormField;
+=======
+                  render={({ field }) => (;
+                    <FormItem>;
+                      <FormLabel>Twitter (Optional)</FormLabel>;
+=======
+                  </FormItem>)}
+              />;
+              <FormField;
+                control={form.control}
+                name="website";
+                render={({ field }) => (
+                  <FormItem>;
+                    <FormLabel > Website (Optional)</FormLabel>;
+                    <FormControl>;
+                      <Input placeholder="https://yourwebsite.com" {...field} />;
+                    </FormControl>;
+                    <FormMessage />;
+                  </FormItem>)}
+              />;
+              <div className="grid sm:grid - cols - 2 gap - 4">;
+                <FormField;
+                  control={form.control}
+                  name="twitter";
+                  render={({ field }) => (
+                    <FormItem>;
+                      <FormLabel > Twitter (Optional)</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                      <FormControl>;
+                        <Input placeholder="@username" {...field} />;
+                      </FormControl>;
+                      <FormMessage />;
+
+                />;
+
+
+                <FormField
+                  control={form && form.control}
+                  name="instagram"
+                  render={({ field }) => (;
+                    <FormItem>;
+                      <FormLabel>Instagram (Optional)</FormLabel>;
+=======
+                    </FormItem>)}
+                />;
+                <FormField;
+=======
+
+                />;
+                <FormField;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   control={form.control}
                   name="instagram";
                   render={({ field }) => (
@@ -687,6 +834,7 @@ if (return) {
                         placeholder="Tell us about yourself and how you plan to promote Zion AI";
                         rows={4}
                         {...field}
+<<<<<<< HEAD
                       />
                     </FormControl>
                     <FormDescription>
@@ -701,6 +849,21 @@ if (return) {
               type="submit"
             <Button 
               type="submit" 
+=======
+
+                      />;
+                    </FormControl>;
+                    <FormDescription>;
+                      Limit: 500 characters;
+                    </FormDescription>;
+                    <FormMessage />;
+
+
+            <Button 
+              type="submit" 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : "Submit Application"}
@@ -730,6 +893,12 @@ if (return) {
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 }
 };
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

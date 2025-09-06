@@ -20,6 +20,7 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import {
@@ -53,6 +54,9 @@ import {
   ChevronDown,;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 interface Service {;
 =======
@@ -73,7 +77,10 @@ interface Service {;
 
   Filter,;
   ChevronDown,;
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 } from 'lucide-react';
@@ -313,6 +320,7 @@ const EnhancedServicesShowcase: React.FC = () => {
     'all',
     ...Array.from(new Set(services.map(s => s.category))),
 
+<<<<<<< HEAD
   ];
 
   ];
@@ -340,6 +348,8 @@ const EnhancedServicesShowcase: React.FC = () => {
     }
     return iconMap[category] |Brain;
   }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <section id='services' className='py-24 px-6 relative overflow-hidden'>;
       {/* Background */}
@@ -399,6 +409,15 @@ const EnhancedServicesShowcase: React.FC = () => {
               {categories.map((category) => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
 
+<<<<<<< HEAD
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {category === 'all' ? 'All Categories' : category}
                 </option>
               ))}
@@ -429,6 +448,7 @@ const EnhancedServicesShowcase: React.FC = () => {
               type="text"
               placeholder="Search services..."
               value={searchTerm}
+<<<<<<< HEAD
               onChange={(e) => setSearchTerm(e.target.value)}
               className="px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:border-blue-400 transition-colors duration-300 w-64"
             />
@@ -460,6 +480,9 @@ const EnhancedServicesShowcase: React.FC = () => {
                   </div>
                 </div>
               )}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
               onChange={(e) => setSearchTerm(e.target.value)}
@@ -496,8 +519,13 @@ const EnhancedServicesShowcase: React.FC = () => {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Service Content */}
               <div className='p-8'>
         </div>
@@ -531,6 +559,13 @@ const EnhancedServicesShowcase: React.FC = () => {
 
               <div className='p-8'>
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Icon and Category */}
                 <div className='flex items-center justify-between mb-4'>;
                   <div
@@ -830,6 +865,7 @@ const EnhancedServicesShowcase: React.FC = () => {
                   </div>
                 </div>
 
+<<<<<<< HEAD
                 {/* Benefits */}
                 <div className='mb-6'>
                   <h4 className='text-sm font-semibold text-white mb-3'>
@@ -848,10 +884,33 @@ const EnhancedServicesShowcase: React.FC = () => {
                       <div key={idx} className="flex items-center gap-2 text-xs text-white/70">
                         <TrendingUp className="w-3 h-3 text-blue-400" />
                       </div>
+=======
+                  </div>;
+                </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                {/* Benefits */}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     ))}
                   </div>
                 </div>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* ROI and Market Info */}
 
                 <div className="mb-6 p-4 bg-white/5 rounded-lg">
@@ -1023,9 +1082,15 @@ const EnhancedServicesShowcase: React.FC = () => {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           ))}
         </div>
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1033,11 +1098,25 @@ const EnhancedServicesShowcase: React.FC = () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+        </div>;
+
+
+        {/* CTA Section */}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Ready to Transform Your Business?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -1139,8 +1218,13 @@ export default EnhancedServicesShowcase;  )
 }
 export default EnhancedServicesShowcase;
 
+<<<<<<< HEAD
 export default EnhancedServicesShowcase;
 
 }
 }
 export default EnhancedServicesShowcase;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

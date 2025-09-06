@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
@@ -10,6 +11,18 @@ export default function PartnerDashboard() {;
   const [usage, setUsage] = useState<any>(null),
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+=======
+
+
+import Head from "next/head";
+export default function PartnerDashboard() {;
+  const [apiKey, setApiKey] = useState("");
+
+
+import { useEffect, useState } from 'react';
+import Head from 'next/head';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
@@ -317,6 +330,12 @@ export default function PartnerDashboard() {
 
                     ))}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </ul>
                 </div>
               </div>
@@ -579,3 +598,9 @@ if ( {) {
           </div>
 
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

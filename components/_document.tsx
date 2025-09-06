@@ -98,17 +98,28 @@ import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/do
 
 
 import Document, {
+<<<<<<< HEAD
   Html
   Head
   Main
   NextScript
   DocumentContext;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Html,
   Head,
   Main,
   NextScript,;
   DocumentContext,;
+<<<<<<< HEAD
 } from 'next/document';
+=======
+
+} from 'next/document';
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function Document() {
   return (

@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
@@ -7,6 +14,7 @@ import {supabase} from "@/integrations/supabase/client";
 import {AIListingForm} from "./AIListingForm";
 import {GeneratedContentDisplay} from "./GeneratedContentDisplay";
 import {LoadingContentSkeleton} from "./LoadingContentSkeleton";
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -89,6 +97,8 @@ import { supabase } from "@/integrations/supabase/client",;
 import { AIListingForm } from "./AIListingForm",;
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay",;
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton",;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface GeneratedContent {;
   description: string,;
   tags: string[],;
@@ -149,6 +159,7 @@ function AIListingGenerator() {
   const [is_loading, setIsLoading] = useState (false);
   const [generated_content, setGeneratedContent] = useState < GeneratedContent | null>(null);
 ;
+<<<<<<< HEAD
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
   const { toast } = useToast(),;
   const [isLoading, setIsLoading] = useState(false),;
@@ -171,6 +182,30 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       }),;
       if (error) {;
         throw new Error(error.message);
+=======
+  const handle_generate = async ({
+
+    title;
+    category;
+    key_features;
+    target_audience;
+  }: {
+
+    title: string,
+    category: string,
+    key_features: string,
+    target_audience: string;
+  }) => {
+    setIsLoading (true);
+;
+
+    try {
+      const { data, error } = await supabase.functions.invoke ('ai - listing - generator', {
+        body: { title, category, key_features, target_audience }
+      });
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       if (data.error) {
         throw new Error(data.error)
@@ -188,6 +223,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
+<<<<<<< HEAD
     } finally {
       setIsLoading(false)
     }
@@ -222,6 +258,9 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
           <AIListingForm 
             onSubmit={handleGenerate} 
             isLoading={isLoading} 
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
       // Check condition
 if ( {) {
@@ -328,9 +367,22 @@ if ( {) {
           </p>;
         </CardHeader>;
         <CardContent>;
+<<<<<<< HEAD
           <AIListingForm;
             onSubmit={handleGenerate} ;
             isLoading={isLoading} ;
+=======
+          <AIListingForm
+            onSubmit={handleGenerate} 
+            isLoading={isLoading} 
+=======
+
+          <AIListingForm 
+            onSubmit={handleGenerate} 
+            isLoading={isLoading} 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initialValues={initialValues}
           />;
         </CardContent>;

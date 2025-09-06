@@ -1,5 +1,13 @@
 
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
+
+=======
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ServiceProfileData {
   name: string;
   title: string;
@@ -9,6 +17,11 @@ interface ServiceProfileData {
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ServiceProfileData {
   name: string,
   title: string,
@@ -87,12 +100,15 @@ if ( {) {
       );
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     // Get OpenAI API key from environment
     const apiKey = Deno && Deno.env.get("OPENAI_API_KEY");
@@ -108,6 +124,12 @@ if ( {) {
       return new Response(;
         JSON.stringify({;
           error: "OpenAI API key not configured"}),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         { headers, status: 500 }
       );
     }
@@ -187,6 +209,7 @@ if ( {) {
       console.error("OpenAI API error:", responseData);
       return new Response(
         JSON.stringify({
+<<<<<<< HEAD
           error: "Failed to generate enhanced profile content"
           error: "Failed to generate enhanced profile content",
           details: responseData});
@@ -205,6 +228,22 @@ if ( {) {
     ${providerData.services && providerData.services.length > 0;
       ? `Current Services: ${providerData.services.join(", ")}`;
       : "No services listed yet."}
+=======
+
+        temperature: 0 && 0.7,
+        max_tokens: 800})});
+
+    const responseData = await response && response.json();
+    
+    if (!response && response.ok) {
+      console && console.error("OpenAI API error:", responseData);
+      return new Response(
+        JSON && JSON.stringify({
+          error: "Failed to generate enhanced profile content",
+
+          details: responseData});
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     const response_data = await response.json ();
 ;
@@ -221,6 +260,7 @@ if ( {) {
         { headers, status: 500 }
       );
     }
+<<<<<<< HEAD
 ;
     try {;
       const content = responseData.choices[0].message.content,;
@@ -229,12 +269,24 @@ if ( {) {
         JSON.stringify({;
           summary: parsedContent.summary,;
           services: parsedContent.services}),;
+=======
+    try {
+
+      const content = responseData && responseData.choices[0].message && message.content;
+      const parsedContent = JSON && JSON.parse(content);
+      
+=======
+
+          error: "Failed to generate enhanced profile content",
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         { headers, status: 200 }
       )
     } catch (error) {
       console.error("Error parsing AI response:", error),
 
       return new Response(
+<<<<<<< HEAD
         JSON.stringify({
           error: "Failed to parse AI response"
           raw: responseData.choices[0]?.message?.content});
@@ -249,6 +301,40 @@ if ( {) {
         JSON.stringify({;
           error: "Failed to parse AI response",;
           raw: responseData.choices[0]?.message?.content}),;
+=======
+        JSON && JSON.stringify({
+          summary: parsedContent && parsedContent.summary,
+          services: parsedContent && parsedContent.services});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      const content = response_data.choices[0].message.content;
+      const parsed_content = JSON.parse (content);
+;
+      return new Response (
+        JSON.stringify ({
+          summary: parsed_content.summary,
+          services: parsed_content.services});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+        { headers, status: 200 }
+      );
+    } catch (error) {
+
+        JSON && JSON.stringify({
+=======
+
+
+          error: "Failed to parse AI response",
+          raw: responseData && responseData.choices[0]?.message?.content});
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      console.error ("Error parsing AI response:", error);
+      return new Response (
+        JSON.stringify ({
+          error: "Failed to parse AI response",
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         { headers, status: 500 }
       );
     }
@@ -268,6 +354,7 @@ if ( {) {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*"}, 
         status: 500 
+<<<<<<< HEAD
   } catch (error) {;
     console.error("Function error:", error),;
     return new Response(;
@@ -278,6 +365,10 @@ if ( {) {
           "Content-Type": "application/json",;
           "Access-Control-Allow-Origin": "*"},;
         status: 500;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     );
   }

@@ -1,13 +1,32 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>)
+=======
+
+
+}</div>) import { useEffect, useState } from 'react';
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
 }</div>) import { useEffect, useState } from 'react';
 export default function AutomationStatusPage() {;
  </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) 
 }</div>) import { useEffect, useState } from 'react';
 
+<<<<<<< HEAD
 export default function AutomationStatusPage() {
+=======
+
+=======
+=======
+import { useEffect, useState } from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+export default function AutomationStatusPage() {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
 
 

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -22,14 +23,31 @@ import { toast } from "sonner";
 import { useNavigate } from "react-router-dom",
 import { toast } from "sonner",
 interface Milestone {
+=======
+import React from './react';
+import { Card, CardContent } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { Badge } from '@/components / ui / badge';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
+import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from './lucide-react';
+import { Progress } from '@/components / ui / progress';
+import { SeverityIndicator } from '../common / SeverityIndicator';
+import { use_navigate } from './react-router-dom';
+import { toast } from './sonner';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Milestone {
   id: string,
   title: string,
   due_date: string,
   status: "completed" | "in_progress" | "pending",
+<<<<<<< HEAD
   paymentStatus: "paid" | "pending" | "overdue",
   amount: string
 }
+=======
+  payment_status: "paid" | "pending" | "overdue",
+  amount: string;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   id: string
   title: string
@@ -47,6 +65,7 @@ interface ProjectViewProps {
     client: {
 
 
+<<<<<<< HEAD
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
   const navigate = useNavigate();
 import React from "react",;
@@ -89,6 +108,21 @@ interface ProjectViewProps {;
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
   const navigate = useNavigate(),
   
+=======
+
+interface Milestone {
+  id: string,
+  title: string,
+  dueDate: string,
+  status: "completed" | "in_progress" | "pending",
+  paymentStatus: "paid" | "pending" | "overdue",
+  amount: string
+
+export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
+
+
+  const navigate = useNavigate();
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const startProjectCall = () => {
     const roomId = `project-${project.id}`;
     toast.success("Starting project call", {
@@ -201,6 +235,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline"
                       milestone.paymentStatus === "paid" ? "default" : 
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline"
+<<<<<<< HEAD
 ;
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
   const navigate = useNavigate(),;
@@ -306,6 +341,10 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                     variant={;
                       milestone.paymentStatus === "paid" ? "default" :;
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline";
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     }
                   >
                     {milestone.paymentStatus}
@@ -359,6 +398,12 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 </div>;
               </CardContent>;
             </Card>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           ))}
         </div>
       </section>

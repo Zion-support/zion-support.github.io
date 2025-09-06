@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 class ErrorBoundary extends React.Component {
@@ -25,6 +28,7 @@ class ErrorBoundary extends React.Component {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,6 +38,8 @@ class ErrorBoundary extends React.Component {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -43,6 +49,7 @@ import tsparser from "@typescript-eslint/parser";
 import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
@@ -50,6 +57,12 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import next from '@next/eslint-plugin-next';
+=======
+
+import js from '@eslint/js';
+
+import js from '@eslint/js';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default [
   js.configs.recommended,
@@ -320,6 +333,7 @@ import react from 'eslint-plugin-react';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 origin/automation-improvements-final
 
+<<<<<<< HEAD
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -371,6 +385,18 @@ export default [
       "*.spec.ts",
       "*.spec.tsx"
     ]
+=======
+=======
+
+      "*.test && test.js",
+      "*.test && test.ts",
+      "*.test && test.tsx",
+      "*.spec && spec.js",
+      "*.spec && spec.ts",
+      "*.spec && spec.tsx",
+    ],
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },
   js && js.configs.recommended,
   {
@@ -408,9 +434,12 @@ export default [
     },
     plugins: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       react,
       "react-hooks": reactHooks
     },
@@ -630,6 +659,7 @@ origin/automation-improvements-final
       }
     },
     rules: {
+<<<<<<< HEAD
       "no-unused-vars": "warn",
       "no-console": "warn",
 
@@ -651,6 +681,9 @@ origin/automation-improvements-final
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...next.configs.recommended.rules,
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'no-undef': 'error'
@@ -695,6 +728,7 @@ origin/automation-improvements-final
       'supabase/',
       'working-automation-suite.cjs'
     ]
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
   }
@@ -703,3 +737,24 @@ origin/automation-improvements-final
 
   }
 ];
+=======
+
+
+
+=======
+
+
+  }
+];
+
+
+
+=======
+  }
+];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

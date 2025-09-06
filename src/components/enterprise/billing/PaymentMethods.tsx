@@ -11,6 +11,9 @@ import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from 'lucide-react'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export function PaymentMethods() {
@@ -18,6 +21,7 @@ export function PaymentMethods() {
 
   const paymentMethods = [
     {
+<<<<<<< HEAD
       id: 'pm-1'
       type: 'credit_card'
       brand: 'Visa'
@@ -35,11 +39,18 @@ export function PaymentMethods() {
       isDefault: false
     }
   ]
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       id: 'pm-1',
       type: 'credit_card',
       brand: 'Visa',
       last4: '4242',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       id: "pm-1",
@@ -48,6 +59,9 @@ export function PaymentMethods() {
       last4: "4242",
       expMonth: 12,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -61,11 +75,14 @@ export function PaymentMethods() {
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
+<<<<<<< HEAD
       isDefault: false,
     },
   ]
       isDefault: false}
   ],
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -147,6 +164,9 @@ export function PaymentMethods() {;
           <div 
             key={method.id}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             className={`flex items-center justify-between p-4 rounded-lg border ${
 
@@ -161,6 +181,7 @@ export function PaymentMethods() {;
                 <p className="font-medium">
                   {method.brand} •••• {method.last4}
                   {method.isDefault && (
+<<<<<<< HEAD
                     <span className='ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5'>                      Default
                     </span>
                   )}
@@ -171,6 +192,9 @@ export function PaymentMethods() {;
             </div>
             <div className='flex gap-2'>                    <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">
                     <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       Default
                     </span>
                   )}
@@ -178,6 +202,9 @@ export function PaymentMethods() {;
                 <p className='text-sm text-muted-foreground'>                <p className="text-sm text-muted-foreground">
                 <p className="text-sm text-muted-foreground">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                   Expires {method.expMonth}/{method.expYear}
@@ -195,6 +222,9 @@ export function PaymentMethods() {;
             <div className="flex gap-2">
               {!method.isDefault && (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 <Button size="sm" variant="ghost">Set Default</Button>
@@ -205,6 +235,7 @@ export function PaymentMethods() {;
             </div>
           </div>
         ))}
+<<<<<<< HEAD
       </CardContent>
       <CardFooter>
         <Button className='gap-1'>
@@ -221,6 +252,12 @@ export function PaymentMethods() {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+        <Button className="gap-1">
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <Button className="gap-1">
 
           <Plus className="h-4 w-4" />
@@ -237,10 +274,14 @@ export function PaymentMethods() {;
       </CardFooter>
     </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+<<<<<<< HEAD
 =======
   )
 <<<<<<< HEAD
@@ -250,6 +291,8 @@ export function PaymentMethods() {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;

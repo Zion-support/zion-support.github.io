@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import { Job } from "@/types/jobs";
 export const JOB_POSTS: Job[] = [
   {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 ];
@@ -10,9 +13,18 @@ updated at: "2024-05-05"
 
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Job } from '@/types/jobs';
 import { Job } from "@/types/jobs",
 export const JOB_POSTS: Job[] = [
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   {
     id: "job-1",
     client_id: "client-1",
@@ -26,6 +38,7 @@ export const JOB_POSTS: Job[] = [
     created_at: "2024-05-10",
     updated_at: "2024-05-10"},
   {
+<<<<<<< HEAD
 id: 'job-2',
     client_id: 'client-2',
     title: 'Part-time DevOps Engineer',
@@ -82,3 +95,8 @@ export const JOB_POSTS: Job[] = [;
     created_at: "2024-05-05";
     updated_at: "2024-05-05"}
 ];
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

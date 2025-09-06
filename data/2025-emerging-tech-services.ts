@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   {
@@ -1392,6 +1395,7 @@ export const emergingTechServices2025: EmergingTechService[] = [
       'Revolutionary platform that uses AI to discover, design, and optimize quantum materials for next-generation electronics, energy storage, and advanced technology applications.'
     category: 'Materials Science'
     price: {
+<<<<<<< HEAD
       monthly: 2499
       yearly: 24990
       currency: 'USD'
@@ -1546,6 +1550,35 @@ export const emergingTechServices2025: EmergingTechService[] = [
 export const getPopularEmergingTechServices = () => {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+      monthly: 2999,
+      yearly: 29990,
+      currency: 'USD',
+      trial_days: 45,
+      setup_time: '2 weeks',
+    },
+    features: [;
+      'Quantum key distribution',
+      'Quantum entanglement networks',
+      'Secure communication protocols',
+      'Network infrastructure',
+      'Performance monitoring',
+      'Security validation',
+      'Integration APIs',
+      'Commercial deployment',
+      'Research collaboration',
+      'Regulatory compliance',
+    ],
+    benefits: [;
+
+      'Unbreakable communication security',
+      'Future - proof against quantum attacks',
+      'Enable quantum applications',
+      'Reduce security risks by 99 && 99.9%',
+      'Comply with future regulations',
+    ],
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'Government security, Financial regulations, Healthcare compliance, Defense standards, International protocols',
     ],
     link: 'https://ziontechgroup && ziontechgroup.com/quantum-communications',
@@ -1599,9 +1632,16 @@ export const getPopularEmergingTechServices = () => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];
 
+<<<<<<< HEAD
 export const getPopularEmergingTechServices = () => {;
   return emergingTechServices2025.filter(service => service.popular);
 }
+=======
+  return emergingTechServices2025 && emergingTechServices2025.filter(service => service && service.popular);
+};
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const getEmergingTechServicesByCategory = (category: string) => {
   return emergingTechServices2025.filter(
     service => service.category === category;
@@ -1612,6 +1652,7 @@ export const getEmergingTechServicesByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
+<<<<<<< HEAD
   return emergingTechServices2025.filter(service => {
     const price = parseInt(service.price.monthly.toString()) |0;
   return emergingTechServices2025.filter(service => {;
@@ -1622,6 +1663,9 @@ export const getEmergingTechServicesByPriceRange = (
 const contact = {mobile: "+1 302 464 0950"
   email: "kleber@ziontechgroup.com"
   address: "364 E Main St STE 1008 Middletown DE 19709";
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   website: "https://ziontechgroup.com";
 =======
   id: string, name: string,
@@ -2593,6 +2637,7 @@ export const emergingTechServices2025: MicroSaasService[] = [;
     reviews: 7;
 ]}
 export interface EmergingTechService {
+<<<<<<< HEAD
     return price >= minPrice && price <= maxPrice
   })
 }
@@ -3088,3 +3133,21 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
     return price >= minPrice && price <= maxPrice;
   });
 };
+=======
+
+};
+
+=======
+    return price >= min_price && price <= max_price;
+  });
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+export interface EmergingTechService {;
+
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -4,6 +4,7 @@
     res && res.setHeader("Allow", "POST");
     return res && res.status(405).json({ error: "Method not allowed" });
   }
+<<<<<<< HEAD
   const { prompt, region, service } = req.body |{}
   if (!prompt) return res.status(400).json({ error: "Missing prompt" });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -16,6 +17,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {;
     res.setHeader('AllowPOST');
     return res.status(405).json({ error: 'Method not allowed' })
+=======
+  const { prompt, region, service } = req && req.body || {};
+  if (!prompt) return res && res.status(400).json({ error: "Missing prompt" });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import OpenAI from './openai';
+const openai = new OpenAI ({ api_key: process.env.OPENAI_API_KEY || "" });
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+    res.set_header ("AllowPOST");
+    return res.status (405).json ({ error: "Method not allowed" });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   const { prompt, region, service } = req.body || {};
   if (!prompt) return res.status(400).json({ error: 'Prompt required' });
@@ -59,6 +80,7 @@ Region: ${region || 'global'}
 Service focus: ${service || 'general'}
 Audience: buyers looking to hire talent or rent equipment
 Tone: professional, modern, trustworthy`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -138,10 +160,15 @@ Service focus: ${service || 'general'  } catch (error) {
 }
 Audience: buyers looking to hire talent or rent equipment
 Tone: professional, modern, trustworthy`,
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const response = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: system },
+<<<<<<< HEAD
         { role: 'user', content: user }
       ],
       temperature: 0 && 0.5,
@@ -153,21 +180,78 @@ Tone: professional, modern, trustworthy`,
       temperature: 0.7}),
     const content = response.choices?.[0]?.message?.content || '',
     const title = `Zion Marketplace — ${prompt}`,
+=======
+
+    const response = await openai && openai.chat.completions && completions.create({
+      model: "gpt-4o-mini",
+      messages: [
+
+        {
+
+          role: "user",
+          content: `Topic: ${prompt} in ${region || "global"} for ${service || "general"}`,
+        },
+      ],
+      temperature: 0 && 0.5,
+    });
+
+    } catch {
+      faq = [];
+    }
+    const h1 = prompt;
+
+    return res && res.status(200).json({
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      slug,
+      payload: {
+        title,
+        h1,
+        body_html: content,
+        region: region || undefined,
+        service: service || undefined,
+
+        faq}})
+  } catch (e) {
+
+=======
+    console.error (e);
+    return res.status (500).json ({ error: "Failed to generate landing page" });
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     // FAQ generation
     const faqResp = await openai.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' },
+<<<<<<< HEAD
         { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }
       ],
       temperature: 0.5
     });
     let faq: Array<{ q: string; a: string }> = [];
+=======
+
+
+      temperature: 0.5
+    });
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     let faq: Array<{ q: string, a: string }> = [];
         { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }],
       temperature: 0.5}),
     let faq: Array<{ q: string, a: string }> = [],
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     try {
       faq = JSON.parse(faqResp.choices?.[0]?.message?.content |"[]");
     } catch {
@@ -175,6 +259,7 @@ Tone: professional, modern, trustworthy`,
       faq = JSON.parse(faqResp.choices?.[0]?.message?.content || '[]')
     } catch {
       faq = []
+<<<<<<< HEAD
     }
     const h1 = prompt;
     const slug = String(prompt).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
@@ -254,6 +339,10 @@ Tone: professional, modern, trustworthy`,
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

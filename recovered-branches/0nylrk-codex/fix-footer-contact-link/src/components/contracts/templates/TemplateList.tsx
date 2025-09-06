@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {ContractTemplate} from "@/types/contracts";
 import {Button} from "@/components/ui/button";
 import {Loader2, Edit, Trash, Star, StarOff} from "lucide-react";
@@ -7,6 +14,7 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Separator} from "@/components/ui/separator";
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {useState} from "react";
+<<<<<<< HEAD
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",
@@ -106,6 +114,8 @@ import {;
   AlertDialogHeader,;
   AlertDialogTitle} from "@/components/ui/alert-dialog",;
 import { useState } from "react",;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface TemplateListProps {;
   templates: ContractTemplate[],;
   isLoading: boolean,;
@@ -131,7 +141,17 @@ export function TemplateList(): any ({;
       await deleteTemplate && deleteTemplate.mutateAsync(templateToDelete);
       setTemplateToDelete(null);
     }
+<<<<<<< HEAD
   },
+=======
+  };
+=======
+interface TemplateListProps {
+  templates: ContractTemplate[],
+  isLoading: boolean,
+  onSelect: (template: ContractTemplate) => void,
+  onEdit: (template: ContractTemplate) => void
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleSetDefault = async (templateId: string) => {
     await setDefaultTemplate.mutateAsync(templateId)
@@ -174,6 +194,7 @@ export function TemplateList(): any ({;
                   {template && template.is_default && (;
                     <span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0 && 0.5 rounded-full">Default</span>;
                   )}
+<<<<<<< HEAD
                 </div>
                 <p className="text-xs text-muted-foreground">
                   Last updated: {new Date(template.updated_at).toLocaleDateString()}
@@ -204,6 +225,15 @@ export function TemplateList(): any ({;
             <Button 
               onClick={() => onSelect(template)} 
               variant="outline" 
+=======
+
+
+            <Button 
+              onClick={() => onSelect(template)} 
+              variant="outline" 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="w-full"
             >
               Use This Template

@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 import { MessageSquare, Video  } from 'lucide-react';
 import { useMessaging  } from '@/context/MessagingContext';
 import { ProtectedRoute  } from '@/components/ProtectedRoute';
@@ -23,12 +24,16 @@ export default function MessagingInbox() {
   const isMobile = useIsMobile();
   const navigate = useNavigate();
   const [activeCall, setActiveCall] = useState<string | null>(null);
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {MessageSquare, Video} from 'lucide-react';
 import {use_messaging} from '@/context / MessagingContext';
 import {ProtectedRoute} from '@/components / ProtectedRoute';
 import {ConversationsList, ConversationDetailView} from '@/components / messaging';
 import {useIsMobile} from '@/hooks / use - mobile';
 import {toast} from 'sonner';
+<<<<<<< HEAD
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 export default function MessagingInbox() {
@@ -56,6 +61,10 @@ export default function MessagingInbox() {
   const navigate = useNavigate(),
   const [activeCall, setActiveCall] = useState<string | null>(null),
   
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   useEffect(() => {
     // Fetch conversations when component mounts
     const loadData = async () => {
@@ -269,6 +278,15 @@ if ( {) {
                   <div className="animate - pulse">Loading conversations...</div>;
                 </div>) : (
                 <ConversationsList;
+<<<<<<< HEAD
+=======
+
+=======
+                <ConversationsList;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   conversations={conversations}
                   active_conversation={active_conversation}
                   setActiveConversation={setActiveConversation}

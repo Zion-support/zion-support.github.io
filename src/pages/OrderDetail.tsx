@@ -100,11 +100,20 @@ const getStatusIcon = (status: string) => {
     default:
       return <Clock className="h-4 w-4" />;
   }
+<<<<<<< HEAD
 }
 export default function OrderDetail() {
 };
 
 export default function OrderDetail() {;
+=======
+
+};
+
+export default function OrderDetail() {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const router = useRouter();
   const { user } = useAuth();
   const [order, setOrder] = useState<Order | null>(null);
@@ -249,6 +258,7 @@ if ( {) {
 
   if (isLoading || !order) {;
     return (
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4">Order not found</h1>
@@ -260,6 +270,12 @@ if ( {) {
           </Link>
         </div>
       </div>
+=======
+      <div className='container max-w-3xl py-10'>;
+        <Skeleton className='h-6 w-full' />;
+      </div>;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     );
   }
   return (
@@ -524,6 +540,9 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   <div className="flex items - center space - x-3">;
                     <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
@@ -624,6 +643,9 @@ export default function OrderDetailPage() {;
       <div className="container max-w-3xl py-10">
         <Skeleton className="h-6 w-full" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       </div>

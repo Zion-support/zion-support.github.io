@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import {Button} from "@/components/ui/button";
@@ -10,6 +11,11 @@ import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
 import {NavigationButtonsProps} from "./types";
@@ -19,9 +25,20 @@ export const NavigationButtons = ({;
   isNextDisabled = false;
   backLabel = "Back";
   nextLabel = "Next";
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
 import { NavigationButtonsProps } from "./types",
+=======
+
+
+=======
+import { Button } from "@/components/ui/button",
+import { Loader2 } from "lucide-react",
+import { NavigationButtonsProps } from "./types",
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const NavigationButtons = ({
   onBack,
   onNext,
@@ -48,6 +65,7 @@ export const NavigationButtons = ({;
     <div className="flex justify-between">;
       {onBack && (;
         <Button variant="outline" onClick={onBack}>;
+<<<<<<< HEAD
           {backLabel}
         </Button>;
       )}
@@ -66,4 +84,40 @@ export const NavigationButtons = ({;
   );
     </div>;
   );
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          {backLabel}
+        </Button>;
+      )}
+
+      {onNext && (;
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>;
+
+=======
+      {onNext && (
+
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {nextLabel}
+        </Button>;
+      )}
+
+
+
+    </div>;
+  );
+
+=======
+=======
+    </div>;
+  );
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

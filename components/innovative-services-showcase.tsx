@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Star
   TrendingUp
   Zap
@@ -59,6 +60,61 @@ import {
   MapPin,;
   ExternalLink,;} from 'lucide-react';import {
   Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Head from 'next / head';
+import { motion } from 'framer-motion';
+
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { emergingTechServicesEnhanced2025  } from '../data/emerging-tech-services';
+import { nextGenAIServices } from '../data/next-gen-ai-services';
+
+
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Rocket,
+  Shield,
+  DollarSign,
+  Users,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+
+  MapPin,;
+  ExternalLink,;} from 'lucide-react';import {
+  Star, TrendingUp, Zap, Brain, Rocket, Shield, ;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   DollarSign, Users, Clock, CheckCircle, ArrowRight;
   Phone, Mail, MapPin, ExternalLink
  } from 'lucide-react';
@@ -67,6 +123,10 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { emergingTechServicesEnhanced2025  } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
 export default function InnovativeServicesShowcase() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const contactInfo = {
 
     mobile: '+1 302 464 0950',
@@ -76,6 +136,10 @@ export default function InnovativeServicesShowcase() {
 
   };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -148,6 +212,7 @@ export default function InnovativeServicesShowcase() {
       link: 'https://ziontechgroup.com/quantum-internet-security-platform'
       color: 'from-indigo-600 to-purple-700'
     }
+<<<<<<< HEAD
     {
       title: '🧬 AI-Powered Quantum Drug Discovery'
       description:
@@ -207,6 +272,8 @@ export default function InnovativeServicesShowcase() {
     <UltraAdvancedFuturisticBackground>
       <div className='min-h-screen'>      color: 'from-indigo-600 to-purple-700'
     }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
 
   const itemVariants = {
@@ -525,10 +592,13 @@ export default function InnovativeServicesShowcase() {;
               className="text-center mb-16"
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 
@@ -626,6 +696,12 @@ export default function InnovativeServicesShowcase() {;
 
               initial={{ opacity: 0, y: 30 }}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}>;
@@ -662,6 +738,7 @@ export default function InnovativeServicesShowcase() {;
                   viewport={{ once: true }}
                   className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -669,6 +746,9 @@ export default function InnovativeServicesShowcase() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   <div className='mb-6'>
                     <h3 className='text-2xl font-bold text-white mb-4'>
@@ -957,6 +1037,27 @@ export default function InnovativeServicesShowcase() {;
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+            </div>;
+          </div>;
+        </section>;
+
+
+        {/* Emerging Tech Services */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>;
+          <div className='max-w-7xl mx-auto'>;
+            <motion&& motion.div
+              className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}        <section className="py-20 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-7xl mx-auto">;
+            <motion&& motion.div
+              className="text-center mb-16"
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Emerging Tech Services */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -969,6 +1070,7 @@ export default function InnovativeServicesShowcase() {;
 
               initial={{ opacity: 0, y: 30 }}
 
+<<<<<<< HEAD
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -985,6 +1087,24 @@ export default function InnovativeServicesShowcase() {;
               </p>
             </motion.div>
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+                <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>;
+                  Emerging;
+                </span>{' '}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {emergingTechServicesEnhanced2025
                 .slice(0, 6)
@@ -1140,6 +1260,12 @@ export default function InnovativeServicesShowcase() {;
               className="text-center mt-16"
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -1161,10 +1287,14 @@ export default function InnovativeServicesShowcase() {;
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
+<<<<<<< HEAD
               className='text-center mb-16'              initial={{ opacity: 0, y: 30 }}
 
               initial={{ opacity: 0, y: 30 }}
 
+=======
+              initial={{ opacity: 0, y: 30 }}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -1241,6 +1371,10 @@ export default function InnovativeServicesShowcase() {;
                     <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                     <div className="text-2xl font-bold text-cyan-400 mb-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       </div>;
                     </div>;
                     <div className='mb - 6'>;
@@ -1310,6 +1444,7 @@ export default function InnovativeServicesShowcase() {;
             <motion.div;
               className="text - center mb - 16";
               whileInView={{ opacity: 1, coordinate_y: 0 }}
+<<<<<<< HEAD
 =======
               className='text-center mt-16'              initial={{ opacity: 0, y: 30 }}
 
@@ -1321,6 +1456,8 @@ export default function InnovativeServicesShowcase() {;
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >;
@@ -1537,6 +1674,13 @@ export default function InnovativeServicesShowcase() {;
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -1575,6 +1719,7 @@ export default function InnovativeServicesShowcase() {;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                 <a
                   href="/contact"
+<<<<<<< HEAD
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
                 >
                   Get Started Today
@@ -1619,6 +1764,15 @@ export default function InnovativeServicesShowcase() {;
 );
   );
 }
+=======
+
+
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >;
               <motion.a;
                 href='/services';
@@ -1814,5 +1968,9 @@ export default function InnovativeServicesShowcase() {;
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
+<<<<<<< HEAD
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

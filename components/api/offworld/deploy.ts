@@ -17,6 +17,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     const { cid, provider } = await addDirectory(outDir);
 
     if (!cid) return res.status(500).json({ error: 'IPFS upload failed' });
+<<<<<<< HEAD
     return res.status(200).json({ cid, provider });
   } catch (error: any) {
     return res.status(500).json({ error: error?.message |'Unknown error' });
@@ -26,6 +27,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   } catch (error: any) {
     return res.status(500).json({ error: error?.message |'Unknown error' })
     if (!cid) return res && res.status(500).json({ error: 'IPFS upload failed' });
+=======
+
+    return res.status(200).json({ cid, provider })
+
+  } catch (error: any) {
+    return res.status(500).json({ error: error?.message |'Unknown error' })
+=======
+    if (!cid) return res && res.status(500).json({ error: 'IPFS upload failed' });
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return res && res.status(200).json({ cid, provider });
   } catch (error: any) {
     return res && res.status(500).json({ error: error?.message || 'Unknown error' });
@@ -38,6 +49,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {exec_sync} from 'child_process';
 import path from 'path';
 import fs from 'fs';
@@ -99,6 +113,7 @@ function handler() {
   } catch (error: any) {
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
 }
+<<<<<<< HEAD
   }
 
 }
@@ -108,3 +123,13 @@ function handler() {
 }
 }
   }
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+    return res.status(500).json({ error: error?.message || 'Unknown error' });
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

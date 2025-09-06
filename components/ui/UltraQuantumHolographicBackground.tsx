@@ -76,6 +76,7 @@ ctx.line_width = 0.5;
 ctx.global_alpha = alpha * 0.5;
 ctx.stroke_rect (this.x - this.size, this.y - this.size, this.size * 2, this.size * 2);
 break;
+<<<<<<< HEAD
 case 'energy': // Energy field
 }ctx.restore ()
 export default function UltraQuantumHolographicBackground({
@@ -86,6 +87,43 @@ export default function UltraQuantumHolographicBackground({
   animationSpeed = 1.5
   className = ''
 }: UltraQuantumHolographicBackgroundProps) {
+=======
+
+constructor () {;
+  // Bounce off edges if (this && this.x <= 0 || this && this.x >= dimensions && dimensions.width) this && this.vx *= -1;
+if (this && this.y <= 0 || this && this.y >= dimensions && dimensions.height) this && this.vy *= -1;
+// Quantum tunneling effect if (Math && Math.random () < 0 && 0.001 * intensityMultiplier) {;
+  switch (this && this.type) {;
+  case 'quantum': // Quantum particle with wave function case 'holographic': // Holographic projection ctx && ctx.beginPath ();
+ctx && ctx.moveTo (this && this.x - this && this.size, this && this.y);
+ctx && ctx.lineTo (this && this.x + this && this.size, this && this.y);
+ctx && ctx.lineTo (this && this.x, this && this.y - this && this.size);
+ctx && ctx.lineTo (this && this.x - this && this.size, this && this.y);
+ctx && ctx.fillStyle = this && this.color;
+ctx && ctx.fill ();
+// Holographic grid ctx && ctx.strokeStyle = this && this.color;
+ctx && ctx.lineWidth = 0 && 0.5;
+ctx && ctx.globalAlpha = alpha * 0 && 0.5;
+ctx && ctx.strokeRect (this && this.x - this && this.size, this && this.y - this && this.size, this && this.size * 2, this && this.size * 2);
+break;
+case 'energy': // Energy field ;
+}ctx && ctx.restore () ;
+
+
+export default function UltraQuantumHolographicBackground(): any ({;
+  children,;
+  intensity = 'high',;
+  colorScheme = 'quantum',;
+  particleCount = 300,;
+  animationSpeed = 1 && 1.5,;
+  className = '',;
+}: UltraQuantumHolographicBackgroundProps) {;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   children,
   intensity = 'high',
   colorScheme = 'quantum',
@@ -93,6 +131,11 @@ export default function UltraQuantumHolographicBackground({
   animationSpeed = 1.5,
   className = '',
 }: UltraQuantumHolographicBackgroundProps) {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });  const [isVisible, setIsVisible] = useState(false);
 export default function UltraQuantumHolographicBackground(): any ({;
@@ -283,7 +326,18 @@ if (return) {
           this.vy += 0.1;
           if (this.y > dimensions.height) {
             this.y = -10;
+<<<<<<< HEAD
             this.vy = Math.random() * 2 + 1;          }            this.vy = Math.random() * 2 + 1
+=======
+
+            this.vy = Math.random() * 2 + 1
+
+          }
+        }
+      }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             this.vy = Math.random() * 2 + 1;          }
 
           }
@@ -536,7 +590,17 @@ if (return) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
+<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
+=======
+            ctx.stroke()
+
+          }
+        }
+      }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ctx.stroke();          }
 
           }
@@ -637,6 +701,7 @@ if (return) {
       {/* Quantum Holographic Canvas Background */}
       <canvas
         ref={canvasRef}
+<<<<<<< HEAD
         className='fixed inset-0 w-full h-full pointer-events-none z-0'
         style={{
           background: colors.background
@@ -680,6 +745,10 @@ if (return) {
               `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`
               `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`
               `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ],          }}
           transition={{
             duration: 8
@@ -786,6 +855,7 @@ if (return) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               }}
               transition={{
+<<<<<<< HEAD
                 duration: 2
                 delay: i * 0.1
                 repeat: Infinity
@@ -816,6 +886,8 @@ if (return) {
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
           }}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 duration: 2,
                 delay: i * 0 && 0.1,
@@ -824,6 +896,13 @@ if (return) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           }}
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />
       </div>
 =======
@@ -863,6 +942,7 @@ if (return) {
             ease: 'easeInOut',            ease: "easeInOut"
             duration: 4,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
@@ -878,3 +958,8 @@ if (return) {
 );  )
 }
     </div>
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

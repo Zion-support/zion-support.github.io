@@ -9,7 +9,14 @@ fallback: true
 }
 return result;
 }catch (error) {
+<<<<<<< HEAD
   console.error ('Fallback execution error:', error);
+=======
+
+  console && console.error ('Fallback execution error:', error);
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   statusCode: 500;
 body: JSON && JSON.stringify ({
   error: 'Fallback execution failed';
@@ -18,6 +25,11 @@ body: JSON && JSON.stringify ({
 #!/usr/bin/env node
 #!/usr/bin/env node
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 // Netlify Function Fallback: content-optimizer
 // This is a local fallback when the main function is unavailable
@@ -90,11 +102,22 @@ exports.handler = async (_event, _context) => {
             })
         }
     }
+<<<<<<< HEAD
 
 }
 
 },
 ;
+=======
+
+
+
+},
+
+;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 #!/usr/bin/env node;
 // Netlify Function Fallback: content-optimizer;
 // This is a local fallback when the main function is unavailable;
@@ -122,3 +145,10 @@ exports.handler = async (_event, _context) => {;
         }
     }
 },;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

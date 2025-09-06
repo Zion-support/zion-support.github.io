@@ -554,6 +554,7 @@ export interface Innovative2025Service {
   }
   // Financial Technology Innovation Services
   {
+<<<<<<< HEAD
     id: 'ai-financial-trading-platform'
     name: 'AI Financial Trading Platform'
     tagline: 'Intelligent algorithmic trading and portfolio management'
@@ -622,12 +623,39 @@ export interface Innovative2025Service {
     rating: 4.8
     reviews: 32
   }
+=======
+    id: 'ai - financial - trading - platform',
+    name: 'AI Financial Trading Platform',
+    tagline: 'Intelligent algorithmic trading and portfolio management',
+    price: '$7, 999',
+    period: '/month',
+    description:;
+      'Advanced financial platform that uses AI to analyze markets, execute trades, and manage portfolios with superior performance and risk management.',
+    features: [;
+
+      'AI market analysis',
+      'Algorithmic trading',
+      'Portfolio optimization',
+      'Risk management',
+      'Real - time monitoring',
+      'Regulatory compliance',
+    ],
+    popular: true,
+    icon: '📈',
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'Production financial AI platform with real-time trading and comprehensive risk management.',
     launchDate: '2025-01-15',
     customers: 45,
     rating: 4.8,
     reviews: 32,
   },;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -705,6 +733,9 @@ export interface Innovative2025Service {
 
     reviews: 32
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   id: string, name: string,
   tagline: string, price: string,
@@ -1008,6 +1039,7 @@ export const innovative2025Services: Innovative2025Service[] = [
 =======
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   }
@@ -1015,6 +1047,8 @@ export const innovative2025Services: Innovative2025Service[] = [
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2025Service {;
@@ -1443,5 +1477,12 @@ export const innovative2025Services: Innovative2025Service[] = [;
     customers: 45,;
     rating: 4.8;
     reviews: 32;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];

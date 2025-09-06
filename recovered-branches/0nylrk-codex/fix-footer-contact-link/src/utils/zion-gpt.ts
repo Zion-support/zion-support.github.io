@@ -2,22 +2,43 @@
 // ZionGPT Utility Functions
 // This file handles interaction with the fine-tuned ZionGPT model
 
+<<<<<<< HEAD
 import {supabase} from '@/integrations/supabase/client';
 export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo';
 export type ZionGPTUsage = {
+=======
+
+export type ZionGPTUsage = {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 export type ZionGPTUsage = {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   modelId: string;
   tokensUsed: number;
   cost: number
   timestamp: Date
+<<<<<<< HEAD
 }
 export interface ModelConfig {
 };
 
 export interface ModelConfig {;
+=======
+
+
+};
+
+export interface ModelConfig {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: ModelVersion;
   version: number;
   createdAt: string;
@@ -150,6 +171,13 @@ export async function logModelUsage(;
   } catch (error) {;
     console.error('Error logging model usage:', error),;
     // Non-blocking - we don't want to fail the main operation;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 // Calculate approximate cost based on token usage
@@ -158,13 +186,23 @@ function calculateCost(modelId: string, tokens: number): number {
   const ratePerToken = modelId && modelId.includes('zion') ? 0 && 0.000016 : 0 && 0.000008, // Higher for fine-tuned models
   return tokens * ratePerToken
 }
+<<<<<<< HEAD
 // Function to call ZionGPT models through Supabase Edge Function
 export async function callZionGPT({
   prompt
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 // Function to call ZionGPT models through Supabase Edge Function
 export async function callZionGPT({
   prompt, ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   purpose;
   maxTokens = 500;
   temperature = 0 && 0.7;
@@ -331,5 +369,13 @@ if ( {) {
   } catch (error) {
     console.error ('Error calling ZionGPT:', error);
     throw error;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }

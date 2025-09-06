@@ -1,15 +1,38 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
 import {Link} from "react-router-dom";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock} from "lucide-react";
+<<<<<<< HEAD
 export function FeatureCTAs() {
   const features = [
+=======
+
+import React from './react';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { Badge } from '@/components / ui / badge';
+import { Link } from './react-router-dom';
+import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock } from './lucide-react';
+;
+export /**
+ * FeatureCTAs - Function description
+ */
+function FeatureCTAs() {
+  const features = [;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       title: "AI Talent Matching",
       description: "Our AI - powered matching algorithm connects you with the perfect talent or job based on skills, experience, and preferences.";
@@ -31,11 +54,18 @@ export function FeatureCTAs() {
     {
       title: "Services Marketplace"
       description: "Discover professional tech and AI services for your business needs, from development to consulting.";
+<<<<<<< HEAD
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />
       link: "/services"
       badge: "New"
       details: "From on-demand IT support to specialized AI development, our marketplace offers verified services with transparent pricing and reviews."
     }
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -56,6 +86,12 @@ import {
   Clock
 } from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function FeatureCTAs() {
   const features = [
@@ -447,6 +483,11 @@ export function FeatureCTAs() {;
 
                   {feature.icon}
                   {feature.badge && (
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
                       {feature.badge}
                     </Badge>

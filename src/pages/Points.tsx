@@ -2,6 +2,10 @@
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Card
   CardContent
   CardDescription
@@ -30,6 +34,12 @@ import {;
   CardHeader;
   CardTitle;
 } from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -157,6 +167,9 @@ if (return) {
 
       setRedeeming(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -181,6 +194,9 @@ if (return) {
   const earning_opportunities = [;
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       icon: <Users className='h - 5 w - 5' />,
 
       title: 'Sign Up & Profile Setup',
@@ -204,10 +220,13 @@ if (return) {
       points: '100 pts',
       action: 'Browse Marketplace',
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       icon: <Users className='h-5 w-5' />
       title: 'Sign Up & Profile Setup'
       description: 'Complete your profile and verify your email'
@@ -295,6 +314,9 @@ if (return) {
     }
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const earningOpportunities = [;
     {;
@@ -323,6 +345,7 @@ if (return) {
       description: 'Invite friends to join Zion marketplace',;
       points: '200 pts per referral',;
       action: 'Share Referral Link',;
+<<<<<<< HEAD
 =======
 =======
       icon: <Users className='h-5 w-5' />,
@@ -365,6 +388,8 @@ if (return) {
       points: '200 pts per referral',
       action: 'Share Referral Link',
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },  ];
 
   const upcomingRewards = [
@@ -406,6 +431,7 @@ if (return) {
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },;
     },
     {
+<<<<<<< HEAD
       icon: <ShoppingBag className="h-5 w-5" />,
       title: "First Purchase",
       description: "Make your first purchase on the marketplace",
@@ -431,16 +457,23 @@ if (return) {
     {
       icon: <Users className="h-5 w-5" />,
       title: "Refer Friends",
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       description: "Invite friends to join Zion marketplace",
       points: "200 pts per referral",
       action: "Share Referral Link"
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -448,6 +481,7 @@ if (return) {
     return (
 
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },
+<<<<<<< HEAD
     {
       id: 'premium1',
       title: 'Premium Features (1 month)',
@@ -475,6 +509,14 @@ if (return) {
     { id: 'coupon25', title: '$25 Off Coupon', cost: 2000, category: 'Discount' };
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
   ],
+=======
+    { id: 'premium1', title: 'Premium Features (1 month)', cost: 1000, category: 'Subscription' },
+    { id: 'swag', title: 'Zion Swag Pack', cost: 1500, category: 'Merchandise' },
+    { id: 'coupon25', title: '$25 Off Coupon', cost: 2000, category: 'Discount' },
+    { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
+  ];
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   if (!isAuthenticated) {
     return (
@@ -490,6 +532,9 @@ if (return) {
               Earn points for every action you take and redeem them for exclusive rewards!
             </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -505,6 +550,9 @@ if (return) {
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             <Card>
@@ -513,6 +561,9 @@ if (return) {
                   <TrendingUp className="h-5 w-5" />
                   How to Earn Points
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 </CardTitle>
@@ -547,6 +598,9 @@ if (return) {
                       <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -583,6 +637,9 @@ if (return) {
                       <p className="text-sm text-muted-foreground">{reward.category}</p>
                     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -608,6 +665,9 @@ if (return) {
               </Button>
             </CardContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -794,6 +854,9 @@ if (return) {
   }
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <p className="text-sm text-muted-foreground mt-2">
@@ -813,6 +876,9 @@ if (return) {
               <TrendingUp className="h-5 w-5" />
               Keep Earning
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -848,6 +914,9 @@ if (return) {
                   <p className="text-sm text-muted-foreground">{opportunity.description}</p>
                 </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1011,6 +1080,7 @@ if (return) {
                 <div>
                   <h4 className="font-medium">{reward.title}</h4>
                   <p className="text-sm text-muted-foreground">{reward.category}</p>
+<<<<<<< HEAD
                 </div>
                 <div className="text-right space-y-1">
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
@@ -1018,6 +1088,12 @@ if (return) {
                     <Button
                       size='sm'
                       onClick={() => handleRedeem(reward)}
+=======
+
+                    <Button;
+                      size='sm';
+                      on_click={() => handle_redeem (reward)}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       disabled={redeeming}
                     >                      {redeeming ? 'Processing...' : 'Redeem'}
                     </Button>
@@ -1044,6 +1120,9 @@ if (return) {
                     <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
                       {redeeming ? 'Processing...' : 'Redeem'}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1076,6 +1155,7 @@ if (return) {
           ) : (
             <ScrollArea className="h-64">
               <div className="space-y-2 mt-2">
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -1111,12 +1191,71 @@ if (return) {
                     <Badge
                       variant="outline"
                       className={entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}
+=======
+
+
+                {ledger.map(entry => (
+                  <div
+                    key={entry.id}
+                    className='flex items-center justify-between py-2 border-b'
+                  >
+                    <div>
+
+          </CardContent>;
+        </Card>;
+      </div>;
+
+      <Card>;
+        <CardHeader>;
+          <CardTitle className='flex items-center gap-2'>;
+            <History className='h-5 w-5' />            Points History          <CardTitle className="flex items-center gap-2">;
+            <History className="h-5 w-5" />;
+            Points History;
+          </CardTitle>;
+          <CardDescription>Your recent points activity</CardDescription>;
+        </CardHeader>;
+        <CardContent>;
+          {ledger && ledger.length === 0 ? (;
+            <p className='text-center py-8 text-muted-foreground'>;
+              No points activity yet.;
+            </p>;
+            <ScrollArea className='h-64'>;
+              <div className='space-y-2 mt-2'>;
+                {ledger && ledger.map(entry => (;
+                  <div
+                    key={entry && entry.id}
+                    className='flex items-center justify-between py-2 border-b'>;
+                    <div>;
+                      <p className='font-medium capitalize'>;
+                        {entry && entry.reason || 'adjustment'}
+                      </p>;
+                      <p className='text-xs text-muted-foreground'>;
+                        {formatDistanceToNow(new Date(entry && entry.created_at), {;
+                          addSuffix: true,;
+
+                        })}
+                      </p>;
+                    </div>;
+                    <Badge
+                      variant='outline'
+                      className={
+
+
+                        entry && entry.delta>= 0;
+                          ? 'bg-green-100 text-green-800';
+                          : 'bg-red-100 text-red-800';
+                      }                      variant="outline";
+                      className = {entry && entry.delta >= 0 ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800',}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     >;
                       {entry.delta >= 0 ? '+' : ''}
                       {entry.delta} pts;
                     </Badge>;
                   </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1136,6 +1275,9 @@ if (return) {
           <p className="text-muted-foreground mb-4">
             We're finalizing the redemption system. Keep earning points - they'll be ready to spend soon!
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1148,6 +1290,9 @@ if (return) {
               <Link href='/community'>Join Community</Link>            <Button variant="outline" asChild>
             <Button variant="outline" asChild>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <Link href="/community">Join Community</Link>

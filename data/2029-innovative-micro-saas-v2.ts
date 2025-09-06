@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface InnovativeMicroSaasService2029V2 {
 export interface InnovativeMicroSaasService2029V2 {;
   id: string;
@@ -318,10 +319,17 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
     }
   ];    price: "$2,499/month";
     description: "Advanced customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate retention strategies.";
+=======
+
+
+    description: "Advanced customer success platform that uses AI to predict customer behavior, identify at-risk accounts, and automate retention strategies.";
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     features: [
       "AI-powered churn prediction";
       "Automated customer health scoring";
       "Intelligent intervention recommendations";
+<<<<<<< HEAD
 export interface InnovativeMicroSaasService2029V2 {;
 <<<<<<< HEAD
 
@@ -643,6 +651,11 @@ export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2
   benefits: string[],;
   useCases: string[];
 }
+=======
+=======
+
+export interface InnovativeMicroSaasService2029V2 {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export const innovativeMicroSaasServices2029V2: InnovativeMicroSaasService2029V2[] = [
   {

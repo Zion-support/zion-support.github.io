@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {supabase} from "@/integrations/supabase/client";
 import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
@@ -14,6 +15,12 @@ interface Milestone {
 
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "../components/ContractForm",
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Milestone {
   title: string,
   description: string,
@@ -85,6 +92,7 @@ export async function generateContract(
       paymentTerms: values.paymentTerms,
       paymentAmount: values.paymentAmount,
       additionalClauses: additionalClauses,
+<<<<<<< HEAD
       milestones: milestoneData}
   });
   
@@ -132,6 +140,9 @@ export async function generateContract(;
   });
   if (error) {;
     throw error;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   
   if (data.success && data.contract) {
@@ -143,8 +154,33 @@ export async function generateContract(;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } else {
     throw new Error("Failed to generate contract")
+<<<<<<< HEAD
   }
 }
+=======
+
+import { supabase } from '@/integrations / supabase / client';
+import { TalentProfile } from '@/types / talent';
+import { GeneratedMilestone } from '@/hooks / useMilestoneGenerator';
+import { ContractFormValues } from '../components / ContractForm';
+interface Milestone {
+  title: string;
+  description: string;
+  due_date: string,
+  estimated_hours: number;
+}
+export async function generate_contract (
+  values: ContractFormValues,
+  talent: TalentProfile,
+  client_name: string;
+  generated_milestones: GeneratedMilestone[]): Promise < string> {
+  const additional_clauses = values.additional_clauses || [];
+=======
+
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   // Prepare milestone data if we have AI - generated milestones;
   const milestone_data = generated_milestones.length > 0;
@@ -184,6 +220,13 @@ if ( {) {
 
   } else {;
     throw new Error("Failed to generate contract");
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 ;

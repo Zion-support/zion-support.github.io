@@ -5,6 +5,9 @@
     }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     {
@@ -14,6 +17,9 @@
     }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     {
@@ -23,6 +29,9 @@
     }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     {
@@ -90,6 +99,9 @@ export const MobileFeatureShowcase: React.FC = () => {;
   ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
 
@@ -101,6 +113,9 @@ export const MobileFeatureShowcase: React.FC = () => {;
             <div 
               key={index} 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <div className="mb-4">
@@ -126,6 +141,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-zion-slate-light">{feature.description}</p>
             </div>
+<<<<<<< HEAD
           ))}
         </div>
       </div>
@@ -134,6 +150,8 @@ export const MobileFeatureShowcase: React.FC = () => {;
 }
 '"}
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 '"},
 ;
@@ -200,6 +218,9 @@ export const MobileFeatureShowcase: React.FC = () => {;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

@@ -1,16 +1,25 @@
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { Resume, ResumeBasicInfo  } from '@/types/resume';
 import { useAuth  } from '@/hooks/useAuth';
 import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
 export function useResumeActions() {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume, ResumeBasicInfo} from '@/types/resume';
 import {useAuth} from '@/hooks/useAuth';
 import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
 export function useResumeActions() {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -19,9 +28,16 @@ export function useResumeActions() {;
     if (!user) {
       setError('You must be logged in to create a resume')
       return null
+<<<<<<< HEAD
     }
     setIsLoading(true);
     setError(null);
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume, ResumeBasicInfo } from '@/types/resume',;
@@ -35,6 +51,12 @@ export function useResumeActions() {;
     if (!user) {;
       setError('You must be logged in to create a resume'),;
       return null;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     setIsLoading(true),
@@ -70,6 +92,7 @@ export function useResumeActions() {;
       return handleResumeError(e, 'Could not create resume') ? null : null
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
     }
   }
   const updateBasicInfo = async (resumeId: string, basicInfo: ResumeBasicInfo): Promise<boolean> => {
@@ -79,6 +102,11 @@ export function useResumeActions() {;
     }
     setIsLoading(true);
     setError(null);
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     setError(null),;
@@ -106,6 +134,12 @@ export function useResumeActions() {;
     if (!user) {;
       setError('You must be logged in to update a resume'),;
       return false;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     setIsLoading(true),
@@ -138,6 +172,7 @@ export function useResumeActions() {;
       return handleResumeError(e, 'Could not update resume')
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
     }
   }
   const setActiveResume = async (resumeId: string): Promise<boolean> => {
@@ -147,6 +182,11 @@ export function useResumeActions() {;
     }
     setIsLoading(true);
     setError(null);
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     setError(null),;
@@ -172,6 +212,12 @@ export function useResumeActions() {;
     if (!user) {;
       setError('You must be logged in to set active resume'),;
       return false;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     setIsLoading(true),
@@ -266,6 +312,11 @@ if (throw error) {
   return {;
     isLoading,;
     error,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     createResume;
     updateBasicInfo;
 

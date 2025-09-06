@@ -1,10 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useEffect, useState } from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -18,6 +21,7 @@ import {toast} from "sonner";
 export function WebhookManager() {;
   const { ;
     webhooks;
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -33,6 +37,9 @@ export function WebhookManager() {
     webhooks;
 
     loading
+=======
+    loading, ;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     error;
     testResult;
@@ -176,6 +183,7 @@ export function WebhookManager() {
               <Input 
                 id="webhook-url" 
                 placeholder="https://example.com/webhook"
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -282,6 +290,10 @@ export function WebhookManager() {;
               <Input;
                 id="webhook-url";
                 placeholder="https://example.com/webhook";
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 value={newWebhook.url}
                 onChange={(e) => setNewWebhook({...newWebhook, url: e.target.value})}
               />

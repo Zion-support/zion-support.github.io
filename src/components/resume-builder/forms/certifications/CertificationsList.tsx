@@ -69,6 +69,7 @@ interface CertificationsListProps {
               </div>
               <div className="flex gap-2">
                 <Button
+<<<<<<< HEAD
                   variant="ghost"
                   size="icon"
                   onClick={() => onEdit(cert)}
@@ -77,6 +78,8 @@ interface CertificationsListProps {
                   <Edit className="h-4 w-4" />
                 </Button>
                 <Button
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   variant='ghost'
                   size='icon'
                   onClick={() => onEdit(cert)}
@@ -84,6 +87,9 @@ interface CertificationsListProps {
                   className='text-primary hover:underline'>              <p className="text-xs mt-2">;
                 <a
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   href = {cert && cert.credential_url,}
 
                   variant="ghost"

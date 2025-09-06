@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from "react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -7,6 +11,11 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {ReviewForm} from "./ReviewForm";
 import {useReviews} from "@/hooks/useReviews";
 import { useState, useEffect } from "react",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   Dialog;
   DialogContent;
@@ -16,6 +25,7 @@ import {
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+<<<<<<< HEAD
 import { ReviewForm } from "./ReviewForm";
 import { useReviews } from "@/hooks/useReviews";
 interface LeaveReviewModalProps {
@@ -100,6 +110,15 @@ import { Button } from "@/components/ui/button",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { ReviewForm } from "./ReviewForm",;
 import { useReviews } from "@/hooks/useReviews",;
+=======
+
+import {useState, useEffect} from "react";
+import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {ReviewForm} from "./ReviewForm";
+import {useReviews} from "@/hooks/useReviews";
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface LeaveReviewModalProps {;
   projectId: string,;
   revieweeId: string,;
@@ -145,14 +164,44 @@ export function LeaveReviewModal(): any ({;
       const success = await submitReview(formValues);
       if (success) {;
         handleOpenChange(false);
+<<<<<<< HEAD
       }
       return success;
     }
   }
 
   },
+=======
+=======
+
+import { ReviewForm } from "./ReviewForm",
+import { useReviews } from "@/hooks/useReviews",
+
+interface LeaveReviewModalProps {
+  projectId: string,
+  revieweeId: string,
+  revieweeName: string,
+  isOpen: boolean,
+  onClose: () => void
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      }
+      return success;
+    }
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
   },
+<<<<<<< HEAD
+=======
+=======
+  };
+=======
+  },
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>;

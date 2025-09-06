@@ -2,8 +2,15 @@ import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
 import ReactMarkdown from 'react-markdown';
+<<<<<<< HEAD
 import { logErrorToProduction } from '@/utils/productionLogger';
 // Importing the sample blog posts - in a real app, you would fetch this from an API
+=======
+
+import {logErrorToProduction} from '@/utils/productionLogger';
+// Importing the sample blog posts - in a real app, you would fetch this from an API;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
@@ -29,6 +36,9 @@ import { BLOG_POSTS } from "@/data/blog-posts",
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
 import { fetchWithRetry } from '@/utils/fetchWithRetry',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export default function BlogPost() {
@@ -88,12 +98,25 @@ function BlogPost() {
         setIsLoading (false);
 
         return } catch (err) {
+<<<<<<< HEAD
         logErrorToProduction('Failed to fetch blog post', { data: err })
         setError('Failed to load article')
       }
         logErrorToProduction('Failed to fetch blog post', { data: err });
         setError('Failed to load article');
       };
+=======
+        logErrorToProduction ('Failed to fetch blog post', { data: err });
+        set_error ('Failed to load article');
+      }
+
+
+        logErrorToProduction('Failed to fetch blog post', { data: err });
+        setError('Failed to load article');
+      };
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       const currentPost = BLOG_POSTS.find(p => p.slug === slug);      if (currentPost) {
         setPost(currentPost)
         const related = BLOG_POSTS.filter(
@@ -206,6 +229,12 @@ export default function BlogPost() {;
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router]),
   
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (isLoading && !timedOut) {
     return (
       <div className="min-h-screen bg-zion-blue text-white p-8 flex justify-center items-center">
@@ -224,6 +253,7 @@ export default function BlogPost() {;
       </div>
     )
   }
+<<<<<<< HEAD
   // If post is still null after loading, show not found
   if (!post) {
     return (
@@ -234,6 +264,26 @@ export default function BlogPost() {;
     )
   }
 
+=======
+
+  // If post is still null after loading, show not found;
+  // Check condition
+if ( {) {
+  $2
+}
+
+    return (
+      <div className='min - h-screen bg - zion - blue text - white p - 8 flex flex - col justify - center items - center space - y-4'>;
+        <p > Article not found.</p>;
+        <Button on_click={(, ) => router.push ('/blog')}>Back to Blog</Button>;
+      </div>);
+  }
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
     if (!post) return ''
@@ -260,6 +310,7 @@ if (return '') {
       default:;
         return '#';
   }
+<<<<<<< HEAD
   const articleLd = {
     '@context': 'https://schema.org'
     '@type': 'BlogPosting'
@@ -267,6 +318,16 @@ if (return '') {
     description: post.excerpt
     image: post.featuredImage
     datePublished: post.publishedDate
+=======
+  const article_ld = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    image: post.featured_image,
+    date_published: post.published_date,
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     author: {
       '@type': 'Person'
       name: post.author.name
@@ -361,6 +422,13 @@ if (return '') {
     switch (platform) {;
       case 'facebook':;
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const articleLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -369,6 +437,7 @@ if (return '') {
     image: post.featuredImage,
     datePublished: post.publishedDate,
     author: {
+<<<<<<< HEAD
       '@type': 'Person',
       name: post.author.name,
     },
@@ -405,6 +474,10 @@ if (return '') {
         keywords={post.tags.join(", ")}
         ogImage={post.featuredImage}
         canonical={`https://app.ziontechgroup.com/blog/${post.slug}`}
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       />
       <JsonLd data={articleLd} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
@@ -441,6 +514,9 @@ if (return '') {
 
           
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           {/* Article header */}
           <div className="mb-8 max-w-4xl mx-auto">
@@ -701,6 +777,9 @@ if (return '') {
                   className="text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                   #{tag}
@@ -749,6 +828,9 @@ if (return '') {
             <Separator className="my-12 bg-zion-blue-light" />
             
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             {/* Related articles */}
             {relatedPosts.length > 0 && (
@@ -793,6 +875,9 @@ if (return '') {
                         <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                       </div>
                     </Link>
@@ -863,6 +948,7 @@ if (return '') {
               </div>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             <div className='mt-12 text-center'>
               <p className='text-zion-slate-light'>
@@ -871,6 +957,28 @@ if (return '') {
               <p className="text-zion-slate-light">
             <div className="mt-12 text-center">
               <p className="text-zion-slate-light">
+=======
+
+
+            <div className='mt-12 text-center'>;
+              <p className='text-zion-slate-light'>;
+
+                Ready to put these ideas into action? Explore our{' '}
+                <Link href='/services' className='text-zion-cyan underline'>;
+                  AI services;
+                </Link>{' '}
+                or browse expert{' '}
+                <Link href='/talent' className='text-zion-cyan underline'>;
+                  talent;
+                </Link>{' '}
+
+
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 Ready to put these ideas into action? Explore our{' '}
                 <Link href="/services" className="text-zion-cyan underline">AI services</Link>{' '}
                 or browse expert{' '}
@@ -880,6 +988,9 @@ if (return '') {
                 to accelerate your projects.
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               </p>
             </div>
@@ -978,6 +1089,9 @@ if (return '') {
 };
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.;
               </p>;

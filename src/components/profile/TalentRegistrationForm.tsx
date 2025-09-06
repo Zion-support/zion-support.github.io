@@ -105,6 +105,9 @@ if ( {) {
       if (error) {
         throw new Error(error.message)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       name: user?.displayName || "",
@@ -222,10 +225,17 @@ export function TalentRegistrationForm() {;
       }),;
       if (error) {;
         throw new Error(error.message);
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 
       // Check if data exists before type assertion
       if (data && typeof data === 'object') {
+<<<<<<< HEAD
         setGeneratedContent(data as EnhancedProfile)
         toast({
           title: 'Enhanced Profile Generated',
@@ -272,6 +282,10 @@ export function TalentRegistrationForm() {;
         toast({
           title: "Enhanced Profile Generated",
           description: "AI has created a professional bio and suggested additional skills for your profile."})
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       
     } catch (error: any) {
@@ -316,16 +330,27 @@ export function TalentRegistrationForm() {;
       const newSkills: string[] = [],
       
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       // Safely extract and flatten skills from each category
       Object.values(allCategorizedSkills).forEach(categorySkills => {
         if (Array.isArray(categorySkills)) {
           categorySkills.forEach(skill => {
+<<<<<<< HEAD
             if (
               typeof skill === 'string' &&
               skill &&
               !skillTags.includes(skill)
             if (true) {}
+=======
+
+
+            if (true) {}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ) {
               newSkills.push(skill)
 import {;
@@ -636,6 +661,12 @@ if ( {) {
 
   },
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
     try {
@@ -655,6 +686,7 @@ if ( {) {
               <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>
             </div>
           </div>
+<<<<<<< HEAD
           `
         }
           `,
@@ -692,14 +724,51 @@ if ( {) {
       logErrorToProduction('Failed to send notification email:', { data: error });
     }
   },
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   // Handle form submission
   const onSubmit = async (values: TalentFormValues) => {
     if (skillTags.length === 0) {
       toast({
+<<<<<<< HEAD
         title: 'Skills required'
         description: 'Please add at least one skill to your profile.'
         variant: 'destructive'
+=======
+
+          to: email,
+          subject: 'Your Zion Talent Profile Has Been Enhanced',
+          html: `;
+          <div style="font - family: Arial, sans - serif; max - width: 600px; margin: 0 auto;">;
+            <h2 style="color: #6D28D9;">Profile Enhancement Complete</h2>;
+            <p > Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;
+            <p > We've added a professional summary and categorized your skills to help you stand out.</p>;
+            <p > You can review and edit these enhancements in your profile dashboard.</p>;
+            <div style="margin - top: 30px; padding - top: 20px; border - top: 1px solid #eee;">;
+              <p style="color: #666; font - size: 12px;">© ${new Date ().getFullYear ()} Zion Marketplace</p>;
+            </div>;
+          </div>;
+          `,
+        },
+      });
+    } catch (error) {
+      logErrorToProduction ('Failed to send notification email:', {
+        data: error,
+      });
+    }
+  }
+  // Handle form submission;
+  const on_submit = async (values: TalentFormValues, ) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast ({
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         title: 'Skills required',
         description: 'Please add at least one skill to your profile.',
         variant: 'destructive',
@@ -710,9 +779,12 @@ if ( {) {
         variant: 'destructive',
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       })
 
       return;
@@ -724,6 +796,9 @@ if ( {) {
       if (!user?.id) {
         throw new Error('User not authenticated')
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         title: "Skills required",
         description: "Please add at least one skill to your profile.",
@@ -738,12 +813,16 @@ if ( {) {
       if (!user?.id) {
         throw new Error("User not authenticated")
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       }
 
       });
 
+<<<<<<< HEAD
     setIsSubmitting(true),
 
     try {
@@ -767,6 +846,59 @@ if ( {) {
                 skills: skillTags,
                 location: values.location
   },;
+=======
+      if (newSkills && newSkills.length > 0) {;
+        setSkillTags([...skillTags, ...newSkills]);
+      }
+    }
+  };
+
+  // Get category color;
+  const getCategoryColor = (category: CategoryType,) => {;
+    switch (category) {;
+      case 'programming':;
+        return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
+      case 'devops':;
+        return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
+      case 'platforms':;
+        return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
+      case 'softSkills':;
+        return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
+      case 'other':;
+        return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500';
+      default:;
+        return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
+    }
+  };
+
+  // Send notification email;
+  const sendEnhancementNotification = async (userId: string, email: string,) => {;
+    try {;
+      await supabase && supabase.functions.invoke('send-email', {;
+        body: {;
+          to: email,;
+          subject: 'Your Zion Talent Profile Has Been Enhanced',;
+          html: `;
+          <divstyle="font-family: Arial, sans-serif max-width: 600px margin: 0 auto">;
+            <h2style="color: #6D28D9">Profile Enhancement Complete</h2>;
+            <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p>;
+            <p>We've added a professional summary and categorized your skills to help you stand out.</p>;
+            <p>You can review and edit these enhancements in your profile dashboard.</p>;
+            <divstyle="margin-top: 30px padding-top: 20px border-top: 1px solid #eee">;
+              <pstyle="color: #666 font-size: 12px">© ${new Date().getFullYear()} Zion Marketplace</p>;
+            </div>;
+          </div>;
+          `,;
+        },;
+      });
+    } catch (error) {;
+      logErrorToProduction('Failed to send notification email:', {;
+        data: error,;
+      });
+    }
+  };
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Handle form submission;
   const onSubmit = async (values: TalentFormValues) => {;
     if (skillTags.length === 0) {;
@@ -817,6 +949,9 @@ if ( {) {
                 categorySkills && categorySkills.forEach(skill => {;
                   if (typeof skill === 'string' && skill) {;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     aiSkills && aiSkills.push(skill);
 
       // Enhance profile if not already done;
@@ -903,14 +1038,24 @@ if ( {) {
       const userEmail = (userData as any).user?.email,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       // Create the talent profile
       // In a real implementation, this would save to Supabase
       setTimeout(() => {
         toast({
+<<<<<<< HEAD
           title: 'Profile Created Successfully'
           title: 'Profile Created Successfully',
+=======
+
+
+          title: 'Profile Created Successfully',
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           description:
             'Your talent profile has been published and is now visible in the directory.'
         })
@@ -918,6 +1063,9 @@ if ( {) {
           description: "Your talent profile has been published and is now visible in the directory."}),
         
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -926,6 +1074,12 @@ if ( {) {
           sendEnhancementNotification(user.id, userEmail)
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         setIsSubmitting(false)
       }, 1500)
@@ -934,6 +1088,9 @@ if ( {) {
       }, 1500),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -957,7 +1114,10 @@ if ( {) {
         }),
 
       if (error) throw error,
+<<<<<<< HEAD
       */
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       */
@@ -1529,6 +1689,11 @@ if (throw error) {
                             className="w-full h-full object-cover"
                             loading="lazy"
                           />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </AspectRatio>
                       ) : (
                         <div className="flex items-center justify-center h-full">
@@ -1629,6 +1794,11 @@ if (throw error) {
                   render={({ field }: { field: any }) => (
                     <FormItem>
                       <FormLabel className="text-zion-slate-light">About Yourself</FormLabel>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <FormControl>
                         <Textarea
                           className='h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white'
@@ -1642,7 +1812,13 @@ if (throw error) {
                       </FormDescription>
                     </FormItem>
                   )}
+<<<<<<< HEAD
                 />
+=======
+                />;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* AI Enhancement Option */}
                 <FormField
                   control={form && form.control}
@@ -1662,12 +1838,32 @@ if (throw error) {
                 </h3>;
                 <FormField;
                   control={form.control}
+<<<<<<< HEAD
                   name='enhancedProfile'
                   render={({ field }: { field: any }) => (
                     <FormItem className='flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md'>
                       <div className='space-y-0.5'>
                         <FormLabel className='text-white flex items-center'>
                           <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />                          AI Profile Enhancement
+=======
+                  name='bio';
+                  render={({ field }: { field: any }) => (                    <FormItem>;
+                      <FormLabel className='text - zion - slate - light'>;
+                        About Yourself;
+                      </FormLabel>;
+                      <FormControl>;
+                        <Textarea;
+                          className='h - 32 min - h-[128px] bg - zion - blue border - zion - blue - light text - white';
+                          placeholder='Describe your professional background, expertise, and the value you bring to clients...';
+                          {...field}
+                        />;
+                      </FormControl>;
+                      <FormMessage className='text - red - 400' />;
+                      <FormDescription className='text - zion - slate'>;
+                        {field.value?.length || 0}/1000 characters;
+                      </FormDescription>;
+                    </FormItem>)}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 />;
                 {/* AI Enhancement Option */}
                 <FormField;
@@ -1675,6 +1871,9 @@ if (throw error) {
                   name="enhancedProfile"
                   render={({ field }: { field: any }) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <FormItem className='flex flex - row items - center justify - between p - 3 border border - zion - blue - light bg - zion - blue / 30 rounded - md'>;
                       <div className='space - y-0.5'>;
                         <FormLabel className='text - white flex items - center'>;
@@ -1706,6 +1905,7 @@ if (throw error) {
                   </div>;
 
 
+<<<<<<< HEAD
 =======
                     <FormItem className="flex flex-row items-center justify-between p-3 border border-zion-blue-light bg-zion-blue/30 rounded-md">
                       <div className="space-y-0.5">
@@ -1718,6 +1918,8 @@ if (throw error) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
                           Let AI help optimize your profile for better visibility and engagement
@@ -1735,11 +1937,15 @@ if (throw error) {
                           className="data-[state=checked]:bg-zion-purple"
                         />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                       </FormControl>
                     </FormItem>
                   )}
                 />
+<<<<<<< HEAD
                 {form.watch('enhancedProfile') && (
                   <div className='flex justify-end'>
                     <Button
@@ -1764,6 +1970,10 @@ if (throw error) {
                     >
                       <Sparkles className="mr-2 h-4 w-4" />
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </Button>
                   </div>
                 )}
@@ -1808,6 +2018,11 @@ if (throw error) {
                             {Object.entries(generatedContent.categorizedSkills).map(([category, skills]) => (;
                               <div key={category} className="flex items-center gap-2">;
                                 <Badge;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}
                                 >
                                   {category}
@@ -1825,6 +2040,9 @@ if (throw error) {
                                       className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none";
                                     >;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                                       {skill}
                                     </Badge>
@@ -1858,6 +2076,11 @@ if (throw error) {
                       <FormItem>
                         <FormLabel className="text-zion-slate-light">Skills</FormLabel>
                         <div className="flex gap-2">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           <FormControl>
                             <Input
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white"
@@ -1970,6 +2193,9 @@ if (throw error) {
                     {skillTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No skills added yet</p>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     )}
 
@@ -2176,6 +2402,11 @@ if (throw error) {
                               />
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                                 Currently Unavailable
                               </label>
                             </div>
@@ -2197,6 +2428,11 @@ if (throw error) {
 
             <CardFooter className="border-t border-zion-blue-light pt-6">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Button
                   type="button"
                   variant="outline"
@@ -2216,6 +2452,9 @@ if (throw error) {
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Profile"}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 </Button>
               </div>
@@ -2225,14 +2464,42 @@ if (throw error) {
       </Card>
     </div>
   )
+<<<<<<< HEAD
 }
 //Generate enhanced profile with AI return
+=======
+
+            <CardFooter className='border - t border - zion - blue - light pt - 6'>;
+              <div className='flex flex - col sm:flex - row gap - 4 w - full sm:justify - between'>;
+                <Button;
+                  type='button';
+                  variant='outline';
+                  className='border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white';
+                >;
+                  Save as Draft;
+                </Button>;
+                <Button;
+                  type='submit';
+                  className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white';
+                  disabled={is_submitting}                >;
+                  {is_submitting ? 'Creating Profile...' : 'Create Profile'}
+                </Button>;
+              </div>;
+            </CardFooter>;
+          </form>;
+        </Form>;
+      </Card>;
+    </div>);
+
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 //Generate enhanced profile with AI return;
 }
 
 //Generate enhanced profile with AI return;
 
 }//Call the Supabase Edge Function const {
+<<<<<<< HEAD
   data, error '
 }= await supabase.functions.invoke ('talent-profile-enhancer', {
   body: {
@@ -2275,6 +2542,48 @@ if (Array.isArray (categorySkills) ) {
   <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666,  font-size: 12px, ">© $ {
   new Date () .getFullYear ()
   new Date () .getFullYear () 
+=======
+  data, error ';
+}= await supabase.functions.invoke ('talent - profile - enhancer', {
+  body: {
+
+  talent_data: {
+  name: form_data.name, title: form_data.title, bio: form_data.bio,  skills: skill_tags, location: form_data.location;
+});
+}else {';
+  //Fallback for mock / development mode log_warn ('Mock AI response - using fallback content');
+setGeneratedContent ({";
+  summary: "Experienced professional with expertise in modern technologies and best practices.";
+categorized_skills: {";
+  programming: ["JavaScript", "TypeScript", "React" ];";
+devops: ["Docker", "CI / CD", "AWS" ];";
+platforms: ["Node.js", "Next.js", "Vercel" ];";
+soft_skills: ["Communication", "Problem Solving",  "Team Leadership" ];";
+other: ["Project Management", "Technical Writing" ];
+});
+
+toast ({
+}catch (error: any) {';
+  logErrorToProduction ('Error generating enhanced profile:', {
+
+  data: error;
+});
+toast ({
+}finally {
+  setIsGenerating (false);
+
+}
+//Apply generated content to form const applyGeneratedContent = () =>: any {
+  // Check condition
+if ( {) {
+  $2
+}
+
+
+  new Date () .getFullYear () 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }Zion Marketplace</p>
   //Extract all skills from categorized skills and properly type cast them const allCategorizedSkills = generated_content.categorized_skills;
 const new_skills: string[] = [];
@@ -2300,6 +2609,7 @@ if () {) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
 //Handle form submission const onSubmit = async (values: TalentFormValues) => {
   if (skillTags.length === 0) {
   toast ({
@@ -2352,6 +2662,75 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }<div className="space-y-2"> <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel> <div className="flex items-center gap-6"> <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light"> {
   uploadedAvatar ? (<AspectRatio ratio= {
   1/1
+=======
+  toast ({
+  return;
+}setIsSubmitting (true);
+try {
+  //For actual implementation with Supabase // Check condition
+if ( {) {
+  $2
+}
+  try {
+  const {
+  data: ai_data ';
+}= await supabase.functions.invoke ('talent - profile - enhancer', {
+  body: {
+
+  talent_data: {
+  name: values.name, title: values.title, bio: values.bio,  skills: skill_tags, location: values.location;
+});';
+//Extract skills from each category and ensure they're strings Object.values (categorized_skills) .for_each (category_skills => {
+  if () {) {
+  $2
+}
+  category_skills.for_each (skill => {';
+  // Check condition
+if ( {) {
+  $2
+}
+});
+//Create a unique set of skills final_skills = [...new Set ([...skill_tags, ...ai_skills]) ];
+}//Continue with submission even if enhancement fails;
+}//Send notification email if we have user email // Check condition
+if ( {) {
+  $2
+}
+  sendEnhancementNotification (user.id, user_email);
+}, 1500);
+
+//Here would be the actual code to save the profile to Supabase /* const {
+  error ';
+}= await supabase .from ('talent profiles') .insert ({
+
+  user id: user.id, name: values.name, title: values.title, bio: values.bio, summary: final_summary, location: values.location,  skills: final_skills.map (name => ({
+  name, level: 4;
+}) ), //Default skill level hourly rate: Number (values.hourly_rate);
+availability status: values.availability;
+//Other fields would be handled here;
+});
+// Check condition
+if (throw error) {
+  $2
+}
+*/ setIsSubmitting (false);
+}";
+return (<div className="max - w-4xl mx - auto p - 4 md:p - 6"> <Card className="bg - zion - blue - dark border - zion - blue - light"> <CardHeader> <CardTitle className="text - 2xl text - white">Create Your Talent Profile</CardTitle> <CardDescription className="text - zion - slate"> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {
+  ...form;
+}> <form on_submit= {
+  form.handle_submit (on_submit) ";
+}> <CardContent className="space - y-8"> {
+  /* Basic Information */ ";
+}<div className="space - y-4"> <h3 className="text - lg font - medium text - white">Basic Information</h3> <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6"> <div className="col - span - 1" > <FormField <FormItem> <FormLabel className="text - zion - slate - light">Full Name</FormLabel> <FormControl> <div className="relative"> <UserRound className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> <Input /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
+}/> </div> <div className="col - span - 1" > <FormField <FormItem> <FormLabel className="text - zion - slate - light">Professional Title</FormLabel> <FormControl> <div className="relative"> <Briefcase className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> <Input /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
+}/> </div> <div className="col - span - 1" > <FormField <FormItem> <FormLabel className="text - zion - slate - light">Location</FormLabel> <FormControl> <div className="relative"> <MapPin className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate h - 4 w - 4" /> <Input /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
+}/> </div> <div className="col - span - 1" > <FormField <FormItem> <FormLabel className="text - zion - slate - light">Hourly Rate (USD) </FormLabel> <FormControl> <div className="relative"> <span className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate">$</span> <Input /> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>);
+}/> </div> </div> {
+  /* Upload Avatar */ ";
+}<div className="space - y-2"> <FormLabel className="text - zion - slate - light">Profile Picture</FormLabel> <div className="flex items - center gap - 6"> <div className="relative w - 24 h - 24 rounded - full overflow - hidden bg - zion - blue - light border border - zion - blue - light"> {
+  uploaded_avatar ? (<AspectRatio ratio= {
+  1 / 1;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }> <img src= {
   uploaded_avatar ";
 }alt="Avatar preview" className="w - full h - full object - cover" loading="lazy" /> </AspectRatio>) : (<div className="flex items - center justify - center h - full"> <UserRound className="h - 10 w - 10 text - zion - slate opacity - 50" /> </div>) ";

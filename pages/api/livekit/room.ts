@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { RoomServiceClient, CreateRoomOptions } from "livekit-server-sdk";
@@ -60,6 +66,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     const date = new Date();
     const pad = (n: number) => String(n).padStart(2, "0");
+<<<<<<< HEAD
     const roomName = `${projectId}-${date.getFullYear()}${pad(date.getMonth() + 1)}${pad(date.getDate())}-${pad(date.getHours())}${pad(date.getMinutes())}`;
     // Attempt to create or ensure the room exists
     try {
@@ -152,6 +159,11 @@ export default async function handler(req, res) {
     const date = new Date();
     const pad = (n: number) => String(n).padStart(2, '0');
     const roomName = `${projectId}-${date.getFullYear()}${pad(date.getMonth() + 1)}${pad(date.getDate())}-${pad(date.getHours())}${pad(date.getMinutes())}`;
+=======
+
+    const roomName = `${projectId}-${date && date.getFullYear()}${pad(date && date.getMonth() + 1)}${pad(date && date.getDate())}-${pad(date && date.getHours())}${pad(date && date.getMinutes())}`;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     // Attempt to create or ensure the room exists
     try {
@@ -169,6 +181,17 @@ export default async function handler(req, res) {
 =======
     console.error('Room create error', err);
     return res.status(500).json({ error: 'Failed to create room' });
+<<<<<<< HEAD
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  }
+
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 }
@@ -179,6 +202,7 @@ export default async function handler(req, res) {
 
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -192,3 +216,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

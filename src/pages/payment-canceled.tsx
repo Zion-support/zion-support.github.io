@@ -1,5 +1,10 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useRouter } from 'next/router'; // Changed from useNavigate
 
 import React from 'react',
@@ -13,6 +18,9 @@ import { Button } from '@/components/ui/button',
 import { useRouter } from 'next/router', // Changed from useNavigate
 import { XCircle } from 'lucide-react'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -44,6 +52,9 @@ export default function PaymentCanceled() {
         </p>
         
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         <div className="flex flex-col space-y-3">
@@ -53,16 +64,26 @@ export default function PaymentCanceled() {
           >
             Try Again
           </Button>
+<<<<<<< HEAD
           <Button
             variant="outline"
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
 export default function PaymentCanceled() {
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Button 
             variant="outline";
             onClick={() => router.push('/dashboard')} // Changed to router.push;
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white';
 export default function PaymentCanceled() {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const router = useRouter(); // Changed from navigate
   return (
     <div className='flex flex-1 bg-zion-blue items-center justify-center p-4'>
@@ -112,6 +133,9 @@ export default function PaymentCanceled() {;
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 class ErrorBoundary extends React.Component {

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState} from "react";
 import {Briefcase, Star, User} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -7,6 +8,12 @@ import { Briefcase, Star, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Briefcase, Star, User } from "lucide-react",
 import { Button } from "@/components/ui/button",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface UserTypeOption {
 
   id: "serviceProvider" | "talent" | "client"
@@ -25,6 +32,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
   const userTypes: UserTypeOption[] = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -39,6 +47,16 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       icon: Briefcase
     }
     },
+=======
+
+
+      id: "serviceProvider",
+      name: "Service Provider",
+      description: "I want to offer services on the platform",
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
 
       id: "talent"
@@ -125,6 +143,7 @@ export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSe
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>
                 <p className="text-sm text-zion-slate-light mt-1">
+<<<<<<< HEAD
                   {type.description}
                 </p>
               </div>
@@ -135,6 +154,11 @@ export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSe
     </div>
   )
 }
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",;
 import { Briefcase, Star, User } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -214,5 +238,9 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

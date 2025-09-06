@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/remote-roles.json';
@@ -7,6 +8,11 @@ import data from '../../data/remote-roles.json',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/remote-roles.json',
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function RemoteRolesPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)
@@ -21,9 +27,14 @@ export default function RemoteRolesPage() {
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
               <a href={it.url} target="_blank" rel="noreferrer" className="font-medium underline">
+<<<<<<< HEAD
                 {it.position} — {it.company}
               </a>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">{it.location} · {(it.tags |[]).join(', ')}</div>
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">{it.location} · {(it.tags || []).join(', ')}</div>
 
             </li>
@@ -66,6 +77,11 @@ function RemoteRolesPage() {
 =======
   );
 };
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {it.position} — {it.company  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -87,5 +103,13 @@ function RemoteRolesPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 }
+=======
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

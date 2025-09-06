@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
 export interface Branding {logoUrl?: string;
   primaryColor?: string;
@@ -5,6 +6,12 @@ export interface Branding {logoUrl?: string;
   subdomain?: string;
 }
 export interface DeployModules {marketplace: boolean;
+=======
+
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface Branding {;
   logoUrl?: string;
   primaryColor?: string;
@@ -33,6 +40,7 @@ export interface DeployModules {;
   apiDocsWiki: boolean;
   zionBrain: boolean;
   // Bonus;
+<<<<<<< HEAD
   globalMap?: boolean;
   franchiseOnboarding?: boolean;
   referralAmbassadors?: boolean;
@@ -59,6 +67,12 @@ export interface GeneratedAsset {kind: "file" | "page" | "config" | "job" | "eve
   description?: string;
 }
 export interface DeployResult {success: boolean;
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
   referralAmbassadors?: boolean,;
@@ -76,6 +90,7 @@ export interface DeployInput {;
   defaultLanguage: string;
   deploymentRegion: string;
   tokenActivation: boolean;
+<<<<<<< HEAD
   governanceMode: GovernanceMode;
   branding: Branding;
   modules: DeployModules;
@@ -122,6 +137,10 @@ export interface GeneratedAsset {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 export interface DeployResult {;
@@ -132,13 +151,34 @@ export interface DeployResult {;
   logs: DeployLogEntry[];
   summary: string;
   version: string;
+<<<<<<< HEAD
 }
 export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
   adminKeyConfigured: boolean;
+=======
+
+export type GovernanceMode = "Admin" | "DAO" | "Hybrid",
+export interface Branding {
+  logo_url?: string,
+  primary_color?: string,
+  secondary_color?: string,
+  subdomain?: string;
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export interface DeployModules {
   marketplace: boolean,
@@ -194,8 +234,16 @@ export interface AccessControlConfig {
   allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   adminKeyConfigured: boolean;
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

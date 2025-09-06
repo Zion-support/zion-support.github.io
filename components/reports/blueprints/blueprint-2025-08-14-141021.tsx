@@ -1,6 +1,7 @@
 
 export default function Page() {
 
+<<<<<<< HEAD
   return (
     <div className='min-h-screen bg-slate-950 text-white'>
       <Head>
@@ -55,3 +56,6 @@ export default function Page() {
   }
 }
 ;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {QuoteFormData} from "@/types/quotes";
 import {Input} from "@/components/ui/input";
 import {Label} from "@/components/ui/label";
@@ -9,6 +10,12 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label",
 import { Textarea } from "@/components/ui/textarea",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ProjectDetailsStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -20,10 +27,18 @@ export function ProjectDetailsStep({
   return (
     <div className="space-y-6">
       <div>
+<<<<<<< HEAD
         <h3 className="text-xl font-semibold text-white mb-4">
           Tell us about your project
         </h3>
         <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>
+=======
+
+
+        <h3 className="text-xl font-semibold text-white mb-4">Tell us about your project</h3>
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="space-y-4">
           <div>
             <Label htmlFor="projectName" className="text-zion-slate-light">
@@ -57,10 +72,18 @@ export function ProjectDetailsStep({
         </div>
       </div>
       <div>
+<<<<<<< HEAD
         <h3 className="text-xl font-semibold text-white mb-4">
           Contact Information
         </h3>
         <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
+=======
+
+
+        <h3 className="text-xl font-semibold text-white mb-4">Contact Information</h3>
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <Label htmlFor="name" className="text-zion-slate-light">
@@ -69,6 +92,7 @@ export function ProjectDetailsStep({
             <Input
               id="name"
               placeholder="Your name"
+<<<<<<< HEAD
               value={formData.contactInfo.name}
               onChange={(e) =>
                 updateFormData({
@@ -78,6 +102,12 @@ export function ProjectDetailsStep({
                   }
                 })
               }
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { QuoteFormData } from "@/types/quotes",;
 import { Input } from "@/components/ui/input",;
 import { Label } from "@/components/ui/label",;
@@ -123,6 +153,12 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
             <Input;
               id="name";
               placeholder="Your name";
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               value={formData.contactInfo.name}
               onChange={(e) => updateFormData({;
                 contactInfo: { ...formData.contactInfo, name: e.target.value } ;
@@ -275,9 +311,30 @@ export function ProjectDetailsStep(): any ({ formData, updateFormData }: Project
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
   )
+=======
+
+              value={formData && formData.contactInfo.email}
+              onChange={(e) => updateFormData({ ;
+                contactInfo: { ...formData && formData.contactInfo, email: e && e.target.value } ;
+              })}
+              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white";
+            />;
+          </div>;
+
+          <div>;
+            <Label htmlFor="phone" className="text-zion-slate-light">Phone</Label>;
+            <Input
+              id="phone"
+              placeholder="Your phone number"
+              value={formData && formData.contactInfo.phone}
+              onChange={(e) => updateFormData({ ;
+                contactInfo: { ...formData && formData.contactInfo, phone: e && e.target.value } ;
+              })}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
 =======
 import { QuoteFormData  } from '@/types / quotes';
@@ -330,9 +387,106 @@ function ProjectDetailsStep() {
           </div>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </div>;
   );
 }
 ;
 }
 ;
+=======
+      <div>;
+        <h3 className="text - xl font - semibold text - white mb - 4">;
+          Contact Information;
+        </h3>;
+        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+          <div>;
+            <Label html_for="name" className="text - zion - slate - light">;
+              Name;
+            </Label>;
+            <Input;
+              id="name";
+              placeholder="Your name";
+              value={form_data.contact_info.name}
+              on_change={(e) =>;
+                updateFormData ({
+                  contact_info: {
+                    ...form_data.contact_info,
+                    name: e.target.value,
+                  },
+                });
+              }
+              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
+            />;
+          </div>;
+          <div>;
+            <Label html_for="company" className="text - zion - slate - light">;
+              Company;
+            </Label>;
+            <Input;
+              id="company";
+              placeholder="Your company name";
+              value={form_data.contact_info.company}
+              on_change={(e) =>;
+                updateFormData ({
+                  contact_info: {
+                    ...form_data.contact_info,
+                    company: e.target.value,
+                  },
+                });
+              }
+              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
+            />;
+          </div>;
+          <div>;
+            <Label html_for="email" className="text - zion - slate - light">;
+              Email;
+            </Label>;
+            <Input;
+              id="email";
+              type="email";
+              placeholder="Your email address";
+              value={form_data.contact_info.email}
+              on_change={(e) =>;
+                updateFormData ({
+                  contact_info: {
+                    ...form_data.contact_info,
+                    email: e.target.value,
+                  },
+                });
+              }
+              className="bg - zion - blue border border - zion - blue - light focus:border - zion - purple text - white";
+            />;
+          </div>;
+          <div>;
+            <Label html_for="phone" className="text - zion - slate - light">;
+              Phone;
+            </Label>;
+            <Input;
+              id="phone";
+              placeholder="Your phone number";
+              value={form_data.contact_info.phone}
+              on_change={(e) =>;
+                updateFormData ({
+                  contact_info: {
+                    ...form_data.contact_info,
+                    phone: e.target.value,
+                  },
+                });
+              }
+              className="bg - zion - blue border border - zion - blue - light focus: border - zion - purple text - white";
+
+            />;
+          </div>;
+        </div>;
+      </div>;
+
+    </div>);
+}
+
+=======
+
+  )
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

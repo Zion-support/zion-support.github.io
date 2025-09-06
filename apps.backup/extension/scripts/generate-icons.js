@@ -20,6 +20,7 @@ for (const size of sizes) {
   const out = resolve(outDir, `icon-${size}.png`),
   await sharp(svgPath).resize(size, size).png().toFile(out),
   // eslint-disable-next-line no-console
+<<<<<<< HEAD
   console.log('generated', out)
 };
   // // // console.log('generated', out)
@@ -40,3 +41,7 @@ for (const size of sizes) {;
   // // // console.log('generated', out);
 }
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

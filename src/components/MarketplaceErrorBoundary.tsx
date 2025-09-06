@@ -2,6 +2,7 @@ import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from 'react';
@@ -21,6 +22,8 @@ import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { RefreshCcw, AlertCircle } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface MarketplaceErrorFallbackProps extends FallbackProps {
@@ -66,6 +69,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
     } catch (retryError) {
       logErrorToProduction('Error during retry:', { data: retryError })
       Sentry.captureException(retryError)
+<<<<<<< HEAD
     }
   }
   return (
@@ -94,6 +98,9 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
 import React from 'react';
 import {ErrorBoundary, FallbackProps} from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -132,6 +139,7 @@ function MarketplaceErrorFallback(): any ({;
     }
   }
   return (
+<<<<<<< HEAD
     <div className="flex items-center justify-center min-h-[400px] p-6">
       <div className="max-w-md w-full space-y-4">
         <Alert variant="destructive">
@@ -153,6 +161,10 @@ function MarketplaceErrorFallback(): any ({;
           </Button>
           
           <Button 
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             onClick={() => window.location.reload()}
             variant="outline"
             className="w-full"
@@ -160,11 +172,17 @@ function MarketplaceErrorFallback(): any ({;
             Reload Page
           </Button>
         </div>
+<<<<<<< HEAD
         <div className='text-center text-sm text-muted-foreground'>
           If the problem persists, please{' '}
           <a
             href='mailto:support@example.com'
             className='text-primary hover:underline'          >
+=======
+
+        
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a
@@ -183,6 +201,9 @@ function MarketplaceErrorFallback(): any ({;
             href="mailto: support@example.com" 
             className="text-primary hover:underline"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             contact support
@@ -190,6 +211,7 @@ function MarketplaceErrorFallback(): any ({;
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode
@@ -216,6 +238,8 @@ export function MarketplaceErrorBoundary({
   )
 }   return (
     <ErrorBoundary
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       // Re - call SWR mutate ('*') to refresh all cached data;
       await mutate ((, ) => true, undefined, { revalidate: true }),
@@ -306,7 +330,11 @@ function MarketplaceErrorBoundary() {
             {error?.message ||;
               'An unexpected error occurred while loading marketplace content.'}
   )
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <ErrorBoundary 
 <<<<<<< HEAD
 
@@ -399,6 +427,9 @@ export function MarketplaceErrorBoundary(): any ({;
   );
 } ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   );
 =======

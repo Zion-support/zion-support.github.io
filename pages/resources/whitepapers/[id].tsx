@@ -1,5 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -53,6 +60,12 @@ const whitepapers = {
       ],
       targetAudience: 'Business analysts, project managers, and executives evaluating automation investments.'
     }
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -144,6 +157,7 @@ export default function WhitepaperPage() {
 
   if (!whitepaper) {
 
+<<<<<<< HEAD
 // Mock whitepaper data - in a real app, this would come from an API or database;
 const whitepapers = {;
   'autonomous-systems-guide': {;
@@ -163,6 +177,15 @@ const whitepapers = {;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+=======
+      executive_summary: 'This practical guide helps organizations calculate and maximize ROI for automation initiatives. Learn how to measure success and justify automation investments.',
+      key_topics: [;
+        'ROI Calculation MethodsCost - Benefit AnalysisSuccess Metrics & KPIsInvestment Justification Strategies';
+      ],
+      target_audience: 'Business analysts, project managers, and executives evaluating automation investments.';
+    }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 },
 export default /**
@@ -209,6 +232,12 @@ function WhitepaperPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <nav className="mb-8">
             <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               ← Back to Resources
@@ -254,6 +283,12 @@ function WhitepaperPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
               <span>By {whitepaper.author}</span>
@@ -269,6 +304,12 @@ function WhitepaperPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div className="max-w-4xl mx-auto">
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-cyan-400">Executive Summary</h2>
@@ -299,6 +340,11 @@ function WhitepaperPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <section className="mb-12">
               <div className="bg-gradient-to-r from-fuchsia-500/10 to-purple-500/10 rounded-2xl p-8 border border-fuchsia-500/20 text-center">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Download?</h2>
@@ -312,6 +358,12 @@ function WhitepaperPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </button>
                 <p className="text-white/60 text-sm mt-4">
                   PDF format • {whitepaper.pages} pages • Free download
@@ -324,6 +376,12 @@ function WhitepaperPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <section className="mb-12">
               <h2 className="text-2xl font-bold mb-6 text-white">Explore More Whitepapers</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -331,6 +389,7 @@ function WhitepaperPage() {
                   .filter(w => w.id !== whitepaper.id)
                   .slice(0, 2)
                   .map((relatedPaper) => (
+<<<<<<< HEAD
                     <Link
                     <Link 
                       key={relatedPaper.id}
@@ -561,6 +620,12 @@ export default function WhitepaperPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Need Custom Research?</h2>
@@ -581,6 +646,7 @@ export default function WhitepaperPage(req, res) {
         </main>
       </div>
     </>
+<<<<<<< HEAD
   );
 };
   )
@@ -588,6 +654,47 @@ export default function WhitepaperPage(req, res) {
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">;
                 <h2 className="text-2xl font-bold mb-4 text-white">Need Custom Research?</h2>;
                 <p className="text-white/80 mb-6">;
+=======
+
+=======
+}
+
+=======
+                </button>;
+                <p className="text - white / 60 text - sm mt - 4">;
+                  PDF format • {whitepaper.pages} pages • Free download;
+                </p>;
+              </div>;
+            </section>;
+            {/* Related Whitepapers */}
+            <section className="mb - 12">;
+              <h2 className="text - 2xl font - bold mb - 6 text - white">Explore More Whitepapers</h2>;
+              <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+                {Object.values (whitepapers);
+                  .filter (w => w.id !== whitepaper.id);
+                  .slice (0, 2);
+                  .map ((related_paper) => (
+                    <Link;
+                      key={related_paper.id}
+                      href={`/resources / whitepapers/${related_paper.id}`}
+                      className="group bg - white / 10 backdrop - blur - xl rounded - xl p - 6 border border - white / 20 hover:border - fuchsia - 400 / 30 transition - all duration - 300";
+                    >;
+                      <h3 className="text - lg font - semibold text - white group - hover:text - fuchsia - 400 transition - colors mb - 2">;
+                        {related_paper.title}
+                      </h3>;
+                      <p className="text - white / 70 text - sm mb - 3">{related_paper.description}</p>;
+                      <span className="inline - block px - 3 py - 1 bg - fuchsia - 400 / 20 text - fuchsia - 400 text - xs rounded - full border border - fuchsia - 400 / 30">;
+                        {related_paper.category}
+                      </span>;
+                    </Link>))}
+              </div>;
+            </section>;
+            {/* CTA */}
+            <section className="text - center">;
+              <div className="bg - gradient - to - r from - cyan - 500 / 10 to - fuchsia - 500 / 10 rounded - 2xl p - 8 border border - cyan - 500 / 20">;
+                <h2 className="text - 2xl font - bold mb - 4 text - white">Need Custom Research?</h2>;
+                <p className="text - white / 80 mb - 6">;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   Our research team can conduct custom studies and create whitepapers tailored to your specific industry and needs.;
                 </p>;
                 <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
@@ -603,6 +710,7 @@ export default function WhitepaperPage(req, res) {
           </div>;
         </main>;
       </div>;
+<<<<<<< HEAD
     </>;
   );
   } catch (error) {
@@ -611,3 +719,13 @@ export default function WhitepaperPage(req, res) {
   }
 }
 }
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

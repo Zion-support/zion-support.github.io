@@ -22,6 +22,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   Brain
   Cloud
@@ -39,6 +40,10 @@ import {
   BarChart3,
   ArrowRight,;
   Zap,;} from 'lucide-react';import { ;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Brain;
   Cloud
   RefreshCw
@@ -205,6 +210,9 @@ const ServicesSection: React.FC = () => {
       opacity: 1
       transition: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import {;
@@ -358,6 +366,7 @@ const ServicesSection: React.FC = () => {;
     visible: { opacity: 1, y: 0 },        staggerChildren: 0 && 0.1;
       }
     }
+<<<<<<< HEAD
   }
   const cardVariants = {
     hidden: { opacity: 0, y: 20 }
@@ -370,14 +379,26 @@ const ServicesSection: React.FC = () => {;
     visible: { opacity: 1, y: 0 },
 
   };
+=======
+  };
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const cardVariants = {;
     hidden: { opacity: 0, y: 20 },;
     visible: { opacity: 1, y: 0 },;
   };
+<<<<<<< HEAD
   return (
     <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden'>;
       {/* Background Elements */}
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+    <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden'>;
+      {/* Background Elements */}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       <div className='absolute inset-0'>;
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0 && 0.1),transparent_50%)]' />;
@@ -388,6 +409,12 @@ const ServicesSection: React.FC = () => {;
 
 
 
+<<<<<<< HEAD
+=======
+      <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
       <div className='absolute inset-0'>
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]' />
@@ -400,6 +427,12 @@ const ServicesSection: React.FC = () => {;
       <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
         {/* Section Header */}
 
+<<<<<<< HEAD
+=======
+    hidden: { opacity: 0, y: 20 },
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">;
       {/* Background Elements */}
@@ -430,6 +463,7 @@ const ServicesSection: React.FC = () => {;
           className='text-center mb-16'        >          className="text-center mb-16"
           className='text-center mb-16'        >
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -437,6 +471,9 @@ const ServicesSection: React.FC = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <motion.div
         stagger_children: 0.1,
@@ -570,6 +607,12 @@ const ServicesSection: React.FC = () => {;
             className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6'
 
           >
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <Zap className='w-5 h-5 text-blue-400' />
             <span className='text-blue-400 font-medium'>Our Services</span>
           </motion.div>
@@ -580,8 +623,16 @@ const ServicesSection: React.FC = () => {;
             </span>
           </h2>
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
+<<<<<<< HEAD
             We deliver cutting-edge technology solutions that drive innovation
             We deliver cutting-edge technology solutions that drive innovation,
+=======
+
+
+            We deliver cutting-edge technology solutions that drive innovation,
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             efficiency, and growth for businesses across all industries.          </p>
 =======
             We deliver cutting-edge technology solutions that drive innovation,
@@ -620,10 +671,14 @@ const ServicesSection: React.FC = () => {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -631,6 +686,8 @@ const ServicesSection: React.FC = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
@@ -734,11 +791,29 @@ const ServicesSection: React.FC = () => {;
 
                 {/* Features */}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
             </motion.div>
           ))}
         </motion.div>
 
+<<<<<<< HEAD
+=======
+        </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Bottom CTA */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -747,6 +822,7 @@ const ServicesSection: React.FC = () => {;
           viewport={{ once: true }}
           className='text-center'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -754,6 +830,9 @@ const ServicesSection: React.FC = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -787,11 +866,34 @@ const ServicesSection: React.FC = () => {;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 export default ServicesSection;  );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ServicesSection;
 
 export default ServicesSection;
+<<<<<<< HEAD
 export default ServicesSection;
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  );
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

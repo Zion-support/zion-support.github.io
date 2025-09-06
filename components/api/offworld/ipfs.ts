@@ -1,10 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   addJSON,
   publishManifesto,
   OFFWORLD_TOPICS,;
 } from '@/utils/offworld/ipfs';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {
   addJSON
@@ -12,10 +23,19 @@ import {
   OFFWORLD_TOPICS;
 } from '@/utils/offworld/ipfs';
 export default async function handler(
+<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
   req: NextApiRequest,
   res: NextApiResponse;
+=======
+
+
+  req: NextApiRequest,
+  res: NextApiResponse;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

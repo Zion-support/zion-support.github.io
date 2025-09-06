@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type CuttingEdgeAIService = {
       'CBT-guided prompts',
   launch_date?: string;
@@ -31,6 +32,11 @@ export type CuttingEdgeAIService = {;
   realService?: boolean;
 }
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   {
 
 =======
@@ -56,6 +62,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 
   },
   {
+<<<<<<< HEAD
     id: 'ai-product-spec-writer'
     name: 'AI Product Spec Writer'
     description:
@@ -91,16 +98,38 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     link: 'https://ziontechgroup.com/services/ai-creative-studio'
     realService: true
   }
+=======
+
+=======
+    id: 'ai - creative - studio',
+    name: 'AI Creative Studio',
+    description:;
+      'Generate brand - consistent images and short - form videos with approvals and rights management.',
+    category: 'AI Creativity',
+    pricing: { starter: '$149 / mo' },
+    features: [;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'Brand kit',
       'Image & video gen',
       'Review & approvals',
       'Rights management',
     ],
     integrations: ['Canva', 'Figma'],
+<<<<<<< HEAD
     useCases: ['Marketing velocity', 'Cost savings'],
     link: 'https://ziontechgroup.com/services/ai-creative-studio',
     realService: true,
   },;
+=======
+
+    use_cases: ['Marketing velocity', 'Cost savings'],
+    link: 'https://ziontechgroup.com / services / ai - creative - studio',
+    real_service: true,
+
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];	id: string;
 
 =======
@@ -176,10 +205,14 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 
 		realService: true
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 	}
 ];
 
 export type CuttingEdgeAIService = {;
+<<<<<<< HEAD
 	id: string,;
 	name: string,;
 	description: string,;
@@ -237,6 +270,9 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [;
 		useCases: ['Marketing velocityCost savings'],;
 		link: 'https://ziontechgroup.com/services/ai-creative-studio',;
 		realService: true;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 	}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];

@@ -48,6 +48,7 @@ import { ServiceVariant } from '../types/service-variants';
 ;
 
 const contact = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -664,6 +665,16 @@ export interface SpecializedEmergingTechService {;
 }
 ;
 =======
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+
+    features: [
+      'Brain-inspired neural architecturesEnergy-efficient AI processingSpiking neural networksCognitive computing capabilitiesReal-time learning and adaptationNeuromorphic hardware integrationBrain-computer interface supportCognitive robotics applications';
+      'Advanced pattern recognitionCustom neuromorphic algorithms'
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
     marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth'
     variant: 'ai-futuristic', contactInfo: contact
     realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities'
@@ -739,6 +750,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     period: '/month',;
     description: 'Advanced AR/VR platform that enables businesses to create immersive experiences, develop metaverse applications, and engage customers in virtual environments.',;
     features: [;
+<<<<<<< HEAD
       'AR/VR content creation and managementMetaverse development tools and SDKs3D modeling and animation capabilitiesMulti-platform deployment (VR headsets, mobile AR, web)Real-time collaboration in virtual spacesAI-powered content generationAnalytics and user behavior trackingIntegration with major VR/AR hardware',;
       'Custom avatar and environment creationE-commerce integration for virtual stores';
     ],;
@@ -1027,6 +1039,16 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      'Brain - inspired neural architectures_energy - efficient AI processing_spiking neural networks_cognitive computing capabilities_real - time learning and adaptation_neuromorphic hardware integration_brain - computer interface support_cognitive robotics applications';
+      'Advanced pattern recognition_custom neuromorphic algorithms';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    ];
+
+    popular: true, icon: '🧠',
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

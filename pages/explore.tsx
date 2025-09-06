@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -268,6 +269,30 @@ export default function ExplorePage(req, res) {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 import React, { useState } from 'react';
@@ -337,6 +362,7 @@ import React, { useState } from 'react';
       case 'name':;
         return a && a.name.localeCompare(b && b.name);
       case 'featured':;
+<<<<<<< HEAD
         return (b.featured ? 1 : 0) - (a.featured ? 1 : 0),;
       default: return 0;
       } catch (error) {
@@ -345,6 +371,13 @@ import React, { useState } from 'react';
   }
 }
   }),
+=======
+        return (b && b.featured ? 1 : 0) - (a && a.featured ? 1 : 0);
+      default:;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        return 0;    }
+  });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -402,6 +435,12 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
 
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
@@ -447,6 +486,13 @@ import React, { useState } from 'react';
               <div className="flex-1 max-w-md">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <input
                     type="text"
                     placeholder="Search categories..."
@@ -465,6 +511,12 @@ import React, { useState } from 'react';
   }
 }
               <div className="flex items-center gap-4">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <select
                   value={sortBy}
 
@@ -504,6 +556,13 @@ import React, { useState } from 'react';
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="mb-12"
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Featured Services
@@ -663,6 +722,12 @@ import React, { useState } from 'react';
   }
 }
                 className="group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                 <div className="relative z-10">
@@ -695,6 +760,11 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </span>
                     <span className="text-xs text-white/40">{service.category}</span>
                   </div>
@@ -713,6 +783,13 @@ import React, { useState } from 'react';
                   
                   <div className="mb-4">
                     <span className="text-xl font-bold text-cyan-400">{service.price}</span>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </div>
                   
                   <a
@@ -761,6 +838,10 @@ import React, { useState } from 'react';
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="mb-12"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className="text-3xl font-bold text-white mb-4">
               Technology Categories
@@ -772,6 +853,13 @@ import React, { useState } from 'react';
           <AnimatePresence mode='wait'>            {sortedCategories.length === 0 ? (
           <AnimatePresence mode="wait">
             {sortedCategories.length === 0 ? (
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <motion.div
 =======
             transition={{ duration: 0 && 0.6 }}
@@ -949,6 +1037,7 @@ import React, { useState } from 'react';
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {sortedCategories.map((category, index) => (
                   <motion.div
+<<<<<<< HEAD
                     key={category.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -983,6 +1072,9 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
@@ -1043,6 +1135,13 @@ import React, { useState } from 'react';
                         <div className="text-center">
                           <div className="text-2xl font-bold text-cyan-400">{category.serviceCount}</div>
                           <div className="text-xs text-white/60">Services</div>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </div>
                         <div className="text-center">
                           <div className="text-2xl font-bold text-purple-400">
@@ -1071,6 +1170,12 @@ import React, { useState } from 'react';
 }
                       <div className="flex items-center justify-between">
                         <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           Explore Category
                         </span>
                         <ChevronRight className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1" />
@@ -1118,6 +1223,7 @@ import React, { useState } from 'react';
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1139,6 +1245,16 @@ import React, { useState } from 'react';
   }
 }
             className="text-center mb-16"
+=======
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Emerging Technology Trends
@@ -1147,6 +1263,7 @@ import React, { useState } from 'react';
               Stay ahead of the curve with our insights into the latest technology developments
             </p>
           </motion.div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {[
               {
                 icon: Brain
@@ -1196,6 +1313,10 @@ import React, { useState } from 'react';
                 trend: 'Growing'
                 color: 'from-emerald-500 to-green-500'
               },            ].map((trend, index) => (
+=======
+
+            ].map((trend, index) => (
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               <motion.div
                 key={trend.title}
@@ -1269,6 +1390,7 @@ import React, { useState } from 'react';
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
                 className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -1395,6 +1517,10 @@ import React, { useState } from 'react';
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xl font-bold text-white">{trend.title}</h3>
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -1430,6 +1556,7 @@ import React, { useState } from 'react';
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
       {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1458,6 +1585,35 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* CTA Section */}
+      <section className='py-20 px-6'>;
+        <div className='max-w-4xl mx-auto text-center'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
+              Ready to Explore?;
+            </h2>;
+            <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>;
+              Dive deep into our technology categories and discover the perfect;
+              solutions for your business needs.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <a
+                href='/services'
+                className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'>;
+                View All Services;
+                <ArrowRight className='w-5 h-5 ml-2' />;
+              </a>;
+              <a
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Explore?
@@ -1486,10 +1642,34 @@ import React, { useState } from 'react';
       </section>
       <SmartFooter />
     </div>
+<<<<<<< HEAD
 );
 
 
 }
+=======
+
+                href='mailto:kleber@ziontechgroup && ziontechgroup.com'
+                className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>;
+                Get Expert Guidance;
+              </a>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+      <SmartFooter />;
+    </div>;
+  );
+
+=======
+
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1543,3 +1723,10 @@ import React, { useState } from 'react';
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

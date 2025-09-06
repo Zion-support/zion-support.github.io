@@ -1,16 +1,25 @@
 
 import React from "react";
 import {
+<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
@@ -54,6 +63,7 @@ export function ExportPanel() {
       }, 1500));
   };
 
+<<<<<<< HEAD
       description: "Your export is being prepared and will download shortly."}),
     
     // In a real implementation, this would trigger an API call to generate and download the export
@@ -64,6 +74,10 @@ export function ExportPanel() {
     }, 1500)
   },
   
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">;
       <CardHeader>;
@@ -172,6 +186,12 @@ export function ExportPanel() {;
       </CardContent>;
 
     </Card>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 =======
     </Card>);

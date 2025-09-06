@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export interface ListingCategory {
 export interface ListingCategory {;
   id: string;
@@ -9,6 +10,13 @@ export interface ListingCategory {;
 export interface ProductListing {
 
 export interface ProductListing {;
+=======
+  description: string,
+  icon: string;
+
+}
+export interface ProductListing {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   title: string;
   description: string;
@@ -39,13 +47,18 @@ export interface ProductListing {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ListingItem {
 
 export interface ListingItem {;
+=======
+export interface ListingItem {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   title: string;
   category: string;
 
+<<<<<<< HEAD
   image?: string
   description?: string
 }
@@ -91,4 +104,15 @@ export interface ListingItem {;
   description?: string;
 }
 ;
+=======
+  image?: string,
+  description?: string;
+}
+=======
+
+
+export interface ListingCategory {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export type ListingView = 'grid' | 'list';

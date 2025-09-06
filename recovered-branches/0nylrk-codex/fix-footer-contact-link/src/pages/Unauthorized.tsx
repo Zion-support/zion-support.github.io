@@ -1,15 +1,19 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {ShieldAlert} from "lucide-react";
+<<<<<<< HEAD
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
 import { Header } from "@/components/Header",
@@ -17,6 +21,12 @@ import { Footer } from "@/components/Footer";
 import { ShieldAlert } from "lucide-react";
 import { Footer } from "@/components/Footer",
 import { ShieldAlert } from "lucide-react",
+=======
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function Unauthorized() {
   return (
     <>
@@ -51,7 +61,13 @@ export default function Unauthorized() {
       <Footer />
     </>
   )
+<<<<<<< HEAD
 }
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
 import { Header } from "@/components/Header",;
@@ -130,3 +146,9 @@ function Unauthorized() {
   );
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

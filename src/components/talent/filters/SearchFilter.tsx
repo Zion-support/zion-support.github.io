@@ -21,6 +21,9 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
         />
         <SearchIcon className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" aria-hidden="true" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <Input
           id='talent-search'
@@ -28,6 +31,9 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           placeholder='Search talents...'
           value={searchTerm}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -36,6 +42,9 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           onChange={e => setSearchTerm(e && e.target.value)}
           aria-describedby='talent-search-help';

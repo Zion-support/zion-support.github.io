@@ -5,6 +5,7 @@ import {
 
 
 import {
+<<<<<<< HEAD
   Sidebar
   SidebarContent
   SidebarGroup
@@ -13,6 +14,18 @@ import {
   SidebarMenuButton
   SidebarGroupLabel
   SidebarGroupContent
+=======
+
+import {;
+  Bell,;
+  FileText,;
+  Home,;
+  Mail,;
+  Search,;
+  Settings,;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Bell,
   FileText,
   Home,
@@ -20,6 +33,7 @@ import {
   Search,
   Settings,
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -48,6 +62,8 @@ import {
   Search,
   Settings,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Users,;
 } from "lucide-react";
 import {;
@@ -59,6 +75,12 @@ import {;
   SidebarMenuButton,;
   SidebarGroupLabel,;
   SidebarGroupContent,;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "@/components/ui/sidebar";
 
 export function AppSidebar() {;
@@ -87,6 +109,12 @@ export function AppSidebar() {;
           </SidebarGroupContent>
         </SidebarGroup>
         
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -111,6 +139,12 @@ export function AppSidebar() {;
           </SidebarGroupContent>
         </SidebarGroup>
         
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -135,6 +169,7 @@ export function AppSidebar() {;
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+<<<<<<< HEAD
     </Sidebar>
   );
 }
@@ -151,6 +186,9 @@ import {;
   SidebarGroupContent} from "@/components/ui/sidebar";
 export function AppSidebar() {;
   return (;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <Sidebar>;
       <SidebarContent>;
         <SidebarGroup>;

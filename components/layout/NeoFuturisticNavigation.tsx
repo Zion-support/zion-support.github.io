@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -108,6 +109,9 @@ import Button from '../ui/Button';
 export default function NeoFuturisticNavigation() {;
 
 export default function NeoFuturisticNavigation() {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -1552,6 +1556,14 @@ export default function NeoFuturisticNavigation() {;
                   />
                 </button>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
@@ -1657,6 +1669,18 @@ export default function NeoFuturisticNavigation() {;
                 )}
               </div>
 
+<<<<<<< HEAD
+=======
+              </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Company Section */}
               <div>;
                 <button

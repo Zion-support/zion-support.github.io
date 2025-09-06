@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import { UseFormReturn } from "react-hook-form";
@@ -14,6 +15,22 @@ import {
   FormItem
   FormLabel
   FormMessage
+=======
+
+
+import {;
+  Form,;
+  FormControl,;
+  FormDescription,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage,;
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Form,
   FormControl,
   FormDescription,
@@ -21,11 +38,31 @@ import {
   FormItem,
   FormLabel,
   FormMessage,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "@/components/ui/form";
 
 import { Badge } from "@/components/ui/badge";
 import { X } from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
+
+  const { control, register, watch, setValue } = form;
+
+  const keywords = watch("keywords");
+  const platform = watch("platform");
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
@@ -36,9 +73,14 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Badge } from "@/components/ui/badge",
 import { X } from "lucide-react",
+<<<<<<< HEAD
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
@@ -48,10 +90,14 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
   const keywords = watch("keywords");
   const platform = watch("platform");
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const { control, register, watch, setValue } = form;
 
@@ -338,6 +384,11 @@ if ( {) {
               )}
             />;
             <FormField;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               control={control}
               name="shortDescription"
               render={({ field }) => (
@@ -359,6 +410,11 @@ if ( {) {
             <FormField
             />;
             <FormField;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               control={control}
               name="longDescription"
               render={({ field }) => (
@@ -367,6 +423,11 @@ if ( {) {
                   <FormControl>
                     <Textarea
                     <Textarea 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       placeholder="Detailed description of your app"
                       className="min-h-32"
                       maxLength={maxDescriptionLength}
@@ -395,6 +456,12 @@ if ( {) {
                 className="mb-2"
               />
               
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
 =======
@@ -409,6 +476,12 @@ if ( {) {
                     {keyword}
                     <button
                     <button 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       type="button"
                       onClick={() => removeKeyword(keyword)}
                       className="ml-1 hover:text-red-300";
@@ -423,6 +496,11 @@ if ( {) {
               </FormDescription>
             </div>
             
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <FormField
               control={control}
               name="version"
@@ -430,6 +508,7 @@ if ( {) {
                 <FormItem>
                   <FormLabel>App Version</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
                     <Input placeholder="e.g., 1.0.0" {...field} />
                   </FormControl>
                 </FormItem>
@@ -443,6 +522,12 @@ if ( {) {
 }
 
 );
+=======
+
+);
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <Input 
                       placeholder="e.g., 1.0.0"
                       {...field}
@@ -467,6 +552,18 @@ if ( {) {
           </div>;
         </Form>;
       </CardContent>;
+<<<<<<< HEAD
     </Card>;
   );
+=======
+
+    </Card>);
+}
+;
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

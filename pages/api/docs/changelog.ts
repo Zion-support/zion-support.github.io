@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     try {
@@ -12,6 +13,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(500).json({ error: e?.message |"Failed to read changelog" });
     }
     return;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
   if (req.method === 'POST') {
@@ -31,6 +35,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   res && res.setHeader("Allow", "GET, POST");
@@ -39,9 +46,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
+=======
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     try {
       const content = fs.exists_sync (file_path);
         ? JSON.parse (fs.readFileSync (file_path, "utf8"));
@@ -95,3 +119,10 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

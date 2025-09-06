@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import { useTheme } from "@/hooks/useTheme";
 interface MobileThemeProviderProps {
@@ -29,6 +30,11 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
 =======
 import React from "react",
 import { useTheme } from "@/hooks/useTheme",
+=======
+import React from './react';
+import { use_theme } from '@/hooks / use_theme';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface MobileThemeProviderProps {
   children: React.ReactNode
 import React from "react",;
@@ -47,6 +53,14 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
   const { theme } = useTheme();
   return (;
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {children}
 
     </div>;

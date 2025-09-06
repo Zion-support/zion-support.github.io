@@ -3,6 +3,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
 export interface WhitelabelContextType {
 
+<<<<<<< HEAD
   isWhitelabel: boolean
   primaryColor: string
   logoUrl: string | null
@@ -14,10 +15,18 @@ export interface WhitelabelContextType {
 
     cta: string
   }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     headline: string,
     subtitle: string,
     cta: string;
   };
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   tenant: WhitelabelTenant | null
 }
 
@@ -36,13 +45,59 @@ const defaultContext: WhitelabelContextType = {
 // the generic as `WhitelabelContextType | null` we get proper type checking
 // without falling back to an empty object which triggers TS2740 errors.
 const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
+<<<<<<< HEAD
 export const useWhitelabel = (): WhitelabelContextType => {
 
 export const useWhitelabel = (): WhitelabelContextType => {;
+=======
+
+import {useWhitelabelTenant, WhitelabelTenant} from '@/hooks/useWhitelabelTenant';
+
+export interface WhitelabelContextType {;
+  isWhitelabel: boolean,;
+  primaryColor: string,;
+  logoUrl: string | null,;
+  brandName: string,;
+  themePreset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
+  landingPageCopy: {;
+    headline: string,;
+    subtitle: string,;
+    cta: string;
+  };
+  tenant: WhitelabelTenant | null;
+}
+
+const defaultContext: WhitelabelContextType = {;
+  isWhitelabel: false,;
+  primaryColor: '#9b87f5', // Default Zion purple;
+  logoUrl: null,;
+  brandName: 'Zion AI Marketplace',;
+  themePreset: 'light',;
+  landingPageCopy: {;
+    headline: 'AI Talent Marketplace',;
+    subtitle: 'Find the best AI talent for your projects',;
+    cta: 'Get Started'},;
+  tenant: null},;
+
+// The context may be undefined if the provider is not mounted.  By declaring;
+// the generic as `WhitelabelContextType | null` we get proper type checking;
+// without falling back to an empty object which triggers TS2740 errors.;
+const WhitelabelContext = createContext<WhitelabelContextType | null>(null);
+
+export const useWhitelabel = (): WhitelabelContextType => {;
+
+=======
+
+
+export const useWhitelabel = (): WhitelabelContextType => {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const context = useContext(WhitelabelContext);
   if (!context) {
     throw new Error('useWhitelabel must be used within a WhitelabelProvider')
   }
+<<<<<<< HEAD
   // Cast is used here because the context default is `null` until provided by
   // `WhitelabelProvider`. The runtime check above guarantees it's defined.
   return context as WhitelabelContextType
@@ -65,10 +120,17 @@ export const useWhitelabel = (): WhitelabelContextType => {;
     throw new Error('useWhitelabel must be used within a WhitelabelProvider');
   }
 <<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [contextValue, setContextValue] = useState<WhitelabelContextType>(defaultContext);
   const { tenant, isLoading } = useWhitelabelTenant();
   useEffect(() => {
@@ -244,3 +306,10 @@ if ( {) {
     </WhitelabelContext.Provider>;
   );
 };
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

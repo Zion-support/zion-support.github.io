@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const cuttingEdgeITServices2025 = [
@@ -426,13 +430,26 @@ export const cuttingEdgeITServices2025 = [
       'Quality Assurance Protocols'
     ]
   }
+=======
+export const cuttingEdgeITServices2025 = [
+  {
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'DevOps Best Practices',
       'Security Standards',
       'Quality Assurance Protocols',
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   },;
+=======
+
+  },;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
 =======
 ];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
@@ -440,10 +457,23 @@ export const cuttingEdgeITServices2025 = [
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
+<<<<<<< HEAD
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
   }
 ];
 
+=======
+
+
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const cuttingEdgeITServices2025 = [;
   {;
     id: 'quantum-cloud-infrastructure-platform',;
@@ -649,5 +679,11 @@ export const cuttingEdgeITServices2025 = [;
     ],;
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];

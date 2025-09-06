@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import nacl from 'tweetnacl',;
 import bs58 from 'bs58',;
@@ -23,6 +24,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import nacl from 'tweetnacl';
 import bs58 from 'bs58';
 import jwt from 'jsonwebtoken';
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const JWT_SECRET = process.env.JWT_SECRET |'dev-secret-change-me'
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -43,6 +49,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const token = jwt.sign({ sub: publicKey, chain: 'sol' }, JWT_SECRET, { expiresIn: '7d' })
     res.setHeader('Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)
 
+<<<<<<< HEAD
     return res.status(200).json({ ok: true })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message |'Verify failed' })
@@ -71,3 +78,7 @@ export default async function handler(req, res) {
 }
   }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -161,6 +161,12 @@ if ( {) {
     }
   },
   
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
@@ -176,6 +182,9 @@ if ( {) {
           render={({ field }: { field: ControllerRenderProps<FormValues "title"> }) => (
             <FormItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               <FormLabel>Template Name</FormLabel>
               <FormControl>
@@ -265,6 +274,9 @@ if ( {) {
         <div className="flex gap-2 justify-end">
           <Button type="button" variant="outline" onClick={onCancel}>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             Cancel
@@ -311,6 +323,7 @@ if ( {) {
                 Saving...
               </>
             ) : (
+<<<<<<< HEAD
               `${editTemplate ? 'Update' : 'Save'} Template`
             )}
           </Button>
@@ -331,11 +344,17 @@ try {
 }Template`)
 }</Button> </div> </form> </Form>)
 }"}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   editTemplate ? "Update" : "Save" 
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"};
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               `${editTemplate ? "Update" : "Save"} Template`
 

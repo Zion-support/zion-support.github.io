@@ -69,6 +69,7 @@ import { EducationItemProps } from './types';
           </div>
         </div>
         {education.description && (
+<<<<<<< HEAD
           <p className='text-sm mt-3 line-clamp-2'>{education.description}</p>        )}
       </CardContent>
     </Card>
@@ -117,6 +118,8 @@ import { EducationItemProps } from './types';
         </div>
         {education.description && (
 <<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               onClick={() => onDelete(education && education.id!)}

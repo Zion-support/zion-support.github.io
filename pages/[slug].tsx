@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
@@ -46,6 +47,36 @@ const service = useMemo(() => {
         const url = new URL(s.link);
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
       } catch {
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useMemo } from 'react';
+import Head from 'next / head';
+import {GetStaticPaths, GetStaticProps} from 'next';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         return false;
       }
     });
@@ -56,6 +87,7 @@ if (return by_link) {
   }, [slug]);
 import React, { useMemo } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -74,6 +106,9 @@ import { realQ4Services2025, real2025Q4Additions } from '../data/real-2025-q4-ad
 import { real2026Q1Additions } from '../data/real-2026-q1-additions';
 import fs from 'fs';
 import path from 'path';
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 type Service = typeof enhancedRealMicroSaasServices[number];
 function getAllServices(): Service[] {
   return enhancedRealMicroSaasServices
@@ -106,6 +141,7 @@ function getAllServices(): any (): Service[] {;
 		.concat(real2025Q4Additions as unknown as Service[]);
 		.concat(realMarketServicesExtended as unknown as Service[]);
 		.concat(real2026Q1Additions as unknown as Service[]);
+<<<<<<< HEAD
 		.concat(real2026Additions as unknown as Service[]);
 		.concat(added2026Q2Services as unknown as Service[]);
 		.concat(real2026Q3Additions as unknown as Service[]);
@@ -132,6 +168,15 @@ export async function getStaticPaths() {
 	const services = getAllServices(),
 	const slugs = new Set<string>(),
 	 })),;
+=======
+
+
+	const services = getAllServices(),
+	const slugs = new Set<string>(),
+	 })),;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 		fallback: false;
 	}
 export async function getStaticProps() {
@@ -176,6 +221,7 @@ export async function getStaticProps(): any ({ params }: { params: { slug: strin
 	}
 	return {props: { service }
 	}
+<<<<<<< HEAD
 export default function RootServiceDetailPage({ service }: { service: Service }) {const canonical = `https://ziontechgroup.com/${toSlug(service.id |service.name |'')}`,	return (
 
 ;
@@ -396,6 +442,10 @@ export async function getStaticProps(req, res) {
 export default function RootServiceDetailPage({ service }: { service: Service }) {
 	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`;
 	return (
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
@@ -420,6 +470,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 					dangerouslySetInnerHTML={{
 						__html: JSON && JSON.stringify(
 							{
+<<<<<<< HEAD
 								"@context": "https://schema.org"
 								"@type": "Service",								name: service.name
 								description: service.tagline |service.description
@@ -556,6 +607,11 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>
 							<ul className="space-y-2 text-gray-300">
 								{(service.features || []).slice(0, 12).map((f: string) => (
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 									<li key={f} className="flex items-start gap-2">
 										<Check className="w-4 h-4 mt-0.5 text-emerald-400" />
 										<span>{f}</span>
@@ -571,6 +627,7 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 								))}
 								{(service.integrations || []).slice(0, 12).map((i: string) => (
 									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>
+<<<<<<< HEAD
 								))}
 								))  } catch (error) {
     console.error("Error:", error);
@@ -585,6 +642,10 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 							</div>
 						</Card>
 					</div>
@@ -597,6 +658,15 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 									<Phone className="w-4 h-4" /> +1 302 464 0950
 								</Link>
 								</a>
+<<<<<<< HEAD
+=======
+=======
+
+								</a>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
 								</a>
@@ -623,13 +693,180 @@ export default function RootServiceDetailPage(): any ({ service }: { service: Se
 				</div>
 			</div>
 		</UltraFuturisticBackground>
+<<<<<<< HEAD
 );
+=======
+
+
+								"@context": "https://schema && schema.org",
+								"@type": "Service",								name: service && service.name,
+								description: service && service.tagline || service && service.description,
+								url: canonical,
+								provider: {
+									"@type": "Organization",
+									name: "Zion Tech Group",
+									url: "https://ziontechgroup && ziontechgroup.com"
+								},
+								offers: {
+									"@type": "Offer",
+									price: (service && service.price || '').replace(/[^0-9.]/g, ''),									priceCurrency: "USD",
+									availability: "https://schema && schema.org/InStock"
+								}
+							}
+							null
+							2
+							)}
+				/>;			</Head>;
+
+          {/* Service Details */}
+          <div className="grid md:grid-cols-2 gap-12 mb-16">;
+            <Card className="p-8">;
+              <h2 className="text-2xl font-bold text-white mb-6">Service Details</h2>;
+              <div className="space-y-4">;
+                <div>;
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">Category</h3>;
+                  <p className="text-slate-300">{service && service.category}</p>;
+                </div>;
+                <div>;
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">Price</h3>;
+                  <p className="text-slate-300">{service && service.price} {service && service.period}</p>;
+                </div>;
+                <div>;
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">Trial Period</h3>;
+                  <p className="text-slate-300">{service && service.trialDays} days free trial</p>;
+                </div>;
+                <div>;
+                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">Setup Time</h3>;
+                  <p className="text-slate-300">{service && service.setupTime}</p>;
+                </div>;
+              </div>;
+            </Card>;
+
+            <Card className="p-8">;
+              <h2 className="text-2xl font-bold text-white mb-6">Features</h2>;
+              <ul className="space-y-3">;
+                {service && service.features.map((feature, index) => (;
+                  <li key={index} className="flex items-start gap-3">;
+                    <Check className="w-5 h-5 text-cyan-400 mt-0 && 0.5 flex-shrink-0" />;
+                    <span className="text-slate-300">{feature}</span>;
+                  </li>;
+                ))}
+              </ul>;
+            </Card>;
+          </div>;
+
+						<Card className="p-6 bg-black/40 border border-gray-700/50">;
+							<h3 className="text-white text-lg font-semibold mb-4">Key Features</h3>;
+							<ul className="space-y-2 text-gray-300">;
+								{(service && service.features || []).slice(0, 12).map((f: string) => (;
+									<li key={f} className="flex items-start gap-2">;
+										<Check className="w-4 h-4 mt-0 && 0.5 text-emerald-400" />;
+										<span>{f}</span>;
+									</li>;
+								))}
+							</ul>;
+						</Card>;
+
+						<Card className="p-6 bg-black/40 border border-gray-700/50">;
+							<h3 className="text-white text-lg font-semibold mb-4">Integrations</h3>;
+							<div className="flex flex-wrap gap-2">;
+								{(service && service.integrations || []).slice(0, 12).map((i: string) => (;
+									<span key={i} className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-gray-200">{i}</span>;
+								))}
+							</div>;
+						</Card>;
+					</div>;
+
+					<div className="space-y-6">;
+						<Card className="p-6 bg-black/40 border border-gray-700/50">;
+							<div className="text-3xl font-bold text-white">{service && service.price} <span className="text-base text-gray-400">{service && service.period}</span></div>;
+							<p className="text-gray-400 text-sm mt-1">Transparent pricing with market references</p>;
+							<div className="mt-4 space-y-3">;
+								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">;
+									<Phone className="w-4 h-4" /> +1 302 464 0950;
+								</Link>;
+								<a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">;
+									<Mail className="w-4 h-4" /> kleber@ziontechgroup && ziontechgroup.com;
+								</Link>								<div className="flex items-start gap-2 text-gray-300">;
+									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709;
+								</div>;
+							</div>;
+							<div className="mt-6">;
+								<Button href="/contact" className="w-full">Talk to Sales</Button>;
+							</div>;
+						</Card>;
+
+						<Card className="p-6 bg-black/40 border border-gray-700/50">;
+							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>;
+							<a href={service && service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">;
+								Open canonical page <ExternalLink className="w-4 h-4" />;
+							</a>;
+						</Card>;
+					</div>;
+				</div>;
+			</div>;
+		</UltraFuturisticBackground>;
+	);
+
+
+=======
+	)
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+;
+function getAllServices (): Service[] {
+  return enhancedRealMicroSaasServices;
+    .concat (extra_services as Service[], additionalEnhancedServices as Service[]);
+    .concat (newlyAddedServices as unknown as Service[]);
+    .concat (curatedMarketServices as Service[]);
+    .concat (new2025Services as unknown as Service[]);
+  .concat (marketValidatedServices as unknown as Service[]);
+  .concat (moreRealServices2025 as unknown as Service[]);
+  .concat (verified2025Additions as unknown as Service[]);
+  .concat (realServicesQ12025 as unknown as Service[]);
+  .concat (realEnterpriseServices2025 as unknown as Service[]);
+  .concat (verifiedRealServices2025Batch2 as unknown as Service[]);
+  .concat (realMarketAugmentations2025 as unknown as Service[]);
+  .concat (additionalLiveServices2025 as unknown as Service[]);
+  .concat (real2025Q2Additions as unknown as Service[]);
+  .concat (augmentedServicesBatch3 as unknown as Service[]);
+  .concat (realServicesQ22025 as unknown as Service[]);
+  .concat (realServicesQ32025 as unknown as Service[]);
+  .concat (realQ4Services2025 as unknown as Service[]);
+  .concat (real2025Q4Additions as unknown as Service[]);
+  .concat (realMarketServicesExtended as unknown as Service[]);
+  .concat (real2026Q1Additions as unknown as Service[]);
+  .concat (real2026Additions as unknown as Service[]);
+  .concat (added2026Q2Services as unknown as Service[]);
+  .concat (real2026Q3Additions as unknown as Service[]);
+  .concat (real2026Q4Additions as unknown as Service[]);
+  .concat (real2026Q4NewServices as unknown as Service[]);
+  .concat (real2027Q1Additions as unknown as Service[]);
+  .concat (newSaasItAiServices2025 as unknown as Service[]);
+;
+function to_slug (value: string): string {
+return value.toLowerCase ().replace (/[^a - z0 - 9]+/g, '-').replace (/(^-|-$)/g, '');
+;
+function getExistingRootPageSlugs (): Set < string> {
+const pages_dir = path.join (process.cwd (), 'pages'),
+const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
+const reserved = new Set < string>(['apireportsservices']),
+const slugs = new Set < string>(),
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 
 }
 }
 }
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 	);
   } catch (error) {
     console.error("Error:", error);
@@ -673,3 +910,10 @@ if ( {) {
   }
 
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

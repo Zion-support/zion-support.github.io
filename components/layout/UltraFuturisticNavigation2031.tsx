@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Menu
   X
   ChevronDown
@@ -82,6 +83,41 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+=======
+import {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Menu,
   X,
   ChevronDown,
@@ -154,12 +190,23 @@ import {
   GlobeIcon,
   ZapIcon,
   SparklesIcon,
+<<<<<<< HEAD
 
   BrainIcon,;
   AtomIcon,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
+=======
+
+  BrainIcon,;
+  AtomIcon,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Users, Briefcase, ;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -235,6 +282,7 @@ const serviceCategories = [;
       { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' };
       { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' };
       { name: 'AI Dream Interpreter Platform', href: '/ai-dream-interpreter-platform', description: 'Dream analysis with AI psychology', price: '$299/month' }
+<<<<<<< HEAD
     ]
   }
     title: '⚛️ 2031 Quantum & Emerging Tech'
@@ -433,6 +481,17 @@ const serviceCategories = [;
 ];
 
 ];
+=======
+    ];
+  };
+
+
+    title: '⚛️ 2031 Quantum & Emerging Tech',
+    icon: AtomIcon,
+    color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
+    description: 'Quantum computing and beyond',
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
@@ -475,6 +534,11 @@ const mainNavigation = [
 export default function UltraFuturisticNavigation2031() {
 
 export default function UltraFuturisticNavigation2031() {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [scrolled, setScrolled] = useState(false);
@@ -534,6 +598,7 @@ export default function UltraFuturisticNavigation2031() {;
             <div className='flex items-center space-x-2'>
               <Phone className='w-4 h-4 text-cyan-400' />
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -541,6 +606,9 @@ export default function UltraFuturisticNavigation2031() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <span>{contactInfo.mobile}</span>
             </div>
             <div className='flex items-center space-x-2'>
@@ -564,6 +632,40 @@ export default function UltraFuturisticNavigation2031() {;
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      <div className='bg-gradient-to-r from-cyan-900 via-purple-900 to-pink-900 text-white py-2 px-4 text-sm'>;
+        <div className='max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0'>;
+          <div className='flex items-center space-x-6'>;
+            <div className='flex items-center space-x-2'>;
+              <Phone className='w-4 h-4 text-cyan-400' />;
+              <span>{contactInfo && contactInfo.mobile}</span>;
+            </div>;
+            <div className='flex items-center space-x-2'>;
+              <Mail className='w-4 h-4 text-purple-400' />;
+              <span>{contactInfo && contactInfo.email}</span>;
+            </div>;
+          </div>;
+          <div className='flex items-center space-x-2'>;
+            <MapPin className='w-4 h-4 text-pink-400' />;
+            <span className='text-xs'>{contactInfo && contactInfo.address}</span>          </div>              <span>{contactInfo && contactInfo.mobile}</span>;
+            </div>;
+            <div className="flex items-center space-x-2">;
+              <Mail className="w-4 h-4 text-purple-400" />;
+              <span>{contactInfo && contactInfo.email}</span>;
+            </div>;
+          </div>;
+          <div className="flex items-center space-x-2">;
+            <MapPin className="w-4 h-4 text-pink-400" />;
+            <span className="text-xs">{contactInfo && contactInfo.address}</span>;
+          </div>;
+        </div>;
+      </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Main Navigation */}
 
         }`}>;
@@ -583,6 +685,14 @@ export default function UltraFuturisticNavigation2031() {;
               transition={{ duration: 0.5 }}
               className='flex items-center space-x-3'
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>
                 <Rocket className='w-6 h-6 text-white' />
@@ -665,6 +775,7 @@ className="relative group"
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -702,6 +813,8 @@ className="relative group"
                 </motion.div>
               ))}
             </div>
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full'></div>                </motion.div>
 
                 </motion.div>
@@ -719,6 +832,7 @@ className="relative group"
 =======
             </div>
 
+<<<<<<< HEAD
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>              <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -749,6 +863,14 @@ className="relative group"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {/* CTA Buttons */}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -758,7 +880,12 @@ className="relative group"
                 Get Started
               </motion.button>
               <motion.button
+<<<<<<< HEAD
 services: [;
+=======
+=======
+    services: [;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {
         name: 'Neuromorphic Computing Platform',
         href: '/neuromorphic - computing - platform',
@@ -905,6 +1032,7 @@ function UltraFuturisticNavigation2031() {
                   key={item.name}
                   initial={{ opacity: 0, coordinate_y: -20 }}
                   animate={{ opacity: 1, coordinate_y: 0 }}
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -941,6 +1069,8 @@ function UltraFuturisticNavigation2031() {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className='relative group';
                 >;
@@ -993,6 +1123,17 @@ function UltraFuturisticNavigation2031() {
                 animate={{ opacity: 1, scale: 1 }}
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                initial={{ opacity: 0, scale: 0.8 }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                animate={{ opacity: 1, scale: 1 }}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
                     {active_category === category.title && (
@@ -1001,8 +1142,18 @@ function UltraFuturisticNavigation2031() {
                         animate={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                         exit={{ opacity: 0, coordinate_y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
+<<<<<<< HEAD
                         className='absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden'
 
+=======
+
+                        className='absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden'
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       >
                         <div className="p-4">
                           <div className="mb-3">
@@ -1022,6 +1173,13 @@ function UltraFuturisticNavigation2031() {
                                 }}
                                 className='group cursor-pointer'
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                               >
                                 <Link
                                   href={service.href}
@@ -1056,6 +1214,9 @@ function UltraFuturisticNavigation2031() {
       </nav>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
                         className='absolute top - full left - 0 mt - 2 w - 80 bg - black / 90 backdrop - blur - xl border border - cyan - 500 / 20 rounded - 2xl shadow - 2xl shadow - cyan - 500 / 20 overflow - hidden';
                       >;
@@ -1214,6 +1375,7 @@ function UltraFuturisticNavigation2031() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1221,6 +1383,8 @@ function UltraFuturisticNavigation2031() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -1231,6 +1395,7 @@ function UltraFuturisticNavigation2031() {
             transition={{ duration: 0.3 }}
             className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/20 z-50 lg:hidden'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1238,6 +1403,9 @@ function UltraFuturisticNavigation2031() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <div className='p-6'>
               <div className='flex justify-between items-center mb-8'>
@@ -1317,10 +1485,16 @@ function UltraFuturisticNavigation2031() {
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
       {/* Spacer for fixed navigation */}
       <div className='h-32 lg:h-40'></div>
     </>
 );      <div className="h-32 lg: h-40"></div>
+=======
+
+      <div className="h-32 lg: h-40"></div>
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </>
   )
 }
@@ -1357,12 +1531,21 @@ function UltraFuturisticNavigation2031() {
       <div className='h-32 lg:h-40'></div>
     </>
   );
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Spacer for fixed navigation */}
       <div className='h-32 lg:h-40'></div>
     </>
 );      <div className="h-32 lg: h-40"></div>
     </>
   ),
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 }
@@ -1438,6 +1621,9 @@ function UltraFuturisticNavigation2031() {
       </AnimatePresence>;
       {/* Spacer for fixed navigation */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className='h - 32 lg:h - 40'></div>;
     </>);      <div className="h - 32 lg: h - 40"></div>;
     </>),
@@ -1446,6 +1632,7 @@ function UltraFuturisticNavigation2031() {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
       <div className='h-32 lg:h-40'></div>
     </>
@@ -1453,3 +1640,5 @@ function UltraFuturisticNavigation2031() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

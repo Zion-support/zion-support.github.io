@@ -1,7 +1,14 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -23,6 +30,7 @@ import { Button } from "@/components/ui/button",
 import { toast } from "sonner",
 export type AppPlatform = "ios" | "android",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export type AppMetadataValues = {
   appTitle: string
@@ -30,11 +38,21 @@ export type AppMetadataValues = {
   longDescription: string
   keywords: string[]
   version: string
+=======
+
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export type AppMetadataValues = {
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   appTitle: string,
   shortDescription: string,
   longDescription: string,
   keywords: string[],
   version: string,
+<<<<<<< HEAD
   platform: AppPlatform;
 };
   platform: AppPlatform
@@ -55,6 +73,8 @@ export const MetadataManager: React.FC = () => {
   const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } })
   const currentForm = currentPlatform === "ios" ? iosForm : androidForm;
 },
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const defaultValues: AppMetadataValues = {
   appTitle: "Zion AI Marketplace",
@@ -112,8 +132,16 @@ export const MetadataManager: React.FC = () => {
               Google Play (Android)
             </TabsTrigger>
           </TabsList>
+<<<<<<< HEAD
           <Button
           <Button 
+=======
+
+
+          <Button 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             onClick={currentForm.handleSubmit(handleSaveMetadata)}
             disabled={isSaving}
           >
@@ -147,8 +175,17 @@ export const MetadataManager: React.FC = () => {
       </Tabs>
     </div>
   )
+<<<<<<< HEAD
 }
 
+=======
+
+
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 },
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -299,6 +336,14 @@ export const MetadataManager: React.FC = () => {;
           </div>;
         </TabsContent>;
       </Tabs>;
+<<<<<<< HEAD
     </div>;
   );
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

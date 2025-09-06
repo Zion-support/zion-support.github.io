@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,11 @@ export default function SecurityAudit({ report }: Props) {
  
 };
 </pre> </div>) 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function SecurityAudit({ report }: Props) {
   return (
     <div className="space-y-4">
@@ -24,11 +30,19 @@ export default function SecurityAudit({ report }: Props) {
       {report.generatedAt && (
         <div className="text-sm text-gray-500">Generated at: {new Date(report.generatedAt).toLocaleString()}</div>
       )}
+<<<<<<< HEAD
       <pre className="whitespace-pre-wrap text-xs p-4 rounded border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900/40 overflow-auto">
 {JSON.stringify(report, null, 2)}
       </pre>
     </div>
     </div>;
+=======
+
+
+    </div>;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 );
 }
   );

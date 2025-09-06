@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useEffect, useState } from 'react',;
 import Head from 'next/head',;
 import type { KycProfile } from '../../../utils/kyc',;
@@ -7,6 +12,11 @@ export default function IdentitySettingsPage() {
   const [profile, setProfile] = useState<KycProfile | null>(null),
   const [error, setError] = useState(''),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React, { useEffect, useState } from 'react';
 
@@ -19,6 +29,7 @@ export default function IdentitySettingsPage() {
   const [profile, setProfile] = useState<KycProfile | null>(null)
   const [error, setError] = useState('')
   async function load() {
+<<<<<<< HEAD
     try {
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`)
       const data = await res.json()
@@ -38,6 +49,10 @@ export default function IdentitySettingsPage(req, res) {
   const [profile, setProfile] = useState<KycProfile | null>(null);
   const [error, setError] = useState('');
   async function load() {;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     try {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
@@ -74,6 +89,7 @@ export default function IdentitySettingsPage(req, res) {
           <ProfileBadges profile={profile |undefined} />
         </div>
         <div className="mb-4 text-sm text-gray-600">
+<<<<<<< HEAD
           Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'}
         </div>
         <a href="/verify" className="inline-block rounded bg-blue-600 text-white px-4 py-2">Go to verification</a>
@@ -81,10 +97,18 @@ export default function IdentitySettingsPage(req, res) {
           <ProfileBadges profile={profile || undefined} />
         </div>
         <div className="mb-4 text-sm text-gray-600">
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </main>
     </>
   );
 };
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -104,5 +128,13 @@ export default function IdentitySettingsPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 }
+=======
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

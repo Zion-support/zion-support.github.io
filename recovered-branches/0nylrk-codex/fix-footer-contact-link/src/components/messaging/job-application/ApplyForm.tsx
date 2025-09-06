@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+interface ApplyFormProps {
+
+  job: Job
+  onClose: () => void
+
+  onApplySuccess?: (jobId: string) => Promise<void>
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react';
 import {Button} from "@/components/ui/button";
 import {Loader2} from "lucide-react";
@@ -10,6 +24,7 @@ import {ResumeSelector, ResumeOption} from "../resume-selector";
 import {MessageTab} from "./MessageTab";
 import {ResumeTab} from "./ResumeTab";
 import {Job} from "./types";
+<<<<<<< HEAD
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Loader2 } from "lucide-react",
@@ -63,15 +78,29 @@ interface ApplyFormProps {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+interface ApplyFormProps {;
+  job: Job,;
+  onClose: () => void,;
+  onApplySuccess?: (jobId: string) => Promise<void>;
+}
+
+export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormProps) {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
   const { createConversation } = useMessaging();
   const { applyToJob } = useJobApplications();
+<<<<<<< HEAD
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging(),
   const { applyToJob } = useJobApplications(),
   const [message, setMessage] = useState(
     `Hi, I'm interested in your job "${job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`
+=======
+  const [message, setMessage] = useState(;
+    `Hi, I'm interested in your job "${job && job.title}" and would like to apply. I believe my skills and experience are a great match for this role.`;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
   const [proposalLink, setProposalLink] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -140,6 +169,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       
       if (!applicationSuccess) {
         throw new Error("Failed to submit application")
+<<<<<<< HEAD
       }
       
       // Format message with proposal link if provided
@@ -205,12 +235,24 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       let fullMessage = message,;
       if (proposalLink) {;
         fullMessage += `\n\nHere's a link to my proposal: ${proposalLink}`;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       // Add info about attached resume if available
       if (selectedResume) {
         fullMessage += `\n\nI've attached my resume: ${selectedResume.title}`
       }
+<<<<<<< HEAD
       
+=======
+
+
+      
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       // Create context data for the conversation
       const contextData = {
         title: job.title
@@ -272,10 +314,17 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         job && job.id;
         contextData;
       );
+<<<<<<< HEAD
       // Call onApplySuccess to update job status in the UI
       if (onApplySuccess) {
         await onApplySuccess(job.id)
       }
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
       // Create context data for the conversation;
       const contextData = {;
@@ -298,6 +347,12 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       // Call onApplySuccess to update job status in the UI;
       if (onApplySuccess) {;
         await onApplySuccess(job.id);
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       
       toast({
@@ -317,6 +372,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
   }
   },
 
+<<<<<<< HEAD
   return (
     <>
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
@@ -332,6 +388,14 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
           <MessageTab
           <MessageTab 
 ;
+=======
+
+      // Call onApplySuccess to update job status in the UI;
+      if (onApplySuccess) {;
+        await onApplySuccess(job && job.id);
+      }
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       toast({;
         title: "Application sent",;
         description: `Your application for "${job && job.title}" has been sent.`}),;
@@ -505,6 +569,15 @@ if ( {) {
         </TabsList>;
         <TabsContent value="message">;
           <MessageTab;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+          <MessageTab 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             message={message}
             set_message={set_message}
             proposal_link={proposal_link}

@@ -24,6 +24,7 @@ import { X } from 'lucide-react';
   role: 'talent' | 'client';
   user_id?: string | null;
   message: string;
+<<<<<<< HEAD
 }
 export default function SmartNudgeBanner({
   role
@@ -35,23 +36,41 @@ export default function SmartNudgeBanner({
     [role, userId]
     () => `zion-nudge-${role}-${userId ?? 'anon'}`,
     [role, userId];
+=======
+
+
+    () => `zion-nudge-${role}-${userId ?? 'anon'}`,
+    [role, userId];
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );  const [hidden, setHidden] = React.useState<boolean>(false);
   React.useEffect(() => {
     try {
       const v =
         typeof window !== 'undefined' ? localStorage.getItem(storageKey) : null;
       setHidden(v === 'dismissed');    } catch {}export type SmartNudgeBannerProps = {
+<<<<<<< HEAD
   role: 'talent' | 'client'
   userId?: string | null;
   message: string
 }
 export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   role: 'talent' | 'client',;
   userId?: string | null;
   message: string
 };
 
 export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBannerProps) {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`, [role, userId]);
   const [hidden, setHidden] = React.useState<boolean>(false);
   React.useEffect(() => {
@@ -106,6 +125,12 @@ export default function SmartNudgeBanner(): any ({ role, userId, message }: Smar
         localStorage.setItem(storageKey, 'dismissed');    } catch {}      if (typeof window !== 'undefined') localStorage.setItem(storageKey, 'dismissed')
         localStorage.setItem(storageKey, 'dismissed');    } catch {}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch {}
   }, [storageKey]);
   if (hidden) return null;
@@ -120,6 +145,7 @@ export default function SmartNudgeBanner(): any ({ role, userId, message }: Smar
 =======
       <div className='text-sm'>{message}</div>
     </div>
+<<<<<<< HEAD
   );        <X size={16} />
       </button>
       <div className="text-sm">
@@ -130,12 +156,22 @@ export default function SmartNudgeBanner(): any ({ role, userId, message }: Smar
 }
   );
 
+=======
+
+  );
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 export default /**
@@ -219,8 +255,11 @@ if (return null) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

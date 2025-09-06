@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 export default function Custom500() {
@@ -25,47 +26,78 @@ export default function Custom500() {
               Something went wrong on our end. We're working to fix it.
               Something went wrong on our end. We&apos,re working to fix it. 
               Something went wrong on our end. We're working to fix it.
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Please try again in a few moments.
             </p>
           </div>
           <div className="space-y-4">
+<<<<<<< HEAD
             <Link
               href="/"
             <Link 
               href="/" 
             <Link
               href="/"
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
             >
               Go Home
             </Link>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
               <Link
                 href="/about"
               <Link 
                 href="/about" 
               <Link
                 href="/about"
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 About Us
               </Link>
+<<<<<<< HEAD
               <Link
                 href="/services"
               <Link 
                 href="/services" 
               <Link
                 href="/services"
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 Services
               </Link>
+<<<<<<< HEAD
               <Link
                 href="/contact"
               <Link 
                 href="/contact" 
               <Link
                 href="/contact"
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 Contact

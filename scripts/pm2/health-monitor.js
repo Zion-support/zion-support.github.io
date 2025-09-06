@@ -219,6 +219,7 @@ origin/automation-improvements-final
 ;
 // Run the health monitor;
 const healthMonitor = new HealthMonitor();
+<<<<<<< HEAD
 healthMonitor.run().catch(error = > {; process.exit(1)});
 };
 };
@@ -455,6 +456,10 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
           }
         })
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       };
 ;
       return {;
@@ -2072,3 +2077,10 @@ const healthMonitor = new HealthMonitor(),;
 healthMonitor.run().catch(error => {,;
   process.exit(1);
 }),;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

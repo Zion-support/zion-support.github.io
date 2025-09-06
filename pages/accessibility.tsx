@@ -27,6 +27,7 @@ origin/automation-improvements-final
 import Link from 'next/link';
 import MainLayout from '../components/layout/MainLayout';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   Eye
   Ear
@@ -40,6 +41,16 @@ import {
   Zap
   FileText
   Settings
+=======
+
+  Eye,
+  Ear,
+  Hand,
+  Brain,
+  CheckCircle,
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Eye, 
   Ear, 
   Hand, 
@@ -53,6 +64,12 @@ import {
   Zap,
   FileText,
   Settings;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 const accessibility_features = [;
   {

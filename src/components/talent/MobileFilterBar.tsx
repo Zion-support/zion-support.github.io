@@ -2,6 +2,7 @@ interface MobileFilterBarProps {
   searchTerm: string;
   setSearchTerm: (value: string) => void;
   setIsMobileFilterOpen: (isOpen: boolean) => void
+<<<<<<< HEAD
 }
 
 export function MobileFilterBar({ 
@@ -38,6 +39,31 @@ export function MobileFilterBar({
       
       <div className="relative mt-4">
         <label htmlFor="mobile-talent-search" className="sr-only">
+=======
+
+
+
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Search, Sliders } from 'lucide-react';
+import { Input } from '@/components/ui/input';
+interface MobileFilterBarProps {;
+  searchTerm: string;
+  setSearchTerm: (value: string) => void;
+  setIsMobileFilterOpen: (isOpen: boolean) => void;
+export function MobileFilterBar(): any ({;
+  searchTerm,;
+  setSearchTerm,;
+  setIsMobileFilterOpen,;
+}: MobileFilterBarProps) {;
+  return (
+    <div className='lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4'>;
+      <Button
+        onClick={() => setIsMobileFilterOpen(true)}
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           Search talents
         </label>
         <Search className='absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate' />
@@ -53,6 +79,7 @@ export function MobileFilterBar({
         </label>;
         <Search className='absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate' />;
         <Input
+<<<<<<< HEAD
           id='mobile-talent-search'
           placeholder='Search talents...'
           value={searchTerm}
@@ -60,6 +87,10 @@ export function MobileFilterBar({
           aria-describedby='mobile-talent-search-help'
           className='pl-8 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate'        />
         <p id='mobile-talent-search-help' className='sr-only'>
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           Search by name or skill
         </p>
       </div>
@@ -68,6 +99,9 @@ export function MobileFilterBar({
 };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           id="mobile-talent-search"
           placeholder="Search talents..."
@@ -77,12 +111,21 @@ export function MobileFilterBar({
           className="pl-8 bg-zion-blue border-zion-blue-light text-white placeholder: text-zion-slate"
         />
         <p id="mobile-talent-search-help" className="sr-only">
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           Search by name or skill
         </p>
       </div>
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           onChange={e => setSearchTerm(e && e.target.value)}
           aria-describedby='mobile-talent-search-help';
@@ -90,6 +133,7 @@ export function MobileFilterBar({
         <p id='mobile-talent-search-help' className='sr-only'>;
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -98,6 +142,8 @@ export function MobileFilterBar({
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { Search, Sliders } from 'lucide-react';

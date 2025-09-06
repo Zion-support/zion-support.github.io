@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
@@ -41,6 +42,10 @@ export function ProfileContact({
   }
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ProfileContactProps {
   email?: string,
   profileName: string,
@@ -125,6 +130,7 @@ function ProfileContact() {
           <span className="block">Email: </span>;
           <a;
             href={`mailto:${email}`}
+<<<<<<< HEAD
             className="text-zion-cyan hover:underline truncate block"
           >
             {email}
@@ -173,6 +179,15 @@ import { Textarea } from "@/components/ui/textarea",;
 import { Mail, Send } from "lucide-react",;
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
+=======
+
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Mail, Send} from "lucide-react";
+import {useState} from "react";
+import {toast} from "@/hooks/use-toast";
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ProfileContactProps {;
   email?: string;
   profileName: string,;
@@ -278,4 +293,37 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+
+=======
+            <Textarea;
+              placeholder={`Message to ${profile_name}...`}
+              value={message}
+              on_change={(e) => set_message (e.target.value)}
+              className="bg - zion - blue border - zion - blue - light text - white min - h-[120px]";
+              required;
+            />;
+          </div>;
+          <Button;
+            type="submit";
+            className="w - full bg - zion - cyan hover:bg - zion - cyan / 90";
+            disabled={is_sending}
+          >;
+            <Send className="mr - 2 h - 4 w - 4" />;
+            {is_sending ? "Sending..." : "Send Message"}
+          </Button>;
+        </div>;
+      </form>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+=======
+  )
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

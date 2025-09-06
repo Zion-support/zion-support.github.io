@@ -4,6 +4,7 @@ interface ProfileAvailabilityProps {
   availability: Availability
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -12,6 +13,12 @@ interface ProfileAvailabilityProps {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ProfileAvailability({
   availability
 }: ProfileAvailabilityProps) {
@@ -50,6 +57,7 @@ function ProfileAvailability() {
         return '' }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
@@ -73,6 +81,19 @@ function ProfileAvailability() {
           variant="outline"
         <Badge 
           variant="outline" 
+=======
+
+
+
+
+  return (
+
+
+        <Badge 
+          variant="outline" 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           {getStatusText(availability.status)}
         </Badge>
@@ -89,6 +110,13 @@ function ProfileAvailability() {
         <p className='text-zion-slate mb-4'>{availability.message}</p>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       {availability.availableHours &&
         availability.availableHours.length > 0 && (
@@ -160,6 +188,9 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
       )}
       
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -172,6 +203,9 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
             {availability.availableHours.map((slot, index) => (
               <div key={index} className="flex items-center gap-2 text-zion-slate">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 <div className="w-20 text-zion-slate-light">{slot.day}:</div>
@@ -198,6 +232,7 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
 
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -205,12 +240,17 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </div>
               </div>
             ))}
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       )};
 

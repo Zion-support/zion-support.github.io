@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
@@ -12,20 +13,33 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { AppLayout } from "@/layout/AppLayout";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { AppLayout } from "@/layout/AppLayout",
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function Careers() {
   // Sample job listings
 
   const jobs = {
     engineering: [
       {
+<<<<<<< HEAD
         title: "Senior Frontend Engineer"
         location: "Remote"
         type: "Full-time"
         department: "Engineering"
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         title: "Senior Frontend Engineer",
         location: "Remote",
         type: "Full-time",
         department: "Engineering",
+<<<<<<< HEAD
         description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace.";
       };
         description: "Join our frontend team to build beautiful, responsive, and accessible user interfaces for our AI-powered marketplace."
@@ -45,6 +59,10 @@ export default function Careers() {
         department: "Engineering",
         description: "Work on cutting-edge AI technologies to power our matching algorithms and recommendation systems."
       },
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {
         title: "Full Stack Developer"
         location: "Remote"
@@ -596,6 +614,7 @@ export default function Careers() {;
                       </CardContent>;
 
                     </Card>;
+<<<<<<< HEAD
                   ))}
                 </TabsContent>;
               ))}
@@ -616,6 +635,19 @@ export default function Careers() {;
     </AppLayout>
   )
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  ))}
+                </TabsContent>;
+              ))}
+
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </Tabs>;
           </div>;
 
@@ -644,7 +676,15 @@ export default function Careers() {;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
     </AppLayout>;
   );
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

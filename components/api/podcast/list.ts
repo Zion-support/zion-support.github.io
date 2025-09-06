@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 const EPISODES_PATH = path.join(
   process.cwd()
   'data'
@@ -33,6 +34,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     createdAt: e.createdAt
     summary: e.bestQuote |''
     audio: e.audio |{}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }));
   return res.status (200).json ({ episodes: simplified });  const simplified = episodes.map ((e) => ({
     id: e.id;
@@ -85,6 +89,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     invitee_name: e.invitee?.name || 'Guest';
@@ -94,6 +101,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status (200).json ({ episodes: simplified });
 
 }
+<<<<<<< HEAD
 }
   ensureStorage();
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

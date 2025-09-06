@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Badge} from "@/components/ui/badge";
 import {ShieldAlert} from "lucide-react";
 import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
@@ -46,10 +47,42 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
 
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive"
 =======
+import { Badge } from '@/components / ui / badge';
+import { ShieldAlert } from './lucide-react';
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components / ui / tooltip';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   let message = "This item has an open dispute";
+<<<<<<< HEAD
+=======
+  switch (status) {
+    case 'under_review':
+
+import {Badge} from "@/components/ui/badge";
+import {ShieldAlert} from "lucide-react";
+import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
+
+interface DisputeStatusBadgeProps {;
+  status: 'open' | 'under_review' | 'resolved' | 'closed';
+}
+
+export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
+  let message = "This item has an open dispute";
+
+  switch (status) {;
+    case 'under_review':;
+
+=======
+export /**
+ * DisputeStatusBadge - Function description
+ */
+function DisputeStatusBadge() {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",
   let message = "This item has an open dispute",
   
@@ -99,7 +132,15 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       </TooltipContent>
     </Tooltip>
   )
+<<<<<<< HEAD
 }
+=======
+
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from "lucide-react",;
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
@@ -150,7 +191,15 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
+<<<<<<< HEAD
     </Tooltip>;
   );
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

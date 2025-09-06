@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -27,6 +28,31 @@ const SKILLS = [
   'PostgreSQL',
   'Rust'
 ];
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
@@ -43,9 +69,17 @@ const SAMPLE_QUERIES = [
   "Cloud architects AWS/Azure"
   "DevOps engineers with Kubernetes"
 ];
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") {
   if (req.method !== "GET") {;
+=======
+
+
+  if (req.method !== "GET") {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
@@ -64,6 +98,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const suggestions = SAMPLE_QUERIES && SAMPLE_QUERIES.filter((s) =>
     s && s.toLowerCase().includes(query),
   ).slice(0, 5);
+<<<<<<< HEAD
   return res.status(200).json({ suggestions });
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -87,11 +122,17 @@ export default function handler(req, res) {
   for (const s of SKILLS) {
     if (!q || s.toLowerCase().includes(q)) suggestions.add(s);
   }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return res && res.status(200).json({ suggestions });
 =======
   res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -114,3 +155,10 @@ function handler() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

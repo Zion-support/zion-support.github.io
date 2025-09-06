@@ -16,6 +16,9 @@ export function UploadSection(): any ({;
 
 export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <div className='space-y-3'>;
@@ -73,6 +76,9 @@ function UploadSection() {
       
       {customFile && (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       
@@ -88,6 +94,9 @@ function UploadSection() {
           </div>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

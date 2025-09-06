@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 
 
@@ -11,10 +12,18 @@ const CAPABILITIES = [
   'IoT'
   'Security',];const CAPABILITIES = [
   'Full‑stack WebMobile (iOS/Android)AI/MLCloud & DevOpsData EngineeringBlockchainIoTSecurity'
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];
 export default function CapabilitiesPage() {;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         ))}
@@ -116,4 +125,10 @@ export default function CapabilitiesPage() {
 );
 }
 
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

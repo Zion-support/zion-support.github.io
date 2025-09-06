@@ -1,10 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {ChatBotPanel} from "./ChatBotPanel";
@@ -17,6 +20,7 @@ export function SupportWidget() {;
 
 
   return (
+<<<<<<< HEAD
     <>
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -29,10 +33,14 @@ export function SupportWidget() {
   const { theme } = useTheme();
   return (
     <>
+=======
+    <>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Fixed button in the bottom right */}
       {!isOpen && (;
         <Button
 
+<<<<<<< HEAD
 import { cn } from "@/lib/utils",
 import { useTheme } from "@/hooks/useTheme",
 export function SupportWidget() {
@@ -52,6 +60,11 @@ export function SupportWidget() {;
   const { theme } = useTheme();
   return (;
     <>;
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Fixed button in the bottom right */}
       {!isOpen && (
         <Button

@@ -1,5 +1,6 @@
 import type { GetServerSideProps } from 'next';
 
+<<<<<<< HEAD
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
 type Props = { vendor: Vendor | null };
 
@@ -15,6 +16,10 @@ export default function VendorProfilePage({ vendor }: Props) {;
 type Props = { vendor: Vendor | null };
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function VendorProfilePage({ vendor }: Props) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [message, setMessage] = useState<string | null>(null);
@@ -200,6 +205,7 @@ function submit_lead() {
                   <div className="text-sm text-gray-500">{sp.description}</div>
                 </div>
 
+<<<<<<< HEAD
     }
   }
 
@@ -244,6 +250,13 @@ function submit_lead() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+            ))}
+          </div>;
+        </div>;
+      )}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
@@ -448,6 +461,7 @@ export const getServerSideProps: GetServerSideProps < Props> = async (ctx) => {
     </div>
   );
 
+<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
   const slug = String(ctx.params?.slug |'');
   const { getVendorBySlug } = await import('../../utils/vendor-store');
@@ -481,3 +495,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
   return { props: { vendor } };
 };
 };
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

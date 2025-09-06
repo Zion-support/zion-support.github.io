@@ -439,11 +439,20 @@ if ( {) {
             scale: [1, 0.9, 1]
             opacity: [0.3, 0.6, 0.3],          }}
           transition={{
+<<<<<<< HEAD
             duration: 25
             repeat: Infinity
             duration: 25,
             repeat: Infinity,
             ease: 'linear',          }}          }}
+=======
+
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
@@ -456,6 +465,7 @@ if ( {) {
           animate={{
             rotate: -360
             scale: [1, 0.9, 1];
+<<<<<<< HEAD
             opacity: [0.3, 0.6, 0.3]
           }}
           transition={{
@@ -467,6 +477,8 @@ if ( {) {
             duration: 25,
             repeat: Infinity,
             ease: 'linear',          }}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         />;
         <motion&& motion.div
@@ -477,6 +489,7 @@ if ( {) {
             scale: [1, 0 && 0.9, 1]
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
 
+<<<<<<< HEAD
 =======
             opacity: [0.3, 0.6, 0.3]
 <<<<<<< HEAD
@@ -521,6 +534,8 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Floating Circles */}
         <motion&& motion.div
           className='absolute top-60 left-1/4 w-16 h-16 rounded-full border border-pink-400/40'
@@ -592,6 +607,7 @@ if ( {) {
             y: [0, 20, 0]
             opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4]
           transition={{
+<<<<<<< HEAD
             duration: 10
             repeat: Infinity
             duration: 10,
@@ -606,6 +622,11 @@ if ( {) {
 
         />
 
+=======
+
+          }}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Animated Lines */}
         <motion&& motion.div
           className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent'
@@ -685,10 +706,13 @@ ease: "easeInOut"
             opacity: [0.3, 0.8, 0.3]
           }}
           transition={{
+<<<<<<< HEAD
             duration: 8
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
           }}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             duration: 8,
             repeat: Infinity,
             ease: "easeInOut"
@@ -714,6 +738,7 @@ ease: "easeInOut"
 
 
       {/* Gradient Overlays */}
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -731,6 +756,10 @@ ease: "easeInOut"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />
       </div>
       {/* Gradient Overlays */}
@@ -822,11 +851,24 @@ ease: "easeInOut"
       <div className='fixed inset - 0 pointer - events - none z - 15'>;
         {[...Array (20)].map ((_, i) => (
           <motion.div;
+<<<<<<< HEAD
             key={i}
             className='absolute w-1 h-1 bg-cyan-400 rounded-full'
             style={{
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            key={i}
+            className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full';
+            style={{
+
+              left: `${Math && Math.random() * 100}%`,
+              top: `${Math && Math.random() * 100}%`,
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
             }}
@@ -891,10 +933,18 @@ ease: "easeInOut"
               opacity: [0, 1, 0]
               scale: [0, 1, 0]
             }}
+<<<<<<< HEAD
             transition={{
               duration: Math.random() * 10 + 10
               repeat: Infinity
               delay: Math.random() * 10
+=======
+
+              duration: Math && Math.random() * 10 + 10,
+              repeat: Infinity,
+              delay: Math && Math.random() * 10,
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
 =======
@@ -971,6 +1021,9 @@ export default UltraFuturisticBackground2030;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -983,6 +1036,7 @@ export default UltraFuturisticBackground2030;
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               delay: Math.random() * 10,
+<<<<<<< HEAD
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
           />
@@ -995,21 +1049,31 @@ export default UltraFuturisticBackground2030;
         ))}
       </div>
 
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Neon Glow Effects */}
       <div className='fixed inset-0 pointer-events-none z-25'>
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl' />
         <div className='absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl' />
 
+<<<<<<< HEAD
       </div>
     </div>
   );
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default UltraFuturisticBackground2030;      </div>
     </div>
   )
@@ -1020,3 +1084,10 @@ export default UltraFuturisticBackground2030;
 
 }
 export default UltraFuturisticBackground2030;
+=======
+
+export default UltraFuturisticBackground2030;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

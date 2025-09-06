@@ -34,6 +34,9 @@ export const AppScreenshots: React.FC = () => {;
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
 
@@ -51,6 +54,9 @@ export const AppScreenshots: React.FC = () => {;
 
         
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <div className="relative">
           <Button
@@ -64,6 +70,15 @@ export const AppScreenshots: React.FC = () => {;
           >
             <ChevronLeft className="h-6 w-6" />
           </Button>
+<<<<<<< HEAD
+=======
+
+            aria-label="Scroll left";
+          >;
+            <ChevronLeft className="h-6 w-6" />;
+          </Button>;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div
             ref = {scrollContainerRef,}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
@@ -71,6 +86,9 @@ export const AppScreenshots: React.FC = () => {;
             {mockScreenshots && mockScreenshots.map((screenshot,) => (;
               <div
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 key = {screenshot && screenshot.id,}
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30">;
 
@@ -110,6 +128,9 @@ export const AppScreenshots: React.FC = () => {;
           </div>
           
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           <Button
             variant="ghost"
@@ -125,6 +146,7 @@ export const AppScreenshots: React.FC = () => {;
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 };
 '"};
@@ -198,6 +220,9 @@ export const AppScreenshots: React.FC = () => {;
             size="icon";
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white";
             onClick={() => scroll("right")}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             aria-label="Scroll right";
           >;
             <ChevronRight className="h-6 w-6" />;
@@ -208,6 +233,9 @@ export const AppScreenshots: React.FC = () => {;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 '"},;
 
 };

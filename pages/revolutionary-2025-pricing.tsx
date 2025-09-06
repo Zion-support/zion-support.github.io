@@ -2,6 +2,7 @@ import React, { useState } from 'react',
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   Star
   Zap
@@ -120,6 +121,14 @@ import {
   Target as TargetIcon
   Zap as ZapIcon2;
 import {
+=======
+
+
+} from 'lucide-react';
+import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Star,
   Zap,
   Shield,
@@ -234,8 +243,13 @@ import {
   MessageCircle,
   Share,
   Users as UsersIcon2,
+<<<<<<< HEAD
   Target as TargetIcon,;
   Zap as ZapIcon2,;
+=======
+  Target as TargetIcon,
+  Zap as ZapIcon2,
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components / ui / UltraQuantumHolographicBackground';
 import UltraAdvancedNavigation from '../components / layout / UltraAdvancedNavigation';
@@ -290,6 +304,9 @@ function Revolutionary2025Pricing() {
     }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function Revolutionary2025Pricing() {;
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(;
@@ -364,11 +381,15 @@ export default function Revolutionary2025Pricing() {;
       return Math.floor(basePrice * 0.8); // 20% discount for yearly
     }
     return basePrice;  }
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
     return basePrice;  };
 
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
 
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
@@ -419,7 +440,17 @@ export default function Revolutionary2025Pricing() {
       return Math.floor(basePrice * 0.8), // 20% discount for yearly
     }
     return basePrice
+<<<<<<< HEAD
   },
+=======
+  };
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Pricing tiers for comparison
   const pricingTiers = [
     {
@@ -749,6 +780,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 Revolutionary 2025 Pricing
@@ -802,6 +839,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   />
                 </button>
                 <span className="text-gray-400">Yearly (Save 20%)</span>
@@ -814,6 +857,12 @@ if ( {) {
   }
 }
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -873,6 +922,7 @@ if ( {) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -901,6 +951,10 @@ if ( {) {
 }
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 Choose Your Transformation Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -921,6 +975,7 @@ if ( {) {
                   } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {pricingTiers.map((tier, index) => (
+<<<<<<< HEAD
                 <motion.div
                   key={tier.name  } catch (error) {
     console.error("Error:", error);
@@ -956,6 +1011,33 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+              className='text-center mb-16'>;
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+                Choose Your Transformation Plan;
+              </h2>;
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+                Start with our starter plan and scale up as you grow. All plans;
+                include our revolutionary AI and quantum computing services.;
+              </p>;
+            </motion && motion.div>;
+
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>              {pricingTiers && pricingTiers.map((tier, index) => (;
+                <motion&& motion.div
+                  key={tier && tier.name}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.2 }}
+                  viewport={{ once: true }}
+                  className={`relative ${
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -1031,6 +1113,13 @@ if ( {) {
 }
                   </div>
                   <ul className="space-y-4 mb-8">
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
@@ -1123,6 +1212,10 @@ if ( {) {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 Individual Service Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1146,6 +1239,7 @@ if ( {) {
                   viewport={{ once: true }}
                   className='group relative bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105'>;
                   {/* Service Header */}
+<<<<<<< HEAD
                   <div className='flex items-start justify-between mb-4'>
                     <div className='flex items-center gap-3'>
                       <div className='text-3xl'>{service.icon}</div>
@@ -1234,6 +1328,27 @@ if ( {) {
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="text-3xl">{service.icon}</div>
+=======
+                  <div className='flex items-start justify-between mb-4'>;
+                    <div className='flex items-center gap-3'>;
+                      <div className='text-3xl'>{service && service.icon}</div>;
+                      <div>;
+                        <h3 className='text-xl font-bold text-white group-hover:text-blue-400 transition-colors'>;
+                          {service && service.name}
+                        </h3>;
+                        <p className='text-gray-400 text-sm'>;
+                          {service && service.tagline}
+                        </p>;
+                      </div>;
+                    </div>;
+                    {service && service.popular && (;
+                      <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1'>;
+                        <Star className='w-3 h-3' />                        Popular;
+                      </div>;
+
+                    )}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
                           {service.name}
@@ -1281,6 +1396,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       </span>
                       <span className="text-gray-400">{service.period}</span>
                     </div>
@@ -1329,6 +1450,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       {service.features.length > 3 && (
                         <div className="text-xs text-gray-500 mt-1">
                           +{service.features.length - 3} more features
@@ -1387,6 +1514,10 @@ if ( {) {
                   <div className="flex items-center gap-3">
                     <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                       <ExternalLink className="w-4 h-4 mr-2" />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       Learn More
                     </button>
                     <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
@@ -1454,6 +1585,12 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
 
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1516,6 +1653,13 @@ if ( {) {
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700">
                   <Phone className="w-5 h-5 mr-2" />
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   Get Custom Quote
                 </button>
                 <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
@@ -1529,10 +1673,23 @@ if ( {) {
         </section>
       </div>
     </UltraQuantumHolographicBackground>
+<<<<<<< HEAD
 );
 
 
 }
+=======
+
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+=======
+
+
+}
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -1670,3 +1827,10 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

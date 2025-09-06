@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { v4 as uuidv4 } from 'uuid',;
 import { readJsonFile, writeJsonFile } from '../../utils/db',;
@@ -80,6 +81,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       existing.status = action === 'apply' ? 'applied' : 'skipped'
       writeJsonFile<Application[]>(FILE, apps)
       res.status(200).json({ application: existing })
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       return
     }
     const app: Application = {
@@ -107,6 +112,7 @@ type Application = {
 
 const FILE = 'applications.json';
 
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     if (!rateLimit(req, res)) return;
@@ -161,3 +167,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

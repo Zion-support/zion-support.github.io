@@ -19,11 +19,20 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
+<<<<<<< HEAD
 export type PaginationProps = {;
+=======
+
+
+  page: number;
+  page_size: number;
+  total: number;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export type PaginationProps = {
   on_change: (next_page: number) => void;
 }
+<<<<<<< HEAD
 export default function Pagination({
   page
   pageSize
@@ -36,6 +45,19 @@ export default function Pagination({
   onChange: (nextPage: number) => void
 }
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
+=======
+;
+export default /**
+ * Pagination - Function description
+ */
+function Pagination() {  const total_pages = Math.max (1, Math.ceil (total / page_size));export type PaginationProps = {
+
+  page: number,
+  page_size: number,
+  total: number,
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   page,
   pageSize,
   total,
@@ -48,6 +70,11 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
 };
 
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
@@ -431,6 +458,9 @@ export default Pagination;
 }
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -458,5 +488,8 @@ export default Pagination;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

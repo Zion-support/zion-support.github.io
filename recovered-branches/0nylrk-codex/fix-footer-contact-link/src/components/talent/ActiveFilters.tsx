@@ -1,27 +1,62 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {ClickableBadge} from "@/components/ui/clickable-badge";
 import {Button} from "@/components/ui/button";
 import {X} from "lucide-react";
+<<<<<<< HEAD
 import React from "react",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 interface ActiveFiltersProps {
+=======
+interface ActiveFiltersProps {;
+  selectedSkills: string[],;
+  toggleSkill: (skill: string) => void,;
+  selectedAvailability: string[],;
+  toggleAvailability: (status: string) => void,;
+  selectedRegions: string[],;
+  toggleRegion: (region: string) => void,;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   priceRange: [number, number];
 
   setPriceRange: (range: [number, number]) => void;
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void;
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { X } from "lucide-react",
+=======
+  clearFilters: () => void;
+}
+
+
+export function ActiveFilters(): any ({;
+
+  selectedSkills;
+  toggleSkill;
+  selectedAvailability;
+  toggleAvailability;
+  selectedRegions;
+  toggleRegion;
+  priceRange;
+  setPriceRange;
+  experienceRange;
+  setExperienceRange;
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ActiveFiltersProps {
   selectedSkills: string[],
   toggleSkill: (skill: string) => void,
@@ -35,6 +70,7 @@ interface ActiveFiltersProps {
   setExperienceRange: (range: [number, number]) => void,
   clearFilters: () => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function ActiveFilters({;
@@ -59,6 +95,12 @@ export function ActiveFilters({
   setPriceRange,
   experienceRange,
   setExperienceRange,
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   clearFilters
 }: ActiveFiltersProps) {
   // Check if any filters are active
@@ -146,6 +188,12 @@ export function ActiveFilters({;
           key={skill}
 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           onClick={() => toggleSkill(skill)}
         >;
           {skill}
@@ -207,6 +255,7 @@ export function ActiveFilters({;
 
 
       <Button
+<<<<<<< HEAD
         variant="ghost"
         size="sm"
         onClick={clearFilters}
@@ -217,6 +266,14 @@ export function ActiveFilters({;
     </div>
   )
 }
+=======
+        variant="ghost" 
+        size="sm" 
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}
@@ -251,6 +308,14 @@ export function ActiveFilters({;
       </Button>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

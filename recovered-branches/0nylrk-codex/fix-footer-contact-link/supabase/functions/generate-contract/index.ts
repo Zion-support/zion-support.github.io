@@ -1,14 +1,31 @@
 
+<<<<<<< HEAD
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 interface Milestone {
   title: string;
   description: string;
   dueDate: string
   estimatedHours: number
+<<<<<<< HEAD
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
@@ -19,6 +36,7 @@ interface Milestone {
   description: string,
   dueDate: string,
   estimatedHours: number
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -28,6 +46,11 @@ interface Milestone {;
   description: string,;
   dueDate: string,;
   estimatedHours: number;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -35,6 +58,13 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   try {
     // Get the OpenAI API key from environment variables
@@ -62,7 +92,15 @@ serve(async (req) => {
     let prompt = `
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   try {;
     // Get the OpenAI API key from environment variables;
@@ -87,6 +125,13 @@ serve(async (req) => {
     // Create the contract prompt for OpenAI;
     let prompt = `;
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -164,10 +209,23 @@ serve(async (req) => {
         success: false
         error: error.message |'Failed to generate contract'
       });
+<<<<<<< HEAD
       {
         status: 500
       { 
         status: 500, 
+=======
+;
+=======
+        Milestone ${index + 1}: ${milestone.title}
+        - Description: ${milestone.description}
+        - Due Date: ${new Date(milestone.dueDate).toLocaleDateString()}
+
+      { 
+        status: 500, 
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         - Estimated Work: ${milestone.estimatedHours} hours;
         `;
       }),;
@@ -258,6 +316,13 @@ if ( {) {
       }),;
       {;
         status: 500,;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }

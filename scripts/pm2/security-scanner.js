@@ -91,6 +91,7 @@ class SecurityScanner {; constructor() {; this.projectRoot = process.cwd(); this
 const scanner = new SecurityScanner();
 scanner.run().catch(error = > {; process.exit(1)}));
 }),);
+<<<<<<< HEAD
 #!/usr/bin/env node,;
 const fs = require('fs'),;
 const path = require('path'),;
@@ -599,6 +600,11 @@ class SecurityScanner {,;
     } catch (error) {,;
       this.log(`❌ Error running security: scanner: ${error.message}`),;
       process.exit(1);
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
   log(message, level = 'INFO') {'}
@@ -1418,3 +1424,10 @@ origin/automation-improvements-final
 scanner.run().catch(error = > {process.exit(1)}));}),);
 }),);
 }),),;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { getConfig } from "../../../../utils/token/service",;
 import { tokenStore } from "../../../../utils/token/storage",;
@@ -17,6 +18,8 @@ const body = req.body || {},
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getConfig } from "../../../../utils/token/service";
 import { tokenStore } from "../../../../utils/token/storage";
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     return res.status(200).json(updated)
@@ -26,6 +29,7 @@ import { tokenStore } from "../../../../utils/token/storage";
 
 
 
+<<<<<<< HEAD
     if (req.method === 'GET') {
       const config = getConfig();
       res.json({ config });
@@ -42,3 +46,8 @@ import { tokenStore } from "../../../../utils/token/storage";
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

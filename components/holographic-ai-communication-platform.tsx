@@ -24,6 +24,7 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Eye  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 
+<<<<<<< HEAD
 export default function HolographicAICommunicationPage() {
 
   const contactInfo = {
@@ -31,11 +32,23 @@ export default function HolographicAICommunicationPage() {
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
   }
+=======
+
+export default function HolographicAICommunicationPage() {
+
+  const contactInfo = {
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',;
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const features = [
     'AI-powered 3D holographic projection'
     'Real-time holographic rendering'
@@ -193,8 +206,11 @@ export default function HolographicAICommunicationPage() {;
       </div>
     </UltraAdvancedFuturisticBackground>
   );
+<<<<<<< HEAD
 }
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
@@ -211,3 +227,13 @@ function HolographicAICommunicationPage() {
   }
 ;
 }
+<<<<<<< HEAD
+=======
+;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

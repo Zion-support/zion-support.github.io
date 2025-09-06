@@ -75,12 +75,16 @@ const LoadingSkeleton = () => React.createElement(
 )
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 // Chart components (heavy - only load when needed)
 // TODO: Uncomment when Chart component is available
 // export const DynamicChart = dynamic(
 //   () => import('../components/charts/Chart'),
+<<<<<<< HEAD
 //   {//     loading: LoadingSkeleton,
 //     ssr: false
 //   }
@@ -211,6 +215,10 @@ export const DynamicVirtualList = dynamic(;
     ssr: false;
   }
 ),;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Usage examples: // Replace: import Chart from '../components/charts/Chart';
 
 // With: import { DynamicChart as Chart } from '@/utils/dynamicComponents';

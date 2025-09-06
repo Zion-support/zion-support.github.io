@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
@@ -12,6 +13,20 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
   switch(tabValue) {
     case 'pending':
       return (
+=======
+import React from './react';
+import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react';
+
+=======
+
+
+import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
+
+=======
+import React from "react",
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">
           <AlertTriangle className="mx-auto h-12 w-12 text-amber-500 mb-4" />
@@ -49,9 +64,18 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       )
     default:
       return null
+<<<<<<< HEAD
   }
 }
 
+=======
+
+
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
 interface FraudTabContentProps {;
@@ -94,5 +118,13 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
 
     default:;
       return null;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };

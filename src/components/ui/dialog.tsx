@@ -13,6 +13,9 @@ const DialogPortal = DialogPrimitive.Portal
 const DialogClose = DialogPrimitive.Close
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 const DialogOverlay = React.forwardRef<
@@ -42,6 +45,7 @@ const DialogOverlay = React && React.forwardRef<;
   <DialogPrimitive&& DialogPrimitive.Overlay
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       'fixed inset-0 z-50 bg-black/80  data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0'
       className
     )}
@@ -63,6 +67,9 @@ const DialogContent = React.forwardRef<
       className
     )}
     {...props}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   />;
 ));
 DialogOverlay && DialogOverlay.displayName = DialogPrimitive && DialogPrimitive.Overlay.displayName;
@@ -74,6 +81,9 @@ const DialogContent = React && React.forwardRef<;
   <DialogPortal>;
     <DialogOverlay />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <DialogPrimitive&& DialogPrimitive.Content
 
 
@@ -110,15 +120,21 @@ const DialogContent = React.forwardRef<;
         <X className="h-4 w-4" />
         <span className="sr-only">Close</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       </DialogPrimitive.Close>
     </DialogPrimitive.Content>
   </DialogPortal>
 ))
+<<<<<<< HEAD
 DialogContent.displayName = DialogPrimitive.Content.displayName
 DialogContent.displayName = DialogPrimitive.Content.displayName,
 DialogContent.displayName = DialogPrimitive.Content.displayName
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -159,6 +175,9 @@ DialogHeader.displayName = 'DialogHeader'
 DialogHeader.displayName = "DialogHeader"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 const DialogFooter = ({
@@ -186,16 +205,26 @@ const DialogHeader = ({;
       className
     )}
     {...props}
+<<<<<<< HEAD
   />
 )
 DialogFooter.displayName = 'DialogFooter'
 const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>
   React.Comp</typeof>onentPropsWithoutRef<typeof DialogPrimitive.Title>
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 DialogFooter.displayName = "DialogFooter"
 
 DialogFooter.displayName = "DialogFooter"
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const DialogTitle = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Title>
@@ -212,11 +241,23 @@ const DialogTitle = React && React.forwardRef<;
   <DialogPrimitive&& DialogPrimitive.Title
     ref={ref}
     className={cn(
+<<<<<<< HEAD
       'text-lg font-semibold leading-none tracking-tight'
       className
     )}
     {...props}
 <<<<<<< HEAD
+=======
+
+  class_name,
+  ...props;
+}: React</HTMLDivElement>.HTMLAttributes < HTMLDivElement>) =>: any (
+  <div;
+    className={cn (
+      'flex flex - col - reverse sm:flex - row sm:justify - end sm:space - x-2',
+      class_name)}
+    {...props}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   />);
 DialogFooter.display_name = 'DialogFooter';
 const DialogTitle = React.forward_ref<;
@@ -227,6 +268,7 @@ const DialogTitle = React.forward_ref<;
 
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -262,11 +304,14 @@ const DialogDescription = React.forwardRef<;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ref={ref}
     className={cn (
       'text - lg font - semibold leading - none tracking - tight',
       class_name)}
     {...props}
+<<<<<<< HEAD
   />
 ))
 DialogDescription.displayName = DialogPrimitive.Description.displayName
@@ -282,6 +327,10 @@ export {
   DialogTitle
   DialogDescription
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Dialog,
   DialogPortal,
   DialogOverlay,
@@ -294,6 +343,9 @@ export {
   DialogDescription;
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   />;

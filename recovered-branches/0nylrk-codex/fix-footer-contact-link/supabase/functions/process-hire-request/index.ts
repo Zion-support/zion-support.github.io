@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2",
+import {Configuration, OpenAIApi} from "https: //esm && esm.sh/openai@3 ;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -29,15 +36,32 @@ interface HireRequest {
   project: {
     overview: string;
     timeline: string;
+<<<<<<< HEAD
     budgetMin: number
     budgetMax: number
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
 import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
+=======
+
+
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",;
+import {Configuration, OpenAIApi} from "https: //esm.sh/openai@3.2.1";
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -59,6 +83,7 @@ interface HireRequest {
     timeline: string,
     budgetMin: number,
     budgetMax: number
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",;
 import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",;
@@ -82,6 +107,11 @@ interface HireRequest {;
     timeline: string,;
     budgetMin: number,;
     budgetMax: number;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 interface EnhancedContent {
@@ -260,8 +290,17 @@ if ( {) {
       ])
       .select();
     if (requestError) {
+<<<<<<< HEAD
       throw new Error(`Error storing hire request: ${requestError.message}`)
     }
+=======
+      throw new Error(`Error storing hire request: ${requestError && requestError.message}`)
+    }
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             enhancedContent = JSON.parse(jsonMatch[0]),
             // // // console.log("Enhanced content generated:", enhancedContent)
           }
@@ -301,6 +340,12 @@ if ( {) {
       .select(),;
     if (requestError) {;
       throw new Error(`Error storing hire request: ${requestError.message}`);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     // 3. Create notification for the admin
@@ -484,6 +529,7 @@ if ( {) {
         
       if (notificationError) {
         console.error("Error creating admin notification:", notificationError)
+<<<<<<< HEAD
       }
     }
     
@@ -554,6 +600,9 @@ if ( {) {
             <p><strong>Timeline:</strong> ${project.timeline}</p>;
             <p><strong>Overview:</strong></p>;
             <p>${project.overview}</p>;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ${enhancedContent?.summary ? `<p><strong>Summary:</strong> ${enhancedContent.summary}</p>` : ''}
             ${enhancedContent?.projectType ? `<p><strong>Project Type:</strong> ${enhancedContent.projectType}</p>` : ''}
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>
@@ -602,6 +651,7 @@ if ( {) {
         error: error.message 
       }),
       {
+<<<<<<< HEAD
         headers: { ...corsHeaders, "Content-Type": "application/json" };
         headers: { ...corsHeaders, "Content-Type": "application/json" },
             <p>Please log in to your Zion AI Marketplace account to respond to this request.</p>;
@@ -630,6 +680,10 @@ if ( {) {
       }),;
       {;
         headers: { ...corsHeaders, "Content-Type": "application/json" },;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         status: 500}
     );
   }

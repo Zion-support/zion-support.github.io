@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 // @ts-ignore
 import data from '../../data/github-contributors.json';
@@ -7,6 +8,11 @@ import data from '../../data/github-contributors.json',;
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 // @ts-ignore;
 import data from '../../data/github-contributors.json',
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function GithubContributorsPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)
@@ -24,6 +30,7 @@ export default function GithubContributorsPage() {
         <ul className="mt-6 grid md:grid-cols-3 gap-4">
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
+<<<<<<< HEAD
               <a className="font-medium underline" href={it.html_url} target="_blank" rel="noreferrer">{it.login}</a>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Contributions {it.contributions}</div>
             </li>
@@ -34,6 +41,9 @@ export default function GithubContributorsPage() {
   );
 };
               <a className="font-medium underline" href={it.html_url} target="_blank" rel="noreferrer">{it.login}</Link>
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Contributions {it.contributions}</div>
             </li>
           ))  } catch (error) {
@@ -49,5 +59,13 @@ export default function GithubContributorsPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 }
+=======
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

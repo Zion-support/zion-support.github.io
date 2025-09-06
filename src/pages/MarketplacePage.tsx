@@ -23,10 +23,15 @@ import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
 import { INITIAL_MARKETPLACE_PRODUCTS  } from '@/data/initialMarketplaceProducts';
 import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
+<<<<<<< HEAD
 // Market insights component
 
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
 <<<<<<< HEAD
+=======
+
+const MarketplaceInsights = ({ stats }: { stats: any }) => (
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const MarketplaceInsights = ({ stats }: { stats: any },) => (
 const MarketplaceInsights = ({ stats }: { stats: any }) => (
@@ -64,6 +69,9 @@ const MarketplaceFilterControls = ({
 }: any,) => (
 }: any) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
@@ -108,6 +116,11 @@ const MarketplaceFilterControls = ({;
       <Filter className="h-4 w-4 text-muted-foreground" />
       <select value={filterCategory} onChange={(e,) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
       <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <option value="">All Categories</option>
         {categories.map((cat: string,) => <option key={cat} value={cat}>{cat}</option>)}
       </select>
@@ -117,6 +130,9 @@ const MarketplaceFilterControls = ({;
       <select value={sortBy} onChange={(e,) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
       <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <option value="newest">Newest First</option>
         <option value="price-low">Price: Low to High</option>
@@ -272,6 +288,9 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
 
           onClick={onAddToCart}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           aria-label="Add to cart"
@@ -337,6 +356,9 @@ function MarketplacePageContent() {;
       if (filterCategory) {;
         processedDataset = processedDataset.filter(p => p.category === filterCategory);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       }
@@ -556,6 +578,11 @@ function MarketplacePageContent() {;
         <NextSeo;
           title="Marketplace - Zion Tech Marketplace Solutions & Services";
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
         />
       <div className="container py-8">
@@ -592,6 +619,9 @@ function MarketplacePageContent() {;
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   // Error state;
@@ -807,9 +837,12 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
         openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png' }] }}
       />;
@@ -837,6 +870,7 @@ if ( {) {
           showRecommended = {showRecommended,}
           setShowRecommended = {setShowRecommended,}
           loading = {isFetching,}
+<<<<<<< HEAD
         />
       </motion.div>
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
@@ -847,6 +881,10 @@ if ( {) {
               ref = {index === products.length - 1 ? lastElementRef : null,}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               initial={{ opacity: 0, scale: 0.9 }} 
               animate={{ opacity: 1, scale: 1 }} 
 
@@ -873,6 +911,9 @@ if ( {) {
               initial={{ opacity: 0, scale: 0.9 }} ;
               animate={{ opacity: 1, scale: 1 }} ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -990,10 +1031,18 @@ if ( {) {
             </motion.div>
 
           ))}
+<<<<<<< HEAD
         </AnimatePresence>
       </motion.div>
       {(isFetching |loading) && products.length > 0 && (
       {(isFetching || loading) && products.length > 0 && (
+=======
+
+
+      {(isFetching || loading) && products.length > 0 && (
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <MarketplaceLoadingGrid count={4} />
         </motion.div>
@@ -1015,6 +1064,11 @@ if ( {) {
         </motion && motion.div>;
 
             </Button>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           )}
         </div>
       )}
@@ -1059,10 +1113,17 @@ if ( {) {
           </motion && motion.button>;
 
         )}
+<<<<<<< HEAD
       </AnimatePresence>
     </div>
     </>
   )
+=======
+      </AnimatePresence>;
+    </div>;
+    </>;
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 
@@ -1133,6 +1194,9 @@ function MarketplacePage() {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 // Main export export default function MarketplacePage() {
   return <MarketplacePageContent />;

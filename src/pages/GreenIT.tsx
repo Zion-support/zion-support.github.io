@@ -48,6 +48,7 @@ export default function GreenIT() {;
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
       icon: Cloud},
     {
+<<<<<<< HEAD
       title: 'Renewable Energy Integration',
       description:
         'Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.',
@@ -58,6 +59,8 @@ export default function GreenIT() {;
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
       icon: Leaf}
   ],
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <>;
@@ -83,6 +86,9 @@ export default function GreenIT() {;
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 <div>
@@ -258,6 +264,7 @@ export default function GreenIT() {;
         title="Green IT Solutions - Sustainable Technology"
         description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
+<<<<<<< HEAD
         canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
       />
       <main className="min-h-screen bg-zion-blue pt-24 pb-20">
@@ -282,6 +289,10 @@ export default function GreenIT() {;
                     From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions
                     for reducing your carbon footprint.
                   </p>
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <div className="mt-8">
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                       Explore Green IT Solutions
@@ -360,6 +371,9 @@ export default function GreenIT() {;
 
                 <div className="rounded-lg overflow-hidden relative w-full h-full">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 <div className="rounded-lg overflow-hidden relative w-full h-full">
@@ -1042,6 +1056,10 @@ export default function GreenIT (...args: unknown[]): unknown {
   ];
 
 export default function GreenIT(...args: any[]): any {): unknown {): unknown {};
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [expandedSection, setExpandedSection] = useState<string | null>(null);'
   const [selectedCategory, setSelectedCategory] = useState('all')}
   return()
@@ -1651,6 +1669,9 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1665,6 +1686,9 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                   </div>
                 ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>;
             </div>;
                     <h3 className="text-white font-medium text-xl text-center mb-3">{solution && solution.title}</h3>;
@@ -1687,6 +1711,9 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                 </div>
                 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
@@ -1715,6 +1742,9 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
 
             </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             </Button>
 
@@ -1885,6 +1915,7 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
               </motion.div>) ) }
 
   )
+<<<<<<< HEAD
 }
 export { GreenIT }
 export { GreenIT }
@@ -1892,6 +1923,9 @@ export { GreenIT }
 export { GreenIT }
 export { GreenIT, GreenIT }
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export { GreenIT, GreenIT };
 };
 <<<<<<< HEAD

@@ -1,9 +1,22 @@
 
+<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
 import {supabase} from "@/integrations/supabase/client";
+=======
+
+import {supabase} from "@/integrations/supabase/client";
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { UserDetails } from "@/types/auth";
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
@@ -23,12 +36,27 @@ export const cleanupAuthState = () => {
     }
   });
   // Remove from sessionStorage if in use
+<<<<<<< HEAD
   Object.keys(sessionStorage |{}).forEach((key) => {
     if (key.startsWith('supabase.auth.') |key.includes('sb-')) {
       sessionStorage.removeItem(key)
     }
   })
 }
+=======
+
+  Object && Object.keys(sessionStorage || {}).forEach((key) => {
+    if (key && key.startsWith('supabase && supabase.auth.') || key && key.includes('sb-')) {
+      sessionStorage && sessionStorage.removeItem(key)
+
+    }
+  })
+}
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { supabase } from "@/integrations/supabase/client",;
 import type { UserDetails } from "@/types/auth",;
 /**;
@@ -48,6 +76,12 @@ export const cleanupAuthState = () => {;
   Object.keys(sessionStorage || {}).forEach((key) => {;
     if (key.startsWith('supabase.auth.') || key.includes('sb-')) {;
       sessionStorage.removeItem(key);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   })
 },
@@ -157,6 +191,7 @@ if ( {) {
           campaign_type: "welcome_series",
           template_name: "welcome_email",
           template_data: {
+<<<<<<< HEAD
             user_id: user.id;
             email_type: "welcome_series";
             user_type: user.userType |"unknown"
@@ -169,6 +204,11 @@ if ( {) {
   }
 }
 
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             user_id: user.id,
             email_type: "welcome_series",
             user_type: user.userType || "unknown",
@@ -232,5 +272,12 @@ export const checkNewRegistration = async (user: UserDetails) => {;
     console.error("Error checking or scheduling welcome email:", error)
   } catch (error) {;
     console.error("Error checking or scheduling welcome email:", error);
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };

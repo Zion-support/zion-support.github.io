@@ -1,27 +1,38 @@
 
 import { Button } from "@/components/ui/button";
 import {
+<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
   CardTitle
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
+<<<<<<< HEAD
   CardTitle,;
 } from "@/components/ui/card";
 import { FileText, ShieldCheck } from "lucide-react";
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { FileText, ShieldCheck } from "lucide-react",
 
+<<<<<<< HEAD
 import { FileText, ShieldCheck } from "lucide-react";
 interface ContractTypeCardsProps {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onStandardClick: () => void;
   onSmartClick: () => void
 }
@@ -61,6 +72,12 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
         </CardFooter>
       </Card>
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
@@ -86,6 +103,7 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </ul>
         </CardContent>
         <CardFooter>
+<<<<<<< HEAD
           <Button
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600"
             onClick={onSmartClick}
@@ -97,6 +115,19 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
     </div>
   );
 }
+=======
+
+
+export function ContractTypeCards(): any ({;
+  onStandardClick,;
+  onSmartClick,;
+}: ContractTypeCardsProps) {;
+  return (
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
@@ -189,4 +220,12 @@ function ContractTypeCards() {
     </div>;
   );
 }
+<<<<<<< HEAD
 ;
+=======
+=======
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -42,6 +42,7 @@ interface Listing {
   image?: string;
   tags?: string[];
   author?: string;
+<<<<<<< HEAD
   authorImage?: string;
   aiScore?: number;
   rating?: number;
@@ -49,6 +50,8 @@ interface Listing {
   price?: number | null;
   createdAt: string
 interface CategoryListingPageProps {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   author_image?: string;
   ai_score?: number;
@@ -96,6 +99,7 @@ function CategoryListingPage() {
       mounted = false;
       clear_timeout (timeout);
     }
+<<<<<<< HEAD
   }, [searchQuery, selectedSort, selectedFilter])
   // Process listings based on filters and search
   const processedListings = initialListings
@@ -127,10 +131,45 @@ function CategoryListingPage() {
       // Apply sorting
       switch (selectedSort) {
         case 'newest':
+=======
+
+  }, [search_query, selected_sort, selected_filter]);
+  // Process listings based on filters and search;
+  const processed_listings = initial_listings;
+    .filter (listing => {
+      // Apply search filter;
+      const matches_search =;
+        listing.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        listing.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
+        (listing.tags &&;
+          listing.tags.some (tag =>;
+            tag.toLowerCase ().includes (search_query.toLowerCase ())));
+      // Apply category filters;
+      // Check condition
+if (return matches_search) {
+  $2
+}
+      if (
+        return matches_search && (listing.rating || 0) >= 4) {
+  $2
+}
+      if (
+        return matches_search && (listing.ai_score || 0) >= 85) {
+  $2
+}
+      return matches_search;
+    });
+    .sort ((a, b, ) => {
+      // Apply sorting;
+      switch (selected_sort) {
+        case 'newest':;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           return (
             new Date (b.created_at).get_time () - new Date (a.created_at).get_time ());
         case 'oldest':;
           return (
+<<<<<<< HEAD
             new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
           )
         case 'rating-high':
@@ -201,6 +240,9 @@ interface Listing {;
   rating?: number,;
   reviewCount?: number,;
   price?: number | null,;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   createdAt: string;
 
 interface CategoryListingPageProps {;
@@ -321,10 +363,14 @@ export function CategoryListingPage(): any ({;
   return (
     <>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+<<<<<<< HEAD
 =======
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
         <div className="container mx-auto">;
@@ -337,6 +383,8 @@ export function CategoryListingPage(): any ({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {description}
 
             </p>;
@@ -452,6 +500,9 @@ export function CategoryListingPage(): any ({;
                       className='text-white'>                      {option && option.label}
                     </SelectItem>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -494,6 +545,11 @@ export function CategoryListingPage(): any ({;
 
           <div className="mb-6">
             <p className="text-zion-slate-light">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Showing {processedListings.length} results
               {searchQuery && ` for "${searchQuery}"`}
 
@@ -522,6 +578,7 @@ export function CategoryListingPage(): any ({;
                     reviewCount = {listing && listing.reviewCount,}
                   />;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -540,6 +597,25 @@ export function CategoryListingPage(): any ({;
 
 
 
+=======
+
+
+
+                ))}
+              </div>;
+            ) : (;
+              <div className='text-center py-20'>;
+                <h3 className='text-xl font-bold text-white mb-2'>;
+                  No listings found;
+                </h3>;
+                <p className='text-zion-slate-light mb-6'>;
+                  Try adjusting your filters or search query;
+                </p>;
+                <Button
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   variant="outline"
                   onClick={() => {
                     setSearchQuery(""),
@@ -547,6 +623,9 @@ export function CategoryListingPage(): any ({;
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

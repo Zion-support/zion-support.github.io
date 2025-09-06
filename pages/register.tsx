@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -19,6 +20,11 @@ export default function RegisterPage() {
 export default function RegisterPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+export default function RegisterPage() {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({;

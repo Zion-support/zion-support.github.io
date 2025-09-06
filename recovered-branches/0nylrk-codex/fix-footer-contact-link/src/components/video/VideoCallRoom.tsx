@@ -1,10 +1,18 @@
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react';
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX} from '@/components/icons';
+<<<<<<< HEAD
 import './video-call.css';
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
@@ -13,6 +21,21 @@ import { Badge } from "@/components/ui/badge",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX  } from '@/components/icons';
 import './video-call.css';
+=======
+import './video-call ;
+interface Participant {;
+  id: string,;
+  name: string,;
+
+=======
+import React, { useState } from 'react';
+import { Button } from '@/components / ui / button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
+import {Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX} from '@/components / icons';
+import './video - call.css';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Participant {
   id: string,
   name: string,
@@ -83,11 +106,17 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
 
     const newVideoState = !isVideoEnabled;
     setIsVideoEnabled(newVideoState);
+<<<<<<< HEAD
     if (onToggleVideo) {
       onToggleVideo(newVideoState)
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from '@/components/icons',
 import './video-call.css',
+=======
+    if (onToggleVideo) {;
+      onToggleVideo(newVideoState);
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Participant {
   id: string,
   name: string,
@@ -96,7 +125,10 @@ interface Participant {
   isVideoEnabled?: boolean,
   isScreenSharing?: boolean,
   isHost?: boolean
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -109,6 +141,7 @@ interface Participant {
     }
   };
 
+<<<<<<< HEAD
   const handleToggleVideo = () => {
     const newVideoState = !isVideoEnabled;
     setIsVideoEnabled(newVideoState);
@@ -188,6 +221,17 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
   }
   };
 
+=======
+  const handleToggleScreenShare = () => {;
+
+    const newScreenShareState = !isScreenSharing;
+    setIsScreenSharing(newScreenShareState);
+=======
+
+  };
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleToggleScreenShare = () => {
     const newScreenShareState = !isScreenSharing;
     setIsScreenSharing(newScreenShareState);
@@ -208,8 +252,15 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
     if (onLeave) {
       onLeave()
     }
+<<<<<<< HEAD
   }
   };
+=======
+
+  };
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },;
   const handleToggleScreenShare = () => {;
     const newScreenShareState = !isScreenSharing,;
@@ -241,7 +292,16 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({;
 
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>;
@@ -451,11 +511,22 @@ if ( {) {
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleMute}>;
             {isMuted ? <MicOff /> : <Mic />}
+<<<<<<< HEAD
           </Button>
+=======
+
+          </Button>;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Button
             variant="outline"
             size="icon"
           
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Button 
 
             variant="outline" 
@@ -463,10 +534,21 @@ if ( {) {
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleVideo}>;
             {isVideoEnabled ? <Video /> : <VideoOff />}
+<<<<<<< HEAD
           </Button>
+=======
+
+          </Button>;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Button
             variant="outline"
           
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Button 
 
             variant="outline" 
@@ -474,10 +556,21 @@ if ( {) {
             className="video-button rounded-full h-10 w-10"
             onClick={handleToggleScreenShare}>;
             {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
+<<<<<<< HEAD
           </Button>
+=======
+
+          </Button>;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Button
             variant="outline"
           
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Button 
 
             variant="outline" 
@@ -487,10 +580,18 @@ if ( {) {
             {isAudioOnly ? <VolumeX /> : <Volume2 />}
 
           </Button>
+<<<<<<< HEAD
           <Button
             variant="destructive"
           <Button 
             variant="destructive" 
+=======
+
+          <Button 
+            variant="destructive" 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             size="icon"
             className="video-button video-button-danger rounded-full h-10 w-10"
             onClick={handleLeaveCall}
@@ -501,8 +602,111 @@ if ( {) {
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 }
 
 },
 };
 },
+=======
+
+          </Button>;
+
+          <Button
+            variant="destructive" 
+            size="icon"
+            className="video-button video-button-danger rounded-full h-10 w-10"
+            onClick={handleLeaveCall}>;
+            <Phone className="rotate-135" />;
+          </Button>;
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+=======
+
+},
+
+=======
+
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+                  <div className="bg - zion - blue - light h - full w - full flex items - center justify - center text - white">;
+                    {/* Placeholder for actual video stream */}
+                    <Video className="h - 12 w - 12 opacity - 50" />;
+                  </div>) : participant.isScreenSharing ? (
+                  <div className="bg - zion - blue h - full w - full flex items - center justify - center text - white">;
+                    {/* Placeholder for screen share */}
+                    <ScreenShare className="h - 12 w - 12 opacity - 50" />;
+                  </div>) : (
+                  <div className="bg - zion - blue - dark h - full w - full flex items - center justify - center">;
+                    <Avatar className="h - 20 w - 20">;
+                      <AvatarImage src={participant.avatar} alt={participant.name} />;
+                      <AvatarFallback className="bg - zion - purple text - white text - 2xl">;
+                        {participant.name.char_at (0).toUpperCase ()}
+                      </AvatarFallback>;
+                    </Avatar>;
+                  </div>)}
+                <div className="video - metadata flex items - center space - x-2">;
+                  <span>{participant.name}</span>;
+                  {participant.is_muted && <MicOff className="h - 4 w - 4" />}
+                  {participant.is_host && <Badge variant="secondary" className="text - xs">Host</Badge>}
+                </div>;
+              </div>))) : (
+            <div className="col - span - full flex flex - col items - center justify - center py - 12 text - white">;
+              <Video className="h - 16 w - 16 mb - 4 opacity - 30" />;
+              <p className="text - center text - lg mb - 2">No participants yet</p>;
+              <p className="text - center text - sm text - gray - 300">;
+                Share the meeting link to invite others;
+              </p>;
+            </div>)}
+        </div>;
+        <div className="bg - zion - blue - dark border - t border - zion - blue - light p - 4 flex items - center justify - center space - x-3">;
+          <Button;
+            variant="outline";
+            size="icon";
+            className="video - button rounded - full h - 10 w - 10";
+            on_click={handleToggleMute}
+          >;
+            {is_muted ? <MicOff /> : <Mic />}
+          </Button>;
+          <Button;
+            variant="outline";
+            size="icon";
+            className="video - button rounded - full h - 10 w - 10";
+            on_click={handleToggleVideo}
+          >;
+            {isVideoEnabled ? <Video /> : <VideoOff />}
+          </Button>;
+          <Button;
+            variant="outline";
+            size="icon";
+            className="video - button rounded - full h - 10 w - 10";
+            on_click={handleToggleScreenShare}
+          >;
+            {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
+          </Button>;
+          <Button;
+            variant="outline";
+            size="icon";
+            className="video - button rounded - full h - 10 w - 10";
+            on_click={handleToggleAudioOnly}
+          >;
+            {isAudioOnly ? <VolumeX /> : <Volume2 />}
+          </Button>;
+          <Button;
+            variant="destructive";
+            size="icon";
+            className="video - button video - button - danger rounded - full h - 10 w - 10";
+            on_click={handleLeaveCall}
+          >;
+            <Phone className="rotate - 135" />;
+          </Button>;
+        </div>;
+      </CardContent>;
+    </Card>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

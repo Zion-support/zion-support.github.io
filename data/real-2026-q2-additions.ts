@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export const real2026Q2Additions = [
   {
@@ -644,6 +650,7 @@ export const real2026Q2Additions = [
 
   },
   {
+<<<<<<< HEAD
     id: 'msp-remote-device-ops'
     name: 'MSP Remote Device Ops'
     category: 'Cloud & FinOps'
@@ -673,6 +680,29 @@ export const real2026Q2Additions = [
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
   }
+=======
+
+=======
+    id: 'msp - remote - device - ops',
+    name: 'MSP Remote Device Ops',
+    category: 'Cloud & FinOps',
+    tagline:;
+      'Manage and secure fleets of endpoints with remote scripts and patches.',
+    description:;
+      'MSP - grade remote monitoring and management for SMB fleets: inventory, patching, scripts, alerts, and remote access with compliance - ready logs.',
+    features: [;
+      'Windows / macOS / Linux agent and lightweight mode',
+      'Patch automation and health policies',
+      'Remote scripts and secure sessions',
+      'Inventory, software metering, and alerts',
+      'Ticketing and customer portals',
+    ],
+    use_cases: [;
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'MSPs and IT providers',
       'Internal IT for SMBs',
       'BYOD governance',
@@ -680,10 +710,19 @@ export const real2026Q2Additions = [
     integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
     competitors: ['Atera', 'NinjaOne'],
     price: '$4',
+<<<<<<< HEAD
 
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
   },;
+=======
+
+    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
+  },;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
 
 =======
@@ -710,6 +749,7 @@ export const real2026Q2Additions = [
     integrations: ['Azure ADOktaSlackServiceNow'];
     competitors: ['AteraNinjaOne'];
     price: '$4';
+<<<<<<< HEAD
     period: '/device/month';
     trialDays: 14;
     setupTime: 'Fast';
@@ -932,6 +972,12 @@ export const real2026Q2Additions = [;
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
 <<<<<<< HEAD
+=======
+
+    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/msp-remote-device-ops'
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 
@@ -949,8 +995,20 @@ export const real2026Q2Additions = [;
 ];
 
 =======
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+    period: '/device / month';
+    trial_days: 14;
+    setup_time: 'Fast';
+    market_position: 'Cost - effective RMM for partners and IT teams';
+    roi: 'Reduce mean - time - to - repair by 35% and manual toil by 50%',
+    link: 'https://ziontechgroup.com / services / msp - remote - device - ops';
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 export const real2026Q2Additions = [;
   {;
@@ -1155,9 +1213,16 @@ export const real2026Q2Additions = [;
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

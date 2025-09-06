@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function CloudflareWorkersEdgeConfigPage() {
@@ -31,6 +32,8 @@ export default function CloudflareWorkersEdgeConfigPage() {
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-700 text-white">Start from $99/mo</Link>
             <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</Link>
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
         </div>
       </div>
@@ -63,6 +66,7 @@ export default function CloudflareWorkersEdgeConfigPage(req, res) {
   }
 }
 
+<<<<<<< HEAD
           </div>;
           <div className="flex gap-3">;
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-700 text-white">Start from $99/mo</a>;
@@ -79,3 +83,8 @@ export default function CloudflareWorkersEdgeConfigPage(req, res) {
 }
 ;
 ;
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

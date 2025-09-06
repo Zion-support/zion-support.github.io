@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -7,6 +8,20 @@ try {// Check if we're in a git repository;
     console.log('✅ Git repository detected');
 } catch (error) {console.error('❌ Not in a git repository');
     process.exit(1);
+=======
+
+#!/usr / bin / env node;
+const { exec_sync } = require ('child_process'),
+const fs = require ('fs'),
+console.log ('🚀 Starting merge process for all open PRs...'),
+try {
+    // Check if we're in a git repository;
+    exec_sync ('git rev - parse --git - dir', { stdio: 'pipe' }),
+    console.log ('✅ Git repository detected');
+} catch (error) {
+    console.error ('❌ Not in a git repository'),
+    process.exit (1);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 try {
     // Ensure clean working directory;
@@ -30,12 +45,37 @@ try {
     } catch (error) {
         console.log ('⚠️  Merge conflicts detected. Resolving...'),
         // Find files with merge conflicts;
+<<<<<<< HEAD
         const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
         if (conflictFiles.trim()) {console.log('Found merge conflicts in:', conflictFiles.trim());
 const { execSync } = require('child_process'),;
 const fs = require('fs'),;
 const { execSync } = require('child_process');
 const fs = require('fs');
+=======
+        const conflict_files = exec_sync ('git diff --name - only --diff - filter = U', { encoding: 'utf8' }),
+        if () {) {
+  $2
+}
+            console.log ('Found merge conflicts in:', conflict_files.trim ()),
+            // Resolve conflicts by accepting our version;
+            const files = conflict_files.trim ().split ('\n'),
+            for (const file of files) {
+                if () {) {
+  $2
+}
+                    console.log (`Resolving conflicts in: ${file}`),
+                    try {
+                        exec_sync (`git checkout --ours "${file}"`);
+                    } catch (e) {
+                        exec_sync (`git checkout --theirs "${file}"`);
+
+=======
+#!/usr/bin/env node;
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 console.log('🚀 Starting merge process for all open PRs...'),;
 try {;
     // Check if we're in a git repository;
@@ -71,9 +111,14 @@ try {;
         if (conflictFiles.trim()) {;
             console.log('Found merge conflicts in:', conflictFiles.trim()),;
             // Resolve conflicts by accepting our version;
+<<<<<<< HEAD
             const files = conflictFiles.trim().split('\n');
             const files = conflictFiles.trim().split('\n'),;
             const files = conflictFiles.trim().split('\n');
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             for (const file of files) {;
                 if (file.trim()) {;
                     console.log(`Resolving conflicts in: ${file}`);
@@ -132,9 +177,13 @@ try {;
     const branches = execSync('git branch -r', { encoding: 'utf8' }),;
     const branchList = branches.split('\n');
         .map(branch => branch.trim());
+<<<<<<< HEAD
         .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
         .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')),;
         .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     console.log(`Found ${branchList.length} branches to merge: `),;
     branchList.forEach(branch => console.log(`  - ${branch}`)),;
     // Merge each branch;

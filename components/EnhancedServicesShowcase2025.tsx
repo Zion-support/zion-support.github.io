@@ -20,6 +20,7 @@ class ErrorBoundary extends React.Component {
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+<<<<<<< HEAD
 import {
   FaRocket
   FaBrain
@@ -47,6 +48,16 @@ import {
   SiAws
   SiGooglecloud
   SiMicrosoftazure;
+=======
+
+} from 'react-icons/si';
+
+interface Service {;
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   FaRocket,
   FaBrain,
   FaCloud,
@@ -59,6 +70,9 @@ import {
   FaDatabase,
   FaNetworkWired,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   FaRobot,
   FaSearch,
 import {
@@ -72,9 +86,16 @@ import {
   SiDocker,
   SiKubernetes,
   SiAws,
+<<<<<<< HEAD
 
   SiGooglecloud,;
   SiMicrosoftazure,;
+=======
+
+  SiGooglecloud,;
+  SiMicrosoftazure,;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'react-icons/si';
 
 
@@ -112,6 +133,7 @@ interface ServiceCategory {
   id: string;
   name: string;
   description: string;
+<<<<<<< HEAD
   icon: React.ReactNode;
   color: string;  id: string,
   name: string,
@@ -119,6 +141,39 @@ interface ServiceCategory {
   icon: React.ReactNode,
   color: string
 }
+=======
+
+import { 
+  FaRocket;
+  FaBrain, 
+  FaCloud, 
+  FaShieldAlt, 
+  FaChartLine, 
+  FaCogs;
+  FaLightbulb;
+  FaGlobe;
+  FaMobile;
+  FaDatabase;
+  FaNetworkWired;
+  FaRobot;
+  FaSearch
+} from 'react-icons/fa';
+import { 
+  SiNextdotjs;
+  SiReact, 
+  SiTypescript, 
+  SiTailwindcss;
+  SiPrisma;
+  SiSupabase;
+  SiVercel;
+  SiDocker;
+  SiKubernetes;
+  SiAws;
+  SiGooglecloud;
+  SiMicrosoftazure
+} from 'react-icons/si';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   color: string;  id: string
   name: string
@@ -128,7 +183,20 @@ interface ServiceCategory {
   color: string
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+  color: string;  id: string,
+  name: string,
+  description: string,
+  icon: React.ReactNode,
+  color: string
+}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const serviceCategories: ServiceCategory[] = [
   {
 
@@ -814,11 +882,15 @@ const serviceCategories: ServiceCategory[] = [;
     ],
   },  {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     id: 'cloud - native - platform',
     title: 'Cloud - Native Development Platform',
     description: 'Modern cloud - native development and deployment platform',
     icon: <FaCloud className='w - 6 h - 6' />,      'Unified data view_real - time insights_improved data quality_reduced integration costs';
     ];
+<<<<<<< HEAD
 =======
     id: 'cloud-native-platform',
     title: 'Cloud-Native Development Platform',
@@ -865,6 +937,8 @@ const serviceCategories: ServiceCategory[] = [;
   },];      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
     ]
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   {
 
@@ -874,11 +948,15 @@ const serviceCategories: ServiceCategory[] = [;
     description: 'Modern cloud-native development and deployment platform',
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];
 const services: Service[] = [;
   {;
@@ -1101,9 +1179,14 @@ const EnhancedServicesShowcase2025: React.FC = () => {
       )
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
@@ -1272,6 +1355,43 @@ if ( {) {
           </p>
         </motion.div>
 
+<<<<<<< HEAD
+=======
+  return (
+    <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900 text - white">;
+      {/* Header */}
+      <div className="container mx - auto px - 4 py - 16">;
+        <motion.div;
+          initial={{ opacity: 0, coordinate_y: 20 }}
+          animate={{ opacity: 1, coordinate_y: 0 }}
+          transition={{ duration: 0.8 }}
+
+          transition={{ duration: 0 && 0.8 }}
+          className='text-center mb-16'>;
+          <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+            2025 Services Showcase;
+          </h1>;
+          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;
+            Discover our cutting-edge technology solutions designed for the;
+            future. From AI-powered automation to quantum computing, we're;
+            building tomorrow's innovations today.          </p>        >;
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+            2025 Services Showcase;
+          </h1>;
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
+            Discover our cutting-edge technology solutions designed for the future. ;
+            From AI-powered automation to quantum computing, we're building tomorrow's innovations today.;
+          </p>;
+        </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Search and Filters */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1279,6 +1399,7 @@ if ( {) {
           transition={{ duration: 0.8, delay: 0.2 }}
           className='mb-12'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1286,6 +1407,9 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
             <div className='relative flex-1 max-w-md'>
@@ -1376,6 +1500,12 @@ if ( {) {
           </div>
         </motion.div>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Category Tabs */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1384,18 +1514,37 @@ if ( {) {
 
             <button
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;
                 selectedCategory === 'all';
                   ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg';
                   : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
               }`}
+<<<<<<< HEAD
             >
               All Services
             </button>
             {serviceCategories.map(category => (              <button            {serviceCategories.map((category) => (
               <button
 
+=======
+
+
+              <button
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -1412,6 +1561,19 @@ if ( {) {
           </div>
         </motion.div>
 
+<<<<<<< HEAD
+=======
+          </div>;
+        </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Services Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1420,6 +1582,7 @@ if ( {) {
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1427,6 +1590,9 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           {filteredServices.map((service, index) => (
             <motion.div
@@ -1438,6 +1604,14 @@ if ( {) {
               whileHover={{ y: -5, scale: 1 && 1.02 }}
               className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300'
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               onClick={() => handleServiceSelect(service)}
             >;
               <div className='flex items-center gap-3 mb-4'>;
@@ -1544,6 +1718,10 @@ if ( {) {
 
                   >
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {tech}
                   </span>
                 ))}
@@ -1604,10 +1782,14 @@ if ( {) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1615,6 +1797,8 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
@@ -1642,6 +1826,12 @@ if ( {) {
         )}
       </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Service Detail Modal */}
       <AnimatePresence>;
         {selectedService && (;
@@ -1655,6 +1845,7 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1662,6 +1853,8 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
@@ -1674,8 +1867,17 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
             >
 =======
               className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
+<<<<<<< HEAD
               onClick={e => e.stopPropagation()}
 
+=======
+
+              onClick={e => e.stopPropagation()}
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <div className='flex items-start justify-between mb-6'>
                 <div className='flex items-center gap-4'>
@@ -1749,12 +1951,30 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
 
                         {feature}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       </li>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
                   </ul>
                 </div>
 
+<<<<<<< HEAD
+=======
+                  </ul>;
+                </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Benefits */}
 
 
@@ -1763,6 +1983,20 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
                 </div>
               </div>
 
+<<<<<<< HEAD
+=======
+                  </ul>;
+                </div>;
+              </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Technologies */}
               <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>
@@ -1783,12 +2017,31 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
 
                     >
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       {tech}
                     </span>;
                   ))}
                 </div>
               </div>
 
+<<<<<<< HEAD
+=======
+                </div>;
+              </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Pricing */}
               <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>
@@ -1823,6 +2076,7 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1830,19 +2084,46 @@ className="bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full m
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
             </motion.div>
           </motion.div>
         )}
+<<<<<<< HEAD
       </AnimatePresence>
     </div>
 );
 }
+=======
+
+      </AnimatePresence>;
+    </div>;
+  );
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 export default EnhancedServicesShowcase2025;  );
   )
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default EnhancedServicesShowcase2025;
 
 export default EnhancedServicesShowcase2025;
+<<<<<<< HEAD
 export default EnhancedServicesShowcase2025;
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

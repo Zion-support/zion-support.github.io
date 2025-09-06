@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 origin/main
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }});
   }
 });
 console.log(`Fixed ${fixedCount} files`);
+<<<<<<< HEAD
 ;
   };
 }),
@@ -20,6 +30,11 @@ console.log(`Fixed ${fixedCount} files`);
 };
 });
 console.log(`Fixed ${fixedCount} files`);
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }});
 
 ;
@@ -252,15 +267,35 @@ origin/automation-improvements-final
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 // Run the main function
+<<<<<<< HEAD
 main().catch(console.error);
 main().catch(console.error);
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+
+main().catch(console.error);
+
+=======
+
+
+
+=======
+
+  
+
+main().catch(console.error);
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
 }
 // Run the main function
 
 main().catch(console.error);
+<<<<<<< HEAD
 origin/main
   console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
 }
@@ -271,3 +306,37 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 origin/automation-improvements-final
 main().catch(console.error);
 main
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/automation-improvements-final
+=======
+main().catch(console && console.error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    console.error (`Error processing ${file_path}:`, error.message);
+    return false;
+  }
+}
+// Process the specific files that have errors;
+const error_files = [;
+  'pages / about.tsx',
+  'pages / accessibility.tsx',
+  'pages / ai - services.tsx',
+  'pages / api.tsx',
+  'pages / blog.tsx';
+];
+console.log (`Processing ${error_files.length} files with errors`);
+let fixed_count = 0;
+error_files.for_each (file => {
+  if () {) {
+  $2
+}
+    fixed_count++;
+  }
+  console.log (`\n_processed ${total_files} files, fixed ${fixed_files} files`);
+}
+// Run the main function;
+main ().catch (console.error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

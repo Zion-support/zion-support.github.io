@@ -29,8 +29,29 @@ origin/automation-improvements-final
   Star,
   TrendingUp,
   Award,
+<<<<<<< HEAD
   Clock,
   Clock,;
+=======
+
+import {;
+  ArrowRight,;
+  Users,;
+  Calendar,;
+  FileText,;
+  Video,;
+  Globe,;
+  Shield,;
+  Zap,;
+  CheckCircle,;
+  Mail,;
+  Send,;
+  Star,;
+  TrendingUp,;
+  Award,;
+  Clock,;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "lucide-react";
   Clock
 } from 'lucide-react';
@@ -151,11 +172,20 @@ export default function NewsletterPage() {
   }
 ];
 
+<<<<<<< HEAD
 export default function NewsletterPage() {
   const [email, setEmail] = useState('');
 origin/automation-improvements-final
 export default function NewsletterPage() {;
   const [email, setEmail] = useState("");
+=======
+
+
+export default function NewsletterPage() {;
+  const [email, setEmail] = useState("");
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
@@ -192,6 +222,7 @@ origin/automation-improvements-final
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
             >
               <h1 className="text-5xl font-bold mb-6">
@@ -204,11 +235,26 @@ origin/automation-improvements-final
                 Get exclusive insights, industry trends, and early access to new
                 features delivered directly to your inbox.
               </p>
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
               </p>
               
+<<<<<<< HEAD
 origin/automation-improvements-final
+=======
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -736,6 +782,7 @@ origin/automation-improvements-final
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold mb-6">
@@ -748,11 +795,26 @@ origin/automation-improvements-final
                 Subscribe now and start receiving valuable insights delivered to
                 your inbox every week.
               </p>
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 Subscribe now and start receiving valuable insights delivered to your inbox every week.
               </p>
               
+<<<<<<< HEAD
 origin/automation-improvements-final
+=======
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">

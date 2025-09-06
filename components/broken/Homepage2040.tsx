@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 //Enhanced animation variants for better performance const containerVariants = {
   hidden: {
@@ -7,6 +8,15 @@
 //Enhanced animation variants for better performance const containerVariants = {
   hidden: {
   opacity: 0 
+=======
+
+
+
+
+  opacity: 0 
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 
 interface Homepage2040Props {
@@ -20,6 +30,12 @@ const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 visible: {
   opacity: 1, transition: {
@@ -615,6 +631,7 @@ const Homepage2040: React.FC = () => {
                 variants={itemVariants}
                 className="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
                 role="banner"
+<<<<<<< HEAD
                 aria-label="Company recognition"
               >
                 <Star className="w-5 h-5 animate-pulse" aria-hidden="true" />
@@ -623,21 +640,43 @@ const Homepage2040: React.FC = () => {
               </motion.div>
               <motion.h1
               <motion.h1 
+=======
+
+
+              <motion.h1 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 variants={itemVariants}
                 id="hero-heading"
                 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight"
               >
                 Zion Tech Group
               </motion.h1>
+<<<<<<< HEAD
               <motion.p
               <motion.p 
+=======
+
+
+              <motion.p 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 variants={itemVariants}
                 className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
               >
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide
               </motion.p>
+<<<<<<< HEAD
               {/* Enhanced CTA Section */}
               <motion.div
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               
               {/* Enhanced CTA Section */}
               <motion.div 
@@ -664,6 +703,11 @@ const Homepage2040: React.FC = () => {
                 </Link>
               </motion.div>
               
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Enhanced Trust Indicators */}
               <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -762,6 +806,20 @@ const Homepage2040: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Enhanced Service Categories */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-7xl mx-auto">;
@@ -811,6 +869,20 @@ const Homepage2040: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Enhanced Featured Services Section */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-7xl mx-auto">;
@@ -1082,10 +1154,18 @@ const Homepage2040: React.FC = () => {
                       <div className="mb - 6">;
                         <span className="text - 2xl font - bold text - cyan - 400">;
                           {service.price}
+<<<<<<< HEAD
                         </span>
                       </div>
                       {/* CTA Button */}
                       <Link
+=======
+
+
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                       {/* CTA Button */}
                       <Link 
@@ -1099,6 +1179,56 @@ const Homepage2040: React.FC = () => {
                   ))}
                 </motion.div>
 
+<<<<<<< HEAD
+=======
+                  </div>;
+
+                  <h3 className="text-2xl font-bold text-white mb-3">{service && service.name}</h3>;
+                  <p className="text-gray-400 mb-4">{service && service.tagline}</p>;
+
+                  <div className="flex items-center justify-between mb-6">;
+                    <div className="text-3xl font-bold text-cyan-400">;
+                      ${service && service.price.monthly}
+                      <span className="text-lg text-gray-400">/month</span>;
+                    </div>;
+                    <div className="text-sm text-gray-400">;
+                      {service && service.rating} ⭐ ({service && service.reviews});
+                    </div>;
+                  </div>;
+
+                  <div className="space-y-3 mb-6">;
+                    {service && service.features.slice(0, 3).map((feature, idx) => (;
+                      <div key={idx} className="flex items-center gap-3 text-gray-300">;
+                        <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>;
+                        <span className="text-sm">{feature}</span>;
+                      </div>;
+
+                      {/* Service Price */}
+                      <div className="mb-6">;
+                        <span className="text-2xl font-bold text-cyan-400">;
+                          {service && service.price}
+                        </span>;
+                      </div>;
+
+                      {/* CTA Button */}
+                      <Link
+                        href={service && service.link}
+                        className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 group-hover:shadow-lg group-hover:shadow-cyan-400/25">;
+                        Learn More;
+                        <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />;
+                      </Link>;
+                    </motion && motion.div>;
+                  ))}
+                </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* View All Services Button */}
                 <motion&& motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -1137,6 +1267,20 @@ const Homepage2040: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -1145,6 +1289,7 @@ const Homepage2040: React.FC = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
+<<<<<<< HEAD
               className="space-y-8"
             >
               <motion.h2
@@ -1161,6 +1306,13 @@ const Homepage2040: React.FC = () => {
               </motion.p>
               <motion.div
               <motion.div 
+=======
+
+
+              <motion.div 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center"
               >

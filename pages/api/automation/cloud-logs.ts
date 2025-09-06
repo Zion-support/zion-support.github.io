@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -7,6 +8,8 @@ import fs from 'fs',;
 import path from 'path',;
 async function fetchFromGitHub(): Promise<any[]> {
   try {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       } catch {
@@ -47,6 +50,7 @@ if ( {) {
       }
     }
   } catch {
+<<<<<<< HEAD
     // fall through to GitHub
   }
 const remote = await fetchFromGitHub()
@@ -147,3 +151,26 @@ export default async function handler(req, res) {
   return res.status(200).json({ logs: remote });
 }
 };
+=======
+    // fall through to GitHub;
+  }
+
+=======
+}
+
+=======
+const remote = await fetchFromGitHub (),
+  return res.status (200).json ({ logs: remote });
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+  return res.status(200).json({ logs: remote });
+
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

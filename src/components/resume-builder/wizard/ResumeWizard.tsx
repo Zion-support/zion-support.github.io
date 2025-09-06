@@ -15,7 +15,15 @@ if (isLoading) {
       </div>
     )
   }
+<<<<<<< HEAD
   
+=======
+
+
+  
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
   }
@@ -36,6 +44,9 @@ if (isLoading) {
     );
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -58,6 +69,9 @@ if (isLoading) {
   }
   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   return (
@@ -81,6 +95,9 @@ if (isLoading) {
       </div>
       
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <Card>
@@ -90,6 +107,9 @@ if (isLoading) {
             <ResumeProgress resume={resume} progress={progress} />
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           
@@ -161,13 +181,20 @@ if ( {) {
             {resume && (;
 
               <ResumeStepContent
+<<<<<<< HEAD
             {resume && (
               <ResumeStepContent 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 activeTab = {activeTab,}
                 resume = {resume as Resume,}
                 onNextStep = {nextStep,}
                 onPrevStep = {prevStep,}
+<<<<<<< HEAD
               />
+=======
+              />;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             )}
 
           </Tabs>;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const { spawn } = require('child_process');
 console.log('🚀 Starting development server...');
 // Start the development server;
@@ -19,6 +20,15 @@ process.on('SIGTERM', () => {console.log('Stopping development server...');
 });
 const { spawn } = require('child_process'),;
 const { spawn } = require('child_process');
+=======
+
+const { spawn } = require ('child_process'),
+console.log ('🚀 Starting development server...'),
+=======
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 console.log('🚀 Starting development server...'),;
 
 // Start the development server;

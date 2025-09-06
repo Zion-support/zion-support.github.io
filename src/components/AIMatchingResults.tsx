@@ -13,6 +13,7 @@ interface AIMatchingResultsProps {
   serviceType?: string
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export function AIMatchingResults({
 
@@ -24,6 +25,36 @@ export function AIMatchingResults({
 }: AIMatchingResultsProps) {
   const [activeTab, setActiveTab] = useState('all')
   // Group matches by category
+=======
+
+import { useState } from 'react';
+import { MatchResultItem } from '@/lib / ai - matchmaking';
+import { Card, CardContent } from '@/components / ui / card';
+import { Badge } from '@/components / ui / badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
+import Skeleton from '@/components / ui / skeleton';
+import { cn } from '@/lib / utils';
+interface AIMatchingResultsProps {
+  matches: MatchResultItem[];
+  onSelectMatch?: (match: MatchResultItem) => void;
+  is_loading?: boolean;
+  project_description?: string;
+  service_type?: string;interface AIMatchingResultsProps {
+  matches: MatchResultItem[],
+  onSelectMatch?: (match: MatchResultItem, ) => void,
+  is_loading?: boolean,
+  project_description?: string,
+  service_type?: string;
+}
+export /**
+ * AIMatchingResults - Function description
+ */
+function AIMatchingResults() {
+  const [active_tab, setActiveTab] = useState ('all');
+  // Group matches by category;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const categories = {
     all: matches,
     talent: matches.filter (match =>;
@@ -293,6 +324,7 @@ if ( {) {
                               <AvatarImage;
                                 src={match.image}
                                 alt={match.title}
+<<<<<<< HEAD
                               />
                             ) : (
                               <AvatarFallback className='bg-zion-purple/20'>
@@ -322,6 +354,53 @@ if ( {) {
                                       ? '/hour'
                                       : ''}
 <<<<<<< HEAD
+=======
+                              />) : (
+                              <AvatarFallback className='bg - zion - purple / 20'>;
+                                <CategoryIcon className='h - 6 w - 6 text - zion - purple' />;
+                              </AvatarFallback>)}
+                          </Avatar>;
+                          <div className='flex - 1'>;
+                            <div className='flex justify - between'>;
+                              <div>;
+                                <h3 className='font - medium text - white'>;
+
+                                  {match.title}
+                                </h3>;
+                                <p className='text - zion - slate - light text - sm'>;
+                                  {match.description}
+                                </p>;
+                              </div>;
+                              {match.price && (
+                                <div className='text - right ml - 2'>;
+                                  <div className='font - medium text - white'>;
+                                    ${match.price}
+
+                          </Avatar>;
+
+                          <div className='flex-1'>;
+                            <div className='flex justify-between'>;
+                              <div>;
+                                <h3 className='font-medium text-white'>;
+                                  {match && match.title}
+                                </h3>;
+                                <p className='text-zion-slate-light text-sm'>;
+                                  {match && match.description}
+                                </p>;
+                              </div>;
+                              {match && match.price && (;
+                                <div className='text-right ml-2'>;
+                                  <div className='font-medium text-white'>;
+                                    ${match && match.price}
+                                  </div>;
+                                  <div className='text-xs text-zion-slate-light'>;
+                                    {match && match.category;
+                                      .toLowerCase();
+                                      .includes('talent');
+                                      ? '/hour';
+
+                                      : ''}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                                   </div>;
                                 </div>;
                               )}
@@ -332,6 +411,7 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -341,6 +421,8 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                                   </div>
                                 </div>
                               )}
@@ -412,23 +494,38 @@ if ( {) {
                       </div>;
                     </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
             )}
           </TabsContent>;
         ))}
+<<<<<<< HEAD
       </Tabs>
     </div>
   )
 };
 ;
+=======
+
+
+};
+;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
       </Tabs>;
     </div>;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

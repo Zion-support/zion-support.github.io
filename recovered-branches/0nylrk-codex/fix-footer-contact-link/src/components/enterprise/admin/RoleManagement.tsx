@@ -25,12 +25,15 @@ import {
   TooltipProvider,
   TooltipTrigger} from "@/components/ui/tooltip",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function RoleManagement() {
   // Mock team members data
@@ -99,6 +102,7 @@ function RoleManagement() {
       email: "taylor@example.com"
       role: "Viewer"
       permissions: {
+<<<<<<< HEAD
         viewCandidates: true
         editCandidates: false
         createJobs: false
@@ -120,6 +124,8 @@ function RoleManagement() {
     "Manager": "Can view candidates and create jobs";
     "Viewer": "Read-only access to candidates"}
   },
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const roleDescriptions: Record<string string> = {
     "Admin": "Full access to all features and settings",
@@ -127,6 +133,7 @@ function RoleManagement() {
     "Manager": "Can view candidates and create jobs",
     "Viewer": "Read-only access to candidates"},
 
+<<<<<<< HEAD
   return (
     <div className="space-y-6">
       <div>
@@ -317,6 +324,8 @@ import {;
   TooltipContent,;
   TooltipProvider,;
   TooltipTrigger} from "@/components/ui/tooltip",;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function RoleManagement() {;
   // Mock team members data;
   const teamMembers = [;
@@ -597,6 +606,15 @@ export function RoleManagement() {;
                   />;
                 </TableCell>;
               </TableRow>;
+<<<<<<< HEAD
+=======
+=======
+
+                  <Switch 
+                    checked={member.permissions.viewBilling} 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ))}
 
           </TableBody>;

@@ -1,4 +1,5 @@
 export function ClickableBadge({
+<<<<<<< HEAD
   children
   className
   variant = 'default'
@@ -67,6 +68,10 @@ export function ClickableBadge({
           }}
           className="ml-1 rounded-full p-0.5 hover:bg-background/20"
           aria-label="Remove"
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <X className="h-3 w-3" />
         </button>

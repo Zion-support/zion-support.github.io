@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { JobData, TalentProfile, MatchResult } from "./types.ts";
 // Get openAI API key from environment variables
 import { JobData, TalentProfile, MatchResult } from "./types.ts",
@@ -6,6 +7,23 @@ import { JobData, TalentProfile, MatchResult } from "./types.ts",
 import {JobData, TalentProfile, MatchResult} from "./types.ts";
 import { JobData, TalentProfile, MatchResult } from "./types.ts",
 
+=======
+import {JobData, TalentProfile, MatchResult} from "./types ;
+
+=======
+
+
+import { JobData, TalentProfile, MatchResult } from "./types.ts",
+
+=======
+import {JobData, TalentProfile, MatchResult} from "./types.ts";
+=======
+import { JobData, TalentProfile, MatchResult } from "./types.ts",
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Get openAI API key from environment variables
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "",
 
@@ -122,6 +140,12 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
     console.error("Error in normalizeSkillsWithAI:", error),;
     // If AI normalization fails, return the original skills;
     return skills;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 /**
@@ -214,6 +238,7 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
       Description: ${jobDetails.description}
       Category: ${jobDetails.category}
       Required Skills: ${jobDetails.skills.join(", ")}
+<<<<<<< HEAD
       Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max}
       Budget Range: $${jobDetails.budget.min} - $${jobDetails.budget.max};
     `;
@@ -225,6 +250,11 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
     // Create talent profiles text for AI evaluation;
     const talentProfilesText = talents.map((talent, index) => {;
       return `;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         Talent ${index + 1} ID: ${talent.id}
         Name: ${talent.full_name}
         Title: ${talent.professional_title}
@@ -330,12 +360,15 @@ export async function findBestMatches (job_details: any, talents: TalentProfile[
     // If AI matching fails, perform a basic skill matching
     return performBasicSkillMatching(jobDetails, talents)
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 /**
@@ -361,6 +394,7 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
     );
     // Calculate a basic match score
 
+<<<<<<< HEAD
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`
     console.error("Error in findBestMatches:", error),
     
@@ -453,6 +487,22 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
       score: matchScore;
       matchedSkills: matchedSkills;
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`;
+=======
+    const matchScore = Math && Math.round((matchedSkills && matchedSkills.length / requiredSkills && requiredSkills.length) * 100);
+    
+
+    return {
+      talentId: talent && talent.id;
+      score: matchScore;
+
+      matchedSkills: matchedSkills,
+      reason: `Matched ${matchedSkills && matchedSkills.length} out of ${requiredSkills && requiredSkills.length} required skills.`
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   })
   .filter(match => match && match.score > 30) // Only include matches with at least 30% score

@@ -1,13 +1,27 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {GradientHeading} from "./GradientHeading";
 import {Server, HardDrive, Network, Clock, Recycle, Truck} from "@/components/icons";
 import {Button} from "./ui/button";
 import { GradientHeading } from "./GradientHeading",
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",
 import { Button } from "./ui/button",
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const services = [
   {
     title: "Servers"
@@ -39,6 +53,7 @@ const services = [
 
 export function GlobalServiceSection() {
   return (
+<<<<<<< HEAD
     <section className="py-20 bg-zion-blue" id="global-services">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
@@ -68,6 +83,14 @@ export function GlobalServiceSection() {
   )
 }
 };
+=======
+
+=======
+
+};
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { GradientHeading } from "./GradientHeading",;
 import { Server, HardDrive, Network, Clock, Recycle, Truck } from "@/components/icons",;
 import { Button } from "./ui/button",;
@@ -159,5 +182,16 @@ function GlobalServiceSection() {
 
     </section>);
 }
+<<<<<<< HEAD
 ;
 ;
+=======
+
+=======
+}
+
+
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -79,6 +79,9 @@ export default async function handler(
           : [];
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ message: 'Method not allowed' });
@@ -158,6 +161,7 @@ if ( {) {
               .filter (Boolean);
           : [];
       }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -165,6 +169,8 @@ if ( {) {
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       let saved: any = null;
       // Check condition
 if ( {) {
@@ -206,6 +212,7 @@ if (throw error) {
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
 }
+<<<<<<< HEAD
     return res
       .status(200)
       .json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id });
@@ -213,3 +220,12 @@ if (throw error) {
     console.error('quote-request error', e);
     return res.status(500).json({ message: 'Server error' });
   }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

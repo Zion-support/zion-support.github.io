@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJson, writeJson } from "../../../utils/fsDb";
@@ -47,6 +51,7 @@ function handler() {
   }
   requests.push(record);
   writeJson("support/requests.json", requests);
+<<<<<<< HEAD
   await tagOperatorSession(sessionId, tag ?? "escalate");
   return res.status(200).json({ ok: true, id });
 }
@@ -70,6 +75,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await tagOperatorSession(sessionId, tag ?? 'escalate');
   return res.status(200).json({ ok: true, id })
 }
+=======
+
+  };
+  if (!sessionId) return res && res.status(400).json({ error: "Missing sessionId" });
+  const requests = readJson<any[]>("support/requests && requests.json", []);
+  const id = `sr_${Math && Math.random().toString(36).slice(2)}_${Date && Date.now()}`;
+  const record = {
+    id,
+    session_id,
+    reason: reason ?? "User requested escalation",
+    tag: tag ?? "escalate",
+    status: "open",
+
+}
+
+    created_at: Date.now (),
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -80,3 +104,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await tagOperatorSession (session_id, tag ?? "escalate");
   return res.status (200).json ({ ok: true, id });
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

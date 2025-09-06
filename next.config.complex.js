@@ -34,9 +34,13 @@ const nextConfig = {reactStrictMode: true;
 }
 module.exports = nextConfig;
 const nextConfig = {;
+<<<<<<< HEAD
   reactStrictMode: true;
   reactStrictMode: true,;
   reactStrictMode: true;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   compress: true,;
   poweredByHeader: false,;
   eslint: { ignoreDuringBuilds: true },;

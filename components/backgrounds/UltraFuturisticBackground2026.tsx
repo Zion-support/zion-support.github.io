@@ -501,10 +501,13 @@ if ( {) {
           }}
           transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             duration: 10
             repeat: Infinity
             ease: 'linear',            ease: "linear"
@@ -526,6 +529,7 @@ if ( {) {
 
           }}
 
+<<<<<<< HEAD
             duration: 10,
             repeat: Infinity,
             ease: 'linear',            ease: "linear"
@@ -537,11 +541,26 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+        />;
+      </div>;
+
+
+      {/* Energy Field Effects */}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />
       </div>
       {/* Energy Field Effects */}
       <div className='fixed inset-0 pointer-events-none z-20'>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent'
@@ -776,15 +795,23 @@ if ( {) {
             coordinate_y: ['-100%100%'];
           }}
           transition={{
+<<<<<<< HEAD
             duration: 20
             repeat: Infinity
             ease: 'linear',            ease: "linear"
           }}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             duration: 20,
             repeat: Infinity,
 
           }}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             duration: 20,
             repeat: Infinity,
             ease: 'linear',            ease: "linear"
@@ -792,6 +819,20 @@ if ( {) {
 
           }}
 
+<<<<<<< HEAD
+=======
+
+=======
+            duration: 20,
+            repeat: Infinity,
+
+
+          }}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />
       </div>
       {/* Content */}
@@ -893,6 +934,7 @@ export default UltraFuturisticBackground2026;
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 };
 
@@ -909,3 +951,11 @@ export default UltraFuturisticBackground2026;
 
 export default UltraFuturisticBackground2026;
 export default UltraFuturisticBackground2026;
+=======
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

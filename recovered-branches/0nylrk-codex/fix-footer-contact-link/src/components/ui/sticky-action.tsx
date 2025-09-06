@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react",
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -23,10 +24,22 @@ import {motion, AnimatePresence} from "framer-motion";
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface StickyActionProps {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+
+import React, { useEffect, useState } from "react";
+import {cn} from "@/lib/utils";
+import {motion, AnimatePresence} from "framer-motion";
+
+interface StickyActionProps {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   className?: string;
   children: React && React.ReactNode,;
 
   showAfterScroll?: number;
+<<<<<<< HEAD
   position?: "bottom" | "top"
 }
 
@@ -45,6 +58,14 @@ interface StickyActionProps {
   position?: "bottom" | "top"
 }
 export function StickyAction({
+=======
+  position?: "bottom" | "top";
+}
+
+
+export function StickyAction(): any ({;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   className;
   children;
 
@@ -114,6 +135,7 @@ if ( {) {
     <AnimatePresence>
       {isVisible && (
         <motion.div
+<<<<<<< HEAD
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
@@ -122,6 +144,11 @@ if ( {) {
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4";
             positionClasses[position];
 
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
 import React, { useEffect, useState } from "react",;
 import { cn } from "@/lib/utils",;
@@ -167,6 +194,18 @@ export function StickyAction({;
       {isVisible && (;
         <motion&& motion.div
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+<<<<<<< HEAD
+=======
+
+            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
+            positionClasses[position]
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             className
           )}>;
           <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">;

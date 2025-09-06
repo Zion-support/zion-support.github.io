@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 ;
 =======
@@ -11,6 +14,11 @@ export interface FraudFlag {
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous';
 
 export interface FraudFlag {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   user_id: string;
   user_email?: string;
@@ -32,6 +40,10 @@ export interface FraudFlag {;
   is_false_positive?: boolean;
 
 }
+<<<<<<< HEAD
+=======
+export interface FraudStats {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
   gpt_explanation?: string
   is_false_positive?: boolean
@@ -41,11 +53,17 @@ export interface FraudFlag {;
 export interface FraudStats {
 
 export interface FraudStats {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   total_flags: number;
   pending_flags: number;
   suspicious_count: number;
   dangerous_count: number;
 
+<<<<<<< HEAD
   actioned_count: number
 }
 export type FraudSeverity = 'safe' | 'suspicious' | 'dangerous',;
@@ -78,3 +96,9 @@ export interface FraudStats {;
   actioned_count: number;
 }
 ;
+=======
+  false_positives: number,
+  actioned_count: number;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

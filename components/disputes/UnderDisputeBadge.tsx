@@ -1,9 +1,13 @@
 import useSWR from 'swr';
 
+<<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r.json());
 export function useProjectDisputeStatus(projectId: string): {
 
 export function useProjectDisputeStatus(projectId: string): {;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   hasActiveDispute: boolean;
   isLoading: boolean;
 } {;
@@ -15,6 +19,9 @@ export function useProjectDisputeStatus(projectId: string): {;
       (d && d.status === 'Open' || d && d.status === 'Under Review');
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return { hasActiveDispute, isLoading: !data && !error };
 export default function UnderDisputeBadge(): any ({;
   projectId,;
@@ -31,6 +38,11 @@ export default function UnderDisputeBadge({
 
   projectId,
 }: {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   projectId: string;
 }) {;
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
@@ -47,11 +59,18 @@ export default function UnderDisputeBadge({
   return { hasActiveDispute, isLoading: !data && !error }
 }
 
+<<<<<<< HEAD
 export default function UnderDisputeBadge({ projectId }: { projectId: string }) {
 export default function UnderDisputeBadge({ projectId }: { projectId: string }) {;
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
   return (
+<<<<<<< HEAD
     <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">
       Under Dispute
     </span>
@@ -60,6 +79,16 @@ export default function UnderDisputeBadge({ projectId }: { projectId: string }) 
   );
 }
 <<<<<<< HEAD
+=======
+
+    <span className="inline-flex items-center gap-1 px-2 py-1 rounded bg-yellow-100 text-yellow-800 border border-yellow-300 text-xs">;
+      Under Dispute;
+    </span>;
+  );
+}
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
   );
@@ -118,7 +147,10 @@ if (return null) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

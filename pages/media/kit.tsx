@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useCallback, useMemo, useState  } from 'react';
 import Head from 'next/head',
 import {useCallback, useMemo, useState} from 'react';
@@ -14,6 +15,17 @@ import {
   buildPressRelease
   buildTimeline;
   MediaBundle,
+=======
+
+
+import {useCallback, useMemo, useState} from 'react';
+import Head from 'next/head';
+
+
+import DatePicker from 'react-datepicker';
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   MediaAsset,;
   PressReleaseType,;
 } from '../../utils/mediaKit';
@@ -21,6 +33,7 @@ import {;
   getDefaultAssets,;
   buildPressRelease,;
   buildTimeline,;
+<<<<<<< HEAD
 } from '../../utils/mediaKit';
 const KitPage = () => {
 import { useCallback, useMemo, useState } from 'react';
@@ -29,11 +42,32 @@ import DatePicker from 'react-datepicker';
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
 import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
 const KitPage = () => {;
+=======
+
+
+
+} from '../../utils/mediaKit';
+const KitPage = () => {;
+
+=======
+import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
+import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
+
+const KitPage = () => {
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [bundle, setBundle] = useState<MediaBundle>('general');
   const [startDate, setStartDate] = useState<Date>(new Date());
   const [companyName, setCompanyName] = useState('Zion');
   const [raiseAmount, setRaiseAmount] = useState('$5M');
   const [tokenName, setTokenName] = useState('ZION');
+<<<<<<< HEAD
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>(
     []
   );
@@ -126,6 +160,11 @@ const KitPage = () => {;
     saveAs(blob, `zion-media-kit-${bundle}.zip`);
   }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]),;
   const onGeneratePdf = useCallback(async () => {;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const { PDFDocument, StandardFonts, rgb } = await import('pdf-lib');
     const pdfDoc = await PDFDocument.create();
     const page = pdfDoc.addPage([612, 792]);
@@ -173,12 +212,15 @@ const KitPage = () => {;
 
     let y = 760;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     drawText('Zion Media Kit', 50, y, 18);
 =======
 import {useCallback, useMemo, useState} from 'react';
@@ -339,6 +381,7 @@ if ( {) {
       tokenName,;
 
     });
+<<<<<<< HEAD
     const onCopy = () => navigator.clipboard.writeText(text);
     const drawText = (text: string, x: number, y: number, size = 12) => {;
       page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
@@ -372,6 +415,9 @@ if ( {) {
     const nowStr = new Date().toISOString().substring(0, 10),
     const text = buildPressRelease(type, { companyName, date: nowStr, raiseAmount, tokenName }),
     const onCopy = () => navigator.clipboard.writeText(text),
+=======
+    const onCopy = () => navigator && navigator.clipboard.writeText(text);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return (
       <div className="p-4 border rounded-lg space-y-2">
         <div className="flex items-center justify-between">
@@ -417,6 +463,7 @@ if ( {) {
                   </button>;
                 );
               )}
+<<<<<<< HEAD
       <div className="space-y-8">
         <header className="flex items-center justify-between">
           <h1 className="text-2xl font-bold">Media Kit</h1>
@@ -436,6 +483,79 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+            </div>;
+            <p className='text-xs text-gray-500 mt-2'>;
+              Toggle to tailor assets and legal docs.;
+            </p>;
+          </div>;
+          <div className='p-4 border rounded-lg'>;
+            <h3 className='font-semibold mb-2'>Organization</h3>;
+            <div className='space-y-2'>;
+              <input
+                className='w-full border rounded px-2 py-1'
+                value={companyName}
+                onChange={e => setCompanyName(e && e.target.value)}
+                placeholder='Company name';
+              />;
+              <input
+                className='w-full border rounded px-2 py-1'
+                value={raiseAmount}
+                onChange={e => setRaiseAmount(e && e.target.value)}
+                placeholder='Seed raise amount';
+              />;
+              <input
+                className='w-full border rounded px-2 py-1'
+                value={tokenName}
+                onChange={e => setTokenName(e && e.target.value)}
+
+=======
+        <section className='grid md:grid - cols - 3 gap - 6'>;
+          <div className='p - 4 border rounded - lg'>;
+            <h3 className='font - semibold mb - 2'>Bundle</h3>;
+            <div className='flex gap - 2'>;
+              {(['general', 'web3', 'institutional'] as MediaBundle[]).map (
+                boolean => (
+                  <button;
+                    key={b}
+                    on_click={() => set_bundle (b)}
+                    className={`px - 3 py - 1 rounded border ${bundle === b ? 'bg - blue - 600 text - white border - blue - 600' : 'bg - white'}`}
+                  >;
+                    {b}
+                  </button>))}
+            </div>;
+            <p className='text - xs text - gray - 500 mt - 2'>;
+              Toggle to tailor assets and legal docs.;
+            </p>;
+          </div>;
+          <div className='p - 4 border rounded - lg'>;
+            <h3 className='font - semibold mb - 2'>Organization</h3>;
+            <div className='space - y-2'>;
+              <input;
+                className='w - full border rounded px - 2 py - 1';
+                value={company_name}
+                on_change={e => setCompanyName (e.target.value)}
+                placeholder='Company name';
+              />;
+              <input;
+                className='w - full border rounded px - 2 py - 1';
+                value={raise_amount}
+                on_change={e => setRaiseAmount (e.target.value)}
+                placeholder='Seed raise amount';
+              />;
+              <input;
+                className='w - full border rounded px - 2 py - 1';
+                value={token_name}
+                on_change={e => setTokenName (e.target.value)}
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                placeholder='Token name';
+              />;
+            </div>;
+          </div>;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </div>
             <p className="text-xs text-gray-500 mt-2">Toggle to tailor assets and legal docs.</p>
           </div>
@@ -470,11 +590,19 @@ if ( {) {
         <section className="p-4 border rounded-lg">
           <h3 className="font-semibold mb-3">Assets Included</h3>
           <ul className="grid md:grid-cols-2 gap-3">
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {assets.map(a => (
               <li key={a.filename} className="flex items-center justify-between border rounded p-2">
                 <span className="text-sm">{a.filename}</span>
                 {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</a> : <span className="text-gray-400 text-xs">generated</span>}
               </li>
+<<<<<<< HEAD
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -496,6 +624,17 @@ if ( {) {
   );
 }
 export default KitPage;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+            ))}
+
+          </ul>;
+        </section>;
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 
         <section className="p-4 border rounded-lg space-y-4">
@@ -528,4 +667,11 @@ export default KitPage;
   );
 
 },;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default KitPage;

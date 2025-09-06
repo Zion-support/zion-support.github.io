@@ -1,4 +1,20 @@
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+interface ContractBuilderProps {
+
+  isOpen: boolean
+  onClose: () => void
+  talent: TalentProfile
+  clientName: string
+
+  onContractGenerated?: (contractContent: string) => void
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from "react";
 import {Dialog, DialogContent} from "@/components/ui/dialog";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
@@ -9,6 +25,7 @@ import {ContractForm, ContractFormValues} from "./components/ContractForm";
 import {ContractPreview} from "./components/ContractPreview";
 import {TemplateManager} from "./templates/TemplateManager";
 import {SmartContractBuilder} from "./SmartContractBuilder";
+<<<<<<< HEAD
 import { useState } from "react",
 import { Dialog, DialogContent } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -64,17 +81,124 @@ interface ContractBuilderProps {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+interface ContractBuilderProps {;
+  isOpen: boolean,;
+  onClose: () => void,;
+  talent: TalentProfile,;
+  clientName: string,;
+  onContractGenerated?: (contractContent: string) => void;
+}
+
+export function ContractBuilder(): any ({;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function ContractBuilder({;
   isOpen;
   onClose;
   talent;
   clientName;
+<<<<<<< HEAD
 export function ContractBuilder({
   isOpen,
   onClose,
   talent,
   clientName,
+=======
+  onContractGenerated;
+}: ContractBuilderProps) {;
+  const [activeTab, setActiveTab] = useState<string>("form");
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null);
+
+  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(;
+    undefined;
+  );
+  const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
+
+  const handleLoadTemplate = (templateData: ContractFormValues) => {;
+    setFormValues(templateData);
+  };
+
+  const handleContractGenerated = (contract: string) => {;
+    setGeneratedContract(contract);
+    setActiveTab("preview"),;
+    if (onContractGenerated) {;
+      onContractGenerated(contract);
+    }
+  };
+
+  if (showSmartContractBuilder) {;
+
+    return (
+      <SmartContractBuilder
+        isOpen={isOpen}
+        onClose={() => {;
+          setShowSmartContractBuilder(false);
+
+          onClose();
+
+=======
+import { useState } from './react';
+import { Dialog, DialogContent } from '@/components / ui / dialog';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components / ui / tabs';
+import { Button } from '@/components / ui / button';
+import { Save } from './lucide-react';
+import { TalentProfile } from '@/types / talent';
+import { ContractForm, ContractFormValues } from './components / ContractForm';
+import { ContractPreview } from './components / ContractPreview';
+import { TemplateManager } from './templates / TemplateManager';
+import { SmartContractBuilder } from './SmartContractBuilder';
+interface ContractBuilderProps {
+  is_open: boolean,
+  on_close: () => void,
+  talent: TalentProfile,
+  client_name: string,
+  onContractGenerated?: (contract_content: string) => void;
+}
+export /**
+ * ContractBuilder - Function description
+ */
+function ContractBuilder() {
+  const [active_tab, setActiveTab] = useState < string>("form");
+  const [generated_contract, setGeneratedContract] = useState < string | null>(null);
+  const [form_values, setFormValues] = useState < ContractFormValues | undefined>(
+    undefined);
+  const [templateManagerOpen, setTemplateManagerOpen] = useState (false);
+  const [showSmartContractBuilder, setShowSmartContractBuilder] = useState (false);
+;
+  const handleLoadTemplate = (template_data: ContractFormValues) =>: any {
+    setFormValues (template_data);
+  }
+;
+  const handleContractGenerated = (contract: string) =>: any {
+    setGeneratedContract (contract);
+    setActiveTab ("preview"),
+    // Check condition
+if ( {) {
+  $2
+}
+      onContractGenerated (contract);
+    }
+  }
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <SmartContractBuilder;
+        is_open={is_open}
+        on_close={() => {
+          setShowSmartContractBuilder (false);
+          on_close ();
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+}
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onContractGenerated
 }: ContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
@@ -115,6 +239,7 @@ export function ContractBuilder({
     setActiveTab("preview"),
     if (onContractGenerated) {
       onContractGenerated(contract)
+<<<<<<< HEAD
     }
   };
 
@@ -174,6 +299,10 @@ export function ContractBuilder({;
         onClose={() => {;
           setShowSmartContractBuilder(false);
           onClose();
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }}
         talent={talent}
         client_name={client_name}

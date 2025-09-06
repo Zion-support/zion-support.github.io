@@ -10,7 +10,39 @@ interface CategoryType {
   name: string;
   slug: string;
   icon: string
+<<<<<<< HEAD
 }
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+      logErrorToProduction('Categories API error:', { data: response && response.statusText }),;
+      return CATEGORIES as CategoryType[];
+    fallbackData: initialCategories}),;
+  const categories = data || [];
+  const isLoading = !data && !error;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       logErrorToProduction ('Categories API error:', { data: response.status_text }),
@@ -141,6 +173,7 @@ const Categories: React.FC = () => {}
 export default Categories"";
 ";
   )}
+<<<<<<< HEAD
 export: default Categories
 export default Categories," ]
 export default Categories"")))))))))
@@ -194,6 +227,13 @@ const fetcher = async (url: string): Promise<CategoryType[]> => {;
 export interface CategoriesProps {;
   categories?: CategoryType[];
 }
+=======
+
+export: default Categories,;
+export default Categories," ];
+export default Categories"")))))))));
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const Categories: React.FC: = () => {, ";
   const categories = [];

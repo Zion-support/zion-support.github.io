@@ -1,4 +1,30 @@
 
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState, useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -15,6 +41,7 @@ import {useIsMobile} from "@/hooks/use-mobile";
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {useTranslationService} from "@/hooks/useTranslationService";
 export default function TranslationManager() {;
+<<<<<<< HEAD
   const { t, i18n } = useTranslation();
   const isMobile = useIsMobile();
   const { supportedLanguages } = useLanguage();
@@ -35,6 +62,9 @@ import { useIsMobile } from "@/hooks/use-mobile",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { useTranslationService } from "@/hooks/useTranslationService";
 export default function TranslationManager() {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { t, i18n } = useTranslation();
 
   const isMobile = useIsMobile();
@@ -86,6 +116,7 @@ export default function TranslationManager() {
               Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))
             } else {
               acc[`${pre}${key}`] = obj[key]
+<<<<<<< HEAD
             }
             return acc
           }, {} as Record<string, string>)
@@ -154,6 +185,11 @@ export default function TranslationManager() {
       setTranslations(updatedTranslations);
       setEditingKey(null);
       setIsSaving(false);
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState, useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -277,6 +313,12 @@ export default function TranslationManager() {;
       const updatedTranslations = { ...translations },;
       supportedLanguages.forEach(lang => {;
         if (!updatedTranslations[lang.code]) {;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           updatedTranslations[lang.code] = {}
         }
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
@@ -467,12 +509,20 @@ export default function TranslationManager() {;
       .filter(lang => !translations[lang]?.[key])
   }
 
+<<<<<<< HEAD
   return (
     <>
       <SEO
         title={t('translation.manager_title')}
       <SEO 
         title={t('translation.manager_title')} 
+=======
+
+      <SEO 
+        title={t('translation.manager_title')} 
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
       }),;
       setTranslations(updatedTranslations),;
@@ -554,6 +604,13 @@ export default function TranslationManager() {;
     <>;
       <SEO;
         title={t('translation.manager_title')} ;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         description={t('translation.manager_description')}
       />
       <Header />
@@ -638,6 +695,12 @@ export default function TranslationManager() {;
                 </Tabs>
               </div>
               
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">

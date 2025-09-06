@@ -26,6 +26,7 @@ import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
+<<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
@@ -44,10 +45,16 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
     if (k) acc[k] = decodeURIComponent(v || '');
     return acc;
   }, {} as Record<string, string>),;
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   let role = 'guest';
   try {;
     const user = cookies['x-user'] ? JSON && JSON.parse(cookies['x-user']) : null;
     role = user?.role || 'guest';
+<<<<<<< HEAD
   } catch {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -80,6 +87,16 @@ export default function AdminDisputesDashboard() {
   const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open'),
   const disputes = useMemo(() => {
     const list = data?.disputes |[];
+=======
+  } catch {}
+  if (role !== 'admin') {;
+    return { redirect: { destination: '/', permanent: false } };
+  }
+
+  const disputes = useMemo(() => {;
+    const list = data?.disputes || [];
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     if (statusFilter === 'All') return list;
     return list && list.filter((d: any) => d && d.status === statusFilter);  }, [data, statusFilter]);
 
@@ -183,6 +200,7 @@ export default function AdminDisputesDashboard() {
                     <Link href={`/disputes/${encodeURIComponent(d.id)}?tab=Attachments`}><a className="text-gray-700 hover:underline">Download Evidence</a></Link>
                   </td>
                 </tr>
+<<<<<<< HEAD
               ))}
             </tbody>
           </table>
@@ -193,6 +211,33 @@ export default function AdminDisputesDashboard() {
 
 
 }
+=======
+
+=======
+import useSWR from 'swr';
+import React, { useMemo, useState } from 'react';
+import EnhancedLayout from '../../../components / layout / EnhancedLayout';
+import Link from 'next / link';
+import type { GetServerSideProps } from 'next';
+const fetcher = (url: string) =>: any fetch (url).then (r => r.json ()),
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {
+  const cookies = (req.headers.cookie || '').split (';').reduce (
+    (acc: any, part: string) => {
+      const [k, v] = part.trim ().split ('=');
+      if (acc[k] = decodeURIComponent (v || '')) {
+  $2
+}
+      return acc;
+    },
+    {} as Record < string, string>);
+  let role = 'guest';
+=======
+
+
+}
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 },;
 export default function AdminDisputesDashboard(req, res) {
 
@@ -303,3 +348,10 @@ if (return list) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

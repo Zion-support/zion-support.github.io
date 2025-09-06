@@ -1,16 +1,25 @@
 
+<<<<<<< HEAD
 import { useState, useCallback  } from 'react';
 import { PortfolioProject  } from '@/types/resume';
 import { supabase  } from '@/integrations/supabase/client';
 import { useAuth  } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
 export function usePortfolio() {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useCallback} from 'react';
 import {PortfolioProject} from '@/types/resume';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 import {toast} from '@/hooks/use-toast';
 export function usePortfolio() {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -134,6 +143,12 @@ export function usePortfolio() {;
     
     setIsLoading(true),
     setError(null),
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     
     try {
       const { data, error } = await supabase
@@ -197,6 +212,7 @@ export function usePortfolio() {;
       return null
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
     }
   }
   const updateProject = async (projectId: string, project: PortfolioProject): Promise<boolean> => {
@@ -206,6 +222,11 @@ export function usePortfolio() {;
     }
     setIsLoading(true);
     setError(null);
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     setError(null),;
@@ -248,6 +269,12 @@ export function usePortfolio() {;
     if (!user) {;
       setError('You must be logged in to update a portfolio project'),;
       return false;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     setIsLoading(true),
@@ -306,6 +333,7 @@ export function usePortfolio() {;
       return false
     } finally {
       setIsLoading(false)
+<<<<<<< HEAD
     }
   }
   const deleteProject = async (projectId: string): Promise<boolean> => {
@@ -315,6 +343,11 @@ export function usePortfolio() {;
     }
     setIsLoading(true);
     setError(null);
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setIsLoading(true),;
     setError(null),;
@@ -356,6 +389,12 @@ export function usePortfolio() {;
     if (!user) {;
       setError('You must be logged in to delete a portfolio project'),;
       return false;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     setIsLoading(true),
@@ -474,5 +513,11 @@ if (throw error) {
     addProject;
     updateProject;
     deleteProject;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }

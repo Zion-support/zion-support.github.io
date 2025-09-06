@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export type ReferralStatus = 'pending' | 'completed' | 'expired';
 ;
 =======
@@ -11,6 +14,11 @@ export interface ReferralCode {
 export type ReferralStatus = 'pending' | 'completed' | 'expired';
 
 export interface ReferralCode {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   user_id: string;
   code: string;
@@ -19,6 +27,10 @@ export interface ReferralCode {;
   updated_at: string;
 
 }
+<<<<<<< HEAD
+=======
+export interface Referral {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
@@ -32,6 +44,11 @@ export interface ReferralCode {;
 export interface Referral {
 
 export interface Referral {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   referrer_id: string;
   referred_id: string | null;
@@ -49,6 +66,10 @@ export interface Referral {;
   reward_issued_at: string | null;
 
 }
+<<<<<<< HEAD
+=======
+export interface ReferralReward {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
   reward_issued: boolean
   reward_issued_at: string | null
@@ -58,17 +79,31 @@ export interface Referral {;
 export interface ReferralReward {
 
 export interface ReferralReward {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   user_id: string;
   referral_id: string;
   reward_type: 'credit' | 'visibility';
   amount: number | null;
+<<<<<<< HEAD
   created_at: string
   expires_at: string | null
 }
 export interface ReferralStats {
 
 export interface ReferralStats {;
+=======
+
+
+
+export interface ReferralStats {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   totalReferrals: number;
   pendingReferrals: number;
   completedReferrals: number
@@ -118,3 +153,10 @@ export interface ReferralStats {;
   totalRewards: number;
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

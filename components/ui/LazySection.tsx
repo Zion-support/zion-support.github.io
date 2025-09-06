@@ -1,6 +1,9 @@
+<<<<<<< HEAD
  const getInitialPosition = () => {
   switch (direction) {
   case 'up': 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -15,18 +18,35 @@ interface LazySectionProps {
   direction?: 'up' | 'down' | 'left' | 'right'
 }
 export const LazySection: React.FC<LazySectionProps> = ({
+<<<<<<< HEAD
   children
   className = ''
   threshold = 0.1
   delay = 0
   direction = 'up'
 }) => {
+=======
+  children;
+  className = '';
+  threshold = 0.1;
+  delay = 0;
+
+  direction = 'up'
+}) => {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   children,
   className = '',
   threshold = 0.1,
   delay = 0,
   direction = 'up',
 }) => {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
   const getInitialPosition = () => {

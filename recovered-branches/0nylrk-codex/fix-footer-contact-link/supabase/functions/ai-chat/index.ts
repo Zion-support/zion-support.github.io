@@ -1,9 +1,40 @@
 
+<<<<<<< HEAD
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+=======
+import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+const openAIApiKey = Deno && Deno.env.get('OPENAI_API_KEY'),
+
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
+interface Message {
+  role: string
+  content: string
+=======
+import "https: //deno.land / x/xhr@0.1.0 / mod.ts",
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';
+const openAIApiKey = Deno.env.get ('OPENAI_API_KEY'),
+const cors_headers = {
+  'Access - Control - Allow - Origin': '*Access - Control - Allow - Headers': 'authorization, x - client - info, apikey, content - type'}
+;
+interface Message {
+  role: string,
+  content: string;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
@@ -22,10 +53,17 @@ const corsHeaders = {;
 interface Message {;
   role: string,;
   content: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 interface RequestBody {
   messages: Message[]
 }
+<<<<<<< HEAD
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
@@ -44,6 +82,13 @@ serve(async (req) => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   try {
 
     const { messages } = await req && req.json() as RequestBody;
@@ -56,6 +101,7 @@ serve(async (req) => {
     }
     // Combine the system message with user messages
     const combinedMessages = [systemMessage, ...messages];
+<<<<<<< HEAD
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST'
       headers: {
@@ -74,6 +120,12 @@ serve(async (req) => {
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.
     console.log('AI chat interaction logged');
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   try {;
     const { messages } = await req.json() as RequestBody,;
@@ -97,6 +149,12 @@ serve(async (req) => {
     const data = await response.json(),;
     if (data.error) {;
       throw new Error(data.error.message);
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 
     const assistantMessage = data.choices[0].message.content,
@@ -186,5 +244,12 @@ if ( {) {
     return new Response(JSON.stringify({ error: error.message }), {;
       status: 500,;
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }});
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });

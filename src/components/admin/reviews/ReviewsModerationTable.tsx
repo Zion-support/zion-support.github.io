@@ -3,6 +3,7 @@ Dialog,
   DialogDescription,
   DialogFooter,
   DialogHeader,
+<<<<<<< HEAD
   DialogTitle,
 } from '@/components/ui/dialog'
   DropdownMenu,
@@ -90,12 +91,18 @@ interface ReviewsModerationTableProps {
         title: "Review updated",
         description: `Review has been ${data.status}.`}),
       onRefresh(),
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setViewDetailsOpen(false)
     },
     onError: (error: Error) => {
       toast({
         title: "Error",
         description: `Failed to update review: ${error.message}`,
+<<<<<<< HEAD
         variant: 'destructive',
       })
     },
@@ -109,6 +116,8 @@ interface ReviewsModerationTableProps {
   }
         variant: "destructive"})
     }}),
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   const getInitials = (name: string) => {
@@ -327,6 +336,7 @@ export function ReviewsModerationTable(): any ({;
         </p>
       </div>
     )
+<<<<<<< HEAD
   }
   const handleApprove = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: 'approved' })
@@ -373,6 +383,9 @@ export function ReviewsModerationTable(): any ({;
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |''}                      />
   }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleApprove = (reviewId: string) => {
                         alt={review.reviewer_profile.display_name || ''}                      />
@@ -435,11 +448,14 @@ export function ReviewsModerationTable(): any ({;
                 ) : (;
                   'None';
                 )}
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     updateReviewStatus({ reviewId, status: "approved" })
   },
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                           onClick={() =>;
                             updateReviewStatus({;
@@ -481,6 +497,7 @@ export function ReviewsModerationTable(): any ({;
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage;
                         src={review.reviewer_profile.avatar_url}
+<<<<<<< HEAD
                         alt={review.reviewer_profile.display_name || ""}
                       />
                     ) : (
@@ -492,6 +509,16 @@ export function ReviewsModerationTable(): any ({;
                     )}
                   </Avatar>
                   <div>
+=======
+                        alt={review.reviewer_profile.display_name || ''}                      />) : (
+                      <AvatarFallback>;
+                        {review.reviewer_profile?.display_name ? (
+                          get_initials (review.reviewer_profile.display_name)) : (
+                          <User className='h - 4 w - 4' />)}
+                      </AvatarFallback>)}
+                  </Avatar>;
+                  <div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {review.is_anonymous ? (
                       <span className="text-sm font-medium">Anonymous</span>
                     ) : (
@@ -615,6 +642,11 @@ export function ReviewsModerationTable(): any ({;
                         disabled={isPending}
                       >
                         <X className="h-4 w-4 text-red-500" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       </Button>
                     </>
                   )}
@@ -664,6 +696,9 @@ export function ReviewsModerationTable(): any ({;
                           Mark as approved
                         </DropdownMenuItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                       )}
                     </DropdownMenuContent>
@@ -692,14 +727,25 @@ export function ReviewsModerationTable(): any ({;
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                   <Avatar>
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
                         src={selectedReview.reviewer_profile.avatar_url}
+<<<<<<< HEAD
                         alt={selectedReview.reviewer_profile.display_name |''}                      />
                         alt={selectedReview.reviewer_profile.display_name || ''}                      />
+=======
+
+
+                        alt={selectedReview.reviewer_profile.display_name || ''}                      />
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     ) : (
                       <AvatarFallback>
                         {selectedReview.reviewer_profile?.display_name ? (
@@ -741,6 +787,9 @@ export function ReviewsModerationTable(): any ({;
                         )}
                       </AvatarFallback>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -778,6 +827,9 @@ export function ReviewsModerationTable(): any ({;
                 <h4 className="text-sm font-medium">Additional Ratings</h4>
                 <div className="flex flex-wrap gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                   {selectedReview.communication_rating && (
@@ -835,6 +887,11 @@ export function ReviewsModerationTable(): any ({;
                       variant={selectedReview.would_work_again ? "default" : "secondary"}
                     >
                       {selectedReview.would_work_again ? "Would work again" : "Would not work again"}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </Badge>
                   )}
 
@@ -937,6 +994,9 @@ export function ReviewsModerationTable(): any ({;
                   Mark as Approved;
                 </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -945,6 +1005,7 @@ export function ReviewsModerationTable(): any ({;
           </DialogContent>;
         </Dialog>;
       )}
+<<<<<<< HEAD
     </>
   )
 }
@@ -957,10 +1018,19 @@ export function ReviewsModerationTable(): any ({;
   star
 }/>) )
 }</div>)
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   [1, 2, 3,  4, 5].map ( (star) => (<Star key= {;
   star ;
 }/>) ) ;
 }</div>) ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
             </TableRow>))}
@@ -1121,6 +1191,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</div> </div> </TableCell> <TableCell> {
   renderStars (review.rating) "
 }</TableCell> <TableCell> </TableCell> <TableCell> <Badge variant=" outline"> {
+<<<<<<< HEAD
   review.status.charAt (0) .toUpperCase () + review.status.slice (1) "
 }</Badge> </TableCell> <TableCell>) : (" None") "
 }</TableCell> <Button size=" sm"variant=" outline"className=" h-8 w-8 p-0"onClick={
@@ -1139,6 +1210,13 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
   selectedReview.reviewer profile?.display name ? getInitials (selectedReview.reviewer profile.display name) : <User className="h-4 w-4"/>
 }</AvatarFallback>)
 }</AvatarFallback>) 
+=======
+
+
+}</AvatarFallback>) 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</Avatar> <div> </Badge> </div> </div> <div> {
   renderStars (selectedReview.rating) "
 }</div> </div> <div className="border rounded-md p-3 bg-muted/20"> <p className="whitespace-pre-wrap"> {

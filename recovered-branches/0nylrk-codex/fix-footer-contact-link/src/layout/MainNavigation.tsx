@@ -1,20 +1,41 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Link, useLocation} from "react-router-dom";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare} from "lucide-react";
+<<<<<<< HEAD
 import { Link, useLocation } from "react-router-dom",
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth",
 import { MessageSquare } from "lucide-react",
+=======
+interface MainNavigationProps {;
+
+  isAdmin?: boolean;
+  unreadCount?: number;
+  className?: string;
+}
+
+export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+  const location = useLocation();
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
@@ -183,6 +204,11 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                 link.matches(location.pathname);
                   ? "bg-zion-purple/20 text-zion-cyan";
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               )}
             >
               {link.name}
@@ -220,6 +246,13 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               )}
             </Link>;
           </li>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         )}
 
       </ul>;

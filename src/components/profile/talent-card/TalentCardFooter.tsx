@@ -19,9 +19,15 @@
               <span className="text-zion-slate-light">{profile.years_experience} years exp.</span>
             </div>
           )}
+<<<<<<< HEAD
         </div>
         </div>
         </div>;
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Action Buttons */}
         <div className="flex gap-2">
           <Button
@@ -31,19 +37,33 @@
           <Button 
             variant="default" 
             size="sm" 
+<<<<<<< HEAD
             onClick={handleRequestHire}
             onClick = {handleRequestHire,}
             onClick={handleRequestHire}
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
           >
             Hire
           </Button>
+<<<<<<< HEAD
           <Button
             variant="outline"
             size="sm"
           <Button 
             variant="outline" 
             size="sm" 
+=======
+
+
+          <Button 
+            variant="outline" 
+            size="sm" 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             onClick = {handleViewProfile,}
           
           <Button 
@@ -51,6 +71,9 @@
             size="sm" 
             onClick={handleViewProfile}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

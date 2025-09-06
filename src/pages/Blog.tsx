@@ -1,6 +1,7 @@
 // Categories for filtering
 
 const CATEGORIES = [
+<<<<<<< HEAD
   'All Categories'
   'Trends'
   'Marketing'
@@ -19,6 +20,9 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const query = useDebounce(searchQuery, 300)
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   "All Categories",
   "Trends",
   "Marketing",
@@ -42,6 +46,9 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const router = useRouter(),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   // Reset state when navigating away to avoid cross-page leakage
   useEffect(() => {
@@ -85,6 +92,9 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
           `/api/blog?query=${encodeURIComponent(query)}`
         ),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         setPosts(data)
       } catch (err) {
@@ -92,9 +102,14 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       } finally {
         setIsLoading (false);
       }
+<<<<<<< HEAD
     }
     fetchPosts()
   }, [query])
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },
 
     fetchPosts()
@@ -104,12 +119,22 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
+<<<<<<< HEAD
       selectedCategory === 'All Categories' |
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory = null;
       selectedCategory === 'All Categories' ||
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       post.category === selectedCategory
     return matchesCategory
   })
@@ -118,10 +143,13 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   logInfo('BlogPage filteredPosts:', { data: filteredPosts })
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },
 
     fetchPosts()
@@ -131,6 +159,10 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       selectedCategory === "All Categories" || post.category === selectedCategory,
 
     return matchesCategory
@@ -141,6 +173,12 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
 
   logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
   
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>
       <SEO
@@ -154,6 +192,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <GradientHeading>AI & Tech Insights</GradientHeading>
+<<<<<<< HEAD
             <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
               Expert perspectives on artificial intelligence, tech innovation
               and digital transformation
@@ -270,6 +309,10 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                       <p className="text-sm text-zion-slate-light">
                         {featuredPost.publishedDate} • {featuredPost.readTime}
                       </p>
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </div>
                   </div>
                   <Button 
@@ -627,6 +670,9 @@ if (return null) {
                       className='text-white'>                      {category}
                     </SelectItem>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -653,6 +699,11 @@ if (return null) {
               {filteredPosts.map((post) => (
                 <Card
                   key={post.id}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   asChild
                   className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
                 >
@@ -702,6 +753,9 @@ if (return null) {
                           target.src = "/images/blog-placeholder.svg"
                         }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                       />
                     </div>
@@ -872,6 +926,9 @@ if (return null) {
                   </Link>;
                 </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               ))}
@@ -1007,6 +1064,7 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
                     className="px-4 py-2 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-sm">
                   >
                     {category.name}
+<<<<<<< HEAD
                   </span>
 export default function Blog() {
   const blogPosts = [], image: "/api/placeholder/600/400"
@@ -1024,6 +1082,10 @@ export default function Blog() {
       readTime: &quot,12 min read&quot
       category: &quot,Quantum Computing&quot
       tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot]
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       id: 2,
       title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot,
       excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,
@@ -1032,6 +1094,11 @@ export default function Blog() {
       readTime: &quot,12 min read&quot,;
       category: &quot,Quantum Computing&quot;
       tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot],
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       image: &quot,/api/placeholder/600/400&quot,"
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.","
       author: "Prof. Michael Rodriguez", date: "2025-01-12","

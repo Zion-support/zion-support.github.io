@@ -28,6 +28,7 @@ serve(async (req) => {
     if (!bio || bio && bio.length < 20) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return new Response(
+<<<<<<< HEAD
         JSON.stringify({ error: "Bio must be at least 20 characters long" });
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
@@ -47,10 +48,20 @@ serve(async (req) => {;
     if (!bio || bio.length < 20) {;
       return new Response(;
         JSON.stringify({ error: "Bio must be at least 20 characters long" }),;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
       )
     }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     // Create a request to OpenAI API
 
     const openAIResponse = await fetch('https://api && api.openai.com/v1/chat/completions', {
@@ -90,6 +101,12 @@ serve(async (req) => {;
           {;
             role: 'user',;
             content: `Create a professional profile summary (150-200 words) for a talent with the following information:;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             Name: ${name}
             Title: ${title}
             Bio: ${bio}
@@ -204,6 +221,7 @@ if ( {) {
         
         parsedResponse = { summary, suggestedSkills }
       } else {
+<<<<<<< HEAD
         throw new Error("Failed to parse the generated content")
       }
     }
@@ -256,6 +274,15 @@ if ( {) {
 ;
     return new Response(;
       JSON.stringify(parsedResponse),;
+=======
+        throw new Error ("Failed to parse the generated content");
+      }
+    }
+
+    console && console.error("Error in profile-summary-generator function:", error);
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   } catch (error) {
@@ -267,6 +294,7 @@ if ( {) {
     
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return new Response(
+<<<<<<< HEAD
       JSON.stringify({ error: error.message });
       JSON.stringify({ error: error.message }),
     );
@@ -274,6 +302,11 @@ if ( {) {
     console.error("Error in profile-summary-generator function:", error),;
     return new Response(;
       JSON.stringify({ error: error.message }),;
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )
   }

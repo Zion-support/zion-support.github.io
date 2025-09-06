@@ -16,6 +16,7 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import i18n, { supportedLocales, isRtl } from "../../utils/i18n";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const localeLabelKey: Record<string, string> = {
 
@@ -33,6 +34,10 @@ const localeLabelKey: Record<string, string> = {
   ar: "lang.arabic",
 };
 export default function LanguageSwitchPrompt() {;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { t } = useTranslation();
   const [suggested, setSuggested] = useState<string | null>(null);
   useEffect(() => {
@@ -160,9 +165,13 @@ export default function LanguageSwitchPrompt() {;
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 );
   );
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 }
 export default /**

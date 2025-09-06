@@ -42,6 +42,9 @@ class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, ma
 ; this.saveMetrics(); this.log("Code quality analysis completed successfully"); return this.metrics} catch (error) {; this.log(`Code quality analysis failed: ${error.message}`, "ERROR"); return null};
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
 
@@ -248,8 +251,20 @@ class CodeQualityMonitor {,
     this.logFile = path.join(__dirname, "logs", "code-quality.log"),
   };
 
+<<<<<<< HEAD
 }
 }
+=======
+=======
+
+=======
+
+}
+}
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ,
   log(message) {,
     const timestamp = new Date().toISOString(),
@@ -353,3 +368,10 @@ class CodeQualityMonitor {,;
       this.log(`Code quality analysis: failed: ${error.message}`, "ERROR"),;
       return null;
     },;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

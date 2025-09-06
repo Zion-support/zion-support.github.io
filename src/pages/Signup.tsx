@@ -18,6 +18,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'
 import { AuthButtons } from '@/components/AuthButtons'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
 
@@ -45,6 +46,18 @@ export default function Signup() {
   ),
 });
 export default function Signup() {;
+=======
+
+import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
+
+
+
+  ),
+});
+export default function Signup() {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
@@ -114,6 +127,7 @@ function Signup() {
         setHealthCheckError('Authentication service is experiencing issues')
       }
     } catch (err: any) {
+<<<<<<< HEAD
       logErrorToProduction('Auth service health check failed', { data: err })
       setAuthServiceAvailable(false)
       // Set a more specific error message based on the error type
@@ -121,6 +135,13 @@ function Signup() {
         err.code === 'NETWORK_ERROR' |
         err.message?.includes('Network Error')
       if (true) {}
+=======
+
+
+      if (true) {}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       ) {
         setHealthCheckError('Network connection issues detected')
       } else if (err.response?.status === 500) {
@@ -254,6 +275,7 @@ if ( {) {
                 url: err.config.url
                 method: err.config.method
               }
+<<<<<<< HEAD
             : 'No config'
         })
         const status = err.response?.status
@@ -264,6 +286,15 @@ if ( {) {
         const errorMsg = null;
           err.response?.data?.error ||
           err.response?.data?.message ||
+=======
+
+
+        const errorMsg = null;
+          err.response?.data?.error ||
+          err.response?.data?.message ||
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           'Signup failed. Please try again.'
         logInfo('Processed error message:', { data: errorMsg })
         if (status === 409) {
@@ -578,8 +609,11 @@ export default function Signup() {;
   };
 
 
+<<<<<<< HEAD
   // Show loading state only during initial health check
   if (healthCheckLoading) {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return (
       <AuthLayout>;
         <div className='flex min-h-screen items-center justify-center p-4'>;
@@ -627,6 +661,168 @@ export default function Signup() {;
               </p>
             </div>
           )}
+<<<<<<< HEAD
+=======
+;
+          {/* Show Success message */}
+          {successMessage && (
+            <Alert className="border-green-500 bg-green-50 text-green-900" data-testid="success-alert">
+              {emailVerificationRequired ? <Mail className="h-4 w-4" /> : <CheckCircle className="h-4 w-4" />}
+              <AlertDescription>{successMessage}</AlertDescription>
+            </Alert>
+          )}
+;
+          {/* Show Error message */}
+          {errorMessage && (
+            <Alert variant="destructive" data-testid="error-alert">
+              <AlertCircle className="h-4 w-4" />
+              <AlertDescription>{errorMessage}</AlertDescription>
+            </Alert>
+          )}
+          
+          {emailVerificationRequired && (
+            <Alert className="border-blue-500 bg-blue-50 text-blue-900">
+              <Mail className="h-4 w-4" />
+              <AlertDescription>
+                Before you can log in, please click the verification link in the email we sent to <strong>{formik.values.email}</strong>.
+              </AlertDescription>
+            </Alert>
+          )}
+          
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium">
+              Full Name
+            </label>
+            <Input
+              id="name"
+              name="name"
+              data-testid="name-input"
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              disabled={loading || emailVerificationRequired}
+            />
+            {formik.touched.name && formik.errors.name && (
+              <div className="text-red-500 text-sm">{formik.errors.name}</div>
+            )}
+          </div>
+          
+          <div>
+            <label htmlFor="email" className="block text-sm font-medium">
+              Email address
+            </label>
+            <Input
+              id="email"
+              type="email"
+              name="email"
+              data-testid="email-input"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              disabled={loading || emailVerificationRequired}
+            />
+            {formik.touched.email && formik.errors.email && (
+              <div className="text-red-500 text-sm">{formik.errors.email}</div>
+            )}
+          </div>
+          
+          <div>
+            <label htmlFor="password" className="block text-sm font-medium">
+              Password
+            </label>
+          <Input
+            id="password"
+            type="password"
+            name="password"
+            data-testid="password-input"
+            value={formik.values.password}
+            onChange={formik.handleChange}
+            disabled={loading || emailVerificationRequired}
+          />
+          <PasswordStrengthMeter password={formik.values.password} />
+          {formik.touched.password && formik.errors.password && (
+            <div className="text-red-500 text-sm">{formik.errors.password}</div>
+          )}
+        </div>
+          
+          <div>
+            <label htmlFor="confirm" className="block text-sm font-medium">
+              Confirm Password
+            </label>
+            <Input
+              id="confirm"
+              type="password"
+              name="confirm"
+              data-testid="confirm-password-input"
+              value={formik.values.confirm}
+              onChange={formik.handleChange}
+              disabled={loading || emailVerificationRequired}
+            />
+            {formik.touched.confirm && formik.errors.confirm && (
+              <div className="text-red-500 text-sm">{formik.errors.confirm}</div>
+            )}
+          </div>
+          
+          <div className="flex items-center space-x-2">
+            <input
+              id="terms"
+              name="terms"
+              type="checkbox"
+              data-testid="terms-checkbox"
+              checked={formik.values.terms}
+              onChange={formik.handleChange}
+              disabled={loading || emailVerificationRequired}
+            />
+            <label htmlFor="terms" className="text-sm">
+              I agree to the{' '}
+              <Link href="/terms" className="underline">Terms of Service</Link>{' '}
+              and{' '}
+              <Link href="/privacy" className="underline">Privacy Policy</Link>
+            </label>
+          </div>
+          {formik.touched.terms && formik.errors.terms && (
+            <div className="text-red-500 text-sm">{formik.errors.terms}</div>
+          )}
+          
+          {!emailVerificationRequired ? (
+            <Button 
+              type="submit" 
+              disabled={loading} 
+              data-testid="signup-submit"
+              className={healthCheckError ? 'bg-yellow-600 hover:bg-yellow-700' : ''}
+            >
+              {loading ? (
+                <>
+                  <LoadingSpinner size="sm" className="mr-2" />
+                  Creating Account...
+                </>
+              ) : (
+                healthCheckError ? 'Try Creating Account' : 'Create Account'
+              )}
+            </Button>
+          ) : (
+            <div className="space-y-2">
+              <Button
+                type="button"
+                variant="outline"
+                className="w-full"
+                onClick={() => router.push('/login')}
+              >
+                Go to Login
+              </Button>
+
+
+              <Button
+                type="button"
+                variant="outline"
+                className="w-full"
+                onClick={() =>
+                  router.push(`/verify-status?email=${encodeURIComponent(formik.values.email)}`)
+                }
+              >
+                Check Verification Status
+              </Button>
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Button
                 type="button"
                 variant="ghost"
@@ -649,6 +845,17 @@ export default function Signup() {;
             </div>
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+          </form>
+          {!emailVerificationRequired && (
+            <div className='mt-6'>
+              <AuthButtons providers={['google', 'github']} />
+            </div>
+          )}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           </form>;
           {!emailVerificationRequired && (;
@@ -774,6 +981,7 @@ import { Checkbox  } from '@/components / ui / checkbox';
 import { Alert, AlertDescription  } from '@/components / ui / alert';
 import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
 import {
+<<<<<<< HEAD
   Form
   FormControl
   FormField
@@ -823,6 +1031,10 @@ export default function Signup() {
 }) as UseFormReturn<SignupFormValues>
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       displayName: ",
       email: ",
       password: ",
@@ -832,6 +1044,11 @@ export default function Signup() {
 }) as UseFormReturn<SignupFormValues>;
   // Form submission handler;
   const onSubmit = async (data: SignupFormValues) => {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     if (isSubmitting) return; // Prevent multiple submissions
     setIsSubmitting(true)
     try {
@@ -862,6 +1079,9 @@ export default function Signup() {
         if (sessionError) {
           console.error("Error setting session:", sessionError)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   Form,
   FormControl,
@@ -933,6 +1153,11 @@ if ( {) {
           form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
           toast.error(sessionError.message || "Failed to set session. Please try logging in.")
           return;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
         form.set_error ('email', { message: res_data.message });
         toast.error ('Email already registered – please login.');

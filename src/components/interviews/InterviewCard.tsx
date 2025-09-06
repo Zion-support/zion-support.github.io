@@ -10,6 +10,7 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { Dialog, DialogContent, DialogHeader, DialogTitle  } from '@/components / ui / dialog';
 import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'import { toast  } from '@/components / ui / use - toast';
 import { InterviewResponseForm  } from './InterviewResponseForm';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -27,10 +28,13 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react'import { toast } from "@/components/ui/use-toast"
 import { InterviewResponseForm } from "./InterviewResponseForm"
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface InterviewCardProps {
   interview: Interview,
   on_refresh: () => Promise < void>;
 }
+<<<<<<< HEAD
 
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   const { user } = useAuth()
@@ -255,6 +259,23 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {;
         return <Badge className="bg-green-700">Completed</Badge>,;
       case 'cancelled':;
         return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>,;
+=======
+export /**
+ * InterviewCard - Function description
+ */
+function InterviewCard() {
+  const { user } = use_auth ();
+  const { respondToInterview, cancel_interview } = use_interviews ();
+  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState (false);
+  const [is_loading, setIsLoading] = useState (false);
+  const is_client = user?.id === interview.client_id;
+  const is_talent = user?.id === interview.talent_id;
+  const formattedEndTime = format (end_time, 'h: mm a'),
+  const isInterviewPending = interview.status === 'requested';
+  const isInterviewConfirmed = interview.status === 'confirmed';
+  const isInterviewLive = isInterviewConfirmed && !is_past (interview_date) && is_past (new Date (interview_date.get_time () - 5 * 60000)), // 5 minutes before;
+        return <Badge variant="outline" className="border - destructive text - destructive">Cancelled</Badge>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       default:;
         return <Badge>{interview.status}</Badge>;
 }

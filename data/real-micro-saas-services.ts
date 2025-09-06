@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface RealMicroSaasService {
 export interface RealMicroSaasService {;
   id: string;
@@ -1365,6 +1366,10 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     rating: 4.6,
     reviews: 6,
   },];
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id: 'ai-legal-document-generator'
@@ -2818,6 +2823,9 @@ reviews: 14
 
 export const serviceCategories = [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   'Legal Technology'
   'Customer Service & Support'
   'Digital Marketing & SEO'
@@ -2843,6 +2851,7 @@ export const serviceCategories = [
   'Financial Technology'
   'Education Technology'
   'Enterprise IT'
+<<<<<<< HEAD
 <<<<<<< HEAD
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
 
@@ -2876,20 +2885,37 @@ export const serviceCategories = [
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   return realMicroSaasServices.filter(service => service.category === category)
 };
+=======
+];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+
+=======
+  return realMicroSaasServices.filter(service => service.category === category)
+};
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const getServicesByPriceRange = (min: number, max: number) => {
   return realMicroSaasServices.filter(service => {
     const price = parseFloat(service.price.replace('$', '').replace(, ''));
     return price >= min && (max === Infinity || price <= max)
   })
 };
+<<<<<<< HEAD
 export const getPopularServices = () => {
   return realMicroSaasServices.filter(service => service.popular)
 };
+=======
+
+export const getPopularServices = () => {
+  return realMicroSaasServices.filter(service => service.popular)
+};
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const serviceCategories = [
   'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
+<<<<<<< HEAD
 reviews: 14;
 }
 ;
@@ -2962,10 +2988,53 @@ export const service_categories = [;
   }
 }
 ;
+=======
+=======
+reviews: 14;
+}
+;
+export const service_categories = [;
+  'Legal Technology',
+  'Customer Service & Support',
+  'Digital Marketing & SEO',
+  'Creative & Media',
+  'Data & Analytics',
+  'Human Resources',
+  'Sales & CRM',
+  'Market Research',
+  'Blockchain & Cryptocurrency',
+  'Cloud & DevOps',
+  'Database & Performance',
+  'Design & UI / UX',
+  'Development & DevOps',
+  'Business Intelligence',
+  'Quantum Computing',
+  'Cybersecurity',
+  'Metaverse & Virtual Reality',
+  'Web3 & DeFi',
+  'IoT & Edge Computing',
+  'Autonomous Vehicles & Robotics',
+  'Climate & Environmental',
+  'Biotechnology & Healthcare',
+  'Financial Technology',
+  'Education Technology',
+  'Enterprise IT',
+];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
+  'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
+  'Enterprise IT';
+];
+
+
+=======
+;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 export interface RealMicroSaasService {;
+<<<<<<< HEAD
   id: string,;
   name: string,;
   tagline: string,;
@@ -3814,3 +3883,7 @@ export const serviceCategories = [;
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology',;
   'Enterprise IT';
 ];
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,5 +1,6 @@
 ;
 interface PerformanceMetrics {
+<<<<<<< HEAD
   loadTime: number, firstContentfulPaint: number
   largestContentfulPaint: number, firstInputDelay: number
   cumulativeLayoutShift: number
@@ -21,6 +22,13 @@ export function usePerformanceMonitor() {;
       const entries = list.getEntries();
       entries.forEach((entry) => {
         if (entry.entryType === 'navigation') {
+=======
+
+      const entries = list && list.getEntries();
+      
+      entries && entries.forEach((entry) => {
+        if (entry && entry.entryType === 'navigation') {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           const navEntry = entry as PerformanceNavigationTiming;
           setMetrics(prev => ({
             ...prev,

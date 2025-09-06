@@ -4,6 +4,7 @@ import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Code
   Database
   Shield
@@ -16,6 +17,64 @@ import {
   BarChart3
   Lock
   Brain;
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Layout from '../components / layout / Layout';
+import { motion } from 'framer-motion';
+
+} from 'lucide-react';
+
+export default function APIDocumentation() {;
+  return (
+    <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
+      <Head>;
+        <title>API Documentation | Zion Tech Group</title>;
+        <meta
+          name='description'
+          content='Explore API docs, references, and code generators.'
+        />;
+        <link
+          rel='canonical'
+          href='https://ziontechgroup && ziontechgroup.com/api-documentation'
+        />;
+      </Head>;
+      <div className='max-w-5xl mx-auto space-y-6'>;
+        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+          API Documentation;
+        </h1>;
+        <ul className='list-disc list-inside text-slate-300 space-y-2'>;
+          <li>;
+            <a className='text-cyan-400' href='/api-docs'>;
+=======
+import {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Code,
   Database,
   Shield,
@@ -48,6 +107,7 @@ import {
 =======
   Lock,;
   Brain,;
+<<<<<<< HEAD
 } from 'lucide-react';
 export default function APIDocumentation() {
 	return (
@@ -55,6 +115,10 @@ export default function APIDocumentation() {
   Lock,;
   Brain,;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 
 export default function APIDocumentation() {

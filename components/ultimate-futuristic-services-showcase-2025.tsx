@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Star
   TrendingUp
   Users
@@ -63,6 +64,42 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
   Star, TrendingUp, Users, Award, Clock, Heart
   Brain, Atom, Shield, Rocket, Zap, Globe
 
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import Head from 'next / head';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+=======
+import {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Star,
   TrendingUp,
   Users,
@@ -113,6 +150,7 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
   Sparkles as SparklesIcon,
   Zap as ZapIcon,
 <<<<<<< HEAD
+<<<<<<< HEAD
   Brain as BrainIcon,
   Play as PlayIcon,
 } from 'lucide-react';
@@ -121,6 +159,18 @@ import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import {
   Star, TrendingUp, Users, Award, Clock, Heart, 
   Brain, Atom, Shield, Rocket, Zap, Globe, ;
+=======
+  Brain as BrainIcon,
+  Play as PlayIcon,
+} from 'lucide-react';
+
+import Layout from '../components/layout/Layout';
+import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import {
+  Star, TrendingUp, Users, Award, Clock, Heart, 
+  Brain, Atom, Shield, Rocket, Zap, Globe, ;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   CheckCircle, ArrowRight, Search, Filter;
   ChevronDown, ChevronUp, Eye, Play, Sparkles;
   Target, Microscope, Lock, Cloud, BarChart3;
@@ -136,6 +186,7 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
 import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
 
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -184,6 +235,17 @@ const stats = [
 export default function UltimateFuturisticServicesShowcase2025() {
 
 export default function UltimateFuturisticServicesShowcase2025() {;
+=======
+
+export default function UltimateFuturisticServicesShowcase2025() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+export default function UltimateFuturisticServicesShowcase2025() {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('popular');
@@ -465,6 +527,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
         </div>
       </section>
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -472,11 +535,29 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+
+      {/* Search and Filter Section */}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Search and Filter Section */}
       <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Search */}
             <div className='relative flex-1 max-w-md'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -542,6 +623,12 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 
                   <option key={category.title} value={category.title}>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {category.title} ({category.count})
                   </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -549,12 +636,28 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                 ))}
               </select>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Sort Options */}
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value)}
                 className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <option value='popular'>Most Popular</option>
                 <option value='price-low'>Price: Low to High</option>
@@ -684,6 +787,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -691,6 +795,8 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -764,6 +870,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     >
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -771,6 +878,8 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       {service.icon}
                     </div>
                   </div>
@@ -1021,6 +1130,12 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                   </div>
                 </div>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Service Details */}
                 <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                   <div className='text-gray-400'>
@@ -1029,6 +1144,14 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                       {service.setupTime}
                     </span>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </div>
                   <div className='text-gray-400'>
                     <span className='block'>Trial</span>
@@ -1251,6 +1374,10 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 
             ))}
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       </a>
                     </div>
                   </div>
@@ -1270,6 +1397,14 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* No Results */}
 
           {sortedServices.length === 0 && (
@@ -1292,12 +1427,26 @@ export default function UltimateFuturisticServicesShowcase2025() {;
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+        </div>;
+      </section>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1306,6 +1455,9 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1334,6 +1486,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
               <Link
                 href="/contact"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -1357,9 +1510,19 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 );
 <<<<<<< HEAD
 =======
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
   );
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
@@ -1569,5 +1732,9 @@ export default function UltimateFuturisticServicesShowcase2025() {;
       </section>;
     </Layout>);
 }
+<<<<<<< HEAD
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

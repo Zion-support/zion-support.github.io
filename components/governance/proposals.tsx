@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
+<<<<<<< HEAD
 export async function getStaticProps() {
   try {;
     const p = path.join(process.cwd(), 'data', 'governance', 'proposals.json');
@@ -30,6 +31,9 @@ export default function Proposals({
             <div className='text-sm opacity-70'>
               by {p.author} · {new Date(p.created_at).toLocaleString()}
             </div>
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <a
               className='text-blue-600 underline'
               href={p && p.url}
@@ -127,11 +131,31 @@ export default function Proposals({ data }: { data: { updatedAt: string|null, pr
         ))}
         {(!data.proposals |data.proposals.length===0) && <li className="opacity-70">No open proposals</li>}
       </ul>
+<<<<<<< HEAD
     </div>
 );
 }
   );
 }
+=======
+
+
+export default function Proposals(): any ({ data }: { data: { updatedAt: string|null, proposals: any[] } }){;
+  return (
+    <div className="max-w-3xl mx-auto p-6 space-y-4">;
+      <h1 className="text-2xl font-semibold">DAO Proposals</h1>;
+      <div className="text-sm opacity-70">Updated: {data && data.updatedAt || '—'}</div>;
+      <ul className="space-y-3">;
+        {data && data.proposals?.map((p:any)=> (;
+          <li key={p && p.id} className="border rounded p-3">;
+            <div className="font-medium">#{p && p.id} {p && p.title}</div>;
+            <div className="text-sm opacity-70">by {p && p.author} · {new Date(p && p.created_at).toLocaleString()}</div>;
+            <a className="text-blue-600 underline" href={p && p.url} target="_blank" rel="noreferrer">View</a>;
+          </li>;
+        ))}
+        {(!data && data.proposals || data && data.proposals.length===0) && <li className="opacity-70">No open proposals</li>}
+      </ul>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </div>;
   );
 }
@@ -160,3 +184,9 @@ function Proposals() {
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

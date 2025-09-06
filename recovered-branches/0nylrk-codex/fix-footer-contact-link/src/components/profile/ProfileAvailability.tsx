@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Availability } from "@/types/profile",
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Check } from "lucide-react";
@@ -36,6 +37,20 @@ interface ProfileAvailabilityProps {
 import { Availability } from "@/types/profile",;
 import { Badge } from "@/components/ui/badge",;
 import { Calendar, Clock, Check } from "lucide-react",;
+=======
+import { Availability } from '@/types / profile';
+import { Badge } from '@/components / ui / badge';
+import { Calendar, Clock, Check } from './lucide-react';
+
+interface ProfileAvailabilityProps {
+  availability: Availability;
+}
+
+import {Availability} from "@/types/profile";
+import {Badge} from "@/components/ui/badge";
+import {Calendar, Clock, Check} from "lucide-react";
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ProfileAvailabilityProps {;
   availability: Availability;
 }
@@ -58,7 +73,15 @@ export function ProfileAvailability(): any ({ availability }: ProfileAvailabilit
       default: return '';
 
     }
+<<<<<<< HEAD
   },
+=======
+  }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">

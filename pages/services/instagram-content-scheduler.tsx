@@ -15,6 +15,7 @@ const InstagramContentScheduler: NextPage = () => {
       </main>
     </div>
   )
+<<<<<<< HEAD
 }
 export default InstagramContentScheduler;
 
@@ -26,10 +27,20 @@ export default InstagramContentScheduler,
 <<<<<<< HEAD
 }
 export default InstagramContentScheduler;
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+},
+export default InstagramContentScheduler,
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
 },
 export default InstagramContentScheduler,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 },
@@ -38,3 +49,8 @@ export default InstagramContentScheduler,
 
 export default InstagramContentScheduler,;
 export default InstagramContentScheduler,
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

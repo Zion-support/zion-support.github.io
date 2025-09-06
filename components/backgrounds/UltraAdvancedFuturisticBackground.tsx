@@ -7,6 +7,7 @@ const particles: Array< {
 for (let i = 0, i < count, i++) {
   particles.push ({
 export default function UltraAdvancedFuturisticBackground({
+<<<<<<< HEAD
   children
   intensity = 'medium'
   theme = 'quantum'
@@ -14,6 +15,9 @@ export default function UltraAdvancedFuturisticBackground({
   animationSpeed = 1.0
   enableHolographic = true
   enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground({
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   children,
   intensity = 'medium',
   theme = 'quantum',
@@ -21,6 +25,11 @@ export default function UltraAdvancedFuturisticBackground({
   animationSpeed = 1.0,
   enableHolographic = true,
   enableQuantumEffects = true,}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground({ ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   children;
   intensity = 'medium';
   theme = 'quantum';
@@ -314,7 +323,17 @@ if (return) {
             ctx.lineWidth = 1;
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(partner.x, partner.y);
+<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
+=======
+
+            ctx.stroke()
+
+          }
+        }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ctx.stroke();          }
 
           }
@@ -331,17 +350,47 @@ if (return) {
             particle.vx *= -1
             particle.vx *= -1;          }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
         }
         if (particle.y <= 0 |particle.y >= canvas.height) {
         if (particle.y <= 0 || particle.y >= canvas.height) {
           if (enableQuantumEffects && Math.random() < 0.1) {
             // Quantum tunneling effect
+<<<<<<< HEAD
             particle.y = particle.y <= 0 ? canvas.height : 0;
+=======
+
+            particle.y = particle.y <= 0 ? canvas.height : 0
+
+=======
+        // Check condition
+if ( {) {
+  $2
+}
+          // Check condition
+if (< 0.1) {) {
+  $2
+}
+            // Quantum tunneling effect;
+            particle.coordinate_y = particle.y <= 0 ? canvas.height : 0;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           } else {
             particle.vy *= -1;          }            particle.coordinate_y = particle.y <= 0 ? canvas.height : 0;
           } else {
+<<<<<<< HEAD
             particle.vy *= -1
+=======
+            particle.vy *= -1;
+          }
+        }
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             particle.vy *= -1;          }
 
           }
@@ -357,6 +406,7 @@ if (return) {
         ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife);
         ctx.translate(particle.x, particle.y);
         ctx.rotate(particle.rotation);
+<<<<<<< HEAD
         if (particle.type === 'quantum') {
           // Quantum particle with wave effect
           const gradient = ctx.createRadialGradient(
@@ -386,6 +436,19 @@ if (return) {
           );
             }
 
+=======
+
+
+
+
+
+=======
+            }
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           // Quantum wave rings
           if (enableQuantumEffects) {
             for (let i = 1; i <= 3; i++) {
@@ -753,11 +816,25 @@ if (return) {
           ctx.stroke();        }          ctx.stroke()
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
+=======
+      }
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           ctx.stroke();        }
 
         }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 
       // Add holographic matrix effect
@@ -890,6 +967,18 @@ if (return) {
         style={{ zIndex: -1 }}
       />
 
+<<<<<<< HEAD
+=======
+      />;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Additional futuristic overlay effects */}
       {enableHolographic && (;
         <div
@@ -911,7 +1000,11 @@ if (return) {
         </div>;
       )}
       {children}
+<<<<<<< HEAD
     </div>
+=======
+    </div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );      }
 
 =======
@@ -1223,10 +1316,17 @@ if ( {) {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0 && 0.02),transparent_70%)]" />;
         </div>;
       )}
+<<<<<<< HEAD
       {children}
     </div>;
   );
 <<<<<<< HEAD
+=======
+
+      {children}
+    </div>;
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 =======
@@ -1353,6 +1453,7 @@ if ( {) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -1360,3 +1461,5 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

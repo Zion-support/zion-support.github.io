@@ -1,6 +1,6 @@
-
 import React from 'react';
 
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 const Home: React.FC = () => {
   return (
@@ -262,10 +262,31 @@ const Home: React.FC = () => {
             <p className="text-sm">📧 Email: kleber@ziontechgroup.com</p>
             <p className="text-sm">📍 Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
           </div>
+=======
+const Home: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl md:text-6xl font-bold mb-8 text-center">
+          Welcome to Zion Tech Group
+        </h1>
+        <p className="text-xl text-gray-300 mb-8 text-center max-w-3xl mx-auto">
+          Leading provider of innovative technology solutions, AI services, and IT solutions
+          for businesses worldwide.
+        </p>
+        <div className="text-center">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+            Get Started
+          </button>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default Home;
+=======
+export default Home;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

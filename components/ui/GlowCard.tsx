@@ -1,5 +1,6 @@
 import React from "react";
 
+<<<<<<< HEAD
 import React from "react";
 export default function GlowCard({
   title
@@ -11,6 +12,8 @@ export default function GlowCard({
   title: string;
   children: React.ReactNode;
 }) {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <div className="group relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-5 hover:bg-white/10 transition-colors">

@@ -1,7 +1,14 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -21,7 +28,16 @@ import {
   DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 type RewardOption = {
   id: string
   title: string
@@ -130,7 +146,13 @@ export function RedeemTokensCard() {
       </CardContent>
     </Card>
   )
+<<<<<<< HEAD
 }
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -340,7 +362,15 @@ if (return, ) {
           </DialogContent>;
         </Dialog>;
       </CardContent>;
+<<<<<<< HEAD
     </Card>;
   );
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

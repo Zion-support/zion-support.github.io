@@ -4,6 +4,7 @@ export default function AIAutonomousResearchAssistant() {
 	return (
 		<ServiceLanding
 
+<<<<<<< HEAD
 			title="AI Autonomous Research Assistant"
 			slug="ai-autonomous-research-assistant"
 			description="An AI agent that continuously tracks competitors, markets, regulations, and technologies. It synthesizes findings, drafts briefs, and recommends actions—so your team stays ahead."
@@ -21,11 +22,25 @@ export default function AIAutonomousResearchAssistant() {
 				"Compliance-friendly data handling, audit logs"
 			]}
 			industries={["Consulting", "Healthcare", "Finance", "Public Sector"]}
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 			pricePerMonthUSD={1299  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 			implementationWeeks="Implementation: 1–2 weeks"
 			roiNote="Average ROI 3–6x within 60 days"
 			features={[
@@ -35,6 +50,7 @@ export default function AIAutonomousResearchAssistant() {
 				"RFP/RFI opportunity discovery and alerts",
 				"Export to Slides/Docs/Notion",
 				"Compliance-friendly data handling, audit logs"
+<<<<<<< HEAD
 			]}
 			industries={["Consulting", "Healthcare", "Finance", "Public Sector"]}
 			canonical="https: //ziontechgroup.com/ai-autonomous-research-assistant"
@@ -62,3 +78,8 @@ export default function AIAutonomousResearchAssistant() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

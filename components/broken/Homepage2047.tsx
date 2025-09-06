@@ -82,6 +82,7 @@ import {
 import {motion, AnimatePresence} from 'framer-motion';
 import Link from 'next / link';
 import {
+<<<<<<< HEAD
   ArrowRight
   Play
   TrendingUp
@@ -135,6 +136,11 @@ import {
   Star as StarIcon
   Sparkles
   Target as TargetIcon;} from 'lucide-react';import {
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ArrowRight,
   Play,
   TrendingUp,
@@ -189,6 +195,11 @@ import {
 
   Sparkles,;
   Target as TargetIcon,;} from 'lucide-react';import { ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -446,14 +457,21 @@ if (return allInnovativeServices) {
     { number: "24 / 7", label: "AI Intelligence Available", icon: Brain },
     { number: "300+", label: "Countries Served", icon: Globe }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   ];
 
   ];
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
+<<<<<<< HEAD
     transition: { duration: 0.6 },  };
 
     transition: { duration: 0.6 },  };    transition: { duration: 0.6 }
@@ -472,6 +490,12 @@ if (return allInnovativeServices) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
 
   const staggerContainer = {
@@ -635,6 +659,13 @@ if (return allInnovativeServices) {
       {/* Navigation */}
       <UltraFuturisticNavigation2047 />;
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Hero Section */}
       <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>
         <div className='max-w-7xl mx-auto w-full'>
@@ -699,6 +730,9 @@ if (return allInnovativeServices) {
               </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
       
 =======
@@ -733,6 +767,7 @@ if (return allInnovativeServices) {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -740,6 +775,8 @@ if (return allInnovativeServices) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* CTA Buttons */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -747,6 +784,7 @@ if (return allInnovativeServices) {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className='flex flex-col sm:flex-row gap-4'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -754,6 +792,9 @@ if (return allInnovativeServices) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Link
@@ -794,6 +835,16 @@ if (return allInnovativeServices) {
                 </Link>
               </motion.div>
 
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Stats */}
               <motion&& motion.div
                 variants={staggerContainer}
@@ -804,6 +855,7 @@ if (return allInnovativeServices) {
                 className="grid grid-cols-2 md:grid-cols-4 gap-6"
                 className='grid grid-cols-2 md:grid-cols-4 gap-6'              >
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -811,6 +863,9 @@ if (return allInnovativeServices) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 {stats.map((stat, index) => (
                   <motion.div
@@ -837,6 +892,18 @@ if (return allInnovativeServices) {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
 
+<<<<<<< HEAD
+=======
+              </motion && motion.div>;
+            </motion && motion.div>;
+
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Right Content - Featured Service */}
             <motion&& motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -849,6 +916,16 @@ if (return allInnovativeServices) {
               <AnimatePresence mode="wait">
                 <motion.div
 
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   key={currentServiceIndex}
                   initial={{ opacity: 0, scale: 0 && 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
@@ -856,6 +933,14 @@ if (return allInnovativeServices) {
                   transition={{ duration: 0.5 }}
                   className='relative'
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   <div className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm'>
                     <div className='flex items-center justify-between mb-6'>
@@ -1002,6 +1087,12 @@ if (return allInnovativeServices) {
 
                     >
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       Learn More
 
                     </Link>;
@@ -1026,6 +1117,13 @@ if (return allInnovativeServices) {
         <div className="max-w-7xl mx-auto">
           <motion.div
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
                   className='relative';
@@ -1145,6 +1243,14 @@ if (return allInnovativeServices) {
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary Service Categories
@@ -1184,10 +1290,14 @@ if (return allInnovativeServices) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1195,6 +1305,8 @@ if (return allInnovativeServices) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Category Cards */}
           <motion&& motion.div
             variants={staggerContainer}
@@ -1243,12 +1355,33 @@ if (return allInnovativeServices) {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+      {/* Featured Services Grid */}
+      <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
+        <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-7xl mx-auto">;
+          <motion&& motion.div
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Featured Services Grid */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
                     category.id === 'all';
@@ -1309,6 +1442,14 @@ if (return allInnovativeServices) {
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Featured Innovative Services
@@ -1348,10 +1489,14 @@ if (return allInnovativeServices) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1359,6 +1504,8 @@ if (return allInnovativeServices) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Services Grid */}
           <motion&& motion.div
             variants={staggerContainer}
@@ -1399,6 +1546,16 @@ if (return allInnovativeServices) {
             ))}
           </motion.div>
 
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* View All Services CTA */}
           <motion&& motion.div
 =======
@@ -1419,6 +1576,7 @@ if (return allInnovativeServices) {
             transition={{ duration: 0.8, delay: 0.2 }}
             className='text-center mt-16'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1426,6 +1584,9 @@ if (return allInnovativeServices) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Link
@@ -1440,6 +1601,7 @@ if (return allInnovativeServices) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <Link
               href="/2025-innovative-services-showcase-v2"
+<<<<<<< HEAD
               className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25"
             >
               <span>View All {allInnovativeServices.length}+ Services</span>
@@ -1448,12 +1610,25 @@ if (return allInnovativeServices) {
           </motion.div>
         </div>
       </section>
+=======
+
+              className="inline-flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-purple-500/25">;
+              <span>View All {allInnovativeServices && allInnovativeServices.length}+ Services</span>;
+              <ArrowRight className="w-5 h-5" />;
+            </Link>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA Section */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-4xl mx-auto text-center'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1461,6 +1636,9 @@ if (return allInnovativeServices) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -1612,6 +1790,7 @@ export default Homepage2047;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -1620,11 +1799,16 @@ export default Homepage2047;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>
   );
+<<<<<<< HEAD
 }
 };
 
@@ -1634,3 +1818,11 @@ export default Homepage2047;
 
 export default Homepage2047;
 export default Homepage2047;
+=======
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

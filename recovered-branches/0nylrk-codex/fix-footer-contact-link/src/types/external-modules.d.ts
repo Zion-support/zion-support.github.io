@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 declare module "cmdk";
 declare module "@radix-ui/react-context-menu";
 declare module "vaul";
@@ -10,6 +11,38 @@ declare module "react-resizable-panels";
 declare module "@radix-ui/react-toggle-group";
 declare module "@radix-ui/react-toggle";
 declare module '@tanstack/react-query';
+=======
+
+
+declare module "@radix - ui / react - hover - card";
+declare module "input - otp";
+declare module "react - markdown";
+declare module "@radix - ui / react - menubar";
+declare module "@radix - ui / react - navigation - menu";
+declare module "react - resizable - panels";
+declare module "@radix - ui / react - toggle - group";
+declare module "@radix - ui / react - toggle";
+;
+declare module '@tanstack / react - query';
+declare module 'react - day - picker' {
+
+  export interface DateRange {
+    from?: Date;
+    to?: Date;
+  }
+
+  // Minimal placeholder for the DayPicker component used in the app;
+  // The actual library provides full typings but we stub them here so the;
+  // TypeScript compiler can understand the imports without requiring the real;
+  // type definitions.;
+  // eslint - disable - next - line @typescript - eslint / no - explicit - any;
+  export const DayPicker: any;
+
+}
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 declare module "cmdk",
 declare module "@radix-ui/react-context-menu",
 declare module "vaul",
@@ -22,12 +55,22 @@ declare module "react-resizable-panels",
 declare module "@radix-ui/react-toggle-group",
 declare module "@radix-ui/react-toggle",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 declare module '@tanstack/react-query',
 declare module 'react-day-picker' {
+<<<<<<< HEAD
   export interface DateRange {
     from?: Date,
     to?: Date
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 declare module "cmdk",;
 declare module "@radix-ui/react-context-menu",;
 declare module "vaul",;
@@ -44,6 +87,7 @@ declare module 'react-day-picker' {;
   export interface DateRange {;
     from?: Date,;
     to?: Date;
+<<<<<<< HEAD
   export interface DateRange {;
     from?: Date;
     to?: Date
@@ -56,6 +100,14 @@ declare module 'react-day-picker' {;
   export const DayPicker: any
 }
 };
+=======
+
+=======
+
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 declare module 'sonner';
 declare module 'lucide-react' {
 
@@ -255,10 +307,19 @@ import {FC, SVGProps} from 'react';
   export const Webhook: LucideIcon;
   export const X: LucideIcon;
   export const XCircle: LucideIcon;
+<<<<<<< HEAD
   export const Zap: LucideIcon
   const icons: { [key: string]: LucideIcon }
   export const Zap: LucideIcon,;
   const icons: { [key: string]: LucideIcon };
+=======
+
+
+  export const Zap: LucideIcon,;
+  const icons: { [key: string]: LucideIcon };
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   export default icons
 =======
   export const Zap: LucideIcon,
@@ -312,6 +373,7 @@ declare module 'i18next - browser - languagedetector';
 declare module 'react - helmet - async';
 declare module 'react - hook - form' {
   import type { ComponentType, ReactElement, ReactNode } from 'react';
+<<<<<<< HEAD
   // Minimal generic typings to satisfy local usage without full type defs
   export type FieldValues = Record<string, any>
   export type FieldPath<TFieldValues extends FieldValues> =
@@ -649,6 +711,10 @@ declare module 'i18next-browser-languagedetector',;
 declare module 'react-helmet-async',;
 declare module 'react-hook-form' {;
   import type { ComponentType, ReactElement, ReactNode } from 'react';
+=======
+
+;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Minimal generic typings to satisfy local usage without full type defs;
   export type FieldValues = Record < string, any>;
   export type FieldPath < TFieldValues extends FieldValues> =;
@@ -659,6 +725,7 @@ declare module 'react-hook-form' {;
 =======
 
 
+<<<<<<< HEAD
 =======
   // Minimal generic typings to satisfy local usage without full type defs
   export type FieldValues = Record<string, any>
@@ -1017,6 +1084,8 @@ declare module 'react-hook-form' {;
     keyof TFieldValues & string;
   export type Control<TFieldValues extends FieldValues = FieldValues> = any;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   export interface UseFormReturn<;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1084,6 +1153,7 @@ declare module 'react-hook-form' {;
   >(): UseFormReturn < TFieldValues>;
 
 }
+<<<<<<< HEAD
 declare module 'react-i18next',;
 declare module 'react-dom/client',;
 declare module 'react-dom',;
@@ -1094,3 +1164,16 @@ declare module 'ws',;
 declare module 'recharts',;
 declare module 'next-themes';
 declare module 'tailwind-merge';
+=======
+declare module 'react - i18next';
+declare module 'react-dom / client';
+declare module 'react-dom';
+declare module 'react - beautiful - dnd';
+declare module 'react - redux';
+declare module 'semver';
+declare module 'ws';
+declare module 'recharts';
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

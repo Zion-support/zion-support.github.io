@@ -48,9 +48,12 @@ type EmptyStateCardProps = {
   type: 'active' | 'archived'
 },
 
+<<<<<<< HEAD
 export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
   const isActive = type === 'active',
   
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light text-center py-12">
       <CardContent>
@@ -70,9 +73,12 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
         </p>
       </CardContent>
@@ -92,6 +98,9 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
     </Card>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export const EmptyStateCard: React.FC < EmptyStateCardProps> = ({ type }) => {

@@ -89,6 +89,9 @@ const TopicPage: NextPage < Props> = ({ topic, posts }) => {
               }).catch (() => {});
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           />;
         </div>;
         <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6'>;
@@ -138,6 +141,7 @@ export default TopicPage;      </Head>;
           {posts && posts.map((p) => (;
             <BlogCard key={p && p.id} post={p} />;
           ))}
+<<<<<<< HEAD
         </div>
         <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>
       </div>
@@ -149,6 +153,26 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 };
 export const getServerSideProps: GetServerSideProps = async (ctx) => {;
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
+=======
+
+        </div>;
+        <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>;
+      </div>;
+    </div>;
+  );
+};
+
+export const getServerSideProps: GetServerSideProps = async (ctx) => {;
+  const topic = String(ctx && ctx.params?.topic || '');
+  const posts = listPublishedPosts().filter((p) => p && p.topics.includes(topic));
+
+=======
+
+=======
+};
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const topic = String(ctx.params?.topic || '');
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic));
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

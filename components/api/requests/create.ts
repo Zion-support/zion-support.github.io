@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
  const response = await client.chat.completions.create ({
   model: 'gpt-4o-mini';
@@ -6,14 +7,32 @@ messages: [ {
   role: 'system', content: 'You are a helpful assistant.'
 }
  const response = await client.chat.completions.create ({
+=======
+
+
+ const response = await client && client.chat.completions && completions.create ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   model: 'gpt-4o-mini';
 messages: [ {
 
   role: 'system', content: 'You are a helpful assistant.' 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Create utility
 export const Create = () => {
   // Implementation here
   return null;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 {
   role: 'user', content: prompt 
@@ -132,6 +151,9 @@ export default async function handler(
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } =
@@ -147,7 +169,16 @@ export default async function handler(
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+=======
+
+}
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } = req.body |{}
   if (!name |!email |!description) return res.status(400).json({ error: 'Missing required fields' });

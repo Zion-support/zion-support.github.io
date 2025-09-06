@@ -25,6 +25,11 @@ export default function Placeholder() {
 
 export default function Placeholder() {
   return (
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <main className="min-h-screen p-8">
       <Head>
         <title>Reports • Seo • Index.html - Placeholder</title>
@@ -35,6 +40,7 @@ export default function Placeholder() {
         <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/reports/seo/index.html</code>.</p>
         <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></a>
       </div>
+<<<<<<< HEAD
     </main>
   );
 }
@@ -51,3 +57,9 @@ export default function Placeholder() {
   }
 }
 ;
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

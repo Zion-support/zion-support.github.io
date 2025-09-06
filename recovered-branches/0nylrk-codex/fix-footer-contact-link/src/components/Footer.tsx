@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -9,6 +10,20 @@ import { Link } from "react-router-dom";
 import { NewsletterForm } from "@/components/NewsletterForm",
 import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
 import { Link } from "react-router-dom",
+=======
+
+
+import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
+import { Link } from "react-router-dom",
+
+=======
+
+import { NewsletterForm } from "@/components/NewsletterForm",
+import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react",
+import { Link } from "react-router-dom",
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function Footer() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -321,6 +336,7 @@ function Footer() {
         </div>
       </div>
     </footer>
+<<<<<<< HEAD
   );
 }
   )
@@ -399,6 +415,10 @@ export function Footer() {;
           </div>;
         </div>;
       </div>;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </footer>;
   );
 }

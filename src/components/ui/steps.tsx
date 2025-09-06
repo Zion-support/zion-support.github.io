@@ -3,6 +3,7 @@ status;
   description;
   className}: StepProps) {;
 
+<<<<<<< HEAD
   status: "incomplete" | "current" | "complete"
   label: string
   description?: string
@@ -27,6 +28,14 @@ export function Step({
   status,
   label,
   description,
+=======
+
+  className?: string
+}
+export function Step({
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   className}: StepProps) {
   return (
     <li
@@ -39,6 +48,9 @@ export function Step({
         {
           "opacity-60": status === "incomplete"},
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         className
@@ -68,6 +80,9 @@ export function Step({
             "bg-zion-blue border-zion-cyan text-white":
               status === "current",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             "bg-zion-purple border-zion-purple text-white":
               status === "complete"}
@@ -118,12 +133,16 @@ export function Step({;
         ) : (;
           <span>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
             {/* Step number would go here */}
           </span>;
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -138,15 +157,22 @@ export function Step({;
             "text-white": status === "current" |status === "complete"})}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             "text-zion-slate-light": status === "incomplete",
             "text-zion-slate-light": status === "incomplete",
 <<<<<<< HEAD
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             "text-white": status === "current" || status === "complete"})}
         >
       </div>;
@@ -157,6 +183,7 @@ export function Step({;
             "text-zion-slate-light": status === "incomplete"
             "text-white": status === "current" || status === "complete"})}>;
           {label}
+<<<<<<< HEAD
         </h3>
         {description && (
           <p className="text-sm text-zion-slate-light">{description}</p>
@@ -166,6 +193,21 @@ export function Step({;
   )
 }
 
+=======
+        </h3>;
+        {description && (;
+          <p className="text-sm text-zion-slate-light">{description}</p>;
+        )}
+      </div>;
+    </li>;
+  );
+}
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface StepsProps {
   currentStep: number
   className?: string
@@ -185,6 +227,9 @@ export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -192,10 +237,13 @@ export function Steps({ currentStep, className, children }: StepsProps) {
     <div className={cn("w-full", className)}>
       <ol className="space-y-6 md:flex md:space-y-0 md:space-x-16">
         {React.Children.map(childrenArray, (child, index) => {
+<<<<<<< HEAD
           if (!React.isValidElement(child)) return null
           let status: "incomplete" | "current" | "complete" = "incomplete"
           if (index < currentStep) status = "complete"
           if (index === currentStep) status = "current"
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -206,6 +254,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index === currentStep) status = "current",
           
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -215,12 +264,20 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index < currentStep) status = "complete",
           if (index === currentStep) status = "current",
           
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           return React.cloneElement(child as React.ReactElement<StepProps>, {
             status})
         })}
       </ol>
       
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <div className="hidden md:flex md:mt-4">
@@ -229,6 +286,9 @@ export function Steps({ currentStep, className, children }: StepsProps) {
             className="h-full bg-zion-purple transition-all"
             style={{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 interface StepsProps {;

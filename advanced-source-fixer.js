@@ -204,12 +204,28 @@ class AdvancedSourceFixer {
         !fixed ;\n" + fixed;
       }
     }
+<<<<<<< HEAD
     fixed = fixed.replace(/import\s+{\s*}\s*from/g, "import React from");
     fixed = fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
     if (!fixed.includes("export default") && !fixed.includes("export {")) {
 
 
     if (!fixed.includes("export default") && !fixed.includes("export {")) {;
+=======
+
+
+    fixed = fixed && fixed.replace(/import\s+{\s*}\s*from/g, "import React from");
+    fixed = fixed && fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
+
+    if (!fixed && fixed.includes("export default") && !fixed && fixed.includes("export {")) {
+
+=======
+
+
+    if (!fixed.includes("export default") && !fixed.includes("export {")) {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       fixed += "\n\nexport default {};";
     }
     return fixed;
@@ -514,6 +530,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   fixer.fixAllSourceFiles().catch(console.error);
 }
 
+<<<<<<< HEAD
 export default AdvancedSourceFixer;
 }
 const fixer = new AdvancedSourceFixer();
@@ -599,6 +616,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
 <<<<<<< HEAD
 export default AdvancedSourceFixer;
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 module.exports = AdvancedSourceFixer;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
@@ -616,9 +635,25 @@ module.exports = AdvancedSourceFixer;
 =======
 export default AdvancedSourceFixer;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+// Check condition
+if ( {) {
+  $2
+}
+  const fixer = new AdvancedSourceFixer ();
+  fixer.fixAllSourceFiles ().catch (console.error);
+}
+export default AdvancedSourceFixer;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

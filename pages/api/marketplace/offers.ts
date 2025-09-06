@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
@@ -15,6 +16,12 @@ import { v4 as uuidv4 } from "uuid";
 import {
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+import {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   assertClient
   assertTalentOrClientForOffer
   getDemoUser
@@ -24,6 +31,17 @@ import {
   listOffers
   saveOffer
   saveProject
+<<<<<<< HEAD
+=======
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next";
+
+import { v4 as uuidv4 } from "uuid";
+
+import {
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   assertClient,
   assertTalentOrClientForOffer,
   getDemoUser,;
@@ -39,6 +57,7 @@ import { v4 as uuidv4 } from "uuid";
 import { assertClient, assertTalentOrClientForOffer, getDemoUser } from "../../../utils/marketplace/auth";
 import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils/marketplace/store";
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types";
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({
@@ -52,17 +71,53 @@ import { getOfferById, listOffers, saveOffer, saveProject } from "../../../utils
 import { Offer, PaymentTerms, Project } from "../../../utils/marketplace/types",
 function bad(res: NextApiResponse, message: string, code = 400) {
   return res.status(code).json({ ok: false, error: message })
+=======
+
+import type { NextApiRequest, NextApiResponse } from './next';
+import { v4 as uuidv4  } from './uuid';
+import {
+  assert_client,
+  assertTalentOrClientForOffer,
+  getDemoUser,
+} from '../../../utils / marketplace / auth';
+import {
+  getOfferById,
+  list_offers,
+  save_offer,
+  save_project,
+} from '../../../utils / marketplace / store';
+import { Offer, PaymentTerms, Project  } from '../../../utils / marketplace / types';
+/**
+ * bad - Function description
+ */
+function bad() {
+  return res.status (code).json ({ ok: false, error: message });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export default /**
  * handler - Function description
  */
 function handler() {
   try {
+<<<<<<< HEAD
     if (req.method === "GET") {
       const user = getDemoUser(req);
       if (user.role === "client") {
         const offers = listOffers({ clientId: user.id });
         return res.json({ ok: true, offers });
+=======
+    // Check condition
+if ( {) {
+  $2
+}
+      const user = getDemoUser (req);
+      // Check condition
+if ( {) {
+  $2
+}
+        const offers = list_offers ({ client_id: user.id });
+        return res.json ({ ok: true, offers });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       // Check condition
 if ( {) {
@@ -189,6 +244,7 @@ if ( {) {
 
         return bad(res, "Missing required fields");
       }
+<<<<<<< HEAD
 
     if (req.method === 'GET') {
       res.status(200).json({ offers: [] });
@@ -562,11 +618,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       const offer: Offer = {
+=======
+      const offer: Offer = {
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         id: uuidv4(),
         createdAtIso: new Date().toISOString(),
         clientId: client.id,
         talentSlug,
         startDateIso,
+<<<<<<< HEAD
         scopeSummary,
         paymentTerms: paymentTerms as PaymentTerms,
         agreementUrl,
@@ -580,6 +641,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       saveOffer(offer);
       return res.status(201).json({ ok: true, offer });
     }
+=======
+        scope_summary,
+        payment_terms,
+        agreement_url,
+      } = req.body || {}
+      // Check condition
+if ( {) {
+  $2
+}
+        return bad (res, "Missing required fields");
+      }
+      const offer: Offer = {
+        id: uuidv4 (),
+        createdAtIso: new Date ().toISOString (),
+        client_id: client.id,
+        talent_slug,
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     if (req.method === "PATCH") {
       // Update offer: accept or request changes
@@ -595,6 +673,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       );
       if (action === "accept") {
+<<<<<<< HEAD
         if (user.role !== "talent") return bad(res, "Only talent can accept", 403);
         existing.status = "CONFIRMED";
         status: "SENT"},
@@ -625,6 +704,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         existing.status = "CONFIRMED",
         // Create a project upon acceptance
         const project: Project = {
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           id: uuidv4(),
           title: `Project with ${existing && existing.talentSlug}`,
           summary: existing && existing.scopeSummary,
@@ -632,18 +715,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           talentSlug: existing && existing.talentSlug,
           startDateIso: existing && existing.startDateIso,
           status: "ACTIVE",
+<<<<<<< HEAD
           timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
           timeline:
             existing.paymentTerms.type === "milestone"
               ? existing.paymentTerms.milestones || []
               : [],
           timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           documents: existing.agreementUrl
 
             ? [
                 {
                   id: uuidv4(),
                   name: "Agreement",
+<<<<<<< HEAD
                   url: existing.agreementUrl,
                   uploadedAtIso: new Date().toISOString()}]
             : [],
@@ -655,6 +745,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         saveOffer(existing);
         return res.json({ ok: true, offer: existing, project })
       }
+=======
+                  url: existing && existing.agreementUrl,
+                  uploadedAtIso: new Date().toISOString(),
+                },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              ]
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             : []
           notes: []
@@ -744,6 +841,7 @@ if ( {) {
         saveOffer(existing);
         return res.json({ ok: true, offer: existing })
       }
+<<<<<<< HEAD
       return bad(res, "Unknown action");
     }
     return bad(res, "Method not allowed", 405);
@@ -768,11 +866,17 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+      // Check condition
+if ( {) {
+  $2
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
         if (
           return bad (res, "Only talent can decline", 403)) {
   $2
 }
+<<<<<<< HEAD
       if (action === "request_changes") {
         if (user.role !== "talent") return bad(res, "Only talent can request changes", 403),
         existing.status = "CHANGES_REQUESTED",
@@ -795,6 +899,8 @@ if ( {) {
 ;
       if (action === "decline") {;
         if (user.role !== "talent") return bad(res, "Only talent can decline", 403);
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         existing.status = "DECLINED";
         save_offer (existing);
         return res.json ({ ok: true, offer: existing });
@@ -803,6 +909,7 @@ if ( {) {
     }
     return bad (res, "Method not allowed", 405);
   } catch (e: any) {
+<<<<<<< HEAD
     const status = e?.statusCode || 500;
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
   }
@@ -811,6 +918,12 @@ if ( {) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+    const status = e?.status_code || 500;
+    return res;
+      .status (status);
+      .json ({ ok: false, error: e?.message || "Server error" });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 
@@ -827,3 +940,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

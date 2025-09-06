@@ -216,6 +216,20 @@ export default function QuantumServices() {;
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+            </div>;
+          </div>;
+        </section>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Quantum Services */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -504,10 +518,18 @@ function QuantumServices() {
                     ))}
 
                   </ul>
+<<<<<<< HEAD
                   <a
                     href="/contact"
                   <a 
                     href="/contact" 
+=======
+
+                  <a 
+                    href="/contact" 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
                   >
                     Get Started
@@ -518,6 +540,29 @@ function QuantumServices() {
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+                  </ul>;
+
+                  <a
+                    href="/contact" 
+                    className="w-full block text-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300">;
+                    Get Started;
+                  </a>;
+                </motion && motion.div>;
+              ))}
+            </div>;
+          </div>;
+        </section>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
@@ -629,5 +674,11 @@ export default QuantumServicesPage;
 }
 export default QuantumServicesPage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default QuantumServicesPage;
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

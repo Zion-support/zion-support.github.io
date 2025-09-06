@@ -72,6 +72,12 @@ const ContentCard: React.FC < ContentCardProps> = ({
         )}
       </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Content */}
       <h3 className='text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2'>;
         {title}
@@ -90,6 +96,7 @@ const ContentCard: React.FC < ContentCardProps> = ({
           Read More
           <span className='ml-2 group-hover:translate-x-1 transition-transform duration-300'>
             →
+<<<<<<< HEAD
           </span>      <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-2">
         {title}
       </h3>
@@ -123,6 +130,11 @@ export default ContentCard;    </Link>
 }
 export default ContentCard;
 
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </span>
 
         {description}
@@ -165,6 +177,9 @@ export default ContentCard;
 
       {/* Hover Effects */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />;
     </Link>;
   );
@@ -242,5 +257,8 @@ export default ContentCard;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

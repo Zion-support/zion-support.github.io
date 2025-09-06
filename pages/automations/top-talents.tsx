@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
@@ -12,18 +16,44 @@ type TalentItem = {;
   talentName: string;
   averageRating: number;
   totalReviews: number;
+<<<<<<< HEAD
 }
 type Props = { items: TalentItem[] }
+=======
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 
 type Props = { items: TalentItem[] };
 
+<<<<<<< HEAD
 import type { NextPage, GetServerSideProps } from 'next',
 import fs from 'fs',
 import path from 'path',
 import Link from 'next/link',
 type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
 type Props = { items: TalentItem[] },
+=======
+
+
+
+=======
+=======
+import type { NextPage, GetServerSideProps } from 'next';
+import fs from 'fs';
+import path from 'path';
+import Link from 'next/link';
+type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
+type Props = { items: TalentItem[] },
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
     <main className="space-y-6">
@@ -77,8 +107,13 @@ export const getServerSideProps: GetServerSideProps = async () => {
   );
   let items: TalentItem[] = [];
   try {
+<<<<<<< HEAD
     const raw = fs.readFileSync(p, "utf8");
     const data = JSON.parse(raw);
+=======
+    const raw = fs.readFileSync (p, "utf8");
+    const data = JSON.parse (raw);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     items = data.items || [];
   } catch {}
   return { props: { items } }
@@ -86,6 +121,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
 ;
 =======
 
+<<<<<<< HEAD
   const p = path.join(process.cwd(), 'publicautomationstop-talents.json'),
   let items: TalentItem[] = [],
   try {
@@ -103,4 +139,11 @@ export const getServerSideProps: GetServerSideProps = async () => {
   }
 }
 };
+=======
+  )
+},
+export const getServerSideProps: GetServerSideProps = async () => {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default TopTalentsPage;

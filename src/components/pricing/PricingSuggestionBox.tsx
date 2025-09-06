@@ -50,12 +50,15 @@ interface PricingSuggestionBoxProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion;
   isLoading;
@@ -76,6 +79,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   isLoading,
   onApplySuggestion,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     return (
       <Card className="border border-dashed border-muted">
@@ -85,6 +91,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
             <p className="text-sm text-muted-foreground">
               Generating optimal pricing suggestion...
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -148,6 +157,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -239,13 +251,19 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
             ${suggestion.minRate.toFixed(0)} - ${suggestion.maxRate.toFixed(0)}
           </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
           <span className="text-sm text-muted-foreground ml-1">
             {rateType === "hourly" ? "/hour" : " total"}
+<<<<<<< HEAD
           </span>
         </div>
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -275,6 +293,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 
         <div className="flex items-center justify-between">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               </TooltipTrigger>
@@ -289,6 +310,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
         <p className="text-xs text-center text-muted-foreground pt-2">
           Based on market data & trends. You can adjust as needed.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         </p>
@@ -304,9 +328,12 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
       </CardContent>
     </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
 
 
@@ -315,6 +342,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 "  );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 },
 ;
@@ -370,6 +400,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {toast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
@@ -24,6 +25,9 @@ export function useReferrals() {
   const [stats, setStats] = useState<ReferralStats>({
     totalReferrals: 0;
     pendingReferrals: 0;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     completedReferrals: 0
     totalRewards: 0});
@@ -406,6 +410,7 @@ if ( {) {
     
     if (!link) {
       toast({
+<<<<<<< HEAD
         title: "Cannot share";
         description: "Please generate a referral code first",
         variant: "destructive"});
@@ -470,11 +475,18 @@ export function useReferrals() {;
       console.error("Error in fetchReferralCode:", error);
     } finally {;
       setIsLoading(false);
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     if (shareUrl) {
       window && window.open(shareUrl, '_blank')
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     let share_url = '';
 ;
@@ -502,6 +514,11 @@ if ( {) {
   }
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return {
     referral_code;
     is_loading;
@@ -514,6 +531,7 @@ if ( {) {
     shareOnSocialMedia;
     fetchReferralStats;
 
+<<<<<<< HEAD
     fetchReferrals, // Added this method for refreshing referrals
     fetchRewards,   // Added this method for refreshing rewards
   },;
@@ -656,5 +674,9 @@ if ( {) {
     fetchReferralStats;
     fetchReferrals, // Added this method for refreshing referrals;
     fetchRewards,   // Added this method for refreshing rewards;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }

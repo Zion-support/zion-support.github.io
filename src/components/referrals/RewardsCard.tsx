@@ -30,6 +30,9 @@ import { formatDate } from "@/utils/referralUtils"
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -44,10 +47,13 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface RewardsCardProps {
 
   rewards: ReferralReward[]
@@ -67,6 +73,12 @@ interface RewardsCardProps {
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
 
+<<<<<<< HEAD
+=======
+          <CardTitle className="flex items-center gap-2">
+            <BadgeDollarSign className="h-5 w-5" />
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             Your Rewards
           </CardTitle>
@@ -79,6 +91,9 @@ interface RewardsCardProps {
         </CardContent>
       </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -94,6 +109,9 @@ interface RewardsCardProps {
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             Your Rewards
@@ -123,6 +141,11 @@ interface RewardsCardProps {
 
 
     )
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   return (
     <Card>
@@ -132,6 +155,9 @@ interface RewardsCardProps {
         <CardTitle className="flex items-center gap-2">
           <BadgeDollarSign className="h-5 w-5" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           Your Rewards
         </CardTitle>
@@ -182,8 +208,11 @@ interface RewardsCardProps {
   );
 };
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <div className="space-y-4">
           {rewards.map((reward, index) => (

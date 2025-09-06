@@ -19,6 +19,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+<<<<<<< HEAD
 type Props = {
   room: Room | null;
   onLeave: () => void;
@@ -29,6 +30,9 @@ type Props = {
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
 
 export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [micEnabled, setMicEnabled] = React.useState(true);
   const [camEnabled, setCamEnabled] = React.useState(true);
   const [sharing, setSharing] = React.useState(false);
@@ -81,6 +85,7 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
       setSharing(enabled)
     } catch (e) {
       console.warn('Screen share failed', e)
+<<<<<<< HEAD
   }
 
   return (
@@ -112,6 +117,8 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
 );
 }
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 
   };
@@ -123,6 +130,9 @@ export default function Controls(): any ({ room, onLeave, accent = 'cyan' }: Pro
   };
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         className='px-4 py-2 rounded bg-red-600 text-white'>;
         Leave;
@@ -234,5 +244,8 @@ if (return) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

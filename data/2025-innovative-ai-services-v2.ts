@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface InnovativeAIService {
 export interface InnovativeAIService {;
   id: string;
@@ -11,6 +12,8 @@ export interface InnovativeAIService {;
     currency: string;
     trialDays: number;
     setupTime: string;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   {
@@ -356,6 +359,7 @@ export interface InnovativeAIService {;
     support:
       '24/7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.'
     compliance: [
+<<<<<<< HEAD
       'GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'
     ]
     link: 'https://ziontechgroup.com/ai-ethics-governance-platform'
@@ -369,6 +373,9 @@ export interface InnovativeAIService {;
     marketSize: '$15B AI governance market'
     growthRate: '28% annually'
   }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations',
     ],
     link: 'https://ziontechgroup.com/ai-ethics-governance-platform',
@@ -540,12 +547,16 @@ export interface InnovativeAIService {;
     market_size: '$15B AI governance market',
     growth_rate: '28% annually';
 
+<<<<<<< HEAD
     growthRate: '28% annually'
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
 ];
 
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
@@ -585,11 +596,14 @@ export interface InnovativeAIService {;
   marketSize: string,;
   growthRate: string;
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 export interface InnovativeAIService {;
+<<<<<<< HEAD
   id: string,;
   name: string,;
   tagline: string,;
@@ -863,5 +877,8 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [;
     reviews: 220,;
     marketSize: '$15B AI governance market',;
     growthRate: '28% annually';
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];

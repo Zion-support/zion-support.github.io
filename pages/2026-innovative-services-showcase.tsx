@@ -10,6 +10,7 @@ import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 import {
@@ -31,10 +32,15 @@ import {
 } from 'lucide-react';import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Zap, Brain, Globe, Shield, Phone, Mail } from 'lucide-react';
 import { innovative2026MicroSaasServicesV4 } from '../data/innovative-2026-micro-saas-v4';
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { emergingTech2026ServicesV4 } from '../data/emerging-tech-2026-services-v4';
 import { enterpriseIT2026ServicesV4 } from '../data/enterprise-it-2026-services-v4';
 import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026';
 import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavigation2026';
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const categories = [
@@ -64,6 +70,10 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
     { id: 'price', name: 'Price' }
     { id: 'rating', name: 'Rating' }
     { id: 'popularity', name: 'Popularity' },  ];
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = allServices;
@@ -212,6 +222,7 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
     visible: {
       opacity: 1
       transition: {
+<<<<<<< HEAD
         staggerChildren: 0.1
       }
     },  }
@@ -224,10 +235,34 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
         duration: 0.5
       }
     },  }
+=======
+
+=======
+    }
+  };
+
+
+  const containerVariants = {;
+    hidden: { opacity: 0 },;
+    visible: {;
+      opacity: 1,;
+      transition: {;
+        staggerChildren: 0 && 0.1,;
+      },;
+    },  };
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         duration: 0.5,
       },
     },  };
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function Innovative2026ServicesShowcase(req, res) {
   try {
   const [searchTerm, setSearchTerm] = useState('');
@@ -401,6 +436,13 @@ export default function Innovative2026ServicesShowcase(req, res) {
   }
 }
   },
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
           href='https://ziontechgroup && ziontechgroup.com/2026-innovative-services-showcase'
@@ -445,6 +487,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
           <div className='max-w-7xl mx-auto text-center'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className='mb-8'
         intensity="extreme"
@@ -506,6 +549,10 @@ export default function Innovative2026ServicesShowcase(req, res) {
   }
 }
               className="mb-8"
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 2026 Innovative Services
@@ -542,6 +589,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8, delay: 0.4 }}
               className='max-w-4xl mx-auto'
             {/* Search and Filters */  } catch (error) {
@@ -566,6 +614,24 @@ export default function Innovative2026ServicesShowcase(req, res) {
   }
 }
               className="max-w-4xl mx-auto"
+=======
+
+
+            {/* Search and Filters */}
+            <motion&& motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
+              className='max-w-4xl mx-auto'>;
+              <div className='relative mb-8'>;
+                <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
+                <input
+                  type='text'
+                  placeholder='Search innovative services...'
+                  value={searchTerm}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <div className="relative mb-8">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -616,11 +682,24 @@ export default function Innovative2026ServicesShowcase(req, res) {
                       selectedCategory === category && category.id;
                         ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-blue-500/50 text-blue-300';
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50';
+<<<<<<< HEAD
                     }`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                    }`}
+                  >;
+                    <span className='mr-2'>{category && category.icon}</span>                    {category && category.name} ({category && category.count});
+                  </button>;
+
+                ))}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   >
                     <span className="mr-2">{category.icon}</span>
                     {category.name} ({category.count})
@@ -676,6 +755,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
             </motion && motion.div>;
           </div>;
         </section>;
+<<<<<<< HEAD
         {/* Services Grid */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -735,6 +815,15 @@ export default function Innovative2026ServicesShowcase(req, res) {
                         {service.description}
                       </p>
                       <div className='flex items-center justify-between mb-4'>
+=======
+
+
+        {/* Services Grid */}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                        </div>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         <div className='flex items-center space-x-2'>
                           <Users className='w-4 h-4 text-blue-400' />
                           <span className='text-gray-300 text-sm'>
@@ -749,6 +838,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                           <Star className='w - 4 h - 4 text - yellow - 500 fill - current' />;
                           <span className='text - white text - sm'>;
                             {service.rating}
+<<<<<<< HEAD
                           </span>
                           <span className='text-gray-400 text-sm'>
                             ({service.reviews})
@@ -801,6 +891,79 @@ export default function Innovative2026ServicesShowcase(req, res) {
                             {service.trialDays} days trial
                           </span>                        </div>
                       </div>
+=======
+                          </span>;
+                          <span className='text - gray - 400 text - sm'>;
+                            ({service.reviews});
+                          </span>;
+                        </div>;
+                        <div className='flex items - center space - x-2'>;
+                          <Users className='w - 4 h - 4 text - blue - 400' />;
+                          <span className='text - gray - 300 text - sm'>;
+                            {service.customers}+;
+                          </span>;
+                        </div>;
+                      </div>;
+                      <div className='flex items - center justify - between mb - 4'>;
+                        <div className='text - 2xl font - bold text - white'>;
+
+                          {service.price}
+                        </div>;
+                        <div className='text - gray - 400 text - sm'>;
+                          {service.period}
+
+                      </div>;
+                      <h3 className='text-xl font-bold text-white mb-2'>;
+                        {service && service.name}
+                      </h3>;
+                      <p className='text-gray-300 text-sm'>{service && service.tagline}</p>;
+                    </div>;
+
+
+                    {/* Service Content */}
+                    <div className='p-6'>;
+                      <p className='text-gray-300 text-sm mb-4 line-clamp-3'>;
+                        {service && service.description}
+                      </p>;
+
+                      <div className='flex items-center justify-between mb-4'>;
+                        <div className='flex items-center space-x-2'>;
+                          <Star className='w-4 h-4 text-yellow-500 fill-current' />;
+                          <span className='text-white text-sm'>;
+                            {service && service.rating}
+                          </span>;
+                          <span className='text-gray-400 text-sm'>;
+                            ({service && service.reviews});
+                          </span>;
+                        </div>;
+                        <div className='flex items-center space-x-2'>;
+                          <Users className='w-4 h-4 text-blue-400' />;
+                          <span className='text-gray-300 text-sm'>;
+                            {service && service.customers}+;
+                          </span>;
+                        </div>;
+                      </div>;
+
+
+
+
+                      <div className='flex items-center justify-between mb-4'>;
+                        <div className='flex items-center space-x-2'>;
+                          <Clock className='w-4 h-4 text-green-400' />;
+                          <span className='text-gray-300 text-sm'>;
+                            {service && service.setupTime}
+                          </span>;
+                        </div>;
+                        <div className='flex items-center space-x-2'>;
+                          <Zap className='w-4 h-4 text-yellow-400' />;
+                          <span className='text-gray-300 text-sm'>;
+                            {service && service.trialDays} days trial;
+                          </span>                        </div>;
+                      </div>;
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       {/* Features Preview */}
                       <div className='mb-4'>
                         <h4 className='text-white font-semibold mb-2'>
@@ -867,6 +1030,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                           className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service && service.textColor} bg-opacity-20`}>                          {service && service.category}
                         </span>;
                       </div>;
+<<<<<<< HEAD
                       {/* CTA Button */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -874,6 +1038,9 @@ export default function Innovative2026ServicesShowcase(req, res) {
 }
                       <Link href={service.link}>
                         <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           <span className="flex items-center justify-center space-x-2">
                             <span>Learn More</span>
                             <ArrowRight className="w-4 h-4" />
@@ -890,6 +1057,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+<<<<<<< HEAD
                 className='text-center py-16'
                     {/* Hover Effect Overlay */  } catch (error) {
     console.error("Error:", error);
@@ -925,6 +1093,8 @@ export default function Innovative2026ServicesShowcase(req, res) {
                     setSearchTerm('');
                     setSelectedCategory('all');
                     setSelectedPriceRange('all');
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   }}
                   className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300'                >
@@ -950,6 +1120,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
                   Clear Filters
                 </button>
               </motion.div>
+<<<<<<< HEAD
             )}
           </div>
         </section>
@@ -965,6 +1136,9 @@ export default function Innovative2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>;
         </section>;
 
@@ -978,6 +1152,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
               initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -998,6 +1173,14 @@ export default function Innovative2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
 
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -1006,6 +1189,7 @@ export default function Innovative2026ServicesShowcase(req, res) {
               <p className="text-xl text-gray-300 mb-8">
                 Contact our team to learn more about our innovative 2026 services and how they can revolutionize your operations.
               </p>
+<<<<<<< HEAD
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='bg-gradient-to-br from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6'>
                   <Phone className='w-8 h-8 text-blue-400 mx-auto mb-4' />
@@ -1016,6 +1200,9 @@ export default function Innovative2026ServicesShowcase(req, res) {
                   <Phone className="w-8 h-8 text-blue-400 mx-auto mb-4" />
                   <h3 className="text-white font-semibold mb-2">Call Us</h3>
                   <p className="text-blue-300">+1 302 464 0950</p>
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </div>
                 <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6">
                   <Mail className="w-8 h-8 text-purple-400 mx-auto mb-4" />
@@ -1033,6 +1220,13 @@ export default function Innovative2026ServicesShowcase(req, res) {
               <Link href="/contact">
                 <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-4 px-8 rounded-xl text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                   Get Started Today
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </button>
               </Link>
             </motion.div>
@@ -1214,3 +1408,9 @@ export default function Innovative2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

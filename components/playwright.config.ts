@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  trace: on-first-retry'
 }
  trace: on-first-retry' 
@@ -5,6 +6,10 @@
 export const Playwright.config = () => {
   // Implementation here
   return null;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 reporter: [ ['list'], ['json', {
 

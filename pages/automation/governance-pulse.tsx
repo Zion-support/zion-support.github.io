@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
   return (
     <EnhancedLayout>
       <div className="max-w-5xl mx-auto py-10">
@@ -52,3 +53,5 @@
   }
 }
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

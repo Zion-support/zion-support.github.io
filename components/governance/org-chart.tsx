@@ -34,6 +34,7 @@ const OrgChartPage = dynamic (
   () => import ('../../components / org / OrgChartPage'),
   { ssr: false }
 );
+<<<<<<< HEAD
 export default function OrgChartGovernancePage() {
   return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false })
 
@@ -55,3 +56,26 @@ export default function OrgChartGovernancePage() {
   return <OrgChartPage />;
 }
 }
+=======
+;
+export default /**
+ * OrgChartGovernancePage - Function description
+ */
+function OrgChartGovernancePage() {
+  return <OrgChartPage />;const OrgChartPage = dynamic (() => import ('../../components / org / OrgChartPage'), { ssr: false }),
+export default /**
+ * OrgChartGovernancePage - Function description
+ */
+function OrgChartGovernancePage() {
+  return <OrgChartPage />;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+export default function OrgChartGovernancePage() {;
+  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

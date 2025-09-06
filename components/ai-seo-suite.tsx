@@ -1,11 +1,39 @@
+<<<<<<< HEAD
 import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
+<<<<<<< HEAD
 import {
   Search
   TrendingUp
@@ -50,12 +78,17 @@ export default function AISeosuitePage() {
   Sparkles,
   ChartBar,
   Lightbulb,
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Rocket,;
   Settings,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AISeosuitePage() {
   const features = [
     {;
@@ -63,10 +96,14 @@ export default function AISeosuitePage() {
     {
       icon: <Search className='w-8 h-8 text-white' />,
 
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AISeosuitePage() {
   const features = [
     {
@@ -113,17 +150,25 @@ export default function AISeosuitePage() {
       icon: <Zap className='w-8 h-8 text-white' />
       title: 'Automated Reports'
       description:
+<<<<<<< HEAD
         'Generate comprehensive SEO reports automatically with actionable insights and recommendations.'
       color: 'bg-gradient-to-br from-pink-500 to-rose-600'
       gradient: 'from-pink-400 to-rose-500'
     }
   ];
+=======
+
+import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         'Generate comprehensive SEO reports automatically with actionable insights and recommendations.',
       color: 'bg-gradient-to-br from-pink-500 to-rose-600',
       gradient: 'from-pink-400 to-rose-500',
     },;
   ];
 
+<<<<<<< HEAD
   const seoTools = [
     {
       category: 'Keyword Research'
@@ -225,6 +270,10 @@ export default function AISeosuitePage() {
     }
       icon: <Search className='w-8 h-8 text-white' />,
   ];
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function AISeosuitePage() {
   const features = [
@@ -614,10 +663,52 @@ function AISeosuitePage() {
     },  ];    { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' }
     { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' }
     { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' }
+<<<<<<< HEAD
+=======
+=======
+
+
+=======
+      title: 'E-commerce Websites',
+      description: 'Optimize product pages, category pages, and search functionality for better conversions.',
+    icon: '🛍️',
+      benefits: ['Higher search rankingsIncreased organic trafficBetter conversion ratesCompetitive advantage']
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    };
+    {;
+      category: 'On-Page SEO',;
+      icon: <Target className="w-6 h-6 text-green-400" />,;
+      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization'];
+    };
+    {;
+      category: 'Technical SEO',;
+      icon: <Settings className="w-6 h-6 text-purple-400" />,;
+      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator'];
+    };
+    {;
+      category: 'Analytics & Reporting',;
+      icon: <BarChart3 className="w-6 h-6 text-orange-400" />,;
+      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards'];
+    }
+  ];
+
+
+  const successMetrics = [
+    { metric: 'Organic Traffic', value: '+150%', description: 'Average increase in organic traffic' },
+    { metric: 'Search Rankings', value: '+45%', description: 'Improvement in search rankings' },
+    { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' },
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
 
   ];
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
         />;
@@ -769,6 +860,7 @@ function AISeosuitePage() {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -776,6 +868,8 @@ function AISeosuitePage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </p>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -785,6 +879,14 @@ function AISeosuitePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* SEO Tools Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -880,6 +982,11 @@ function AISeosuitePage() {
 
                           {toolName}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       ))}
@@ -892,6 +999,14 @@ function AISeosuitePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Success Metrics Section */}
 
       <section className="py-24 bg-gray-900 relative overflow-hidden">
@@ -968,11 +1083,24 @@ function AISeosuitePage() {
 
               </Card>
 
+<<<<<<< HEAD
             ))}
           </div>
         </div>
       </section>
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            ))}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Use Cases Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -1077,6 +1205,11 @@ function AISeosuitePage() {
 
                           {benefit}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       ))}
@@ -1089,6 +1222,14 @@ function AISeosuitePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Pricing Section */}
 
       <section id="pricing" className="py-24 bg-gray-900 relative overflow-hidden">
@@ -1378,6 +1519,9 @@ function AISeosuitePage() {
                   </div>
                 )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 <div className='text-center mb-8'>;
@@ -1390,6 +1534,7 @@ function AISeosuitePage() {
                   </div>;
                   <p className='text-gray-400'>{plan && plan.description}</p>;
                 </div>;
+<<<<<<< HEAD
                 <ul className='space-y-4 mb-8'>;
                   {plan && plan.features.map((feature, featureIndex) => (;
                     <li
@@ -1420,6 +1565,11 @@ function AISeosuitePage() {
                 </div>
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
+=======
+
+                <ul className='space-y-4 mb-8'>;
+                  {plan && plan.features.map((feature, featureIndex) => (;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <li
                       key={featureIndex}
                       className='flex items-center text-gray-300'
@@ -1459,6 +1609,15 @@ function AISeosuitePage() {
                       {feature}
 =======
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </li>
                   ))}
                 </ul>
@@ -1479,6 +1638,14 @@ function AISeosuitePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Integrations Section */}
 
       <section className="py-24 bg-black relative overflow-hidden">
@@ -1557,6 +1724,7 @@ function AISeosuitePage() {
 
               </Card>
 
+<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -1581,12 +1749,33 @@ function AISeosuitePage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             Ready to Dominate Search Rankings?
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -1643,6 +1832,9 @@ function AISeosuitePage() {
               variant="outline"
               size="lg"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               Watch Demo;
@@ -1651,6 +1843,7 @@ function AISeosuitePage() {
         </div>;
       </section>;
 
+<<<<<<< HEAD
 =======
               className="border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl"
             >
@@ -1668,7 +1861,17 @@ function AISeosuitePage() {
   );
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 }
@@ -1697,3 +1900,6 @@ function AISeosuitePage() {
 }
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

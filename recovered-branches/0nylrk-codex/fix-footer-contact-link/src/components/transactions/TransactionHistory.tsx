@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -10,6 +17,7 @@ import {Badge} from "@/components/ui/badge";
 import {Skeleton} from "@/components/ui/skeleton";
 import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -160,6 +168,8 @@ import { Badge } from "@/components/ui/badge",;
 import { Skeleton } from "@/components/ui/skeleton",;
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",;
 import { formatDistanceToNow } from "date-fns",;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Transaction {;
   id: string,;
   user_id: string,;
@@ -218,8 +228,13 @@ export function TransactionHistory() {;
         body: { transactionId, action }
       }),
       
+<<<<<<< HEAD
       if (error) throw error,
       
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       toast({
         title: "Success"
         description: data.message |"Transaction updated successfully"})
@@ -662,6 +677,12 @@ export function TransactionHistory() {;
                             <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>;
                           ) : (;
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           )}
                         </CardDescription>
                       </div>
@@ -682,8 +703,14 @@ export function TransactionHistory() {;
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
                       </span>
                     </div>
+<<<<<<< HEAD
                     {(transaction.completed_at |transaction.refunded_at |transaction.cancelled_at) && (
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
+=======
+
+                    {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">
                           {transaction.completed_at ? 'Completed:' :

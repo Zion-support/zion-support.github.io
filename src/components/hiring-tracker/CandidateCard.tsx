@@ -2,10 +2,19 @@ const handleSaveNotes = () => {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
+<<<<<<< HEAD
       title: 'Notes saved'
       description: 'Your notes have been saved'
       title: 'Notes saved',
       description: 'Your notes have been saved',
+=======
+
+
+      title: 'Notes saved',
+      description: 'Your notes have been saved',
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     })
     setShowNotes(false)
   }
@@ -17,15 +26,21 @@ const handleSaveNotes = () => {
     })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import { useState } from 'react';
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   const candidateName = application.talent_profile?.full_name |'Candidate'
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const candidateName = application.talent_profile?.full_name || 'Candidate'
   return (
     <>
@@ -35,6 +50,9 @@ import { useState } from 'react';
             className='mb-2 p-0 shadow-sm border'
             ref={provided.innerRef}            {...provided.draggableProps}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       title: "Notes saved",
       description: "Your notes have been saved"
@@ -147,6 +165,11 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
             className="mb-2 p-0 shadow-sm border";
             ref={provided.innerRef}
             {...provided.draggableProps}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {...provided.dragHandleProps}
           >
             <CardContent className='p-3'>
@@ -206,6 +229,9 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                 </div>
                 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
@@ -314,6 +340,9 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   asChild
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                   <Link href={`/messages?talentId=${application.talent_id}`}>
@@ -329,6 +358,9 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   asChild
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                   {application.resume?.file_url ? (
@@ -361,6 +393,7 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
                   onClick={() => setShowHireModal(true)}                >;
                   <BriefcaseIcon className='h-3 w-3 mr-1' /> Hire;
                 </Button>
+<<<<<<< HEAD
               </div>
             </CardContent>
           </Card>
@@ -452,11 +485,17 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
   handleHireConfirmed
 }/> </>)
 }'"}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   handleHireConfirmed 
 }/> </>) 
 }'"};
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 
                 <Button 

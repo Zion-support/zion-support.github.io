@@ -1,11 +1,21 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Button} from "@/components/ui/button";
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogOverlay} from "@/components/ui/dialog";
 import {DisputeForm} from "./DisputeForm";
 import {useNavigate} from "react-router-dom";
 import {ShieldAlert} from "lucide-react";
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { 
@@ -44,6 +54,10 @@ interface RaiseDisputeButtonProps {;
   const navigate = useNavigate();
 import { useNavigate } from "react-router-dom",
 import { ShieldAlert } from "lucide-react",
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface RaiseDisputeButtonProps {
   projectId: string,
   milestoneId?: string,
@@ -90,6 +104,7 @@ export function RaiseDisputeButton({
               Please provide details about the issue you're experiencing with this project.
             </DialogDescription>
           </DialogHeader>
+<<<<<<< HEAD
           <DisputeForm
           
           <DisputeForm 
@@ -121,6 +136,16 @@ export function RaiseDisputeButton({;
   variant = "outline",;
   size,;
   className;
+=======
+
+
+export function RaiseDisputeButton(): any ({ ;
+  projectId;
+  milestoneId, ;
+  variant = "outline", ;
+  size;
+  className ;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }: RaiseDisputeButtonProps) {;
   const [isDialogOpen, setIsDialogOpen] = useState(false);
   const navigate = useNavigate();
@@ -192,7 +217,18 @@ function RaiseDisputeButton() {
               Please provide details about the issue you're experiencing with this project.;
             </DialogDescription>;
           </DialogHeader>;
+<<<<<<< HEAD
           <DisputeForm;
+=======
+
+
+          
+          <DisputeForm 
+=======
+          <DisputeForm 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             projectId={projectId}
             milestoneId={milestoneId}
             onDisputeCreated={handleDisputeCreated}

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
@@ -6,6 +7,10 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const store = getFraudStore();
 
     return res.status(200).json(settings)
@@ -19,9 +24,83 @@ export default async function handler(
 
   }
   res.status(405).json({ error: "Method not allowed" });
+<<<<<<< HEAD
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+=======
+}
+
+
+  if (req && req.method === "GET") {
+    const userId = (req && req.query.userId as string) || "";
+    if (!userId) return res && res.status(400).json({ error: "Missing userId" });
+    const settings = await store && store.getPrivacySettings(userId);
+    return res && res.status(200).json(settings);
+  }
+
+  if (req && req.method === "POST") {
+    const { userId, optOut } = req && req.body || {};
+    if (!userId || typeof optOut !== "boolean")
+      return res && res.status(400).json({ error: "Missing userId or optOut" });
+    const updated = await store && store.setPrivacySettings(userId, optOut);
+    return res && res.status(200).json(updated);
+  }
+
+  res && res.status(405).json({ error: "Method not allowed" });
+}
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { getFraudStore  } from '../../../../utils / fraud / store';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  const store = getFraudStore ();
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    const user_id = (req.query.user_id as string) || "";
+    if (return res.status (400).json ({ error: "Missing user_id" })) {
+  $2
+}
+    const settings = await store.getPrivacySettings (user_id);
+    return res.status (200).json (settings);
+  }
+  // Check condition
+if ( {) {
+  $2
+}
+    const { user_id, opt_out } = req.body || {}
+    if (
+      return res.status (400).json ({ error: "Missing user_id or opt_out" })) {
+  $2
+}
+    const updated = await store.setPrivacySettings (user_id, opt_out);
+    return res.status (200).json (updated);
+  }
+  res.status (405).json ({ error: "Method not allowed" });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getFraudStore } from "../../../../utils/fraud/store";
+export default async function handler(
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -29,6 +108,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 export default async function handler(req, res) {
   try {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const store = getFraudStore();
   if (req.method === 'GET') {
     const userId = (req.query.userId as string) || '';
@@ -60,6 +145,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 res.status(405).json({ error: "Method not allowed" });
 }
@@ -85,3 +171,8 @@ res.status(405).json({ error: "Method not allowed" });
   }
 }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

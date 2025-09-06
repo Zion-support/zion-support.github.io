@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 class ErrorBoundary extends React.Component {
@@ -25,6 +28,10 @@ class ErrorBoundary extends React.Component {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
+=======
+"use client";
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -90,7 +97,15 @@ origin/automation-improvements-final
   GraduationCap,
   Factory,
   Truck,
+<<<<<<< HEAD
   CreditCard,
+=======
+
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Menu
   X
   ChevronDown
@@ -107,6 +122,11 @@ origin/automation-improvements-final
   Factory
   Truck
   CreditCard
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {;
   Menu,;
   X,;
@@ -124,10 +144,14 @@ import {;
   Factory,;
   Truck,;
   CreditCard,;
+<<<<<<< HEAD
 } from "lucide-react";
 
   CreditCard,;
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "lucide-react";
 
 export default function Header() {;
@@ -180,15 +204,24 @@ origin/automation-improvements-final
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
+<<<<<<< HEAD
             <Link href="/" className="text-2xl font-bold text-blue-600">
               Zion Tech Group
             </Link>
+=======
+
+
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <Link href="/" className="flex items-center">
               <div className="w-8 h-8 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center mr-2">
                 <Brain className="h-5 w-5 text-white" />
               </div>
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </Link>
+<<<<<<< HEAD
             <Link href="/" className="text-2xl font-bold text-blue-600">
               Zion Tech Group
             </Link>
@@ -305,6 +338,12 @@ const Header = () => {
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50">
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Top Bar */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
@@ -445,6 +484,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             </Link>;
           </div>;
           {/* Desktop Navigation */}
+<<<<<<< HEAD
 origin/automation-improvements-final
           </div>
           {/* Desktop Navigation */}
@@ -455,6 +495,13 @@ ursor/integrate-build-improve-and-re-verify-8f7d
           <nav className="hidden lg:flex space-x-8">
 origin/main
             {navigation.map((item) => (
+=======
+          <nav className="hidden lg:flex space-x-8">;
+            {navigation && navigation.map((item) => (;
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Link
                 key={item && item.name}
                 href={item && item.href}
@@ -462,6 +509,7 @@ origin/main
                 {item && item.name}
               </Link>;
             ))}
+<<<<<<< HEAD
           </nav>
           <div className="hidden lg:flex items-center space-x-8">
             {/* Services Dropdown */}
@@ -509,6 +557,8 @@ origin/main
                     />
                   )}
                 </button>
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 {/* Dropdown Menu */}
                 {item.dropdown && (
@@ -538,6 +588,7 @@ origin/main
             ))}
           </div>
 
+<<<<<<< HEAD
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
@@ -662,6 +713,13 @@ origin/automation-improvements-final
           </div>
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+          </nav>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
 
@@ -964,6 +1022,12 @@ className="lg:hidden bg-white shadow-lg">;
                   href="/contact"
                   className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center px-6 py-3 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
                   onClick={() => setIsMenuOpen(false)}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   Get Started
                 </Link>
@@ -981,3 +1045,9 @@ className="lg:hidden bg-white shadow-lg">;
 };
 
 export default Header;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

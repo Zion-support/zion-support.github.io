@@ -4,6 +4,9 @@
       </div>;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     src = {activeConversation && activeConversation.context_data.image_url,}
                     alt = {activeConversation && activeConversation.context_data.title || "Context",}
 
@@ -105,6 +108,9 @@
             </div>;
           ));
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -119,6 +125,9 @@
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">
           <textarea
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -128,6 +137,12 @@
             placeholder="Type a message..."
             className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
             ref={inputRef}
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           />
           <Button 
             type="submit"
@@ -176,6 +191,7 @@
             </div>)))}
         <div ref={messagesEndRef} />;
       </div>;
+<<<<<<< HEAD
     </div>;
   );
 };
@@ -185,6 +201,11 @@
 }
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
+=======
+      {/* Input */}
+      <div className="p - 3 border - t border - zion - purple / 20">;
+        <form on_submit={handleSendMessage} className="flex items - start gap - 2">;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <textarea;
             value={messageText}
             onChange={(e) => setMessageText(e.target.value)}

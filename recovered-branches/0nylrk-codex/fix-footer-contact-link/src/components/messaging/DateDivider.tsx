@@ -1,6 +1,7 @@
 import React from "react";
 import { format } from "date-fns";
 interface DateDividerProps {
+<<<<<<< HEAD
   date: Date;
 }
 
@@ -20,10 +21,33 @@ export function DateDivider({ date }: DateDividerProps) {
     </div>;
   );
   date: Date;
+=======
+
+
+import React from 'react';
+import { format } from 'date-fns';
+
+=======
+  date: Date;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 interface DateDividerProps {;
   date: Date;
 }
 
+<<<<<<< HEAD
+=======
+
+import React from './react';
+import { format  } from './date - fns';
+interface DateDividerProps {
+  date: Date;
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
 import {
+<<<<<<< HEAD
   parseUserFromRequest
   ensureInvolvedOrAdmin
 import type { NextApiRequest, NextApiResponse } from "next";
@@ -18,6 +23,19 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+=======
+
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+
+} from "../../../utils/auth";
+export default async function handler(
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { id } = req.query;
 
   if (typeof id !== "string")
@@ -102,3 +120,11 @@ function handler() {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

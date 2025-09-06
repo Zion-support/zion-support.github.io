@@ -19,6 +19,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+<<<<<<< HEAD
 import {
   Star
   Quote
@@ -26,6 +27,13 @@ import {
   Award
   TrendingUp
   CheckCircle;
+=======
+
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Star,
   Quote,
   Users,
@@ -33,6 +41,11 @@ import {
 
   TrendingUp,;
   CheckCircle,;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 interface Testimonial {;
   id: string;
@@ -310,6 +323,7 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {testimonials.map(testimonial => (
 
+<<<<<<< HEAD
           ))}
         </div>
 
@@ -317,6 +331,10 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
           {testimonials.map(testimonial => (
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div
               key={testimonial.id}
               className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-blue-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
@@ -357,6 +375,11 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
                 {/* Testimonial Text */}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   "{testimonial.content}"
                 </p>
                 {/* Author Info */}
@@ -390,6 +413,12 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
 
                     {testimonial.category}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </span>
                 </div>
               </div>
@@ -458,11 +487,22 @@ const EnhancedTestimonialsSection: React.FC = () => {_const testimonials: Testim
           ))}
         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* CTA Section */}
         <div className='text-center mt-16'>
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Ready to Join Our Success Stories?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -637,6 +677,11 @@ className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full f
 };
 export default EnhancedTestimonialsSection;  );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default EnhancedTestimonialsSection;
 
 
@@ -659,5 +704,10 @@ export default EnhancedTestimonialsSection;  )
 }
 export default EnhancedTestimonialsSection;
 
+<<<<<<< HEAD
 export default EnhancedTestimonialsSection;
 export default EnhancedTestimonialsSection;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

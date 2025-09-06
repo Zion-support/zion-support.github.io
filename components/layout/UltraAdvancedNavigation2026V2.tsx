@@ -265,6 +265,7 @@ icon: <Zap className="w-4 h-4" />
   Palette,
   Cloud,
   Server,
+<<<<<<< HEAD
   Network,;
   Cpu,;
 } from 'lucide-react';
@@ -280,6 +281,22 @@ export default function UltraAdvancedNavigation2026V2() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+=======
+  Network,
+  Cpu,
+} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+export default /**
+ * UltraAdvancedNavigation2026V2 - Function description
+ */
+function UltraAdvancedNavigation2026V2() {
+  const [is_open, setIsOpen] = useState (false);
+  const [is_scrolled, setIsScrolled] = useState (false);
+  const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
+;
+  useEffect (() => {
+    const handle_scroll = () =>: any {
+      setIsScrolled (window.scroll_y > 20);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 <<<<<<< HEAD
     window.addEventListener ('scroll', handle_scroll);
@@ -437,6 +454,7 @@ export default function UltraAdvancedNavigation2026V2() {
                 <Phone className='w-4 h-4 text-purple-400' />
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -444,6 +462,8 @@ export default function UltraAdvancedNavigation2026V2() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <span>{contactInfo.mobile}</span>
               </div>
               <div className='flex items-center space-x-2'>
@@ -557,6 +577,7 @@ export default function UltraAdvancedNavigation2026V2() {
                     <button
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
+<<<<<<< HEAD
                       className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2'
                     >
                       {item.icon}
@@ -577,6 +598,10 @@ export default function UltraAdvancedNavigation2026V2() {
                     >
                       {item.icon}
                       <span>{item.name}</span>
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -588,6 +613,7 @@ export default function UltraAdvancedNavigation2026V2() {
                       onMouseLeave={() => setActiveDropdown(null)}
                       className='absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl p-4'
 
+<<<<<<< HEAD
                     >
                       <div className='grid grid-cols-1 gap-2'>
                         {item.dropdown.map(dropdownItem => (
@@ -616,6 +642,10 @@ export default function UltraAdvancedNavigation2026V2() {
 
                               {dropdownItem.name}
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             </span>
                           </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -637,12 +667,19 @@ export default function UltraAdvancedNavigation2026V2() {
 
             {/* CTA Button */}
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   Get Started
                 </button>
               </Link>
             </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             </div>;
             {/* CTA Button */}
@@ -775,6 +812,7 @@ export default function UltraAdvancedNavigation2026V2() {
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -782,6 +820,8 @@ export default function UltraAdvancedNavigation2026V2() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -799,6 +839,22 @@ export default function UltraAdvancedNavigation2026V2() {
         </div>
       </nav>
 
+<<<<<<< HEAD
+=======
+
+            </button>;
+          </div>;
+        </div>;
+      </nav>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -809,10 +865,14 @@ export default function UltraAdvancedNavigation2026V2() {
             transition={{ duration: 0.3 }}
             className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden'
 
+<<<<<<< HEAD
           >
             <div className='p-6'>
               <div className='flex items-center justify-between mb-8'>
                 <div className='text-xl font-bold text-white'>Menu</div>
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <button
                   onClick={() => setIsOpen(false)}
 
@@ -1011,6 +1071,13 @@ href={item && item.href}
                         onClick={() => setIsOpen(false)}
                         className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'                        className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       >
                         {item.icon}
                         <span>{item.name}</span>
@@ -1188,10 +1255,14 @@ href={item && item.href}
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1199,6 +1270,8 @@ href={item && item.href}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Overlay */}
       {isOpen && (;
         <motion&& motion.div
@@ -1213,7 +1286,11 @@ href={item && item.href}
           transition={{ duration: 0.3 }}
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={() => setIsOpen(false)}
+<<<<<<< HEAD
         />
+=======
+        />;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
       {/* Spacer for fixed navigation */}
 
@@ -1228,16 +1305,41 @@ href={item && item.href}
   );
 
 }
+<<<<<<< HEAD
+=======
+
+=======
+          className='fixed inset - 0 bg - black / 50 z - 40 lg:hidden'          on_click={() => setIsOpen (false)}          className="fixed inset - 0 bg - black / 50 z - 40 lg:hidden";
+          on_click={() => setIsOpen (false)}
+        />)}
+      {/* Spacer for fixed navigation */}
+      <div className='h - 32'></div>;
+    </>);      <div className="h - 32"></div>;
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}
 
           onClick={() => setIsOpen(false)}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />
       )}
 
       {/* Spacer for fixed navigation */}
       <div className='h-32'></div>
     </>
+<<<<<<< HEAD
   );
 );      <div className="h-32"></div>
     </>
@@ -1246,3 +1348,8 @@ href={item && item.href}
 
 }
   );
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

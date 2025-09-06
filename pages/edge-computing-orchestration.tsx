@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -16,6 +17,42 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function EdgeComputingPage() {
 
   const features = [
@@ -557,6 +594,12 @@ export default function EdgeComputingPage(req, res) {
   }
 }
             className="text-center"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Edge Computing
@@ -1270,6 +1313,7 @@ function EdgeComputingPage() {
                     </li>
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
+<<<<<<< HEAD
       {/* Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1710,6 +1754,8 @@ function EdgeComputingPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </ul>
 
                 <a
@@ -1738,6 +1784,7 @@ function EdgeComputingPage() {
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
       {/* CTA */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1761,6 +1808,34 @@ function EdgeComputingPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+      {/* CTA */}
+      <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>;
+        <div className='max-w-4xl mx-auto px-6 text-center'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}>;
+            <h2 className='text-4xl font-bold text-white mb-6'>;
+              Ready to Deploy Edge Computing?;
+            </h2>;
+            <p className='text-xl text-blue-100 mb-8'>;
+              Join the edge computing revolution and transform your business;
+              with real-time processing capabilities.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <a
+                href='/contact'
+                className='bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'>;
+                Start Free Trial;
+              </a>;
+              <a
+                href='/contact'
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -1786,9 +1861,93 @@ function EdgeComputingPage() {
       </section>
       <EnhancedFooter />
     </>
+<<<<<<< HEAD
 );
 
 
 }
   )
 }
+=======
+
+                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'>;
+                Schedule Demo;
+              </a>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+      <EnhancedFooter />;
+    </>;
+  );
+
+=======
+
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+  )
+}
+
+                    </span>;
+                  </div>;
+                  <p className='text - slate - 600'>{plan.description}</p>;
+                </div>;
+                <ul className='space - y-4 mb - 8'>;
+                  {plan.features.map (feature => (
+                    <li key={feature} className='flex items - center space - x-3'>;
+                      <CheckCircle className='w - 5 h - 5 text - green - 500 flex - shrink - 0' />;
+                      <span className='text - slate - 700'>{feature}</span>                    </li>))}
+                </ul>;
+                <a;
+                  href='/contact';
+                  className='block w - full bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 text - white text - center py - 3 rounded - xl font - medium transition - all duration - 200 transform hover:scale - 105'                >;
+                  Get Started;
+                </a>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* CTA */}
+      <section className='py - 20 bg - gradient - to - r from - blue - 600 to - cyan - 600'>;
+        <div className='max - w-4xl mx - auto px - 6 text - center'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.6 }}
+          >;
+            <h2 className='text - 4xl font - bold text - white mb - 6'>;
+              Ready to Deploy Edge Computing?;
+            </h2>;
+            <p className='text - xl text - blue - 100 mb - 8'>;
+              Join the edge computing revolution and transform your business;
+              with real - time processing capabilities.;
+            </p>;
+            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
+              <a;
+                href='/contact';
+                className='bg - white text - blue - 600 hover:bg - blue - 50 px - 8 py - 4 rounded - xl font - semibold text - lg transition - all duration - 200 transform hover:scale - 105'              >;
+                Start Free Trial;
+              </a>;
+              <a;
+                href='/contact';
+                className='border border - white / 20 text - white hover:bg - white / 10 px - 8 py - 4 rounded - xl font - semibold text - lg transition - all duration - 200'              >;
+                Schedule Demo;
+              </a>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <EnhancedFooter />;
+    </>);
+;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

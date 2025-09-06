@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion } from '@/types/search';
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion } from "@/types/search";
@@ -191,6 +195,7 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
+<<<<<<< HEAD
     'AI models'
     'GPT integration'
     'Machine learning'
@@ -208,6 +213,13 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
   }));};  ];
 import { ProductListing } from "@/types/listings",
 import { SearchSuggestion } from "@/types/search",
+=======
+
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Shared data source for marketplace listings
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -516,6 +528,7 @@ export const generateFilterOptions = () => {
       label: item,
       value: item,
     })),
+<<<<<<< HEAD
     ratingOptions: [1, 2, 3, 4, 5],
   };
 };
@@ -527,6 +540,17 @@ export const MIN_PRICE = Math.min(
   ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0);
 );
 reviewCount: 58;
+=======
+    rating_options: [1, 2, 3, 4, 5],
+  }
+}
+;
+export const MAX_PRICE = Math.max (
+  ...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
+export const MIN_PRICE = Math.min (
+  ...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
+review_count: 58;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 featured: true;
 location: "Global";
 availability: "Immediate";
@@ -580,6 +604,7 @@ rating_options: [1, 2, 3, 4, 5];
 export const MIN_PRICE = Math.min (...MARKETPLACE_LISTINGS.map (listing => listing.price || 0));
 ;
 
+<<<<<<< HEAD
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
     ratingOptions: [1, 2, 3, 4, 5]
 import { ProductListing } from "@/types/listings",;
@@ -750,4 +775,9 @@ export const generateFilterOptions = () => {;
   }
 },;
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));

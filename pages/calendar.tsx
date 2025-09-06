@@ -1,5 +1,6 @@
 
 import {
+<<<<<<< HEAD
   Calendar
   Clock
   Users
@@ -11,6 +12,9 @@ import {
   Video
   MessageSquare
   Building
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Calendar,
   Clock,
   Users,
@@ -22,6 +26,11 @@ import {
   Video,
   MessageSquare,
   Building,;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "lucide-react";
 const timeSlots = [
   { time: "9:00 AM", available: true, type: "Video Call" }

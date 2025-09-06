@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {Config} from "tailwindcss";
 import {fontFamily} from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
@@ -9,6 +10,13 @@ import animatePlugin from "tailwindcss-animate";
 
 import plugin from "tailwindcss/plugin",
 import animatePlugin from "tailwindcss-animate",
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const config: Config = {
   darkMode: ["class"]
   content: [
@@ -178,6 +186,7 @@ export default config;
       addUtilities(newUtilities)
     })]},
 
+<<<<<<< HEAD
 export default config,
 import { Config } from "tailwindcss",;
 import { fontFamily } from "tailwindcss/defaultTheme",;
@@ -270,4 +279,8 @@ const config: Config = {;
           textAlign: 'left'}},;
       addUtilities(newUtilities);
     })]},;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default config;

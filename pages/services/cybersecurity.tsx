@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -21,6 +22,37 @@ import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function CybersecurityServicesPage() {
   const services = [
+=======
+
+import React from 'react';
+import Head from 'next / head';
+
+import { motion } from 'framer-motion';
+
+import {
+
+  Shield,
+  Lock,
+  Eye,
+  Zap,
+  Cpu,
+  Database,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
+  TrendingUp,
+
+} from 'lucide-react';
+import EnhancedNavigation from '../../components / EnhancedNavigation';
+import EnhancedFooter from '../../components / EnhancedFooter';
+export default /**
+ * CybersecurityServicesPage - Function description
+ */
+function CybersecurityServicesPage() {
+  const services = [;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       title: 'Advanced Threat Detection'
       description: 'AI-powered threat detection and response systems'
@@ -82,6 +114,7 @@ export default function CybersecurityServicesPage() {
     { number: '500+', label: 'Protected Systems', icon: CheckCircle }
   ];
 
+<<<<<<< HEAD
   Shield,
   Lock,
   Eye,
@@ -114,6 +147,18 @@ export default function CybersecurityServicesPage() {
       description: "AI-powered threat detection and response systems",
       features: ["Real-time Monitoring", "Behavioral Analysis", "Automated Response", "24/7 Protection"],
       price: "From $8,000",
+=======
+=======
+      title: 'Advanced Threat Detection',
+      description: 'AI - powered threat detection and response systems',
+      features: [;
+        'Real - time Monitoring',
+        'Behavioral Analysis',
+        'Automated Response',
+        '24 / 7 Protection',
+      ],
+      price: 'From $8, 000',
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       icon: Eye,
       color: "from-red-500 to-orange-500"
     },
@@ -186,6 +231,7 @@ export default function CybersecurityServicesPage() {
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.8 }}
             className='mb-8'
         <meta name="description" content="Advanced cybersecurity solutions from Zion Tech Group. AI-powered threat detection, quantum-resistant encryption, and comprehensive security services." />
@@ -218,10 +264,15 @@ export default function CybersecurityServicesPage() {
   }
 }
             className="mb-8"
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-red-400 via-orange-400 to-red-400 bg-clip-text text-transparent mb-6">
               Cybersecurity
             </h1>
+<<<<<<< HEAD
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Advanced security solutions that protect your digital assets and
               ensure business continuity            </p>
@@ -235,10 +286,23 @@ export default function CybersecurityServicesPage() {
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
               From AI-powered threat detection to quantum-resistant encryption
               From AI-powered threat detection to quantum-resistant encryption,
+=======
+
+
+              From AI-powered threat detection to quantum-resistant encryption,
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               we provide comprehensive cybersecurity solutions that keep your
               business secure and compliant.
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Advanced security solutions that protect your digital assets and ensure business continuity
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 hover:from-red-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Secure Your Business
@@ -297,6 +361,7 @@ export default function CybersecurityServicesPage() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -484,6 +549,10 @@ export default function CybersecurityServicesPage(req, res) {
   }
 }
                 className="text-center"
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-orange-400" />
@@ -526,6 +595,7 @@ export default function CybersecurityServicesPage(req, res) {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -547,6 +617,15 @@ export default function CybersecurityServicesPage(req, res) {
   }
 }
             className="text-center mb-16"
+=======
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className="text-4xl font-bold text-white mb-6">Cybersecurity Services</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -565,6 +644,7 @@ export default function CybersecurityServicesPage(req, res) {
             {services.map((service, index) => (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
+<<<<<<< HEAD
                 key={service.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -591,6 +671,32 @@ export default function CybersecurityServicesPage(req, res) {
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-red-500/30 transition-all duration-300"
+=======
+
+
+            className='text-center mb-16'>;
+            <h2 className='text-4xl font-bold text-white mb-6'>;
+              Cybersecurity Services;
+            </h2>;
+            <p className='text-xl text-white/70 max-w-3xl mx-auto'>;
+              Comprehensive security solutions designed to protect your business;
+              from evolving threats;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services && services.map((service, index) => (;
+              <motion&& motion.div
+                key={service && service.title}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
@@ -626,6 +732,12 @@ export default function CybersecurityServicesPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </ul>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-orange-400">{service.price}</span>
@@ -686,6 +798,12 @@ export default function CybersecurityServicesPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -708,11 +826,21 @@ export default function CybersecurityServicesPage(req, res) {
       </section>
       <EnhancedFooter />
     </div>
+<<<<<<< HEAD
 )
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion.div> Get Started </button> </div> </motion.div>) )
 ),
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
+=======
+
+
+),
+
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cybersecurity Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive security solutions designed to protect your business from evolving threats </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> </div> </section> <motion.div initial= {
 =======
             transition={{ duration: 0 && 0.8 }}
@@ -754,12 +882,20 @@ export default function CybersecurityServicesPage(req, res) {
 
 }viewport= {
   {
+<<<<<<< HEAD
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Secure Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity. </p> Security Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 
 }
 }
 }
+=======
+  once: true 
+
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Secure Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our cybersecurity solutions can protect your digital assets and ensure business continuity. </p> Security Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Learn More </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -927,3 +1063,10 @@ export default function CybersecurityServicesPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

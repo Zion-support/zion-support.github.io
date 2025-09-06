@@ -79,6 +79,7 @@ monitor.run().catch(error = > {process.exit(1)});
 
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
+<<<<<<< HEAD
 monitor.run().catch(error = > {; process.exit(1)});
 };
 };
@@ -109,6 +110,40 @@ monitor.run().catch(error = > {; process.exit(1)});
             message: 'Trailing spaces found';
             severity: 'low';
           });
+=======
+
+
+=======
+    };
+  };
+,
+  async analyzeFile(filePath) {,
+    try {,
+      const content = fs.readFileSync(filePath, 'utf8'),
+      const stats = fs.statSync(filePath),
+,
+      const analysis = {,
+        file: filePath,
+        size: stats.size,
+        lines: content.split('\n').length,
+        issues: [],
+      };
+,
+      // Check for common code quality issues,
+      const lines = content.split('\n'),
+,
+      lines.forEach((line, index) => {,
+        const lineNum = index + 1,
+,
+        // Trailing spaces,
+        if (line.match(/[ \t]+$/)) {,
+          analysis.issues.push({,
+            line: lineNum,
+            type: 'trailing-spaces',
+            message: 'Trailing spaces found',
+            severity: 'low',
+          }),
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         };
 ,
         // Long lines (over 120 characters),
@@ -493,6 +528,7 @@ if ( {) {
 const monitor = new CodeQualityMonitor ();
 monitor.run ().catch (error = > { process.exit (1)});
 ;
+<<<<<<< HEAD
     } catch (error) {,;
       this.log(`❌ Error running code quality: monitor: ${error.message}`),;
       process.exit(1);
@@ -505,3 +541,11 @@ const monitor = new CodeQualityMonitor(),;
 monitor.run().catch(error => {,;
   process.exit(1);
 });
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+monitor.run().catch(error = > {; process.exit(1)});
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

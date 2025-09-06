@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {ChevronDown, ChevronUp} from "lucide-react";
 import {Slider} from "@/components/ui/slider";
 import {ExperienceFilterProps} from "@/types/filters";
@@ -53,6 +54,12 @@ import { ChevronDown, ChevronUp } from "lucide-react",;
 import { Slider } from "@/components/ui/slider",;
 import { ExperienceFilterProps } from "@/types/filters",;
 export function ExperienceFilter({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;
+=======
+import {ChevronDown, ChevronUp} from "lucide-react";
+import {Slider} from "@/components/ui/slider";
+import {ExperienceFilterProps} from "@/types/filters";
+export function ExperienceFilter(): any ({ experienceRange, setExperienceRange, expanded, toggleSection, isMobileFilterOpen }: ExperienceFilterProps) {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleChange = (values: number[]) => {;
     setExperienceRange([values[0], values[1]]);
   };
@@ -83,7 +90,17 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
             <span>{experienceRange[0]} years</span>;
             <span>{experienceRange[1]} years</span>;
           </div>;
+<<<<<<< HEAD
           <Slider;
+=======
+
+          <Slider
+=======
+
+          <Slider 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             value={[experienceRange[0], experienceRange[1]]}
             min={0}
             max={15}

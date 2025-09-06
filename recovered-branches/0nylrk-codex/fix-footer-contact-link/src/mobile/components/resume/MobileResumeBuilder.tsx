@@ -1,7 +1,14 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
@@ -10,9 +17,16 @@ import {Textarea} from "@/components/ui/textarea";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Label} from "@/components/ui/label";
 import {ChevronRight, Plus, Zap, Trash2} from "lucide-react";
+<<<<<<< HEAD
 type ResumeStep = "basics" | "experience" | "education" | "skills";
 export function MobileResumeBuilder() {
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -27,6 +41,12 @@ import {
 import { Label } from "@/components/ui/label",
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 type ResumeStep = "basics" | "experience" | "education" | "skills",
 
@@ -37,6 +57,7 @@ export function MobileResumeBuilder() {
   
   const renderStepContent = () => {
     switch (currentStep) {
+<<<<<<< HEAD
       case "basics": return <BasicsStep />,
       case "experience":
         return <ExperienceStep />,
@@ -148,6 +169,10 @@ import {;
 import { Label } from "@/components/ui/label",;
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",;
 type ResumeStep = "basics" | "experience" | "education" | "skills",;
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function MobileResumeBuilder() {;
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
 
@@ -280,12 +305,15 @@ function BasicsStep() {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }])
@@ -750,6 +778,7 @@ function SkillsStep() {;
                 />;
                 <Select;
                   value={skill.proficiency}
+<<<<<<< HEAD
                   onValueChange={(value) => updateSkill(skill.id, "proficiency", value)}
                 >
                   <SelectTrigger className="w-[130px]">
@@ -770,6 +799,25 @@ function SkillsStep() {;
                   >;
                     <Trash2 className="h-4 w-4 text-destructive" />;
                   </Button>;
+=======
+                  onValueChange={(value) => update_skill (skill.id, "proficiency", value)}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                >;
+                  <SelectTrigger className="w-[130px]">;
+                    <SelectValue placeholder="Level" />;
+                  </SelectTrigger>;
+                  <SelectContent>;
+                    <SelectItem value="beginner">Beginner</SelectItem>;
+                    <SelectItem value="intermediate">Intermediate</SelectItem>;
+                    <SelectItem value="advanced">Advanced</SelectItem>;
+                    <SelectItem value="expert">Expert</SelectItem>;
+                  </SelectContent>;
+                </Select>;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 )}
               </div>;
             ))}
@@ -805,6 +853,15 @@ function SkillsStep() {;
     </div>
   )
 }
+<<<<<<< HEAD
 }
 ;
 ;
+=======
+
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

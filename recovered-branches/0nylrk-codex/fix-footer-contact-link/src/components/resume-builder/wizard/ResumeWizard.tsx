@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useResume  } from '@/hooks/useResume';
@@ -18,6 +19,14 @@ import { useResumeProgress  } from './useResumeProgress';
 import { ResumeVersionSelector  } from './ResumeVersionSelector';
 import { RESUME_STEPS } from './constants';
 export function ResumeWizard() {
+=======
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {use_resume} from '@/hooks / use_resume';
@@ -38,7 +47,13 @@ import {ResumeStepContent} from './ResumeStepContent';
 import {useResumeProgress} from './useResumeProgress';
 import {ResumeVersionSelector} from './ResumeVersionSelector';
 import {RESUME_STEPS} from './constants';
+<<<<<<< HEAD
 export function ResumeWizard() {;
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const { ;
     isLoading;
@@ -54,6 +69,7 @@ export function ResumeWizard() {;
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
   // Use the extracted hook for progress calculation
 
+<<<<<<< HEAD
   const progress = useResumeProgress(resume);
   useEffect(() => {
     if (user) {
@@ -84,6 +100,13 @@ export function ResumeWizard() {;
   }
 
   };
+=======
+=======
+
+  };
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useResume } from '@/hooks/useResume',;
@@ -143,6 +166,10 @@ export function ResumeWizard() {;
     if (currentIndex > 0) {;
       setActiveTab(RESUME_STEPS[currentIndex - 1].id);
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },
 
   },
@@ -175,9 +202,16 @@ export function ResumeWizard() {;
         <AlertDescription>{error}</AlertDescription>
       </Alert>
     )
+<<<<<<< HEAD
   }
   if (!resume && !showNewResumeForm) {
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   if (showNewResumeForm) {
 =======

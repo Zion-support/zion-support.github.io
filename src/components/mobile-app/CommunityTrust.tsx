@@ -7,6 +7,9 @@ export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { Star } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -45,6 +48,9 @@ export const CommunityTrust: React.FC = () => {
     { value: '96%', label: 'User Satisfaction' },
     { value: '12M+', label: 'Matches Made' },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         </div>;
 
@@ -78,9 +84,12 @@ export const CommunityTrust: React.FC = () => {
 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ]
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
@@ -89,6 +98,9 @@ export const CommunityTrust: React.FC = () => {
   ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -161,11 +173,21 @@ export const CommunityTrust: React.FC = () => {;
           ))}
         </div>;
         {/* Rating display */}
+<<<<<<< HEAD
         <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">
           <div className="flex justify-center mb-4">
             {[1, 2, 3, 4, 5].map((star) => (
               <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />
             ))}
+=======
+        <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">;
+          <div className="flex justify-center mb-4">;
+            {[1, 2, 3, 4, 5].map((star) => (;
+              <Star key={star} className="w-6 h-6 text-zion-cyan" fill="currentColor" />;
+            ))}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
           <blockquote className="text-center text-lg text-white italic mb-4">
             "The Zion app has completely changed how I find tech talent. The AI matching is spot on and I can manage everything from anywhere."
@@ -178,6 +200,9 @@ export const CommunityTrust: React.FC = () => {;
       </div>
     </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           </div>;

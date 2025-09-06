@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import React, { forwardRef } from 'react';
 export type ResumeData = {;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export type ResumeData = {
   name: string;
@@ -41,6 +44,7 @@ export type ResumeData = {
     start?: string;
     end?: string;
     location?: string;
+<<<<<<< HEAD
     bullets?: string[];
   }>;
   education?: Array<{
@@ -58,11 +62,20 @@ export type ResumeData = {
   }>;
 }
 export type ResumePreviewProps = {
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 
     {children}
 
 export type ResumePreviewProps = {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   data: ResumeData;
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number;
@@ -133,12 +146,20 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
     title: string,
     description?: string;
     link?: string;
+<<<<<<< HEAD
     technologies?: string[]
   }>
 }
 export type ResumePreviewProps = {
   data: ResumeData
   data: ResumeData,;
+=======
+
+
+  data: ResumeData,;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   theme?: 'light' | 'dark';
   maxPortfolioItems?: number
 }
@@ -176,6 +197,7 @@ export type ResumePreviewProps = {
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 
 
+<<<<<<< HEAD
   </h2>
 );
 export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
@@ -186,6 +208,12 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
     const portfolioItems = (data.portfolio || []).slice(
       0,
       Math.max(0, maxPortfolioItems);
+=======
+    const portfolioItems = (data.portfolio || []).slice(
+      0,
+      Math.max(0, maxPortfolioItems);
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     );
 
       >
@@ -255,6 +283,11 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
               )}
               {data.contact?.linkedin && (                <a className="underline" href={data.contact.website} target="_blank" rel="noreferrer">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {data.contact.website}
                 </a>)}
               {data.contact?.linkedin && (
@@ -283,6 +316,19 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
             </div>
           </header>
 
+<<<<<<< HEAD
+=======
+            </div>;
+          </header>;
+=======
+
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Summary */}
 
           {data.summary && (
@@ -290,18 +336,42 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
               <SectionTitle>Professional Summary</SectionTitle>
               <p className="mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{data.summary}</p>
             </section>
+<<<<<<< HEAD
           )}
           {/* Skills & Technologies */}
           {(data.skills?.length |data.technologies?.length) && (
+=======
+
+          {/* Summary */}
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+          {data && data.summary && (;
+            <section className='mb-5'>;
+              <SectionTitle>Professional Summary</SectionTitle>;
+              <p className='mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200'>;
+                {data && data.summary}
+              </p>            </section>            <section className="mb-5">;
+              <SectionTitle>Professional Summary</SectionTitle>;
+              <p className="mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{data && data.summary}</p>;
+            </section>;
+          )}
+          {/* Skills & Technologies */}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 =======
 =======
+<<<<<<< HEAD
 =======
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           )}
 
           {/* Skills & Technologies */}
@@ -366,9 +436,23 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
+<<<<<<< HEAD
               </div>
             </section>
           )}
+=======
+                {data && data.technologies?.map((t, idx) => (;
+                  <span
+                    key={`tech-${idx}`}
+                    className='px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700'>                  <span key={`tech-${idx}`} className="px-2 py-0 && 0.5 rounded border border-gray-200 dark:border-gray-700">;
+                    {t}
+                  </span>;
+                ))}
+              </div>;
+            </section>;
+          )}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <a;
                   className='underline';
                   href={data.contact.linkedin}
@@ -423,6 +507,7 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                     className='px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700'
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
               </div>
@@ -431,6 +516,8 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
                   >                    {t}
 
@@ -444,11 +531,14 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                   >                  <span key={`tech-${idx}`} className="px - 2 py - 0.5 rounded border border - gray - 200 dark:border - gray - 700">;
                     {t}
 
+<<<<<<< HEAD
                   </span>
                 ))}
               </div>
             </section>
           )}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           {/* Experience */}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -462,9 +552,22 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                       <h3 className='font - medium text - gray - 900 dark:text - white'>;
                         {role.title}
                         {role.company ? ` • ${role.company}` : ''}
+<<<<<<< HEAD
                       </h3>
                       <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start |role.end) && (              <SectionTitle>Work Experience</SectionTitle>
                       <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (              <SectionTitle>Work Experience</SectionTitle>
+=======
+
+          {data.experience?.length ? (
+            <section className="mb-5">
+              <SectionTitle>Work Experience</SectionTitle>
+
+=======
+
+                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (              <SectionTitle>Work Experience</SectionTitle>
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <div className="mt-2 space-y-3">
                 {data.experience.map((role, idx) => (
                   <div key={`exp-${idx}`}>
@@ -474,7 +577,13 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                         {role.company ? ` • ${role.company}` : ''}
                       </h3>
                       <div className="text-xs text-gray-600 dark:text-gray-300">
+<<<<<<< HEAD
                         {(role.start |role.end) && (
+=======
+
+                        {(role.start || role.end) && (
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           <span>
                             {role.start |''}
                             {role.end ? ` – ${role.end}` : ''}
@@ -530,10 +639,42 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                       </h3>;
                       <div className="text - xs text - gray - 600 dark:text - gray - 300">;
                         {(role.start || role.end) && (
+<<<<<<< HEAD
+=======
+                          <span>;
+                            {role.start || ''}
+                            {role.end ? ` – ${role.end}` : ''}
+                          </span>)}
+
+                        {role.location ? ` • ${role.location}` : ''}
+                      </div>;
+                    </div>;
+                    {role.bullets?.length ? (
+
+                      <ul className='mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1'>                        {role.bullets.map ((b, b_idx) => (                      <ul className="mt - 1 list - disc list - inside text - sm text - gray - 800 dark:text - gray - 200 space - y-1">;
+                        {role.bullets.map ((b, b_idx) => (
+                          <li key={`exp-${idx}-b-${b_idx}`}>{b}</li>))}
+                      </ul>) : null}
+                  </div>))}
+              </div>;
+            </section>) : null}
+
+=======
+
+                        {(role.start || role.end) && (
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (
 
                         {(role.start || role.end) && (
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           <span>
                             {role.start || ''}
                             {role.end ? ` – ${role.end}` : ''}
@@ -576,12 +717,17 @@ export const ResumePreview = forward_ref < HTMLDivElement, ResumePreviewProps>(
                       {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start |ed.end]
                       {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                         .filter(Boolean)
 
 
                         .filter(Boolean)
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         .join(' • ')}
                     </div>
                   </div>
@@ -762,6 +908,7 @@ export default ResumePreview;
 ResumePreview.display_name = 'ResumePreview';
 ;
 export default ResumePreview;
+<<<<<<< HEAD
 
 export default ResumePreview;
 export default ResumePreview;
@@ -776,3 +923,7 @@ export default ResumePreview;
 }
 }
 export default ResumePreview;
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

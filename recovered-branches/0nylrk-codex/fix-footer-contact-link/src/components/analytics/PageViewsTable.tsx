@@ -1,7 +1,14 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -17,7 +24,16 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useState } from "react",
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const timeRangeToInterval = {
   '1d': { days: 1, interval: 'hour' }
   '7d': { days: 7, interval: 'day' }
@@ -108,6 +124,7 @@ export function PageViewsTable() {
             pageViews.map((page, index) => {
               const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0';
 
+<<<<<<< HEAD
               const percentage = totalViews > 0 ? (page.count / totalViews * 100).toFixed(1) : '0',
               
               return (
@@ -147,6 +164,8 @@ import { Skeleton } from "@/components/ui/skeleton",;
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
 import { useState } from "react",;
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const timeRangeToInterval = {;
   '1d': { days: 1, interval: 'hour' },;
   '7d': { days: 7, interval: 'day' },;
@@ -167,6 +186,14 @@ const timeRangeToInterval = {;
             <div className="text-center py-8 text-zion-slate">;
               No page view data available for this time period;
             </div>;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           )}
 
         </div>;

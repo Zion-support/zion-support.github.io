@@ -4,6 +4,7 @@ job: Job
 
 }
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
+<<<<<<< HEAD
   const { createConversation } = useMessaging(),
   const { applyToJob } = useJobApplications(),
   const { createConversation } = useMessaging()
@@ -36,15 +37,29 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
     setSelectedResumeId(resume.id)
   },
   
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleApply = async () => {
     if (!message.trim()) {
       toast({
         title: "Message required"
         description: "Please enter a message before applying."
         variant: "destructive"
+<<<<<<< HEAD
       })
       return
       return;
+=======
+
+
+      return;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     try {
       setIsSubmitting(true)
@@ -305,6 +320,12 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
         await onApplySuccess(job.id);
       }
       
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       toast({
         title: "Application sent",
         description: `Your application for "${job.title}" has been sent.`}),
@@ -321,6 +342,9 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       setIsSubmitting(false)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       let fullMessage = message;
 
@@ -463,6 +487,10 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
 
 
           <MessageTab 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             message = {message,}
             setMessage = {setMessage,}
             proposalLink = {proposalLink,}
@@ -470,6 +498,9 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
           />
         </TabsContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         
@@ -513,6 +544,9 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
 
       
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <div className="flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4">
@@ -553,6 +587,7 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
           ) : (
             'Submit Application'
           )}
+<<<<<<< HEAD
         </Button>
       </div>
     </>
@@ -563,6 +598,13 @@ export function ApplyForm(): any ({ job, onClose, onApplySuccess }: ApplyFormPro
 }//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id, message, selectedResume && selectedResume.type === 'ai resume'? selectedResumeId |undefined : undefined, selectedResume && selectedResume.type === 'custom upload'? selectedResume.file : undefined)
   return;
 }//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id, message, selectedResume && selectedResume.type === 'ai resume'? selectedResumeId || undefined : undefined, selectedResume && selectedResume.type === 'custom upload'? selectedResume.file : undefined)
+=======
+
+  return;
+}//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id, message, selectedResume && selectedResume.type === 'ai resume'? selectedResumeId || undefined : undefined, selectedResume && selectedResume.type === 'custom upload'? selectedResume.file : undefined)
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 if (!applicationSuccess) {
 }//Format message with proposal link if provided let fullMessage = message
 if (proposalLink) {'

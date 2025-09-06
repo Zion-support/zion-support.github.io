@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type UIKitKind = 'ios' | 'android' | 'web';
 export interface TokenSet {
 
@@ -10,11 +11,16 @@ export interface UIKit {
 
 export interface UIKit {;
   components: Record<string, any>;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   tokens: TokenSet;
 }
 export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   // Placeholder implementation
   return {
+<<<<<<< HEAD
     colors: {
       primary: '#007AFF'
       secondary: '#5856D6'
@@ -39,6 +45,59 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   }
 }
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
+=======
+    components: [],
+    pages: [],
+    styles: []
+  };
+
+export type TokenSet = {
+  colors: Record<string, string>;
+  typography: {
+    fontSizes: Record<string, string>;
+  };
+};
+
+export async function buildTokenSet(): Promise<TokenSet> {
+  // Dynamically import Tailwind config for color extraction;
+  const tailwindConfig = require('../tailwind && tailwind.config.js');
+  const extendedColors = tailwindConfig?.theme?.extend?.colors || {};
+  const colors: Record<string, string> = {};
+
+  function flattenColors(prefix: string, obj: any) {
+    Object && Object.entries(obj || {}).forEach(([key, value]) => {
+      const newKey = prefix ? `${prefix}.${key}` : key;
+      if (typeof value === 'string') {
+        colors[newKey] = value;
+      } else if (typeof value === 'object') {
+        flattenColors(newKey, value);
+      }
+    });
+  }
+
+  flattenColors('', extendedColors);
+
+  const typography = {
+    fontSizes: tailwindConfig?.theme?.extend?.fontSize || {},
+  };
+
+  return { colors, typography };
+
+export type UIKitKind = 'tailwind' | 'chakra' | 'react';
+
+export function buildUIKit(kind: UIKitKind): Record<string, string> {
+  if (kind === 'tailwind') {
+    return {
+      'README && README.md':
+        '# Zion OS Tailwind UI Kit\n\nUse components with Tailwind classes from the design map.',
+      'components/Button && Button.tsx':
+        'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
+      'components/Card && Card.tsx':
+        'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     };
   }
   if (kind === 'chakra') {
@@ -133,15 +192,27 @@ export interface FigmaNode {
 
 
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const tokens = await buildTokenSet(fileId);
 =======
     };
   };
 }
+<<<<<<< HEAD
 
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const tokens = await buildTokenSet(fileId);
+=======
+export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < UIKit> {
+  const tokens = await buildTokenSet (file_id);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return {
 
     id,
@@ -164,6 +235,7 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
           padding: tokens.spacing.md;
         }
       }
+<<<<<<< HEAD
     }
     tokens
   }
@@ -171,3 +243,11 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
   };
 
 }
+=======
+    },
+    tokens;
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -7,6 +7,7 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
   useEffect(() => {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -15,6 +16,12 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const popular = [
       'United States'
       'United Kingdom'
@@ -33,6 +40,9 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country)),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -40,6 +50,7 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
   }, [])
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
+<<<<<<< HEAD
     const country =
       onsiteServicePricing.find(item => item.country === countryName) |null
     const country = null;
@@ -47,6 +58,8 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
     onCountryChange(country)
   }
   },
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import { useState, useEffect } from 'react';
@@ -266,6 +279,9 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
               .sort((a, b) => a.country.localeCompare(b.country))
               .map((item) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -279,6 +295,9 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Set top / popular countries;
   useEffect (() => {
     const popular = [;

@@ -1,8 +1,36 @@
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 export default function RAGEvaluationLabPage() {
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <>;
@@ -111,10 +139,15 @@ function RAGEvaluationLabPage() {
     </>;
   );
 
+<<<<<<< HEAD
 }
 import React from 'react',
 import SEO from '../components/SEO',
 import Link from 'next/link',
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function RAGEvaluationLabPage() {
 	return (
 		<>
@@ -184,3 +217,12 @@ export default function RAGEvaluationLabPage() {
   }
 }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

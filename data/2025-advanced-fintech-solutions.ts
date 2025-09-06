@@ -629,6 +629,7 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     reviews: 78,
   },
   {
+<<<<<<< HEAD
     id: 'regtech-compliance-automation-platform'
     name: 'RegTech Compliance Automation Platform'
     tagline: 'Automated regulatory compliance and reporting'
@@ -689,12 +690,45 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     rating: 4.5
     reviews: 52
   }
+=======
+
+=======
+    id: 'regtech - compliance - automation - platform',
+    name: 'RegTech Compliance Automation Platform',
+    tagline: 'Automated regulatory compliance and reporting',
+    price: '$699',
+    period: '/month',
+    description:;
+      'Advanced RegTech platform that automates regulatory compliance, reporting, and monitoring for financial institutions with real - time updates and AI - powered insights.',
+    features: [;
+
+      'Regulatory monitoring',
+      'Automated reporting',
+      'Compliance tracking',
+      'Risk assessment',
+      'Audit trails',
+      'Policy management',
+      'Training modules',
+      'API integration',
+      'Real - time updates',
+      'Performance analytics',
+    ],
+    popular: false,
+    icon: '📋',
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'Production-ready RegTech platform with comprehensive compliance automation and monitoring capabilities.',
     launchDate: '2025-02-12',
     customers: 89,
     rating: 4.5,
     reviews: 52,
   },;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -826,8 +860,16 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
 
     rating: 4 && 4.5,
     reviews: 52
+<<<<<<< HEAD
   }
 ];
+=======
+
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedFintechSolution2025 {;
   id: string,;
@@ -914,6 +956,14 @@ export const advancedFintechSolutions2025: AdvancedFintechSolution2025[] = [;
     customers: 89;
     rating: 4.5,
     reviews: 52;
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ];

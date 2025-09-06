@@ -126,6 +126,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   const payload = req.body as VotePayload;
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
 =======
 <<<<<<< HEAD
@@ -136,6 +137,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     res.status(400).json({ error: 'Missing fields' });
     return
   }
@@ -149,6 +153,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ record: g })
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -157,6 +162,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     id: uuidv4(),
     voter: payload && payload.voter,
@@ -178,6 +185,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
   // Check condition
@@ -242,6 +252,7 @@ if ( {) {
 =======
 
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+<<<<<<< HEAD
     res.status(400).json({ error: 'Missing fields' });
 
 }
@@ -250,3 +261,8 @@ if ( {) {
 }
 }
     res.status(400).json({ error: 'Missing fields' });
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

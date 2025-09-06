@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 export async function getStaticProps() {
 	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } })
@@ -16,6 +17,18 @@ export async function getStaticProps() {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+
+=======
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+;
+export async /**
+ * getStaticProps - Function description
+ */
+function getStaticProps() {
+return (getSlugStaticProps as any)({ params: { slug: 'ai - autonomous - marketing - platform' } });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export default /**
  * AIAutonomousMarketingPlatform - Function description

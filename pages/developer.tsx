@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -15,6 +16,11 @@ import React from 'react'
 import Head from 'next/head'
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground'
 import Link from 'next/link'
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function DeveloperPage() {
   return (
     <>
@@ -33,6 +39,11 @@ export default function DeveloperPage() {
         <a href="/api-docs" className="text-cyan-400 underline">API Docs</Link>
         <a href="/docs" className="text-cyan-400 underline">Guides</Link>
         <a href="/support" className="text-cyan-400 underline">Support</Link>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>
       </div>
     </>

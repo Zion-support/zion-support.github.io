@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
@@ -7,6 +8,8 @@ export interface MessageTabProps {;
   setMessage: (message: string) => void;
   proposalLink: string;
   setProposalLink: (link: string) => void;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React from 'react',
 import { Textarea } from "@/components/ui/textarea",
@@ -49,6 +52,11 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
         />
       </div>
       
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div>
         <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -108,6 +116,7 @@ function MessageTab() {
         />
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
   )
@@ -150,3 +159,12 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
   );
 }
 ;
+=======
+
+    </div>;
+  );
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

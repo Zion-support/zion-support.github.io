@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Download, FileImage, FileText, FileType, FileVideo, Link} from "lucide-react";
@@ -8,6 +9,13 @@ import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide
 import { toast } from "@/hooks/use-toast";
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ResourceItem {
 
   id: string
@@ -306,12 +314,19 @@ export function PartnerResources() {;
                     className="w-full flex items-center gap-2";
                   >;
                     <Download className="h-4 w-4" />;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>
                 </CardContent>
               </Card>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
+<<<<<<< HEAD
           </div>
         </CardContent>
       </Card>
@@ -365,6 +380,14 @@ export function PartnerResources() {;
     </div>
   )
 };
+=======
+
+
+};
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>;
         </CardContent>;
       </Card>;
@@ -444,7 +467,20 @@ export function PartnerResources() {;
           </Button>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
     </div>;
   );
 }
 }
+=======
+
+    </div>);
+
+}
+=======
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

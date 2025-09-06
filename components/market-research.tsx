@@ -18,6 +18,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -113,6 +114,10 @@ import { Zap } from 'lucide-react';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function MarketResearchPage() {
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -280,6 +285,7 @@ export default function MarketResearchPage() {
       ],
       color: 'from-fuchsia-500 to-purple-600',
       icon: <Zap className='w-8 h-8 text-white' />,
+<<<<<<< HEAD
     },    {
 
     },    {      opportunities: [
@@ -403,6 +409,10 @@ export default function MarketResearchPage() {
       icon: <Users className='w-8 h-8 text-white' />,
     },  ];
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];
   const competitiveAnalysis = [
     {
@@ -1017,12 +1027,28 @@ function MarketResearchPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Market Segments */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Market Segment Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1315,6 +1341,19 @@ function MarketResearchPage() {
                           </ul>
                         </div>
 
+<<<<<<< HEAD
+=======
+                          </ul>;
+                        </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         {/* Top Players */}
 
 
@@ -1325,6 +1364,20 @@ function MarketResearchPage() {
                         </div>
                       </div>
 
+<<<<<<< HEAD
+=======
+                          </ul>;
+                        </div>;
+                      </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       {/* Opportunities */}
                       <div className='mt-8 pt-6 border-t border-gray-700'>
                         <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
@@ -1352,6 +1405,12 @@ function MarketResearchPage() {
 
                         </div>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       </div>
                     </div>
                   </div>
@@ -1364,12 +1423,28 @@ function MarketResearchPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Competitive Analysis */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Competitive Landscape Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1564,6 +1639,12 @@ function MarketResearchPage() {
 
                           {strength}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </li>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1571,6 +1652,19 @@ function MarketResearchPage() {
                     </ul>
                   </div>
 
+<<<<<<< HEAD
+=======
+                    </ul>;
+                  </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {/* Weaknesses */}
 
 
@@ -1584,12 +1678,28 @@ function MarketResearchPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Market Trends */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Emerging Market Trends
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1775,6 +1885,10 @@ function MarketResearchPage() {
                           <span className="w-1.5 h-1.5 bg-cursor-blue rounded-full mr-2 mt-1.5 flex-shrink-0" />
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </li>
                       ))}
                     </ul>
@@ -1792,12 +1906,28 @@ function MarketResearchPage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Pricing Strategies */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Pricing Strategy Analysis
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -2045,6 +2175,13 @@ function MarketResearchPage() {
                     </ul>
                   </div>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {/* Cons */}
                   <div className='mb-4'>
                     <h4 className='text-sm font-semibold text-red-400 mb-2'>
@@ -2064,6 +2201,13 @@ function MarketResearchPage() {
                     </ul>
                   </div>
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {/* Best For */}
                   <div>
                     <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>
@@ -2079,6 +2223,7 @@ function MarketResearchPage() {
       </section>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -2086,12 +2231,127 @@ function MarketResearchPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+      {/* Pricing Strategies */}
+      <section className='section-padding bg-gradient-cursor-accent'>;
+        <div className='container-cursor'>;
+          <div className='text-center mb-20'>;
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
+              Pricing Strategy Analysis;
+            </h2>;
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
+              Analysis of different pricing strategies used in the micro SaaS;
+              market and their implications for business success.;
+            </p>;
+          </div>;
+
+          <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>;
+            {pricingStrategies && pricingStrategies.map((strategy, index) => (;
+              <Card
+                key={index}
+                className='card-hover border-gradient-blue'
+                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                <div className='p-6'>;
+                  <h3 className='text-xl font-bold text-white mb-3'>;
+                    {strategy && strategy.strategy}
+                  </h3>;
+                  <p className='text-gray-300 mb-6'>{strategy && strategy.description}</p>;
+
+                  {/* Pros */}
+                  <div className='mb-4'>;
+                    <h4 className='text-sm font-semibold text-green-400 mb-2'>;
+                      Pros:;
+                    </h4>;
+                    <ul className='space-y-1 text-xs text-gray-300'>;
+                      {strategy && strategy.pros.map((pro, proIndex) => (;
+                        <li key={proIndex} className='flex items-start'>;
+                          <span className='w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />                          {pro}              Pricing Strategy Analysis;
+            </h2>;
+            <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">;
+              Analysis of different pricing strategies used in the micro SaaS market and their implications for business success.;
+            </p>;
+          </div>;
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
+            {pricingStrategies && pricingStrategies.map((strategy, index) => (;
+              <Card
+                key={index}
+                className="card-hover border-gradient-blue"
+                style={{ animationDelay: `${index * 0 && 0.1}s` }}>;
+                <div className="p-6">;
+                  <h3 className="text-xl font-bold text-white mb-3">{strategy && strategy.strategy}</h3>;
+                  <p className="text-gray-300 mb-6">{strategy && strategy.description}</p>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                  {/* Pros */}
+                  <div className="mb-4">;
+                    <h4 className="text-sm font-semibold text-green-400 mb-2">Pros:</h4>;
+                    <ul className="space-y-1 text-xs text-gray-300">;
+                      {strategy && strategy.pros.map((pro, proIndex) => (;
+                        <li key={proIndex} className="flex items-start">;
+                          <span className="w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0" />;
+                          {pro}
+                        </li>;
+                      ))}
+
+                    </ul>;
+                  </div>;
+
+
+                  {/* Cons */}
+                  <div className='mb-4'>;
+                    <h4 className='text-sm font-semibold text-red-400 mb-2'>;
+                      Cons:;
+                    </h4>;
+                    <ul className='space-y-1 text-xs text-gray-300'>;
+                      {strategy && strategy.cons.map((con, conIndex) => (;
+                        <li key={conIndex} className='flex items-start'>;
+                          <span className='w-1 && 1.5 h-1 && 1.5 bg-red-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0' />                          {con}                  <div className="mb-4">;
+                    <h4 className="text-sm font-semibold text-red-400 mb-2">Cons:</h4>;
+                    <ul className="space-y-1 text-xs text-gray-300">;
+                      {strategy && strategy.cons.map((con, conIndex) => (;
+                        <li key={conIndex} className="flex items-start">;
+                          <span className="w-1 && 1.5 h-1 && 1.5 bg-red-400 rounded-full mr-2 mt-1 && 1.5 flex-shrink-0" />;
+                        </li>;
+                      ))}
+
+                    </ul>;
+                  </div>;
+
+
+                  {/* Best For */}
+                  <div>;
+                    <h4 className='text-sm font-semibold text-blue-400 mb-2'>;
+                      Best For:;
+                    </h4>;
+                    <p className='text-xs text-gray-300'>{strategy && strategy.bestFor}</p>                  </div>                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Best For:</h4>;
+                    <p className="text-xs text-gray-300">{strategy && strategy.bestFor}</p>;
+                  </div>;
+                </div>;
+              </Card>;
+            ))}
+
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-cursor-blue to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-dots opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             Ready to Apply This Market Intelligence?
           </h2>
           <p className='text-responsive-md text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -2243,3 +2503,9 @@ function MarketResearchPage() {
   );
 }
             <Button
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

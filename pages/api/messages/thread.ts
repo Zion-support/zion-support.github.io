@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -10,6 +13,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../utils/auth";
 import {
+<<<<<<< HEAD
   getConversationById
   getMessages
   sendMessage
@@ -19,6 +23,14 @@ import {
   getConversationById,
   getMessages,
   sendMessage,;
+=======
+
+  getConversationById,
+  getMessages,
+  sendMessage,;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "../../../utils/messaging/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const user = requireUser(req, res);
@@ -87,6 +99,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!recipientId || !body) return res.status(400).json({ error: 'Missing fields' });
     const { conversation, message } = sendMessage({
       conversationId,
+<<<<<<< HEAD
       senderId: user.id,
       recipientId,
       body,
@@ -112,6 +125,9 @@ export default function handler(req, res) {
   const user = requireUser(req, res);
   if (!user) return,;
   if (req.method === 'GET') {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const { id } = req.query;
     if (return res.status ($1).json ({ $2 })) {
   $2
@@ -196,3 +212,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

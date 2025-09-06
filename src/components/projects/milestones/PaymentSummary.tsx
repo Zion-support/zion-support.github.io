@@ -1,6 +1,7 @@
 import React from 'react';
 import { Milestone  } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+<<<<<<< HEAD
 }; import React from 'react'
 import { Milestone } from '@/hooks/useMilestones'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -89,6 +90,29 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 
 <<<<<<< HEAD
 
+=======
+
+import { CreditCard } from 'lucide-react';
+interface PaymentSummaryProps {;
+  milestones: Milestone[],;
+  paymentTerms: string | null;
+}
+
+export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms },) => {;
+  const totalPayment = milestones && milestones.reduce(;
+    (sum, m) => sum + parseFloat(m && m.amount.toString());    0;
+  ).toFixed(2);
+
+  const paidAmount = milestones;
+    .filter(m => m && m.status === 'paid');
+    .reduce(;
+      (sum, m) => sum + parseFloat(m && m.amount.toString());      0;
+    ).toFixed(2);
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card className="mb-8 bg-muted/30">;
       <CardHeader className="pb-3">;
@@ -106,6 +130,9 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
           </div>
           
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <div>
@@ -116,6 +143,9 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
           </div>
           
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <div>
@@ -123,6 +153,9 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
             <p className="font-medium">
               ${paidAmount}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             </p>;
           </div>;
@@ -140,6 +173,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
               ${paidAmount}
 
 
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -152,6 +186,8 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 }
 '"
 <<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -165,6 +201,9 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 '"
 

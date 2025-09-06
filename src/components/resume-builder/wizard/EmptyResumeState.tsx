@@ -12,6 +12,9 @@
           >
             <FilePlus className="h-4 w-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           </Button>
         </div>
@@ -19,6 +22,9 @@
     </Card>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     <Card className='w-full max-w-2xl mx-auto'>;
       <CardContent className='py-8'>;
@@ -35,6 +41,9 @@
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 },
 import { Card, CardContent } from "@/components/ui/card",;
@@ -62,6 +71,9 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

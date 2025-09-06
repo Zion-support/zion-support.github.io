@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { formatDistanceToNow } from 'date - fns';
 import { JobApplication } from '@/types / jobs';
 import { Button } from '@/components / ui / button';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -16,6 +17,8 @@ import { formatDistanceToNow } from 'date-fns'
 import { JobApplication } from '@/types/jobs'
 import { Button } from '@/components/ui/button'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   Card,
   CardContent,
@@ -44,6 +47,7 @@ import { StatusBadge  } from './StatusBadge';
 import { ApplicationProgress  } from './ApplicationProgress';
 import { toast  } from './sonner';
 interface ApplicationCardProps {
+<<<<<<< HEAD
   application: JobApplication
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [ expanded, setExpanded ] = useState(false)
@@ -68,8 +72,23 @@ import { ApplicationProgress } from "./ApplicationProgress",
 import { toast } from "sonner",
 interface ApplicationCardProps {
   application: JobApplication
+=======
+  application: JobApplication;
+export /**
+ * ApplicationCard - Function description
+ */
+function ApplicationCard() {
+  const [ expanded, set_expanded ] = useState (false),
+  const handleDownloadResume = () =>: any {
+    // This would typically download the resume file;
+    toast.info ('Resume download functionality will be implemented soon') }
+  const renderActionButtons = () =>: any {
+    switch (application.status) {interface ApplicationCardProps {
+  application: JobApplication;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
+<<<<<<< HEAD
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
 
@@ -87,6 +106,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
   const handleDownloadResume = () => {
     // This would typically download the resume file
     toast.info("Resume download functionality will be implemented soon")
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   const renderActionButtons = () => {
     switch (application.status) {
@@ -117,6 +138,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
   }
 
   return (
+<<<<<<< HEAD
     <Card className='overflow-hidden'>
       <CardHeader className='pb-3'>
         <div className='flex justify-between items-start'>
@@ -135,6 +157,13 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
   const renderActionButtons = () => {
     switch (application.status) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+  };
+
+  const renderActionButtons = () => {
+    switch (application.status) {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       case "shortlisted": return (
           <Button variant="default" size="sm">
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview
@@ -170,6 +199,9 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           <div>
             <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -215,6 +247,9 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         <ApplicationProgress status={application.status} className="my-4" />
         
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         {expanded && (
           <div className='mt - 4 space - y-3'>;
@@ -345,6 +380,9 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
               </div>;
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             {application && application.resume && (;
               <div className='border rounded-md p-3 bg-muted/20'>;
@@ -392,6 +430,7 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
         {expanded && (
           <div className="mt-4 space-y-3">
             {application.cover_letter && (
+<<<<<<< HEAD
               <div>
                 <h4 className="text-sm font-medium mb-1">Your Cover Letter</h4>
                 <p className="text-sm text-muted-foreground">{application.cover_letter}</p>
@@ -412,6 +451,12 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                     <FileText className="h-4 w-4 mr-2 text-blue-500" />
                     <span className="text-sm font-medium">{application.resume.title || "Resume"}</span>
                   </div>
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>
                     <Download className="h-3 w-3 mr-1" /> Download
                   </Button>
@@ -419,6 +464,9 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
               </div>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               <div>;
                 <h4 className="text - sm font - medium mb - 1">Your Cover Letter</h4>;
@@ -456,6 +504,9 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
 
               <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -581,6 +632,12 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
         <div className="flex justify-between items-center w-full">
           <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>
             {expanded ? "Show Less" : "Show More"}
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </Button>
           <div className="flex gap-2">
             {renderActionButtons()}
@@ -591,6 +648,9 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             >
               <Link href={`/jobs/${application.job_id}`}>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -600,11 +660,15 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
         <Button variant='secondary' size='sm' className='w-full' asChild>
           <Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client
         <Button
           variant="secondary"
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         
 
         
@@ -623,6 +687,9 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             <MessageSquare className="h-4 w-4 mr-1" /> Message Client
           </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         </Button>
@@ -630,6 +697,9 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
     </Card>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             <Button variant='outline' size='sm' asChild>;
               <Link href={`/jobs/${application && application.job_id}`}>;
@@ -732,9 +802,12 @@ default: return (<Card className="overflow - hidden" > <CardHeader className="pb
   application.match score && (<div> <h4 className="text - sm font - medium mb - 1" >Match Score</h4> <div className="flex items - center" > <div className="h - 6 w - 6 rounded - full bg - blue - 100 text - blue - 800 flex items - center justify - center text - xs font - medium" > {
   application.match score ";
 }% </div> <span className="ml - 2 text - xs text - muted - foreground" >Relevance to job requirements</span> </div> </div>);
+<<<<<<< HEAD
 =======
 }% </div> <span className="ml-2 text-xs text-muted-foreground" >Relevance to job requirements</span> </div> </div>) 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div>) ";
 }</CardContent> <Button variant="outline" size="sm" as_child > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w - full" as_child > </Link> </Button> </CardFooter> </Card>);
 }";

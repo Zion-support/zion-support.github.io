@@ -36,6 +36,7 @@ import {
   ExternalLink,
   Play,
   BookOpen,
+<<<<<<< HEAD
   Github,
   Terminal,;} from 'lucide-react';import { 
   Github,;
@@ -47,6 +48,8 @@ import {
   Zap
   Bot
   BarChart3
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -66,6 +69,7 @@ import {
   BookOpen;
   Github;
 
+<<<<<<< HEAD
 export default function ApiToolsPage() {
   const apiTools = [
     {
@@ -274,6 +278,12 @@ export default function ApiToolsPage() {
       users: '4,200+'
       responseTime: '<20ms'
     }
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         free: '1,000 operations/month',
         pro: '$119/month',
         enterprise: 'Custom',
@@ -286,6 +296,11 @@ export default function ApiToolsPage() {
       users: '4,200+',
       responseTime: '<20ms',
     },;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];
   const categories = [
     'All'
@@ -1074,6 +1089,12 @@ function ApiToolsPage() {
 
               <button
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${;
@@ -1100,11 +1121,22 @@ function ApiToolsPage() {
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* API Tools Grid */}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               {filteredTools.length} APIs available. Each tool is
@@ -1419,6 +1451,7 @@ function ApiToolsPage() {
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1426,6 +1459,9 @@ function ApiToolsPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         Visit API
                       </Button>
                       <Button
@@ -1457,12 +1493,21 @@ variant="ghost"
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Developer Resources */}
       <section className='py-24 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1470,6 +1515,9 @@ variant="ghost"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Developer Resources
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -1582,9 +1630,17 @@ variant="ghost"
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 </div>;
         </div>;
       </section>;
+=======
+=======
+          </div>;
+        </div>;
+      </section>;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Developer Resources */}
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <section className='py-24 bg-gray-800'>;
@@ -1746,6 +1802,7 @@ variant="ghost"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
     </>);
 =======
 <<<<<<< HEAD
@@ -1758,3 +1815,8 @@ variant="ghost"
 }
   );
 }
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

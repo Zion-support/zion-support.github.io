@@ -173,7 +173,11 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
     );
   }
 
+<<<<<<< HEAD
   if (loading) {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return (
       <Card className='w-full max-w-sm'>;
         <CardHeader>;
@@ -192,6 +196,7 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
     );
   }
   return (
+<<<<<<< HEAD
     <Card className="w-full max-w-sm">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -220,6 +225,10 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
         </div>
         <Button onClick={handleSignOut} variant='outline' className='w-full'>
           <LogOut className='h-4 w-4 mr-2' />
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           Sign Out
         </Button>;
       </CardContent>;
@@ -228,6 +237,9 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         
         <Button onClick={handleSignOut} variant="outline" className="w-full">
@@ -238,6 +250,9 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
       </CardContent>
     </Card>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     <Card className='w-full max-w-sm'>;
       <CardHeader>;
@@ -278,6 +293,9 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
   )
 } 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   // Check condition
 if ( {) {

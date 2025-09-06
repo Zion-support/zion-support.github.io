@@ -4,9 +4,16 @@ import {useEffect, useState} from 'react';
 import {useRouter} from 'next/router';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication } from '../../types/grants';
+<<<<<<< HEAD
 export default function GrantDetailPage() {
 
 export default function GrantDetailPage() {;
+=======
+
+export default function GrantDetailPage() {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const router = useRouter();
   const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
   const router = useRouter();
@@ -19,6 +26,7 @@ export default function GrantDetailPage() {;
   useEffect(() => {;
     if (!id) return;
     setLoading(true);
+<<<<<<< HEAD
     fetch(`/api/grants/${id}`)
       .then(r => r.json())
       .then(d => setItem(d.record))
@@ -30,6 +38,11 @@ export default function GrantDetailPage() {;
     if (!id || !updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
     if (!id || !updateContent.trim()) return;
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }, [id]);
   const addUpdate = async () => {
     if (!id |!updateContent.trim()) return;
@@ -279,7 +292,12 @@ if (
         </aside>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 );
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </EnhancedLayout>
   );
 }
@@ -318,6 +336,11 @@ if (
     </EnhancedLayout>;
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
             <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;
@@ -462,6 +485,7 @@ if (
     </EnhancedLayout>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 }
 =======
@@ -471,3 +495,5 @@ if (
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

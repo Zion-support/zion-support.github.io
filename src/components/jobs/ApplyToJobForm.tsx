@@ -13,6 +13,9 @@ import { toast } from "sonner";
 import { Job } from "@/types/jobs",
 import { toast } from "sonner",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 interface ApplyToJobFormProps {
@@ -23,6 +26,12 @@ interface ApplyToJobFormProps {
 }
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const { user } = useAuth()
   const { applyToJob } = useJobApplications()
@@ -38,12 +47,17 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     if (!user) {
       toast.error("You must be logged in to apply")
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`)
+<<<<<<< HEAD
       return
     }
     if (!coverLetter.trim()) {
       setError("Please provide a cover letter")
       return
     }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       return;
     }
     
@@ -52,16 +66,29 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       return;
     }
     
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     setIsSubmitting(true)
     setError(null)
     try {
       const success = await applyToJob(
         job.id
         coverLetter
+<<<<<<< HEAD
         selectedResumeId |undefined
         resumeFile |undefined
         selectedResumeId || undefined
         resumeFile || undefined
+=======
+
+
+        selectedResumeId || undefined
+        resumeFile || undefined
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )
       if (success) {
         toast.success("Your application has been submitted!")
@@ -104,6 +131,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       if (success) {
         toast.success("Your application has been submitted!"),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -203,6 +233,9 @@ if ( {) {
       </div>
       
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       {error && (
@@ -316,6 +349,9 @@ export function ApplyToJobForm(): any ({ job, onSuccess }: ApplyToJobFormProps) 
         </div>
         
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         <div>
@@ -500,6 +536,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
                       </SelectItem>;
                     );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   }
                   return null;
@@ -544,6 +583,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <div className="flex justify-end gap-2">
@@ -565,6 +607,9 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           onClick={() => {;
             if (onSuccess) onSuccess();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           }}
         >;
@@ -579,6 +624,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
           ) : (;
             "Submit Application";
           )}
+<<<<<<< HEAD
         </Button>
       </div>
     </form>
@@ -604,6 +650,10 @@ handleSubmit
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application")
 }</Button> </div> </form>)
 }"}
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
 }</Button> </div> </form>) ;
 }"};

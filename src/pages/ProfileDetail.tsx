@@ -6,6 +6,7 @@ export default function ProfileDetail() {;
   const [profileData, setProfileData] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useRouter } from "next/router",
 import { supabase } from "@/integrations/supabase/client",
@@ -21,6 +22,8 @@ import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   useEffect(() => {
@@ -119,12 +122,16 @@ export default function ProfileDetail() {
   }, [profileId]);
 
     )
+<<<<<<< HEAD
   }
   return (
     <>
       <SEO
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description = {profileData.bio |"Check out this talent's profile on Zion!",}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         description = {profileData.bio || "Check out this talent's profile on Zion!",}
 <<<<<<< HEAD
 
@@ -219,6 +226,9 @@ export default function ProfileDetail() {;
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={profileData.bio || "Check out this talent's profile on Zion!"}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       />
@@ -374,6 +384,9 @@ if ( {) {
               </CardContent>;
             </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             {/* About Section */}
@@ -534,9 +547,14 @@ if ( {) {
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
+<<<<<<< HEAD
                 hourly_rate: profileData?.hourly_rate || 0
                 hourly_rate: profileData?.hourly_rate || 0,
                 hourly_rate: profileData?.hourly_rate || 0
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               }}
             />
             {/* Contact Information */}
@@ -568,6 +586,9 @@ if ( {) {
               </div>;
             </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -602,6 +623,9 @@ if ( {) {
                   <a;
                     href={profileData.twitter_url}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     target="_blank"
                     rel="noopener noreferrer"
@@ -625,6 +649,9 @@ if ( {) {
                   <a;
                     href={profileData.linkedin_url}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     target="_blank"
                     rel="noopener noreferrer"

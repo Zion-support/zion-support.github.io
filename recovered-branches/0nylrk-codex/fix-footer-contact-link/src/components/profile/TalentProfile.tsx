@@ -1,4 +1,18 @@
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+interface TalentProfileProps {
+
+  profile: TalentProfileType
+  onRequestHire: () => void
+
+  onMessageTalent?: () => void
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {Handshake, MessageSquare, Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -13,6 +27,7 @@ import {ProfileRatings} from "./ProfileRatings";
 import {TalentProfile, as, TalentProfileType} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {Availability} from "@/types/profile";
+<<<<<<< HEAD
 import React from "react",
 import { Handshake, MessageSquare, Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -35,6 +50,12 @@ interface TalentProfileProps {
   onRequestHire: () => void
 
   onMessageTalent?: () => void
+=======
+interface TalentProfileProps {;
+  profile: TalentProfileType,;
+  onRequestHire: () => void,;
+  onMessageTalent?: () => void;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export function TalentProfile({
   profile;
@@ -83,6 +104,7 @@ export function TalentProfile({
   
   return (
     <div className="container mx-auto px-4 py-8">
+<<<<<<< HEAD
 import React from "react",;
 import { Handshake, MessageSquare, Star } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -129,6 +151,10 @@ export function TalentProfile({;
   })) || [];
   return (;
     <div className="container mx-auto px-4 py-8">;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Profile Header */}
       <ProfileHero
         name={profile && profile.full_name}
@@ -166,6 +192,12 @@ export function TalentProfile({;
             </div>
           </div>
           
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Projects Section */}
           <ProfileProjects projects={projectsArray} />
           {/* Ratings Section */}

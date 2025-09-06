@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 export default function Custom404() {
@@ -24,13 +25,38 @@ export default function Custom404() {
             Go back home
           >
             Go Home
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </Link>
         </main>
       </div>
     </>
   );
+<<<<<<< HEAD
 }
 
+=======
+
+import Head from 'next / head';
+import Link from 'next / link';
+;
+export default /**
+ * Custom404 - Function description
+ */
+function Custom404() {
+=======
+
+}
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -53,5 +79,13 @@ const NotFoundPage: NextPage = () => {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 }
+=======
+
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

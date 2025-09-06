@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState} from "react";
 import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
@@ -15,6 +16,12 @@ import { CountryServiceCard } from "@/components/services/CountryServiceCard";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { CountryServiceCard } from "@/components/services/CountryServiceCard",
 import { CountryPricing } from "@/data/onsiteServicePricing",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface CountryTabsProps {
 
   popularCountries: string[]
@@ -59,6 +66,7 @@ export function CountryTabs({
           {filteredCountries
             .filter(country => popularCountries.includes(country.country))
             .map(country => (
+<<<<<<< HEAD
               <CountryServiceCard
                 key={country.country}
                 country={country}
@@ -72,6 +80,16 @@ import { Button } from "@/components/ui/button",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { CountryServiceCard } from "@/components/services/CountryServiceCard",;
 import { CountryPricing } from "@/data/onsiteServicePricing",;
+=======
+
+import {useState} from "react";
+import {Search} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {CountryServiceCard} from "@/components/services/CountryServiceCard";
+import {CountryPricing} from "@/data/onsiteServicePricing";
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface CountryTabsProps {;
   popularCountries: string[],;
   filteredCountries: CountryPricing[],;
@@ -110,9 +128,23 @@ export function CountryTabs(): any ({ ;
           {filteredCountries;
             .filter(country => popularCountries && popularCountries.includes(country && country.country));
             .map(country => (;
+<<<<<<< HEAD
               <CountryServiceCard;
                 key={country.country} ;
                 country={country} ;
+=======
+              <CountryServiceCard
+                key={country && country.country} 
+                country={country} 
+
+=======
+
+              <CountryServiceCard 
+                key={country.country} 
+                country={country} 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 onSelect={handleCountrySelect}
                 isPopular={true}
               />;

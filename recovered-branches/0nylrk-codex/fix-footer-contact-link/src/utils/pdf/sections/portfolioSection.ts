@@ -1,12 +1,21 @@
 
+<<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
 import { PortfolioProject  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addPortfolioSection(
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addPortfolioSection(;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   doc: jsPDF;
   projects: PortfolioProject[];
   colors: PdfThemeColors;
@@ -78,6 +87,7 @@ export function addPortfolioSection(;
         doc && doc.text(`GitHub: ${project && project.github_url}`, 20, yPos);
         yPos += 4
       }
+<<<<<<< HEAD
       if (project.demo_url) {
         doc.text(`Demo: ${project.demo_url}`, 20, yPos);
         yPos += 4
@@ -146,11 +156,23 @@ export function addPortfolioSection(;
       if (project.demo_url) {;
         doc.text(`Demo: ${project.demo_url}`, 20, yPos),;
         yPos += 4;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     }
     yPos += 10, // Add space between projects
   }
+<<<<<<< HEAD
   
+=======
+
+
+  
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // If there are more projects than we're displaying
 
   if (projects && projects.length > maxProjects) {
@@ -159,9 +181,39 @@ export function addPortfolioSection(;
     doc && doc.text(`+ ${projects && projects.length - maxProjects} more projects not shown`, 20, yPos);
 
     yPos += 6
+<<<<<<< HEAD
   }
   return yPos + 5
 }
+=======
+
+import {jsPDF} from 'jspdf';
+import {PortfolioProject} from '@/types / resume';
+import {PdfThemeColors} from '../theme_config';
+export function addPortfolioSection (
+  doc: jsPDF;
+  projects: PortfolioProject[];
+  colors: PdfThemeColors;
+  start_y: number;
+  max_projects: number = 2): number {
+  // Check condition
+if (return start_y) {
+  $2
+}
+  let y_pos = start_y;
+;
+  // Check if we need to add a new page;
+  // Check condition
+if ( {) {
+  $2
+}
+    doc.add_page (),
+    y_pos = 20;
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   // If there are more projects than we're displaying;
   if (projects.length > maxProjects) {;
@@ -169,6 +221,13 @@ export function addPortfolioSection(;
     doc.setTextColor(colors.text);
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
     yPos += 6;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   doc.setFontSize (16);
   doc.setTextColor (colors.heading);

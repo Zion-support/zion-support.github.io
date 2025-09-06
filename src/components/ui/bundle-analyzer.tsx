@@ -3,6 +3,7 @@ totalSize: number;
   chunkCount: number;
   loadTime: number;
 
+<<<<<<< HEAD
   const { user } = useAuth()
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
   const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
@@ -20,6 +21,13 @@ totalSize: number;
       process.env.NODE_ENV === 'development' |
     const show = null;
       process.env.NODE_ENV === 'development' ||
+=======
+
+    const show = null;
+      process.env.NODE_ENV === 'development' ||
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       localStorage.getItem('bundle-analyzer') === 'true'
     setShouldShow(show)
     if (!show) return;
@@ -80,6 +88,7 @@ if (return) {
     if (typeof window === 'undefined') return;
     setIsCollecting(true)
     try {
+<<<<<<< HEAD
       // Get performance entries for script resources
       const resourceEntries = performance.getEntriesByType(
         'resource'
@@ -117,12 +126,21 @@ if (return) {
         loadTime: totalLoadTime / chunkData.length
         cacheHitRate: cacheHitRate * 100
       })
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         totalSize,
         gzippedSize,
         chunkCount: chunkData.length,;
         loadTime: totalLoadTime / chunkData.length,;
         cacheHitRate: cacheHitRate * 100;
       });
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setChunks(chunkData.sort((a, b) => b.size - a.size).slice(0, 5)); // Top 5 largest chunks    } catch (error) {
       logErrorToProduction('Failed to collect bundle info:', { data: error })
       // Get performance entries for script resources;
@@ -303,6 +321,13 @@ export function BundleAnalyzer() {;
     return null;
   }
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!isVisible) {
     return (
       <div className="fixed bottom-20 right-4 z-50">
@@ -319,6 +344,9 @@ export function BundleAnalyzer() {;
         >
           <Package className="w-4 h-4 mr-2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           Bundle Analyzer
@@ -370,6 +398,9 @@ export function BundleAnalyzer() {;
                 className="h-6 w-6 p-0"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 ✕
@@ -475,6 +506,11 @@ if ( {) {
                         <span className="w-4 text-muted-foreground">{index + 1}.</span>
                         <span className="truncate" title={chunk.name}>
                           {chunk.name}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </span>
                         {chunk.cached && (
                           <Badge variant="outline" className="text-xs px-1 py-0">
@@ -488,6 +524,9 @@ if ( {) {
                       >
                       <Badge className={getSizeColor(chunk.size)} variant="outline">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                         {formatSize(chunk.size)}
                       </Badge>
@@ -507,6 +546,7 @@ if ( {) {
 
             </>
           ) : (
+<<<<<<< HEAD
             <div className='text-xs text-muted-foreground'>
               {isCollecting
                 ? 'Analyzing bundle...'
@@ -520,6 +560,14 @@ if ( {) {
 } 
 
 }
+=======
+
+} 
+
+}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
         </CardContent>;
       </Card>;
@@ -527,6 +575,9 @@ if ( {) {
   );
 } ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

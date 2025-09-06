@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 import Head from 'next/head';
 import Button from '../components/ui/Button';
 export default function QuantumCybersecurityPlatform() {
@@ -27,6 +28,8 @@ export default function QuantumCybersecurityPlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </section>
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Contact Security Team</Button>

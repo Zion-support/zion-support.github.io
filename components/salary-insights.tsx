@@ -19,6 +19,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useMemo, useState } from 'react';
 
+<<<<<<< HEAD
 import {
   LineChart
   BarChart
@@ -26,6 +27,19 @@ import {
   LineChart,
   BarChart,;
   DonutChart,;
+=======
+
+type InsightResponse = {
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import {;
+  LineChart,;
+  BarChart,;
+  DonutChart,;
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '../components/salary/InsightCharts';
 type InsightResponse = {;
   recommendedHourlyUsd: number;
@@ -39,6 +53,9 @@ type InsightResponse = {;
   regional_comparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
 type InsightResponse = {
@@ -65,6 +82,16 @@ trend_monthly: { label: string, value: number }[],
   tags: string[],;
   gptRecommendation?: string;
 export default function SalaryInsightsPage() {;
+<<<<<<< HEAD
+=======
+
+=======
+
+
+export default function SalaryInsightsPage() {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -165,6 +192,28 @@ function SalaryInsightsPage() {
       setError(e.message |'Unexpected error')
     } finally {
       setLoading(false)
+<<<<<<< HEAD
+=======
+
+    } catch (e: any) {;
+      setError(e && e.message || 'Unexpected error');
+    } finally {;
+      setLoading(false);    }      if (!res && res.ok) throw new Error('Failed to fetch insights');
+      const json = (await res && res.json()) as InsightResponse;
+      setData(json);
+    } catch (e: any) {;
+      setError(e && e.message || 'Unexpected error');
+    } finally {;
+      setLoading(false);
+
+    }
+  }
+
+  useEffect(() => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setLoading(false);    }
 
     }
@@ -324,6 +373,7 @@ if ( {) {
 
 
         alert('Insight saved locally');
+<<<<<<< HEAD
       } catch {}
     })();
   }
@@ -336,13 +386,22 @@ if ( {) {
     })();
   }
 =======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
 =======
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       } catch {}
     })();
   }
@@ -979,6 +1038,7 @@ if (return [] as { label: string, value: number }[], ) {
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
               )}
 
+<<<<<<< HEAD
             </div>
           </div>
           {data?.gptRecommendation && (
@@ -990,6 +1050,22 @@ if (return [] as { label: string, value: number }[], ) {
           )}
 
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              )}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            </div>
+          </div>
+          {data?.gptRecommendation && (
+
+            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
             </div>
@@ -1097,4 +1173,11 @@ if (return [] as { label: string, value: number }[], ) {
             </div>
           )}
 
+<<<<<<< HEAD
           {data && (
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

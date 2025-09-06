@@ -1,19 +1,33 @@
 
+<<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
 import { WorkExperience  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
 import { formatDate } from '../formatters';
 export function addWorkExperienceSection(
+=======
+import {jsPDF} from 'jspdf';
+import {WorkExperience} from '@/types / resume';
+import {PdfThemeColors} from '../theme_config';
+import {format_date} from '../formatters';
+export function addWorkExperienceSection (
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {jsPDF} from 'jspdf';
 import {WorkExperience} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addWorkExperienceSection(;
+<<<<<<< HEAD
   doc: jsPDF;
   workExperience: WorkExperience[];
   colors: PdfThemeColors;
   startY: number
 ): number {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   doc: jsPDF;
@@ -149,6 +163,13 @@ export function addWorkExperienceSection(;
       yPos += (descriptionLines.length * 5) + 20;
     } else {;
       yPos += 20;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
   return yPos + 5

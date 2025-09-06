@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { AccessToken } from "livekit-server-sdk";
@@ -74,6 +78,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       roomJoin: true,
       room: String(roomName),
       canPublish: audioOnly ? false : true,
+<<<<<<< HEAD
       canPublishData: true,
       canSubscribe: true
     });
@@ -113,6 +118,11 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import { AccessToken  } from './livekit - server - sdk';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || "";
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || "";
@@ -148,6 +158,7 @@ if ( {) {
       identity: String (identity),
       name: name ? String (name) : String (identity),
       ttl: 60 * 60, // 1 hour;
+<<<<<<< HEAD
     }),;
     at.addGrant({;
       roomJoin: true,;
@@ -164,6 +175,54 @@ if ( {) {
     return res.status(500).json({ error: 'Failed to create token' });
   }
 }
+=======
+    });
+
+;
+    at.add_grant ({
+      room_join: true,
+      room: String (room_name),
+      can_publish: audio_only ? false : true,
+
+      canPublishData: true,
+      can_subscribe: true,
+    });
+
+      return res.status(400).json({ error: 'Missing roomName or identity' })
+    }
+    if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
+      return res.status(500).json({ error: 'LiveKit env vars not configured' })
+    }
+
+    const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
+      identity: String(identity), name: name ? String(name) : String(identity),
+      ttl: 60 * 60, // 1 hour
+    });
+
+    at.addGrant({
+      roomJoin: true, room: String(roomName),
+      canPublish: audioOnly ? false : true, canPublishData: true,
+      canSubscribe: true});
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+    const token = await at && at.toJwt();
+
+    return res && res.status(200).json({
+=======
+;
+    const token = await at.to_jwt ();
+;
+    return res.status (200).json ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      token,
+
+
+=======
+
+  }
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   } catch (error) {
     console.error("Error:", error);
@@ -184,8 +243,13 @@ if ( {) {
 
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

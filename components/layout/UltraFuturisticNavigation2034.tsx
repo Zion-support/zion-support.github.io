@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Menu
   X
   ChevronDown
@@ -111,6 +112,41 @@ import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   Microscope, DollarSign, Home, Users, Briefcase
 
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+=======
+import {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Menu,
   X,
   ChevronDown,
@@ -212,12 +248,23 @@ import {
   Twitter,
   Facebook,
   Instagram,
+<<<<<<< HEAD
 
   Youtube,;
   Github,;} from 'lucide-react';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
+=======
+
+  Youtube,;
+  Github,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Users, Briefcase, ;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -474,10 +521,133 @@ import {
     ];
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ];
 
 ];
+=======
+
+    title: '🏙️ Enterprise IT Solutions',
+    icon: CpuIcon,
+    color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
+    description: 'Autonomous enterprise infrastructure',
+
+    services: [;
+      {
+        name: 'API Security & Monitoring',
+        href: '/api - security - monitoring - suite',
+        description: 'Protect and monitor your APIs',
+        price: '$399 / month',
+      },
+      {
+        name: 'Customer Success Automation',
+        href: '/customer - success - automation',
+        description: 'Automate customer success workflows',
+        price: '$199 / month',
+      },
+      {
+        name: 'HR Automation Suite',
+        href: '/hr - automation - suite',
+        description: 'Streamline HR processes with AI',
+        price: '$179 / month',
+      },
+      {
+        name: 'Project Management AI',
+        href: '/project - management - ai - platform',
+        description: 'AI - powered project management',
+        price: '$199 / month',
+      },
+    ],
+  },  {      { name: 'API Security & Monitoring', href: '/api - security - monitoring - suite', description: 'Protect and monitor your APIs', price: '$399 / month' },
+      { name: 'Customer Success Automation', href: '/customer - success - automation', description: 'Automate customer success workflows', price: '$199 / month' },
+      { name: 'HR Automation Suite', href: '/hr - automation - suite', description: 'Streamline HR processes with AI', price: '$179 / month' },
+      { name: 'Project Management AI', href: '/project - management - ai - platform', description: 'AI - powered project management', price: '$199 / month' }
+    ];
+  }
+
+    title: '🛒 Business Automation',
+    icon: ShoppingCart,
+    color: 'from - teal - 600 via - emerald - 600 to - green - 600',
+    description: 'Streamline business operations',
+
+    services: [;
+      {
+        name: 'E - commerce Automation',
+        href: '/ecommerce - automation - platform',
+        description: 'Automate your entire e - commerce operation',
+        price: '$249 / month',
+      },
+      {
+        name: 'Marketing Automation Suite',
+        href: '/marketing - automation - suite',
+        description: 'Automate your entire marketing operation',
+        price: '$279 / month',
+      },
+      {
+        name: 'Financial Analytics Platform',
+        href: '/financial - analytics - platform',
+        description: 'Real - time financial insights',
+        price: '$349 / month',
+      },
+      {
+        name: 'Legal Document Automation',
+        href: '/legal - document - automation',
+        description: 'Automate legal document creation',
+        price: '$399 / month',
+      },
+    ],
+  },  {      { name: 'E - commerce Automation', href: '/ecommerce - automation - platform', description: 'Automate your entire e - commerce operation', price: '$249 / month' },
+      { name: 'Marketing Automation Suite', href: '/marketing - automation - suite', description: 'Automate your entire marketing operation', price: '$279 / month' },
+      { name: 'Financial Analytics Platform', href: '/financial - analytics - platform', description: 'Real - time financial insights', price: '$349 / month' },
+      { name: 'Legal Document Automation', href: '/legal - document - automation', description: 'Automate legal document creation', price: '$399 / month' }
+    ];
+  }
+
+    title: '🤖 Robotics & Automation',
+    icon: RocketIcon,
+    color: 'from - green - 600 via - yellow - 600 to - orange - 600',
+    description: 'Intelligent automation solutions',
+
+    services: [;
+      {
+        name: 'Autonomous Robotics Platform',
+        href: '/autonomous - robotics - platform',
+        description: 'Build and deploy intelligent robots',
+        price: '$2, 499 / month',
+      },
+      {
+        name: 'AI Content Generator Elite',
+        href: '/ai - content - generator - elite',
+        description: 'Professional AI content creation',
+        price: '$49 / month',
+      },
+      {
+        name: 'AI Guardrails Suite',
+        href: '/ai - guardrails - suite',
+        description: 'Policy and safety for LLM apps',
+        price: '$199 / month',
+      },
+      {
+        name: 'AI Business Intelligence',
+        href: '/ai - business - intelligence - suite',
+        description: 'Intelligent business insights',
+        price: '$299 / month',
+      },
+    ],
+  },  {      { name: 'Autonomous Robotics Platform', href: '/autonomous - robotics - platform', description: 'Build and deploy intelligent robots', price: '$2, 499 / month' }
+      { name: 'AI Content Generator Elite', href: '/ai - content - generator - elite', description: 'Professional AI content creation', price: '$49 / month' },
+      { name: 'AI Guardrails Suite', href: '/ai - guardrails - suite', description: 'Policy and safety for LLM apps', price: '$199 / month' },
+      { name: 'AI Business Intelligence', href: '/ai - business - intelligence - suite', description: 'Intelligent business insights', price: '$299 / month' }
+    ];
+  }
+
+    title: '🔬 Research & Development',
+    icon: MicroscopeIcon,
+    color: 'from - orange - 600 via - red - 600 to - pink - 600',
+    description: 'Breakthrough research solutions',
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home }
@@ -547,6 +717,7 @@ const company_links = [;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   { name: 'Status', href: '/status', icon: Activity }
 ];
+<<<<<<< HEAD
 const socialLinks = [
   {
     name: 'LinkedIn'
@@ -588,6 +759,14 @@ const certifications = [
 export default function UltraFuturisticNavigation2034() {
 
 export default function UltraFuturisticNavigation2034() {;
+=======
+
+
+
+export default function UltraFuturisticNavigation2034() {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -699,6 +878,7 @@ export default function UltraFuturisticNavigation2034() {;
               <Phone className='w-4 h-4 text-cyan-400' />
               <span className='hover:text-cyan-400 transition-colors'>
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -706,6 +886,9 @@ export default function UltraFuturisticNavigation2034() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {contactInfo.mobile}
               </span>
             </div>
@@ -776,6 +959,69 @@ export default function UltraFuturisticNavigation2034() {;
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      <div className='bg-gradient-to-r from-cyan-900 via-blue-900 to-purple-900 text-white py-2 px-4 text-sm'>;
+        <div className='max-w-7xl mx-auto flex flex-wrap items-center justify-between'>;
+          <div className='flex items-center space-x-6'>;
+            <div className='flex items-center space-x-2'>;
+              <Phone className='w-4 h-4 text-cyan-400' />;
+              <span className='hover:text-cyan-400 transition-colors'>;
+                {contactInfo && contactInfo.mobile}
+              </span>;
+            </div>;
+            <div className='flex items-center space-x-2'>;
+              <Mail className='w-4 h-4 text-blue-400' />;
+              <span className='hover:text-blue-400 transition-colors'>;
+                {contactInfo && contactInfo.email}
+              </span>;
+            </div>;
+            <div className='flex items-center space-x-2'>;
+              <MapPin className='w-4 h-4 text-purple-400' />;
+              <span className='hover:text-purple-400 transition-colors'>                {contactInfo && contactInfo.address}
+              </span>;
+            </div>;
+          </div>                {contactInfo && contactInfo.mobile}
+              </span>;
+            </div>;
+            <div className="flex items-center space-x-2">;
+              <Mail className="w-4 h-4 text-blue-400" />;
+              <span className="hover:text-blue-400 transition-colors">;
+                {contactInfo && contactInfo.email}
+              </span>;
+            </div>;
+            <div className="flex items-center space-x-2">;
+              <MapPin className="w-4 h-4 text-purple-400" />;
+              <span className="hover:text-purple-400 transition-colors">;
+                {contactInfo && contactInfo.address}
+              </span>;
+            </div>;
+          </div>;
+          <div className='flex items-center space-x-4'>;
+            <div className='flex items-center space-x-2'>;
+              <Star className='w-4 h-4 text-yellow-400' />;
+              <span className='text-yellow-400 font-semibold'>5 && 5.0 Rating</span>;
+            </div>;
+            <div className='flex items-center space-x-2'>;
+              <Users className='w-4 h-4 text-green-400' />;
+              <span className='text-green-400 font-semibold'>;
+                50K+ Customers;
+              </span>            </div>          <div className="flex items-center space-x-4">;
+            <div className="flex items-center space-x-2">;
+              <Star className="w-4 h-4 text-yellow-400" />;
+              <span className="text-yellow-400 font-semibold">5 && 5.0 Rating</span>;
+            </div>;
+            <div className="flex items-center space-x-2">;
+              <Users className="w-4 h-4 text-green-400" />;
+              <span className="text-green-400 font-semibold">50K+ Customers</span>;
+          </div>;
+        </div>;
+      </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Main Navigation */}
 
         }`}>;
@@ -795,6 +1041,14 @@ export default function UltraFuturisticNavigation2034() {;
               transition={{ duration: 0.5 }}
               className='flex items-center space-x-3'
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -872,6 +1126,7 @@ export default function UltraFuturisticNavigation2034() {;
                   href={link.href}
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                   {link.name}
                 </Link>
@@ -879,14 +1134,20 @@ export default function UltraFuturisticNavigation2034() {;
 =======
 =======
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {link.name}
                 </Link>
               ))}
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+              
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
@@ -1135,6 +1396,7 @@ function UltraFuturisticNavigation2034() {
                             <Link;
                               key={service.name}
                               href={service.href}
+<<<<<<< HEAD
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors"
 
 
@@ -1145,6 +1407,34 @@ function UltraFuturisticNavigation2034() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+                              className='block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */}
+              <div className="relative group">;
+                <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium">;
+                  <span > Services</span>;
+                  <ChevronDown className="w - 4 h - 4" />;
+                </button>;
+                <div className="absolute top - full left - 0 w - 96 bg - black / 95 backdrop - blur - xl border border - cyan - 500 / 20 rounded - xl p - 4 opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform translate - y-2 group - hover:translate - y-0">;
+                  <div className="grid grid - cols - 2 gap - 4">;
+                    {service_categories.slice (0, 4).map ((category) => (
+                      <div key={category.title} className="p - 3 rounded - lg hover:bg - cyan - 500 / 10 transition - colors">;
+                        <div className="flex items - center space - x-2 mb - 2">;
+                          <category.icon className="w - 5 h - 5 text - cyan - 400" />;
+                          <h3 className="text - sm font - semibold text - white">{category.title.split (' ')[0]}</h3>;
+                        </div>;
+                        <p className="text - xs text - gray - 400 mb - 2">{category.description}</p>;
+                        <div className="space - y-1">;
+                          {category.services.slice (0, 2).map ((service) => (
+                            <Link;
+
+                              key={service.name}
+                              href={service.href}
+                              className="block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors";
+                            >;
+                              {service.name}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             >
                               {service.name}
                             </Link>
@@ -1240,6 +1530,22 @@ function UltraFuturisticNavigation2034() {
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
+
+              </button>;
+            </div>;
+          </div>;
+        </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -1247,6 +1553,7 @@ function UltraFuturisticNavigation2034() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.3 }}
               className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-cyan-500/20'
             >
@@ -1363,6 +1670,10 @@ function UltraFuturisticNavigation2034() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </button>
                     <AnimatePresence>
                       {activeDropdown === category.title && (
@@ -1561,3 +1872,23 @@ function UltraFuturisticNavigation2034() {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
+<<<<<<< HEAD
+=======
+
+}
+
+=======
+            </motion.div>)}
+        </AnimatePresence>;
+      </nav>;
+      {/* Spacer for fixed navigation */}
+      <div className='h - 20'></div>;
+    </>);      <div className="h - 20"></div>;
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 import { readJson, writeJson } from '../../../utils/fsDb';
@@ -26,6 +27,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 <<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { readJson, writeJson } from '../../../utils/fsDb';
 =======
@@ -52,8 +55,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     writeJson('support/requests.json', reqs)
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return res.status(200).json({ ok: true, id })
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -87,6 +94,8 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 =======
@@ -122,6 +131,7 @@ if ( {) {
   return res.status (200).json ({ ok: true, id });
 }
 ;
+<<<<<<< HEAD
   return res.status(200).json({ ok: true, id });
   } catch (error) {
     console.error("Error:", error);
@@ -137,3 +147,11 @@ if ( {) {
   }
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

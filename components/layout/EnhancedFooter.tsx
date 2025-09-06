@@ -4,9 +4,12 @@ import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React from 'react';
 import { motion } from 'framer-motion';
@@ -95,12 +98,16 @@ export default function EnhancedFooter() {
   const currentYear = new Date().getFullYear()
   const services = [
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     { name: 'AI Services', href: '/ai-services' }
     { name: 'IT Services', href: '/it-services' }
     { name: 'Blockchain Solutions', href: '/blockchain-solutions' }
     { name: 'Micro SaaS', href: '/micro-saas' }
     { name: 'Security', href: '/security' }
     { name: 'Case Studies', href: '/case-studies' }
+<<<<<<< HEAD
 =======
     { name: 'AI Services', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
@@ -109,6 +116,8 @@ export default function EnhancedFooter() {
     { name: 'Security', href: '/security' },;
     { name: 'Case Studies', href: '/case-studies' },;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];
   const company = [
     { name: 'About Us', href: '/about' }
@@ -128,10 +137,16 @@ export default function EnhancedFooter() {
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github }
   ];
+<<<<<<< HEAD
 
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <footer className;
                   return (
@@ -509,5 +524,10 @@ export default EnhancedFooter;
 
 export default EnhancedFooter;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

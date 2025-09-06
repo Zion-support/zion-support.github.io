@@ -1,10 +1,18 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
+<<<<<<< HEAD
 export const useDeleteMilestone = () => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -13,6 +21,15 @@ export const useDeleteMilestone = () => {
 export const useDeleteMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
+=======
+
+
+export const useDeleteMilestone = () => {;
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -84,6 +101,7 @@ if (throw error) {
       return false
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
     }
   };
   
@@ -119,5 +137,9 @@ export const useDeleteMilestone = () => {;
   return {;
     deleteMilestone;
     isSubmitting;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };

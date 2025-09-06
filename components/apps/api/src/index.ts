@@ -341,6 +341,11 @@ app.listen ({ port, host: '0.0.0.0' }).catch ((err) => {
   app.log.error (err);
   process.exit (1);
 });
+<<<<<<< HEAD
 
     );
     );
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

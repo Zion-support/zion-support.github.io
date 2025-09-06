@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -13,6 +14,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Sparkles } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea",
 import { Sparkles } from "lucide-react",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface AIListingFormProps {
   onSubmit: (formData: {
 
@@ -112,6 +119,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           onChange={(e) => setTargetAudience(e.target.value)}
           placeholder="e.g. Developers, Marketers, Startups"
           className="bg-zion-blue border border-zion-blue-light text-white"
+<<<<<<< HEAD
           disabled={isLoading}
         />
       </div>
@@ -119,6 +127,12 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
       <Button 
+=======
+
+      <Button 
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -220,6 +234,13 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
         />;
       </div>;
       <Button;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         onClick={handleSubmit}
         disabled={isLoading || !title || !category}
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"

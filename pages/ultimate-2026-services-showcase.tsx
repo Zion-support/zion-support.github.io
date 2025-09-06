@@ -1,5 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState, useMemo } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -104,6 +111,12 @@ export default function Ultimate2026ServicesShowcase() {
       default: break
     }
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -275,6 +288,10 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return filtered
   }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
   const featuredServices = allServices.filter(service => service.popular).slice(0, 6),
@@ -304,6 +321,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 animate-pulse"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.1),transparent_50%)]"></div>
@@ -328,12 +351,17 @@ export default function Ultimate2026ServicesShowcase(req, res) {
               Discover revolutionary AI consciousness simulation, quantum neural interfaces, autonomous AI agents,
               and cutting-edge enterprise solutions that will transform your business in 2026 and beyond.
             </p>
+<<<<<<< HEAD
             {/* Service Statistics */}
             {/* Service Statistics */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
@@ -370,6 +398,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-10 w-24 h-24 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-500"></div>
@@ -380,6 +414,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <section className="bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600 text-white py-4">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center space-x-6 mb-4 md:mb-0">
@@ -428,6 +468,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">Revolutionary Services</span>
@@ -457,6 +503,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 transition={{ duration: 0.8, delay: index * 0.1 }} className="group relative">
                 <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -501,6 +553,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         <span className="text-sm text-gray-400">{service.period}</span>
                       </div>
                       <div className="flex items-center text-yellow-400">
@@ -557,6 +615,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             transition={{ duration: 0.8 }} className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               All <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Revolutionary Services</span>
@@ -579,6 +643,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div className="relative max-w-2xl mx-auto">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
@@ -620,6 +690,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   onChange={(e) => setSelectedCategory(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   {categories.map((category) => (
                     <option key={category.id} value={category.id}>
@@ -645,6 +721,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   onChange={(e) => setSelectedPriceRange(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   {priceRanges.map((range) => (
                     <option key={range.id} value={range.id}>
@@ -678,6 +760,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   onChange={(e) => setSortBy(e.target.value)} className="appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all">
                   <option value="name">Sort by Name</option>
                   <option value="price">Sort by Price</option>
@@ -692,6 +780,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <div className="flex bg-gray-800 border border-gray-700 rounded-lg p-1">
                 <button
                   onClick={() => setViewMode('grid')}
@@ -725,6 +819,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
           <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>;
             {filteredServices.map((service, index) => (;
               <motion.div;
+<<<<<<< HEAD
                 key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -750,6 +845,16 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+                key={service.id}
+                initial={{ opacity: 0, coordinate_y: 30 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.05 }}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 {viewMode === 'grid' ? (
                   <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
@@ -795,6 +900,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           <span className="text-sm text-gray-400">{service.period}</span>
                         </div>
                         <div className="flex items-center text-yellow-400">
@@ -826,6 +937,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </h3>
                         {service.popular && (
                           <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center">
@@ -849,6 +966,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         <span className="text-sm text-gray-400">{service.period}</span>
                       </div>
                       <Link
@@ -884,6 +1007,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               animate={{ opacity: 1 }} className="text-center py-20">
               <div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
@@ -905,6 +1034,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <section className="py-20 bg-gradient-to-r from-cyan-600 via-purple-600 to-pink-600">
         <div className="max-w-4xl mx-auto text-center px-6">
           <motion.div
@@ -968,6 +1103,12 @@ export default function Ultimate2026ServicesShowcase(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -1031,6 +1172,7 @@ export default function Ultimate2026ServicesShowcase(req, res) {
         </div>
       </section>
     </>
+<<<<<<< HEAD
   );
 };
   )
@@ -1040,3 +1182,116 @@ export default function Ultimate2026ServicesShowcase(req, res) {
   }
 }
 }
+=======
+
+=======
+}
+
+=======
+          >;
+            <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
+              Ready to Transform Your Business with 2026 Innovations?;
+            </h2>;
+            <p className="text - xl text - white / 90 mb - 8">;
+              Join thousands of forward - thinking companies already leveraging our revolutionary AI, quantum computing,
+              and emerging technology solutions to gain competitive advantages and drive unprecedented growth.;
+            </p>;
+            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+              <Link href="/contact" className="inline - flex items - center px - 8 py - 4 bg - white text - purple - 600 font - semibold rounded - full hover:bg - gray - 100 transition - all duration - 300 transform hover:scale - 105">;
+                <Phone className="w - 5 h - 5 mr - 2" />;
+                Get Started Today;
+              </Link>;
+              <Link href="/pricing" className="inline - flex items - center px - 8 py - 4 border - 2 border - white text - white font - semibold rounded - full hover:bg - white hover:text - purple - 600 transition - all duration - 300">;
+                <DollarSign className="w - 5 h - 5 mr - 2" />;
+                View Pricing;
+              </Link>;
+            </div>;
+            <div className="mt - 12 grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
+              <div className="text - center">;
+                <div className="text - 3xl font - bold text - white mb - 2">500%+</div>;
+                <div className="text - white / 80">Average ROI</div>;
+              </div>;
+              <div className="text - center">;
+                <div className="text - 3xl font - bold text - white mb - 2">24 / 7</div>;
+                <div className="text - white / 80">Support Available</div>;
+              </div>;
+              <div className="text - center">;
+                <div className="text - 3xl font - bold text - white mb - 2">99.9%</div>;
+                <div className="text - white / 80">Uptime Guarantee</div>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      {/* Footer Contact */}
+      <section className="py - 16 bg - gray - 900">;
+        <div className="max - w-7xl mx - auto px - 6">;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 12">;
+            <div>;
+              <h3 className="text - 3xl font - bold text - white mb - 6">;
+                Let's Build the Future Together;
+              </h3>;
+              <p className="text - gray - 400 mb - 8 text - lg">;
+                Our team of experts is ready to help you implement these revolutionary 2026 innovations;
+                and transform your business operations with cutting - edge technology.;
+              </p>;
+              <div className="space - y-4">;
+                <div className="flex items - center text - gray - 300">;
+                  <Phone className="w - 5 h - 5 mr - 3 text - cyan - 400" />;
+                  <span>{contact_info.mobile}</span>;
+                </div>;
+                <div className="flex items - center text - gray - 300">;
+                  <Mail className="w - 5 h - 5 mr - 3 text - cyan - 400" />;
+                  <span>{contact_info.email}</span>;
+                </div>;
+                <div className="flex items - center text - gray - 300">;
+                  <MapPin className="w - 5 h - 5 mr - 3 text - cyan - 400" />;
+                  <span>{contact_info.address}</span>;
+                </div>;
+              </div>;
+            </div>;
+            <div>;
+              <h4 className="text - 2xl font - bold text - white mb - 6">Why Choose Zion Tech Group?</h4>;
+              <div className="space - y-4">;
+                <div className="flex items - start">;
+                  <CheckCircle className="w - 6 h - 6 text - green - 400 mr - 3 mt - 1 flex - shrink - 0" />;
+                  <div>;
+                    <h5 className="text - white font - semibold mb - 1">First - to - Market Innovations</h5>;
+                    <p className="text - gray - 400">Access cutting - edge technology before your competitors</p>;
+                  </div>;
+                </div>;
+                <div className="flex items - start">;
+                  <CheckCircle className="w - 6 h - 6 text - green - 400 mr - 3 mt - 1 flex - shrink - 0" />;
+                  <div>;
+                    <h5 className="text - white font - semibold mb - 1">Proven ROI</h5>;
+                    <p className="text - gray - 400">Average customers see 300 - 500% return on investment</p>;
+                  </div>;
+                </div>;
+                <div className="flex items - start">;
+                  <CheckCircle className="w - 6 h - 6 text - green - 400 mr - 3 mt - 1 flex - shrink - 0" />;
+                  <div>;
+                    <h5 className="text - white font - semibold mb - 1">Expert Implementation</h5>;
+                    <p className="text - gray - 400">Full - service deployment and ongoing support</p>;
+                  </div>;
+                </div>;
+                <div className="flex items - start">;
+                  <CheckCircle className="w - 6 h - 6 text - green - 400 mr - 3 mt - 1 flex - shrink - 0" />;
+                  <div>;
+                    <h5 className="text - white font - semibold mb - 1">Future - Proof Technology</h5>;
+                    <p className="text - gray - 400">Built for the challenges and opportunities of tomorrow</p>;
+                  </div>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

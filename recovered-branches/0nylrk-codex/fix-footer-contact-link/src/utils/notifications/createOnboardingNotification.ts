@@ -1,8 +1,16 @@
 
+<<<<<<< HEAD
 import { createNotification  } from './createNotification';
 import { OnboardingNotificationParams } from './types';
 import {createNotification} from './createNotification';
 import {OnboardingNotificationParams} from './types';
+=======
+
+import {createNotification} from './createNotification';
+import {OnboardingNotificationParams} from './types';
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /**
  * Creates an onboarding notification for a user
  */
@@ -94,9 +102,17 @@ if ( {) {
     action_text;
   });
 
+<<<<<<< HEAD
     actionText
   })
 }
+=======
+}
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { createNotification } from './createNotification',;
 import { OnboardingNotificationParams } from './types',;
 /**;
@@ -164,5 +180,11 @@ export async function createOnboardingNotification({;
     actionUrl;
     actionText;
   });
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

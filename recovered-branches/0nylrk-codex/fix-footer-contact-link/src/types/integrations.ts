@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
 ;
 export type IntegrationStatus = "connected" | "warning" | "disconnected";
@@ -16,6 +19,11 @@ export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export type IntegrationStatus = "connected" | "warning" | "disconnected",
 
@@ -39,6 +47,7 @@ export interface Integration {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export interface SyncLog {;
   id: string;
@@ -56,6 +65,13 @@ export interface SyncLog {
   event: string,
   status: "success" | "error" | "warning",
   timestamp: string,
+=======
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   details: string
 }
 export type CrmIntegrationEvents =
@@ -69,6 +85,7 @@ export type CrmIntegrationEvents =
 export type AtsIntegrationEvents =
   | "job_synced",
 
+<<<<<<< HEAD
 export type AtsIntegrationEvents = 
   | "applicant_created"
   | "candidate_status_changed"
@@ -95,6 +112,9 @@ export interface SyncLog {;
   event: string,;
   status: "success" | "error" | "warning",;
   timestamp: string,;
+=======
+  timestamp: string,
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   details: string;
 }
 export type CrmIntegrationEvents =;

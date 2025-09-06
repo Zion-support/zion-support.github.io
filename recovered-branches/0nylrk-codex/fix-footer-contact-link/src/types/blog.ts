@@ -1,15 +1,22 @@
+<<<<<<< HEAD
 export interface BlogAuthor {
 export interface BlogAuthor {;
   name: string;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   title: string,
   avatar_url: string;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface BlogPost {
 
 export interface BlogPost {;
+=======
+export interface BlogPost {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   title: string;
   slug: string;
@@ -47,6 +54,7 @@ export interface GeneratedNewsletterContent {;
 
   cta: string
 }
+<<<<<<< HEAD
 export interface BlogAuthor {;
   name: string,;
   title: string,;
@@ -90,3 +98,10 @@ export interface GeneratedNewsletterContent {
 
 }
 ;
+=======
+=======
+
+export interface BlogAuthor {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

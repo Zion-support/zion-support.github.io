@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import { useState, useEffect } from 'react';
 import {
@@ -253,6 +254,10 @@ const getVerticalIcon = (vertical: string) => {
             </div>
             <div>
               <p className='text-2xl font-bold'>{getStatusCount('failed')}</p>
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <p className='text-sm text-white/60'>Failed</p>            </div>  return (
     <div className="space-y-8">
       {/* Header Section */}
@@ -567,6 +572,9 @@ export default function DeploymentsPage() {;
             {label} ({count});
           </button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       </div>;
 
@@ -608,6 +616,7 @@ export default function DeploymentsPage() {;
             {/* Status Header */}
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -615,6 +624,8 @@ export default function DeploymentsPage() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         ))}
       </div>
       {/* Deployments Grid */}
@@ -1088,6 +1099,7 @@ const getVerticalIcon = (vertical: string) =>: any {
                       style={{ width: `${deployment && deployment.progress}%` }}></div>;
                   </div>;
                 </div>;
+<<<<<<< HEAD
               )}
             </div>
             {/* Deployment Details */}
@@ -1109,6 +1121,10 @@ const getVerticalIcon = (vertical: string) =>: any {
                   </span>
                 </div>
                 {(deployment.region || deployment.country) && (
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <div className='flex items-center gap-2 text-white/70'>
                     <MapPin className='w-4 h-4' />
                     <span>
@@ -1175,14 +1191,24 @@ const getVerticalIcon = (vertical: string) =>: any {
                 <div className="flex items-center gap-2 text-white/70">
                   <span>🌐</span>
                   <span className="font-mono">
+<<<<<<< HEAD
                     {deployment.domain |deployment.subdomain |'No domain set'}
                   </span>
                 </div>
                 {(deployment.region |deployment.country) && (
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {deployment.domain || deployment.subdomain || 'No domain set'}
                   </span>
                 </div>
                 {(deployment.region || deployment.country) && (
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <div className="flex items-center gap-2 text-white/70">
                     <span>📍</span>
                     <span>{deployment.region} {deployment.country}</span>
@@ -1201,6 +1227,13 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <MapPin className="w-4 h-4" />;
                     <span>{[deployment.region, deployment.country].filter(Boolean).join()}</span>;
                   </div>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 )}
               </div>
 =======
@@ -1400,6 +1433,12 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <span className="inline-flex items-center px-2 py-1 rounded-md text-xs bg-white/10 text-white/70">;
                       +{deployment.features.length - 4} more;
                     </span>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   )}
 
                 </div>;
@@ -1459,6 +1498,12 @@ const getVerticalIcon = (vertical: string) =>: any {
                     <RefreshCw className="w-3 h-3" />;
                     <span>Updated: {formatDate(deployment.updatedAt)}</span>;
                   </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 )}
 
               </div>;
@@ -1565,6 +1610,13 @@ const getVerticalIcon = (vertical: string) =>: any {
               </div>;
             </div>;
           </div>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         ))}
 
       </div>;
@@ -1898,6 +1950,7 @@ const getVerticalIcon = (vertical: string) =>: any {
         </div>
       )}
     </div>
+<<<<<<< HEAD
   );      )}
     </div>
   );
@@ -1926,6 +1979,17 @@ const getVerticalIcon = (vertical: string) =>: any {
         </div>;
       )}
     </div>;
+=======
+
+=======
+        </div>;
+      )}
+    </div>;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
 <<<<<<< HEAD

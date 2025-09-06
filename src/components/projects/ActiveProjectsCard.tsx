@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects()
   const [activeProjects, setActiveProjects] = useState<Project[]>([]);
@@ -17,6 +18,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge",
 import { useProjects } from "@/hooks/useProjects",
 import { Project } from "@/types/projects",
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ActiveProjectsCard() {
   const { projects, isLoading } = useProjects();
   const [activeProjects, setActiveProjects] = useState<Project[]>([]),
@@ -32,6 +35,9 @@ export function ActiveProjectsCard() {
   }, [projects, isLoading]),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   if (isLoading) {
@@ -64,11 +70,16 @@ export function ActiveProjectsCard() {;
 
   if (isLoading) {;
     return (
+<<<<<<< HEAD
       <Card>
         <CardHeader>
           <CardTitle className='flex items-center gap-2'>
             <BriefcaseIcon className='h-5 w-5 text-primary' />            <span>Active Projects</span>          <CardTitle className="flex items-center gap-2">
           <CardTitle className="flex items-center gap-2">
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <BriefcaseIcon className="h-5 w-5 text-primary" />
             <span>Active Projects</span>
           </CardTitle>
@@ -128,6 +139,9 @@ export function ActiveProjectsCard() {;
       </Card>;
     );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   }
@@ -150,6 +164,9 @@ export function ActiveProjectsCard() {;
         </CardHeader>          <CardTitle className="flex items-center gap-2">
           <CardTitle className="flex items-center gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -172,11 +189,19 @@ export function ActiveProjectsCard() {;
           <Button variant="outline" asChild>
             <Link href="/jobs">Find Opportunities</Link>
           </Button>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </CardContent>
       </Card>
     )
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -220,6 +245,7 @@ export function ActiveProjectsCard() {;
 
 
                   : 'In Progress'}
+<<<<<<< HEAD
               </Badge>
             </div>
             <div className='flex items-center text-xs text-muted-foreground gap-2'>
@@ -256,6 +282,32 @@ export function ActiveProjectsCard() {;
               <span>Started {new Date(project.start_date).toLocaleDateString()}</span>
             </div>
             <Button size="sm" variant="outline" className="w-full mt-2" asChild>
+=======
+              </Badge>;
+            </div>;
+            <div className='flex items-center text-xs text-muted-foreground gap-2'>;
+              <Clock className='h-3 w-3' />;
+              <span>;
+                Started {new Date(project && project.start_date).toLocaleDateString()}
+              </span>;
+            </div>;
+            <Button size='sm' variant='outline' className='w-full mt-2' asChild>              <Link href={`/project/${project && project.id}`}>View Project</Link>            <Button size="sm" variant="outline" className="w-full mt-2" asChild>;
+              <Link href={`/project/${project && project.id}`}>View Project</Link>;
+            </Button>;
+          </div>;
+        ))}
+      </CardContent>;
+      {activeProjects && activeProjects.length > 2 && (;
+        <CardFooter>;
+          <Button variant='ghost' className='w-full' asChild>;
+            <Link href='/projects'>View All Projects</Link>          </Button>          <Button variant="ghost" className="w-full" asChild>;
+            <Link href="/projects">View All Projects</Link>;
+          </Button>;
+        </CardFooter>;
+
+      )}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Link href={`/project/${project.id}`}>View Project</Link>
             </Button>
           </div>

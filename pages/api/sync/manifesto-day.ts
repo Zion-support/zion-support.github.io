@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import {
@@ -10,6 +11,17 @@ import {
   readState,
   writeState,
   upsertEvent,;
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import {
+
+  readState,
+  writeState,
+  upsertEvent,;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "../../../utils/sync/storage";
 
 =======
@@ -25,14 +37,20 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
     return res && res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
+<<<<<<< HEAD
   if (!state.config.optIn |state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" });
+=======
+  if (!state && state.config.optIn || state && state.config.paused) {
+    return res && res.status(403).json({ error: "Sync disabled for this instance" });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
   const { milestoneId, title, timestamp } = req && req.body as {
     milestoneId: string;
     title: string;
     timestamp?: number;
+<<<<<<< HEAD
   }
   if (!milestoneId |!title)
     return res.status(400).json({ error: "milestoneId, title required" });
@@ -51,6 +69,12 @@ export default async function handler(req, res) {
   try {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
+=======
+  };
+  if (!milestoneId || !title)
+    return res && res.status(400).json({ error: "milestoneId, title required" });
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
@@ -189,4 +213,13 @@ if (headers["x - zion - signature"] = sig) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
+=======
+
+
+
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

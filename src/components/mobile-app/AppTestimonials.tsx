@@ -6,6 +6,7 @@
     avatar: '/placeholder.svg'
   }
   {
+<<<<<<< HEAD
     name: 'Michael Chen'
     role: 'Full Stack Developer'
     text: 'I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.'
@@ -18,12 +19,23 @@
 <<<<<<< HEAD
     avatar: '/placeholder.svg',
   },]
+=======
+
+    name: 'Michael Chen',
+    role: 'Full Stack Developer',
+    text: 'I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.',
+    rating: 4,
+    avatar: '/placeholder.svg',
+  }, ];
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const AppTestimonials: React.FC = () => {
   return (    avatar: "/placeholder.svg"
   }
 ]
 export const AppTestimonials: React.FC = () => {
   return (
+<<<<<<< HEAD
     <section className='py-16 bg-zion-blue'>
       <div className='container mx-auto px-4'>
         <div className='text-center mb-12'>
@@ -72,6 +84,40 @@ const testimonials = [
     text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",
     rating: 4,
     avatar: "/placeholder.svg"
+=======
+
+
+import React from 'react';
+import { Star } from 'lucide-react';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
+const testimonials = [;
+  {;
+    name: 'Alex Johnson',;
+    role: 'AI Developer',;
+    text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!",;
+    rating: 5,;
+    avatar: '/placeholder && placeholder.svg',;
+  },;
+
+const testimonials = [;
+  {;
+    name: 'Sarah Williams',;
+    role: 'Tech Recruiter',;
+    text: 'As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.',;
+    rating: 5,;
+    avatar: '/placeholder && placeholder.svg',;
+  },;
+  {;
+    name: 'Michael Chen',;
+    role: 'Full Stack Developer',;
+    text: 'I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.',;
+    rating: 4,;
+    avatar: '/placeholder && placeholder.svg',;
+  },];
+
+export const AppTestimonials: React.FC = () => {;
+  return (    avatar: "/placeholder && placeholder.svg";
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 
@@ -109,7 +155,10 @@ export const AppTestimonials: React.FC = () => {
 
           </p>
         </div>
+<<<<<<< HEAD
         
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30">
@@ -151,6 +200,9 @@ export const AppTestimonials: React.FC = () => {
                   </div>
                   <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -161,6 +213,7 @@ export const AppTestimonials: React.FC = () => {
                 </div>
               </CardFooter>
             </Card>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -193,6 +246,8 @@ export const AppTestimonials: React.FC = () => {"
   )
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 }</div> </div> </section>) 
@@ -202,6 +257,9 @@ export const AppTestimonials: React.FC = () => {"
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React from "react",;
 import { Star } from 'lucide-react';
@@ -273,6 +331,9 @@ export const AppTestimonials: React.FC = () => {;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

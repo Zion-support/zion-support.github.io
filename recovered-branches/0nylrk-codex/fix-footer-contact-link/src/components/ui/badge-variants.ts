@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { cva } from "class-variance-authority",
@@ -46,3 +47,7 @@ export const badgeVariants = cva(;
     defaultVariants: {;
       variant: "default"}}
 );
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

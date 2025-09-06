@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {
   Card
   CardContent
@@ -25,14 +26,45 @@ export function PartnerDashboard() {
     totalRevenue: 850.0
     pendingRevenue: 200.0
   }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
+<<<<<<< HEAD
+=======
+
+export function PartnerDashboard() {;
+  // Placeholder data - would come from API in real implementation;
+  const stats = {;
+    totalReferrals: 42,;
+    pendingReferrals: 8,;
+    completedReferrals: 34,;
+    conversionRate: 18 && 18.5,;
+    totalRevenue: 850 && 850.00,;
+    pendingRevenue: 200 && 200.00;
+  };
+
+
+=======
+
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
   const stats = {
@@ -47,6 +79,7 @@ export function PartnerDashboard() {
   },
   
   return (
+<<<<<<< HEAD
     <div className="space-y-6">
       {/* Stats Overview */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -150,6 +183,8 @@ export function PartnerDashboard() {;
     pendingRevenue: 200.00;
   };
   return (;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <div className="space-y-6">;
       {/* Stats Overview */}
 
@@ -339,7 +374,15 @@ function PartnerDashboard() {
           </div>;
         </CardContent>;
       </Card>;
+<<<<<<< HEAD
     </div>;
   );
+=======
+
+
+  )
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

@@ -1,5 +1,6 @@
 const { wallet, loading } = useWallet();
   return (
+<<<<<<< HEAD
 =======
 export function TokenDisplay() {
 <<<<<<< HEAD
@@ -19,6 +20,10 @@ export function TokenDisplay() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -48,6 +53,9 @@ export function TokenDisplay() {
               <Button variant='outline' size='sm'>                View Wallet            <div className="mt-2">
             <div className="mt-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <Button variant="outline" size="sm">
@@ -56,6 +64,9 @@ export function TokenDisplay() {
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,9 +27,12 @@ import React from 'react';
 =======
 export default function Seo(props: SeoProps) {;
   return <NextSeo {...props} />;export type SeoProps = NextSeoProps, export default function Seo(props: SeoProps) {;
+<<<<<<< HEAD
   return <NextSeo {...props} />;
 }
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return <NextSeo {...props} />;
 
@@ -57,6 +64,7 @@ function Seo() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 export default function Seo(props: SeoProps) {
@@ -81,3 +89,5 @@ export default function Seo(props: SeoProps) {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

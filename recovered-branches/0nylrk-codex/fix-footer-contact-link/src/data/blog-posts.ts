@@ -1,22 +1,46 @@
 
+<<<<<<< HEAD
 import { BlogPost } from "@/types/blog";
 import { BlogPost } from '@/types/blog';
 // Sample blog data - in a real app this would come from an API or CMS
 export const BLOG_POSTS: BlogPost[] = [
   {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     id: 'ai-trends-2025'
     title: '10 Emerging AI Trends to Watch in 2025'
     slug: 'ai-trends-2025'
     excerpt:
+<<<<<<< HEAD
+=======
+=======
+
+import { BlogPost } from '@/types/blog';
+
+// Sample blog data - in a real app this would come from an API or CMS
+export const BLOG_POSTS: BlogPost[] = [
+  {
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     id: 'ai-trends-2025',
     title: '10 Emerging AI Trends to Watch in 2025',
     slug: 'ai-trends-2025',
     excerpt:;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.',    content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>    id: "ai-trends-2025";
     title: "10 Emerging AI Trends to Watch in 2025";
     slug: "ai-trends-2025"
     excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
 <h2>1. Multimodal AI Systems</h2>
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
@@ -43,6 +67,7 @@ export const BLOG_POSTS: BlogPost[] = [
     is_featured: true,
 
   },
+<<<<<<< HEAD
 
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
 <h2>1. Multimodal AI Systems</h2>
@@ -69,6 +94,9 @@ export const BLOG_POSTS: BlogPost[] = [
       'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&h=630'
     isFeatured: true
   }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   {
 
     id: 'optimize - ai - listings',
@@ -153,6 +181,11 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: "Practical steps for implementing sustainable practices in your IT infrastructure while maintaining performance and reliability.",
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.performance.</p>
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
 <h2>Optimizing Cooling Systems</h2>
@@ -307,6 +340,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
+<<<<<<< HEAD
     id: "ai-compute-optimization",
     title: "AI Compute Optimization: Balancing Performance and Cost",
     slug: "ai-compute-optimization",
@@ -333,6 +367,20 @@ export const BLOG_POSTS: BlogPost[] = [
       title: "ML Infrastructure Architect"
       avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
     }
+=======
+
+    id: 'ai - compute - optimization',
+    title: 'AI Compute Optimization: Balancing Performance and Cost',
+    slug: 'ai - compute - optimization',
+    excerpt:;
+      'Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.',    content: `<p > As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>    id: "ai - compute - optimization";
+
+    title: "AI Compute Optimization: Balancing Performance and Cost";
+    slug: "ai - compute - optimization";
+    excerpt: "Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.";
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     publishedDate: "Mar 15, 2025";
     readTime: "6 min read";
     category: "Infrastructure"
@@ -340,6 +388,7 @@ export const BLOG_POSTS: BlogPost[] = [
     featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
   }
 ];
+<<<<<<< HEAD
 }];
     }
     publishedDate: 'Mar 15, 2025'
@@ -354,9 +403,37 @@ export const BLOG_POSTS: BlogPost[] = [
     featuredImage:
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630'
   }
+=======
+
+      'https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630',
+=======
+    },
+    published_date: 'Mar 15, 2025',
+    read_time: '6 min read',
+    category: 'Infrastructure',
+    tags: [;
+      'AI Infrastructure',
+      'Cost Optimization',
+      'Machine Learning',
+      'Computing',
+    ],
+    featured_image:;
+      'https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=1200 & h=630',
+
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];
 }];
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       name: "Michael Wong",
       title: "ML Infrastructure Architect",
       avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
@@ -533,3 +610,10 @@ export const BLOG_POSTS: BlogPost[] = [;
     featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630";
   }
 ];
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

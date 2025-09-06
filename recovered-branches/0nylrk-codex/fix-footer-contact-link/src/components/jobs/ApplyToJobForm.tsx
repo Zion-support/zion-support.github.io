@@ -1,4 +1,17 @@
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+interface ApplyToJobFormProps {
+
+  job: Job
+
+  onSuccess?: () => void
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -13,6 +26,7 @@ import {AlertCircle, FileText, Loader2} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
 import {Job} from "@/types/jobs";
 import {toast} from "sonner";
+<<<<<<< HEAD
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -70,15 +84,25 @@ interface ApplyToJobFormProps {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+interface ApplyToJobFormProps {;
+  job: Job,;
+  onSuccess?: () => void;
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
+<<<<<<< HEAD
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
 
   const { resumes, isLoading: isResumesLoading } = useResume()
+=======
+  const { resumes, isLoading: isResumesLoading } = useResume(),;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const navigate = useNavigate();
 
   const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job && job.title}" position and would like to apply. My skills and experience align well with this role.`);
@@ -451,9 +475,14 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
       </div>;
 
       <div className="flex justify-end gap-2">;
+<<<<<<< HEAD
         <Button;
           type="button";
           variant="outline";
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();

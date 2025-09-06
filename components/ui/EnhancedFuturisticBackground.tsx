@@ -190,7 +190,17 @@ if (return) {
         if (this.y > canvas.height) this.y = 0;
         // Fade out near end of life
         if (this.life < 20) {
+<<<<<<< HEAD
           this.opacity *= 0.95;        }          this.opacity *= 0.95
+=======
+
+          this.opacity *= 0.95
+
+        }
+      }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           this.opacity *= 0.95;        }
 
         }
@@ -215,6 +225,7 @@ if (return) {
         
 
         ctx.restore()
+<<<<<<< HEAD
 =======
         return this.life <= 0 || this.opacity < 0.01;      }
 
@@ -230,6 +241,26 @@ if (return) {
         ctx.restore()
         return this.life <= 0 || this.opacity < 0.01;      }
 
+=======
+      }
+      isDead() {
+
+        return this.life <= 0 || this.opacity < 0.01
+      }
+
+    }
+=======
+
+        return this.life <= 0 || this.opacity < 0.01;      }        
+
+        ctx.restore()
+=======
+        return this.life <= 0 || this.opacity < 0.01;      }
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       isDead() {
         return this.life <= 0 |this.opacity < 0.01
@@ -726,6 +757,7 @@ if (> 0.975) {) {
       }
       // Create connections between nearby particles
       connections = [];
+<<<<<<< HEAD
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const distance = Math.sqrt(
@@ -749,6 +781,11 @@ if (> 0.975) {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
         }
       }
@@ -1020,6 +1057,27 @@ if (< 0.5) {) {
 }
 export default EnhancedFuturisticBackground;
 
+<<<<<<< HEAD
 export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
 export default EnhancedFuturisticBackground;
+=======
+
+=======
+
+export default EnhancedFuturisticBackground;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+          background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
+        }}
+      />;
+{/* Content */}
+      <div className='relative z - 10'>{children}</div>;
+    </div>);
+}
+;
+export default EnhancedFuturisticBackground;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

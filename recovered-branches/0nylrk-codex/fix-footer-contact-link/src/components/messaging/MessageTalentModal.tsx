@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
   Dialog;
@@ -6,6 +7,12 @@ import {
   DialogHeader;
   DialogTitle;
   DialogDescription;
+=======
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -14,6 +21,12 @@ import {useMessaging} from "@/context/MessagingContext";
 import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -31,6 +44,11 @@ import { toast } from "@/components/ui/use-toast";
 import { useNavigate } from "react-router-dom";
 import { toast } from "@/components/ui/use-toast",
 import { useNavigate } from "react-router-dom",
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface MessageTalentModalProps {
 
   talent: TalentProfile
@@ -39,6 +57,7 @@ export interface MessageTalentModalProps {
 
   jobTitle?: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function MessageTalentModal({;
@@ -49,6 +68,11 @@ export function MessageTalentModal({
   talent,
   isOpen,
   onClose,
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   jobTitle
 }: MessageTalentModalProps) {
   const { createConversation } = useMessaging();
@@ -279,6 +303,12 @@ export function MessageTalentModal({;
             <Avatar className="h-8 w-8 border border-zion-purple/20">;
               <AvatarImage src={talent && talent.profile_picture_url} alt={talent && talent.full_name} />;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>

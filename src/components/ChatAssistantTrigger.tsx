@@ -4,6 +4,7 @@
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
           "Content-Type": "application/json"}
         body: JSON.stringify({
           messages: [{ role: "user", content: message }]
@@ -11,6 +12,10 @@
             avatarUrl: 'https://placehold.co/64x64?text=AI'
             role: 'Virtual Assistant';      if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         body: JSON.stringify({ ;
           messages: [{ role: "user", content: message }] ;
         })});
@@ -19,6 +24,9 @@
         throw new Error("Failed to get response from AI assistant")
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
@@ -47,6 +55,9 @@ export function ChatAssistantTrigger() {;
       if (!response.ok) {;
         throw new Error("Failed to get response from AI assistant");
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   const [isOpen, setIsOpen] = useState(false);
@@ -72,11 +83,21 @@ export function ChatAssistantTrigger() {;
       logErrorToProduction('Error in AI chat:', { data: error }),;
       return Promise && Promise.resolve();
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },;
   return (;
     <>;
       <Button;
         onClick={() => setIsOpen(true)}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         size="icon"
         variant="outline"
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
@@ -84,6 +105,11 @@ export function ChatAssistantTrigger() {;
       >
         <MessageSquare className="h-5 w-5" />
       </Button>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       
       return Promise.resolve()
     } catch (error) {
@@ -97,6 +123,7 @@ export function ChatAssistantTrigger() {;
     <>;
       <Button
         onClick = {(,) => setIsOpen(true),}
+<<<<<<< HEAD
         size="icon"
         variant="outline"
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50"
@@ -105,6 +132,18 @@ export function ChatAssistantTrigger() {;
         <MessageSquare className="h-5 w-5" />
       </Button>
       {isOpen && (
+=======
+
+        size="icon";
+        variant="outline";
+        className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover:bg-zion-purple-light z-50";
+        aria-label="Open chat assistant";
+      >;
+        <MessageSquare className="h-5 w-5" />;
+      </Button>;
+
+      {isOpen && (;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <ChatAssistant
           isOpen = {isOpen,}
           onClose = {(,) => setIsOpen(false),}
@@ -119,6 +158,9 @@ export function ChatAssistantTrigger() {;
             avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',;
             role: 'Virtual Assistant';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -130,6 +172,9 @@ export function ChatAssistantTrigger() {;
   )
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { useState  } from './react';
 import { MessageSquare } from 'lucide-react'import { Button  } from '@/components / ui / button';
@@ -198,6 +243,9 @@ if ( {) {
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 ;

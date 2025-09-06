@@ -9,9 +9,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 origin/automation-improvements-final
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Search
   HelpCircle
   BookOpen
@@ -24,6 +27,14 @@ import {
   ExternalLink
   ChevronDown
   Cloud
+<<<<<<< HEAD
+=======
+=======
+
+
+import {
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Search,
   HelpCircle,
   BookOpen,
@@ -36,6 +47,11 @@ import {
   ExternalLink,
   ChevronDown,
   Cloud,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "lucide-react";
 const helpArticles = [
   {
@@ -153,13 +169,23 @@ const help_categories = [;
     color: "blue"
     articles: helpArticles
   }
+<<<<<<< HEAD
 ];
 export default function HelpPage() {
   const [searchTerm, setSearchTerm] = useState("");
+=======
+
+];
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     color: 'blue',
     articles: helpArticles
   }
 ];
+<<<<<<< HEAD
 export default function HelpPage() {
 
 export default function HelpPage() {;
@@ -171,6 +197,93 @@ export default function HelpPage() {
 export default function HelpPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+import {;
+  Search,;
+  HelpCircle,;
+  BookOpen,;
+  MessageCircle,;
+  Phone,;
+  Mail,;
+  FileText,;
+  Video,;
+  Download,;
+  ExternalLink,;
+  ChevronDown,;
+  Cloud,;
+} from "lucide-react";
+
+const helpArticles = [;
+  {;
+    id: "overview",;
+    title: "Understanding Our Services",;
+    description: "Overview of all available services and solutions",;
+    readTime: "7 min read",;
+    type: "Overview",;
+  },;
+  {;
+    id: "ai-services",;
+    title: "AI Services",;
+    description: "Everything about our AI and machine learning solutions.",;
+    icon: HelpCircle,;
+    color: "green",;
+    articles: [;
+      {;
+        title: "AI Implementation Guide",;
+        description: "How to implement AI solutions in your business",;
+        readTime: "10 min read",;
+        type: "Guide",;
+      },;
+      {;
+        title: "Machine Learning Models",;
+        description: "Understanding different ML models and their applications",;
+        readTime: "8 min read",;
+        type: "Technical",;
+      },;
+      {;
+        title: "AI Best Practices",;
+        description: "Tips and best practices for AI development",;
+        readTime: "6 min read",;
+        type: "Best Practice",;
+      },;
+    ],;
+  },;
+  {;
+    id: "cloud-services",;
+    title: "Cloud Services",;
+    description: "Cloud infrastructure and deployment solutions.",;
+    icon: Cloud,;
+    color: "blue",;
+    articles: [;
+      {;
+        title: "Cloud Migration Guide",;
+        description: "Step-by-step guide to migrating to the cloud",;
+        readTime: "12 min read",;
+        type: "Guide",;
+      },;
+      {;
+        title: "Cloud Security",;
+        description: "Best practices for securing your cloud infrastructure",;
+        readTime: "9 min read",;
+        type: "Security",;
+      },;
+    ],;
+  },;
+];
+
+const helpCategories = [;
+  {;
+    title: "Getting Started",;
+    description: "New to our platform? Start here.",;
+    icon: BookOpen,;
+    color: "blue",;
+    articles: helpArticles,;
+  },;
+];
+
+export default function HelpPage() {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [searchTerm, setSearchTerm] = useState("");
   const [expandedCategory, setExpandedCategory] = useState<number | null>(null);
 

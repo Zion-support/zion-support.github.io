@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Header} from "@/components/Header";
@@ -10,6 +14,7 @@ import {NotificationCenter} from "@/components/NotificationCenter";
 import {useToast} from "@/hooks/use-toast";
 import {Link} from "react-router-dom";
 export default function Dashboard() {;
+<<<<<<< HEAD
   const { user, logout } = useAuth();
   const { toast } = useToast();
 import { useAuth } from "@/hooks/useAuth",
@@ -24,6 +29,9 @@ import { NotificationCenter } from "@/components/NotificationCenter",
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 export default function Dashboard() {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
@@ -61,6 +69,7 @@ export default function Dashboard() {
         <div className="container mx-auto px-4 py-8">;
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
             {/* Left Sidebar - User Profile */}
+<<<<<<< HEAD
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
                 <div className="flex flex-col items-center text-center">
@@ -71,12 +80,27 @@ export default function Dashboard() {
                   <p className="text-zion-slate-light mb-2">{user.email}</p>
                   <Badge
                   <Badge 
+=======
+
+
+                  <Badge 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     className="bg-zion-purple text-white mb-4"
                   >
                     {user.userType ? user.userType.charAt(0).toUpperCase() + user.userType.slice(1) : "New User"}
                   </Badge>
+<<<<<<< HEAD
                   <Button
                   <Button 
+=======
+
+
+                  <Button 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                     onClick={() => window.location.href = "/profile"}
                   >
@@ -120,8 +144,16 @@ export default function Dashboard() {
                       <Send size={16} className="text-zion-cyan" />
                       Send Test Notification
                     </Button>
+<<<<<<< HEAD
                     <Button
                     <Button 
+=======
+
+
+                    <Button 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
@@ -143,8 +175,16 @@ export default function Dashboard() {
                       <Settings size={16} className="text-zion-purple" />
                       Send Onboarding Nudge
                     </Button>
+<<<<<<< HEAD
                     <Button
                     <Button 
+=======
+
+
+                    <Button 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
                       onClick={async () => {
@@ -709,3 +749,9 @@ if ( {) {
     </>);
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

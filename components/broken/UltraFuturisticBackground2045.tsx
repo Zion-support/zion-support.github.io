@@ -622,6 +622,18 @@ if ( {) {
           }}
         />
 
+<<<<<<< HEAD
+=======
+        />;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Floating Neon Shapes */}
         <motion&& motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
@@ -825,6 +837,7 @@ if ( {) {
           }}
         />
 
+<<<<<<< HEAD
         {/* Additional floating elements */}
         <motion.div
           className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full'
@@ -839,6 +852,8 @@ if ( {) {
           transition={{
             duration: 4
             repeat: Infinity
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ease: 'easeInOut',          }}
           transition={{
             duration: 10,
@@ -947,6 +962,11 @@ ease: 'linear',
           }}
         />
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Energy Orbs */}
         <motion&& motion.div
           className='absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50'
@@ -1053,6 +1073,14 @@ ease: 'linear',
         />
       </div>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Gradient Overlays */}
 
         />;
@@ -1117,6 +1145,7 @@ ease: 'linear',
     </div>;
   );
 
+<<<<<<< HEAD
 export default UltraFuturisticBackground2045;
 export default UltraFuturisticBackground2045;
 
@@ -1124,3 +1153,7 @@ export default UltraFuturisticBackground2045;
 }
 }
 export default UltraFuturisticBackground2045;
+=======
+};  );
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

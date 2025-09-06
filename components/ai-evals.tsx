@@ -3,6 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 
 import {
+<<<<<<< HEAD
   Check
   ShieldCheck
   TrendingUp
@@ -11,6 +12,9 @@ import {
   Mail
   MapPin
   ExternalLink;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Check,
   ShieldCheck,
   TrendingUp,
@@ -19,10 +23,15 @@ import {
   Mail,
   MapPin,;
   ExternalLink,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
+<<<<<<< HEAD
 export default function AIEvalsPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950'
@@ -30,6 +39,10 @@ export default function AIEvalsPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com'
   }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AIEvalsPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -38,6 +51,11 @@ export default function AIEvalsPage() {
     website: 'https://ziontechgroup.com',;
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const features = [
     'Golden datasets and synthetic evals'
     'Hallucination and grounding score'
@@ -164,6 +182,7 @@ function AIEvalsPage() {
                   {features.map (function => (
                     <li;
                       key={f}
+<<<<<<< HEAD
                       className='flex items-start gap-2 text-gray-200'
                     >
                       <Check className='w-5 h-5 text-emerald-400 mt-0.5' />{' '}
@@ -276,6 +295,79 @@ function AIEvalsPage() {
 			</section>
 		</QuantumHolographicMatrixBackground>
 );
+=======
+                      className='flex items - start gap - 2 text - gray - 200';
+                    >;
+                      <Check className='w - 5 h - 5 text - emerald - 400 mt - 0.5' />{' '}
+                      <span>{f}</span>;
+                    </li>))}
+                </ul>;
+              </div>;
+            </Card>;
+            <Card className='bg - black / 30 border border - cyan - 500 / 30'>;
+              <div className='p - 6'>;
+                <div className='text - 3xl font - bold text - white'>;
+                  Starting at $99;
+                  <span className='text - base text - gray - 400'>/month</span>;
+                </div>;
+                <div className='text - sm text - gray - 400 mt - 1'>;
+                  14 - day trial • Setup: 45 minutes;
+                </div>;
+                <div className='flex items - center gap - 2 text - yellow - 400 mt - 3'>;
+                  <TrendingUp className='w - 4 h - 4' /> Reduce regressions 30–60%;
+                </div>;
+                <div className='mt - 4'>;
+                  <Button;
+                    href='/contact';
+                    className='w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
+                  >;
+
+                    Request Demo;
+                  </Button>;
+                </div>;
+              </div>;
+            </Card>;
+          </div>;
+
+          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 6 mb - 12'>;
+            <Card className='p - 6 bg - black / 30 border border - purple - 500 / 30'>;
+              <h3 className='text - lg font - semibold mb - 2'>;
+                Guardrails & Policies;
+              </h3>;
+              <p className='text - gray - 300 text - sm'>;
+                Safety checks for toxicity, PII / PHI, jailbreaks and policy;
+                enforcement before responses reach users.;
+              </p>;
+            </Card>;
+            <Card className='p - 6 bg - black / 30 border border - emerald - 500 / 30'>;
+              <h3 className='text - lg font - semibold mb - 2'>Observability</h3>;
+              <p className='text - gray - 300 text - sm'>;
+                Latency, cost, and quality KPIs with prompt / version diffs and;
+                canary alerts in CI and prod.;
+              </p>;
+            </Card>;
+            <Card className='p - 6 bg - black / 30 border border - cyan - 500 / 30'>;
+              <h3 className='text - lg font - semibold mb - 2'>Integrations</h3>;
+              <p className='text - gray - 300 text - sm'>;
+
+                GitHub Actions, CircleCI, Datadog, Slack and PagerDuty. SDKs for;
+                Node and Python.;
+              </p>;
+            </Card>;
+          </div>;
+
+
+              </Button>;
+            </div>;
+          </div>;
+        </div>;
+      </section>;
+
+
+}
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 	);
 }
 	);

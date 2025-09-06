@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -9,11 +10,19 @@ import {
   CardTitle
   CardFooter
 } from "@/components/ui/card";
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components/ui/card";
 import {Textarea} from "@/components/ui/textarea";
 import {Check, Pencil} from "lucide-react";
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -21,13 +30,22 @@ import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/componen
 import { Textarea } from "@/components/ui/textarea",
 import { Check, Pencil } from "lucide-react",
 
+<<<<<<< HEAD
 import { Textarea } from "@/components/ui/textarea";
 import { Check, Pencil } from "lucide-react";
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface GeneratedDescriptionDisplayProps {
   description: string;
   onSave: (editedDescription: string) => void
 }
 
+<<<<<<< HEAD
 export function GeneratedDescriptionDisplay({
   description
   onSave
@@ -35,15 +53,41 @@ export function GeneratedDescriptionDisplay({
 export function GeneratedDescriptionDisplay({ 
   description, 
   onSave 
+=======
+
+interface GeneratedDescriptionDisplayProps {;
+  description: string,;
+  onSave: (editedDescription: string) => void;
+}
+
+export function GeneratedDescriptionDisplay(): any ({ ;
+  description, ;
+  onSave ;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }: GeneratedDescriptionDisplayProps) {;
 
   const { toast } = useToast();
   const [isEditing, setIsEditing] = useState(false);
   const [editedDescription, setEditedDescription] = useState(description);
+<<<<<<< HEAD
 }: GeneratedDescriptionDisplayProps) {
   const { toast } = useToast(),
   const [isEditing, setIsEditing] = useState(false),
   const [editedDescription, setEditedDescription] = useState(description),
+=======
+=======
+
+export function GeneratedDescriptionDisplay({ 
+  description, 
+  onSave 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+  const handleSave = () => {;
+    onSave(editedDescription);
+    setIsEditing(false);
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleSave = () => {
     onSave(editedDescription),
@@ -129,6 +173,13 @@ export function GeneratedDescriptionDisplay({;
                 <Pencil className="h-4 w-4 mr-1" />;
                 Edit;
               </>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             )}
 =======
 import React, { useState } from './react';

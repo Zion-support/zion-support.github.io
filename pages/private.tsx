@@ -10,10 +10,15 @@ import type { User as SupabaseUser } from '@supabase/supabase-js';
 interface PrivatePageProps {user: SupabaseUser;
 interface PrivatePageProps {;
   user: SupabaseUser;
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export default /**
  * PrivatePage - Function description
@@ -29,8 +34,14 @@ function PrivatePage() {
         <title>Private Profile - Zion Tech Marketplace</title>
         <meta name="description" content="Private user profile page" />
       </Head>
+<<<<<<< HEAD
       <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
       <div className="container max-w-4xl mx-auto py-8">
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <Card>
           <CardHeader>
             <CardTitle className=&quot;flex items-center gap-2&quot;>
@@ -71,11 +82,18 @@ function PrivatePage() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
             <div className=&quot;p-4 bg-muted/50 rounded-lg&quot;>
               <h4 className=&quot;font-medium mb-2&quot;>Authentication Details</h4>
               <div className=&quot;grid gap-2 text-sm&quot;>
                 <div>
                   <span className=&quot;font-medium&quot;>Last Sign In: </span>
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div className="p-4 bg-muted/50 rounded-lg">
               <h4 className="font-medium mb-2">Authentication Details</h4>
               <div className="grid gap-2 text-sm">
@@ -96,6 +114,12 @@ function PrivatePage() {
             </div>
             <div className=&quot;flex gap-2&quot;>
             <div className="flex gap-2">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Button asChild>
                 <Link href=&quot;/dashboard&quot;>
                   Go to Dashboard
@@ -130,7 +154,15 @@ if ( {) {
 
       user: data.user}}
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+}
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -162,5 +194,13 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 } ;
 } ;
+=======
+
+
+} ;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,6 +1,7 @@
 import { PdfExportButton } from '../PdfExportButton';
 import { Resume } from '@/types/resume';
 import { useState } from 'react';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -19,6 +20,8 @@ import { PdfExportButton  } from '../PdfExportButton';
 import { Resume  } from '@/types/resume';
 import { useState  } from 'react';
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useIsMobile } from '@/hooks/use-mobile';
 
 
@@ -32,6 +35,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
         .no-print {
           display: none !important }
       }
+<<<<<<< HEAD
     `
     document.head.appendChild(style)
         }
@@ -75,6 +79,9 @@ import { useIsMobile } from '@/hooks/use-mobile';
         </Button>
         <Button variant='outline' className='gap-2'>
           <Link className='h-4 w-4' />          Add to Profile        
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       </Button>
       <div
@@ -158,12 +165,17 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
           variant='outline'
           onClick={handleBrowserPrint}
           disabled={isPrinting}
+<<<<<<< HEAD
           className="gap-2"
         >
           <FileText className="h-4 w-4" />
           Print
         </Button>
         
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <Button variant="outline" className="gap-2">
           <Link className="h-4 w-4" />
           Add to Profile

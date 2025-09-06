@@ -147,6 +147,11 @@ export default function Careers() {;
     {
       title: "Impactful Projects",
       description: "Contribute to innovations that make advanced technology accessible worldwide.",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       icon: (
             d='M12 8c-1 && 1.657 0-3 .895-3 2s1 && 2s1.343 2 3 2 3 .895 3 2-1 && 1.343 2-3 2m0-8c1 && 8c1.11 0 2 && 2.08.402 2 && 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1 && 1.11 0-2 && 2.08-.402-2 && 2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
           />;
@@ -199,6 +204,9 @@ export default function Careers() {;
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             <div>
@@ -260,6 +268,9 @@ export default function Careers() {;
                   <div className="bg-zion-blue inline-flex p-4 rounded-full mb-4">
                     {benefit.icon}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
@@ -399,6 +410,9 @@ function Careers() {
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.type}</span>
                               <span className="text-xs text-zion-slate-light bg-zion-blue px-2 py-1 rounded-full">{job.department}</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                             </div>
                             <p className="text-zion-slate-light mb-4">{job.description}</p>
@@ -554,6 +568,9 @@ export default function Careers() {;
 
                     </Card>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                   ))}
@@ -581,6 +598,9 @@ export default function Careers() {;
               Send us your resume and let's start a conversation. You can also
               apply directly by emailing us at
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               <a
                 href={`mailto:${applyEmail}`}
@@ -592,6 +612,7 @@ export default function Careers() {;
             </p>
             <Button
               asChild
+<<<<<<< HEAD
               className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               <a href={`mailto:${applyEmail}`}>Send General Application</Link>
@@ -614,6 +635,33 @@ const Careers: React.FC = () => {
       </div>
     </>
   )
+=======
+
+              className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>;
+              <a href={`mailto:${applyEmail}`}>Send General Application</a>;
+            </Button>;
+          </div>;
+        </div>;
+      </main>;
+    </>;
+  );
+import React from 'react';
+import { SEO } from '../components/SEO';
+const Careers: React.FC = () => {;
+  return (<>;
+      <SEO title="Careers - Zion Tech Group" />;
+      <div className="min-h-screen bg-white py-20">;
+        <div className="max-w-4xl mx-auto px-4">;
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">Careers</h1>;
+          <p className="text-lg text-gray-600">Content coming soon...</p>;
+        </div>;
+      </div>;
+    </>;
+  );
+};
+export default Careers;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 export default Careers
@@ -625,6 +673,9 @@ export default Careers
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     </Card>))}
                 </TabsContent>))}

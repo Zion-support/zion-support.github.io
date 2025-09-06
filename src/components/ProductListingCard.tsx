@@ -33,7 +33,10 @@ import type { AppDispatch } from '@/store'
 import { addItem } from '@/store/cartSlice'
 import { toast } from '@/hooks/use-toast';
 import { useCurrency } from '@/hooks/useCurrency';
+<<<<<<< HEAD
 import Image from 'next/image'; // Import next/image
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React, { useState } from 'react';
 import { log_debug, logErrorToProduction } from '@/utils / production_logger';
@@ -63,6 +66,10 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { ProductListing } from "@/types/listings",
 import { DollarSign } from 'lucide-react'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { RatingStars } from "@/components/RatingStars",
 import { FavoriteButton } from "@/components/FavoriteButton",
 import { useDispatch } from 'react-redux',
@@ -79,12 +86,15 @@ interface ProductListingCardProps {
   detailBasePath?: string
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -93,6 +103,7 @@ const ProductListingCardComponent = ({
   listing,
   view = 'grid',
   onRequestQuote,
+<<<<<<< HEAD
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
   const isGrid = view === 'grid',
@@ -154,6 +165,20 @@ const ProductListingCardComponent = ({
       // Prevent infinite loops if placeholder also fails
       setImageSrc('/placeholder.svg')
       setImageError(true)
+=======
+
+  const handleViewListing = () =>: any {
+    // Debug logging for development;
+    // Check condition
+if ( {) {
+  $2
+}
+      log_debug ('[ProductCard] Navigating to:', {
+        path: `${detailBasePath}/${listing.id}`,
+      });
+      log_debug ('[ProductCard] Listing ID:', { id: listing.id });
+      log_debug ('[ProductCard] Listing Title:', { title: listing.title });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     // Validate listing ID exists before navigation;
     // Check condition
@@ -206,6 +231,7 @@ if ( {) {
   }
   const imageContainerClasses = is_grid ? 'h - 48' : 'h - 32 w - 48';
       onKeyDown={e => {
+<<<<<<< HEAD
         if (e.key === 'Enter' |e.key === ' ') {
           e.preventDefault()
           handleViewListing()
@@ -274,6 +300,9 @@ interface ProductListingCardProps {;
   listing: ProductListing,;
   view?: 'grid' | 'list',;
   onRequestQuote?: (id: string) => void,;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   detailBasePath?: string;
 const ProductListingCardComponent = ({;
   listing,;
@@ -394,6 +423,9 @@ const ProductListingCardComponent = ({;
     >;
       {/* Image */}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0',}
 
@@ -401,6 +433,7 @@ const ProductListingCardComponent = ({;
         onClick={handleViewListing} // Keep existing onClick for navigation
         role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
+<<<<<<< HEAD
         onKeyDown={e => {
           if (e.key === 'Enter' |e.key === ' ') {
             e.preventDefault()
@@ -410,6 +443,14 @@ const ProductListingCardComponent = ({;
             e.preventDefault()
             handleViewListing()
           }  return ()
+=======
+
+        onKeyDown={e => {;
+          if (e && e.key === 'Enter' || e && e.key === ' ') {;
+            e && e.preventDefault();
+            handleViewListing();
+          }  return ();
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <div
       data-testid= "equipment-link"'`
       className={`bg-card/70 backdrop-blur-md border border-primary/10 sm:border-primary/20 rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary hover:animate-glowing-border transition-all duration-300`}
@@ -490,6 +531,7 @@ if ( {) {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
             handleViewListing()
+<<<<<<< HEAD
           }
         }}
       >;
@@ -500,6 +542,11 @@ if ( {) {
             fill={true}
             style={{ objectFit: 'cover' }}
             onError={handleImageError}
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             priority={false} // Assuming these are not LCP images
             sizes={
               isGrid
@@ -522,6 +569,9 @@ if ( {) {
               className="absolute top-2 left-2"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               {stockStatus}
@@ -543,6 +593,11 @@ if ( {) {
 
           <div className="flex justify-between items-center mb-2">
             <Badge variant="outline" className="bg-background text-foreground/80 border-primary/10">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {listing.category}
             </Badge>
             {listing.rating && (
@@ -590,6 +645,9 @@ if ( {) {
             {listing.uspHeadline && (
               <p className="text-primary font-semibold text-sm mb-1">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 {listing.uspHeadline}
               </p>
@@ -624,6 +682,9 @@ if ( {) {
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
                 >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   {tag}
                 </span>;
@@ -684,6 +745,11 @@ if ( {) {
 
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {listing.price !== null ? (
               <div className="flex items-center text-primary">
                 <DollarSign className="h-4 w-4 mr-1" />
@@ -717,6 +783,9 @@ if ( {) {
               }}
               disabled={loading}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             >
               {loading ? (
@@ -756,6 +825,9 @@ if ( {) {
                   addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
                 ),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 router.push('/checkout')
               }}
@@ -939,6 +1011,7 @@ export const ProductListingCard = React.memo (ProductListingCardComponent);
 ProductListingCard.display_name = 'ProductListingCard';
                 Request Quote;
               </Button>) }
+<<<<<<< HEAD
 =======
   loading
 }> Buy Now </Button> {"
@@ -969,6 +1042,8 @@ export default ProductListingCard
 export const ProductListingCard = React.memo(ProductListingCardComponent)
 ProductListingCard.displayName = 'ProductListingCard'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export const ProductListingCard = React.memo(ProductListingCardComponent);

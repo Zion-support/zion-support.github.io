@@ -41,6 +41,7 @@ interface Particle {
   life: number;
 
 
+<<<<<<< HEAD
 interface EnergyField {
   x: number;
   y: number;
@@ -54,6 +55,12 @@ export default function UltraFuturisticBackground2029({
 }: {
   children,
 }: {;
+=======
+  children,
+}: {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   children: React.ReactNode;
 =======
   children,
@@ -78,11 +85,32 @@ export default function UltraFuturisticBackground2029({
   life: number,;
   maxLife: number;
 }
+<<<<<<< HEAD
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {
 
 
 
 export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
+=======
+
+interface EnergyField {;
+  x: number,;
+  y: number,;
+  radius: number,;
+  intensity: number,;
+  color: string,;
+  pulse: number;
+}
+
+export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
+
+=======
+
+
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
@@ -1274,6 +1302,7 @@ if ( {) {
             duration: 10,
             repeat: Infinity,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
           }}
             ease: 'easeInOut',            ease: "easeInOut"
@@ -1297,6 +1326,17 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+          }}
+
+
+            duration: 10,
+            repeat: Infinity,
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />
       </div>
       {/* Gradient overlays for depth */}
@@ -1349,3 +1389,9 @@ if ( {) {
   )
 }
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

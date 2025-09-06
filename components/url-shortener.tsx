@@ -6,6 +6,7 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
+<<<<<<< HEAD
 import {
   Link
   Copy
@@ -28,6 +29,33 @@ export default function URLShortenerPage() {
   CheckCircle,
   ExternalLink,
   QrCode,
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Settings,;
   Trash2,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -56,6 +84,12 @@ import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function URLShortenerPage() {;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [longUrl, setLongUrl] = useState('');
   const [customAlias, setCustomAlias] = useState('');
   const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
@@ -546,6 +580,9 @@ export default function URLShortenerPage() {;
               </h3>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 <Button
                   onClick={generateShortUrl}
@@ -661,6 +698,14 @@ export default function URLShortenerPage() {;
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
 
@@ -923,7 +968,11 @@ export default function URLShortenerPage() {;
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 
+<<<<<<< HEAD
               Professional URL Shortening Features
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to create, manage, and track your shortened
@@ -1083,6 +1132,7 @@ export default function URLShortenerPage() {;
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-orange-600 to-red-600'>
@@ -1120,6 +1170,8 @@ export default function URLShortenerPage() {;
 );
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       <section className='py-20 bg-gray-900'>;
@@ -1869,6 +1921,7 @@ export default function URLShortenerPage() {;
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 }
 
@@ -1878,3 +1931,5 @@ export default function URLShortenerPage() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

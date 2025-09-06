@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -14,6 +15,12 @@ interface MilestoneCardProps {
   onReject?: (id: string) => Promise<void>
 }
 export function MilestoneCard({
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -23,6 +30,7 @@ import {Check, ArrowDown, X} from "lucide-react";
 import {useDisputeCheck} from '@/hooks/useDisputeCheck';
 import {DisputeStatusBadge} from '@/components/disputes/DisputeStatusBadge';
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
+<<<<<<< HEAD
 import React from 'react',
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
@@ -96,6 +104,8 @@ import { Check, ArrowDown, X } from "lucide-react",;
 import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
 import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface MilestoneCardProps {;
   id: string,;
   projectId: string,;
@@ -135,6 +145,11 @@ export function MilestoneCard(): any ({ ;
       case 'rejected':;
         return 'bg-red-500';
       default: return 'bg-gray-500';
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
   
@@ -183,6 +198,7 @@ export function MilestoneCard(): any ({ ;
               size="sm"
             />;
           )}
+<<<<<<< HEAD
         </div>
         <div className="flex gap-2">
           {status === 'pending' && onReject && !isUnderDispute && (
@@ -205,6 +221,13 @@ export function MilestoneCard(): any ({ ;
     </Card>
   )
 }
+=======
+
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>;
           <div className="flex gap-2">;
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
@@ -259,6 +282,14 @@ export function MilestoneCard(): any ({ ;
       </CardFooter>;
     </Card>;
   );
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

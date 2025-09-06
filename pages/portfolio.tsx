@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -144,6 +145,15 @@ export default function PortfolioPage() {
     selectedCategory === 'All'
       ? projects
       : projects.filter(project => project.category === selectedCategory);
+=======
+
+import React from 'react';
+import Head from 'next / head';
+
+import { motion } from 'framer-motion';
+
+import {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   Rocket,
   Brain,
@@ -155,6 +165,7 @@ export default function PortfolioPage() {
   ExternalLink,
   Star,
   Users,
+<<<<<<< HEAD
   Clock,;
   TrendingUp,;
 } from 'lucide-react';
@@ -171,6 +182,19 @@ import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 export default function PortfolioPage() {
   const projects = [
+=======
+  Clock,
+  TrendingUp,
+
+} from 'lucide-react';
+import EnhancedNavigation from '../components / EnhancedNavigation';
+import EnhancedFooter from '../components / EnhancedFooter';
+export default /**
+ * PortfolioPage - Function description
+ */
+function PortfolioPage() {
+  const projects = [;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       title: "AI-Powered Financial Analytics Platform",
       description: "Revolutionary financial analytics platform using advanced AI algorithms for real-time market analysis and predictive modeling",
@@ -285,6 +309,7 @@ export default function PortfolioPage() {
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.8 }}
             className='mb-8'
         <meta name="description" content="Explore Zion Tech Group's portfolio of innovative technology projects. AI, quantum computing, cybersecurity, and digital transformation solutions." />
@@ -317,6 +342,10 @@ export default function PortfolioPage() {
   }
 }
             className="mb-8"
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Our Work
@@ -373,6 +402,7 @@ export default function PortfolioPage() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -595,6 +625,10 @@ export default function PortfolioPage(req, res) {
   }
 }
                 className="text-center"
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
@@ -723,6 +757,7 @@ export default function PortfolioPage(req, res) {
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
+<<<<<<< HEAD
 =======
                 key={project.title  } catch (error) {
     console.error("Error:", error);
@@ -756,6 +791,8 @@ export default function PortfolioPage(req, res) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
@@ -870,6 +907,11 @@ export default function PortfolioPage(req, res) {
                     <span className="text-sm text-white/60">Client: {project.client}</span>
                     <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
                       View Details
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </button>
                   </div>
                 </div>
@@ -926,6 +968,12 @@ export default function PortfolioPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -948,10 +996,19 @@ export default function PortfolioPage(req, res) {
       </section>
       <EnhancedFooter />
     </div>
+<<<<<<< HEAD
 )
 </Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) )
 ),
 </Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) ) 
+=======
+
+
+),
+</Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) ) 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> </div> </section> key= {
   category
 }onClick= {
@@ -1185,3 +1242,10 @@ export default function PortfolioPage(req, res) {
   }
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

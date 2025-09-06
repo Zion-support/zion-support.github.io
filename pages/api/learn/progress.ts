@@ -1,15 +1,26 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
     const users = readUsers()
     if (req.method === 'GET') {
     const users = readUsers(),
     if (req.method === 'GET') {;
       const { userId = 'demo-user' } = req.query;
+=======
+
+    const users = readUsers(),
+    if (req && req.method === 'GET') {
+      const { userId = 'demo-user' } = req && req.query;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       const user = users[userId as string];
       return res.status(200).json({ progress: user?.progress ?? {} });
     }
@@ -47,6 +58,7 @@ function readUsers() {
 }
 
 
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = readUsers();
@@ -219,14 +231,19 @@ export default function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
+<<<<<<< HEAD
     res.setHeader('AllowGET, POST');
     return res.status(405).end('Method Not Allowed')
   } catch (e: any) {
     return res.status(500).json({ error: e?.message ?? 'Failed to handle progress' })
   }
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -237,3 +254,9 @@ export default function handler(req, res) {
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

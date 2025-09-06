@@ -44,6 +44,7 @@ interface StatusBadgeProps {
 
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
+<<<<<<< HEAD
     case "new":;
       return <Badge variant="secondary">Submitted</Badge>;
     case "new": return <Badge variant="secondary">Submitted</Badge>,
@@ -86,3 +87,6 @@ export function StatusBadge({ status }: StatusBadgeProps) {;
   }
 }
 ;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

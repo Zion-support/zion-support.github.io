@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path';
 import OpenAI from 'openai';
@@ -11,6 +12,14 @@ import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
+=======
+
+
+=======
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST');
@@ -64,6 +73,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
+<<<<<<< HEAD
 
     return res.status(200).json({ ok: true, count: 4 })
   } catch (e) {
@@ -164,3 +174,19 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 };
+=======
+=======
+=======
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import fs from 'fs';
+import path from 'path';
+import OpenAI from 'openai';
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

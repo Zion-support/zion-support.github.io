@@ -69,6 +69,11 @@ if ( {) {
                 )}
                 <AlertTitle>;
                   {isNetworkError ? 'Connection Problem' : 'Something went wrong'}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </AlertTitle>
               </div>
               <AlertDescription className="mt-2">
@@ -97,6 +102,11 @@ if ( {) {
                 disabled={this.state.isRetrying}
                 className="w-full"
               >
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
@@ -118,6 +128,9 @@ if ( {) {
                 className="w-full"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 Reload Page
@@ -216,11 +229,17 @@ export const useApiErrorHandler = () =>: any {
                 </summary>
                 <pre className='mt-2 whitespace-pre-wrap break-all'>
                 <pre className="mt-2 whitespace-pre-wrap break-all">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {this.state.error.toString()}
                   {this.state.errorInfo?.componentStack}
                 </pre>
               </details>
             )}
+<<<<<<< HEAD
           </div>
         </div>
       )
@@ -242,6 +261,8 @@ export const useApiErrorHandler = () => {
 }
   return { handleApiError }
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }, ;
   return { handleApiError };
@@ -265,6 +286,9 @@ export const useApiErrorHandler = () => {;
   };
   return { handleApiError }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

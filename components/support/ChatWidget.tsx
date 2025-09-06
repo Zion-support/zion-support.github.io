@@ -101,6 +101,7 @@ function generateSessionId(): any (): string {;
           eventType,
           payload,
         }),
+<<<<<<< HEAD
       });    } catch {}
 
       });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
@@ -120,6 +121,9 @@ function generateSessionId(): any (): string {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch {}
   }
 
@@ -127,12 +131,16 @@ function generateSessionId(): any (): string {;
     try {
       await fetch('/api/support/escalate', {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
 
       setShowEscalation(true)
+<<<<<<< HEAD
 =======
       setShowEscalation(true);    } catch {}
 
@@ -159,9 +167,23 @@ function generateSessionId(): any (): string {;
 =======
 
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+=======
+    } catch {}
+  }
+=======
+
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setShowEscalation(true)
       setShowEscalation(true);    } catch {}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch {}
   }
 
@@ -302,6 +324,10 @@ function generateSessionId(): any (): string {;
     } finally {;
       setIsLoading(false);    }
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className='fixed bottom-4 right-4 z-50'>      }
 <<<<<<< HEAD
@@ -325,20 +351,32 @@ function generateSessionId(): any (): string {;
     } catch (e) {;
       setMessages((prev) => [;
         ...prev;
+<<<<<<< HEAD
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
     } finally {
       setIsLoading(false)
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
     <div className='fixed bottom-4 right-4 z-50'>
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+  return (
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
 
@@ -351,6 +389,13 @@ function generateSessionId(): any (): string {;
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   }
                 >
                   {m.content}
@@ -389,12 +434,28 @@ function generateSessionId(): any (): string {;
 
                   >
 
+<<<<<<< HEAD
                     {q}
                   </button>
                 ))}
               </div>
             </div>
           )}
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    {q}
+                  </button>;
+                ))}
+              </div>;
+            </div>;
+          )}
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
             {!showEscalation ? (
@@ -433,7 +494,14 @@ function generateSessionId(): any (): string {;
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
+<<<<<<< HEAD
                   className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >            {!showEscalation ? (
+=======
+
+
+          <div className="border-t border-gray-200 dark:border-gray-800 p-2">
+            {!showEscalation ? (
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <div className="flex gap-2">
 
                 <input
@@ -446,8 +514,16 @@ function generateSessionId(): any (): string {;
 =======
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+<<<<<<< HEAD
                   className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >
 
+=======
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 />
                 <button
                   onClick={() => onSend()}
@@ -485,12 +561,391 @@ function generateSessionId(): any (): string {;
 }
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
   );
 }
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 useEffect ( () => {
   // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
   );
 }
+=======
+  //Seed greeting set_messages ([ import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { X } from 'lucide-react';
+type ChatMessage = {
+  role: 'user' | 'assistant' | 'system',
+  content: string,
+  timestamp?: number;
+}
+;
+function generateSessionId (): string {
+  // Check condition
+if (return '') {
+  $2
+}
+  const existing = window.local_storage.get_item ('zion_support_session_id');
+  // Check condition
+if (return existing) {
+  $2
+}
+  const id = `sess_${Math.random ().to_string (36).slice (2)}_${Date.now ()}`;
+  window.local_storage.set_item ('zion_support_session_id', id);
+  return id;
+}
+export default /**
+ * ChatWidget - Function description
+ */
+function ChatWidget() {
+  const [is_open, setIsOpen] = useState (false);
+  const [messages, set_messages] = useState < ChatMessage[]>([]);
+  const [input, set_input] = useState ('');
+  const [is_loading, setIsLoading] = useState (false);
+  const [failed_intents, setFailedIntents] = useState (0);
+  const [show_escalation, setShowEscalation] = useState (false);
+  const sessionIdRef = useRef < string>('');
+  const messagesEndRef = useRef < HTMLDivElement | null>(null);
+;
+  useEffect (() => {
+    sessionIdRef.current = generateSessionId ();  }, []);    sessionIdRef.current = generateSessionId ();
+  }, []);
+;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      // Seed greeting;
+      set_messages ([;
+        {
+          role: 'assistant',
+          content: 'Hi! How can I help you?',
+          timestamp: Date.now (),
+        },
+      ]);    }
+  }, [is_open, messages.length]);
+;
+  useEffect (() => {        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now () }]);
+    }
+  }, [is_open, messages.length]);
+;
+  useEffect (() => {
+    messagesEndRef.current?.scrollIntoView ({ behavior: 'smooth' });
+  }, [messages]);
+;
+  const quick_replies = useMemo (
+    () => ['How do I hire?', 'How do I get matched?', 'Billing help'],    []    messagesEndRef.current?.scrollIntoView ({ behavior: 'smooth' });
+  }, [messages]);
+;
+  const quick_replies = useMemo (
+    () => ['How do I hire?How do I get matched?Billing help']);
+;
+  async /**
+ * log_event - Function description
+ */
+function log_event() {
+    try {
+      await fetch ('/api / support / session', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({
+          session_id: sessionIdRef.current,
+          event_type,
+          payload,
+        }),
+      });    } catch {}        body: JSON.stringify ({ session_id: sessionIdRef.current, event_type, payload })});
+    } catch {}
+  }
+  async /**
+ * escalate_support - Function description
+ */
+function escalate_support() {
+    try {
+      await fetch ('/api / support / escalate', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({
+          session_id: sessionIdRef.current,
+          reason,
+          tag: 'escalate',
+        }),
+      });
+      setShowEscalation (true);    } catch {}        body: JSON.stringify ({ session_id: sessionIdRef.current, reason, tag: 'escalate' })}),
+      setShowEscalation (true);
+    } catch {}
+  }
+  async /**
+ * on_send - Function description
+ */
+function on_send() {
+    const text = (message_text ?? input).trim ();
+    // Check condition
+if (return) {
+  $2
+}
+    const newUserMessage: ChatMessage = {
+      role: 'user',
+      content: text,
+      timestamp: Date.now (),
+    }
+    set_messages (prev => [...prev, newUserMessage]);
+    set_input ('');
+    setIsLoading (true);
+    await log_event ('message / user', { content: text });    const newUserMessage: ChatMessage = { role: 'user', content: text, timestamp: Date.now () },
+    set_messages ((prev) => [...prev, newUserMessage]);
+    set_input ('');
+    setIsLoading (true);
+    await log_event ('message / user', { content: text }),
+      const res = await fetch ('/api / support / chat', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({
+          session_id: sessionIdRef.current,
+          messages: [...messages, newUserMessage].map (({ role, content }) => ({
+            role,
+            content,
+          })),
+        }),
+      });      const data = await res.json ();          messages: [...messages, newUserMessage].map (({ role, content }) => ({ role, content }))})});
+      const data = await res.json ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        const assistant_message: ChatMessage = {
+          role: 'assistant',
+          content: data.assistant_message,
+          timestamp: Date.now (),
+        }
+        set_messages (prev => [...prev, assistant_message]);
+        await log_event ('message / assistant', {
+          content: assistant_message.content,
+          meta: data.meta,
+        });
+      }
+      // Check condition
+if ( {) {
+  $2
+}
+        setFailedIntents (number => {
+          const next = n + 1;
+          // Check condition
+if ( {) {
+  $2
+}
+            escalate_support ('Failed to match user intent 3+ times');
+          }
+          return next;
+        });
+      } else // Check condition
+if ( {) {
+  $2
+}
+        setFailedIntents (0);
+      }
+    } catch (e) {
+      set_messages (prev => [;
+        ...prev,
+        {
+          role: 'assistant',
+          content:;
+            'Sorry, something went wrong. Please try again or contact support.',
+          timestamp: Date.now (),
+        },
+      ]);
+    } finally {
+      setIsLoading (false);    }
+  }
+  return (
+    <div className='fixed bottom - 4 right - 4 z - 50'>      }
+      // Check condition
+if ( {) {
+  $2
+}
+        setFailedIntents ((n) => {
+          const next = n + 1;
+          // Check condition
+if ( {) {
+  $2
+}
+            escalate_support ('Failed to match user intent 3+ times');
+          }
+          return next;
+        });
+      } else // Check condition
+if ( {) {
+  $2
+}
+        setFailedIntents (0);
+      }
+    } catch (e) {
+      set_messages ((prev) => [;
+        ...prev;
+        { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now () }]);
+    } finally {
+      setIsLoading (false);
+    }
+  }
+  return (
+    <div className='fixed bottom - 4 right - 4 z - 50'>;
+      {!is_open && (
+        <button;
+          aria - label='Open support chat';
+          on_click={() => setIsOpen (true)}
+          className='rounded - full shadow - lg bg - blue - 600 text - white w - 14 h - 14 flex items - center justify - center focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 dark:focus:ring - offset - black'        >      {!is_open && (
+        <button;
+          aria - label="Open support chat";
+          on_click={() => setIsOpen (true)}
+          className="rounded - full shadow - lg bg - blue - 600 text - white w - 14 h - 14 flex items - center justify - center focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 dark:focus:ring - offset - black";
+        >;
+          ?;
+        </button>)}
+      {is_open && (
+        <div className='w-[360px] max - w-[92vw] h-[520px] max - h-[80vh] rounded - 2xl overflow - hidden shadow - 2xl border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray - 900 text - gray - 900 dark:text - gray - 100 flex flex - col'>;
+          <div className='flex items - center justify - between px - 4 py - 3 border - b border - gray - 200 dark:border - gray - 800 bg - gray - 50 dark:bg - gray - 800'>;
+            <div className='font - semibold'>Zion Support</div>;
+            <button;
+              on_click={() => setIsOpen (false)}
+              aria - label='Close';
+              className='p - 1 rounded hover:bg - gray - 200 dark:hover:bg - gray - 700';
+            >              <X size={18} />;
+            </button>;
+          </div>;
+          <div className='flex - 1 overflow - y-auto p - 3 space - y-3'>        <div className="w-[360px] max - w-[92vw] h-[520px] max - h-[80vh] rounded - 2xl overflow - hidden shadow - 2xl border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - gray - 900 text - gray - 900 dark:text - gray - 100 flex flex - col">;
+          <div className="flex items - center justify - between px - 4 py - 3 border - b border - gray - 200 dark:border - gray - 800 bg - gray - 50 dark:bg - gray - 800">;
+            <div className="font - semibold">Zion Support</div>;
+            <button on_click={() => setIsOpen (false)} aria - label="Close" className="p - 1 rounded hover:bg - gray - 200 dark:hover:bg - gray - 700">;
+            </button>;
+          </div>;
+          <div className='flex - 1 overflow - y-auto p - 3 space - y-3'>;
+            {messages.map ((m, idx) => (
+              <div;
+                key={idx}
+                className={
+                  m.role === 'assistant' ? 'text - sm' : 'text - sm text - right';
+                }
+              >;
+                <div;
+                  className={
+                    m.role === 'assistant';
+                      ? 'inline - block rounded - 2xl px - 3 py - 2 bg - gray - 100 dark:bg - gray - 800'                      : 'inline - block rounded - 2xl px - 3 py - 2 bg - blue - 600 text - white'            {messages.map ((m, idx) => (
+              <div key={idx} className={m.role === 'assistant' ? 'text - sm' : 'text - sm text - right'}>;
+                <div;
+                  className={
+                    m.role === 'assistant';
+                      ? 'inline - block rounded - 2xl px - 3 py - 2 bg - gray - 100 dark: bg - gray - 800';
+                      : 'inline - block rounded - 2xl px - 3 py - 2 bg - blue - 600 text - white';
+                  }
+                >;
+                  {m.content}
+                </div>;
+              </div>))}
+            {is_loading && (
+              <div className='text - sm'>;
+                <div className='inline - block rounded - 2xl px - 3 py - 2 bg - gray - 100 dark:bg - gray - 800 animate - pulse'>;
+                  Thinking…;
+                </div>              </div>              <div className="text - sm">;
+                <div className="inline - block rounded - 2xl px - 3 py - 2 bg - gray - 100 dark:bg - gray - 800 animate - pulse">Thinking…</div>;
+              </div>)}
+            <div ref={messagesEndRef} />;
+          </div>;
+          {!show_escalation && (
+            <div className='px - 3 pb - 2'>;
+              <div className='flex flex - wrap gap - 2 mb - 2'>;
+                {quick_replies.map (q => (
+                  <button;
+                    key={q}
+                    on_click={() => on_send (q)}
+                    className='text - xs rounded - full px - 3 py - 1 border border - gray - 200 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 800'                  >            <div className="px - 3 pb - 2">;
+              <div className="flex flex - wrap gap - 2 mb - 2">;
+                {quick_replies.map ((q) => (
+                  <button;
+                    key={q}
+                    on_click={() => on_send (q)}
+                    className="text - xs rounded - full px - 3 py - 1 border border - gray - 200 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 800";
+                    {q}
+                  </button>))}
+              </div>;
+            </div>)}
+          <div className='border - t border - gray - 200 dark:border - gray - 800 p - 2'>;
+            {!show_escalation ? (
+              <div className='flex gap - 2'>;
+                <input;
+                  value={input}
+                  on_change={e => set_input (e.target.value)}
+                  onKeyDown={e => {
+                    // Check condition
+if ( {) {
+  $2
+}
+                      e.prevent_default ();
+                      on_send ();
+                    }
+                  }}
+                  placeholder='Ask a question…';
+                  className='flex - 1 rounded - xl border border - gray - 300 dark:border - gray - 700 bg - white dark:bg - gray - 900 px - 3 py - 2 text - sm focus:outline - none focus:ring - 2 focus:ring - blue - 500'                />;
+                <button;
+                  on_click={() => on_send ()}
+                  disabled={is_loading}
+                  className='rounded - xl px - 4 py - 2 text - sm bg - blue - 600 text - white disabled:opacity - 50'                >            {!show_escalation ? (
+              <div className="flex gap - 2">;
+                <input;
+                  value={input}
+                  on_change={(e) => set_input (e.target.value)}
+                  onKeyDown={(e) => {
+                    // Check condition
+if ( {) {
+  $2
+}
+                      e.prevent_default ();
+                      on_send ();
+                    }
+                  }}
+                  placeholder="Ask a question…";
+                  className="flex - 1 rounded - xl border border - gray - 300 dark:border - gray - 700 bg - white dark:bg - gray - 900 px - 3 py - 2 text - sm focus:outline - none focus:ring - 2 focus:ring - blue - 500";
+                />;
+                <button;
+                  on_click={() => on_send ()}
+                  disabled={is_loading}
+                  className='rounded - xl px - 4 py - 2 text - sm bg - blue - 600 text - white disabled:opacity - 50'                  className="rounded - xl px - 4 py - 2 text - sm bg - blue - 600 text - white disabled:opacity - 50";
+                >;
+                  Send;
+                </button>;
+              </div>) : (
+              <div className='flex flex - col gap - 2 text - sm'>;
+                <div className='text - gray - 700 dark:text - gray - 300'>;
+                  We can escalate this to our team:;
+                </div>;
+                <div className='flex gap - 2'>;
+                  <a;
+                    href='mailto:support@zion.ai';
+                    className='rounded - lg px - 3 py - 2 border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 800';
+                  >;
+                    Email Support;
+                  </a>;
+                  <a;
+                    href='/contact';
+                    className='rounded - lg px - 3 py - 2 border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 800';
+                  >;
+                    Chat with Live Agent;
+                  </a>                </div>              <div className="flex flex - col gap - 2 text - sm">;
+                <div className="text - gray - 700 dark:text - gray - 300">We can escalate this to our team:</div>;
+                <div className="flex gap - 2">;
+                  <a href="mailto:support@zion.ai" className="rounded - lg px - 3 py - 2 border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 800">Email Support</a>;
+                  <a href="/contact" className="rounded - lg px - 3 py - 2 border border - gray - 300 dark:border - gray - 700 hover:bg - gray - 100 dark:hover:bg - gray - 800">Chat with Live Agent</a>;
+              </div>)}
+          </div>;
+        </div>)}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

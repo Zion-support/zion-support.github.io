@@ -27,6 +27,7 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect } from 'react';
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
+<<<<<<< HEAD
 import i18n, { isRtl } from '../../utils/i18n';
 import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt';
 export type EnhancedLayoutProps = {
@@ -53,6 +54,9 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
     const lng = i18n.resolvedLanguage || i18n.language;
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }, []);
 
   return (
@@ -85,6 +89,7 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   );
 
   return (
+<<<<<<< HEAD
     <div className=&quot;min-h-screen flex flex-col&quot;>
       <header>
         <EnhancedNavigation />
@@ -114,3 +119,50 @@ export type EnhancedLayoutProps = {
 export type EnhancedLayoutProps = {
   children: React.ReactNode
 }
+=======
+
+
+      </main>      <main id="main" className="flex-1 container mx-auto px-4 py-6">{children}</main>;
+      <footer>;
+        <EnhancedFooter />;
+      </footer>;
+    </div>;
+  );
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}
+}
+  );
+=======
+
+
+  );
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+=======
+  );
+}
+
+    <div className="min - h-screen flex flex - col">;
+        <EnhancedNavigation />;
+        <LanguageSwitchPrompt />;
+      </header>;
+      <main id='main' className='flex - 1 container mx - auto px - 4 py - 6'>;
+        {children}
+      </main>      <main id="main" className="flex - 1 container mx - auto px - 4 py - 6">{children}</main>;
+      <footer>;
+        <EnhancedFooter />;
+      </footer>;
+    </div>);
+}
+}
+  );
+}
+
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

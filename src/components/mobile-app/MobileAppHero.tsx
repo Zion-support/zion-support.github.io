@@ -7,6 +7,9 @@
           </div>
           
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <div className="flex-1 flex justify-center">
@@ -14,12 +17,20 @@
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
               {/* This would be replaced with an actual phone mockup image in production */}
+<<<<<<< HEAD
             </div>
           </div>
         </div>
       </div>
     </section>
   )
+=======
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </section>);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 
@@ -80,6 +91,9 @@ export const MobileAppHero: React.FC = () => {;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 "
 

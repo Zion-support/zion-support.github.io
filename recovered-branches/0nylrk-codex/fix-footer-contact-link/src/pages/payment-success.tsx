@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { useNavigate  } from 'react-router-dom';
@@ -11,6 +12,17 @@ import {useNavigate} from 'react-router-dom';
 import {CheckCircle2} from 'lucide-react';
 export default function PaymentSuccess() {;
   const navigate = useNavigate();
+=======
+
+
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+import {CheckCircle2} from 'lucide-react';
+export default function PaymentSuccess() {;
+  const navigate = useNavigate();
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',
 import { Button } from '@/components/ui/button',
 import { useNavigate } from 'react-router-dom',
@@ -35,8 +47,16 @@ export default function PaymentSuccess() {
           >
             Go to Dashboard
           </Button>
+<<<<<<< HEAD
           <Button
           <Button 
+=======
+
+
+          <Button 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             variant="outline"
             onClick={() => navigate('/')}
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
@@ -47,7 +67,18 @@ export default function PaymentSuccess() {
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+import {CheckCircle2} from 'lucide-react';
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
@@ -119,7 +150,15 @@ function PaymentSuccess() {
           </Button>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </div>;
   );
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

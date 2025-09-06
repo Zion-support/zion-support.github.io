@@ -29,6 +29,9 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import {;
@@ -39,6 +42,7 @@ import {;
   CheckCircle,;
   AlertCircle,;
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -56,13 +60,21 @@ import {
   AlertCircle;
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Mail,
   Phone,
   MapPin,
   Send,
 <<<<<<< HEAD
+<<<<<<< HEAD
   CheckCircle,
   AlertCircle,
+=======
+  CheckCircle,
+  AlertCircle,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 
 const ContactForm: React.FC = () => {;
@@ -316,6 +328,7 @@ const ContactForm: React.FC = () => {
           className='text-center mb-16'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -323,6 +336,9 @@ const ContactForm: React.FC = () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <h2 className='text-4xl md:text-6xl font-bold text-white mb-6'>
             Let&apos;s Start a
@@ -415,6 +431,11 @@ const ContactForm: React.FC = () => {
 
           {/* Contact Information */}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             initial={{ opacity: 0, x: -30 }}
@@ -487,6 +508,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
                   viewport={{ once: true }}
                   className='flex items-start space-x-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-blue-500/30 transition-all duration-300 group'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -494,6 +516,9 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <info.icon className="w-6 h-6 text-white" />
@@ -510,6 +535,18 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
               ))}
             </div>
 
+<<<<<<< HEAD
+=======
+            </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Additional Info */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -557,6 +594,16 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
             </motion.div>
           </motion.div>
 
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Contact Form */}
           <motion&& motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -566,6 +613,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
             className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'          >            className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8"
             className='bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-8'          >
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -573,6 +621,9 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             {submitStatus === 'success' ? (
               <motion.div
@@ -948,6 +999,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -955,6 +1007,8 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   />
                 </div>
                 {submitStatus === 'error' && (
@@ -998,6 +1052,11 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
 };
 export default ContactForm;  );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ContactForm;
 
 
@@ -1124,5 +1183,10 @@ export default ContactForm;  )
 }
 export default ContactForm;
 
+<<<<<<< HEAD
 export default ContactForm;
 export default ContactForm;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

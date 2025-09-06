@@ -25,6 +25,10 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function IAMAccessReviewPage() {
 
   const service = extraServices.find(s =>
@@ -376,5 +380,10 @@ export default function IAMAccessReviewPage() {
 }
 }
 
+<<<<<<< HEAD
 ;
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

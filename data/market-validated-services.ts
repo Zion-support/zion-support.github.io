@@ -561,6 +561,7 @@ export const marketValidatedServices: MarketValidatedService[] = [
   }
   // Search and Knowledge
   {
+<<<<<<< HEAD
     id: 'vector-search-starter'
     name: 'Vector Search Starter'
     tagline: 'Deploy a production-grade vector database and APIs'
@@ -586,6 +587,20 @@ export const marketValidatedServices: MarketValidatedService[] = [
 ];import { ServiceVariant  } from "../types/service-variants";
 
 export interface MarketValidatedService {
+=======
+    id: 'vector - search - starter',
+    name: 'Vector Search Starter',
+    tagline: 'Deploy a production - grade vector database and APIs',
+    price: '$89',
+    period: '/month',
+    description:;
+      'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',
+    features: [;
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'Managed vector DB',
       'Ingestion pipelines',
       'Metadata filters',
@@ -610,6 +625,11 @@ export interface MarketValidatedService {
 export interface MarketValidatedService {
 =======
 export interface MarketValidatedService {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 	id: string;
 	name: string;
 	tagline: string;
@@ -1662,4 +1682,10 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 	}
 ];
 
+<<<<<<< HEAD
 ;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

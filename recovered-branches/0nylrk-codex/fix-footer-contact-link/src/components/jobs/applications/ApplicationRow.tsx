@@ -1,4 +1,20 @@
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+interface ApplicationRowProps {
+
+  application: JobApplication
+  processingId: string | null
+  onViewApplication: (applicationId: string) => Promise<void>
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
+
+  onViewScore: (application: JobApplication) => void
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {formatDistanceToNow} from "date-fns";
 import {Link} from "react-router-dom";
 import {Calendar, User, FileText, BarChart} from "lucide-react";
@@ -9,6 +25,7 @@ import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {StatusBadge} from "./StatusBadge";
 import {ScoreBadge} from "./ScoreBadge";
 import {ApplicationActions} from "./ApplicationActions";
+<<<<<<< HEAD
 import { formatDistanceToNow } from "date-fns",
 import { Link } from "react-router-dom",
 import { Calendar, User, FileText, BarChart } from "lucide-react",
@@ -64,17 +81,38 @@ interface ApplicationRowProps {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+interface ApplicationRowProps {;
+  application: JobApplication,;
+  processingId: string | null,;
+  onViewApplication: (applicationId: string) => Promise<void>,;
+  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>,;
+  onViewScore: (application: JobApplication) => void;
+}
+
+export function ApplicationRow(): any ({;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function ApplicationRow({;
   application;
   processingId;
   onViewApplication;
   onStatusChange;
+<<<<<<< HEAD
 export function ApplicationRow({
   application,
   processingId,
   onViewApplication,
   onStatusChange,
+=======
+  onViewScore;
+}: ApplicationRowProps) {;
+=======
+}
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onViewScore
 }: ApplicationRowProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -248,6 +286,12 @@ function ApplicationRow() {
       </TableCell>
       <TableCell className="text-right">
         <ApplicationActions
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           application={application}
           processing_id={processing_id}
           onViewApplication={onViewApplication}

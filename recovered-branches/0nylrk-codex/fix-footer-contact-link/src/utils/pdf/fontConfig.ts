@@ -1,8 +1,16 @@
 
+<<<<<<< HEAD
 import { jsPDF } from 'jspdf';
 export interface FontConfig {
 import {jsPDF} from 'jspdf';
 export interface FontConfig {;
+=======
+
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
 
@@ -73,5 +81,12 @@ if (return, ) {
     // Fall back to default font;
 
     doc.setFont('helvetica');
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }

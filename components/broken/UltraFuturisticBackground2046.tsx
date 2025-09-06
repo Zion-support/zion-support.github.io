@@ -144,15 +144,28 @@ max_life: number,
           case 'data':
             this.color = `hsl(${200 + Math.random() * 40}, 90%, 80%)`;
             break;
+<<<<<<< HEAD
           case 'energy':
             this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
             break;        }            break
         }
       }
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             break;        }
 
         }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 
       update() {
@@ -837,6 +850,11 @@ if ( {) {
         }}
       />
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
@@ -1034,6 +1052,39 @@ export default UltraFuturisticBackground2046;  );
 
 export default UltraFuturisticBackground2046;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     </div>
     </div>
+=======
+
+
+=======
+
+    </div>
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+              duration: Math.random () * 6 + 4,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: i * 0.8,
+            }}          />))}
+      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2046;              ease: "easeInOut",
+              delay: i * 0.8}}
+          />))}
+      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2046);
+}
+;
+export default UltraFuturisticBackground2046;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

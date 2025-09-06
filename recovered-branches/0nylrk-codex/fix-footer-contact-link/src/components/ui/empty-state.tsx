@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {cn} from "@/lib/utils";
 import {Button} from "@/components/ui/button";
@@ -9,6 +10,12 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface EmptyStateProps {
 
   icon: React.ReactNode
@@ -33,8 +40,26 @@ interface EmptyStateProps {;
   secondaryAction?: {;
     text: string,;
     href?: string;
+<<<<<<< HEAD
     onClick?: () => void
   }
+=======
+    onClick?: () => void;
+  };
+  className?: string;
+}
+
+export function EmptyState(): any ({;
+
+  icon;
+  title;
+  description;
+  action;
+  secondaryAction;
+  className}: EmptyStateProps) {;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     text: string,
     href?: string,
     onClick?: () => void
@@ -47,6 +72,7 @@ interface EmptyStateProps {;
   className?: string
 }
 
+<<<<<<< HEAD
 export function EmptyState({;
   icon;
   title;
@@ -59,6 +85,10 @@ export function EmptyState({
   description,
   action,
   secondaryAction,
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   className}: EmptyStateProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -69,6 +99,7 @@ export function EmptyState({
 
         "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",
         className
+<<<<<<< HEAD
       )}
     >
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
@@ -125,6 +156,10 @@ export function EmptyState({;
       )}
     >
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">
+=======
+      )}>;
+      <div className="bg-zion-blue/30 p-6 rounded-full mb-6">;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {icon}
 
       </div>;
@@ -138,9 +173,27 @@ export function EmptyState({;
               <Link to={action && action.href}>{action && action.text}</Link>;
             </Button>;
           ) : (;
+<<<<<<< HEAD
             <Button;
               size="lg";
               className="bg-zion-purple hover:bg-zion-purple-light";
+=======
+            <Button
+              size="lg" 
+
+              className="bg-zion-purple hover:bg-zion-purple-light"
+              onClick={action && action.onClick}>;
+              {action && action.text}
+            </Button>;
+          );
+        )}
+
+
+            <Button 
+              size="lg" 
+              className="bg-zion-purple hover:bg-zion-purple-light"
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               onClick={action.onClick}
             >
               {action.text}

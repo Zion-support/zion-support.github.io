@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
@@ -13,12 +17,22 @@ async function ensure() {
   }
 }
 export default async function handler(
+<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+=======
+
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   await ensure();
   if (req.method === "GET") {
     const data = await fs.readJson(FILE_PATH);
@@ -68,8 +82,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
+<<<<<<< HEAD
   res.status(405).json({ error: "Method not allowed" });
   res.status(405).json({ error: 'Method not allowed' })
+=======
+
+
+  res.status(405).json({ error: 'Method not allowed' })
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 res.status(405).json({ error: "Method not allowed" });
 }
@@ -89,6 +111,7 @@ async function ensure() {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
   } catch (error) {
     console.error("Error:", error);
@@ -143,6 +166,8 @@ export default async function handler(req, res) {
     return res.status(201).json(comment)
   }
 <<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   res.status(405).json({ error: 'Method not allowed' })
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
@@ -195,3 +220,7 @@ if ( {) {
   }
   res.status (405).json ({ error: "Method not allowed" });
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

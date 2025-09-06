@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import useSWR from 'swr',
 import React, { useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -15,11 +16,33 @@ export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
       const [k, v] = part.trim().split('=');
       if (k) acc[k] = decodeURIComponent(v |'');
       return acc;
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     return this.props.children;
   }
 }
+<<<<<<< HEAD
 export default function ContentReviewPage() {
   const [filters, setFilters] = useState<{;
     status?: string;
@@ -100,6 +123,15 @@ export default function ContentReviewPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+import useSWR from 'swr';
+import React, { useMemo, useState } from 'react';
+
+      }
+    );
+    set_selected (null);
+    mutate ();  }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <EnhancedLayout>;
 
@@ -323,6 +355,7 @@ export default function ContentReviewPage(req, res) {
                 </tr>
               ))}
               {flags.length === 0 && (
+<<<<<<< HEAD
                 <tr>
                   <td
                     colSpan={8}
@@ -347,6 +380,16 @@ export default function ContentReviewPage(req, res) {
 
 
 }
+=======
+
+
+=======
+
+
+}
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <tr><td colSpan={8} className="px-3 py-6 text-center text-gray-500">No results</td></tr>
               )  } catch (error) {
     console.error("Error:", error);
@@ -438,3 +481,10 @@ export default function ContentReviewPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

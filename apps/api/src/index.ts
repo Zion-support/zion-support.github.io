@@ -127,11 +127,15 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
   });
   return { items }
 });
+<<<<<<< HEAD
 const port = Number(process.env.API_PORT |4000);
 app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
 app.log.error(err);
 app.log.error(err);
   app.log.error(err);
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   (process as any).exit(1);
 });  (process as any).exit(1)
 });

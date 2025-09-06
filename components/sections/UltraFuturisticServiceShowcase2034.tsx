@@ -20,6 +20,7 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
 import {
   Star
   CheckCircle
@@ -80,6 +81,9 @@ import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-service
 import { realMarketServices } from '../../data/2024-real-market-services';
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
   Star, CheckCircle, ArrowRight, TrendingUp, Users, ;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Award, Clock, Zap, Shield, Brain, Atom, Rocket;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
@@ -190,7 +194,10 @@ const serviceCategories = [
     gradient: 'from-orange-500/20 to-pink-500/20'
   }
 ];
+<<<<<<< HEAD
 export default function UltraFuturisticServiceShowcase2034() {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import {;
@@ -331,6 +338,7 @@ const service_categories = [;
     visible: { opacity: 1, y: 0 },        staggerChildren: 0 && 0.1;
       }
     }
+<<<<<<< HEAD
   }
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
@@ -343,14 +351,26 @@ const service_categories = [;
     visible: { opacity: 1, y: 0 },
 
   };
+=======
+  };
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const itemVariants = {;
     hidden: { opacity: 0, y: 20 },;
     visible: { opacity: 1, y: 0 },;
   };
+<<<<<<< HEAD
   return (
     <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden'>;
       {/* Animated Background */}
 <<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+    <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden'>;
+      {/* Animated Background */}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       <div className='absolute inset-0 overflow-hidden'>;
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>;
@@ -362,6 +382,12 @@ const service_categories = [;
 
 
 
+<<<<<<< HEAD
+=======
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
       <div className='absolute inset-0 overflow-hidden'>
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>
@@ -375,6 +401,12 @@ const service_categories = [;
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
         {/* Header */}
 
+<<<<<<< HEAD
+=======
+    hidden: { opacity: 0, y: 20 },
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">;
       {/* Animated Background */}
@@ -405,6 +437,7 @@ const service_categories = [;
           viewport={{ once: true }}
           className='text-center mb-16'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -412,6 +445,9 @@ const service_categories = [;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>
             Revolutionary Technology Services
@@ -619,6 +655,7 @@ const service_categories = [;
               },
               { label: 'Happy Customers', value: '50K+', icon: Users },
               { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
+<<<<<<< HEAD
               { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (
 
               { label: 'Global Reach', value: '45+ Countries', icon: Globe },            ].map((stat, index) => (        >
@@ -666,6 +703,10 @@ const service_categories = [;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ].map((stat, index) => (
               <motion.div
 
@@ -697,6 +738,18 @@ const service_categories = [;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             ))}
 
+<<<<<<< HEAD
+=======
+          </div>;
+        </motion && motion.div>;
+
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Search and Filter */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -705,6 +758,7 @@ const service_categories = [;
           viewport={{ once: true }}
           className='mb-12'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -712,6 +766,9 @@ const service_categories = [;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -743,6 +800,12 @@ const service_categories = [;
 
             </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Category Filter */}
             <select
               value={selectedCategory}
@@ -753,6 +816,20 @@ const service_categories = [;
           </div>
         </motion.div>
 
+<<<<<<< HEAD
+=======
+            </select>;
+          </div>;
+        </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Service Categories */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -772,6 +849,7 @@ const service_categories = [;
           </div>
         </motion.div>
 
+<<<<<<< HEAD
         {/* Services Grid */}
         <motion&& motion.div
           variants={containerVariants}
@@ -805,6 +883,26 @@ const service_categories = [;
                 </div>
               )}
 
+=======
+          </div>;
+        </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Services Grid */}
+        <motion&& motion.div
+          variants={containerVariants}
+
+
+                </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+              )}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Service Icon */}
 
                 className='text - center p - 4 rounded - xl bg - white / 5 backdrop - blur - sm border border - white / 10 hover:bg - white / 10 transition - all duration - 300';
@@ -1043,6 +1141,7 @@ const service_categories = [;
               </p>;
               {/* Features */}
 
+<<<<<<< HEAD
                     <span>{feature}</span>
                   </div>
                 ))}
@@ -1057,11 +1156,17 @@ const service_categories = [;
                   <div className='text-sm text-cyan-400'>                  <div className="text-sm text-cyan-400">
                     +{service.features.length - 3} more features
                   </div>
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 )}
               </div>
                 )}
               </div>
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Service Meta */}
               <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                 <div className='flex items-center space-x-2 text-gray-400'>
@@ -1221,6 +1326,13 @@ const service_categories = [;
               {/* Action Buttons */}
               <div className='flex space-x-3'>
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <a
 
               <div className="flex space-x-3">
@@ -1266,6 +1378,32 @@ const service_categories = [;
           ))}
         </motion.div>
 
+<<<<<<< HEAD
+=======
+              {/* Trial Info */}
+              <div className='mt-4 text-center'>;
+                <div className='text-sm text-gray-400'>;
+                  <span className='text-cyan-400 font-semibold'>;
+                    {service && service.trialDays} days;
+                  </span>{' '}
+                  free trial                </div>              <div className="mt-4 text-center">;
+                <div className="text-sm text-gray-400">;
+                  <span className="text-cyan-400 font-semibold">{service && service.trialDays} days</span> free trial;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          ))}
+
+        </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -1274,6 +1412,7 @@ const service_categories = [;
           viewport={{ once: true }}
           className='text-center mt-20'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1281,6 +1420,9 @@ const service_categories = [;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -1340,6 +1482,7 @@ const service_categories = [;
                              <a
                  href="/pricing-2034"
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -1360,9 +1503,19 @@ const service_categories = [;
 );
 <<<<<<< HEAD
 =======
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
   );
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
@@ -1542,5 +1695,9 @@ const service_categories = [;
       </div>;
     </section>);
 }
+<<<<<<< HEAD
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

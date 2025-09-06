@@ -17,11 +17,24 @@ interface AIEnhancementPanelProps {;
   showInstructions?: boolean;
   initialContent?: string;
 }
+<<<<<<< HEAD
 export function AIEnhancementPanel({
+=======
+
+
+export function AIEnhancementPanel(): any ({;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 export function AIEnhancementPanel({;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   title;
   defaultOptions;
   onApply;
@@ -43,8 +56,15 @@ export function AIEnhancementPanel({;
     if (result) {
       setGeneratedContent(result)
     }
+<<<<<<< HEAD
   }
   };
+=======
+
+  };
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
 import { Textarea } from '@/components/ui/textarea',;
@@ -85,7 +105,16 @@ export function AIEnhancementPanel({;
 
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
     field: keyof AIEnhancementOptions

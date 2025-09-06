@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO',
 import React from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 class ErrorBoundary extends React.Component {
@@ -30,6 +33,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 import {motion} from 'framer-motion';
+<<<<<<< HEAD
 const ComprehensiveServicesShowcase2036: React.FC = () => {
   const allServices = [
     ...real2036InnovativeServices
@@ -43,6 +47,20 @@ import { real2036InnovativeServices } from '../data/real-2036-innovative-service
 import { real2036ITServices } from '../data/real-2036-it-services',
 import { real2036AIServices } from '../data/real-2036-ai-services',
 import { motion } from 'framer-motion',
+=======
+
+  const categories = [...new Set(allServices.map(service => service.category))]
+=======
+=======
+import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
+import { real2036ITServices } from '../data/real-2036-it-services';
+import { real2036AIServices } from '../data/real-2036-ai-services';
+import { motion } from 'framer-motion';
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const ComprehensiveServicesShowcase2036: React.FC = () => {
   const allServices = [
     ...real2036InnovativeServices;
@@ -51,6 +69,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   ],
   const categories = [...new Set(allServices.map(service => service.category))],
   return (
+<<<<<<< HEAD
     <Layout>
       <SEO
         title="Comprehensive Services Showcase 2036 - Zion Tech Group"
@@ -87,6 +106,10 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
             >
               2036 Services Showcase
@@ -116,6 +139,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
           </div>
         </section>
         {/* Services Overview */}
+<<<<<<< HEAD
         <section className='py-16 px-4'>
           <div className='max-w-7xl mx-auto'>
         {/* Services Overview */  } catch (error) {
@@ -141,6 +165,43 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+            {/* Category Cards */}
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {categories && categories.map((category, index) => (;
+                <motion&& motion.div
+                  key={category}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                  className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105'>;
+                  <h3 className='text-2xl font-bold mb-4 text-cyan-400'>;
+                    {category}
+                  </h3>;
+                  <p className='text-gray-300 mb-4'>;
+                    {;
+                      allServices && allServices.filter(;
+                        service => service && service.category === category;
+                      ).length;
+                    }{' '}
+                    innovative services;
+                  </p>;
+                  <div className='flex items-center justify-between'>;
+                    <span className='text-sm text-gray-400'>Starting from</span>;
+                    <span className='text-lg font-bold text-green-400'>;
+                      $;
+                      {Math && Math.min(;
+                        ...allServices;
+                          .filter(service => service && service.category === category);
+                          .map(s => parseInt(s && s.price.replace(/[^0-9]/g, '')));
+                      )}                    </span>;
+                  </div>;
+                </motion && motion.div>;
+
+              ))}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -187,6 +248,12 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   }
 }
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   <h3 className="text-2xl font-bold mb-4 text-cyan-400">{category}</h3>
                   <p className="text-gray-300 mb-4">
@@ -250,6 +317,12 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   }
 }
               className="text-center mb-16"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Featured Revolutionary Services
@@ -268,6 +341,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
             {/* Featured Services Grid */  } catch (error) {
@@ -376,6 +450,10 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   }
 }
               className="text-center mb-16"
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Complete Service Portfolio
@@ -391,6 +469,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
                 key={category}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 className='mb-16'
             {/* Services by Category */  } catch (error) {
@@ -421,6 +500,10 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   }
 }
                 className="mb-16"
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <h3 className="text-3xl font-bold mb-8 text-center text-cyan-400">{category}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -457,6 +540,12 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   }
 }
                         className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       >
                         <div className="flex items-center justify-between mb-3">
                           <span className="text-2xl">{service.icon}</span>
@@ -494,11 +583,18 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </div>
                         <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white py-2 px-3 rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 text-sm">
                           View Details
                         </button>
                       </motion.div>
+<<<<<<< HEAD
                     ))}
                 </div>
               </motion.div>
@@ -544,6 +640,10 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
   }
 }
               className="text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20"
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <h2 className="text-4xl font-bold mb-6 text-white">
                 Ready to Transform Your Business?
@@ -565,6 +665,7 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
   ),
 };
 
@@ -577,6 +678,12 @@ export default ComprehensiveServicesShowcase2036,
               className="text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20";
             >;
               <h2 className="text-4xl font-bold mb-6 text-white">;
+=======
+
+              transition={{ duration: 0 && 0.8 }}
+              className='text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20'>;
+              <h2 className='text-4xl font-bold mb-6 text-white'>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 Ready to Transform Your Business?;
               </h2>;
               <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
@@ -867,7 +974,17 @@ export default ComprehensiveServicesShowcase2036;
           </div>;
         </section>;
       </div>;
+<<<<<<< HEAD
     </Layout>;
   );
 },;
+=======
+    </Layout>),
+}
+;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ComprehensiveServicesShowcase2036;

@@ -1,13 +1,44 @@
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
 import { Routes, Route  } from 'react-router-dom';
 import './App.css',
 import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App ;
 import { ThemeProvider } from "./components/ThemeProvider";
 import { WhitelabelProvider } from "./context/WhitelabelContext";
+<<<<<<< HEAD
 import { Toaster } from "./components/ui/toaster";
 
 import { Toaster, as, SonnerToaster } from "./components/ui/sonner";
@@ -23,6 +54,21 @@ import {
   EnterpriseRoutes
   CommunityRoutes
   DeveloperRoutes
+=======
+
+import {;
+  AuthRoutes,;
+  DashboardRoutes,;
+  MarketplaceRoutes,;
+  TalentRoutes,;
+  AdminRoutes,;
+  MobileAppRoutes,;
+  ContentRoutes,;
+  ErrorRoutes,;
+  EnterpriseRoutes,;
+  CommunityRoutes,;
+  DeveloperRoutes,;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "./routes";
 const Home = React && React.lazy(() => import("./pages/Home"));
 const AIMatcherPage = React && React.lazy(() => import("./pages/AIMatcher"));
@@ -59,6 +105,7 @@ const baseRoutes = [;
   { path: "/community", element: <CommunityPage /> },;
   { path: "/contact", element: <ContactPage /> },;
 ];
+<<<<<<< HEAD
 import React, { Suspense } from 'react',
 import { Routes, Route } from 'react-router-dom',
 import './App.css',
@@ -66,6 +113,27 @@ import { ThemeProvider } from "./components/ThemeProvider",
 import { WhitelabelProvider } from "./context/WhitelabelContext",
 import { Toaster } from "./components/ui/toaster",
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
+=======
+
+const App = () => {;
+
+  return (
+    <WhitelabelProvider>;
+      <ThemeProvider defaultTheme="dark">;
+        <Suspense fallback={<div className="p-4 text-center">Loading...</div>}>;
+          <Routes>;
+            {baseRoutes && baseRoutes.map(({ path, element }) => (;
+              <Route key={path} path={path} element={element} />;
+            ))}
+=======
+import React, { Suspense } from './react';
+import { Routes, Route  } from './react-router-dom';
+import "./App.css";
+import { ThemeProvider  } from './components / ThemeProvider';
+import { WhitelabelProvider  } from './context / WhitelabelContext';
+import { Toaster  } from './components / ui / toaster';
+import { Toaster, as, SonnerToaster  } from './components / ui / sonner';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   AuthRoutes,
   DashboardRoutes,
@@ -164,6 +232,7 @@ export default App;
   )
 },
 
+<<<<<<< HEAD
 export default App,
 import React, { Suspense } from 'react',;
 import { Routes, Route } from 'react-router-dom',;
@@ -244,4 +313,8 @@ const App = () => {;
     </WhitelabelProvider>;
   );
 },;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default App;

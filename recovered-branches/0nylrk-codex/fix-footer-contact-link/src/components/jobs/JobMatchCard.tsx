@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
@@ -173,6 +174,15 @@ export function JobMatchCard({;
   // Generate a formatted date for display
   const postedDate = new Date(),
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
+=======
+
+
+
+
+
+import React from 'react';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card className="overflow-hidden">;
       <CardContent className="p-0">;
@@ -250,17 +260,33 @@ export function JobMatchCard({;
                 Apply Now;
               </Button>;
             )}
+<<<<<<< HEAD
           </div>
         </div>
       </CardContent>
     </Card>
   )
 }
+=======
+
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

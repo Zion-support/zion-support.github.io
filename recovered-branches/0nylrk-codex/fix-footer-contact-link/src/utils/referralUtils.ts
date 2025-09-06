@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 import { format } from 'date-fns';
 import {format} from 'date-fns';
+=======
+
+
+import {format} from 'date-fns';
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
@@ -93,10 +101,21 @@ export function checkUrlForReferralCode(): string | null {;
     url.searchParams.delete('ref'),;
     window.history.replaceState({}, document.title, url.toString()),;
     return refCode;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   return localStorage.getItem('referral_code')
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /**
  * Track referral when a user signs up
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -150,6 +169,13 @@ export async function trackReferral(userId: string, email: string) {;
     if (response.ok) {;
       // Clear the stored referral code;
       localStorage.removeItem('referral_code');
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   } catch (error) {
     console && console.error('Error tracking referral:', error)

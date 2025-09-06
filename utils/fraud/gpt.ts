@@ -56,16 +56,38 @@ if ( {) {
     } as GptClassification;
   } catch {
     return {
+<<<<<<< HEAD
+=======
+
+=======
+// GPT-based fraud classification utilities
+export interface GptClassification {
+  label: 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
+  confidence: number; // 0-100
+
+  reasoning: string;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       label: 'SUSPICIOUS'
       reason: 'Invalid JSON from GPT'
       confidence: 0.5
     }
   }export interface GptResult {
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5,
     };
   }export interface GptResult {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   label: string;
   confidence: number;
   reasoning: string
@@ -96,9 +118,24 @@ if ( {) {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 
 }
 
 
 }
 
+=======
+export async function analyzeWithGpt (data: any): Promise < GptResult> {
+  // Mock implementation - in production, this would call OpenAI API;
+  const suspicious = data.description && data.description.toLowerCase ().includes ('fraud');
+;
+  return {
+    label: suspicious ? 'SUSPICIOUS' : 'SAFE',
+    confidence: suspicious ? 0.9 : 0.1,
+    reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected';
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

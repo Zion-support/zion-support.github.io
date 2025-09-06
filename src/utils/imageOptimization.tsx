@@ -4,9 +4,12 @@ const imgRef = useRef<HTMLDivElement>(null);
 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
@@ -43,8 +46,16 @@ export function OptimizedImage({
 
   // Intersection Observer for lazy loading
   useEffect(() => {
+<<<<<<< HEAD
     if (!lazy |priority |isInView) return
     if (!lazy || priority || isInView) return;
+=======
+
+
+    if (!lazy || priority || isInView) return;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry && entry.isIntersecting) {
@@ -114,6 +125,7 @@ if (||) {
         if (entry && entry.isIntersecting) {;
           setIsInView(true),;
           observer.disconnect();
+<<<<<<< HEAD
         }
       }
       {
@@ -181,6 +193,15 @@ if (||) {
   const generateBlurDataURL = () => {
     if (blurDataURL) return blurDataURL,
     
+=======
+
+
+
+        }
+      }
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     // Generate a simple gray blur placeholder
     return `data: image/svg+xml,base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
@@ -280,6 +301,9 @@ if (||) {
 
         <Image;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           src={getOptimizedSrc(src)}
@@ -312,12 +336,17 @@ if (return blurDataURL) {
           blurDataURL={
             placeholder === 'blur' ? generateBlurDataURL() : undefined
           }
+<<<<<<< HEAD
           onLoad={handleLoad}
           onError={handleError}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           className={cn(            'transition-opacity duration-300'
 
 
           className={cn(            'transition-opacity duration-300',
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             isLoading ? 'opacity-0' : 'opacity-100'
@@ -327,6 +356,11 @@ if (return blurDataURL) {
             isLoading ? 'opacity-0' : 'opacity-100';
           )}
 <<<<<<< HEAD
+=======
+
+            isLoading ? 'opacity-0' : 'opacity-100'
+          )}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -340,6 +374,9 @@ if (return blurDataURL) {
       {(isLoading && isInView) && (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       )}
@@ -386,6 +423,9 @@ if (return blurDataURL) {
               </svg>
               <span className="text-xs">Image not available</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             </div>
           )}
@@ -457,4 +497,135 @@ export function getImageDimensions(
     img.onerror = reject
     img.src = src
   })
+<<<<<<< HEAD
+=======
+}
+
+
+      {!isInView && lazy && !priority && (
+
+
+        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800" />
+      )}
+    </div>;
+  );
+}
+;
+// Higher-order component for easy migration from regular img tags;
+export function withImageOptimization<P extends { src: string, alt: string }>(;
+  Component: React.ComponentType<P>;
+) {;
+  return function OptimizedComponent(props: P) {;
+    const { src, alt, ...otherProps } = props,;
+    return (;
+      <OptimizedImage;
+        src={src}
+        alt={alt}
+        {...(otherProps as any)}
+      />;
+    );
+  }
+}
+;
+// Utility to preload critical images;
+export function preloadImage(src: string): Promise<void> {;
+  return new Promise((resolve, reject) => {;
+    const img = new window.Image(),;
+    img.onload = () => resolve(),;
+    img.onerror = reject,;
+    img.src = src;
+  });
+}
+;
+// Utility to get image dimensions;
+export function getImageDimensions(): any (;
+  src: string;
+): Promise<{ width: number; height: number }> {;
+  return new Promise((resolve, reject) => {;
+    const img = new window && window.Image();
+    img && img.onload = () =>;
+      resolve({ width: img && img.naturalWidth, height: img && img.naturalHeight });
+    img && img.onerror = reject;
+    img && img.src = src;
+  });    img && img.src = src;
+  });
+} ;
+    img && img.onerror = reject;
+    img && img.src = src;
+  });
+} ;
+
+
+
+          on_load={handle_load}
+          on_error={handle_error}
+          className={cn (            'transition - opacity duration - 300',
+            is_loading ? 'opacity - 0' : 'opacity - 100'), }
+          {...props}
+        />)}
+      {/* Loading placeholder */}
+      {is_loading && isInView && (
+        <div className='absolute inset - 0 bg - gradient - to - br from - gray - 100 to - gray - 200 dark:from - gray - 800 dark:to - gray - 900 animate - pulse' />)}
+      {/* Error fallback */}
+      {has_error && (
+        <div className='absolute inset - 0 bg - gray - 100 dark:bg - gray - 800 flex items - center justify - center'>;
+          {fallback_src ? (
+            <img;
+              src={fallback_src}
+              alt={alt}
+              className='max - w-full max - h-full object - contain';
+              on_load={handle_load}            />) : (
+            <div className='text - gray - 400 text - center'>;
+              <svg;
+                className='w - 8 h - 8 mx - auto mb - 2';
+                fill='current_color';
+                view_box='0 0 20 20';
+              >;
+                <path;
+                  fill_rule='evenodd';
+                  d='M4 3a2 2 0 00 - 2 2v10a2 2 0 002 2h12a2 2 0 002 - 2V5a2 2 0 00 - 2-2H4zm12 12H4l4 - 8 3 6 2 - 4 3 6z';
+                  clip_rule='evenodd';
+                />;
+              </svg>;
+              <span className='text - xs'>Image not available</span>;
+            </div>)}
+        </div>)}
+      {/* Lazy loading placeholder */}
+      {!isInView && lazy && !priority && (
+        <div className='absolute inset - 0 bg - gray - 100 dark:bg - gray - 800' />)}
+    </div>);
+// Higher - order component for easy migration from regular img tags;
+export function withImageOptimization < P extends { src: string; alt: string }>(
+  Component: React.ComponentType < P>) {
+  return /**
+ * OptimizedComponent - Function description
+ */
+function OptimizedComponent() {
+    const { src, alt, ...other_props } = props;
+    return <OptimizedImage src={src} alt={alt} {...(other_props as any)} />;
+  }
+// Utility to preload critical images;
+export function preload_image (src: string): Promise < void> {
+  return new Promise ((resolve, reject) => {
+    const img = new window.Image ();
+    img.onload = () => resolve ();
+    img.onerror = reject;
+    img.src = src;
+  });
+// Utility to get image dimensions;
+export function getImageDimensions (
+  src: string): Promise<{ width: number; height: number }> {
+  return new Promise ((resolve, reject) => {
+    const img = new window.Image ();
+    img.onload = () =>;
+      resolve ({ width: img.natural_width, height: img.natural_height });
+    img.onerror = reject;
+    img.src = src;
+  });    img.src = src;
+  });
+}
+    img.onerror = reject;
+    img.src = src;
+  });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }

@@ -1,4 +1,11 @@
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {Star} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -8,6 +15,7 @@ import {HireRequestModal} from "@/components/profile/hire-request";
 import {useAuthStatus} from "@/hooks/talent";
 import {UserProfile} from "@/types/auth";
 import {useNavigate} from "react-router-dom";
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Star } from "lucide-react",
 import { Button } from "@/components/ui/button",
@@ -84,6 +92,8 @@ import { HireRequestModal } from "@/components/profile/hire-request",;
 import { useAuthStatus } from "@/hooks/talent",;
 import { UserProfile } from "@/types/auth",;
 import { useNavigate } from "react-router-dom",;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface TalentCardFooterProps {;
   profile: TalentProfile,;
   onViewProfile: (id: string) => void,;
@@ -179,7 +189,13 @@ if ( {) {
       onViewProfile(profile && profile.id || '');
 
     }
+<<<<<<< HEAD
   },
+=======
+  }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <>;
@@ -211,12 +227,22 @@ if ( {) {
           >
             Hire
           </Button>
+<<<<<<< HEAD
           <Button
             variant="outline"
             size="sm"
           <Button 
             variant="outline" 
             size="sm" 
+=======
+
+
+          <Button 
+            variant="outline" 
+            size="sm" 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             onClick={handleViewProfile}
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
           >
@@ -226,6 +252,12 @@ if ( {) {
         </div>
       </div>
       
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Hire Request Modal */}
       <HireRequestModal
         talent={profile}

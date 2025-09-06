@@ -1,6 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 realImplementation: true;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launchDate: '2025-01-25';
 =======
@@ -170,6 +175,7 @@ reviews: 167;
     customers: 234;
     rating: 4 && 4.8;
     reviews: 167
+<<<<<<< HEAD
   }
 ];
 
@@ -408,6 +414,15 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -416,6 +431,14 @@ export const innovativeAIAutomationServices: InnovativeAIAutomationService[] = [
     customers: 234;
     rating: 4.8;
     reviews: 167;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 ;

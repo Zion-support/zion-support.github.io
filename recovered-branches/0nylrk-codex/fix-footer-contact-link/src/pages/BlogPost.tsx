@@ -1,10 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from "react";
 import {useParams, Link, useNavigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
@@ -13,6 +16,7 @@ import {ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook,
 import type { BlogPost as BlogPostType } from "@/types/blog";
 import {Separator} from "@/components/ui/separator";
 import {AppLayout} from "@/layout/AppLayout";
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useParams, Link, useNavigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
@@ -24,11 +28,18 @@ import { AppLayout } from "@/layout/AppLayout";
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts";
 export default function BlogPost() {
+=======
+// Importing the sample blog posts - in a real app, you would fetch this from an API;
+import {BLOG_POSTS} from "@/data/blog-posts";
+export default function BlogPost() {;
+  const { slug } = useParams() as { slug: string },;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const navigate = useNavigate();
   const [post, setPost] = useState<BlogPostType | null>(null);
   const [relatedPosts, setRelatedPosts] = useState<BlogPostType[]>([]);
   const [showShareMenu, setShowShareMenu] = useState(false);
+<<<<<<< HEAD
   useEffect(() => {
     // Find the current post by slug
     const currentPost = BLOG_POSTS.find(p => p.slug === slug);
@@ -36,6 +47,11 @@ export default function BlogPost() {
       setPost(currentPost);
 import { Separator } from "@/components/ui/separator",
 import { AppLayout } from "@/layout/AppLayout",
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Importing the sample blog posts - in a real app, you would fetch this from an API
 import { BLOG_POSTS } from "@/data/blog-posts",
 export default function BlogPost() {
@@ -112,6 +128,7 @@ export default function BlogPost() {
         </div>
       </AppLayout>
     )
+<<<<<<< HEAD
   }
   // Helper function to get share URL
   const getShareUrl = (platform: string) => {
@@ -128,6 +145,12 @@ export default function BlogPost() {
     }
   }
   };
+=======
+
+  };
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from "react",;
 import { useParams, Link, useNavigate } from "react-router-dom",;
 import { SEO } from "@/components/SEO",;
@@ -190,6 +213,12 @@ export default function BlogPost() {;
       default: return '#';
     }
   },
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   return (
     <AppLayout>
@@ -369,6 +398,13 @@ export default function BlogPost() {;
                         <span>LinkedIn</span>;
                       </a>;
                     </div>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   )}
 
                 </div>;
@@ -392,6 +428,7 @@ export default function BlogPost() {;
                 alt={post.title}
                 className="object-cover w-full h-full"
                 onError={(e) => {
+<<<<<<< HEAD
                   const target = e.target as HTMLImageElement;
                   target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
                   const target = e.target as HTMLImageElement,
@@ -405,6 +442,10 @@ export default function BlogPost() {;
                 onError={(e) => {;
                   const target = e.target as HTMLImageElement;
                   target.src = "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 }}
 
               />;
@@ -490,6 +531,13 @@ export default function BlogPost() {;
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost && relatedPost.title}</h4>;
                       </div>;
                     </Link>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   ))}
                 </div>;
               </div>;
@@ -783,3 +831,9 @@ if ( {) {
     </AppLayout>);
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

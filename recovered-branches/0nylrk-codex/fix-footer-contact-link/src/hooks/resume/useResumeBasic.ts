@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useFetchResume  } from './useFetchResume';
 import { useResumeActions } from './useResumeActions';
 export function useResumeBasic() {
@@ -19,6 +20,8 @@ export function useResumeBasic() {;
     updateBasicInfo: resumeActions.updateBasicInfo
 
     updateBasicInfo: resumeActions.updateBasicInfo,
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useFetchResume } from './useFetchResume',;
 import { useResumeActions } from './useResumeActions',;
 export function useResumeBasic() {;
@@ -33,6 +36,12 @@ export function useResumeBasic() {;
     // From useResumeActions;
     createResume: resumeActions.createResume;
     updateBasicInfo: resumeActions.updateBasicInfo;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     setActiveResume: resumeActions.setActiveResume}
 }
 =======

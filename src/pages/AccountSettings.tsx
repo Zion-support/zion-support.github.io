@@ -1,5 +1,6 @@
 toast.success (
         `Wallet connected: ${address.slice (0, 6)}...${address.slice (-4)}`);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -174,6 +175,10 @@ export default function AccountSettings() {;
       toast.success(`Wallet connected: ${address.slice(0, 6)}...${address.slice(-4)}`);
     } catch (error: any) {;
       toast.error(error.message || 'Failed to connect wallet');
+=======
+    } catch (error: any) {
+      toast.error (error.message || 'Failed to connect wallet');
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   },
 
@@ -258,10 +263,18 @@ export default function AccountSettings() {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>
       <SEO title="Account Settings" description="Manage your account" />
@@ -274,6 +287,9 @@ export default function AccountSettings() {;
         
         <div className="grid gap-6 md:grid-cols-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           <Card>
             <CardHeader>
@@ -349,6 +365,9 @@ export default function AccountSettings() {;
                   >
                     <Wallet className="h-4 w-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                     Connect
@@ -395,6 +414,9 @@ export default function AccountSettings() {;
                   <Label htmlFor="backup" className="flex items-center gap-1">
                     <Database className="h-4 w-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                     Decentralized Backup
@@ -439,6 +461,9 @@ export default function AccountSettings() {;
                 className="w-full"
               >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className="ml-2 h-4 w-4" />}
@@ -447,6 +472,9 @@ export default function AccountSettings() {;
           </Card>
           
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <Card>
@@ -550,6 +578,9 @@ export default function AccountSettings() {;
 
               
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <div>
@@ -567,6 +598,7 @@ export default function AccountSettings() {;
                     <p className='text-sm font-medium'>Profile Data</p>;
                     <p className='text-xs text-gray-500'>;
                       {enableBackup ? 'Backed up' : 'Not backed up'}
+<<<<<<< HEAD
                     </p>
                   </div>
                   <div className="bg-gray-100 p-3 rounded-md">
@@ -586,6 +618,26 @@ export default function AccountSettings() {;
                     <p className="text-xs text-gray-500">
                       {enableBackup ? 'Backed up' : 'Not backed up'}
 <<<<<<< HEAD
+=======
+                    </p>;
+                  </div>;
+                  <div className='bg-gray-100 p-3 rounded-md'>;
+                    <p className='text-sm font-medium'>Resume Data</p>;
+                    <p className='text-xs text-gray-500'>;
+                      {enableBackup ? 'Backed up' : 'Not backed up'}
+                    </p>;
+                  </div>;
+                  <div className='bg-gray-100 p-3 rounded-md'>;
+                    <p className='text-sm font-medium'>Project History</p>;
+                    <p className='text-xs text-gray-500'>;
+                      {enableBackup ? 'Backed up' : 'Not backed up'}
+                    </p>;
+                  </div>;
+                  <div className='bg-gray-100 p-3 rounded-md'>;
+                    <p className='text-sm font-medium'>Reviews</p>;
+                    <p className='text-xs text-gray-500'>;
+                      {enableBackup ? 'Backed up' : 'Not backed up'}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             <CardContent className='space - y-6'>;
               <div className='space - y-2'>;

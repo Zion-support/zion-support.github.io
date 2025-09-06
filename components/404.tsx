@@ -3,7 +3,10 @@ export default function NotFoundPage() {
 import React from 'react';
 
 
+<<<<<<< HEAD
 const 404: React.FC<404Props> = ({ className }) => {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className='container mx-auto px-4 py-20 text-center'>
       <h1 className='text-3xl font-semibold'>404 - Page Not Found</h1>
@@ -36,9 +39,26 @@ const 404: React.FC<404Props> = ({ className }) => {
     </div>;
   );
 }
+<<<<<<< HEAD
 
 
 }
 };
 
 export default 404;
+=======
+
+=======
+
+
+}
+
+=======
+};
+
+export default 404;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -4,23 +4,39 @@ import {useEffect, useMemo, useState} from 'react';
 interface Message {;
   role: 'user' | 'assistant';
   content: string;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function Assistant() {;
   const params =;
     typeof window !== 'undefined';
       ? new URLSearchParams(window && window.location.search);
       : new URLSearchParams();  const tenantId = params && params.get('tenantId') || '';
   const brand = params && params.get('brand') || 'Zion AI';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [messages, setMessages] = useState<Message[]>([interface Message { role: 'user' | 'assistant', content: string }
 export default function Assistant() {;
+<<<<<<< HEAD
 <<<<<<< HEAD
   const params = typeof window !== 'undefined' ? new URLSearchParams(window && window.location.search) : new URLSearchParams();
   const tenantId = params && params.get('tenantId') || '';
   const brand = params && params.get('brand') || 'Zion AI';
+=======
+  const params = typeof window !== 'undefined' ? new URLSearchParams(window && window.location.search) : new URLSearchParams();
+  const tenantId = params && params.get('tenantId') || '';
+  const brand = params && params.get('brand') || 'Zion AI';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [messages, setMessages] = useState<Message[]>([;
     {;
       role: 'assistant',;
       content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`,;
     },;
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
@@ -32,6 +48,8 @@ export default function Assistant() {;
       content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.`
     }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ]);
   const [input, setInput] = useState('');
   const faqs: Record<string, string> = useMemo(;
@@ -223,6 +241,7 @@ export default function Assistant() {;
         </button>
       </form>
     </div>
+<<<<<<< HEAD
   );      >
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
@@ -237,12 +256,22 @@ export default function Assistant() {;
 }
   );
 
+=======
+
+  );
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useEffect, useMemo, useState} from 'react';
 ;
 interface Message {
@@ -397,8 +426,11 @@ if ( {) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
   );
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

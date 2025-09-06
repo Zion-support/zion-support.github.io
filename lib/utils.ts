@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 export function cn(...inputs: ClassValue[]) {
 
 
 export function cn(...inputs: ClassValue[]) {;
+=======
+
+=======
+
+
+export function cn(...inputs: ClassValue[]) {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return twMerge(clsx(inputs));}
   return twMerge(clsx(inputs));}
   return twMerge(clsx(inputs));
@@ -65,6 +74,7 @@ export function format_currency (amount: number, currency = "USD"): string {
     style: "currency", currency,
   }).format (amount);
 }
+<<<<<<< HEAD
 
 
 };
@@ -74,7 +84,27 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }
 
 origin/main
+=======
+}
+;
+},
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 };
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

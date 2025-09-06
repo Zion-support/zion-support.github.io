@@ -1,8 +1,14 @@
 
+<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0"
 import {Resend} from "npm: resend@2.0.0";
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.45.0",
+import {Resend} from "npm: resend@2 ;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Initialize Resend with API key
 const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
 
@@ -38,6 +44,7 @@ interface EmailData {
   user_type: string;
   days_inactive?: number;
   onboarding_status?: any;
+<<<<<<< HEAD
   job_id?: string
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
@@ -45,6 +52,22 @@ import {Resend} from "npm: resend@2.0.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
 import { Resend } from "npm: resend@2.0.0",
+=======
+
+
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
+import {Resend} from "npm: resend@2.0.0";
+
+=======
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
+import { Resend } from "npm: resend@2.0.0",
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Initialize Resend with API key
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
 
@@ -315,6 +338,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
       {
         headers: {
           ...corsHeaders,
+<<<<<<< HEAD
           "Content-Type": "application/json"};
         status: 500}
     )
@@ -431,6 +455,9 @@ serve(async (req) => {;
     );
   }
 }),
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {
   const { email_type, display_name, user_type } = emailData,
@@ -748,8 +775,17 @@ if ( {) {
         </div>
         <p>The Zion AI Marketplace Team</p>
       </div>
+<<<<<<< HEAD
     `}
 }
+=======
+
+      subject: `Tips to find the perfect talent for "${email_data.job_title}"`;
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }),;
 async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {;
   const { email_type, display_name, user_type } = emailData,;
@@ -877,6 +913,14 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
         </div>;
         <p > The Zion AI Marketplace Team</p>;
       </div>;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     `}
 }
 ;

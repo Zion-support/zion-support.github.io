@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -6,6 +7,8 @@ import fs from 'fs',;
 import path from 'path',;
 const LOG_DIR = path.join(process.cwd(), 'dataanalytics'),
 const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl'),
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   if (!fs.existsSync(LOG_FILE)) fs.writeFileSync(LOG_FILE, '')
@@ -56,6 +59,7 @@ function handler() {
 
 
     fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n')
+<<<<<<< HEAD
   } catch (e) {
     // ignore file errors in serverless
   }
@@ -69,6 +73,13 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdmin } from '../../../utils/auth';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+
+=======
+    at: at && typeof at === 'string' ? at : now_iso,
+    ua: req.headers['user - agent'] || '',
+ip: (req.headers['x - forwarded - for'] || req.socket.remote_address || '') as string},
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   try {
     ensureLogFile (),
     fs.appendFileSync (LOG_FILE, JSON.stringify (event) + '\n');
@@ -80,3 +91,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res.status(200).json({ ok: true })
 }
+<<<<<<< HEAD
+=======
+
+=======
+res.status (200).json ({ ok: true });
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

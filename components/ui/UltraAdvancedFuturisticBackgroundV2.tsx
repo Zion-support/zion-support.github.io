@@ -634,6 +634,9 @@ if (return) {
           }}
           transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
         />;
@@ -654,10 +657,13 @@ if (return) {
 
           }}
           transition={{
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             duration: 7
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
@@ -684,6 +690,11 @@ if (return) {
 
           }}
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             duration: 7,
             repeat: Infinity,
             ease: 'easeInOut',            ease: "easeInOut"
@@ -691,11 +702,22 @@ if (return) {
 
           }}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />
       </div>
       {/* Quantum Energy Particles */}
       <div className='fixed inset-0 pointer-events-none z-20'>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {[...Array(20)].map((_, i) => (
           <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -790,10 +812,18 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
               opacity: [0, 1, 0]
               scale: [0, 1, 0]
             }}
+<<<<<<< HEAD
             transition={{
               duration: 3 + Math.random() * 2
               repeat: Infinity
               delay: Math.random() * 2
+=======
+
+              duration: 3 + Math && Math.random() * 2,
+              repeat: Infinity,
+              delay: Math && Math.random() * 2,
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
 =======
@@ -809,10 +839,22 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
       </div>
 
 
+<<<<<<< HEAD
+=======
+=======
+
+
+=======
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
+<<<<<<< HEAD
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
           />
@@ -825,6 +867,11 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
         ))}
       </div>
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Neural Network Connections */}
       <div className='fixed inset-0 pointer-events-none z-30'>;
         <svg className='w-full h-full'>;
@@ -937,6 +984,7 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
+<<<<<<< HEAD
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
                 ease: 'easeInOut',              }}
@@ -961,18 +1009,39 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
         </svg>
       </div>
 
+<<<<<<< HEAD
       {/* Content */}
       <div className='relative z-40'>{children}</div>
     </div>
   );
 }
 };
+=======
+        </svg>;
+      </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      {/* Content */}
+
+
+};
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default UltraAdvancedFuturisticBackgroundV2;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -1012,5 +1081,10 @@ export default UltraAdvancedFuturisticBackgroundV2;
 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export default UltraAdvancedFuturisticBackgroundV2;
 export default UltraAdvancedFuturisticBackgroundV2;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

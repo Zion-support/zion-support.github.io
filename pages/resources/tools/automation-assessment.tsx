@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -6,6 +11,11 @@ export default function ToolPage() {
   const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
   const [showResults, setShowResults] = useState(false),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -36,6 +46,7 @@ export default function ToolPage() {
   ]
   const handleAnswer = (questionId: string, value: number) => {
     setAnswers(prev => ({ ...prev, [questionId]: value }))
+<<<<<<< HEAD
   }
   const calculateScore = () => {
     const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0)
@@ -61,6 +72,29 @@ export default function ToolPage(req, res) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState<{ [key: string]: number }>({});
   const [showResults, setShowResults] = useState(false);
+=======
+
+
+  const nextQuestion = () => {
+    if (currentQuestion < questions.length - 1) {
+      setCurrentQuestion(currentQuestion + 1)
+
+=======
+
+
+
+=======
+import React, { useState } from 'react',
+import Head from 'next / head',
+import Link from 'next / link',
+export default /**
+ * ToolPage - Function description
+ */
+function ToolPage() {
+  const [current_question, setCurrentQuestion] = useState (0),
+  const [answers, set_answers] = useState<{ [key: string]: number }>({}),
+  const [show_results, setShowResults] = useState (false),
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const questions = [;
     {
       id: 'current - automation',
@@ -129,6 +163,13 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },
   const resetAssessment = () => {
     setCurrentQuestion(0)
@@ -171,6 +212,7 @@ export default function ToolPage(req, res) {
                   ))}
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
+<<<<<<< HEAD
                   <button 
 
                     onClick={resetAssessment}
@@ -181,13 +223,37 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+                      <p className="text-white/80 text-sm">Score: {answers[q.id] || 0}/5</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                  <button 
+
+                    onClick={resetAssessment}
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
                   >
                     Retake Assessment
                   </button>
+<<<<<<< HEAD
                   <Link
                   <Link 
                   <Link
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     href="/contact"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
                   >
@@ -231,6 +297,12 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
             </div>
 
@@ -370,6 +442,12 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       className="mr-3 text-cyan-400 focus:ring-cyan-400"
                     />
                     <span className="text-white/90">{option}</span>
@@ -379,6 +457,7 @@ export default function ToolPage(req, res) {
 
 
               <div className="flex justify-between">
+<<<<<<< HEAD
                 <button 
                   onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
                   disabled={currentQuestion === 0}
@@ -395,10 +474,18 @@ export default function ToolPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   className="px-6 py-3 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Previous
                 </button>
+<<<<<<< HEAD
                 <button
                   onClick={nextQuestion}
                   disabled={!answers[currentQ.id]}
@@ -422,6 +509,10 @@ export default function ToolPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 =======
@@ -507,5 +598,13 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 }
+=======
+
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

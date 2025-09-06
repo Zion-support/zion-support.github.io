@@ -9,6 +9,7 @@ import { ReviewsList } from "@/components/reviews/ReviewsList",
 import { useReviews } from "@/hooks/useReviews",
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+<<<<<<< HEAD
 interface ProfileRatingsProps {
 
   userId: string
@@ -75,6 +76,8 @@ export function ProfileRatings({
   return (
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 interface ProfileRatingsProps {
   userId: string,
@@ -112,13 +115,19 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 
 
   return (
+<<<<<<< HEAD
     <div className='space-y-6'>
       <div className='flex flex-col md:flex-row gap-6'>
+=======
+    <div className='space-y-6'>;
+      <div className='flex flex-col md:flex-row gap-6'>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className='md:w-1/3'>          <ReviewStats
 
 
 
   return (
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 
@@ -204,6 +213,16 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             
             <TabsContent value="positive">
               <ReviewsList
+=======
+    <div className="space-y-6">;
+      <div className="flex flex-col md:flex-row gap-6">;
+        <div className="md:w-1/3">;
+          <ReviewStats
+            averageRating={averageRating}
+            totalReviews={ratingCount}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ratingDistribution={ratingDistribution}
           />
         </div>
@@ -253,6 +272,10 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             
             <TabsContent value="positive">
               <ReviewsList
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 reviews={reviews.filter((r) => r.rating >= 4)}
                 isLoading={isLoading}
                 onReportReview={reportReview}
@@ -276,6 +299,9 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 isLoading={isLoading}
                 onReportReview={reportReview}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               />;
             </TabsContent>;
@@ -292,6 +318,7 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
                 onReportReview={reportReview}
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
               />
@@ -331,6 +358,8 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 }"}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   reportReview ;
 }/> </TabsContent> </Tabs> </div> </div> </div>) ;
 }"};
@@ -338,6 +367,9 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import { useState, useEffect } from 'react';

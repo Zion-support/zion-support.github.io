@@ -19,6 +19,7 @@ interface MobileChatViewProps {;
   onBack: () => void;
   onSendMessage: (content: string) => void
 
+<<<<<<< HEAD
 export function MobileChatView({
   contact
   messages
@@ -40,6 +41,24 @@ import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lu
 import { cn } from "@/lib/utils",
 import { useRouter } from 'next/router',
 import { toast } from "sonner",
+=======
+
+import React, { useState } from 'react';
+import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import {
+  Send,
+  PaperclipIcon,
+  ChevronLeft,
+  MoreVertical,
+  Video,
+  Phone,
+} from 'lucide-react';
+import { cn } from '@/lib / utils';
+import { use_router } from 'next / router';
+import { toast } from 'sonner';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Message {
   id: string;
   content: string;
@@ -169,6 +188,11 @@ export function MobileChatView(): any ({;
     router.push(`/call/${roomId}?audioOnly=true`)
   },
   
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -191,6 +215,9 @@ export function MobileChatView(): any ({;
           
           <div className="flex items-center flex-1 gap-3 mx-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             <Avatar>
               <AvatarImage src={contact.avatar} alt={contact.name} />
@@ -229,6 +256,7 @@ export function MobileChatView(): any ({;
               </p>
             </div>
           </div>
+<<<<<<< HEAD
           <div className='flex'>
             <Button
               variant='ghost'
@@ -268,6 +296,10 @@ export function MobileChatView(): any ({;
             
             <Button variant="ghost" size="icon" aria-label="More options">
               <MoreVertical className="h-5 w-5" />
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </Button>
           </div>
         </div>
@@ -469,6 +501,9 @@ export function MobileChatView(): any ({;
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                     {message.status === 'read' ? '✓✓' : '✓'}
@@ -487,6 +522,10 @@ export function MobileChatView(): any ({;
           </Button>
           <Input
             value={newMessage}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             onChange={e => setNewMessage(e.target.value)}
             onKeyDown={handleKeyDown}
             placeholder='Type a message...'
@@ -563,6 +602,11 @@ export function MobileChatView(): any ({;
 
           <Input
             value={newMessage}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             onChange={(e) => setNewMessage(e.target.value)}
 
             onKeyDown={handleKeyDown}
@@ -571,6 +615,12 @@ export function MobileChatView(): any ({;
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </Button>
         </div>
       </div>

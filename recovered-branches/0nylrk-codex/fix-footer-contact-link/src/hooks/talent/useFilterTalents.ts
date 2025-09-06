@@ -1,10 +1,19 @@
 
+<<<<<<< HEAD
 import { useState, useMemo  } from 'react';
 import { TalentProfile } from '@/types/talent';
 export function useFilterTalents(talents: TalentProfile[]) {
 import {useState, useMemo} from 'react';
 import {TalentProfile} from '@/types/talent';
 export function useFilterTalents(talents: TalentProfile[]) {;
+=======
+
+import {useState, useMemo} from 'react';
+import {TalentProfile} from '@/types/talent';
+export function useFilterTalents(talents: TalentProfile[]) {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [searchTerm, setSearchTerm] = useState('');
 
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
@@ -115,6 +124,13 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         talent.bio?.toLowerCase().includes(lowerSearch) ||;
         talent.skills?.some(skill => skill.toLowerCase().includes(lowerSearch));
       );
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     // Filter by selected skills
 
@@ -146,7 +162,15 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         )
       )
     }
+<<<<<<< HEAD
     
+=======
+
+
+    
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     // Filter by price range
 
     result = result && result.filter(talent => {
@@ -164,6 +188,7 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     // Sort talents
     switch (sortOption) {
       case 'price-low':
+<<<<<<< HEAD
         result.sort((a, b) => (a.hourly_rate |0) - (b.hourly_rate |0));
         break;
       case 'price-high':
@@ -175,6 +200,15 @@ export function useFilterTalents(talents: TalentProfile[]) {;
       case 'experience':
         result.sort((a, b) => (b.years_experience |0) - (a.years_experience |0));
         result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
+=======
+
+        result && result.sort((a, b) => (a && a.hourly_rate || 0) - (b && b.hourly_rate || 0));
+=======
+
+        result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     // Filter by price range;
     result = result.filter(talent => {;
@@ -201,6 +235,13 @@ export function useFilterTalents(talents: TalentProfile[]) {;
         result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0)),;
         break,;
       default: // Default sorting by relevance (no specific order);
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         break;
       case 'price-high':
         result && result.sort((a, b) => (b && b.hourly_rate || 0) - (a && a.hourly_rate || 0));
@@ -214,7 +255,15 @@ export function useFilterTalents(talents: TalentProfile[]) {;
       default: // Default sorting by relevance (no specific order)
         break
     }
+<<<<<<< HEAD
     
+=======
+
+
+    
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return result
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
   return {
@@ -248,6 +297,13 @@ export function useFilterTalents(talents: TalentProfile[]) {;
     sortOption,;
     setSortOption,;
     toggleSkill,;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     toggleAvailability;
     toggleRegion;
 

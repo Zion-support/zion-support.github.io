@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
+=======
+
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 'use client';
 
 ;
@@ -13,12 +21,21 @@ interface Props {;
   children: ReactNode;
   level?: string;
   fallback?: ReactNode;
+<<<<<<< HEAD
   onError?: (error: Error, errorInfo: ErrorInfo) => void;import { AlertTriangle, RefreshCw } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 }
 
+=======
+
+
+}
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
@@ -36,6 +53,13 @@ interface Props {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface State {
 =======
 
@@ -290,6 +314,7 @@ class ErrorBoundary extends Component<Props, State> {
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -448,6 +473,11 @@ export default class ErrorBoundary extends Component<Props, State> {
               </p>
             </div>
             <div className="space-y-3">
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <button
                 onClick={() => typeof window !== 'undefined' && window.location.reload()  } catch (error) {
     console.error("Error:", error);
@@ -841,6 +871,7 @@ if ( {) {
               Reload Page
             </button>
           </div>
+<<<<<<< HEAD
     // Log the error to an error reporting service
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     this.setState({ error, errorInfo });
@@ -887,6 +918,12 @@ if ( {) {
               </pre>
             </details>
           )}
+=======
+
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       );
@@ -896,6 +933,7 @@ if ( {) {
     return this && this.props.children;
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 class ErrorBoundary extends Component<Props, State> {;
   constructor(props: Props) {;
@@ -909,6 +947,11 @@ class ErrorBoundary extends Component<Props, State> {;
   constructor(props: Props) {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+class ErrorBoundary extends Component<Props, State> {;
+  constructor(props: Props) {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     super(props);
     this && this.state = { hasError: false };
 
@@ -1051,6 +1094,7 @@ if ( {) {
 }
 }
 export default ErrorBoundary;
+<<<<<<< HEAD
         </div>
       );
       } catch (error) {
@@ -1095,3 +1139,9 @@ export default ErrorBoundary;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

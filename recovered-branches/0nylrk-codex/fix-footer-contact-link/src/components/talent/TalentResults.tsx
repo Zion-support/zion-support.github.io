@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {TalentProfile} from "@/types/talent";
 import {ActiveFilters} from "@/components/talent/ActiveFilters";
@@ -11,6 +12,12 @@ import { ResultsHeader } from "@/components/talent/ResultsHeader";
 import { TalentGrid } from "@/components/talent/TalentGrid";
 import { ResultsHeader } from "@/components/talent/ResultsHeader",
 import { TalentGrid } from "@/components/talent/TalentGrid",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface TalentResultsProps {
 
   filteredTalents: TalentProfile[]
@@ -46,6 +53,7 @@ interface TalentResultsProps {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export function TalentResults({;
   filteredTalents;
@@ -63,6 +71,11 @@ export function TalentResults({
   savedTalents,
   handleToggleSave,
   isAuthenticated,
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   activeFiltersProps
 }: TalentResultsProps) {
   return (
@@ -112,6 +125,13 @@ export function TalentResults(): any ({;
 }: TalentResultsProps) {;
   return (
     <div className="flex-1">;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Active filters */}
 
       <ActiveFilters {...activeFiltersProps} />;
@@ -185,13 +205,28 @@ function TalentResults() {
 =======
         isAuthenticated={isAuthenticated}
         clearFilters={activeFiltersProps.clearFilters}
+<<<<<<< HEAD
       />
     </div>
   )
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       />;
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
 ;
+=======
+
+=======
+
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

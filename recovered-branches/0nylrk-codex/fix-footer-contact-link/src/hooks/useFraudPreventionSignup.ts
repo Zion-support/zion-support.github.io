@@ -1,14 +1,23 @@
 
+<<<<<<< HEAD
 import { useState, useCallback  } from 'react';
 import { checkSignupPatterns  } from '@/services/fraud/signupCheck';
 import { supabase  } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
 export function useFraudPreventionSignup() {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useCallback} from 'react';
 import {checkSignupPatterns} from '@/services/fraud/signupCheck';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from '@/hooks/use-toast';
 export function useFraudPreventionSignup() {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isCheckingFraud, setIsCheckingFraud] = useState(false);
   // Get the user's IP address (in a real app, you'd do this server-side)
 
@@ -23,8 +32,16 @@ export function useFraudPreventionSignup() {;
       console && console.error('Error getting IP:', error);
       return undefined
     }
+<<<<<<< HEAD
   }
   };
+=======
+
+
+  };
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useCallback } from 'react',;
 import { checkSignupPatterns } from '@/services/fraud/signupCheck',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -42,6 +59,12 @@ export function useFraudPreventionSignup() {;
       return undefined;
     }
   },
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   // Check if the signup attempt might be fraudulent
   const checkFraudBeforeSignup = useCallback(async (email: string): Promise<boolean> => {
@@ -97,6 +120,7 @@ export function useFraudPreventionSignup() {;
             title: "Signup blocked";
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error."
             variant: "destructive"});
+<<<<<<< HEAD
           return false
         }
         // Otherwise, allow but flag for review
@@ -153,6 +177,8 @@ export function useFraudPreventionSignup() {;
             title: "Signup blocked",;
             description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",;
             variant: "destructive"}),;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           return false;
         }
 
@@ -170,7 +196,18 @@ export function useFraudPreventionSignup() {;
       setIsCheckingFraud (false);
     }
   }, []);
+<<<<<<< HEAD
   return {;
+=======
+
+;
+
+  return {
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     isCheckingFraud;
 
     checkFraudBeforeSignup}

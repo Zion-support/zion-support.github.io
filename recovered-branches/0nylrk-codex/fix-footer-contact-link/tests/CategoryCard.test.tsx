@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen  } from '@testing-library/react';
 import { MemoryRouter  } from 'react-router-dom';
 import { CategoryCard } from '@/components/CategoryCard';
@@ -15,6 +16,25 @@ import {CategoryCard} from '@/components/CategoryCard',
 import { render, screen } from '@testing-library/react',
 import { MemoryRouter } from 'react-router-dom',
 import { CategoryCard } from '@/components/CategoryCard',
+=======
+
+import {render, screen} from '@testing-library/react',;
+import {MemoryRouter} from 'react-router-dom',;
+import {CategoryCard} from '@/components/CategoryCard',;
+=======
+
+import {render, screen} from '@testing-library/react',
+import {MemoryRouter} from 'react-router-dom',
+import {CategoryCard} from '@/components/CategoryCard',
+
+=======
+import { render, screen } from '@testing-library/react',
+import { MemoryRouter } from 'react-router-dom',
+import { CategoryCard } from '@/components/CategoryCard',
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 it('renders category card with link to slug', () => {
   render(
     <MemoryRouter>
@@ -91,3 +111,9 @@ it('treats underscores as spaces in slug', () => {
 ;
   expect(link).toHaveAttribute('href/category/ai-tools')
 }),
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

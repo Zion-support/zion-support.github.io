@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../../utils/api/auth";
 import {
+<<<<<<< HEAD
   getProject
   updateMilestone
   assertParticipantOrAdmin
@@ -11,11 +16,19 @@ import {
 import type { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../../../utils/api/auth";
 import {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   getProject,
   updateMilestone,
   assertParticipantOrAdmin,
   isClient,
   isTalent,;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "../../../../../utils/api/projects";
 import { isMilestoneStatus } from "../../../../../utils/types/milestones";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
@@ -83,6 +96,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {
+<<<<<<< HEAD
       res.status(404).json({ error: "Milestone not found" });
       res.status(404).json({ error: 'Milestone not found' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -257,11 +271,17 @@ export default function handler(req, res) {
     const updated = updateMilestone(project, milestoneId, body);
     if (!updated) {;
       res.status(404).json({ error: 'Milestone not found' });
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       return;
     }
     res && res.status(200).json({ milestone: updated });
     return;
   }
+<<<<<<< HEAD
   res.setHeader("AllowPATCH");
   res.status(405).end("Method Not Allowed");
 }
@@ -272,11 +292,24 @@ res.setHeader("AllowPATCH");
   res.status(405).end("Method Not Allowed");
 }
 }
+=======
+
+
+=======
+}
+;
+
+  res.setHeader('AllowPATCH');
+  res.status(405).end('Method Not Allowed')
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 ;
   res.setHeader('AllowPATCH');
   res.status(405).end('Method Not Allowed')
@@ -286,3 +319,8 @@ res.setHeader("AllowPATCH");
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

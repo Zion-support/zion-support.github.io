@@ -62,6 +62,62 @@ export default function AIPage() {
             price="$8,000-25,000"
             icon="📊"
           />
+          <AIServiceCard
+            title="AI Voice & Speech Processing"
+            description="Advanced speech recognition, synthesis, and voice AI applications"
+            features={["Speech-to-text", "Text-to-speech", "Voice cloning", "Emotion detection", "Multi-language support", "Real-time processing"]}
+            price="$25k–$65k"
+            icon="🎤"
+          />
+          <AIServiceCard
+            title="AI-Powered Search & Discovery"
+            description="Intelligent search engines with semantic understanding and personalization"
+            features={["Semantic search", "Personalization", "Auto-tagging", "Content recommendation", "Search analytics", "Multi-modal search"]}
+            price="$18k–$45k"
+            icon="🔎"
+          />
+          <AIServiceCard
+            title="AI Fraud Detection & Security"
+            description="Advanced fraud detection and cybersecurity using machine learning"
+            features={["Real-time fraud detection", "Anomaly detection", "Risk scoring", "Behavioral analysis", "Threat intelligence", "Compliance monitoring"]}
+            price="$30k–$80k"
+            icon="🛡️"
+          />
+          <AIServiceCard
+            title="AI Content Generation & Moderation"
+            description="Automated content creation and intelligent content moderation systems"
+            features={["Content generation", "Auto-moderation", "Brand safety", "Content optimization", "Multi-format support", "Quality scoring"]}
+            price="$15k–$40k"
+            icon="✍️"
+          />
+          <AIServiceCard
+            title="AI Supply Chain Optimization"
+            description="Intelligent supply chain management with demand forecasting and logistics optimization"
+            features={["Demand forecasting", "Route optimization", "Inventory management", "Supplier analytics", "Risk assessment", "Cost optimization"]}
+            price="$35k–$90k"
+            icon="🚚"
+          />
+          <AIServiceCard
+            title="AI Healthcare & Medical Imaging"
+            description="Medical AI solutions for diagnosis, treatment planning, and patient care"
+            features={["Medical imaging analysis", "Diagnostic assistance", "Treatment recommendations", "Patient monitoring", "Drug discovery", "Clinical trials"]}
+            price="$50k–$150k"
+            icon="🏥"
+          />
+          <AIServiceCard
+            title="AI Financial Trading & Analysis"
+            description="Algorithmic trading and financial analysis using advanced AI models"
+            features={["Algorithmic trading", "Market analysis", "Risk management", "Portfolio optimization", "Sentiment analysis", "Real-time alerts"]}
+            price="$40k–$120k"
+            icon="💹"
+          />
+          <AIServiceCard
+            title="AI Customer Intelligence"
+            description="Deep customer insights and behavior analysis using AI and machine learning"
+            features={["Customer segmentation", "Behavior prediction", "Churn analysis", "Lifetime value", "Personalization", "Engagement optimization"]}
+            price="$20k–$55k"
+            icon="👥"
+          />
         </div>
       </section>
 
@@ -323,6 +379,7 @@ function Pricing() {
       </div>
     </section>
   );
+<<<<<<< HEAD
 }
 
 function Plan({ name, price, features, popular }: { 
@@ -390,4 +447,6 @@ function CTASection() {
       </div>
     </div>
   );
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }

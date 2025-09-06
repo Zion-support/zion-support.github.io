@@ -7,9 +7,18 @@ import { setSessionCookie } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {;
     res.status(405).json({ error: 'Method Not Allowed' });
+<<<<<<< HEAD
     return;  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {;
     res.status(405).json({ error: 'Method Not Allowed' });
+=======
+
+    return;  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {;
+    res.status(405).json({ error: 'Method Not Allowed' });
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return
 
   const { username, password } = req.body |{}

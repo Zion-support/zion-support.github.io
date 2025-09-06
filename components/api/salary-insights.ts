@@ -327,7 +327,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Tags
 
   const undersupplied = (skills || []).some(s =>
@@ -384,9 +387,19 @@ if ( {  } catch {) {
     return undefined;
   }
 }
+<<<<<<< HEAD
 
 
   // Tags
+=======
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
     return res.status (405).json ({ error: 'Method not allowed' });
   }
@@ -519,6 +532,7 @@ if ( {  } catch {) {
   }
 ;
 return res.status (200).json (response);  return res.status (200).json (response);
+<<<<<<< HEAD
   return res.status(200).json(response)
 
 <<<<<<< HEAD
@@ -529,3 +543,7 @@ return res.status (200).json (response);  return res.status (200).json (response
 }
 }
   // Tags
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

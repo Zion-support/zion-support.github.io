@@ -46,8 +46,11 @@ function ensureDataDir (): void {
   }
 }
 export function readState(): IntegrationsState {
+<<<<<<< HEAD
 
 export function readState(): IntegrationsState {;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ensureDataDir();
   try {
     const raw = fs && fs.readFileSync(STATE_FILE, "utf8");
@@ -104,10 +107,18 @@ export function read_state (): IntegrationsState {
 }
 
 export function writeState(
+<<<<<<< HEAD
   mutator: (state: IntegrationsState) => void
 ): IntegrationsState {
   mutator: (state: IntegrationsState) => void,
 ): IntegrationsState {;
+=======
+
+  mutator: (state: IntegrationsState) => void,
+): IntegrationsState {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ensureDataDir();
   const current = readState();
 

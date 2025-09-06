@@ -1,13 +1,28 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 import { supabase } from "@/integrations/supabase/client",
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
@@ -111,10 +126,17 @@ export async function createNotification({;
     if (sendEmail && data) {;
       const notificationId = data,;
       await supabase.functions.invoke('send-notification-email', {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
+<<<<<<< HEAD
   } catch (error) {
     console.error('Error creating notification:', error);
     return { success: false, error }
@@ -124,6 +146,23 @@ export async function createNotification({;
     console.error('Error creating notification:', error),;
   } catch (error) {;
     console.error('Error creating notification:', error),;
+=======
+
+      success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
+      talentNotification,
+
+      adminNotification
+=======
+
+  } catch (error) {;
+    console.error('Error creating notification:', error),;
+=======
+=======
+  } catch (error) {;
+    console.error('Error creating notification:', error),;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return { success: false, error }
   }
 }
@@ -136,6 +175,7 @@ export async function createHireRequestNotifications({;
   adminId;
   requesterName;
 export async function createHireRequestNotifications({
+<<<<<<< HEAD
   talentId;
   adminId;
   requesterName;
@@ -292,6 +332,10 @@ export async function createHireRequestNotifications({;
       success: talentNotification.success && adminNotification.success,;
       talentNotification,;
       adminNotification;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
   return {
@@ -302,6 +346,13 @@ export async function createHireRequestNotifications({;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 /**
  * Creates an onboarding notification for a user
@@ -548,9 +599,16 @@ function createTestNotification() {
     'system': { url: '/dashboard', text: 'Learn More' }
   }
 
+<<<<<<< HEAD
     actionText: actions[randomType].text
   })
 }
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   return create_notification ({
     user_id;
@@ -622,5 +680,11 @@ export async function createTestNotification(userId: string) {;
     actionUrl: actions[randomType].url;
     actionText: actions[randomType].text;
   });
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

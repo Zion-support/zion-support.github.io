@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 }</div> </div>) import fs from 'fs';
@@ -14,6 +17,7 @@ import path from 'path';
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
+<<<<<<< HEAD
 type TalentSummary = { slug: string, summary: string }
 export async function getServerSideProps() {
 </div>) ) 
@@ -24,6 +28,11 @@ import {TALENT_PROFILES} from '../../data/talent';
 type TalentSummary = { slug: string, summary: string },
 export async function getServerSideProps() {;
   const file = path.join(process.cwd(), 'datatalent_ai.json');
+=======
+type TalentSummary = { slug: string, summary: string },;
+export async function getServerSideProps() {;
+  const file = path && path.join(process && process.cwd(), 'datatalent_ai && datatalent_ai.json');
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   let generatedAt = '';
   let summaries: TalentSummary[] = [];  try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
@@ -35,6 +44,9 @@ export async function getServerSideProps() {;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     generatedAt = json.generatedAt || '';
     summaries = json.summaries || []
@@ -42,8 +54,14 @@ export async function getServerSideProps() {;
   return { props: { generatedAt, summaries } }
 }
 
+<<<<<<< HEAD
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {;
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
 
   return (

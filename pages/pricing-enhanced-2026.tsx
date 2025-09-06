@@ -1,5 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -43,6 +50,12 @@ export default function PricingEnhanced2026Page() {
     ...innovative2026AIServicesV3,
     ...emergingTech2026ServicesV3,
     ...enterpriseIT2026ServicesV3
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -225,6 +238,10 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ],
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
@@ -395,17 +412,39 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <meta property="og:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta property="og:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://ziontechgroup.com/pricing-enhanced-2026" />
           <meta property="og:image" content="https://ziontechgroup.com/og-image.svg" />
           {/* Twitter */}
+<<<<<<< HEAD
           {/* Twitter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+          <meta name="twitter:card" content="summary_large_image" />;
+          <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />;
+          <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />;
+          <meta name="twitter:image" content="https://ziontechgroup.com / og - image.svg" />;
+        </Head>;
+        {/* Enhanced Header Section */}
+
+        <div className="relative z - 10 pt - 20 pb - 16 px - 4 sm:px - 6 lg:px - 8">;
+          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content="Enhanced 2026 Pricing - Zion Tech Group" />
           <meta name="twitter:description" content="Discover our comprehensive 2026 pricing for innovative AI, quantum computing, and enterprise IT services." />
@@ -439,12 +478,22 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             className="max-w-7xl mx-auto text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
               Enhanced 2026 Pricing
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services. 
 
               Achieve remarkable ROI with transparent, competitive pricing.
@@ -461,6 +510,7 @@ export default function PricingEnhanced2026Page(req, res) {
             </p>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {/* Billing Cycle Toggle */}
+<<<<<<< HEAD
               Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services.
               Achieve remarkable ROI with transparent, competitive pricing.
             </p>
@@ -470,6 +520,13 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div className="flex items-center justify-center space-x-4 mb-8">
               <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>Monthly</span>
               <button
@@ -511,6 +568,12 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
               <h3 className="text-xl font-semibold text-cyan-400 mb-4">Need Custom Pricing?</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -536,6 +599,12 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -565,6 +634,12 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   className="relative"
                 >
                   <UltraFuturisticCard
@@ -580,6 +655,7 @@ export default function PricingEnhanced2026Page(req, res) {
 }
                   >
                     {tier.popular && (
+<<<<<<< HEAD
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                         <div className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                           Most Popular
@@ -587,11 +663,27 @@ export default function PricingEnhanced2026Page(req, res) {
                       </div>
                     )}
                     
+=======
+
+
+=======
+
+                    
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
@@ -611,6 +703,12 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       </div>
                       <ul className="text-left space-y-3 mb-8">
                         {tier.features.map((feature, idx) => (
@@ -698,6 +796,12 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -710,6 +814,7 @@ export default function PricingEnhanced2026Page(req, res) {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {serviceCategories.map((category, index) => (
                 <motion.div
+<<<<<<< HEAD
                   key={category.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -767,6 +872,29 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+=======
+              className="text - center mb - 12";
+            >;
+              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 4">;
+                Service Categories & Pricing;
+              </h2>;
+              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+                Explore our comprehensive service categories with transparent pricing and competitive advantages;
+              </p>;
+            </motion.div>;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+              {service_categories.map ((category, index) => (
+                <motion.div;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                  key={category.name}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       </ul>
 
 
@@ -780,6 +908,12 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       >
                         View Services
                         <ArrowRight className="w-4 h-4 ml-2" />
@@ -835,6 +969,12 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="text-center mb-12"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -847,6 +987,7 @@ export default function PricingEnhanced2026Page(req, res) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {featuredServices.map((service, index) => (
                 <motion.div
+<<<<<<< HEAD
                   key={service.name  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -902,6 +1043,29 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+=======
+              className="text - center mb - 12";
+            >;
+              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 4">;
+                Featured Services;
+              </h2>;
+              <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+                Discover our most popular and innovative services that are transforming businesses worldwide;
+              </p>;
+            </motion.div>;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 6">;
+              {featured_services.map ((service, index) => (
+                <motion.div;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                  key={service.name}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       </ul>
 
 
@@ -916,6 +1080,12 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         >
                           Learn More
                           <ArrowRight className="w-4 h-4 ml-1" />
@@ -988,6 +1158,12 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1006,6 +1182,12 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
@@ -1019,6 +1201,12 @@ export default function PricingEnhanced2026Page(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call Now
@@ -1033,6 +1221,7 @@ export default function PricingEnhanced2026Page(req, res) {
         </div>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
   );
 };
   )
@@ -1042,3 +1231,52 @@ export default function PricingEnhanced2026Page(req, res) {
   }
 }
 }
+=======
+
+=======
+}
+
+=======
+              className="bg - gradient - to - r from - cyan - 900 / 50 via - purple - 900 / 50 to - pink - 900 / 50 backdrop - blur - sm rounded - 2xl p - 8 border border - cyan - 500 / 30 text - center";
+            >;
+              <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
+                Ready to Transform Your Business?;
+              </h2>;
+              <p className="text - xl text - gray - 300 mb - 8">;
+                Join thousands of businesses already using our innovative services to gain competitive advantages and achieve remarkable ROI.;
+              </p>;
+              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+                <Button;
+                  variant="primary";
+                  size="lg";
+                  on_click={() => window.open (`mailto:${contact_info.email}?subject = Business Transformation Consultation`, '_blank')}
+                >;
+                  <Mail className="w - 5 h - 5 mr - 2" />;
+                  Schedule Consultation;
+                </Button>;
+                <Button;
+                  variant="secondary";
+                  size="lg";
+                  on_click={() => window.open (`tel:${contact_info.mobile}`, '_blank')}
+                >;
+                  <Phone className="w - 5 h - 5 mr - 2" />;
+                  Call Now;
+                </Button>;
+              </div>;
+              <div className="mt - 8 text - sm text - gray - 400">;
+                <p > Contact: {contact_info.mobile} | {contact_info.email}</p>;
+                <p>{contact_info.address}</p>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </div>;
+      </div>;
+    </UltraFuturisticBackground>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

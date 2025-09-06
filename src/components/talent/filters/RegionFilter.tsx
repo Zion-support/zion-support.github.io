@@ -5,6 +5,11 @@ return (
         className='flex w-full items-center justify-between text-white font-medium'      >
         className="flex w-full items-center justify-between text-white font-medium"
       >
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <span>Region</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -121,6 +126,9 @@ const REGION_OPTIONS = [;
   { id: "South America", label: "South America" },;
   { id: "Australia", label: "Australia" },;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -242,6 +250,7 @@ function RegionFilter() {
 }className="flex w - full items - center justify - between text - white font - medium" > <span > Region</span>) : (<ChevronDown className="h - 4 w - 4 text - zion - slate - light" />);
 }</button> {
   REGION OPTIONS.map (region => (<div key= {
+<<<<<<< HEAD
   region.id "
 }className="flex items-center" > <Checkbox > {
   region.label
@@ -257,6 +266,22 @@ function RegionFilter() {
 }"};
 <<<<<<< HEAD
 
+=======
+  region.id ";
+}className="flex items - center" > <Checkbox > {
+  region.label;
+}</label> </div>) );
+}</div>);
+}</div>);
+}"}
+
+  region.label 
+}</label> </div>) ) 
+}</div>) ;
+}</div>) ;
+}"};
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";
               >;
                 {region.label}

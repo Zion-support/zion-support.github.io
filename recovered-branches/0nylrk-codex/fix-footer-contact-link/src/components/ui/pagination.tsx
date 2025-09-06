@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import {ChevronLeft, ChevronRight, MoreHorizontal} from 'lucide-react';
 import {cn} from '@/lib/utils';
@@ -7,6 +8,17 @@ import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
 import * as React from "react"
 import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
+=======
+
+=======
+
+import * as React from "react"
+import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
+=======
+=======
+import * as React from "react"
+import { ChevronLeft, ChevronRight, MoreHorizontal } from "lucide-react"
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
@@ -269,6 +281,7 @@ export {
   PaginationItem,
   PaginationLink,
   PaginationNext,
+<<<<<<< HEAD
   PaginationPrevious,;
 };
   />;
@@ -356,3 +369,8 @@ export {;
   PaginationNext;
   PaginationPrevious}
 ;
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

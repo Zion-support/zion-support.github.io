@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 export default function Reports() {
   return (
@@ -10,6 +11,10 @@ export default function Reports() {
           <p className="text-sm opacity-80">Weekly summary of core categories.</p>
           <Link href="/metrics/performance.json"><a className="text-blue-600">Open JSON →</a></Link>
           <Link href="/metrics/window.window.window.performance.json"><a className="text-blue-600">Open JSON →</a></Link>
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>
         <div className="border rounded p-5">
           <h3 className="font-semibold">External Link Health</h3>
@@ -19,6 +24,12 @@ export default function Reports() {
             <Link href="/automation_logs/link-report.json"><a className="text-blue-600">Full report →</a></Link>
             <Link href="/metrics/links.json"><a className="text-blue-600">Summary →</Link></Link>
             <Link href="/automation_logs/link-report.json"><a className="text-blue-600">Full report →</Link></Link>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
         </div>
         <div className="border rounded p-5">
@@ -26,6 +37,12 @@ export default function Reports() {
           <p className="text-sm opacity-80">List of GitHub Action workflows.</p>
           <Link href="/automation-catalog.json"><a className="text-blue-600">Catalog JSON →</a></Link>
           <Link href="/automation-catalog.json"><a className="text-blue-600">Catalog JSON →</Link></Link>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>
       </div>
     </div>

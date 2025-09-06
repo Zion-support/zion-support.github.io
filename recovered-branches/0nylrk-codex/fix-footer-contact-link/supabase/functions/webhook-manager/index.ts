@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
+import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 interface CreateWebhookRequest {
   name: string;
@@ -6,15 +11,25 @@ interface CreateWebhookRequest {
   eventTypes: string[]
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface CreateWebhookRequest {
   name: string,
   url: string,
   eventTypes: string[],
   secret?: string
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
 interface CreateWebhookRequest {;
@@ -22,6 +37,10 @@ interface CreateWebhookRequest {;
   url: string,;
   eventTypes: string[],;
   secret?: string;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 interface WebhookTestRequest {;
@@ -168,6 +187,11 @@ serve(async (req) => {;
       } else if (path === 'delete') {;
         const { webhookId } = await req.json(),;
         return await deleteWebhook(user.id, webhookId);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     } else if (req.method === 'GET') {
       if (path === 'webhooks') {
@@ -175,7 +199,14 @@ serve(async (req) => {;
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return new Response(JSON.stringify({ error: 'Invalid action' }), {
       status: 400
       headers: { 'Content-Type': 'application/json' }})
@@ -552,6 +583,13 @@ async function deleteWebhook(userId: string, webhookId: string) {;
       return new Response(JSON.stringify({ error: 'Failed to delete webhook' }), {;
         status: 500,;
         headers: { 'Content-Type': 'application/json' }});
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     if (!data |data.length === 0) {
       return new Response(JSON.stringify({ error: 'Webhook not found' }), {
@@ -559,6 +597,13 @@ async function deleteWebhook(userId: string, webhookId: string) {;
         headers: { 'Content-Type': 'application/json' }})
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     return new Response(JSON.stringify({
       message: 'Webhook deleted successfully'
@@ -931,10 +976,16 @@ function createTestPayload() {
 =======
         data: {
           message: 'This is a test webhook event'
+<<<<<<< HEAD
         }
       }
   }
 }
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     return new Response(JSON.stringify({;
       message: 'Webhook deleted successfully',;
@@ -1107,6 +1158,14 @@ function createTestPayload(eventType: string) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         data: {
           message: 'This is a test webhook event';
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       }
   }

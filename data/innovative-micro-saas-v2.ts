@@ -389,6 +389,11 @@ import { ServiceVariant } from '../types/service-variants';
     rating: 4.8,
     reviews: 912,
   },;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -518,3 +523,14 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   }
 ];
 ];
+<<<<<<< HEAD
+=======
+
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

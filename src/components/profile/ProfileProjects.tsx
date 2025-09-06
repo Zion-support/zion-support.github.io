@@ -35,6 +35,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ProfileProject } from "@/types/profile";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+<<<<<<< HEAD
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { ProfileProject } from '@/types/profile'
@@ -60,6 +61,8 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { ProfileProject } from "@/types/profile",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { FileText } from 'lucide-react'
 
 interface ProfileProjectsProps {
@@ -76,6 +79,7 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
 
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -83,10 +87,13 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
             {project.imageUrl ? (
               <AspectRatio ratio={16/9}>
                 <img
+<<<<<<< HEAD
                   src={project.imageUrl}
                   alt={project.title}
                   className='w-full h-full object-cover'
@@ -94,6 +101,10 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </AspectRatio>
             ) : (
               <div className="h-40 w-full flex items-center justify-center bg-zion-blue">
@@ -101,6 +112,11 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
               </div>
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             <CardContent className='p-4'>
               <h4 className='text-white font-medium mb-2'>{project.title}</h4>
@@ -149,6 +165,9 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
               <AspectRatio ratio={16/9}>;
                 <img;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                   src={project.imageUrl}
@@ -162,7 +181,13 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                 <FileText className="text-zion-purple h-12 w-12 opacity-50" />
               </div>
             )}
+<<<<<<< HEAD
             
+=======
+
+            
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <CardContent className="p-4">
               <h4 className="text-white font-medium mb-2">{project.title}</h4>
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>
@@ -183,14 +208,22 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                       {tag}
                     </Badge>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
                   ))}
+<<<<<<< HEAD
                 </div>
               )}
 <<<<<<< HEAD
+=======
+                </div>;
+              )}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               
 
@@ -206,8 +239,13 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
           </Card>
         ))}
       </div>
+<<<<<<< HEAD
     </div>
   )
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </div>;
   );
 };
@@ -215,6 +253,11 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
 }
 }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
               <div className='text-xs text-zion-slate-light mt-2'>                {project && project.date}              ;

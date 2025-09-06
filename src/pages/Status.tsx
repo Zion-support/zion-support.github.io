@@ -6,6 +6,7 @@ interface ServiceStatus {
   lastChecked: string
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         return <CheckCircle className="h-5 w-5 text-green-500" />
         return <Clock className="h-5 w-5 text-blue-500" />
@@ -13,6 +14,9 @@ interface ServiceStatus {
         return <AlertCircle className="h-5 w-5 text-gray-500" />};
 import React, { useState, useEffect } from 'react'; import { motion  } from 'framer-motion'; import { SEO } from '../components/SEO'; import {CheckCircle, AlertTriangle, XCircle, Clock, Activity, Server, Database, Globe, Zap, RefreshCw, TrendingUp, BarChart3, Calendar, AlertCircle, Info, ExternalLink } from 'lucide-react'; export default function Status() { const [lastUpdated, setLastUpdated] = useState(new Date()); const [isRefreshing, setIsRefreshing] = useState(false)
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -22,6 +26,7 @@ class ErrorBoundary extends React.Component {
 
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -46,6 +51,11 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
     name: "Marketplace API",

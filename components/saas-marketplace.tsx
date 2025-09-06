@@ -32,6 +32,7 @@ import {
   Cloud,
   ArrowRight,
   Star,
+<<<<<<< HEAD
   Check,
   ExternalLink,;} from 'lucide-react';import { 
   Check,;
@@ -45,6 +46,8 @@ import {
   TrendingUp
   Code
   Database
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -63,6 +66,7 @@ import {
   Star;
   Check;
 
+<<<<<<< HEAD
 export default function SaaSMarketplacePage() {
   const microSaasServices = [
     {
@@ -304,6 +308,12 @@ export default function SaaSMarketplacePage() {
       ]
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
     }
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         'Lightning fast',
         'Beautiful design',
         'Great keyboard shortcuts',
@@ -311,6 +321,11 @@ export default function SaaSMarketplacePage() {
       ],
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem'],
     },;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];
   const categories = [
     'All'
@@ -852,6 +867,14 @@ export default function SaaSMarketplacePage() {
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-blue-400 group-hover:scale-110 transition-transform duration-300'>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {microSaasServices.length}+
               </div>
               <div className='text-gray-400 text-sm'>Curated Services</div>
@@ -1362,6 +1385,12 @@ function SaaSMarketplacePage() {
 
               <button
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1377,6 +1406,20 @@ function SaaSMarketplacePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Services Grid */}
       <section id='services' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1386,7 +1429,11 @@ function SaaSMarketplacePage() {
                 ? 'All Services'
                 : `${selectedCategory} Services`}
 
+<<<<<<< HEAD
             </h2>
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
                 ? 'Explore our curated selection of the best micro SaaS services for modern businesses.'
@@ -1411,8 +1458,60 @@ function SaaSMarketplacePage() {
                 <div className='flex items-start space-x-6'>;
                   <div className='relative'>;
                     <div
+<<<<<<< HEAD
                       className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${service.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}
                     >
+=======
+
+      {/* Category Filter */}
+      <section className='py - 16 bg - gray - 900'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+          <div className='flex flex - wrap justify - center gap - 4'>;
+            {categories.map (category => (              <button      <section className="py - 16 bg - gray - 900">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+          <div className="flex flex - wrap justify - center gap - 4">;
+            {categories.map ((category) => (
+                key={category}
+                on_click={() => setSelectedCategory (category)}
+                className={`px - 6 py - 3 rounded - full text - sm font - medium transition - all duration - 300 ${
+                  selected_category === category;
+                    ? 'bg - blue - 600 text - white shadow - lg';
+                    : 'bg - gray - 800 text - gray - 300 hover:bg - gray - 700 hover:text - white';
+                }`}
+              >;
+                {category}
+              </button>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Services Grid */}
+      <section id='services' className='py - 24 bg - black'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+          <div className='text - center mb - 20'>;
+            <h2 className='text - 4xl sm:text - 5xl font - bold mb - 8 text - white leading - tight'>;
+              {selected_category === 'All';
+                ? 'All Services';
+                : `${selected_category} Services`}
+            <p className='text - xl text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
+              {selected_category === 'All';
+                ? 'Explore our curated selection of the best micro SaaS services for modern businesses.';
+                : `Discover the best ${selected_category.toLowerCase ()} tools to streamline your business operations.`}
+            </p>;
+          </div>;
+          <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
+            {filtered_services.map ((service, index) => (
+              <Card;
+                key={index}
+                className='group border border - gray - 800 hover:border - blue - 500 / 30 hover:bg - gray - 900 / 80 transition - all duration - 300 hover:-translate - y-1';
+                style={{ animation_delay: `${index * 0.1}s` }}
+              >;
+                <div className='flex items - start space - x-6'>;
+                  <div className='relative'>;
+                    <div;
+                      className={`w - 20 h - 20 rounded - 2xl flex items - center justify - center text - 3xl bg - gradient - to - br ${service.color} shadow - xl group - hover:scale - 110 transition - transform duration - 300`}
+                    >;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       {service.icon}
                     </div>
                   </div>
@@ -1439,6 +1538,14 @@ function SaaSMarketplacePage() {
                       {service.description}
                     </p>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -1522,6 +1629,7 @@ function SaaSMarketplacePage() {
         </div>
       </section>
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1529,6 +1637,21 @@ function SaaSMarketplacePage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+      {/* CTA Section */}
+
+
+            Our team of experts can help you select the perfect SaaS tools for;
+            your business needs. Get personalized recommendations and;
+            implementation support.;
+          </p>;
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1536,6 +1659,11 @@ function SaaSMarketplacePage() {
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
 
             Need Help Choosing?
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our team of experts can help you select the perfect SaaS tools for
@@ -1556,6 +1684,7 @@ function SaaSMarketplacePage() {
               href='/services'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl'            >              href="/services"
               variant="outline"
               size="lg"
@@ -1567,10 +1696,24 @@ function SaaSMarketplacePage() {
       </section>
     </>
 );
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              View Our Services;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
+<<<<<<< HEAD
 <<<<<<< HEAD
     </>);
 =======
@@ -1584,3 +1727,8 @@ function SaaSMarketplacePage() {
 }
   );
 }
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

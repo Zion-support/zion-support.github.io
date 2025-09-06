@@ -1,21 +1,38 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {useRecordActivity} from './useRecordActivity';
+<<<<<<< HEAD
 export const useUploadDeliverable = () => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
   const uploadDeliverable = async (milestoneId: string, projectId: string, file: File) => {
     if (!user |!projectId) return null;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const useUploadDeliverable = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -177,6 +194,7 @@ if (throw error) {
       return null
     } finally {
       setIsSubmitting(false)
+<<<<<<< HEAD
     }
   };
   
@@ -241,5 +259,9 @@ export const useUploadDeliverable = () => {;
   return {;
     uploadDeliverable;
     isSubmitting;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };

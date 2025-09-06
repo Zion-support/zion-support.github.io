@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import SEO from '../components/SEO';
 export default function AIMeetingNotesPage() {
@@ -13,6 +14,10 @@ export default function AIMeetingNotesPage() {
 						<a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</a>
 						<a href="/services" className="px-4 py-2 rounded-lg bg-white text-black font-medium">Explore Services</Link>
 						<a href="/contact" className="px-4 py-2 rounded-lg border border-white/10 text-gray-200">Contact Sales</Link>
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 					</div>
 				</div>
 			</section>

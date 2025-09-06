@@ -1,15 +1,22 @@
 import { ServiceVariant } from '../types/service-variants';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface InnovativeMicroSaasService {
 
 export interface InnovativeMicroSaasService {;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
 =======
 export interface InnovativeMicroSaasService {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   name: string;
   tagline: string;
@@ -1310,6 +1317,10 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       variant: 'ai-legal-enterprise',
       contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       color: 'from - gray - 600 to - slate - 600',
       text_color: 'text - gray - 400',
       link: 'https://ziontechgroup.com / ai - legal - document - analysis',
@@ -1354,6 +1365,11 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       reviews: 20,
 
     },;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];    features: [
 
 =======
@@ -1526,6 +1542,7 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     customers: 42;
     rating: 4 && 4.7;
     reviews: 20
+<<<<<<< HEAD
   }
 ];
 import { ServiceVariant } from '../types/service-variants',;
@@ -1606,6 +1623,15 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+=======
+
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       website: 'https://ziontechgroup.com';
     }
     real_implementation: true;
@@ -1614,6 +1640,14 @@ export const innovativeRealMicroSaasServices2025: EnhancedRealMicroSaasService[]
     customers: 42;
     rating: 4.7;
     reviews: 20;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 ;

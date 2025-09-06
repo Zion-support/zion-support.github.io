@@ -218,6 +218,9 @@ if (return) {
           this.x = Math.random() * canvas.width;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       maxLife: number;      x: number,;
       y: number,;
       vx: number,;
@@ -246,6 +249,7 @@ if (return) {
           this && this.x = Math && Math.random() * canvas && canvas.width;
           this && this.y = Math && Math.random() * canvas && canvas.height;        }          this && this.y = Math && Math.random() * canvas && canvas.height;
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -253,6 +257,8 @@ if (return) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       }
       draw() {;
@@ -500,6 +506,9 @@ if (return) {
             ctx.stroke();          }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -523,6 +532,7 @@ if (return) {
 <<<<<<< HEAD
             ctx.stroke()
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -530,6 +540,8 @@ if (return) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
         }
       }
@@ -841,6 +853,16 @@ if ( {) {
           delay: 2,        }}
       />
 
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
@@ -880,6 +902,7 @@ if ( {) {
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
 export default UltraAdvancedQuantumBackground;            ease: "linear"
 };
@@ -888,10 +911,15 @@ export default UltraAdvancedQuantumBackground;            ease: "linear"
       {/* Content Layer */}
 
 export default UltraAdvancedQuantumBackground;            ease: "linear",
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             delay: 2
           }}
         />
       </div>
+<<<<<<< HEAD
     </div>
   );
 }
@@ -912,6 +940,17 @@ export default UltraAdvancedQuantumBackground;  )
 export default UltraAdvancedQuantumBackground;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+};
+
+export default UltraAdvancedQuantumBackground;  );
+};
+
+
+export default UltraAdvancedQuantumBackground;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
             ease: 'linear',          }}
@@ -922,6 +961,9 @@ export default UltraAdvancedQuantumBackground;
             coordinate_x: [0, 100, 0],
           }}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           transition={{
             duration: 10,
             repeat: Infinity,
@@ -969,8 +1011,13 @@ export default UltraAdvancedQuantumBackground;
 
       {/* Content Layer */}
 
+<<<<<<< HEAD
           }}
         />
       </div>
     </div>
     </div>
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

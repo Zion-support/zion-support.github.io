@@ -59,6 +59,9 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
     cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0)
   } else {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
@@ -119,15 +122,20 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       name: "Home",
       href: "/",
       icon: Home,
+<<<<<<< HEAD
       matches: (path: string) => path === "/"
     },
       matches: (path: string) => path === '/',    },
       matches: (path: string) => path === "/"
     },
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       name: "Browse",
       href: "/talent",
       icon: Search,
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
     },
       matches: (path: string) =>
@@ -136,20 +144,30 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
         path.startsWith('/marketplace'),    },
       matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
     },
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       name: "Community",
       href: "/community",
       icon: MessageCircle,
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     },
       matches: (path: string) =>
         path.startsWith('/community') || path.startsWith('/forum'),    },
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
     },
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       name: "Wishlist",
       href: "/wishlist",
       icon: Heart,
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith("/wishlist"),
       badge: favoritesCount,
       authRequired: true
@@ -158,11 +176,16 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/wishlist"),
       badge: favoritesCount,
       authRequired: true
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },
     {
       name: "Messages",
       href: "/messages",
       icon: MessageSquare,
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
       badge: unreadCount,
       authRequired: true
@@ -172,11 +195,16 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
       badge: unreadCount,
       authRequired: true
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },
     {
       name: "Cart",
       href: "/cart",
       icon: ShoppingCart,
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith("/cart"),
       badge: cartCount
     },
@@ -185,10 +213,15 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/cart"),
       badge: cartCount
     },
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       name: "Dashboard",
       href: "/dashboard",
       icon: User,
+<<<<<<< HEAD
       matches: (path: string) => path.startsWith('/dashboard'),
       authRequired: true,
     },
@@ -211,6 +244,10 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">
       <div className="flex justify-around items-center h-16">
@@ -356,6 +393,9 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
               {item.badge && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
@@ -366,10 +406,15 @@ export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProp
             </span>;
           </Link>;
         ))}
+<<<<<<< HEAD
       </div>
     </nav>
   )
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 }
 

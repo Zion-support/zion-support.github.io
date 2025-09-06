@@ -1,8 +1,16 @@
 
+<<<<<<< HEAD
 import { NotificationType  } from './types';
 import { createNotification } from './createNotification';
 import {NotificationType} from './types';
 import {createNotification} from './createNotification';
+=======
+
+import {NotificationType} from './types';
+import {createNotification} from './createNotification';
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /**
  * Demo function to create test notifications for the current user
  */
@@ -52,9 +60,16 @@ function createTestNotification() {
     'system': { url: '/dashboard', text: 'Learn More' }
   }
 
+<<<<<<< HEAD
     actionText: actions[randomType].text
   })
 }
+=======
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { NotificationType } from './types',;
 import { createNotification } from './createNotification',;
 /**;
@@ -86,6 +101,12 @@ export async function createTestNotification(userId: string) {;
     actionUrl: actions[randomType].url;
     actionText: actions[randomType].text;
   });
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;

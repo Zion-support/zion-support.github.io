@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState} from "react";
 import {BookOpen, Code, Copy, Terminal} from "lucide-react";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -15,6 +16,11 @@ import { Badge } from "@/components/ui/badge";
 import CodeBlock from "./CodeBlock";
 import { Badge } from "@/components/ui/badge",
 import CodeBlock from "./CodeBlock",
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ApiDocumentation() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -90,12 +96,19 @@ const data = await response.json(),
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+<<<<<<< HEAD
 }
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/jobs'
     params={'limit': 10, 'category': 'development'}
     'https: //api.ziontechgroup.com/v1/jobs',;
     params={'limit': 10, 'category': 'development'};
+=======
+
+    'https: //api.ziontechgroup.com/v1/jobs',;
+    params={'limit': 10, 'category': 'development'};
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     headers=headers
 )
 data = response.json()
@@ -214,6 +227,13 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               }}
               response_examples={{
                 success: `{
@@ -246,9 +266,14 @@ print(data)`;
       "created_at": "2025-05-15T10:30:00Z"
     },
     // More jobs...
+<<<<<<< HEAD
   ],
   ];
   ],
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   "meta": {
     "total": 42
     "page": 1
@@ -382,6 +407,12 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               }}
               response_examples={{
                 success: `{
@@ -510,10 +541,17 @@ const data = await response.json(),
 import json
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+<<<<<<< HEAD
 }
 payload = {
 
 payload = {;
+=======
+
+
+payload = {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'];
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     'budget': {
@@ -604,6 +642,13 @@ response = requests.post(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               }}
               response_examples={{
                 success: `{
@@ -678,12 +723,19 @@ const data = await response.json(),
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+<<<<<<< HEAD
 }
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/talent'
     params={'skills': 'react,typescript'}
     'https: //api.ziontechgroup.com/v1/talent',;
     params={'skills': 'react,typescript'};
+=======
+
+    'https: //api.ziontechgroup.com/v1/talent',;
+    params={'skills': 'react,typescript'};
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     headers=headers
 )
 data = response.json()
@@ -769,6 +821,13 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               }}
               response_examples={{
                 success: `{
@@ -793,9 +852,14 @@ print(data)`;
       "rating_count": 15
     },
     // More talent profiles...
+<<<<<<< HEAD
   ],
   ];
   ],
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   "meta": {
     "total": 28
     "page": 1
@@ -923,6 +987,12 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               }}
               response_examples={{
                 success: `{
@@ -973,6 +1043,21 @@ print(data)`;
         "image_url": "https://example.com / portfolio / 123.jpg";
       }
     ];
+<<<<<<< HEAD
+=======
+    "certifications": [;
+      {
+        "name": "AWS Certified Developer";
+        "issuing_organization": "Amazon Web Services";
+        "issue_date": "2024 - 01 - 15";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      }
+    ];
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }`;
               }}
@@ -1475,6 +1560,11 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
   }
 }`
               }}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             />
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">
@@ -1561,8 +1651,14 @@ headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
 
+<<<<<<< HEAD
 payload = {
 payload = {;
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000;
     'budget_max': 12000;
     'requester_name': 'John Doerequester_email': 'john@example.com'
@@ -2153,6 +2249,7 @@ function EndpointSection(): any ({ ;
     <div className="border border-zinc-800 rounded-md">;
       <div className="p-4">;
         <div className="flex items-center">;
+<<<<<<< HEAD
           <Badge;
             variant="outline";
             className={;
@@ -2163,6 +2260,9 @@ function EndpointSection(): any ({ ;
                 : method === 'PUT';
                 ? "border-yellow-500 text-yellow-400 font-mono";
                 : "border-red-500 text-red-400 font-mono";
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             }
           >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -2332,10 +2432,72 @@ function EndpointSection() {
     </div>
   )
 }
+<<<<<<< HEAD
 
 
 ;
+=======
+
+=======
+                    {param.required && <span className="text - red - 500">*</span>}
+                  </td>;
+                  <td className="py - 2 text - sm text - zinc - 400">{param.type}</td>;
+                  <td className="py - 2 text - sm text - zinc - 400">{param.description}</td>;
+                </tr>))}
+            </tbody>;
+          </table>;
+        </div>)}
+      {code_examples && (
+        <div className="border - t border - zinc - 800 p - 4">;
+          <div className="flex items - center mb - 2">;
+            <h4 className="font - medium">Request Example</h4>;
+            <div className="ml - auto flex border border - zinc - 700 rounded - md overflow - hidden">;
+              {Object.keys (code_examples).map ((lang) => (
+                <button;
+                  key={lang}
+                  className={`px - 3 py - 1 text - xs font - medium ${
+                    active_tab === lang;
+                      ? "bg - zinc - 700 text - white";
+                      : "text - zinc - 400 hover:bg - zinc - 800";
+                  }`}
+                  on_click={() => setActiveTab (lang)}
+                >;
+                  {lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
+                </button>))}
+            </div>;
+          </div>;
+          <CodeBlock;
+            code={code_examples[active_tab]}
+            language={active_tab === "curl" ? "bash" : active_tab}
+          />;
+        </div>)}
+      {response_examples && (
+        <div className="border - t border - zinc - 800 p - 4">;
+          <h4 className="font - medium mb - 2">Response</h4>;
+          <CodeBlock;
+            code={response_examples.success}
+            language="json";
+          />;
+        </div>)}
+    </div>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </div>;
   );
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

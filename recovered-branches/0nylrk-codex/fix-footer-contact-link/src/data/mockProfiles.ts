@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { ProfileData } from '@/types/profile';
 export const MOCK_PROFILES: Record<string, ProfileData> = {
@@ -36,6 +37,25 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         tags: ['Healthcare', 'AI', 'Machine Learning']
         date: 'Oct 2023'
       }
+=======
+
+
+      {
+
+          'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',
+=======
+        id: 'p2',
+        title: 'Financial Analytics Suite',
+        description:;
+          'Developed predictive models for investment analysis with 92% accuracy.',
+        image_url:;
+          'https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?auto = format & fit = crop & w=500 & h=300',
+
+        tags: ['Finance', 'Analytics', 'Python'],
+        date: 'Jun 2023',
+      },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {
         id: 'p2'
         title: 'Financial Analytics Suite'
@@ -308,6 +328,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
       ]
     }
   },};        { day: "Monday", hours: "10:00 AM - 6:00 PM" }
+<<<<<<< HEAD
         { day: "Tuesday", hours: "10:00 AM - 6:00 PM" }
         { day: "Wednesday", hours: "10:00 AM - 6:00 PM" }
         { day: "Thursday", hours: "10:00 AM - 6:00 PM" }
@@ -315,10 +336,43 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
       ]
     }
   }
+=======
+=======
+    experience: [;
+      {
+        id: 'e1',
+        role: 'Senior AI Engineer',
+        company: 'Innovate AI',
+        description:;
+          'Leading computer vision projects and mentoring junior engineers in deep learning techniques.',
+        start_date: 'Mar 2021',
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+        current: true,
+      },
+      {
+        id: 'e2',
+        role: 'Machine Learning Engineer',
+        company: 'TechGiant Inc.',
+
+        description:;
+          'Developed and deployed ML models for product recommendation systems.',
+        start_date: 'Jun 2018',
+        end_date: 'Feb 2021',
+
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600',
     bio: 'Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.',
     location: 'San Francisco, CA',
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { ProfileData } from "@/types/profile",
 export const MOCK_PROFILES: Record<string ProfileData> = {
   "service-provider-1": {
@@ -329,6 +383,12 @@ export const MOCK_PROFILES: Record<string ProfileData> = {
     coverImageUrl: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600",
     bio: "Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.",
     location: "San Francisco, CA",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     rating: 4.9,
     reviewCount: 124,
     aiScore: 95,
@@ -664,3 +724,9 @@ export const MOCK_PROFILES: Record<string ProfileData> = {;
     }
   }
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

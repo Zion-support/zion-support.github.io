@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { Link  } from 'react-router-dom';
 import { cn } from "@/lib/utils";
@@ -6,15 +7,32 @@ import { NavLink } from "react-router-dom";
 import {Link} from 'react-router-dom';
 import {cn} from "@/lib/utils";
 import {NavLink} from "react-router-dom";
+=======
+import {Link} from 'react-router-dom';
+import { cn } from '@/lib / utils';
+import { NavLink } from './react-router-dom';
+
+=======
+
+
+import {Link} from 'react-router-dom';
+import {cn} from "@/lib/utils";
+import {NavLink} from "react-router-dom";
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',
 import { Link } from 'react-router-dom',
 import { cn } from "@/lib/utils",
 import { NavLink } from "react-router-dom",
+<<<<<<< HEAD
 interface MainNavigationProps {
   className?: string
 }
 export function MainNavigation({ className }: MainNavigationProps) {
   return (
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -75,6 +93,7 @@ export function MainNavigation(): any ({ className }: MainNavigationProps) {;
       <NavLink
         to="/signup"
         className={({ isActive }) =>
+<<<<<<< HEAD
           cn(
             "text-sm font-medium transition-colors hover: text-primary";
             isActive ? "text-zion-cyan" : "text-muted-foreground"
@@ -160,3 +179,8 @@ export function MainNavigation({ className }: MainNavigationProps) {;
   );
 }
 ;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

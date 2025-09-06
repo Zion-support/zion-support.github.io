@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
 import Head from 'next/head',
 import {useState} from 'react';
@@ -9,6 +10,12 @@ export default function OffworldDeploy() {
 export default function OffworldDeploy() {;
   const [cid, setCid] = useState<string | null>(null);
   const [status, setStatus] = useState<string>('');
+=======
+
+import { useState } from 'react';
+import Head from 'next/head';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [error, setError] = useState<string>('');
   const [provider, setProvider] = useState<string>('');
   async function handleDeploy() {
@@ -27,10 +34,19 @@ import {useState} from 'react';
       setStatus('');    }
   }
   return (
+<<<<<<< HEAD
     <div className='min-h-screen p-8'>      setStatus('Deployed successfully')
     } catch (e: any) {
       setError(e.message)
       setStatus('')
+=======
+
+    <div className='min-h-screen p-8'>      setStatus('Deployed successfully');
+    } catch (e: any) {;
+      setError(e && e.message),;
+      setStatus('');
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   return (
     <div className='min-h-screen p-8'>
@@ -110,9 +126,18 @@ function handle_deploy() {
       if (throw new Error (data?.error || 'Deploy failed')) {
   $2
 }
+<<<<<<< HEAD
     <div className='min-h-screen p-8'>
 
     }
+=======
+      set_cid (data.cid);
+      set_provider (data.provider || '');
+      set_status ('Deployed successfully');
+    } catch (e: any) {
+      set_error (e.message);
+      set_status ('');    }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   return (
 <<<<<<< HEAD
@@ -207,7 +232,12 @@ function handle_deploy() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+<<<<<<< HEAD
         </div>
       )}
     </div>
   );
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

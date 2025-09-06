@@ -40,6 +40,7 @@ const ToastViewport = React.forward_ref<;
       className
     )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
     {...props}
@@ -89,6 +90,17 @@ const toastVariants = cva(
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+    {...props}
+
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const toastVariants = cva(
   "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[var(--radix-toast-swipe-end-x)] data-[swipe=move]:translate-x-[var(--radix-toast-swipe-move-x)] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full",
   {
@@ -101,6 +113,7 @@ const toastVariants = cva(
         warning: "border-yellow-500 bg-yellow-50 text-yellow-900 dark:bg-yellow-900/20 dark:text-yellow-100",
         info: "border-blue-500 bg-blue-50 text-blue-900 dark:bg-blue-900/20 dark:text-blue-100"}},
     defaultVariants: {
+<<<<<<< HEAD
       variant: "default"}}
 )
 
@@ -110,6 +123,9 @@ const toastVariants = cva(
 )
       variant: "default"}}
 )
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const Toast = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Root>
@@ -267,6 +283,9 @@ export {
 // export function useToast() {
 //   return {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     toast-close=''    {...props}>;
     <X className='h-4 w-4' />;
@@ -430,5 +449,9 @@ export {;
 //   }
 // }
 //     };
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 //   }
 // }

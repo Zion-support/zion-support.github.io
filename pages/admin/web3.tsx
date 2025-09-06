@@ -45,6 +45,12 @@ export default function AdminWeb3Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <ul className="space-y-2">
             {users.map((u, i) => (
               <li key={i} className="flex items-center justify-between">
@@ -56,6 +62,7 @@ export default function AdminWeb3Page() {
                   }} />
                 </label>
               </li>
+<<<<<<< HEAD
             ))}
           </ul>
         </div>
@@ -97,6 +104,10 @@ export default function AdminWeb3Page(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 =======
@@ -149,6 +160,7 @@ function AdminWeb3Page() {
           </ul>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </>;
   );
   } catch (error) {
@@ -157,3 +169,13 @@ function AdminWeb3Page() {
   }
 }
 }
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

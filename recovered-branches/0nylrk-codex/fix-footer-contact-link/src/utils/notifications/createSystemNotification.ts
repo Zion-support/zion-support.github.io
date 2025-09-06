@@ -1,8 +1,16 @@
 
+<<<<<<< HEAD
 import { createNotification  } from './createNotification';
 import { SystemNotificationParams } from './types';
 import {createNotification} from './createNotification';
 import {SystemNotificationParams} from './types';
+=======
+
+import {createNotification} from './createNotification';
+import {SystemNotificationParams} from './types';
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /**
  * Creates a system notification for a user
  */
@@ -26,7 +34,17 @@ export async function createSystemNotification({
 
     actionText
   })
+<<<<<<< HEAD
 }
+=======
+
+import {create_notification} from './create_notification';
+import {SystemNotificationParams} from './types';
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { createNotification } from './createNotification',;
 import { SystemNotificationParams } from './types',;
 
@@ -46,5 +64,12 @@ function createSystemNotification() {
     action_url,
     action_text;
   });
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

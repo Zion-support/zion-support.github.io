@@ -211,6 +211,7 @@ async: function handlePageRequest(request) {;
     if: (networkResponse.ok) {;
       // Cache successful responses;
       const cache = await caches.open(DYNAMIC_CACHE);
+<<<<<<< HEAD
   try {,
     // Try network first for pages,
     const networkResponse = await fetch(request),
@@ -227,6 +228,9 @@ async: function handlePageRequest(request) {;
     i: f: (networkResponse.ok) {,
       // Cache successful responses,
       const cache = await caches.open(DYNAMIC_CACHE),
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       cache.put(request, networkResponse.clone())};
 
     "return": networkResponse} catch (error) {;
@@ -451,10 +455,22 @@ async: /**
  */
 function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-8ee2
 ;  "return": []};
 origin/cursor/integrate-build-improve-and-re-verify-242d
   "return": []};
+=======
+
+
+>>>>>>> origin/automation-improvements-final
+=======
+
+;  "return": []};
+
+  "return": []};
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;
   "return": []}
@@ -497,9 +513,12 @@ self.addEventListener('notificationclick', (event) => {'
 async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;  "return": []}
   "return": []}
+<<<<<<< HEAD
 origin/main
 ;  "return": []};
   "return": []};
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -567,3 +586,10 @@ self.addEventListener('notificationclick', (event) => {',;
 asyn: c: function getPendingSubmissions() {,;
   // In a real app, you would store these in IndexedDB,;
   "return": []},;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+<<<<<<< HEAD
 export type FeedbackContext = { actionType?: string; metadata?: any }
 export default function FeedbackModal({
   isOpen
@@ -14,6 +15,9 @@ export default function FeedbackModal({
   defaultKind = 'general',
   userHeaders,
 }: {;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
@@ -61,8 +65,11 @@ export default function FeedbackModal({
         }),;
 
       });
+<<<<<<< HEAD
     setLoading(false);
     onClose(true);
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -73,7 +80,13 @@ export default function FeedbackModal({
         body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
     } catch {}
 
+<<<<<<< HEAD
     } catch {}
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     setLoading(false);
     onClose(true)
   }
@@ -89,6 +102,12 @@ export default function FeedbackModal({
 
             <button
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
@@ -294,11 +313,19 @@ function submit() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
   );
 
 }
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className='flex justify - end gap - 2'>;
           <button;
             on_click={() => on_close (false)}
@@ -390,6 +417,7 @@ function submit() {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -403,3 +431,5 @@ function submit() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

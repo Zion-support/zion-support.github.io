@@ -56,6 +56,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   }
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
     id: "bamboohr"
@@ -88,6 +89,8 @@ export function getProviderById(
   return PROVIDERS.find(p => p.id === id);
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 import { IntegrationProviderMeta } from './types';
@@ -117,12 +120,19 @@ export function getProviderById (
     category: "ats",
     description: "HRIS & ATS",
   },;
+<<<<<<< HEAD
 ];
 export function getProviderById(
   id: string
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find((p) => p.id === id);
 }
+=======
+
+];
+export function getProviderById(
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string,
 ): IntegrationProviderMeta | undefined {;
   return PROVIDERS.find((p) => p.id === id);
@@ -130,4 +140,9 @@ export function getProviderById(
 ): IntegrationProviderMeta | undefined {
   return PROVIDERS.find(p => p.id === id);
 
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

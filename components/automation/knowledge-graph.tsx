@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 }
 ) )
@@ -14,6 +15,10 @@ export default function KnowledgeGraph({ report }: Props) {;
 ) ) 
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>) 
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function KnowledgeGraph({ report }: Props) {
   if (!report) return <div>No knowledge graph yet.</div>;
   return (

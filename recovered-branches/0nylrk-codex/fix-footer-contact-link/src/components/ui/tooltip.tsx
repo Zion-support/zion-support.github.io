@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import * as TooltipPrimitive from '@radix-ui/react-tooltip';
 import {cn} from '@/lib/utils';
@@ -9,6 +10,18 @@ import * as TooltipPrimitive from "@radix-ui/react-tooltip"
 import * as React from "react"
 import * as TooltipPrimitive from "@radix-ui/react-tooltip"
 <<<<<<< HEAD
+=======
+
+
+import * as React from "react"
+import * as TooltipPrimitive from "@radix-ui/react-tooltip"
+=======
+=======
+import * as React from "react"
+import * as TooltipPrimitive from "@radix-ui/react-tooltip"
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { cn } from "@/lib/utils"
 
@@ -33,11 +46,28 @@ const TooltipContent = React.forwardRef<
     {...props}
   />;
 ));
+<<<<<<< HEAD
 TooltipContent.displayName = TooltipPrimitive.Content.displayName;
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 ;
 
+=======
+
+TooltipContent && TooltipContent.displayName = TooltipPrimitive && TooltipPrimitive.Content.displayName;
+=======
+
+export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
+;
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider };
 export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
 ;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

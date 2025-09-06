@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
@@ -19,6 +20,9 @@ import { useAuth } from "@/hooks/useAuth",
 import { AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 export function SignUpForm() {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth();
@@ -126,12 +130,78 @@ export function SignUpForm() {;
         }
 
         navigate("/mobile");
+<<<<<<< HEAD
+=======
+
+import React, { useState } from './react';
+import { Label } from '@/components / ui / label';
+import { Input } from '@/components / ui / input';
+import { Button } from '@/components / ui / button';
+import { use_navigate } from './react-router-dom';
+import { use_auth } from '@/hooks / use_auth';
+import { AlertCircle } from './lucide-react';
+import { Alert, AlertDescription } from '@/components / ui / alert';
+export /**
+ * SignUpForm - Function description
+ */
+function SignUpForm() {
+  const navigate = use_navigate ();
+  const { signup, login, loginWithGoogle } = use_auth ();
+;
+  const [form_data, setFormData] = useState ({
+    email: "",
+    password: "",
+    name: ""}),
+  const [is_loading, setIsLoading] = useState (false);
+  const [signup_mode, setSignupMode] = useState (true);
+  const [error, set_error] = useState ("");
+;
+  const handleInputChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
+    const { name, value } = e.target;
+    setFormData (prev => ({ ...prev, [name]: value }));
+    set_error ("");
+  }
+;
+  const handle_submit = async (e: React.FormEvent) => {
+    e.prevent_default ();
+    set_error ("");
+    setIsLoading (true),
+    try {
+      // Check condition
+if ( {) {
+  $2
+}
+        const { error } = await signup (form_data.email, form_data.password, {
+          name: form_data.name}),
+        // Check condition
+if ( {) {
+  $2
+}
+          throw new Error (error);
+        }
+        navigate ("/mobile");
+      } else {
+        const { error } = await login (form_data.email, form_data.password);
+;
+        // Check condition
+if ( {) {
+  $2
+}
+          throw new Error (error);
+        }
+        navigate ("/mobile");
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     } catch (err: any) {
       set_error (err.message);
     } finally {
       setIsLoading (false);
     }
+<<<<<<< HEAD
   }
   };
   
@@ -144,18 +214,34 @@ export function SignUpForm() {;
   }
 
   };
+=======
+
+  };
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleGoogleLogin = async () => {;
     try {;
       await loginWithGoogle();
     } catch (err: any) {;
       setError(err && err.message);
     }
+<<<<<<< HEAD
   },
+=======
+  };
+
+
+=======
+
+  };
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   return (
     <div className="space-y-4 px-4">;
       <h2 className="text-xl font-medium text-center">;
         {signupMode ? "Create your account" : "Welcome back"}
+<<<<<<< HEAD
       </h2>
       <div className="space-y-2">
         <Button
@@ -175,6 +261,14 @@ export function SignUpForm() {;
           variant="outline"
         <Button 
           variant="outline" 
+=======
+
+
+        <Button 
+          variant="outline" 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           className="w-full py-6 relative"
         >
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -281,12 +375,21 @@ export function SignUpForm() {;
             onChange={handleInputChange}
             required
             placeholder="Create a password"
+<<<<<<< HEAD
           />
         </div>
         <Button
           type="submit"
         <Button 
           type="submit" 
+=======
+
+
+        <Button 
+          type="submit" 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           className="w-full py-6"
           disabled={isLoading}
         >

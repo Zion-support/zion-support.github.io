@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 export type ModerationModalProps = {;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export type ModerationModalProps = {
   flag: any | null;
@@ -8,6 +12,10 @@ export type ModerationModalProps = {
     action: 'approve' | 'remove' | 'warn' | 'ban',;
     adminNotes?: string;
   ) => Promise<void>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function ModerationModal(): any ({;
   flag,;
   onClose,;
@@ -15,6 +23,7 @@ export default function ModerationModal(): any ({;
 }: ModerationModalProps) {;
 
 =======
+<<<<<<< HEAD
 export default function ModerationModal({
 <<<<<<< HEAD
   flag
@@ -28,6 +37,15 @@ export default function ModerationModal({
   onClose,
   onAction,
 }: ModerationModalProps) {;
+=======
+
+  flag,
+  onClose,
+  onAction,
+}: ModerationModalProps) {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [adminNotes, setAdminNotes] = useState('');
   if (!flag) return null;
   return (
@@ -315,3 +333,9 @@ if (return null) {
 =======
 
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

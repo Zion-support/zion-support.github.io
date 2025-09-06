@@ -19,6 +19,7 @@ class ErrorBoundary extends React.Component {
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
+<<<<<<< HEAD
 export type FeedbackWidgetProps = {;
   responseId?: string;
   aiModel?: string;
@@ -47,6 +48,9 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
   const effectiveResponseId = useMemo(
     () => responseId |uuidv4()
     [responseId]
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
   const submit = async () => {;
     if (!rating) {;
@@ -190,15 +194,32 @@ export default function FeedbackWidget({ responseId, aiModel }: FeedbackWidgetPr
   );
 }
     </div>
+<<<<<<< HEAD
 );
   );
 }
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 export type FeedbackWidgetProps = {
   response_id?: string;
   ai_model?: string;
 }
+<<<<<<< HEAD
   );
+=======
+;
+export default /**
+ * FeedbackWidget - Function description
+ */
+function FeedbackWidget() {  const [rating, set_rating] = useState < null | 'up' | 'down'>(null);export type FeedbackWidgetProps = {
+  response_id?: string;
+  ai_model?: string;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 export default /**
@@ -436,6 +457,7 @@ if ( {) {
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 );
@@ -452,3 +474,5 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

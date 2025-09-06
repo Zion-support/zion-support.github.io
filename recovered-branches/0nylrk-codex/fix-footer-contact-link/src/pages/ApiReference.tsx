@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
@@ -13,6 +14,9 @@ export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
 import { CodeBlock } from "@/components/developers/CodeBlock",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
@@ -237,6 +241,7 @@ function ApiReference() {
         "201": {
           description: "Job created successfully"
           example: `{
+<<<<<<< HEAD
   "id": "job-456",
   "title": "UX Designer",
   "description": "Looking for a UX designer with 3+ years experience...",
@@ -305,6 +310,9 @@ export function ApiReference() {;
       "category": "development",;
       "budget": {;
         "min": 5000,;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         "max": 10000,;
         "currency": "USD";
       };
@@ -406,7 +414,36 @@ export function ApiReference() {;
   ];
 }`;
         }
+<<<<<<< HEAD
       },
+=======
+
+  "id": "job-456",
+  "title": "UX Designer",
+  "description": "Looking for a UX designer with 3+ years experience...",
+  "category": "design",
+  "budget": {
+
+    "min": 3000,
+    "max": 5000,
+    "currency": "USD"
+  },
+  "status": "open",
+  "created_at": "2023-05-15T10:12:00Z"
+}`
+        },
+
+        "400": {
+          description: "Bad request"
+          example: `{
+  "error": "validation_error",
+  "message": "Invalid input",
+  "details": [
+    {
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       requestExample: `curl -X POST \\
   https://api.zionai.com/v1/api/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -667,6 +704,7 @@ export function ApiReference() {;
                           <span className={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${
                             status.startsWith('2') ? 'bg-green-950 text-green-500' :
                             status === '401' |status === '403' ? 'bg-orange-950 text-orange-500' :
+<<<<<<< HEAD
                             'bg-red-950 text-red-500'
                           }`}>
                             {status}
@@ -676,6 +714,45 @@ export function ApiReference() {;
                         <CodeBlock
                           code={response.example}
                         
+=======
+=======
+
+                    <h4 className="text-lg font-medium text-white mb-3">Example Request</h4>;
+                    <CodeBlock
+                      code={activeEndpointData && activeEndpointData.requestExample} 
+                      language="bash"
+                      showLineNumbers={true}
+                    />;
+                  </div>;
+
+                  {/* Response section */}
+                  <div>;
+                    <h3 className="text-xl font-semibold text-white mb-4">Responses</h3>;
+
+                    {Object && Object.entries(activeEndpointData && activeEndpointData.responses).map(([status, response]) => (;
+                      <div key={status} className="mb-6">;
+                        <div className="flex items-center mb-3">;
+                          <spanclassName={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${
+                            status && status.startsWith('2') ? 'bg-green-950 text-green-500' : 
+                            status === '401' || status === '403' ? 'bg-orange-950 text-orange-500' : 
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                            'bg-red-950 text-red-500'
+                          }`}>;
+                            {status}
+
+                          </span>;
+                          <span className="text-white">{response && response.description}</span>;
+                        </div>;
+
+                        <CodeBlock
+                          code={response && response.example} 
+
+=======
+
+                        
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         <CodeBlock 
                           code={response.example} 
                           language="json"
@@ -796,8 +873,11 @@ export default ApiReference;
       </div>;
     </ApiDocsLayout>);
 }
+<<<<<<< HEAD
 
 ;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ApiReference;
 
 ;

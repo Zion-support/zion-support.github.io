@@ -198,11 +198,16 @@ const EquipmentFilterControls = ({
   </div>
 ),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 // Equipment card
 const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency(),
   return (
+<<<<<<< HEAD
     <EquipmentErrorBoundary>
       <EquipmentPageContent />
     </EquipmentErrorBoundary>
@@ -246,6 +251,8 @@ const EquipmentCard = ({ equipment, onViewDetails }: { equipment: ProductListing
     </Card>
   )
 },
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

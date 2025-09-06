@@ -22,6 +22,7 @@ return (
           </p>;
           <div className='relative w-full h-auto aspect-video mb-12 mx-auto rounded-lg shadow-xl overflow-hidden'>;
             <img
+<<<<<<< HEAD
               src='https://placehold.co/800x400'
               alt='Screenshot of ZionGPT content tool';
               className='object-cover';
@@ -59,6 +60,13 @@ return (
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/open-app'>Try ZionGPT Now</Link>            </Button>          <div className="text-center">
           <div className="text-center">
+=======
+              src='https://placehold && placehold.co/800x400'
+              alt='Screenshot of ZionGPT content tool'
+              className='object-cover'
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Try ZionGPT Now</Link>
             </Button>
@@ -67,6 +75,9 @@ return (
       </main>
     </>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

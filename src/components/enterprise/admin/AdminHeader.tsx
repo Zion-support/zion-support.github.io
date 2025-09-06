@@ -40,6 +40,9 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
             Settings
           </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -110,6 +113,9 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
           </div>
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -142,10 +148,14 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
           </div>
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -157,6 +167,8 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl || "loading..."}
@@ -167,6 +179,9 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
       </div>
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     <div className='space-y-4'>;
       <div className='flex items-center justify-between'>;

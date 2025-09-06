@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 class ErrorBoundary extends React.Component {
@@ -20,6 +23,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -29,6 +33,8 @@ class ErrorBoundary extends React.Component {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
@@ -153,15 +159,23 @@ import React, { ReactNode } from "react";
         <script
           type="application/ld+json"
 <<<<<<< HEAD
+<<<<<<< HEAD
           dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(jsonLd) }}
         />;
       </Head>;
+=======
+          dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(jsonLd) }}
+        />;
+      </Head>;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <Header />;
       <main>{children}</main>;
       <Footer />;
     </div>;
   );
 };
+<<<<<<< HEAD
 =======
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
@@ -175,6 +189,9 @@ import React, { ReactNode } from "react";
 =======
 =======
 import React, { ReactNode } from "react";
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 interface LayoutProps {
@@ -191,6 +208,7 @@ origin/automation-improvements-final
   );
 }
 export default Layout;
+<<<<<<< HEAD
 import React, { ReactNode } from "react";
 interface LayoutProps {
   children: ReactNode;
@@ -201,6 +219,37 @@ interface LayoutProps {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+=======
+        {no_index && <meta name="robots" content="noindex, nofollow" />}
+        {/* Open Graph */}
+        <meta property="og:title" content={og_title || title} />;
+        <meta;
+          property="og:description";
+          content={og_description || description}
+        />;
+        <meta property="og:image" content={og_image} />;
+        <meta property="og:url" content={canonical} />;
+        <meta property="og:type" content="website" />;
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />;
+        <meta name="twitter:title" content={og_title || title} />;
+        <meta;
+          name="twitter:description";
+          content={og_description || description}
+        />;
+        <meta name="twitter:image" content={og_image} />;
+        {/* JSON - LD */}
+        <script;
+          type="application / ld + json";
+          dangerouslySetInnerHTML={{ __html: JSON.stringify (json_ld) }}
+        />;
+      </Head>;
+      <Header />;
+      <main>{children}</main>;
+      <Footer />;
+    </div>);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
   } catch (error) {
@@ -225,6 +274,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 }
     </main>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 };
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

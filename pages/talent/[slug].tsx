@@ -1,11 +1,54 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import EnhancedButton from "../../components/ui/EnhancedButton";
 import { TrustBadge, MicroTestimonial } from "../../components/ui/Badges";
+<<<<<<< HEAD
+=======
+
+import type { NextPage } from './next';
+import Head from './next / head';
+import { use_router  } from './next / router';
+import { useState  } from './react';
+import EnhancedButton from "../../components / ui / EnhancedButton";
+import { TrustBadge, MicroTestimonial  } from '../../components / ui / Badges';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const TalentProfile: NextPage = () => {
   const router = use_router ();
   const { slug } = router.query;
@@ -26,6 +69,7 @@ const TalentProfile: NextPage = () => {;
 
     ]);
   }
+<<<<<<< HEAD
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import { useRouter } from 'next/router',
@@ -35,6 +79,39 @@ import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges',
 const TalentProfile: NextPage = () => {
   const router = useRouter(),
   const { slug } = router.query,
+=======
+  return (
+    <div className="space-y-6 pb-20">;
+      {" "}
+      <Head>;
+        <title>{slug} - Talent - Zion</title>;
+      </Head>;
+      <header className="flex items-start justify-between gap-4">;
+        <div>;
+          <h1 className="text-2xl font-semibold">{slug}</h1>;
+          <div className="text-sm opacity-80">Full-Stack Developer</div>;
+          <div className="mt-2 flex gap-1">;
+            <TrustBadge type="Verified" />;
+            <TrustBadge type="Top Rated" />;
+          </div>;
+        </div>;
+        <div className="flex gap-2">;
+          <EnhancedButton onClick={() => handleRespond("Accept")}>;
+            Accept;
+          </EnhancedButton>;
+          <EnhancedButton
+            variant="secondary"
+            onClick={() => handleRespond("Decline")}
+          >;
+            Decline;
+          </EnhancedButton>;
+          <EnhancedButton
+            variant="ghost"
+            onClick={() => handleRespond("Negotiate")}
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [responseLog, setResponseLog] = useState<Array<{ action: 'Accept' | 'Decline' | 'Negotiate', at: string }>>([]),
   const handleRespond = (action: 'Accept' | 'Decline' | 'Negotiate') => {
     setResponseLog((prev) => [...prev, { action, at: new Date().toISOString() }])
@@ -159,4 +236,9 @@ export default TalentProfile;
       </section>;
 
 },;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default TalentProfile;

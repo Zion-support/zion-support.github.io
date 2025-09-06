@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 
+<<<<<<< HEAD
 import {useParams} from 'react-router-dom';
 import {useProjects} from '@/hooks/useProjects';
 import {useMilestones} from '@/hooks/useMilestones';
@@ -14,6 +15,14 @@ export function ProjectMilestonesContent() {
 
 export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
+=======
+
+
+export function ProjectMilestonesContent() {;
+  const { projectId } = useParams() as { projectId?: string };
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const { getProjectById } = useProjects();
   const {
@@ -95,6 +104,14 @@ export function ProjectMilestonesContent() {;
         const projectData = await getProjectById(projectId);
         if (projectData) {;
           setProject(projectData);
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       } catch (error) {;
         console && console.error("Error loading project:", error);
@@ -120,6 +137,7 @@ export function ProjectMilestonesContent() {;
   }, [projectId, getProjectById, refetch]),
 
 
+<<<<<<< HEAD
   // Determine project type based on job category or default to "Other"
   const projectType = job?.category || "Other",
 
@@ -173,6 +191,8 @@ export function ProjectMilestonesContent() {;
     loadProject(),;
     refetch();
   }, [projectId, getProjectById, refetch]),;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleMilestoneCreated = async () => {;
     await refetch();
   };
@@ -219,7 +239,32 @@ export function ProjectMilestonesContent() {;
 
       <div className="flex justify-between items-center my-6">;
         <h2 className="text-2xl font-bold">Payment Milestones</h2>;
+<<<<<<< HEAD
         <ProjectActions;
+=======
+        <ProjectActions
+=======
+
+    },
+    
+    await createMilestone(milestoneData),
+    setActiveTab('milestones'),
+    await handleMilestoneCreated()
+  },
+
+
+  return (
+    <div className="container mx-auto py-8 px-4">
+
+      <ProjectHeader title={project.job?.title || "Untitled Project"} />
+
+      <div className="flex justify-between items-center my-6">
+        <h2 className="text-2xl font-bold">Payment Milestones</h2>
+
+        <ProjectActions 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           projectId={projectId || ''}
           isUnderDispute={isUnderDispute}
           disputeId={disputeId}

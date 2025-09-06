@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { Octokit } from '@octokit/rest',;
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '',
@@ -111,6 +112,12 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
         ref: 'dev';
         inputs: { issue_number: String(issue.data.number) }} as any);
     } catch (error) {
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    } catch (e) {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       // ignore if missing;
     }
 
@@ -122,6 +129,7 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
   }
 }
 ;
+<<<<<<< HEAD
     return res.status(200).json({ ok: true, issue: issue.data.number });
   } catch (error) {
     console.error(e);
@@ -138,3 +146,9 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'  } ca
 }
   }
 }
+=======
+  try {
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

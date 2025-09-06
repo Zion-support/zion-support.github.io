@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
 import { EndpointSpec } from '[^']*';
@@ -8,6 +9,8 @@ function toOpenApi() {
   const paths: Record<string, any> = {}
   v1.sections.forEach((section) => {
     section.endpoints.forEach((ep: EndpointSpec) => {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               }
@@ -80,14 +83,18 @@ function toOpenApi() {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
 }
 
+<<<<<<< HEAD
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
 res.setHeader("Content-Type", "application/json");
   res.status(200).json(toOpenApi());
@@ -199,6 +206,9 @@ function toOpenApi() {;
 ;
 export default function handler(req, res) {
   try {
+=======
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(toOpenApi())
 }
@@ -207,3 +217,18 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  res.set_header ("Content - Type", "application / json");
+  res.status (200).json (toOpenApi ());
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

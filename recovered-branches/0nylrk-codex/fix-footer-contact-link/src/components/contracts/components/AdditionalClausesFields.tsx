@@ -11,8 +11,13 @@ import {
   FormItem,
   FormLabel,
   FormControl,
+<<<<<<< HEAD
   FormDescription,
   FormDescription,;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "@/components/ui/form";
 
 import { Checkbox } from "@/components/ui/checkbox";
@@ -20,6 +25,7 @@ import { ContractFormValues } from "./ContractForm";
 interface AdditionalClausesFieldsProps {;
   form: UseFormReturn<ContractFormValues>;
 }
+<<<<<<< HEAD
 
 export function AdditionalClausesFields({
   form
@@ -28,6 +34,17 @@ export function AdditionalClausesFields({
     <FormField
 
 
+=======
+
+
+
+
+
+
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { UseFormReturn } from "react-hook-form",
 import { 
   FormField,
@@ -57,6 +74,13 @@ interface AdditionalClausesFieldsProps {;
 export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) {;
   return (;
     <FormField;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       control={form.control}
       name="additionalClauses"
       render={() => (
@@ -72,6 +96,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
               control={form.control}
               name="additionalClauses"
               render={({ field }) => (
+<<<<<<< HEAD
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">
                   <FormControl>
                     <Checkbox
@@ -82,12 +107,32 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange(
                               currentValues.filter((value) => value !== "nda")
+=======
+                <FormItem className="flex flex - row items - start space - x-3 space - y-0">;
+                  <FormControl>;
+                    <Checkbox;
+                      checked={field.value?.includes ("nda")}
+                      onCheckedChange={(checked) => {
+                        const current_values = field.value || [];
+                        return checked;
+                          ? field.on_change ([...current_values, "nda"]);
+                          : field.on_change (
+                              current_values.filter ((value) => value !== "nda"),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
                         return checked
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange(
                               currentValues.filter((value) => value !== "nda"),
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       checked={field.value?.includes('nda')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [],;
@@ -95,6 +140,13 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, 'nda']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'nda');
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             );
                       }}
                     />
@@ -113,6 +165,11 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
             <FormField
             />;
             <FormField;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="additionalClauses"
@@ -120,6 +177,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
+<<<<<<< HEAD
                       checked={field.value?.includes("ip")}
                       onCheckedChange={(checked) => {
                         const currentValues = field.value |[];
@@ -128,6 +186,15 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           : field.onChange(
                               currentValues.filter((value) => value !== "ip")
                               currentValues.filter((value) => value !== "ip"),
+=======
+
+                      checked={field && field.value?.includes("ip")}
+=======
+
+                              currentValues.filter((value) => value !== "ip"),
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       checked={field.value?.includes('ip')}
 
                       onCheckedChange={(checked) => {;
@@ -155,6 +222,13 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, 'ip']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'ip');
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             );
                       }}
                     />
@@ -173,6 +247,11 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
             <FormField
             />;
             <FormField;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="additionalClauses"
@@ -182,6 +261,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                     <Checkbox
                       checked={field.value?.includes("termination")}
                       onCheckedChange={(checked) => {
+<<<<<<< HEAD
                         const currentValues = field.value |[];
                         return checked
                           ? field.onChange([...currentValues, "termination"])
@@ -191,6 +271,22 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                               )
                                 (value) => value !== "termination",
                               ),
+=======
+                        const current_values = field.value || [];
+                        return checked;
+                          ? field.on_change ([...current_values, "termination"]);
+                          : field.on_change (
+                              current_values.filter (
+                                (value) => value !== "termination",
+                              ),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+                                (value) => value !== "termination",
+                              ),
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       checked={field.value?.includes('termination')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
@@ -198,6 +294,13 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, 'termination']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'termination');
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             );
                       }}
                     />
@@ -216,6 +319,11 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
             <FormField
             />;
             <FormField;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="additionalClauses"
@@ -223,6 +331,7 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
+<<<<<<< HEAD
                       checked={field.value?.includes("revisions")}
                       onCheckedChange={(checked) => {
                         const currentValues = field.value |[];
@@ -235,6 +344,45 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                               )
                                 (value) => value !== "revisions",
                               ),
+=======
+
+
+                      checked={field && field.value?.includes("revisions")}
+                      onCheckedChange={(checked) => {;
+                        const currentValues = field && field.value || [];
+                        return checked;
+                          ? field && field.onChange([...currentValues, "revisions"]);
+                          : field && field.onChange(;
+                              currentValues && currentValues.filter(;
+                                (value) => value !== "revisions",;
+                              ),;
+
+=======
+                </FormItem>)}
+            />;
+            <FormField;
+              control={form.control}
+              name="additional_clauses";
+              render={({ field }) => (
+                <FormItem className="flex flex - row items - start space - x-3 space - y-0">;
+                  <FormControl>;
+                    <Checkbox;
+                      checked={field.value?.includes ("revisions")}
+                      onCheckedChange={(checked) => {
+                        const current_values = field.value || [];
+                        return checked;
+                          ? field.on_change ([...current_values, "revisions"]);
+                          : field.on_change (
+                              current_values.filter (
+                                (value) => value !== "revisions",
+                              ),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                                (value) => value !== "revisions",
+                              ),
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       checked={field.value?.includes('revisions')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [];
@@ -242,6 +390,13 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
                           ? field.onChange([...currentValues, 'revisions']);
                           : field.onChange(;
                               currentValues.filter((value) => value !== 'revisions');
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             );
                       }}
                     />
@@ -262,6 +417,12 @@ export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) 
       )}
     />
     />;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 =======
                 </FormItem>)}

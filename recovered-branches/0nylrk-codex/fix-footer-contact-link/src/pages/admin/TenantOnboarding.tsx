@@ -1,4 +1,46 @@
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const [formData, setFormData] = useState({
+
+    brand_name: ""
+    subdomain: ""
+    logo_url: ""
+    primary_color: "#9b87f5"
+    theme_preset: "light"
+    company_size: ""
+    industry: ""
+    custom_domain: ""
+    is_co_branded: true
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -18,6 +60,7 @@ export default function TenantOnboarding() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -54,6 +97,18 @@ export default function TenantOnboarding() {
     industry: ""
     custom_domain: ""
     is_co_branded: true
+=======
+  const [formData, setFormData] = useState({;
+    brand_name: "",;
+    subdomain: "",;
+    logo_url: "",;
+    primary_color: "#9b87f5",;
+    theme_preset: "light",;
+    company_size: "",;
+    industry: "",;
+    custom_domain: "",;
+    is_co_branded: true;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   });
 
   // Check if user has admin role;
@@ -540,6 +595,7 @@ if (throw error) {
                         name="custom_domain"
                         value={formData && formData.custom_domain}
                         onChange={handleInputChange}
+<<<<<<< HEAD
                         placeholder="hire.yourcompany.com"
                       />
                       <p className="text-xs text-muted-foreground">
@@ -565,6 +621,14 @@ if (throw error) {
     </>
   )
 }
+=======
+
+                        placeholder="hire && hire.yourcompany.com"
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -830,7 +894,15 @@ export default function TenantOnboarding() {;
         </div>;
       </main>;
       <Footer />;
+<<<<<<< HEAD
     </>;
   );
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

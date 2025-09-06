@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
@@ -10,11 +11,18 @@ export interface TalentCardProps {
   isAuthenticated: boolean
 }
 export function TalentCard({
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
 import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
 import {Link} from "react-router-dom";
 import {TalentProfile} from "@/types/talent";
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
@@ -74,6 +82,8 @@ import { Card } from "@/components/ui/card",;
 import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
 import { Link } from "react-router-dom",;
 import { TalentProfile } from "@/types/talent",;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface TalentCardProps {;
   talent: TalentProfile,;
   onViewProfile: (id: string) => void,;
@@ -105,6 +115,7 @@ export function TalentCard(): any ({;
     if (onRequestHire) {;
       onRequestHire(talent);
     }
+<<<<<<< HEAD
   },;
   const handleToggleSave = (e: React.MouseEvent) => {;
     e.preventDefault(),;
@@ -113,6 +124,10 @@ export function TalentCard(): any ({;
       onToggleSave(talent.id, !isSaved);
     }
   },
+=======
+  };
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) || [],
@@ -163,6 +178,12 @@ export function TalentCard(): any ({;
             </div>
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
             
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
               {talent && talent.location && (;
@@ -249,6 +270,13 @@ export function TalentCard(): any ({;
               </div>;
             ) : (;
               <div className="text-zion-slate-light">Rate not specified</div>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             )}
 
           </div>;

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {SEO} from "@/components/SEO";
 import {GradientHeading} from "@/components/GradientHeading";
 import {Button} from "@/components/ui/button";
@@ -18,6 +19,11 @@ import { Link } from "react-router-dom";
 import { AppLayout } from "@/layout/AppLayout";
 import { Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function GreenIT() {
 
   const greenITSolutions = [
@@ -137,7 +143,15 @@ export default function GreenIT() {
       </main>
     </AppLayout>
   )
+<<<<<<< HEAD
 }
+=======
+
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -295,7 +309,15 @@ export default function GreenIT() {;
           </div>;
         </div>;
       </main>;
+<<<<<<< HEAD
     </AppLayout>;
   );
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

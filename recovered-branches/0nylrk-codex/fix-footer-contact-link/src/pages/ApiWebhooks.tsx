@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
@@ -14,6 +15,10 @@ import { CodeBlock } from "@/components/developers/CodeBlock";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CodeBlock } from "@/components/developers/CodeBlock",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function ApiWebhooks() {
   // Sample webhook event payload
@@ -150,6 +155,7 @@ app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {
 }`,
 
   const messageReceivedPayload = `{
+<<<<<<< HEAD
   "event_type": "message_received";
   "created_at": "2023-06-18T14: 22:15Z";
   "data": {
@@ -288,6 +294,9 @@ function verifyWebhookSignature(req, res, next) {;
   }
 ;
   next();
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 // Webhook endpoint with signature verification
@@ -587,4 +596,9 @@ app.listen(3000, () => {;
 }
 
 ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ApiWebhooks;

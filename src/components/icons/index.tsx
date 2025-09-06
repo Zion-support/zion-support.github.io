@@ -603,6 +603,9 @@ export type IconProps = SVGProps<SVGSVGElement> & {
   className?: string
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React, { SVGProps } from 'react',
 import { logWarn } from '@/utils/productionLogger',
@@ -1521,6 +1524,9 @@ export type IconProps = SVGProps<SVGSVGElement> & {
 },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 // Create a map of icon names to component references
@@ -2109,6 +2115,7 @@ const iconMap = {
   'zap-off': LucideZapOff,
   zap: LucideZap,
   'zoom-in': LucideZoomIn,
+<<<<<<< HEAD
   'zoom-out': LucideZoomOut},
 
   'zoom-out': LucideZoomOut,
@@ -2130,12 +2137,17 @@ const iconMap = {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const Icon: React.FC<IconProps> = ({
   name
   size = 24, // Default size
   className
   ...props
 }) => {
+<<<<<<< HEAD
   const LucideIconComponent = iconMap[name]
   if (!LucideIconComponent) {
     logWarn(`Icon "${name}" not found.`)
@@ -2149,6 +2161,11 @@ export const Icons = iconMap; // Export the map if you need to refer to availabl
 
 
 
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const LucideIconComponent = iconMap[name],
 
 

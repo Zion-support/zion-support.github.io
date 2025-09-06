@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {Header} from "@/components/Header";
@@ -21,6 +22,10 @@ import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@
 import { toast } from "@/hooks/use-toast";
 import { MatchResult } from "@/lib/ai-matchmaking";
 export default function AIMatcherPage() {
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -89,6 +94,7 @@ export default function AIMatcherPage() {
                 </SelectContent>
               </Select>
             </div>
+<<<<<<< HEAD
             <AIMatchmaker
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
@@ -113,6 +119,18 @@ import { AIMatchmaker } from "@/components/AIMatchmaker",;
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",;
 import { toast } from "@/hooks/use-toast",;
 import { MatchResult } from "@/lib/ai-matchmaking",;
+=======
+
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {GradientHeading} from "@/components/GradientHeading";
+import {AIMatchmaker} from "@/components/AIMatchmaker";
+import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
+import {toast} from "@/hooks/use-toast";
+import {MatchResult} from "@/lib/ai-matchmaking";
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AIMatcherPage() {;
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
@@ -171,7 +189,20 @@ export default function AIMatcherPage() {;
                 </SelectContent>;
               </Select>;
             </div>;
+<<<<<<< HEAD
             <AIMatchmaker;
+=======
+
+            <AIMatchmaker
+=======
+
+            
+            <AIMatchmaker 
+=======
+            <AIMatchmaker 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               serviceType={selectedCategory === "all" ? "" : selectedCategory}
               onMatchSelect={handleMatchSelect}
 =======
@@ -259,5 +290,13 @@ if (|| category === "hardware") {) {
 
     </>);
 }
+<<<<<<< HEAD
 ;
 ;
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,6 +1,7 @@
 import React from 'react';
 import React from 'react';
 
+<<<<<<< HEAD
 export default function MainLayout({
   children,
 }: {
@@ -23,3 +24,8 @@ export default function MainLayout({
     </>,;
   );
 },;
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

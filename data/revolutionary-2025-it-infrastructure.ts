@@ -44,6 +44,7 @@ import { ServiceVariant } from '../types/service-variants';
     description:
       'Revolutionary cybersecurity platform that combines quantum encryption, AI threat detection, and zero-trust architecture to provide unhackable security for enterprises and governments.'
     features: [
+<<<<<<< HEAD
       'Quantum encryption algorithms'
       'AI-powered threat detection'
       'Zero-trust architecture'
@@ -105,6 +106,9 @@ import { ServiceVariant } from '../types/service-variants';
 
     trialDays: 30;
     setupTime: '8 hours';
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     category: 'Cybersecurity & Quantum Security';
     real_service: true;
     technology: ['Quantum ComputingAI / MLZero TrustPythonQuantum APIsCloud Security'];
@@ -1667,4 +1671,12 @@ export const revolutionary2025ITServices: Revolutionary2025ITService[] = [
     reviews: 52
   }
 ];
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default revolutionary2025ITServices;

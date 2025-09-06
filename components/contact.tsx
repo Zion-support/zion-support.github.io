@@ -1,9 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const [isSubmitting, setIsSubmitting] = useState (false);
  const [isSubmitting, setIsSubmitting] = useState (false);
 const [isSubmitting, setIsSubmitting] = useState (false);
  const [isSubmitting, setIsSubmitting] = useState (false);
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const [submitSuccess, setSubmitSuccess] = useState (false);
 //Get popular services for showcase const popularServices = [ ...innovativeAIServices2029 && innovativeAIServices2029.filter (s => s && s.popular);
 ...quantumSpaceInnovations2029 && quantumSpaceInnovations2029.filter (s => s && s.popular);
@@ -19,9 +26,14 @@ const [submit_success, setSubmitSuccess] = useState (false);
 setIsSubmitting (false);
 setSubmitSuccess (true);
 //Reset form after 3 seconds ];
+<<<<<<< HEAD
 }<motion.div > {
   stats.map ( (stat, index) => (<motion.div key= {
   stat.label
+=======
+
+  stat.label;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> </div> <div className= {
   `text - 3xl font - bold $ {
   stat.color;
@@ -518,6 +530,21 @@ export default function ContactPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Popular Services Showcase */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -536,6 +563,14 @@ export default function ContactPage() {
               </p>
             </motion.div>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {popularServices.map((service, index) => (
                 <motion.div
@@ -748,6 +783,14 @@ export default function ContactPage() {
                       <span className="text-2xl">{service.icon}</span>
                     </div>
 
+<<<<<<< HEAD
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {/* Popular Badge */}
                     {service.popular && (
                       <div className="flex items-center space-x-2 mb-4">
@@ -763,12 +806,29 @@ export default function ContactPage() {
                     {/* Service Title and Tagline */}
                     <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
                     <p className="text-sm text-cyan-400 mb-3">{service.tagline}</p>
+<<<<<<< HEAD
                     
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {/* Description */}
                     <p className="text - gray - 300 leading - relaxed mb - 4 line - clamp - 3">;
                       {service.description}
                     </p>
 
+<<<<<<< HEAD
+=======
+                    </p>;
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {/* Price */}
                     <div className="mb - 4">;
                       <span className={`${service.text_color} font - semibold text - lg`}>;
@@ -795,10 +855,14 @@ export default function ContactPage() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -806,6 +870,8 @@ export default function ContactPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {/* CTA */}
                     <div className="flex items-center justify-between">;
                       <span className="text-sm text-gray-400">Setup: {service && service.setupTime}</span>;
@@ -818,6 +884,20 @@ export default function ContactPage() {
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+            </div>;
+          </div>;
+        </section>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Why Choose Us Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -931,6 +1011,7 @@ export default function ContactPage() {
 }
   ),
 }
+<<<<<<< HEAD
 ;
 }
 }
@@ -945,3 +1026,7 @@ export default function ContactPage() {
 }
 }
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

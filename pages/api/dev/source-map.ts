@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
 import { getGitStatus, requireRoles } from "../../../utils/devAccess";
@@ -14,6 +15,10 @@ export default function handler(req: any, res: any) {
 import type { NextApiRequest, NextApiResponse } from "next",
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap",
 import { getGitStatus, requireRoles } from "../../../utils/devAccess",
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const identity = requireRoles(req, res, ["admin", "maintainer"]),
   if (!identity) return,
@@ -69,6 +74,7 @@ if ( {) {
 
     if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
       res.status(400).json({ error: "Invalid path" }),
+<<<<<<< HEAD
       return
     }
     const result = deployBasicTemplateForPath(repoRelativePath),
@@ -159,3 +165,7 @@ export default function handler(req, res) {
   }
 }
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

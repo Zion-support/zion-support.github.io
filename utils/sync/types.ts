@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type SyncScope = "full" | "dao" | "marketplace";
 export interface Peer {id: string;
 export type SyncScope = "full" | "dao" | "marketplace",;
@@ -20,6 +21,29 @@ export interface InstanceConfig {instanceId: string;
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+export type SyncScope = "full" | "dao" | "marketplace",
+export interface Peer {
+  id: string,
+  base_url: string, // e.g., https: //zion - latam.example.org;
+  scope?: SyncScope,
+  paused?: boolean;
+}
+export interface InstanceConfig {
+  instance_id: string,
+  opt_in: boolean,
+  paused: boolean,
+  scope: SyncScope,
+  peers: Peer[],
+  secret_configured: boolean;
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export type SyncEventType =;
   | "proposal";
   | "token_transfer";
@@ -40,6 +64,7 @@ export interface TokenTransferPayload extends BaseEventPayload {txId: string;
   | "leaderboard_entry",;
 export interface BaseEventPayload {;
   id: string;
+<<<<<<< HEAD
 }
 ;
 export interface ProposalVoteEntry {;
@@ -106,6 +131,10 @@ export interface ProposalPayload extends BaseEventPayload {;
 ;
 export interface TokenTransferPayload extends BaseEventPayload {;
   txId: string;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   token: string;
   amount: number;
   fromSubnet: string;
@@ -164,10 +193,15 @@ export interface DaoEndorsementPayload extends BaseEventPayload {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 export interface LeaderboardEntryPayload extends BaseEventPayload {;
   subjectId: string, // userId or teamId;
+<<<<<<< HEAD
   score: number,;
   category: string, // e.g., grants, contributions;
   rank?: number,;
@@ -180,6 +214,11 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -194,6 +233,7 @@ export interface SyncEvent {eventId: string;
   payload: SyncEventPayload;
   | LeaderboardEntryPayload,;
 export interface SyncEvent {;
+<<<<<<< HEAD
   eventId: string,;
   type: SyncEventType,;
   payload: SyncEventPayload,;
@@ -204,6 +244,10 @@ export interface SyncEvent {;
   eventId: string;
   type: SyncEventType,;
   payload: SyncEventPayload,;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   originInstanceId: string;
   version: number;
   timestamp: number;
@@ -233,10 +277,15 @@ export interface MultiverseState {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 export interface MultiverseState {;
   config: InstanceConfig,;
+<<<<<<< HEAD
   lastSyncedAt: number,;
   seenEventIds: Record<string true>,;
   latestVersionByEntityId: Record<string number>,;
@@ -252,3 +301,9 @@ export interface MultiverseState {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

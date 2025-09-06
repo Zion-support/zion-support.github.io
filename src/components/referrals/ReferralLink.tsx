@@ -32,6 +32,9 @@ interface ReferralLinkProps {;
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ReferralLink(): any ({;
   referralLink,;
   onCopy,;
@@ -45,6 +48,7 @@ export function ReferralLink(): any ({;
     setTimeout(() => setCopied(false), 2000);
   };
   return (
+<<<<<<< HEAD
     <Card className="mt-6">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
@@ -69,6 +73,24 @@ export function ReferralLink(): any ({;
             </Button>
           </div>
           {copied && (
+=======
+
+    <Card className='mt - 6'>;
+      <CardHeader>;
+        <CardTitle className='flex items - center gap - 2'>;
+          <Link className='h - 5 w - 5' />;
+
+          Your Referral Link;
+        </CardTitle>;
+        <CardDescription>;
+          Share this link with others to earn rewards when they join and;
+          complete onboarding;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!
             <p className="text-sm text-green-600 dark:text-green-500">
 
@@ -127,6 +149,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
 
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     <Card className="mt - 6">;
@@ -302,6 +325,10 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
   return (;
     <Card className="mt-6">;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+    <Card className="mt - 6">;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <CardHeader>;
         <CardTitle className="flex items - center gap - 2">;
           <Link className="h - 5 w - 5" />;

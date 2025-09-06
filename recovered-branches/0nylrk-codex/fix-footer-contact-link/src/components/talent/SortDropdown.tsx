@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {SORT_OPTIONS} from "@/data/sortOptions";
@@ -9,6 +10,8 @@ import { Button } from "@/components/ui/button",
 import { SORT_OPTIONS } from "@/data/sortOptions";
 import { SortDesc, ChevronDown } from "lucide-react";
 import {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   DropdownMenu
   DropdownMenuContent
@@ -21,8 +24,14 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+<<<<<<< HEAD
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 
+=======
+  DropdownMenuTrigger,
+} from '@/components / ui / dropdown - menu';
+;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface SortDropdownProps {
   sort_option: string;
   setSortOption: (option: string) => void;
@@ -124,6 +133,7 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
             key={option.value}
             onClick={() => setSortOption(option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+<<<<<<< HEAD
               sortOption === option.value
                 ? "bg-zion-purple/20 text-zion-purple"
                 : ""
@@ -187,3 +197,15 @@ export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
 }
 }
 ;
+=======
+
+              sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
+
+  );
+
+
+}
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

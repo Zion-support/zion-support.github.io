@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {logErrorToProduction} from '@/utils/productionLogger';
+<<<<<<< HEAD
 =======
 interface Props {
   children: React.ReactNode
@@ -42,6 +43,8 @@ import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Props {;
   children: React && React.ReactNode;
 }
@@ -69,6 +72,7 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
   render() {;
     if (this && this.state.hasError) {;
       return (
+<<<<<<< HEAD
         <div className='container py-8'>
           <Card className='border-red-200 bg-red-50'>
             <CardContent className='p-8 text-center'>
@@ -149,6 +153,10 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
                   <RefreshCw className="h-4 w-4 mr-2" />
                   Try Again
                 </Button>
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Button onClick={() => window.location.reload()} variant="default">
                   Refresh Page
                 </Button>
@@ -157,12 +165,17 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
           </Card>
         </div>
       )
+<<<<<<< HEAD
     }
     return this.props.children
   }      )
     }
     return this.props.children
   }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     return this.props.children
   }      )
@@ -171,6 +184,11 @@ export class EquipmentErrorBoundary extends React.Component<Props State> {;
     return this.props.children;
   };
 } ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
                   onClick={() => window && window.location.reload()}
                   variant='default';

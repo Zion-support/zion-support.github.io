@@ -1,8 +1,22 @@
+<<<<<<< HEAD
 // Marketplace types
 export interface Offer {
 
+=======
+
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface Offer {;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   createdAtIso: string;
   clientId: string;
@@ -28,6 +42,7 @@ export interface PaymentTerms {
 }
 export interface Project {
 
+<<<<<<< HEAD
 export interface PaymentTerms {;
   type: 'hourly' | 'fixed' | 'milestone';
   amount?: number;
@@ -40,12 +55,18 @@ export interface PaymentTerms {;
 }
 
 export interface Project {;
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   title: string;
   summary: string;
   clientId: string;
   talentSlug: string;
   startDateIso: string;
+<<<<<<< HEAD
   status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
   timeline: any[];
   documents: ProjectDocument[];
@@ -108,3 +129,10 @@ export interface ProjectNote {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

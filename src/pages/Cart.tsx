@@ -241,6 +241,7 @@ export default function CartPage(function CartPage(function CartPage() {): any {
 
 
 ;
+<<<<<<< HEAD
   return (;
     <div className="min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4">;
       <div className="container mx-auto max-w-6xl">;
@@ -429,6 +430,12 @@ export default function CartPage(function CartPage(function CartPage() {): any {
       </div>;
     </div>;
   );
+=======
+        shipping_address: details?.address}),
+      const session_id = data.session_id as string | undefined;
+  const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0;
+  const total = subtotal + tax + shipping;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export default /**
  * CartPage - Function description

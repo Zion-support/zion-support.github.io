@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
@@ -11,6 +12,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -25,6 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const raw = fs.readFileSync(coursesPath, 'utf-8')
     const courses = JSON.parse(raw)
     const existingIndex = courses.findIndex((c: any) => c.id === body.id)
+<<<<<<< HEAD
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -51,6 +56,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
 
     const existingIndex = courses.findIndex((c: any) => c.id === body.id);
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     if (existingIndex >= 0) {
 
 
@@ -58,6 +65,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } else {
       courses.push(body);
     }
+<<<<<<< HEAD
     fs.writeFileSync(coursesPath, JSON.stringify(courses, null, 2))
     res.status(200).json({ ok: true, course: body })
   } catch (e: any) {
@@ -80,3 +88,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+}
+
+=======
+    fs.writeFileSync (courses_path, JSON.stringify (courses, null, 2)),
+    res.status (200).json ({ ok: true, course: body });
+  } catch (e: any) {
+    res.status (500).json ({ error: e?.message ?? 'Failed to save course' });
+  }
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

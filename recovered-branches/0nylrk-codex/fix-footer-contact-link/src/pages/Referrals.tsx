@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useEffect  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { useReferrals  } from '@/hooks/useReferrals';
@@ -15,6 +16,9 @@ import { toast  } from '@/hooks/use-toast';
 import { Share, Users  } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 export default function ReferralsPage() {
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {useEffect} from 'react';
 import {use_auth} from '@/hooks / use_auth';
@@ -67,7 +71,13 @@ function ReferralsPage() {
     stats;
     getReferralLink;
     copyReferralLink;
+<<<<<<< HEAD
     shareOnSocialMedia} = useReferrals();
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useEffect} from 'react';
 import {useAuth} from '@/hooks/useAuth';
 import {useReferrals} from '@/hooks/useReferrals';
@@ -86,6 +96,11 @@ import {useNavigate} from 'react-router-dom';
 export default function ReferralsPage() {;
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useEffect } from 'react',
 import { useAuth } from '@/hooks/useAuth',
 import { useReferrals } from '@/hooks/useReferrals',
@@ -129,6 +144,7 @@ export default function ReferralsPage() {
   const referralLink = getReferralLink(),
 
   return (
+<<<<<<< HEAD
     <div className="container max-w-7xl py-10">
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">
         <div>
@@ -177,6 +193,13 @@ export default function ReferralsPage() {
     </div>
   )
 }
+=======
+
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;
@@ -326,7 +349,15 @@ if ( {) {
           <ReferralLeaderboard />;
         </div>;
       </div>;
+<<<<<<< HEAD
     </div>;
   );
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

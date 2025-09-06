@@ -22,6 +22,7 @@ interface Activity {
   milestone: {
 
 
+<<<<<<< HEAD
     avatar_url: string | null
   }
 }
@@ -30,6 +31,14 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
 
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
   const [activities, setActivities] = useState<Activity[]>([]);
+=======
+
+
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
+  const [activities, setActivities] = useState<Activity[]>([]);
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     async function fetchActivities() {
@@ -106,6 +115,10 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
         console && console.error('Error fetching milestone activities:', err);
       } finally {;
         setIsLoading(false);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     }
     if (projectId) {
@@ -116,6 +129,7 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
     switch (activity.action) {
       case 'created':
 
+<<<<<<< HEAD
         return 'created a new milestone'
 
       case 'status_changed':
@@ -128,6 +142,15 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
         return activity.action.replace(/_/g, ' ')
     }
   }
+=======
+    if (projectId) {;
+      fetchActivities();
+    }
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
     switch (activity.action) {;
@@ -143,6 +166,12 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
         return 'added a deliverable';
       default:;
         return activity.action.replace(/_/g, ' ');
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
 

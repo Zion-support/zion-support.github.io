@@ -3,11 +3,20 @@
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
+        await supabase;
+
+          .from('model_versions');
+          .update({ active: false });
+          .eq('purpose', purpose);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       }
 
       // Update this model;
+<<<<<<< HEAD
 =======
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {
     try {
@@ -114,6 +123,8 @@ export function ZionGPTModelManager() {;
       ),;
       // Also update in the database;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       await supabase;
         .from ('model_versions');
         .update ({ active: !current_active });
@@ -139,10 +150,13 @@ export function ZionGPTModelManager() {;
           .update({ active: false });
           .eq('purpose', purpose);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 
       // Update this model;
@@ -229,12 +243,16 @@ export function ZionGPTModelManager() {;
                       <Button
                         variant="ghost"
                         size="sm"
+<<<<<<< HEAD
                         onClick={() => checkTrainingStatus(model.id)}
                         disabled={activeJobs[model.id]}
                         onClick = {(,) => checkTrainingStatus(model.id),}
                         disabled = {activeJobs[model.id],}
                         onClick={() => checkTrainingStatus(model.id)}
                         disabled={activeJobs[model.id]}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
@@ -251,6 +269,11 @@ export function ZionGPTModelManager() {;
                         variant={model.active ? "outline" : "default"}
                         size="sm"
                         onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       >
                         {model.active ? (
                           <>
@@ -268,6 +291,9 @@ export function ZionGPTModelManager() {;
                         size="sm"
                         className="text-red-500"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                         title = {model && model.errorMessage || "Training failed",}>;
                         <AlertCircle className="h-4 w-4 mr-1" /> Error;
@@ -290,6 +316,9 @@ export function ZionGPTModelManager() {;
                   </TableCell>;
                 </TableRow>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               ))}
             </TableBody>;
@@ -301,6 +330,9 @@ export function ZionGPTModelManager() {;
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   },
   return (

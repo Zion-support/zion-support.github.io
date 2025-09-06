@@ -1,7 +1,14 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -34,6 +41,13 @@ import { ProjectDetailsFields } from "./ProjectDetailsFields",
 import { PaymentTermsFields } from "./PaymentTermsFields",
 import { AdditionalClausesFields } from "./AdditionalClausesFields",
 import { DeploymentOptions } from "@/types/smart-contracts",
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const formSchema = z.object({
   projectName: z.string().min(1, "Project name is required");
   scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
@@ -86,6 +100,7 @@ interface ContractFormProps {
   onDeployOptionsChange?: (options: DeploymentOptions) => void
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export function ContractForm({;
   talent;
@@ -101,6 +116,11 @@ export function ContractForm({
   onFormValuesChange,
   onContractGenerated,
   deployOptions,
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onDeployOptionsChange
 }: ContractFormProps) {
   const [isGenerating, setIsGenerating] = useState(false);
@@ -227,6 +247,10 @@ export function ContractForm({;
       return () => subscription.unsubscribe();
     }
   }, [form, onFormValuesChange]),
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   const handleMilestonesGenerated = (milestones: GeneratedMilestone[]) => {
     setGeneratedMilestones(milestones)
@@ -341,6 +365,7 @@ export function ContractForm({;
       <DialogHeader>;
         <DialogTitle className="text-xl">Contract Builder</DialogTitle>;
         <DialogDescription>;
+<<<<<<< HEAD
           Create a professional contract for your project with {talent.full_name}
         </DialogDescription>
       </DialogHeader>
@@ -349,15 +374,34 @@ export function ContractForm({;
           <ProjectDetailsFields
             form={form}
           />
+=======
+          Create a professional contract for your project with {talent && talent.full_name}
+        </DialogDescription>;
+      </DialogHeader>;
+
+      <Form {...form}>;
+        <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-6">;
+          <ProjectDetailsFields
+            form={form} 
+          />;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <PaymentTermsFields
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
           
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <PaymentTermsFields 
             form={form}
             talent={talent}
             handleMilestonesGenerated={handleMilestonesGenerated}
+<<<<<<< HEAD
           />;
           <AdditionalClausesFields;
             form={form}
@@ -376,6 +420,11 @@ export function ContractForm({;
           />
           <Button 
             type="submit" 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
             disabled={isGenerating}>;
             {isGenerating ? (;

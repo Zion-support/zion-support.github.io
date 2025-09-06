@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -358,3 +359,11 @@ gitWorkflow.run().catch(error => {,
   process.exit(1)
 }),
 
+=======
+
+
+=======
+gitWorkflow.run().catch(error = > {; process.exit(1)});
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

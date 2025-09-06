@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
+<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -12,6 +17,14 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+=======
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (req.method !== "POST") return res.status($1).json({ $2 });
   const { code, amount } = req.body |{}
   if (!code) return res.status($1).json({ $2 });
@@ -50,7 +63,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (error) return res.status(500).json({ error: "Database error" });
     return res.status(200).json({ ok: true, status: "requested" });
 
+<<<<<<< HEAD
   } catch (e: any) {
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -84,6 +102,11 @@ export default async function handler(req, res) {
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     return res.status(200).json({ ok: true, status: 'requested' });
   } catch (error) {
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return res.status(500).json({ error: e?.message });
     const { error } = await supabase.from('payout_requests').insert({
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

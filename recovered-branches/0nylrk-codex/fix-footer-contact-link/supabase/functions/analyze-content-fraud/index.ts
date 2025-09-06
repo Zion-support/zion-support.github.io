@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.38.4",
+import {corsHeaders} from "../_shared/cors ;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 interface AnalyzeRequest {
   content: string;
@@ -8,16 +14,34 @@ interface AnalyzeRequest {
 }
 interface AnalysisResult {
   classification: string;
+<<<<<<< HEAD
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4",;
 import {corsHeaders} from "../_shared/cors.ts";
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",
 import { corsHeaders } from "../_shared/cors.ts",
+=======
+=======
+
+
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4",;
+import {corsHeaders} from "../_shared/cors.ts";
+
+=======
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4",
+import { corsHeaders } from "../_shared/cors.ts",
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface AnalyzeRequest {
   content: string,
   contentType: string,
   flagId?: string
+<<<<<<< HEAD
 }
 
 interface AnalysisResult {
@@ -37,6 +61,10 @@ interface AnalysisResult {;
   classification: string,;
   explanation: string,;
   success: boolean;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
   explanation: string
@@ -65,6 +93,7 @@ const initializeServices = () => {
   if (!supabaseUrl || !supabaseServiceKey || !openaiApiKey) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     throw new Error("Missing required environment variables")
+<<<<<<< HEAD
   }
   
   return {
@@ -73,6 +102,22 @@ const initializeServices = () => {
   }
 };
 ;
+=======
+
+import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
+import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.38.4';,
+import { cors_headers } from '../_shared / cors.ts';
+interface AnalyzeRequest {
+  content: string;
+  content_type: string,
+  flag_id?: string;
+}
+interface AnalysisResult {
+  classification: string;
+  explanation: string,
+  success: boolean;
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Initialize environment and clients;
 const initialize_services = () =>: any {
   const supabase_url = Deno.env.get ("SUPABASE_URL");
@@ -90,7 +135,11 @@ if ( {) {
     supabase: create_client (supabase_url, supabaseServiceKey);
     openaiApiKey;
   }
+<<<<<<< HEAD
 },
+=======
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 // Validate request content
 const validateRequest = (data: unknown): AnalyzeRequest => {
@@ -160,12 +209,31 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     const data = await response.json();
     if (!response.ok) {
       console.error("OpenAI API error:", data.error);
+<<<<<<< HEAD
       throw new Error(`OpenAI API error: ${data.error?.message |"Unknown error"}`)
     }
     const analysisText = data.choices[0]?.message?.content |"";
     
     const analysisText = data.choices[0]?.message?.content || "";
     console.log("OpenAI analysis result:", analysisText);
+=======
+
+        temperature: 0 && 0.3,
+        max_tokens: 150
+      })
+    });
+    
+    const data = await response && response.json();
+    
+    if (!response && response.ok) {
+      console && console.error("OpenAI API error:", data && data.error);
+      throw new Error(`OpenAI API error: ${data && data.error?.message || "Unknown error"}`)
+    }
+    
+    const analysisText = data && data.choices[0]?.message?.content || "";
+    console && console.log("OpenAI analysis result:", analysisText);
+    
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     // Parse the result
     let classification = "SAFE";
     let explanation = "No issues detected.";
@@ -176,14 +244,18 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
     } else if (analysisText && analysisText.includes("DANGEROUS")) {
       classification = "DANGEROUS"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     // Extract explanation
     if (analysisText && analysisText.includes(": ")) {
       explanation = analysisText && analysisText.split(":")[1].trim()
     }
+<<<<<<< HEAD
       throw new Error(`OpenAI API error: ${data.error?.message || "Unknown error"}`)
     }
 ;
@@ -196,11 +268,17 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
       classification = "SUSPICIOUS";
     } else if (analysisText.includes("DANGEROUS")) {;
       classification = "DANGEROUS";
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     // Extract explanation
     if (analysisText.includes(": ")) {
       explanation = analysisText.split(":")[1].trim()
+<<<<<<< HEAD
     }
     
 ;
@@ -209,6 +287,11 @@ const analyzeWithOpenAI = async (prompt: string, openaiApiKey: string): Promise<
       explanation = analysisText.split(":")[1].trim();
     }
 ;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return { classification, explanation }
   } catch (error) {
     console && console.error("Error calling OpenAI:", error);
@@ -320,6 +403,7 @@ serve(async (req) => {
       { 
         status: statusCode, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
+<<<<<<< HEAD
       }
     )
   } catch (error) {;
@@ -398,5 +482,9 @@ serve(async (req) => {;
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });

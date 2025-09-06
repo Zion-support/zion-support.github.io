@@ -20,6 +20,7 @@ class ErrorBoundary extends React.Component {
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+<<<<<<< HEAD
 import {
   Menu
   X
@@ -32,11 +33,17 @@ import {
   MapPin
   Globe
   ChevronDown;
+=======
+
+  Globe,;
+  ChevronDown,;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 import Link from 'next/link';import {
   Menu, X, Home, Brain, Cpu, Rocket
 
 =======
+<<<<<<< HEAD
 import {
 <<<<<<< HEAD
   Menu
@@ -89,6 +96,48 @@ import {
   Menu, X, Home, Brain, Cpu, Rocket, 
   Phone, Mail, MapPin, Globe, ChevronDown
  } from 'lucide-react';
+=======
+import { 
+  Menu, X, Home, Brain, Cpu, Rocket, 
+  Phone, Mail, MapPin, Globe, ChevronDown
+} from 'lucide-react';
+import Link from 'next/link';
+const Navigation: React.FC = () => {
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+
+      setIsScrolled(window.scrollY > 50)
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, []);
+
+  const navigationItems = [
+    {
+      name: 'Home',
+      href: '/',
+      icon: Home
+    };
+
+    {
+      name: 'Services'
+      href: '/services'
+      icon: Rocket
+      dropdown: [
+
+        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Revolutionary AI solutions' },
+        { name: 'IT Services', href: '/it-services', icon: Cpu, description: 'Enterprise IT solutions' },
+        { name: 'Micro SaaS', href: '/micro-saas', icon: Rocket, description: 'Specialized software solutions' },
+        { name: 'Innovative Showcase', href: '/innovative-services-showcase', icon: Globe, description: 'Cutting-edge technology' }
+
+      ]
+    }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Menu,
   X,
   Home,
@@ -99,6 +148,9 @@ import {
   Mail,
   MapPin,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Globe,
   ChevronDown,
 } from 'lucide-react';
@@ -106,6 +158,7 @@ import Link from 'next / link';import {
   Menu, X, Home, Brain, Cpu, Rocket,
   Phone, Mail, MapPin, Globe, ChevronDown;
 } from 'lucide-react';
+<<<<<<< HEAD
 import Link from 'next/link';
 
   const [isOpen, setIsOpen] = useState(false);
@@ -114,6 +167,16 @@ import Link from 'next/link';
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+=======
+import Link from 'next / link';
+  const [is_open, setIsOpen] = useState (false);
+  const [is_scrolled, setIsScrolled] = useState (false);
+  const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
+;
+  useEffect (() => {
+    const handle_scroll = () =>: any {
+      setIsScrolled (window.scroll_y > 50);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 ;
     window.addEventListener ('scroll', handle_scroll);
@@ -370,6 +433,11 @@ import Link from 'next/link';
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
                   {item.dropdown ? (
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <div
                       onMouseEnter={() => setActiveDropdown(item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
@@ -382,7 +450,12 @@ import Link from 'next/link';
                       <span className="font-medium">{item.name}</span>
                       <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
 
+<<<<<<< HEAD
                       {/* Dropdown Menu */}
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <AnimatePresence>
                         {activeDropdown === item.name && (
                           <motion.div
@@ -392,6 +465,14 @@ import Link from 'next/link';
                             transition={{ duration: 0.2 }}
                             className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl rounded-2xl border border-cyan-500/20 shadow-2xl shadow-cyan-500/25 p-4'
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           >
                             <div className='grid grid-cols-1 gap-3'>
                               {item.dropdown.map(dropdownItem => {
@@ -472,6 +553,7 @@ import Link from 'next/link';
 
                               })}
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -479,6 +561,10 @@ import Link from 'next/link';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             </div>
                           </motion.div>
                         )}
@@ -510,6 +596,12 @@ import Link from 'next/link';
 
                     </Link>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   )}
                 </div>
               ))}
@@ -613,6 +705,7 @@ import Link from 'next/link';
             <div className='hidden lg:block'>
 =======
 
+<<<<<<< HEAD
             {/* CTA Button */}
             <div className='hidden lg:block'>
 
@@ -634,6 +727,8 @@ import Link from 'next/link';
                 Get Started
               </motion.a>
             </div>
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>
               <motion.button
@@ -649,6 +744,16 @@ import Link from 'next/link';
         </div>
       </motion.nav>
 
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -673,6 +778,7 @@ import Link from 'next/link';
             transition={{ duration: 0.3 }}
             className='fixed inset-0 z-40 lg:hidden'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -680,6 +786,9 @@ import Link from 'next/link';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Backdrop */}
@@ -704,9 +813,14 @@ import Link from 'next/link';
               onClick={() => setIsOpen(false)}
             />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Mobile Menu */}
             <motion&& motion.div
               initial={{ x: '100%' }}
@@ -715,6 +829,7 @@ import Link from 'next/link';
               transition={{ duration: 0.3 }}
               className='absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-xl border-l border-cyan-500/20 shadow-2xl'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -722,6 +837,9 @@ import Link from 'next/link';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <div className='p-6'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1013,6 +1131,11 @@ import Link from 'next/link';
 
                             })}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           </div>
                         </div>
                       ) : (
@@ -1036,11 +1159,26 @@ import Link from 'next/link';
 
                         </Link>
 
+<<<<<<< HEAD
                       )}
                     </div>
                   ))}
                 </div>
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                      )}
+                    </div>;
+                  ))}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Contact Information */}
                 <div className='mt-8 p-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20'>
                   <h3 className='text-cyan-400 font-semibold mb-3'>
@@ -1050,6 +1188,14 @@ import Link from 'next/link';
                     <div className='flex items-center space-x-2 text-gray-300'>
                       <Phone className='w-4 h-4 text-cyan-400' />
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <span>{contactInfo.mobile}</span>
                     </div>
                     <div className='flex items-center space-x-2 text-gray-300'>
@@ -1111,6 +1257,11 @@ import Link from 'next/link';
 };
 export default Navigation;  );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default Navigation;
 
 
@@ -1214,5 +1365,10 @@ export default Navigation;  )
 }
 export default Navigation;
 
+<<<<<<< HEAD
 export default Navigation;
 export default Navigation;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

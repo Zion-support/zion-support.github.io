@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -22,6 +28,12 @@ async function fetchJson(url: string) {
 const configPath = path.join(process.cwd(), 'datadaoconfig.json'),;
 const cachePath = path.join(process.cwd(), 'datadaometrics.json'),;
 async function fetchJson(url: string) {;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return resp.json();
@@ -31,6 +43,11 @@ async function fetchJson(url: string) {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
@@ -41,6 +58,13 @@ function readJson(p: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2));
@@ -50,16 +74,53 @@ function writeJson(p: string, v: any) {
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
 ) {
+<<<<<<< HEAD
 ;
 export default async function handler(req, res) {
+=======
+
+  if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+  return resp.json()
+}
+
+function readJson(p: string) {
+  return JSON.parse(fs.readFileSync(p, 'utf-8'))
+}
+
+function writeJson(p: string, v: any) {
+  fs.writeFileSync(p, JSON.stringify(v, null, 2))
+}
+
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+;
+export default async function handler(req, res) {
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   try {;
 ;
 export default async function handler(req, res) {
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   try {
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
@@ -254,8 +315,15 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -5,6 +5,7 @@
       )}
       <iframe
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
+<<<<<<< HEAD
         src={src}
         title={title}
         loading='lazy'
@@ -39,6 +40,22 @@
 ;
 <<<<<<< HEAD
 
+=======
+
+
+        onLoad={() => setLoaded(true)}
+
+
+
+
+        allowFullScreen
+      />
+    </div>
+
+
+;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         loading="lazy";
         onLoad={() => setLoaded(true)}
 

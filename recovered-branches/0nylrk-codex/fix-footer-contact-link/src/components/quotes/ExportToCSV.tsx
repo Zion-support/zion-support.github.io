@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Button} from "@/components/ui/button";
 import {Download} from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
@@ -7,6 +8,12 @@ import { Download } from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
 import { Download } from "lucide-react",
 import type { QuoteRequest } from "@/types/quotes",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ExportToCSVProps {
 
   quotes: QuoteRequest[]
@@ -122,6 +129,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   return (
     <Button 
       variant="outline" 
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",;
 import { Download } from "lucide-react",;
 import type { QuoteRequest } from "@/types/quotes",;
@@ -145,6 +153,29 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       quote.requester_email,;
       quote.project_name,;
       quote.project_summary,;
+=======
+
+      onClick={handleExport}
+      className="flex items-center gap-2"
+      disabled={quotes.length === 0}
+
+
+=======
+    >;
+
+      <Download size={16} />;
+      Export CSV;
+    </Button>;
+  );
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+};
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       quote.budget_display ||;
         (quote.budget_min && quote.budget_max;
           ? `$${quote.budget_min} - $${quote.budget_max}`;
@@ -186,6 +217,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   return (
     <Button;
       variant="outline";
+<<<<<<< HEAD
       onClick={handleExport}
       className="flex items-center gap-2"
       disabled={quotes.length === 0}
@@ -202,3 +234,15 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     </Button>;
   );
 };
+=======
+      on_click={handle_export}
+      className="flex items - center gap - 2";
+      disabled={quotes.length === 0}
+    >;
+      <Download size={16} />;
+      Export CSV;
+    </Button>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

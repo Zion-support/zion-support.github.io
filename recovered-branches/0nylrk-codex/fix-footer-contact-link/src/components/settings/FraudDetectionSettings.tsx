@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
 import { Switch  } from '@/components/ui/switch';
@@ -9,6 +10,11 @@ import {
 
 
 export function FraudDetectionSettings() {
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
 import {Switch} from '@/components/ui/switch';
 import {Button} from '@/components/ui/button';
@@ -19,11 +25,18 @@ import {toast} from '@/hooks/use-toast';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
 export function FraudDetectionSettings() {;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   const handleSavePreferences = async () => {
@@ -33,6 +46,12 @@ export function FraudDetectionSettings() {;
       // In a real implementation, we would save these preferences to the database
       // For now, we'll just simulate a successful save
       await new Promise((resolve) => setTimeout(resolve, 1000));
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react',
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
 import { Switch } from '@/components/ui/switch',
@@ -76,6 +95,7 @@ export function FraudDetectionSettings() {
         variant: "destructive"
       });
     } finally {
+<<<<<<< HEAD
       setIsSaving(false);
     }
   }
@@ -207,6 +227,9 @@ export function FraudDetectionSettings() {;
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true),;
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true),;
   const [isSaving, setIsSaving] = useState(false),;
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleSavePreferences = async () => {;
     if (!user?.id) return;
 
@@ -505,4 +528,15 @@ if (return) {
 
     </Card>);
 }
+<<<<<<< HEAD
 ;
+=======
+
+=======
+
+  )
+=======
+  )
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

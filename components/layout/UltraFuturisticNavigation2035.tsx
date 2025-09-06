@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   Menu,
   ChevronDown,
@@ -62,6 +66,11 @@ import {
   MessageCircle,;
 } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {
   Menu
@@ -124,8 +133,16 @@ import {
 } from 'lucide-react';
 interface NavigationItem {
   name: string;
+<<<<<<< HEAD
   href: string;  icon?: React.ReactNode;import {
   href: string;  icon?: React.ReactNode;import { ;
+=======
+
+
+  href: string;  icon?: React.ReactNode;import { ;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
   Truck, DollarSign, BarChart3, Globe, Users, Star, Sparkles
@@ -327,12 +344,19 @@ interface NavigationItem {;
   children?: NavigationItem[];
   badge?: string;
   title?: string;
+<<<<<<< HEAD
   featured?: boolean
 }
   featured?: boolean;
   featured?: boolean;  featured?: boolean
 }
   featured?: boolean;
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const contactInfo = {
 
@@ -1168,6 +1192,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     badge: 'Showcase',
     featured: true,
 
+<<<<<<< HEAD
     description: 'Revolutionary AI consciousness and emotional intelligence',
     badge: 'New',
     featured: true,
@@ -1313,6 +1338,10 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     ],
   },
 ];
+=======
+  }
+  {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     name: 'AI & Consciousness',
 
@@ -2111,6 +2140,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
         <div
           className={`absolute inset-0 transition-opacity duration-300 ${
             isScrolled ? 'opacity-100' : 'opacity-0'
+<<<<<<< HEAD
           }`}
         >
           <div className='absolute inset-0 bg-gradient-to-b from-black/95 via-black/90 to-black/95' />
@@ -2136,6 +2166,23 @@ const UltraFuturisticNavigation2035: React.FC = () => {;
             {/* Desktop Navigation */}  }
             {/* Desktop Navigation */}  };
 
+=======
+
+  };
+
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+    closeDropdowns()
+  };
+
+
+=======
+
+            {/* Desktop Navigation */}  };
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled
@@ -2506,6 +2553,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
                   </button>
 
+<<<<<<< HEAD
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeDropdown === item.name && (
@@ -2540,6 +2588,19 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                  {/* Dropdown Menu */}
+                  <AnimatePresence>;
+                    {activeDropdown === item && item.name && (;
+                      <motion&& motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0 && 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         onMouseLeave={closeDropdowns}
                       >
                         <div className='p-6'>
@@ -2671,6 +2732,12 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
                               >
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                               <Link
                                 key={child && child.name}
                                 href={child && child.href}
@@ -2723,6 +2790,12 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
                               </Link>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             ))}
                           </div>;
                         </div>;
@@ -2733,6 +2806,18 @@ const UltraFuturisticNavigation2035: React.FC = () => {
               ))}
             </div>
 
+<<<<<<< HEAD
+=======
+            </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Right Side Actions */}
             <div className='hidden lg:flex items-center gap-4'>;
               {/* Quick Actions */}
@@ -2746,6 +2831,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 
                   <Link
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     key={action.name}
                     href={action.href}
                     className={`flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
@@ -2761,6 +2851,18 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                 ))}
               </div>
 
+<<<<<<< HEAD
+=======
+              </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Contact Info */}
               <div className='flex items-center gap-4 text-sm text-gray-400'>;
                 <a
@@ -2860,6 +2962,30 @@ const UltraFuturisticNavigation2035: React.FC = () => {
               </div>
             </div>
 
+<<<<<<< HEAD
+=======
+                  href={`mailto:${contactInfo && contactInfo.email}`}
+                  className='flex items-center gap-2 hover:text-purple-400 transition-colors duration-200'>;
+                  <Mail className='w-4 h-4' />;
+                  <span className='hidden xl:inline'>{contactInfo && contactInfo.email}</span>                </a>              <div className="flex items-center gap-4 text-sm text-gray-400">;
+                <a href={`tel:${contactInfo && contactInfo.mobile}`} className="flex items-center gap-2 hover:text-cyan-400 transition-colors duration-200">;
+                  <Phone className="w-4 h-4" />;
+                  <span className="hidden xl:inline">{contactInfo && contactInfo.mobile}</span>;
+                </a>;
+                <a href={`mailto:${contactInfo && contactInfo.email}`} className="flex items-center gap-2 hover:text-purple-400 transition-colors duration-200">;
+                  <Mail className="w-4 h-4" />;
+                  <span className="hidden xl:inline">{contactInfo && contactInfo.email}</span>;
+              </div>;
+            </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -2877,6 +3003,16 @@ const UltraFuturisticNavigation2035: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -3371,7 +3507,11 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                               'bg-gray-500/20 text-gray-400'
                             }`}>
 
+<<<<<<< HEAD
                               {item.badge}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             </span>
                           )}
                         </div>
@@ -3384,6 +3524,22 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                         }`} />
                       </button>
 
+<<<<<<< HEAD
+=======
+
+                        />                      </button>                        <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${
+                          activeDropdown === item && item.name ? 'rotate-180' : ''
+                        }`} />;
+                      </button>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       {/* Mobile Dropdown */}
                       <AnimatePresence>;
                         {activeDropdown === item && item.name && (;
@@ -3427,6 +3583,13 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                                 )}
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                               </Link>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             ))}
@@ -3444,6 +3607,13 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                       {quickActions.map((action) => (
                         <Link
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           key={action.name}
                           href={action.href}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -3460,6 +3630,19 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                     </div>
                   </div>
 
+<<<<<<< HEAD
+=======
+                    </div>;
+                  </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {/* Mobile Contact Info */}
                   <div className='pt-4 border-t border-gray-800/50'>;
                     <div className='space-y-3 text-sm text-gray-400'>;
@@ -3470,6 +3653,12 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                       >
                         <Phone className='w-4 h-4' />
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         <span>{contactInfo.mobile}</span>
                       </a>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -3875,6 +4064,7 @@ export default UltraFuturisticNavigation2035;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
+<<<<<<< HEAD
   closeMobileMenu 
 }>) ) 
 }</div> </div> </div> </div> </div> </div> </div> </motion.div>) 
@@ -3886,3 +4076,6 @@ export default UltraFuturisticNavigation2035;  )
 
 export default UltraFuturisticNavigation2035;
 export default UltraFuturisticNavigation2035;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

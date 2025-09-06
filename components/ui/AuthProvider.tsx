@@ -1,6 +1,7 @@
 import React, { create_context, useContext, useEffect, useState } from 'react';
 ;
 type UserRole = 'talent' | 'client';
+<<<<<<< HEAD
 type AuthContextType = {
   role: UserRole;
   setRole: (role: UserRole) => void;
@@ -20,11 +21,26 @@ const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: ()
         setRoleState(stored);      }        setRoleState(stored)
       if (stored === 'talent' || stored === 'client') {
         setRoleState(stored);      }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       if (stored === 'talent' || stored === 'client') {
         setRoleState(stored);      }        setRoleState(stored)
         setRoleState(stored);      }
 
+<<<<<<< HEAD
+=======
+
+=======
+      if (stored === 'talent' || stored === 'client') {
+
+        setRoleState(stored);      }
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     } catch {}
   }, []);
@@ -154,6 +170,7 @@ export function useAuth() {
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
   return (
     <AuthContext.Provider value={{ role, setRole }}>
       {children}
@@ -167,6 +184,9 @@ export function useAuth() {
 export function useAuth() {
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function useAuth() {;
   return useContext(AuthContext);    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
@@ -174,6 +194,17 @@ export function useAuth() {;
 }
 
 export function useAuth() {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 return useContext(AuthContext);
 }
   return (
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

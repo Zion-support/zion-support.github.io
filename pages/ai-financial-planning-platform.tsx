@@ -4,6 +4,7 @@ export default function AiFinancialPlanningPlatform() {
 	return (
 		<ServiceLanding
 
+<<<<<<< HEAD
 			title="AI Financial Planning Platform"
 			description="Forecast revenue, optimize budgets, and model scenarios with AI-driven planning and real-time financial intelligence."
 			subtitle="Smarter, faster financial decisions"
@@ -31,6 +32,13 @@ export default function AiFinancialPlanningPlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 			implementationWeeks="1-2 weeks"
 			roiNote="Finance teams report 3–6x ROI via faster cycles and improved accuracy"
 			features={[
@@ -42,6 +50,7 @@ export default function AiFinancialPlanningPlatform() {
 				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake",
 				"Executive dashboards and board-ready reports",
 				"Headcount planning and hiring plans"
+<<<<<<< HEAD
 			]}
 			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}
 			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
@@ -69,3 +78,8 @@ export default function AiFinancialPlanningPlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

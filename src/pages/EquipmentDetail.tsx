@@ -242,6 +242,9 @@ export default function EquipmentDetail() {;
       }
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -410,6 +413,7 @@ export default function EquipmentDetail() {;
     loadEquipment()
   }, [id]),
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -419,13 +423,22 @@ export default function EquipmentDetail() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleAddToCart = async () => {
     if (!equipment |!isAuthenticated) {
       toast({
+<<<<<<< HEAD
         title: 'Authentication Required'
         description: 'Please log in to add items to cart'
         variant: 'destructive'
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         title: 'Authentication Required',
         description: 'Please log in to add items to cart',
         variant: 'destructive',
@@ -437,6 +450,9 @@ export default function EquipmentDetail() {;
 
     setIsAdding(true),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -445,6 +461,9 @@ export default function EquipmentDetail() {;
         type: 'ADD_ITEM'
         payload: {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     load_equipment ();
   }, [id]);
@@ -460,6 +479,7 @@ if ( {) {
       });
       return;
     }
+<<<<<<< HEAD
   }
   const inCart = items.some(item => item.id === equipment?.id)
           quantity}}),
@@ -467,6 +487,23 @@ if ( {) {
       toast({
         title: "Added to Cart",
         description: `${equipment.name} has been added to your cart.`})
+=======
+    setIsAdding (true);
+    try {
+      dispatch ({
+        type: 'ADD_ITEM',
+        payload: {
+          id: equipment.id,
+          name: equipment.name,
+          price: equipment.price,
+          quantity,
+        },
+      });
+      toast ({
+        title: 'Added to Cart',
+        description: `${equipment.name} has been added to your cart.`,
+      });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch (error) {
       toast ({
         title: 'Error',
@@ -478,6 +515,7 @@ if ( {) {
       setIsAdding(false)
     }
 
+<<<<<<< HEAD
           id: equipment.id,
           name: equipment.name,
           price: equipment.price,
@@ -500,6 +538,8 @@ if ( {) {
 
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           id: equipment.id,
           name: equipment.name,
           price: equipment.price,
@@ -507,6 +547,7 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           quantity}}),
 
+<<<<<<< HEAD
       toast({
         title: "Added to Cart",
         description: `${equipment.name} has been added to your cart.`})
@@ -528,6 +569,8 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Loading state
   if (loading) {
     return (
@@ -683,6 +726,7 @@ if ( {) {
               <h1 className="text-3xl font-bold text-white mb-4">
                 {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}
               </h1>
+<<<<<<< HEAD
               <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>
                 {error === 'Equipment not found'
                   ? "The equipment you're looking for doesn't exist or has been removed."
@@ -719,6 +763,11 @@ if ( {) {
                   onClick={() => router.push('/equipment')}
                   className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue"
                 >
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   Browse Equipment
                 </Button>
               </div>
@@ -735,6 +784,9 @@ if ( {) {
         description = {equipment.description,}
         openGraph={{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           title: `${equipment && equipment.name} - Zion Marketplace`,
           description: equipment && equipment.description,
@@ -865,6 +917,9 @@ if ( {) {
           description: equipment.description;
           images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         }}
@@ -890,6 +945,9 @@ if ( {) {
               className="text-zion-cyan hover:text-white transition-colors"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               Equipment
@@ -912,6 +970,9 @@ if ( {) {
 
           <div className="grid lg:grid-cols-2 gap-12">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             {/* Images */}
             <motion.div 
@@ -961,6 +1022,11 @@ if ( {) {
                         src={image}
                         alt={`${equipment.name} view ${index + 1}`}
                         className="object-cover"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       />
                     </button>
                   ))}
@@ -976,6 +1042,9 @@ if ( {) {
             <motion.div 
               className="space-y-6"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               initial={{ opacity: 0, x: 20 }}
@@ -1008,6 +1077,9 @@ if ( {) {
                 <div className="flex items-center gap-2 mb-2">
                   <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     {equipment.category}
                   </Badge>
@@ -1041,6 +1113,9 @@ if ( {) {
                               ? 'text-yellow-400 fill-current';
                               : 'text-zion-slate-light';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                           }`}
                         />;
@@ -1057,6 +1132,7 @@ if ( {) {
 
 
               {/* Price */}
+<<<<<<< HEAD
 ;
 
 ;
@@ -1126,12 +1202,427 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 }</p> </div> </div>)
 }</div> </motion.div> </div> </div> </div> </>)
 }'"}
+=======
+              <div className='bg-zion-blue-light rounded-lg p-4'>;
+                <div className='text-3xl font-bold text-zion-cyan mb-2'>;
+                  {formatPrice(equipment && equipment.price)}
+                </div>;
+                <div className='flex items-center gap-2 text-sm'>;
+                  <Clock className='h-4 w-4 text-zion-cyan' />;
+                  <span
+                    className={
+
+              </div>
+              {/* Price */}
+
+              <div className="bg-zion-blue-light rounded-lg p-4">
+                <div className="text-3xl font-bold text-zion-cyan mb-2">
+                  {formatPrice(equipment.price)}
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Clock className="h-4 w-4 text-zion-cyan" />
+                  <span className={equipment.inStock ? 'text-green-400' : 'text-yellow-400'}>
+
+
+                    {equipment.expectedShipping}
+                  </span>
+                </div>
+              </div>
+  // Error state;
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <>;
+        <NextSeo;
+          title='Equipment Not Found';
+          description="The equipment you're looking for doesn't exist or has been removed.";
+        />;
+        <div className='min - h-screen bg - zion - blue py - 12 px - 4'>;
+          <div className='container mx - auto'>;
+            <motion.div;
+              className='text - center py - 20';
+              initial={{ opacity: 0, coordinate_y: 20 }}
+              animate={{ opacity: 1, coordinate_y: 0 }}
+            >;
+              <AlertTriangle className='mx - auto h - 16 w - 16 text - red - 500 mb - 6' />;
+              <h1 className='text - 3xl font - bold text - white mb - 4'>;
+                {error === 'Equipment not found';
+                  ? 'Equipment Not Found';
+                  : 'Something went wrong'}
+              </h1>;
+              <p className='text - zion - slate - light mb - 8 max - w-md mx - auto'>;
+                {error === 'Equipment not found';
+                  ? "The equipment you're looking for doesn't exist or has been removed.";
+                  : error ||;
+                    "We couldn't load the equipment details. Please try again."}
+              </p>;
+              <div className='space - x-4'>;
+                <Button;
+                  on_click={() => router.back ()}
+                  variant='outline';
+                  className='border - zion - cyan text - zion - cyan hover:bg - zion - cyan hover:text - zion - blue'                >;
+                  <ArrowLeft className='h - 4 w - 4 mr - 2' />;
+                  Go Back;
+                </Button>;
+                <Button;
+                  on_click={() => router.push ('/equipment')}
+                  className='bg - zion - cyan hover:bg - zion - cyan / 90 text - zion - blue'                >;
+                  Browse Equipment;
+                </Button>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </div>;
+      </>);
+  }
+  return (
+    <>;
+      <NextSeo;
+        title={`${equipment.name} - Zion Marketplace`}
+        description = {equipment.description, }
+        open_graph={{
+          title: `${equipment.name} - Zion Marketplace`,
+          description: equipment.description,
+          images:;
+            equipment.images.length > 0 && equipment.images[0];
+              ? [{ url: equipment.images[0] }];
+              : undefined,
+        }}
+      />;
+      <div className='min - h-screen bg - zion - blue py - 8 px - 4'>;
+        <div className='container mx - auto'>;
+          {/* Breadcrumb */}
+          <motion.nav;
+            className='flex mb - 8';
+            initial={{ opacity: 0, coordinate_y: -20 }}
+            animate={{ opacity: 1, coordinate_y: 0 }}
+          >;
+            <button;
+              on_click={() => router.push ('/equipment')}
+              className='text - zion - cyan hover:text - white transition - colors'            >;
+              Equipment;
+            </button>;
+            <span className='mx - 2 text - zion - slate - light'>/</span>;
+            <span className='text - zion - slate - light'>{equipment.name}</span>;
+          </motion.nav>;
+          <div className='grid lg:grid - cols - 2 gap - 12'>;
+            {/* Images */}
+            <motion.div;
+              className='space - y-4';
+              initial={{ opacity: 0, coordinate_x: -20 }}
+              animate={{ opacity: 1, coordinate_x: 0 }}
+              transition={{ delay: 0.2 }}
+            >;
+              <AspectRatio;
+                ratio={1}
+                className='bg - zion - blue - light rounded - lg overflow - hidden';
+              >;
+                <ImageWithRetry;
+                  src={
+                    equipment.images[selectedImageIndex] ||;
+                    equipment.images[0] ||;
+                    'https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=800 & h=500';
+                  }
+                  alt={equipment.name}
+                  className='object - cover'                />;
+              </AspectRatio>;
+              {equipment.images.length > 1 && (
+                <div className='grid grid - cols - 4 gap - 2'>;
+                  {equipment.images.map ((image, index) => (                    <button;
+                      key = {index, }
+                      on_click = {(, ) => setSelectedImageIndex (index), }
+                      className={`aspect - square rounded - md overflow - hidden border - 2 transition - all ${
+                        selectedImageIndex === index;
+                          ? 'border - zion - cyan';
+                          : 'border - transparent hover:border - zion - slate - light';
+                      }`}
+                    >;
+                      <ImageWithRetry;
+                        src = {image, }
+                        alt={`${equipment.name} view ${index + 1}`}
+                        className='object - cover';
+                      />;
+                    </button>))}
+                </div>)}
+            </motion.div>;
+            {/* Product Details */}
+            <motion.div;
+              className='space - y-6';
+              initial={{ opacity: 0, coordinate_x: 20 }}
+              animate={{ opacity: 1, coordinate_x: 0 }}
+              transition={{ delay: 0.4 }}
+            >;
+              {/* Header */}
+              <div className='space - y-2'>;
+                <div className='flex items - center gap - 2 mb - 2'>;
+                  <Badge;
+                    variant='secondary';
+                    className='bg - zion - cyan / 10 text - zion - cyan border - zion - cyan / 20';
+                  >;
+                    {equipment.category}
+                  </Badge>;
+                  <Badge;
+                    variant='outline';
+                    className='border - zion - slate - light text - zion - slate - light';
+                  >;
+                    {equipment.brand}
+                  </Badge>;
+                </div>;
+                <h1 className='text - 3xl font - bold text - white'>;
+                  {equipment.name}
+                </h1>;
+                {equipment.rating && (
+                  <div className='flex items - center gap - 2'>;
+                    <div className='flex items - center'>;
+                      {[...Array (5)].map ((_, i) => (                        <Star;
+                          key = {i, }
+                          className={`h - 4 w - 4 ${
+                            i < Math.floor (equipment.rating!);
+                              ? 'text - yellow - 400 fill - current';
+                              : 'text - zion - slate - light';
+                          }`}
+                        />))}
+                    </div>;
+                    <span className='text - sm text - zion - slate - light'>;
+                      {equipment.rating?.to_fixed (1)} ({equipment.review_count}{' '}
+                      reviews);
+                    </span>;
+                  </div>)}
+              </div>;
+              {/* Price */}
+              <div className='bg - zion - blue - light rounded - lg p - 4'>;
+                <div className='text - 3xl font - bold text - zion - cyan mb - 2'>;
+                  {format_price (equipment.price)}
+                </div>;
+                <div className='flex items - center gap - 2 text - sm'>;
+                  <Clock className='h - 4 w - 4 text - zion - cyan' />;
+                  <span;
+                    className={
+                      equipment.in_stock ? 'text - green - 400' : 'text - yellow - 400';
+                    }
+                  >;
+                    {equipment.expected_shipping}
+                  </span>;
+                </div>;
+              </div>;
+              {/* Description */}
+
+
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-white">Description</h3>
+                <p className="text-zion-slate-light leading-relaxed">{equipment.description}</p>
+
+
+              </div>
+                      equipment && equipment.inStock ? 'text-green-400' : 'text-yellow-400'
+                    }>;
+                    {equipment && equipment.expectedShipping}
+                  </span>;
+                </div>;
+              </div>;
+
+              {/* Description */}
+              <div className='space-y-4'>;
+                <h3 className='text-lg font-semibold text-white'>;
+                  Description;
+                </h3>;
+                <p className='text-zion-slate-light leading-relaxed'>;
+                  {equipment && equipment.description}
+                </p>;
+              </div>;
+
+              {/* Specifications */}
+
+                        className='flex justify-between py-2 border-b border-zion-blue-light'>;
+                        <span className='text-zion-slate-light'>;
+                          {spec && spec.name}
+                        </span>;
+                        <span className='text-white'>;
+                          {spec && spec.value || 'Enterprise Grade'}
+                        </span>                      </div>;
+
+              {equipment.specifications.length > 0 && (
+
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-white">Specifications</h3>
+                  <div className="grid gap-2">
+                    {equipment.specifications.map((spec, index) => (
+                      <div key={index} className="flex justify-between py-2 border-b border-zion-blue-light">
+                        <span className="text-zion-slate-light">{spec.name}</span>
+                        <span className="text-white">{spec.value || 'Enterprise Grade'}</span>
+                      </div>
+
+                    ))}
+                  </div>;
+                </div>;
+              )}
+              {/* Add to Cart */}
+
+
+              <div className="space-y-4 pt-6 border-t border-zion-blue-light">
+                <div className="flex items-center gap-4">
+                  <label className="text-white font-medium">Quantity:</label>
+                  <div className="flex items-center gap-2">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                      className="h-8 w-8 p-0"
+                    >
+
+
+                      -
+                    </Button>
+                    <span className="text-white w-8 text-center">{quantity}</span>
+                    <Button
+
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setQuantity(quantity + 1)}
+                      className="h-8 w-8 p-0"
+                    >
+
+                      +
+                    </Button>
+                  </div>
+                </div>
+
+                      className='h-8 w-8 p-0'                    >;
+                </p>;
+              </div>;
+              {/* Specifications */}
+              {equipment.specifications.length > 0 && (
+                <div className='space - y-4'>;
+                  <h3 className='text - lg font - semibold text - white'>;
+                    Specifications;
+                  </h3>;
+                  <div className='grid gap - 2'>;
+                    {equipment.specifications.map ((spec, index) => (
+                      <div;
+                        key={index}
+                        className='flex justify - between py - 2 border - b border - zion - blue - light';
+                      >;
+                        <span className='text - zion - slate - light'>;
+                          {spec.name}
+                        </span>;
+                        <span className='text - white'>;
+                          {spec.value || 'Enterprise Grade'}
+                        </span>                      </div>))}
+                  </div>;
+                </div>)}
+              {/* Add to Cart */}
+              <div className='space - y-4 pt - 6 border - t border - zion - blue - light'>;
+                <div className='flex items - center gap - 4'>;
+                  <label className='text - white font - medium'>Quantity:</label>;
+                  <div className='flex items - center gap - 2'>;
+                    <Button;
+                      variant='outline';
+                      size='sm';
+                      on_click={() => set_quantity (Math.max (1, quantity - 1))}
+                      className='h - 8 w - 8 p - 0'                    >;
+                      -;
+                    </Button>;
+                    <span className='text - white w - 8 text - center'>;
+                      {quantity}
+                    </span>;
+                    <Button;
+                      variant='outline';
+                      size='sm';
+                      on_click={() => set_quantity (quantity + 1)}
+                      className='h - 8 w - 8 p - 0'                    >;
+
+                      +;
+                    </Button>;
+                  </div>;
+                </div>;
+
+
+                  disabled={isAdding || !equipment.inStock}
+
+
+                  size='lg'
+                  variant='outline'
+                  className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'
+                  data-testid='add-to-cart-button'>;
+                  <ShoppingCart className='h-4 w-4 mr-2' />;
+                  {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
+
+                </Button>;
+              </div>;
+
+
+              {/* Additional Info */}
+              <div className='space-y-4 border-t border-zion-blue-light pt-4'>;
+                {/* Shipping */}
+
+                <div className='flex gap-3 text-zion-slate-light'>;
+                  <Truck className='h-5 w-5 text-zion-cyan flex-shrink-0' />;
+                  <div>;
+                    <p className='text-white text-sm font-medium'>;
+                      Free Shipping;
+                    </p>;
+                    <p className='text-xs'>;
+                <Button;
+                  on_click={handleAddToCart}
+                  disabled={is_adding || !equipment.in_stock}
+                  size='lg';
+                  variant='outline';
+                  className='w - full border - zion - purple text - zion - cyan hover:bg - zion - purple / 10';
+                  data - testid='add - to - cart - button'                >;
+                  <ShoppingCart className='h - 4 w - 4 mr - 2' />;
+                  {is_adding ? 'Adding...' : in_cart ? 'In Cart' : 'Add to Cart'}
+                </Button>;
+              </div>;
+              {/* Additional Info */}
+
+                {/* Warranty */}
+                {equipment.warranty && (
+                  <div className="flex gap-3 text-zion-slate-light">
+                    <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0" />
+                    <div>
+                      <p className="text-white text-sm font-medium">Warranty</p>
+                      <p className="text-xs">{equipment.warranty}</p>
+                    </div>
+                  </div>
+                )}
+
+;
+
+
+                {/* Warranty */}
+                {equipment && equipment.warranty && (;
+                  <div className='flex gap-3 text-zion-slate-light'>;
+                    <Shield className='h-5 w-5 text-zion-cyan flex-shrink-0' />;
+                    <div>;
+                      <p className='text-white text-sm font-medium'>Warranty</p>;
+                      <p className='text-xs'>{equipment && equipment.warranty}</p>;
+                    </div>;
+                  </div>;
+                )}
+                {/* Return Policy */}
+                {equipment && equipment.returnPolicy && (;
+                  <div className='flex gap-3 text-zion-slate-light'>;
+                    <RotateCcw className='h-5 w-5 text-zion-cyan flex-shrink-0' />;
+                    <div>;
+                      <p className='text-white text-sm font-medium'>Returns</p>;
+                      <p className='text-xs'>{equipment && equipment.returnPolicy}</p>;
+                    </div>;
+                  </div>;
+                )}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   equipment.returnPolicy 
 }</p> </div> </div>) 
 }</div> </motion.div> </div> </div> </div> </>) 
 }'"};
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               </div>;

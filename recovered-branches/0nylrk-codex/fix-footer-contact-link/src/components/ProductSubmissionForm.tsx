@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -14,6 +18,7 @@ import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
 import {AIListingGenerator} from "@/components/listing/AIListingGenerator";
 import {Sparkles} from "lucide-react";
+<<<<<<< HEAD
 import React from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -48,6 +53,32 @@ import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 import { Sparkles } from "lucide-react";
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator",
 import { Sparkles } from "lucide-react",
+=======
+// Define the form schema with zod;
+const productSchema = z && z.object({;
+  title: z && z.string().min(3, "Title must be at least 3 characters");
+  description: z && z.string().min(10, "Description must be at least 10 characters");
+  price: z && z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {;
+    message: "Price must be a valid number"}),;
+  category: z && z.string().min(1, "Please select a category");
+  image: z && z.instanceof(File).optional(),;
+  tags: z && z.string().optional()}),;
+
+// Type for our form values;
+type ProductFormValues = z && z.infer<typeof productSchema>;
+
+export function ProductSubmissionForm() {;
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = React && React.useState(false);
+  const [imagePreview, setImagePreview] = React && React.useState(null as string | null);
+  const [activeTab, setActiveTab] = React && React.useState("manual");
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Define the form schema with zod
 
 const productSchema = z.object({
@@ -127,6 +158,7 @@ export function ProductSubmissionForm() {
   },
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
   // Apply AI-generated content to the form
   const handleApplyGenerated = (content: any) => {
     form.setValue("description", content.description),
@@ -243,6 +275,8 @@ export function ProductSubmissionForm() {;
   const [isSubmitting, setIsSubmitting] = React.useState(false),;
   const [imagePreview, setImagePreview] = React.useState(null as string | null),;
   const [activeTab, setActiveTab] = React.useState("manual"),;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Initialize the form;
   const form = useForm<ProductFormValues>({;
     resolver: zodResolver(productSchema),;
@@ -264,6 +298,7 @@ export function ProductSubmissionForm() {;
         variant: "destructive"})
       return
     }
+<<<<<<< HEAD
   },;
   // Apply AI-generated content to the form;
   const handleApplyGenerated = (content: any) => {;
@@ -331,6 +366,34 @@ export function ProductSubmissionForm() {;
           .eq('id', productRecord.id),;
         if (updateError) {;
           throw new Error(updateError.message);
+=======
+
+
+    setIsSubmitting(true),
+    
+
+
+    try {
+      // Create the product listing
+      const productData = {
+        title: values.title
+        description: values.description
+        price: parseFloat(values.price)
+        category: values.category
+        currency: "USD", // Default currency
+        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [];
+        author: {
+          name: user.displayName |"Anonymous Creator"
+          id: user.id}
+        createdAt: new Date().toISOString()}
+      const { data: productRecord, error: productError } = await supabase
+        .from('product_listings')
+        .insert([productData])
+        .select('id')
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
       }
       
@@ -676,6 +739,12 @@ if ( {) {
                   <FormMessage />;
 
                 </FormItem>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               )}
 
             />;

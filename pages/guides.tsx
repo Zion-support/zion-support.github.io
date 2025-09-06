@@ -17,6 +17,7 @@ import Layout from "./components/Layout";
 origin/main
 origin/automation-improvements-final
 import {
+<<<<<<< HEAD
   BookOpen
   Clock
   User
@@ -214,6 +215,10 @@ import {
   SleepyFace2
   YawningFace2
   DizzyFace2
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   BookOpen,
   Clock,
   User,
@@ -411,8 +416,14 @@ import {
   SleepyFace2,
   YawningFace2,
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   DizzyFace2,;
+=======
+
+  DizzyFace2,;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "lucide-react";
 const guides = [
 

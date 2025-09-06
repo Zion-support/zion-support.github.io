@@ -170,6 +170,7 @@ import {
 import Head from 'next / head';
 import Link from 'next / link';
 import {
+<<<<<<< HEAD
   Cpu
   Gauge
   GitBranch
@@ -184,6 +185,11 @@ import {
   Link2
   Palette
   LineChart;
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Cpu,
   Gauge,
   GitBranch,
@@ -209,12 +215,20 @@ import {
 =======
   Palette,;
   LineChart,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';import { motion, useScroll, useSpring } from 'framer-motion';import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 export default function MainFrontIndex() {;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function MainFrontIndex() {
   const { scrollYProgress } = useScroll();
   const progressX = useSpring(scrollYProgress, {
@@ -423,6 +437,12 @@ export default function MainFrontIndex() {
 
         </nav>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Mobile overlay menu */}
         {mobileOpen && (;
           <motion&& motion.div
@@ -435,6 +455,11 @@ export default function MainFrontIndex() {
 
             onClick={() => setMobileOpen(false)}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -444,9 +469,13 @@ export default function MainFrontIndex() {
               className='mx-auto mt-20 w-[92%] max-w-md rounded-2xl border border-white/10 bg-white/5 p-6 text-white shadow-xl'
               onClick={e => e.stopPropagation()}
 
+<<<<<<< HEAD
             >
               <div className='mb-4 flex items-center justify-between'>
                 <div className='text-lg font-semibold'>Navigate</div>
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <button
                   aria-label='Close menu'
                   onClick={() => setMobileOpen(false)}
@@ -1004,6 +1033,7 @@ export default function MainFrontIndex() {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
@@ -1024,6 +1054,10 @@ export default function MainFrontIndex() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+      {/* Hero */}
+      <div role="main" className="relative z-10">
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -1384,7 +1418,11 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
                   Open <span aria-hidden>→</span>
                 </div>
 
+<<<<<<< HEAD
               </a>
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </Link>
             <Link href='#capabilities'>
               <a className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo'>
@@ -1682,7 +1720,10 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
           viewport={{ once: true, amount: 0 && 0.2 }}
           transition={{ duration: 0 && 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="engines"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -1971,7 +2012,10 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
           viewport={{ once: true, amount: 0 && 0.2 }}
           transition={{ duration: 0 && 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="innovations"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -2122,6 +2166,7 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
                 <p className="mt - 1 text - sm text - white / 75">{card.desc}</p>;
                 {card.external ? (
 
+<<<<<<< HEAD
               </article>
             ))}
           </div>
@@ -2134,6 +2179,11 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}          id="netlify-automations"
           transition={{ duration: 0.5 }}
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -2365,11 +2415,111 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
                 </a>
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </Link>
             ))}
           </div>
         </motion.section>
 
+<<<<<<< HEAD
+=======
+
+          viewport={{ once: true, amount: 0 && 0.2 }}
+          transition={{ duration: 0 && 0.5 }}
+          className='mx-auto max-w-7xl px-6 pb-14'>;
+          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;
+            Feature Spotlight;
+          </h2>;
+          <p className='mx-auto mt-2 max-w-3xl text-center text-sm text-white/70'>;
+            A quick tour of the most impactful capabilities — each card links to;
+            a deep dive.;
+          </p>;
+          <div className='mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3'>;
+            {[;
+              {;
+                Icon: Rocket,;
+                title: 'Automation Hub',;
+                desc: 'Factories, agents, and live workflows',;
+                href: '/automation',;
+              },;
+              {;
+                Icon: Search,;
+                title: 'AI SEO Auditor',;
+                desc: 'Continuous on‑site SEO improvements',;
+                href: '/reports/seo',;
+              },;
+              {;
+                Icon: Gauge,;
+                title: 'Site Health',;
+                desc: 'A11y, performance, and link integrity',;
+                href: '/site-health',;
+              },;
+              {;
+                Icon: Globe,;
+                title: 'AI Trends Radar',;
+                desc: 'Signals that inspire new automations',;
+                href: '/reports/ai-trends',;
+              },;
+              {;
+                Icon: GitBranch,;
+                title: 'Main Sync',;
+                desc: 'Safe, incremental diffs shipped continuously',;
+                href: '/automation',;
+              },;
+              {;
+                Icon: ShieldCheck,;
+                title: 'Guardrails',;
+                desc: 'Defense‑in‑depth quality gates',;
+                href: '/site-health',;
+              },;
+            ].map(({ Icon, title, desc, href }) => (;
+              <Link key={title} href={href}>;
+                <a className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo'>;
+                  <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />;
+                  <div className='flex items-center gap-2'>;
+                    <Icon className='h-5 w-5 text-cyan-300' />;
+                    <h3 className='text-lg font-semibold'>{title}</h3>;
+                  </div>;
+                  <p className='mt-1 text-sm text-white/75'>{desc}</p>;
+                  <div className='mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90'>;
+                    Open <span aria-hidden>→</span>;
+                  </div>                </a>        >;
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Feature Spotlight</h2>;
+          <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A quick tour of the most impactful capabilities — each card links to a deep dive.</p>;
+          <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">;
+            {[;
+              { Icon: Rocket, title: 'Automation Hub', desc: 'Factories, agents, and live workflows', href: '/automation' },;
+              { Icon: Search, title: 'AI SEO Auditor', desc: 'Continuous on‑site SEO improvements', href: '/reports/seo' },;
+              { Icon: Gauge, title: 'Site Health', desc: 'A11y, performance, and link integrity', href: '/site-health' },;
+              { Icon: Globe, title: 'AI Trends Radar', desc: 'Signals that inspire new automations', href: '/reports/ai-trends' },;
+              { Icon: GitBranch, title: 'Main Sync', desc: 'Safe, incremental diffs shipped continuously', href: '/automation' },;
+              { Icon: ShieldCheck, title: 'Guardrails', desc: 'Defense‑in‑depth quality gates', href: '/site-health' }].map(({ Icon, title, desc, href }) => (;
+              <Link key={title} href={href}>;
+                <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo">;
+                  <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
+                  <div className="flex items-center gap-2">;
+                    <Icon className="h-5 w-5 text-cyan-300" />;
+                    <h3 className="text-lg font-semibold">{title}</h3>;
+                  </div>;
+                  <p className="mt-1 text-sm text-white/75">{desc}</p>;
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>→</span></div>;
+                </a>;
+              </Link>;
+            ))}
+          </div>;
+        </motion && motion.section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* AUTO-GENERATED: FRONT_ADS_START */}
 
 
@@ -2404,6 +2554,7 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -2411,6 +2562,9 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Outcome‑Focused Benefits
@@ -2552,6 +2706,14 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
                   <span className="text-sm text-white/80"><span className="font-semibold text-white">{b.label}</span> — {b.desc} <span className="ml-1 text-cyan-300/90">→</span></span>
                 </a>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </Link>
             ))}
           </div>
@@ -2635,10 +2797,14 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -2646,6 +2812,8 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Suites */}
         <motion&& motion.section
           id='suites'          initial={{ opacity: 0, y: 24 }}
@@ -2662,6 +2830,12 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
           className='mx-auto max-w-7xl px-6 pb-14'          id="suites"
           className='mx-auto max-w-7xl px-6 pb-14'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 
@@ -2894,6 +3068,12 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
           </div>
         </motion.section>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Superpowers */}
         <motion.section
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -2903,7 +3083,11 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
 
+<<<<<<< HEAD
         >
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Superpowers
           </h2>
@@ -3051,6 +3235,7 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
           </div>
         </motion.section>
 
+<<<<<<< HEAD
         {/* Get Started */}
         <motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -3060,6 +3245,59 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
           className='mx-auto max-w-7xl px-6 pb-14'
 
         >
+=======
+          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;
+            Superpowers;
+          </h2>;
+          <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-3'>;
+            {[;
+              {;
+                Icon: Rocket,;
+                title: 'Generative Factories',;
+                desc: 'Spins up domain‑specific automation factories that build for you.',;
+              },;
+              {;
+                Icon: ShieldCheck,;
+                title: 'Safety by Design',;
+                desc: 'Layered validations — type checks, builds, a11y, links, and more.',;
+              },;
+              {;
+                Icon: GitBranch,;
+                title: 'Main Sync',;
+                desc: 'Small, reviewable edits committed and pushed continuously.',;
+              },;
+            ].map(({ Icon, title, desc }) => (;
+              <article
+                key={title}
+                className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover'>;
+                <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />;
+                <Icon className='h-6 w-6 text-cyan-300' />;
+                <h3 className='mt-3 text-lg font-semibold'>{title}</h3>;
+                <p className='mt-1 text-sm text-white/75'>{desc}</p>              </article>              { Icon: Rocket, title: 'Generative Factories', desc: 'Spins up domain‑specific automation factories that build for you.' },;
+              { Icon: ShieldCheck, title: 'Safety by Design', desc: 'Layered validations — type checks, builds, a11y, links, and more.' };
+              { Icon: GitBranch, title: 'Main Sync', desc: 'Small, reviewable edits committed and pushed continuously.' }].map(({ Icon, title, desc }) => (;
+              <article key={title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover">;
+                <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" />;
+                <Icon className="h-6 w-6 text-cyan-300" />;
+                <h3 className="mt-3 text-lg font-semibold">{title}</h3>;
+                <p className="mt-1 text-sm text-white/75">{desc}</p>;
+            ))}
+          </div>;
+        </motion && motion.section>;
+
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        {/* Get Started */}
+        <motion&& motion.section
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Get Started in Minutes
           </h2>
@@ -3144,6 +3382,10 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
           className='mx-auto max-w-7xl px-6 pb-14'          id="features"
           className='mx-auto max-w-7xl px-6 pb-14'
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 
@@ -3693,6 +3935,12 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
 
                 </a>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -3700,6 +3948,19 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
           </div>
         </motion.section>
 
+<<<<<<< HEAD
+=======
+          </div>;
+        </motion && motion.section>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Outcomes */}
         <motion&& motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -3708,7 +3969,11 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
 
+<<<<<<< HEAD
         >
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Outcomes
           </h2>
@@ -3749,6 +4014,12 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
 
                       </a>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </Link>
                   ))}
               </div>
@@ -3807,10 +4078,13 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 
@@ -3818,8 +4092,11 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Feature Map */}
         <motion.section
           id="feature-map"
@@ -4259,12 +4536,16 @@ className="mx-auto max-w-7xl px-6 pt-10 pb-16 md:pt-16 md:pb-24"
           id='modules'          id="feature-map"
           id='modules'
 
+<<<<<<< HEAD
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-16'
 
+=======
+          className="mx-auto max-w-7xl px-6 pb-14"
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Platform Modules
@@ -4959,6 +5240,7 @@ label: 'Live Dashboards',
         </motion.section>
         {/* AUTO: catalog injection for automated advertising */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         {
           /* AUTO:FRONT_INDEX_DIRECTORY_START */
@@ -5027,6 +5309,11 @@ label: 'Live Dashboards',
           </div>
         </motion.section>
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Neural Feature Matrix */}
         <motion&& motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -5035,6 +5322,7 @@ label: 'Live Dashboards',
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -5042,6 +5330,9 @@ label: 'Live Dashboards',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Neural Feature Matrix
@@ -5678,9 +5969,21 @@ label: 'Live Dashboards',
             ))}
             )}          </div>
 
+<<<<<<< HEAD
           </div>
         </motion.section>
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          </div>
+        </motion.section>
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Extended Feature Directory */}
         <motion&& motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -5689,6 +5992,7 @@ label: 'Live Dashboards',
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -5696,6 +6000,9 @@ label: 'Live Dashboards',
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Extended Feature Directory
@@ -5999,6 +6306,7 @@ label: 'Live Dashboards',
                 </Link>
               )
             ))}
+<<<<<<< HEAD
 =======
             )}          </div>
 
@@ -6007,6 +6315,8 @@ label: 'Live Dashboards',
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
         </motion.section>
 <<<<<<< HEAD
@@ -6075,11 +6385,21 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             )}          </div>
 
           </div>
         </motion.section>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Capability Deep Links */}
         <motion&& motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -6088,6 +6408,7 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-16'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -6095,6 +6416,9 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Capability Deep Links
@@ -6369,10 +6693,103 @@ className='group relative overflow-hidden rounded-2xl border border-white/10 bg-
 
         </motion.section>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Use Cases */}
         <motion&& motion.section
           id='use-cases'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+
+                Icon: Activity,
+                title: 'Health Monitors',
+                desc: 'A11y, links, and performance monitored 24 / 7.',
+                href: '/site - health',
+              },
+              {
+                Icon: Cpu,
+                title: 'Zero - Ops Runtime',
+                desc: 'Fully managed cloud execution with no servers.',
+                href: '/automation',
+              },
+              {
+                Icon: Globe,
+                title: 'Intelligence Signals',
+                desc: 'AI + cloud trend tracking fueling new ideas.',
+                href: '/reports / ai - trends',
+              },
+            ].map (({ Icon, title, desc, href, external }) =>;
+              external ? (
+                <a;
+                  key={title}
+                  href={href as string}
+                  target='_blank';
+                  rel='noopener';
+                  className='group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover neon - ring';
+                >;
+                  <div className='pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100' />;
+                  <div className='flex items - center gap - 3'>;
+                    <Icon className='h - 5 w - 5 text - cyan - 300' />;
+                    <h3 className='text - lg font - semibold'>{title}</h3>;
+                  </div>;
+                  <p className='mt - 1 text - sm text - white / 75'>{desc}</p>;
+                  <div className='mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90'>;
+                    Open <span aria - hidden>↗</span>;
+                  </div>;
+                </a>) : (
+                <Link key={title} href={href as string}>;
+                  <a className='group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover neon - ring'>;
+                    <div className='pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100' />;
+                    <div className='flex items - center gap - 3'>;
+                      <Icon className='h - 5 w - 5 text - cyan - 300' />;
+                      <h3 className='text - lg font - semibold'>{title}</h3>;
+                    </div>;
+                    <p className='mt - 1 text - sm text - white / 75'>{desc}</p>;
+                    <div className='mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90'>;
+                      Open <span aria - hidden>→</span>;
+                    </div>;
+                  </a>;
+                </Link>))}          </div>        >;
+          <h2 className="text - center text - 2xl font - bold tracking - wide text - white / 90">Extended Feature Directory</h2>;
+          <p className="mx - auto mt - 2 max - w-3xl text - center text - sm text - white / 70">A broader tour of autonomous capabilities. Each card links to the relevant hub, report, or live workflow.</p>;
+          <div className="mt - 6 grid grid - cols - 1 gap - 5 sm:grid - cols - 2 lg:grid - cols - 3">;
+            {[;
+              { Icon: GitBranch, title: 'Automated Changelogs', desc: 'AI - authored CHANGELOG with continuous updates.', href: '/newsroom', external: true },
+              { Icon: Rocket, title: 'Content Curation', desc: 'Homepage promos and deep links generated on the fly.', href: '/newsroom' },
+              { Icon: Search, title: 'Deep Site Index', desc: 'Smarter internal linking and content discovery.', href: '/newsroom' },
+              { Icon: ShieldCheck, title: 'Policy & Compliance', desc: 'Safety rails and audits before changes ship.', href: '/site - health' },
+              { Icon: BarChart3, title: 'Impact Dashboards', desc: 'Real - time visibility into outcomes and ROI.', href: '/site - health' },
+              { Icon: Layers, title: 'Factories Library', desc: 'Composable building blocks for new automations.', href: '/automation' },
+              { Icon: Activity, title: 'Health Monitors', desc: 'A11y, links, and performance monitored 24 / 7.', href: '/site - health' },
+              { Icon: Cpu, title: 'Zero - Ops Runtime', desc: 'Fully managed cloud execution with no servers.', href: '/automation' },
+              { Icon: Globe, title: 'Intelligence Signals', desc: 'AI + cloud trend tracking fueling new ideas.', href: '/reports / ai - trends' }].map (({ Icon, title, desc, href, external }) => (
+              external ? (
+                <a key={title} href={href as string} target="_blank" rel="noopener noreferrer" className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover neon - ring">;
+                  <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" />;
+                  <div className="flex items - center gap - 3"><Icon className="h - 5 w - 5 text - cyan - 300" /><h3 className="text - lg font - semibold">{title}</h3></div>;
+                  <p className="mt - 1 text - sm text - white / 75">{desc}</p>;
+                  <div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90">Open <span aria - hidden>↗</span></div>;
+                </a>) : (
+                <Link key={title} href={href as string}>;
+                  <a className="group relative overflow - hidden rounded - 2xl border border - white / 10 bg - gradient - to - br from - white / 10 to - white / 5 p - 6 backdrop - blur - xl hover:border - cyan - 400 / 30 tilt - on - hover neon - ring">;
+                    <div className="pointer - events - none absolute -inset - px -z - 10 bg - gradient - to - r from - fuchsia - 500 / 0 via - cyan - 400 / 10 to - fuchsia - 500 / 0 opacity - 0 blur - 2xl transition - opacity group - hover:opacity - 100" />;
+                    <div className="flex items - center gap - 3"><Icon className="h - 5 w - 5 text - cyan - 300" /><h3 className="text - lg font - semibold">{title}</h3></div>;
+                    <p className="mt - 1 text - sm text - white / 75">{desc}</p>;
+                    <div className="mt - 3 inline - flex items - center gap - 1 text - xs text - cyan - 300 / 90">Open <span aria - hidden>→</span></div>;
+                  </a>;
+                </Link>)))}
+          </div>;
+        </motion.section>;
+        {/* Capability Deep Links */}
+        <motion.section;
+          initial={{ opacity: 0, coordinate_y: 24 }}
+          whileInView={{ opacity: 1, coordinate_y: 0 }}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="use-cases"
@@ -6755,6 +7172,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
                 </Link>
               )
             ))}
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -6766,6 +7184,11 @@ className="mx-auto max-w-7xl px-6 pb-14"
         </motion.section>
 
 <<<<<<< HEAD
+=======
+          </div>
+        </motion.section>
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   className='rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover:border-cyan-400/30'>;
                   <div className='text-2xl font-extrabold tracking-tight'>;
                     {item && item.value}
@@ -6817,6 +7240,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
 
 
 =======
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -6828,11 +7252,18 @@ className="mx-auto max-w-7xl px-6 pb-14"
           id='capabilities'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="capabilities"
           className='mx-auto max-w-7xl px-6 pb-14'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -7012,11 +7443,159 @@ className="mx-auto max-w-7xl px-6 pb-14"
 
                 </a>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </Link>
             ))}
           </div>
         </motion.section>
 
+<<<<<<< HEAD
+=======
+          viewport={{ once: true, amount: 0 && 0.2 }}
+          transition={{ duration: 0 && 0.5 }}
+          className='mx-auto max-w-7xl px-6 pb-14'>;
+          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;
+            Capabilities;
+          </h2>;
+          <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-3'>;
+            {[;
+              {;
+                Icon: Palette,;
+                title: 'Design Evolution',;
+                desc: 'Autonomously beautifies UI with consistent, futuristic patterns.',;
+                href: '/newsroom',;
+              },;
+              {;
+                Icon: BarChart3,;
+                title: 'Performance & A11y',;
+                desc: 'Optimizes bundles, assets, and accessibility with continuous checks.',;
+                href: '/site-health',;
+              },;
+              {;
+                Icon: LineChart,;
+                title: 'Content & SEO',;
+                desc: 'Curates content, updates promos, and tunes metadata for reach.',;
+                href: '/reports/seo',;
+              },;
+              {;
+                Icon: Layers,;
+                title: 'Code Quality & Refactors',;
+                desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.',;
+                href: '/automation',;
+              },;
+              {;
+                Icon: Gauge,;
+                title: 'Observability & Reports',;
+                desc: 'Artifacts, dashboards, and live logs for every automation.',;
+                href: '/site-health',;
+              },;
+              {;
+                Icon: Globe,;
+                title: 'Intelligence Signals',;
+                desc: 'AI + cloud trend tracking to spark new factory ideas.',;
+                href: '/reports/ai-trends',;
+              },;
+              {;
+                Icon: GitBranch,;
+                title: 'Repo Sync to Main',;
+                desc: 'Small, safe diffs merged continuously for momentum.',;
+                href: '/automation',;
+              },;
+              {;
+                Icon: ShieldCheck,;
+                title: 'Guardrails & Policy',;
+                desc: 'Organization‑wide safety rules enforced automatically.',;
+                href: '/site-health',;
+              },;
+              {;
+                Icon: Cpu,;
+                title: 'Zero‑Ops Cloud',;
+                desc: 'Fully managed cloud execution with no servers to babysit.',;
+                href: '/automation',;
+              },;
+              {;
+                Icon: Activity,;
+                title: 'Automated Dependencies',;
+                desc: 'Minor/patch upgrades proposed and merged safely.',;
+                href: '/automation',;
+              },;
+              {;
+                Icon: Search,;
+                title: 'Broken Link Defender',;
+                desc: 'Continuously scans and fixes link integrity issues.',;
+                href: '/site-health',;
+              },;
+              {;
+                Icon: LineChart,;
+                title: 'Experimentation',;
+                desc: 'Automate A/B setups and monitor telemetry automatically.',;
+                href: '/automation',;
+              },;
+              {;
+                Icon: Palette,;
+                title: 'Design Tokens & Theming',;
+                desc: 'Enforce consistent theming, spacing, and motion.',;
+                href: '/newsroom',;
+              },;
+              {;
+                Icon: Gauge,;
+                title: 'Image Pipeline',;
+                desc: 'Optimize and transform media assets automatically.',;
+                href: '/site-health',;
+              },;
+            ].map(({ Icon, title, desc, href }) => (;
+              <Link key={title} href={href}>;
+                <a className='relative block overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30'>;
+                  <div className='absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-400/10 blur-2xl' />;
+                  <div className='flex items-center gap-2'>;
+                    <Icon className='h-5 w-5 text-cyan-300' />;
+                    <h3 className='text-lg font-semibold'>{title}</h3>;
+                  </div>;
+                  <p className='mt-1 text-sm text-white/75'>{desc}</p>                </a>        >;
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities</h2>;
+          <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">;
+            {[;
+              { Icon: Palette, title: 'Design Evolution', desc: 'Autonomously beautifies UI with consistent, futuristic patterns.', href: '/newsroom' },;
+              { Icon: BarChart3, title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.', href: '/site-health' },;
+              { Icon: LineChart, title: 'Content & SEO', desc: 'Curates content, updates promos, and tunes metadata for reach.', href: '/reports/seo' },;
+              { Icon: Layers, title: 'Code Quality & Refactors', desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.', href: '/automation' },;
+              { Icon: Gauge, title: 'Observability & Reports', desc: 'Artifacts, dashboards, and live logs for every automation.', href: '/site-health' },;
+              { Icon: Globe, title: 'Intelligence Signals', desc: 'AI + cloud trend tracking to spark new factory ideas.', href: '/reports/ai-trends' },;
+              { Icon: GitBranch, title: 'Repo Sync to Main', desc: 'Small, safe diffs merged continuously for momentum.', href: '/automation' },;
+              { Icon: ShieldCheck, title: 'Guardrails & Policy', desc: 'Organization‑wide safety rules enforced automatically.', href: '/site-health' },;
+              { Icon: Cpu, title: 'Zero‑Ops Cloud', desc: 'Fully managed cloud execution with no servers to babysit.', href: '/automation' },;
+              { Icon: Activity, title: 'Automated Dependencies', desc: 'Minor/patch upgrades proposed and merged safely.', href: '/automation' },;
+              { Icon: Search, title: 'Broken Link Defender', desc: 'Continuously scans and fixes link integrity issues.', href: '/site-health' },;
+              { Icon: LineChart, title: 'Experimentation', desc: 'Automate A/B setups and monitor telemetry automatically.', href: '/automation' },;
+              { Icon: Palette, title: 'Design Tokens & Theming', desc: 'Enforce consistent theming, spacing, and motion.', href: '/newsroom' },;
+              { Icon: Gauge, title: 'Image Pipeline', desc: 'Optimize and transform media assets automatically.', href: '/site-health' }].map(({ Icon, title, desc, href }) => (;
+              <Link key={title} href={href}>;
+                <a className="relative block overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30">;
+                  <div className="absolute right-0 top-0 h-24 w-24 rounded-bl-[4rem] bg-cyan-400/10 blur-2xl" />;
+                  <div className="flex items-center gap-2">;
+                    <Icon className="h-5 w-5 text-cyan-300" />;
+                    <h3 className="text-lg font-semibold">{title}</h3>;
+                  </div>;
+                  <p className="mt-1 text-sm text-white/75">{desc}</p>;
+                </a>;
+              </Link>;
+            ))}
+          </div>;
+        </motion && motion.section>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Why Zion */}
         <motion&& motion.section
 =======
@@ -7037,7 +7616,11 @@ className="mx-auto max-w-7xl px-6 pb-14"
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'
 
+<<<<<<< HEAD
         >
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Why Zion
           </h2>
@@ -7170,10 +7753,15 @@ className="mx-auto max-w-7xl px-6 pb-14"
 =======
 
 
+<<<<<<< HEAD
             ))}
           </div>
         </motion.section>
 
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Value Pillars */}
         <motion&& motion.section
           id='pillars'          initial={{ opacity: 0, y: 24 }}
@@ -7190,6 +7778,12 @@ className="mx-auto max-w-7xl px-6 pb-14"
           className='mx-auto max-w-7xl px-6 pb-14'          id="pillars"
           className='mx-auto max-w-7xl px-6 pb-14'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 
@@ -7359,6 +7953,12 @@ className="mx-auto max-w-7xl px-6 pb-14"
 
                 </a>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </Link>
             ))}
           </div>
@@ -7438,10 +8038,14 @@ className="mx-auto max-w-7xl px-6 pb-14"
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -7449,6 +8053,8 @@ className="mx-auto max-w-7xl px-6 pb-14"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Benefits */}
         <motion&& motion.section
           id='benefits'          initial={{ opacity: 0, y: 24 }}
@@ -7458,6 +8064,13 @@ className="mx-auto max-w-7xl px-6 pb-14"
           className='mx-auto max-w-7xl px-6 pb-20'          id="benefits"
           className='mx-auto max-w-7xl px-6 pb-20'
 
+<<<<<<< HEAD
+=======
+
+        {/* Benefits */}
+        <motion.section
+          id="benefits"
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -7635,6 +8248,12 @@ className="mx-auto max-w-7xl px-6 pb-14"
           </div>
         </motion.section>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Benefits in Practice */}
         <motion.section
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -7644,6 +8263,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-16'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -7651,6 +8271,9 @@ className="mx-auto max-w-7xl px-6 pb-14"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Benefits in Practice
@@ -8084,7 +8707,10 @@ className="mx-auto max-w-7xl px-6 pb-14"
           viewport={{ once: true, amount: 0 && 0.2 }}
           transition={{ duration: 0 && 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-14'          id="reports"
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -8197,6 +8823,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
               <div className="mt-3 text-xs text-cyan-300/90">Docs →</div>
 
+<<<<<<< HEAD
             </a>
           </div>
         </motion.section>
@@ -8207,6 +8834,11 @@ className="mx-auto max-w-7xl px-6 pb-14"
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           className='mx-auto max-w-7xl px-6 pb-16'          id="guardrails"
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -8347,6 +8979,13 @@ className="mx-auto max-w-7xl px-6 pb-14"
         <motion&& motion.section
 =======
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -8442,6 +9081,12 @@ className="mx-auto max-w-7xl px-6 pb-14"
 
                 </a>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -8449,6 +9094,19 @@ className="mx-auto max-w-7xl px-6 pb-14"
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+          </div>;
+        </section>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* CTA */}
         <motion&& motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -8761,6 +9419,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
 
         {/* AI Agents Gallery */}
         <motion.section
+<<<<<<< HEAD
           id='agents'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -8768,6 +9427,10 @@ className="mx-auto max-w-7xl px-6 pb-14"
           className='mx-auto max-w-7xl px-6 pb-14'          id="agents"
           className='mx-auto max-w-7xl px-6 pb-14'
 
+=======
+          id="agents"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 
@@ -8870,6 +9533,12 @@ className="mx-auto max-w-7xl px-6 pb-14"
 
                 </a>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </Link>
             ))}
           </div>
@@ -8968,10 +9637,14 @@ className="mx-auto max-w-7xl px-6 pb-14"
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -8979,6 +9652,8 @@ className="mx-auto max-w-7xl px-6 pb-14"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Capabilities Matrix */}
         <motion&& motion.section
           id='capability-matrix'          initial={{ opacity: 0, y: 24 }}
@@ -8995,6 +9670,12 @@ className="mx-auto max-w-7xl px-6 pb-14"
           className='mx-auto max-w-7xl px-6 pb-16'          id="capability-matrix"
           className='mx-auto max-w-7xl px-6 pb-16'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 
@@ -9242,6 +9923,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
                 </Link>
               )
             ))}
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -9249,6 +9931,8 @@ className="mx-auto max-w-7xl px-6 pb-14"
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
         </motion.section>
 
@@ -9319,6 +10003,9 @@ className="mx-auto max-w-7xl px-6 pb-14"
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -9329,6 +10016,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -9336,6 +10024,8 @@ className="mx-auto max-w-7xl px-6 pb-14"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Benefits Directory */}
         <motion&& motion.section
           id='benefits-directory'          initial={{ opacity: 0, y: 24 }}
@@ -9352,6 +10042,12 @@ className="mx-auto max-w-7xl px-6 pb-14"
           className='mx-auto max-w-7xl px-6 pb-16'          id="benefits-directory"
           className='mx-auto max-w-7xl px-6 pb-16'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 
@@ -9515,11 +10211,25 @@ className="mx-auto max-w-7xl px-6 pb-14"
 
                 </a>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </Link>
             ))}
           </div>
         </motion.section>
+<<<<<<< HEAD
         {/* AUTO-GENERATED: FRONT_ADS_START */}
+=======
+
+
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         {/* AUTO-GENERATED: FRONT_ADS_START */}
 
@@ -9822,11 +10532,18 @@ className="mx-auto max-w-7xl px-6 pb-14"
           className='mx-auto max-w-7xl px-6 pb-14'          </div>;
         </section>;
  {/* AUTO-GENERATED: FRONT_ADS_END */}
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Feature Highlights (new) */}
         <motion.section
           id="feature-highlights"
           className='mx-auto max-w-7xl px-6 pb-14'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -9834,6 +10551,9 @@ className="mx-auto max-w-7xl px-6 pb-14"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -9966,12 +10686,26 @@ className="mx-auto max-w-7xl px-6 pb-14"
           </div>
         </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           {/* existing reports content */}
         </section>
 
         {/* New Intelligent Automations */}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>
 =======
           </div>;
@@ -10096,6 +10830,7 @@ className="mx-auto max-w-7xl px-6 pb-14"
           aria-label='Scroll to top'        >
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -10103,6 +10838,8 @@ className="mx-auto max-w-7xl px-6 pb-14"
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           ↑ Top
         </button>
@@ -10110,6 +10847,12 @@ className="mx-auto max-w-7xl px-6 pb-14"
     </div>
   );
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /* AUTO-GENERATED: FRONT_ACTIONS_START */
 <section className='mx-auto max-w-7xl px-6 pb-14'>
   <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -10281,9 +11024,16 @@ className="mx-auto max-w-7xl px-6 pb-14"
   </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 </section>;
+<<<<<<< HEAD
 /* AUTO-GENERATED: FRONT_ACTIONS_END */
 }</div>
 }</div> </div> </div>) )
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> 
 }</div> </div> </div>) ) 
 }</div> </div> </motion.section> {
@@ -10296,19 +11046,37 @@ className="mx-auto max-w-7xl px-6 pb-14"
   /* Autonomous Innovations */
 }<motion.section > </a> <a href="/.netlify/functions/revenue-ideas-lab" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" ><LineChart className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold" >Revenue Ideas Lab</h3></div> <p className="mt-1 text-sm text-white/75" >Monetization experiments with safe, automatic repository sync.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Open <span aria-hidden>→</span></div> </a> <a href="/.netlify/functions/autonomous-invention-orchestrator" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover holo" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" ><Rocket className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold" >Autonomous Invention Orchestrator</h3></div> <p className="mt-1 text-sm text-white/75" >Continuously invents and applies front enhancements.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Open <span aria-hidden>→</span></div> </a> </div> </motion.section> </a>) )
 }</div> </section>) : (<Link href= {
+<<<<<<< HEAD
   card.href as string
 }><a className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline" >Open</a></a>
 }</article>) )
   card.href as string 
 }><a className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline" >Open</a></a>
 }</article>) ) 
+=======
+
+
+  card.href as string 
+}><a className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline" >Open</a></a>
+}</article>) ) 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> </section> {
   /* Netlify Automations */
 }<motion.section <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-lg font-semibold"> {
   f.label
 }</div> <div className="mt-1 text-sm text-white/75"> {
+<<<<<<< HEAD
   f.desc
   f.desc 
+=======
+
+
+  f.desc 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Trigger <span aria-hidden>↗</span></div>
 }</div> </motion.section> </a> <a href="/.netlify/functions/autonomous-invention-orchestrator" target="blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-lg font-semibold" >Autonomous Invention Orchestrator</div> <div className="mt-1 text-sm text-white/75" >Invents and curates fresh automations and safely syncs diffs to main.</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90" >Trigger <span aria-hidden>↗</span></div> </a> </div> </section> {
   /* Feature Spotlight */
@@ -10337,8 +11105,16 @@ className="mx-auto max-w-7xl px-6 pb-14"
 }<motion.section > <h2 className="text-center text-2xl font-bold tracking-wide text-white/90" >Feature Map</h2> <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70" > A fast overview of what you can explore right now across the platform. </p> <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-base font-semibold"> {
   item.label
 }</div> <div className="mt-1 text-sm text-white/75"> {
+<<<<<<< HEAD
   item.desc
   item.desc 
+=======
+
+
+  item.desc 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
 }</div> </motion.section> {
   /* AUTO: catalog injection for automated advertising */
@@ -10352,24 +11128,48 @@ className="mx-auto max-w-7xl px-6 pb-14"
 }<motion.section <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-base font-semibold"> {
   item.label
 }</div> <div className="mt-1 text-sm text-white/75"> {
+<<<<<<< HEAD
   item.desc
   item.desc 
+=======
+
+
+  item.desc 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
 }</div> </motion.section> {
   /* Extended Feature Directory */
 }<motion.section <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-3"><Icon className="h-5 w-5 text-cyan-300" /><h3 className="text-lg font-semibold"> {
   title
 }</h3></div> <p className="mt-1 text-sm text-white/75"> {
+<<<<<<< HEAD
   desc
   desc 
+=======
+
+
+  desc 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
 }</div> </motion.section> {
   /* Capability Deep Links */
 }<motion.section <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-violet-400/10 to-cyan-400/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-base font-semibold"> {
   label as string
 }</div> <div className="mt-1 text-sm text-white/75"> {
+<<<<<<< HEAD
   desc as string
   desc as string 
+=======
+
+
+  desc as string 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
 }</div> </motion.section> {
   /* Use Cases */
@@ -10383,8 +11183,16 @@ className="mx-auto max-w-7xl px-6 pb-14"
 }> <a className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover:border-cyan-400/30" > <div className="text-2xl font-extrabold tracking-tight" > {
   item.value
 }</div> <div className="mt-1 text-xs text-white/70" > {
+<<<<<<< HEAD
   item.label
   item.label 
+=======
+
+
+  item.label 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div>
 }</div> </motion.section> {
   /* Capabilities */
@@ -10396,10 +11204,19 @@ className="mx-auto max-w-7xl px-6 pb-14"
   /* Value Pillars */
 }<motion.section </a> </a>) )
 }</div> </motion.section> {
+<<<<<<< HEAD
   /* Benefits */
 }<motion.section </a> </a>) )
   /* Benefits */ 
 }<motion.section </a> </a>) ) 
+=======
+
+
+  /* Benefits */ 
+}<motion.section </a> </a>) ) 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> </div> </div>
 }</div> </motion.section> {
   /* Benefits in Practice */
@@ -10410,12 +11227,22 @@ className="mx-auto max-w-7xl px-6 pb-14"
 }> <a className="group flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md hover:border-cyan-400/30" > <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0 0 12px rgba (52, 211, 153, 0.9) ]" /> <span className="text-sm text-white/80" ><span className="font-semibold text-white" > {
   b.label
 }</span> — {
+<<<<<<< HEAD
   b.desc
 }<span className="ml-1 text-cyan-300/90" >→</span></span>
 }</div> </motion.section> </a> </a>) )
   b.desc 
 }<span className="ml-1 text-cyan-300/90" >→</span></span>
 }</div> </motion.section> </a> </a>) ) 
+=======
+
+
+  b.desc 
+}<span className="ml-1 text-cyan-300/90" >→</span></span>
+}</div> </motion.section> </a> </a>) ) 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> </section> {
   /* Ecosystem & Integrations */
 }<motion.section > <h2 className="text-center text-2xl font-bold tracking-wide text-white/90" >Ecosystem & Integrations</h2> <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4" > <a href="/site-health" target="blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 tilt-on-hover" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="flex items-center gap-2" > <Rocket className="h-5 w-5 text-cyan-300" /> <h3 className="text-lg font-semibold" >GitHub Actions</h3> </div> <p className="mt-1 text-sm text-white/75" >Live pipelines, logs, and artifacts powering automations.</p> <div className="mt-3 text-xs text-cyan-300/90" >Open →</div> </a> </div> <p className="mt-1 text-sm text-white/75" >Zero‑ops hosting and functions for maintenance schedules.</p> <div className="mt-3 text-xs text-cyan-300/90" >Learn more →</div> </a> </div> <p className="mt-1 text-sm text-white/75" >Realtime data and storage for emerging automation needs.</p> <div className="mt-3 text-xs text-cyan-300/90" >Explore →</div> </a> </div> <p className="mt-1 text-sm text-white/75" >Futuristic micro‑interactions and motion design system.</p> <div className="mt-3 text-xs text-cyan-300/90" >Docs →</div> </a> </div> </motion.section> {
@@ -10440,8 +11267,16 @@ className="mx-auto max-w-7xl px-6 pb-14"
 }<motion.section <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <div className="text-base font-semibold"> {
   item.title
 }</div> <div className="mt-1 text-sm text-white/75"> {
+<<<<<<< HEAD
   item.desc
   item.desc 
+=======
+
+
+  item.desc 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90">Open <span aria-hidden>↗</span></div>
 }</div> </motion.section> {
   /* Benefits Directory */
@@ -11097,6 +11932,11 @@ className="mx-auto max-w-7xl px-6 pb-14"
 }</div> </motion.section> </a>) ) 
 }</div> </section> </div> > ↑ Top </button>) 
 }</div>) 
+<<<<<<< HEAD
 }/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */
 }/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */
 }/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

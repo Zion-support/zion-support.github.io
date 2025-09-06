@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useEffect, useState } from 'react';
 export default function WhitepaperPreview() {
@@ -8,6 +9,8 @@ export default function WhitepaperPreview() {
 import { useRouter  } from 'next/router';
 import { useEffect, useState } from 'react';
 export default function WhitepaperPreview() {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -15,6 +18,12 @@ import {useRouter} from 'next/router';
 import {useEffect, useState} from 'react';
 
 export default function WhitepaperPreview() {;
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useRouter } from 'next/router',
 import { useEffect, useState } from 'react',
 export default function WhitepaperPreview() {
@@ -22,6 +31,7 @@ export default function WhitepaperPreview() {
   const { id } = router.query,
   const [markdown, setMarkdown] = useState<string>(''),
   const [notFound, setNotFound] = useState(false),
+<<<<<<< HEAD
   useEffect(() => {
     if (!id || Array.isArray(id)) return,
     // Simple client fetch from a volatile in-memory store endpoint (for demo we echo in query)
@@ -85,12 +95,16 @@ export default function WhitepaperPreview(req, res) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   useEffect(() => {
     if (!id |Array.isArray(id)) return;
     // Simple client fetch from a volatile in-memory store endpoint (for demo we echo in query)
     // In a production app, this would fetch from a real DB.
     fetch(`/api/whitepaper/get?id=${id}`)
 
+<<<<<<< HEAD
   return (
     <div className='container mx-auto px-4 py-6'>
       <h1 className='text-xl font-semibold mb-4'>Whitepaper Preview</h1>
@@ -99,6 +113,9 @@ export default function WhitepaperPreview(req, res) {
 );
 
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   useEffect(() => {;
     if (!id || Array && Array.isArray(id)) return;
     // Simple client fetch from a volatile in-memory store endpoint (for demo we echo in query);
@@ -139,3 +156,11 @@ if (
     return () {
   $2
 }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

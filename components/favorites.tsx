@@ -8,6 +8,7 @@ import { TALENT_PROFILES } from '../data/talent';
 
   const storageKey = 'zion_favorites';
   const [favorites, setFavorites] = useState<string[]>([]);
+<<<<<<< HEAD
   useEffect(() => {
     try {
       const raw = localStorage.getItem(storageKey);
@@ -24,6 +25,10 @@ export default function FavoritesPage() {;
     () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
     [favorites]
   );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <div>
@@ -203,6 +208,9 @@ function FavoritesPage() {
         </nav>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     </div>;
@@ -255,5 +263,8 @@ function FavoritesPage() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

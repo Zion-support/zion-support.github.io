@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -7,26 +8,43 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function SharedInbox() {
   // Mock messages
 
   const messages = [
     {
+<<<<<<< HEAD
       id: "msg-1"
       from: "John Smith"
       subject: "Interview Scheduled"
       preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm."
       timestamp: "2h ago"
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       id: "msg-1",
       from: "John Smith",
       subject: "Interview Scheduled",
       preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm.",
       timestamp: "2h ago",
+<<<<<<< HEAD
       unread: true;
     };
       unread: true
     }
     },
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       id: "msg-2"
       from: "Talent Support"
@@ -47,6 +65,7 @@ export function SharedInbox() {
   ],
 
   return (
+<<<<<<< HEAD
     <Card>
       <CardHeader>
         <div className="flex items-center justify-between">
@@ -87,6 +106,13 @@ export function SharedInbox() {
     </Card>
   )
 }
+=======
+
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -191,7 +217,15 @@ export function SharedInbox() {;
           </button>;
         </div>;
       </CardContent>;
+<<<<<<< HEAD
     </Card>;
   );
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

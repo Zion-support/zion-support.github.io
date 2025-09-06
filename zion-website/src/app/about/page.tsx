@@ -50,6 +50,9 @@ const values = [
     icon: ShieldCheckIcon}
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     name: 'Research Excellence',
     description: 'Our team of world - class researchers drives breakthrough discoveries and innovations.',
@@ -81,10 +84,13 @@ export default /**
  */
 function AboutPage() {
 
+<<<<<<< HEAD
 export default function AboutPage() {;
   return (;
     <div className=&quot;bg-black&quot;>
 export default function AboutPage() {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="bg-black">
       {/* Hero section */}
@@ -447,6 +453,11 @@ export default function AboutPage() {
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Leadership</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             Meet Our Team
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -482,6 +493,7 @@ export default function AboutPage() {
         </div>;
       </div>;
       {/* CTA section */}
+<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
           <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
@@ -492,6 +504,18 @@ export default function AboutPage() {
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+=======
+
+
+
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             Join us in shaping the future
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

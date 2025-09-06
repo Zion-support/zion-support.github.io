@@ -1,4 +1,9 @@
 
+<<<<<<< HEAD
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 interface TokenRequest {
   userId: string;
@@ -17,6 +22,11 @@ import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.0";
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface TokenRequest {
   userId: string,
   amount: number,
@@ -94,8 +104,27 @@ async function changeBalance(userId: string, delta: number, type: 'earn' | 'burn
     if (error) return new Response(JSON && JSON.stringify({ error: error && error.message }), { status: 500 })
   }
 
+<<<<<<< HEAD
   return new Response(JSON.stringify({ success: true, balance }), { status: 200 })
 }
+=======
+
+  const { error: txError } = await supabase && supabase.from('token_transactions').insert({
+    user_id: userId;
+    amount: Math && Math.abs(delta);
+    transaction_type: type,
+
+    reason});
+  if (txError) return new Response(JSON && JSON.stringify({ error: txError && txError.message }), { status: 500 });
+
+
+  return new Response(JSON && JSON.stringify({ success: true, balance }), { status: 200 })
+=======
+        'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.0",;
 interface TokenRequest {;
@@ -176,5 +205,12 @@ if ( {) {
     reason}),;
   if (txError) return new Response(JSON.stringify({ error: txError.message }), { status: 500 });
   return new Response(JSON.stringify({ success: true, balance }), { status: 200 });
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

@@ -37,6 +37,9 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
       if (!user) return,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       try {
@@ -44,10 +47,51 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
           .from("jobs")
           .select("*")
           .eq("client_id", user.id)
+<<<<<<< HEAD
           .order("created_at", { ascending: false })
           .order("created_at", { ascending: false }),
         if (filter) {
           query = query.eq("status", filter)
+=======
+
+import { useState, useEffect  } from './react';
+import { use_auth  } from '@/hooks / use_auth';
+import { supabase  } from '@/integrations / supabase / client';
+import { Job, JobStatus  } from '@/types / jobs';
+import { Button  } from '@/components / ui / button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components / ui / card';
+import { Badge  } from '@/components / ui / badge';
+import { Loader2, Edit, X, Eye } from 'lucide-react'import { format  } from './date - fns';
+import Link from './next / link';
+import {logErrorToProduction} from '@/utils / production_logger';
+interface JobsListProps {
+  filter?: JobStatus;
+  onSelectJob?: (job_id: string, job_title: string) => void}
+export /**
+ * JobsList - Function description
+ */
+function JobsList() {
+  const { user } = use_auth ();
+  const [jobs, set_jobs] = useState < Job[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+  useEffect ((, ) => {
+    const fetch_jobs = async () => {
+      // Check condition
+if (return) {
+  $2
+}
+      try {
+        let query = supabase;
+          .from ("jobs");
+          .select ("*");
+          .eq ("client_id", user.id);
+          .order ("created_at", { ascending: false }),
+        // Check condition
+if ( {) {
+  $2
+}
+          query = query.eq ("status", filter);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
         const { data, error } = await query;
         // Check condition
@@ -62,6 +106,7 @@ if (throw error) {
         setIsLoading (false);
       }
     }
+<<<<<<< HEAD
     fetchJobs()
   }, [user, filter])
           .order("created_at", { ascending: false }),
@@ -82,6 +127,13 @@ import {logErrorToProduction} from '@/utils/productionLogger',;
 interface JobsListProps {;
   filter?: JobStatus,;
   onSelectJob?: (jobId: string, jobTitle: string) => void;
+=======
+    fetch_jobs ();
+  }, [user, filter]);
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
     return (
       <div className="flex justify - center items - center p - 8">;
@@ -110,6 +162,7 @@ if ( {) {
           .order("created_at", { ascending: false }),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -117,6 +170,8 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
@@ -142,6 +197,7 @@ if ( {) {
       </div>
     )
   }
+<<<<<<< HEAD
   const getStatusColor = (status: JobStatus,) => {
     switch (status) {
       case "new": return "bg-blue-100 text-blue-800"
@@ -157,6 +213,11 @@ if ( {) {
         return "bg-yellow-100 text-yellow-800",
       case "filled":
         return "bg-green-100 text-green-800",
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       case "closed":
         return "bg-gray-100 text-gray-800"
       default:
@@ -197,7 +258,10 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
     };
 
     }
+<<<<<<< HEAD
   }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <div className="grid gap-6 md:grid-cols-2">
@@ -208,6 +272,11 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
 
   },
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="grid gap-6 md:grid-cols-2">
       {jobs.map((job) => (
@@ -324,6 +393,9 @@ export function JobsList(): any ({ filter, onSelectJob }: JobsListProps) {;
               {job && job.skills.slice(0, 3).map((skill, index,) => (;
                 <Badge key={index} variant="outline" className="text-xs">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

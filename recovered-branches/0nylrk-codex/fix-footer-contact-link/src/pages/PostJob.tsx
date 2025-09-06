@@ -1,10 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Header} from "@/components/header";
 import {Footer} from "@/components/Footer";
 import {JobPostingForm} from "@/components/jobs";
@@ -14,6 +17,7 @@ import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 import {useIsMobile} from "@/hooks/use-mobile";
 export default function PostJob() {;
+<<<<<<< HEAD
   const { isAuthenticated, isLoading } = useAuth();
   const isMobile = useIsMobile();
 import { Header } from "@/components/header",
@@ -25,6 +29,9 @@ import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 export default function PostJob() {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { isAuthenticated, isLoading } = useAuth();
 
   const isMobile = useIsMobile();
@@ -43,6 +50,7 @@ export default function PostJob() {
     )
   }
   return (
+<<<<<<< HEAD
     <>
       <SEO
         title="Post a Job | Zion AI Marketplace"
@@ -68,6 +76,12 @@ export default function PostJob() {
     </>
   )
 }
+=======
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Header } from "@/components/header",;
 import { Footer } from "@/components/Footer",;
 import { JobPostingForm } from "@/components/jobs",;
@@ -147,8 +161,16 @@ if ( {) {
       </main>;
       <Footer />;
       {/* Add extra bottom padding on mobile to account for the bottom nav */}
+<<<<<<< HEAD
       {isMobile && <div className="h-16"></div>}
     </>;
   );
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 import {
@@ -394,6 +395,9 @@ export default function UltraFuturisticNavigation2033() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   Phone,
   Mail,
@@ -423,6 +427,11 @@ import {
   Menu, X, Search, ChevronDown, Home, Briefcase, 
   DollarSign, BookOpen, Users, MessageCircle
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {
   Phone
@@ -954,6 +963,10 @@ export default function UltraFuturisticNavigation2033() {
 
 
 export default function UltraFuturisticNavigation2033() {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isOpen, setIsOpen] = useState(false);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -1074,6 +1087,12 @@ export default function UltraFuturisticNavigation2033() {;
 
                 </button>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Mega Menu */}
                 <AnimatePresence>;
                   {activeCategory === 'services' && (;
@@ -1086,6 +1105,7 @@ export default function UltraFuturisticNavigation2033() {;
                       onMouseLeave={() => setActiveCategory(null)}
                       className='absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1093,6 +1113,9 @@ export default function UltraFuturisticNavigation2033() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     >
                       <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
                         {serviceCategories.map(category => (
@@ -1271,6 +1294,7 @@ export default function UltraFuturisticNavigation2033() {;
 
                                   </div>
 
+<<<<<<< HEAD
                                 </Link>
                               ))}
                             </div>
@@ -1278,6 +1302,20 @@ export default function UltraFuturisticNavigation2033() {;
                         ))}
                       </div>
                     </motion.div>
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                                </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                              ))}
+                            </div>;
+                          </div>;
+                        ))}
+                      </div>;
+                    </motion && motion.div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   )}
 
                 </AnimatePresence>;
@@ -1289,12 +1327,16 @@ export default function UltraFuturisticNavigation2033() {;
 
                 <Link
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   key={link && link.name}
                   href={link && link.href}
                   className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
 
 
               ))}
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
@@ -1311,6 +1353,8 @@ export default function UltraFuturisticNavigation2033() {;
               ))}
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Contact Button */}
               <motion&& motion.div
                 whileHover={{ scale: 1 && 1.05 }}
@@ -1318,6 +1362,7 @@ export default function UltraFuturisticNavigation2033() {;
                 <Link
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1343,11 +1388,14 @@ export default function UltraFuturisticNavigation2033() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Quick Links */}
               {quickLinks.map(link => (
                 <Link
                   key={link.name}
                   href={link.href}
+<<<<<<< HEAD
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >              {quickLinks.map((link) => (
                 <Link
                   key={link.name}
@@ -1356,10 +1404,21 @@ export default function UltraFuturisticNavigation2033() {;
                   {link.name}
                 </Link>
               ))}
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
 
                 >
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {link.name}
                 </Link>
               ))}
@@ -1393,6 +1452,11 @@ export default function UltraFuturisticNavigation2033() {;
 
             {/* Mobile Menu Button */}
             <div className='lg:hidden'>;
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Mobile Menu Button */}
             <div className="lg:hidden">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1414,6 +1478,22 @@ export default function UltraFuturisticNavigation2033() {;
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
+
+              </button>;
+            </div>;
+          </div>;
+        </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -1424,8 +1504,12 @@ export default function UltraFuturisticNavigation2033() {;
               transition={{ duration: 0.3 }}
               className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20'
 
+<<<<<<< HEAD
             >
               <div className='px-4 py-6 space-y-6'>
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Mobile Services */}
                 <div className='space-y-4'>;
                   <h3 className='text-lg font-semibold text-white'>Services</h3>;
@@ -1483,16 +1567,43 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
                   ))}
                 </div>
 
+<<<<<<< HEAD
+=======
+                </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Mobile Quick Links */}
 
 
                     ))}
+<<<<<<< HEAD
                   </div>
                 </div>
+=======
+
+                  </div>;
+                </div>;
+=======
+
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Mobile Contact Button */}
                 <div className='pt-4'>
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <Link
                     href='/contact'
                     onClick={closeMenu}
@@ -1648,6 +1759,11 @@ className="block text-sm text-gray-400 hover:text-cyan-400 transition-colors"
 }</div> </div>) ) 
 }</div>) ) 
 }</div> </div> > Get Started </a> </div> </div> </motion.div>) 
+<<<<<<< HEAD
 }</AnimatePresence> </nav> </>)
 }</AnimatePresence> </nav> </>) }
 }</AnimatePresence> </nav> </>)
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

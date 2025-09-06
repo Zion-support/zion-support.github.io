@@ -50,6 +50,7 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
     setPriceRange([values[0] || 0, values[1] || 500])
   },
 
+<<<<<<< HEAD
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -79,6 +80,8 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
   const handleChange = (values: number[]) => {
     setPriceRange([values[0] |0, values[1] |500])
   }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -99,6 +102,9 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
       
       {expanded && (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
@@ -133,6 +139,9 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
           <Slider;
             aria-label="Hourly rate range";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             value={[priceRange[0], priceRange[1]]}
             min={50}
@@ -140,10 +149,14 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             step={5}
             onValueChange={handleChange}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     </div>;
   );
+<<<<<<< HEAD
 };
 }
 <<<<<<< HEAD
@@ -163,15 +176,23 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             className="mt-6"
           />
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
   )
 }
     </div>;
+=======
+    </div>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 };
 }

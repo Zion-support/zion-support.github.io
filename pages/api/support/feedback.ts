@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { readJson, writeJson } from '../../../utils/fsDb',;
 ;
@@ -12,6 +13,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(200).json({ ok: true });
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { readJson, writeJson } from '../../../utils/fsDb';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -22,6 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   feedback.push({ articleId, helpful, ts: Date.now() })
   writeJson('support/feedback.json', feedback)
 
+<<<<<<< HEAD
   return res.status(200).json({ ok: true })
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -50,3 +58,7 @@ export default async function handler(req, res) {
   }
 }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

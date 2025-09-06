@@ -1,4 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   connectOrbit,
   appendChatMessage,
@@ -6,6 +12,11 @@ import {
   editConstitution,;
 } from '@/utils/offworld/orbitdb';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {
   connectOrbit
@@ -14,10 +25,19 @@ import {
   editConstitution;
 } from '@/utils/offworld/orbitdb';
 export default async function handler(
+<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
   req: NextApiRequest,
   res: NextApiResponse;
+=======
+
+
+  req: NextApiRequest,
+  res: NextApiResponse;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 =======
   req: NextApiRequest,

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState} from "react";
 import {MessageSquare} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -15,6 +16,10 @@ import { Button } from "@/components/ui/button",
 import { ChatAssistant } from "@/components/ChatAssistant",
 export function ChatAssistantTrigger() {
   const [isOpen, setIsOpen] = useState(false),
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   // Handle sending messages to the AI chat assistant
 
@@ -78,6 +83,12 @@ export function ChatAssistantTrigger() {;
     <>;
 
       <Button;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         onClick={() => setIsOpen(true)}
 
         size="icon";

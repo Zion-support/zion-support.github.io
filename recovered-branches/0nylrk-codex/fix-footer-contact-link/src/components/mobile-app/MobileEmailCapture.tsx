@@ -1,8 +1,14 @@
 
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
+=======
+import React, { useState } from './react';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const MobileEmailCapture: React.FC = () => {
   const [email, set_email] = useState ("");
   const [is_submitting, setIsSubmitting] = useState (false);
@@ -43,6 +49,7 @@ if (return) {
       await new Promise(resolve => setTimeout(resolve, 1000));
       setIsSuccess(true);
       setEmail("");
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -50,6 +57,22 @@ export const MobileEmailCapture: React.FC = () => {;
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+=======
+
+      setTimeout(() => {;
+        setIsSuccess(false);
+      }, 5000);
+    } catch (error) {;
+      console && console.error("Error subscribing:", error);
+    } finally {;
+      setIsSubmitting(false);
+
+    }
+  }
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -82,6 +105,7 @@ export const MobileEmailCapture: React.FC = () => {
   }
   },
 
+<<<<<<< HEAD
   return (
     <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">
       <div className="container mx-auto px-4">
@@ -146,6 +170,12 @@ export const MobileEmailCapture: React.FC = () => {;
     }
   };
   return (;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">;
       <div className="container mx-auto px-4">;
         <div className="max-w-3xl mx-auto text-center">;
@@ -218,6 +248,14 @@ export const MobileEmailCapture: React.FC = () => {;
           </p>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </section>;
   );
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

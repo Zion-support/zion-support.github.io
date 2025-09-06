@@ -26,6 +26,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Button } from '@/components/ui/button'
 import { toast } from '@/hooks/use-toast'
 import { Share, Users } from 'lucide-react'
+<<<<<<< HEAD
 import { useRouter } from 'next/router', // Changed from useNavigate
 import {
   Card
@@ -35,6 +36,8 @@ import {
   CardTitle
 } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useRouter } from 'next/router'; // Changed from useNavigate
 
 
@@ -90,6 +93,9 @@ export default function ReferralsPage() {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <div className="container max-w-7xl py-10">
 
 
@@ -145,6 +151,9 @@ export default function ReferralsPage() {
   const router = useRouter(), // Changed from navigate
   const { isAuthenticated } = useAuth(),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   const {
@@ -155,6 +164,7 @@ export default function ReferralsPage() {
     stats,
     getReferralLink,
     copyReferralLink,
+<<<<<<< HEAD
     shareOnSocialMedia,
   } = useReferrals()
   useEffect(() => {
@@ -192,6 +202,8 @@ export default function ReferralsPage() {
         <Button className='flex items-center gap-2' onClick={copyReferralLink}>
           <Share className='h-4 w-4' />          Share Referral Link    <div className="container max-w-7xl py-10">
     shareOnSocialMedia} = useReferrals(),
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">
@@ -252,6 +264,9 @@ export default function ReferralsPage() {
               <TabsTrigger value="referrals" className="flex items-center gap-2">
                 <Users className="h-4 w-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -266,6 +281,9 @@ export default function ReferralsPage() {
               <ReferralTable referrals={referrals} isLoading={isLoading} />
             </TabsContent>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -279,6 +297,9 @@ export default function ReferralsPage() {
 
         <div className="space-y-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -290,6 +311,7 @@ export default function ReferralsPage() {
 <<<<<<< HEAD
 
   )
+<<<<<<< HEAD
 }, [isAuthenticated, router]), //Changed navigate to router in dependencies return (<div className="container max-w-7xl py-10" > <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4" > <div> <h1 className="text-3xl font-bold tracking-tight" >Referral Program</h1> <p className="text-muted-foreground mt-1" > Invite others to Zion AI Marketplace and earn rewards </p> </div> Share Referral Link </Button> </div> <ReferralStats stats= {
   stats
 }isLoading= {
@@ -306,6 +328,11 @@ export default function ReferralsPage() {
 ;
 <<<<<<< HEAD
 
+=======
+
+;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
 import { useReferrals } from '@/hooks/useReferrals',;

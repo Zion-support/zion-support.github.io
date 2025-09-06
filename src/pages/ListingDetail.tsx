@@ -15,10 +15,13 @@ export default function ListingDetail() {;
   const { user } = useAuth();
   const { formatPrice } = useCurrency();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { useCurrency } from '@/hooks/useCurrency';
 export default function ListingDetail() {
@@ -191,6 +194,7 @@ export default function ListingDetail() {;
   },
 
   return (
+<<<<<<< HEAD
     <>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
@@ -206,6 +210,10 @@ export default function ListingDetail() {;
                       className="object-cover"
                       fallbackSrc="/placeholder.svg"
                     />
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
                       <span className="text-zion-slate-light">No image available</span>
@@ -218,6 +226,9 @@ export default function ListingDetail() {;
                 {listing.images && listing.images.length > 1 && (
                   <div className="flex p-4 gap-2 overflow-x-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                     {listing.images.map((image, index) => (
@@ -226,8 +237,14 @@ export default function ListingDetail() {;
                         onClick={() => setSelectedImageIndex(index)}
 
                         className={cn(
+<<<<<<< HEAD
                           'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2'
                           'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2',
+=======
+
+                          'w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2',
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           index === selectedImageIndex
                             ? 'border-zion-purple'
                             : 'border-transparent'                        )}                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
@@ -258,6 +275,10 @@ export default function ListingDetail() {;
                           src={image}
                           alt={`${listing.title} - image ${index + 1}`}
                           className="object-cover"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           fallbackSrc="/placeholder.svg"
                         />
                       </div>
@@ -274,6 +295,9 @@ export default function ListingDetail() {;
                 <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
                 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -373,6 +397,7 @@ export default function ListingDetail() {;
                 {/* Features */}
 
 
+<<<<<<< HEAD
 =======
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -398,6 +423,8 @@ export default function ListingDetail() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         <h4 className="font-medium text-white">Enterprise Security</h4>
                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
                       </div>
@@ -551,6 +578,11 @@ export default function ListingDetail() {;
                     {listing.category}
                   </Badge>
                   {listing.featured && (
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">
                       Featured
                     </Badge>
@@ -564,6 +596,9 @@ export default function ListingDetail() {;
                   <div className="flex items-center gap-2 mb-6">
                     <div className="flex items-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -571,8 +606,15 @@ export default function ListingDetail() {;
                         <Star
                           key={i}
                           className={cn(
+<<<<<<< HEAD
                             'h-5 w-5'
                             'h-5 w-5',
+=======
+
+
+                            'h-5 w-5',
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             i < Math.floor(listing.rating!)
 
                               ? 'text-zion-cyan fill-zion-cyan'
@@ -613,6 +655,9 @@ export default function ListingDetail() {;
                     <span className="text-sm text-zion-slate-light">
                       {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -656,14 +701,21 @@ export default function ListingDetail() {;
                     </div>
                   ) : (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     <div className="text-2xl font-bold text-white">
                       Custom Pricing
                     </div>
                   )}
+<<<<<<< HEAD
                 </div>
                 {/* Action Buttons */}
                 <div className='space-y-3 mb-8'>
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </div>;
 
 
@@ -671,6 +723,7 @@ export default function ListingDetail() {;
                 {/* Action Buttons */}
                 <div className='space-y-3 mb-8'>                ;
                 {/* Action Buttons */}
+<<<<<<< HEAD
 =======
                   )}
 <<<<<<< HEAD
@@ -738,6 +791,8 @@ export default function ListingDetail() {;
                           description: "Redirecting to secure checkout..."
                         })
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <div className="space-y-3 mb-8">;
                   {listing && listing.price !== null ? (;
                     <PaymentButton
@@ -996,6 +1051,9 @@ export default function ListingDetail() {;
                 </div>
                 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1008,6 +1066,7 @@ export default function ListingDetail() {;
                         <ImageWithRetry
                           src={listing.author.avatarUrl}
                           alt={listing.author.name}
+<<<<<<< HEAD
                           className='object-cover'
                           onError={e => {
                             const target = e.target as HTMLImageElement;
@@ -1017,6 +1076,8 @@ export default function ListingDetail() {;
                         />
                       </div>
                     ) : (                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1024,6 +1085,9 @@ export default function ListingDetail() {;
                           onError={(e) => {
                             const target = e.target as HTMLImageElement,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1068,6 +1132,9 @@ export default function ListingDetail() {;
 
                     <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                       <p className="font-medium text-white">{listing.author.name}</p>
@@ -1077,6 +1144,9 @@ export default function ListingDetail() {;
                 </div>
                 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 {/* Additional Info */}
@@ -1287,6 +1357,9 @@ export default function ListingDetail() {;
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           <DialogHeader>
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
@@ -1295,6 +1368,9 @@ export default function ListingDetail() {;
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             profileType="service"

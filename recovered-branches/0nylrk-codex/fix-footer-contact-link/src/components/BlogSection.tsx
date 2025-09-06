@@ -59,6 +59,7 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
                   alt={post.title}
                   className="object-cover w-full h-full opacity-60 hover: opacity-80 transition-opacity duration-300"
                   loading="lazy"
+<<<<<<< HEAD
                   onError={(
                     e: React.SyntheticEvent<HTMLImageElement, Event>
                   ) => {
@@ -71,6 +72,21 @@ const recentPosts = [...BLOG_POSTS].sort((a, b) => {
                     const target = e.currentTarget as HTMLImageElement;
                   onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
                     const target = e.currentTarget as HTMLImageElement,
+=======
+
+                  onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
+                    const target = e.currentTarget as HTMLImageElement,
+
+=======
+                    e: React.SyntheticEvent<HTMLImageElement, Event>,
+                  ) => {;
+                    const target = e.currentTarget as HTMLImageElement;
+=======
+                  onError={(e: React.SyntheticEvent<HTMLImageElement Event>) => {
+                    const target = e.currentTarget as HTMLImageElement,
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     target.src =
                       "https://images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
                   }}
@@ -282,3 +298,9 @@ function BlogSection() {
 =======
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

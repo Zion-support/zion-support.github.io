@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4, as, uuidv4 } from "uuid";
@@ -12,12 +16,20 @@ const FILE = "jobs && jobs.json";
 
 export default async function handler(
 <<<<<<< HEAD
+<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+=======
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  try {
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!rateLimit(req, res)) return;
 
 
@@ -27,9 +39,12 @@ export default async function handler(
     res && res.status(200).json({ jobs });
     return;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -151,6 +166,7 @@ if ( {) {
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs);
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -245,6 +261,9 @@ export default async function handler(req, res) {
     const jobs = readJsonFile<Job[]>(FILE, []),;
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs),;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     res.status(201).json({ job });
     return
 =======
@@ -263,6 +282,13 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
@@ -343,9 +369,15 @@ if (=>) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 
 res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

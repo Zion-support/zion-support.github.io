@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { X, Cookie, Settings } from "lucide-react";
 export default function CookieConsent() {
@@ -5,6 +6,11 @@ export default function CookieConsent() {
 export default function CookieConsent() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+
+export default function CookieConsent() {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isVisible, setIsVisible] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
   const [preferences, setPreferences] = useState({;

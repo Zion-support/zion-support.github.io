@@ -1,5 +1,6 @@
 
 import React from 'react';
+<<<<<<< HEAD
 import { Navigate  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
 import { useTenantAdminStatus  } from '@/hooks/useWhitelabelTenant';
@@ -11,10 +12,23 @@ import {Navigate} from 'react-router-dom';
 
 export interface ProtectedRouteProps {
   children: React.ReactNode,;
+=======
+
+
+
+
+import {Navigate} from 'react-router-dom';
+
+export interface ProtectedRouteProps {
+  children: React.ReactNode,;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   adminOnly?: boolean;
   tenantAdminAllowed?: boolean;
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
 }
+<<<<<<< HEAD
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   children;
 
@@ -30,6 +44,23 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   children;
   adminOnly = false;
+=======
+
+
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
+
+  children;
+
+  adminOnly = false;
+
+
+
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
+  children;
+  adminOnly = false;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',
 import { Navigate } from 'react-router-dom',
 import { useAuth } from '@/hooks/useAuth',
@@ -132,4 +163,10 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
 
   return <>{children}</>;
 };
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ProtectedRoute;

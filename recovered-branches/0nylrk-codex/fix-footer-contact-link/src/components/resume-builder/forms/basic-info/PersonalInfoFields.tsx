@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {
   FormField
   FormItem
@@ -10,14 +11,46 @@ import { Input } from "@/components/ui/input";
 
 import { Control } from "react-hook-form";
 import { BasicInfoFormData } from "./schema";
+=======
+
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from '@/components / ui / form';
+import { Input  } from '@/components / ui / input';
+import { Control  } from './react - hook - form';
+import { BasicInfoFormData  } from './schema';
+
+interface PersonalInfoFieldsProps {
+  control: Control < BasicInfoFormData>;
+}
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Control} from "react-hook-form";
 import {BasicInfoFormData} from "./schema";
+<<<<<<< HEAD
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
 }
@@ -78,6 +111,12 @@ function PersonalInfoFields() {
             </FormControl>
             <FormMessage />
           </FormItem>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         )}
 
       />;
@@ -132,6 +171,7 @@ function PersonalInfoFields() {
             <FormLabel>Phone</FormLabel>;
 =======
         render={({ field }) => (
+<<<<<<< HEAD
           <FormItem>
             <FormLabel>Phone</FormLabel>
             <FormControl>
@@ -147,6 +187,14 @@ function PersonalInfoFields() {
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+=======
+          <FormItem>;
+            <FormLabel > Email</FormLabel>;
+            <FormControl>;
+              <Input type="email" placeholder="john@example.com" {...field} />;
+            </FormControl>;
+            <FormMessage />;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </FormItem>)}
       />;
       <FormField;
@@ -168,3 +216,8 @@ function PersonalInfoFields() {
   )
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

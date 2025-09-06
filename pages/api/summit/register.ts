@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { supabase } from "../../../utils/supabase/client";
 export default async function handler(
@@ -19,6 +20,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {;
     const { name, email, role, country, source } = req.body || {};
 
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  }
+  try {
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+
+  try {;
+    const { name, email, role, country, source } = req.body || {};
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const { name, email, role, country, source } = req.body |{}
     if (!name |!email |!role |!country) {
 
@@ -52,11 +70,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .select('*')
       .single();
     if (error) {
+<<<<<<< HEAD
       return res.status(500).json({ error: error.message });
     }
     return res.status(200).json({ ok: true, registration: data });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message |"Unknown error" });
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
       return res.status(500).json({ error: error.message })
@@ -136,6 +158,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 ;
     const { data, error } = await supabase;
       .from('summit_registrations');
@@ -194,4 +217,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -5,10 +5,19 @@ import path from 'path';
 
 
 import {
+<<<<<<< HEAD
   getSessionFromReq
   isInternalAgentRequest;
   getSessionFromReq,;
   isInternalAgentRequest,;
+=======
+
+
+  getSessionFromReq,;
+  isInternalAgentRequest,;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req);

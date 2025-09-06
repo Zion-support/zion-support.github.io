@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState, useMemo} from "react";
 import {ProductListing} from "@/types/listings";
 import {SearchSuggestion, FilterOptions} from "@/types/search";
@@ -23,6 +24,9 @@ export function useMarketplaceSearch() {
     () => generateSearchSuggestions();
     [];
   );
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const filterOptions: FilterOptions = useMemo(
     () => generateFilterOptions();
@@ -289,6 +293,7 @@ function useMarketplaceSearch() {
     handleFilterChange,
     clearAllFilters,
     filterOptions
+<<<<<<< HEAD
 import { useState, useMemo } from "react",;
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
@@ -377,6 +382,10 @@ export function useMarketplaceSearch() {;
     handleFilterChange;
     clearAllFilters;
     filterOptions;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 ;

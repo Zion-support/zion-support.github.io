@@ -1,10 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Filter} from "lucide-react";
@@ -35,6 +38,7 @@ export function FilterSidebar(): any ({;
   sortOption;
   setSortOption;
   clearFilters;
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Filter } from "lucide-react",
@@ -48,6 +52,13 @@ import { PriceFilter } from "./filters/PriceFilter";
 import { FilterSidebarProps } from "@/types/filters";
 import { PriceFilter } from "./filters/PriceFilter",
 import { FilterSidebarProps } from "@/types/filters",
+=======
+  isMobileFilterOpen;
+}: FilterSidebarProps) {;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -135,6 +146,12 @@ export function FilterSidebar({;
           Clear All;
         </Button>;
       </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}

@@ -5,10 +5,16 @@ import {cn} from "@/lib/utils";
 import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from "@/components/icons",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
+<<<<<<< HEAD
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string }[] = [
 
@@ -53,6 +59,14 @@ export function StepProgress({ currentStep }: StepProgressProps) {
   ],
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+    { id: "service", label: "Service" },
+    { id: "details", label: "Details" },
+    { id: "timeline", label: "Timeline" },
+    { id: "budget", label: "Budget" },
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <div className="relative">
@@ -92,6 +106,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
 
+<<<<<<< HEAD
                   "text-zion-slate-light"
                 )}
               >
@@ -116,6 +131,10 @@ interface StepProgressProps {;
 }
 ;
 export function StepProgress({ currentStep }: StepProgressProps) {;
+=======
+
+export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const steps: { id: QuoteRequestSteps, label: string }[] = [;
     { id: "service", label: "Service" },;
     { id: "details", label: "Details" },;
@@ -194,6 +213,10 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

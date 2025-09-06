@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {QrCodeIcon} from "lucide-react";
 import {AppStoreButtons} from "./AppStoreButtons";
@@ -8,6 +9,12 @@ import { AppStoreButtons } from "./AppStoreButtons";
 
 import { QrCodeIcon } from "lucide-react",
 import { AppStoreButtons } from "./AppStoreButtons",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config
   const appStoreUrl = "#"; // Replace with actual App Store URL when available
@@ -25,13 +32,41 @@ export const DownloadSection: React.FC = () => {
                 Download the Zion app now and take your tech career or hiring
                 needs to the next level. Available on iOS and Android.
               </p>
+<<<<<<< HEAD
               <AppStoreButtons
                 className="mb-8"
+=======
+
+import React from './react';
+import { QrCodeIcon  } from './lucide-react';
+import { AppStoreButtons  } from './AppStoreButtons';
+export const DownloadSection: React.FC = () => {
+  // These would typically come from environment variables or a config;
+  const appStoreUrl = "#"; // Replace with actual App Store URL when available;
+  const googlePlayUrl = "#"; // Replace with actual Google Play URL when available;
+  return (
+    <section className="py - 16 bg - gradient - to - b from - zion - blue to - zion - blue - dark">;
+      <div className="container mx - auto px - 4">;
+        <div className="max - w-4xl mx - auto">;
+          <div className="flex flex - col md:flex - row items - center justify - between gap - 8">;
+            <div className="flex - 1">;
+              <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
+                Get The App Today;
+              </h2>;
+              <p className="text - lg text - gray - 300 mb - 8">;
+                Download the Zion app now and take your tech career or hiring;
+                needs to the next level. Available on iOS and Android.;
+              </p>;
+              <AppStoreButtons;
+                className="mb - 8";
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => console.log ("App Store button clicked")}
                 onGooglePlayClick={() =>;
                   console.log ("Google Play button clicked");
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,10 +78,13 @@ export const DownloadSection: React.FC = () => {
                 onGooglePlayClick={() =>
                   console.log("Google Play button clicked")
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 }
               
               <AppStoreButtons 
                 className="mb-8" 
+<<<<<<< HEAD
               <AppStoreButtons 
                 className="mb-8" 
                 appStoreUrl={appStoreUrl}
@@ -76,6 +114,13 @@ export const DownloadSection: React.FC = () => {;
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => // // // console.log("App Store button clicked")}
                 onGooglePlayClick={() => // // // console.log("Google Play button clicked")}
+=======
+=======
+              <AppStoreButtons 
+                className="mb-8" 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               />
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
@@ -95,10 +140,44 @@ export const DownloadSection: React.FC = () => {;
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 }
 
 };
+=======
+
+import React from "react";
+import {QrCodeIcon} from "lucide-react";
+import {AppStoreButtons} from "./AppStoreButtons";
+export const DownloadSection: React.FC = () => {;
+  // These would typically come from environment variables or a config;
+  const appStoreUrl = "#", // Replace with actual App Store URL when available;
+  const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
+
+  return (
+    <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
+      <div className="container mx-auto px-4">;
+        <div className="max-w-4xl mx-auto">;
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">;
+            <div className="flex-1">;
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Get The App Today</h2>;
+              <p className="text-lg text-gray-300 mb-8">;
+                Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.;
+              </p>;
+
+              <AppStoreButtons
+                className="mb-8" 
+                appStoreUrl={appStoreUrl}
+                googlePlayUrl={googlePlayUrl}
+                onAppStoreClick={() => console && console.log("App Store button clicked")}
+                onGooglePlayClick={() => console && console.log("Google Play button clicked")}
+=======
+
+};
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
 },
 
@@ -144,3 +223,10 @@ export const DownloadSection: React.FC = () => {;
 =======
 
 export default DownloadSection;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

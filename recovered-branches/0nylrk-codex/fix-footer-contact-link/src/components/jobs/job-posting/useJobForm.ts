@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -7,6 +8,19 @@ import { toast } from "sonner";
 import { useNavigate  } from 'react-router-dom';
 import { jobSchema, JobSchemaType  } from './validation';
 import { useAuth } from "@/hooks/useAuth";
+=======
+import {useState, useEffect} from 'react';
+import {use_form} from 'react - hook - form';
+import { zod_resolver } from '@hookform / resolvers / zod';
+import {format} from 'date - fns';
+import { toast } from './sonner';
+import {use_navigate} from 'react-router-dom';
+import {job_schema, JobSchemaType} from './validation';
+import { use_auth } from '@/hooks / use_auth';
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -23,6 +37,11 @@ export interface JobPostingProps {;
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
   const { user } = useAuth();
   const navigate = useNavigate();
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -31,6 +50,12 @@ import { toast } from "sonner",
 import { useNavigate } from 'react-router-dom',
 import { jobSchema, JobSchemaType } from './validation',
 import { useAuth } from "@/hooks/useAuth",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface JobPostingProps {
   job_id?: string;
   on_success?: () => void;
@@ -124,6 +149,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       toast.error("You must be logged in to post a job"),
       navigate("/login"),
       return
+<<<<<<< HEAD
     }
 
     setIsLoading(true);
@@ -203,6 +229,10 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
         user_id: user.id},;
       if (onSuccess) {;
         onSuccess();
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       return job_data;
     } catch (error: any) {
@@ -211,9 +241,14 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
       throw error;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
+<<<<<<< HEAD
       setIsLoading(false)
     }
   };
+=======
+
+;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return {
     form;
@@ -228,6 +263,7 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
     setIsRemote;
     initial_values;
     setInitialValues;
+<<<<<<< HEAD
     submitJob
 ;
       return jobData;
@@ -251,5 +287,13 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
     initialValues,;
     setInitialValues;
     submitJob;
+=======
+    submit_job;
+=======
+      setIsLoading(false)
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };

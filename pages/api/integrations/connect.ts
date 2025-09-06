@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { writeState } from '[^']*';
 import { getProviderById } from '[^']*';
@@ -15,6 +16,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { providerId, syncRules } = req.body as {
     providerId?: string;
     syncRules?: SyncRules;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   const now = Date && Date.now();
   const updated = writeState((state) => {
@@ -79,6 +84,7 @@ if (state.connections[existing_idx] = connection) {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -109,6 +115,14 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+
+=======
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { providerId, syncRules } = req.body as { providerId?: string, syncRules?: SyncRules };
+  if (!providerId || !getProviderById(providerId)) {
+    return res.status(400).json({ error: 'Invalid providerId' })
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   const now = Date.now();
   const updated = writeState(state => {
@@ -131,3 +145,11 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,4 +1,5 @@
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { cn } from '@/lib/utils';interface InteractiveFeaturesProps {
   className?: string
@@ -132,6 +133,11 @@ import Link from "next/link",;
 import { cn } from "@/lib/utils",;
 interface InteractiveFeaturesProps {;
   className?: string,;
+=======
+import Link from 'next / link';
+import { cn } from '@/lib / utils';interface InteractiveFeaturesProps {
+  class_name?: string,
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   style?: React.CSSProperties;
 }
 interface InteractiveFeaturesProps {
@@ -276,6 +282,9 @@ export function InteractiveFeatures(): any ({;
           {features.map((feature, index) => (;
             <Card;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               key={index}
@@ -287,6 +296,11 @@ export function InteractiveFeatures(): any ({;
               className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
             >
               <CardHeader className="flex flex-row items-start space-x-3">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {feature.icon}
                 <div>
                   <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
@@ -297,7 +311,11 @@ export function InteractiveFeatures(): any ({;
               </CardHeader>
               <div
                 className={cn(
+<<<<<<< HEAD
                   'transition-all duration-300'
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   'transition-all duration-300',
 
                   openIndex === index
@@ -320,6 +338,12 @@ export function InteractiveFeatures(): any ({;
                 )}
               >
                 <CardContent className="text-sm text-zion-slate-light p-0">
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <p>{feature.details}</p>
                   <Button asChild variant="link" className="mt-3 p-0 h-auto text-primary">
                     <Link href={feature.link} className="flex items-center gap-1">
@@ -330,6 +354,7 @@ export function InteractiveFeatures(): any ({;
               </div>
             </Card>
           ))}
+<<<<<<< HEAD
         </div>
       </div>
     </section>
@@ -347,11 +372,17 @@ export default InteractiveFeatures
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default InteractiveFeatures;
 ;
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         </div>;
       </div>;

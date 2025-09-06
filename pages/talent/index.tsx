@@ -1,9 +1,18 @@
 import type { NextPage } from 'next';
+<<<<<<< HEAD
 import Head from 'next/head';
 import { useMemo, useState  } from 'react';
 import Pagination from '../../components/ui/Pagination';
 import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
 import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
+=======
+
+import Head from 'next / head';
+import {useMemo, useState} from 'react';
+import Pagination from '../../components / ui / Pagination';
+import {TrustBadge, MicroTestimonial} from '../../components / ui / Badges';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Talent {
 =======
 import {TrustBadge, MicroTestimonial} from '../../components/ui/Badges';
@@ -15,9 +24,12 @@ interface Talent {;
   title: string;
   badges: Array<'Verified' | 'Pro' | 'Top Rated'>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   testimonial?: { quote: string; author: string }
 const mock_talent: Talent[] = Array.from ({ length: 47 }).map ((_, i) => ({
@@ -38,6 +50,7 @@ const mock_talent: Talent[] = Array.from ({ length: 47 }).map ((_, i) => ({
 const TalentDirectory: NextPage = () => {
   const [page, setPage] = useState(1);
   const pageSize = 10;
+<<<<<<< HEAD
   const total = mockTalent.length;
   const pageItems = useMemo(() => {
     const start = (page - 1) * pageSize;
@@ -77,6 +90,13 @@ const TalentDirectory: NextPage = () => {
     return mockTalent.slice(start, start + pageSize)
   }, [page]),
   return (
+=======
+
+        page={page}
+        page_size={page_size}
+        total={total}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <div className="space-y-6 pb-16">
       <Head>
         <title>Talent - Zion</title>
@@ -106,6 +126,12 @@ const TalentDirectory: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
             </div>
             <div className="text-sm opacity-80">{t.title}</div>
@@ -126,9 +152,32 @@ const TalentDirectory: NextPage = () => {
     </div>
   )
 
+<<<<<<< HEAD
 export default TalentDirectory;
 
 }
+=======
+};
+
+export default TalentDirectory;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+        on_change={set_page}
+      />;
+    </div>);
+}
+;
+export default TalentDirectory;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+export default TalentDirectory;
+
+}
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <MicroTestimonial quote={t.testimonial.quote} author={t.testimonial.author} />
             )  } catch (error) {
     console.error("Error:", error);
@@ -147,3 +196,10 @@ export default TalentDirectory;
   );
 },;
 export default TalentDirectory;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

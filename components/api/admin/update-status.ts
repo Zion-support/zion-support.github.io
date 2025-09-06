@@ -58,10 +58,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json({ ok: true })
 }
 
+<<<<<<< HEAD
   res.status(200).json({ ok: true })
 }
 }
 
+=======
+
+=======
+import { isInternalAgentRequest } from '../../../utils / admin_auth';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
     res.status (405).json ({ error: 'Method Not Allowed' });
     return;
@@ -130,6 +143,7 @@ if ( {) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
   res.status(200).json({ ok: true })
 <<<<<<< HEAD
@@ -146,3 +160,5 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

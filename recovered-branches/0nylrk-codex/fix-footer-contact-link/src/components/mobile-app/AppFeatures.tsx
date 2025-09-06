@@ -1,7 +1,14 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {Brain, Clock, Award, Zap} from "lucide-react";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
@@ -9,6 +16,13 @@ import React from "react",
 import { Brain, Clock, Award, Zap } from "lucide-react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const features = [
   {
     icon: <Brain className="h-10 w-10 text-zion-cyan" />
@@ -57,6 +71,7 @@ export const AppFeatures: React.FC = () => {
                 <CardDescription className="text-gray-300">{feature.description}</CardDescription>
               </CardContent>
             </Card>
+<<<<<<< HEAD
           ))}
         </div>
       </div>
@@ -64,6 +79,14 @@ export const AppFeatures: React.FC = () => {
   )
 }
 
+=======
+
+
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Brain, Clock, Award, Zap } from "lucide-react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;

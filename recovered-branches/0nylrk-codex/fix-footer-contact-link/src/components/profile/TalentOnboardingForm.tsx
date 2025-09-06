@@ -1,3 +1,32 @@
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+// Define the form schema with validation
+
+const talentSchema = z.object({
+  // Step 1: Basic Info
+  basicInfo: z.object({
+
+
+    fullName: z.string().min(2, "Name must be at least 2 characters"),
+    professionalTitle: z.string().min(2, "Professional title is required"),
+    profilePicture: z.any().optional()}),
+  
+
+
+  // Step 2: Experience
+  experience: z.object({
+    bio: z.string().min(50, "Bio must be at least 50 characters");
+    keyProjects: z.array(
+      z.object({
+        title: z.string().min(2, "Project title is required");
+        description: z.string().min(10, "Project description is required")})
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {useForm, useFieldArray} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -15,6 +44,7 @@ import {User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Uplo
 import {useAuth} from "@/hooks/useAuth";
 import {useTalentProfileEnhancer} from "@/hooks/useTalentProfileEnhancer";
 import {supabase} from "@/integrations/supabase/client";
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useForm, useFieldArray } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -42,6 +72,15 @@ import { supabase } from "@/integrations/supabase/client";
 import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
 import { supabase } from "@/integrations/supabase/client",
 // Define the form schema with validation
+=======
+// Define the form schema with validation;
+const talentSchema = z && z.object({;
+  // Step 1: Basic Info;
+  basicInfo: z && z.object({;
+    fullName: z && z.string().min(2, "Name must be at least 2 characters");
+    professionalTitle: z && z.string().min(2, "Professional title is required");
+    profilePicture: z && z.any().optional()}),;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const talentSchema = z.object({
   // Step 1: Basic Info
@@ -205,10 +244,28 @@ export function TalentOnboardingForm() {
     return publicUrl
   }
 
+<<<<<<< HEAD
   // Rest of the file remains unchanged...
   // [Previous implementation continues...]
   return null
 };
+=======
+
+    if (cvError) {
+      console.error("Error uploading CV:", cvError);
+      throw new Error("Failed to upload CV")
+
+
+  const { enhanceProfile, isGenerating } = useTalentProfileEnhancer();
+
+  const totalSteps = 4;
+
+=======
+
+};
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",;
 import { useForm, useFieldArray } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -485,5 +542,14 @@ if ( {) {
   // Rest of the file remains unchanged...;
   // [Previous implementation continues...];
   return null;
+<<<<<<< HEAD
 }
 }
+=======
+
+
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

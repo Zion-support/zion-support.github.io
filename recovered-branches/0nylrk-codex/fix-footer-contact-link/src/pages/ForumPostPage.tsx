@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -36,6 +37,10 @@ import { useToast } from "@/hooks/use-toast";
 // Mock data for a forum post
 import ReplyForm from "@/components/community/ReplyForm",
 import { useToast } from "@/hooks/use-toast",
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Mock data for a forum post
 const mockPost: ForumPost = {
   id: "1",
@@ -697,6 +702,12 @@ export default function ForumPostPage() {;
                   <div className="font-medium text-lg">{post.authorName}</div>;
                   {post.authorRole && (;
                     <Badge variant="outline" className="mt-1">;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       {post.authorRole}
                     </Badge>
                   )}

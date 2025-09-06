@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
   };
@@ -9,9 +10,23 @@
     text: `Mock ${request.type} for ${request.companyName} on ${request.date}`;
   };
 
+=======
+
+
+  };
+}
+
+
+  }
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
+<<<<<<< HEAD
       path: ''
       filename: 'legal/terms-of-use.md'
       type: 'text'
@@ -29,6 +44,12 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
       type: 'text'
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
     }
+=======
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       path: '',
 
       filename: 'legal / terms - of - use.md',
@@ -37,6 +58,10 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
       content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
     },;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];
   const web3Extras: MediaAsset[] = [
 
@@ -71,10 +96,33 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
 export function buildPressRelease(
 <<<<<<< HEAD
+<<<<<<< HEAD
   type: PressReleaseType
   params: {
   type: PressReleaseType,
   params: {;
+=======
+  type: PressReleaseType
+=======
+;
+  // Check condition
+if (return [...base, ...web3Extras]) {
+  $2
+}
+  return base;
+;
+export function buildPressRelease (
+  type: PressReleaseType,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  params: {
+    company_name: string;
+=======
+export function buildPressRelease(
+
+  type: PressReleaseType,
+  params: {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     companyName: string;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     date: string;
@@ -114,6 +162,7 @@ export function buildTimeline(startDate: Date) {
     { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) }
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 function titleCase(s: string) {
   return s.replace(
@@ -131,6 +180,17 @@ function titleCase(s: string) {
   return s.replace(
     /\w\S*/g
     w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
+=======
+
+
+function titleCase(s: string) {
+
+=======
+  return s && s.replace(
+    /\w\S*/g,
+    w => w && w.charAt(0).toUpperCase() + w && w.slice(1).toLowerCase()
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );}
 
 
@@ -174,7 +234,10 @@ function title_case() {
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ());}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

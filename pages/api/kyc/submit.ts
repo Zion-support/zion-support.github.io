@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import type { KycProfile } from '../../../utils/kyc';
 import { validateKycSubmission } from '[^']*';
 import { getAmlProvider } from '[^']*';
@@ -17,11 +18,20 @@ import fs from 'fs';
 import path from 'path';
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function load(): Record<string, KycProfile> {
   try {
 
     const raw = fs.readFileSync(FILE, 'utf8');
+<<<<<<< HEAD
     return JSON.parse(raw);
+=======
+    return JSON.parse(raw)
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch {
     return {}
   }
@@ -29,6 +39,7 @@ function save(db: Record<string, KycProfile>) {
   fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   fs && fs.writeFileSync(FILE, JSON && JSON.stringify(db, null, 2));
 }
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -38,6 +49,15 @@ export default async function handler(
   if (req.method !== 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  const { userId } = req.body as { userId?: string };
   if (!userId) return res.status(400).json({ error: 'Missing userId' });
+=======
+
+
+  if (req && req.method !== 'POST')
+    return res && res.status(405).json({ error: 'Method not allowed' });  const { userId } = req && req.body as { userId?: string };
+  if (!userId) return res && res.status(400).json({ error: 'Missing userId' });
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const db = load();
   const profile = db[userId];
   if (!profile) return res && res.status($1).json({$2});
@@ -138,6 +158,7 @@ function handler() {
   if (return res.status (400).json ({ error: 'Missing user_id' })) {
   $2
 }
+<<<<<<< HEAD
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
@@ -229,6 +250,18 @@ res.status(200).json({ ok: true, profile, aml: amlResult });
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+  const db = load ();
+  const profile = db[user_id];
+  if (return res.status ($1).json ({$2})) {
+  $2
+}
+  const validation = validateKycSubmission (profile);
+  // Check condition
+if (
+    return res) {
+  $2
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
       .status (400);
       .json ({ error: 'Missing data', missing: validation.missing });
@@ -301,6 +334,7 @@ if ( {) {
   profile.status = 'submitted';
   const now = new Date ().toISOString ();
   profile.lastUpdatedAt = now;
+<<<<<<< HEAD
   profile.auditTrail.push({ at: now, by: userId, action: 'kyc_submitted', details: { aml: amlResult, ip } });
   db[userId] = profile;
   save(db);
@@ -311,3 +345,22 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+  profile.audit_trail.push ({
+    at: now,
+    by: user_id,
+    action: 'kyc_submitted',
+    details: { aml: aml_result, ip },
+  });
+  db[user_id] = profile;
+  save (db);
+;
+res.status (200).json ({ ok: true, profile, aml: aml_result });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  profile.lastUpdatedAt = now;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

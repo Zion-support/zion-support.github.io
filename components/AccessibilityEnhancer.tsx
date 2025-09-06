@@ -377,6 +377,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 {size && size.charAt(0).toUpperCase()}
               </button>;
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </div>
@@ -401,6 +402,17 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   );
 }
 export default AccessibilityEnhancer;
+=======
+
+          </div>;
+        </div>;
+      </div>;
+=======
+
+
+export default AccessibilityEnhancer;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 
 
@@ -423,6 +435,9 @@ export default AccessibilityEnhancer;
     </>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export default AccessibilityEnhancer;
 =======
@@ -495,3 +510,8 @@ export default AccessibilityEnhancer;
 }
 ;
 export default AccessibilityEnhancer;
+<<<<<<< HEAD
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

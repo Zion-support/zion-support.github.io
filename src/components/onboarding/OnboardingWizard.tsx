@@ -73,6 +73,9 @@ interface OnboardingWizardProps {;
   className?: string
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function OnboardingWizard(): any ({;
   type,;
@@ -83,6 +86,7 @@ export function OnboardingWizard(): any ({;
   type,
   onComplete,
 
+<<<<<<< HEAD
 =======
 export function OnboardingWizard({
 <<<<<<< HEAD
@@ -196,12 +200,19 @@ export function OnboardingWizard({
   type,
   onComplete,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onSkip,;
   className,;
 }: OnboardingWizardProps) {;
   const [currentStep, setCurrentStep] = useState(0);
+<<<<<<< HEAD
   const router = useRouter(); // Changed from useNavigate to useRouter
   const { user } = useAuth()
+=======
+  const router = useRouter(); // Changed from useNavigate to useRouter;
+  const { user } = useAuth();
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           </div>;
@@ -211,6 +222,7 @@ export function OnboardingWizard({
           <div className='bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4'>;
 
 
+<<<<<<< HEAD
 =======
   const router = useRouter(); // Changed from useNavigate to useRouter
   const { user } = useAuth()
@@ -218,6 +230,8 @@ export function OnboardingWizard({
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -249,6 +263,9 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const { user } = useAuth(),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   // Define steps based on user type
@@ -278,6 +295,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Reach out to the talent that fits your needs",
       icon: <MessageSquare className="h-6 w-6 text-zion-purple" />,
       action: {
+<<<<<<< HEAD
         text: 'Browse Talent',
         url: '/talent',
       },
@@ -311,6 +329,10 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const talentSteps: WizardStep[] = [
     {
       title: "Complete your profile",
@@ -347,6 +369,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Let our AI find the perfect opportunities for you",
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />,
       action: {
+<<<<<<< HEAD
         text: 'Enable Matchmaking',
         url: '/talent-dashboard',
       },
@@ -407,6 +430,10 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <CardHeader>
         <CardTitle className="text-center text-white">
           {type === 'client' ? 
@@ -420,6 +447,9 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
           <div className='flex items-center justify-center flex-1'>
           <div className="flex items-center justify-center flex-1">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             {steps.map((_, index) => (
               <div
@@ -452,6 +482,9 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
         <div className="flex flex-col items-center text-center p-4">
           <div className="bg-gradient-to-br from-zion-blue to-zion-purple/20 p-4 rounded-full mb-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             {steps[currentStep]?.icon}
           </div>;
@@ -488,6 +521,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
             onClick={handleSkip}
           >;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
             {steps[currentStep]?.skipText}
           </Button>
@@ -496,6 +530,14 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
     </Card>
   )
 }
+=======
+
+            {steps[currentStep]?.skipText}
+          </Button>;
+        )}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 }
 

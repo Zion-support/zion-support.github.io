@@ -36,6 +36,7 @@ import {
   Globe,
   Lock,
   BarChart3,
+<<<<<<< HEAD
   Calendar,
   Target,;} from 'lucide-react';import { 
   Calendar,;
@@ -47,6 +48,8 @@ import {
   Mail
   Share2
   Check
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -453,6 +456,7 @@ import {
         enterprise: {
           price: 149
           features: [
+<<<<<<< HEAD
             'Unlimited URLs'
             'Real-time monitoring'
             'All metrics'
@@ -467,6 +471,15 @@ import {
       website: 'https://performance.ziontech.ai'
       demo: 'https://demo.performance.ziontech.ai'
     }
+=======
+
+  Target;
+export default /**
+ * MicroSaasServicesPage - Function description
+ */
+function MicroSaasServicesPage() {
+  const microSaasServices = [;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       id: 'performance-monitor',
       name: 'Website Performance Monitor',
@@ -865,6 +878,7 @@ import {
       demo: 'https://demo.performance.ziontech.ai',
     },
 =======
+<<<<<<< HEAD
           price: 199
           features: [
             'Unlimited keywords'
@@ -1070,11 +1084,16 @@ import {
       website: 'https://social.ziontech.ai'
       demo: 'https://demo.social.ziontech.ai'
 =======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             'Unlimited accounts',
             'Enterprise scheduling',
             'Advanced calendar',
             'Enterprise analytics',
             'Dedicated support',
+<<<<<<< HEAD
             'White-label options',
           ],
         },
@@ -1329,6 +1348,15 @@ import {
           price: 129,
           features: [;
 =======
+=======
+            'White - label options',
+          ],
+        },
+      },
+      market_price: '$19 - 129 / month',
+      competitors: ['Buffer', 'Hootsuite', 'Later'],
+      website: 'https://social.ziontech.ai',
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             'Unlimited accounts',
@@ -1960,6 +1988,7 @@ export default function MicroSaasServicesPage() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1967,6 +1996,8 @@ export default function MicroSaasServicesPage() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1975,12 +2006,28 @@ export default function MicroSaasServicesPage() {;
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Services Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Our Micro SaaS Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -2555,6 +2602,13 @@ export default function MicroSaasServicesPage() {;
                 <h3 className="text-xl font-bold text-white mb-3">Global Infrastructure</h3>
                 <p className="text-gray-400 text-sm">Worldwide availability with enterprise-grade reliability</p>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
             </Card>
           </div>
@@ -2810,3 +2864,9 @@ export default function MicroSaasServicesPage() {;
   );
 }
             <Button
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

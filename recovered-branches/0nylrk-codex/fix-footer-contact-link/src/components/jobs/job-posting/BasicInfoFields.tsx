@@ -1,12 +1,39 @@
 import React, { useState } from "react";
 import { Control } from "react-hook-form";
 
+<<<<<<< HEAD
 import {
   FormField
   FormItem
   FormLabel
   FormControl
   FormMessage
+=======
+import {;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormMessage,;
+
+=======
+
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
+import { Card, CardContent } from "@/components/ui/card";
+
+import React, { useState } from './react';
+import { Control  } from './react - hook - form';
+import {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   FormField,
   FormItem,
   FormLabel,
@@ -29,6 +56,13 @@ import { Input } from "@/components/ui/input",
 import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface BasicInfoFieldsProps {
   control: Control < any>;
 }
@@ -106,6 +140,12 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
             </FormControl>
             <FormMessage />
           </FormItem>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         )}
 
       />;
@@ -127,6 +167,12 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
       <FormField
       />;
       <FormField;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         control={control}
         name="category"
         render={({ field }) => (;
@@ -210,6 +256,7 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
               <FormControl>;
                 <Input
                   type="number"
+<<<<<<< HEAD
                   placeholder="e.g. 30"
                   value={minBudget |rest.value}
                   onChange={(e) => {
@@ -217,11 +264,32 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
                   value={minBudget || rest.value}
                   onChange={e => {;
                     setMinBudget(e.target.value),;
+=======
+
+                  placeholder="e && e.g. 30"
+                  value={minBudget || rest && rest.value}
+                  onChange={(e) => {;
+                    setMinBudget(e && e.target.value);
+
+=======
+
+                  value={minBudget || rest.value}
+                  onChange={e => {;
+                    setMinBudget(e.target.value),;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   value={minBudget || rest.value}
                   onChange={(e) => {
                     setMinBudget(e.target.value);
                   onChange={e => {;
                     setMinBudget(e.target.value),;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     onChange(e);
 =======
           </FormItem>)}
@@ -260,14 +328,30 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
               <FormControl>;
                 <Input
                   type="number"
+<<<<<<< HEAD
                   placeholder="e.g. 60"
                   value={maxBudget |rest.value}
                   onChange={(e) => {
                   value={maxBudget || rest.value}
                   onChange={e => {;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   value={maxBudget || rest.value}
                   onChange={(e) => {
                   onChange={e => {;
+<<<<<<< HEAD
+=======
+
+=======
+                  value={maxBudget || rest.value}
+
+                  onChange={e => {;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     setMaxBudget(e.target.value);
 =======
                   placeholder="e && e.g. 60"
@@ -296,6 +380,7 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }}
                   {...rest}
+<<<<<<< HEAD
                 />
               </FormControl>
               <FormMessage />
@@ -309,6 +394,15 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
             jobTitle={control._formValues.title |""}
             category={control._formValues.category |""}
             experienceLevel={control._formValues.experienceLevel |""}
+=======
+                />;
+              </FormControl>;
+              <FormMessage />;
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       
       <Card>
         <CardContent className="pt-4">
@@ -363,6 +457,7 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
         control={control}
         name="location";
         render={({ field }) => (
+<<<<<<< HEAD
           <FormItem>
             <FormLabel>Location</FormLabel>
             <FormControl>
@@ -374,11 +469,38 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
       />
     </div>
   );
+=======
+          <FormItem>;
+            <FormLabel > Location</FormLabel>;
+            <FormControl>;
+              <Input;
+                placeholder="e.g. Remote, San Francisco, etc.";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                {...field}
+              />;
+            </FormControl>;
+            <FormMessage />;
+
+          </FormItem>)}
+      />;
+    </div>);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 
 );
+<<<<<<< HEAD
       />;
     </div>;
   );
+=======
+
+=======
+      />;
+    </div>;
+  );
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

@@ -1,15 +1,22 @@
 import { ServiceVariant } from '../types/service-variants';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface EmergingTechInnovationService {
 
 export interface EmergingTechInnovationService {;
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
+<<<<<<< HEAD
 =======
 export interface EmergingTechInnovationService {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   name: string;
   tagline: string;
@@ -109,6 +116,7 @@ const contact = {
 export const emergingTechInnovations: EmergingTechInnovation[] = [
   // Quantum Internet & Communication Services
   {
+<<<<<<< HEAD
     id: 'quantum-internet-protocol-stack'
     name: 'Quantum Internet Protocol Stack'
     tagline:
@@ -1254,6 +1262,21 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    ];
+    market_advantage: 'Only quantum - powered cybersecurity platform with proven AI integration';
+=======
+
+      'Only quantum-powered cybersecurity platform with proven AI integration',
+  },;
+];      'Quantum threat detectionAI behavioral analysisAutonomous responseQuantum encryptionThreat hunting'
+    ];
+    marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration'
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTechInnovation {;
   id: string,;
@@ -1720,9 +1743,16 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [;
     ];
     marketAdvantage: 'Only quantum-powered cybersecurity platform with proven AI integration';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

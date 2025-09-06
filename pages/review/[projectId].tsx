@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React from "react";
 import type { NextPage, GetServerSideProps } from "next";
@@ -34,10 +38,16 @@ type Props = {
 };
 
 const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!valid) {
     return (
       <main className="max-w-2xl mx-auto p-6">
         <h1 className="text-2xl font-semibold mb-3">Review unavailable</h1>
+<<<<<<< HEAD
         <p className="text-sm text-gray-600">
           {reason |"You cannot submit a review for this project."}
         </p>
@@ -117,6 +127,9 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { projectId } = ctx.query as { projectId: string },
   const { role, fromId } = ctx.query as { role?: 'client' | 'talent', fromId?: string },
   if (!projectId || !role || !fromId) {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 
 
@@ -184,6 +197,10 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { projectId } = ctx.query as { projectId: string },
   const { role, fromId } = ctx.query as { role?: 'client' | 'talent', fromId?: string },
   if (!projectId || !role || !fromId) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return { props: { projectId: projectId || '', fromRole: role || 'client', fromId: fromId || '', valid: false, reason: 'Missing parameters' }   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -215,4 +232,11 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const valid = expectedFromId === fromId;
   return { props: { projectId, fromRole: role, fromId, valid, reason: valid ? null : 'Invalid reviewer for this project' } } as any;
 };
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ReviewSubmitPage;

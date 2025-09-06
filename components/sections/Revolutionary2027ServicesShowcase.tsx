@@ -20,6 +20,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   ArrowRight
   Brain
@@ -183,6 +184,14 @@ const Revolutionary2027ServicesShowcase = () => {
       marketSize: '$500B cybersecurity market'
       growthRate: '500% annual growth'
     }
+=======
+
+
+      icon: Brain,
+      color: 'from - purple - 600 to - indigo - 700',
+      category: 'Quantum AI & Neuroscience',
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];
 
 
@@ -419,6 +428,7 @@ const Revolutionary2027ServicesShowcase = () => {;
           viewport={{ once: true }}
           className='text-center mb-20'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -426,6 +436,9 @@ const Revolutionary2027ServicesShowcase = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -450,6 +463,38 @@ const Revolutionary2027ServicesShowcase = () => {;
           </p>
         </motion.div>
 
+<<<<<<< HEAD
+=======
+
+          className='text-center mb-20'>;
+          <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>;
+            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+              2027 Revolutionary Services;
+            </span>;
+          </h2>;
+          <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>;
+            Experience the future of technology with our cutting-edge AI,;
+            quantum computing, and emerging technology services. Transform your;
+            business with solutions that were once science fiction.          </p>        >;
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">;
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+              2027 Revolutionary Services;
+            </span>;
+          </h2>;
+          <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
+            Experience the future of technology with our cutting-edge AI, quantum computing, and emerging technology services. ;
+            Transform your business with solutions that were once science fiction.;
+          </p>;
+        </motion && motion.div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Category Overview */}
         <motion&& motion.div
           variants={containerVariants}
@@ -499,6 +544,7 @@ const Revolutionary2027ServicesShowcase = () => {;
         </motion.div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -506,6 +552,8 @@ const Revolutionary2027ServicesShowcase = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Featured Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -853,6 +901,7 @@ stagger_children: 0.1,
                     ))}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -860,6 +909,8 @@ stagger_children: 0.1,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {/* Market Info */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='flex justify-between items-center text-sm text-gray-400'>
@@ -926,6 +977,25 @@ stagger_children: 0.1,
           ))}
         </motion.div>
 
+<<<<<<< HEAD
+=======
+                      href={`/services/${service && service.id}`}
+                      className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-lg hover:shadow-purple-500/25'>;
+                      <span>Explore</span>;
+                      <ArrowRight className='w-4 h-4' />                    </Link>                      {service && service.price}
+                      <span className="text-lg text-gray-400">{service && service.period}</span>;
+                    </div>;
+                    <Link
+                      href={`/services/${service && service.id}`}
+                      className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-lg hover:shadow-purple-500/25">;
+                      <span>Explore</span>;
+                      <ArrowRight className="w-4 h-4" />;
+                    </Link>;
+                  </div>;
+                </div>;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -934,6 +1004,7 @@ stagger_children: 0.1,
           viewport={{ once: true }}
           className='text-center'
 
+<<<<<<< HEAD
         >
           <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
@@ -945,6 +1016,9 @@ stagger_children: 0.1,
               digital transformation.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Link
                 href='https://ziontechgroup.com/contact'
                 className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25'
@@ -1004,11 +1078,34 @@ stagger_children: 0.1,
       </div>;
     </section>;
   );
+<<<<<<< HEAD
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 export default Revolutionary2027ServicesShowcase;  );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default Revolutionary2027ServicesShowcase;
 
 export default Revolutionary2027ServicesShowcase;
+<<<<<<< HEAD
 export default Revolutionary2027ServicesShowcase;
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  );
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

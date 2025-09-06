@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export interface TalentProfile {
 export interface TalentProfile {;
   id: string;
@@ -78,6 +79,9 @@ export interface TalentProfile {;
   is_verified?: boolean,;
   key_projects?: {;
     title: string,;
+=======
+    title: string,
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     description: string;
   }[];
 }
@@ -101,6 +105,7 @@ export interface HireRequest {
 
     max: number,
     currency: string;
+<<<<<<< HEAD
   },;
   timeline: {;
     startDate: string,;
@@ -109,5 +114,22 @@ export interface HireRequest {
   },;
   status: 'pending' | 'accepted' | 'rejected' | 'completed';
   createdAt: string;
+=======
+  }
+  timeline: {
+    start_date: string;
+    end_date?: string,
+    estimated_duration?: string;
+  }
+  status: 'pending' | 'accepted' | 'rejected' | 'completed',
+  created_at: string;
+
+}
+=======
+
+
+export interface TalentProfile {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

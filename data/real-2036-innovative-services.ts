@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type Real2036InnovativeService = {
   id: string, name: string,
   tagline: string, description: string,
@@ -18,6 +19,11 @@ export type Real2036InnovativeService = {;
   period?: string;
   features: string[];
   link: string;  launchDate?: string;  rating?: number;
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   marketSize?: string;
   targetAudience?: string;
   competitiveAdvantage?: string;
@@ -1349,6 +1355,7 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     category: 'AI & Data', price: '$699',
     period: '/month',
     features: [
+<<<<<<< HEAD
       'Demand forecasting'
       'Inventory optimization'
       'Route optimization'
@@ -1379,6 +1386,16 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Logistics optimization'
       'Risk management'
     ]
+=======
+      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
+    ];
+    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform', launchDate: '2036-03-30',
+    rating: 4.7, marketSize: '$28.4B',
+    targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers',
+    competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage',
+    integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'],
+    useCases: ['Demand planningInventory managementLogistics optimizationRisk management']
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
     link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform',
@@ -1402,21 +1419,35 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
       'Logistics optimization',
       'Risk management',
     ],
+<<<<<<< HEAD
   },;
 ];      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
+=======
+  },
+];      'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_real - time tracking_performance analytics_custom workflows';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ];
     link: 'https://ziontechgroup.com / services / ai - supply - chain - optimization - platform';
     launch_date: '2036 - 03 - 30';
     rating: 4.7;
+<<<<<<< HEAD
     marketSize: '$28.4B'
     targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers';
     competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage';
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services']
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management']
+=======
+    market_size: '$28.4B',
+    target_audience: 'Manufacturing companies, Retail businesses, Logistics providers';
+    competitive_advantage: 'AI optimization, Real - time insights, Comprehensive coverage';
+    integration: ['ERP systemsWMS platformsTMS solutionsIoT devices_cloud services'],
+    use_cases: ['Demand planning_inventory management_logistics optimization_risk management'];
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 
 export type Real2036InnovativeService = {;
+<<<<<<< HEAD
   id: string,;
   name: string,;
   tagline: string,;
@@ -1749,5 +1780,8 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [;
     competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage',;
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'],;
     useCases: ['Demand planningInventory managementLogistics optimizationRisk management'];
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];

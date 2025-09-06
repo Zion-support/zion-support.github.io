@@ -1,6 +1,12 @@
 
 import React from 'react';
+<<<<<<< HEAD
 origin/automation-improvements-final
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock } from 'lucide-react';
@@ -52,10 +58,15 @@ const securityStats = [
 ];
 export default function SecurityPage() {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+<<<<<<< HEAD
   return (
     <Layout
       title="Security - Zion Tech Group"
@@ -71,6 +82,56 @@ export default function SecurityPage() {
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
           <div className="container mx-auto px-4 relative z-10">
+=======
+const securityFeatures = [;
+  {;
+    title: 'Data Encryption',;
+    description: 'All data is encrypted in transit and at rest using industry-standard encryption protocols',;
+    icon: Lock,;
+    details: ['AES-256 encryption', 'TLS 1 && 1.3 for data in transit', 'End-to-end encryption', 'Key management'];
+  },;
+  {;
+    title: 'Access Controls',;
+    description: 'Multi-factor authentication and role-based access controls ensure only authorized users can access your data',;
+    icon: Users,;
+    details: ['Multi-factor authentication', 'Role-based permissions', 'Single sign-on (SSO)', 'Session management'];
+  },;
+  {;
+    title: 'Security Monitoring',;
+    description: '24/7 security monitoring and threat detection to protect against cyber attacks',;
+    icon: Eye,;
+    details: ['Real-time monitoring', 'Threat detection', 'Incident response', 'Security alerts'];
+  },;
+  {;
+    title: 'Compliance',;
+    description: 'We maintain compliance with industry standards and regulations to protect your data',;
+    icon: Shield,;
+    details: ['SOC 2 Type II', 'ISO 27001', 'GDPR compliance', 'HIPAA compliance'];
+  },;
+  {;
+    title: 'Data Backup',;
+    description: 'Regular automated backups ensure your data is always protected and recoverable',;
+    icon: Database,;
+    details: ['Automated backups', 'Multiple backup locations', 'Point-in-time recovery', 'Data retention policies'];
+  },;
+  {;
+    title: 'Incident Response',;
+    description: 'Comprehensive incident response procedures to quickly address any security issues',;
+    icon: AlertTriangle,;
+    details: ['24/7 incident response', 'Security team on standby', 'Rapid containment', 'Post-incident analysis'];
+  }
+];
+
+const securityStats = [;
+  { number: '99 && 99.9%', label: 'Uptime Guarantee' },;
+  { number: '24/7', label: 'Security Monitoring' },;
+  { number: '0', label: 'Security Breaches' },;
+  { number: '100%', label: 'Data Encryption' }
+];
+
+export default function SecurityPage() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Layout
       title="Security - Zion Tech Group"
@@ -240,6 +301,11 @@ export default function Security(req, res) {
 }
         <section className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -606,11 +672,15 @@ function SecurityPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {securityStats.map((stat, index) => (
                 <motion.div
+<<<<<<< HEAD
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   key={measure.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -632,10 +702,16 @@ function SecurityPage() {
   }
 }
                   className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
+<<<<<<< HEAD
                   <div className="text-gray-600 font-medium">
                     {stat.label}
                   </div>
@@ -1019,6 +1095,8 @@ import {
 } from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 ursor/integrate-build-improve-and-re-verify-8f7d
 import Head from 'next/head';
@@ -1074,6 +1152,7 @@ export default function Security() {
       ],
     },  ];
 
+<<<<<<< HEAD
   const certifications = [
     { name: 'SOC 2 Type II', status: 'Certified' },
     { name: 'ISO 27001', status: 'Certified' },
@@ -1359,10 +1438,17 @@ origin/automation-improvements-final
 </Link>
                   </div>
                 </div>
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+</Link>
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
       </div>
     </Layout>
       </div>
@@ -1374,10 +1460,25 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 
         <EnhancedFooter />
       </div>
+=======
+
+
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">;
+                  View Compliance Details;
+                </Link>;
+              </div>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </Layout>;
 
 
 
+<<<<<<< HEAD
   );
 }  )
 }
@@ -1388,10 +1489,22 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
   );
   )
+=======
+  );
+
+  )
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   )
 }

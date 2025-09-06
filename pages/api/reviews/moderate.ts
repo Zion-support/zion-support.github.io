@@ -1,8 +1,22 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import {readReviews, writeReviews} from '../../../utils/dataStore';
 const ADMIN_KEY = process && process.env.ADMIN_KEY || 'dev-admin-key';
 type Action = 'approve' | 'remove' | 'edit';
 <<<<<<< HEAD
+=======
+
+=======
+
+
+import {readReviews, writeReviews} from '../../../utils/dataStore';
+const ADMIN_KEY = process && process.env.ADMIN_KEY || 'dev-admin-key';
+type Action = 'approve' | 'remove' | 'edit';
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {readReviews, writeReviews} from '../../../utils/dataStore';
 const ADMIN_KEY = process.env.ADMIN_KEY |'dev-admin-key';
@@ -107,6 +121,7 @@ if ( {) {
       .json({ error: 'Internal server error', details: error?.message });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 type Action = 'approve' | 'remove' | 'edit';
@@ -169,6 +184,21 @@ export default async function handler(req, res) {
   }
 }
     },;
+=======
+
+=======
+
+
+
+
+
+=======
+    const { action, reviewId, updates } = req.body as {
+      action: Action, reviewId: string,
+      updates?: { rating?: number, text?: string }
+    };
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const reviews = await readReviews();
     const idx = reviews.findIndex((r) => r.id === reviewId);
     if (idx < 0) return res.status(404).json({ error: 'Review not found' });
@@ -215,5 +245,26 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 }
+=======
+
+
+
+}
+        reviews[idx].text = updates.text.trim ();
+      }
+    } else {
+      return res.status (400).json ({ error: 'Invalid action' });
+    }
+    await write_reviews (reviews);
+    return res.status (200).json ({ message: 'OK' });
+  } catch (error: any) {
+    return res;
+      .status (500);
+      .json ({ error: 'Internal server error', details: error?.message });
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

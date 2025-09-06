@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
@@ -248,6 +249,14 @@ import Referrals from "@/pages/Referrals",;
 import DeveloperPortal from "@/pages/DeveloperPortal",;
 import WalletPage from "@/pages/Wallet",;
 import ContractBuilder from "@/pages/ContractBuilder",;
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const DashboardRoutes = () => {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const DashboardRoutes = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
@@ -616,9 +625,18 @@ const DashboardRoutes = () =>: any {
           <ProtectedRoute>;
             <ContractBuilder />;
           </ProtectedRoute>;
+<<<<<<< HEAD
         } ;
       />;
     </Routes>;
   );
 },;
+=======
+
+
+},
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default DashboardRoutes;

@@ -38,10 +38,19 @@ function CareersPage() {
   const open_positions = [;
 
     {
+<<<<<<< HEAD
       title: "Senior AI Engineer"
       department: "AI & Machine Learning"
       title: "Senior AI Engineer",
       department: "AI & Machine Learning",;
+=======
+
+
+      title: "Senior AI Engineer",
+      department: "AI & Machine Learning",;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       location: "San Francisco, CA / Remote";
 
 export default function CareersPage() {;
@@ -419,10 +428,14 @@ export default function CareersPage() {;
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -430,6 +443,8 @@ export default function CareersPage() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Open Positions */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;
@@ -456,6 +471,9 @@ export default function CareersPage() {;
                 viewport={{ once: true }}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300">;
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">;
                   <div className="flex-1">;
@@ -581,6 +599,7 @@ export default function CareersPage() {;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
+<<<<<<< HEAD
 =======
                       </div>
                     </div>
@@ -611,6 +630,8 @@ export default function CareersPage() {;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className="text - center mb - 16";

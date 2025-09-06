@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
  
 
 
@@ -33,8 +38,13 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
 }
 };
 
+<<<<<<< HEAD
 export default function TechRadar({ pypi, crates, github }: Props) {
 export default function TechRadar({ pypi, crates, github }: Props) {;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const langs = Object.keys(github);
 
   return (

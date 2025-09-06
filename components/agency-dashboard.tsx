@@ -1,5 +1,6 @@
 import type { GetServerSideProps } from 'next';
 
+<<<<<<< HEAD
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
 type Props = { vendor: Vendor | null };
 
@@ -7,6 +8,10 @@ type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function AgencyDashboardPage({ vendor }: Props) {;
 type Props = { vendor: Vendor | null };
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AgencyDashboardPage({ vendor }: Props) {
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
@@ -54,6 +59,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     // For MVP, update via direct API not implemented, keep local preview only;
     setActiveVendor(updated);
   }
+<<<<<<< HEAD
   function addPackage() {
     if (!pkgTitle |!pkgPrice |!activeVendor) return;
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
@@ -65,13 +71,41 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         description: pkgDesc
         priceUsd: Number(pkgPrice)
       }
+=======
+
+
+  function addPackage() {;
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+    const packages = [;
+      ...(activeVendor && activeVendor.packages || []),;
+      {;
+        id: `pkg_${Date && Date.now()}`,;
+        title: pkgTitle,;
+        description: pkgDesc,;
+        priceUsd: Number(pkgPrice),;
+      },;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ];
     setActiveVendor({ ...activeVendor, packages });
     setPkgTitle('');
     setPkgDesc('');
     setPkgPrice('');
   }
+<<<<<<< HEAD
 
+=======
+=======
+        .filter(Boolean)} as Vendor;
+    // For MVP, update via direct API not implemented, keep local preview only
+    setActiveVendor(updated)
+  }
+  function addPackage() {
+
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className='space-y-8'>;
       <div className='flex items-center justify-between'>;
@@ -156,6 +190,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     setPkgPrice('')
   }
   return (
+<<<<<<< HEAD
     <div className="space-y-8">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold">Agency Dashboard</h1>
@@ -184,6 +219,40 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       <section className='space-y-3'>
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+=======
+
+    <div className="space-y-8">;
+      <div className="flex items-center justify-between">;
+        <h1 className="text-2xl font-semibold">Agency Dashboard</h1>;
+        {!activeVendor && activeVendor.verified && <span className="text-xs px-2 py-0 && 0.5 rounded bg-yellow-100 text-yellow-800">Pending Verification</span>}
+      </div>;
+
+      <section className="space-y-4">;
+        <h2 className="text-lg font-medium">Profile</h2>;
+        <form onSubmit={saveProfile} className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+          <div>;
+            <label className="block text-sm mb-1" htmlFor="input-Agency Name">Agency Name</label>;
+            <input name="name" defaultValue={activeVendor && activeVendor.name} className="w-full border rounded px-3 py-2 bg-transparent" />;
+          </div>;
+          <div className="md:col-span-2">;
+            <label className="block text-sm mb-1" htmlFor="input-About">About</label>;
+            <textarea name="about" defaultValue={activeVendor && activeVendor.about || ''} rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />;
+          </div>;
+          <div className="md:col-span-2">;
+            <label className="block text-sm mb-1" htmlFor="input-Services Offered">Services Offered</label>;
+            <input name="servicesOffered" defaultValue={activeVendor && activeVendor.servicesOffered?.join() || ''} className="w-full border rounded px-3 py-2 bg-transparent" />;
+          </div>;
+          <div className="md:col-span-2">;
+            <button className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Save</button>;
+          </div>;
+        </form>;
+      </section>;
+
+      <section className='space-y-3'>;
+        <h2 className='text-lg font-medium'>Publish Packages</h2>;
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div
               key={p && p.id}
               className='border border-gray-200 dark:border-gray-800 rounded p-4'>;
@@ -216,6 +285,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
             />;
             <button
               onClick={addPackage}
+<<<<<<< HEAD
               className='px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black'
             >
               Add
@@ -289,6 +359,10 @@ export default function AgencyDashboardPage({ vendor }: Props) {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {
@@ -365,11 +439,18 @@ function Pipeline({ vendorId }: { vendorId: string }) {
     });
     fetchItems();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   useEffect(() => {;
 
   }
 
+<<<<<<< HEAD
   useEffect(() => {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     fetchItems();
   }, []);
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -390,6 +471,9 @@ function Pipeline({ vendorId }: { vendorId: string }) {
           </div>;
           <select
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             defaultValue={item && item.status}
             onChange={e => changeStatus(item && item.id, e && e.target.value)}
             className='border rounded px-2 py-1 bg-transparent text-sm';
@@ -686,6 +770,7 @@ function change_status() {
 
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null; // tie to auth later
@@ -699,6 +784,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null; // tie to auth later;
   return { props: { vendor } };
@@ -755,8 +842,36 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null, // tie to auth later;
   return { props: { vendor } }
+<<<<<<< HEAD
 }
 
     </div>
 };
     </div>
+=======
+
+
+    </div>
+
+
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+        </div>))}
+    </div>);
+;
+export const getServerSideProps: GetServerSideProps < Props> = async () => {
+  const { list_vendors } = await import ('../utils / vendor - store');
+  const vendor = list_vendors ()[0] || null; // tie to auth later;
+  return { props: { vendor } }
+}  );
+}
+export const getServerSideProps: GetServerSideProps < Props> = async () => {
+  const { list_vendors } = await import ('../utils / vendor - store');
+  const vendor = list_vendors ()[0] || null, // tie to auth later;
+  return { props: { vendor } }
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

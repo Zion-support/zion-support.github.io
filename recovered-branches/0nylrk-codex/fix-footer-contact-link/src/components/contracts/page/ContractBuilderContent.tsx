@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { SmartContractBuilder  } from '@/components/contracts/SmartContractBuilder';
 import { ContractBuilder  } from '@/components/contracts/ContractBuilder';
@@ -7,6 +8,10 @@ import { ContractTypeCards  } from './ContractTypeCards';
 import { RecentContractsTable  } from './RecentContractsTable';
 import { TalentProfile  } from '@/types/talent';
 import { useAuth } from '@/hooks/useAuth';
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {SmartContractBuilder} from '@/components/contracts/SmartContractBuilder';
 import {ContractBuilder} from '@/components/contracts/ContractBuilder';
@@ -15,6 +20,7 @@ import {ContractTypeCards} from './ContractTypeCards';
 import {RecentContractsTable} from './RecentContractsTable';
 import {TalentProfile} from '@/types/talent';
 import {useAuth} from '@/hooks/useAuth';
+<<<<<<< HEAD
 // Mock data for demo purposes
 
 const mockTalent: TalentProfile = {
@@ -27,6 +33,15 @@ const mockTalent: TalentProfile = {
   skills: ['ReactNode.jsSmart Contracts']}
 export function ContractBuilderContent() {
 export function ContractBuilderContent() {;
+=======
+
+// Mock data for demo purposes
+
+
+export function ContractBuilderContent() {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user } = useAuth();
   const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');
   const [recentContracts, setRecentContracts] = useState([
@@ -47,9 +62,16 @@ export function ContractBuilderContent() {;
       isSmartContract: false
     }
   ]);
+<<<<<<< HEAD
   const handleContractGenerated = (content: string) => {
     console.log('Contract generated:', content.substring(0, 100) + '...')
   }
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',;
 import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder',;
 import { ContractBuilder } from '@/components/contracts/ContractBuilder',;
@@ -89,6 +111,12 @@ export function ContractBuilderContent() {;
     }
   ]),
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleContractGenerated = (content: string) => {
     // // // console.log('Contract generated:', content.substring(0, 100) + '...')
@@ -106,6 +134,7 @@ export function ContractBuilderContent() {;
       <ContractTypeCards
       
       <ContractTypeCards 
+<<<<<<< HEAD
   ]),;
   const handleContractGenerated = (content: string) => {;
     // // // console.log('Contract generated:', content.substring(0, 100) + '...');
@@ -118,6 +147,10 @@ export function ContractBuilderContent() {;
     <>;
       <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />;
       <ContractTypeCards;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         onStandardClick={() => setShowBuilderType('standard')}
         onSmartClick={() => setShowBuilderType('smart')}
       />

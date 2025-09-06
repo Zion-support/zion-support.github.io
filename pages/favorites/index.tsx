@@ -15,6 +15,7 @@ export default function FavoritesPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
   return (
     <div>
       <h2 className=&quot;text-xl font-semibold mb-4&quot;>Favorites</h2>
@@ -41,3 +42,9 @@ export default function FavoritesPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

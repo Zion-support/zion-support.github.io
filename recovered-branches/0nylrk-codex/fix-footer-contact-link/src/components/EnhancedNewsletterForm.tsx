@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+import React from 'react';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
@@ -7,12 +12,31 @@ export function EnhancedNewsletterForm() {;
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+<<<<<<< HEAD
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { useState } from "react";
 import { Mail } from "lucide-react";
 import { useState } from "react",
 import { Mail } from "lucide-react",
+=======
+
+  const handleSubmit = (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
+    setIsSubmitting(true);
+
+
+    // Simulate API call;
+    setTimeout(() => {;
+
+      setIsSubmitting(false);
+      (setIsSubmitted(true), setEmail(""));
+    }, 1000);
+  }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function EnhancedNewsletterForm() {
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -50,6 +74,12 @@ export function EnhancedNewsletterForm() {
         </div>
       </div>
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {isSubmitted ? (
         <div className="text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40">
           <p className="text-white font-medium">Thank you for subscribing!</p>
@@ -189,6 +219,7 @@ function EnhancedNewsletterForm() {
           </Button>
         </form>
       )}
+<<<<<<< HEAD
       <div className="mt-4 flex items-center text-xs text-zion-slate-light">
         <div className="flex -space-x-1 mr-2">
           {[...Array(3)].map((_, i) => (
@@ -277,4 +308,8 @@ export function EnhancedNewsletterForm() {;
       </div>;
     </div>;
   );
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }

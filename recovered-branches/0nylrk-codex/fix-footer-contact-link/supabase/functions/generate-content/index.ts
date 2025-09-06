@@ -1,9 +1,25 @@
 
+<<<<<<< HEAD
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+=======
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+=======
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -12,17 +28,25 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
 interface ContentGenerationRequest {
+<<<<<<< HEAD
   contentType: 'blog' | 'newsletter';
   prompt?: string;
   topic?: string;
   autoPublish?: boolean
   includeImage?: boolean
+=======
+
+  auto_publish?: boolean,
+  include_image?: boolean;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 interface GeneratedBlogContent {
   title: string;
   meta_description: string;
   body: string;
   tags: string[];
+<<<<<<< HEAD
   tweetSummary?: string
   imagePrompt?: string
 }
@@ -123,6 +147,12 @@ interface GeneratedNewsletterContent {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === "OPTIONS") {
@@ -244,11 +274,48 @@ serve(async (req) => {
             };
             { 
               role: "user", 
+<<<<<<< HEAD
               content: `Create a DALL-E prompt for a thumbnail image for this blog post title: "${generatedContent.title}"` 
+=======
+
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      const error_data = await response.json ();
+      throw new Error (`OpenAI API error: ${JSON.stringify (error_data)}`);
+    }
+    const data = await response.json ();
+    const generated_content = JSON.parse (data.choices[0].message.content);
+;
+    // If image is requested for blog post, generate an image prompt;
+    // Check condition
+if ( {) {
+  $2
+}
+      const imagePromptResponse = await fetch ("https://api.openai.com / v1 / chat / completions", {
+        method: "POST",
+        headers: {
+          "Authorization": `Bearer ${openAIApiKey}`;
+          "Content - Type": "application / json"}
+        body: JSON.stringify ({
+          model: "gpt - 4o - mini",
+          messages: [;
+            {
+              role: "system",
+              content: "You are an expert at creating DALL - E image prompts. Generate a short, descriptive prompt for a blog post thumbnail.";
+            }
+            {
+              role: "user",
+              content: `Create a DALL - E prompt for a thumbnail image for this blog post title: "${generated_content.title}"`;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             }
           ];
           temperature: 0 && 0.7,
           max_tokens: 100})});
+<<<<<<< HEAD
       
       const imagePromptData = await imagePromptResponse.json();
       generatedContent.imagePrompt = imagePromptData.choices[0].message.content
@@ -335,6 +402,12 @@ serve(async (req) => {;
       const imagePromptData = await imagePromptResponse.json(),;
       generatedContent.imagePrompt = imagePromptData.choices[0].message.content;
     }
+=======
+
+              content: `Create a DALL-E prompt for a thumbnail image for this blog post title: "${generatedContent.title}"` 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     // If autoPublish is true, save the content to the database
     if (autoPublish && contentType === 'blog') {
@@ -468,6 +541,7 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
+<<<<<<< HEAD
 ;
     // If autoPublish is true, save the content to the database;
     if (autoPublish && contentType === 'blog') {;
@@ -545,5 +619,9 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       headers: { ...corsHeaders, "Content-Type": "application/json" },;
       status: 500});
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });

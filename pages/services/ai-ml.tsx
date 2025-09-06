@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import React from 'react';
 import Head from 'next/head';
@@ -21,6 +22,37 @@ import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function AIMLServicesPage() {
   const services = [
+=======
+
+import React from 'react';
+import Head from 'next / head';
+
+import { motion } from 'framer-motion';
+
+import {
+
+  Brain,
+  Cpu,
+  Database,
+  Zap,
+  Shield,
+  Rocket,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
+  TrendingUp,
+
+} from 'lucide-react';
+import EnhancedNavigation from '../../components / EnhancedNavigation';
+import EnhancedFooter from '../../components / EnhancedFooter';
+export default /**
+ * AIMLServicesPage - Function description
+ */
+function AIMLServicesPage() {
+  const services = [;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       title: 'Custom AI Solutions'
       description:
@@ -83,6 +115,7 @@ export default function AIMLServicesPage() {
     { number: '2500%', label: 'Average ROI', icon: TrendingUp }
   ];
 
+<<<<<<< HEAD
   Brain,
   Cpu,
   Database,
@@ -115,6 +148,19 @@ export default function AIMLServicesPage() {
       description: "Tailored AI applications built for your specific business needs",
       features: ["Machine Learning Models", "Neural Networks", "Predictive Analytics", "Natural Language Processing"],
       price: "From $5,000",
+=======
+=======
+      title: 'Custom AI Solutions',
+      description:;
+        'Tailored AI applications built for your specific business needs',
+      features: [;
+        'Machine Learning Models',
+        'Neural Networks',
+        'Predictive Analytics',
+        'Natural Language Processing',
+      ],
+      price: 'From $5, 000',
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       icon: Brain,
       color: "from-purple-500 to-pink-500"
     },
@@ -184,6 +230,7 @@ export default function AIMLServicesPage() {
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.8 }}
             className='mb-8'
         <meta name="description" content="Cutting-edge AI and machine learning solutions from Zion Tech Group. Custom AI applications, automation, and intelligent systems that drive business growth." />
@@ -216,6 +263,10 @@ export default function AIMLServicesPage() {
   }
 }
             className="mb-8"
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent mb-6">
               AI & Machine Learning
@@ -236,6 +287,12 @@ export default function AIMLServicesPage() {
               competitive advantages.
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Revolutionary AI solutions that adapt, learn, and evolve with your business
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Get AI Consultation
@@ -321,6 +378,7 @@ export default function AIMLServicesPage() {
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -508,6 +566,10 @@ export default function AIMLServicesPage(req, res) {
   }
 }
                 className="text-center"
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-purple-400" />
@@ -550,6 +612,7 @@ export default function AIMLServicesPage(req, res) {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -571,6 +634,15 @@ export default function AIMLServicesPage(req, res) {
   }
 }
             className="text-center mb-16"
+=======
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className="text-4xl font-bold text-white mb-6">Our AI Services</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -589,6 +661,7 @@ export default function AIMLServicesPage(req, res) {
             {services.map((service, index) => (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
+<<<<<<< HEAD
                 key={service.title  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -615,6 +688,32 @@ export default function AIMLServicesPage(req, res) {
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300"
+=======
+
+
+            className='text-center mb-16'>;
+            <h2 className='text-4xl font-bold text-white mb-6'>;
+              Our AI Services;
+            </h2>;
+            <p className='text-xl text-white/70 max-w-3xl mx-auto'>;
+              Comprehensive AI solutions designed to transform your business;
+              operations and drive innovation;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services && services.map((service, index) => (;
+              <motion&& motion.div
+                key={service && service.title}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
+                viewport={{ once: true }}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
@@ -650,6 +749,12 @@ export default function AIMLServicesPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </ul>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-purple-400">{service.price}</span>
@@ -710,6 +815,12 @@ export default function AIMLServicesPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
 
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -735,11 +846,21 @@ export default function AIMLServicesPage(req, res) {
       </section>
       <EnhancedFooter />
     </div>
+<<<<<<< HEAD
 )
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our AI Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business operations and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) )
 ),
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our AI Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business operations and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
+=======
+
+
+),
+
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our AI Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive AI solutions designed to transform your business operations and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</div> </div> </section> <motion.div initial= {
 =======
             transition={{ duration: 0 && 0.8 }}
@@ -781,12 +902,20 @@ export default function AIMLServicesPage(req, res) {
 
 }viewport= {
   {
+<<<<<<< HEAD
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization. </p> Schedule Consultation </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
 
 }
 }
 }
+=======
+  once: true 
+
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business with AI? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our AI solutions can drive innovation, efficiency, and growth for your organization. </p> Schedule Consultation </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -908,3 +1037,10 @@ export default function AIMLServicesPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

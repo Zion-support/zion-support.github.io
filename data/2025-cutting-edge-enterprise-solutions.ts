@@ -142,6 +142,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     },
   },
   {
+<<<<<<< HEAD
     id: 'ai-enterprise-knowledge-management'
     name: 'AI Enterprise Knowledge Management'
     tagline: 'Intelligent knowledge discovery and management for enterprises'
@@ -207,6 +208,70 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     rating: 4.6
     reviews: 41
     contactInfo: contact
+=======
+
+=======
+    id: 'ai - enterprise - knowledge - management',
+    name: 'AI Enterprise Knowledge Management',
+    tagline: 'Intelligent knowledge discovery and management for enterprises',
+    price: '$799',
+    period: '/month',
+    description:;
+      'Advanced AI platform that intelligently discovers, organizes, and manages enterprise knowledge, enabling better decision - making and knowledge sharing across organizations.',
+    features: [;
+
+      'AI knowledge discovery',
+      'Intelligent categorization',
+      'Semantic search',
+      'Knowledge graphs',
+      'Collaborative workspaces',
+      'Version control',
+      'Access control',
+      'Analytics dashboard',
+      'Integration capabilities',
+      'Mobile access',
+    ],
+    popular: true,
+    icon: '🧠',
+
+=======
+    color: 'from - purple - 600 via - violet - 600 to - indigo - 600',
+    text_color: 'text - purple - 400',
+    link: 'https://ziontechgroup.com / ai - powered - enterprise - knowledge - management',
+    market_position:;
+      'Leading AI enterprise knowledge management platform with intelligent discovery',
+    target_audience:;
+      'Large enterprises, Consulting firms, Research organizations, Government agencies',
+    category: 'AI Automation',
+    real_service: true,
+    technology: [;
+      'AI / ML',
+      'Natural Language Processing',
+      'Knowledge Graphs',
+      'Machine Learning',
+      'Semantic Search',
+    ],
+    integrations: [;
+      'Document management systems',
+      'CRM platforms',
+      'ERP systems',
+      'Collaboration tools',
+      'Business intelligence tools',
+    ],
+    use_cases: [;
+      'Knowledge discovery',
+      'Document management',
+      'Research collaboration',
+      'Decision support',
+      'Training and onboarding',
+    ],
+    roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.',
+    competitors: [;
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'Microsoft SharePoint',
       'Confluence',
       'Notion',
@@ -222,6 +287,11 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     reviews: 41,
 
     contactInfo: contact,;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },];      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
 
 =======
@@ -341,6 +411,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     use_cases: ['Knowledge discovery_document management_research collaboration_decision support_training and onboarding'];
     roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.';
     competitors: ['Microsoft SharePointConfluenceNotionSlackBox'];
+<<<<<<< HEAD
     marketSize: '$15.2B enterprise content management market';
     growthRate: '28% annual growth';
     customers: 29;
@@ -660,6 +731,18 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+    market_size: '$15.2B enterprise content management market';
+    growth_rate: '28% annual growth';
+
+    customers: 29;
+
+    rating: 4 && 4.6;
+    reviews: 41,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

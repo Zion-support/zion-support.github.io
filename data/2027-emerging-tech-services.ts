@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface Service {
 export interface Service {;
   id: string;
@@ -14,6 +15,8 @@ export interface Service {;
   implementationTime: string;
   roi: string;
   link: string;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   {
@@ -259,6 +262,7 @@ export interface Service {;
     tags: ['Robotics', 'AI', 'Automation', 'Manufacturing', 'Logistics'],
   },
   {
+<<<<<<< HEAD
     id: 'quantum-internet-security'
     name: 'Quantum Internet Security Platform'
     description:
@@ -354,6 +358,118 @@ export interface Service {;
   }
   {
 <<<<<<< HEAD
+=======
+
+=======
+    id: 'quantum - materials - discovery',
+    name: 'Quantum Materials Discovery Platform',
+    description:;
+      'Revolutionary platform that uses quantum computing and AI to discover new materials with unprecedented properties for various applications.',
+    category: 'Materials Science',
+    price: '$13, 999 / month',
+    features: [;
+      'Quantum material simulation',
+      'AI - powered discovery',
+      'Property prediction',
+      'Synthesis optimization',
+      'Performance testing',
+      'Database management',
+    ],
+    benefits: [;
+      'Faster material discovery',
+      'Unprecedented properties',
+      'Cost reduction',
+      'Custom solutions',
+      'Breakthrough innovations',
+    ],
+    use_cases: [;
+      'Semiconductor development',
+      'Battery technology',
+      'Aerospace materials',
+      'Medical devices',
+      'Energy storage',
+    ],
+    target_audience: [;
+
+      'Semiconductor companies',
+      'Battery manufacturers',
+      'Aerospace companies',
+      'Medical device companies',
+      'Energy companies',
+    ],
+
+    market_size: '$21.3B by 2027',
+    competitive_advantage:;
+
+      'Only quantum materials discovery platform with AI integration',
+    implementation_time: '8 - 10 weeks',
+    roi: '1100% within 20 months',
+
+=======
+    link: 'https://ziontechgroup.com / services / quantum - materials - discovery',
+    tags: [;
+      'Materials Science',
+      'Quantum Computing',
+      'AI',
+      'Discovery',
+      'Innovation',
+    ],
+  },
+  {
+    id: 'quantum - financial - modeling',
+    name: 'Quantum Financial Modeling Platform',
+    description:;
+      'Advanced financial modeling platform that uses quantum computing for ultra - accurate predictions, risk assessment, and portfolio optimization.',
+    category: 'Financial Technology',
+    price: '$11, 999 / month',
+    features: [;
+      'Quantum risk modeling',
+      'Portfolio optimization',
+      'Market prediction',
+      'Stress testing',
+      'Real - time analysis',
+      'Regulatory compliance',
+    ],
+    benefits: [;
+      '1000x faster calculations',
+      'Improved accuracy',
+      'Better risk assessment',
+      'Optimized portfolios',
+      'Real - time insights',
+    ],
+    use_cases: [;
+      'Risk management',
+      'Portfolio optimization',
+      'Market analysis',
+      'Stress testing',
+      'Regulatory reporting',
+    ],
+    target_audience: [;
+
+      'Investment banks',
+      'Hedge funds',
+      'Asset managers',
+      'Insurance companies',
+      'Regulatory bodies',
+    ],
+
+=======
+    market_size: '$18.9B by 2027',
+    competitive_advantage:;
+      'Only quantum financial modeling platform with real - time analysis',
+    implementation_time: '6 - 8 weeks',
+    roi: '900% within 16 months',
+    link: 'https://ziontechgroup.com / services / quantum - financial - modeling',
+    tags: [;
+      'Financial Technology',
+      'Quantum Computing',
+      'Risk Management',
+      'Portfolio',
+      'Modeling',
+    ],
+  },
+  {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     id: 'quantum - climate - modeling',
     name: 'Quantum Climate Modeling Platform',
     description:;
@@ -427,14 +543,20 @@ export interface Service {;
       'Weather',
       'Research',
     ],
+<<<<<<< HEAD
   },;
 ];      'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
 
+=======
+  },
+];      'Government agencies_research institutions_environmental organizations_insurance companies_energy companies';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ];
     market_size: '$17.6B by 2027';
     competitive_advantage: 'Only quantum climate modeling platform with real - time predictions';
     implementation_time: '7 - 9 weeks';
     roi: '800% within 18 months';
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling'
 
@@ -709,6 +831,11 @@ export const emergingTech2027Services: Service[] = [;
     roi: '800% within 18 months',;
     link: 'https://ziontechgroup.com/services/quantum-climate-modeling',;
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];
+=======
+    link: 'https://ziontechgroup.com / services / quantum - climate - modeling',
+    tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch'];
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
 =======

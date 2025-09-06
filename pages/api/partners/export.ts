@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
+<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -12,6 +17,13 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+=======
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status(400).json({ error: "Missing code" });
 
@@ -52,6 +64,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 }
   const using_placeholder =;
@@ -116,3 +132,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

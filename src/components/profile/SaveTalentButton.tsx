@@ -18,9 +18,12 @@ export function SaveTalentButton({
       }    >
 import { Button } from "@/components/ui/button"
 interface SaveTalentButtonProps {
+<<<<<<< HEAD
   talentId: string,
   onSave: (talentId: string,) => void,
   isSaved: boolean
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   talentId: string
   onSave: (talentId: string,) => void

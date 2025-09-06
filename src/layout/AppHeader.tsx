@@ -49,6 +49,11 @@ import React from 'react';
         className={cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
           { "bg-red-500": mobileMenuOpen }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         )}
       >
         <div className="container flex h-16 items-center px-4 sm:px-6">
@@ -77,6 +82,11 @@ import React from 'react';
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
               aria-label={t('general.toggle_mobile_menu')}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <span className="sr-only">{t('general.open_main_menu')}</span>
               {mobileMenuOpen ? (
@@ -96,12 +106,21 @@ import React from 'react';
                 href="/auth/login"
                 className="text-sm font-medium text-foreground/70 hover:text-foreground"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
                   // or we could default to dashboard.
@@ -125,6 +144,11 @@ import React from 'react';
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
                 aria-label = {t('auth.signup'),}
                 aria-label={t('auth.signup')}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 data-testid="signup-nav-link"
               >
                 {t('auth.signup')}
@@ -147,15 +171,19 @@ import React from 'react';
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             onClick = {(,) => setMobileMenuOpen(false),}
             aria-hidden="true";
           />;
           <div className="relative bg-background border-t border-border h-auto max-h-[calc(100vh-4rem)] overflow-y-auto">;
 
             <MobileMenu
+<<<<<<< HEAD
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />
@@ -215,6 +243,14 @@ import React from 'react';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+              unreadCount = {unreadCount,}
+              onClose = {() => setMobileMenuOpen(false),}
+              openLoginModal = {openLoginModal,}
+            />;
+          </div>;
+        </div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
       {/* Mobile Bottom Navigation */}
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
@@ -1253,6 +1289,9 @@ import React from 'react';
       </AnimatePresence>
     </header>  )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 
@@ -1389,5 +1428,8 @@ import React from 'react';
 }
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 ;

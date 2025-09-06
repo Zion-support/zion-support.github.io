@@ -6,6 +6,9 @@ interface IntegrationCardProps {
   href?: string
   onConnect?: () => void
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import React from 'react';
@@ -43,10 +46,13 @@ interface IntegrationCardProps {;
 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function IntegrationCard({
   title,
   description,
@@ -132,6 +138,9 @@ interface IntegrationCardProps {;
   href?: string;
   onConnect?: () => void;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -230,6 +239,7 @@ export function IntegrationCards() {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -237,6 +247,8 @@ export function IntegrationCards() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function IntegrationCards() {
   return (
     <div className="grid md:grid-cols-3 gap-6">
@@ -253,6 +265,11 @@ export function IntegrationCards() {
         description="Sync leads and opportunities with Salesforce."
 
         icon={<Briefcase className="h-5 w-5" />}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />
     </div>
@@ -275,8 +292,11 @@ export function IntegrationCards() {
   );
 };
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       />;

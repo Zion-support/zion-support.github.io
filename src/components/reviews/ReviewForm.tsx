@@ -4,6 +4,7 @@ rating?: number;
   quality_rating?: number;
   timeliness_rating?: number;
   would_work_again?: boolean;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -122,6 +123,8 @@ interface ReviewFormValues {;
   timeliness_rating?: number,;
   would_work_again?: boolean,;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   is_anonymous?: boolean;
 }
 

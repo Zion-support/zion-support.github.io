@@ -1,15 +1,19 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import {Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
+<<<<<<< HEAD
 import React from "react",
 import { Link, useLocation } from "react-router-dom",
 import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",
@@ -17,6 +21,21 @@ import { cn } from "@/lib/utils";
 import { useAuth } from "@/hooks/useAuth";
 import { cn } from "@/lib/utils",
 import { useAuth } from "@/hooks/useAuth",
+=======
+interface MobileBottomNavProps {;
+  unreadCount?: number;
+
+}
+
+export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
+  const location = useLocation();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface MobileBottomNavProps {
   unreadCount?: number
 }
@@ -200,6 +219,11 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {;
               <item.icon className="h-5 w-5 mb-1" />;
               {item.badge && item.badge > 0 && (;
                 <span className="absolute -top-2 -right-2 bg-zion-purple text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {item.badge > 9 ? '9+' : item.badge}
                 </span>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

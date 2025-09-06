@@ -62,6 +62,104 @@ export default function MicroSaaSPage() {
             price="$4,500-13,000"
             icon="📈"
           />
+          <MicroSaaSCard
+            title="AI Content Creation Suite"
+            description="Complete content marketing automation with AI writing, SEO optimization, and multi-format generation"
+            features={["AI blog writing", "SEO optimization", "Social media content", "Video scripts", "Email campaigns", "Content calendar"]}
+            price="$2,299/month"
+            icon="✍️"
+          />
+          <MicroSaaSCard
+            title="Smart Inventory Management"
+            description="AI-powered inventory optimization with demand forecasting and automated reordering"
+            features={["Demand forecasting", "Auto reordering", "Stock optimization", "Supplier management", "Cost analysis", "Multi-location sync"]}
+            price="$1,899/month"
+            icon="📦"
+          />
+          <MicroSaaSCard
+            title="Lead Generation & CRM Automation"
+            description="Intelligent lead scoring, nurturing, and conversion optimization with AI insights"
+            features={["Lead scoring", "Auto-nurturing", "CRM integration", "Conversion tracking", "Pipeline analytics", "Follow-up automation"]}
+            price="$2,199/month"
+            icon="🎯"
+          />
+          <MicroSaaSCard
+            title="AI-Powered HR Management"
+            description="Complete HR automation with AI recruitment, performance tracking, and employee engagement"
+            features={["AI resume screening", "Interview scheduling", "Performance analytics", "Employee surveys", "Compliance tracking", "Benefits management"]}
+            price="$2,799/month"
+            icon="👥"
+          />
+          <MicroSaaSCard
+            title="Smart Document Processing"
+            description="AI-powered document analysis, extraction, and workflow automation for business documents"
+            features={["Document OCR", "Data extraction", "Contract analysis", "Compliance checking", "Workflow automation", "Version control"]}
+            price="$1,599/month"
+            icon="📄"
+          />
+          <MicroSaaSCard
+            title="AI Sales Forecasting Platform"
+            description="Advanced sales prediction and pipeline management with AI-driven insights and recommendations"
+            features={["Sales forecasting", "Pipeline analysis", "Deal scoring", "Revenue prediction", "Market trends", "Performance optimization"]}
+            price="$2,399/month"
+            icon="📈"
+          />
+          <MicroSaaSCard
+            title="Automated Customer Feedback System"
+            description="AI-powered feedback collection, analysis, and action planning for customer experience optimization"
+            features={["Multi-channel feedback", "Sentiment analysis", "Trend identification", "Action recommendations", "ROI tracking", "Competitor analysis"]}
+            price="$1,299/month"
+            icon="💬"
+          />
+          <MicroSaaSCard
+            title="Smart Expense Management"
+            description="AI-driven expense tracking, categorization, and approval workflows for businesses"
+            features={["Receipt scanning", "Auto-categorization", "Policy compliance", "Approval workflows", "Budget tracking", "Tax preparation"]}
+            price="$999/month"
+            icon="💳"
+          />
+          <MicroSaaSCard
+            title="AI Website Optimization Suite"
+            description="Complete website performance optimization with AI testing, personalization, and conversion enhancement"
+            features={["A/B testing", "Personalization", "Speed optimization", "SEO enhancement", "Conversion tracking", "User behavior analysis"]}
+            price="$1,799/month"
+            icon="🌐"
+          />
+          <MicroSaaSCard
+            title="Automated Meeting Scheduler"
+            description="AI-powered scheduling with timezone management, conflict resolution, and meeting optimization"
+            features={["Smart scheduling", "Timezone handling", "Conflict resolution", "Meeting prep", "Follow-up automation", "Calendar integration"]}
+            price="$799/month"
+            icon="📅"
+          />
+          <MicroSaaSCard
+            title="AI-Powered Learning Management"
+            description="Intelligent training platform with personalized learning paths and progress tracking"
+            features={["Personalized courses", "Progress tracking", "Skill assessment", "Certification management", "Content creation", "Analytics dashboard"]}
+            price="$2,599/month"
+            icon="🎓"
+          />
+          <MicroSaaSCard
+            title="Smart Contract Management"
+            description="AI-powered contract lifecycle management with risk assessment and compliance monitoring"
+            features={["Contract analysis", "Risk assessment", "Renewal tracking", "Compliance monitoring", "Template library", "Digital signatures"]}
+            price="$2,199/month"
+            icon="📋"
+          />
+          <MicroSaaSCard
+            title="AI Data Quality Platform"
+            description="Automated data cleaning, validation, and quality monitoring for business intelligence"
+            features={["Data validation", "Duplicate detection", "Quality scoring", "Auto-correction", "Monitoring alerts", "Compliance reporting"]}
+            price="$1,499/month"
+            icon="🔍"
+          />
+          <MicroSaaSCard
+            title="Intelligent Backup & Recovery"
+            description="AI-powered data backup with intelligent scheduling, compression, and disaster recovery planning"
+            features={["Smart scheduling", "Data compression", "Incremental backups", "Recovery testing", "Compliance reporting", "Multi-cloud support"]}
+            price="$1,199/month"
+            icon="💾"
+          />
         </div>
       </section>
 
@@ -259,6 +357,7 @@ function Pricing() {
       </div>
     </section>
   );
+<<<<<<< HEAD
 }
 
 function Plan({ name, price, features, popular }: { 
@@ -326,4 +425,6 @@ function CTASection() {
       </div>
     </div>
   );
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }

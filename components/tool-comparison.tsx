@@ -32,6 +32,7 @@ import {
   ExternalLink,
   Zap,
   Brain,
+<<<<<<< HEAD
   Globe,
   Rocket,;} from 'lucide-react';import { 
   Globe,;
@@ -41,6 +42,8 @@ import {
   TrendingUp
   DollarSign
   Users
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -75,9 +78,20 @@ import {
   Globe;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function ToolComparisonPage() {
 export default function ToolComparisonPage() {;
+=======
+
+
+export default function ToolComparisonPage() {
+=======
+
+export default function ToolComparisonPage() {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
   const [sortBy, setSortBy] = React.useState('rating');
@@ -1022,6 +1036,14 @@ export default function ToolComparisonPage() {;
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300'>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {allTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>Tools Analyzed</div>
@@ -1195,6 +1217,12 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
                 <button
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${;
@@ -1224,6 +1252,12 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             <div className='flex items-center space-x-2'>
               <Filter className='w-5 h-5 text-gray-400' />
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e && e.target.value)}
@@ -1460,6 +1494,13 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
         </div>
       </section>
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -1467,6 +1508,12 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
 
               Detailed Analysis
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Deep dive into each tool's pros, cons, and use cases to make the
@@ -1736,6 +1783,9 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <div className="flex items-center justify-between">
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
 =======
@@ -1743,6 +1793,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1750,6 +1801,8 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <div className='flex items-center justify-between'>
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}
@@ -1760,6 +1813,12 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
                     href={tool.website}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {tool.pricing}
                   </span>
                   <Button
@@ -1778,6 +1837,12 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 
                   </Button>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </div>
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1787,6 +1852,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
         </div>
       </section>
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1794,6 +1860,16 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+          </div>;
+        </div>;
+      </section>;
+
+
+      {/* CTA Section */}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -1801,6 +1877,11 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
 
             Need Help Choosing?
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Our experts can analyze your business needs and recommend the
@@ -1820,6 +1901,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
               href='/saas-marketplace'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'            >              href="/saas-marketplace"
               variant="outline"
               size="lg"
@@ -1831,11 +1913,25 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
       </section>
     </>
 );
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              Explore All Tools;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     </>);
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 );
@@ -1872,3 +1968,7 @@ className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

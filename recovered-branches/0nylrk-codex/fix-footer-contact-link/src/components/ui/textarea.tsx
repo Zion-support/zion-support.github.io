@@ -8,6 +8,11 @@ import { cn } from "@/lib/utils"
 export type TextareaProps = React.ComponentProps<&quot;textarea&quot;>
 export type TextareaProps = React.ComponentProps<"textarea">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const Textarea = React.forwardRef<HTMLTextAreaElement TextareaProps>(
   ({ className, ...props }, ref) => {
     return (
@@ -35,6 +40,7 @@ const Textarea = React.forward_ref < HTMLTextAreaElement TextareaProps>(
         {...props}
       />);
   }
+<<<<<<< HEAD
 )
 Textarea.displayName = &quot;Textarea&quot;
 export { Textarea }
@@ -44,3 +50,23 @@ Textarea.displayName = "Textarea"
 export { Textarea }
 ;
 ;
+=======
+
+);
+Textarea.display_name = &quot;Textarea & quot;
+
+export { Textarea }
+=======
+
+export { Textarea };
+
+=======
+Textarea.displayName = "Textarea"
+
+export { Textarea }
+
+
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

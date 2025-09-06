@@ -20,6 +20,7 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
 export default function InteractiveSearch({
   placeholder = 'Search talent, skills, or jobs...'
 }: {
@@ -38,6 +39,8 @@ export default function InteractiveSearch({
         <button
           onClick={() => setValue('')}
           className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'        >  const [value, setValue] = useState('');
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   placeholder?: string;
 }) {;
@@ -145,11 +148,14 @@ function InteractiveSearch() {
         </button>;
       </div>;
     </form>;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }}
 
@@ -189,6 +195,7 @@ function InteractiveSearch() {
 }}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -203,3 +210,5 @@ function InteractiveSearch() {
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

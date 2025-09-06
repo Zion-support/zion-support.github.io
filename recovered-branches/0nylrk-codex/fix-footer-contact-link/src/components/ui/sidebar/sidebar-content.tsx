@@ -48,10 +48,16 @@ export const SidebarHeader = React.forwardRef<
 SidebarInput.displayName = "SidebarInput"
 
 export const SidebarHeader = React.forwardRef<
+<<<<<<< HEAD
   HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
   HTMLDivElement,
   React.ComponentProps<"div">
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >((props, ref) => {
   return (
     <div;
@@ -69,10 +75,16 @@ export const SidebarFooter = React.forwardRef<
 SidebarHeader.displayName = "SidebarHeader"
 
 export const SidebarFooter = React.forwardRef<
+<<<<<<< HEAD
   HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
   HTMLDivElement,
   React.ComponentProps<"div">
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >((props, ref) => {
   return (
     <div;
@@ -119,10 +131,16 @@ export const SidebarContent = React.forwardRef<
 SidebarSeparator.displayName = "SidebarSeparator"
 
 export const SidebarContent = React.forwardRef<
+<<<<<<< HEAD
   HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
   HTMLDivElement,
   React.ComponentProps<"div">
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >((props, ref) => {
   return (
     <div;
@@ -145,10 +163,16 @@ export const SidebarGroup = React.forwardRef<
 SidebarContent.displayName = "SidebarContent"
 
 export const SidebarGroup = React.forwardRef<
+<<<<<<< HEAD
   HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
   HTMLDivElement,
   React.ComponentProps<"div">
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >((props, ref) => {
   return (
     <div;

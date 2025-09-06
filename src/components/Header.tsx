@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Menu, X, ChevronDown, Phone, Mail, MapPin } from 'lucide-react';
+=======
+import Button from './Button';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -72,6 +76,7 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
+<<<<<<< HEAD
           <div className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
@@ -113,6 +118,25 @@ const Header: React.FC = () => {
               </div>
             ))}
           </div>
+=======
+          <nav className="hidden md:flex items-center space-x-8">
+            <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+              Home
+            </Link>
+            <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+              Services
+            </Link>
+            <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+              About
+            </Link>
+            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+              Contact
+            </Link>
+            <Button variant="primary" size="small">
+              Get Started
+            </Button>
+          </nav>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           {/* Mobile Menu Button */}
           <button
@@ -125,6 +149,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
+<<<<<<< HEAD
           <div className="lg:hidden mt-4 border-t border-gray-200 pt-4">
             {navigation.map((item) => (
               <div key={item.name} className="mb-2">
@@ -175,8 +200,35 @@ const Header: React.FC = () => {
           </div>
         )}
       </nav>
+=======
+          <div className="md:hidden py-4 border-t border-slate-700">
+            <nav className="flex flex-col space-y-4">
+              <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                Home
+              </Link>
+              <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
+                Services
+              </Link>
+              <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                About
+              </Link>
+              <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+                Contact
+              </Link>
+              <Button variant="primary" size="small" className="w-full">
+                Get Started
+              </Button>
+            </nav>
+          </div>
+        )}
+      </div>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </header>
   );
 };
 
+<<<<<<< HEAD
 export default Header;
+=======
+export default Header;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

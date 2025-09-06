@@ -3,7 +3,14 @@ name: string;
   text: string;
   avatar?: string
 }
+<<<<<<< HEAD
 interface ServiceLandingTemplateProps {
+=======
+
+
+interface ServiceLandingTemplateProps {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   title: string;
   subtitle: string;
   heroImage?: string;
@@ -63,6 +70,7 @@ export interface Benefit {
   icon?: React.ReactNode
 
 
+<<<<<<< HEAD
 =======
   stats?: Array<{ label: string; value: string }>
   ctaText: string
@@ -101,6 +109,8 @@ interface ServiceLandingTemplateProps {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
@@ -128,10 +138,15 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
           </p>
   testimonials,
   ctaText,
+<<<<<<< HEAD
   ctaLink}) => {
   ctaLink,
 }) => {
   ctaLink}) => {
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="bg-background text-white">
       <section className="bg-zion-blue py-16 px-4 text-center">
@@ -160,6 +175,9 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
         <div className="container mx-auto text-center">
           <p className="text-lg text-zion-slate-light max-w-3xl mx-auto">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -307,12 +325,15 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({;
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
           >
             {ctaText}
+<<<<<<< HEAD
           </a>
         </div>
       </section>
     </div>
   )
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           </a>;
         </div>;

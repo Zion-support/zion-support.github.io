@@ -10,6 +10,7 @@ if ( {) {
     window.gtag ('event', event, data);
   }
 }
+<<<<<<< HEAD
 export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', 'GA_MEASUREMENT_ID', {
@@ -34,8 +35,36 @@ export const trackPageView = (url: string) => {
     });
   }
 }
+=======
+;
+export const trackPageView = (url: string) =>: any {
+  // Check condition
+if ( {) {
+  $2
+}
+    window.gtag ('config', 'GA_MEASUREMENT_ID', {
+
+      page_path: url,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       page_path: url,;
       page_path: url,
+<<<<<<< HEAD
+=======
+
+    });
+  }
+}
+=======
+
+      page_path: url,;
+
+=======
+      page_path: url,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     });
   }
 };
@@ -115,6 +144,7 @@ interface WebVitalMetric {
   value: number;
   id: string;
 }
+<<<<<<< HEAD
 export const trackWebVitals = (metric: WebVitalMetric) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', metric.name, {
@@ -126,6 +156,14 @@ export const trackWebVitals = (metric: WebVitalMetric) => {
       event_category: 'Web Vitals',
       event_label: metric.id,
       non_interaction: true,;
+=======
+
+
+      event_category: 'Web Vitals',
+      event_label: metric.id,
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      non_interaction: true,
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     });
   }
 
@@ -135,19 +173,43 @@ export const trackWebVitals = (metric: WebVitalMetric) => {
 
 export const event = ({
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   action
   category
   label
   value
 }: {
+<<<<<<< HEAD
+=======
+=======
+
+      value: Math.round(metric.value),
+      event_category: 'Web Vitals',
+      event_label: metric.id,
+      non_interaction: true,;
+
+    });
+  }
+}
+// Track events
+export const event = ({
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   action,
   category,
   label,
   value,
 }: {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   action: string;
   category: string;
   label?: string;

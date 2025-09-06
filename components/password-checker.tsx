@@ -1,5 +1,6 @@
 
 
+<<<<<<< HEAD
 export default function PasswordCheckerPage() {
 =======
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -36,12 +37,32 @@ function PasswordCheckerPage() {
       analyzePassword(password)
     } else {
       resetAnalysis()
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     return this.props.children;
   }
 }
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -68,6 +89,9 @@ export default function PasswordCheckerPage() {
   RefreshCw,
   CheckCircle,
   XCircle,
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   AlertTriangle,;
   ArrowRight,;
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
@@ -95,6 +119,12 @@ import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, Alert
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function PasswordCheckerPage() {;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [strength, setStrength] = useState(0);
@@ -426,6 +456,9 @@ if (
     if (strength >= 30) return 'bg-orange-400';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   };
 
@@ -456,6 +489,14 @@ if (
         />
       </Head>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -806,6 +847,16 @@ if (return 'bg - orange - 400') {
                   </label>;
                   <div className="relative">;
 
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Generate Password */}
                 <div>;
                   <Button
@@ -819,6 +870,16 @@ if (return 'bg - orange - 400') {
                   </Button>
                 </div>
 
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Generated Password Display */}
 
 =======
@@ -868,6 +929,11 @@ if (return 'bg - orange - 400') {
 
                       {generatedPassword}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </div>
                   </div>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -950,6 +1016,7 @@ if (return 'bg - orange - 400') {
                         {strengthText} ({strength}/100)
                       </span>
                     </div>
+<<<<<<< HEAD
                     <div className='w-full bg-gray-700 rounded-full h-3'>
                       <div                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}                <div className="space-y-6">
                   {/* Strength Score */}
@@ -968,6 +1035,15 @@ if (return 'bg - orange - 400') {
 
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+
+=======
+
+                      <div 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                         style={{ width: `${strength}%` }}
@@ -975,6 +1051,31 @@ if (return 'bg - orange - 400') {
                     </div>
                   </div>
 
+<<<<<<< HEAD
+=======
+                  <div>;
+                    <div className="flex items-center justify-between mb-2">;
+                      <span className="text-sm text-gray-300">Password Strength:</span>;
+                        {strengthText} ({strength}/100);
+                      </span>;
+                    </div>;
+                    <div className='w-full bg-gray-700 rounded-full h-3'>;
+                      <div                    <div className="w-full bg-gray-700 rounded-full h-3">;
+                      <div
+                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
+                        style={{ width: `${strength}%` }}
+                      />;
+                    </div>;
+                  </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {/* Security Checks */}
                   <div>
                     <h4 className='text-lg font-semibold text-white mb-3'>
@@ -992,6 +1093,12 @@ if (return 'bg - orange - 400') {
                           <span className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>
                           >                            {key === 'length' && 'At least 8 characters'}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             {key === 'length' && 'At least 8 characters'}
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
@@ -1003,6 +1110,19 @@ if (return 'bg - orange - 400') {
                     </div>
                   </div>
 
+<<<<<<< HEAD
+=======
+                    </div>;
+                  </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {/* Suggestions */}
                   {suggestions.length > 0 && (
                     <div>
@@ -1028,6 +1148,7 @@ if (return 'bg - orange - 400') {
 
                           </div>
 
+<<<<<<< HEAD
                         ))}
                       </div>
                     </div>
@@ -1049,6 +1170,24 @@ if (return 'bg - orange - 400') {
         </div>
       </section>
 
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                        ))}
+                      </div>;
+                    </div>;
+                  )}
+
+
+              )}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Features */}
 
       <section className="py-20 bg-gray-800">
@@ -1497,6 +1636,11 @@ if (return 'bg - orange - 400') {
           <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
 
             Ready to Secure Your Passwords?
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </h2>
           <p className='text-xl text-indigo-100 mb-8'>
             Join thousands of users who trust our password strength checker to
@@ -1515,6 +1659,7 @@ if (return 'bg - orange - 400') {
               href='/pricing'
               variant='outline'
               size='lg'
+<<<<<<< HEAD
               className='border-white text-white hover:bg-white hover:text-indigo-600'            >              href="/pricing"
               variant="outline"
               size="lg"
@@ -1531,3 +1676,23 @@ if (return 'bg - orange - 400') {
 }
   );
 }
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+              View Pricing;
+            </Button>;
+          </div>;
+        </div>;
+      </section>;
+
+
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

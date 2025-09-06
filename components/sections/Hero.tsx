@@ -200,9 +200,16 @@ const Hero: React.FC<HeroProps> = ({;
           </h1>;
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">;
             {subtitle}
+<<<<<<< HEAD
           </p>
           {/* Action Buttons */}
           {(primaryAction |secondaryAction) && (
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
 
             {subtitle}
@@ -240,6 +247,18 @@ const Hero: React.FC<HeroProps> = ({;
 
                 </Button>
 
+<<<<<<< HEAD
+=======
+            {title}
+          </h1>;
+          <p className="text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading - relaxed font - light">;
+            {subtitle}
+          </p>;
+          {/* Action Buttons */}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               )}
               {secondaryAction && (;
                 <Button
@@ -261,6 +280,18 @@ const Hero: React.FC<HeroProps> = ({;
           )}
         </div>
 
+<<<<<<< HEAD
+=======
+        </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Stats Section */}
         {stats && (;
           <div
@@ -365,6 +396,12 @@ const Hero: React.FC<HeroProps> = ({;
 
                   {stat.label}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </div>
               </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -445,9 +482,13 @@ const Hero: React.FC<HeroProps> = ({;
 }
 export default Hero;
 
+<<<<<<< HEAD
 }
 }
 }
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 }
@@ -512,3 +553,10 @@ export default Hero;
       </div>
 
       {/* Decorative Elements */}
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,6 +1,7 @@
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
+<<<<<<< HEAD
   Dialog
   DialogContent
   DialogHeader
@@ -8,10 +9,18 @@ import {
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Dialog,
   DialogContent,
   DialogHeader,;
   DialogTitle;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -301,6 +310,12 @@ import { LoginModal } from '@/components/auth/LoginModal';
 
           onKeyDown={handleKeyDown}
           aria-modal="true"
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -334,6 +349,11 @@ import { LoginModal } from '@/components/auth/LoginModal';
               name="subject"
               render={({ field }: { field: any }) => (
                 <FormItem>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
@@ -357,6 +377,11 @@ import { LoginModal } from '@/components/auth/LoginModal';
 
               render={({ field }: { field: any }) => (
                 <FormItem>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
@@ -376,6 +401,7 @@ import { LoginModal } from '@/components/auth/LoginModal';
               <SendIcon className="mr-2" />
               {isSubmitting ? 'Sending...' : 'Send Message'}
 
+<<<<<<< HEAD
 =======
             </Button>
           </form>
@@ -391,11 +417,16 @@ import { LoginModal } from '@/components/auth/LoginModal';
 }
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </>;
   ) </>;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />    <Dialog open={is_open} onOpenChange={on_close}>;

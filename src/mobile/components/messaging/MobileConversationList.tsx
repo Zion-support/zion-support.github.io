@@ -120,6 +120,7 @@ function MobileConversationList() {
             <div className='flex items-center gap-3 py-3 cursor-pointer'>
               <Avatar>
                 <AvatarImage
+<<<<<<< HEAD
                   src={conversation.avatar}
                   alt={conversation.name}
                 />                <AvatarFallback>
@@ -149,6 +150,10 @@ function MobileConversationList() {
             <div className="flex items-center gap-3 py-3 cursor-pointer">
               <Avatar>
                 <AvatarImage src={conversation.avatar} alt={conversation.name} />
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
@@ -198,6 +203,9 @@ function MobileConversationList() {
                       ? <em>Typing...</em> 
                       : conversation.lastMessage}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -210,6 +218,9 @@ function MobileConversationList() {
                       {conversation.unreadCount}
                     </Badge>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                   )}

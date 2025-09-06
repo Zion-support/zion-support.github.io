@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 export interface InnovativeMicroSaas2029 {
   id: string;
 export interface InnovativeMicroSaas2029 {  id: string;
+=======
+
+export interface InnovativeMicroSaas2029 {
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   name: string;
   tagline: string;
   price: string;
@@ -12,8 +18,17 @@ export interface InnovativeMicroSaas2029 {  id: string;
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
     address: string;
   };
+=======
+
+
+    address: string;
+  };
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export interface InnovativeMicroSaas2029 {;
   id: string,;
   name: string,;
@@ -31,6 +46,13 @@ export interface InnovativeMicroSaas2029 {;
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     address: string;
   }
@@ -91,6 +113,7 @@ export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [;
     realImplementation: true,
     contactInfo: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -112,6 +135,10 @@ export const innovativeMicroSaasServices2029: InnovativeMicroSaas2029[] = [;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

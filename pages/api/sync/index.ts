@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../utils/sync/storage";
 import { filterEventsByScope } from "../../../utils/sync/storage";
@@ -53,6 +54,10 @@ import { readState } from "../../../utils/sync/storage",
 import { filterEventsByScope } from "../../../utils/sync/storage",
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (req.method === "GET") {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     const scope = state.config.scope,
@@ -65,13 +70,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       counts: {
 
         totalEvents: scopedEvents.length,
+<<<<<<< HEAD
         proposals: scopedEvents.filter((e) => e.type === "proposal").length,
 proposals: scopedEvents.filter((e) => e.type === "proposal").length,
         proposals: scopedEvents.filter((e) => e.type === "proposal").length,
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length,
         talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length,
         daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length,
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})
+<<<<<<< HEAD
   }
 
   return res.status(405).json({ error: "Method not allowed" });
@@ -140,3 +151,8 @@ export default function handler(req, res) {
   }
 }
 }
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

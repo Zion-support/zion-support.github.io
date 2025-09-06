@@ -1,9 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ...realMicroSaasServices2025;
  ...realMicroSaasServices2025;
 ...realMicroSaasServices2025;
  ...realMicroSaasServices2025;
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ...innovativeAIServices2025;
 ...innovativeITServices2025;
 ...emergingTechServices2025;
@@ -63,6 +70,7 @@ and micro SAAS services designed to transform your business and drive innovation
   opacity: 0, y: 20
 }animate= {
   {
+<<<<<<< HEAD
   opacity: 1, y: 0
 }transition= {
   {
@@ -78,6 +86,8 @@ and micro SAAS services designed to transform your business and drive innovation
 }</div>)
   opacity: 1, y: 0 
   opacity: 1, y: 0 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 }> ⭐ Popular </span>) 
@@ -546,6 +556,9 @@ and micro SAAS services designed to transform your business and drive innovation
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Get unique services by ID;
   const uniqueServices = allServices && allServices.filter((service, index, self) => ;
     index === self && self.findIndex(s => s && s.id === service && service.id);
@@ -743,6 +756,16 @@ and micro SAAS services designed to transform your business and drive innovation
               </motion.div>
             </motion.div>
 
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Enhanced Search and Filters */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -981,6 +1004,12 @@ and micro SAAS services designed to transform your business and drive innovation
 
 
               
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
@@ -994,6 +1023,9 @@ and micro SAAS services designed to transform your business and drive innovation
             </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </select>;
               <select
                 value={sortBy}
@@ -1025,6 +1057,7 @@ and micro SAAS services designed to transform your business and drive innovation
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1032,6 +1065,8 @@ and micro SAAS services designed to transform your business and drive innovation
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Enhanced Category Overview */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1119,10 +1154,14 @@ and micro SAAS services designed to transform your business and drive innovation
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1130,6 +1169,8 @@ and micro SAAS services designed to transform your business and drive innovation
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Services Grid/List */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -1170,6 +1211,12 @@ and micro SAAS services designed to transform your business and drive innovation
                           )}
                         </div>
                         
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         {/* Service Icon */}
                         <div className="text-4xl mb-4">{service && service.icon}</div>;
                       </div>;
@@ -1189,7 +1236,12 @@ and micro SAAS services designed to transform your business and drive innovation
                   onClick={() => {;
                     setSearchTerm('');
 
+<<<<<<< HEAD
                     setSelectedCategory('All')
+=======
+                    setSelectedCategory('All');
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   }}
                   className="mt-4 px-6 py-2 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
                 >
@@ -1200,6 +1252,14 @@ and micro SAAS services designed to transform your business and drive innovation
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       {/* Enhanced Price */}
                       <div className="mb-6 relative z-10">
                         <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-2xl p-4">
@@ -1211,6 +1271,10 @@ and micro SAAS services designed to transform your business and drive innovation
 =======
           </div>;
         </section>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       {/* Enhanced Price */}
                       <div className="mb-6 relative z-10">;
                         <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-2xl p-4">;
@@ -1232,6 +1296,14 @@ and micro SAAS services designed to transform your business and drive innovation
                         </ul>
                       </div>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       {/* Enhanced Stats */}
                       <div className="grid grid-cols-3 gap-3 mb-6 text-center relative z-10">
                         <div className="bg-gray-800/50 rounded-xl p-3 border border-gray-700/50 group-hover:border-cyan-500/30 transition-colors duration-300">
@@ -1298,6 +1370,9 @@ and micro SAAS services designed to transform your business and drive innovation
                             )}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           </div>;
                           <p className="text-gray-300 mb-3">{service && service.description}</p>;
                           <div className="flex flex-wrap gap-2 mb-4">;
@@ -1310,6 +1385,14 @@ and micro SAAS services designed to transform your business and drive innovation
                           </div>
                         </div>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         {/* Pricing & Stats */}
                         <div className="lg:w-48 space-y-4">
                           <div className="text-center">
@@ -1381,6 +1464,13 @@ and micro SAAS services designed to transform your business and drive innovation
               )}
             </motion.div>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Enhanced CTA Section */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}

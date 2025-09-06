@@ -4,6 +4,7 @@ import Link from 'next/link';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
 import {
   Phone
   Mail
@@ -30,6 +31,9 @@ import {
   Award
   CheckCircle;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Phone,
   Mail,
   MapPin,
@@ -55,6 +59,11 @@ import {
   Award,;
   CheckCircle,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle
@@ -789,6 +798,10 @@ export default function UltraFuturisticFooter2030() {
           <div className="absolute bottom-40 right-1/3 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>;
         </div>;
       </div>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className="relative z-10">;
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
@@ -833,6 +846,7 @@ export default function UltraFuturisticFooter2030() {
                   <a href={contactInfo.website} className="hover:text-purple-400 transition-colors">
                     {contactInfo.website.replace('https://', '')}
 
+<<<<<<< HEAD
 ];
 
 <<<<<<< HEAD
@@ -841,10 +855,17 @@ export default function UltraFuturisticFooter2030() {
 <<<<<<< HEAD
 ];
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                     {contactInfo.website.replace('https://', '')}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </a>
                 </div>
               </div>
@@ -987,6 +1008,12 @@ export default function UltraFuturisticFooter2030() {
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Rocket className='w-5 h-5 text-purple-400' />
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <span>Our Services</span>
               </h4>
               <div className='grid grid-cols-1 gap-4'>
@@ -1046,6 +1073,19 @@ export default function UltraFuturisticFooter2030() {
               </div>
             </div>
 
+<<<<<<< HEAD
+=======
+              </div>;
+            </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Quick Links */}
 
 
@@ -1086,11 +1126,27 @@ export default function UltraFuturisticFooter2030() {
               </div>
             </div>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Social & Certifications */}
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Users className='w-5 h-5 text-green-400' />
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <span>Connect & Trust</span>
               </h4>
 =======
@@ -1331,11 +1387,27 @@ export default function UltraFuturisticFooter2030() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 
+<<<<<<< HEAD
+=======
+                </div>;
+              </div>;
+
+
+              {/* Certifications */}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Certifications */}
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
                   <Award className='w-4 h-4' />
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <span>Certifications</span>
                 </h5>
                 <div className='grid grid-cols-1 gap-2'>
@@ -1365,6 +1437,11 @@ export default function UltraFuturisticFooter2030() {
                       <CheckCircle className="w-3 h-3 text-green-400" />
                       <span>{cert}</span>
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   ))}
                 </div>
               </div>
@@ -1374,11 +1451,53 @@ export default function UltraFuturisticFooter2030() {
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+                      target='_blank';
+                      rel='noopener noreferrer';
+                      className='w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40';
+                    >;
+                      <social.icon className='w - 5 h - 5' />                    </a>                      target="_blank";
+                      rel="noopener noreferrer";
+                      className="w - 10 h - 10 bg - gray - 800 / 50 hover:bg - purple - 500 / 20 rounded - lg flex items - center justify - center text - gray - 400 hover:text - purple - 400 transition - all duration - 200 hover:shadow - lg hover:shadow - cyan - 400 / 40";
+                    >;
+                      <social.icon className="w - 5 h - 5" />))}
+                </div>;
+              </div>;
+              {/* Certifications */}
+              <div className='space - y-3'>;
+                <h5 className='text - sm font - medium text - green - 300 flex items - center space - x-2'>;
+                  <Award className='w - 4 h - 4' />;
+                  <span > Certifications</span>;
+                </h5>;
+                <div className='grid grid - cols - 1 gap - 2'>;
+                  {certifications.map ((cert, index) => (
+                    <div;
+                      key={index}
+                      className='flex items - center space - x-2 text - xs text - gray - 400';
+                    >;
+                      <CheckCircle className='w - 3 h - 3 text - green - 400' />                      <span>{cert}</span>                  <span > Certifications</span>;
+                </h5>;
+                <div className="grid grid - cols - 1 gap - 2">;
+                  {certifications.map ((cert, index) => (
+                    <div key={index} className="flex items - center space - x-2 text - xs text - gray - 400">;
+                      <CheckCircle className="w - 3 h - 3 text - green - 400" />;
+                      <span>{cert}</span>;
+                    </div>))}
+
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Bottom Bar */}
         <div className='border-t border-purple-500/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
@@ -1496,9 +1615,13 @@ export default function UltraFuturisticFooter2030() {
 =======
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 ;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 ;
 }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

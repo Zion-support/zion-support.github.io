@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { useState } from "react";
@@ -65,6 +66,9 @@ import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { Button } from "@/components/ui/button",;
 import { Textarea } from "@/components/ui/textarea",;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {;
   Form,;
   FormControl,;
@@ -133,7 +137,16 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card>;
       <CardContent className="pt-6">;
@@ -152,6 +165,11 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
                           : "Join the discussion...";
                       }
                       placeholder={parentId ? "Write your reply..." : "Join the discussion..."}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       className="min-h-[100px] resize-y"
                       {...field}
                     />
@@ -176,6 +194,11 @@ export default ReplyForm;
   )
 },
 
+<<<<<<< HEAD
 export default ReplyForm,
 export default ReplyForm;
 export default ReplyForm,
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

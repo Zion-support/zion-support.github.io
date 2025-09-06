@@ -10,6 +10,7 @@ export default function SitemapPage() {
     { name: "Home", href: "/" }
     { name: "Services", href: "/services" }
     {
+<<<<<<< HEAD
       name: "All Services Showcase"
       href: "/comprehensive-services-showcase-2025"
     }
@@ -28,6 +29,23 @@ export default function SitemapPage() {
     { name: "Resources", href: "/resources" },
     { name: "Support", href: "/support" },
     { name: "Contact", href: "/contact" },;
+=======
+
+  const links = [;
+    { name: "Home", href: "/" },;
+    { name: "Services", href: "/services" },;
+    {;
+      name: "All Services Showcase",;
+      href: "/comprehensive-services-showcase-2025",;
+    },;
+    { name: "Pricing", href: "/pricing" },;
+    { name: "Market Pricing", href: "/market-pricing" },;
+    { name: "Services Advertising", href: "/services-advertising" },;
+    { name: "Resources", href: "/resources" },;
+    { name: "Support", href: "/support" },;
+    { name: "Contact", href: "/contact" },;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];
   return (
     <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;

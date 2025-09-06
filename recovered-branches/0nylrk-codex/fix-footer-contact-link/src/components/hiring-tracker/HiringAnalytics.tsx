@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,11 +8,23 @@ interface HiringAnalyticsProps {
   job_id?: string;
 }
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
+=======
+import { useState, useEffect } from './react';
+import { useJobApplications } from '@/hooks / useJobApplications';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
+import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
+
+interface HiringAnalyticsProps {
+  job_id?: string;
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from "react";
 import {useJobApplications} from "@/hooks/useJobApplications";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
 
+<<<<<<< HEAD
 export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {;
   const { applications, isLoading } = useJobApplications(jobId);
   const [analyticsData, setAnalyticsData] = useState<{
@@ -79,6 +92,8 @@ import { useState, useEffect } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts',;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface HiringAnalyticsProps {;
   jobId?: string;
 }
@@ -148,6 +163,32 @@ export function HiringAnalytics(): any ({ jobId }: HiringAnalyticsProps) {;
   if (isLoading) {;
     return <div>Loading analytics data...</div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  }
+
+  if (!applications || applications.length === 0) {;
+
+    return (
+      <Card className="text-center py-16">;
+        <CardContent>;
+          <h3 className="text-lg font-semibold mb-2">No data available</h3>;
+          <p className="text-muted-foreground mb-6">;
+            You need applications to generate analytics;
+          </p>;
+        </CardContent>;
+      </Card>;
+    );
+  }
+
+
+
+  const COLORS = ['#0088FE#00C49F#FFBB28#FF8042#8884d8'];
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   
   if (!applications || applications.length === 0) {

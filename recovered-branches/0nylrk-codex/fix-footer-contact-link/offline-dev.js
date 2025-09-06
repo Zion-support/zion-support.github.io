@@ -64,11 +64,17 @@ server && server.listen(PORT, () => {
 
 
 }),
+<<<<<<< HEAD
 ;
 }),;
 const PORT = 8080,;
 server.listen(PORT, () => {;
   // // // console.log(`;
+=======
+const PORT = 8080,
+server.listen (PORT, () => {
+  console.log (`;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ╔══════════════════════════════════════════════════════════════════╗;
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║;
 ╠══════════════════════════════════════════════════════════════════╣;
@@ -88,4 +94,14 @@ server.listen(PORT, () => {;
 ║                                                                  ║;
 ╚══════════════════════════════════════════════════════════════════╝;
 `);
+<<<<<<< HEAD
 }),;
+=======
+}),
+;
+
+=======
+}),
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

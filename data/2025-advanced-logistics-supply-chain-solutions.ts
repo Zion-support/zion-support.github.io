@@ -633,6 +633,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       reviews: 56,
     },
     {
+<<<<<<< HEAD
       id: 'ai-powered-warehouse-automation'
       name: 'AI-Powered Warehouse Automation Platform'
       tagline: 'Intelligent warehouse automation and optimization'
@@ -695,6 +696,74 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       rating: 4.8
       reviews: 112
     }
+=======
+
+=======
+      id: 'ai - powered - warehouse - automation',
+      name: 'AI - Powered Warehouse Automation Platform',
+      tagline: 'Intelligent warehouse automation and optimization',
+      price: '$1, 099',
+      period: '/month',
+      description:;
+        'Advanced AI - powered warehouse automation platform that uses machine learning to optimize picking, packing, and warehouse operations.',
+      features: [;
+
+        'Automated picking',
+        'Smart routing',
+        'Inventory optimization',
+        'Performance analytics',
+        'Predictive maintenance',
+        'Real - time monitoring',
+        'Mobile integration',
+        'API access',
+        'Custom workflows',
+        'Compliance tools',
+      ],
+      popular: true,
+      icon: '🏭',
+
+=======
+      color: 'from - orange - 600 via - amber - 600 to - yellow - 600',
+      text_color: 'text - orange - 400',
+      link: 'https://ziontechgroup.com / ai - powered - warehouse - automation',
+      market_position:;
+        'Leading AI warehouse automation platform with intelligent optimization',
+      target_audience:;
+        'E - commerce companies, Distribution centers, Manufacturing companies, Retail chains, Logistics providers',
+      trial_days: 21,
+      setup_time: '10 - 15 days',
+      category: 'Logistics & Supply Chain',
+      real_service: true,
+      technology: [;
+        'Machine Learning, Warehouse Automation, Robotics, Predictive Analytics, AI / ML',
+      ],
+      integrations: [;
+        'WMS platforms, Robotics systems, Conveyor systems, Mobile devices, Analytics tools',
+      ],
+      use_cases: [;
+        'Warehouse automation, Picking optimization, Inventory management, Performance monitoring, Cost optimization',
+      ],
+      roi: 'Improve picking efficiency by 40%. Reduce labor costs by 30%. Increase throughput by 35%.',
+      competitors: [;
+        'Locus Robotics, 6 River Systems, Fetch Robotics, RightHand Robotics, AutoStore',
+      ],
+      market_size: '$28B warehouse automation market',
+      growth_rate: '38% annual growth',
+      variant: 'ai - supply - chain - enterprise',
+      contact_info: {
+
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+        website: 'https://ziontechgroup && ziontechgroup.com',
+      },
+      real_implementation: true,
+      implementation_details:;
+        'Production - ready AI warehouse platform with comprehensive automation and optimization capabilities.',
+      launch_date: '2025 - 02 - 18',
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDate: '2025-02-18',
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -703,6 +772,11 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       reviews: 112,
 
     },;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];    features: [
 
 =======
@@ -742,9 +816,17 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
       'Custom algorithmsCompliance tools'
+<<<<<<< HEAD
   ];    features: [;
       'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration';
       'Custom algorithms_compliance tools';
+=======
+=======
+  ];    features: [;
+      'Demand forecasting_inventory optimization_route optimization_supplier management_risk assessment_performance analytics_real - time monitoringAPI integration';
+      'Custom algorithms_compliance tools';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ];
 
     popular: true, icon: '📦',
@@ -763,6 +845,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 
     ];
 
+<<<<<<< HEAD
     reviews: 112
   }
 ];
@@ -1089,6 +1172,10 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
+=======
+    popular: true, icon: '🏭',
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

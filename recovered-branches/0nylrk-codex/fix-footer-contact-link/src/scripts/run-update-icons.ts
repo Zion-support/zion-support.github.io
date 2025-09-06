@@ -31,6 +31,7 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {
     console.error(stderr)
   }
   
+<<<<<<< HEAD
   console.log('Icon imports updated successfully!')
   // // // console.log('Icon imports updated successfully!')
 }),
@@ -51,4 +52,8 @@ exec(`node ${scriptPath}`, (error, stdout, stderr) => {;
   }
 ;
   // // // console.log('Icon imports updated successfully!');
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 });

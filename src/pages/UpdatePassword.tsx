@@ -3,6 +3,7 @@ Form;
   FormField;
   FormItem;
   FormLabel;
+<<<<<<< HEAD
   FormMessage} from "@/components/ui/form"; import { toast } from "@/hooks/use-toast"
 import { cleanupAuthState } from "@/utils/authUtils"
 import { logErrorToProduction } from '@/utils/productionLogger'
@@ -40,6 +41,9 @@ const updatePasswordSchema = z
     path: ["confirmPassword"]})
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   )
 }

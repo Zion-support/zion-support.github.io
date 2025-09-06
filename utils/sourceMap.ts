@@ -2,12 +2,19 @@
 export function getSourceMapWithExistence() {
   return {
 <<<<<<< HEAD
+<<<<<<< HEAD
     nodes: []
     edges: []
   }
     nodes: [],
     edges: [];
   };
+=======
+    nodes: []
+    edges: []
+  }
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export function getGitStatus() {
   return {
@@ -70,6 +77,19 @@ export function getSourceMapWithExistence(): SourceNode[] {
   return nodes.map(markExistenceRecursive);
 }
 export interface DeployTemplateResult {
+<<<<<<< HEAD
+=======
+=======
+
+    nodes: [],
+    edges: [];
+  };
+
+}
+export function getGitStatus() {
+  return {
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     connected: false,
     branch: 'main';
   };
@@ -81,6 +101,11 @@ export function getSourceMapWithExistence(): SourceNode[] {;
 }
 
 export interface DeployTemplateResult {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   createdPaths: string[];
   skippedPaths: string[];
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
@@ -123,9 +148,15 @@ export function deployBasicTemplateForPath(
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return { createdPaths, skippedPaths };
 
 }
@@ -153,3 +184,11 @@ export function ensure_directory (dir_path: string): void {
   return { created_paths, skipped_paths }
 ;
 
+<<<<<<< HEAD
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

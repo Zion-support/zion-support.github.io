@@ -1,9 +1,24 @@
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 export interface WhitelabelTenant {
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
+=======
+
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+
+export interface WhitelabelTenant {
+=======
+
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+export interface WhitelabelTenant {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   brand_name: string;
   subdomain: string;
@@ -24,6 +39,7 @@ export interface WhitelabelTenant {;
   account_manager_id: string | null;
 
 
+<<<<<<< HEAD
   email_template_override: Record<string, any> | null
 }
 export function useWhitelabelTenant(externalSubdomain?: string) {
@@ -31,6 +47,13 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
 
 export function useWhitelabelTenant(externalSubdomain?: string) {;
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
+=======
+
+export function useWhitelabelTenant(externalSubdomain?: string) {;
+  const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isLoading, setIsLoading] = useState(true);
 
   const [error, setError] = useState<string | null>(null);
@@ -142,6 +165,12 @@ if ( {) {
           console.warn('No tenant data received'),;
           setTenant(null),;
           return;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (data.tenant) {
@@ -306,6 +335,11 @@ if ( {) {
     };
     checkAdminStatus();
   }, [tenantId]);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return { isAdmin, isLoading }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

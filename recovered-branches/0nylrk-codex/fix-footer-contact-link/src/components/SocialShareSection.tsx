@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Button} from "./ui/button";
 import {Twitter, Facebook, Linkedin, Link} from "@/components/icons";
 import {toast} from "./ui/use-toast";
@@ -11,6 +12,10 @@ import { Twitter, Facebook, Linkedin, Link } from "@/components/icons";
 import { toast } from "./ui/use-toast";
 export function SocialShareSection() {
   // Current URL and text to share
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const shareUrl = encodeURIComponent(window.location.href);
   const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace");
@@ -109,6 +114,7 @@ import {toast} from "./ui/use-toast";
                 key={index}
                 className={`${link.color} text-white`}
                 size="sm"
+<<<<<<< HEAD
                 onClick={link.onClick}
               >
                 {link.icon}
@@ -121,6 +127,11 @@ import {toast} from "./ui/use-toast";
     </section>
   )
 }
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
 import { toast } from "./ui/use-toast",;
@@ -256,5 +267,12 @@ function SocialShareSection() {
 
             {shareLinks.map((link, index) => (;
               <Button;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

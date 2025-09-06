@@ -17,12 +17,24 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import {
+=======
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue} from "@/components/ui/select",;
+import { Label } from "@/components/ui/label";
+import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react';
+type ResumeStep = "basics" | "experience" | "education" | "skills",;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   Select
   SelectContent
@@ -82,6 +94,11 @@ export function MobileResumeBuilder() {
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("basics")}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           Basics
         </Button>
@@ -93,6 +110,9 @@ export function MobileResumeBuilder() {
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("experience")}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         >
           Experience
@@ -105,6 +125,9 @@ export function MobileResumeBuilder() {
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("education")}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         >
           Education
@@ -117,6 +140,9 @@ export function MobileResumeBuilder() {
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("skills")}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         >
           Skills
@@ -131,6 +157,9 @@ export function MobileResumeBuilder() {
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <Button variant="default" className="w-full" size="lg">
@@ -165,6 +194,7 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
+<<<<<<< HEAD
           <Textarea
             id="summary"
             placeholder="Write a brief summary about yourself"
@@ -238,6 +268,9 @@ export function MobileResumeBuilder() {;
           variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full";
           onClick={() => setCurrentStep("skills")}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >;
           Skills;
         </Button>;
@@ -292,12 +325,15 @@ function BasicsStep() {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <Textarea 
@@ -314,6 +350,7 @@ function ExperienceStep() {
   }
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
+<<<<<<< HEAD
   }
   const removeEducation = (id: string,) => {
     setEducations(educations.filter(edu => edu.id !== id))
@@ -324,6 +361,9 @@ function ExperienceStep() {
 }
   )
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   };
 };

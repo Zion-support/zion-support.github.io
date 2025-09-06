@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Input} from "@/components/ui/input";
@@ -23,6 +24,12 @@ import { AppLayout } from "@/layout/AppLayout";
 import { SEO } from "@/components/SEO";
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
@@ -243,6 +250,12 @@ export default function SupportRequests() {;
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {;
       return false;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
@@ -454,12 +467,20 @@ export default function SupportRequests() {;
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
+<<<<<<< HEAD
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="pl-10"
                 />
               </div>
               <Select value={statusFilter |""} onValueChange={value => setStatusFilter(value |null)}>
               <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+=======
+
+
+              <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -470,8 +491,16 @@ export default function SupportRequests() {;
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
               <Select value={priorityFilter |""} onValueChange={value => setPriorityFilter(value |null)}>
               <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
+=======
+
+
+              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -482,8 +511,16 @@ export default function SupportRequests() {;
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
+<<<<<<< HEAD
               <Select value={categoryFilter |""} onValueChange={value => setCategoryFilter(value |null)}>
               <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
+=======
+
+
+              <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>
@@ -692,6 +729,11 @@ export default function SupportRequests() {;
                               ? 'secondary';
                               : 'outline';
                           }>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             {request.status}
                           </Badge>
                         </TableCell>

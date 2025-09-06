@@ -3,6 +3,7 @@ import React from 'react';
 import React from 'react';
   id: string;
 label: string;
+<<<<<<< HEAD
 threshold: number, //token balance threshold
 }
 const BADGES: Badge[] = [
@@ -14,6 +15,14 @@ const BADGES: Badge[] = [
 export function currentBadge(balance: number): Badge | null {
 
 export function currentBadge(balance: number): Badge | null {;
+=======
+
+
+
+export function currentBadge(balance: number): Badge | null {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   let current: Badge | null = null;
 =======
 threshold: number, //token balance threshold ;
@@ -111,6 +120,9 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
   return current;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -178,6 +190,10 @@ function Badges() {
 =======
 export default function Badges({ balance }: { balance: number }) {;
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function Badges({ balance }: { balance: number }) {
   const active = currentBadge(balance);
 
@@ -193,12 +209,20 @@ export default function Badges({ balance }: { balance: number }) {
               : 'bg-gray-100 border-gray-200 text-gray-500'              ? "bg-yellow-100 border-yellow-300 text-yellow-800"
               : "bg-gray-100 border-gray-200 text-gray-500"
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }`}
           title={`Requires ${b.threshold} ZION$`}
         >;
           {b.label}
         </span>))}
       {active && (
+<<<<<<< HEAD
         <span className='ml-2 text-xs text-green-600'>
           Current: {active.label}
         </span>
@@ -213,3 +237,11 @@ export default function Badges({ balance }: { balance: number }) {
 
 }
   );
+=======
+
+        <span className='ml - 2 text - xs text - green - 600'>;
+          Current: {active.label}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

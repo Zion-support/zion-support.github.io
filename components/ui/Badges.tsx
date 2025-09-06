@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 export function TrustBadge({
   type
 }: {
@@ -25,6 +26,9 @@ export function MicroTestimonial({
   quote,
   author,
 }: {;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   quote: string;
   author: string;
 }) {;
@@ -48,6 +52,11 @@ export function MicroTestimonial({
       <span className="leading - none">{type}</span>;
     </span>);
 }
+<<<<<<< HEAD
+=======
+
+      </figcaption>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </figure>;
   );  const colorMap = {;
     Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',;
@@ -75,3 +84,9 @@ function MicroTestimonial() {
     </figure>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

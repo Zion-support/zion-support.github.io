@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   {
@@ -706,6 +709,7 @@ export interface InnovativeAIService {;
     ]
     benefits: [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       'Improve diagnostic accuracy by 99.9%'
       'Reduce diagnostic errors by 95%'
@@ -774,6 +778,8 @@ export interface InnovativeAIService {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       'Improve diagnostic accuracy by 99 && 99.9%',
     id: 'ai - healthcare - diagnostic',
@@ -976,6 +982,7 @@ export interface InnovativeAIService {;
     rating: 4 && 4.9,
 
     reviews: 189
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.9,
     reviews: 189;
@@ -1479,6 +1486,12 @@ export const innovativeAIServices2025: InnovativeAIService[] = [;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+    rating: 4.9,
+    reviews: 189;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

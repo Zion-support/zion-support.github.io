@@ -1,6 +1,12 @@
 
 import React from 'react';
 import React from 'react',
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // This is a simplified version of the theme hook for offline development
 
 export const useTheme = () => {
@@ -23,4 +29,14 @@ export const use_theme = () =>: any {
     theme: "dark",
     set_theme: (theme: string) => console.log (`Theme would change to: ${theme}`);
   }
+<<<<<<< HEAD
+=======
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+    theme: "dark",
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

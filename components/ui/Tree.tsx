@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import React, { useState } from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export interface TreeNode {;
 
 export interface TreeNode {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   name: string;
   path: string;
   type: 'folder' | 'file';
@@ -49,6 +54,9 @@ import React, { useState } from "react";
 
 export interface TreeNode {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
@@ -72,6 +80,11 @@ export interface TreeNode {;
   name: string,
   path: string,
   type: "folder" | "file",;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   exists?: boolean;
   children?: TreeNode[];
 }
@@ -167,6 +180,7 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
             <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />
     </div>
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -174,6 +188,9 @@ function NodeItem(): any ({ node, depth, onDeploy }: { node: TreeNode, depth: nu
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           ))}
         </div>
       )}
@@ -261,14 +278,23 @@ export default Tree;
 }depth= {
   0
 }onDeploy= {
+<<<<<<< HEAD
   onDeploy
 }/>) )
 }</div>)
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onDeploy 
 }/>) ) ;
 }</div>) ;
 
 export default Tree;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <div className="w-full">
       {nodes.map((n) => (
 =======
@@ -281,5 +307,41 @@ export default Tree;
       ))}
     </div>
   );
+<<<<<<< HEAD
     </div>
   );
+=======
+
+
+
+=======
+  child.path;
+}node= {
+  child;
+}depth= {
+  depth + 1;
+}on_deploy= {
+  on_deploy;
+}/>) );
+}</div>);
+}</div>);
+}export /**
+ * Tree - Function description
+ */
+function Tree() {
+  return (<div className="w - full"> {
+  nodes.map ( (n) => (<NodeItem key= {
+  n.path;
+}node= {
+  n;
+}depth= {
+  0;
+}on_deploy= {
+  on_deploy;
+}/>) );
+}</div>);
+}export default Tree;}
+export default Tree;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Referral, ReferralStatus} from "@/types/referrals";
 import {Badge} from "@/components/ui/badge";
@@ -8,6 +9,13 @@ import { Badge } from "@/components/ui/badge";
 import { formatDate } from "@/utils/referralUtils";
 import { Badge } from "@/components/ui/badge",
 import { formatDate } from "@/utils/referralUtils",
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ReferralTableProps {
 
   referrals: Referral[]
@@ -59,6 +67,7 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
         </p>
       </div>
     )
+<<<<<<< HEAD
   }
   return (
     <Table>
@@ -83,6 +92,13 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
                 ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1)
               {referral.referred_user_type 
                 ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1) 
+=======
+
+              {referral.referred_user_type 
+                ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1) 
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Referral, ReferralStatus } from "@/types/referrals",;
 import { Badge } from "@/components/ui/badge",;
@@ -157,6 +173,13 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
 
               {referral.referred_user_type;
                 ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1);
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 : '-'}
             </TableCell>;
             <TableCell>{referral && referral.completed_at ? formatDate(referral && referral.completed_at) : '-'}</TableCell>;

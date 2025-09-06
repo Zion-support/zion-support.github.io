@@ -19,6 +19,7 @@ interface Process {;
   }
 }
 
+<<<<<<< HEAD
 declare let process: Process,
 declare let console: Console,
 declare let __dirname: string,
@@ -26,3 +27,6 @@ declare let __dirname: string,
 declare let process: Process,;
 declare let console: Console,;
 declare let __dirname: string,;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

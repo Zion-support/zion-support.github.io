@@ -1,6 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const dataPath = path.join(process.cwd(), 'data', 'learn', 'courses.json');
 const dataPath = path.join(process.cwd(), 'datalearncourses.json');
@@ -29,6 +32,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     res.status(200).json({ courses: filtered });
   } catch (e: any) {
+<<<<<<< HEAD
     res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
   }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -38,6 +42,19 @@ import fs from 'fs';
 import path from 'path';
 const dataPath = path.join(process.cwd(), 'datalearncourses.json'),;
 export default function handler(req, res) {
+=======
+    res && res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
+  }
+
+
+=======
+;
+const data_path = path.join (process.cwd (), 'data', 'learn', 'courses.json');
+export default /**
+ * handler - Function description
+ */
+function handler() {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   try {
     const raw = fs.readFileSync (data_path, 'utf - 8');
     const courses = JSON.parse (raw);
@@ -98,4 +115,8 @@ if (return false) {
 =======
 
 
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

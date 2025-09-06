@@ -1,10 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 import { getDisputeById } from "../../../../utils/fsdb";
 import {
+<<<<<<< HEAD
   parseUserFromRequest
   ensureInvolvedOrAdmin
 } from "../../../../utils/auth";
@@ -23,6 +28,24 @@ export default async function handler(
   res: NextApiResponse,
 ) {;
   const { id, fileName } = req.query as { id?: string; fileName?: string };
+=======
+
+  const { id, fileName } = req && req.query as { id?: string; fileName?: string };
+
+=======
+
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+} from "../../../../utils/auth";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  const { id, fileName } = req.query as { id?: string; fileName?: string };
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (
     !id |
     !fileName |
@@ -55,10 +78,17 @@ export default async function handler(
   stream.pipe(res);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Download endpoint' });
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -75,6 +105,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
+<<<<<<< HEAD
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId);
   } catch (error) {
@@ -120,3 +151,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+  if (!dispute) return res && res.status($1).json({ $2 });
+  try {
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

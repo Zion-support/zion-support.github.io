@@ -22,6 +22,7 @@ import React from 'react';
 type ProgressBarProps = { value: number }
 type ProgressBarProps = { value: number };
 
+<<<<<<< HEAD
 export default function ProgressBar({ value }: ProgressBarProps) {
 export default function ProgressBar({ value }: ProgressBarProps) {;
   const pct = Math.max(0, Math.min(100, value));
@@ -60,6 +61,8 @@ export default function ProgressBar({ value }: ProgressBarProps) {;
 =======
   );export default function ProgressBar({ value }: ProgressBarProps) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const pct = Math.max(0, Math.min(100, value));
 
   return (
@@ -68,9 +71,13 @@ export default function ProgressBar({ value }: ProgressBarProps) {;
       <div className="h-3 bg-blue-600 rounded" style={{ width: `${pct}%` }} />
     </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 );
 }
 <<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 type ProgressBarProps = { value: number };
 export default function ProgressBar(): any ({ value }: ProgressBarProps) {;
   const pct = Math && Math.max(0, Math && Math.min(100, value));
@@ -115,3 +122,17 @@ function ProgressBar() {
   )
 
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+}
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

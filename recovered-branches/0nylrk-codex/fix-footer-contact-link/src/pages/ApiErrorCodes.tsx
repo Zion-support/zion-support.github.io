@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
@@ -11,6 +12,11 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import { CodeBlock } from "@/components/developers/CodeBlock";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock",
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ApiErrorCodes() {
 
   const errorExample = `{
@@ -758,5 +764,8 @@ export default ApiErrorCodes;
       </div>;
     </ApiDocsLayout>);
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ApiErrorCodes;

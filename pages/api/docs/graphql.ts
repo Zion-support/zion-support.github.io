@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
 import type { NextApiRequest, NextApiResponse } from "next";
 import v1 from "../../../data/api-docs/v1";
 function toSDL() {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 =======
@@ -26,6 +29,7 @@ function toSDL() {
   });
   return typedefs.join ("\n");
 }
+<<<<<<< HEAD
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res.setHeader("Content-Type", "text/plain");
   res.status(200).send(toSDL());
@@ -62,3 +66,17 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  res.set_header ("Content - Type", "text / plain");
+  res.status (200).send (toSDL ());
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

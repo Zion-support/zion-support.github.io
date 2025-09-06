@@ -34,6 +34,9 @@ import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -64,6 +67,7 @@ export function EnterpriseTrustBadges() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </section>;
   );
 };
@@ -72,6 +76,15 @@ export function EnterpriseTrustBadges() {
   )
 }
 import React from "react";
+=======
+
+
+
+    </section>
+
+
+import React from 'react';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 export function EnterpriseTrustBadges() {;
   return (

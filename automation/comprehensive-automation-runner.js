@@ -84,6 +84,7 @@ if ( {) {
 } const runner = new ComprehensiveAutomationRunner (); runner.run_all ().catch (console.error)}
 ;
 export default ComprehensiveAutomationRunner;
+<<<<<<< HEAD
 
 
 #!/usr/bin/env node,
@@ -536,3 +537,11 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ,;
 export default ComprehensiveAutomationRunner;
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

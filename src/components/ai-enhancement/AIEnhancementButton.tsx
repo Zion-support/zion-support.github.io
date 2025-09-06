@@ -131,10 +131,16 @@ export function AIEnhancementButton(): any ({;
       onEnhanced(generatedContent),
       setShowActions(false),
       setGeneratedContent(null),
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       toast({
         title: "Content applied"
         description: "AI-enhanced content has been applied."})
     }
+<<<<<<< HEAD
   }
   const handleRegenerate = async () => {
     await handleEnhance()
@@ -143,6 +149,8 @@ export function AIEnhancementButton(): any ({;
     setShowActions(false)
     setGeneratedContent(null)
   }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   },
@@ -157,10 +165,14 @@ export function AIEnhancementButton(): any ({;
   },
   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   if (showActions) {
     return (
+<<<<<<< HEAD
       <div className="flex gap-2 items-center">
         <Button
           type="button"
@@ -232,6 +244,8 @@ export function AIEnhancementButton(): any ({;
   };
   if (showActions) {;
     return (;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className="flex gap-2 items-center">;
         <Button
           type="button"
@@ -343,6 +357,9 @@ if ( {) {
     <Button;
       type="button";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       variant = {variant, }
       size = {size, }
       className={`gap - 1 ${class_name}`}
@@ -364,6 +381,7 @@ if ( {) {
 }"}
 
 
+<<<<<<< HEAD
 =======
       variant={variant}
       size={size}
@@ -376,6 +394,8 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     >
       {isEnhancing ? (
         <Loader2 className="h-4 w-4 animate-spin" />

@@ -4,6 +4,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
   const form = useForm<ProfileFormValues>({
     resolver: zodResolver(profileSchema)
     defaultValues: {
+<<<<<<< HEAD
       displayName: ""
       bio: ""
       headline: ""}})
@@ -33,12 +34,18 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
         return "User"
     }
   },
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-6">
       <div className="text-center mb-6">
@@ -49,6 +56,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       </div>
       
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
@@ -187,6 +197,9 @@ function ProfileSetup() {
             name="headline"
             render={({ field }: { field: any }) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel>
@@ -300,6 +313,11 @@ function ProfileSetup() {
             control={form.control}
             name="bio"
             render={({ field }: { field: any }) => (
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <FormItem>
                 <FormLabel className="text-zion-slate-light">Bio</FormLabel>
                 <FormControl>
@@ -329,11 +347,15 @@ function ProfileSetup() {
       </Form>
     </div>
   )
+<<<<<<< HEAD
                   />;
                 </FormControl>;
                 <FormMessage className="text-red-400" />;
               </FormItem>;
             )}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           />;
           <Button;
             type="submit";
@@ -345,12 +367,22 @@ function ProfileSetup() {
       </Form>;
     </div>;
   );
+<<<<<<< HEAD
 case "talent": return "Talent";"
 case "client": return "Client"
 default:
 }
 getTypeLabel () "
 }Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
+=======
+case "talent": return "Talent";";
+case "client": return "Client";
+default: ;
+
+};
+getTypeLabel () ";
+}Profile</h3> <p className="text-zion-slate-light mt-2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative" > <Inputplaceholder="Your full name" className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ...field "
 }/> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
 }/> <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Headline</FormLabel> <FormControl> <div className="relative" > <InputclassName="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple" {
@@ -364,6 +396,7 @@ getTypeLabel () "
 
                 <FormMessage className="text - red - 400" />;
               </FormItem>)}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
                   />;
@@ -372,6 +405,8 @@ getTypeLabel () "
               </FormItem>;
             )}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           />;
           <Button;
             type="submit";
@@ -387,6 +422,9 @@ case "client": return "Client";
 default:;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 getTypeLabel () ";
 }Profile</h3> <p className="text - zion - slate - light mt - 2"> Help others get to know you better </p> </div> <FormItem> <FormLabel className="text - zion - slate - light">Full Name</FormLabel> <FormControl> <div className="relative" > <Input placeholder="Your full name" className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple" {
   ...field ";

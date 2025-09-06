@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { ReactNode } from "react";
 import {cn} from "@/lib/utils";
 import {slugify} from "@/lib/slugify";
@@ -8,6 +9,13 @@ import { slugify } from "@/lib/slugify";
 import { Link } from "react-router-dom";
 import { slugify } from "@/lib/slugify",
 import { Link } from "react-router-dom",
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface CategoryCardProps {
 
   title: string
@@ -33,7 +41,12 @@ export function CategoryCard({ title, description, icon, color, count, className
   // Create a URL-friendly slug from the category title;
   const slug = slugify(title);
   // Create a URL-friendly slug from the category title
+<<<<<<< HEAD
   const slug = slugify(title),
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const slug = slugify(title);
   return (
@@ -142,6 +155,11 @@ function CategoryCard() {
         className={cn(;
           "mb-4 p-3 bg-zion-blue-dark rounded-full";
           !color && "text-zion-cyan";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         )}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         style={color ? { color } : undefined}

@@ -69,6 +69,7 @@ import {;
 =======
 import {
 <<<<<<< HEAD
+<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -197,6 +198,8 @@ import {
   Shield, Users, Briefcase, BookOpen, MessageCircle
   Star, TrendingUp, Target, Layers, Cpu, Database
   Cloud, Lock, ShieldCheck, Heart, Leaf, Car
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Phone,
   Mail,
   MapPin,
@@ -232,12 +235,21 @@ import {
   Sun,
   Moon,
   Wind,
+<<<<<<< HEAD
   Droplets,;
   Code,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, 
   Shield, Users, Briefcase, BookOpen, MessageCircle, 
   Star, TrendingUp, Target, Layers, Cpu, Database, 
   Cloud, Lock, ShieldCheck, Heart, Leaf, Car, ;
+=======
+  Droplets,
+  Code,} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom,
+  Shield, Users, Briefcase, BookOpen, MessageCircle,
+  Star, TrendingUp, Target, Layers, Cpu, Database,
+  Cloud, Lock, ShieldCheck, Heart, Leaf, Car,
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   GraduationCap, Scale, Building, Factory, Camera;
   Video, Music, Gamepad2, Sun, Moon, Wind, Droplets;
   Code;
@@ -388,6 +400,7 @@ const companyLinks = [;
   { name: 'Support', href: '/support', icon: ShieldCheck },];  { name: 'Support', href: '/support', icon: ShieldCheck }
 ];
 
+<<<<<<< HEAD
 export default function UltraFuturisticFooter2028() {
   return (
     <footer className='bg-black/95 backdrop-blur-xl border-t border-purple-500/30'>
@@ -478,6 +491,15 @@ export default function UltraFuturisticFooter2028() {
                 <a href={contactInfo.website} className="text-sm hover:text-white transition-colors">
                   {contactInfo.website}
 
+=======
+const resourceLinks = [;
+  { name: 'Documentation', href: '/docs', icon: BookOpen },;
+  { name: 'API Reference', href: '/api', icon: Cpu },;
+  { name: 'Developer Tools', href: '/dev-tools', icon: Database },;
+  { name: 'Mobile Apps', href: '/mobile', icon: Globe },;
+  { name: 'Cloud Services', href: '/cloud', icon: Cloud },;
+  { name: 'Security Center', href: '/security', icon: Shield },;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];
 
 const socialLinks = [;
@@ -548,6 +570,7 @@ export default function UltraFuturisticFooter2028() {;
 
                   {contactInfo.website}
 
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
@@ -556,6 +579,8 @@ export default function UltraFuturisticFooter2028() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </a>
               </div>
             </div>
@@ -563,6 +588,13 @@ export default function UltraFuturisticFooter2028() {;
             <div className='flex space-x-4 mt-6'>
               {socialLinks.map(social => (
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <a
                   key={social && social.name}
                   href={social && social.href}
@@ -663,6 +695,11 @@ export default function UltraFuturisticFooter2028() {
           <div className='lg:col-span-2'>
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               🚀 Our Services
             </h3>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -844,6 +881,12 @@ export default function UltraFuturisticFooter2028() {
           <div className='lg:col-span-1'>
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Quick Links
             </h3>
 =======
@@ -953,6 +996,7 @@ export default function UltraFuturisticFooter2028() {
               </ul>
             </div>
 
+<<<<<<< HEAD
             {/* Resource Links */}
             <div className='mb-6'>
               <h4 className='font-medium text-purple-300 mb-3'>Resources</h4>
@@ -1022,11 +1066,23 @@ export default function UltraFuturisticFooter2028() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+              </ul>;
+            </div>;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Newsletter Signup */}
             <div className='bg-purple-900/20 border border-purple-500/30 rounded-lg p-4'>
               <h4 className='font-medium text-white mb-3'>Stay Updated</h4>
               <p className='text-sm text-purple-200 mb-3'>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 Get the latest insights on future technology and AI innovations.
               </p>
               <div className='flex space-x-2'>
@@ -1236,9 +1292,12 @@ className='text-purple-300 hover:text-white transition-colors'>                S
 );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
           className='w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center text-white shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:shadow-lg hover:shadow-cyan-400/40 group'>;
           <MessageCircle className='w-8 h-8 group-hover:rotate-12 transition-transform duration-300' />        </Link>;
@@ -1250,10 +1309,50 @@ className='text-purple-300 hover:text-white transition-colors'>                S
         </Link>;
       </div>;
       {/* Background Effects */}
+<<<<<<< HEAD
 
 }
 }
 }
+=======
+      <div className='absolute inset-0 pointer-events-none'>;
+        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>;
+        <div className='absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>;
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl'></div>;
+      </div>;
+    </footer>;
+  );      <div className="absolute inset-0 pointer-events-none">;
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>;
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>;
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl"></div>;
+      </div>;
+    </footer>;
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
       {/* Background Effects */}
+<<<<<<< HEAD
+=======
+      <div className='absolute inset - 0 pointer - events - none'>;
+        <div className='absolute top - 0 left - 0 w - 96 h - 96 bg - purple - 500 / 5 rounded - full blur - 3xl'></div>;
+        <div className='absolute bottom - 0 right - 0 w - 96 h - 96 bg - blue - 500 / 5 rounded - full blur - 3xl'></div>;
+        <div className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 bg - gradient - to - r from - purple - 500 / 10 to - blue - 500 / 10 rounded - full blur - 2xl'></div>;
+      </div>;
+    </footer>);      <div className="absolute inset - 0 pointer - events - none">;
+        <div className="absolute top - 0 left - 0 w - 96 h - 96 bg - purple - 500 / 5 rounded - full blur - 3xl"></div>;
+        <div className="absolute bottom - 0 right - 0 w - 96 h - 96 bg - blue - 500 / 5 rounded - full blur - 3xl"></div>;
+        <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 bg - gradient - to - r from - purple - 500 / 10 to - blue - 500 / 10 rounded - full blur - 2xl"></div>;
+      </div>;
+    </footer>);
+=======
+
+
+      {/* Background Effects */}
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

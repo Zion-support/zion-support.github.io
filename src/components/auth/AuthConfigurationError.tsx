@@ -29,6 +29,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import React from 'react'
 import Link from 'next/link'
 import {
+<<<<<<< HEAD
   AlertTriangle
   ExternalLink
   RefreshCw
@@ -37,11 +38,19 @@ import {
 import React from 'react'
 import Link from 'next/link'
 import {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   AlertTriangle,
   ExternalLink,
   RefreshCw,
   Settings,;
   CheckCircle;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react'; import { Button } from '@/components/ui/button'; import { AlertTriangle, ExternalLink, RefreshCw, Settings, CheckCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Alert, AlertDescription } from '@/components/ui/alert'
@@ -181,6 +190,7 @@ if ( {) {
             </p>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -202,6 +212,14 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Alert variant="destructive" className="mb-6">
             <AlertTriangle className="h-4 w-4" />
             <AlertDescription>
@@ -217,6 +235,9 @@ if ( {) {
             <ul className='text-sm text-gray-700 space-y-1'>              <li>• AUTH0_SECRET</li>          <div className="bg-gray-50 rounded-lg p-4 mb-6">
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -266,6 +287,11 @@ if ( {) {
             {showSetupButton && (
               <Button 
                 onClick={() => window.open('/AUTH0_SETUP_GUIDE_ISSUE_1.md_blank')}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="bg-blue-600 hover:bg-blue-700 text-white flex-1"
               >
                 <Settings className="w-4 h-4 mr-2" />
@@ -400,6 +426,9 @@ if ( {) {
             >
               <RefreshCw className="w-4 h-4 mr-2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               Check Again
             </Button>
@@ -419,6 +448,12 @@ if ( {) {
             <ol className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">1</span>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <div>
                   <strong>Create Auth0 Account:</strong>
                   <br />
@@ -451,6 +486,9 @@ if ( {) {
               </li>
               
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <li className="flex items-start gap-3">
@@ -469,6 +507,9 @@ if ( {) {
               <li className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">3</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 <div>
@@ -616,6 +657,9 @@ if ( {) {
                   <strong>Restart Application:</strong>
                   <br />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -691,17 +735,24 @@ if ( {) {
               <span>Browse Marketplace</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
+<<<<<<< HEAD
             <Link
               href="/talent"
             
             <Link 
               href="/talent" 
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800"
             >
               <span>View Talent Pool</span>
               <ExternalLink className="w-4 h-4" />
             </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -715,6 +766,9 @@ if ( {) {
               <ExternalLink className="w-4 h-4" />
             </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               className='flex items-center gap-2 p-3 bg-white rounded-lg hover:bg-blue-50 transition-colors text-blue-700 hover:text-blue-800'>;
               <span>Browse Marketplace</span>            >;
@@ -732,6 +786,9 @@ if ( {) {
             >
               <span>System Status</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -752,6 +809,9 @@ if ( {) {
                 <CheckCircle className="w-5 h-5" />
                 <span className="font-semibold">Automated Setup Available</span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -760,6 +820,9 @@ if ( {) {
                 Run the setup script to configure Auth0 interactively:
               </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -851,6 +914,9 @@ if ( {) {
               className="text-blue-600 hover: underline"
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               AUTH0_SETUP_GUIDE_ISSUE_1.md
             </button>
@@ -858,6 +924,7 @@ if ( {) {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   )
@@ -871,12 +938,20 @@ export default AuthConfigurationError
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+              onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default AuthConfigurationError };
 ;
 export default AuthConfigurationError;
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <div className="mt-6 text-center text-sm text-gray-500">;
           <p>;

@@ -27,6 +27,7 @@ if ( {) {
 
 import { Sparkles } from 'lucide-react'
 interface ClientBudgetRecommenderProps {
+<<<<<<< HEAD
   jobTitle: string
   category: string
   timeline?: string
@@ -96,11 +97,15 @@ export const ClientBudgetRecommender: React.FC<
           suggestionType: 'client'
           suggestedMin: suggestion.minRate
           suggestedMax: suggestion.maxRate
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   jobTitle: string,
   category: string,
   timeline?: string,
   scope?: string,
   experienceLevel?: string,
+<<<<<<< HEAD
   onSuggestionApplied: (minValue: number, maxValue: number) => void
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -159,6 +164,9 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     if (suggestion) {
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate),
       
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
@@ -166,6 +174,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestionType: "client",
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
+<<<<<<< HEAD
           accepted: true,
         })
       }
@@ -205,6 +214,11 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-4">
       <div>
@@ -224,6 +238,9 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           >
             <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           </Button>
         ) : (
@@ -271,6 +288,7 @@ if (experienceLevel) params.experienceLevel = experienceLevel
 //Track this suggestion application if (user && user.id) {
   trackPricingSuggestion ({
 }
+<<<<<<< HEAD
 return (<div className="space-y-4" > <div> {"
   !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={
   generateSuggestion "
@@ -281,6 +299,8 @@ return (<div className="space-y-4" > <div> {"
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 },
@@ -295,6 +315,9 @@ return (<div className="space-y-4" > <div> {"
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

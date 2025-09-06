@@ -1,6 +1,19 @@
 import Head from 'next/head';
 
 export default function SiteHealth() {
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+export default function SiteHealth() {
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -449,3 +462,9 @@ import Head from 'next / head';
 
         </nav>
       </header>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

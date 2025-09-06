@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 export default function AISalesIntelligencePlatform() {
 	return (
@@ -23,6 +24,10 @@ export default function AISalesIntelligencePlatform() {
     </Layout>
   );
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AISalesIntelligencePlatform() {
 	return (
 		<ServiceLanding
@@ -30,6 +35,7 @@ export default function AISalesIntelligencePlatform() {
 			slug="ai-sales-intelligence-platform"
 			description="Auto-prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows."
 			subtitle="Lift conversion rates 15–35% and shorten sales cycles with AI-first workflows."
+<<<<<<< HEAD
 			pricePerMonthUSD={1499}
 			implementationWeeks="Implementation: 1–3 weeks"
 			roiNote="Average ROI 3–8x within 60 days"
@@ -43,6 +49,46 @@ export default function AISalesIntelligencePlatform() {
 				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
 			]}
 			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
+=======
+
+=======
+}
+
+=======
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+;
+export default /**
+ * AISalesIntelligencePlatform - Function description
+ */
+function AISalesIntelligencePlatform() {
+return (
+  <ServiceLanding;
+  title="AI Sales Intelligence Platform";
+  slug="ai - sales - intelligence - platform";
+  description="Auto - prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows.";
+  subtitle="Lift conversion rates 15–35% and shorten sales cycles with AI - first workflows.";
+  pricePerMonthUSD={1499}
+    implementation_weeks="Implementation: 1–3 weeks";
+  roi_note="Average ROI 3–8x within 60 days";
+  features={[;
+    "AI lead scoring using firmographics, intent, and engagement",
+    "One - click hyper - personalized emails and sequences",
+    "Meeting prep briefs and objection handling",
+    "Forecasting with scenario simulations",
+    "CRM automations for notes, tasks, and next steps",
+    "Integrations: Salesforce, HubSpot, Gmail / Outlook, Gong, Zoom";
+  ]}
+    industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
+    canonical="https: //ziontechgroup.com / ai - sales - intelligence - platform";
+  />);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 			pricePerMonthUSD={1499  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -56,6 +102,12 @@ export default function AISalesIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 			implementationWeeks="Implementation: 1–3 weeks"
 			roiNote="Average ROI 3–8x within 60 days"
 			features={[
@@ -65,6 +117,7 @@ export default function AISalesIntelligencePlatform() {
 				"Forecasting with scenario simulations",
 				"CRM automations for notes, tasks, and next steps",
 				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
+<<<<<<< HEAD
 			]}
 			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}
 			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform"
@@ -116,3 +169,8 @@ export default function AISalesIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

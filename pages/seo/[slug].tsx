@@ -32,6 +32,7 @@ export type LandingPayload = {
   h1: string;
   body_html: string;
   region?: string;
+<<<<<<< HEAD
   service?: string;
   faq: Array<{ q: string; a: string }>;}
 export default function SEOLandingPage() {
@@ -88,6 +89,11 @@ export default function SEOLandingPage() {;
 export default function SEOLandingPage(req, res) {
   try {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
   const [payload, setPayload] = React.useState<LandingPayload | null>(null);
@@ -99,6 +105,7 @@ export default function SEOLandingPage(req, res) {
       try {;
         setPayload(JSON && JSON.parse(decodeURIComponent(dataParam)));
         return;
+<<<<<<< HEAD
       } catch {}
     }
       } catch {  } catch (error) {
@@ -139,6 +146,29 @@ export default function SEOLandingPage(req, res) {
       <div className="mt-8">
         <h2 className="text-lg font-semibold mb-2">Featured Talent</h2>
         <TalentGrid region={payload.region} service={payload.service} />
+=======
+
+=======
+        return
+      } catch {}
+    }
+=======
+
+
+
+    // Fallback: render a basic placeholder until a generated page is deployed
+    setPayload({ title: String(slug).replace(/-/g, ' '), h1: String(slug).replace(/-/g, ' '), bodyHtml: '<p>Localized marketplace landing page.</p>', region: undefined, service: undefined, faq: [] })
+  }, [router.isReady, slug]);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  if (!payload) return null;
+
+  return (
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>
       <FAQ items={payload.faq} />
     </div>
@@ -239,3 +269,10 @@ if (return null) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

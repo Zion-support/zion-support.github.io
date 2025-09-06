@@ -2,6 +2,7 @@ return (
     <>;
       <TooltipProvider>;
         <Tooltip>;
+<<<<<<< HEAD
 =======
 interface FavoriteButtonProps {
   itemId: string;
@@ -111,6 +112,8 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {;
                     : 'text-zion-slate'
                 )}              />
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 )}              />;
             </button>;
@@ -151,6 +154,7 @@ className: {`w-4 h-4 transition-all duration-300 ${
 }
 
           <TooltipTrigger as_child>;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -178,6 +182,8 @@ className: {`w-4 h-4 transition-all duration-300 ${
         <Tooltip>;
           <TooltipTrigger asChild>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <button;
               class_name = {cn (
                 'absolute top - 2 right - 2 z - 10 p - 2 rounded - full bg - zion - blue - dark / 80 hover:bg - zion - blue - light / 30 transition - colors',
@@ -201,6 +207,9 @@ className: {`w-4 h-4 transition-all duration-300 ${
     </>);
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       // Add to favorites`;
       // console.log (`Added ${item_type} ${item_id} to favorites`)}  }
   return ();

@@ -11,9 +11,13 @@ export interface ProfileSkill {
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ProfileProject {
 
 export interface ProfileProject {;
+=======
+export interface ProfileProject {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   title: string;
   description: string;
@@ -25,9 +29,13 @@ export interface ProfileProject {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ProfileExperience {
 
 export interface ProfileExperience {;
+=======
+export interface ProfileExperience {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   role: string;
   company: string;
@@ -38,9 +46,13 @@ export interface ProfileExperience {;
   current?: boolean;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Availability {
 
 export interface Availability {;
+=======
+export interface Availability {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   status: 'available' | 'limited' | 'unavailable';
   next_available?: string;
   message?: string,
@@ -48,9 +60,13 @@ export interface Availability {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ProfileData {
 
 export interface ProfileData {;
+=======
+export interface ProfileData {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   name: string;
   title: string;
@@ -71,6 +87,7 @@ export interface ProfileData {;
   contact_email?: string;
 
 }
+<<<<<<< HEAD
 export interface ProfileSkill {;
   name: string,;
   level: number, // 1-5;
@@ -124,3 +141,7 @@ export interface ProfileData {;
   contactEmail?: string;
 }
 ;
+=======
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

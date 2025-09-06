@@ -5,7 +5,12 @@ import { useContractTemplates } from "@/hooks/useContractTemplates",
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip",
+<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useAuth } from "@/hooks/useAuth",
 
 
@@ -19,6 +24,11 @@ import { useAuth } from "@/hooks/useAuth",
   AlertDialogFooter
   AlertDialogHeader
   AlertDialogTitle} from "@/components/ui/alert-dialog"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { ContractTemplate } from "@/types/contracts"
 import { Button } from "@/components/ui/button"
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react'
@@ -36,6 +46,7 @@ import { useAuth } from "@/hooks/useAuth"
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle} from "@/components/ui/alert-dialog",
+<<<<<<< HEAD
 import { useState } from "react"
 interface TemplateListProps {
   templates: ContractTemplate[]
@@ -68,6 +79,14 @@ interface TemplateListProps {
 import { useAuth } from "@/hooks/useAuth",
 // useRouter replaces the old useLocation hook from react-router
 import { useRouter } from 'next/router',
+=======
+
+
+
+
+// use_router replaces the old use_location hook from react - router;
+import { use_router } from 'next / router';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   AlertDialog;
   AlertDialogAction;
@@ -93,8 +112,13 @@ import { use_auth  } from '@/hooks / use_auth';
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
+<<<<<<< HEAD
   AlertDialogTitle} from "@/components/ui/alert-dialog",
 import { useState } from "react",
+=======
+  AlertDialogTitle} from "@/components / ui / alert - dialog",
+import { useState  } from './react';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface TemplateListProps {
   templates: ContractTemplate[],
   is_loading: boolean,
@@ -207,6 +231,9 @@ export function TemplateList(): any ({;
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (isLoading) {;
 
 
@@ -247,6 +274,9 @@ export function TemplateList(): any ({;
               </div>
               
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <div className="flex items-center gap-2">
@@ -294,6 +324,9 @@ export function TemplateList(): any ({;
                   variant="ghost"
                   size="icon"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -310,7 +343,15 @@ export function TemplateList(): any ({;
           </CardContent>
         </Card>
       ))}
+<<<<<<< HEAD
       
+=======
+
+
+      
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <AlertDialog open={!!templateToDelete} onOpenChange={() => setTemplateToDelete(null)}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -339,10 +380,19 @@ const handleSetDefault = async (templateId: string) => {
 router.push (`/auth/login?returnTo=$ {
   encodeURIComponent (currentPath)
 }`)
+<<<<<<< HEAD
 return
 }await setDefaultTemplate.mutateAsync (templateId)
 return;
 }await setDefaultTemplate.mutateAsync (templateId) 
+=======
+
+
+return;
+}await setDefaultTemplate.mutateAsync (templateId) 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 <CardContent className="p-4"> <div className="flex items-center justify-between"> <div className="space-y-1"> <div className="flex items-center gap-2"> <h3 className="font-medium"> {
   template.title
@@ -363,6 +413,9 @@ return;
   () => setTemplateToDelete (null) "
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick={
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   onClick = {() => handleDeleteClick(template && template.id),}
                   aria-label="Delete template";

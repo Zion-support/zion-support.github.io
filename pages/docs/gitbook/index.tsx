@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import fs from 'fs';
 import path from 'path';
@@ -6,6 +7,15 @@ import Link from 'next/link';
 import fs from 'fs',;
 import path from 'path',;
 import Link from 'next/link',;
+=======
+
+
+import fs from 'fs',;
+import path from 'path',;
+import Link from 'next/link',;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function list(dir: string, baseDir: string) {
 
 
@@ -15,9 +25,14 @@ function list(dir: string, baseDir: string) {
     const stat = fs.statSync(full)
     return { name, rel, isDir: stat.isDirectory() }
   })
+<<<<<<< HEAD
 }
 export async function getStaticProps() {
   const base = path.join(process.cwd(), 'docs/gitbook')
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const sections = fs.existsSync(base)
     ? list(base, base).map((entry) => ({
         title: entry.name
@@ -25,6 +40,13 @@ export async function getStaticProps() {
     : []
 
   return { props: { sections }, revalidate: 600 }
+<<<<<<< HEAD
+=======
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
@@ -38,6 +60,12 @@ function list(dir: string, baseDir: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   });
   } catch (error) {
@@ -77,7 +105,13 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
                 <li key={it.rel}>
                   <a className="underline" href={`https://github.com/Zion-Holdings/zion.app/blob/main/docs/gitbook/${it.rel}`} target="_blank" rel="noreferrer">
                     {it.rel}
+<<<<<<< HEAD
                   </a>
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </li>
               ))}
             </ul>
@@ -102,6 +136,11 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
 =======
   );
 };
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {it.rel  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -128,5 +167,13 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 }
+=======
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

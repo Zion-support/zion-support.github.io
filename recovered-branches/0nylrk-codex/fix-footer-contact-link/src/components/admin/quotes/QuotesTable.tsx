@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
 import { 
@@ -22,6 +23,11 @@ import { formatDate } from "@/utils/dateUtils";
 interface QuotesTableProps {
 
   quotes: QuoteRequest[]
+=======
+import {formatDate} from "@/utils/dateUtils";
+interface QuotesTableProps {;
+  quotes: QuoteRequest[],;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   isArchived?: boolean;
   isLoading: boolean
   updateStatus: (id: string, status: QuoteStatus) => void
@@ -30,6 +36,11 @@ interface QuotesTableProps {
 
 <<<<<<< HEAD
 import {formatDate} from "@/utils/dateUtils";
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
 import { 
@@ -50,6 +61,12 @@ import {
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 import { formatDate } from "@/utils/dateUtils",
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean,
@@ -59,6 +76,7 @@ interface QuotesTableProps {
   deleteQuote: (id: string) => void,
   onViewDetails: (quote: QuoteRequest) => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
@@ -81,6 +99,12 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   updateStatus,
   toggleArchive,
   deleteQuote,
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onViewDetails
 }) => {
   return (
@@ -476,6 +500,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
+<<<<<<< HEAD
                     )}
                   </div>
                 </TableCell>
@@ -488,8 +513,33 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
   )
 }
 
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    )}
+                  </div>;
+                </TableCell>;
+              </TableRow>;
+            ));
+          )}
+
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </TableBody>;
       </Table>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

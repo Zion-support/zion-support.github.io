@@ -1,4 +1,10 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
@@ -6,20 +12,32 @@ import type { Job } from "../../../utils/types";
 import { rateLimit } from "../../../utils/rateLimit";
 import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
 const FILE = "jobs.json";
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+=======
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!rateLimit(req, res)) return;
   const { id } = req && req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
 
 
   if (idx === -1) {
+<<<<<<< HEAD
     res.status(404).json({ error: "Job not found" });
     return;
   }
   if (req.method === "GET") {
     res.status(200).json({ job: jobs[idx] });
+=======
+    res && res.status(404).json({ error: "Job not found" });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return;
   }
 
@@ -42,6 +60,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     }
     const {
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -115,6 +134,17 @@ export default function handler(req, res) {
     const job = jobs[idx];
     const isOwner = userEmail && userEmail === job.clientEmail;
     if (!isOwner && !isAdminEmail(userEmail)) {;
+=======
+      title,
+      description,
+      category,
+      required_skills,
+      budgetMinUsd,
+      budgetMaxUsd,
+      deliveryDeadlineIso,
+      status,
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       res.status(403).json({ error: 'Forbidden' });
       return
     }
@@ -205,12 +235,19 @@ if (job.status = status as Job["status"]) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 
 
@@ -249,3 +286,8 @@ res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
 }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

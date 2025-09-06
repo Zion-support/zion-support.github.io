@@ -4,6 +4,7 @@ import {
   Home,
   Bug,
   Send,
+<<<<<<< HEAD
   Clipboard,
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -24,6 +25,10 @@ interface ErrorBoundaryProps {
   fallback?: ReactNode
   onError?: (error: Error, errorInfo: ErrorInfo) => void
   enableRetry?: boolean
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Clipboard,;
 
 } from 'lucide-react';
@@ -55,6 +60,7 @@ interface ErrorBoundaryProps {
   context?: string;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export class GlobalErrorBoundary extends Component<
   ErrorBoundaryProps
@@ -72,6 +78,15 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null,
+      retryCount: 0,
+      userFeedback: '',
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export class GlobalErrorBoundary extends Component<
@@ -145,6 +160,7 @@ export class GlobalErrorBoundary extends Component < ErrorBoundaryProps, ErrorBo
       show_details: false,
     } }    , }
       show_details: false;
+<<<<<<< HEAD
 =======
     }
     // Log to console in development
@@ -178,6 +194,8 @@ export class GlobalErrorBoundary extends Component < ErrorBoundaryProps, ErrorBo
       this.props.onError(error, errorInfo)
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
   static getDerivedStateFromError (error: Error): Partial < ErrorBoundaryState> {
@@ -774,6 +792,7 @@ if (return) {
 if (return) {
   $2
 }
+<<<<<<< HEAD
 ;
 interface ErrorBoundaryProps {;
   children: ReactNode;
@@ -1052,6 +1071,8 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
       userAgent:
         typeof window !== 'undefined' ? navigator.userAgent : 'unknown',
     }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     try {
       // Report to your error reporting service;
       const response = await fetch ('/api / error - report', {
@@ -1070,6 +1091,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
           context: this.props.context,
           timestamp: new Date ().toISOString (),
         }),
+<<<<<<< HEAD
       });          timestamp: new Date().toISOString()
         })
       })
@@ -1224,6 +1246,9 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps ErrorBound
           userFeedback: this.state.userFeedback,;
           context: this.props.context;
           timestamp: new Date().toISOString();
+=======
+      });          timestamp: new Date ().toISOString ();
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         });
       });
       // Check condition
@@ -1241,7 +1266,13 @@ if ( {) {
 
     }
 
+<<<<<<< HEAD
   };
+=======
+    this.setState({
+      errorInfo,
+      errorId,
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1259,10 +1290,14 @@ if ( {) {
       // Use custom fallback if provided
       if (this.props.fallback) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         return this.props.fallback;
 
+<<<<<<< HEAD
         return this.props.fallback;
 
 =======
@@ -1292,10 +1327,25 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+  private getBuildInfo() {;
+    return {;
+      version: process && process.env.NEXT_PUBLIC_APP_VERSION || 'unknown',;
+      environment: process && process.env.NODE_ENV,;
+      buildTime: process && process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',;
+    };
+  }
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 
       const severity = this.getErrorSeverity(this.state.error)
       const suggestion = this.getErrorSuggestion(this.state.error)
+<<<<<<< HEAD
       const canRetry = null;
         this.props.enableRetry !== false &&
         this.state.retryCount < (this.props.maxRetries || 3)
@@ -1304,6 +1354,10 @@ if ( {) {
 
       const severity = this.getErrorSeverity(this.state.error)
       const suggestion = this.getErrorSuggestion(this.state.error)
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       const canRetry = this.props.enableRetry !== false && 
                        this.state.retryCount < (this.props.maxRetries || 3)
 
@@ -1323,6 +1377,9 @@ if ( {) {
                 <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20">
                   <AlertTriangle className="h-8 w-8 text-red-600 dark:text-red-400" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1361,6 +1418,9 @@ if ( {) {
                 </div>
               </CardHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                       {this.props.maxRetries || 3}                    </p>                    {suggestion}
@@ -1368,6 +1428,10 @@ if ( {) {
                   {this.state.retryCount > 0 && (
                     <p className="text-sm text-orange-600 dark:text-orange-400">
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </p>
                 <div className="flex items-center justify-center gap-2 mt-2">
                   <Badge 
@@ -1485,12 +1549,21 @@ if ( {) {
 
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
                     </p>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   )}
                 </div>
                 {/* Action Buttons */}
                 <div className='flex flex-col sm:flex-row gap-3 justify-center'>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   {canRetry && (
                     <Button onClick={this.retry} className="flex items-center gap-2">
@@ -1498,6 +1571,7 @@ if ( {) {
                       Try Again
                     </Button>
                   )}
+<<<<<<< HEAD
                   <Button
                     onClick={this.goHome}
                     variant='outline'
@@ -1541,6 +1615,8 @@ if ( {) {
                     size="sm"
                     className="flex items-center gap-2"
                   >
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                     <Bug className="h-4 w-4" />
@@ -1568,6 +1644,9 @@ if ( {) {
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 {/* Error Details */}
@@ -1579,6 +1658,10 @@ if ( {) {
                       exit={{ opacity: 0, height: 0 }}
                       className='border-t pt-4'
                       className="border-t pt-4"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     >
                       <div className="space-y-4">
                         <div>
@@ -1589,6 +1672,13 @@ if ( {) {
                             {this.state.error.message}
                           </code>
                         </div>
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         {process.env.NODE_ENV === 'development' &&
   private go_home = () => {
     // Check condition
@@ -1814,9 +1904,19 @@ if ( {) {
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+                          {this && this.props.showReportButton !== false && (;
+
+                            <Button
+                              onClick={this && this.reportError}
+                              variant='outline'
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         {process.env.NODE_ENV === 'development' && this.state.error.stack && (
                           <div>
                             <h4 className="font-semibold text-sm mb-2">Stack Trace:</h4>
@@ -1827,6 +1927,7 @@ if ( {) {
                         )}
 
 
+<<<<<<< HEAD
                         <div className="flex gap-2">
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
@@ -1847,6 +1948,8 @@ if ( {) {
                               size='sm'
                             >
                               <Send className='h-4 w-4 mr-2' />                              Report Issue
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         <div className="flex gap-2">
                           <Button onClick={this.copyErrorDetails} variant="outline" size="sm">
                             <Clipboard className="h-4 w-4 mr-2" />
@@ -1886,6 +1989,7 @@ if ( {) {
                       </div>;
                     </motion && motion.div>;
                   )}
+<<<<<<< HEAD
                 </AnimatePresence>
               </CardContent>
             </Card>
@@ -1910,6 +2014,12 @@ export const useErrorBoundary = () => {
     setError(error)
   }, [])
   return { captureError }
+=======
+
+
+
+  return WrappedComponent;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 

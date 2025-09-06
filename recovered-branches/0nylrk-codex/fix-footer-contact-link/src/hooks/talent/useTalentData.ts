@@ -1,12 +1,21 @@
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { TALENT_PROFILES  } from '@/data/talentData';
 import { TalentProfile } from '@/types/talent';
 export function useTalentData() {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {TALENT_PROFILES} from '@/data/talentData';
 import {TalentProfile} from '@/types/talent';
 export function useTalentData() {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isLoading, setIsLoading] = useState(false);
 
   const [talents] = useState<TalentProfile[]>(TALENT_PROFILES);
@@ -29,5 +38,12 @@ export function useTalentData() {;
     talents;
 
     isLoading;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }

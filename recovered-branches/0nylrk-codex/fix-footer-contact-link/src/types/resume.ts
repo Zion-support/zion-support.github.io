@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export interface ResumeBasicInfo {
 export interface ResumeBasicInfo {;
   id?: string;
@@ -9,6 +10,13 @@ export interface ResumeBasicInfo {;
 export interface WorkExperience {
 
 export interface WorkExperience {;
+=======
+  headline?: string,
+  summary?: string;
+
+}
+export interface WorkExperience {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id?: string;
   company_name: string;
   role_title: string;
@@ -22,9 +30,13 @@ export interface WorkExperience {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Education {
 
 export interface Education {;
+=======
+export interface Education {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id?: string;
   institution: string;
   degree: string;
@@ -39,9 +51,13 @@ export interface Education {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Skill {
 
 export interface Skill {;
+=======
+export interface Skill {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id?: string;
   name: string;
   proficiency?: number;
@@ -51,9 +67,13 @@ export interface Skill {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Certification {
 
 export interface Certification {;
+=======
+export interface Certification {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id?: string;
   name: string;
   issuing_organization: string;
@@ -65,9 +85,13 @@ export interface Certification {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface PortfolioProject {
 
 export interface PortfolioProject {;
+=======
+export interface PortfolioProject {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id?: string;
   title: string;
   description?: string;
@@ -80,9 +104,13 @@ export interface PortfolioProject {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Resume {
 
 export interface Resume {;
+=======
+export interface Resume {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id?: string;
   user_id?: string;
   basic_info: ResumeBasicInfo;
@@ -95,6 +123,7 @@ export interface Resume {;
 
   is_active: boolean
 }
+<<<<<<< HEAD
 export interface ResumeBasicInfo {;
   id?: string,;
   title: string,;
@@ -169,3 +198,11 @@ export interface Resume {;
 
 }
 ;
+=======
+=======
+
+
+export interface ResumeBasicInfo {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

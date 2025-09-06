@@ -1,4 +1,5 @@
 // If there are multiple milestones, submit them one by one
+<<<<<<< HEAD
     milestones.forEach(milestone => {
       onSubmit({
         title: milestone.title
@@ -187,6 +188,8 @@ export function AddMilestoneForm({;
     }
 
     // If there are multiple milestones, submit them one by one
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     milestones.forEach(milestone => {
       onSubmit({
         title: milestone.title
@@ -197,6 +200,192 @@ export function AddMilestoneForm({;
     })
   },
 
+<<<<<<< HEAD
+=======
+  const handleAddMilestone = (milestone: GeneratedMilestone) => {
+
+
+    onSubmit({
+      title: milestone.title
+      description: milestone.description
+      due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
+      amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
+    })
+
+type MilestoneFormValues = z.infer < typeof form_schema>;
+import React from 'react';
+import { use_form } from 'react - hook - form';
+import { zod_resolver } from '@hookform / resolvers / zod';
+import { z } from 'zod';
+import { CalendarIcon, Loader2 } from 'lucide-react'import { format } from 'date - fns';
+import { Button } from '@/components / ui / button';
+import { Calendar } from '@/components / ui / calendar';
+import {
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from '@/components / ui / form';
+import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components / ui / textarea';
+  Popover;
+  PopoverContent;
+  PopoverTrigger} from '@/components / ui / popover'; import { AIMilestoneGenerator } from './AIMilestoneGenerator';
+import { GeneratedMilestone } from '@/hooks / useMilestoneGenerator';
+const form_schema = z.object ({
+  title: z.string ().min (1, 'Title is required');
+  description: z.string ().optional (),
+  due_date: z.date ().optional (),
+  amount: z.coerce.number ().min (0, 'Amount must be greater than or equal to 0')});
+type MilestoneFormValues = z.infer < typeof form_schema>;
+interface AddMilestoneFormProps {
+  on_submit: (data: MilestoneFormValues, ) => void,
+  is_submitting: boolean,
+  on_cancel?: () => void;
+  project_scope?: string;
+  projectStartDate?: string;
+  projectEndDate?: string;
+  project_type?: string;
+}
+export /**
+ * AddMilestoneForm - Function description
+ */
+function AddMilestoneForm() {
+  const form = use_form < MilestoneFormValues>({
+    resolver: zod_resolver (form_schema),
+    default_values: {
+      title: '',
+      description: '',
+      amount: 0}}),
+  const handle_submit = (values: MilestoneFormValues) =>: any {
+    on_submit (values);    form.reset ();
+  }
+  const handleAddMilestones = (milestones: GeneratedMilestone[], ) =>: any {
+    // If there's only one milestone, submit it directly;
+    // Check condition
+if ( {) {
+  $2
+}
+      const milestone = milestones[0];
+      // Check condition
+if ( {) {
+  $2
+}
+        on_submit ({
+          title: milestone.title,
+          description: milestone.description,
+          due_date: milestone.due_date ? new Date (milestone.due_date) : undefined,
+          amount: milestone.estimated_hours * 10, // Convert hours to a default payment amount;
+        });
+        return;
+      }
+    }
+    // If there are multiple milestones, submit them one by one;
+    milestones.for_each (milestone => {
+      on_submit ({
+        title: milestone.title,
+        description: milestone.description,
+        due_date: milestone.due_date ? new Date (milestone.due_date) : undefined,
+        amount: milestone.estimated_hours * 10, // Convert hours to a default payment amount;
+      });
+    });
+  }
+  const handleAddMilestone = (milestone: GeneratedMilestone, ) =>: any {
+    on_submit ({
+      title: milestone.title,
+      description: milestone.description,
+      due_date: milestone.due_date ? new Date (milestone.due_date) : undefined,
+      amount: milestone.estimated_hours * 10, // Convert hours to a default payment amount;
+    });
+
+  }
+type MilestoneFormValues = z && z.infer<typeof formSchema>;
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
+import { CalendarIcon, Loader2 } from 'lucide-react'import { format } from 'date-fns';
+import { Button } from '@/components/ui/button';
+import { Calendar } from '@/components/ui/calendar';
+import {;
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import {;
+  Popover;
+  PopoverContent;
+  PopoverTrigger} from '@/components/ui/popover';import { AIMilestoneGenerator } from './AIMilestoneGenerator';
+import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
+const formSchema = z && z.object({;
+  title: z && z.string().min(1, 'Title is required');
+  description: z && z.string().optional(),;
+  due_date: z && z.date().optional(),;
+  amount: z && z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
+
+type MilestoneFormValues = z && z.infer<typeof formSchema>;
+
+interface AddMilestoneFormProps {;
+  onSubmit: (data: MilestoneFormValues,) => void,;
+  isSubmitting: boolean,;
+  onCancel?: () => void;
+  projectScope?: string;
+  projectStartDate?: string;
+  projectEndDate?: string;
+  projectType?: string;
+}
+
+export function AddMilestoneForm(): any ({;
+  onSubmit;
+  isSubmitting;
+  onCancel;
+  projectScope = '';
+  projectStartDate = '';
+  projectEndDate = '';
+  projectType = 'Other';
+}: AddMilestoneFormProps) {;
+  const form = useForm<MilestoneFormValues>({;
+    resolver: zodResolver(formSchema),;
+    defaultValues: {;
+      title: '',;
+      description: '',;
+      amount: 0}}),;
+  const handleSubmit = (values: MilestoneFormValues) => {;
+    onSubmit(values);    form && form.reset();
+  };
+
+  const handleAddMilestones = (milestones: GeneratedMilestone[],) => {;
+    // If there's only one milestone, submit it directly;
+    if (milestones && milestones.length === 1) {;
+      const milestone = milestones[0];
+      if (milestone) {;
+        onSubmit({;
+          title: milestone && milestone.title,;
+          description: milestone && milestone.description,;
+          due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
+          amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
+        });
+        return;
+      }
+    }
+
+    // If there are multiple milestones, submit them one by one;
+    milestones && milestones.forEach(milestone => {;
+      onSubmit({;
+        title: milestone && milestone.title,;
+        description: milestone && milestone.description,;
+        due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
+        amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
+      });
+    });
+  };
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleAddMilestone = (milestone: GeneratedMilestone,) => {;
     onSubmit({;
       title: milestone && milestone.title,;
@@ -216,6 +405,7 @@ export function AddMilestoneForm({;
     <div className="space-y-6">
       {/* AI Milestone Generator */}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   },
 
@@ -232,11 +422,18 @@ export function AddMilestoneForm({;
           onAddMilestone = {handleAddMilestone,}
         />
       )}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },
 
   return (
     <div className="space-y-6">
       {/* AI Milestone Generator */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {projectScope && projectStartDate && (;
         <AIMilestoneGenerator;
           scope={projectScope}
@@ -247,6 +444,9 @@ export function AddMilestoneForm({;
           onAddMilestone={handleAddMilestone}
         />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -294,6 +494,7 @@ export function AddMilestoneForm({;
             name="description"
 
             render={({ field }: { field: any }) => (
+<<<<<<< HEAD
               <FormItem>
                 <FormLabel>Title</FormLabel>
                 <FormControl>
@@ -312,6 +513,10 @@ export function AddMilestoneForm({;
             control={form.control}
             name="description"
             render={({ field }: { field: any }) => (
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <FormItem>
                 <FormLabel>Description (optional)</FormLabel>
                 <FormControl>
@@ -439,6 +644,9 @@ export function AddMilestoneForm({;
               name="amount"
               render={({ field }: { field: any }) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 <FormItem>
                   <FormLabel>Amount ($)</FormLabel>
@@ -487,6 +695,9 @@ export function AddMilestoneForm({;
                 Cancel;
               </Button>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             )}

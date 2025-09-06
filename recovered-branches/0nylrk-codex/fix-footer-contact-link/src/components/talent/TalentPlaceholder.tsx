@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Card} from "@/components/ui/card";
 import {Skeleton} from "@/components/ui/skeleton";
 import {Button} from "@/components/ui/button";
@@ -7,6 +8,12 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton",
 import { Button } from "@/components/ui/button",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function TalentPlaceholder() {
   return (
     <div className="p-8 text-center">
@@ -21,6 +28,7 @@ export function TalentPlaceholder() {
         Join as Talent
       </Button>
     </div>
+<<<<<<< HEAD
   );
 }
   )
@@ -28,6 +36,12 @@ export function TalentPlaceholder() {
 import { Card } from "@/components/ui/card",;
 import { Skeleton } from "@/components/ui/skeleton",;
 import { Button } from "@/components/ui/button";
+=======
+
+import {Card} from "@/components/ui/card";
+import {Skeleton} from "@/components/ui/skeleton";
+import {Button} from "@/components/ui/button";
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function TalentPlaceholder() {;
   return (
     <div className="p-8 text-center">;
@@ -42,3 +56,9 @@ export function TalentPlaceholder() {;
   );
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -19,6 +19,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 
+<<<<<<< HEAD
 type Question = {
   id: string;
   question: string;
@@ -45,6 +46,10 @@ export default function Quiz({ questions, onComplete }: Props) {;
     0
   );
   function submit() {
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     setSubmitted(true);
     onComplete(score);
   }
@@ -94,6 +99,7 @@ export default function Quiz({ questions, onComplete }: Props) {
               <label key={i} className="flex items-center gap-2">;
                 <input
                   type="radio"
+<<<<<<< HEAD
                   name={q.id}
                   checked={answers[q.id] === i}
                   onChange={() => setAnswers({ ...answers, [q.id]: i })}
@@ -124,14 +130,40 @@ export default function Quiz({ questions, onComplete }: Props) {
       </button>
       {submitted && (
         <div className='text-sm'>
+=======
+
+
+=======
+            <div className='mt - 2 text - sm'>;
+              {answers[q.id] === q.answer_index ? (
+                <span className='text - green - 600'>Correct</span>) : (
+                <span className='text - red - 600'>Incorrect</span>              )}              {answers[q.id] === q.answer_index ? (
+                <span className="text - green - 600">Correct</span>) : (
+                <span className="text - red - 600">Incorrect</span>)}
+            </div>)}
+        </div>))}
+      <button;
+        on_click={submit}
+        className='px - 4 py - 2 bg - blue - 600 text - white rounded';
+      >;
+        Submit Quiz;
+      </button>;
+      {submitted && (
+        <div className='text - sm'>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           Score: {score} / {questions.length}
         </div>)}
     </div>);      <button on_click={submit} className="px - 4 py - 2 bg - blue - 600 text - white rounded">Submit Quiz</button>;
       {submitted && <div className="text - sm">Score: {score} / {questions.length}</div>}
     </div>);
+<<<<<<< HEAD
                 />
 <<<<<<< HEAD
                 <span>{_opt}</span>
+=======
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
                 <span>{opt}</span>
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -170,5 +202,13 @@ export default function Quiz({ questions, onComplete }: Props) {
   );
 }
 
+<<<<<<< HEAD
 }
 }
+=======
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

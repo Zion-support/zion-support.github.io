@@ -18,6 +18,13 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   try {
 
@@ -33,6 +40,13 @@ serve(async (req) => {
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),;
     if (!openAiKey) {;
       throw new Error("OPENAI_API_KEY is not defined");
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     if (!content) {
       throw new Error("Content is required")
@@ -154,6 +168,7 @@ if ( {) {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error in resume-enhancer function:", error),
     return new Response(
       JSON.stringify({
@@ -165,6 +180,21 @@ if ( {) {
   }
 });
 
+=======
+
+    console.error ("Error in resume - enhancer function:", error);
+    return new Response (
+      JSON.stringify ({
+        error: error.message});
+      {
+        status: 500,
+        headers: { ...cors_headers, "Content - Type": "application / json" }}
+    );
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     // Determine the system prompt based on enhancement type;
     let systemPrompt = "",;
@@ -222,5 +252,12 @@ if ( {) {
         status: 500,;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });

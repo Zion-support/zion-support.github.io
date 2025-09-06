@@ -50,6 +50,7 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
     setExperienceRange([values[0] || 0, values[1] || 15])
   },
 
+<<<<<<< HEAD
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -79,6 +80,8 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
   const handleChange = (values: number[]) => {
     setExperienceRange([values[0] |0, values[1] |15])
   }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -99,6 +102,9 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
       
       {expanded && (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <div className="mt-6">
           <div className="flex justify-between text-sm text-zion-slate-light mb-2">
@@ -133,6 +139,9 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
           <Slider;
             aria-label="Experience range";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             value={[experienceRange[0], experienceRange[1]]}
             min={0}
@@ -140,10 +149,14 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
             step={1}
             onValueChange={handleChange}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     </div>;
   );
+<<<<<<< HEAD
 };
 }
 <<<<<<< HEAD
@@ -163,15 +176,23 @@ export function ExperienceFilter({ experienceRange, setExperienceRange, expanded
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             className="mt-6"
           />
         </div>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
   )
 }
     </div>;
+=======
+    </div>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 };
 }

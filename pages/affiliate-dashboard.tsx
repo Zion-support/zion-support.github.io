@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
 import { useEffect, useMemo, useState } from 'react',;
 ;
 function getRefCode(): string {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   useEffect(() => {
@@ -26,6 +29,7 @@ function getRefCode(): string {
       setMsg(e?.message |'Error')
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -39,6 +43,14 @@ function getRefCode(): string {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+  }
+  const exportUrl = useMemo(() => (code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#'), [code])
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 ;
@@ -129,6 +141,12 @@ export default function AffiliateDashboard(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>
     </div>
   )
@@ -139,6 +157,7 @@ function Stat({ label, value }: { label: string, value: number | string }) {
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>
       <div className="text-2xl font-semibold">{value}</div>
     </div>
+<<<<<<< HEAD
   );
 };
   )
@@ -155,6 +174,10 @@ function Stat({ label, value }: { label: string, value: number | string }) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 =======
@@ -247,6 +270,7 @@ if ( {) {
       </div>;
     </div>);
 }
+<<<<<<< HEAD
 ;
 function Stat({ label, value }: { label: string, value: number | string }) {;
   return (;
@@ -261,3 +285,21 @@ function Stat({ label, value }: { label: string, value: number | string }) {;
   }
 }
 }
+=======
+/**
+ * Stat - Function description
+ */
+function Stat() {
+  return (
+    <div className="p - 4 rounded border border - gray - 200 dark:border - gray - 800">;
+      <div className="text - sm text - gray - 600 dark:text - gray - 300">{label}</div>;
+      <div className="text - 2xl font - semibold">{value}</div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

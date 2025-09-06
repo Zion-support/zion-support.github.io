@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {JobApplication} from "@/types/jobs";
 import {ApplicationScoreCard} from "../ApplicationScoreCard";
@@ -12,6 +13,12 @@ import { JobApplication } from "@/types/jobs";
 import { ApplicationScoreCard } from "../ApplicationScoreCard";
 import { JobApplication } from "@/types/jobs",
 import { ApplicationScoreCard } from "../ApplicationScoreCard",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ScoreDialogProps {
 
   open: boolean
@@ -20,6 +27,7 @@ interface ScoreDialogProps {
 
   onScoreUpdated: (updatedApplication: JobApplication) => void
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function ScoreDialog({;
@@ -49,6 +57,12 @@ import {;
 } from "@/components/ui/dialog",;
 import { JobApplication } from "@/types/jobs",;
 import { ApplicationScoreCard } from "../ApplicationScoreCard",;
+=======
+
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {JobApplication} from "@/types/jobs";
+import {ApplicationScoreCard} from "../ApplicationScoreCard";
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ScoreDialogProps {;
   open: boolean,;
   onOpenChange: (open: boolean) => void,;
@@ -85,7 +99,17 @@ export function ScoreDialog(): any ({;
           <DialogTitle>Application Match Score</DialogTitle>;
         </DialogHeader>;
         {application && (;
+<<<<<<< HEAD
           <ApplicationScoreCard;
+=======
+
+          <ApplicationScoreCard
+=======
+
+          <ApplicationScoreCard 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             application={application}
             onScoreUpdated={onScoreUpdated}
           />;

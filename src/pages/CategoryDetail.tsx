@@ -7,6 +7,7 @@ const AUTO_SERVICE_TITLES = [
   "Machine Learning Model Tuning"
   "IoT Device Integration Service"
   "Blockchain Data Solutions"
+<<<<<<< HEAD
 ]
 function generateInnovationListing(index: number): ProductListing {
   const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] |'AI Service'
@@ -66,6 +67,16 @@ import { NextSeo } from '@/components/NextSeo',;
 import { Header } from "@/components/Header",;
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
+=======
+
+import { use_router } from 'next / router';
+import Link from 'next / link';
+import { toast } from '@/hooks / use - toast';
+import {NextSeo} from '@/components / NextSeo';
+import { Header } from '@/components / Header';
+import ListingGridSkeleton from '@/components / skeletons / ListingGridSkeleton';
+import {logErrorToProduction} from '@/utils / production_logger';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const AUTO_SERVICE_TITLES = [;
   "AI - Powered Customer Support";
   "Cloud Infrastructure Management";
@@ -86,6 +97,7 @@ function generateInnovationListing (index: number): ProductListing {
       icon: <Briefcase className="w-6 h-6" />
     }
     'talents': {
+<<<<<<< HEAD
       title: "Talents",
       description: "Connect with AI experts, developers, and tech specialists",
       icon: <Brain className="w-6 h-6" />
@@ -95,6 +107,12 @@ function generateInnovationListing (index: number): ProductListing {
       description: "Rent or buy specialized hardware, servers, and devices",
       icon: <Code className="w-6 h-6" />
     },
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     'innovation': {
       title: "Innovation"
       description: "Discover cutting-edge solutions and tech breakthroughs"
@@ -102,6 +120,9 @@ function generateInnovationListing (index: number): ProductListing {
     }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     'ai-models-apis': {
@@ -111,6 +132,9 @@ function generateInnovationListing (index: number): ProductListing {
     }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     'content-creation': {
@@ -120,6 +144,9 @@ function generateInnovationListing (index: number): ProductListing {
     }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     'data-analysis': {
@@ -129,6 +156,9 @@ function generateInnovationListing (index: number): ProductListing {
     }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     'computer-vision': {
@@ -138,6 +168,9 @@ function generateInnovationListing (index: number): ProductListing {
     }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     'virtual-assistants': {
@@ -147,13 +180,21 @@ function generateInnovationListing (index: number): ProductListing {
     }
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     'voice-speech': {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
       icon: <Mic className="w-6 h-6" />
+<<<<<<< HEAD
     }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },
 
     'developer-tools': {
@@ -163,11 +204,15 @@ function generateInnovationListing (index: number): ProductListing {
     };          icon: <Bot className="w-6 h-6" />},
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     'developer-tools': {
       title: "Developer Tools"
       description: "AI-powered coding assistance and automation"
       icon: <Code className="w-6 h-6" />
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -185,6 +230,11 @@ function generateInnovationListing (index: number): ProductListing {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },
     'business-solutions': {
       title: "Business Solutions",
@@ -292,13 +342,20 @@ function generateInnovationListing (index: number): ProductListing {
   const seoDescription =
     category.description || 'Explore listings in this category.',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         setCategory(currentCategory)
         innovationCounterRef.current = 0
     : 'Category | Zion Marketplace'
   const seoDescription = null;
     category.description || 'Explore listings in this category.'
+<<<<<<< HEAD
 <<<<<<< HEAD
 
   useEffect(() => {
@@ -406,6 +463,9 @@ function generateInnovationListing (index: number): ProductListing {
     : 'Category | Zion Marketplace'
   const seoDescription = null;
     category.description || 'Explore listings in this category.'
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>
       <NextSeo title={seoTitle} description={seoDescription} />
@@ -421,6 +481,9 @@ function generateInnovationListing (index: number): ProductListing {
           </div>
           
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <div className="text-center mb-12">
@@ -732,12 +795,16 @@ function generateInnovationListing(): any (index: number): ProductListing {;
                   detailBasePath="/marketplace/listing"
                 />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
               ))}
             </div>
           )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -753,6 +820,11 @@ function generateInnovationListing(): any (index: number): ProductListing {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>;
         </div>;
       </Suspense>;

@@ -1,8 +1,15 @@
 export function SelectResumeSection({
+<<<<<<< HEAD
   resumeOptions,
   selectedResume,
   handleResumeSelect,
   handleDownloadResume,
+=======
+  resumeOptions;
+  selectedResume;
+  handleResumeSelect;
+  handleDownloadResume;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   isLoading
 }: SelectResumeSectionProps) {
   return (
@@ -29,6 +36,9 @@ export function SelectResumeSection({
               }`}
               onClick={() => handleResumeSelect(option.id)}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -39,6 +49,7 @@ export function SelectResumeSection({
               </div>
             </button>
           ))}
+<<<<<<< HEAD
           
 
           
@@ -47,6 +58,13 @@ export function SelectResumeSection({
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+          
+
+          
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {resumeOptions.map((option) => (
             <button
               key={option.id}
@@ -144,10 +162,14 @@ function SelectResumeSection() {
           )}
         </>
       )}
+<<<<<<< HEAD
     </div>
   )
 }}
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }};
 };

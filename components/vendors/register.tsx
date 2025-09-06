@@ -1,6 +1,19 @@
+<<<<<<< HEAD
 import { FormEvent, useState } from 'react';
 import {FormEvent, useState} from 'react';
 export default function VendorRegisterPage() {;
+=======
+
+import {FormEvent, useState} from 'react';
+
+export default function VendorRegisterPage() {;
+
+=======
+
+import {FormEvent, useState} from 'react';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   async function onSubmit(): any (e: FormEvent<HTMLFormElement>) {;
@@ -61,9 +74,21 @@ export default function VendorRegisterPage() {;
       setLoading(false);    }
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 
+=======
+
+
+=======
+
+  return (
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (            .map(s => s.trim())
             .filter(Boolean);
           teamSize: Number(payload.teamSize |0)
@@ -79,6 +104,9 @@ export default function VendorRegisterPage() {;
 
       form.reset()
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 import {FormEvent, useState} from 'react';
 export default /**
@@ -124,6 +152,7 @@ function on_submit() {
 }
       set_message ('Application submitted. Await approval.');
       form.reset ();
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -229,6 +258,12 @@ function on_submit() {
 }
 
     }
+=======
+    } catch (err: any) {
+      set_message (err.message);
+    } finally {
+      set_loading (false);    }
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
 
@@ -256,6 +291,9 @@ function on_submit() {
 <<<<<<< HEAD
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   );
@@ -373,5 +411,8 @@ function on_submit() {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface BlockchainWeb3Service {
 export interface BlockchainWeb3Service {;
   id: string;
@@ -11,6 +12,8 @@ export interface BlockchainWeb3Service {;
     currency: string;
     trialDays: number;
     setupTime: string;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   {
@@ -357,6 +360,7 @@ export interface BlockchainWeb3Service {;
       'MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'
     ]
     support:
+<<<<<<< HEAD
       'Community support, developer documentation, custom development services, and enterprise solutions.'
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001']
     link: 'https://ziontechgroup.com/web3-social-media-platform'
@@ -386,6 +390,10 @@ export interface BlockchainWeb3Service {;
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'],
     support: 'Community support, developer documentation, custom development services, and enterprise solutions.',
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+      'Community support, developer documentation, custom development services, and enterprise solutions.',
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
     link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform',
     id: 'web3 - social - media - platform',
@@ -505,6 +513,7 @@ export interface BlockchainWeb3Service {;
     rating: 4 && 4.6,
 
     reviews: 18000
+<<<<<<< HEAD
 <<<<<<< HEAD
     rating: 4.6,
     reviews: 18000;
@@ -794,6 +803,12 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+    rating: 4.6,
+    reviews: 18000;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

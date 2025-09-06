@@ -118,6 +118,9 @@ function TalentDashboardContent() {
     onboardingStatus.matchReceived,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -154,6 +157,9 @@ function TalentDashboardContent() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <div>
@@ -214,6 +220,9 @@ function TalentDashboardContent() {
                     <Link href="/messages">
                       <MessageSquare className="h-4 w-4 mr-2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                       Messages
@@ -225,6 +234,11 @@ function TalentDashboardContent() {
 
 
             
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             {showAdvanced && (
@@ -444,6 +458,9 @@ function TalentDashboardContent() {
             
             <Card className="mt-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <CardHeader>
@@ -483,6 +500,9 @@ function TalentDashboardContent() {
                 <TabsTrigger value="job-matches" className="flex items-center">
                   <BriefcaseIcon className="h-4 w-4 mr-2" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                   AI Job Matches
@@ -501,6 +521,9 @@ function TalentDashboardContent() {
               
               <TabsContent value="applications" className="mt-0">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 <MyApplications />
@@ -522,6 +545,9 @@ function TalentDashboardContent() {
                   <CardContent className="pt-6 text-center">
                     <p className="text-muted-foreground">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                       You haven't saved any jobs yet.
@@ -539,6 +565,9 @@ function TalentDashboardContent() {
     </>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             <div className='mt-8'>;
               <UpcomingInterviewsCard />;
@@ -625,6 +654,9 @@ function TalentDashboardContent() {
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 ;

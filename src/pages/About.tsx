@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 const About: React.FC = () => {
   return (
@@ -80,6 +81,8 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       {/* Team Section */}
       <div className="py-20 bg-gray-50">

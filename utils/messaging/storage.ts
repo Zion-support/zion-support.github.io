@@ -28,10 +28,20 @@ export interface Message {;
   }>;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Conversation {
 
 
 export interface Conversation {;
+=======
+export interface Conversation {
+=======
+
+
+export interface Conversation {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -48,9 +58,18 @@ export interface Conversation {;
     tags?: string[]
   }
 }
+<<<<<<< HEAD
 export interface MessageThread {
 
 export interface MessageThread {;
+=======
+
+
+
+export interface MessageThread {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   conversation_id: string;
   rootMessageId: string;
@@ -62,8 +81,19 @@ export interface MessageThread {;
 }
 <<<<<<< HEAD
 export interface MessageSearchResult {
+<<<<<<< HEAD
 
 export interface MessageSearchResult {;
+=======
+=======
+  updatedAtIso: string
+}
+
+
+export interface MessageSearchResult {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   message: Message;
   conversation: Conversation;
   highlights: string[];
@@ -875,9 +905,16 @@ export async function updateMessage(id: string, updates: Partial<Message>): Prom
 =======
   return messagingStorage.getMessage(id)
 }
+<<<<<<< HEAD
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {
 
 export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
+=======
+
+
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return messagingStorage.updateMessage(id, updates);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
@@ -922,6 +959,27 @@ export async function getMessagesByConversation(conversationId: string, limit?: 
 }
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {
 =======
+<<<<<<< HEAD
+=======
+  return messagingStorage && messagingStorage.getUnreadMessageCount(userId),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+}
+export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
+  return messagingStorage && messagingStorage.searchMessages(query, userId, limit);
+=======
+  return messagingStorage.markAsRead(id)
+}
+
+
+export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
+
+  return messagingStorage.createConversation(conversation);
+}
+export async function getConversation(id: string): Promise<Conversation | null> {
+  return messagingStorage.getConversation(id)
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
   return messagingStorage.updateConversation(id, updates);
@@ -932,6 +990,7 @@ export async function getMessagesByConversation(conversationId: string, limit?: 
 }
 
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return messagingStorage.getConversationsByUser(userId, includeArchived);
 }
@@ -974,18 +1033,29 @@ export async function getMessagesByConversation(conversationId: string, limit?: 
 }
 
 export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return messagingStorage.getConversationsByUser(userId, includeArchived);
 }
 export async function getUnreadMessageCount(userId: string): Promise<number> {
   return messagingStorage.getUnreadMessageCount(userId)
 }
+<<<<<<< HEAD
 export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
 
 export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {;
+=======
+
+
+export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return messagingStorage.searchMessages(query, userId, limit);
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 // Utility functions
+<<<<<<< HEAD
 export function createMessageData(
   conversationId: string
   senderId: string
@@ -1019,6 +1089,10 @@ export function createConversationData(
     ...additionalData
   }
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function generateMessageId(): string {
   return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
@@ -1027,6 +1101,10 @@ export function generateConversationId(): string {
 }
 export function formatMessageTime(isoString: string): string {
 =======
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     participants,
     lastMessageAtIso: new Date().toISOString(),
     isArchived: false,
@@ -1044,6 +1122,7 @@ export function generateConversationId(): string {;
 }
 
 export function formatMessageTime(isoString: string): string {;
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const date = new Date(isoString);
   const now = new Date();
@@ -1083,6 +1162,9 @@ export function generateConversationId(): string {;
 }
 
 export function formatMessageTime(isoString: string): string {;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const date = new Date(isoString);
   const now = new Date();
   const diffInHours = (now.getTime() - date.getTime()) / (1000 * 60 * 60);
@@ -1095,6 +1177,13 @@ export function formatMessageTime(isoString: string): string {;
   } else {
     return date.toLocaleDateString();
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
 

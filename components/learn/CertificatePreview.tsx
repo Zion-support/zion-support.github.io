@@ -2,12 +2,21 @@ import React from "react";
 
 import React from "react";
 export default function CertificatePreview({
+<<<<<<< HEAD
   courseId
   userId = "demo-user"
 }: {
   courseId,
   userId = "demo-user",
 }: {;
+=======
+
+  courseId,
+  userId = "demo-user",
+}: {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   courseId: string;
   userId?: string;
 }) {;
@@ -29,9 +38,15 @@ export default function CertificatePreview({
         Download PDF
       </a>
     </div>
+<<<<<<< HEAD
   );
 );
   );
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">;

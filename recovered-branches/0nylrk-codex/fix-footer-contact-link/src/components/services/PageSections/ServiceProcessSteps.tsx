@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 export function ServiceProcessSteps() {
   return (
     <div className="my-20">
@@ -28,6 +29,12 @@ export function ServiceProcessSteps() {
     </div>
   )
 }
+=======
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ServiceProcessSteps() {;
   return (;
 
@@ -63,3 +70,9 @@ export function ServiceProcessSteps() {;
   );
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

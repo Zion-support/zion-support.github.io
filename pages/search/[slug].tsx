@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GetServerSideProps  } from 'next';
 import { useRouter  } from 'next/router';
 import { useState, useEffect  } from 'react';
@@ -6,10 +7,16 @@ import { Search, Filter, Grid, List } from 'lucide-react'
 import { SEO  } from '@/components/SEO';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
+<<<<<<< HEAD
 import { Search, Filter, Grid, List } from 'lucide-react';import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -23,6 +30,10 @@ import { BLOG_POSTS  } from '@/data/blog-posts';
 import { useDebounce  } from '@/hooks/useDebounce';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface BaseSearchResult {
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   title: string;
   description?: string;
@@ -78,6 +89,7 @@ type SearchResult =;
   | TalentSearchResult;
   | BlogSearchResult;
   | CategorySearchResult;
+<<<<<<< HEAD
 // Type guard functions
 const hasPrice = (result: SearchResult): result is ProductSearchResult =>
   result.type === 'product' |result.type === 'equipment';
@@ -88,11 +100,41 @@ const hasRating = (
   result.type === 'equipment' |
   result.type === 'talent';
 interface SearchResultsPageProps {
+=======
+
+
+// Type guard functions;
+const hasPrice = (result: SearchResult): result is ProductSearchResult =>;
+  result && result.type === 'product' || result && result.type === 'equipment';
+
+const hasRating = (;
+  result: SearchResult;
+): result is ProductSearchResult | TalentSearchResult =>;
+  result && result.type === 'product' ||;
+  result && result.type === 'equipment' ||;
+  result && result.type === 'talent';
+
+interface SearchResultsPageProps {;
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  initialResults: SearchResult[];
+  query: string;
+  slug: string;
+  totalCount: number;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
+<<<<<<< HEAD
 import { Search, Filter, Grid, List } from 'lucide-react';
+=======
+import { Search, Filter, Grid, List } from 'lucide-react'
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -149,11 +191,22 @@ const hasPrice = (result: SearchResult): result is ProductSearchResult =>
 
 const hasRating = (result: SearchResult): result is ProductSearchResult | TalentSearchResult => 
   result.type === 'product' || result.type === 'equipment' || result.type === 'talent';
+<<<<<<< HEAD
 interface SearchResultsPageProps {;
   initialResults: SearchResult[];
   query: string;
   slug: string;
   totalCount: number;
+=======
+
+interface SearchResultsPageProps {
+  initialResults: SearchResult[],
+  query: string,
+  slug: string,
+  totalCount: number
+}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface OfflineFilters {
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -171,6 +224,7 @@ interface OfflineFilters {
           const bPrice = b && b.type === 'product' ? (b && b.price ?? 0) : 0;
           return bPrice - aPrice;        });
         break;
+<<<<<<< HEAD
       case 'rating':
         all.sort((a, b) => {
           const aRating =
@@ -178,6 +232,15 @@ interface OfflineFilters {
           const bRating =
             b.type === 'product' |b.type === 'talent' ? (b.rating ?? 0) : 0;
             b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
+=======
+
+
+=======
+
+            b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -341,6 +404,13 @@ function offlineSearch(;
         all.sort((a, b) => {;
           const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
           const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           return bRating - aRating;
         });
         break;
@@ -348,6 +418,7 @@ function offlineSearch(;
         break;
     }
   } else {;
+<<<<<<< HEAD
     all.sort((a, b) => a.title.localeCompare(b.title));
     } catch (error) {
     console.error("Error:", error);
@@ -363,6 +434,9 @@ export default function SearchResultsPage({
   slug
   totalCount
   return { results: paginated, totalCount: all.length };
+=======
+    all && all.sort((a, b) => a && a.title.localeCompare(b && b.title));
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
           return aPrice - bPrice
@@ -403,7 +477,25 @@ export default function SearchResultsPage(): any ({;
   query,;
   slug,;
   totalCount,;
+<<<<<<< HEAD
 }: SearchResultsPageProps) {  const router = useRouter();
+=======
+
+
+}: SearchResultsPageProps) {  const router = useRouter();
+=======
+  initialResults;
+  query;
+  slug;
+  totalCount}: SearchResultsPageProps) {
+  const router = useRouter();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+}: SearchResultsPageProps) {  const router = useRouter();
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return { results: paginated, totalCount: all.length   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -418,6 +510,13 @@ export default function SearchResultsPage(): any ({;
 export default function SearchResultsPage(req, res) {
   try {
   const router = useRouter();
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
   const [loading, setLoading] = useState(false);
@@ -651,13 +750,17 @@ export default function SearchResultsPage(req, res) {
       if ((r.price ?? 0) < Number(minPrice)) {;
         return false;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     }
     return true;  });
 
+<<<<<<< HEAD
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -696,6 +799,9 @@ export default function SearchResultsPage(req, res) {
 }
     return true
   }),
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Group results by type for better display
   const groupedResults = filteredResults.reduce(
     (acc, result) => {
@@ -829,6 +935,7 @@ export default function SearchResultsPage(req, res) {
                 bio: result.description,
                 summary: result.description,
                 is_verified: false,
+<<<<<<< HEAD
                 availability_type: 'available',
               }}
               onViewProfile={(id: string) => {
@@ -901,6 +1008,10 @@ export default function SearchResultsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             />;
           </div>;
         );
@@ -936,6 +1047,13 @@ export default function SearchResultsPage(req, res) {
 
 }
   },
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>;
       <SEO
@@ -962,6 +1080,15 @@ export default function SearchResultsPage(req, res) {
       />
       <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+<<<<<<< HEAD
+=======
+=======
+
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div
           className="container mx-auto px-4 py-8"
           data-testid="search-results"
@@ -987,6 +1114,7 @@ export default function SearchResultsPage(req, res) {
                 </p>
               </div>
               {/* Search Input */}
+<<<<<<< HEAD
               <div className='relative w-full lg:w-96'>
                 <Search className='absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200' />
               {/* Search Input */  } catch (error) {
@@ -996,6 +1124,10 @@ export default function SearchResultsPage(req, res) {
 }
               <div className="relative w-full lg:w-96">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200" />
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Input
                   type="text"
                   value={searchQuery}
@@ -1007,6 +1139,7 @@ export default function SearchResultsPage(req, res) {
               </div>
             </div>
             {/* Controls */}
+<<<<<<< HEAD
             <div className='flex flex-wrap items-center justify-between gap-4 mt-6'>
               <div className='flex items-center gap-2 flex-wrap'>
             {/* Controls */  } catch (error) {
@@ -1016,6 +1149,10 @@ export default function SearchResultsPage(req, res) {
 }
             <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
               <div className="flex items-center gap-2 flex-wrap">
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Button
                   variant="outline"
                   size="sm"
@@ -1027,6 +1164,7 @@ export default function SearchResultsPage(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </Button>
                 <select
+<<<<<<< HEAD
                   value={sortBy  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1051,6 +1189,14 @@ export default function SearchResultsPage(req, res) {
                   <option value="price_desc">Price: High to Low</option>
                   <option value="rating">Highest Rated</option>
                 </select>
+=======
+
+
+                  data-testid='filter-button'>;
+                  <Filter className='h-4 w-4' />                  Filters;
+                </Button>;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <select
                   value={sortBy}
                   onChange={e => setSortBy(e && e.target.value)}
@@ -1187,6 +1333,12 @@ export default function SearchResultsPage(req, res) {
 }
                 </select>
                 <div className="flex items-center gap-1">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <input
                     type="number"
                     placeholder="Min $"
@@ -1222,6 +1374,11 @@ export default function SearchResultsPage(req, res) {
               </div>
               <div className='flex items-center gap-2'>
               <div className="flex items-center gap-2">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
@@ -1289,6 +1446,7 @@ export default function SearchResultsPage(req, res) {
   }
 }
           {loading && results.length === 0 && (
+<<<<<<< HEAD
             <div className="flex justify-center py-12">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
             </div>
@@ -1303,6 +1461,9 @@ export default function SearchResultsPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {!loading && filteredResults.length === 0 && (
             <div data-testid="search-empty-state">
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
@@ -1361,11 +1522,86 @@ export default function SearchResultsPage(req, res) {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     let results = [];
     let totalCount = 0;
+<<<<<<< HEAD
     if (response.ok) {
       const data = await response.json();
       results = data.results |[];
       totalCount = data.totalCount |results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
+=======
+
+            <div className='flex justify - center py - 12'>;
+              <div className='animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 600'></div>            </div>)}
+          {/* Empty State */}
+          {!loading && filtered_results.length === 0 && (
+            <div data - testid='search - empty - state'>              <SearchEmptyState on_retry={() => fetch_results (search_query)} />;
+            </div>)}
+          {/* Results */}
+          {filtered_results.length > 0 && (
+            <div className='space - y-8'>;
+              {Object.entries (grouped_results).map (([type, type_results]) => (
+                <div key={type}>;
+                  <h2 className='text - xl font - semibold text - gray - 900 dark:text - white mb - 4 capitalize'>                    {type}s ({type_results.length});
+                  </h2>;
+                  <div;
+                    className={
+                      view_mode === 'grid';
+                        ? 'grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 4 gap - 6';
+                        : 'space - y-4';
+                    }
+                  >;
+                    {type_results.map (renderResultCard)}
+                  </div>;
+                </div>))}
+              {/* Load More Button */}
+              {results.length < total_results && (
+                <div className='flex justify - center py - 8'>;
+                  <Button;
+                    on_click={load_more}
+                    disabled={loading}
+                    className='flex items - center gap - 2';
+                  >;
+                    {loading ? (
+                      <>;
+                        <div className='animate - spin rounded - full h - 4 w - 4 border - b-2 border - white'></div>                        Loading...;
+                      </>) : (
+                      'Load More Results')}
+                  </Button>;
+                </div>)}
+            </div>)}
+        </div>;
+      </div>;
+    </>);
+export const getServerSideProps: GetServerSideProps<;
+  SearchResultsPageProps;
+> = async (context: any) => {
+  const params = context.params;
+  const slug = params?.slug as string,
+  // Convert slug back to query term;
+  const query = slug ? slug.replace (/-/g, ' ') : '';
+;
+  try {
+    // In production, replace with your actual API base URL;
+    const apiBaseUrl =;
+      process.env.NEXT_PUBLIC_API_URL || 'http: //localhost:3000',
+    log_info (`Fetching search results for slug: ${slug}, query: ${query}`);
+;
+    const response = await fetch (
+      `${apiBaseUrl}/api / search?query=${encodeURIComponent (query)}&limit = 12`    );
+;
+    let results = [];
+    let total_count = 0;
+;
+    // Check condition
+if ( {) {
+  $2
+}
+      const data = await response.json ();
+      results = data.results || [];
+      total_count = data.total_count || results.length;
+      log_info (`Server - side fetch successful: ${results.length} results`);
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } else {
       logErrorToProduction (
         `Search API error: ${response.status} ${response.status_text}`);
@@ -1410,6 +1646,68 @@ export default function SearchResultsPage(req, res) {
 
 }
 
+<<<<<<< HEAD
+=======
+=======
+      results = data.results || [];
+      totalCount = data.totalCount || results.length;
+      logInfo(`Server-side fetch successful: ${results.length} results`)
+    } else {
+      logErrorToProduction(`Search API error: ${response.status} ${response.statusText}`),
+      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
+      results = offline.results;
+      totalCount = offline.totalCount
+    }
+
+    return {
+      props: {
+        initialResults: results,
+        query;
+        slug;
+        totalCount}}
+  } catch (error) {
+    logErrorToProduction('Error fetching search results:', { data: error }),
+    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
+    return {
+      props: {
+        initialResults: offline.results,
+        query;
+        slug;
+        totalCount: offline.totalCount}}
+  }
+
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+      total_count = offline.total_count;    }
+    return {
+      props: {
+        initial_results: results,
+        query,
+        slug,
+        total_count,
+      },
+    }
+  } catch (error) {
+    logErrorToProduction ('Error fetching search results:', { data: error });
+    const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
+;
+    return {
+      props: {
+        initial_results: offline.results,
+        query,
+        slug,
+total_count: offline.total_count,
+      },
+    }  }
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1524,10 +1822,17 @@ export const getServerSideProps: GetServerSideProps<;
     let results = [];
     let totalCount = 0;
     if (response.ok) {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       const data = await response.json();
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
+<<<<<<< HEAD
     } else {
       logErrorToProduction(
         `Search API error: ${response.status} ${response.statusText}`
@@ -1597,3 +1902,8 @@ totalCount: offline.totalCount,
   }
 }
 };
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

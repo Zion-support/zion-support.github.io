@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -5,6 +6,10 @@ import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
@@ -14,6 +19,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 
 
     res.status(200).json({ leaderboard: top })
+<<<<<<< HEAD
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to load leaderboard' })
   };
@@ -26,6 +32,17 @@ import fs from 'fs';
 import path from 'path';
 const usersPath = path.join(process.cwd(), 'datalearnusers.json'),;
 export default function handler(req, res) {
+=======
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+import fs from 'fs',
+import path from 'path',
+const users_path = path.join (process.cwd (), 'datalearnusers.json'),
+export default /**
+ * handler - Function description
+ */
+function handler() {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   try {
     const users = JSON.parse (fs.readFileSync (users_path, 'utf - 8')),
     const entries = Object.values (users as any).map ((u: any) => ({
@@ -46,6 +63,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -61,3 +79,12 @@ export default function handler(req, res) {
 }
   }
 }
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

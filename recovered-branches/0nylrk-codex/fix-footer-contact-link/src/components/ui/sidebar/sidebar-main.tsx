@@ -23,6 +23,7 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
 }
 export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
+<<<<<<< HEAD
   if (props.collapsible === &quot;none&quot;) {
     return (
       <div
@@ -31,6 +32,14 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
 ;
   if (props.collapsible === &quot;none&quot;) {
 
+=======
+
+;
+  if (props.collapsible === &quot;none&quot;) {
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (props.collapsible === "none") {
     return (
       <div
@@ -97,9 +106,13 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
   return (;
     <div;
       ref={ref}
+<<<<<<< HEAD
       className="group peer hidden md:block text-sidebar-foreground"
 className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
       className="group peer hidden md:block text-sidebar-foreground"
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       data-state={state}
       data-collapsible={state === "collapsed" ? props.collapsible : ""}
       data-variant={props.variant}
@@ -162,10 +175,16 @@ export const SidebarRail = React.forwardRef<
 Sidebar.displayName = "Sidebar"
 
 export const SidebarRail = React.forwardRef<
+<<<<<<< HEAD
   HTMLButtonElement,;
   React.ComponentProps<&quot;button&quot;>
   HTMLButtonElement,
   React.ComponentProps<"button">
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
   return (
@@ -202,10 +221,16 @@ export const SidebarInset = React.forwardRef<
 SidebarRail.displayName = "SidebarRail"
 
 export const SidebarInset = React.forwardRef<
+<<<<<<< HEAD
   HTMLDivElement,;
   React.ComponentProps<&quot;main">
   HTMLDivElement,
   React.ComponentProps<"main">
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >((props, ref) => {
   return (
     <main

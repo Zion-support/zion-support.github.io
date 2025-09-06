@@ -5,6 +5,7 @@ loading,
     toggleWebhook,
     deleteWebhook,
     testWebhook,
+<<<<<<< HEAD
     clearTestResult
   } = useWebhooks(),
   
@@ -13,6 +14,10 @@ loading,
   const [showTestDialog, setShowTestDialog] = useState<string | null>(null),
   const [showTestResult, setShowTestResult] = useState(false),
     clearTestResult,
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   // Create webhook form state
   const [webhookName, setWebhookName] = useState(""),
@@ -139,6 +144,9 @@ function WebhooksManager() {
   }
   const handleToggleStatus = async (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     webhook_id: string,
     current_status: boolean) => {
     await toggle_webhook (webhook_id, !current_status) }
@@ -176,6 +184,7 @@ function WebhooksManager() {
     setWebhookSecret ('');
     setSelectedEvents ([]);
 
+<<<<<<< HEAD
 =======
     webhookId: string
     currentStatus: boolean
@@ -204,6 +213,8 @@ function WebhooksManager() {
     await deleteWebhook(webhookId)
     setShowDeleteConfirm(null)
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   const handleDeleteWebhook = async (webhookId: string,) => {
     await deleteWebhook(webhookId)
@@ -271,6 +282,10 @@ function WebhooksManager() {
   }, []),
 
   const handleCreateWebhook = async () => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     if (webhookName.trim() === "" || webhookUrl.trim() === "" || selectedEvents.length === 0) return,
     
     await createWebhook(
@@ -295,12 +310,19 @@ function WebhooksManager() {
 
   const handleTestWebhook = async (webhookId: string,) => {
   const handleTestWebhook = async (webhookId: string) => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     await testWebhook(webhookId, testEventType),
     setShowTestResult(true)
   },
 
   const resetWebhookForm = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   return (
@@ -724,12 +746,15 @@ export function WebhooksManager() {;
     setWebhookName("");
     setWebhookUrl("");
     setWebhookSecret("");
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setWebhookName(""),
     setWebhookUrl(""),
     setWebhookSecret(""),
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     setSelectedEvents([])
   };
 
@@ -749,6 +774,7 @@ export function WebhooksManager() {;
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -756,6 +782,8 @@ export function WebhooksManager() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
       <CardHeader>
@@ -768,6 +796,7 @@ export function WebhooksManager() {;
       </CardHeader>
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -775,6 +804,8 @@ export function WebhooksManager() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <CardContent>
         <div className="flex justify-between items-center mb-6">
           <p className="text-sm text-zinc-400">
@@ -782,6 +813,7 @@ export function WebhooksManager() {;
           </p>
           
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -789,6 +821,8 @@ export function WebhooksManager() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
             <DialogTrigger asChild>
               <Button variant="default">
@@ -849,6 +883,9 @@ export function WebhooksManager() {;
                 
                 <div className="space-y-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -860,6 +897,7 @@ export function WebhooksManager() {;
                           id={event.value}
                         <Checkbox 
                           id={event.value} 
+<<<<<<< HEAD
 import { useState, useEffect } from "react",;
 import { format } from "date-fns",;
 import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from 'lucide-react';
@@ -1019,6 +1057,10 @@ export function WebhooksManager() {;
                         <Checkbox;
                           id={event.value} ;
                           checked={selectedEvents.includes(event.value)}
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           onCheckedChange={() => toggleEvent(event.value)}
                         />
                         <Label
@@ -1035,6 +1077,9 @@ export function WebhooksManager() {;
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
                         </Label>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                       </div>
@@ -1100,6 +1145,9 @@ export function WebhooksManager() {;
                   resetWebhookForm()
                 }}>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1111,8 +1159,15 @@ export function WebhooksManager() {;
                   webhookUrl.trim() === "" || 
                   selectedEvents.length === 0;
                 }>
+<<<<<<< HEAD
                   Create Webhook
                   Create Webhook
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </Button>
               </DialogFooter>
             </DialogContent>
@@ -1232,6 +1287,7 @@ export function WebhooksManager() {;
                         <DropdownMenuItem
 
 
+<<<<<<< HEAD
 =======
         
 <<<<<<< HEAD
@@ -1240,6 +1296,8 @@ export function WebhooksManager() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Webhooks List */}
         <div className="space-y-4">
           {loading ? (
@@ -1260,6 +1318,9 @@ export function WebhooksManager() {;
             webhooks.map((webhook) => (
               <div key={webhook.id} className="p-4 border border-zinc-800 rounded-lg">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 <div className="flex items-center justify-between">
@@ -1298,6 +1359,9 @@ export function WebhooksManager() {;
                     
                       <DropdownMenu>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1395,6 +1459,9 @@ export function WebhooksManager() {;
                           <X size={14} className="mr-2" /> Delete
                         </DropdownMenuItem>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1423,6 +1490,9 @@ export function WebhooksManager() {;
                       className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
                     >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1661,6 +1731,9 @@ if ( {) {
       >
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <DialogHeader>
@@ -1692,6 +1765,9 @@ if ( {) {
                 <div className="space-y-2">
                   <Label htmlFor="test-event-type">Event Type</Label>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   <Select
                     value={testEventType}
@@ -1786,6 +1862,7 @@ if ( {) {
               </div>;
 
 
+<<<<<<< HEAD
 =======
                   <p className="text-xs text-zinc-500">
                     The event type will determine the structure of the test payload.
@@ -1804,6 +1881,8 @@ if ( {) {
                 </Button>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Button
                   variant='outline'
                   onClick={() => setShowTestDialog(null)}
@@ -1821,6 +1900,9 @@ if ( {) {
                   Cancel
                 </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1895,6 +1977,7 @@ if ( {) {
                       ,}
                     >
                       {testResult?.status} {testResult?.statusText}
+<<<<<<< HEAD
                     </Badge>
                   </div>
                   <div className='space-y-2 mt-4'>
@@ -1912,18 +1995,30 @@ if ( {) {
                     </Badge>
                   </div>
                   
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <div className="space-y-2 mt-4">
                     <Label>Response Body</Label>
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">
                         {testResult?.responseBody |"No response body"}
                         {testResult?.responseBody || "No response body"}
+<<<<<<< HEAD
                       </pre>
                       </pre>
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </ScrollArea>
                   </div>
                 </div>
@@ -2067,6 +2162,9 @@ if ( {) {
               </DialogFooter>;
             </>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           )}
@@ -2088,6 +2186,7 @@ if ( {) {
       </Dialog>;
 
       {/* Delete Webhook Confirmation Dialog */}
+<<<<<<< HEAD
       <AlertDialog
         open={showDeleteConfirm !== null}
         onOpenChange={open => !open && setShowDeleteConfirm(null)}
@@ -2110,6 +2209,20 @@ if ( {) {
               className='bg-red-600 hover:bg-red-700'            >
             <AlertDialogAction
             <AlertDialogAction 
+=======
+
+
+              This action will permanently remove this webhook. You will no;
+              longer receive events at this endpoint.;
+            </AlertDialogDescription>;
+          </AlertDialogHeader>;
+          <AlertDialogFooter>;
+
+
+            <AlertDialogAction 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               onClick = {() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm),}
               className="bg-red-600 hover: bg-red-700"
       <AlertDialog 
@@ -2128,8 +2241,16 @@ if ( {) {
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
+<<<<<<< HEAD
             <AlertDialogAction
             <AlertDialogAction 
+=======
+
+
+            <AlertDialogAction 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700"
             >
@@ -2140,9 +2261,157 @@ if ( {) {
       </AlertDialog>
     </Card>
   )
+<<<<<<< HEAD
   value: WebhookEventType,  label: string, description: string
 }[] = [ {
   value: 'new application',  label: 'New Application', description: 'When a talent applies to a job'
+=======
+
+              className='bg-red-600 hover:bg-red-700'            >;
+            <AlertDialogAction
+              onClick = {() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm),}
+              className="bg-red-600 hover: bg-red-700";
+      >;
+        <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">;
+          <AlertDialogHeader>;
+            <AlertDialogTitle>Delete Webhook?</AlertDialogTitle>;
+            <AlertDialogDescription className="text-zinc-400">;
+              This action will permanently remove this webhook.;
+              You will no longer receive events at this endpoint.;
+            </AlertDialogDescription>;
+          </AlertDialogHeader>;
+          <AlertDialogFooter>;
+            <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">;
+              Cancel;
+            </AlertDialogCancel>;
+            <AlertDialogAction
+              onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
+              className="bg-red-600 hover: bg-red-700";
+            >;
+              Delete;
+            </AlertDialogAction>;
+          </AlertDialogFooter>;
+        </AlertDialogContent>;
+      </AlertDialog>;
+    </Card>;
+  );
+  value: WebhookEventType,  label: string, description: string ;
+}[] = [ {;
+  value: 'new application',  label: 'New Application', description: 'When a talent applies to a job' ;
+};
+{';
+  value: 'quote received',  label: 'Quote Received', description: 'When a quote is received from talent' ;
+};
+{';
+  value: 'milestone approved',  label: 'Milestone Approved', description: 'When a project milestone is approved' ;
+};
+{';
+  value: 'talent hired',  label: 'Talent Hired', description: 'When talent is hired for a project' ;
+}];
+setSelectedEvents (prev => prev && prev.includes (event) ? prev && prev.filter (e => e !== event) return (<Card className="bg-zinc-900 border-zinc-800 text-white"> <CardHeader> <CardTitle className="text-xl flex items-center"> <WebhookclassName="mr-2" size= {
+  20 "
+}/> Webhooks </CardTitle> <CardDescription className="text-zinc-400"> Set up webhooks to get notified when events happen in your Zion account. </CardDescription> </CardHeader> <CardContent> <div className="flex justify-between items-center mb-6"> </p> <Dialogopen= {
+  showCreateDialog 
+}onOpenChange= {
+  setShowCreateDialog "
+}> <DialogTrigger asChild> </Button> </DialogTrigger> <DialogContent className="bg-zinc-900 border-zinc-800 text-white"> <DialogHeader> <DialogTitle>Create Webhook</DialogTitle> <DialogDescription className="text-zinc-400"> Add a webhook endpoint to receive event notifications. </DialogDescription> </DialogHeader> <div className="space-y-4 py-4"> <div className="space-y-2" > <Label htmlFor="webhook-name" >Webhook Name</Label> <Input className="bg-zinc-800 border-zinc-700" /> </div> className="bg-zinc-800 border-zinc-700" /> <p className="text-xs text-zinc-500"> The window && window.URL where webhook payloads will be sent when events occur. </p> </div> <div className="space-y-2" > <Label htmlFor="webhook-secret" >Secret Key (Optional) </Label> <Input className="bg-zinc-800 border-zinc-700" /> <p className="text-xs text-zinc-500"> Used to verify webhook payload signatures. Keep it secret and secure. </p> </div> <div className="space-y-2"> <Label>Event Types</Label> <div className="grid gap-2 pt-2"> {;
+  eventOptions && eventOptions.map ( (event) => (<divkey= {
+  event && event.value "
+}className="flex items-center space-x-2"> <Checkboxid= {
+  event && event.value 
+}checked= {
+  selectedEvents && selectedEvents.includes (event && event.value) 
+}onCheckedChange= {
+  () => toggleEvent (event && event.value) ;
+}/> <LabelhtmlFor= {
+  event && event.value "
+}className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"> </Label> </div>) ) ;
+}</div> </div> </div> <DialogFooter> ;
+
+}> Cancel </Button> <ButtononClick={
+  handleCreateWebhook 
+}disabled= {"
+  webhookName && webhookName.trim () === ""|| 
+}> Create Webhook </Button> </DialogFooter> </DialogContent> </Dialog> </div> {;
+  /* Webhooks List */ ";
+}<div className="space-y-4"> {";
+  loading ? (<div className="text-center py-8 text-zinc-500">Loading webhooks...</div>) : webhooks && webhooks.length === 0 ? (<div className="text-center py-8 text-zinc-500"> <WebhookclassName="mx-auto mb-2 opacity-30"size= {
+  24 "
+}/> <p>No webhooks found.</p> <p className="text-sm mt-1">Create one to receive event notifications.</p> </div>) : (webhooks && webhooks.map ( (webhook) => (<divkey= {
+  webhook && webhook.id "
+}className="p-4 border border-zinc-800 rounded-lg"> <div className="flex items-center justify-between"> <div> <h3 className="font-medium"> {;
+  webhook && webhook.name ";
+}</h3> <div className="flex items-center text-sm text-zinc-400 mt-1"> <Globesize= {
+  14 "
+}className="mr-1"/> <span className="max-w-md truncate"> {;
+  webhook && webhook.url ";
+}</span> </div> </div> <div className="flex items-center space-x-2"> <div className="flex items-center mr-2"> <Switch </span> </div> <DropdownMenu> <DropdownMenuTrigger asChild> </Button> </DropdownMenuTrigger> <DropdownMenuContent align=" end"className="bg-zinc-900 border-zinc-800 text-white"> <DropdownMenuItemonClick={
+  () => setShowTestDialog (webhook && webhook.id) ";
+}className="cursor-pointer"> <PlayCirclesize= {
+  14 "
+}className="mr-2"/> Test </DropdownMenuItem> <DropdownMenuItemonClick={
+  () => setShowDeleteConfirm (webhook && webhook.id) ";
+}className="cursor-pointer text-red-500"> <Xsize= {
+  14 "
+}className="mr-2"/> Delete </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> </div> </div> <Badgekey= {
+  event "
+}variant=" secondary"className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"> {;
+  event ;
+}</Badge>) ) ";
+}</div> <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4"> <span>Created: {';
+  format (new Date (webhook && webhook.created at),  'MMM d, yyyy') ;
+}</span> {;
+  webhook && webhook.last triggered at && (<span>Last triggered: {';
+  format (new Date (webhook && webhook.last triggered at),  'MMM d, yyyy HH:mm') ;
+}</span>) ;
+}</div> </div>) ) ) ";
+}</div> </CardContent> <CardFooter className="justify-between border-t border-zinc-800 py-4"> <div className="text-xs text-zinc-500"> Webhooks will be sent with HTTPS POST requests to your endpoint. </div> </Button> </CardFooter> {;
+  /* Test Webhook Dialog */ ;
+}<Dialogopen= {
+  showTestDialog !== null 
+}onOpenChange= {
+  (open) => {;
+  if (!open) {;
+  setShowTestDialog (null);';
+setTestEventType ('new application');
+if (showTestResult) {;
+
+
+}";
+}> <DialogContent className="bg-zinc-900 border-zinc-800 text-white"> <DialogHeader> <DialogTitle>Test Webhook</DialogTitle> <DialogDescription className="text-zinc-400"> Send a test webhook to your endpoint. </DialogDescription> </DialogHeader> {";
+  !showTestResult ? (<> <div className="space-y-4 py-4"> <div className="space-y-2"> <Label htmlFor=" test-event-type">Event Type</Label> <Selectvalue= {
+  testEventType 
+}onValueChange= {
+  (value) => setTestEventType (value as WebhookEventType) ";
+}> <SelectTrigger className="bg-zinc-800 border-zinc-700"> <SelectValue placeholder=" Select an event type"/> </SelectTrigger> <SelectContent className="bg-zinc-900 border-zinc-800"> {;
+  eventOptions && eventOptions.map ( (option) => (<SelectItemkey= {
+  option && option.value 
+}value= {
+  option && option.value 
+}> {;
+  option && option.label ;
+}</SelectItem>) ) ";
+}</SelectContent> </Select> <p className="text-xs text-zinc-500"> The event type will determine the structure of the test payload. </p> </div> </div> <DialogFooter> Cancel </Button> <ButtononClick={
+  () => showTestDialog && handleTestWebhook (showTestDialog) ";
+}> Send Test </Button> </DialogFooter> </>) : (<> <div className="space-y-4 py-4"> <div className="space-y-2"> <div className="flex items-center justify-between"> <Label>Response Status</Label> <Badge > {;
+  testResult?.status ;
+}{;
+  testResult?.statusText ";
+}</Badge> </div> <div className="space-y-2 mt-4"> <Label>Response Body</Label> <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4"> </pre> </ScrollArea> </div> </div> </div> <DialogFooter> setShowTestDialog (null);
+setShowTestResult (false);
+clearTestResult ();
+
+}> Close </Button> Test Another Event </Button> </DialogFooter> </>) ;
+}</DialogContent> </Dialog> {;
+  /* Delete Webhook Confirmation Dialog */ ;
+}<AlertDialogopen= {
+  showDeleteConfirm !== null 
+}onOpenChange= {
+  (open) => !open && setShowDeleteConfirm (null) ";
+}> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook?</AlertDialogTitle> <AlertDialogDescription className="text-zinc-400"> This action will permanently remove this webhook. You will no longer receive events at this endpoint. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;
+}'"  );
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 {'
   value: 'quote received',  label: 'Quote Received', description: 'When a quote is received from talent'
@@ -2152,6 +2421,7 @@ if ( {) {
 }
 {'
   value: 'talent hired',  label: 'Talent Hired', description: 'When talent is hired for a project'
+<<<<<<< HEAD
 
   value: WebhookEventType,  label: string, description: string 
 }[] = [ {
@@ -2167,18 +2437,43 @@ if ( {) {
   value: 'talent hired',  label: 'Talent Hired', description: 'When talent is hired for a project' 
 <<<<<<< HEAD
 
+=======
+
+  value: WebhookEventType,  label: string, description: string 
+}[] = [ {
+  value: 'new application',  label: 'New Application', description: 'When a talent applies to a job' 
+}
+{'
+  value: 'quote received',  label: 'Quote Received', description: 'When a quote is received from talent' 
+}
+{'
+  value: 'milestone approved',  label: 'Milestone Approved', description: 'When a project milestone is approved' 
+}
+{'
+  value: 'talent hired',  label: 'Talent Hired', description: 'When talent is hired for a project' 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }]
 setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event) return (<Card className="bg-zinc-900 border-zinc-800 text-white"> <CardHeader> <CardTitle className="text-xl flex items-center"> <Webhook className="mr-2" size= {
   20 "
 }/> Webhooks </CardTitle> <CardDescription className="text-zinc-400"> Set up webhooks to get notified when events happen in your Zion account. </CardDescription> </CardHeader> <CardContent> <div className="flex justify-between items-center mb-6"> </p> <Dialog open= {
+<<<<<<< HEAD
   showCreateDialog
   showCreateDialog 
+=======
+
+
+  showCreateDialog 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }onOpenChange= {
   setShowCreateDialog "
 }> <DialogTrigger asChild> </Button> </DialogTrigger> <DialogContent className="bg-zinc-900 border-zinc-800 text-white"> <DialogHeader> <DialogTitle>Create Webhook</DialogTitle> <DialogDescription className="text-zinc-400"> Add a webhook endpoint to receive event notifications. </DialogDescription> </DialogHeader> <div className="space-y-4 py-4"> <div className="space-y-2" > <Label htmlFor="webhook-name" >Webhook Name</Label> <Input className="bg-zinc-800 border-zinc-700" /> </div> className="bg-zinc-800 border-zinc-700" /> <p className="text-xs text-zinc-500"> The window.URL where webhook payloads will be sent when events occur. </p> </div> <div className="space-y-2" > <Label htmlFor="webhook-secret" >Secret Key (Optional) </Label> <Input className="bg-zinc-800 border-zinc-700" /> <p className="text-xs text-zinc-500"> Used to verify webhook payload signatures. Keep it secret and secure. </p> </div> <div className="space-y-2"> <Label>Event Types</Label> <div className="grid gap-2 pt-2"> {
   eventOptions.map ( (event) => (<div key= {
   event.value "
 }className="flex items-center space-x-2"> <Checkbox id= {
+<<<<<<< HEAD
   event.value
 }checked= {
   selectedEvents.includes (event.value)
@@ -2192,6 +2487,10 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
   handleCreateWebhook
 }disabled= {"
   webhookName.trim () === ""|
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   event.value 
 }checked= {
   selectedEvents.includes (event.value) 
@@ -2205,6 +2504,11 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
   handleCreateWebhook 
 }disabled= {"
   webhookName.trim () === ""|| 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }> Create Webhook </Button> </DialogFooter> </DialogContent> </Dialog> </div> {
   /* Webhooks List */ "
 }<div className="space-y-4"> {"
@@ -2229,6 +2533,7 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
 }className="mr-2"/> Delete </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> </div> </div> <Badge key= {
   event "
 }variant=" secondary"className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"> {
+<<<<<<< HEAD
   event
 }</Badge>) ) "
 }</div> <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4"> <span>Created: {'
@@ -2242,6 +2547,10 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
   /* Test Webhook Dialog */
 }<Dialog open= {
   showTestDialog !== null
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   event 
 }</Badge>) ) "
 }</div> <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4"> <span>Created: {'
@@ -2255,6 +2564,11 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
   /* Test Webhook Dialog */ 
 }<Dialog open= {
   showTestDialog !== null 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }onOpenChange= {
   (open) => {
   if (!open) {
@@ -2264,33 +2578,60 @@ if (showTestResult) {
 }"
 }> <DialogContent className="bg-zinc-900 border-zinc-800 text-white"> <DialogHeader> <DialogTitle>Test Webhook</DialogTitle> <DialogDescription className="text-zinc-400"> Send a test webhook to your endpoint. </DialogDescription> </DialogHeader> {"
   !showTestResult ? (<> <div className="space-y-4 py-4"> <div className="space-y-2"> <Label htmlFor=" test-event-type">Event Type</Label> <Select value= {
+<<<<<<< HEAD
   testEventType
   testEventType 
+=======
+
+
+  testEventType 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }onValueChange= {
   (value) => setTestEventType (value as WebhookEventType) "
 }> <SelectTrigger className="bg-zinc-800 border-zinc-700"> <SelectValue placeholder=" Select an event type"/> </SelectTrigger> <SelectContent className="bg-zinc-900 border-zinc-800"> {
   eventOptions.map ( (option) => (<SelectItem key= {
+<<<<<<< HEAD
   option.value
 }value= {
   option.value
 }> {
   option.label
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   option.value 
 }value= {
   option.value 
 }> {
   option.label 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</SelectItem>) ) "
 }</SelectContent> </Select> <p className="text-xs text-zinc-500"> The event type will determine the structure of the test payload. </p> </div> </div> <DialogFooter> Cancel </Button> <Button onClick={
   () => showTestDialog && handleTestWebhook (showTestDialog) "
 }> Send Test </Button> </DialogFooter> </>) : (<> <div className="space-y-4 py-4"> <div className="space-y-2"> <div className="flex items-center justify-between"> <Label>Response Status</Label> <Badge > {
+<<<<<<< HEAD
   testResult?.status
   testResult?.status 
+=======
+
+
+  testResult?.status 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }{
   testResult?.statusText "
 }</Badge> </div> <div className="space-y-2 mt-4"> <Label>Response Body</Label> <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4"> </pre> </ScrollArea> </div> </div> </div> <DialogFooter> setShowTestDialog (null)
 setShowTestResult (false)
 clearTestResult ()
+<<<<<<< HEAD
 }> Close </Button> Test Another Event </Button> </DialogFooter> </>)
 }</DialogContent> </Dialog> {
   /* Delete Webhook Confirmation Dialog */
@@ -2305,6 +2646,12 @@ clearTestResult ()
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }> Close </Button> Test Another Event </Button> </DialogFooter> </>) 
 }</DialogContent> </Dialog> {
   /* Delete Webhook Confirmation Dialog */ 
@@ -2318,6 +2665,9 @@ clearTestResult ()
 ;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             <AlertDialogCancel className='bg - transparent text - white hover:bg - zinc - 800 border - zinc - 700'>;
               Cancel;

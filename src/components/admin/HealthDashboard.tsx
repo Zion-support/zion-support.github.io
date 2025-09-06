@@ -39,6 +39,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / ca
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from 'react'
@@ -47,6 +48,8 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   AlertTriangle,
   CheckCircle,
@@ -225,6 +228,9 @@ const HealthDashboard: React.FC = () => {;
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -257,6 +263,9 @@ const HealthDashboard: React.FC = () => {;
   const [autoRefresh, setAutoRefresh] = useState(true);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -285,19 +294,25 @@ const HealthDashboard: React.FC = () => {;
   if (!healthData) return null,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   if (!healthData) return null
   if (!healthData) return null,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-6">
       {/* Header */}
@@ -316,6 +331,9 @@ const HealthDashboard: React.FC = () => {;
             onClick={() => setAutoRefresh(!autoRefresh)}
           >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             {autoRefresh ? 'Disable' : 'Enable'} Auto-refresh
           </Button>
@@ -385,6 +403,9 @@ const HealthDashboard: React.FC = () => {;
         <TabsContent value="overview" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             <Card>
               <CardHeader>
@@ -630,12 +651,16 @@ const HealthDashboard: React.FC = () => {;
                 </CardTitle>;
               </CardHeader>;
               <CardContent>;
+<<<<<<< HEAD
                 {healthData.health.issues.length > 0 ? (;
                   <ul className="space-y-2">;
                     {healthData.health.issues.map((issue, index) => (;
                       <li key={index} className="text-sm text-red-600 flex items-start">;
                         <span className="w-2 h-2 bg-red-400 rounded-full mt-1.5 mr-2 flex-shrink-0"></span>;
                         {issue}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       </li>
                     ))}
                   </ul>;
@@ -652,6 +677,9 @@ const HealthDashboard: React.FC = () => {;
         <TabsContent value="errors" className="space-y-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             <Card>
@@ -722,6 +750,9 @@ const HealthDashboard: React.FC = () => {;
                     ))}
                   </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 ) : (
                   <p className="text-gray-600 text-sm">No recurring errors</p>
@@ -736,6 +767,9 @@ const HealthDashboard: React.FC = () => {;
         <TabsContent value="metrics" className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             <Card>
@@ -788,6 +822,9 @@ const HealthDashboard: React.FC = () => {;
 
         <TabsContent value="recommendations" className="space-y-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <Card>
@@ -809,12 +846,16 @@ const HealthDashboard: React.FC = () => {;
                 </p>;
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export default HealthDashboard, ;
 export default HealthDashboard;
 }
 
+<<<<<<< HEAD
 =======
             </CardContent>
           </Card>
@@ -828,6 +869,8 @@ export default HealthDashboard
 export default HealthDashboard
 export default HealthDashboard
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       const response = await fetch ('/api / admin / health');
       // Check condition

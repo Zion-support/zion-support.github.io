@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 import React from 'react';
 export type SkeletonProps = {
   className?: string;
 }
 export type SkeletonProps = {;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export type SkeletonProps = {
   className?: string;
@@ -63,6 +66,9 @@ export default function Skeleton(): any ({ className = '' }: SkeletonProps) {;
           100% { transform: translateX(100%) }
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export const Skeleton: React.FC<SkeletonProps> = ({ ",;
@@ -71,6 +77,7 @@ export const Skeleton: React.FC<SkeletonProps> = ({ ",;
   height,;
   rounded = false}) => {;
   const style: React && React.CSSProperties = {}
+<<<<<<< HEAD
 =======
 export const Skeleton: React.FC<SkeletonProps> = ({ "
   className = "
@@ -83,6 +90,9 @@ export const Skeleton: React.FC<SkeletonProps> = ({ "
 ;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ";
   if (width) style && style.width = typeof width === "number" ? "${width}px" : width,;
 if (height) style && style.height = typeof height === "number" ? "${height}px" : height,;
@@ -123,7 +133,17 @@ export default Component;
   )
 
 }
+<<<<<<< HEAD
   );
 ;
     </div>
   );
+=======
+
+=======
+      `}</style>
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

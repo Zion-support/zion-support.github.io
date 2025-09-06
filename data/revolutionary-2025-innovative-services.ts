@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface Revolutionary2025Service {
 export interface Revolutionary2025Service {;
   id: string;
@@ -112,6 +113,10 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
 
     trialDays: 30;
     setupTime: '4 hours';
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     category: 'AI Consciousness & Emotional Intelligence';
     real_service: true;
     technology: ['Advanced Neural NetworksEmotional AIConsciousness AlgorithmsPythonTensorFlowQuantum Computing'];
@@ -1503,6 +1508,7 @@ export default revolutionary2025Services;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface Revolutionary2025Service {;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -1544,6 +1550,33 @@ export interface Revolutionary2025Service {;
   rating: number,;
   reviews: number;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string,
+  contactInfo: {
+      
+    mobile: string, email: string,
+    address: string,
+    website: string
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export const revolutionary2025Services: Revolutionary2025Service[] = [
   // 🧠 AI Consciousness & Emotional Intelligence Services
@@ -1865,5 +1898,15 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
 
     reviews: 112
   }
+<<<<<<< HEAD
 ],;
+=======
+];
+;
+=======
+
+export interface Revolutionary2025Service {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default revolutionary2025Services;

@@ -734,6 +734,12 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     market_advantage: 'Advanced AI energy platform with comprehensive sustainability features';
   }
 ];
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default comprehensiveInnovativeServices;
 <<<<<<< HEAD
 ;

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -18,6 +19,10 @@ export function useJobSuggestions(talentId?: string) {
   const [jobMatches, setJobMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   useEffect(() => {
 
     const fetchSuggestedJobs = async () => {
@@ -111,6 +116,7 @@ export function useJobSuggestions(talentId?: string) {
     } catch (error) {
       console && console.error("Error updating job match status:", error);
       toast({
+<<<<<<< HEAD
         title: "Error";
         description: "Failed to update job status"
         variant: "destructive"})
@@ -121,6 +127,15 @@ export function useJobSuggestions(talentId?: string) {
   const viewedMatches = jobMatches.filter(match => match.status === 'viewed');
   const appliedMatches = jobMatches.filter(match => match.status === 'applied');
   const declinedMatches = jobMatches.filter(match => match.status === 'declined');
+=======
+
+  const newMatches = jobMatches && jobMatches.filter(match => match && match.status === 'new');
+  const viewedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'viewed');
+  const appliedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'applied');
+  const declinedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'declined');
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return {
     jobMatches;
     isLoading;
@@ -131,6 +146,7 @@ export function useJobSuggestions(talentId?: string) {
       appliedMatches
 
       declinedMatches
+<<<<<<< HEAD
         title: "Error",
         description: "Failed to update job status",
         variant: "destructive"})
@@ -165,6 +181,20 @@ export function useJobSuggestions(talentId?: string) {;
           variant: "destructive"});
       } finally {;
         setIsLoading(false);
+=======
+    }
+  }
+=======
+;
+    fetchSuggestedJobs ();
+  }, [talent_id]);
+;
+  const updateJobMatchStatus = async (match_id: string, status: 'viewed' | 'applied' | 'declined') => {
+    try {
+      const updates = {
+        status,
+        ...(status === 'viewed' ? { viewed_at: new Date ().toISOString () } : {});
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 ;
       const { error } = await supabase;
@@ -211,6 +241,7 @@ if ( {) {
   }
 ;
   // Filter matches by status;
+<<<<<<< HEAD
   const newMatches = jobMatches.filter(match => match.status === 'new'),;
   const viewedMatches = jobMatches.filter(match => match.status === 'viewed'),;
   const appliedMatches = jobMatches.filter(match => match.status === 'applied'),;
@@ -224,6 +255,26 @@ if ( {) {
       viewedMatches;
       appliedMatches;
       declinedMatches;
+=======
+  const new_matches = job_matches.filter (match => match.status === 'new');
+  const viewed_matches = job_matches.filter (match => match.status === 'viewed');
+  const applied_matches = job_matches.filter (match => match.status === 'applied');
+  const declined_matches = job_matches.filter (match => match.status === 'declined');
+;
+  return {
+    job_matches;
+    is_loading;
+    updateJobMatchStatus;
+    categorized_matches: {
+      new_matches;
+      viewed_matches;
+      applied_matches,
+      declined_matches;
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

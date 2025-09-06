@@ -1,10 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from "react";
 import {useParams} from "react-router-dom";
 import {Header} from "@/components/Header";
@@ -15,6 +18,7 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {ShoppingCart, Star, Truck, Shield, RotateCcw, Clock} from "lucide-react";
 import {toast} from "@/hooks/use-toast";
+<<<<<<< HEAD
 interface EquipmentSpecification {
   name: string,
   value: string
@@ -100,6 +104,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { AspectRatio } from "@/components/ui/aspect-ratio",;
 import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react",;
 import { toast } from "@/hooks/use-toast",;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface EquipmentSpecification {;
   name: string,;
   value: string;
@@ -137,6 +143,7 @@ interface EquipmentDetails {
   images: string[],;
   price: number,;
   currency: string,;
+<<<<<<< HEAD
   rating?: number,;
   reviewCount?: number,;
   inStock: boolean,;
@@ -145,6 +152,12 @@ interface EquipmentDetails {
   features: string[],;
   warranty?: string,;
   returnPolicy?: string;
+=======
+  rating?: number;
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 // Sample data - in a real app this would come from an API
@@ -677,6 +690,13 @@ if ( {) {
                           className="w-full h-full object-cover"
                         />;
                       </div>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     ))}
                   </div>;
                 )}
@@ -742,6 +762,13 @@ if ( {) {
                 </Tabs>;
               </div>;
             </div>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">;
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
@@ -762,6 +789,12 @@ if ( {) {
                 <h1 className="text-2xl font-bold text-white mb-1">{equipment.name}</h1>
                 <p className="text-zion-cyan mb-4">Brand: {equipment.brand}</p>
                 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Rating */}
                 {equipment && equipment.rating && (;
                   <div className="flex items-center gap-2 mb-4">;
@@ -849,8 +882,16 @@ if ( {) {
                   >
                     {isAdding ? "Processing..." : "Buy Now"}
                   </Button>
+<<<<<<< HEAD
                   <Button
                   <Button 
+=======
+
+
+                  <Button 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     onClick={handleAddToCart}
                     disabled={isAdding |!equipment.inStock}
                     variant="outline"

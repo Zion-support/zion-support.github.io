@@ -45,6 +45,7 @@ export interface InnovativeAgricultureService {
 
 ;
 const contact = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -56,6 +57,20 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   website: 'https://ziontechgroup.com',};
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+=======
+=======
+
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }
+;
+export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -388,6 +403,11 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     reviews: 89,
 
   },;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
 
       'Compliance management'
@@ -535,6 +555,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
 
     reviews: 89
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 
@@ -596,6 +617,20 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     description: 'Advanced precision agriculture platform that uses AI to monitor crops, optimize irrigation, and maximize yields for agricultural businesses.',;
     features: [;
       'AI-powered crop monitoringIrrigation optimizationYield predictionReal-time monitoringPerformance analyticsIntegration capabilitiesCustom monitoring modelsMulti-field support',;
+=======
+  }
+];
+
+
+=======
+    rating: 4.6
+    reviews: 89
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+];      'AI - powered climate control_crop growth monitoring_environmental optimization_real - time control_performance analytics_integration capabilities_custom growing protocols_multi - tier support';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'Compliance management';
     ];
     popular: true;
@@ -624,6 +659,14 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
     customers: 123;
     rating: 4.6,
     reviews: 89;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 ;

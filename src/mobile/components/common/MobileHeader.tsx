@@ -56,6 +56,11 @@ export function MobileHeader({
   return (
     <header className={cn(
       "sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       className
     )}>
       <div className="flex items-center justify-between h-14 px-4">
@@ -130,12 +135,16 @@ export function MobileHeader(): any ({;
             </Button>
           )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           {showSettings && (;
             <Button variant='ghost' size='icon' onClick={onSettingsClick}>;
               <Settings className='h-5 w-5' />;
               <span className='sr-only'>Settings</span>;
 
+<<<<<<< HEAD
 =======
           {showSettings && (
 <<<<<<< HEAD
@@ -184,23 +193,37 @@ export function MobileHeader(): any ({;
             <Button 
               <span className='sr-only'>Settings</span>            </Button>            <Button 
             <Button 
+=======
+            <Button 
+              <span className='sr-only'>Settings</span>            </Button>            <Button 
+            <Button 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               variant="ghost" 
               size="icon"
               onClick={onSettingsClick}
             >
               <Settings className="h-5 w-5" />
               <span className="sr-only">Settings</span>
+<<<<<<< HEAD
           )}
         </div>
       </div>;
     </header>;
   );  )
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 }
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             </Button>
 import React from "react",;

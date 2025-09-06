@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { Conversation, Message  } from '@/types/messaging';
 /**
@@ -7,6 +8,9 @@ import { Conversation, Message  } from '@/types/messaging';
 export function useConversationState() {
   const [messages, setMessages] = useState<Message[]>([]),
   const [activeMessages, setActiveMessages] = useState<Message[]>([]),
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {Conversation, Message} from '@/types/messaging';
 /**
@@ -15,6 +19,11 @@ import {Conversation, Message} from '@/types/messaging';
 export function useConversationState() {;
   const [messages, setMessages] = useState<Message[]>([]);
   const [activeMessages, setActiveMessages] = useState<Message[]>([]);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [conversations, setConversations] = useState<Conversation[]>([]);
   const [unreadCount, setUnreadCount] = useState(0);
   const [activeConversation, setActiveConversation] = useState<Conversation | null>(null),
@@ -72,6 +81,13 @@ export function useConversationState() {;
     unreadCount,;
     setUnreadCount,;
     activeConversation,;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     setActiveConversation;
     is_loading;
     setIsLoading}

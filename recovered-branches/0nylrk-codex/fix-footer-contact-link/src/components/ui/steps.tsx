@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {cn} from "@/lib/utils";
 import {CheckIcon} from "lucide-react";
@@ -13,12 +14,38 @@ interface StepProps {
   description?: string;
 import { cn } from "@/lib/utils",
 import { CheckIcon } from "lucide-react",
+=======
+
+
+
+
+import React from "react";
+import {cn} from "@/lib/utils";
+import {CheckIcon} from "lucide-react";
+interface StepProps {;
+  status: "incomplete" | "current" | "complete",;
+  label: string,;
+
+  description?: string;
+  className?: string;
+}
+
+
+export function Step(): any ({;
+
+  status;
+  label;
+  description;
+  className}: StepProps) {;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface StepProps {
   status: "incomplete" | "current" | "complete",
   label: string,
   description?: string,
   className?: string
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function Step({;
@@ -29,6 +56,11 @@ export function Step({
   status,
   label,
   description,
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   className}: StepProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -99,6 +131,13 @@ export function Step({;
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Step number would go here */}
           </span>;
         )}
@@ -110,6 +149,7 @@ export function Step({;
             "text-white": status === "current" |status === "complete"})}
             "text-zion-slate-light": status === "incomplete",
             "text-white": status === "current" || status === "complete"})}
+<<<<<<< HEAD
         >
           {label}
         </h3>
@@ -131,6 +171,38 @@ export function Steps({ currentStep, className, children }: StepsProps) {
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children);
 ;
+=======
+
+
+        >
+=======
+      </div>;
+
+      <div className="ml-4 min-w-0">;
+        <h3
+          className={cn("text-sm font-medium", {
+            "text-zion-slate-light": status === "incomplete"
+            "text-white": status === "current" || status === "complete"})}>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+          {label}
+        </h3>;
+        {description && (;
+          <p className="text-sm text-zion-slate-light">{description}</p>;
+        )}
+      </div>;
+    </li>;
+  );
+}
+
+
+
+
+
+interface StepsProps {
+  currentStep: number
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface StepsProps {;
   currentStep: number,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -165,6 +237,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
+<<<<<<< HEAD
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
           />
         </div>
@@ -172,6 +245,18 @@ export function Steps({ currentStep, className, children }: StepsProps) {
     </div>
   )
 }
+=======
+
+
+export function Steps(): any ({ currentStep, className, children }: StepsProps) {;
+  const childrenArray = React && React.Children.toArray(children);
+
+  return (
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
@@ -197,6 +282,12 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
           <div;
             className="h-full bg-zion-purple transition-all";
             style={{;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           />;

@@ -3,7 +3,11 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   Rocket,
   Brain,
@@ -23,6 +27,7 @@ import {
   Clock,
   Target,;
   Crown,;} from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 =======
@@ -49,6 +54,10 @@ import {
   Target,;
   Crown,;} from 'lucide-react';
 <<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {
   Rocket
@@ -70,10 +79,19 @@ import {
   Target
   Crown;} from 'lucide-react';
 export default function UltraFuturisticHero2028() {
+<<<<<<< HEAD
   const features = [import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield
   const features = [import {;
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
+=======
+
+
+  const features = [import {;
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ArrowRight, Star, TrendingUp, Users, Award, Play;
   CheckCircle, DollarSign, Clock, Target, Crown
 export default function UltraFuturisticHero2028() {
@@ -94,18 +112,28 @@ export default function UltraFuturisticHero2028() {
       color: 'from-blue-500 to-cyan-500'
     }
     {
+<<<<<<< HEAD
       icon: Shield
       text: 'Quantum Internet Security'
       color: 'from-red-500 to-orange-500'
     },  ];    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-emerald-500 to-teal-500' }
     { icon: Atom, text: 'Quantum Time Manipulation', color: 'from-violet-500 to-purple-500' }
     { icon: Rocket, text: 'Space Debris Management', color: 'from-blue-500 to-cyan-500' }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       icon: Shield,
       text: 'Quantum Internet Security',
       color: 'from-red-500 to-orange-500',;
     },  ];    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-emerald-500 to-teal-500' },
     { icon: Atom, text: 'Quantum Time Manipulation', color: 'from-violet-500 to-purple-500' },
     { icon: Rocket, text: 'Space Debris Management', color: 'from-blue-500 to-cyan-500' },
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     { icon: Shield, text: 'Quantum Internet Security', color: 'from-red-500 to-orange-500' }
   const stats = [
     { value: '50+', label: 'Cutting-Edge Services', icon: Rocket }
@@ -239,6 +267,16 @@ import { motion } from 'framer-motion';
             <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
         </motion.div>
 
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Main Heading */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -246,6 +284,7 @@ import { motion } from 'framer-motion';
           transition={{ duration: 0.8, delay: 0.2 }}
           className='mb-8'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -253,6 +292,9 @@ import { motion } from 'framer-motion';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <h1 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight'>
             <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent'>
@@ -277,6 +319,21 @@ import { motion } from 'framer-motion';
           </p>
         </motion.div>
 
+<<<<<<< HEAD
+=======
+                Here;
+              </span>;
+            </span>;
+          </h1>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* CTA Buttons */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -289,6 +346,11 @@ import { motion } from 'framer-motion';
             className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 border border-cyan-400/50 hover:border-cyan-300 flex items-center space-x-2'          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
             className='group bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-2xl shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all duration-300 border border-cyan-400/50 hover:border-cyan-300 flex items-center space-x-2'
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -347,10 +409,14 @@ import { motion } from 'framer-motion';
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -358,6 +424,8 @@ import { motion } from 'framer-motion';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Features Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -376,6 +444,7 @@ import { motion } from 'framer-motion';
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
                 className='group relative'
 
+<<<<<<< HEAD
               >
                 <div className='bg-gradient-to-br from-gray-900/80 to-black/80 border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/50 hover:bg-gray-900/90 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20 backdrop-blur-sm'>
                   <div
@@ -394,6 +463,10 @@ import { motion } from 'framer-motion';
 
                     {feature.text}
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </h3>
                 </div>
               </motion.div>
@@ -403,6 +476,19 @@ import { motion } from 'framer-motion';
           </div>
         </motion.div>
 
+<<<<<<< HEAD
+=======
+          </div>;
+        </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Stats */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -421,6 +507,7 @@ import { motion } from 'framer-motion';
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
                 className='text-center group'
 
+<<<<<<< HEAD
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-3xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:border-cyan-400/50 transition-all duration-300'>
                   <stat.icon className='w-10 h-10 text-cyan-400' />
@@ -441,6 +528,10 @@ import { motion } from 'framer-motion';
 
                   {stat.label}
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </div>
               </motion.div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -449,6 +540,19 @@ import { motion } from 'framer-motion';
           </div>
         </motion.div>
 
+<<<<<<< HEAD
+=======
+          </div>;
+        </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Trust Indicators */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -456,7 +560,11 @@ import { motion } from 'framer-motion';
           transition={{ duration: 0.8, delay: 1.4 }}
           className='mb-16'
 
+<<<<<<< HEAD
         >
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm'>
             <h3 className='text-2xl font-bold text-white mb-6'>
               Trusted by Industry Leaders
@@ -483,6 +591,38 @@ import { motion } from 'framer-motion';
           </div>
         </motion.div>
 
+<<<<<<< HEAD
+=======
+          <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm'>;
+            <h3 className='text-2xl font-bold text-white mb-6'>;
+              Trusted by Industry Leaders;
+            </h3>;
+            <div className='flex flex-wrap justify-center items-center gap-8 opacity-70'>;
+              <div className='text-cyan-400 font-semibold'>;
+                Fortune 500 Companies;
+              </div>;
+              <div className='text-blue-400 font-semibold'>;
+                Government Agencies;
+              </div>;
+              <div className='text-purple-400 font-semibold'>;
+                Research Institutions;
+              </div>;
+              <div className='text-emerald-400 font-semibold'>Startups</div>            </div>            <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">;
+              <div className="text-cyan-400 font-semibold">Fortune 500 Companies</div>;
+              <div className="text-blue-400 font-semibold">Government Agencies</div>;
+              <div className="text-purple-400 font-semibold">Research Institutions</div>;
+              <div className="text-emerald-400 font-semibold">Startups</div>;
+          </div>;
+        </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Bottom CTA */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -490,6 +630,7 @@ import { motion } from 'framer-motion';
           transition={{ duration: 0.8, delay: 1.6 }}
           className='text-center'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -497,6 +638,9 @@ import { motion } from 'framer-motion';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <div className='inline-flex items-center space-x-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl px-8 py-4 backdrop-blur-sm'>
             <div className='flex items-center space-x-2'>
@@ -535,6 +679,24 @@ import { motion } from 'framer-motion';
         </motion.div>
       </div>
 
+<<<<<<< HEAD
+=======
+
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-2 rounded-xl font-semibold hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 border border-purple-400/50 hover:border-purple-300">;
+              Get Started;
+            </Link>;
+          </div>;
+        </motion && motion.div>;
+      </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Scroll Indicator */}
       <motion&& motion.div
         initial={{ opacity: 0 }}
@@ -542,6 +704,7 @@ import { motion } from 'framer-motion';
         transition={{ duration: 1, delay: 2 }}
         className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -549,6 +712,9 @@ import { motion } from 'framer-motion';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       >
         <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -617,6 +783,7 @@ import { motion } from 'framer-motion';
             animate={{ y: [0, 12, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
+<<<<<<< HEAD
           />
         </motion.div>
       </motion.div>
@@ -625,6 +792,15 @@ import { motion } from 'framer-motion';
   );
 <<<<<<< HEAD
 }
+=======
+
+
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   );
 
@@ -730,7 +906,11 @@ import { motion } from 'framer-motion';
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 }
+<<<<<<< HEAD
 }
 }
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

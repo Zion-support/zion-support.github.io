@@ -8,6 +8,7 @@ import { NotificationItem } from './NotificationItem';
 import { Notification } from '@/context / notifications';
 import { EmptyState } from '@/components / ui / empty - state';
 import { Bell } from 'lucide-react';
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -20,6 +21,8 @@ import { Notification } from '@/context/notifications'
 import { EmptyState } from '@/components/ui/empty-state'
 import { Bell } from 'lucide-react'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface NotificationListProps {
   loading: boolean,
   error: string | null,
@@ -40,6 +43,7 @@ export const NotificationList: React.FC < NotificationListProps> = ({
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
 
+<<<<<<< HEAD
 export const NotificationList: React.FC<NotificationListProps> = ({
   loading
   error
@@ -53,6 +57,8 @@ import { Button } from '@/components/ui/button',;
 import { NotificationItem } from './NotificationItem',;
 import { Notification } from '@/context/notifications',;
 import { EmptyState } from '@/components/ui/empty-state',;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Bell } from 'lucide-react';
 interface NotificationListProps {;
   loading: boolean,;
@@ -63,6 +69,7 @@ interface NotificationListProps {;
   onRetry: () => void;
 }
 
+<<<<<<< HEAD
   loading: boolean
   error: string | null
   notifications: Notification[]
@@ -85,6 +92,16 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   onDismiss,
   onRetry
 }) => {
+=======
+export const NotificationList: React.FC<NotificationListProps> = ({;
+  loading;
+  error;
+  notifications;
+  onMarkAsRead;
+  onDismiss,;
+  onRetry;
+},) => {;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">;
       {error ? (;
@@ -153,6 +170,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
         notifications.map((notification) => (
           <NotificationItem
 <<<<<<< HEAD
+<<<<<<< HEAD
             key = {notification.id,}
             notification = {notification,}
             onMarkAsRead = {onMarkAsRead,}
@@ -166,6 +184,12 @@ export const NotificationList: React.FC<NotificationListProps> = ({
 }
 "
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+    </ScrollArea>;
+  );
+};
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <div className="p - 8 text - center text - amber - 500">;
           <p>{error}</p>;

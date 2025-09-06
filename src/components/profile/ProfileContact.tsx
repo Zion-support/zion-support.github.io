@@ -76,6 +76,7 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
   },
 
 
+<<<<<<< HEAD
 export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
   const [message, setMessage] = useState(""),
   const [subject, setSubject] = useState(""),
@@ -98,10 +99,13 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
   return (
+<<<<<<< HEAD
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
       <h3 className="text-xl font-bold text-white mb-4 flex items-center">
         <Mail className="mr-2 h-5 w-5 text-zion-cyan" />
@@ -217,6 +221,12 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">;
       <h3 className="text-xl font-bold text-white mb-4 flex items-center">;
         <Mail className="mr-2 h-5 w-5 text-zion-cyan" />;
+=======
+
+    <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
+      <h3 className='text - xl font - bold text - white mb - 4 flex items - center'>;
+        <Mail className='mr - 2 h - 5 w - 5 text - zion - cyan' />;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         Contact;
       </h3>;
 

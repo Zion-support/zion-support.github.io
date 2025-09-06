@@ -1,9 +1,31 @@
+<<<<<<< HEAD
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import ErrorBoundary from '../components/ErrorBoundary';
 import PerformanceMonitor from '../components/PerformanceMonitor';
+=======
+
+
+
+import '../src/styles/globals.css';
+
+export default function App({ Component, pageProps }: AppProps) {
+=======
+
+=======
+
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import '../src/styles/globals.css';
+export default function App({ Component, pageProps }: AppProps) {
+return <Component {...pageProps} />;
+>>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import '../styles/globals.css';
 import EnhancedNavigation from '../components/layout/EnhancedNavigation';
 import EnhancedFooter from '../components/layout/EnhancedFooter';
@@ -199,6 +221,7 @@ function Header(): any {
   );
 }
 
+<<<<<<< HEAD
 function Footer(): any {
   return (
     <footer style={{ 
@@ -329,3 +352,33 @@ export default function App({ Component, pageProps }: AppProps) {
     </ErrorBoundary>
   );
 }
+=======
+=======
+import '../src/styles/globals.css';
+
+export default function App({ Component, pageProps }: AppProps) {
+
+import '../styles/globals.css';
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import type { AppProps } from 'next / app';
+import '../src / styles / globals.css';
+;
+export default /**
+ * App - Function description
+ */
+function App() {
+return <Component {...page_props} />;
+import '../styles / globals.css';
+;
+export default /**
+ * App - Function description
+ */
+function App() {
+  return <Component {...page_props} />;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

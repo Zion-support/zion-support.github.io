@@ -3,12 +3,17 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const section = String(req.query.section |"General");
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const section = String(req.query.section || "General");
   const dir = resolveDataPath(path.join("dataroom", section));
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!fs.existsSync(dir)) return res.status(200).json([]);
   const files = fs.readdirSync(dir).map((name) => ({ name }));
 =======

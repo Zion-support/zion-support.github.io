@@ -72,6 +72,7 @@ export interface PracticalBusinessSolution2029 {
     description:
       'Comprehensive AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting. Transform your data into actionable business intelligence.'
     features: [
+<<<<<<< HEAD
       'Real-time data analytics'
       'Predictive business modeling'
       'Automated report generation'
@@ -133,6 +134,9 @@ export interface PracticalBusinessSolution2029 {
     growthRate: '280% annual growth';
     variant: 'ai-futuristic';
     contactInfo: {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       mobile: '+1 302 464 0950';
 
       email: 'kleber@ziontechgroup && ziontechgroup.com';
@@ -676,12 +680,27 @@ export interface PracticalBusinessSolution2029 {
   }
 ];
 export const getPopularPracticalBusinessSolutions2029 = () => {
+<<<<<<< HEAD
   return practicalBusinessSolutions2029.filter(service => service.popular)
 }
 export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
   return practicalBusinessSolutions2029.filter(service => service.category === category)
 }
   return practicalBusinessSolutions2029.filter(service => service.popular);
+=======
+
+  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.popular)
+=======
+
+  return practicalBusinessSolutions2029.filter(service => service.popular);
+
+};
+
+export const getPracticalBusinessSolutions2029ByCategory = (category: string) => {
+  return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.category === category)
+};
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 };
 
@@ -716,6 +735,9 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
   }
 ];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 export const getPopularPracticalBusinessSolutions2029 = () =>: any {
   return practicalBusinessSolutions2029.filter (service => service.popular);
@@ -1252,6 +1274,11 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 
 
 export const getPopularPracticalBusinessSolutions2029 = () => {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return practicalBusinessSolutions2029.filter(service => service.popular);
 }
 =======
@@ -1284,6 +1311,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
   });
 };export const practicalBusinessSolutions2029: PracticalBusinessSolution2029[] = [;
   // AI-Powered Business Intelligence;
+<<<<<<< HEAD
   {id: "ai-business-intelligence-suite"
     name: "AI Business Intelligence Suite"
     tagline: "Intelligent insights and predictive analytics for business growth"
@@ -1681,6 +1709,12 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (
 
   {;
     id: "ai-business-intelligence-suite",
+=======
+
+  {;
+    id: "ai-business-intelligence-suite",
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 export const getPopularPracticalBusinessSolutions2029 = () =>: any {
   return practicalBusinessSolutions2029.filter (service => service.popular);
@@ -2641,4 +2675,10 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (minPrice: number, 
     const price = parseInt(service.price.replace(/[^0-9]/g, ''));
     return price >= minPrice && price <= maxPrice;
   });
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

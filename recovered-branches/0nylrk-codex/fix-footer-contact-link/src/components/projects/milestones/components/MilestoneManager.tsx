@@ -1,10 +1,15 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { MilestonesList  } from '../MilestonesList';
 import { PaymentSummary  } from '../PaymentSummary';
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
 import { toast } from "sonner";
 interface MilestoneManagerProps {
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   projectId: string
   milestones: Milestone[]
@@ -21,13 +26,25 @@ interface MilestoneManagerProps {
 
 import {MilestonesList} from '../MilestonesList';
 import {PaymentSummary} from '../PaymentSummary';
+<<<<<<< HEAD
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {toast} from "sonner";
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',
 import { MilestonesList } from '../MilestonesList',
 import { PaymentSummary } from '../PaymentSummary',
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',
 import { toast } from "sonner",
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface MilestoneManagerProps {
   projectId: string,
   milestones: Milestone[],
@@ -43,6 +60,7 @@ interface MilestoneManagerProps {
   onUploadDeliverable: (id: string, file: File) => Promise<any>,
   refetch: () => Promise<void>
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 export function MilestoneManager({;
@@ -71,6 +89,12 @@ export function MilestoneManager({
   onUpdateStatus,
   onDeleteMilestone,
   onUploadDeliverable,
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   refetch
 }: MilestoneManagerProps) {
 
@@ -187,6 +211,7 @@ function MilestoneManager() {
       <div className="lg:col-span-2">
         <MilestonesList
         <MilestonesList 
+<<<<<<< HEAD
 import React from 'react',;
 import { MilestonesList } from '../MilestonesList',;
 import { PaymentSummary } from '../PaymentSummary',;
@@ -247,6 +272,10 @@ export function MilestoneManager({;
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">;
       <div className="lg:col-span-2">;
         <MilestonesList;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           milestones={milestones}
           activities={activities}
           is_loading={is_loading}

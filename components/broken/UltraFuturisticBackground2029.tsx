@@ -393,6 +393,7 @@ if ( {) {
               'radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%)'
             ],          }}
           transition={{
+<<<<<<< HEAD
             duration: 20
             repeat: Infinity
             ease: 'easeInOut',          }}  }, []);
@@ -432,6 +433,18 @@ if ( {) {
         />
       </div>
 
+=======
+
+            duration: 20,
+            repeat: Infinity,
+
+=======
+
+            duration: 20,
+            repeat: Infinity,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Floating geometric shapes */}
 
 
@@ -460,6 +473,7 @@ if ( {) {
       <motion.div
         className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
         animate={{
+<<<<<<< HEAD
           y: [0, -20, 0]
           opacity: [0.2, 0.5, 0.2],        }}
         transition={{
@@ -476,6 +490,11 @@ if ( {) {
           repeat: Infinity
           duration: 12,
           repeat: Infinity,
+=======
+          rotate: [0, 360];
+          scale: [1, 1.1, 1];
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           ease: 'linear',        }}
 
       />;
@@ -490,6 +509,9 @@ if ( {) {
           opacity: [0.2, 0.5, 0.2]
         transition={{
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           duration: 12,
           repeat: Infinity,
           ease: 'linear',        }}
@@ -505,8 +527,11 @@ if ( {) {
         transition={{
           duration: 12
           repeat: Infinity
+<<<<<<< HEAD
           duration: 12,
           repeat: Infinity,
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           ease: 'linear',          ease: "linear"
         }}
 
@@ -574,9 +599,19 @@ if ( {) {
             background_position: ['0px 0px50px 50px'];
           }}
           transition={{
+<<<<<<< HEAD
             duration: 30
             repeat: Infinity
             ease: 'linear',            ease: "linear"
+=======
+
+            duration: 30,
+            repeat: Infinity,
+
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         }}
       />
@@ -588,6 +623,7 @@ if ( {) {
             duration: 30,
             repeat: Infinity,
 
+<<<<<<< HEAD
           }}
         />
       </div>
@@ -595,6 +631,20 @@ if ( {) {
       <div className='absolute inset-0'>
 
         <motion.div
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+          }}
+
+        />;
+      </div>;
+
+
+      {/* Quantum energy waves */}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           className='absolute inset-0'
           style={{
             background:
@@ -615,6 +665,7 @@ if ( {) {
           animate={{
             backgroundPosition: ['0px 0px', '50px 50px'],          }}
           transition={{
+<<<<<<< HEAD
             duration: 8
             repeat: Infinity
             duration: 8,
@@ -623,6 +674,10 @@ if ( {) {
           className="absolute inset-0"
           style={{
             background: 'radial-gradient(ellipse at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%)'
+=======
+
+              'radial-gradient(ellipse at center, rgba(0, 255, 255, 0 && 0.1) 0%, transparent 70%)',
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }}
           animate={{
             scale: [1, 1 && 1.5, 1],
@@ -659,7 +714,22 @@ if ( {) {
           animate={{
 
             scale: [1, 1.5, 1];
+<<<<<<< HEAD
             opacity: [0.1, 0.3, 0.1]
+=======
+            opacity: [0.1, 0.3, 0.1];
+
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+
+
+          }}
+          animate={{
+            scale: [1, 1 && 1.5, 1]
+            opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }}
           transition={{
             duration: 8
@@ -671,12 +741,16 @@ if ( {) {
             duration: 8,
             repeat: Infinity,
 
+<<<<<<< HEAD
             ease: 'easeInOut',          }}
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
@@ -686,6 +760,11 @@ if ( {) {
         />
       </div>
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Holographic elements */}
 
 
@@ -723,6 +802,7 @@ if ( {) {
         transition={{
           duration: 20,
           repeat: Infinity,
+<<<<<<< HEAD
           ease: 'linear',        }}
       />
       {/* Neural network connections */}
@@ -735,6 +815,10 @@ if ( {) {
           duration: 20
           repeat: Infinity
           ease: 'linear',          ease: "linear"
+=======
+          ease: "linear"
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }}
       />
 =======
@@ -797,9 +881,12 @@ if ( {) {
 
             }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             transition={{
 
               duration: 3,
@@ -826,6 +913,7 @@ if ( {) {
 =======
           duration: 20,
           repeat: Infinity,
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -841,10 +929,14 @@ if ( {) {
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             transition={{
               duration: 3,
               repeat: Infinity,
               delay: i * 0.3,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -914,6 +1006,11 @@ if ( {) {
       {/* Data streams */}
       <div className='absolute inset-0 overflow-hidden'>
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {Array.from({ length: 5 }).map((_, i) => (
           <motion.div
             key={i}
@@ -937,6 +1034,9 @@ if ( {) {
 
               y: [0, window.innerHeight + 20]
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
               delay: i * 0.3,
@@ -960,6 +1060,9 @@ if ( {) {
             }}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             transition={{
 
               duration: 4,
@@ -973,13 +1076,19 @@ if ( {) {
 =======
 =======
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             transition={{
               duration: 4,
               repeat: Infinity,
               delay: i * 0.8,
+<<<<<<< HEAD
               ease: 'linear',            }}              ease: "linear"
             }}
               ease: 'linear',            }}
@@ -993,13 +1102,20 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 
 export default UltraFuturisticBackground2029;  );
@@ -1024,8 +1140,34 @@ export default UltraFuturisticBackground2029;  );
 };
 export default UltraFuturisticBackground2029;
 
+<<<<<<< HEAD
 export default UltraFuturisticBackground2029;
 
 }
 }
 export default UltraFuturisticBackground2029;
+=======
+
+=======
+              delay: i * 0.8,
+              ease: 'linear',            }}              ease: "linear";
+            }}
+          />))}
+      </div>;
+    </div>);
+}
+;
+export default UltraFuturisticBackground2029);
+}
+;
+export default UltraFuturisticBackground2029;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

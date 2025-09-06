@@ -66,6 +66,9 @@ interface ApplicationActionsProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ApplicationActions({
   application;
   processingId;
@@ -124,12 +127,16 @@ export function ApplicationActions({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+<<<<<<< HEAD
       <Button variant='default' size='sm' asChild>        <Link href={`/messages?talentId=${application.talent_id}`}>
       <Button
         variant="default"
         size="sm"
         asChild
       >
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       
 
       
@@ -143,6 +150,9 @@ export function ApplicationActions({
         asChild
       >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             onClick={() => onStatusChange(application && application.id, 'hired')}          >;
             Shortlist;
@@ -175,6 +185,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components / ui / dropdown - menu';
 import { Button } from '@/components / ui / button';
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         <Link href={`/messages?talentId=${application.talent_id}`}>
@@ -211,6 +222,8 @@ import {;
 } from "@/components/ui/dropdown-menu",;
 import { Button } from "@/components/ui/button",;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Eye, ChevronDown, Loader2 } from 'lucide-react';
 import { JobApplication, ApplicationStatus } from "@/types/jobs",;
 interface ApplicationActionsProps {;

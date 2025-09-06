@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 import { useState  } from 'react';
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -16,6 +20,11 @@ import {cn} from "@/lib/utils";
 import {ProductListing} from "@/types/listings";
 import {toast} from '@/hooks/use-toast';
 import {supabase} from "@/integrations/supabase/client";
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
@@ -35,6 +44,12 @@ import { supabase } from "@/integrations/supabase/client";
 import { ProductListing } from "@/types/listings",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from "@/integrations/supabase/client",
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ServiceQuoteModalProps {
 
   open: boolean
@@ -399,6 +414,11 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
 
                     {BUDGET_RANGES.map((range) => (;
                       <SelectItem key={range.value} value={range.value} className="text-white hover:bg-zion-blue-light">;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         {range.label}
                       </SelectItem>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -517,6 +537,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                       <span className="text-white">{format(endDate, "PPP")}</span>
                     </div>
                   )}
+<<<<<<< HEAD
                 </div>
               </div>
             </div>
@@ -524,6 +545,51 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 </div>;
               </div>;
             </div>;
+=======
+
+
+
+=======
+                />;
+              </div>;
+
+              <div className="bg-zion-blue-dark border border-zion-blue-light rounded-md p-4">;
+                <h3 className="font-medium text-zion-cyan mb-2">Quote Summary</h3>;
+                <div className="space-y-2 text-sm">;
+                  <div className="flex justify-between">;
+                    <span className="text-zion-slate-light">Service:</span>;
+                    <span className="text-white">{service?.title || "Custom Service"}</span>;
+                  </div>;
+                  <div className="flex justify-between">;
+                    <span className="text-zion-slate-light">Budget:</span>;
+                    <span className="text-white">{BUDGET_RANGES && BUDGET_RANGES.find(b => b && b.value === formData && formData.budget)?.label}</span>;
+                  </div>;
+                  <div className="flex justify-between">;
+                    <span className="text-zion-slate-light">Timeline:</span>;
+                    <span className="text-white">{TIMELINE_OPTIONS && TIMELINE_OPTIONS.find(t => t && t.value === formData && formData.timeframe)?.label}</span>;
+                  </div>;
+                  {startDate && (;
+                    <div className="flex justify-between">;
+                      <span className="text-zion-slate-light">Start Date:</span>;
+                      <span className="text-white">{format(startDate, "PPP")}</span>;
+                    </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                  )}
+                  {endDate && (;
+                    <div className="flex justify-between">;
+                      <span className="text-zion-slate-light">End Date:</span>;
+                      <span className="text-white">{format(endDate, "PPP")}</span>;
+                    </div>;
+                  )}
+                </div>;
+              </div>;
+            </div>;
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           )}
 
           <DialogFooter className="flex-col sm:flex-row sm:justify-between sm:space-x-2">

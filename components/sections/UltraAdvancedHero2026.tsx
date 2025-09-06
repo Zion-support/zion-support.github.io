@@ -76,6 +76,7 @@ export default function UltraAdvancedHero2026() {
 import {motion} from 'framer-motion';
 import Link from 'next / link';
 import {
+<<<<<<< HEAD
   ArrowRight
   Star
   TrendingUp
@@ -88,6 +89,11 @@ import {
   Phone
   Mail
   MapPin;
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ArrowRight,
   Star,
   TrendingUp,
@@ -101,6 +107,11 @@ import {
 
   Mail,;
   MapPin,;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services';
 import { quantumSpaceTechServices2026 } from '../../data / 2026 - quantum - space - tech - services';
@@ -207,6 +218,23 @@ export default function UltraAdvancedHero2026() {;
             </span>
           </motion.div>
 
+<<<<<<< HEAD
+=======
+            className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-600/20 to-pink-600/20 px-4 py-2 rounded-full border border-purple-500/30'>;
+            <Sparkles className='w-5 h-5 text-purple-400' />;
+            <span className='text-purple-300 text-sm font-medium'>;
+              2026 Revolutionary Technology Solutions;
+            </span>;
+          </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Main Heading */}
           <motion&& motion.h1
             variants={itemVariants}
@@ -219,6 +247,24 @@ export default function UltraAdvancedHero2026() {;
             <span className='text-white'>is Now</span>
           </motion.h1>
 
+<<<<<<< HEAD
+=======
+            className='text-5xl md:text-7xl lg:text-8xl font-black leading-tight'>;
+            <span className='bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent'>;
+              The Future;
+            </span>;
+            <br />;
+            <span className='text-white'>is Now</span>;
+          </motion && motion.h1>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Subheading */}
           <motion&& motion.p
             variants={itemVariants}
@@ -232,6 +278,19 @@ export default function UltraAdvancedHero2026() {;
             with our revolutionary solutions.
           </motion.p>
 
+<<<<<<< HEAD
+=======
+            with our revolutionary solutions.;
+          </motion && motion.p>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Service Statistics */}
           <motion&& motion.div
             variants={itemVariants}
@@ -455,6 +514,7 @@ export default function UltraAdvancedHero2026() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -462,6 +522,8 @@ export default function UltraAdvancedHero2026() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </div>
             <div className='flex items-center space-x-3 p-4 bg-gradient-to-r from-green-600/20 to-emerald-600/20 backdrop-blur-xl border border-green-500/20 rounded-xl'>
               <CheckCircle className='w-6 h-6 text-green-400 flex-shrink-0' />
@@ -515,8 +577,17 @@ export default function UltraAdvancedHero2026() {;
               <ArrowRight className="w-6 h-6 ml-3" />
             </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Link
             <Link 
+=======
+            <Link
+=======
+
+            <Link 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               href="/contact"
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >
@@ -524,10 +595,23 @@ export default function UltraAdvancedHero2026() {;
 
           {/* Call to Action Buttons */}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Get Started Today
             </Link>
           </motion.div>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Contact Information */}
 
           <motion.div 
@@ -567,6 +651,86 @@ export default function UltraAdvancedHero2026() {;
             </div>
           </motion.div>
 
+<<<<<<< HEAD
+=======
+            className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto'>;
+            <h3 className='text-2xl font-bold text-white mb-6'>;
+              Ready to Transform Your Business?;
+            </h3>;
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>;
+              <div className='flex items-center space-x-3'>;
+                <div className='w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center'>;
+                  <Phone className='w-6 h-6 text-white' />;
+                </div>;
+                <div>;
+                  <div className='text-white font-semibold'>Call Us</div>;
+                  <div className='text-purple-300'>{contactInfo && contactInfo.phone}</div>;
+                </div>;
+              </div>;
+
+              <div className='flex items-center space-x-3'>;
+                <div className='w-12 h-12 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-xl flex items-center justify-center'>;
+                  <Mail className='w-6 h-6 text-white' />;
+                </div>;
+                <div>;
+                  <div className='text-white font-semibold'>Email Us</div>;
+                  <div className='text-cyan-300'>{contactInfo && contactInfo.email}</div>;
+                </div>;
+              </div>;
+
+              <div className='flex items-center space-x-3'>;
+                <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center'>;
+                  <MapPin className='w-6 h-6 text-white' />;
+                </div>;
+                <div>;
+                  <div className='text-white font-semibold'>Visit Us</div>;
+                  <div className='text-purple-300 text-sm'>;
+                    {contactInfo && contactInfo.address}
+                  </div>                </div>            variants={itemVariants}
+            className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-xl border border-purple-500/20 rounded-2xl max-w-4xl mx-auto";
+          >;
+            <h3 className="text-2xl font-bold text-white mb-6">Ready to Transform Your Business?</h3>;
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">;
+              <div className="flex items-center space-x-3">;
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center">;
+                  <Phone className="w-6 h-6 text-white" />;
+                </div>;
+                <div>;
+                  <div className="text-white font-semibold">Call Us</div>;
+                  <div className="text-purple-300">{contactInfo && contactInfo.phone}</div>;
+                </div>;
+              </div>;
+
+              <div className="flex items-center space-x-3">;
+                <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-cyan-500 rounded-xl flex items-center justify-center">;
+                  <Mail className="w-6 h-6 text-white" />;
+                </div>;
+                <div>;
+                  <div className="text-white font-semibold">Email Us</div>;
+                  <div className="text-cyan-300">{contactInfo && contactInfo.email}</div>;
+                </div>;
+              </div>;
+
+              <div className="flex items-center space-x-3">;
+                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center">;
+                  <MapPin className="w-6 h-6 text-white" />;
+                </div>;
+                <div>;
+                  <div className="text-white font-semibold">Visit Us</div>;
+                  <div className="text-purple-300 text-sm">{contactInfo && contactInfo.address}</div>;
+                </div>;
+              </div>;
+            </div>;
+          </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Trust Indicators */}
 
           <motion.div 
@@ -1064,3 +1228,9 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
 =======
 
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

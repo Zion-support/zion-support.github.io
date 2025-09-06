@@ -180,6 +180,12 @@ export default function CloudNativeAutomation() {
                   As we continue to evolve our cloud-native automation
                   infrastructure, we&apos,re exploring emerging technologies
                   infrastructure, we're exploring emerging technologies
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   like: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>• Serverless computing for event-driven automation</li>

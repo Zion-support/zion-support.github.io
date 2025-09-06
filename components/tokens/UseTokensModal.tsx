@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import { connectMetaMask, getAccounts } from "../../utils/wallet";
 export type RedemptionType =
@@ -11,11 +12,22 @@ export default function UseTokensModal({
   serviceId
   defaultType
 }: {
+=======
+
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   isOpen,
   onClose,
   serviceId,
   defaultType,
 }: {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   isOpen: boolean;
   onClose: () => void;
   serviceId?: string;
@@ -209,9 +221,13 @@ defaultType
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 );
   );
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======

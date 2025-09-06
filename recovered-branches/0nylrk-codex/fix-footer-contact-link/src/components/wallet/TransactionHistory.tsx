@@ -1,10 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -14,6 +17,7 @@ import {Badge} from "@/components/ui/badge";
 import {formatDistanceToNow} from "date-fns";
 export function TransactionHistory() {;
   const { transactions, loading } = useWallet();
+<<<<<<< HEAD
 import React from "react",
 import { useWallet } from "@/hooks/useWallet",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -27,6 +31,13 @@ import { Badge } from "@/components/ui/badge",
 import { formatDistanceToNow } from "date-fns",
 export function TransactionHistory() {
   const { transactions, loading } = useWallet(),
+=======
+
+  if (loading) {;
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   if (loading) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -126,6 +137,13 @@ export function TransactionHistory() {;
                         +{tx && tx.amount} ZION$;
                       </Badge>;
                     </div>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   ))}
                 </div>
               )}

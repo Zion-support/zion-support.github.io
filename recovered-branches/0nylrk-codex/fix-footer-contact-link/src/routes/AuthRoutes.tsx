@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Fragment} from "react";
 import {Route, Routes} from "react-router-dom";
 import Login from "@/pages/Login";
@@ -73,6 +74,14 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",;
 import Onboarding from "@/pages/Onboarding",;
 import TalentOnboarding from "@/pages/TalentOnboarding",;
 import ServiceOnboarding from "@/pages/ServiceOnboarding",;
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const AuthRoutes = () => {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const AuthRoutes = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
@@ -111,5 +120,17 @@ const AuthRoutes = () => {;
       />;
     </Routes>;
   );
+<<<<<<< HEAD
 },;
+=======
+};
+
+
+=======
+
+},
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default AuthRoutes;

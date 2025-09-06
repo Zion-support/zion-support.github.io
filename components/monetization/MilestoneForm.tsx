@@ -38,11 +38,20 @@ export default function MilestoneForm({ onSubmit }: Props) {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
+<<<<<<< HEAD
 }
 export default function MilestoneForm({ onSubmit }: Props) {
 };
 
 export default function MilestoneForm({ onSubmit }: Props) {;
+=======
+
+};
+
+export default function MilestoneForm({ onSubmit }: Props) {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [dueDate, setDueDate] = useState('');
@@ -216,6 +225,7 @@ export default function MilestoneForm({ onSubmit }: Props) {;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         {loading ? 'Adding...' : 'Add Milestone'}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       </button>;
     </form>;
@@ -227,6 +237,11 @@ export default function MilestoneForm({ onSubmit }: Props) {;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+      </button>;
+    </form>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 =======
 
@@ -241,6 +256,11 @@ export default function MilestoneForm({ onSubmit }: Props) {;
 }
   );
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <button;
         type='submit';
         className='bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50'        disabled={loading}        type="submit";
@@ -251,5 +271,9 @@ export default function MilestoneForm({ onSubmit }: Props) {;
       </button>;
     </form>);
 }
+<<<<<<< HEAD
   );
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

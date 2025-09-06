@@ -1,14 +1,23 @@
 
+<<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
 import { Certification  } from '@/types/resume';
 import { PdfThemeColors  } from '../themeConfig';
 import { formatDate } from '../formatters';
 export function addCertificationsSection(
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {jsPDF} from 'jspdf';
 import {Certification} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 import {formatDate} from '../formatters';
 export function addCertificationsSection(;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   doc: jsPDF;
   certifications: Certification[];
   colors: PdfThemeColors;
@@ -42,6 +51,7 @@ export function addCertificationsSection(;
       yPos = 20
     }
 
+<<<<<<< HEAD
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10)
 import { jsPDF } from 'jspdf',;
 import { Certification } from '@/types/resume',;
@@ -86,6 +96,10 @@ export function addCertificationsSection(;
       const expirationText = cert.expiration_date ? ` - ${formatDate(cert.expiration_date)}` : '';
       doc.setFontSize(10);
       doc.text(`${issueDate}${expirationText}`, 20, yPos + 10);
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     yPos += 16
   }

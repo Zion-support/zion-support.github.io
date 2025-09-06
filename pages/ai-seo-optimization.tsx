@@ -1,18 +1,31 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'));
   if (!service) return null;
 
 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import Head from 'next/head',;
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Rocket } from 'lucide-react',;
 import Layout from '../components/layout/Layout',;
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 import Layout from '../components/layout/Layout';
 export default function AISEOOptimization() {
@@ -35,6 +48,12 @@ import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Rocket } from 'lucide-react',
 import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AISEOOptimizationPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))
   if (!service) return null,
@@ -72,6 +91,12 @@ export default function AISEOOptimizationPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">
@@ -84,6 +109,12 @@ export default function AISEOOptimizationPage() {
               </div>
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Boost Rankings<ArrowRight /></a>
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Boost Rankings<ArrowRight /></Link>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2 w-4 h-4 text-emerald-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
@@ -94,6 +125,7 @@ export default function AISEOOptimizationPage() {
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
   );
 };
   )
@@ -111,3 +143,72 @@ export default function AISEOOptimizationPage() {
   }
 }
 }
+=======
+
+=======
+}
+
+=======
+import React from 'react',
+import Head from 'next / head',
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, Rocket } from 'lucide-react',
+import Layout from '../components / layout / Layout',
+import { enhancedRealMicroSaasServices } from '../data / enhanced - real - micro - saas - services',
+export default /**
+ * AISEOOptimizationPage - Function description
+ */
+function AISEOOptimizationPage() {
+  const service = enhancedRealMicroSaasServices.find (string => s.link.ends_with ('/ai - seo - optimization')),
+  // Check condition
+if (return null, ) {
+  $2
+}
+  return (
+    <Layout>;
+      <Head>;
+        <title>{service.name} - Zion Tech Group</title>;
+        <meta name="description" content={service.description} />;
+        <link rel="canonical" href="https://ziontechgroup.com / ai - seo - optimization" />;
+      </Head>;
+      <div className="min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8">;
+        <div className="max - w-6xl mx - auto">;
+          <div className="text - center mb - 10">;
+            <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - emerald - 400 via - green - 400 to - teal - 400 bg - clip - text text - transparent flex items - center justify - center gap - 3 w - 10 h - 10"><Rocket />{service.name}</h1>;
+            <p className="mt - 4 text - xl text - slate - 300 max - w-3xl mx - auto">{service.tagline}</p>;
+          </div>;
+          <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 12">;
+            <div className="lg:col - span - 2 bg - black / 30 rounded - 2xl border border - emerald - 500 / 30 p - 6">;
+              <h2 className="text - 2xl font - semibold mb - 4">SEO automation</h2>;
+              <p className="text - slate - 300 mb - 6">{service.description}</p>;
+              <ul className="grid grid - cols - 1 md:grid - cols - 2 gap - 3">;
+                {service.features.slice (0, 12).map ((feat, i) => (
+                  <li key={i} className="flex items - start space - x-3 text - slate - 200 w - 5 h - 5 text - emerald - 400 mt - 0.5"><Check /><span>{feat}</span></li>))}
+              </ul>;
+            </div>;
+            <div className="bg - black / 30 rounded - 2xl border border - emerald - 500 / 30 p - 6 h - fit">;
+              <div className="flex items - end justify - between mb - 3">;
+                <div>;
+                  <div className="text - 3xl font - bold text - white text - slate - 400 text - base">{service.price}<span >{service.period}</span></div>;
+                  <div className="text - slate - 400">{service.trial_days}-day free trial • Setup: {service.setup_time}</div>;
+                </div>;
+                <div className="flex items - center text - yellow - 400 w - 4 h - 4 mr - 1"><Star />{service.rating.to_fixed (1)}</div>;
+              </div>;
+              <a href="/contact" className="w - full px - 6 py - 3 bg - gradient - to - r from - cyan - 600 to - blue - 700 hover:from - cyan - 700 hover:to - blue - 800 text - white font - semibold rounded - lg transition - all duration - 200 w - 5 h - 5 ml - 2">Boost Rankings < ArrowRight /></a>;
+              <div className="mt - 6 space - y-3 text - sm text - slate - 300">;
+                <div className="flex items - center space - x-2 w - 4 h - 4 text - emerald - 400"><Phone /><span>{service.contact_info.mobile}</span></div>;
+                <div className="flex items - center space - x-2 w - 4 h - 4 text - purple - 400"><Mail /><span>{service.contact_info.email}</span></div>;
+                <div className="flex items - center space - x-2 w - 4 h - 4 text - green - 400 text - xs"><MapPin /><span >{service.contact_info.address}</span></div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </Layout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

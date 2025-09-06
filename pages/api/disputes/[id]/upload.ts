@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
@@ -37,6 +38,31 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+=======
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import path from "path";
+import {
+
+  ensureDisputeUploadDir,
+  getDisputeById,
+  upsertDispute,;
+} from "../../../../utils/fsdb";
+import {
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+} from "../../../../utils/auth";
+export const config = {
+  api: { bodyParser: { sizeLimit: "20mb" } },;
+};
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { id } = req.query;
 
   if (typeof id !== "string")
@@ -138,6 +164,7 @@ async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void
       }
     );
   });
+<<<<<<< HEAD
 }
 
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -164,6 +191,11 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 
@@ -262,3 +294,10 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

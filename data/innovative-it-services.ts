@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   {
@@ -403,6 +406,7 @@
   useCases: string[], roi: string,
   competitors: string[], marketSize: string,
   growthRate: string, variant: string,
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -438,6 +442,8 @@ export interface InnovativeITService {;
   growthRate: string;
   variant: string;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   contactInfo: {
     mobile: string, email: string,
     address: string,
@@ -470,11 +476,16 @@ export const innovativeITServices: InnovativeITService[] = [
     competitors: ['Palo Alto NetworksCrowdStrikeZscalerOktaCyberArk'], marketSize: '$45B cybersecurity market',
     growthRate: '110% annual growth', variant: 'cyberpunk',
     contactInfo: {
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
     reviews: 1250
   }
 ];
@@ -1037,6 +1048,8 @@ export const innovativeITServices: InnovativeITService[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
@@ -1218,9 +1231,13 @@ export const innovativeITServices: InnovativeITService[] = [;
     rating: 4.7,;
     reviews: 1250;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

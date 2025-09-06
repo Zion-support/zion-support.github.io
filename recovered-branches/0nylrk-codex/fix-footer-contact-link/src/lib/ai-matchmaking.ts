@@ -1,10 +1,22 @@
 
+<<<<<<< HEAD
 // AI Matchmaking utility functions
 export interface MatchResultItem {
+=======
+// AI Matchmaking utility functions;
+
+export interface MatchResultItem {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 export interface MatchResultItem {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   title: string;
   description: string;
@@ -16,12 +28,21 @@ export interface MatchResultItem {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+export interface MatchResult {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 export interface MatchResult {
 
 export interface MatchResult {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   item: MatchResultItem;
   score: number;
 
@@ -37,7 +58,12 @@ const sample_data: MatchResultItem[] = [;
     description: "Experienced AI engineer with expertise in machine learning and computer vision";
     category: "Talent - Engineering";
 
+<<<<<<< HEAD
     price: 120
+=======
+    price: 120,
+    skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"];
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   }
   {
@@ -58,7 +84,12 @@ const sample_data: MatchResultItem[] = [;
 
 
 
+<<<<<<< HEAD
   type: string = ""
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // AI Matchmaking utility functions;
 export interface MatchResultItem {;
   id: string,;
@@ -77,6 +108,12 @@ export interface MatchResult {;
   reason: string;
 }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
   {
@@ -154,6 +191,7 @@ export async function findMatches(
   } catch (error) {
     console.error("Error in matchmaking:", error),
     return []
+<<<<<<< HEAD
 ;
 // Sample data for testing when API is not available;
 const sampleData: MatchResultItem[] = [;
@@ -213,6 +251,9 @@ export async function findMatches(;
   } catch (error) {;
     console.error("Error in matchmaking:", error);
     return [];
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,11 @@ import Layout from '../components/layout/Layout',;
 import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function DocsPage() {
 	return (
 		<Layout>

@@ -45,10 +45,15 @@ import { nextGenAIServices  } from '../data/next-gen-ai-services';
 import { industryRealServices  } from '../data/industry-real-services';
 import { professionalServices  } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
+<<<<<<< HEAD
 export default function DynamicServicePage() {
 export default function DynamicServicePage() {;
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const router = useRouter();
@@ -535,6 +540,7 @@ function normalizeSlug(value: string): string {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
+<<<<<<< HEAD
 
 // Static export support: generate root-level pages for service slugs;
 
@@ -578,6 +584,59 @@ function normalizeSlug(value: string): string {
 
 export const getStaticPaths: GetStaticPaths = async () => {
 export const getStaticPaths: GetStaticPaths = async () => {;
+=======
+}
+
+
+function collectAllServices(): any (): Svc[] {;
+  return enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.concat(;
+    extraServices as Svc[],;
+    additionalEnhancedServices as Svc[],;
+    innovativeAIServices as Svc[],;
+    quantumSpaceServices as Svc[],;
+    enterpriseITServices as Svc[],;
+    newRealServices as Svc[],;
+    marketReadyServices as Svc[],;
+    nextGenerationAIServices as Svc[],;
+    emergingTechnologyServices as Svc[],;
+    comprehensiveITSolutions as Svc[],;
+    marketValidatedServices as Svc[],;
+    newRealInnovations as Svc[],;
+    realMarketServices as Svc[],;
+    realVerifiedServices as unknown as Svc[];
+  );
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+function normalizeSlug(): any (value: string): string {;
+  return value;
+    .toLowerCase();
+    .replace(/[^a-z0-9]+/g, '-');
+    .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(): any (link?: string): string | null {;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  if (!link) return null;
+  try {;
+    const url = new URL(link);
+
+    const path = url && url.pathname.replace(/^\/+|\/+$/g, '');
+    // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/...";
+    if (path && !path && path.includes('/')) return path;
+    return null;
+  } catch {;
+    return null;
+=======
+
+
+  };
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+}
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const services = collectAllServices();
 
   const candidateSlugs = new Set<string>(),;
@@ -650,6 +709,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
     }
   } catch {}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
     for (const entry of entries) {
       if (&& /\.tsx?$/.test (entry.name)) {) {
@@ -666,6 +728,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -673,12 +736,19 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Exclude any slug that conflicts with an existing root page file
   const uniqueNonConflicting = Array.from(candidateSlugs).filter(
     slug => !staticSlugs.has(slug)
   );
   return {
+<<<<<<< HEAD
     paths: uniqueNonConflicting.map(slug => ({ params: { slug } }))
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
     fallback: true,
   };
@@ -692,6 +762,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {;
 
   return {
     paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     fallback: true
   }
 }
@@ -708,6 +783,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
@@ -780,6 +858,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client - side.;
   return { props: {} }
 }
+<<<<<<< HEAD
 
 
 };
@@ -787,3 +866,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 };
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

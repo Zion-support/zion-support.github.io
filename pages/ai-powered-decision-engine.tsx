@@ -4,6 +4,7 @@ export default function AiPoweredDecisionEngine() {
 	return (
 		<ServiceLanding
 
+<<<<<<< HEAD
 			title="AI-Powered Decision Engine"
 			description="Operationalize policy, risk, pricing, and routing decisions with explainable AI and guardrails. Deploy strategies, test variants, and monitor outcomes."
 			subtitle="Make better decisions, continuously"
@@ -31,6 +32,13 @@ export default function AiPoweredDecisionEngine() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 			implementationWeeks="3-7 days"
 			roiNote="Teams report 2–5x ROI via faster, consistent decisions and uplift from experimentation"
 			features={[
@@ -42,6 +50,7 @@ export default function AiPoweredDecisionEngine() {
 				"Integrations: Kafka, Snowflake, Redis, REST/gRPC",
 				"Drift monitoring and alerts",
 				"Versioned strategies with canary rollouts"
+<<<<<<< HEAD
 			]}
 			industries={["Fintech", "SaaS", "Marketplaces", "Logistics"]}
 			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
@@ -69,3 +78,8 @@ export default function AiPoweredDecisionEngine() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

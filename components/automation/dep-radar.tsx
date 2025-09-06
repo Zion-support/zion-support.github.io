@@ -5,10 +5,19 @@
 }</div>) import fs from 'fs';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' }
 export async function getServerSideProps() {
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
 export async function getServerSideProps() {;
+=======
+
+
+type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
+export async function getServerSideProps() {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const file = path.join(process.cwd(), 'datadep-radar.json');
   let outdated: Outdated[] = [];  let generatedAt = '';
   try {
@@ -93,8 +102,11 @@ function getServerSideProps() {
 }
 =======
     </div>;
+<<<<<<< HEAD
 );
     </div>
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
 

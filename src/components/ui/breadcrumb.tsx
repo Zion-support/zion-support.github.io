@@ -38,6 +38,12 @@ const Breadcrumb = React.forwardRef<
     ref={ref}
     aria-label="breadcrumb"
     className={cn(
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",
       className
     )}
@@ -97,6 +103,9 @@ const BreadcrumbLink = React.forward_ref<;
 BreadcrumbLink.displayName = "BreadcrumbLink"
  
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 const BreadcrumbSeparator = ({
@@ -109,18 +118,34 @@ const BreadcrumbSeparator = ({
     className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
     {...props}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   >
     {children |<ChevronRight className='h-4 w-4' />}
   </li>
 )
+<<<<<<< HEAD
 BreadcrumbSeparator.displayName = 'BreadcrumbSeparator'
 }: React.ComponentProps<"li">) => (
   <li
     role="presentation"
     aria-hidden="true"
     className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
+=======
+
+  />;
+));
+Breadcrumb && Breadcrumb.displayName = 'Breadcrumb';
+    ref = {ref,}
+    aria-label="breadcrumb";
+    className = {cn(;
+      "inline-flex items-center gap-1 text-sm text-zion-slate-light",;
+      className;
+    ),}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {...props}
   />;
 ));
@@ -184,6 +209,9 @@ const BreadcrumbEllipsis = ({;
 
 export {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Breadcrumb
   BreadcrumbList
   BreadcrumbItem
@@ -228,9 +256,12 @@ export {
 
 export {;
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   BreadcrumbSeparator;
   BreadcrumbEllipsis};
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
@@ -238,6 +269,10 @@ BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
 const BreadcrumbEllipsis = ({
   className,
   ...props
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }: React.ComponentProps<"span">) => (
   <span
     role="presentation"

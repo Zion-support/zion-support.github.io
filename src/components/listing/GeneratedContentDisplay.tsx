@@ -7,6 +7,7 @@
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">;
 
 
+<<<<<<< HEAD
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
@@ -15,6 +16,15 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 
 interface GeneratedContent {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight } from 'lucide-react'
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+
+interface GeneratedContent {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   description: string,
   tags: string[],
   suggestedPrice: {
@@ -46,6 +56,7 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -53,6 +64,8 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
@@ -76,6 +89,9 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         
         <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
@@ -92,12 +108,24 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
 
         
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
           <p className="text-white">
             ${content.suggestedPrice.min.toFixed(2)} - ${content.suggestedPrice.max.toFixed(2)}
+=======
+
+
+        <div>
+          <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
+            Suggested Price Range
+          </h3>
+          <p className='text-white'>
+            ${content.suggestedPrice.min.toFixed(2)} - $
+            {content.suggestedPrice.max.toFixed(2)}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </p>
         </div>
 

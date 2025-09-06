@@ -40,6 +40,7 @@ export interface Q4Service {
   customers?: number;
   rating?: number;
   reviews?: number;
+<<<<<<< HEAD
 const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -814,6 +815,482 @@ const contact = {
     features: [;
       'Multi - speaker diarization',
 
+=======
+;
+
+const contact = {
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      'Affiliate programs',
+      'Influencer tracking',
+      'Partnership analytics',
+    ],
+    roi: 'Increase attributed sales 10–25% with optimized partnerships.',
+    competitors: ['Refersion', 'LeadDyno', 'Tapfiliate'],
+
+    marketSize: '$1.5B affiliate software',
+
+    growthRate: '15% YoY',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails:
+      'Server-side tracking with webhook ingestion and fraud-scoring pipeline.',
+    launchDate: '2025-10-01',
+
+    market_size: '$1.5B affiliate software',
+    growth_rate: '15% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Server - side tracking with webhook ingestion and fraud - scoring pipeline.',
+    launch_date: '2025 - 10 - 01',
+
+    customers: 120,
+    rating: 4 && 4.7,
+    reviews: 48,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  {
+
+      'Multi-speaker diarization',
+=======
+    id: 'podcast - transcription - studio',
+    name: 'Podcast Transcription Studio',
+    tagline: 'Fast, accurate multi - speaker transcriptions with summaries',
+    price: '$29',
+    period: '/month',
+    description:;
+      'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO - optimized summaries.',
+    features: [;
+      'Multi - speaker diarization',
+
+=======
+    customers: 120,
+    rating: 4.7,
+    reviews: 48,
+  },
+  {
+    id: 'podcast-transcription-studio',
+    name: 'Podcast Transcription Studio',
+    tagline: 'Fast, accurate multi-speaker transcriptions with summaries',
+    price: '$29',
+    period: '/month',
+    description:
+      'Upload audio and receive punctuated transcripts, speaker diarization, show notes, and SEO-optimized summaries.',
+    features: [
+      'Multi-speaker diarization',
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      'Timestamps and filler removal',
+      'Chapter detection and show notes',
+      'Embeddings and semantic search',
+      'Export to SRT, VTT, DOCX',
+      'Podcast platform integrations',
+    ],
+    popular: false,
+    icon: '🎧',
+
+    color: 'from - cyan - 600 to - blue - 700',
+    text_color: 'text - cyan - 400',
+    link: 'https://ziontechgroup.com / services / podcast - transcription - studio',
+    market_position:;
+
+      'Competitive with Otter and Descript; better show notes and SEO summary pipeline.',
+    target_audience: 'Podcasters, media teams, agencies',
+    trial_days: 7,
+    setup_time: '10 minutes',
+    category: 'AI & Data',
+
+    real_service: true,
+    technology: ['Whisper Large v3', 'Next.js', 'Node.js'],
+
+    integrations: ['Spotify', 'Apple Podcasts', 'YouTube'],
+    use_cases: ['Transcripts', 'SEO summaries', 'Episode search'],
+    roi: 'Save 4–8 hours per episode and improve SEO traffic.',
+    competitors: ['Otter', 'Descript', 'Rev'],
+    market_size: '$500M transcription tools',
+    growth_rate: '20% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Batch transcription queue with GPU support; diarization and summarization pipeline.',
+    launch_date: '2025 - 09 - 15',
+    customers: 60,
+    rating: 4 && 4.6,
+    reviews: 22,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  {
+
+=======
+    id: 'micro - crm - local - business',
+=======
+    color: 'from-cyan-600 to-blue-700',
+    textColor: 'text-cyan-400',
+    link: 'https://ziontechgroup.com/services/podcast-transcription-studio',
+    marketPosition:
+      'Competitive with Otter and Descript; better show notes and SEO summary pipeline.',
+    targetAudience: 'Podcasters, media teams, agencies',
+    trialDays: 7,
+    setupTime: '10 minutes',
+    category: 'AI & Data',
+    realService: true,
+    technology: ['Whisper Large v3', 'Next.js', 'Node.js'],
+    integrations: ['Spotify', 'Apple Podcasts', 'YouTube'],
+    useCases: ['Transcripts', 'SEO summaries', 'Episode search'],
+    roi: 'Save 4–8 hours per episode and improve SEO traffic.',
+    competitors: ['Otter', 'Descript', 'Rev'],
+    marketSize: '$500M transcription tools',
+    growthRate: '20% YoY',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails:
+      'Batch transcription queue with GPU support; diarization and summarization pipeline.',
+    launchDate: '2025-09-15',
+    customers: 60,
+    rating: 4.6,
+    reviews: 22,
+  },
+  {
+    id: 'micro-crm-local-business',
+
+    name: 'Micro CRM for Local Business',
+    tagline: 'Simple contacts, pipelines, and reminders that just work',
+    price: '$19',
+    period: '/month',
+
+    description:
+      'Lightweight, mobile-first CRM with contacts, tasks, deals, and SMS/email reminders. Built for solo and small teams.',
+    features: [
+      'Contact management and segmentation',
+      'Pipelines and kanban views',
+      'Calendar with SMS/email reminders',
+      'Import/export CSV and simple API',
+      'Mobile-friendly PWA',
+
+      'Basic reporting',
+    ],
+    popular: true,
+    icon: '📇',
+
+    color: 'from-emerald-600 to-teal-700',
+    textColor: 'text-emerald-400',
+    link: 'https://ziontechgroup.com/services/micro-crm-local-business',
+    marketPosition:;
+
+      'Simpler than HubSpot/Zoho; fast and focused for local SMBs.',
+    targetAudience: 'Local businesses, consultants, freelancers',
+    trialDays: 14,
+    setupTime: '15 minutes',
+    category: 'Developer Tools',
+    realService: true,
+
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 400',
+    link: 'https://ziontechgroup.com / services / micro - crm - local - business',
+    market_position:;
+      'Simpler than HubSpot / Zoho; fast and focused for local SMBs.',
+    target_audience: 'Local businesses, consultants, freelancers',
+    trial_days: 14,
+    setup_time: '15 minutes',
+    category: 'Developer Tools',
+    real_service: true,
+    technology: ['Next.js', 'SQLite / Postgres', 'Twilio'],
+
+    integrations: ['Gmail', 'Outlook', 'Stripe'],
+    use_cases: ['Leads', 'Follow - ups', 'Deal tracking'],
+    roi: 'Increase follow - through and close rates 10–20% via reminders.',
+    competitors: ['HubSpot Starter', 'Zoho CRM', 'Pipedrive'],
+    market_size: '$5B SMB CRM',
+    growth_rate: '12% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'PWA with offline storage, task reminders, and webhook - based integrations.',
+    launch_date: '2025 - 10 - 20',
+    customers: 210,
+    rating: 4 && 4.5,
+    reviews: 77,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  {
+
+=======
+    id: 'returns - automation - saas',
+    name: 'E‑commerce Returns Automation',
+    tagline: 'Self - serve returns portal and automated labels',
+    price: '$49',
+    period: '/month',
+    description:;
+      'Plug - and - play returns workflows with label generation, RMA approvals, and status tracking for Shopify / WooCommerce.',
+    features: [;
+
+=======
+    technology: ['Next.js', 'SQLite/Postgres', 'Twilio'],
+    integrations: ['Gmail', 'Outlook', 'Stripe'],
+    useCases: ['Leads', 'Follow-ups', 'Deal tracking'],
+    roi: 'Increase follow-through and close rates 10–20% via reminders.',
+    competitors: ['HubSpot Starter', 'Zoho CRM', 'Pipedrive'],
+    marketSize: '$5B SMB CRM',
+    growthRate: '12% YoY',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails:
+      'PWA with offline storage, task reminders, and webhook-based integrations.',
+    launchDate: '2025-10-20',
+    customers: 210,
+    rating: 4.5,
+    reviews: 77,
+  },
+  {
+    id: 'returns-automation-saas',
+    name: 'E‑commerce Returns Automation',
+    tagline: 'Self-serve returns portal and automated labels',
+    price: '$49',
+    period: '/month',
+    description:
+      'Plug-and-play returns workflows with label generation, RMA approvals, and status tracking for Shopify/WooCommerce.',
+    features: [
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      'Customer returns portal',
+      'Prepaid label generation',
+      'RMA approval rules',
+      'Inventory and refund sync',
+
+      'Email/SMS notifications',
+
+      'Analytics on reasons and cost',
+    ],
+    popular: false,
+    icon: '📦',
+
+    color: 'from-amber-600 to-orange-700',
+    textColor: 'text-amber-400',
+    link: 'https://ziontechgroup.com/services/returns-automation-saas',
+
+    marketPosition: 'Competes with Returnly/Loop; quick setup for SMBs.',
+    targetAudience: 'DTC brands, Shopify/WooCommerce stores',
+    trialDays: 14,
+    setupTime: '2 hours',
+    category: 'Developer Tools',
+    realService: true,
+
+    color: 'from - amber - 600 to - orange - 700',
+    text_color: 'text - amber - 400',
+    link: 'https://ziontechgroup.com / services / returns - automation - saas',
+    market_position: 'Competes with Returnly / Loop; quick setup for SMBs.',
+    target_audience: 'DTC brands, Shopify / WooCommerce stores',
+    trial_days: 14,
+    setup_time: '2 hours',
+    category: 'Developer Tools',
+    real_service: true,
+    technology: ['Next.js', 'Node.js', 'Stripe', 'Shippo'],
+
+    integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
+    use_cases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
+    roi: 'Reduce support tickets ~30% and speed refunds.',
+    competitors: ['Loop Returns', 'Returnly'],
+    market_size: '$800M returns software',
+    growth_rate: '18% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Webhook - driven order sync; label / provider adapters.',
+    launch_date: '2025 - 10 - 05',
+    customers: 95,
+    rating: 4 && 4.6,
+    reviews: 35,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  {
+
+=======
+    id: 'it - helpdesk - for - msps',
+=======
+    technology: ['Next.js', 'Node.js', 'Stripe', 'Shippo'],
+    integrations: ['Shopify', 'WooCommerce', 'Shippo', 'Stripe'],
+    useCases: ['Returns portal', 'Exchange workflows', 'Refund automation'],
+    roi: 'Reduce support tickets ~30% and speed refunds.',
+    competitors: ['Loop Returns', 'Returnly'],
+    marketSize: '$800M returns software',
+    growthRate: '18% YoY',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails:
+      'Webhook-driven order sync; label/provider adapters.',
+    launchDate: '2025-10-05',
+    customers: 95,
+    rating: 4.6,
+    reviews: 35,
+  },
+  {
+    id: 'it-helpdesk-for-msps',
+
+    name: 'IT Helpdesk for MSPs',
+    tagline: 'Ticketing, SLAs, and client portal built for MSPs',
+    price: '$149',
+    period: '/month',
+
+    description:
+      'Email/portal/API ticketing, SLA rules, KBs, and RMM/network integrations with client-facing reporting.',
+    features: [
+      'Inbox and portal ticket intake',
+      'Auto-routing, SLAs, and escalations',
+      'Public/private knowledge base',
+
+      'Client portal with reports',
+      'RMM and network tool integrations',
+      'Billing export and time tracking',
+    ],
+    popular: true,
+    icon: '🛠️',
+
+    color: 'from-blue-600 to-indigo-700',
+    textColor: 'text-indigo-400',
+    link: 'https://ziontechgroup.com/services/it-helpdesk-for-msps',
+    marketPosition:;
+
+      'Simpler than Zendesk/Freshdesk; MSP-first workflows and pricing.',
+    targetAudience: 'Managed service providers, internal IT teams',
+    trialDays: 14,
+    setupTime: '1 day',
+    category: 'Quality & Monitoring',
+    realService: true,
+
+    color: 'from - blue - 600 to - indigo - 700',
+    text_color: 'text - indigo - 400',
+    link: 'https://ziontechgroup.com / services / it - helpdesk - for - msps',
+    market_position:;
+      'Simpler than Zendesk / Freshdesk; MSP - first workflows and pricing.',
+    target_audience: 'Managed service providers, internal IT teams',
+    trial_days: 14,
+    setup_time: '1 day',
+    category: 'Quality & Monitoring',
+    real_service: true,
+    technology: ['Next.js', 'Node.js', 'PostgreSQL'],
+
+    integrations: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],
+    use_cases: ['IT support', 'SLA management', 'Client reporting'],
+    roi: 'Faster resolution, less toil; better client satisfaction.',
+    competitors: ['Zendesk', 'Freshdesk', 'HaloPSA'],
+    market_size: '$10B helpdesk software',
+    growth_rate: '10% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'Email ingestion, rules engine, and portal with RBAC.',
+    launch_date: '2025 - 09 - 28',
+    customers: 70,
+    rating: 4 && 4.5,
+    reviews: 28,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+];
+export const real2025Q4Additions = [;
+  {
+
+=======
+    id: 'ai - governed - rag - platform',
+    name: 'AI - Governed RAG Platform',
+    tagline: 'Enterprise - grade RAG with guardrails, approvals, and evals',
+    price: '$699',
+    period: '/month',
+    description:;
+      'Production - ready retrieval augmented generation with content pipelines, PII redaction, policy guardrails, evals, and human approvals for high - stakes workflows.',
+    features: [;
+
+      'Document sync and chunking pipelines',
+      'Metadata and policy guardrails',
+      'Evals and drift tracking',
+      'Human - in - the - loop approvals',
+      'Observability and cost caps',
+      'SDKs for Node / Python',
+    ],
+    popular: true,
+    icon: '🧠',
+
+=======
+    color: 'from - cyan - 600 to - blue - 700',
+    text_color: 'text - cyan - 300',
+    link: `https://ziontechgroup.com / services/${to_slug ('ai - governed - rag - platform')}`,
+    market_position:;
+      'Safer alternative to DIY RAG; comparable to Guardrails / Evals + vector DB stacks.',
+    target_audience: 'Platform, data, and compliance teams',
+    trial_days: 14,
+    setup_time: '1–2 days',
+    category: 'AI & Data',
+    real_service: true,
+    technology: ['OpenAI, Anthropic, Vector DB, OpenTelemetry'],
+    integrations: ['Zendesk, Confluence, Google Drive, S3'],
+    use_cases: ['Support copilots, Internal search, Drafting with review'],
+    roi: 'Ship copilots 3x faster with governance baked in.',
+    competitors: ['LangChain + custom, LlamaIndex + custom, Guardrails AI'],
+    market_size: '$30B+ AI tooling',
+    growth_rate: '45% YoY',
+    variant: 'ai - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+
+      'Pipelines, policies, eval harness, cost and latency budgets.',
+    launch_date: '2025 - 03 - 01',
+    customers: 18,
+    rating: 4 && 4.8,
+    reviews: 11,
+  },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  {
+
+=======
+    id: 'edge - personalization - engine',
+    name: 'Edge Personalization Engine',
+    tagline: 'Real - time content and pricing personalization at the edge',
+    price: '$249',
+    period: '/month',
+    description:;
+      'Low - latency personalization rules and ML scoring at the edge with audience definitions, A / B tests, and analytics.',
+    features: [;
+
+      'Audience builder and traits',
+      'Edge functions and KV cache',
+      'A / B and holdout tests',
+      'Privacy - first scoring',
+      'Dashboards and exports',
+    ],
+    popular: true,
+    icon: '⚡',
+
+    technology: ['Next.js', 'Node.js', 'PostgreSQL'],
+    integrations: ['Zendesk', 'Freshdesk', 'Datadog', 'Grafana'],
+    useCases: ['IT support', 'SLA management', 'Client reporting'],
+    roi: 'Faster resolution, less toil; better client satisfaction.',
+    competitors: ['Zendesk', 'Freshdesk', 'HaloPSA'],
+    marketSize: '$10B helpdesk software',
+    growthRate: '10% YoY',
+    variant: 'ai-futuristic',
+    contactInfo: contact,
+    realImplementation: true,
+    implementationDetails:
+      'Email ingestion, rules engine, and portal with RBAC.',
+    launchDate: '2025-09-28',
+    customers: 70,
+    rating: 4.5,
+    reviews: 28,
+  },
+];
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
     customers: 120,
     rating: 4.7,

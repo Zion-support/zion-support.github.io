@@ -1,5 +1,6 @@
 import OpenAI from 'openai';
 
+<<<<<<< HEAD
 type OpenAIClient = OpenAI;
 export function createOpenAIClient(apiKey: string): OpenAIClient {
   return new OpenAI({ apiKey })
@@ -14,16 +15,31 @@ Add responsibilities, requirements, and benefits in bullet points.`;
     model: 'gpt-4o-mini'
     input: prompt
 });
+=======
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import OpenAI from 'openai',;
 type OpenAIClient = OpenAI,;
 export function createOpenAIClient(apiKey: string): OpenAIClient {;
   return new OpenAI({ apiKey });
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 export async function generateJobPost(openai: OpenAIClient, role: string, opts: any): Promise<string> {;
   const prompt = `Create a concise, compelling job post for a ${role}.;
 Company: ${opts.company || 'Confidential'}
 Location: ${opts.location || 'Remote'}
+<<<<<<< HEAD
 Key skills: ${(opts.tags || []).join() || 'N/A'};
 Add responsibilities, requirements, and benefits in bullet points.`;
   const completion = await openai.responses.create({
@@ -97,6 +113,10 @@ Add responsibilities, requirements, and benefits in bullet points.`,;
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return completion.output_text;
 }
 

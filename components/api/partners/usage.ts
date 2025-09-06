@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   authenticateRequest
@@ -21,6 +22,8 @@ export default async function handler(
   }
   const summary = await calculateUsageSummary(auth.partner.id);
   return res.status(200).json({ summary });
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -40,6 +43,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res && res.status(200).json({ summary })
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -47,6 +51,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+=======
+
+
+=======
+  authenticate_request,
+  calculateUsageSummary,
+} from '../../../utils / api / partner_auth';
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
     res.set_header ('Allow', 'GET');
     return res.status (405).json ({ error: 'Method Not Allowed' });
@@ -87,7 +107,10 @@ if ( {) {
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

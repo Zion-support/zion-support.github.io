@@ -160,6 +160,11 @@ const Page: React.FC<PageProps> = ({ className }) => {
                   href={solution.href}
 className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
                   className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   Learn more <span aria-hidden="true">→</span>
                 </Link>
@@ -170,6 +175,7 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
         </div>;
       </div>;
       {/* Industry Applications */}
+<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Industries</h2>
@@ -178,10 +184,22 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
           </p>
           <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
             Our AI solutions are designed to adapt and excel across diverse industries
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Industries</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             Transforming Every Sector
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -278,6 +296,7 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
         </div>;
       </div>;
       {/* Implementation Process */}
+<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
           <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Implementation</h2>
@@ -286,10 +305,22 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
           </p>
           <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
             From initial assessment to ongoing optimization, we guide you through every step
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             Our Proven Process
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
@@ -393,6 +424,7 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
         </div>;
       </div>;
       {/* CTA section */}
+<<<<<<< HEAD
 <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl text-center&quot;>
           <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
@@ -403,6 +435,18 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+=======
+
+
+
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             Ready to transform your business?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

@@ -1,10 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { supabase } from '../../../utils/supabase/client';
 import {
   NotificationItem
   NotificationType;
   NotificationItem,;
   NotificationType,;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '../../../utils/notifications';
 function getUserId(req: NextApiRequest): string {
 

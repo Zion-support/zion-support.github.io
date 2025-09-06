@@ -86,6 +86,7 @@ if ( {) {
   return (
 
         setNewResumeTitle('')
+<<<<<<< HEAD
 =======
 import { useState } from 'react',;
 import {;
@@ -122,11 +123,14 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         setSaveDialogOpen(false);
         setNewResumeTitle('');
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       setIsLoading(false)
     }
   },
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -134,11 +138,15 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="flex items-center gap-2">
       <span className="text-sm text-muted-foreground">Resume:</span>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
+<<<<<<< HEAD
           <Button variant='outline' size='sm' className='gap-2'>
             {currentResume?.basic_info?.title |'My Resume'}
             <ChevronDown className='h-4 w-4' />
@@ -155,11 +163,17 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             <DropdownMenuItem
               key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Button variant="outline" size="sm" className="gap-2">
             {currentResume?.basic_info?.title || 'My Resume'}
             <ChevronDown className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <DropdownMenuContent align="end">
           {existingResumes.map((resume) => (
             <DropdownMenuItem
@@ -187,6 +201,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             >;
 
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -201,6 +216,8 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="cursor-pointer"
             >
               {resume.basic_info.title}
@@ -238,6 +255,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
           <DropdownMenuSeparator />;
           <DropdownMenuItem;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             onClick={() => setSaveDialogOpen(true)}
             className="cursor-pointer"
@@ -248,6 +268,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         </DropdownMenuContent>
       </DropdownMenu>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             className='cursor-pointer'          >;
             <Plus className='h-4 w-4 mr-2' />            Save as new version;
@@ -294,6 +317,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -305,6 +331,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 
             <Button 
               variant="outline" 
+<<<<<<< HEAD
               onClick = {() => setSaveDialogOpen(false),}
             >
               Cancel
@@ -326,6 +353,11 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
               className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <Save className="h-4 w-4" />
               Save
             </Button>
@@ -413,6 +445,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 }
 > {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   resume.basic info.title;
 }</DropdownMenuItem>) );
 }<DropdownMenuSeparator /> <DropdownMenuItem > <Plus className="h - 4 w - 4 mr - 2" /> Save as new version </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu> <DialogHeader> <DialogTitle > Save as new resume version</DialogTitle> </DialogHeader> <div className="py - 4" > <Input /> </div> <DialogFooter> <Button > Cancel </Button> <Button Save </Button> </DialogFooter> </DialogContent> </Dialog> </div>);

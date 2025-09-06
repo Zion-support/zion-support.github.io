@@ -64,6 +64,7 @@ import {;
   ResolutionType,;
 } from '@/types/disputes';
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import { useDisputes } from "@/hooks/useDisputes",
@@ -242,6 +243,11 @@ import React, { useState, useEffect } from "react",;
 import { useRouter } from 'next/router',;
 import { useDisputes } from "@/hooks/useDisputes",;
 import {logErrorToProduction} from '@/utils/productionLogger',;
+=======
+import { Button } from '@/components/ui/button';
+import { Textarea } from '@/components/ui/textarea';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {;
   Card,;
   CardContent,;
@@ -376,6 +382,7 @@ export function DisputeDetail() {;
 
       summary: resolution.summary,
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -383,6 +390,8 @@ export function DisputeDetail() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (isLoading) {
 
     return (
@@ -405,6 +414,9 @@ export function DisputeDetail() {;
         <Button onClick={() => router.push("/dashboard/disputes")} className="mt-4">
           Back to Disputes
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         </Button>
@@ -439,7 +451,12 @@ if ( {) {
   }
   const getStatusBadgeVariant = (status: DisputeStatus, ) =>: any {
     switch (status) {
+<<<<<<< HEAD
       case 'open':
+=======
+
+      case 'open':;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         return 'default';
       case 'under_review':;
         return 'secondary';
@@ -478,6 +495,7 @@ if ( {) {
             </Button>;
 
 
+<<<<<<< HEAD
 =======
         return 'outline'; // Changed from "success" to "outline"
       case 'closed':
@@ -507,6 +525,8 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="container mx-auto p-4 space-y-6">
       <div className="flex flex-wrap items-center justify-between gap-4">
@@ -524,6 +544,7 @@ if ( {) {
             })}
           </p>
         </div>
+<<<<<<< HEAD
         <div className='flex gap-2'>
           <Button
             variant='outline'
@@ -546,6 +567,19 @@ if ( {) {
       {dispute.status === 'resolved' && dispute.resolution_summary && (
         <Alert className='bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900'>
           <Check className='h-4 w-4' />
+=======
+
+            </Button>
+          )}
+
+
+
+      {dispute.status === "resolved" && dispute.resolution_summary && (
+        <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
+          <Check className="h-4 w-4" />
+          <AlertTitle>This dispute has been resolved</AlertTitle>
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <AlertTitle>This dispute has been resolved</AlertTitle>
           <AlertDescription>{dispute.resolution_summary}</AlertDescription>
         </Alert>
@@ -557,6 +591,7 @@ if ( {) {
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -573,6 +608,9 @@ if ( {) {
         <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900">
           <Check className="h-4 w-4" />
           <AlertTitle>This dispute has been resolved</AlertTitle>
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <AlertDescription>
   },;
   if (isLoading) {;
@@ -642,6 +680,9 @@ if ( {) {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -656,6 +697,9 @@ if ( {) {
             
             <TabsContent value="overview" className="space-y-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <Card>
@@ -667,6 +711,7 @@ if ( {) {
                 </CardHeader>
                 <CardContent className='space-y-4'>
                   <div>
+<<<<<<< HEAD
                     <h3 className="font-medium">Reason</h3>
                     <p>{
                       disputeReasonLabels[
@@ -686,6 +731,16 @@ if ( {) {
                       {dispute.project?.scope_summary}
                     </p>
                   </div>
+=======
+                    <h3 className='font-medium'>Reason</h3>
+                    <p>
+                      {disputeReasonLabels[dispute.reason_code] ??
+                        dispute.reason_code}
+                    </p>
+                  </div>
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   
 
 
@@ -778,6 +833,9 @@ if ( {) {
                   </div>
                   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   {dispute.milestone_id && (
                     <div>;
@@ -951,6 +1009,11 @@ if ( {) {
               {dispute.status === 'resolved' && (
               
               {dispute.status === "resolved" && (
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Card>
                   <CardHeader>
                     <CardTitle>Resolution</CardTitle>
@@ -962,6 +1025,9 @@ if ( {) {
                     <p className="whitespace-pre-wrap">{dispute.resolution_summary}</p>
                     
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     {dispute.resolution_type && (
                       <div className='mt-4'>
@@ -975,6 +1041,9 @@ if ( {) {
                         </Badge>;
                       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     )}
                   </CardContent>;
@@ -985,6 +1054,9 @@ if ( {) {
             
             <TabsContent value="messages" className="space-y-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <Card>
@@ -1066,6 +1138,9 @@ if ( {) {
                           );
                         });
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1096,6 +1171,9 @@ if ( {) {
                       <Button onClick={handleSendMessage} disabled={isSending || !message.trim()}>
                         {isSending ? "Sending..." : "Send Message"}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                       </Button>
@@ -1108,6 +1186,9 @@ if ( {) {
             
             <TabsContent value="attachments">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <Card>
@@ -1129,6 +1210,9 @@ if ( {) {
             </TabsContent>
             
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             {isAdmin && (
@@ -1291,6 +1375,11 @@ if ( {) {
                           variant="outline" 
                           onClick={() => handleStatusChange("closed")}
                           disabled={dispute.status === "closed"}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         >
                           Mark as Open
                         </Button>
@@ -1312,6 +1401,11 @@ if ( {) {
                     {dispute.status !== 'resolved' && (
                     
                     {dispute.status !== "resolved" && (
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <div>
                         <h3 className="font-medium mb-2">Resolve Dispute</h3>
                         <div className="space-y-4">
@@ -1334,6 +1428,9 @@ if ( {) {
                           
                           <div className="grid grid-cols-2 gap-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                             <div>
                               <label className='text-sm font-medium mb-1 block'>
@@ -1341,6 +1438,9 @@ if ( {) {
                               </label>
                               <select
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -1451,6 +1551,9 @@ if ( {) {
                                   {msg.user_profile?.display_name || 'Admin'}
                                 </span>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                               </div>
@@ -1486,6 +1589,7 @@ if ( {) {
                           onChange={(e) => setAdminNote(e.target.value)}
                         />
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                         <Button
                           variant="outline"
@@ -1500,6 +1604,80 @@ if ( {) {
                                   setMessages
                                 )
                                 setAdminNote('')
+=======
+
+                        <Button
+                          variant='outline'
+
+                          <Button on_click={handleResolveDispute}>;
+                            Resolve Dispute;
+                          </Button>;
+                        </div>;
+                      </div>)}
+                    <div>;
+                      <h3 className='font - medium mb - 2'>Admin Notes</h3>;
+                      <div className='space - y-4 max - h-[300px] overflow - y-auto p - 2'>;
+                        {messages;
+                          .filter (msg => msg.is_admin_note);
+                          .map (msg => (
+                            <div;
+                              key={msg.id}
+                              className='bg - yellow - 50 border - l-4 border - yellow - 200 p - 4 dark:bg - yellow - 900 / 20 dark:border - yellow - 900';
+                            >;
+                              <div className='flex items - center justify - between mb - 2'>;
+                                <div className='flex items - center gap - 2'>;
+                                  <Avatar className='h - 6 w - 6'>;
+                                    <AvatarImage;
+                                      src={msg.user_profile?.avatar_url}
+                                      alt={
+                                        msg.user_profile?.display_name ||;
+                                        'Admin avatar';
+                                      }
+                                    />;
+                                    <AvatarFallback>;
+                                      {msg.user_profile?.display_name?.[0] ||;
+                                        'A'}
+                                    </AvatarFallback>;
+                                  </Avatar>;
+                                  <span className='text - sm font - medium'>;
+                                    {msg.user_profile?.display_name || 'Admin'}
+                                  </span>;
+                                </div>;
+                                <span className='text - xs opacity - 70'>;
+                                  {format (
+                                    new Date (msg.created_at),
+                                    'MMM d, h:mm a')}                                </span>;
+                              </div>;
+                              <p className='whitespace - pre - wrap text - sm'>;
+                                {msg.message}
+                              </p>;
+                            </div>))}
+                        {!messages.some (msg => msg.is_admin_note) && (
+                          <p className='text - sm text - muted - foreground italic'>;
+                            No admin notes yet;
+                          </p>)}
+                      </div>;
+                      <Separator className='my - 4' />;
+                      <div className='space - y-4'>;
+                        <Textarea;
+                          placeholder='Add an admin note (only visible to administrators)...';
+                          value={admin_note}
+                          on_change={e => setAdminNote (e.target.value)}                        />;
+                        <Button;
+                          variant='outline';
+                          on_click={() => {
+                            if () {) {
+  $2
+}
+                              addDisputeMessage (
+                                dispute_id!,
+                                admin_note,
+                                true).then (() => {
+                                getDisputeMessages (dispute_id!).then (
+                                  set_messages);
+                                setAdminNote ('');
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                               }) }
 
                           onClick={() => {;
@@ -1522,6 +1700,9 @@ if ( {) {
                               })
                             }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                           }}
@@ -1540,6 +1721,9 @@ if ( {) {
         
         <div className="space-y-6">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <Card>
@@ -1630,6 +1814,9 @@ if ( {) {
           </Card>
           
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <Card>
@@ -1813,6 +2000,9 @@ if ( {) {
 }
 const handleResolveDispute = async () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 ;
 

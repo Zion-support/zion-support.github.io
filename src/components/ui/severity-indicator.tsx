@@ -11,6 +11,9 @@ interface SeverityIndicatorProps {
   showText?: boolean,
   size?: "sm" | "md" | "lg",
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   className?: string
@@ -21,6 +24,9 @@ export function SeverityIndicator({
   showIcon = true, 
   showText = true, 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           "text-green-500"
@@ -49,6 +55,9 @@ export function SeverityIndicator ({
 
     <div className={cn("flex items-center gap-1", className)}>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       {showIcon && getSeverityIcon()}

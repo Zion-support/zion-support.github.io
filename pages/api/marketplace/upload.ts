@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
@@ -6,6 +7,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(201).json({ ok: true, file: { name, url: url |null } })
 import type { NextApiRequest, NextApiResponse } from "next",;
 ;
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+import type { NextApiRequest, NextApiResponse } from "next",;
+;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -15,6 +27,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { name, url } = req.body || {},
   if (!name) return res.status(400).json({ ok: false, error: "Missing name" }),
   // Echo back URL, real impl would upload to storage (Supabase, S3, etc.)
+<<<<<<< HEAD
   return res.status(201).json({ ok: true, file: { name, url: url || null } });
 };
   return res.status(201).json({ ok: true, file: { name, url: url || null } })
@@ -40,3 +53,8 @@ export default function handler(req, res) {
   }
 }
 }
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

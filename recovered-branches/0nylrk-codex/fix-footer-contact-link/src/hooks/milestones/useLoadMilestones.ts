@@ -1,11 +1,19 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneActivity} from './types';
+<<<<<<< HEAD
 export const useLoadMilestones = (projectId?: string) => {;
   const { user } = useAuth();
   const [milestones, setMilestones] = useState<Milestone[]>([]);
@@ -39,18 +47,32 @@ export const useLoadMilestones = (projectId?: string) => {;
           .order('created_at', { ascending: false });
         if (activitiesError) throw activitiesError;
         activitiesMap[milestone.id] = activitiesData |[]
+=======
+
+        
+        activitiesMap[milestone && milestone.id] = activitiesData || []
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       setActivities(activitiesMap);
       setError(null)
     } catch (err: any) {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       console && console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err && err.message),
       toast && toast.error("Failed to fetch milestones")
 
         
         activitiesMap[milestone.id] = activitiesData || []
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -98,6 +120,7 @@ if (throw milestones_error) {
           .order('created_at', { ascending: false }),;
         if (activitiesError) throw activitiesError,;
         activitiesMap[milestone.id] = activitiesData || [];
+<<<<<<< HEAD
       }
       
       setActivities(activitiesMap),
@@ -110,6 +133,8 @@ if (throw milestones_error) {
       setIsLoading(false)
     }
   };
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -141,6 +166,7 @@ if ( {) {
     activities;
     is_loading;
     error;
+<<<<<<< HEAD
     refetch: fetchMilestones
 ;
       setActivities(activitiesMap),;
@@ -165,5 +191,13 @@ if ( {) {
     isLoading,;
     error;
     refetch: fetchMilestones;
+=======
+    refetch: fetch_milestones;
+=======
+      setIsLoading(false)
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };

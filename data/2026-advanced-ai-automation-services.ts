@@ -44,6 +44,7 @@ import { ServiceVariant } from '../types/service-variants';
 
 ;
 const contact = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -55,6 +56,20 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   website: 'https://ziontechgroup.com',};
 
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
+=======
+=======
+
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }
+;
+export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -105,6 +120,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
   {
+<<<<<<< HEAD
     id: 'ai-autonomous-business-processor'
     name: 'AI Autonomous Business Processor'
     tagline:
@@ -136,6 +152,13 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Real-time optimization algorithms',
       'Cross-departmental coordination',
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+
+
+      'Autonomous process discovery and mapping',
+      'Real - time optimization algorithms',
+      'Cross - departmental coordination',
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'Predictive maintenance scheduling',
       'Resource allocation optimization',
       'Performance analytics dashboard',
@@ -143,14 +166,26 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
       'Process improvement suggestions',
       'Integration with existing systems',
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       '24 / 7 autonomous operation',
     ],
     popular: true,
     icon: '🤖',
+<<<<<<< HEAD
 
     link: 'https://ziontechgroup.com/ai-autonomous-business-processor',
     marketPosition:;
       'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.',
+=======
+
+    link: 'https://ziontechgroup.com/ai-autonomous-business-processor',
+    marketPosition:;
+      'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.',
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     targetAudience: [
       'Enterprise companies'
       'manufacturing'
@@ -755,6 +790,7 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
 
     reviews: 267
 <<<<<<< HEAD
+<<<<<<< HEAD
   }
 ];
 
@@ -968,6 +1004,20 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     description: 'Intelligent sales platform that autonomously identifies high-value prospects, qualifies leads, and nurtures them through the sales funnel using advanced AI and behavioral analysis.',;
     features: [;
       'Automatic lead scoringBehavioral analysisPredictive lead qualificationPersonalized nurturing sequencesSales forecasting AIPipeline optimizationCompetitor intelligenceMarket opportunity detection',;
+=======
+  }
+];
+
+
+=======
+    rating: 4.9
+    reviews: 267
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+];      'Automatic lead scoring_behavioral analysis_predictive lead qualification_personalized nurturing sequences_sales forecasting AIPipeline optimization_competitor intelligence_market opportunity detection';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'ROI trackingCRM integration';
     ];
     popular: true;
@@ -996,6 +1046,14 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     customers: 198;
     rating: 4.9,
     reviews: 267;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 ;

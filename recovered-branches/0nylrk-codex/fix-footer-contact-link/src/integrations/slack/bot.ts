@@ -11,11 +11,24 @@ interface SlackAck {
 interface SlackRespond {
   (text: string): Promise < void>;
 }
+<<<<<<< HEAD
 // Define console type to avoid TypeScript errors
 interface SafeConsole {
   log: (message: string) => void
 }
 <<<<<<< HEAD
+=======
+
+// Define console type to avoid TypeScript errors;
+
+interface SafeConsole {
+  log: (message: string) => void;
+}
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 // Declare available globals
 declare const globalThis: {
@@ -44,8 +57,16 @@ class MockApp {
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis && globalThis.console : undefined;
 
     if (safeConsole && safeConsole.log) {
+<<<<<<< HEAD
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port |3000}!`)
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
+=======
+
+
+      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 // Declare available globals;
 declare const globalThis: {;
@@ -70,12 +91,25 @@ class MockApp {;
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
     if (safeConsole && safeConsole.log) {;
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`);
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     return Promise.resolve()
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Create a mock app instance
 const app = new MockApp();
 async function askZionGPT(prompt: string): Promise<string> {
@@ -93,10 +127,22 @@ async function askZionGPT(prompt: string): Promise<string> {;
   const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,;
   if (safeConsole && safeConsole.log) {;
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   return `AI response to: ${prompt}`
 }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
   await ack();
   const [action, ...args] = command.text.split(/\s+/);
@@ -128,11 +174,14 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
       await respond(answer),;
       break;
     }
+<<<<<<< HEAD
     case 'track-project': {;
       const project = args.join(' '),;
       await respond(`Tracking project **${project}** - feature coming soon.`),;
       break;
     }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });
 // Mock startup with safer environment access
@@ -156,4 +205,9 @@ export default app;
   const port = env.PORT ? Number(env.PORT) : 3000,;
   await app.start(port);
 })(),;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default app;

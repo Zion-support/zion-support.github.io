@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readReviews, readProjects } from "../../../utils/dataStore";
 import type { PublicReview, ReviewsSummary } from "../../../types/reviews";
@@ -26,6 +27,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { targetType, targetId } = req.query as {
       targetType?: string;
       targetId?: string;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 
       return res.status(400).json({ error: "Missing targetType or targetId" });
@@ -186,6 +190,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -290,4 +295,6 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

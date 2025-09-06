@@ -55,6 +55,7 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
   const { resume, fetchResume } = useResume();
 
         setIsLoading(false)
+<<<<<<< HEAD
       }
     }
             return;
@@ -63,11 +64,17 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
 
   )
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ;
 };
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React, { useState, useEffect } from 'react',;
 import { Button } from "@/components/ui/button",;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth',;
 import { getFlagById } from '../../../../../utils/moderationDb',;
@@ -20,6 +21,10 @@ import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
 import { getFlagById } from '../../../../../utils/moderationDb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const user = parseUserFromRequest(req)
   try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode |403).json({ error: 'Forbidden' }) }
@@ -45,6 +50,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
 
+<<<<<<< HEAD
     if (req.method === 'GET') {
       const flag = await getFlagById(id);
       if (!flag) return res.status(404).json({ error: 'Not found' });
@@ -58,3 +64,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

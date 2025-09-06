@@ -43,6 +43,7 @@ import { ServiceVariant } from '../types/service-variants';
 ;
 
 const contact = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -1071,6 +1072,20 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       reviews: 28,
 
     },;
+=======
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      customers: 34,
+      rating: 4 && 4.9,
+      reviews: 28,
+
+    },;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ];    features: [
 
 =======
@@ -1651,11 +1666,15 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     roi: 'Increase warehouse efficiency by 300% and reduce operational costs by 40%'
     competitors: ['Amazon Robotics, Fetch Robotics, Locus Robotics, 6 River Systems, AutoStore'];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     market_size: '$28B+ Warehouse Robotics market', growth_rate: '35% YoY',
     variant: 'autonomous - robotics - enterprise', contact_info: contact,
     real_implementation: true, implementation_details: 'Robotics - grade platform with AI - powered autonomy and comprehensive logistics management',
     launch_date: '2023 - 10 - 01', customers: 34,
     rating: 4.9,
+<<<<<<< HEAD
 =======
     marketSize: '$28B+ Warehouse Robotics market', growthRate: '35% YoY'
     variant: 'autonomous-robotics-enterprise', contactInfo: contact
@@ -1991,6 +2010,8 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     customers: 34,;
     rating: 4.9,;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     reviews: 28;
 
   },;
@@ -2422,6 +2443,13 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] = 
     customers: 34,;
     rating: 4.9;
     reviews: 28;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 ;

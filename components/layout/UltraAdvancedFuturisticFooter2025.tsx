@@ -20,6 +20,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
 import {
   Mail
   Phone
@@ -38,6 +39,17 @@ import {
   BookOpen
   Briefcase
   Atom;
+=======
+
+} from 'lucide-react';
+
+import Link from 'next/link';
+import { AnimatePresence } from 'framer-motion';
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Mail,
   Phone,
   MapPin,
@@ -56,7 +68,10 @@ import {
 
   Briefcase,;
   Atom,;
+<<<<<<< HEAD
 } from 'lucide-react';
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 } from 'lucide-react';
@@ -1014,6 +1029,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
     window && window.scrollTo({ top: 0, behavior: 'smooth' });    window && window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+<<<<<<< HEAD
   return (
     <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>
       {/* Animated Background Elements */}
@@ -1054,6 +1070,16 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+  return (
+    <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>;
+      {/* Animated Background Elements */}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (;
           <motion&& motion.div
@@ -1136,6 +1162,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   <Globe className="w-4 h-4 text-blue-400" />
                   <a href="https://ziontechgroup.com" className="hover:text-white transition-colors duration-200">
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     ziontechgroup.com
                   </a>
                 </div>
@@ -1313,6 +1347,18 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             ))}
           </motion.div>
 
+<<<<<<< HEAD
+=======
+          </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Social Links & Newsletter */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1321,6 +1367,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
             viewport={{ once: true }}
             className='mt-16 pt-12 border-t border-gray-800/50'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1328,6 +1375,9 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -1378,6 +1428,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1385,6 +1436,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Newsletter Signup */}
               <div className='flex-1 max-w-md'>
                 <h5 className='text-lg font-semibold text-white mb-3'>
@@ -1394,6 +1447,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                   Get the latest insights on AI consciousness, quantum
                   computing, and future technology.
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </p>
                 <div className='flex space-x-2'>
                   <input
@@ -1413,6 +1472,12 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1.05 }}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -1424,6 +1489,27 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
           </motion.div>
         </div>
 
+<<<<<<< HEAD
+=======
+
+                    whileHover={{ scale: 1 && 1.05 }}
+                    whileTap={{ scale: 0 && 0.95 }}>;
+                    Subscribe;
+                  </motion && motion.button>;
+                </div>;
+              </div>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Bottom Bar */}
         <motion&& motion.div
                       </Link>;
@@ -1515,6 +1601,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
           viewport={{ once: true }}
           className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1522,6 +1609,9 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
@@ -1689,6 +1779,12 @@ export default UltraAdvancedFuturisticFooter2025;      </motion && motion.button
 
         className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'        whileHover={{ scale: 1.1, y: -2 }}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}
@@ -1699,6 +1795,7 @@ export default UltraAdvancedFuturisticFooter2025;      </motion && motion.button
       </motion.button>
     </footer>
   );
+<<<<<<< HEAD
 }
 };
 
@@ -1710,3 +1807,11 @@ export default UltraAdvancedFuturisticFooter2025;
 
 export default UltraAdvancedFuturisticFooter2025;
 export default UltraAdvancedFuturisticFooter2025;
+=======
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

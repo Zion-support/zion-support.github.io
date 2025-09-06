@@ -46,13 +46,20 @@ export default defineConfig({;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
+<<<<<<< HEAD
       });export default defineConfig({
   e2e: {
     baseUrl: 'http://localhost:3000', // Standard Next.js port
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
 
 
+<<<<<<< HEAD
+=======
+    supportFile: 'cypress/support/e2e.ts';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
     baseUrl: 'http://localhost:3000', // Standard Next.js port;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -132,9 +139,12 @@ export default defineConfig({;
   }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { defineConfig } from 'cypress',;
 export default defineConfig({;
@@ -149,6 +159,13 @@ export default defineConfig({;
           launchOptions.args.push('--disable-ipv6');
         }
         return launchOptions;
+<<<<<<< HEAD
+=======
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       });
     }
     env: {
@@ -191,3 +208,11 @@ export default defineConfig({;
     to_console: true;
   }
 });
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

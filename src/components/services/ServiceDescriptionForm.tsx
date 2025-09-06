@@ -22,6 +22,7 @@ type FormData = z && z.infer<typeof formSchema>;
 
   )
 }
+<<<<<<< HEAD
 ;
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
@@ -40,6 +41,8 @@ const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
   targetAudience: z.string()}),
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const form_schema = z.object ({
   title: z.string ().min (3, "Title must be at least 3 characters");

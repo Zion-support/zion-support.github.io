@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { TALENT_PROFILES } from "@/data/talentData",
 import { JOB_POSTS } from "@/data/jobsData";
@@ -9,6 +10,18 @@ import {TALENT_PROFILES} from "@/data/talentData";
 import {JOB_POSTS} from "@/data/jobsData";
 import {PROJECTS} from "@/data/projectsData";
 export interface SearchResult {;
+=======
+
+
+
+
+
+import { useState } from './react';
+import { TALENT_PROFILES } from '@/data / talent_data';
+import { JOB_POSTS } from '@/data / jobs_data';
+import { PROJECTS } from '@/data / projects_data';
+export interface SearchResult {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   type: "talent" | "job" | "project";
   title: string,
@@ -20,6 +33,7 @@ interface SearchFilters {
   skills?: string[] | null;
   location?: string | null;
   budget?: { min: number, max: number } | null;
+<<<<<<< HEAD
   availability?: string | null
 }
 export function useAISearch() {
@@ -61,6 +75,22 @@ export function useAISearch() {
   const [results, setResults] = useState<SearchResult[]>([]),
   const [loading, setLoading] = useState(false),
 
+=======
+  availability?: string | null;
+}
+
+
+
+=======
+export /**
+ * useAISearch - Function description
+ */
+function useAISearch() {
+  const [results, set_results] = useState < SearchResult[]>([]);
+  const [loading, set_loading] = useState (false);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const search = async (query: string) => {
     setLoading(true),
     try {
@@ -140,8 +170,33 @@ export function useAISearch() {
     }
   }
 
+<<<<<<< HEAD
   return { results, loading, search }
 }
+=======
+      const response = await fetch (
+        "https://ziontechgroup.functions.supabase.co / functions / v1 / ai - search";
+        {
+          method: "POST",
+          headers: { "Content - Type": "application / json" }
+          body: JSON.stringify ({ query })}
+      );
+      const data = await response.json ();
+      const filters: SearchFilters = data.filters || {}
+;
+      const items: SearchResult[] = [];
+      const match_skill = (skills: string[] | undefined) =>: any {
+        // Check condition
+if (return true, ) {
+  $2
+}
+        return skills?.some ((s) =>;
+          filters.skills!.some ((f) => s.toLowerCase ().includes (f.toLowerCase ())));
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 export function useAISearch() {;
   const [results, setResults] = useState<SearchResult[]>([]),;
@@ -216,6 +271,12 @@ if ( {) {
     }
 
   };
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return { results, loading, search }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

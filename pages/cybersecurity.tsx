@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +15,10 @@ import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function CybersecurityPage() {
   const features = [
     'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
@@ -44,6 +49,12 @@ export default function CybersecurityPage() {
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
               <a href="/contact" className="px-8 py-4">Security Assessment</Link>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </div>
           </header>
           <section>
@@ -72,6 +83,12 @@ export default function CybersecurityPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <a href="/vulnerability-assessment-penetration-testing" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40 transition-colors">
                 <div className="text-gray-200 font-semibold mb-2">Vulnerability Assessment & Pentest (VAPT)</div>
                 <p className="text-gray-300 text-sm">Learn more</p>
@@ -85,6 +102,7 @@ export default function CybersecurityPage() {
         </div>
       </div>
     </Layout>
+<<<<<<< HEAD
   );
 };
   )
@@ -94,6 +112,22 @@ import Layout from '../components/layout/Layout';
 import { Shield, CheckCircle, Lock, Activity } from 'lucide-react';
 export default function CybersecurityPage(req, res) {
   try {
+=======
+
+=======
+}
+
+=======
+import React from 'react',
+import Head from 'next / head',
+import Layout from '../components / layout / Layout',
+import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
+;
+export default /**
+ * CybersecurityPage - Function description
+ */
+function CybersecurityPage() {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const features = [;
     'Zero Trust architectures and identity - first segmentation_cloud posture hardening, secrets management, and key rotation_threat detection, incident response playbooks, and tabletop exercises_compliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
   const solutions = [;
@@ -152,6 +186,7 @@ export default function CybersecurityPage(req, res) {
           </section>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </Layout>;
   );
   } catch (error) {
@@ -160,3 +195,13 @@ export default function CybersecurityPage(req, res) {
   }
 }
 }
+=======
+    </Layout>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

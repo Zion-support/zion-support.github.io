@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
@@ -7,6 +8,50 @@ import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button",
 import { Mail } from "lucide-react",
+=======
+
+import { GradientHeading  } from '@/components / GradientHeading';
+import { Button  } from '@/components / ui / button';
+import { Mail  } from './lucide-react';
+export /**
+ * ContactSection - Function description
+ */
+function ContactSection() {
+  return (
+    <section className="py - 20 bg - zion - blue" id="contact">;
+      <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
+        <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 16 items - center">;
+          <div>;
+            <GradientHeading > Get In Touch</GradientHeading>;
+            <p className="mt - 4 text - zion - slate - light text - xl mb - 8">;
+              We have the equipment, the parts, and the maintenance services;
+              ready for you — right now. Contact us today.;
+            </p>;
+            <div className="flex items - center mb - 6">;
+              <div className="mr - 4 p - 2 bg - zion - purple / 20 rounded - full text - zion - cyan">;
+                <Mail className="h - 6 w - 6" />;
+              </div>;
+              <div>;
+                <p className="text - white font - semibold">Email Us</p>;
+                <a;
+                  href="mailto:commercial@ziontechgroup.com";
+                  className="text - zion - cyan hover:text - zion - purple transition - colors";
+                >;
+                  commercial@ziontechgroup.com;
+                </a>;
+              </div>;
+            </div>;
+            <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple text - white">;
+
+              Request Commercial Proposal;
+            </Button>;
+          </div>;
+          <div className="relative">;
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ContactSection() {
   return (
     <section className="py-20 bg-zion-blue" id="contact">
@@ -170,6 +215,7 @@ export function ContactSection() {
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   );
 }
   )
@@ -258,6 +304,10 @@ export function ContactSection() {;
           </div>;
         </div>;
       </div>;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </section>;
   );
 }

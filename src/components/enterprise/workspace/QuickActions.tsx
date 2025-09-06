@@ -16,6 +16,7 @@ import { Calendar } from 'lucide-react';
         <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>;
           {actions && actions.map(action => (;
             <Button
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -80,6 +81,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button",
 import { FileText, Plus, Search, Calendar } from 'lucide-react'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       id: 'post - job',
       label: 'Post New Job',
@@ -117,12 +120,27 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react'
   ],
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+              key={action.id}
+              variant='outline'              className={`h - auto justify - start p - 4 ${action.color}`}
+            >;
+              <div className='flex flex - col items - start text - left'>;
+                <div className='flex items - center'>;
+                  {action.icon}
+                  <span>{action.label}</span>;
+                </div>;
+
+                <span className='mt - 1 text - xs text - muted - foreground'>;
+                  {action.description}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card>
       <CardHeader>
@@ -142,18 +160,27 @@ import { FileText, Plus, Search, Calendar } from 'lucide-react'
               key={action.id}
               variant="outline" 
               className={`h-auto justify-start p-4 ${action.color}`}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <div className="flex flex-col items-start text-left">
                 <div className="flex items-center">
                   {action.icon}
                   <span>{action.label}</span>
                 </div>
+<<<<<<< HEAD
                 <span className='mt-1 text-xs text-muted-foreground'>
                   {action.description}
                 </span>              </div>
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
           {actions.map(action => (
             <Button
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <Button 
 
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
@@ -205,6 +232,9 @@ export function QuickActions() {;
           {actions.map(action => (;
             <Button;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               key={action.id}
@@ -212,6 +242,9 @@ export function QuickActions() {;
               className={`h-auto justify-start p-4 ${action.color}`}
             >
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               key={action && action.id}
               variant='outline'              className={`h-auto justify-start p-4 ${action && action.color}`}>;

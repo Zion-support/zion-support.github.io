@@ -73,12 +73,17 @@ export default function Header() {;
           ? 'bg - black / 90 backdrop - blur - xl border - b border - white / 20 shadow - 2xl';
           : 'bg - black / 60 backdrop - blur - md border - b border - white / 10';
       }`}
+<<<<<<< HEAD
       role="banner"
       aria-label="Main navigation"
 role=&quot;banner&quot;
       aria-label=&quot;Main navigation&quot;
       role="banner"
       aria-label="Main navigation"
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -106,6 +111,7 @@ role=&quot;banner&quot;
                 aria - label={`Navigate to ${item.name} page`}
               >;
                 {item.name}
+<<<<<<< HEAD
 <span className=&quot;absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full&quot;></span>
               </Link>
             ))}
@@ -118,13 +124,28 @@ role=&quot;banner&quot;
                 aria-label=&quot;Services menu&quot;
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
+=======
+
+
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
+=======
+=======
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full"></span>
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </Link>
             ))}
 ;
             {/* Services Dropdown */}
+<<<<<<< HEAD
             <div className="relative group">
 <div className=&quot;relative group&quot;>
             <div className="relative group">
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <button 
                 className="text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group"
                 aria-expanded="false"
@@ -319,6 +340,11 @@ role=&quot;banner&quot;
           {/* CTA Button */}
 <div className=&quot;hidden lg:flex items-center space-x-4&quot;>
           <div className="hidden lg:flex items-center space-x-4">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <Link
               href="/contact"
               className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
@@ -332,6 +358,11 @@ role=&quot;banner&quot;
             onClick={() => setIsMenuOpen(!isMenuOpen)}
 className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200&quot;
             className="lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg-white/10 transition-all duration-200"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             aria-expanded={isMenuOpen}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             aria-controls="mobile-menu"
@@ -426,6 +457,11 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                 <div className=&quot;text-gray-400 text-sm font-medium mb-2&quot;>Services</div>
               <div className="px-3 py-2">
                 <div className="text-gray-400 text-sm font-medium mb-2">Services</div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {services.map((service) => (
                   <Link
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -443,6 +479,11 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
               <div className=&quot;pt-4&quot;>
               </div>
               <div className="pt-4">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Link
                   href="/contact"
                   className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-200"

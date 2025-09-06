@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {
   Card
@@ -23,10 +24,25 @@ import {HELP_CATEGORIES} from "./help-content";
 import React from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { HELP_CATEGORIES } from "./help-content",
+=======
+
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HELP_CATEGORIES} from "./help-content";
+
+=======
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HELP_CATEGORIES } from "./help-content",
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface HelpArticleListProps {
   categoryId: string,
   onArticleSelect: (articleId: string) => void,
   searchQuery: string
+<<<<<<< HEAD
 }
 
 export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
@@ -47,6 +63,10 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
   const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
   if (!category) {;
     return <div>Category not found</div>;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   
   // Filter articles based on search query
@@ -104,12 +124,49 @@ function formatDate(date: string): string {
     year: "numeric"
     month: "long"
     day: "numeric"
+<<<<<<< HEAD
   });
 }
 
   })
   })
 }
+=======
+
+    </div>;
+  );
+}
+
+function formatDate(): any (date: string): string {;
+  return new Date(date).toLocaleDateString("en-US", {;
+    year: "numeric",;
+    month: "long",;
+    day: "numeric";
+
+  });
+}
+
+=======
+import React from './react';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components / ui / card';
+import { HELP_CATEGORIES  } from './help - content';
+interface HelpArticleListProps {
+  category_id: string;
+  onArticleSelect: (article_id: string) => void;
+  search_query: string;
+}
+export /**
+ * HelpArticleList - Function description
+ */
+function HelpArticleList() {
+  const category = HELP_CATEGORIES.find ((cat) => cat.id === category_id);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   // Check condition
 if ( {) {
@@ -168,4 +225,15 @@ function format_date (date: string): string {
     day: "numeric",
   });
 }
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  })
+=======
+  })
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

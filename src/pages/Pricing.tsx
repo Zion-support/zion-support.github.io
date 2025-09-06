@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -60,6 +61,25 @@ const Pricing: React.FC = () => {
       ],
       color: "from-purple-500 to-pink-600",
       popular: false
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   ];
 
@@ -132,6 +152,7 @@ const Pricing: React.FC = () => {
         </div>
       </div>
 
+<<<<<<< HEAD
       {/* Pricing Cards */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -318,4 +339,11 @@ const Pricing: React.FC = () => {
   );
 };
 
+=======
+  );
+}
+  );
+};
+;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default Pricing;

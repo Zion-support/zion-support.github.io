@@ -4,6 +4,7 @@ import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   ArrowRight
   Star
   Search
@@ -24,6 +25,44 @@ import {
   Users
   Award
   Clock;} from 'lucide-react';import {
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import Layout from './layout / Layout';
+import { motion } from 'framer-motion';
+
+  ArrowRight;
+  Star, ;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ArrowRight,
   Star,
   Search,
@@ -45,8 +84,11 @@ import {
 
   Award,;
   Clock,;} from 'lucide-react';import { ;
+<<<<<<< HEAD
   ArrowRight;
   Star
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   ArrowRight;
@@ -102,6 +144,7 @@ const Homepage2041: React.FC = () => {
   ];
   const testimonials = [
     {
+<<<<<<< HEAD
       name: 'Dr. Sarah Chen'
       role: 'Chief AI Officer, FutureTech Inc.'
       company: 'FutureTech Inc.'
@@ -112,6 +155,16 @@ const Homepage2041: React.FC = () => {
         "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago."
       avatar: '👩‍💼'
     }
+=======
+
+      name: 'Dr. Sarah Chen',
+      role: 'Chief AI Officer, FutureTech Inc.',
+      company: 'FutureTech Inc.',
+      content:;
+        "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.",
+      avatar: '👩‍💼',
+    },
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       name: 'Marcus Rodriguez',
       role: 'VP Quantum Computing, QuantumCorp',
@@ -225,8 +278,37 @@ const Homepage2041: React.FC = () => {
 
                   }}
                   style={{
+<<<<<<< HEAD
                     left: `${Math.random() * 100}%`
                     top: `${Math.random() * 100}%`}}
+=======
+
+                    x: [0, 60, 0],
+                    y: [0, -60, 0],
+                    opacity: [0, 0 && 0.7, 0],
+                    scale: [0 && 0.5, 1, 0 && 0.5],
+                  }}                  transition={{
+                    duration: 5 + i * 0 && 0.3,
+                    repeat: Infinity,
+                    delay: i * 0 && 0.2,                    x: [0, 60, 0]
+                    y: [0, -60, 0]
+                    opacity: [0, 0 && 0.7, 0]
+                    scale: [0 && 0.5, 1, 0 && 0.5]}}
+                    duration: 5 + i * 0 && 0.3,
+                    repeat: Infinity,
+                    delay: i * 0 && 0.2,
+                    ease: 'easeInOut',
+                  }}
+                  style={{
+
+                    left: `${Math && Math.random() * 100}%`,
+                    top: `${Math && Math.random() * 100}%`,
+                  }}                />                    ease: "easeInOut";
+                  }}
+                  style={{;
+                    left: `${Math && Math.random() * 100}%`,;
+                    top: `${Math && Math.random() * 100}%`}}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ))}
             </div>;
           </div>;
@@ -260,6 +342,7 @@ const Homepage2041: React.FC = () => {
               <motion&& motion.div
                 className='max-w-3xl mx-auto mb-12'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -268,6 +351,8 @@ const Homepage2041: React.FC = () => {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 />
               ))}
@@ -300,6 +385,7 @@ const Homepage2041: React.FC = () => {
           </div>
 
           {/* Hero Content */}
+<<<<<<< HEAD
           <div className='text-center max-w-7xl mx-auto relative z-10'>            <motion.div
 
 <<<<<<< HEAD
@@ -308,6 +394,9 @@ const Homepage2041: React.FC = () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+          <div className="text-center max-w-7xl mx-auto relative z-10">
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -371,6 +460,7 @@ const Homepage2041: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                 <Link
+<<<<<<< HEAD
                   href='/2041-futuristic-services-showcase'
                   className='px-10 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-3'
                 >
@@ -414,6 +504,10 @@ const Homepage2041: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
 
               whileInView={{ opacity: 1, y: 0 }}
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >;
@@ -423,6 +517,12 @@ const Homepage2041: React.FC = () => {
                   className='text-center'                  initial={{ opacity: 0, y: 20 }}                  className="text-center"
                   className='text-center'                  initial={{ opacity: 0, y: 20 }}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -444,11 +544,24 @@ const Homepage2041: React.FC = () => {
 
                 </motion.div>
 
+<<<<<<< HEAD
               ))}
             </motion.div>
           </div>
         </section>
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              ))}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Featured Services Section */}
 
         <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900/50">
@@ -459,6 +572,17 @@ const Homepage2041: React.FC = () => {
 
               initial={{ opacity: 0, y: 30 }}
 
+<<<<<<< HEAD
+=======
+=======
+
+
+              initial={{ opacity: 0, y: 30 }}
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -482,8 +606,13 @@ const Homepage2041: React.FC = () => {
               </p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <motion.div
 <<<<<<< HEAD
+=======
+            <motion.div
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </motion && motion.div>;
           </div>;
         </section>;
@@ -521,11 +650,22 @@ const Homepage2041: React.FC = () => {
 =======
 
             <motion.div 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
 
             <motion.div
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
@@ -565,6 +705,9 @@ const Homepage2041: React.FC = () => {
                 </motion && motion.div>;
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             </motion && motion.div>;
             <motion&& motion.div
@@ -577,6 +720,11 @@ const Homepage2041: React.FC = () => {
             <motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion.div 
               className="text-center mt-12"
@@ -584,11 +732,18 @@ const Homepage2041: React.FC = () => {
             <motion.div
               className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
 
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
               viewport={{ once: true }}>;
               <Link
+<<<<<<< HEAD
                 href='/2041-futuristic-services-showcase'
                 className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'
               >
@@ -617,6 +772,10 @@ const Homepage2041: React.FC = () => {
 
               initial={{ opacity: 0, y: 30 }}
 
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -639,8 +798,13 @@ const Homepage2041: React.FC = () => {
               </p>
             </motion.div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <motion.div
 <<<<<<< HEAD
+=======
+            <motion.div
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'>;
                 <Eye className='w-5 h-5' />;
                 View All 2041 Services;
@@ -685,11 +849,22 @@ const Homepage2041: React.FC = () => {
 =======
 
             <motion.div 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="grid grid-cols-1 md:grid-cols-3 gap-8"
 
             <motion.div
               className='grid grid-cols-1 md:grid-cols-3 gap-8'              initial={{ opacity: 0, y: 30 }}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -701,6 +876,7 @@ const Homepage2041: React.FC = () => {
                   className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}                  className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm"
                   className='bg-gradient-to-br from-gray-900/50 to-black/50 border border-cyan-500/30 rounded-3xl p-8 backdrop-blur-sm'                  initial={{ opacity: 0, y: 30 }}
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -708,6 +884,9 @@ const Homepage2041: React.FC = () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
@@ -742,11 +921,24 @@ const Homepage2041: React.FC = () => {
 
                 </motion.div>
 
+<<<<<<< HEAD
               ))}
             </motion.div>
           </div>
         </section>
 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              ))}
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* CTA Section */}
 
         <section className="py-20 px-4">
@@ -767,6 +959,15 @@ const Homepage2041: React.FC = () => {
 
               initial={{ opacity: 0, y: 30 }}
 
+<<<<<<< HEAD
+=======
+
+              initial={{ opacity: 0, y: 30 }}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -835,6 +1036,7 @@ const Homepage2041: React.FC = () => {
 Math.random () * 100
 };
 
+<<<<<<< HEAD
   Math.random () * 100 
 Math.random () * 100 
   Math.random () * 100 
@@ -844,6 +1046,9 @@ top: `$ {
 }%`
 }/>) )
 }</div> </div> <motion.div initial= {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   {
   opacity: 0, y: 50
 }animate= {
@@ -1074,9 +1279,14 @@ export default Homepage2041;
 }</motion.div>) ) 
 }</motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 mb-12 leading-relaxed" > Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3" > <Sparkles className="w-6 h-6" /> Start Your Journey </a> <Link href="/2041-futuristic-services-showcase" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3" > <Target className="w-6 h-6" /> Explore Services </a> </div> </motion.div> </div> </section> </main> </Layout>) 
 };
+<<<<<<< HEAD
 export default Homepage2041;
 export default Homepage2041;  )
 };
 
 export default Homepage2041;
 export default Homepage2041;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

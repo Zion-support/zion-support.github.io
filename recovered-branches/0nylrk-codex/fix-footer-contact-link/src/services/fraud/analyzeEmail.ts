@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // Email analysis functionality
 import { suspiciousEmailDomains  } from './constants';
 import { EmailAnalysisResult } from './types';
@@ -8,6 +9,13 @@ import { EmailAnalysisResult } from './types';
 
 export const analyzeEmail = (email: string): EmailAnalysisResult => {
 export const analyzeEmail = (email: string): EmailAnalysisResult => {;
+=======
+
+
+export const analyzeEmail = (email: string): EmailAnalysisResult => {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const domain = email.split('@')[1]?.toLowerCase();
   const reasons: string[] = []
   if (!domain) return { isSuspicious: true, reasons: ['Invalid email format'] }
@@ -38,6 +46,13 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {;
     if (domain.includes(suspiciousDomain)) {;
       reasons.push(`Suspicious email domain: ${domain}`),;
       break;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
   return {

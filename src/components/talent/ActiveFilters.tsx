@@ -26,10 +26,14 @@ interface ActiveFiltersProps {
   clearFilters: () => void
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+<<<<<<< HEAD
   selectedSkills
   toggleSkill
   selectedAvailability
@@ -87,6 +91,9 @@ export function ActiveFilters({
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const hasActiveFilters = null;
     selectedSkills.length > 0 ||
     selectedAvailability.length > 0 ||
@@ -96,6 +103,9 @@ export function ActiveFilters({
     experienceRange[1] !== 15 ||
     priceRange[0] !== 50 ||
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     selectedRegions.length > 0 ||
@@ -103,11 +113,14 @@ export function ActiveFilters({
     experienceRange[1] !== 15 ||
     priceRange[0] !== 50 ||
 
+<<<<<<< HEAD
 =======
 =======
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     priceRange[1] !== 200,
   
   if (!hasActiveFilters) return null,
@@ -231,15 +244,41 @@ export function ActiveFilters({;
 
         <ClickableBadge
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
+<<<<<<< HEAD
           onClick={() => setExperienceRange([0, 15])}        >
         <ClickableBadge 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
           onClick={() => setExperienceRange([0, 15])}
         >
+=======
+          onClick={() => setExperienceRange([0, 15])}        >;
+          {experienceRange[0]}-{experienceRange[1]} years;
+          <X className='h-3 w-3' />;
+        </ClickableBadge>;
+      )}
+          <X className="h-3 w-3" />
+
+
+        </ClickableBadge>
+      ))}
+      
+      {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
+
+
+          ${priceRange[0]}-${priceRange[1]}/hr
+          <X className="h-3 w-3" />
+        </ClickableBadge>
+      )}
+
+      
+      {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {experienceRange[0]}-{experienceRange[1]} years
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
+<<<<<<< HEAD
           <X className="h-3 w-3" />
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -279,6 +318,8 @@ export function ActiveFilters({;
         </ClickableBadge>
       )}
 <<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -286,7 +327,12 @@ export function ActiveFilters({;
         variant='ghost'
         size='sm'
         onClick={clearFilters}
+<<<<<<< HEAD
         className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'      >
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         Clear All
       </Button>
     </div>
@@ -294,6 +340,9 @@ export function ActiveFilters({;
 };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       
       <Button 
@@ -302,15 +351,25 @@ export function ActiveFilters({;
         onClick={clearFilters}
         className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
       >
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         Clear All
       </Button>
     </div>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -319,6 +378,8 @@ export function ActiveFilters({;
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <X className="h-3 w-3" />;
         </ClickableBadge>;
       ))}

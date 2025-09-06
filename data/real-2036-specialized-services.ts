@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export type Real2036SpecializedService = {
   id: string, name: string,
   tagline: string, description: string,
@@ -18,6 +19,11 @@ export type Real2036SpecializedService = {;
   period?: string;
   features: string[];
   link: string;  launchDate?: string;  rating?: number;
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   marketSize?: string;
   targetAudience?: string;
   competitiveAdvantage?: string;
@@ -26,6 +32,7 @@ export type Real2036SpecializedService = {;
 
 
   {
+<<<<<<< HEAD
     id: 'neuromorphic-computing-platform'
     name: 'Neuromorphic Computing Platform'
     tagline: 'Brain-inspired computing for next-generation AI applications'
@@ -500,6 +507,9 @@ export type Real2036SpecializedService = {;
   // Synthetic Biology Platform
   {
     id: 'synthetic-biology-platform';
+=======
+    id: 'synthetic - biology - platform';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     name: 'Synthetic Biology Platform';
     tagline: 'Design and engineer biological systems with AI'
     description: 'Advanced platform that combines synthetic biology with artificial intelligence to design, engineer, and optimize biological systems for various applications.';
@@ -985,10 +995,14 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [
     useCases: ['Space tourismTraining programsSafety managementCustomer experience']
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management']
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 
 export type Real2036SpecializedService = {;
+<<<<<<< HEAD
   id: string,;
   name: string,;
   tagline: string,;
@@ -1227,6 +1241,10 @@ export const real2036SpecializedServices: Real2036SpecializedService[] = [;
     integration: ['Spacecraft systemsTraining facilitiesBooking systemsSafety systems'],;
     useCases: ['Space tourismTraining programsSafety managementCustomer experience'],;
     technology: ['Space systemsSafety protocolsTraining technologyCustomer management'];
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];
 ;

@@ -4,6 +4,7 @@ import Link from 'next/link';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 
+<<<<<<< HEAD
 import {
   Phone
   Mail
@@ -27,6 +28,12 @@ import {
   Github
   Youtube
   Instagram;} from 'lucide-react';import {
+=======
+import { 
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Phone,
   Mail,
   MapPin,
@@ -49,6 +56,11 @@ import {
   Github,
   Youtube,;
   Instagram,;} from 'lucide-react';import { ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;
@@ -414,6 +426,15 @@ const EnhancedFooter2025: React.FC = () => {
               </div>
             </div>
 
+<<<<<<< HEAD
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Service Categories */}
             {serviceCategories && serviceCategories.map((category, index) => (;
               <motion&& motion.div
@@ -424,6 +445,7 @@ const EnhancedFooter2025: React.FC = () => {
                 viewport={{ once: true }}
                 className='space-y-4'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -431,6 +453,9 @@ const EnhancedFooter2025: React.FC = () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className='flex items-center space-x-3'>
                   <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -564,6 +589,7 @@ const EnhancedFooter2025: React.FC = () => {
 
                     >
 
+<<<<<<< HEAD
                       {service.name}
                     </Link>
                   ))}
@@ -571,10 +597,27 @@ const EnhancedFooter2025: React.FC = () => {
               </motion.div>
             ))}
           </div>
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                      {service.name}
+
+          </div>;
+=======
+
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Additional Links */}
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Company Links */}
             <div>;
               <h4 className='text-white font-semibold mb-4'>Company</h4>;
@@ -609,6 +652,7 @@ const EnhancedFooter2025: React.FC = () => {
 
                   >
 
+<<<<<<< HEAD
                     {link.name}
                   </Link>
                 ))}
@@ -635,6 +679,17 @@ const EnhancedFooter2025: React.FC = () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                    {link.name}
+
+              </div>;
+            </div>;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Legal Links */}
 
 
@@ -651,6 +706,10 @@ const EnhancedFooter2025: React.FC = () => {
                     className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {link.name}
                   </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -670,11 +729,22 @@ const EnhancedFooter2025: React.FC = () => {
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            {/* Social Links */}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     key={social.name}
                     href={social.href}
                     className={`w-10 h-10 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-200 border border-gray-700 hover:border-gray-600`}
@@ -683,12 +753,72 @@ const EnhancedFooter2025: React.FC = () => {
                     <social.icon className="w-5 h-5" />
                   </a>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 ))}
               </div>
             </div>
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
+=======
+                  </Link>))}
+              </div>;
+            </div>;
+            {/* Legal Links */}
+            <div>;
+              <h4 className='text - white font - semibold mb - 4'>Legal</h4>;
+              <div className='space - y-2'>;
+                {legal_links.map (link => (
+                  <Link;
+                    key={link.name}
+                    href={link.href}
+                    className='block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm'                  >              <h4 className="text - white font - semibold mb - 4">Legal</h4>;
+              <div className="space - y-2">;
+                {legal_links.map ((link) => (
+                  <Link;
+                    key={link.name}
+                    href={link.href}
+                    className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
+                    {link.name}
+                  </Link>))}
+              </div>;
+            </div>;
+            {/* Social Links */}
+            <div>;
+              <h4 className='text - white font - semibold mb - 4'>Follow Us</h4>;
+              <div className='flex space - x-4'>;
+                {social_links.map (social => (                  <a              <h4 className="text - white font - semibold mb - 4">Follow Us</h4>;
+              <div className="flex space - x-4">;
+                {social_links.map ((social) => (
+                  <a;
+                    key={social.name}
+                    href={social.href}
+                    className={`w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gray - 700 / 50 rounded - lg flex items - center justify - center text - gray - 400 ${social.color} transition - all duration - 200 border border - gray - 700 hover:border - gray - 600`}
+                    aria - label={social.name}
+                  >;
+                    <social.icon className='w - 5 h - 5' />                  </a>                    <social.icon className="w - 5 h - 5" />;
+                  </a>))}
+
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Newsletter Section */}
         <div className='border-t border-gray-800/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
@@ -697,6 +827,16 @@ const EnhancedFooter2025: React.FC = () => {
             <div className="text-center">
               <motion.h3
 
+<<<<<<< HEAD
+=======
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
@@ -704,6 +844,7 @@ const EnhancedFooter2025: React.FC = () => {
                 className='text-2xl md:text-3xl font-bold text-white mb-4'              >                className="text-2xl md:text-3xl font-bold text-white mb-4"
                 className='text-2xl md:text-3xl font-bold text-white mb-4'              >
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -711,6 +852,9 @@ const EnhancedFooter2025: React.FC = () => {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 Stay Ahead of the Future
               </motion.h3>
@@ -723,6 +867,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
                 className='text-gray-400 mb-6 max-w-2xl mx-auto'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -730,6 +875,9 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 Get the latest insights on AI, quantum computing, and emerging
                 technologies delivered to your inbox.
@@ -755,6 +903,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
                 className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -762,6 +911,9 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <input
@@ -780,6 +932,7 @@ transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+<<<<<<< HEAD
                 />
                 <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
                   Subscribe
@@ -824,5 +977,40 @@ export default EnhancedFooter2025;
 
 export default EnhancedFooter2025;
 
+=======
+
+
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+=======
+  )
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+export default EnhancedFooter2025;
+
+
+=======
+    </footer>);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export default EnhancedFooter2025;
+<<<<<<< HEAD
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

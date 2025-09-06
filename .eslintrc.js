@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 /* eslint - env node */;
 =======
@@ -14,6 +17,7 @@ module.exports = {
 =======
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -21,6 +25,8 @@ module.exports = {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /* eslint-env node */
 module.exports = {
   env: {
@@ -423,6 +429,7 @@ origin/automation-improvements-final
   ],
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -430,6 +437,11 @@ origin/automation-improvements-final
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 
@@ -447,6 +459,11 @@ origin/automation-improvements-final
     "commit-and-push.js"
   ]
 };
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     "ecosystem.simple.js",
     "ecosystem.working.js",
     "execute-automation.js",
@@ -543,3 +560,10 @@ module.exports = {;
     'automation/netlify/src/apps/';
   ];
 },;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

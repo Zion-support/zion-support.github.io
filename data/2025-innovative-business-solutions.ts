@@ -87,11 +87,16 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [
     marketSize: '$7.8B business intelligence market', growthRate: '28% annual growth',
     variant: 'ai-business-intelligence',
     contactInfo: {
+<<<<<<< HEAD
+=======
+      
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       address: '364 E Main St STE 1008 Middletown DE 19709',
 
+<<<<<<< HEAD
     reviews: 26
   }
 ];
@@ -706,6 +711,8 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
       mobile: '+1 302 464 0950',;
       email: 'kleber@ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709',;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       website: 'https://ziontechgroup.com';
     },;
     realImplementation: true,;
@@ -979,6 +986,12 @@ export const innovativeBusinessSolutions2025: InnovativeBusinessSolution[] = [;
     rating: 4.7;
     reviews: 26;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

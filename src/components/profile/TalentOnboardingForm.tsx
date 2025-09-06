@@ -1,6 +1,7 @@
 public_url;
 }= supabase.storage.from ('resumes') .getPublicUrl (file_name);
 return public_url;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React, { useState } from "react",
@@ -319,6 +320,8 @@ const form = useForm<TalentFormValues> ({
   basicInfo: {
   cv: undefined
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
 }'}

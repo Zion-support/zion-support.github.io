@@ -19,6 +19,7 @@ return (
               {REWARD_OPTIONS && REWARD_OPTIONS.map(option => (;
 
                 <div
+<<<<<<< HEAD
                   key={option.id}
                   className='flex justify-between items-center border-b pb-4'
                 >                  <div>
@@ -37,6 +38,25 @@ return (
                         wallet && wallet.balance >= option.cost
                           ? 'default'
                           : 'outline'
+=======
+                  key={option && option.id}
+                  className='flex justify-between items-center border-b pb-4'>                  <div>;
+                    <h3 className='font-medium'>{option && option.title}</h3>;
+                    <p className='text-sm text-muted-foreground'>;
+                      {option && option.description}
+                    </p>;
+                  </div>;
+                  <div className='flex flex-col items-end gap-1'>;
+                    <span className='text-sm font-bold'>;
+                      {option && option.cost} ZION$;
+                    </span>;
+                    <Button
+                      size='sm'
+                      variant={
+                        wallet && wallet.balance>= option && option.cost;
+                          ? 'default';
+                          : 'outline';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       }
 
                       disabled={!wallet || wallet.balance < option && option.cost}
@@ -53,6 +73,7 @@ return (
                 variant='outline'
                 size='sm'
                 onClick={() => setOpen(false)}
+<<<<<<< HEAD
 
 
 
@@ -226,6 +247,15 @@ export function RedeemTokensCard() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card>
       <CardHeader>
@@ -243,6 +273,7 @@ export function RedeemTokensCard() {
             <DialogHeader>
               <DialogTitle>Available Rewards</DialogTitle>
               <DialogDescription>
+<<<<<<< HEAD
                 Exchange your tokens for these rewards. You currently have{' '}
                 {wallet?.balance |0} ZION$.
               </DialogDescription>
@@ -291,6 +322,10 @@ export function RedeemTokensCard() {
                       onClick={() => handleRedeem(option)}
                     >
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </Button>
                   </div>
                 </div>
@@ -310,6 +345,7 @@ export function RedeemTokensCard() {
         <Dialog open={open} onOpenChange={set_open}>;
           <DialogTrigger as_child>;
             <Button className='w - full'>View Available Rewards</Button>;
+<<<<<<< HEAD
 =======
   )
 <<<<<<< HEAD
@@ -381,6 +417,8 @@ export function RedeemTokensCard() {;
           <DialogTrigger asChild>;
             <Button className="w-full">View Available Rewards</Button>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;

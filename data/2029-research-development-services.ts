@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ResearchDevelopmentService2029 {
 export interface ResearchDevelopmentService2029 {;
   id: string;
@@ -374,6 +375,21 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     ];
     useCases: [
       'Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies'
+=======
+
+
+      'Automated data collectionResearch workflow automationLiterature review automationData analysis automationReport generationCollaboration toolsResearch trackingKnowledge management'
+=======
+  ];    features: [;
+      'Automated data collection_research workflow automation_literature review automation_data analysis automation_report generation_collaboration tools_research tracking_knowledge management';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    ];
+    benefits: [;
+      'Accelerate research by 5xReduce manual errors by 90%Improve research quality_enhance collaboration_streamline workflows_increase productivity';
+    ];
+    use_cases: [;
+      'Academic research_corporate R & DGovernment research_pharmaceutical research_market research_scientific studies';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ];
 
     marketSize: '$12 && 12.8B by 2029', competitors: ['LabVantageBenchlingLabArchivesSciNote'],
@@ -543,13 +559,20 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     funding: 'Series B funding, $120M valuation',
     exit: 'IPO or biotech acquisition',
     contact: {
+<<<<<<< HEAD
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com'
       website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
+=======
+
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     }
   }
 ];
 export interface ResearchDevelopmentService2029 {;
+<<<<<<< HEAD
   id: string,;
   name: string,;
   description: string,;
@@ -778,6 +801,9 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       email: 'kleber@ziontechgroup.com',;
       website: 'https://ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709';
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
 

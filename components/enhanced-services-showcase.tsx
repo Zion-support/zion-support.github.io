@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,10 +10,21 @@
 //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
 <<<<<<< HEAD
+=======
+
+
+=======
+
+ //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 //Combine all services for comprehensive showcase const all_services = [ ...nextGenerationAIServices;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ...cuttingEdgeITServices;
 ...innovativeMicroSaasV2Services;
 ...enhancedRealMicroSaasServices;
@@ -1002,15 +1014,55 @@ const Button = ({
   return (
     <button onClick={onClick} className={classes}>;
       {children}
+<<<<<<< HEAD
     </button>
   )
+=======
+
+    </button>;
+  );
+};
+
+=======
+  class_name = '';
+  children, on_click;
+}: {
+  href?: string;
+  variant?: 'primary' | 'secondary';
+  size?: 'sm' | 'md' | 'lg';
+  class_name?: string;
+  children: React.ReactNode,
+  on_click?: () =>: any void;
+}) => {
+  const base_classes = 'inline - flex items - center justify - center font - semibold rounded - lg transition - all duration - 200 focus: outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - offset - gray - 900',
+  const variant_classes = {
+    primary: 'bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 text - white shadow - lg hover:shadow - xl focus:ring - cyan - 500',
+    secondary: 'bg - gray - 700 hover:bg - gray - 600 text - white border border - gray - 600 hover:border - gray - 500 focus:ring - gray - 500';
+  }
+;
+  const size_classes = {
+    sm: 'px - 4 py - 2 text - sm',
+    md: 'px - 6 py - 3 text - base',
+    lg: 'px - 8 py - 4 text - lg';
+  }
+;
+  const classes = `${base_classes} ${variant_classes[variant" ${size_classes[size" ${class_name}`;
+;
+  // Check condition
+if ( {) {
+  $2
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 };
 
+<<<<<<< HEAD
 }
 }
 }
 }
 }
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

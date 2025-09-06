@@ -2,18 +2,27 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
+<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
   CardTitle
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { IntegrationCards } from "./IntegrationCards";
@@ -25,6 +34,7 @@ import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
 export function IntegrationsHub() {;
   const [activeTab, setActiveTab] = useState("marketplace");
 
+<<<<<<< HEAD
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
@@ -58,12 +68,22 @@ import { IntegrationsSyncLog } from "./IntegrationsSyncLog",
 export function IntegrationsHub() {
   const [activeTab, setActiveTab] = useState("marketplace"),
   
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="flex gap-2">
           <Button variant="outline">View Documentation</Button>
           <Button>Connect New Integration</Button>
         </div>
       </div>
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>
           <CardHeader className="pb-2">
@@ -94,6 +114,12 @@ export function IntegrationsHub() {
           </CardContent>
         </Card>
         
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <Card className="md:col-span-2">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg">Recent Activity</CardTitle>
@@ -133,6 +159,12 @@ export function IntegrationsHub() {
         </Card>
       </div>
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid grid-cols-3 md: w-[400px]">
           <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
@@ -140,6 +172,12 @@ export function IntegrationsHub() {
           <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
         </TabsList>
         
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="mt-6">
           <TabsContent value="marketplace" className="m-0">
             <IntegrationCards />
@@ -152,6 +190,12 @@ export function IntegrationsHub() {
             <ZapierIntegration />
           </TabsContent>
           
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <TabsContent value="webhooks" className="m-0">
             <Card>
               <CardHeader>
@@ -166,6 +210,12 @@ export function IntegrationsHub() {
               </CardContent>
             </Card>
             
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <Card className="mt-6">
               <CardHeader>
                 <CardTitle>Synchronization Log</CardTitle>
@@ -182,8 +232,16 @@ export function IntegrationsHub() {
         </div>
       </Tabs>
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -381,6 +439,13 @@ function IntegrationsHub() {
       </Tabs>;
 
     </div>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
 ;

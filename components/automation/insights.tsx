@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
 }</ul> </div> </div>)
@@ -6,15 +7,35 @@ return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
 return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
  return (<div> <Head><title>Automation Insights — Zion</title></Head>) ) 
 }</ul> </div> </div>) 
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }</section>) : (<pre className="mt-3 whitespace-pre-wrap text-sm bg-gray-50 dark:bg-gray-900 p-3 rounded border border-gray-200 dark:border-gray-800" > {
   talentMd
 }</pre>)
 }</section> </div>) import { useEffect, useState } from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
 <<<<<<< HEAD
 <<<<<<< HEAD
 
 export default function AutomationInsightsPage() {;
+=======
+=======
+import { useEffect, useState } from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+import Head from 'next/head';
+
+
+
+=======
+export default function AutomationInsightsPage() {;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function AutomationInsightsPage() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45

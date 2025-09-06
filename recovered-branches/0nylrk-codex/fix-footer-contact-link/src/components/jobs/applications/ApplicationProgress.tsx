@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ApplicationStatus } from "@/types/jobs";
 import { Progress } from "@/components/ui/progress";
 import { CheckCircle2, Circle, CircleDot } from "lucide-react";
@@ -17,6 +18,11 @@ export function ApplicationProgress({
 }: ApplicationProgressProps) {
 import { CheckCircle2, Circle, CircleDot } from "lucide-react",
 import { cn } from "@/lib/utils",
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ApplicationProgressProps {
   status: ApplicationStatus,
   className?: string
@@ -61,7 +67,13 @@ export function ApplicationProgress({ status, className }: ApplicationProgressPr
   return (
     <div className={cn("w-full space-y-2", className)}>
       <Progress value={progressValue} className="h-2" />
+<<<<<<< HEAD
       
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className="flex justify-between text-xs text-muted-foreground">
         <div className="flex flex-col items-center">
           <StatusIcon status={status} current="new" />
@@ -286,3 +298,9 @@ if ( {) {
 =======
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

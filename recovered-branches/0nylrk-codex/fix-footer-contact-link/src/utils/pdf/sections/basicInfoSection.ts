@@ -1,12 +1,21 @@
 
+<<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
 import { ResumeBasicInfo  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addBasicInfoSection(
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addBasicInfoSection(;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   doc: jsPDF;
   basicInfo: ResumeBasicInfo;
   colors: PdfThemeColors
@@ -33,6 +42,7 @@ export function addBasicInfoSection(;
   yPos += 10;
   // Add summary if available
 
+<<<<<<< HEAD
     yPos += (summaryLines.length * 6) + 10
 import { jsPDF } from 'jspdf',;
 import { ResumeBasicInfo } from '@/types/resume',;
@@ -67,6 +77,10 @@ export function addBasicInfoSection(;
     const summaryLines = doc.splitTextToSize(basicInfo.summary, 170);
     doc.text(summaryLines, 20, yPos);
     yPos += (summaryLines.length * 6) + 10;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   return yPos
 =======

@@ -3,6 +3,7 @@ fetch("/api/contact", {
       headers: { "Content-Type": "application/json" }
       body: JSON.stringify(formData)})
       .then(async (res) => {
+<<<<<<< HEAD
         setIsSubmitting(false)
         if (!res.ok) {
           const data = await res.json().catch(() => ({}));          throw new Error(data.error |"Failed to send message")
@@ -10,6 +11,9 @@ fetch("/api/contact", {
         toast({
           title: "Message Sent"
           description: "We've received your message and will get back to you soon."})
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
         setIsSubmitting(false),
         if (!res.ok) {
@@ -20,6 +24,7 @@ fetch("/api/contact", {
         toast({
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 =======
@@ -39,6 +44,9 @@ fetch("/api/contact", {
   }
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         setIsSubmitting(false),
         if (!res.ok) {
           const data = await res.json().catch(() => ({})),
@@ -48,9 +56,12 @@ fetch("/api/contact", {
           title: "Message Sent",
           description: "We've received your message and will get back to you soon."}),
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         setSubmitted(true),
         setTimeout(() => setSubmitted(false), 2000),
         setFormData({ name: "", email: "", subject: "", message: "" })
@@ -59,12 +70,16 @@ fetch("/api/contact", {
         setIsSubmitting(false),
         toast({
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           title: "Submission Error",
           description: err.message,
           variant: "destructive"})
       })
+<<<<<<< HEAD
   }
   },
 
@@ -78,10 +93,16 @@ fetch("/api/contact", {
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <section className="py-20 bg-zion-blue" id="contact">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -428,9 +449,13 @@ if ( {) {
                   <Textarea;
                     id="message";
                     name="message";
+<<<<<<< HEAD
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     className={`w-full rounded-md bg-zion-blue-dark border-zion-blue-light text-white ${errors.message ? 'border-red-500 focus-visible:ring-red-500' : ''}`}
                     required
                   />
@@ -447,6 +472,9 @@ if ( {) {
                     disabled={isSubmitting}
                   >;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>

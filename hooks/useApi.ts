@@ -50,6 +50,7 @@ interface ApiState<T> {
   error: string | null;
 }
 
+<<<<<<< HEAD
 export function useApi<T>(url: string, options?: RequestInit) {
   const [state, setState] = useState<ApiState<T>>({
     data: null
@@ -59,6 +60,19 @@ export function useApi<T>(url: string, options?: RequestInit) {
     loading: true,
     error: null,;
   });
+=======
+export function use_api < T>(url: string, options?: RequestInit) {
+  const [state, set_state] = useState < ApiState < T>>({
+    data: null,
+    loading: true,
+    error: null,
+
+=======
+
+    data: null,
+    loading: true,
+    error: null,;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   });
@@ -213,6 +227,7 @@ export default function UseApi({ }: UseApiProps) {
       <p>This component is currently under development.</p>
     </div>;
   );
+<<<<<<< HEAD
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
@@ -220,6 +235,10 @@ interface ApiState<T> {
   data: T | null, loading: boolean,
   error: string | null,
 origin/automation-improvements-final
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 }
 export function useApi<T>(
@@ -257,6 +276,12 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }, [api_function, options]);
   useEffect (() => {
     // Check condition
@@ -264,6 +289,7 @@ if ( {) {
   $2
 }
 }
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
@@ -291,3 +317,6 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

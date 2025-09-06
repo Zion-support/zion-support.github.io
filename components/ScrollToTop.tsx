@@ -25,10 +25,23 @@ import { ChevronUp } from 'lucide-react';
 export default function ScrollToTop() {
 import { ChevronUp } from 'lucide-react';
 
+<<<<<<< HEAD
 export default function ScrollToTop() {
 export default function ScrollToTop() {;
   const [isVisible, setIsVisible] = useState(false);
 <<<<<<< HEAD
+=======
+
+const ScrollToTop: React.FC = () => {
+
+>>>>>>> origin/automation-improvements-final
+=======
+
+=======
+export default function ScrollToTop() {;
+  const [isVisible, setIsVisible] = useState(false);
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const ScrollToTop: React.FC = () => {
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -134,7 +147,11 @@ origin/automation-improvements-final
           className='fixed bottom-8 right-8 z-40 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-110 hover:shadow-xl hover:shadow-cyan-500/25 flex items-center justify-center group'
           aria-label='Scroll to top'
 
+<<<<<<< HEAD
         >
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <svg
             className='w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300'
             fill='none'
@@ -201,6 +218,7 @@ export default ScrollToTop;
       behavior: 'smooth'})
   };
 
+<<<<<<< HEAD
   return (
     <>
       {isVisible && (
@@ -252,6 +270,13 @@ export default ScrollToTop;
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+}
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ScrollToTop;  )
 }
 export default ScrollToTop;
@@ -262,3 +287,9 @@ origin/automation-improvements-final
 
 export default ScrollToTop;
 export default ScrollToTop;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

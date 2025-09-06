@@ -1,7 +1,13 @@
 
+<<<<<<< HEAD
 
 export type ProjectStatus =
 export type ProjectStatus = 
+=======
+export type ProjectStatus = 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   | 'offer_sent'
   | 'offer_accepted'
   | 'changes_requested'
@@ -16,9 +22,18 @@ export type ProjectStatus =;
   | 'in_progress';
   | 'completed';
   | 'canceled';
+<<<<<<< HEAD
 export interface Project {
 
 export interface Project {;
+=======
+
+
+
+export interface Project {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   client_id: string;
   talent_id: string;
@@ -46,9 +61,18 @@ export interface Project {;
 
   }
 }
+<<<<<<< HEAD
 export interface ProjectNote {
 
 export interface ProjectNote {;
+=======
+
+
+
+export interface ProjectNote {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   project_id: string;
   user_id: string;
@@ -88,6 +112,7 @@ export interface Project {;
   client_profile?: {;
     display_name: string,;
     avatar_url?: string;
+<<<<<<< HEAD
   }
 }
 ;
@@ -100,5 +125,9 @@ export interface ProjectNote {;
   created_by_profile?: {;
     display_name: string;
     avatar_url?: string;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }

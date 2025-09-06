@@ -12,6 +12,9 @@ animate ();
 // Handle resize window.addEventListener ('resize', handle_resize);
 /> {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -34,6 +37,10 @@ import React, { useEffect, useRef } from 'react';
 =======
 
   children,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }: UltraFuturisticBackground2028Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 
@@ -285,6 +292,7 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full pointer-events-none'        style={{ zIndex: 0 }}
+<<<<<<< HEAD
       />
       {/* Gradient Overlays */}  }, []);
 =======
@@ -292,6 +300,14 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+      />;
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      {/* Gradient Overlays */}  }, []);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
@@ -482,6 +498,10 @@ if ( {) {
             repeat: Infinity
             ease: 'easeInOut'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       />
       {/* Gradient Overlays */}
       <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20" style={{ zIndex: 1 }} />
@@ -501,10 +521,13 @@ if ( {) {
           animate={{
 
 
+<<<<<<< HEAD
           }}
           transition={{
             duration: 8
             repeat: Infinity
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ease: 'easeInOut',          }}
         />;
         <motion.div;
@@ -557,6 +580,10 @@ if ( {) {
             rotate: [45, 405]
             scale: [1, 1.15, 1]
             opacity: [0.25, 0.55, 0.25],          }}
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />;
         <motion&& motion.div
           className='absolute bottom-32 left-1/4 w-40 h-40 border border-cyan-500/30 rotate-45'
@@ -577,8 +604,11 @@ if ( {) {
 
           }}
 
+<<<<<<< HEAD
         />
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Floating Circles */}
         <motion&& motion.div
           className='absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full'
@@ -696,15 +726,25 @@ if ( {) {
             y: [0, -15, 0]
             opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25]
           transition={{
+<<<<<<< HEAD
             duration: 5
             repeat: Infinity
             ease: 'easeInOut',            ease: "easeInOut"
           }}
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             duration: 5,
             repeat: Infinity,
 
           }}
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             duration: 5,
             repeat: Infinity,
             ease: 'easeInOut',            ease: "easeInOut"
@@ -712,6 +752,12 @@ if ( {) {
 
           }}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />
       </div>
 =======
@@ -723,7 +769,11 @@ if ( {) {
         style={{ zIndex: 3 }}
       >
 
+<<<<<<< HEAD
         <motion.div
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent'
           animate={{
             y: [0, 1000]
@@ -825,6 +875,10 @@ if ( {) {
             delay: 2
             y: [0, 1000];
             opacity: [0, 1, 0]
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />;
         <motion.div;
           className="absolute top - 0 left - 0 w - full h - 1 bg - gradient - to - r from - transparent via - blue - 500 to - transparent";
@@ -834,6 +888,19 @@ if ( {) {
             opacity: [0, 1, 0];
           }}
           transition={{
+<<<<<<< HEAD
+=======
+            duration: 6,
+            repeat: Infinity,
+
+
+            delay: 4,          }}          className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500 to-transparent"
+          animate={{
+            y: [0, 1000]
+            opacity: [0, 1, 0]
+          transition={{
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             duration: 8
             repeat: Infinity
             ease: 'linear'
@@ -846,6 +913,11 @@ if ( {) {
 
           }}
 
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             duration: 8,
             repeat: Infinity,
             ease: 'linear',
@@ -855,6 +927,12 @@ if ( {) {
 
           }}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />
       </div>
 =======
@@ -867,6 +945,7 @@ if ( {) {
       >
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -874,6 +953,9 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {[...Array(20)].map((_, i) => (
           <motion.div
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -961,6 +1043,7 @@ if ( {) {
               scale: [0, 1, 0]
               opacity: [0, 1, 0]
             }}
+<<<<<<< HEAD
             transition={{
               duration: 3 + Math.random() * 2
               repeat: Infinity
@@ -968,10 +1051,31 @@ if ( {) {
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
 
+=======
+
+              duration: 3 + Math && Math.random() * 2,
+              repeat: Infinity,
+
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+
+
+
+            }}
+          />;
+=======
+
+
+=======
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 3,
+<<<<<<< HEAD
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
           />
@@ -981,11 +1085,28 @@ if ( {) {
 
             }}
 
+=======
+
+
+
+            }}
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           />
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
       </div>
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Content */}
       <div className='relative' style={{ zIndex: 10 }}>        {children}
       </div>
@@ -1048,12 +1169,18 @@ if ( {) {
   )
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className='relative' style={{ z_index: 10 }}>        {children}
       </div>;
       {/* Bottom Glow */}      <div className="relative" style={{ z_index: 10 }}>;
         {children}
       </div>;
       {/* Bottom Glow */}
+<<<<<<< HEAD
 
 }
 }
@@ -1067,3 +1194,13 @@ if ( {) {
 }
 
       {/* Bottom Glow */}
+=======
+      <div;
+        className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 900 / 20 to - transparent pointer - events - none';
+        style={{ z_index: 5 }}
+      />;
+    </div>);      <div className="absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 900 / 20 to - transparent pointer - events - none" style={{ z_index: 5 }} />;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import jwt from "jsonwebtoken";
@@ -15,6 +16,10 @@ export default async function handler(
   const { message, signature, address, chainId } = req.body |{}
   if (!message |!signature |!address)
     return res.status(400).json({ error: "Missing fields" });
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   try {
     const recovered = ethers && ethers.utils
       .verifyMessage(message, signature)
@@ -43,6 +48,7 @@ export default async function handler(
     );
     return res && res.status(200).json({ ok: true });
   } catch (e: any) {
+<<<<<<< HEAD
     return res.status(500).json({ error: e?.message |"Verify failed" });
     return res.status(500).json({ error: e?.message || "Verify failed" });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -50,6 +56,33 @@ import jwt from 'jsonwebtoken';
 import { ethers } from 'ethers';
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
 export default async function handler(req, res) {
+=======
+    return res && res.status(500).json({ error: e?.message || "Verify failed" });
+
+
+  }
+
+}
+
+=======
+import type { NextApiRequest, NextApiResponse } from './next';
+import jwt from './jsonwebtoken';
+import { ethers  } from './ethers';
+const JWT_SECRET = process.env.JWT_SECRET || "dev - secret - change - me";
+;
+export default async /**
+ * handler - Function description
+ */
+function handler() {
+  if (return res.status (405).end ()) {
+  $2
+}
+  const { message, signature, address, chain_id } = req.body || {}
+  if (
+    return res.status (400).json ({ error: "Missing fields" })) {
+  $2
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   try {
     const recovered = ethers.utils;
       .verify_message (message, signature);
@@ -89,6 +122,12 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

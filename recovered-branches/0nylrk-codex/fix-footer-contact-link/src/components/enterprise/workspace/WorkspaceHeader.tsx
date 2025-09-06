@@ -10,6 +10,13 @@ import { Button } from "@/components/ui/button",
 import { type Company } from "./CompanyDashboard",
 import { Bell, Users, Settings } from "lucide-react",
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface WorkspaceHeaderProps {
   company: Company
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -18,6 +25,7 @@ interface WorkspaceHeaderProps {
 
 export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
   return (
+<<<<<<< HEAD
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
@@ -65,6 +73,13 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
   )
 }
 };
+=======
+=======
+
+};
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { type Company } from "./CompanyDashboard",;
@@ -126,3 +141,10 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,10 +1,15 @@
 if (error) {
           throw error
         }
+<<<<<<< HEAD
         setProfileData(data)
       } catch (error) {
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' })
         setIsError(true)
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
         setIsError(true),
 
@@ -95,6 +100,7 @@ export default function ProfilePage() {;
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -102,6 +108,8 @@ export default function ProfilePage() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -137,12 +145,21 @@ export default function ProfilePage() {;
     )
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <>
       <SEO
         title={`${profileData.full_name} | Talent Profile`}
+<<<<<<< HEAD
         description = {profileData.bio |"View the profile of this talented individual.",}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         description = {profileData.bio || "View the profile of this talented individual.",}
 
 ;
@@ -152,6 +169,9 @@ export default function ProfilePage() {;
         title={`${profileData.full_name} | Talent Profile`}
         description={profileData.bio || "View the profile of this talented individual."}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -213,6 +233,9 @@ export default function ProfilePage() {;
                 </div>;
               </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -305,6 +328,9 @@ export default function ProfilePage() {;
                   <a;
                     href={profileData.twitter_link}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                     target="_blank"
@@ -329,6 +355,9 @@ export default function ProfilePage() {;
                   </a>
                   </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 )}
@@ -350,12 +379,18 @@ export default function ProfilePage() {;
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
+<<<<<<< HEAD
                 hourly_rate: profileData?.hourly_rate || 0
                 hourly_rate: profileData?.hourly_rate || 0,
                 hourly_rate: profileData?.hourly_rate || 0
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               }}
             />
             {/* Placeholder for other sidebar elements */}
+<<<<<<< HEAD
           </div>
         </div>
       </div>
@@ -398,6 +433,10 @@ if (isLoading) {"
   /* Placeholder for other sidebar elements */
 }</div> </div> </div> </>)
 }'"}
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   /* Placeholder for other sidebar elements */ ;
 }</div> </div> </div> </>) ;
 }'"};

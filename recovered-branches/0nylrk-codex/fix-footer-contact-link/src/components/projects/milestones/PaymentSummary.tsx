@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { Milestone  } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
@@ -19,6 +20,12 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({
     .filter((m) => m.status === "paid")
     .reduce((sum, m) => sum + parseFloat(m.amount.toString()), 0)
     .toFixed(2);
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { Milestone } from '@/hooks/useMilestones',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -26,6 +33,12 @@ import { CreditCard } from 'lucide-react',;
 interface PaymentSummaryProps {;
   milestones: Milestone[],;
   paymentTerms: string | null;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
@@ -64,6 +77,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
           </div>
           <div>
             <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
+<<<<<<< HEAD
             <p className="font-medium">${paidAmount}</p>
             <p className="font-medium">
               ${paidAmount}
@@ -73,15 +87,36 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
       </CardContent>
     </Card>
   );
+=======
+
+import {Milestone} from '@/hooks/useMilestones';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
+import {CreditCard} from 'lucide-react';
+interface PaymentSummaryProps {;
+  milestones: Milestone[],;
+  paymentTerms: string | null;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
             <p className="font-medium">
               ${paidAmount}
+<<<<<<< HEAD
   )
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </p>;
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
+=======
+=======
+
+            <p className="font-medium">
+              ${paidAmount}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

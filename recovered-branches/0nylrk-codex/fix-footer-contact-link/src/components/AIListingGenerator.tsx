@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -8,6 +16,7 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {Sparkles, ArrowRight} from "@/components/icons";
 import {supabase} from "@/integrations/supabase/client";
 import {Badge} from "@/components/ui/badge";
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Button } from "@/components/ui/button",
@@ -28,6 +37,16 @@ interface GeneratedContent {
     max: number
   }
   keyPoints: string[]
+=======
+interface GeneratedContent {;
+  description: string,;
+  tags: string[],;
+  suggestedPrice: {;
+    min: number,;
+    max: number;
+  };
+  keyPoints: string[];
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 interface AIListingGeneratorProps {;
@@ -37,9 +56,19 @@ interface AIListingGeneratorProps {;
     title?: string;
     category?: string;
     keyFeatures?: string;
+<<<<<<< HEAD
     targetAudience?: string
 import { supabase } from "@/integrations/supabase/client",
 import { Badge } from "@/components/ui/badge",
+=======
+    targetAudience?: string;
+  }
+}
+
+export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {;
+  const { toast } = useToast();
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -48,6 +77,7 @@ interface GeneratedContent {
     max: number
   },
   keyPoints: string[]
+<<<<<<< HEAD
 }
 
 
@@ -104,6 +134,10 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
   const [isLoading, setIsLoading] = useState(false),
   const [generatedContent, setGeneratedContent] = useState(null as GeneratedContent | null),
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleInputChange = (e: { target: { value: string } }, field: string) => {
     switch(field) {
@@ -264,6 +298,12 @@ if ( {) {
       }),;
       if (error) {;
         throw new Error(error.message);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       if (data.error) {
         throw new Error(data.error)
@@ -385,6 +425,7 @@ if ( {) {
               onChange={(e) => handleInputChange(e, 'targetAudience')}
               placeholder="e.g. Developers, Marketers, Startups"
               className="bg-zion-blue border border-zion-blue-light text-white"
+<<<<<<< HEAD
               disabled={isLoading}
             />
           </div>
@@ -392,6 +433,12 @@ if ( {) {
             onClick={handleGenerate}
             disabled={isLoading |!title |!category}
           <Button 
+=======
+
+          <Button 
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
       setGeneratedContent(data.generated),;
 
@@ -481,6 +528,13 @@ if ( {) {
             />;
           </div>;
           <Button;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             onClick={handleGenerate}
             disabled={isLoading || !title || !category}
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"

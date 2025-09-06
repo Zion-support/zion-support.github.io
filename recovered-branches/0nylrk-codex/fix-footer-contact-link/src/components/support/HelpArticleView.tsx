@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card} from "@/components/ui/card";
@@ -13,6 +14,21 @@ import { toast } from "@/components/ui/use-toast",
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
 import { HELP_CATEGORIES } from "./help-content",
+=======
+import React, { useState } from './react';
+import { Button  } from '@/components / ui / button';
+import { Card  } from '@/components / ui / card';
+import { ThumbsUp, ThumbsDown  } from './lucide-react';
+import { toast  } from '@/components / ui / use - toast';
+import { HELP_CATEGORIES  } from './help - content';
+
+interface HelpArticleViewProps {
+  article_id: string;
+}
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface HelpArticleViewProps {
   articleId: string
 }
@@ -29,6 +45,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     if (found) {
       article = found,
       break
+<<<<<<< HEAD
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card } from "@/components/ui/card",;
@@ -36,6 +53,10 @@ import { ThumbsUp, ThumbsDown } from "lucide-react",;
 import { toast } from "@/components/ui/use-toast",;
 import { HELP_CATEGORIES } from "./help-content",;
 interface HelpArticleViewProps {;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   articleId: string;
 }
 
@@ -91,6 +112,14 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       article = found;
       break;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   }
   if (!article) {
@@ -241,6 +270,13 @@ if ( {) {
                 Contact Support;
               </Button>;
             </div>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           )}
         </div>;
       </Card>;
@@ -253,11 +289,15 @@ function formatDate(date: string): string {
     year: "numeric"
     month: "long"
     day: "numeric"
+<<<<<<< HEAD
   });
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   })
   })
+<<<<<<< HEAD
 }
 ;
 function formatDate(date: string): string {;
@@ -268,3 +308,7 @@ function formatDate(date: string): string {;
   });
 }
 ;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

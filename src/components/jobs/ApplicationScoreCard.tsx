@@ -42,6 +42,9 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       default:;
         return "bg-gray-100 text-gray-800";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     }
@@ -75,6 +78,9 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
           .single()
         if (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 interface ApplicationScoreCardProps {;
   application: JobApplication,;
@@ -164,8 +170,12 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
           setIsScoring(false),
           toast.success("Resume scoring completed"),
           if (onScoreUpdated) onScoreUpdated(data as JobApplication),
+<<<<<<< HEAD
           return;
           return
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
         if (attempts < maxAttempts) {
           setTimeout(checkScore, 3000)
@@ -186,6 +196,7 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
         } else {
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
+<<<<<<< HEAD
         }
       },
       
@@ -231,6 +242,9 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
     } catch (error: any) {;
       setIsScoring(false);
       toast.error(`Failed to score resume: ${error.message}`);
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   },
 
@@ -319,10 +333,19 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
                         {application && application.match_breakdown.skills_match && skills_match.missing && (;
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
+<<<<<<< HEAD
                       </div>
                     )}
                       </div>;
                       </div>;
+=======
+
+
+                      </div>;
+                      </div>;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     )}
                     
                     {application.match_breakdown.experience_match && (
@@ -499,12 +522,21 @@ if ( {) {
                         {application.match_breakdown.certifications_match.matching && (
                           <p > Matching certs: {application.match_breakdown.certifications_match.matching.join (", ")}</p>)}
                         {application.match_breakdown.certifications_match.missing && (
+<<<<<<< HEAD
                           <p>Missing certs: {application.match_breakdown.certifications_match.missing.join(", ")}</p>
                         )}
                       </div>
                     )}
                       </div>;
                       </div>;
+=======
+
+
+                      </div>;
+                      </div>;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     )}
                     
                     {application.match_breakdown.education_match && (
@@ -544,12 +576,23 @@ if ( {) {
                 </details>;
               </div>;
             )}
+<<<<<<< HEAD
           </div>
         ) : (
           <div className="text-center py-4">
             <p className="text-muted-foreground mb-4">
               Analyze how well this resume matches your job requirements.
             </p>
+=======
+
+          </div>;
+        ) : (;
+          <div className="text-center py-4">;
+            <p className="text-muted-foreground mb-4">;
+              Analyze how well this resume matches your job requirements.;
+            </p>;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <Button
               onClick = {handleScore,}
               disabled = {isScoring,}
@@ -566,6 +609,9 @@ if ( {) {
               onClick={handleScore} 
               disabled={isScoring}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             <Button 
               onClick = {handleScore,}
@@ -586,16 +632,23 @@ if ( {) {
             </Button>;
           </div>;
         )}
+<<<<<<< HEAD
       </CardContent>
     </Card>;
   );
 };
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </CardContent>;
     </Card>;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                           <p > Missing certs: {application.match_breakdown.certifications_match.missing.join (", ")}</p>)}
                       </div>)}

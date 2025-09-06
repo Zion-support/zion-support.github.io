@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {useToast} from "@/hooks/use-toast";
 import {Button} from "@/components/ui/button";
@@ -31,6 +32,30 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 import z from "zod",
 import { zodResolver } from "@hookform/resolvers/zod",
+=======
+import React, { useState } from './react';
+import { use_toast } from '@/hooks / use - toast';
+import { Button } from '@/components / ui / button';
+import { Input } from '@/components / ui / input';
+import { Textarea } from '@/components / ui / textarea';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
+import { Loader, Sparkles } from './lucide-react';
+import { supabase } from '@/integrations / supabase / client';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
+import { use_form } from './react - hook - form';
+import z from './zod';
+import { zod_resolver } from '@hookform / resolvers / zod';
+const form_schema = z.object ({
+  title: z.string ().min (3, "Title must be at least 3 characters");
+  key_features: z.string (),
+  target_audience: z.string ()}),
+type FormData = z.infer < typeof form_schema>;
+;
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   keyFeatures: z.string(),
@@ -42,6 +67,7 @@ interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {;
   const { toast } = useToast();
@@ -52,6 +78,13 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
   const { toast } = useToast(),
   const [isLoading, setIsLoading] = useState(false),
   
+=======
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const form = useForm<FormData>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -74,6 +107,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
           title: data.title, 
           keyFeatures: data.keyFeatures, 
           targetAudience: data.targetAudience 
+<<<<<<< HEAD
         }
       });
 
@@ -121,6 +155,10 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       }),;
       if (error) {;
         throw new Error(error.message);
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       if (response.error) {
         throw new Error(response.error)
@@ -227,6 +265,7 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
                 <FormItem>
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>
                   <FormControl>
+<<<<<<< HEAD
                     <Input
                       {...field}
                       placeholder="e.g. Professional Web Design Services"
@@ -277,6 +316,9 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
             <FormField;
               control={form.control}
               name="title";
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel className="text-zion-slate-light">Service Title</FormLabel>;
@@ -294,7 +336,17 @@ export function ServiceDescriptionForm(): any ({ onDescriptionGenerated }: Servi
               )}
 
             />;
+<<<<<<< HEAD
             <FormField;
+=======
+
+
+            <FormField
+              control={form && form.control}
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               control={form.control}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               name="keyFeatures"

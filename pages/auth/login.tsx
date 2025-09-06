@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useEffect, useState, FormEvent  } from 'react';
 import Link from 'next/link',
@@ -8,12 +9,17 @@ import {useRouter} from 'next/router';
 import {useEffect, useState, FormEvent} from 'react';
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import Link from 'next/link';
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
 import Head from 'next/head';
 
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
+<<<<<<< HEAD
 import type {
   AuthError
   User
@@ -24,6 +30,14 @@ import {
   logInfo
   logWarn
   logErrorToProduction;
+=======
+
+import type {;
+  AuthError,;
+  User,;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   AuthError,
   User,
 
@@ -34,21 +48,36 @@ import {;
   logInfo,;
   logWarn,;
   logErrorToProduction,;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
+<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Card,
   CardContent,
   CardDescription,
   CardHeader,;
   CardTitle,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '@/components/ui/card';
 const LoginPage = () => {
 import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
@@ -58,6 +87,13 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 const LoginPage = () => {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const router = useRouter();
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
@@ -344,8 +380,13 @@ const LoginPage = () => {;
         if (mounted) {;
           setIsCheckingSession(false);
           setSessionChecked(true);
+<<<<<<< HEAD
           logInfo(
             'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true'
+=======
+          logInfo(;
+            'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           );        }
       }
 
@@ -556,6 +597,7 @@ const LoginPage = () => {;
 
       });
     } finally {;
+<<<<<<< HEAD
       setIsResendingVerification(false);
       } catch (error) {
     console.error("Error:", error);
@@ -608,6 +650,87 @@ const LoginPage = () => {;
     setError(null),
     setIsEmailUnverified(false),
     setVerificationEmailSent(false),
+=======
+      setIsProactivelyResending(false);    }
+
+
+  };
+
+  const handleLogin = async (e: FormEvent) => {;
+    e && e.preventDefault();
+    setIsLoading(true);
+    setError(null);
+    setIsEmailUnverified(false);
+    setVerificationEmailSent(false),;
+
+    try {;
+      logInfo('Attempting Supabase login with email:', { data: email });
+      const { data, error: signInError } =;
+        await supabase && supabase.auth.signInWithPassword({;
+          email,;
+          password,;
+        });
+
+      if (signInError) {;
+        logErrorToProduction('Supabase sign-in error:', { data: signInError });
+
+        // Check if error is related to email verification;
+        const messageIncludesEmailNotConfirmed =;
+          signInError && signInError.message?.toLowerCase().includes('email not confirmed') ||;
+          signInError && signInError.message?.toLowerCase().includes('email_not_confirmed') ||;
+          signInError && signInError.message?.toLowerCase().includes('verify') ||;
+          signInError && signInError.message?.toLowerCase().includes('confirm');
+        // As per issue description, check for a specific error code "email_not_verified";
+        // Assuming 'code' is a property on the error object. Supabase errors might have different structures.;
+        const codeIsEmailNotVerified =;
+          (signInError as any).code === 'email_not_verified';
+
+        if (messageIncludesEmailNotConfirmed || codeIsEmailNotVerified) {;
+          setIsEmailUnverified(true);
+          setError({;
+            name: 'EmailNotVerifiedError',;
+            message:;
+              'Please verify your email address before logging in. Check your inbox for a verification link.',;
+          } as AuthError);
+          setShowProactiveResendForm(false); // Hide proactive form if reactive one is triggered;
+
+          // Auto-resend verification email;
+          setTimeout(() => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+            handleResendVerification();
+          }, 1000);
+        } else {;
+          // MODIFIED SECTION FOR BETTER ERROR MESSAGES;
+          let displayMessage =;
+            'Login failed. Please check your credentials and try again.'; // Default user-friendly message;
+          if (signInError && signInError.message) {;
+            if (;
+              signInError && signInError.message;
+                .toLowerCase();
+                .includes('invalid login credentials');
+            ) {;
+              displayMessage = 'Invalid email or password. Please try again.';
+            } else if (;
+              signInError && signInError.message;
+                .toLowerCase();
+                .includes('network request failed');
+            ) {;
+              displayMessage =;
+                'Network error. Please check your internet connection and try again.';
+            } else if (;
+              signInError && signInError.message.toLowerCase().includes('user disabled');
+            ) {;
+              displayMessage =;
+                'Your account has been disabled. Please contact support.';
+            }
+            // Add more specific checks here if needed for other Supabase error messages;
+          }
+
+          setError({;
+            name: signInError && signInError.name || 'AuthApiError',;
+            message: displayMessage,;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     try {
       logInfo('Attempting Supabase login with email:', { data: email }),
       const { data, error: signInError } = await supabase.auth.signInWithPassword({
@@ -640,6 +763,7 @@ const LoginPage = () => {;
           // MODIFIED SECTION FOR BETTER ERROR MESSAGES
           let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
           if (signInError.message) {
+<<<<<<< HEAD
             if (
               signInError.message
                 .toLowerCase()
@@ -711,6 +835,12 @@ const LoginPage = () => {;
     }
     return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
 
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
               } else if (signInError.message.toLowerCase().includes('network request failed')) {
@@ -1112,6 +1242,13 @@ if ( {) {
 }
     return undefined, // Explicitly return undefined if condition is not met
   }, [isEmailUnverified, verificationEmailSent, email, router]),
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
@@ -1168,6 +1305,7 @@ if ( {) {
           <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>
         </div>
       </div>
+<<<<<<< HEAD
     );  }
     )
     } catch (error) {
@@ -1246,6 +1384,11 @@ if ( {) {
   // This also covers the case where a user was present but a login attempt failed, clearing the user.;
   logInfo(`LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`);
   // Defensive check: If router.pathname is not /auth/login, do not render the login form.;
+=======
+
+
+  // Defensive check: If router && router.pathname is not /auth/login, do not render the login form.;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // This is a safeguard against the component's content persisting on other auth routes.;
 
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {;
@@ -1256,6 +1399,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   return (
     <>
       <Head>
@@ -1267,6 +1411,21 @@ if ( {) {
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <Card className="w-full max-w-md">
           <CardHeader>
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    );
+    return null; // Or a minimal loader/empty div  }
+  return (
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
               Enter your email and password to access your account
@@ -1320,6 +1479,7 @@ if ( {) {
                   Email
                 </label>
                 <Input
+<<<<<<< HEAD
                   id='email'
                   type='email'
                   value={email}
@@ -1331,6 +1491,20 @@ if ( {) {
                 <label htmlFor='password' className='text-sm font-medium'>
                   Password
                 </label>
+=======
+
+
+                />;
+              </div>;
+
+              <div className='space-y-2'>;
+                <label htmlFor='password' className='text-sm font-medium'>;
+                  Password;
+                </label>;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Input
                   id='password'
                   type='password'
@@ -1364,6 +1538,7 @@ if ( {) {
   }
 }
 
+<<<<<<< HEAD
               <div className="space-y-2">
                 <label htmlFor="email" className="text-sm font-medium">
                   Email
@@ -1427,6 +1602,10 @@ if ( {) {
 }
                 />
               </div>
+=======
+=======
+              
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium">
                   Password
@@ -1451,6 +1630,13 @@ if ( {) {
                 Don't have an account?{' '}
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
                   Sign up
+<<<<<<< HEAD
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </Link>
               </p>
             </div>
@@ -1458,9 +1644,18 @@ if ( {) {
         </Card>
       </div>
     </>
+<<<<<<< HEAD
 );
 };export default LoginPage;
 
+=======
+
+
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
 },
 export default LoginPage,
@@ -1619,3 +1814,10 @@ if ( {) {
 =======
 },;
 export default LoginPage;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

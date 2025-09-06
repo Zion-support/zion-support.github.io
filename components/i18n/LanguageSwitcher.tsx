@@ -23,6 +23,7 @@ import i18n from '../../utils/i18n';
 import { supportedLocales, isRtl } from '../../utils/i18n';
 import {supportedLocales, isRtl} from '../../utils/i18n';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -36,6 +37,10 @@ import {supportedLocales, isRtl} from '../../utils/i18n';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const localeToFlag: Record<string, string> = {
 
   en: 'us',
@@ -43,18 +48,34 @@ const localeToFlag: Record<string, string> = {
   es: 'es',
   ar: 'sa'},
 const localeLabelKey: Record<string, string> = {
+<<<<<<< HEAD
   en: 'lang.english'
   pt: 'lang.portuguese'
   es: 'lang.spanish'
   ar: 'lang.arabic'
 };  ar: 'lang.arabic'}
 export default function LanguageSwitcher() {
+=======
+  en: 'lang.english',
+  pt: 'lang.portuguese',
+  es: 'lang.spanish',
+  ar: 'lang.arabic'},
+
+export default function LanguageSwitcher() {
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
   ar: 'lang.arabic',
 };  ar: 'lang.arabic'},
 export default function LanguageSwitcher() {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n.resolvedLanguage |i18n.language |'en';

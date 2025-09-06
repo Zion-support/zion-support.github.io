@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) 
@@ -20,6 +21,16 @@ export async function getServerSideProps() {;
     const json = JSON.parse(raw);
     routes = json.routes |[];
     generatedAt = json.generatedAt |''
+=======
+
+
+}</tbody> </table> </div> </div>) import fs from 'fs';
+=======
+import fs from 'fs';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+import path from 'path';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   } catch {}
   return { props: { routes, generatedAt } }
@@ -31,6 +42,7 @@ export async function getServerSideProps() {;
 }
 
 export default function SiteMapIntelPage({ routes, generatedAt }: { routes: RouteInfo[], generatedAt: string }) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   return (
@@ -59,6 +71,8 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
     </div>
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
  <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) ) ;
@@ -124,6 +138,11 @@ function getServerSideProps() {
 
 
     </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 );
 }
   );

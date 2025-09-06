@@ -119,6 +119,9 @@ key={language.code}
                 ? "border-primary bg-primary/5" 
                 : "border-border hover:border-primary/40"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -139,6 +142,7 @@ key={language.code}
             className={`flex-1 cursor-pointer transition-all ${
             </CardContent>
           </Card>
+<<<<<<< HEAD
           <Card
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark'
@@ -162,6 +166,9 @@ key={language.code}
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark'
                 ? "border-primary bg-primary/5"
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Card 
             className={`flex-1 cursor-pointer transition-all ${
 <<<<<<< HEAD
@@ -170,6 +177,9 @@ key={language.code}
           <Card 
             className={`flex-1 cursor-pointer transition-all ${
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -182,6 +192,9 @@ key={language.code}
 
               )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       </div>;

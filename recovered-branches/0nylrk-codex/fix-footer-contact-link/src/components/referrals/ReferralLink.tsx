@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -9,25 +10,42 @@ import {
   CardHeader
   CardTitle
 } from "@/components/ui/card";
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Input} from "@/components/ui/input";
 import {Copy, Facebook, Link, Share, Twitter} from "lucide-react";
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",
 
+<<<<<<< HEAD
 import { Input } from "@/components/ui/input";
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react";
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ReferralLinkProps {
   referralLink: string;
   onCopy: () => void;
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
 }
 
+<<<<<<< HEAD
 export function ReferralLink({
   referralLink
   onCopy
@@ -41,6 +59,14 @@ export function ReferralLink({
   }
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
   const [copied, setCopied] = useState(false);
+=======
+
+
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
+  const [copied, setCopied] = useState(false);
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
   const [copied, setCopied] = useState(false),
   
@@ -65,6 +91,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
       <CardContent>
         <div className="flex flex-col space-y-3">
           <div className="flex space-x-2">
+<<<<<<< HEAD
             <Input
               value={referralLink}
               readOnly
@@ -129,6 +156,9 @@ import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Input } from "@/components/ui/input",;
 import { Copy, Facebook, Link, Share, Twitter } from "lucide-react",;
+=======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ReferralLinkProps {;
   referralLink: string,;
   onCopy: () => void,;
@@ -308,4 +338,15 @@ function ReferralLink() {
 
     </Card>);
 }
+<<<<<<< HEAD
 ;
+=======
+
+=======
+
+  )
+=======
+  )
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,9 +1,15 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 //FCP recommendations if (metrics.fcp > 2000) {
  //FCP recommendations if (metrics.fcp > 2000) {
 //FCP recommendations if (metrics.fcp > 2000) {
  //FCP recommendations if (metrics.fcp > 2000) {
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   recs.push ({
 }return recs;
 }, []);

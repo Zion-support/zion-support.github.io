@@ -18,6 +18,13 @@ serve(async (req) => {
     return new Response(null, { headers: corsHeaders })
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   try {
 
@@ -33,6 +40,13 @@ serve(async (req) => {
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),;
     if (!openAiKey) {;
       throw new Error("OPENAI_API_KEY is not defined");
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     if (!content && !context) {
       throw new Error("Either content or context is required")
@@ -63,6 +77,7 @@ serve(async (req) => {
 
     switch (enhancementType) {
       case "resume-summary":
+<<<<<<< HEAD
         systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.";
         userPrompt = `Create a professional summary for someone with the following background: ${content || context}. Include key strengths and career objectives. Keep it under 200 words.`;
         break;
@@ -111,6 +126,10 @@ serve(async (req) => {
         break,;
       default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.",;
         userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     // Add custom instructions if provided
     if (instructions) {
@@ -213,6 +232,7 @@ if ( {) {
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
   } catch (error) {
+<<<<<<< HEAD
     console.error("Error in ai-content-enhancer function:", error),
     return new Response(
       JSON.stringify({
@@ -224,6 +244,21 @@ if ( {) {
   }
 });
 
+=======
+
+    console.error ("Error in ai - content - enhancer function:", error);
+    return new Response (
+      JSON.stringify ({
+        error: error.message});
+      {
+        status: 500,
+        headers: { ...cors_headers, "Content - Type": "application / json" }}
+    );
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     // Call OpenAI API;
     const response = await fetch("https://api.openai.com/v1/chat/completions", {;
@@ -263,5 +298,12 @@ if ( {) {
         status: 500,;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });

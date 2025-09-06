@@ -6,6 +6,7 @@ import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hoo
 import { Loader2, Sparkles, Check } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 interface MilestoneSuggestionsProps {
+<<<<<<< HEAD
   projectName: string
   scopeSummary: string
   startDate: Date
@@ -14,15 +15,22 @@ interface MilestoneSuggestionsProps {
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;  projectType: string
   onMilestonesGenerated?: (milestones: GeneratedMilestone[],) => void
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   endDate?: Date;
   projectType: string;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;  projectType: string,
   onMilestonesGenerated?: (milestones: GeneratedMilestone[],) => void
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function MilestoneSuggestions({
 import React, { useState } from 'react';
@@ -118,6 +126,7 @@ export function MilestoneSuggestions(): any ({;
 
 
 
+<<<<<<< HEAD
 =======
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -138,6 +147,8 @@ interface MilestoneSuggestionsProps {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 export function MilestoneSuggestions({
@@ -148,6 +159,7 @@ export function MilestoneSuggestions({
   projectType,
   onMilestonesGenerated
 }: MilestoneSuggestionsProps) {
+<<<<<<< HEAD
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator(),
   const [showSuggestions, setShowSuggestions] = useState(false),
 
@@ -174,11 +186,16 @@ export function MilestoneSuggestions({
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
       scope: `${projectName}: ${scopeSummary}`,
       startDate: startDate.toISOString(),
       endDate: endDate ? endDate.toISOString() : null,
+<<<<<<< HEAD
       projectType: projectType || 'Other',
     }
     const milestones = await generateMilestones(input)
@@ -210,6 +227,11 @@ export function MilestoneSuggestions({
   }
       projectType: projectType || "Other"
     },
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     const milestones = await generateMilestones(input),
     
@@ -283,6 +305,9 @@ export function MilestoneSuggestions({;
           {isGenerating ? (
             <>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -294,6 +319,9 @@ export function MilestoneSuggestions({;
               <Sparkles className='mr-2 h-4 w-4' />              <Sparkles className="mr-2 h-4 w-4" />
               <Sparkles className="mr-2 h-4 w-4" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -329,6 +357,7 @@ export function MilestoneSuggestions({;
           )}
         </Button>
       )}
+<<<<<<< HEAD
       {showSuggestions && generatedMilestones.length > 0 && (
         <Card>
           <CardHeader className='pb-3'>
@@ -341,6 +370,10 @@ export function MilestoneSuggestions({;
 
           <CardHeader className="pb-3">
 <<<<<<< HEAD
+=======
+
+          <CardHeader className="pb-3">
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -364,6 +397,9 @@ export function MilestoneSuggestions({;
                       {milestone.title}
                       <Badge variant="secondary" className="ml-2 text-xs">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                         AI Suggested
@@ -401,9 +437,13 @@ export function MilestoneSuggestions({;
                 </div>
               ))}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
               <div className='flex items-center justify-center mt-4 text-sm text-muted-foreground'>
                 <Check className='h-4 w-4 mr-1 text-green-500' />                These milestones will be added to your contract              <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               <div className="flex items-center justify-center mt-4 text-sm text-muted-foreground">
 
@@ -579,6 +619,7 @@ export function MilestoneSuggestions({;
         </Card>)}
     </div>);
 }
+<<<<<<< HEAD
 <Button variant="outline" onClick={
   handleGenerateMilestones
 }> {"
@@ -606,11 +647,26 @@ export function MilestoneSuggestions({;
 }"}
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+<Button variant="outline" on_click={
+  handleGenerateMilestones;
+}> {";
+  is_generating ? (<> <Loader2 className="mr - 2 h - 4 w - 4 animate - spin" /> Generating milestones... </>) : (<> <Sparkles className="mr - 2 h - 4 w - 4" /> Suggest Project Milestones with AI </>);
+}</Button>);
+}AI - Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) ";
+}<div className="flex items - center justify - center mt - 4 text - sm text - muted - foreground" > <Check className="h - 4 w - 4 mr - 1 text - green - 500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>);
+}</div>);
+}"}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) 
 }</div>) 
 }"};
 ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     </div>;
   );

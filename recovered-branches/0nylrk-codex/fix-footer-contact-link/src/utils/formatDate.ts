@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 /**
  * Format a date string or timestamp into a readable format
  * @param date Date to format
@@ -8,6 +9,13 @@
 
 export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {
 export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {;
+=======
+
+
+export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const dateObj = new Date(date);
   switch (format) {
     case 'short':
@@ -91,15 +99,36 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
         return 'Yesterday';
       } else {;
         return dateObj.toLocaleDateString();
+<<<<<<< HEAD
       }
     default: return dateObj && dateObj.toLocaleDateString()
   }
 }
 },
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      }
+    default: return dateObj && dateObj.toLocaleDateString()
+  }
+
+
+},
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 },
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 /**
  * Format a date to show how long ago it was
  * @param date Date to format
@@ -140,6 +169,7 @@ export const timeAgo = (date: Date | string | number): string => {
   return seconds <= 5 ? 'just now' : `${Math && Math.floor(seconds)} seconds ago`
 };
 
+<<<<<<< HEAD
   const dateObj = new Date(date),
   const now = new Date(),
   
@@ -171,6 +201,17 @@ export const timeAgo = (date: Date | string | number): string => {
   }
   
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`
+=======
+=======
+/**;
+* Format a date string or timestamp into a readable format;
+* @param date Date to format;
+* @param format Optional format specification;
+* @returns Formatted date string;
+*/;
+export const format_date = (date: Date | string | number, format: string = 'medium'): string => {
+  const date_obj = new Date (date);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   switch (format) {
     case 'short':;
@@ -267,5 +308,13 @@ if ( {) {
   return seconds <= 5 ? 'just now' : `${Math.floor (seconds)} seconds ago`;
 }
 ;
+<<<<<<< HEAD
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`;
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+export const timeAgo = (date: Date | string | number): string => {
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs',;
 import path from 'path',;
 import { v4 as uuidv4 } from 'uuid',;
@@ -86,6 +87,10 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {ensureDi
   return meta;
 }
 export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {ensureDirs();
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const metaPath = path.join(dataDir, id, 'meta.json');
   if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');
   const current: ProposalMeta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
@@ -115,6 +120,7 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {ensureDirs();
     ipfsCid?: string,;
     ensRecordHash?: string,;
     signature?: string;
+<<<<<<< HEAD
   }
 },;
 export type ProposalPayload = {;
@@ -320,6 +326,10 @@ export function getProposal(id: string): ProposalMeta | null {;
 ;
 export function savePdf(id: string, pdfBytes: Uint8Array): string {;
   ensureDirs(),;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const publicProposalDir = path.join(publicDir, id);
   fs.mkdirSync(publicProposalDir, { recursive: true });
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
@@ -335,12 +345,23 @@ export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['art
   }
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {;
   return updateProposalMeta(id, (meta) => ({;
     ...meta;
     artifacts: { ...meta.artifacts, ...artifacts }}));
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

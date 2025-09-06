@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 '),
@@ -75,6 +76,22 @@ function restorePage(pagePath) {;
       if (parts.length > 1) {;
         // Take the content after the conflict resolution;
         backupContent = parts[1].split('>>>>>>>')[0];
+=======
+
+
+'),
+
+
+      if (parts.length > 1) {
+        // Take the content after the conflict resolution
+        backupContent = parts[1].split('>>>>>>>')[0]
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     }
     // Clean up the content
@@ -85,7 +102,15 @@ function restorePage(pagePath) {;
     if (!backupContent.includes('export default')) {
       return { restored: false, reason: 'Backup content is also corrupted' }
     }
+<<<<<<< HEAD
     
+=======
+
+
+    
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     // Create a backup of the current corrupted file
 
     const timestamp = Date.now()
@@ -110,12 +135,25 @@ function restorePage(pagePath) {;
       restored: true,;
       backupUsed: backupPath,;
       corruptedBackup: corruptedBackupPath;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
   }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 // Function to fix specific corrupted pages
 function fixSpecificPages() {
@@ -125,6 +163,7 @@ function fixSpecificPages() {
     restored: 0
     failed: 0
     details: []
+<<<<<<< HEAD
   }
   console.log('🚀 Starting targeted page restoration...')
   console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`)
@@ -135,6 +174,13 @@ function fixSpecificPages() {
   
   // // // console.log('🚀 Starting targeted page restoration...'),
   // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
+=======
+
+
+  },
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   for (const pagePath of corruptedPages) {
     if (!fs.existsSync(pagePath)) {
       console.log(`⚠️  Page not found: ${pagePath}`)
@@ -155,12 +201,25 @@ function fixSpecificPages() {
       })
       continue
     }
+<<<<<<< HEAD
     console.log(`\n🔍 Checking: ${pagePath}`)
     const result = restorePage(pagePath)
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
     
     console.log(`\n🔍 Checking: ${pagePath}`),
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
+=======
+
+
+    // // // console.log(`\n🔍 Checking: ${pagePath}`),
+=======
+    
+    console.log(`\n🔍 Checking: ${pagePath}`),
+=======
+    // // // console.log(`\n🔍 Checking: ${pagePath}`),
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const result = restorePage(pagePath),
     if (result.restored) {
       results.restored++
@@ -168,6 +227,7 @@ function fixSpecificPages() {
       console.log(`   Used backup: ${result.backupUsed}`)
       console.log(`   Corrupted backup: ${result.corruptedBackup}`)
     } else {
+<<<<<<< HEAD
       results.failed++
       console.log(`❌ Failed: ${pagePath}`)
 
@@ -251,12 +311,22 @@ function fixSpecificPages() {;
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),;
   // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),;
   return results;
+=======
+
+
+      results.failed++,
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 // Run the restoration if this script is executed directly
 if ({
   fixSpecificPages()
 }
+<<<<<<< HEAD
 module.exports = {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 // Function to fix specific corrupted pages;
 /**
@@ -322,6 +392,10 @@ if ( {) {
   $2
 }
   fixSpecificPages ();
+<<<<<<< HEAD
+=======
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -339,7 +413,14 @@ module.exports = {;
   fixSpecificPages,;
   findBestBackup;
 };
+<<<<<<< HEAD
 main
+=======
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 module.exports = {
@@ -349,4 +430,12 @@ module.exports = {
 },;
 
 };
+<<<<<<< HEAD
 main
+=======
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

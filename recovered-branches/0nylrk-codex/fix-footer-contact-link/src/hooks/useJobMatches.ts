@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -16,6 +17,15 @@ export function useJobMatches(jobId: string) {
   const [matches, setMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [isProcessing, setIsProcessing] = useState(false),
+=======
+
+
+
+export function useJobMatches(jobId: string) {
+  const [matches, setMatches] = useState<JobMatch[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isProcessing, setIsProcessing] = useState(false);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const fetchMatches = async () => {
     setIsLoading(true);
@@ -133,6 +143,7 @@ function useJobMatches() {
         variant: "destructive"})
     } finally {
       setIsProcessing(false)
+<<<<<<< HEAD
     }
   };
 
@@ -216,6 +227,9 @@ export function useJobMatches(jobId: string) {;
     isLoading;
     isProcessing;
     triggerAIMatching;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 

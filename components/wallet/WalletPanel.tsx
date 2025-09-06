@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react';
 import Badges from './Badges';
 import React, { useEffect, useMemo, useState } from 'react';
@@ -20,6 +21,13 @@ import Badges from './Badges';
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 type Tx = {
 =======
 class ErrorBoundary extends React.Component {
@@ -81,9 +89,18 @@ function getUserId(): any (): string {;
   const generated = 'demo-user';
   window && window.localStorage.setItem('zion_user_id', generated);
   return generated;
+<<<<<<< HEAD
 export default function WalletPanel() {
 
 export default function WalletPanel() {;
+=======
+
+
+
+export default function WalletPanel() {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
@@ -99,8 +116,59 @@ type Tx = {
   created_at: string;
 }
 type Summary = {
+<<<<<<< HEAD
   wallet: { userId: string, balance: number }
   transactions: Tx[]
+=======
+  wallet: { user_id: string; balance: number }
+  transactions: Tx[];
+  config: { usdPerToken: number; symbol: string }
+}
+;
+function getUserId (): string {
+  // Check condition
+if (return 'demo - user') {
+  $2
+}
+  const from_storage = window.local_storage.get_item ('zion_user_id');
+  // Check condition
+if (return from_storage) {
+  $2
+}
+  const generated = 'demo - user';
+  window.local_storage.set_item ('zion_user_id', generated);
+  return generated;
+;
+export default /**
+ * WalletPanel - Function description
+ */
+function WalletPanel() {
+  const [summary, set_summary] = useState < Summary | null>(null);
+  const [tab, set_tab] = useState<'earnings' | 'spending' | 'redeem'>(
+    'earnings');  const [eth_address, setEthAddress] = useState < string | null>(null);type Tx = {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  id: string,
+  type: "earn" | "burn" | "issue" | "revoke" | "redeem",
+  amount: number,
+  reason: string,
+
+
+export default function WalletPanel() {;
+  const [summary, setSummary] = useState<Summary | null>(null);
+  const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(;
+    'earnings';
+  );  const [ethAddress, setEthAddress] = useState<string | null>(null);type Tx = {;
+  id: string,;
+  type: "earn" | "burn" | "issue" | "revoke" | "redeem",;
+  amount: number,;
+  reason: string,;
+  createdAt: string;
+};
+
+type Summary = {;
+  wallet: { userId: string, balance: number },;
+  transactions: Tx[],;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   config: { usdPerToken: number, symbol: string }
 };
 function getUserId(): any (): string {;
@@ -115,6 +183,12 @@ function getUserId(): any (): string {;
 export default function WalletPanel() {
 
 export default function WalletPanel() {;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
@@ -775,13 +849,34 @@ export default function WalletPanel() {
             </div>          </div>            <div className="text-xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>
           </div>
         )}
+<<<<<<< HEAD
       </div>
     </div>
 );
 <<<<<<< HEAD
 =======
+
+
 }
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
+}
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+=======
+            <div className='text - xs text - gray - 500'>;
+              Coming soon: Redeem for branded perks and courses.;
+            </div>          </div>            <div className="text - xs text - gray - 500">Coming soon: Redeem for branded perks and courses.</div>;
+          </div>)}
+      </div>;
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -793,6 +888,7 @@ export default function WalletPanel() {
 );
 }
 
+<<<<<<< HEAD
           </div>
 
         )}
@@ -806,3 +902,7 @@ export default function WalletPanel() {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 }
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -9,9 +9,18 @@ origin/automation-improvements-final
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
+<<<<<<< HEAD
 export function securityMiddleware(request) {
 
 export function securityMiddleware(request) {;
+=======
+
+
+
+export function securityMiddleware(request) {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const response = NextResponse.next();
 =======
   const response = NextResponse && NextResponse.next();
@@ -75,21 +84,33 @@ export function securityHeaders(req, res, next) {
   return response;// Security headers middleware
 export function securityHeaders(req, res, next) {
   Object.entries({
+<<<<<<< HEAD
     'X-Content-Type-Options': 'nosniff'
     'X-Frame-Options': 'DENY'
     'X-XSS-Protection': '1; mode=block'
     'Referrer-Policy': 'strict-origin-when-cross-origin'
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
     'X-XSS-Protection': '1; mode=block',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   }).forEach(([key, value]) => {
     res && res.setHeader(key, value);
   });
   next();
+<<<<<<< HEAD
 }
 origin/main
 }
@@ -108,6 +129,10 @@ origin/automation-improvements-final
 }
 <<<<<<< HEAD
 =======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -120,9 +145,38 @@ origin/automation-improvements-final
 =======
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+<<<<<<< HEAD
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 
 }
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+    response.headers.set (
+      'Strict - Transport - Security',
+      'max - age = 31536000; includeSubDomains; preload');
+  }
+  return response;// Security headers middleware;
+export /**
+ * security_headers - Function description
+ */
+function security_headers() {
+  Object.entries ({
+    'X - Content - Type - Options': 'nosniff',
+    'X - Frame - Options': 'DENY',
+    'X - XSS - Protection': '1; mode = block',
+    'Referrer - Policy': 'strict - origin - when - cross - origin',
+    'Permissions - Policy': 'camera=(), microphone=(), geolocation=()',
+    'Strict - Transport - Security': 'max - age = 31536000; includeSubDomains';
+  }).for_each (([key, value]) => {
+    res.set_header (key, value);
+  });
+;
+  next ();
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

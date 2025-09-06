@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { GetServerSideProps  } from 'next';
 import fs from 'fs',
@@ -9,12 +10,27 @@ import {useState, useEffect} from 'react';
 import {GetServerSideProps} from 'next';
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
+=======
+
+
+import { useState, useEffect } from 'react';
+import { GetServerSideProps } from 'next';
+=======
+import {useState, useEffect} from 'react';
+import {GetServerSideProps} from 'next';
+=======
+import { useState, useEffect } from 'react';
+import { GetServerSideProps } from 'next';
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import fs from 'fs';
 import path from 'path';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+<<<<<<< HEAD
 import {
   Select
   SelectContent
@@ -33,6 +49,10 @@ import {
   Select,
   SelectContent,
   SelectItem,
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   SelectTrigger,;
   SelectValue,;
 } from '@/components/ui/select';
@@ -100,9 +120,12 @@ import {
   AlertCircle,
   XCircle,
   Search,
+<<<<<<< HEAD
   Download,;
   RefreshCw,;
 } from 'lucide-react';
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
@@ -147,6 +170,7 @@ interface LogEntry {;
 
   }
 
+<<<<<<< HEAD
 interface LogsPageProps {
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
@@ -188,6 +212,11 @@ interface LogEntry {
 }
 ;
 interface LogsPageProps {;
+=======
+interface LogsPageProps {;
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
@@ -199,6 +228,11 @@ interface LogsPageProps {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
     case 'debug':
@@ -210,6 +244,7 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
     case 'error':
       return <AlertCircle className="h-4 w-4 text-red-500" />,
     case 'critical':
+<<<<<<< HEAD
       return <XCircle className='h-4 w-4 text-red-700' />;
     default:
       return <Info className='h-4 w-4 text-gray-500' />;
@@ -231,11 +266,18 @@ export default function LogsPage({
   warningCount
   totalCount
   lastUpdated
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   logs: initialLogs,
   errorCount,
   warningCount,
   totalCount,
   lastUpdated,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
       return <XCircle className="h-4 w-4 text-red-700" />,
     default: return <Info className="h-4 w-4 text-gray-500" />
@@ -331,6 +373,15 @@ const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
 
 export default function LogsPage({ logs: initialLogs, errorCount, warningCount, totalCount, lastUpdated }: LogsPageProps) {
   const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
+<<<<<<< HEAD
+=======
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>(initialLogs);
   const [searchTerm, setSearchTerm] = useState('');
   const [levelFilter, setLevelFilter] = useState<string>('all');
@@ -338,6 +389,13 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
   const [sourceFilter, setSourceFilter] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(
     Boolean
@@ -397,12 +455,28 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
       case 'error': return 'bg-red-100 text-red-800';
       case 'critical': return 'bg-red-200 text-red-900';
       default: return 'bg-gray-100 text-gray-800';    }
+<<<<<<< HEAD
   }
   const exportLogs = () => {
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri =
       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
+=======
+
+  };
+
+  const exportLogs = () => {;
+    const dataStr = JSON && JSON.stringify(filteredLogs, null, 2);
+    const dataUri =;
+
+      'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+    const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
   useEffect(() => {;
@@ -472,6 +546,12 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 }
   },;
   const exportLogs = () => {;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
@@ -479,6 +559,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
     linkElement.click();
+<<<<<<< HEAD
   }
   },;
   const formatTimestamp = (timestamp: string) => {;
@@ -488,6 +569,21 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
   const formatTimestamp = (timestamp: string) => {
     return new Date(timestamp).toLocaleString();  }
   const formatPerformance = (performance?: LogEntry['performance']) => {
+=======
+
+
+    const linkElement = document && document.createElement('a');
+    linkElement && linkElement.setAttribute('href', dataUri);
+    linkElement && linkElement.setAttribute('download', exportFileDefaultName);
+    linkElement && linkElement.click();
+  };
+
+  const formatTimestamp = (timestamp: string) => {;
+    return new Date(timestamp).toLocaleString();  };
+
+  const formatPerformance = (performance?: LogEntry['performance']) => {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     if (!performance) return null;
     const parts = [];
     if (performance && performance.memory) {;
@@ -606,16 +702,24 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     if (performance.fps) {
       parts.push(`FPS: ${performance.fps}`)
     }
+<<<<<<< HEAD
     return parts.length > 0 ? parts.join(', ') : null;
   }
   const errorCount = logs.filter(log => log.level === 'error' |log.level === 'critical').length;
   const warningCount = logs.filter(log => log.level === 'warn').length;
   const totalCount = logs.length;
+=======
+    
+    return parts.length > 0 ? parts.join() : null
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },;
   const formatTimestamp = (timestamp: string) => {;
     return new Date(timestamp).toLocaleString();
   };
 
+<<<<<<< HEAD
   const formatPerformance = (performance?: LogEntry['performance']) => {;
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       } catch (error) {
@@ -625,6 +729,8 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 }
     return parts.length > 0 ? parts.join() : null
   },
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="container mx-auto p-6 space-y-6">
       <div className="flex items-center justify-between">
@@ -645,6 +751,13 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 
       {/* Summary Cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Logs</CardTitle>
@@ -699,6 +812,12 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <Card>
         <CardHeader>
           <CardTitle>Filters</CardTitle>
@@ -751,6 +870,11 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 =======
             </Select>
             <Select value={categoryFilter} onValueChange={setCategoryFilter}>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <SelectTrigger>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <SelectValue placeholder="All categories" />
@@ -792,6 +916,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
               </SelectContent>;
             </Select>;
           </div>;
+<<<<<<< HEAD
         </CardContent>;
       </Card>;
       {/* Logs Table */  } catch (error) {
@@ -799,6 +924,102 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+      <Card>;
+        <CardHeader>;
+          <CardTitle > Log Entries ({filtered_logs.length})</CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+          <div className='space - y-4'>;
+            {filtered_logs.length > 0 ? (
+              filtered_logs.map (log => (
+                <div key={log.id} className='border rounded - lg p - 4 space - y-2'>;
+                  <div className='flex items - center justify - between'>;
+                    <div className='flex items - center space - x-2'>;
+                      <LogLevelIcon level={log.level} />;
+                      <LogLevelBadge level={log.level} />;
+                      <Badge variant='outline'>{log.category}</Badge>;
+                      <Badge variant='secondary'>{log.source}</Badge>;
+                      {log.component && (
+                        <Badge variant='outline'>{log.component}</Badge>)}
+                    </div>;
+                    <span className='text - sm text - muted - foreground'>;
+                      {format_timestamp (log.timestamp)}
+                    </span>;
+                  </div>;
+                  <div className='text - sm font - medium'>{log.message}</div>;
+                  {log.context && Object.keys (log.context).length > 0 && (
+                    <details className='text - xs'>;
+                      <summary className='cursor - pointer text - muted - foreground hover:text - foreground'>;
+                        View Context;
+                      </summary>;
+                      <pre className='mt - 2 p - 2 bg - muted rounded text - xs overflow - x-auto'>                        {JSON.stringify (log.context, null, 2)}
+                      </pre>;
+                    </details>)}
+
+                  {log.error && (
+                    <details className='text - xs'>;
+                      <summary className='cursor - pointer text - red - 600 hover:text - red - 800'>;
+                        View Error Details;
+                      </summary>;
+                      <div className='mt - 2 p - 2 bg - red - 50 rounded'>;
+                        <div>;
+                          <strong > Name:</strong> {log.error.name}
+                        </div>;
+                        <div>;
+                          <strong > Message:</strong> {log.error.message}
+                        </div>;
+                        {log.error.stack && (
+                          <details className='mt - 2'>;
+                            <summary className='cursor - pointer'>;
+                              Stack Trace;
+                            </summary>;
+                            <pre className='mt - 1 text - xs overflow - x-auto'>;
+                              {log.error.stack}
+
+                    </div>;
+                    <span className='text-sm text-muted-foreground'>;
+                      {formatTimestamp(log && log.timestamp)}
+                    </span>;
+                  </div>;
+
+                  <div className='text-sm font-medium'>{log && log.message}</div>;
+
+                  {log && log.context && Object && Object.keys(log && log.context).length > 0 && (;
+                    <details className='text-xs'>;
+                      <summary className='cursor-pointer text-muted-foreground hover:text-foreground'>;
+                        View Context;
+                      </summary>;
+                      <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-x-auto'>                        {JSON && JSON.stringify(log && log.context, null, 2)}
+                      </pre>;
+                    </details>;
+                  )}
+
+                  {log && log.error && (;
+                    <details className='text-xs'>;
+                      <summary className='cursor-pointer text-red-600 hover:text-red-800'>;
+                        View Error Details;
+                      </summary>;
+                      <div className='mt-2 p-2 bg-red-50 rounded'>;
+                        <div>;
+                          <strong>Name:</strong> {log && log.error.name}
+                        </div>;
+                        <div>;
+                          <strong>Message:</strong> {log && log.error.message}
+                        </div>;
+                        {log && log.error.stack && (;
+                          <details className='mt-2'>;
+                            <summary className='cursor-pointer'>;
+                              Stack Trace;
+                            </summary>;
+                            <pre className='mt-1 text-xs overflow-x-auto'>;
+                              {log && log.error.stack}
+                            </pre>;
+                          </details>;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <Card>
         <CardHeader>
           <CardTitle>Log Entries ({filteredLogs.length})</CardTitle>
@@ -824,16 +1045,30 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                   </div>
                   <div className='text-sm font-medium'>{log.message}</div>
                   <div className="text-sm font-medium">{log.message}</div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
                         View Context
                       </summary>
+<<<<<<< HEAD
                       <pre className='mt-2 p-2 bg-muted rounded text-xs overflow-x-auto'>                        {JSON.stringify(log.context, null, 2)}
                       </pre>
                     </details>
                   )}
 
+=======
+
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-x-auto">
                         {JSON.stringify(log.context, null, 2)  } catch (error) {
     console.error("Error:", error);
@@ -847,6 +1082,13 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {log.error && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-red-600 hover:text-red-800">
@@ -860,6 +1102,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                             <summary className="cursor-pointer">Stack Trace</summary>
                             <pre className="mt-1 text-xs overflow-x-auto">{log.error.stack}</pre>
                           </details>
+<<<<<<< HEAD
                         )}
                         <div className="flex items-center justify-between text-xs text-gray-500">
                           <div>
@@ -931,6 +1174,10 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </div>
               ))
             ) : (
@@ -1031,9 +1278,12 @@ export const getServerSideProps: GetServerSideProps = async () => {
     logErrorToProduction ('Error reading logs:', error);    return {
       props: {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         logs: []
         errorCount: 0
         warningCount: 0
@@ -1056,6 +1306,11 @@ export const getServerSideProps: GetServerSideProps = async () => {
         lastUpdated: new Date().toISOString(),
       },
     };
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1155,9 +1410,30 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   }
 
 }
+<<<<<<< HEAD
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 };
+=======
+
+=======
+        errorCount;
+        warningCount;
+        totalCount;
+        lastUpdated: new Date().toISOString()}}
+  } catch (error) {
+            logErrorToProduction('Error reading logs:', error);
+    return {
+      props: {
+        logs: [],
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  }
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

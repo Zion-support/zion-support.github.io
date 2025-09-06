@@ -1,11 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 origin/automation-improvements-final
 
+=======
+
+
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from 'react';
 import MainLayout from '../src / components / layout / MainLayout';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
   Shield
   Settings
   Info
@@ -14,6 +29,10 @@ import {
   CheckCircle
   XCircle
   AlertTriangle
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Shield,
   Settings,
   Info,
@@ -22,6 +41,7 @@ import {
   CheckCircle,
   XCircle,
   AlertTriangle;
+<<<<<<< HEAD
 } from 'lucide-react';
 export default function CookiePolicyPage() {
   const [cookiePreferences, setCookiePreferences] = useState({
@@ -29,10 +49,22 @@ export default function CookiePolicyPage() {
     analytics: false
     marketing: false
     functional: false
+=======
+
+} from 'lucide-react';
+export default function CookiePolicyPage() {
+  const [cookiePreferences, setCookiePreferences] = useState({
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     necessary: true,
     analytics: false,
     marketing: false,
     functional: false;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   });
   const cookieTypes = [
     {
@@ -727,6 +759,7 @@ if (return) {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Questions About Our Cookie Policy?
@@ -771,6 +804,42 @@ import Head from 'next/head';
 import Layout from '../components/Layout';
 
 origin/automation-improvements-final
+=======
+            >;
+              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
+                Questions About Our Cookie Policy?;
+              </h2>;
+              <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
+                If you have any questions about our use of cookies or this policy,
+                please don't hesitate to contact us.;
+              </p>;
+            </motion.div>;
+            <div className="max - w-2xl mx - auto text - center">;
+              <div className="bg - white rounded - lg shadow - lg p - 8">;
+                <div className="space - y-4">;
+                  <div className="flex items - center justify - center">;
+                    <Shield className="w - 6 h - 6 text - indigo - 600 mr - 3" />;
+                    <span className="text - lg font - semibold text - gray - 900">Privacy Team</span>;
+                  </div>;
+                  <p className="text - gray - 600">;
+                    Email: <a href="mailto:privacy@ziontechgroup.com" className="text - indigo - 600 hover:text - indigo - 700">privacy@ziontechgroup.com</a>;
+                  </p>;
+                  <p className="text - gray - 600">;
+                    Phone: <a href="tel:+13024640950" className="text - indigo - 600 hover:text - indigo - 700">+1 302 464 0950</a>;
+                  </p>;
+                  <p className="text - sm text - gray - 500">;
+                    Last updated: {new Date ().toLocaleDateString ()}
+
+                  </p>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function CookiesPage() {
   return (
@@ -795,9 +864,12 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
@@ -814,6 +886,7 @@ origin/automation-improvements-final
             <li>Retention: session or short‑term</li>
             <li>Opt‑out: browser settings and extensions</li>
           </ul>
+<<<<<<< HEAD
 origin/automation-improvements-final
           <p className='text-gray-400 text-sm'>
             Questions?{' '}
@@ -832,6 +905,11 @@ origin/automation-improvements-final
     </>;
   );
 
+=======
+
+
+  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
 =======
           <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
@@ -861,3 +939,11 @@ origin/automation-improvements-final
 =======
     </>);
 ;
+<<<<<<< HEAD
+=======
+<li > Purpose: performance and security</li> <li > Retention: session or short‑term</li> <li > Opt‑out: browser settings and extensions</li> </ul> <p className="text - gray - 400 text - sm" >Questions? <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>;
+      </div>;
+    </UltraAdvancedFuturisticBackground>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {Link, useLocation} from "react-router-dom";
 import {Search} from "lucide-react";
@@ -14,13 +15,22 @@ import { cn } from "@/lib/utils",
 interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
 
+<<<<<<< HEAD
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
   const location = useLocation();
   const currentPath = location.pathname;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 
   const location = useLocation();
@@ -181,4 +191,9 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {;
 }
 
 ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default ApiDocsLayout;

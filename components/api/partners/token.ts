@@ -4,6 +4,7 @@ import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';
 
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -50,6 +51,8 @@ export default async function handler(
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
   if (req && req.method !== "POST") {
@@ -123,7 +126,10 @@ if ( {) {
   );
   return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
 }
+<<<<<<< HEAD
     {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     .json({ token, partner: { id: partner && partner.id, name: partner && partner.name } });      sub: partner && partner.id;
       apiKeyId: key && key.id;
@@ -175,6 +181,7 @@ if ( {) {
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -186,3 +193,8 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

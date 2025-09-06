@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {Heart} from "lucide-react";
 import {cn} from "@/lib/utils";
@@ -9,6 +10,12 @@ import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils",
 import { useToast } from "@/hooks/use-toast",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface TalentCardSaveButtonProps {
 
   profileId: string
@@ -49,6 +56,7 @@ export function TalentCardSaveButton({
         title: "Authentication required"
         description: "Please log in to save talents to your favorites"
         variant: "destructive"
+<<<<<<< HEAD
       });
       return
     }
@@ -65,6 +73,18 @@ export function TalentCardSaveButton({
     })
   }
     
+=======
+
+import React from "react";
+import {Heart} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {useToast} from "@/hooks/use-toast";
+=======
+
+    
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }),
       return
 import React from "react",;
@@ -117,6 +137,12 @@ export function TalentCardSaveButton({;
       onToggleSave(profileId, !localIsSaved);
     }
     
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",
       description: localIsSaved 
@@ -139,11 +165,23 @@ export function TalentCardSaveButton({;
           "h-4 w-4 transition-colors"
 
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
+<<<<<<< HEAD
         )}
       />
     </button>
   )
 }
+=======
+
+        )} 
+      />;
+    </button>;
+  );
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     toast({;
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",;
@@ -167,6 +205,13 @@ export function TalentCardSaveButton({;
       />;
     </button>;
   );
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type WatchlistMatch = {
 export type WatchlistMatch = {;
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
@@ -5,6 +6,16 @@ export type WatchlistMatch = {;
   score: number; // 0-1 match confidence
   referenceId?: string;
   detailsUrl?: string;
+=======
+
+
+  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
+  name: string;
+
+  score: number; // 0 - 1 match confidence;
+  reference_id?: string;
+  details_url?: string;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 
@@ -12,14 +23,27 @@ export type AmlCheckResult = {
 };
 
 export type AmlCheckResult = {;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   status: 'clear' | 'match' | 'review' | 'unknown';
   matches: WatchlistMatch[];
   checked_at: string; // ISO;
   provider: 'mock' | 'remote';
+<<<<<<< HEAD
 }
 export interface AmlProvider {
 };
 export interface AmlProvider {;
+=======
+
+
+};
+export interface AmlProvider {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult>;
   checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>;
 
@@ -102,6 +126,7 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
     return { status: 'clear' }
   }
 }
+<<<<<<< HEAD
 export function getAmlProvider(): AmlProvider {
   return new MockAmlProvider();
 }
@@ -109,3 +134,10 @@ export function getAmlProvider(): AmlProvider {
 export function getAmlProvider(): AmlProvider {;
   return new MockAmlProvider();
 }
+=======
+export function getAmlProvider (): AmlProvider {
+  return new MockAmlProvider ();
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

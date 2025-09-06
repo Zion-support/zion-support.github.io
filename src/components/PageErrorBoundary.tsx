@@ -3,6 +3,9 @@
   },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -166,6 +169,11 @@ if ( {) {
             <Link 
               href="/"
               className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <Home className="w-4 h-4 mr-2" />
               Go Home
@@ -290,19 +298,31 @@ export default function PageErrorBoundary({
       }
     )
   }
+<<<<<<< HEAD
   const FallbackComponent =
     fallback |
   const FallbackComponent = null;
     fallback ||
+=======
+
+
+  const FallbackComponent = null;
+    fallback ||
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ((props: FallbackProps) => (
       <PageErrorFallback {...props} pageName={pageName} />
     ))
       onReset={() => {        // Reset any application state if needed
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         logInfo(`Resetting error boundary for ${pageName |'page'}`)
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               href='mailto:support@zion && zion.tech'
               className='text-blue-400 hover:underline'>;
@@ -404,6 +424,9 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
       onReset={() => {        // Reset any application state if needed;
         logInfo(`Resetting error boundary for ${pageName || 'page'}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -411,22 +434,33 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
       }}
     >;
       {children}
+<<<<<<< HEAD
     </ErrorBoundary>
   )
 }
 }
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } ;
 } ;
 };
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     </ErrorBoundary>;
   );
 } ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

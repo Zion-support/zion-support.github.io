@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useParams, Link} from "react-router-dom";
 import {Header} from "@/components/header/Header";
 import {Footer} from "@/components/Footer";
@@ -39,6 +40,12 @@ export default function CategoryDetail() {
   const navigate = useNavigate(),
   const [isLoading, setIsLoading] = useState(true),
   const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: ""
     description: ""
@@ -519,15 +526,35 @@ if ( {) {
             title: listing.title,;
             category: listing.category;
             image: listing.images?.[0];
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           }
         }
       });
     }
+<<<<<<< HEAD
   }
   },
+=======
+
+
+  },
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
   },
 
+<<<<<<< HEAD
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
 ;

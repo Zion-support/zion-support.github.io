@@ -1,12 +1,29 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "@/components/ui/carousel";
 import {Card, CardContent} from "@/components/ui/card";
 import {Avatar} from "@/components/ui/avatar";
 import {Quote} from "lucide-react";
+<<<<<<< HEAD
 const testimonials = [
+=======
+
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components / ui / carousel';
+import { Card, CardContent } from '@/components / ui / card';
+import { Avatar } from '@/components / ui / avatar';
+import { Quote } from './lucide-react';
+const testimonials = [;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!"
     author: "Sarah Chen"
@@ -31,8 +48,15 @@ const testimonials = [
     quote: "Their green IT recycling program helped us meet our sustainability goals while upgrading our server infrastructure."
     author: "Thomas Klein"
     role: "Operations Manager, EcoTech Systems";
+<<<<<<< HEAD
     avatar: "https://i.pravatar.cc/150?img=67"
     company: "EcoTech"}]
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   Carousel,
   CarouselContent,
@@ -42,6 +66,12 @@ import {
 import { Card, CardContent } from "@/components/ui/card",
 import { Avatar } from "@/components/ui/avatar",
 import { Quote } from "lucide-react",
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const testimonials = [
   {
     quote: "Zion has revolutionized how we source AI talent. We found three machine learning specialists within just one week!",
@@ -143,6 +173,7 @@ function TestimonialCarousel() {
               align: "start"
 
               loop: true}}
+<<<<<<< HEAD
             className="w-full"
           >
             <CarouselContent>
@@ -179,6 +210,14 @@ function TestimonialCarousel() {
   )
 }
 };
+=======
+
+=======
+
+};
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {;
   Carousel,;
   CarouselContent,;
@@ -293,5 +332,15 @@ export function TestimonialCarousel() {;
 
     </section>);
 }
+<<<<<<< HEAD
 ;
 ;
+=======
+
+=======
+
+
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

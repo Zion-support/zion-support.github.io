@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   Rocket
   Brain
   Atom
@@ -58,6 +59,41 @@ import {
   CpuIcon;} from 'lucide-react';import {
   Rocket, Brain, Atom, Zap, Sparkles, Shield
 
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Link from 'next / link';
+import { motion } from 'framer-motion';
+
+=======
+import {
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Rocket,
   Brain,
   Atom,
@@ -108,10 +144,19 @@ import {
   Palette,
   Video,
   LockIcon,
+<<<<<<< HEAD
 
   GlobeIcon,;
   CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Zap, Sparkles, Shield, ;
+=======
+
+  GlobeIcon,;
+  CpuIcon,;} from 'lucide-react';import {
+  Rocket, Brain, Atom, Zap, Sparkles, Shield, ;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Phone, Mail, MapPin, Globe, ArrowRight;
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
   CheckCircle, Award, Star, Crown, Gem, Infinity;
@@ -329,11 +374,20 @@ const stats = [;
   { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },];
 export default function UltraFuturisticFooter2034() {;
   return (
+<<<<<<< HEAD
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>  { label: 'Success Rate', value: '99.9%', icon: CheckCircle };
 ];
 export default function UltraFuturisticFooter2034() {
   return (
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>
+=======
+
+
+export default function UltraFuturisticFooter2034() {;
+
+  return (
+    <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Animated Background Elements */}
 
       <div className='absolute inset-0 overflow-hidden'>;
@@ -365,6 +419,7 @@ export default function UltraFuturisticFooter2034() {
             <div className="lg:col-span-1">
               <motion.div
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function UltraFuturisticFooter2034() {
   return (
@@ -373,12 +428,21 @@ export default function UltraFuturisticFooter2034() {
 
 
 
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
                 className='space-y-6'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -386,6 +450,9 @@ export default function UltraFuturisticFooter2034() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className='flex items-center space-x-3'>
                   <div className='relative'>
@@ -482,6 +549,7 @@ export default function UltraFuturisticFooter2034() {
                   ))}
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -489,11 +557,21 @@ export default function UltraFuturisticFooter2034() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Contact Info */}
                 <div className='space-y-3'>
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors'>
                     <Phone className='w-4 h-4' />
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <span>{contactInfo.mobile}</span>
                   </div>
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors'>
@@ -611,6 +689,13 @@ export default function UltraFuturisticFooter2034() {
             <div className='lg:col-span-2'>              <motion.div            <div className="lg:col-span-2">
               <motion.div
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -623,6 +708,7 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                       viewport={{ once: true }}
                       className='space-y-4'
 
+<<<<<<< HEAD
                     >
                       <div className='flex items-center space-x-2'>
                         <category.icon className='w-5 h-5 text-cyan-400' />
@@ -661,6 +747,10 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
                               {service.price}
 
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             </span>
                           </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -686,12 +776,19 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
               <motion.div
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
                 viewport={{ once: true }}
                 className='space-y-8'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -699,6 +796,9 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -756,6 +856,11 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                   </div>
                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Company Links */}
                 <div>
                   <h4 className='text-lg font-semibold text-white mb-4'>
@@ -788,6 +893,12 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                   </div>
                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Social Links */}
 
 
@@ -807,6 +918,12 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
                       </Link>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     ))}
                   </div>
                 </div>
@@ -814,6 +931,22 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
             </div>
           </div>
 
+<<<<<<< HEAD
+=======
+                  </div>;
+                </div>;
+              </motion && motion.div>;
+            </div>;
+          </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Certifications */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -844,6 +977,7 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
                 </motion.div>
 
+<<<<<<< HEAD
               ))}
             </div>
           </motion.div>
@@ -868,6 +1002,21 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+              ))}
+
+            </div>;
+          </motion && motion.div>;
+        </div>;
+
+
+        {/* Bottom Bar */}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Bottom Bar */}
         <div className='border-t border-white/10 bg-black/50 backdrop-blur-sm'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
@@ -884,6 +1033,7 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 </Link>
                 <Link
                   href='/terms'
+<<<<<<< HEAD
                   className='hover:text-cyan-400 transition-colors'
                 >
                   Terms of Service
@@ -907,9 +1057,36 @@ export default function UltraFuturisticFooter2034() {return (";
 ;
 export default function UltraFuturisticFooter2034() {;
   return (";
+=======
+
+
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+
+=======
+
+;
+export default function UltraFuturisticFooter2034() {;
+  return (";
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <footer className = "py-8 text-center text-sm text-gray-400">;
       <span>© {new Date().getFullYear()} Zion Tech Group</span>;
     </footer>;
   )}"';
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

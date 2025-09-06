@@ -1,8 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
+<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {
@@ -12,6 +17,13 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+=======
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status($1).json({ $2 });
 
@@ -52,6 +64,7 @@ if ( {) {
         payout_amount: 210,
         currency: 'USD'})
     }
+<<<<<<< HEAD
     const supabase = getServerSupabase();
     const events = ["visitsignupprofile_completedjob_createdhire"] as const;
     const counts: Record<string, number> = {}
@@ -80,6 +93,12 @@ if ( {) {
         : 0
       payout_amount: total_profile_completions * 50
       currency: "USD"
+=======
+
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         : 0,
       payout_amount: total_profile_completions * 50,
       currency: "USD",
@@ -137,6 +156,11 @@ export default async function handler(req, res) {
 }
 ;
     const supabase = getServerSupabase();
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const events = ['visitsignupprofile_completedjob_createdhire'] as const;
     const counts: Record<string, number> = {};
 
@@ -191,6 +215,21 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: e?.message })
   }
 }
+<<<<<<< HEAD
+=======
+=======
+      conversion_rate: total_signups ? total_profile_completions / total_signups : 0, payout_amount,
+      currency: 'USD'})
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message })
+
+=======
+
+    return res.status(500).json({ error: e?.message })
+
+  }
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   } catch (error) {
     console.error("Error:", error);
@@ -210,8 +249,13 @@ export default async function handler(req, res) {
 
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

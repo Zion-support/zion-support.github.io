@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface EmergingTechService {
 export interface EmergingTechService {;
   id: string;
@@ -11,6 +12,8 @@ export interface EmergingTechService {;
     currency: string;
     trialDays: number;
     setupTime: string;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   {
@@ -360,6 +363,7 @@ export interface EmergingTechService {;
     support:
       '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
     compliance: [
+<<<<<<< HEAD
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'
     ]
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
@@ -373,6 +377,9 @@ export interface EmergingTechService {;
     marketSize: '$35B autonomous vehicle market'
     growthRate: '75% annually'
   }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
@@ -546,12 +553,16 @@ export interface EmergingTechService {;
     market_size: '$35B autonomous vehicle market',
     growth_rate: '75% annually';
 
+<<<<<<< HEAD
     growthRate: '75% annually'
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
 ];
 
 =======
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
@@ -591,11 +602,14 @@ export interface EmergingTechService {;
   marketSize: string,;
   growthRate: string;
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
 export interface EmergingTechService {;
+<<<<<<< HEAD
   id: string,;
   name: string,;
   tagline: string,;
@@ -869,5 +883,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     reviews: 65,;
     marketSize: '$35B autonomous vehicle market',;
     growthRate: '75% annually';
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 ];

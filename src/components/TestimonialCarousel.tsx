@@ -34,6 +34,9 @@ export function TestimonialCarousel() {
           </p>
         </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import {  Carousel,  Carousel,;
@@ -111,17 +114,21 @@ function TestimonialCarousel() {
         <div className='max - w-5xl mx - auto px - 8'>;
           <Carousel;
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
         <div className='max-w-5xl mx-auto px-8'>
 <<<<<<< HEAD
           <Carousel
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             opts={{
               align: 'start'
               loop: true
             }}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
             className='w - full';
@@ -199,6 +206,10 @@ export function TestimonialCarousel() {;
               loop: true}}
             className="w-full";
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+            className='w - full';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >;
             <CarouselContent>;
               {testimonials.map ((testimonial, index) => (
@@ -236,6 +247,11 @@ export function TestimonialCarousel() {;
                             loading="lazy"
                           />
                           <Image;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             src={testimonial.avatar}
                             alt={testimonial.author}
                             width={80}
@@ -244,6 +260,9 @@ export function TestimonialCarousel() {;
                             loading="lazy"
                           />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                         </Avatar>
                         <div className="text-center md:text-left">
@@ -252,6 +271,9 @@ export function TestimonialCarousel() {;
                         </div>
                       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -263,6 +285,7 @@ export function TestimonialCarousel() {;
                             alt={`${testimonial && testimonial.company} logo`}
                             width={32}
                             height={32}
+<<<<<<< HEAD
                             className='h-8 w-auto'
                             loading='lazy'
                           <span className='text-white font-semibold'>
@@ -272,11 +295,16 @@ export function TestimonialCarousel() {;
                             loading="lazy"
                           />
                           <span className="text-white font-semibold">{testimonial.company}</span>
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </div>
                         <Quote className="h-10 w-10 text-zion-cyan opacity-30 mb-3" />
                         <p className="text-white text-lg mb-6">"{testimonial.quote}"</p>
                       </div>
                     </CardContent>
+<<<<<<< HEAD
                     <CardFooter className='p-6 pt-0'>
                       <Button
                         variant='link'
@@ -297,6 +325,8 @@ export function TestimonialCarousel() {;
                       </div>
                     </CardContent>
 <<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -315,6 +345,9 @@ export function TestimonialCarousel() {;
               <CarouselNext className='relative static right-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover:bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple' />            </div>            <div className="flex justify-center mt-8 gap-2">
             <div className="flex justify-center mt-8 gap-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <CarouselPrevious className="relative static left-0 translate-y-0 bg-zion-blue-dark border-zion-purple/30 text-zion-cyan hover: bg-zion-blue-light hover:text-zion-cyan hover:border-zion-purple" />
@@ -329,6 +362,9 @@ export function TestimonialCarousel() {;
       </div>
     </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             </CarouselContent>;
@@ -347,6 +383,7 @@ export function TestimonialCarousel() {;
                           <p className='text - zion - slate - light text - sm'>;
                             {testimonial.role}
                           </p>;
+<<<<<<< HEAD
 =======
   )
 <<<<<<< HEAD
@@ -360,6 +397,8 @@ export function TestimonialCarousel() {;
                           />;
                           <span className="text-white font-semibold">{testimonial.company}</span>;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </div>;
                       </div>;
                       <div className='flex - 1'>;

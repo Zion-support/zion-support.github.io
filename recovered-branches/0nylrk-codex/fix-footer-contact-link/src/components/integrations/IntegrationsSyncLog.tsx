@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import { Card } from "@/components/ui/card";
 import {
@@ -12,6 +13,15 @@ import { Badge } from "@/components/ui/badge";
 import {Card} from "@/components/ui/card";
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Badge} from "@/components/ui/badge";
+=======
+
+
+import {Card} from "@/components/ui/card";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",
 import { Card } from "@/components/ui/card",
 import {
@@ -22,6 +32,13 @@ import {
   TableHeader,
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Sample data for integration sync logs
 
 const syncLogs = [
@@ -113,6 +130,7 @@ export function IntegrationsSyncLog() {
                 <TableCell>{new Date(log.timestamp).toLocaleString()}</TableCell>
                 <TableCell className="hidden md:table-cell">{log.details}</TableCell>
               </TableRow>
+<<<<<<< HEAD
             ))}
           </TableBody>
         </Table>
@@ -120,6 +138,11 @@ export function IntegrationsSyncLog() {
     </Card>
   )
 }
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Card } from "@/components/ui/card",;
 import {;
@@ -215,6 +238,14 @@ export function IntegrationsSyncLog() {;
                 <TableCell>{new Date(log && log.timestamp).toLocaleString()}</TableCell>;
                 <TableCell className="hidden md:table-cell">{log && log.details}</TableCell>;
               </TableRow>;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ))}
 
           </TableBody>;

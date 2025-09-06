@@ -7,6 +7,9 @@ import { Check } from 'lucide-react'
 import { cn } from "@/lib/utils"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 const Checkbox = React.forwardRef<

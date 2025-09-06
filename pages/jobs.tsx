@@ -30,6 +30,7 @@ const Jobs: NextPage = () => {
         jobLocationType={job.jobLocationType}
         title={job.title}
 
+<<<<<<< HEAD
 export default Jobs,;
         datePosted={job.datePosted  } catch (error) {
     console.error("Error:", error);
@@ -71,6 +72,12 @@ export default Jobs,;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+=======
+        valid_through={job.valid_through}
+        base_salary={job.base_salary}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       />;
       <main>;
         <h1 > Jobs</h1>;
@@ -82,3 +89,10 @@ export default Jobs,;
   );
 },;
 export default Jobs;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

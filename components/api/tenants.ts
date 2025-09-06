@@ -179,6 +179,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const result = updateTenant(tenantId, update || {});
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
     if (!tenantId || !rotateKey)
@@ -194,6 +198,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ tenant: result });
   }
 
+<<<<<<< HEAD
   return res.status(405).json({ error: 'Method not allowed' });    const result = rotateTenantApiKey(tenantId);
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
     return res.status(200).json({ tenant: result })
@@ -204,3 +209,7 @@ return res.status(405).json({ error: 'Method not allowed' });
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
     const { tenantId, rotateKey } = req.body || {};
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -1,6 +1,11 @@
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react'; import { Input } from '@/components/ui/input'; import { Search, X } from 'lucide-react'
 import { Input } from '@/components/ui/input'
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Search, X } from 'lucide-react'
 import { Input  } from '@/components/ui/input';
 import { AutocompleteSuggestions  } from '@/components/search/AutocompleteSuggestions';
@@ -22,8 +27,11 @@ import { useOnClickOutside } from '@/hooks/useOnClickOutside';
  */
 interface SearchBarProps {
   /**
+<<<<<<< HEAD
    * The current value of the search input
    */
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   value: string,
 
@@ -53,15 +61,24 @@ interface SearchBarProps {
   placeholder?: string
 }
 
+<<<<<<< HEAD
 export function SearchBar({
   value
   onChange
   onSelectSuggestion
   placeholder = 'Search...'
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   value,
   onChange,
   onSelectSuggestion,;
   placeholder = 'Search...';
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
   const router = useRouter()
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])
@@ -154,6 +171,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
 import { useRouter } from 'next/router';
 import { Search, X } from 'lucide-react';import { Input } from '@/components/ui/input';import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+<<<<<<< HEAD
 =======
       aria-controls={listId}
       data-testid='search-bar'    >
@@ -201,6 +219,8 @@ import { Input } from '@/components/ui/input';
 import React, { useState, useEffect, useRef } from 'react',;
 import { useRouter } from 'next/router',;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Search, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
@@ -367,12 +387,30 @@ export function SearchBar(): any ({;
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="search"
           onKeyDown={(e) => {
+<<<<<<< HEAD
             if (!focused |suggestions.length === 0) {
               if (e.key === 'Escape') {
                 e.preventDefault()
                 setFocused(false)
                 setHighlightedIndex(-1)
                 inputRef.current?.blur()
+=======
+
+
+          autoComplete='search';
+          onKeyDown={e => {            if (!focused || suggestions && suggestions.length === 0) {;
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate";
+          aria-autocomplete="list";
+          aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
+          autoComplete="search";
+          onKeyDown={(e) => {;
+            if (!focused || suggestions && suggestions.length === 0) {;
+              if (e && e.key === 'Escape') {;
+                e && e.preventDefault();
+                setFocused(false);
+                setHighlightedIndex(-1);
+                inputRef && inputRef.current?.blur();
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               }
               // If Enter is pressed and there's a value, navigate with query parameter;
               if (e && e.key === 'Enter' && value && value.trim()) {                e && e.preventDefault(); // Prevent form submission if SearchBar is in a form;
@@ -394,9 +432,15 @@ export function SearchBar(): any ({;
               return;
             if (!focused || suggestions.length === 0) {
               if (e.key === 'Escape') {
+<<<<<<< HEAD
                 e.preventDefault(),
                 setFocused(false),
                 setHighlightedIndex(-1),
+=======
+                e.preventDefault();
+                setFocused(false);
+                setHighlightedIndex(-1);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 inputRef.current?.blur()
               }
               // If Enter is pressed and there's a value, navigate with query parameter
@@ -455,6 +499,9 @@ export function SearchBar(): any ({;
                   inputRef && inputRef.current?.blur();
                 break;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               case 'Escape':;
                 e && e.preventDefault();
                 setFocused(false);
@@ -471,6 +518,7 @@ export function SearchBar(): any ({;
         />;
         {value && (;
           <button
+<<<<<<< HEAD
             className='absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white'
             onClick={() => onChange('')}
             aria-label='Clear search'          >
@@ -479,11 +527,16 @@ export function SearchBar(): any ({;
             onClick={() => onChange('')}
             className="absolute right-3 top-1/2 -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             aria-label="Clear search"
           >
             <X className="h-4 w-4" />
           </button>
         )}
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -521,12 +574,19 @@ export function SearchBar(): any ({;
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 }
 }
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       </div>;
       <AutocompleteSuggestions;

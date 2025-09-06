@@ -1,10 +1,13 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from "react";
 import {Button} from "@/components/ui/button";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -20,6 +23,7 @@ export function WaitlistSection() {;
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+<<<<<<< HEAD
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -29,6 +33,11 @@ import { useToast } from "@/hooks/use-toast";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast",
 import { Checkbox } from "@/components/ui/checkbox",
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function WaitlistSection() {
   const [email, setEmail] = useState(""),
   const [name, setName] = useState(""),
@@ -239,6 +248,7 @@ if ( {) {
               />;
               <Label
                 htmlFor="terms"
+<<<<<<< HEAD
                 className="text-sm text-zion-slate font-normal"
               >
                 I agree to receive updates about Zion and understand I can unsubscribe anytime.
@@ -250,6 +260,15 @@ if ( {) {
             <Button 
               type="submit" 
               disabled={isSubmitting} 
+=======
+
+
+            <Button 
+              type="submit" 
+              disabled={isSubmitting} 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               {isSubmitting ? "Processing..." : "Complete Registration"}
@@ -259,6 +278,7 @@ if ( {) {
       </div>
     </section>
   )
+<<<<<<< HEAD
 }
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -283,6 +303,24 @@ export function WaitlistSection() {;
         description: "Please fill all fields and agree to the terms."}),;
       return;
     }
+=======
+
+                className="text-sm text-zion-slate font-normal">;
+                I agree to receive updates about Zion and understand I can unsubscribe anytime.;
+              </Label>;
+            </div>;
+
+            <Button
+              type="submit" 
+              disabled={isSubmitting} 
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
+              {isSubmitting ? "Processing..." : "Complete Registration"}
+=======
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   return (
     <section id="waitlist" className="py - 20 bg - zion - blue - dark relative overflow - hidden">;
@@ -356,7 +394,15 @@ export function WaitlistSection() {;
           </form>;
         </div>;
       </div>;
+<<<<<<< HEAD
     </section>;
   );
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

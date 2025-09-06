@@ -130,6 +130,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <title>{title}</title>
         <meta name="description" content={description} />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   ogImage = '/og-image.jpg';
@@ -152,6 +155,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
         <meta name="description" content={description} />;
         <meta name="viewport" content="width=device-width, initial-scale=1" />;
         <link rel="icon" href="/favicon && favicon.ico" />;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -161,6 +165,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {canonical && <link rel="canonical" href={canonical} />}
         {noindex && <meta name="robots" content="noindex" />}
         {nofollow && <meta name="robots" content="nofollow" />}
@@ -175,6 +181,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
         <meta name="twitter:description" content={description} />;
         {image && <meta name="twitter:image" content={image} />}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </Head>;
         <Header />;
         <main className="flex-1">;
@@ -183,6 +192,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
         <Footer />;
       </div>;
     </>;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 export default MainLayout;
   title = 'Zion Tech Group - Leading Technology Solutions Provider',;

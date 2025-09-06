@@ -1,12 +1,21 @@
+<<<<<<< HEAD
 // Define RequestInit if not available
+=======
+
+// Define RequestInit if not available;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface File extends Blob {
   name: string;
   lastModified: number;
 }
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface Blob {
   size: number;
   type: string;
@@ -395,6 +404,7 @@ if ( {) {
 
 export type { ApiResponse, RequestOptions };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -420,6 +430,9 @@ declare global { interface RequestInit { timeout?: number} } interface ApiRespon
 export type { ApiResponse, RequestOptions };
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
@@ -439,6 +452,9 @@ export type { ApiResponse, RequestOptions }
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         error: error instanceof Error ? error.message : 'Unknown error occurred',
       }
 
@@ -477,7 +493,11 @@ origin/cursor/integrate-build-improve-and-re-verify-242d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 export type { ApiResponse, RequestOptions }
+<<<<<<< HEAD
 origin/main
 origin/automation-improvements-final
 export type { ApiResponse, RequestOptions }
 export type { ApiResponse, RequestOptions };
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

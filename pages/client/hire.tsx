@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 import { useState } from "react";
 import FeedbackModal from "../../components/ui/FeedbackModal";
+=======
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 
 
@@ -11,6 +19,57 @@ import {useState} from 'react';
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [showFeedback, setShowFeedback] = useState(false);
 
+<<<<<<< HEAD
+=======
+
+  async function sendOffer() {;
+    setLoading(true);
+    setResult(null);
+    const paymentTerms =;
+      termsType === 'hourly';
+
+        ? { type: 'hourly', hourlyRateUsd }
+        : termsType === 'fixed';
+          ? { type: 'fixed', fixedAmountUsd }
+
+          : { type: 'milestone', milestones: [] };
+
+    const res = await fetch('/api/marketplace/offers', {;
+      method: 'POST',;
+      headers: {;
+        'Content-Type': 'application/json',;
+        'x-demo-user-role': 'client',;
+        'x-demo-user-id': 'client-1',;
+      },;
+      body: JSON && JSON.stringify({;
+        talentSlug,;
+        startDateIso,;
+        scopeSummary,;
+        paymentTerms,;
+        agreementUrl,;
+      }),;
+
+    });
+    const json = await res && res.json();
+    setLoading(false);
+
+    if (!json && json.ok) {;
+      alert(json && json.error || 'Failed to send offer');
+    } else {;
+      setResult(json && json.offer);
+
+      setShowFeedback(true);    }
+=======
+      termsType === "hourly"
+        ? { type: "hourly", hourlyRateUsd }
+        : termsType === "fixed"
+        ? { type: "fixed", fixedAmountUsd }
+=======
+  const [showFeedback, setShowFeedback] = useState(false);
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",
 import FeedbackModal from "../../components/ui/FeedbackModal",
 export default function ClientHirePage() {
@@ -70,10 +129,15 @@ export default function ClientHirePage() {
   const [loading, setLoading] = useState(false),
   const [result, setResult] = useState<any | null>(null),
   const [showFeedback, setShowFeedback] = useState(false),
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   async function sendOffer() {
     setLoading(true),
     setResult(null),
     const paymentTerms =
+<<<<<<< HEAD
       termsType === 'hourly'
         ? { type: 'hourly', hourlyRateUsd }
         : termsType === 'fixed'
@@ -106,6 +170,10 @@ export default function ClientHirePage() {
         ? { type: "hourly", hourlyRateUsd   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
         : termsType === "fixed";
@@ -142,6 +210,13 @@ export default function ClientHirePage() {
       <h1 className="text-xl font-semibold">Hire Talent</h1>
 
       <div className="space-y-4 border rounded p-4">
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div>
           <label className="block text-sm font-medium">Talent</label>
           <input value={talentSlug} onChange={(e) => setTalentSlug(e.target.value)} className="w-full border rounded px-3 py-2" />
@@ -167,6 +242,13 @@ export default function ClientHirePage() {
         </div>
         {termsType === 'hourly' && (
         {termsType === "hourly" && (
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div>
             <label className="block text-sm font-medium">Hourly rate (USD)</label>
             <input type="number" value={hourlyRateUsd} onChange={(e) => setHourlyRateUsd(Number(e.target.value))} className="w-full border rounded px-3 py-2" />
@@ -209,6 +291,7 @@ export default function ClientHirePage() {
           <button
             onClick={sendOffer}
             disabled={loading}
+<<<<<<< HEAD
             className='px-4 py-2 rounded bg-indigo-600 text-white'
           >
             {loading ? 'Sending…' : 'Send Offer to Confirm'}          </button>
@@ -218,6 +301,18 @@ export default function ClientHirePage() {
         <div className='border rounded p-4 bg-emerald-50'>
           <div className='font-medium'>Offer sent</div>
           <div className='text-sm'>Offer ID: {result.id}</div>        </div>
+=======
+            className='px-4 py-2 rounded bg-indigo-600 text-white'>;
+            {loading ? 'Sending…' : 'Send Offer to Confirm'}          </button>;
+        </div>;
+      </div>;
+
+      {result && (;
+        <div className='border rounded p-4 bg-emerald-50'>;
+          <div className='font-medium'>Offer sent</div>;
+          <div className='text-sm'>Offer ID: {result && result.id}</div>        </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
       <FeedbackModal
         isOpen={showFeedback}
@@ -287,6 +382,10 @@ export default function ClientHirePage() {
         </div>
       </div>
       {result && (
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="border rounded p-4 bg-emerald-50">
           <div className="font-medium">Offer sent</div>
           <div className="text-sm">Offer ID: {result.id}</div>
@@ -414,3 +513,10 @@ export default function ClientHirePage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

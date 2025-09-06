@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
 export type DisputeReason =
   | 'Scope Disagreement'
@@ -8,6 +9,15 @@ export type DisputeReason =
   | 'Other';
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',;
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
+=======
+
+export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
+=======
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export type DisputeReason =;
   | 'Scope Disagreement';
   | 'Quality Issues';
@@ -16,6 +26,7 @@ export type DisputeReason =;
   | 'Communication Breakdown';
 
   | 'Other',;
+<<<<<<< HEAD
 export type DisputeAttachment = {;
   id: string,;
   fileName: string,;
@@ -136,6 +147,10 @@ export type DisputeListItem = Pick<;
 export type UserSummary = {
   id: string;
   name: string;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   role: 'admin' | 'client' | 'talent';
 }
 };

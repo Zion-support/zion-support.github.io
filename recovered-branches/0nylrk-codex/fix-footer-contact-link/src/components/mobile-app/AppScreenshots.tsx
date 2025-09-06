@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useRef } from "react";
 import {ChevronLeft, ChevronRight} from "lucide-react";
 import {Button} from "@/components/ui/button";
@@ -21,6 +22,16 @@ export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const scrollContainerRef = useRef<HTMLDivElement>(null),
 
+=======
+
+
+
+// These would be replaced with actual screenshots
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const scroll = (direction: "left" | "right") => {
     if (scrollContainerRef.current) {
       const scrollAmount = 300
@@ -54,6 +65,7 @@ export const AppScreenshots: React.FC = () => {;
   },
 
   return (
+<<<<<<< HEAD
     <section className="py-16 bg-zion-blue-dark">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -73,6 +85,13 @@ export const AppScreenshots: React.FC = () => {;
           </Button>
           <div
           <div 
+=======
+
+
+          <div 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
@@ -92,14 +111,22 @@ export const AppScreenshots: React.FC = () => {;
               </div>
             ))}
           </div>
+<<<<<<< HEAD
           <Button
             variant="ghost"
             size="icon"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Button 
             variant="ghost" 
             size="icon" 
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white" 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             onClick={() => scroll("right")}
           >
             <ChevronRight className="h-6 w-6" />
@@ -108,8 +135,14 @@ export const AppScreenshots: React.FC = () => {;
       </div>
     </section>
   )
+<<<<<<< HEAD
 }
 
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 },
 import React, { useRef } from "react",;
 import { ChevronLeft, ChevronRight } from "lucide-react",;
@@ -183,4 +216,8 @@ export const AppScreenshots: React.FC = () => {;
       </div>;
     </section>;
   );
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

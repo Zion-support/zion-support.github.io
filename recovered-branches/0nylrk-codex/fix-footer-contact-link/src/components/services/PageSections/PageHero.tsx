@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading";
 import { Clock, Map, DollarSign } from "lucide-react";
 import {GradientHeading} from "@/components/GradientHeading";
@@ -6,6 +7,21 @@ import {Clock, Map, DollarSign} from "lucide-react";
 import { GradientHeading } from "@/components/GradientHeading",
 import { Clock, Map, DollarSign } from "lucide-react",
 
+=======
+
+
+import {GradientHeading} from "@/components/GradientHeading";
+import {Clock, Map, DollarSign} from "lucide-react";
+
+=======
+import { GradientHeading } from "@/components/GradientHeading",
+import { Clock, Map, DollarSign } from "lucide-react",
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function PageHero() {
   return (
     <div className="text-center mb-12">
@@ -51,12 +67,19 @@ export function PageHero() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
   )
   )
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Clock, Map, DollarSign } from "lucide-react";
+=======
+
+import {GradientHeading} from "@/components/GradientHeading";
+import {Clock, Map, DollarSign} from "lucide-react";
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function PageHero() {;
   return (
     <div className="text-center mb-12">;
@@ -94,3 +117,9 @@ export function PageHero() {;
   );
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

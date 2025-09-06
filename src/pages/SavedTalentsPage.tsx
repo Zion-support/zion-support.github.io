@@ -49,10 +49,17 @@ if ( {) {
         setIsLoading(false)
       }
     }
+<<<<<<< HEAD
     fetchSavedTalents()
   }, [user])
   const handleViewProfile = (talentId: string) => {
     router.push(`/talent/${talentId}`)
+=======
+    fetchSavedTalents ();
+  }, [user]);
+  const handleViewProfile = (talent_id: string) =>: any {
+    router.push (`/talent/${talent_id}`);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
   const handleRequestHire = (talent: TalentProfile) =>: any {
@@ -219,14 +226,23 @@ if ( {) {
         toast({
           title: "Talent Removed",
           description: "Talent removed from saved list."})
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       } else {
         // Add to saved talents
         const { error } = await supabase
           .from('saved_talents')
+<<<<<<< HEAD
           .insert([{ user_id: user.id, talent_id: talentId }])
         if (error) {
           throw error
         }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           .insert([{ user_id: user.id, talent_id: talentId }]),
   
           .insert([{ user_id: user.id, talent_id: talentId }]),
@@ -241,6 +257,7 @@ if ( {) {
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
+<<<<<<< HEAD
           .single()
         if (talentError) {
           logErrorToProduction(
@@ -283,6 +300,73 @@ if ( {) {
     }
   }
           return;
+=======
+
+export default function SavedTalentsPage() {;
+  const { user } = useAuth();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const router = useRouter();
+  // Using router && router.asPath instead of useLocation;
+
+  useEffect((,) => {;
+    if (!user) {;
+      router && router.push(`/auth/login?returnTo=${encodeURIComponent(router && router.asPath)}`);
+    }
+  }, [user, router]);
+
+  useEffect((,) => {;
+    const fetchSavedTalents = async () => {;
+      setIsLoading(true);
+      try {;
+        if (!user) {;
+          logWarn('User not authenticated.');
+          return;
+        }
+
+        const { data, error } = await supabase;
+          .from('saved_talents');
+          .select(;
+            `;
+            talent_profile (;
+              id,;
+              user_id,;
+              full_name,;
+              professional_title,;
+              profile_picture_url,;
+              hourly_rate,;
+              bio,;
+              years_experience,;
+              key_projects,;
+              skills,;
+              location,;
+              availability,;
+              is_verified;
+            );
+          `;
+          );
+          .eq('user_id', user && user.id);
+
+        if (error) {;
+          throw error;
+        }
+
+        if (data) {;
+          // Extract talent profiles and convert to TalentProfile type;
+          const talentProfiles = data && data.map(;
+            (item: any) => item && item.talent_profile as unknown as TalentProfile;
+          );
+          setSavedTalents(talentProfiles);        }
+      } catch (error) {;
+        logErrorToProduction(;
+          error instanceof Error ? error && error.message : String(error),;
+          error instanceof Error ? error : undefined,;
+          { message: 'Error fetching saved talents' }
+        );
+
+          return;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           .single(),
   
         if (talentError) {
@@ -295,6 +379,7 @@ if ( {) {
         }
   
         if (talentData) {
+<<<<<<< HEAD
           setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
           toast({
             title: "Talent Saved",
@@ -309,6 +394,12 @@ if ( {) {
         variant: "destructive"})
     }
   },
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
     <>
@@ -322,6 +413,10 @@ if ( {) {
           Here are the talents you've saved for future reference.
         </p>
         
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {isLoading ? (
           <div className="text-center py-8">Loading saved talents...</div>
         ) : savedTalents.length === 0 ? (
@@ -330,6 +425,10 @@ if ( {) {
               icon={<Heart className="h-8 w-8" />}
               title="No Saved Talents"
               description="You haven't saved any talents yet."
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               action={{ text: 'Browse Talent', href: '/talent' }}
               className="border-none bg-transparent text-center"
             />
@@ -467,6 +566,9 @@ if ( {) {
                 isAuthenticated={!!user}
               />;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

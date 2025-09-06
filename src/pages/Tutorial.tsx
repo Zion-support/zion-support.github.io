@@ -91,8 +91,11 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
   );
 };
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             <p className="mt-8 text-white font-semibold">
 import Link from "next/link",;

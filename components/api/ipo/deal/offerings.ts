@@ -100,14 +100,27 @@ if ( {) {
     return res.status (200).json (offerings);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 return res.status (405).json ({ error: 'Method not allowed' });
 
 }
 <<<<<<< HEAD
+=======
+return res.status (405).json ({ error: 'Method not allowed' });
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 
   return res.status(405).json({ error: 'Method not allowed' });
 }
 
+<<<<<<< HEAD
 }
+=======
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

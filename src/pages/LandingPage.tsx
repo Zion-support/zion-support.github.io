@@ -4,9 +4,12 @@ BarChart3,;
 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function LandingPage() {
   const { t } = useTranslation();
@@ -36,6 +39,9 @@ export default function LandingPage() {
   const { isRTL } = useLanguage(),
   
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -251,6 +257,7 @@ export default function LandingPage() { const { t  } = useTranslation(),
 
 
   return (
+<<<<<<< HEAD
     <div className='min-h-screen bg-zion-blue text-white'>
       <SEO
         title={t('home.seo_title')}
@@ -269,6 +276,11 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <Header />
       <HeroSection />
       
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Quick Access Tools Section */}
       <section className="py-16 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -299,6 +311,9 @@ export default function LandingPage() { const { t  } = useTranslation(),
               >
                 <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -335,6 +350,9 @@ export default function LandingPage() { const { t  } = useTranslation(),
       <TrustedBySection />
       <BlogSection />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           </div>;

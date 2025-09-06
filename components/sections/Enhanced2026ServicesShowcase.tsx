@@ -20,6 +20,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   ArrowRight
   Brain
@@ -33,6 +34,19 @@ import {
   Cpu
   Lock
   Cloud;
+=======
+
+
+import Link from 'next/link';
+const Enhanced2026ServicesShowcase = () => {
+  const featuredServices = [
+    {
+
+      id: 'ai-business-intelligence-elite-2026',
+      name: 'AI Business Intelligence Elite 2026',
+      description: 'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   ArrowRight,
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   Brain,
@@ -205,11 +219,14 @@ import {;
   Cpu,;
   Lock,;
   Cloud,;
+<<<<<<< HEAD
 =======
   Lock,;
   Cloud,;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 import Link from 'next/link';import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react';
 import Link from 'next/link';
@@ -402,6 +419,7 @@ const Enhanced2026ServicesShowcase = () => {;
           viewport={{ once: true }}
           className='text-center mb-16'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -409,6 +427,9 @@ const Enhanced2026ServicesShowcase = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -431,6 +452,36 @@ const Enhanced2026ServicesShowcase = () => {;
           </p>
         </motion.div>
 
+<<<<<<< HEAD
+=======
+
+          className='text-center mb-16'>;
+          <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+            <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+              2026 Revolutionary Services;
+            </span>;
+          </h2>;
+          <p className='text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed'>;
+            Experience the future with our cutting-edge AI, quantum, and;
+            emerging technology services designed to transform your business          </p>        >;
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
+            <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
+              2026 Revolutionary Services;
+            </span>;
+          </h2>;
+          <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">;
+            Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business;
+          </p>;
+        </motion && motion.div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Category Overview */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -440,6 +491,7 @@ const Enhanced2026ServicesShowcase = () => {;
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -447,6 +499,9 @@ const Enhanced2026ServicesShowcase = () => {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           {categories.map((category, index) => (
             <motion.div
@@ -549,6 +604,12 @@ const Enhanced2026ServicesShowcase = () => {;
               whileHover={{ scale: 1.05, y: -5 }}
               className='group text-center'
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div
@@ -592,6 +653,12 @@ const Enhanced2026ServicesShowcase = () => {;
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices.map((service, index) => (
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -603,6 +670,12 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               whileHover={{ scale: 1.02, y: -5 }}
               className='group relative'
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div
@@ -679,16 +752,34 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
                         {feature}
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       </li>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     ))}
+<<<<<<< HEAD
                   </ul>
                 </div>
+=======
+
+                  </ul>;
+                </div>;
+=======
+
+
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Price and CTA */}
                 <div className='flex items-center justify-between'>
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -696,6 +787,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <div>
                     <span className='text-2xl font-bold text-cyan-400'>
                       {service.price}
@@ -725,6 +818,33 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
           ))}
         </div>
 
+<<<<<<< HEAD
+=======
+                    href={`/${service && service.id}`}
+                    className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200'>;
+                    Learn More <ArrowRight className='w-4 h-4 ml-1' />                  </Link>                  <div>;
+                    <span className="text-2xl font-bold text-cyan-400">{service && service.price}</span>;
+                    <span className="text-gray-400 text-sm">{service && service.period}</span>;
+                  </div>;
+                  <Link
+                    href={`/${service && service.id}`}
+                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 transition-transform duration-200">;
+                    Learn More <ArrowRight className="w-4 h-4 ml-1" />;
+                  </Link>;
+                </div>;
+              </div>;
+            </motion && motion.div>;
+          ))}
+        </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Call to Action */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -733,6 +853,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
           viewport={{ once: true }}
           className='text-center'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -740,6 +861,9 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         >
           <div className="bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -781,6 +905,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
       </div>
     </section>
   );
+<<<<<<< HEAD
 }
 };
 
@@ -793,3 +918,11 @@ export default Enhanced2026ServicesShowcase;
 }
 }
 export default Enhanced2026ServicesShowcase;
+=======
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

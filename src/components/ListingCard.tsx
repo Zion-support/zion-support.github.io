@@ -84,6 +84,10 @@ export function ListingCard(): any ({;
         className
       )}
     >
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {images && images.length > 0 && images[0] && (
         <div className="h-48 w-full overflow-hidden relative">
           <Image
@@ -95,6 +99,9 @@ export function ListingCard(): any ({;
             loading="lazy"
           />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         </div>
@@ -122,6 +129,9 @@ export function ListingCard(): any ({;
         
         {tags && tags.length > 0 && (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -132,12 +142,18 @@ export function ListingCard(): any ({;
               </Badge>
               </Badge>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             ))}
           </div>;
         )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <Image
@@ -167,6 +183,7 @@ export function ListingCard(): any ({;
 
 
         
+<<<<<<< HEAD
 =======
 
 =======
@@ -174,6 +191,8 @@ export function ListingCard(): any ({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {author.avatarUrl ? (
@@ -182,6 +201,9 @@ export function ListingCard(): any ({;
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

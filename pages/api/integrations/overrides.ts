@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '[^']*';
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   if (req && req.method === "GET") {
 
@@ -35,6 +38,7 @@ import { readState, writeState } from '[^']*';
     });
 
   }
+<<<<<<< HEAD
   return res.status(405).json({ error: "Method not allowed" });
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../lib/integrations/fileStore";
@@ -59,6 +63,10 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+  return res && res.status(405).json({ error: "Method not allowed" });
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 =======
@@ -115,6 +123,7 @@ if (state.overrides[idx] = entry) {
 =======
 
   }
+<<<<<<< HEAD
 }
   } catch (error) {
     console.error("Error:", error);
@@ -138,3 +147,13 @@ if (state.overrides[idx] = entry) {
 return res.status(405).json({ error: "Method not allowed" });
 }
 }
+=======
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

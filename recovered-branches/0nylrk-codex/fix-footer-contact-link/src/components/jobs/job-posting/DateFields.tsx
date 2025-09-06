@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 import { format } from "date-fns";
@@ -11,11 +12,29 @@ import {
   Popover,
   PopoverContent,
   PopoverTrigger,;
+=======
+
+
+import {;
+  Popover,;
+  PopoverContent,;
+  PopoverTrigger,;
+
+=======
+
+
+  Popover,
+  PopoverContent,
+  PopoverTrigger,;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 
 import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
+<<<<<<< HEAD
 interface DateFieldsProps {
   startDate: Date | undefined;
   setStartDate: (date: Date | undefined) => void;
@@ -49,6 +68,14 @@ export function DateFields({
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+=======
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',
 import { format } from 'date-fns',
 import { Label } from "@/components/ui/label",
@@ -57,6 +84,12 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar",
 import { FormControl } from "@/components/ui/form",
 import { cn } from "@/lib/utils",
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface DateFieldsProps {
   startDate: Date | undefined,
   setStartDate: (date: Date | undefined) => void,
@@ -143,6 +176,12 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               disabled={(date) =>;
                 date > new Date();
               }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               initialFocus
             />
           </PopoverContent>
@@ -175,6 +214,7 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
               mode="single"
               selected={endDate}
               onSelect={setEndDate}
+<<<<<<< HEAD
               disabled={(date) => date < new Date()}
               initialFocus
             />
@@ -182,6 +222,11 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
         </Popover>
       </div>
     </div>
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               disabled={(date) =>;
                 date < new Date();
               }
@@ -192,6 +237,12 @@ export function DateFields({ startDate, setStartDate, endDate, setEndDate }: Dat
         </Popover>;
       </div>;
     </div>;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 =======
     </div>);

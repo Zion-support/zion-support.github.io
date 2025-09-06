@@ -1,12 +1,20 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneStatus} from './types';
 import {useRecordActivity} from './useRecordActivity';
+<<<<<<< HEAD
 export const useUpdateMilestone = () => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -15,10 +23,19 @@ export const useUpdateMilestone = () => {
     if (!user) return false;
     try {
       setIsSubmitting(true);
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const useUpdateMilestone = () => {;
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { recordMilestoneActivity } = useRecordActivity();
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import { useAuth } from '@/hooks/useAuth',
@@ -148,6 +165,7 @@ if (throw error) {
   }
 }
 
+<<<<<<< HEAD
         .eq('id', milestoneId),
       
       if (error) throw error,
@@ -239,3 +257,7 @@ export const useUpdateMilestone = () => {;
     isSubmitting;
   }
 };
+=======
+;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

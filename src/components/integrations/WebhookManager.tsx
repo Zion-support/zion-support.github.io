@@ -129,6 +129,7 @@ export function WebhookManager() {;
     createWebhook,
     toggleWebhook,
     deleteWebhook,
+<<<<<<< HEAD
     testWebhook
   } = useWebhooks(),
   
@@ -184,11 +185,16 @@ export function WebhookManager() {;
     if (newWebhook.eventTypes.includes(newWebhook.selectedEvent)) {
       toast.error("This event is already added"),
       return
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     setNewWebhook({
       ...newWebhook,
       eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent],
+<<<<<<< HEAD
       selectedEvent: '' as WebhookEventType,
     })
   }
@@ -220,6 +226,10 @@ export function WebhookManager() {;
     if (!newWebhook.name || !newWebhook.url || newWebhook.eventTypes.length === 0) {
       toast.error("Please fill in all required fields"),
       return
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     
     await createWebhook(
@@ -227,17 +237,23 @@ export function WebhookManager() {;
       newWebhook.url, 
       newWebhook.eventTypes, 
       newWebhook.secret || undefined
+<<<<<<< HEAD
     ),
     
     )
     ),
     
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     // Reset form
     setNewWebhook({
       name: "",
       url: "",
       selectedEvent: "" as WebhookEventType,
       eventTypes: [],
+<<<<<<< HEAD
       secret: '',
     })
   }
@@ -255,6 +271,10 @@ export function WebhookManager() {;
     await testWebhook(webhookId, eventType)
   },
   
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-8">
       <Card>
@@ -278,6 +298,11 @@ export function WebhookManager() {;
               <Input 
                 id="webhook-name" 
                 placeholder="e.g., Job Postings Webhook"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 value={newWebhook.name}
                 onChange={e =>
                   setNewWebhook({ ...newWebhook, name: e.target.value })
@@ -306,14 +331,25 @@ export function WebhookManager() {;
                 <ClickableBadge
                   key = {event,}
                   onRemove = {(,) => handleRemoveEvent(event),}
+<<<<<<< HEAD
                 >
                   {eventOptions.find(e => e.value === event)?.label |event}
                 </ClickableBadge>
+=======
+
+                >;
+                  {eventOptions && eventOptions.find(e => e && e.value === event)?.label || event}
+                </ClickableBadge>;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ))}
             </div>;
             <div className='flex space-x-2'>;
               <Select
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -442,6 +478,12 @@ export function WebhookManager() {;
                   key={event} ;
                   onRemove={() => handleRemoveEvent(event)}
                 >;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {eventOptions.find(e => e.value === event)?.label || event}
                 </ClickableBadge>;
               ))}
@@ -466,6 +508,7 @@ export function WebhookManager() {;
             <Input
               id='webhook-secret'
               placeholder='A secret key to verify the webhook source'
+<<<<<<< HEAD
               value={newWebhook.secret}
               onChange={e =>
                 setNewWebhook({ ...newWebhook, secret: e.target.value })
@@ -556,6 +599,56 @@ export function WebhookManager() {;
               placeholder="A secret key to verify the webhook source"
               value={newWebhook.secret}
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
+=======
+              value={newWebhook && newWebhook.secret}
+              onChange={e =>;
+                setNewWebhook({ ...newWebhook, secret: e && e.target.value });
+              }            />;
+            <p className='text-xs text-muted-foreground'>;
+              If provided, this secret will be used to sign the webhook payload.;
+            </p>;
+          </div>;
+        </CardContent>;
+        <CardFooter>;
+          <Button onClick={handleCreateWebhook}>;
+            <Save className='h-4 w-4 mr-2' /> Create Webhook;
+          </Button>;
+        </CardFooter>;
+      </Card>;
+
+      <div>;
+        <h3 className='text-lg font-medium mb-4'>Your Webhooks</h3>;
+
+        {loading ? (;
+          <p>Loading webhooks...</p>;
+        ) : error ? (;
+          <p className='text-red-500'>{error}</p>;
+        ) : webhooks && webhooks.length === 0 ? (;
+          <p>No webhooks configured yet. Create your first webhook above.</p>;
+        ) : (;
+          <div className='space-y-4'>;
+            {webhooks && webhooks.map(webhook => (;
+              <Card key={webhook && webhook.id}>;
+                <CardHeader className='pb-2'>;
+                  <div className='flex justify-between items-start'>;
+                    <div>;
+                      <CardTitle className='text-lg'>{webhook && webhook.name}</CardTitle>;
+                      <CardDescription className='truncate max-w-md'>;
+                </SelectContent>;
+              </Select>;
+              <Button type="button" onClick={handleAddEvent} variant="outline">;
+                <PlusCircle className="h-4 w-4 mr-2" /> Add;
+              </Button>;
+            </div>;
+          </div>;
+          <div className="space-y-2">;
+            <Label htmlFor="webhook-secret">Secret(optional)</Label>;
+            <Input
+              id="webhook-secret" 
+              placeholder="A secret key to verify the webhook source"
+              value={newWebhook && newWebhook.secret}
+              onChange={(e) => setNewWebhook({...newWebhook, secret: e && e.target.value})}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             />;
             <p className="text-xs text-muted-foreground">;
               If provided, this secret will be used to sign the webhook payload.</p>;
@@ -585,6 +678,9 @@ export function WebhookManager() {;
                       <CardTitle className="text-lg">{webhook && webhook.name}</CardTitle>;
                       <CardDescription className="truncate max-w-md">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         {webhook && webhook.url}
                       </CardDescription>;
                     </div>;
@@ -614,6 +710,7 @@ export function WebhookManager() {;
               onChange={(e) => setNewWebhook({...newWebhook, secret: e.target.value})}
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -621,6 +718,8 @@ export function WebhookManager() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         {webhook.url}
                       </CardDescription>
                     </div>
@@ -643,6 +742,9 @@ export function WebhookManager() {;
                           onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
                         >;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                           {webhook.is_active ? 'Disable' : 'Enable'}
@@ -757,6 +859,11 @@ export function WebhookManager() {;
                     <div className="text-xs text-muted-foreground">;
                       {webhook.last_triggered_at;
                         ? `Last triggered: ${new Date(webhook.last_triggered_at).toLocaleString()}`;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         : 'Never triggered'}
                     </div>
                   </div>
@@ -764,6 +871,9 @@ export function WebhookManager() {;
                 <CardFooter className="flex justify-between pt-2">
                   <Button
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                     variant="outline"
@@ -782,12 +892,18 @@ export function WebhookManager() {;
                       <SelectItem value="test_event">Test (generic)</SelectItem>
                       {webhook.event_types.map((event: WebhookEventType) => (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                         <SelectItem key={event} value={event}>
                           Test {eventOptions.find(e => e.value === event)?.label || event}
                         </SelectItem>;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   >;
                     <Trash className="h - 4 w - 4 mr - 2" /> Delete;
                   </Button>;
@@ -803,6 +919,7 @@ export function WebhookManager() {;
 
 
 
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       ))}
@@ -819,6 +936,8 @@ export function WebhookManager() {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {testResult && (
           <Card className='mt-4 border-blue-200'>
             <CardHeader>
@@ -845,6 +964,9 @@ export function WebhookManager() {;
                         : 'text-red-600';
                     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -865,6 +987,12 @@ export function WebhookManager() {;
                 <div>;
                   <span className="font-medium">Response:</span>;
                   <pre className="mt-1 p-2 bg-gray-100 rounded text-sm overflow-x-auto">;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {testResult.responseBody || '<empty>'}
                   </pre>
                 </div>

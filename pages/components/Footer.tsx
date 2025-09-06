@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
+<<<<<<< HEAD
   Mail
   Phone
   MapPin
@@ -18,6 +19,45 @@ import {
   Linkedin,
   Instagram,
   Github,;
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Facebook,;
+  Twitter,;
+  Linkedin,;
+  Instagram,;
+  Github,;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -379,6 +419,7 @@ origin/main
                     </Link>;
                   </li>;
                 ))}
+<<<<<<< HEAD
               </ul>
               <h3 className="text-lg font-semibold mb-6">Legal</h3>
               <ul className="space-y-3">
@@ -400,18 +441,59 @@ origin/main
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/main
 origin/automation-improvements-final
+=======
+
+              </ul>;
+
+              <h3 className="text-lg font-semibold mb-6">Legal</h3>;
+              <ul className="space-y-3">;
+                {footerLinks && footerLinks.legal.map((link, index) => (;
+                  <li key={index}>;
+
+                    <Link
+                      href={link && link.href}
+                      className="text-gray-400 hover:text-white transition-colors">;
+                      {link && link.name}
+                    </Link>;
+                  </li>;
+                ))}
+
+              </ul>;
+            </motion && motion.div>;
+          </div>;
+        </div>;
+
+
+
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
           <div className="flex flex-col md:flex-row justify-between items-center">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0.8 }}
               className="text-gray-400 text-sm mb-4 md:mb-0"
             >
               © {currentYear} Zion Tech Group. All rights reserved.
             </motion.div>
 
+=======
+
+
+=======
+
+
+=======
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <motion.div
 =======
               transition={{ duration: 0 && 0.8 }}

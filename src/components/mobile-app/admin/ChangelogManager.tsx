@@ -48,15 +48,22 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     })
   },
   
+<<<<<<< HEAD
   const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id))
   }
   )
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleRemoveEntry = (id: string) => {
     setEntries(entries.filter(entry => entry.id !== id)),
   };
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 };  const handleRemoveEntry = (id: string,) => {
     setEntries(entries.filter(entry => entry.id !== id))
@@ -83,10 +90,16 @@ import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./Metada
                 onChange = {handleInputChange,}
                 value={newEntry.version}
                 onChange={handleInputChange}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               />
               <Input
                 type="date"
                 name="date"
+<<<<<<< HEAD
                 value = {newEntry.date,}
                 onChange = {handleInputChange,}
               />
@@ -94,6 +107,9 @@ import { Plus, Trash2 } from 'lucide-react'import { AppPlatform } from "./Metada
             <Button
               onClick = {handleAddEntry,}
               disabled = {!newEntry.version |!newEntry.changes,}
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               disabled = {!newEntry.version || !newEntry.changes,}
 
 import React, { useState } from "react",;
@@ -175,6 +191,9 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               onClick={handleAddEntry}
               disabled={!newEntry.version || !newEntry.changes}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -214,6 +233,9 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               <div 
                 key={entry.id}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 className="p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"
@@ -240,6 +262,11 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                     size="sm"
                     onClick = {(,) => handleRemoveEntry(entry.id),}
                     onClick={() => handleRemoveEntry(entry.id)}
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     className="text-gray-400 hover:text-red-400 p-1 h-auto"
                   >
                     <Trash2 className="h-4 w-4" />
@@ -254,6 +281,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
               <p className="text-center text-gray-400 py-4">No changelog entries yet</p>;
             )}
 
+<<<<<<< HEAD
 };
 
 
@@ -268,6 +296,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
 }
 
 =======
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======

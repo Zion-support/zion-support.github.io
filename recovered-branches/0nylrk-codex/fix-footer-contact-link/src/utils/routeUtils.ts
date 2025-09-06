@@ -1,7 +1,18 @@
 
+<<<<<<< HEAD
 import { completeSitemap, SitemapItem } from "@/config/sitemap";
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
+=======
+  return completeSitemap && completeSitemap.find(route => route && route.path === path)
+};
+=======
+
+import { completeSitemap, SitemapItem } from "@/config/sitemap",
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {completeSitemap, SitemapItem} from "@/config/sitemap";
 // Find a route by path in the complete sitemap
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
@@ -9,6 +20,10 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 };
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Find a route by path in the complete sitemap
 
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
@@ -18,11 +33,17 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
+<<<<<<< HEAD
   const route = findRouteByPath(path)
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const route = findRouteByPath(path),
   return route?.requiredAuth === true;
 };
 
+<<<<<<< HEAD
 // Check if a route is accessible by a specific user type
 export const canAccessRoute = (;
   path: string;
@@ -30,6 +51,8 @@ export const canAccessRoute = (;
   return route?.requiredAuth === true
 }
 },
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 // Check if a route is accessible by a specific user type
 export const canAccessRoute = (
@@ -78,8 +101,27 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
   }
   return breadcrumbs
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
+=======
+}
+
+=======
+import { complete_sitemap, SitemapItem } from '@/config / sitemap';
+=======
+
+  if (route.requiredAuth && !isAuthenticated) return false,
+  
+
+  // If route requires specific roles and user doesn't have one
+  if (route.requiredRoles && route.requiredRoles.length > 0) {
+    if (!userType) return false,
+    return route.requiredRoles.includes(userType as any)
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Find a route by path in the complete sitemap;
@@ -156,4 +198,11 @@ if ( {) {
     }
   }
   return breadcrumbs;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

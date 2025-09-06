@@ -12,6 +12,7 @@ import PricingPage from './src/pages/Pricing';
 
 export default function App() {
   return (
+<<<<<<< HEAD
     <ErrorBoundary>
       <Router>
         <div className="min-h-screen bg-gray-50">
@@ -30,5 +31,11 @@ export default function App() {
         </div>
       </Router>
     </ErrorBoundary>
+=======
+    <main>
+      <h1>Zion Tech Group - AI, Micro SaaS & IT Services</h1>
+      <p>Building the future with innovative technology solutions</p>
+    </main>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }

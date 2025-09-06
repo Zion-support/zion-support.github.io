@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
@@ -96,6 +100,7 @@ if ( {) {
   } catch {
     // fall back to remote;
   }
+<<<<<<< HEAD
   const remote = await fetchFromGitHub();
   if (remote) return res.status(200).json(remote);
   return res.status(200).json(null);
@@ -131,6 +136,19 @@ async function fetchFromGitHub(): Promise<any | null> {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+=======
+
+  if (remote) return res && res.status(200).json(remote);
+  return res && res.status(200).json(null);
+}
+
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+  const remote = await fetchFromGitHub ();
+  if (return res.status (200).json (remote)) {
+  $2
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
   } catch (error) {
     console.error("Error:", error);
@@ -140,6 +158,7 @@ async function fetchFromGitHub(): Promise<any | null> {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -212,3 +231,12 @@ export default async function handler(req, res) {
   }
 }
 }
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

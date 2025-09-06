@@ -4,6 +4,7 @@ import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+<<<<<<< HEAD
   ArrowRight
   Play
   Star
@@ -45,6 +46,40 @@ import {
   DollarSign
   CheckCircle
   ArrowUpRight;
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import Layout from './layout / Layout';
+import { motion, AnimatePresence } from 'framer-motion';
+
+  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
+  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3, ;
+  Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite;
+  Eye, Clock, DollarSign, CheckCircle, ArrowUpRight;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -123,8 +158,11 @@ import {
 
 import Link from 'next/link';import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
+<<<<<<< HEAD
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
@@ -136,10 +174,18 @@ import Link from 'next/link';import {
 import Link from 'next/link';
 
 // Import our new innovative services
+<<<<<<< HEAD
 import { innovative2046AIServices  } from '../data/innovative-2046-ai-services';
 import { innovative2046ITServices  } from '../data/innovative-2046-it-services';
 import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
 import { innovative2046ITServices } from '../data/innovative-2046-it-services';
+=======
+
+
+import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
+import { innovative2046ITServices } from '../data/innovative-2046-it-services';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
 // Enhanced loading component with quantum effects
 
@@ -173,6 +219,34 @@ const QuantumLoadingFallback = () => (
       ))}
     </div>
 
+<<<<<<< HEAD
+=======
+            x: [0, Math && Math.random() * 1200],
+            y: [0, Math && Math.random() * 800],
+            opacity: [0, 1, 0],
+            scale: [0, 1, 0],
+          }}
+          transition={{
+            duration: Math && Math.random() * 4 + 3,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+          style={{
+            left: Math && Math.random() * 100 + '%',
+            top: Math && Math.random() * 100 + '%',          }}
+        />;
+      ))}
+    </div>;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {/* Quantum loading animation */}
     <motion&& motion.div
       initial={{ opacity: 0, scale: 0 && 0.5 }}
@@ -180,6 +254,7 @@ const QuantumLoadingFallback = () => (
       transition={{ duration: 1 }}
       className='text-center relative z-10'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -187,6 +262,9 @@ const QuantumLoadingFallback = () => (
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     >
       <div className='relative'>
         <motion.div
@@ -546,12 +624,26 @@ if ( {) {
           <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
           <div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Floating orbs */}
           {[...Array(20)].map((_, i) => (;
             <motion&& motion.div
               key={i}
               className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-30'
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               animate={{
                 x: [0, Math.random() * 100 - 50]
                 y: [0, Math.random() * 100 - 50]
@@ -660,13 +752,41 @@ if ( {) {
                 ease: 'easeInOut',
               }}
               style={{
+<<<<<<< HEAD
                 left: Math.random() * 100 + '%'
                 top: Math.random() * 100 + '%'}}
             />
+=======
+                left: Math && Math.random() * 100 + '%',
+                top: Math && Math.random() * 100 + '%',
+              }}            />              animate={{;
+                x: [0, Math && Math.random() * 100 - 50];
+                y: [0, Math && Math.random() * 100 - 50];
+                opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]}}
+              transition={{;
+                duration: Math && Math.random() * 10 + 10,;
+                repeat: Infinity,;
+                ease: "easeInOut";
+              }}
+              style={{;
+                left: Math && Math.random() * 100 + '%',;
+                top: Math && Math.random() * 100 + '%'}}
+            />;
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           ))}
         </div>
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Hero Section */}
         <section
           id='hero'
@@ -676,6 +796,7 @@ if ( {) {
           <div className="text-center max-w-6xl mx-auto">
           <div className='text-center max-w-6xl mx-auto'>            <motion.div
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -683,6 +804,9 @@ if ( {) {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -819,6 +943,7 @@ if ( {) {
                   Zion Tech Group
                 </span>
               </motion.h1>
+<<<<<<< HEAD
               <motion.p 
 =======
 <<<<<<< HEAD
@@ -1058,6 +1183,11 @@ if ( {) {
               <motion.p 
                 className=&quot;text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto&quot;
 
+=======
+              
+              <motion.p 
+                className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto"
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 }}
@@ -1257,14 +1387,28 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
           <div className="max-w-7xl mx-auto">
             <motion.div
 
+<<<<<<< HEAD
             <motion.div
 
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+            >
+
+
+            <motion.div
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
               className='text-center mb-16'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1272,6 +1416,9 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
@@ -1293,6 +1440,37 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
               </p>
             </motion.div>
 
+<<<<<<< HEAD
+=======
+
+              className='text-center mb-16'>;
+              <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>;
+                <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>;
+                  Revolutionary Services;
+                </span>;
+              </h2>;
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
+                Discover our cutting-edge quantum AI, neural interface, and;
+                space technology solutions that are transforming industries;
+                worldwide.              </p>            >;
+              <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">;
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">;
+                  Revolutionary Services;
+                </span>;
+              </h2>;
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
+                Discover our cutting-edge quantum AI, neural interface, and space technology solutions that are transforming industries worldwide.;
+              </p>;
+            </motion && motion.div>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Search and Filter */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -1301,6 +1479,7 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
               viewport={{ once: true }}
               className='mb-12'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1308,6 +1487,9 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <div className='flex flex-col md:flex-row gap-4 justify-center items-center'>
                 <div className='relative flex-1 max-w-md'>
@@ -1350,6 +1532,12 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 
                     <button
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       key={category}
                       onClick={() => setSelectedCategory(category)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${;
@@ -1365,6 +1553,20 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
               </div>
             </motion.div>
 
+<<<<<<< HEAD
+=======
+                </div>;
+              </div>;
+            </motion && motion.div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Services Grid */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -1374,6 +1576,7 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'            >              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'            >
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1381,6 +1584,9 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -1391,9 +1597,20 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
                   whileInView={{ opacity: 1, y: 0 }}
 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
                   whileHover={{ y: -10, scale: 1.02 }}
                   className='group'
 
+=======
+
+
+=======
+                  className='group'
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full'>
                     <div className='flex items-start justify-between mb-4'>
@@ -1420,6 +1637,12 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
                           {[...Array(5)].map((_, i) => (
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
@@ -1438,6 +1661,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1445,6 +1669,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </div>
                       </div>
                     </div>
@@ -1579,6 +1805,9 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
             </motion.div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       </ul>;
                     </div>;
 
@@ -1923,6 +2152,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1930,6 +2160,8 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Call to Action */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -1938,6 +2170,7 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               viewport={{ once: true }}
               className='text-center mt-20'
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -1945,6 +2178,9 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             >
               <div className='bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-12 border border-cyan-400/30'>
                 <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
@@ -2010,11 +2246,34 @@ transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
       </div>;
     </Layout>;
   );
+<<<<<<< HEAD
 }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 export default Homepage2046;  );
 };
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default Homepage2046;
 
 export default Homepage2046;
+<<<<<<< HEAD
 export default Homepage2046;
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  );
+
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

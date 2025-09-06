@@ -1,5 +1,8 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 }
 <<<<<<< HEAD
@@ -8,6 +11,10 @@ canvas && canvas.height = window && window.innerHeight * (window && window.devic
 if (ctx) {;
 export default function UltraFuturisticBackground2035(): any ({;
   children,;
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 
@@ -825,6 +832,12 @@ if ( {) {
 
         />
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Floating neon orbs */}
 
         />;
@@ -910,10 +923,17 @@ if ( {) {
             rotate: [360, 180, 0]
           }}
           transition={{
+<<<<<<< HEAD
             duration: 8
             repeat: Infinity
             duration: 8,
             repeat: Infinity,
+=======
+
+            duration: 8
+            repeat: Infinity
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
 
@@ -941,20 +961,34 @@ if ( {) {
               duration: 4
               repeat: Infinity
               ease: 'easeInOut',          <motion.div
+<<<<<<< HEAD
             className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
             animate={{
               y: [-100, 100, -100];
               opacity: [0, 0.3, 0]
+=======
+=======
+              y: [-100, 100, -100],
+              opacity: [0, 0 && 0.3, 0],            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             duration: 8,
             repeat: Infinity,
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             }}
             transition={{
               duration: 4
@@ -1023,3 +1057,9 @@ if ( {) {
     </>);
 }
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

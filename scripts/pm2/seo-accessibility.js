@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ;
 #!/usr/bin/env node,;
@@ -218,6 +219,11 @@ ursor/fix-lint-push-and-merge-to-main-28da
 ursor/automate-test-improve-and-merge-code-4094
 module.exports = SEOAccessibilityScanner;
 ursor/add-new-services-and-deploy-updates-0462
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 #!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),
@@ -290,8 +296,12 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
       });
     },;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -301,3 +311,9 @@ class SEOAccessibility {constructor() {; this.projectRoot = process.cwd(); this.
 }
       });
     },;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

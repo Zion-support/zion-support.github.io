@@ -246,6 +246,7 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message, signature: bs58.encode(signature), publicKey })});
       if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
+<<<<<<< HEAD
       onLoggedIn?.({ address: publicKey, chain: 'sol' });
       onClose();
     } catch (e: any) {
@@ -254,11 +255,20 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
     } finally {
       setLoading(false);    }      if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature');
       onLoggedIn?.({ address: publicKey, chain: 'sol' })
+=======
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       setLoading(false);    }
 
       onLoggedIn?.({ address: publicKey, chain: 'sol' }),
+<<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       onClose()
     } catch (e: any) {
       console.error(e);
@@ -299,6 +309,9 @@ function ModalInner(): any ({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps
   if (!isOpen) return null;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             Cancel;
@@ -317,6 +330,7 @@ if (return null) {
   $2
 }
   return <ModalInner {...props} />;
+<<<<<<< HEAD
 
   useEffect__(() => {
     if (!isOpen) {
@@ -499,6 +513,8 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
       </div>
     </div>
   )
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -506,6 +522,7 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
 
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
+<<<<<<< HEAD
   return <ModalInner {...props} />;        </div>
         {error && (
           <div className="mb-3 rounded-md bg-red-50 dark:bg-red-900/30 px-3 py-2 text-sm text-red-700 dark:text-red-300">{error}</div>
@@ -537,3 +554,7 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
   return <ModalInner {...props} />
 }
   return <ModalInner {...props} />;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

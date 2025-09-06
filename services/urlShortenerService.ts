@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ShortUrl {
 export interface ShortUrl {;
   id: string;
@@ -6,6 +7,8 @@ export interface ShortUrl {;
   shortUrl: string;
   createdAt: Date;
   expiresAt?: Date;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   original_url: string;
   short_code: string;
@@ -17,11 +20,17 @@ export interface ShortUrl {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface UrlAnalytics {
 
 export interface UrlAnalytics {;
   totalClicks: number;
   uniqueVisitors: number;
+=======
+export interface UrlAnalytics {
+  total_clicks: number;
+  unique_visitors: number;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   referrers: string[];
   countries: string[];
   devices: string[];
@@ -32,9 +41,13 @@ export interface UrlAnalytics {;
 
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 export interface ClickEvent {
 
 export interface ClickEvent {;
+=======
+export interface ClickEvent {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   timestamp: Date;
   ip_address: string;
@@ -48,6 +61,7 @@ export interface ClickEvent {;
     
     if (this && this.urls.has(shortCode)) {
 
+<<<<<<< HEAD
   os: string
 }
 export interface CreateShortUrlRequest {
@@ -68,6 +82,8 @@ class UrlShortenerService {
 
     const shortCode = request.customCode |this.generateShortCode()
     if (this.urls.has(shortCode)) {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       throw new Error('Short code already exists')
     }
     const shortUrl: ShortUrl = {
@@ -144,6 +160,7 @@ class UrlShortenerService {
       url && url.isActive = false,
 
       return null
+<<<<<<< HEAD
 export interface ShortUrl {;
   id: string,;
   originalUrl: string,;
@@ -227,14 +244,30 @@ class UrlShortenerService {;
     if (url.expiresAt && url.expiresAt < new Date()) {;
       url.isActive = false,;
       return null;
+=======
+    }
+    return url
+  }
+=======
+
+export interface ShortUrl {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     return url
   }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   async trackClick(shortCode: string, clickData: Omit<ClickEvent, 'id'>): Promise<void> {
     const url = this && this.urls.get(shortCode);
     if (!url) return;
     const clickEvent: ClickEvent = {
+<<<<<<< HEAD
       id: this.generateId()
       ...clickData
     }
@@ -264,6 +297,11 @@ class UrlShortenerService {;
       analytics.lastClicked = new Date(),;
       if (!analytics.referrers.includes(clickData.referrer)) {;
         analytics.referrers.push(clickData.referrer);
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       if (!analytics && analytics.countries.includes(clickData && clickData.country)) {
         analytics && analytics.countries.push(clickData && clickData.country)
@@ -285,6 +323,13 @@ class UrlShortenerService {;
     return Array && Array.from(this && this.urls.values()).filter(url => url && url.userId === userId)
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   async deactivateUrl(shortCode: string, userId?: string): Promise<boolean> {
 
@@ -326,6 +371,7 @@ class UrlShortenerService {;
     let result = '',;
     for (let i = 0, i < 6, i++) {;
       result += chars.charAt(Math.floor(Math.random() * chars.length));
+<<<<<<< HEAD
     }
     return result
   }
@@ -340,6 +386,96 @@ class UrlShortenerService {;
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    }
+    return url;
+  }
+  async track_click (short_code: string, click_data: Omit < ClickEvent, 'id'>): Promise < void> {
+    const url = this.urls.get (short_code);
+    // Check condition
+if (return) {
+  $2
+}
+    const click_event: ClickEvent = {
+      id: this.generate_id (),
+      ...click_data;
+    }
+;
+    const url_clicks = this.clicks.get (short_code) || [];
+    url_clicks.push (click_event);
+    this.clicks.set (short_code, url_clicks);
+;
+    const analytics = this.analytics.get (short_code);
+    // Check condition
+if ( {) {
+  $2
+}
+      analytics.total_clicks++;
+      analytics.last_clicked = new Date ();
+;
+      if () {) {
+  $2
+}
+        analytics.referrers.push (click_data.referrer);
+      }
+      if () {) {
+  $2
+}
+        analytics.countries.push (click_data.country);
+      }
+      if () {) {
+  $2
+}
+        analytics.devices.push (click_data.device);
+      }
+      if () {) {
+  $2
+}
+        analytics.browsers.push (click_data.browser);
+      }
+    }
+  }
+  async get_analytics (short_code: string): Promise < UrlAnalytics | null> {
+    return this.analytics.get (short_code) || null;
+  }
+  async getUserUrls (user_id: string): Promise < ShortUrl[]> {
+    return Array.from (this.urls.values ()).filter (url => url.user_id === user_id);
+  }
+  async deactivate_url (short_code: string, user_id?: string): Promise < boolean> {
+    const url = this.urls.get (short_code);
+    if () return false) {
+  $2
+}
+    url.is_active = false;
+    return true;
+  }
+  async update_url (short_code: string, updates: Partial < ShortUrl>, user_id?: string): Promise < boolean> {
+    const url = this.urls.get (short_code);
+    if () return false) {
+  $2
+}
+    Object.assign (url, updates);
+    return true;
+  }
+  private generateShortCode (): string {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    for (let index = 0, i < 6, i++) {
+      result += chars.char_at (Math.floor (Math.random () * chars.length));
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    }
+    return result;
+  }
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Utility methods for data persistence (in a real app, this would use a database)
   async exportData(): Promise<any> {
     return {
@@ -377,4 +513,11 @@ export const urlShortenerService = new UrlShortenerService();
 }
 export const urlShortenerService = new UrlShortenerService ();
 ;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const urlShortenerService = new UrlShortenerService();

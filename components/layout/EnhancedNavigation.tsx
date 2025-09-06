@@ -48,6 +48,7 @@ import {;
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
+<<<<<<< HEAD
   Menu
   X
   ChevronDown
@@ -69,6 +70,9 @@ import {
   Bot
   Factory
   Car
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Menu,
   X,
   ChevronDown,
@@ -90,6 +94,11 @@ import {
   Bot,
   Factory,
   Car,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "lucide-react";
 import Link from "next/link";
 interface EnhancedNavigationProps {;
@@ -424,6 +433,21 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
               <Search className="w-5 h-5" />
             </motion.button>
 
+<<<<<<< HEAD
+=======
+              transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
+              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
+              <Search className="w-5 h-5" />;
+            </motion && motion.button>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -442,6 +466,22 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
               <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
             </motion.button>
 
+<<<<<<< HEAD
+=======
+              transition={{ duration: 0 && 0.5, delay: 0 && 0.7 }}
+              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative">;
+              <Bell className="w-5 h-5" />;
+              <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />;
+            </motion && motion.button>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* CTA Button */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -467,6 +507,20 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         </div>
       </div>
 
+<<<<<<< HEAD
+=======
+          </motion && motion.button>;
+        </div>;
+      </div>;
+
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Mobile Navigation */}
       <AnimatePresence>;
         {isOpen && (;
@@ -555,7 +609,12 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
                   href="/contact"
                   onClick={() => setIsOpen(false)}
 <<<<<<< HEAD
+<<<<<<< HEAD
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300";
+=======
+                  className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300";
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               className="p - 2 text - gray - 400 hover:text - cyan - 400 hover:bg - cyan - 500 / 10 rounded - lg transition - all duration - 300 relative";
             >;
               <Bell className="w - 5 h - 5" />;
@@ -658,6 +717,7 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
           </motion.div>)}
       </AnimatePresence>;
     </nav>);
+<<<<<<< HEAD
 =======
                   className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-medium transition-all duration-300"
                 >
@@ -673,6 +733,8 @@ className="block text-gray-400 hover:text-cyan-400 transition-colors duration-30
   );
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export default EnhancedNavigation;
 ;
@@ -680,8 +742,18 @@ export default EnhancedNavigation;
 };
 
 export default EnhancedNavigation;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 );
 };
 export default EnhancedNavigation;
 
+<<<<<<< HEAD
 export default EnhancedNavigation;
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -4,6 +4,7 @@ import type { QuoteRequest } from "@/types/quotes";
 
 
 import { Button } from "@/components/ui/button";
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button'
 import { Download } from 'lucide-react'
 import type { QuoteRequest } from "@/types/quotes";
@@ -110,6 +111,11 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     document.body.appendChild(link)
 import { Button } from "@/components/ui/button"
 import type { QuoteRequest } from "@/types/quotes"
+=======
+import { Download } from 'lucide-react'
+import type { QuoteRequest } from "@/types/quotes";
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ExportToCSVProps {
   quotes: QuoteRequest[]
   filename?: string
@@ -143,6 +149,9 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     const csvContent = [
       headers.join()
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       ...rows.map(row =>
         row.map(cell =>
 
@@ -297,6 +306,7 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
   } }
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <Button
       variant="outline"
@@ -314,6 +324,8 @@ export const ExportToCSV = ({ quotes, filename = "quote - requests" }: ExportToC
   )
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import { Button } from "@/components/ui/button",
@@ -367,9 +379,12 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   );
 };
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ].join('\n'),
     
     // Create download link
@@ -459,6 +474,9 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

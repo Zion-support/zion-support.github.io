@@ -4,6 +4,7 @@ appStoreUrl?: string;
   onGooglePlayClick?: () => void;
 }
 
+<<<<<<< HEAD
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
   className;
   appStoreUrl = "#";
@@ -48,16 +49,25 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   className,
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ 
   className,
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   appStoreUrl = "#",
   googlePlayUrl = "#",
   onAppStoreClick,
   onGooglePlayClick
+<<<<<<< HEAD
 }) => {
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
 },) => {
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
 }) => {
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     if (!appStoreUrl || appStoreUrl === "#") {
       e.preventDefault(),
       logInfo("App Store download clicked"),
@@ -65,9 +75,14 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
     }
   },
 
+<<<<<<< HEAD
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>,) => {
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     if (!googlePlayUrl || googlePlayUrl === "#") {
       e.preventDefault(),
       logInfo("Google Play download clicked"),
@@ -111,6 +126,9 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleAppStoreClick}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         target="_blank"
@@ -133,6 +151,9 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleGooglePlayClick}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         target="_blank"
@@ -144,6 +165,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
           xmlns="http: //www.w3.org/2000/svg"
           className="h-8 w-8 mr-3 fill-current"
           aria-hidden="true"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           focusable="false"
@@ -164,6 +186,8 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
 <<<<<<< HEAD
 }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           focusable="false">;
           <path d="M5 && M5.39712 2 && 2.55259C5.46194 2 && 2.48941 5 && 5.54489 2 && 2.44922 5 && 5.63353 2 && 2.43851C5.7219 2 && 2.42779 5 && 5.81183 2 && 2.44668 5 && 5.88981 2 && 2.4932L19.0263 9 && 9.88803C19.1105 9 && 9.93801 19 && 19.1789 10 && 10.0116 19 && 19.2221 10 && 10.0995C19.2655 10 && 10.1876 19 && 19.2823 10 && 10.2863 19 && 19.2703 10 && 10.3838C19.2584 10 && 10.4814 19 && 19.2181 10 && 10.5731 19 && 19.1546 10 && 10.648C19.0911 10 && 10.7229 19 && 19.0075 10 && 10.7776 18 && 18.9141 10 && 10.8053L5.78534 15 && 15.3491C5.69396 15 && 15.3768 5 && 5.59685 15 && 15.3796 5 && 5.50418 15 && 15.3575C5.4115 15 && 15.3351 5 && 5.32714 15 && 15.2887 5 && 5.2608 15 && 15.2235C5.19447 15 && 15.1582 5 && 5.14865 15 && 15.0768 5 && 5.12834 14 && 14.9875C5.10804 14 && 14.898 5 && 5.11404 14 && 14.8045 5 && 5.14551 14 && 14.7177L6.5082 11 && 11.2062L5.14551 7 && 7.40668C5.11404 7 && 7.31957 5 && 5.10774 7 && 7.22573 5 && 5.12804 7 && 7.13612C5.14834 7 && 7.04681 5 && 5.19447 6 && 6.96544 5 && 5.2611 6 && 6.90016C5.32745 6 && 6.83517 5 && 5.4118 6 && 6.78856 5 && 5.50448 6 && 6.76611C5.59715 6 && 6.74367 5 && 5.69396 6 && 6.74611 5 && 5.78534 6 && 6.77416L9.15613 7 && 7.91314L5.39712 2 && 2.55259Z" />;

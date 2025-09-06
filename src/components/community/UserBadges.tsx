@@ -1,4 +1,5 @@
 ;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -11,6 +12,8 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 interface UserBadgesProps {
   badges: Badge[];
@@ -49,6 +52,7 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
   if (!badges?.length) return null,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
 
@@ -70,12 +74,21 @@ export default UserBadges
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+  return (
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
 export default UserBadges;
 }
 }
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy,
         

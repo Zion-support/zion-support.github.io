@@ -11,9 +11,13 @@ export function TalentDashboard() {
             </Button>
           </Link>
         </div>
+<<<<<<< HEAD
         <div className='space-y-3'>
         
         <div className="space-y-3">
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between items-start">
@@ -68,6 +72,9 @@ export function TalentDashboard() {
                 </Button>              </div>              <div className="flex gap-2 mt-3">
               <div className="flex gap-2 mt-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 <Button size="sm">Apply Now</Button>
@@ -79,6 +86,9 @@ export function TalentDashboard() {
       </section>
       
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <section>
@@ -104,6 +114,9 @@ export function TalentDashboard() {
               </div>
             </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -319,6 +332,7 @@ export function TalentDashboard() {;
 
       
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -326,6 +340,8 @@ export function TalentDashboard() {;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <section>
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
         <div className="grid grid-cols-2 gap-4">
@@ -356,6 +372,9 @@ export function TalentDashboard() {;
             <span>Availability</span>
           </Button>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -427,6 +446,9 @@ export function TalentDashboard() {;
 
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               </div>
 
@@ -434,6 +456,7 @@ export function TalentDashboard() {;
           </CardContent>
         </Card>
       </section>
+<<<<<<< HEAD
     </div>;
   );
 };
@@ -561,6 +584,11 @@ export function TalentDashboard() {;
             className="h-auto py-4 flex flex-col gap-1";
             aria-label="Set Availability";
           >;
+=======
+
+
+            aria-label="Set Availability">;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <Clock className="h-5 w-5 mb-1" aria-hidden="true" />;
             <span>Availability</span>;
           </Button>;
@@ -696,6 +724,9 @@ export function TalentDashboard() {;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     </div>);
 }

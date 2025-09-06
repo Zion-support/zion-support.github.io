@@ -1,10 +1,18 @@
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { Check, Copy  } from 'lucide-react';
 import { cn } from "@/lib/utils";
 interface CodeBlockProps {
 
   code: string
+=======
+import {useState} from 'react';
+import {Check, Copy} from 'lucide-react';
+import {cn} from "@/lib/utils";
+interface CodeBlockProps {;
+  code: string,;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   language?: string;
   showLineNumbers?: boolean;
@@ -21,12 +29,29 @@ export function CodeBlock(): any ({ ;
   className;
 }: CodeBlockProps) {;
   const [copied, setCopied] = useState(false);
+<<<<<<< HEAD
 import {useState} from 'react';
 import {Check, Copy} from 'lucide-react';
 import {cn} from "@/lib/utils";
 import { useState } from 'react',
 import { Check, Copy } from 'lucide-react',
 import { cn } from "@/lib/utils",
+=======
+
+
+
+import {useState} from 'react';
+import {Check, Copy} from 'lucide-react';
+import {cn} from "@/lib/utils";
+
+=======
+import { useState } from 'react',
+import { Check, Copy } from 'lucide-react',
+import { cn } from "@/lib/utils",
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface CodeBlockProps {
   code: string,
   language?: string,
@@ -108,6 +133,13 @@ export function CodeBlock({;
           <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">;
             {code && code.split('\n').map((_, i) => (;
               <div key={i} className="h-6 leading-6">;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {i + 1}
               </div>;
             ))}
@@ -130,7 +162,35 @@ export function CodeBlock({;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+export default CodeBlock;
+
+=======
+import {useState} from 'react';
+import {Check, Copy} from 'lucide-react';
+import { cn } from '@/lib / utils';
+interface CodeBlockProps {
+  code: string,
+  language?: string;
+  showLineNumbers?: boolean;
+  class_name?: string;
+}
+export /**
+ * CodeBlock - Function description
+ */
+function CodeBlock() {
+  const [copied, set_copied] = useState (false);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   const handleCopyClick = async () => {
     await navigator.clipboard.write_text (code);

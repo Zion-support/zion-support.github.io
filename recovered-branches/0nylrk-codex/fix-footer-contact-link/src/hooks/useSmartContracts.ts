@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase  } from '@/integrations/supabase/client';
@@ -9,6 +10,8 @@ import { ContractFormValues } from "@/components/contracts/components/ContractFo
 export function useSmartContracts() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import {useState} from 'react';
 import {useAuth} from '@/hooks/useAuth';
@@ -20,6 +23,11 @@ import {ContractFormValues} from "@/components/contracts/components/ContractForm
 export function useSmartContracts() {;
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
 import { useState } from 'react',
 import { useAuth } from '@/hooks/useAuth',
@@ -220,6 +228,7 @@ if ( {) {
       
       return mockSmartContractInfo
     } catch (err: any) {
+<<<<<<< HEAD
       console.error("Error deploying smart contract:", err);
       toast.error("Failed to deploy smart contract");
       setDeploymentStatus('error');
@@ -324,6 +333,10 @@ export function useSmartContracts() {;
     deploySmartContract;
     isLoading;
     deploymentStatus;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 ;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
@@ -8,12 +9,19 @@ import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../ty
 import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
+=======
+
+
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function toSlug(name: string): string {;
   return name;
     .toLowerCase();
     .replace(/[^a-z0-9]+/g, "-");
     .replace(/(^-|-$)+/g, "");
     .slice(0, 64);
+<<<<<<< HEAD
 }
 function ensureDir(dirPath: string) {if (!fs.existsSync(dirPath)) {;
     fs.mkdirSync(dirPath, { recursive: true });
@@ -122,10 +130,19 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     );
     assets.push({ kind: "file", path: trailerScriptPath, description: "Trailer script" });
   }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   // Schedule launch stream (/summit);
   ensureDir(eventsDir),;
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),;
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -513,6 +530,12 @@ if ( {) {
   // Schedule launch stream (/summit);
   ensureDir(eventsDir);
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`);
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   writeTextFile(;
     summitEventPath;
     JSON.stringify(;
@@ -553,6 +576,7 @@ if ( {) {
       2;
     );
   ),;
+<<<<<<< HEAD
   assets.push({ kind: "event", path: summitEventPath, description: "Launch stream scheduled" }),;
   // 4. Activate Public Pages (record intent);
   const pagesActivationPath = path.join(baseDir, "pages.json"),;
@@ -575,6 +599,9 @@ if ( {) {
         activate: [;
           "/about";
           "/manifesto";
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           "/constitution",;
           "/partners",;
           "/academy",;
@@ -585,6 +612,7 @@ if ( {) {
       2;
     );
   ),;
+<<<<<<< HEAD
   assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" });
   // Optional modules markers;
   const optionalModules = Object.entries(input.modules);
@@ -648,3 +676,9 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

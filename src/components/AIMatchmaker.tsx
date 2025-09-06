@@ -11,6 +11,7 @@ import { Sparkles, Search } from 'lucide-react';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {
 
+<<<<<<< HEAD
   serviceType?: string
 onMatchSelect?: (match: any) => void
 className?: string
@@ -30,6 +31,14 @@ toast ({
 }finally {
   //Set empty matches to show no results found UI setMatches ([]) ;
 }finally {;
+=======
+
+
+  //Set empty matches to show no results found UI setMatches ([]) ;
+}finally {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 interface AIMatchmakerProps {
   serviceType?: string
@@ -37,6 +46,9 @@ interface AIMatchmakerProps {
   className?: string
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -48,6 +60,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const [matches, setMatches] = useState([] as MatchResult[]),
   const [hasSearched, setHasSearched] = useState(false),
 
+<<<<<<< HEAD
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -83,12 +96,15 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const [isMatchmaking, setIsMatchmaking] = useState(false),
   const [matches, setMatches] = useState([] as MatchResult[]),
   const [hasSearched, setHasSearched] = useState(false),
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
+<<<<<<< HEAD
         variant: "destructive"}),
       return
     }
@@ -118,6 +134,11 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         title: "Matching Error",
         description: "We couldn't find matches for your request. Please try again.",
         variant: "destructive"}),
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       // Set empty matches to show no results found UI
       setMatches([])
 import { useState } from 'react';
@@ -198,6 +219,7 @@ function AIMatchmaker() {
       set_matches ([]);
     } finally {
       setIsMatchmaking(false)
+<<<<<<< HEAD
     }
   }
   const handleItemSelect = (item: any) => {    if (onMatchSelect) {
@@ -277,6 +299,9 @@ function AIMatchmaker() {
 
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
           AI Matchmaker;
         </CardTitle>;
@@ -284,6 +309,9 @@ function AIMatchmaker() {
           Describe what you&apos;re looking for and our AI will find the best
           matches
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 interface AIMatchmakerProps {;
@@ -410,6 +438,11 @@ if ( {) {
       <CardHeader className="pb-2">
         <CardTitle className="flex items-center text-white">
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           AI Matchmaker
         </CardTitle>
         <p className="text-sm text-zion-slate-light">
@@ -460,12 +493,18 @@ if ( {) {
 
           {hasSearched && (;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               matches={matchItems}
               onSelectMatch={handleItemSelect}
               isLoading={isMatchmaking}
               serviceType={serviceType}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -483,6 +522,9 @@ if ( {) {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

@@ -8,9 +8,17 @@ return (
               <br />
               In Your Pocket
             </h1>
+<<<<<<< HEAD
             <p className='text-lg md:text-xl opacity-90 mb-8'>
               Find top AI talent or global IT jobs on the go. Track projects
               Find top AI talent or global IT jobs on the go. Track projects,
+=======
+
+
+              Find top AI talent or global IT jobs on the go. Track projects,
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               message candidates, and get AI-powered matches instantly with our
               mobile app.
             </p>
@@ -20,8 +28,16 @@ return (
               />
             </div>
             <div className="mb-8">
+<<<<<<< HEAD
               <AppStoreButtons
               <AppStoreButtons 
+=======
+
+
+              <AppStoreButtons 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}              />
             </div>
@@ -47,6 +63,9 @@ return (
                   size='lg'
                   className='text-white hover:bg-white/10'
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import React from "react";
@@ -96,6 +115,9 @@ export const MobileLaunchHero: React.FC = () => {
               </Link>
               
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -122,6 +144,9 @@ export const MobileLaunchHero: React.FC = () => {
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl transform translate-y-2"></div>
               
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -138,9 +163,12 @@ export const MobileLaunchHero: React.FC = () => {
       </div>
     </section>
   )
+<<<<<<< HEAD
 }
 "  )
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
 }
@@ -215,6 +243,9 @@ export const MobileLaunchHero: React.FC = () => {;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

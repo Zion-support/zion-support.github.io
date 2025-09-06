@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import fs from 'fs',
 import fs from 'fs';
 import path from 'path';
@@ -8,6 +9,8 @@ const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, 'utf-8'))
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 const doc = new PDFDocument ({
   size: 'A4', margin: 50
@@ -78,6 +81,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res
       .status(500)
       .json({ error: e?.message ?? 'Failed to generate certificate' });
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ certificate: 'PDF certificate' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -178,6 +182,17 @@ function readJson(p: string) {;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+=======
+
+  }
+}
+=======
+
+    doc.end()
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' })
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 ;
@@ -318,3 +333,8 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

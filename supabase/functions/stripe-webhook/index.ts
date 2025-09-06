@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
 ;
   return new Response('Not found', { "status": 404 })});    return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
@@ -14,6 +15,14 @@
     return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
   return new Response('Not found', { "status": 404 })});
     return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
+=======
+
+
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           .eq('id', orderId)};
     };
     return new Response(JSON.stringify({ "received": true }), { "status": 200 })};
@@ -122,4 +131,19 @@ origin/automation-improvements-final
 .eq('id', orderId)}}; return new Response(JSON.stringify({ "received": true }), { "status": 200 })}; return new Response('Not found', { "status": 404 })}); return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
   return new Response('Not found', { "status": 404 })});
     return new Response(JSON.stringify({ "received": true }), { "status": 200 })}
+<<<<<<< HEAD
 origin/main
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+.eq ('id', order_id)}} return new Response (JSON.stringify ({ "received": true }), { "status": 200 })} return new Response ('Not found', { "status": 404 })}); return new Response (JSON.stringify ({ "received": true }), { "status": 200 })}
+;
+  return new Response ('Not found', { "status": 404 })});
+    return new Response (JSON.stringify ({ "received": true }), { "status": 200 })}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

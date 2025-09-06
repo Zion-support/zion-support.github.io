@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { format  } from 'date-fns';
 import { cn  } from '@/lib/utils';
@@ -8,6 +9,15 @@ interface ConversationItemProps {
   conversation: Conversation,
   isActive: boolean,
   onClick: () => void
+=======
+
+
+  conversation: Conversation,
+  isActive: boolean,
+  onClick: () => void
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { format } from 'date-fns',;
 import { cn } from '@/lib/utils',;
@@ -17,6 +27,12 @@ interface ConversationItemProps {;
   conversation: Conversation,;
   isActive: boolean,;
   onClick: () => void;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
   conversation: Conversation
@@ -26,6 +42,7 @@ interface ConversationItemProps {;
 }
 export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     <div
@@ -39,6 +56,14 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
 
         "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover:bg-zion-blue-dark/30",
+=======
+
+
+    <div 
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}

@@ -7,6 +7,7 @@ import { NotificationContextType } from './types';
 // fully-typed object here avoids TypeScript errors that occur when an untyped
 // `createContext` call returns `{}` instead of the expected shape.
 
+<<<<<<< HEAD
 const defaultContext: NotificationContextType = {
   notifications: []
   filteredNotifications: []
@@ -41,6 +42,21 @@ export const useNotifications = (): NotificationContextType => {;
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider')
+=======
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+import {useNotificationOperations} from './useNotificationOperations';
+import {NotificationContextType} from './types';
+=======
+
+
+export const useNotifications = (): NotificationContextType => {;
+  const context = useContext(NotificationContext) as NotificationContextType;
+  if (!context) {
+    throw new Error('useNotifications must be used within a NotificationProvider')
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -72,6 +88,13 @@ export const useNotifications = (): NotificationContextType => {;
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {;
     throw new Error('useNotifications must be used within a NotificationProvider');
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   return context
 },
@@ -98,6 +121,7 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
             schema: 'public'
             table: 'notifications'
             filter: `user_id=eq.${user.id}`
+<<<<<<< HEAD
           }
           },
           (payload) => {
@@ -119,6 +143,22 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
 }
 
 };
+=======
+
+
+          },
+
+
+          (payload) => {
+            console.log('Notification change received:', payload);
+            notificationOps.fetchNotifications()
+
+
+};
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return context;
 };
 
@@ -234,3 +274,12 @@ if ( {) {
     </NotificationContext && NotificationContext.Provider>;
   );
 };
+<<<<<<< HEAD
+=======
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

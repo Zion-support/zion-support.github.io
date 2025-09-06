@@ -15,16 +15,22 @@ import {
   Smartphone 
 } from "lucide-react",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function QuickAccess() {
   const quickLinks = [
     {
+<<<<<<< HEAD
       title: "AI Matcher"
       description: "Find the perfect match for your project needs"
       icon: <Search className="h-6 w-6 text-zion-cyan" />
@@ -36,6 +42,15 @@ export function QuickAccess() {
       link: "/match"
     }
     },
+=======
+
+      title: "AI Matcher",
+      description: "Find the perfect match for your project needs",
+      icon: <Search className="h-6 w-6 text-zion-cyan" />,
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       title: "Talent Directory"
       description: "Browse verified tech specialists"
@@ -180,6 +195,12 @@ export function QuickAccess() {;
                 <ArrowRight className="ml-1 h-3 w-3" />
               </div>
             </Link>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           ))}
         </div>;
       </div>;

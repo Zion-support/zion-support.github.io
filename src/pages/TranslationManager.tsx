@@ -9,6 +9,7 @@ let sourceText = '';    ;
 }
 
 
+<<<<<<< HEAD
 ;
     const query = searchQuery.toLowerCase().trim(),;
     const filtered: string[] = [],;
@@ -354,5 +355,10 @@ let sourceText = '';    ;
       </main>;
     </>;
   );
+=======
+;
+    let source_text = '';
+    for (const lang of supported_languages.map (l => l.code)) {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 }

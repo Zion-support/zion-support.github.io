@@ -1,16 +1,25 @@
 
 import React from "react";
 import {
+<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "@/components/ui/card";
 
 import { Progress } from "@/components/ui/progress";
@@ -69,17 +78,30 @@ export function TeamStats() {
           <p className="text-xs text-muted-foreground">18 seats available</p>
         </div>
         
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <p className="text-xl font-bold">24</p>
             </div>
           </div>
         </div>
         
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <div className="pt-4 text-center border-t border-border mt-4">
           <button className="text-sm text-blue-500 font-medium hover: text-blue-700">
             View Full Analytics
           </button>
         </div>
       </CardContent>
+<<<<<<< HEAD
     </Card>
   );
 }
@@ -89,6 +111,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Progress } from "@/components/ui/progress";
 export function TeamStats() {;
   return (;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <Card>;
       <CardHeader>;
         <CardTitle>Team Stats</CardTitle>;

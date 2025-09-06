@@ -1,15 +1,27 @@
 import Link from "next/link";
 
+<<<<<<< HEAD
 import Link from "next/link";
 export default function ReportProblemButton({
   projectId
   entityType
   entityId
 }: {
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   projectId,
   entityType,
   entityId,
 }: {;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   projectId: string;
   entityType?: "milestone" | "contract" | "thread";
   entityId?: string;
@@ -89,6 +101,9 @@ export default function ReportProblemButton({ projectId, entityType, entityId }:
       </a>
     </Link>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import Link from './next / link';
 ;
@@ -100,6 +115,7 @@ function ReportProblemButton() {
     project_id,
     ...(entity_type ? { entity_type } : {}),
     ...(entity_id ? { entity_id } : {}),
+<<<<<<< HEAD
 }
 export default function ReportProblemButton({
   projectId,
@@ -116,6 +132,8 @@ export default function ReportProblemButton({
     ...(entityType ? { entityType } : {})
     ...(entityId ? { entityId } : {})
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   });
   return (
     <Link href={`/disputes/new?${query.toString()}`}>
@@ -145,10 +163,14 @@ function ReportProblemButton() {
 
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
   );
 <<<<<<< HEAD
@@ -157,3 +179,5 @@ function ReportProblemButton() {
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

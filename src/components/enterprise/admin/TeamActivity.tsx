@@ -105,6 +105,7 @@ export function TeamActivity() {;
 
     const style = categoryStyles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>
+<<<<<<< HEAD
   }
   },
 
@@ -118,10 +119,16 @@ export function TeamActivity() {;
   },
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
 
     <div className="space - y-6">;
@@ -305,6 +312,9 @@ const getCategoryBadge = (category: string) =>: any {
                 <TableCell>{getCategoryBadge(activity && activity.category)}</TableCell>;
                 <TableCell className="text-muted-foreground">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   activity.id;
 }> </TableCell> </TableRow>) ) ";
@@ -320,6 +330,9 @@ const getCategoryBadge = (category: string) =>: any {
       </div>
       
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">

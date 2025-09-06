@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Route, Routes} from "react-router-dom";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import Marketplace from "@/pages/Marketplace";
@@ -130,6 +131,14 @@ import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",;
 import SearchPage from "@/pages/SearchPage",;
 import ProjectRoom from "@/pages/ProjectRoom",;
 import VideoCall from "@/pages/VideoCall",;
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+const MarketplaceRoutes = () => {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const MarketplaceRoutes = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
@@ -204,5 +213,17 @@ const MarketplaceRoutes = () => {;
       />;
     </Routes>;
   );
+<<<<<<< HEAD
 },;
+=======
+};
+
+
+=======
+
+},
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default MarketplaceRoutes;

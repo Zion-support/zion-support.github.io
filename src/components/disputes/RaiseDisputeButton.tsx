@@ -1,5 +1,6 @@
 return (
     <>;
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -60,6 +61,8 @@ Dialog,
   DialogHeader,
   DialogTitle,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   projectId: string,
   milestoneId?: string,
@@ -69,6 +72,12 @@ Dialog,
 }
 
 export function RaiseDisputeButton({ 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   projectId,
   milestoneId, 
   variant = "outline", 
@@ -76,6 +85,9 @@ export function RaiseDisputeButton({
   className 
 }: RaiseDisputeButtonProps) {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
@@ -88,6 +100,9 @@ export function RaiseDisputeButton({
             </DialogDescription>
           </DialogHeader>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         onClick={() => setIsDialogOpen(true)}      >;
         <ShieldAlert className='h-4 w-4 mr-2' />;

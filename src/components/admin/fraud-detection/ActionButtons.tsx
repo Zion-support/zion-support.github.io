@@ -2,6 +2,7 @@
         <Eye className="h-4 w-4" />
       </Button>
       <Button
+<<<<<<< HEAD
         variant='ghost'
         size='icon'
         title='Send Warning'
@@ -101,6 +102,15 @@
 };
 <<<<<<< HEAD
 
+=======
+
+
+};
+'"},;
+  );
+};
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         variant="ghost"
         size="icon"
@@ -148,6 +158,9 @@
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

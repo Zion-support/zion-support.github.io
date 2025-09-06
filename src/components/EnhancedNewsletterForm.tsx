@@ -17,6 +17,7 @@ export function EnhancedNewsletterForm() {;
       toast && toast.error('Invalid email');
       return;
     }
+<<<<<<< HEAD
     setIsSubmitting(true)
     try {
       const res = await fetch('/api/newsletter', {
@@ -53,6 +54,8 @@ import { Mail } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast",
 import {logErrorToProduction} from '@/utils/productionLogger',
 export function EnhancedNewsletterForm() {
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const [email, setEmail] = useState(""),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -74,6 +77,7 @@ export function EnhancedNewsletterForm() {
       return
     }
 
+<<<<<<< HEAD
     setIsSubmitting(true),
     try {
       const res = await fetch("/api/newsletter", {
@@ -81,6 +85,8 @@ export function EnhancedNewsletterForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: trimmed })}),
 
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       const data = await res.json().catch(() => ({})),
 
 
@@ -90,6 +96,7 @@ export function EnhancedNewsletterForm() {
         if (data.status === 'already_subscribed') {
           toast.success(data.message || "You're already subscribed!")
         } else {
+<<<<<<< HEAD
           toast.success(data.message || 'Thanks for subscribing!')
         }
         setIsSubmitted(true)
@@ -122,6 +129,8 @@ export function EnhancedNewsletterForm() {
       setIsSubmitting(false)
     }
   },
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -154,6 +163,7 @@ export function EnhancedNewsletterForm() {
 
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -213,6 +223,8 @@ export function EnhancedNewsletterForm() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {isSubmitted ? (;
         <div className='text-center p-4 rounded-lg bg-zion-purple/20 border border-zion-purple/40'>;
           <p className='text-white font-medium'>Thank you for subscribing!</p>;
@@ -232,6 +244,9 @@ export function EnhancedNewsletterForm() {
             We&apos;ll keep you updated with the latest from Zion.
           </p>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       
       {isSubmitted ? (
@@ -246,6 +261,9 @@ export function EnhancedNewsletterForm() {
           </label>
           <Input
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             type="email"
@@ -334,6 +352,9 @@ export function EnhancedNewsletterForm() {
     </div>;
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

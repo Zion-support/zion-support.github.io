@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -68,6 +69,22 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array.from(e.target.files));
     }
   },
+=======
+import React, { useState, useRef } from './react';
+import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
+import { Button } from '@/components / ui / button';
+import { Upload, Trash2, Plus } from './lucide-react';
+import { AppPlatform } from './MetadataManager';
+import { toast } from './sonner';
+
+interface ScreenshotManagerProps {
+  platform: AppPlatform;
+}
+type Screenshot = {
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
@@ -124,6 +141,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     const availableSlots = maxScreenshots - screenshots.length,
     
     if (availableSlots <= 0) {
+<<<<<<< HEAD
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
       return
     }
@@ -231,6 +249,12 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     }
   },
   
+=======
+
+  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -393,14 +417,30 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               </button>;
             </div>;
           ))}
+<<<<<<< HEAD
         </div>
       </CardContent>
     </Card>
   )
 }
 
+=======
+
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>;
       </CardContent>;
     </Card>;
   );
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };

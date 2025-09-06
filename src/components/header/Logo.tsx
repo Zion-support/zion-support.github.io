@@ -4,6 +4,7 @@ return (
       </Link>);
   }
 
+<<<<<<< HEAD
   // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined)
 import React from 'react';
 import Link from 'next/link';
@@ -24,6 +25,9 @@ export function Logo({ customLogo }: LogoProps) {
   // Use the white-label color if available and no specific _customColor is provided
   // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined),
   
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (logoToUse) {
     return (
       <Link href="/" className="flex items-center">

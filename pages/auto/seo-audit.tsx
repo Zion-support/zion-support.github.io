@@ -13,10 +13,17 @@ const SEOAudit: NextPage = () => {
         <div>
           <Link href="/data/reports/seo/latest.json"><a className="text-blue-600 underline">Latest SEO Report (JSON)</a></Link>
           <Link href="/data/reports/seo/latest.json"><a className="text-blue-600 underline">Latest SEO Report (JSON)</Link></Link>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>
       </main>
     </div>
   )
+<<<<<<< HEAD
 }
 export default SEOAudit;
 
@@ -28,10 +35,20 @@ export default SEOAudit,
 <<<<<<< HEAD
 }
 export default SEOAudit;
+=======
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+},
+export default SEOAudit,
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 =======
 },
 export default SEOAudit,
+<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 },
@@ -40,3 +57,8 @@ export default SEOAudit,
 
 export default SEOAudit,;
 export default SEOAudit,
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -96,6 +96,7 @@ const Services: React.FC = () => {
             Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
           </p>
         </div>
+<<<<<<< HEAD
       </div>
 
       {/* Services Grid */}
@@ -151,6 +152,77 @@ const Services: React.FC = () => {
             <p className="text-xl text-gray-600">How we deliver exceptional results for your business</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+=======
+        {/* Main Services */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <ServiceCard
+            title="AI & Machine Learning"
+            description="Transform your business with cutting-edge AI solutions including machine learning, natural language processing, and computer vision."
+            icon="🤖"
+          />
+          <ServiceCard
+            title="Cybersecurity"
+            description="Protect your digital assets with advanced security solutions, threat detection, and compliance management."
+            icon="🔒"
+          />
+          <ServiceCard
+            title="Cloud Infrastructure"
+            description="Scale your operations with robust cloud solutions, migration services, and infrastructure optimization."
+            icon="☁️"
+          />
+          <ServiceCard
+            title="Digital Transformation"
+            description="Modernize your business processes with comprehensive digital transformation strategies and implementation."
+            icon="🚀"
+          />
+          <ServiceCard
+            title="Data Analytics"
+            description="Unlock insights from your data with advanced analytics, business intelligence, and reporting solutions."
+            icon="📊"
+          />
+          <ServiceCard
+            title="IoT Solutions"
+            description="Connect and manage your devices with Internet of Things solutions for smart operations and monitoring."
+            icon="🌐"
+          />
+        </div>
+
+        {/* Service Categories */}
+        <div className="mb-16">
+          <h2 className="text-4xl font-bold text-center mb-12">Service Categories</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card
+              title="Consulting Services"
+              description="Strategic technology consulting to help you make informed decisions about your digital future."
+            />
+            <Card
+              title="Implementation"
+              description="End-to-end implementation of technology solutions tailored to your specific business needs."
+            />
+            <Card
+              title="Support & Maintenance"
+              description="Ongoing support and maintenance to ensure your systems run smoothly and efficiently."
+            />
+            <Card
+              title="Training & Education"
+              description="Comprehensive training programs to help your team master new technologies and processes."
+            />
+            <Card
+              title="Custom Development"
+              description="Bespoke software development solutions designed specifically for your unique requirements."
+            />
+            <Card
+              title="Integration Services"
+              description="Seamless integration of new technologies with your existing systems and workflows."
+            />
+          </div>
+        </div>
+
+        {/* Industry Solutions */}
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-12">Industry Solutions</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-blue-600">1</span>
@@ -179,6 +251,7 @@ const Services: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Support</h3>
               <p className="text-gray-600">We provide ongoing support and optimization to ensure your success.</p>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
       </div>
@@ -201,6 +274,20 @@ const Services: React.FC = () => {
             >
               View Pricing
             </Link>
+=======
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎓</span>
+              </div>
+              <h3 className="text-lg font-semibold">Education</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏛️</span>
+              </div>
+              <h3 className="text-lg font-semibold">Government</h3>
+            </div>
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>
         </div>
       </div>

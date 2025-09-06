@@ -1,21 +1,38 @@
 
+<<<<<<< HEAD
 import React from 'react';
 import { SEO  } from '@/components/SEO';
 import { AppHeader  } from '@/layout/AppHeader';
 import { Footer  } from '@/components/Footer';
 import { DisputeDetail  } from '@/components/disputes';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {SEO} from '@/components/SEO';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
 import {DisputeDetail} from '@/components/disputes';
 import {ProtectedRoute} from '@/components/ProtectedRoute';
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',
 import { SEO } from '@/components/SEO',
 import { AppHeader } from '@/layout/AppHeader',
 import { Footer } from '@/components/Footer',
 import { DisputeDetail } from '@/components/disputes',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 function DisputeDetailPage() {
   return (
     <ProtectedRoute>
@@ -73,8 +90,11 @@ export default DisputeDetailPage;
 =======
     </ProtectedRoute>);
 }
+<<<<<<< HEAD
 
 ;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default DisputeDetailPage;
 
 ;

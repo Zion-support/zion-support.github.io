@@ -36,6 +36,7 @@ type DocsContent = {
   title: string;
   sections: Section[];
 }
+<<<<<<< HEAD
 type PageProps = {
   docs: DocsContent;
 }
@@ -43,6 +44,14 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
 };
 
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
+=======
+
+
+};
+
+export const getServerSideProps: GetServerSideProps<PageProps> = async () => {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const contentPath = path.join(process.cwd(), 'data', 'docs', 'content.json');
   const raw = fs.readFileSync(contentPath, 'utf8');
   const docs = JSON.parse(raw) as DocsContent;
@@ -157,11 +166,21 @@ export default function ApiDocsPage({ docs }: PageProps) {
               {section.code.map((c, idx) => (
                 <CodeBlock key={idx} language={c.language}>{c.content}</CodeBlock>
 
+<<<<<<< HEAD
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ))}
             </div>;
           )}
         </section>;
       ))}
+<<<<<<< HEAD
     </DocsLayout>
 );
   );
@@ -173,6 +192,23 @@ export default function ApiDocsPage({ docs }: PageProps) {
   );
 }
 <<<<<<< HEAD
+=======
+
+    </DocsLayout>;
+  );
+=======
+
+  );
+
+
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+    </DocsLayout>
+  );
+}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 ;
 type PageProps = {
@@ -246,7 +282,10 @@ function ApiDocsPage() {
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

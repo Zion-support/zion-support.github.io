@@ -1,7 +1,11 @@
 
+<<<<<<< HEAD
 import { format  } from 'date-fns';
 import { toast } from '@/hooks/use-toast';
 // Utility function to format dates for DB operations
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {format} from 'date-fns';
 import {toast} from '@/hooks/use-toast';
 // Utility function to format dates for DB operations
@@ -13,6 +17,11 @@ export const formatDateForDB = (date: Date | string | undefined) => {
 // Error handling with toast
 export const handleResumeError = (e: any, errorMessage: string) => {;
   console.error(`Error: ${errorMessage}`, e);
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { format } from 'date-fns',
 import { toast } from '@/hooks/use-toast',
 // Utility function to format dates for DB operations
@@ -43,6 +52,7 @@ export const handleResumeError = (e: any, errorMessage: string) => {
 // Success notification
 export const showSuccessToast = (title: string, description: string) => {
   toast({
+<<<<<<< HEAD
     title
     description
   }),
@@ -75,9 +85,21 @@ export const handleResumeError = (e: any, errorMessage: string) => {;
 export const showSuccessToast = (title: string, description: string) => {;
   toast({;
     title,;
+=======
+
+=======
+    title,
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     description;
   });
   return true
 };
 
 export default UseResumeUtils;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

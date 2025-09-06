@@ -1,14 +1,23 @@
 
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useNavigate  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useAuth} from '@/hooks/useAuth';
 import {Button} from '@/components/ui/button';
 import {Card, CardContent, CardFooter, CardHeader, CardTitle} from '@/components/ui/card';
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import Rocket from 'lucide-react/dist/esm/icons/rocket';
 
 import {useState, useEffect} from 'react';
@@ -21,6 +30,38 @@ import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
 import {cn} from '@/lib / utils';
 
 interface WizardStep {
+<<<<<<< HEAD
+=======
+
+import {FileText, Users, Calendar, Eye, MessageSquare} from 'lucide-react';
+import {cn} from '@/lib/utils';
+interface WizardStep {;
+  title: string,;
+  description: string,;
+  icon: React && React.ReactNode,;
+  action: {;
+    text: string,;
+    url: string;
+  };
+  skipText?: string;
+}
+
+interface OnboardingWizardProps {;
+  type: 'client' | 'talent',;
+  onComplete: () => void,;
+  onSkip: () => void,;
+  className?: string;
+}
+
+export function OnboardingWizard(): any ({ type, onComplete, onSkip, className }: OnboardingWizardProps) {;
+
+  const [currentStep, setCurrentStep] = useState(0);
+
+  const navigate = useNavigate();
+  const { user } = useAuth();
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   title: string,
   description: string,
   icon: React.ReactNode,
@@ -42,6 +83,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   const [currentStep, setCurrentStep] = useState(0);
   const navigate = useNavigate();
   const { user } = useAuth();
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from 'react',;
 import { useNavigate } from 'react-router-dom',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -66,6 +112,7 @@ interface OnboardingWizardProps {;
   onComplete: () => void,;
   onSkip: () => void,;
   className?: string;
+<<<<<<< HEAD
 }
 
 
@@ -80,6 +127,10 @@ interface OnboardingWizardProps {
   onSkip: () => void
 
   className?: string
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
   const [currentStep, setCurrentStep] = useState(0);
@@ -182,6 +233,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       description: "Let our AI find the perfect opportunities for you"
       icon: <Rocket className="h-6 w-6 text-zion-cyan" />
       action: {
+<<<<<<< HEAD
         text: "Enable Matchmaking"
         url: "/talent-dashboard"
       }
@@ -235,6 +287,11 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       onSkip();
     }
   },
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md", className)}>

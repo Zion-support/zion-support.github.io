@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import { cn } from "@/lib/utils";
 import React from "react",
@@ -6,6 +7,26 @@ import { cn } from "@/lib/utils",
 import {cn} from "@/lib/utils";
 import React from "react",
 import { cn } from "@/lib/utils",
+=======
+import {cn} from "@/lib/utils";
+interface SidebarMenuItemProps extends React && React.HTMLAttributes<HTMLLIElement> {;
+
+  className?: string;
+  children?: React && React.ReactNode;
+=======
+
+
+import React from "react",
+import { cn } from "@/lib/utils",
+
+=======
+import {cn} from "@/lib/utils";
+=======
+import React from "react",
+import { cn } from "@/lib/utils",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {
   className?: string,
   children?: React.ReactNode
@@ -14,6 +35,12 @@ import { cn } from "@/lib/utils",;
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLLIElement> {;
   className?: string;
   children?: React.ReactNode;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 import React from './react';
@@ -31,8 +58,17 @@ function SidebarMenuItem() {
     <li className={cn ("", class_name)} {...props}>;
       {children}
     </li>
+<<<<<<< HEAD
   );
 }
   )
 }
 ;
+=======
+
+  )
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

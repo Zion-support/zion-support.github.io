@@ -33,6 +33,7 @@ import {
   Card,
   CardContent,
   CardFooter,
+<<<<<<< HEAD
   CardHeader,;
   CardHeader,
 } from "@/components/ui/card";
@@ -64,6 +65,10 @@ export function ZapierIntegration() {
     toast.success("API key copied to clipboard")
   },
   
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-6">
       <div className="grid md:grid-cols-3 gap-6">
@@ -82,6 +87,12 @@ export function ZapierIntegration() {
               to set up integrations.
             </p>
             
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div className="space-y-4">
               <div className="space-y-2">
                 <label className="text-sm font-medium">Your Zion API Key</label>
@@ -106,6 +117,12 @@ export function ZapierIntegration() {
           </CardFooter>
         </Card>
         
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <Card>
           <CardHeader>
             <h3 className="text-lg font-semibold">Popular Zaps</h3>
@@ -139,6 +156,12 @@ export function ZapierIntegration() {
         </Card>
       </div>
       
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <Card>
         <CardHeader>
           <h3 className="text-lg font-semibold">Zapier Webhook Triggers</h3>
@@ -149,6 +172,12 @@ export function ZapierIntegration() {
             Zion account.
           </p>
           
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div className="grid md: grid-cols-3 gap-4">
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Job Posted</h4>
@@ -160,6 +189,12 @@ export function ZapierIntegration() {
               </Button>
             </div>
             
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Application</h4>
               <p className="text-xs text-muted-foreground mb-3">
@@ -170,6 +205,12 @@ export function ZapierIntegration() {
               </Button>
             </div>
             
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">Contract Signed</h4>
               <p className="text-xs text-muted-foreground mb-3">
@@ -183,6 +224,7 @@ export function ZapierIntegration() {
         </CardContent>
       </Card>
     </div>
+<<<<<<< HEAD
   );
 }
   )
@@ -215,6 +257,17 @@ export function ZapierIntegration() {;
           <CardContent>;
             <p className="text-sm text-muted-foreground mb-4">;
               Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.;
+=======
+
+=======
+
+
+
+=======
+            <p className="text - sm text - muted - foreground mb - 4">;
+              Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
+              to set up integrations.;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </p>;
             <div className="space - y-4">;
               <div className="space - y-2">;
@@ -332,6 +385,13 @@ export function ZapierIntegration() {;
       </Card>;
 
     </div>;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 }
 ;

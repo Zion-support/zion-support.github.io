@@ -3,6 +3,9 @@
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       {/* Steps list */}
@@ -91,6 +94,7 @@ export function OnboardingTracker({
   const progress = Math.round((completedSteps / steps.length) * 100),
 
   return (
+<<<<<<< HEAD
     <div className={cn("rounded-lg border border-zion-blue-light bg-zion-blue-dark/60 p-4 md:p-6", className)}>
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-medium text-white">{title}</h3>
@@ -124,6 +128,12 @@ export function OnboardingTracker({;
       <div className="flex items-center justify-between mb-4">;
         <h3 className="text-lg font-medium text-white">{title}</h3>;
         <div className="text-sm font-medium text-zion-cyan">{progress}% Complete</div>;
+=======
+    <div className={cn ("rounded - lg border border - zion - blue - light bg - zion - blue - dark / 60 p - 4 md:p - 6", class_name)}>;
+      <div className="flex items - center justify - between mb - 4">;
+        <h3 className="text - lg font - medium text - white">{title}</h3>;
+        <div className="text - sm font - medium text - zion - cyan">{progress}% Complete</div>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       </div>;
       {/* Progress bar */}
       <div className="w - full h - 2 bg - zion - blue rounded - full mb - 5">;
@@ -133,6 +143,7 @@ export function OnboardingTracker({;
         ></div>;
       </div>;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -140,6 +151,8 @@ export function OnboardingTracker({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Steps list */}
       <div className="space - y-3">;
         {steps.map ((step, ) => (
@@ -173,6 +186,7 @@ export function OnboardingTracker({;
   /* Steps list */ "
 }<div className="space-y-3" > {
   steps.map ( (step) => (<div key= {
+<<<<<<< HEAD
   step.id "
 }className="flex items-center" > <div className="mr-3" > {"
   step.completed ? (<CheckCircle className="h-5 w-5 text-zion-cyan" /> h-5 w-5 text-zion-slate-light"/>)
@@ -183,12 +197,19 @@ export function OnboardingTracker({;
 }</div>) )
 }</div> </div>)
 }"}
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   step.link 
 }> </Link> </Button>) 
 }</div>) ) ;
 }</div> </div>) ;
 }"};
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       </div>;

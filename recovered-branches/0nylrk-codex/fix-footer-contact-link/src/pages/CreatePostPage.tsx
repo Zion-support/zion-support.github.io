@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {Link, useNavigate, useSearchParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -17,6 +18,12 @@ import { useToast } from "@/hooks/use-toast";
 import { ForumCategory } from "@/types/community";
 import { useToast } from "@/hooks/use-toast",
 import { ForumCategory } from "@/types/community",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface PostFormValues {
 
   title: string
@@ -26,12 +33,18 @@ interface PostFormValues {
   tags: string
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function CreatePostPage() {;
   const navigate = useNavigate();
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
 export default function CreatePostPage() {
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -243,3 +256,62 @@ function CreatePostPage() {
   const { toast } = use_toast ();
   const [search_params] = useSearchParams ();
 ;
+<<<<<<< HEAD
+=======
+  // Get category from URL query params if available;
+  const initial_category = search_params.get ("category") as ForumCategory | null;
+;
+  const initial_values: Partial < PostFormValues> = {
+    category_id: initial_category || "project - help";
+  }
+;
+  const handle_submit = async (values: PostFormValues) => {
+    try {
+      // Here we would normally save to the database;
+      // For now, we'll just simulate a successful post creation;
+      // Parse tags into an array;
+      const tags_array = values.tags.split (", ").map (tag => tag.trim ());
+;
+      toast ({
+        title: "Post created",
+        description: "Your post has been published successfully";
+      });
+;
+      // Redirect to the forum category;
+      navigate (`/community / category/${values.category_id}`);
+    } catch (error) {
+      toast ({
+        title: "Error",
+        description: "There was a problem creating your post",
+        variant: "destructive";
+      });
+    }
+  }
+;
+  return (
+    <AppLayout>;
+      <SEO;
+        title="Create New Post | Community Forum | Zion AI Marketplace";
+        description="Create a new discussion post in the Zion AI Marketplace community forum.";
+        keywords="community, forum, discussion, create post, new thread";
+      />;
+      <div className="container py - 8">;
+        <div className="flex items - center gap - 3 mb - 6">;
+          <Link to="/community" className="text - sm text - muted - foreground hover:text - foreground">;
+            Forum;
+          </Link>;
+          <span className="text - muted - foreground">/</span>;
+          <span className="text - sm font - medium">Create Post</span>;
+        </div>;
+        <h1 className="text - 3xl font - bold mb - 8">Create New Post</h1>;
+        <PostForm initial_values={initial_values} on_submit={handle_submit} />;
+      </div>;
+    </AppLayout>);
+}
+
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

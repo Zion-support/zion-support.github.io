@@ -1,4 +1,5 @@
 interface SafeImageProps {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,6 +15,8 @@ import { useState } from 'react'
 import { ImageIcon } from 'lucide-react'
 interface SafeImageProps {;
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   src: string;
   alt: string;  width?: number;interface SafeImageProps {
 
@@ -33,9 +36,16 @@ interface SafeImageProps {;
         <ImageIcon className='w-6 h-6' />      </div>
     )
   }
+<<<<<<< HEAD
     />
 ;
     />;
+=======
+
+;
+    />;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );        aria-label={alt}
 'use client',;
 import Image from 'next/image',;
@@ -120,6 +130,9 @@ export function SafeImage({
         role="img"
         aria-label={alt}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       >
         <ImageIcon className="w-6 h-6" />
@@ -127,6 +140,13 @@ export function SafeImage({
     )
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     />
   ); return (
@@ -159,11 +179,21 @@ export function SafeImage({
       priority = {priority,}
       // Add unoptimized as fallback for problematic images
       unoptimized = {hasError,}
+<<<<<<< HEAD
     />
   )
 } 
 
 }
+=======
+
+
+} 
+
+}
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
     />;
   );

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -13,6 +14,25 @@ import { useHireRequest } from "@/hooks/useHireRequest";
 import { TalentProfile } from "@/types/talent";
 import { useHireRequest } from "@/hooks/useHireRequest",
 import { TalentProfile } from "@/types/talent",
+=======
+import { useState } from './react';
+import { use_form } from './react - hook - form';
+import { zod_resolver } from '@hookform / resolvers / zod';
+import { z } from './zod';
+import { useHireRequest } from '@/hooks / useHireRequest';
+import { TalentProfile } from '@/types / talent';
+
+interface UseHireRequestFormProps {
+  talent: TalentProfile;
+  on_close: () => void;
+  initialJobTitle?: string;
+  user_details?: {
+    name?: string;
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface UseHireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
@@ -21,6 +41,7 @@ interface UseHireRequestFormProps {
     name?: string;
 
 
+<<<<<<< HEAD
     id?: string
   }
 }
@@ -68,6 +89,21 @@ export interface FormValues {;
   budgetMin: number,;
   budgetMax: number;
 }
+=======
+
+    email?: string,
+    id?: string;
+
+  }
+}
+export interface FormValues {
+  requester_name: string;
+  requester_email: string;
+  project_overview: string;
+  timeline: string;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   budgetMin: number
 
@@ -201,6 +237,7 @@ function useHireRequestForm() {
           timeline: values.timeline,
           budgetMin: values.budgetMin,
           budgetMax: values.budgetMax
+<<<<<<< HEAD
         }
       };
 
@@ -273,6 +310,47 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     onSubmit
   }
 }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      }
+    } catch (error) {
+      console && console.error("Error submitting hire request:", error)
+=======
+          id: talent.id || "";
+          full_name: talent.full_name,
+          professional_title: talent.professional_title}
+        requester: {
+          name: values.requester_name;
+          email: values.requester_email,
+          id: user_details?.id;
+        }
+        project: {
+          overview: values.project_overview;
+          timeline: values.timeline;
+          budget_min: values.budget_min,
+          budget_max: values.budget_max;
+        }
+      }
+;
+      const result = await submitHireRequest (request_data);
+      // Check condition
+if ( {) {
+  $2
+}
+        on_close ();
+      }
+    } catch (error) {
+      console.error ("Error submitting hire request:", error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    } finally {
+
+=======
+      setIsSubmitting(false)
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch (error) {;
       console.error("Error submitting hire request:", error);
     } finally {;
@@ -283,6 +361,12 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     form;
     isSubmitting;
     onSubmit;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
@@ -6,12 +10,32 @@ import { parseUserFromRequest } from "../../../utils/auth";
 import { DisputeCase, DisputeReason } from "../../../types/disputes";
 import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
+<<<<<<< HEAD
   req: NextApiRequest
   res: NextApiResponse
 ) {
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+=======
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { createDispute, readAllDisputes } from '../../../utils/fsdb';
+import { parseUserFromRequest } from '../../../utils/auth';
+import { DisputeCase, DisputeReason } from '../../../types/disputes';
+import { generateCaseId } from '../../../utils/fsdb';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const user = parseUserFromRequest(req);
 
 
@@ -66,6 +90,7 @@ export default async function handler(
     }
     const id = generateCaseId();
     const dispute: DisputeCase = {
+<<<<<<< HEAD
       id
       projectId: String(projectId)
       entityType
@@ -81,6 +106,10 @@ export default async function handler(
       attachments: []
       messages: []
     }
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       id,
       projectId: String(projectId),
       entityType,
@@ -134,6 +163,11 @@ export default async function handler(
 res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 }
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET', 'POST']);
@@ -256,3 +290,9 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

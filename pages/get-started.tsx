@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -450,6 +451,40 @@ export default function GetStarted() {
 
 
 =======
+=======
+
+
+  Rocket,
+  CheckCircle,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Zap,
+  Users,
+  Clock,
+  Target,
+  Star,
+  FileText,
+  Video,
+  Code,
+
+      step: 1,
+      title: 'Choose Your Path',
+      description: 'Select the technology area that best fits your needs',
+
+  Globe,;
+  Building,;} from 'lucide-react';
+
+export default function GetStarted() {;
+  const [selectedPath, setSelectedPath] = useState<string>('');
+  const [currentStep, setCurrentStep] = useState(1);
+
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const handlePathSelection = (pathId: string) => {;
     setSelectedPath(pathId);
@@ -564,6 +599,7 @@ export default function GetStarted() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
+<<<<<<< HEAD
       color: 'from-orange-500 to-red-600'
       } catch (error) {
     console.error("Error:", error);
@@ -628,6 +664,21 @@ export default function GetStarted() {
               Begin your journey into the future of AI consciousness, quantum
               computing, and autonomous systems. Our expert team will guide you
               every step of the way.
+=======
+  const handlePreviousStep = () => {;
+    if (currentStep > 1) {;
+
+
+
+
+  return (
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      setCurrentStep(currentStep - 1);    }
+  }
+  return (
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Begin your journey into the future of AI consciousness, quantum computing,
@@ -655,6 +706,7 @@ export default function GetStarted() {
         <div className='container mx-auto px-4'>          <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
       {/* Onboarding Steps */  } catch (error) {
@@ -681,6 +733,10 @@ export default function GetStarted() {
   }
 }
             className="text-center mb-16"
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Simple 4-Step Process
@@ -702,6 +758,7 @@ export default function GetStarted() {
             {onboardingSteps.map((step, index) => (
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <motion.div
+<<<<<<< HEAD
                 key={step.step  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -731,6 +788,35 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+            transition={{ duration: 0 && 0.8 }}
+            className='text-center mb-16'>;
+            <h2 className='text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
+              Simple 4-Step Process;
+            </h2>;
+            <p className='text-xl text-gray-400'>;
+              From initial consultation to full implementation;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid md:grid-cols-4 gap-8'>            {onboardingSteps && onboardingSteps.map((step, index) => (;
+              <motion&& motion.div
+                key={step && step.step}
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                className={`text-center p-6 rounded-2xl border transition-all duration-300 ${
+                  currentStep === step && step.step
+                    ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50'
+                    : 'bg-gradient-to-br from-gray-900/30 to-black/30 border-gray-800/50'
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold">
                   {step.step}
@@ -758,11 +844,15 @@ export default function GetStarted() {
           </div>;
         </div>;
       </section>;
+<<<<<<< HEAD
       {/* Technology Paths */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {currentStep === 1 && (
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
@@ -959,6 +1049,12 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 >
                   <div className="p-8 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                     <div className="flex items-start gap-4 mb-6">
@@ -972,6 +1068,12 @@ export default function GetStarted() {
                     </div>
                     <div className='grid md:grid-cols-2 gap-6 mb-6'>
                     <div className="grid md:grid-cols-2 gap-6 mb-6">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <div>
                         <h4 className="text-sm font-semibold text-gray-400 uppercase tracking-wide mb-3">Key Features</h4>
                         <ul className="space-y-2">
@@ -1087,11 +1189,15 @@ export default function GetStarted() {
                       <div className="flex gap-4 text-sm text-gray-400">
                         <span className="flex items-center gap-1">
                           <Clock className="w-4 h-4" />
+<<<<<<< HEAD
                           {path.timeline  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         </span>
                         <span className="flex items-center gap-1">
                           <Target className="w-4 h-4" />
@@ -1130,6 +1236,12 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {currentStep === 2 && (
         <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
           <div className="container mx-auto px-4">
@@ -1161,6 +1273,12 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   </h3>
                   <p className="text-gray-300">
                     Now let's gather more details about your specific needs
@@ -1170,6 +1288,12 @@ export default function GetStarted() {
                   <div className='grid md:grid-cols-2 gap-6'>
                 <div className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">Project Timeline</label>
                       <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300">
@@ -1349,8 +1473,12 @@ export default function GetStarted() {
                       placeholder="Describe your project goals, challenges, and specific requirements..."
                     />
                   </div>
+<<<<<<< HEAD
                   <div className='flex justify-between pt-6'>
                   <div className="flex justify-between pt-6">
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <button
                       onClick={handlePreviousStep}
                       className="px-6 py-3 border border-gray-600 text-gray-300 rounded-xl hover:border-gray-500 hover:text-white transition-all duration-300"
@@ -1396,6 +1524,13 @@ export default function GetStarted() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick Start Options
@@ -1524,6 +1659,11 @@ export default function GetStarted() {
   }
 }
                 className="group cursor-pointer"
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -1614,6 +1754,7 @@ export default function GetStarted() {
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
+<<<<<<< HEAD
             initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1629,6 +1770,9 @@ export default function GetStarted() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Ready to Begin Your Journey?
@@ -1657,9 +1801,18 @@ export default function GetStarted() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
 )
 ),
 
+=======
+
+
+),
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -1793,3 +1946,10 @@ export default function GetStarted() {
   }
 }
 ;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

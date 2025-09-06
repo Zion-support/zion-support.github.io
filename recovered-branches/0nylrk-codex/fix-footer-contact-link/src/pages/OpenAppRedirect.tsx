@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import {useNavigate} from "react-router-dom";
 import {SEO} from "@/components/SEO";
@@ -11,6 +12,11 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // This component handles deep linking to the mobile app
 
 const OpenAppRedirect: React.FC = () => {
@@ -109,6 +115,7 @@ const OpenAppRedirect: React.FC = () => {;
             window.location.href = androidAppUrl
           } else if (isiOS) {
             window.location.href = iosAppUrl
+<<<<<<< HEAD
           }
         }, 2500), // Wait 2.5 seconds before redirecting to store
         // Try to open the app
@@ -120,6 +127,11 @@ const OpenAppRedirect: React.FC = () => {;
           navigate(fallbackUrl)
         }, 1500)
       }
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { SEO } from "@/components/SEO",;
@@ -160,6 +172,14 @@ const OpenAppRedirect: React.FC = () => {;
         setTimeout(() => {;
           navigate(fallbackUrl);
         }, 1500);
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
       
       // Clear timeout if page visibility changes (meaning app opened successfully)
@@ -224,4 +244,9 @@ export default OpenAppRedirect;
     </div>;
   );
 },;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default OpenAppRedirect;

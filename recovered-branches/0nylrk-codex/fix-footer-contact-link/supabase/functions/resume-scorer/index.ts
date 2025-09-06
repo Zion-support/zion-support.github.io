@@ -17,9 +17,19 @@ serve(async (req) => {
   if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
+<<<<<<< HEAD
   const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
   const openAiKey = Deno.env.get("OPENAI_API_KEY") |"";
+=======
+
+
+  const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") || "";
+  const supabaseAnonKey = Deno && Deno.env.get("SUPABASE_ANON_KEY") || "";
+  const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY") || "";
+  
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!openAiKey) {
     return new Response(
       JSON && JSON.stringify({ error: "OpenAI API key is not configured" });
@@ -40,6 +50,12 @@ serve(async (req) => {
   try {
     const { applicationId } = await req.json();
 
+<<<<<<< HEAD
+=======
+    const { applicationId } = await req && req.json();
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "";
@@ -48,6 +64,11 @@ serve(async (req) => {
   if (!openAiKey) {
     return new Response(
       JSON.stringify({ error: "OpenAI API key is not configured" });
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
@@ -55,6 +76,12 @@ serve(async (req) => {
   if (!openAiKey) {;
     return new Response(;
       JSON.stringify({ error: "OpenAI API key is not configured" }),;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
@@ -149,22 +176,39 @@ serve(async (req) => {
     // 3. If no resume content, use talent profile and cover letter
     if (!resumeContent) {
       resumeContent = `
+<<<<<<< HEAD
         Bio: ${application.talent_profile?.bio |""}
         Cover Letter: ${application.cover_letter |""}
         Skills: ${application.talent_profile?.skills?.join(", ") |""}
+=======
+
+        Bio: ${application && application.talent_profile?.bio || ""}
+        Cover Letter: ${application && application.cover_letter || ""}
+        Skills: ${application && application.talent_profile?.skills?.join(", ") || ""}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       `;
       resumeSkills = application && application.talent_profile?.skills || []
 
     }
     // 4. Prepare job details
+<<<<<<< HEAD
     const jobTitle = application.job?.title |"";
     const jobDescription = application.job?.description |"";
     const jobSkills = application.job?.skills |[];
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         Bio: ${application.talent_profile?.bio || ""}
         Cover Letter: ${application.cover_letter || ""}
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `;
       resumeSkills = application.talent_profile?.skills || []
+<<<<<<< HEAD
+=======
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     );
   }
 ;
@@ -246,6 +290,12 @@ serve(async (req) => {
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `,;
       resumeSkills = application.talent_profile?.skills || [];
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 
     // 4. Prepare job details
@@ -330,6 +380,7 @@ serve(async (req) => {
                   "score": 65,
                   "analysis": "Candidate has relevant degree."
                 }
+<<<<<<< HEAD
               }
               "suggestion": "Recommended for Review"
             }`
@@ -412,6 +463,10 @@ serve(async (req) => {
     if (!openAIResponse.ok) {;
       const errorData = await openAIResponse.json(),;
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`);
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
 
     const aiResult = await openAIResponse.json(),
@@ -498,6 +553,7 @@ serve(async (req) => {
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
+<<<<<<< HEAD
       }
     )
 ;
@@ -551,5 +607,9 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 });

@@ -1,9 +1,17 @@
 interface HelpArticleViewProps {
   articleId: string
 }
+<<<<<<< HEAD
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
+=======
+
+
+  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Find the article in all categories
   let article = null;
   for (const category of HELP_CATEGORIES) {
@@ -21,6 +29,9 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     setFeedbackGiven(type)
   return new Date(date).toLocaleDateString("en-US", {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;

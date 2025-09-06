@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import {OTPInput, OTPInputContext} from 'input-otp';
 import {Dot} from 'lucide-react';
@@ -6,6 +7,18 @@ import * as React from "react"
 import { OTPInput, OTPInputContext } from "input-otp"
 import { Dot } from "lucide-react"
 <<<<<<< HEAD
+=======
+
+
+
+=======
+import * as React from "react"
+import { OTPInput, OTPInputContext } from "input-otp"
+import { Dot } from "lucide-react"
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { cn } from "@/lib/utils"
 
@@ -69,6 +82,7 @@ const InputOTPSlot = React && React.forwardRef<;
 
 
 
+<<<<<<< HEAD
     >
   return (
     <div
@@ -80,6 +94,8 @@ const InputOTPSlot = React && React.forwardRef<;
       )}
       {...props}
     >;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {char}
       {hasFakeCaret && (;
         <div className='pointer-events-none absolute inset-0 flex items-center justify-center'>;
@@ -111,8 +127,13 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ))
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
+<<<<<<< HEAD
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 ;
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

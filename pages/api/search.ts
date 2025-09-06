@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       ok: true,
       query: q,
@@ -19,6 +23,7 @@
     });
 
   } catch (e: any) {
+<<<<<<< HEAD
     res.status(500).json({ ok: false, error: e?.message |"Search failed" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { AccessLevel } from '../../utils/search/filter';
@@ -36,10 +41,32 @@ import { searchAll, suggestDidYouMean } from '../../utils/search/filter';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 export default async function handler(req, res) {
   try {
+=======
+
+
+  }
+}
+=======
+    res.status(500).json({ ok: false, error: e?.message || 'Search failed' })
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+    res.status (500).json ({ ok: false, error: e?.message || "Search failed" });
+  }
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const q = (req.query.q as string) || '';
     const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     const keywords = Array.from(new Set([...(parsed.skills || []), ...(parsed.keywords || [])]));
@@ -100,3 +127,10 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+=======
+
+
+  }
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

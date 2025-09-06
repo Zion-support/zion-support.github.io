@@ -217,6 +217,7 @@ export default SyntaxFixer;
 ,
         // Fix export statements,
         content = content.replace(/export\s+([^]+),\s*$/gm, 'export $1,'),
+<<<<<<< HEAD
 ,;
         if (content !== fs.readFileSync(file, &quot;utf8&quot;)) {,
 ,
@@ -233,6 +234,9 @@ export default SyntaxFixer;
         this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
 this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
         this.log(`Failed to fix ${file}: ${error.message}`, "WARN")
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
     })
   },
@@ -274,9 +278,14 @@ this.log("=" * 50)
     try {,
       await this.fixSyntaxErrors(),
 ,
+<<<<<<< HEAD
       this.log("=" * 50),
 this.log("=" * 50),
       this.log("=" * 50),
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
     } catch (error) {
       this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR")
@@ -598,9 +607,14 @@ if ( {, ) {
 ,
 export default SyntaxFixer,
 
+<<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-28da
 
 ;
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     });
   },;
@@ -702,3 +716,10 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ;
 export default SyntaxFixer;
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

@@ -27,6 +27,7 @@ export function GlobalServiceSection() {;
 
           ))}
 
+<<<<<<< HEAD
 =======
 import { GradientHeading } from './GradientHeading'
 import {
@@ -145,6 +146,8 @@ const services = [
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function GlobalServiceSection() {
   return (
     <section className="py-20 bg-zion-blue" id="global-services">
@@ -176,6 +179,9 @@ export function GlobalServiceSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           {services.map((service, index) => (
@@ -194,6 +200,9 @@ export function GlobalServiceSection() {
 
         <div className="flex justify-center mt-12">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -207,6 +216,7 @@ export function GlobalServiceSection() {
 };
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
 import { GradientHeading } from "./GradientHeading",;
@@ -246,6 +256,9 @@ export function GlobalServiceSection() {;
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">;
             Our 24x7x365 global IT service offering provides enterprise-grade solutions for businesses of all sizes;
           </p>;
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>;
 
         <div className='flex justify-center mt-12'>;
@@ -361,6 +374,9 @@ function GlobalServiceSection() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     </section>);
 }

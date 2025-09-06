@@ -230,6 +230,7 @@ const v1: ApiDocsSpec = {
               }
             }
           }
+<<<<<<< HEAD
         }
       ];
     }
@@ -238,6 +239,25 @@ const v1: ApiDocsSpec = {
 export default v1;
 
   ];
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        }
+      ];
+    }
+
+            { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },
+            { language: 'python', code: `import requests\nrequests ;
+
+
+=======
+=======
+
+  ];
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 };
 export default v1;

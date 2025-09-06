@@ -1,4 +1,31 @@
 
+<<<<<<< HEAD
+=======
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState, useEffect} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {useNavigate} from "react-router-dom";
@@ -13,6 +40,7 @@ import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
 import {toast} from "@/hooks/use-toast";
 import {Check, Flag, Search, Settings, X} from "lucide-react";
 import {supabase} from "@/integrations/supabase/client";
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useNavigate } from "react-router-dom",
@@ -221,6 +249,8 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
 import { toast } from "@/hooks/use-toast",;
 import { Check, Flag, Search, Settings, X } from "lucide-react",;
 import { supabase } from "@/integrations/supabase/client",;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface PartnerProfile {;
   id: string,;
   user_id: string,;
@@ -305,6 +335,143 @@ export default function PartnerManager() {;
       } else {;
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery);
+<<<<<<< HEAD
+=======
+
+export default /**
+ * PartnerManager - Function description
+ */
+function PartnerManager() {
+  const [partners, set_partners] = useState < PartnerProfile[]>([]);
+  const [filtered_partners, setFilteredPartners] = useState < PartnerProfile[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+  const [search_query, setSearchQuery] = useState ("");
+  const [active_tab, setActiveTab] = useState ("pending");
+  const [selected_partner, setSelectedPartner] = useState < PartnerProfile | null>(null);
+  const [isDetailsOpen, setIsDetailsOpen] = useState (false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState (false);
+  const [commission_rate, setCommissionRate] = useState (25);
+  const { user, is_authenticated } = use_auth ();
+  const navigate = use_navigate ();
+;
+  useEffect (() => {
+    // Check condition
+if ( {) {
+  $2
+}
+      navigate ("/login");
+      return;
+    }
+    fetch_partners ();
+  }, [is_authenticated, navigate]);
+;
+  const fetch_partners = async () => {
+    try {
+      setIsLoading (true);
+      // In a real application, check admin permissions here;
+      const { data, error } = await supabase;
+        .from ('partner_profiles');
+        .select ('*');
+        .order ('created_at', { ascending: false }),
+      // Check condition
+if (throw error) {
+  $2
+}
+      // If no data is returned, use mock data;
+      // Check condition
+if ( {) {
+  $2
+}
+        const mock_data: PartnerProfile[] = [;
+          {
+            id: '1',
+            user_id: 'user1',
+            name: 'AI Bytes',
+            status: 'pending',
+            created_at: new Date (Date.now () - 2 * 24 * 60 * 60 * 1000).toISOString (),
+            niche: 'AI Tutorials',
+            audience_size: '10k - 50k',
+            social_media: { twitter: '@aibytes', youtube: 'AI Bytes' },
+            website: 'aibytes.com',
+            bio: 'We create AI tutorials and insights for developers.',
+            payout_method: 'paypal',
+            fraud_flags: 0,
+            commission_rate: 25;
+          }
+          {
+            id: '2',
+            user_id: 'user2',
+            name: 'ML Academy',
+            status: 'approved',
+            created_at: new Date (Date.now () - 15 * 24 * 60 * 60 * 1000).toISOString (),
+            niche: 'Machine Learning Education',
+            audience_size: 'over100k',
+            social_media: { twitter: '@mlacademy', youtube: 'ML Academy' },
+            website: 'mlacademy.edu',
+            bio: 'Premiere online academy for machine learning enthusiasts.',
+            payout_method: 'bank',
+            fraud_flags: 0,
+            commission_rate: 30;
+          }
+          {
+            id: '3',
+            user_id: 'user3',
+            name: 'Tech Insights',
+            status: 'rejected',
+            created_at: new Date (Date.now () - 5 * 24 * 60 * 60 * 1000).toISOString (),
+            niche: 'Technology News',
+            audience_size: '1k - 10k',
+            social_media: { twitter: '@techinsights' },
+            website: 'techinsights.io',
+            bio: 'We share insights about the latest in tech.',
+            payout_method: 'crypto',
+            fraud_flags: 2,
+            commission_rate: 20;
+          }
+          {
+            id: '4',
+            user_id: 'user4',
+            name: 'CodeMaster',
+            status: 'approved',
+            created_at: new Date (Date.now () - 30 * 24 * 60 * 60 * 1000).toISOString (),
+            niche: 'Coding Tutorials',
+            audience_size: '50k - 100k',
+            social_media: { youtube: 'CodeMaster', linkedin: 'codemaster' },
+            website: 'codemaster.dev',
+            bio: 'Learn to code with our expert tutorials.',
+            payout_method: 'paypal',
+            fraud_flags: 0,
+            commission_rate: 25;
+          }
+          {
+            id: '5',
+            user_id: 'user5',
+            name: 'AI Daily',
+            status: 'pending',
+            created_at: new Date (Date.now () - 1 * 24 * 60 * 60 * 1000).toISOString (),
+            niche: 'AI News',
+            audience_size: '10k - 50k',
+            social_media: { twitter: '@aidaily', instagram: '@aidailynews' },
+            website: 'aidaily.news',
+            bio: 'Daily updates on the world of artificial intelligence.',
+            payout_method: 'platform_credit',
+            fraud_flags: 1,
+            commission_rate: 20;
+          }
+        ];
+;
+        set_partners (mock_data);
+        filter_partners (mock_data, active_tab, search_query);
+      } else {
+        set_partners (data as PartnerProfile[]);
+        filter_partners (data as PartnerProfile[], active_tab, search_query);
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       }
 
       console.error ("Error fetching partners:", error);
@@ -329,6 +496,7 @@ export default function PartnerManager() {;
     // Filter by status
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
+<<<<<<< HEAD
     }
     // Filter by search query
     if (query) {
@@ -342,6 +510,13 @@ export default function PartnerManager() {;
     }
     setFilteredPartners(filtered)
   }
+=======
+
+
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch (error) {;
       console && console.error("Error fetching partners:", error);
       toast({;
@@ -371,6 +546,13 @@ export default function PartnerManager() {;
         p && p.website?.toLowerCase().includes(lowerQuery);
       );
     }
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     
     setFilteredPartners(filtered)
   },
@@ -473,6 +655,7 @@ export default function PartnerManager() {;
         title: "Error"
         description: "Failed to update partner settings"
         variant: "destructive"})
+<<<<<<< HEAD
     }
   }
   const getAudienceSizeLabel = (size: string) => {
@@ -486,6 +669,15 @@ export default function PartnerManager() {;
     }
   }
   };
+=======
+
+
+=======
+
+  };
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setFilteredPartners(filtered);
   },;
@@ -574,7 +766,16 @@ export default function PartnerManager() {;
 
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
@@ -673,6 +874,12 @@ export default function PartnerManager() {;
                   Pending Applications;
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   {partners.filter(p => p.status === 'pending').length}
                 </div>
               </CardHeader>
@@ -935,6 +1142,7 @@ export default function PartnerManager() {;
               )}
               {selectedPartner.status === 'pending' && (
                 <div className="flex justify-end gap-2 mt-4">
+<<<<<<< HEAD
                   <Button
                     variant="destructive"
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
@@ -955,6 +1163,110 @@ export default function PartnerManager() {;
                   <Button 
                     variant="destructive" 
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
+=======
+
+
+              <div className="grid grid-cols-2 gap-2">;
+                <div>;
+                  <p className="text-xs text-zion-slate-light">Payout Method</p>;
+                  <p className="text-white capitalize">{selectedPartner && selectedPartner.payout_method || "Not specified"}</p>;
+                </div>;
+                <div>;
+                  <p className="text-xs text-zion-slate-light">Commission Rate</p>;
+                  <p className="text-white">{selectedPartner && selectedPartner.commission_rate || 25}%</p>;
+                </div>;
+              </div>;
+
+              {selectedPartner && selectedPartner.fraud_flags && selectedPartner && selectedPartner.fraud_flags > 0 && (;
+                <Alert className="bg-red-900/20 border-red-900/50 text-red-500">;
+                  <AlertTitle className="flex items-center gap-2">;
+                    <Flag className="h-4 w-4" />;
+                    Potential Fraud Detected ({selectedPartner && selectedPartner.fraud_flags});
+=======
+          {selected_partner && (
+            <div className="space - y-4">;
+              <div className="grid grid - cols - 2 gap - 2">;
+                <div>;
+                  <p className="text - xs text - zion - slate - light">Name</p>;
+                  <p className="font - medium text - white">{selected_partner.name}</p>;
+                </div>;
+                <div>;
+                  <p className="text - xs text - zion - slate - light">Status</p>;
+                  <div>{getStatusBadge (selected_partner.status)}</div>;
+                </div>;
+              </div>;
+              <div>;
+                <p className="text - xs text - zion - slate - light">Bio</p>;
+                <p className="text - white">{selected_partner.bio || "No bio provided"}</p>;
+              </div>;
+              <div className="grid grid - cols - 2 gap - 2">;
+                <div>;
+                  <p className="text - xs text - zion - slate - light">Niche</p>;
+                  <p className="text - white">{selected_partner.niche}</p>;
+                </div>;
+                <div>;
+                  <p className="text - xs text - zion - slate - light">Audience Size</p>;
+                  <p className="text - white">{getAudienceSizeLabel (selected_partner.audience_size)}</p>;
+                </div>;
+              </div>;
+              {selected_partner.website && (
+                <div>;
+                  <p className="text - xs text - zion - slate - light">Website</p>;
+                  <p className="text - zion - cyan">{selected_partner.website}</p>;
+                </div>)}
+              {selected_partner.social_media && Object.keys (selected_partner.social_media).length > 0 && (
+                <div>;
+                  <p className="text - xs text - zion - slate - light">Social Media</p>;
+                  <div className="grid grid - cols - 2 gap - 2">;
+                    {Object.entries (selected_partner.social_media).map (([platform, handle]) => (
+                      <p key={platform} className="text - white">;
+                        <span className="font - medium">{platform}: </span>;
+                        {handle}
+                      </p>))}
+                  </div>;
+                </div>)}
+              <div className="grid grid - cols - 2 gap - 2">;
+                <div>;
+                  <p className="text - xs text - zion - slate - light">Payout Method</p>;
+                  <p className="text - white capitalize">{selected_partner.payout_method || "Not specified"}</p>;
+                </div>;
+                <div>;
+                  <p className="text - xs text - zion - slate - light">Commission Rate</p>;
+                  <p className="text - white">{selected_partner.commission_rate || 25}%</p>;
+                </div>;
+              </div>;
+              {selected_partner.fraud_flags && selected_partner.fraud_flags > 0 && (
+                <Alert className="bg - red - 900 / 20 border - red - 900 / 50 text - red - 500">;
+                  <AlertTitle className="flex items - center gap - 2">;
+                    <Flag className="h - 4 w - 4" />;
+                    Potential Fraud Detected ({selected_partner.fraud_flags});
+
+                  </AlertTitle>;
+                  <AlertDescription>;
+                    This application has triggered our fraud detection system. Review carefully before approving.;
+                  </AlertDescription>;
+
+
+
+
+          )}
+
+        </DialogContent>;
+      </Dialog>;
+
+      {/* Partner Settings Dialog */}
+      <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>;
+        <DialogContent className="bg-zion-blue border-zion-blue-light">;
+          <DialogHeader>;
+            <DialogTitle>Partner Settings</DialogTitle>;
+=======
+                </Alert>)}
+              {selected_partner.status === 'pending' && (
+                <div className="flex justify - end gap - 2 mt - 4">;
+                  <Button;
+                    variant="destructive";
+                    on_click={() => handleUpdateStatus (selected_partner.id, 'rejected')}
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   >;
                     <X className="h - 4 w - 4 mr - 1" />;
                     Reject;
@@ -966,12 +1278,19 @@ export default function PartnerManager() {;
                     <Check className="h - 4 w - 4 mr - 1" />;
                     Approve;
                   </Button>;
+<<<<<<< HEAD
                 </div>;
               )}
             </div>;
           )}
         </DialogContent>
       </Dialog>
+=======
+                </div>)}
+            </div>)}
+        </DialogContent>;
+      </Dialog>;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Partner Settings Dialog */}
       <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>;
         <DialogContent className="bg - zion - blue border - zion - blue - light">;
@@ -1006,6 +1325,7 @@ export default function PartnerManager() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 interface PartnerTableProps {
   partners: PartnerProfile[]
   isLoading: boolean
@@ -1019,11 +1339,20 @@ function PartnerTable({
   partners
   isLoading
   onViewDetails
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 function PartnerTable({ 
   partners, 
   isLoading, 
   onViewDetails, 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onUpdateStatus;
   onOpenSettings;
   getStatusBadge;
@@ -1053,6 +1382,13 @@ function PartnerTable({;
         <p className="text-zion-slate-light">Loading partner data...</p>;
       </div>;
     );
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (partners.length === 0) {
@@ -1228,14 +1564,28 @@ if ( {) {
                   variant="ghost" 
                   size="sm"
                   onClick={() => onOpenSettings(partner)}
+<<<<<<< HEAD
                   className="text-zion-slate-light hover:text-white"
                 >
                   <Settings className="h-4 w-4" />
                   <span className="sr-only">Settings</span>
                 </Button>
+=======
+                  className="text-zion-slate-light hover:text-white";
+                >;
+                  <Settings className="h-4 w-4" />;
+                  <span className="sr-only">Settings</span>;
+                </Button>;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Button
                   variant="outline"
                 
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Button 
 
                   variant="outline" 

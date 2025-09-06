@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {MapPin} from "lucide-react";
 import {TalentCardSkills} from "./TalentCardSkills";
@@ -7,6 +8,17 @@ import { MapPin } from "lucide-react";
 import { TalentCardSkills } from "./TalentCardSkills";
 import { MapPin } from "lucide-react",
 import { TalentCardSkills } from "./TalentCardSkills",
+=======
+import React, { useState } from './react';
+import { MapPin  } from './lucide-react';
+import { TalentCardSkills  } from './TalentCardSkills';
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface TalentCardContentProps {
   summary: string | undefined;
   bio: string;
@@ -14,6 +26,7 @@ interface TalentCardContentProps {
   skills: string[] | undefined
 }
 
+<<<<<<< HEAD
 export function TalentCardContent({
   summary
   bio
@@ -23,6 +36,16 @@ export function TalentCardContent({
 export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {;
   const [isHovering, setIsHovering] = useState(false);
 <<<<<<< HEAD
+=======
+import React, { useState } from "react";
+import {MapPin} from "lucide-react";
+import {TalentCardSkills} from "./TalentCardSkills";
+=======
+
+export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {;
+  const [isHovering, setIsHovering] = useState(false);
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const [isHovering, setIsHovering] = useState(false);
   return (
@@ -45,6 +68,14 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
   const [isHovering, setIsHovering] = useState(false);
   return (
     <div>;
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Location */}
       {timezone && (;
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">;
@@ -70,10 +101,15 @@ export function TalentCardContent(): any ({ summary, bio, timezone, skills }: Ta
       >
         <p className="text-zion-slate mb-4">
           {summary || bio}
+<<<<<<< HEAD
         </p>;
       </div>;
         </p>
       </div>
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Skills */}
       <TalentCardSkills skills={skills} />
     </div>

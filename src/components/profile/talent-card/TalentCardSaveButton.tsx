@@ -4,6 +4,13 @@
       onToggleSave(profileId, !localIsSaved)
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     toast({
       title: localIsSaved ? 'Removed from favorites' : 'Added to favorites'
@@ -70,6 +77,9 @@ export function TalentCardSaveButton(): any ({;
     </button>
   )
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 }variant: "default" 
@@ -79,6 +89,9 @@ export function TalentCardSaveButton(): any ({;
 }";
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     
     toast({

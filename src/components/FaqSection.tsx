@@ -95,12 +95,16 @@ const faqs = [;
 export function FaqSection() {;
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     <section className='py-20 bg-zion-blue' id='faq'>;
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>;
         <div className='text-center mb-12'>;
           <GradientHeading>Frequently Asked Questions</GradientHeading>;
           <p className='mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto'>;
 import { GradientHeading } from './GradientHeading';
+<<<<<<< HEAD
 =======
     <section className='py-20 bg-zion-blue' id='faq'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
@@ -181,6 +185,8 @@ const faqs = [
 import { GradientHeading } from "./GradientHeading",
 import {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Accordion,
   AccordionContent,
   AccordionItem,
@@ -334,16 +340,20 @@ const faqs = [;
 export function FaqSection() {;
 
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const faqs = [
   {
     question: "How do I publish my AI product or service?",
     answer:
+<<<<<<< HEAD
       "Create an account, choose 'Post Your Product/Service for Free,' fill in the details, and submit for review. Listings go live within 24 hours if they pass our quality check."}
   {
     question: "What types of AI jobs can I find or post?",
@@ -474,6 +484,10 @@ const faqs = [
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function FaqSection() {
   return (
     <section className="py-20 bg-zion-blue" id="faq">
@@ -486,6 +500,9 @@ export function FaqSection() {
         </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -497,6 +514,9 @@ export function FaqSection() {
           </div>
           
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <Accordion type="single" collapsible className="w-full">
@@ -634,6 +654,9 @@ export function FaqSection() {;
               <AccordionItem key={index} value={`item-${index}`} className="border-zion-purple/10">;
                 <AccordionTrigger className="text-white hover:text-zion-cyan">;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   );
 }

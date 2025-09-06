@@ -4,7 +4,13 @@ interface ApplicationRowProps {
   onViewApplication: (application_id: string) => Promise < void>;
   onStatusChange: (
 
+<<<<<<< HEAD
 }
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function ApplicationRow({
 
   application
@@ -14,7 +20,10 @@ export function ApplicationRow({
   onViewScore
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false)
+<<<<<<< HEAD
   const talentName = application.talent_profile?.full_name |'Unknown'
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 import { formatDistanceToNow } from 'date-fns';
@@ -58,6 +67,7 @@ export function ApplicationRow(): any ({;
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
   const talentName = application.talent_profile?.full_name |'Unknown'
@@ -71,6 +81,8 @@ export function ApplicationRow(): any ({;
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <TableRow key={application.id}>
       <TableCell>
@@ -93,6 +105,11 @@ export function ApplicationRow(): any ({;
                 onError={() => setAvatarError(true)}
                 priority={false}
               />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ) : (
               <User className="h-5 w-5 text-gray-400" />
             )}
@@ -135,6 +152,11 @@ export function ApplicationRow(): any ({;
           className="flex items-center gap-1"
         >
           <BarChart className="h-4 w-4 mr-1" />
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <ScoreBadge application={application} />
         </Button>
       </TableCell>

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -9,6 +10,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function CurrentSubscription() {
   // Mock subscription data
 
@@ -24,11 +31,27 @@ export function CurrentSubscription() {
     billingCycle: "Annual",;
     startDate: "May 1, 2025";
     nextBillingDate: "May 1, 2026";
+<<<<<<< HEAD
     amount: "$1,999.00";
     billingCycle: "Annual",
     startDate: "May 1, 2025",
     nextBillingDate: "May 1, 2026",
     amount: "$1,999.00",
+=======
+    amount: "$1,999 && 999.00";
+    teamSeats: {;
+      used: 32,;
+      total: 50;
+
+    }
+  }
+=======
+
+    plan: "Business",
+    status: "active",
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     teamSeats: {
       used: 32
       total: 50
@@ -37,6 +60,7 @@ export function CurrentSubscription() {
   },
 
   return (
+<<<<<<< HEAD
     <Card>
       <CardHeader>
         <div className="flex items-center justify-between">
@@ -93,6 +117,13 @@ export function CurrentSubscription() {
     </Card>
   )
 }
+=======
+
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -245,7 +276,11 @@ function CurrentSubscription() {
         <Button variant="outline">Change Plan</Button>;
         <Button variant="destructive">Cancel Subscription</Button>;
       </CardFooter>;
+<<<<<<< HEAD
     </Card>;
   );
+=======
+    </Card>);
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -24,6 +25,12 @@ export function ResumePreviewCard({
 import { Button } from "@/components/ui/button",
 import { Download } from 'lucide-react',
 import { Resume } from "@/types/resume",
+=======
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ResumePreviewCardProps {
   resume: Resume,
   onDownload: () => void,
@@ -115,6 +122,7 @@ function ResumePreviewCard() {
 
         {resume && resume.basic_info.summary && (;
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">;
+<<<<<<< HEAD
             {resume.basic_info.summary}
           </p>
         )}
@@ -146,6 +154,43 @@ function ResumePreviewCard() {
     </Card>
       </CardContent>;
     </Card>;
+=======
+            {resume && resume.basic_info.summary}
+          </p>;
+        )}
+
+        {resume && resume.skills && resume && resume.skills.length > 0 && (;
+          <div className="flex flex-wrap gap-1 mt-2">;
+            {resume && resume.skills.slice(0, 5).map((skill, index) => (;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              <Badge
+                key={index}
+                variant="outline"
+                className="bg-zion-blue-dark/50 text-zion-cyan border-zion-purple/20 text-xs">;
+                {skill && skill.name}
+              </Badge>;
+            ))}
+            {resume && resume.skills.length > 5 && (;
+              <Badge
+                variant="outline"
+                className="bg-zion-blue-dark/50 text-zion-slate border-zion-purple/20 text-xs">;
+                +{resume && resume.skills.length - 5} more;
+              </Badge>;
+            )}
+          </div>;
+        )}
+
+
+
+=======
+
+      </CardContent>;
+    </Card>;
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 =======
           </p>)}

@@ -8,6 +8,7 @@ interface ToastProps {
   onRemove: (id: string) => void;
 <<<<<<< HEAD
 export type ToastType = 'success' | 'error' | 'info' | 'warning';
+<<<<<<< HEAD
 export interface Toast {
 <<<<<<< HEAD
   id: string
@@ -27,6 +28,14 @@ interface ToastProps {
 }
 =======
 <<<<<<< HEAD
+=======
+
+export interface Toast {;
+  id: string,;
+  type: ToastType,;
+  title: string,;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -53,6 +62,11 @@ export interface Toast {
   id: string,
   type: ToastType,
   title: string,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   message?: string;
   duration?: number
 }
@@ -112,6 +126,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       case 'info':
         return <Info className='w-5 h-5 text-blue-400' />;
       default:
+<<<<<<< HEAD
         return <Info className='w-5 h-5 text-blue-400' />;    }      case 'error':
         return <AlertCircle className="w-5 h-5 text-red-400" />;
       case 'warning':
@@ -121,10 +136,21 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       default: return <Info className="w-5 h-5 text-blue-400" />
     }
   }
+=======
+
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         return <Info className='w-5 h-5 text-blue-400' />;    }
 
     }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
 
   const getBorderColor = () => {
@@ -214,6 +240,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       <div className="flex items-start space-x-3">;
         <div className="flex-shrink-0 mt-0 && 0.5">;
           {getIcon()}
+<<<<<<< HEAD
         </div>
         <div className="flex-1 min-w-0">
           <h4 className="text-sm font-semibold text-white">
@@ -228,12 +255,17 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
 
 
         </div>
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <button
           onClick={() => {;
             setIsVisible(false);
 
 
   return (
+<<<<<<< HEAD
     <div className='fixed top-4 right-4 z-50 space-y-3'>
       <AnimatePresence>
         {toasts.map(toast => (          <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
@@ -242,6 +274,12 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
     </div>
     </div>;
   );};          }}
+=======
+
+            setTimeout(() => onRemove(toast.id), 300)
+          }}
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
         >
           <X className="w-4 h-4 text-white/60 hover:text-white" />
@@ -267,6 +305,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
           }`}
           initial={{ width: '100%' }}
           animate={{ width: '0%' }}
+<<<<<<< HEAD
           transition={{ duration: toast.duration |5000, ease: "linear" }}
         />
       </div>
@@ -276,6 +315,8 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
 };
     </div>
   );};
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     <div className='fixed top-4 right-4 z-50 space-y-3'>
       <AnimatePresence>
@@ -284,14 +325,20 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       </AnimatePresence>
     </div>
 
+<<<<<<< HEAD
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ToastContainerProps {
   toasts: Toast[]
   onRemove: (id: string) => void
 }
 export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => {
+<<<<<<< HEAD
   return (
     <div className="fixed top-4 right-4 z-50 space-y-3">
       <AnimatePresence>
@@ -311,6 +358,17 @@ export const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+
+          transition={{ duration: toast && toast.duration || 5000, ease: "linear" }}
+        />;
+      </div>;
+    </motion && motion.div>;
+  );
+=======
+  return (
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
         ))}
       </AnimatePresence>

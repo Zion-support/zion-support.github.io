@@ -1,8 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 //Zion Tech Group Website JavaScript
 })
 //Zion Tech Group Website JavaScript 
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         
         card.addEventListener('mouseleave', function() {
@@ -76,15 +80,19 @@ function performSearch(query) {
     if (searchResults) {
         const results = [
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' }
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' }
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' }
 
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
 
+<<<<<<< HEAD
         )
 
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },
@@ -375,6 +383,8 @@ function performSearch(query) {;
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },;
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },;
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         ].filter(item => 
             item && item.title.toLowerCase().includes(query)
         ),
@@ -445,8 +455,13 @@ function initializeModals() {
             ).join(''),
             searchResults.style.display = 'block'
         } else {
+<<<<<<< HEAD
             searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',
             searchResults.style.display = 'block'
+=======
+            search_results.innerHTML = '<div class="search - result - item no - results">No results found</div>',
+            search_results.style.display = 'block';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         }
     }
 }
@@ -468,6 +483,7 @@ if ( {) {
             current = target,
             clear_interval (timer);
         }
+<<<<<<< HEAD
         
         const suffix = element.textContent.replace(/\d/g, ''),
         element.textContent = Math.floor(current) + suffix
@@ -526,6 +542,10 @@ function animateCounter(element) {;
 ;
         const suffix = element.textContent.replace(/\d/g, ''),;
         element.textContent = Math.floor(current) + suffix;
+=======
+        const suffix = element.text_content.replace (/\d / g, ''),
+        element.text_content = Math.floor (current) + suffix;
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }, 16);
 }
 // Tooltip initialization;
@@ -553,16 +573,20 @@ if ( {) {
                 this.tooltip.remove (),
                 this.tooltip = null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             }
         });
     });
 }
+<<<<<<< HEAD
 
 // Modal initialization
 function initializeModals() {
@@ -609,6 +633,8 @@ function initializeModals() {
                     modal.classList.remove('active'),
                     document.body.style.overflow = ''
 ;
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Modal initialization;
 /**
  * initialize_modals - Function description
@@ -665,6 +691,10 @@ if ( {) {
 }
                     modal.class_list.remove ('active'),
                     document.body.style.overflow = '';
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 }
             });
         }
@@ -672,6 +702,7 @@ if ( {) {
 }
 
 
+<<<<<<< HEAD
                     document.body.style.overflow = ''
                 }
             })
@@ -686,6 +717,10 @@ function logPerformance() {
         console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms')
 
         console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
+=======
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         const perfData = window.window.window.performance.getEntriesByType('navigation')[0],
         // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),
         // // // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
@@ -701,9 +736,12 @@ function logPerformance() {
 })
 // Analytics tracking (replace with your analytics service)
 function trackEvent(eventName, eventData = {}) {
+<<<<<<< HEAD
     // // // console.log('Event tracked:', eventName, eventData),
     // Implement your analytics tracking here
 }
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     // Implement your analytics tracking here
@@ -858,6 +896,7 @@ document && document.addEventListener('click', function(e) {
 })
 // Log performance when page is fully loaded
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -867,6 +906,12 @@ document && document.addEventListener('click', function(e) {
     // Implement your analytics tracking here
 window.addEventListener('load', logPerformance),
 
+=======
+
+
+=======
+  title: 'AI Autonomous Business Manager', url: '/solutions / ai - autonomous - business - manager';
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 {
   title: 'Quantum Neural Network Platform', url: '/solutions / quantum - neural - network - platform';
@@ -936,4 +981,16 @@ document.addEventListener ('click', function (e) {
     }
 }),
 // Log performance when page is fully loaded;
+<<<<<<< HEAD
 window.addEventListener('load', logPerformance),;
+=======
+window.addEventListener ('load', log_performance),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+    // // // console.log('Event tracked:', eventName, eventData),
+    // Implement your analytics tracking here
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

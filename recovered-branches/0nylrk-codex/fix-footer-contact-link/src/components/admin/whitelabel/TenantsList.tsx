@@ -106,6 +106,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
+<<<<<<< HEAD
   TableRow,;
   TableRow,
 } from "@/components/ui/table";
@@ -117,10 +118,62 @@ import {
   DropdownMenuTrigger,
 DropdownMenuTrigger,;
   DropdownMenuTrigger,
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
 import { WhitelabelTenant } from "@/hooks/useWhitelabelTenant";
+<<<<<<< HEAD
+=======
+
+import {;
+  Edit,;
+  MoreHorizontal,;
+  ExternalLink,;
+  Power,;
+  PowerOff,;
+  Users,;
+  RefreshCcw,;
+} from "@/components/icons";
+import { format } from "date-fns";
+export function TenantsList() {;
+  const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {;
+
+    loadTenants();
+  }, []);
+
+  const loadTenants = async () => {;
+    try {;
+      setIsLoading(true);
+      const { data, error } = await supabase;
+        .from("whitelabel_tenants");
+        .select("*");
+        .order("created_at", { ascending: false });
+      if (error) throw error;
+      setTenants(data as WhitelabelTenant[]);
+
+    } catch (error: any) {;
+      console && console.error("Error loading tenants:", error);
+      toast({;
+        variant: "destructive",;
+        title: "Failed to load tenants",;
+        description: error && error.message,;
+
+      });
+    } finally {;
+      setIsLoading(false);
+    }
+
+  };
+
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   Edit,
   MoreHorizontal,
@@ -135,10 +188,13 @@ export function TenantsList() {;
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   useEffect(() => {
     loadTenants();
   }, []);
@@ -233,6 +289,10 @@ export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import {;
@@ -344,6 +404,13 @@ export function TenantsList() {;
 
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   return (
 
@@ -764,3 +831,9 @@ if (throw error) {
   );
 }
 ;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

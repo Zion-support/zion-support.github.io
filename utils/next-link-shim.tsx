@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ;
   };
   };
@@ -12,6 +13,12 @@
 origin/cursor/integrate-build-improve-and-re-verify-242d
 }}; return (; <a href = {resolved} className = {className} {...rest}>; {children}}}};
 origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+
+=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 };
   return (;
@@ -48,8 +55,40 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 };
 origin/automation-improvements-final
 import React from 'react';
+<<<<<<< HEAD
 // Define HTMLAnchorElement if not available
 interface HTMLElement {
+=======
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+// Define HTMLAnchorElement if not available;
+interface HTMLElement {;
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   className: string;
   id: string;
   innerHTML: string;
@@ -130,9 +169,18 @@ function resolveHref("href": Href): string {
   if (typeof href === 'string') return href;
   return href?.pathname || (href as { href?: string })?.href || '#';
 }
+<<<<<<< HEAD
 export default function Link({ href, children, className, ...rest }: LinkProps) {
 
 export default function Link({ href, children, className, ...rest }: LinkProps) {;
+=======
+
+
+
+export default function Link({ href, children, className, ...rest }: LinkProps) {;
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const resolved = resolveHref(href);
   if (React.isValidElement(children)) {
     const existingClass = (children.props as { className?: string })?.className || '';
@@ -159,6 +207,7 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
       {children}
     </a>
   );
+<<<<<<< HEAD
 }
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
@@ -208,6 +257,10 @@ import React from 'react'; type Href = string | { pathname?: string; href?: stri
 import React from 'react'; type Href = string | { pathname?: string; href?: string }; type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & { href: Href; children: React.ReactNode}; function resolveHref(href: Href): string { if (typeof href === 'string') return href; return href?.pathname || (href as { href?: string })?.href || '#'} export default function Link({ href,children,className,...rest }: LinkProps) { const resolved = resolveHref(href); if (React.isValidElement(children)) { const existingClass = (children.props as { className?: string })?.className || ''; const mergedClassName = [existingClass,className].filter(Boolean).join(' '); return React.cloneElement(children as React.ReactElement,{ href: resolved,className: mergedClassName,...rest,})} return ( <a href={resolved} className={className} {...rest}> {children} </a> )}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 =======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+=======
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
@@ -227,6 +280,9 @@ import React from 'react'; type Href = string | { pathname?: string; href?: stri
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 =======
@@ -277,9 +333,12 @@ function Link() {
     </a>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+<<<<<<< HEAD
 =======
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

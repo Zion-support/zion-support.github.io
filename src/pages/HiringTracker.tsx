@@ -2,6 +2,9 @@ return (
     <>;
       <SEO
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         title='Hiring Tracker | Zion AI Marketplace'
         description='Manage your candidate pipeline in the Zion AI Marketplace.'
 
@@ -19,6 +22,9 @@ return (
 
         <Tabs defaultValue="kanban" onValueChange={setActiveTab} className="mb-8">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <TabsList>
@@ -42,6 +48,9 @@ return (
           </TabsContent>
           
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           <TabsContent value="analytics" className="mt-6">
             <HiringAnalytics jobId={jobId} />
@@ -57,6 +66,9 @@ export default function HiringTracker() {
   return (
     <ProtectedRoute>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <HiringTrackerContent />
     </ProtectedRoute>
 
@@ -73,12 +85,19 @@ export default function HiringTracker() {
 
   return (
   )
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <HiringTrackerContent />;
     </ProtectedRoute>;
   );
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import { useState } from "react",;
 import { useRouter } from "next/router",;
