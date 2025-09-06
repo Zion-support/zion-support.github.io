@@ -1,18 +1,291 @@
+export const metadata = { 
+  title: 'AI Services | Zion Tech Group',
+  description: 'Professional AI development services including LLM integration, RAG systems, custom AI models, and MLOps. Expert AI consulting and implementation.'
+};
 
-export const metadata = { title: 'AI Services | Zion Tech Group' }; export default function AIPage() { return ( <section> <h1 style={{fontSize: 26,fontWeight: 800}}>AI Services</h1> <p style={{marginTop: 8,color: '#374151'}}>Ship AI features with confidence: RAG,agents,fine-tuning,evals and MLOps.</p> <div style={{display: 'grid',gap: 12,marginTop: 16}}> <Item title="Applied AI" details={["RAG over private data","Task-specific agents","Vision + speech","Personalization"]} /> <Item title="Model Ops" details={["Offline evals","Safety + guardrails","Batch + streaming","Cost controls"]} /> <Item title="Data & MLOps" details={["Pipelines","Feature stores","Vector DBs","Monitoring + drift"]} /> </div> <Pricing /> </section> )} function Item(): any ({ title,details }: { title: string; details: string[] }) { return ( <div style={{border: '1px solid #e5e7eb',borderRadius: 12,padding: 16}}> <h3 style={{fontWeight: 700}}>{title}</h3> <ul style={{paddingLeft: 18,color: '#4b5563'}}>{details && details.map(d => (<li key={d} style={{listStyle: 'disc'}}>{d}</li>))}</ul> </div> )} function Pricing() { return ( <div style={{marginTop: 20,display: 'grid',gap: 12,gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))'}}> <Plan name="AI Discovery" price="$5k–$12k" features={["2–3 weeks","Use-case design","Tech selection","Roadmap"]} /> <Plan name="Pilot" price="$15k–$45k" features={["4–8 weeks","RAG/agent MVP","Evals + safety","Dashboards"]} /> <Plan name="Production" price="$50k+" features={["Hardened infra","Monitoring","SLAs","Cost optimization"]} /> </div> )} function Plan(): any ({ name,price,features }: { name: string; price: string; features: string[] }) { return ( <div style={{border: '1px solid #e5e7eb',borderRadius: 12,padding: 16}}> <h4 style={{fontWeight: 700}}>{name}</h4> <div style={{color: '#111827',fontWeight: 800,marginTop: 4}}>{price}</div> <ul style={{paddingLeft: 18,color: '#4b5563',marginTop: 8}}>{features && features.map(f => (<li key={f} style={{listStyle: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
+export default function AIPage() {
+  return (
+    <section className="max-w-6xl mx-auto px-4 py-12">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Services</h1>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Ship AI features with confidence: RAG, agents, fine-tuning, evals and MLOps. 
+          We help you build production-ready AI solutions that drive real business value.
+        </p>
+      </div>
 
-=======
-export const metadata = { title: 'AI Services | Zion Tech Group' } export default /**
- * AIPage - Function description
- */
-function AIPage() { return ( <section> <h1 style={{font_size: 26, font_weight: 800}}>AI Services</h1> <p style={{margin_top: 8, color: '#374151'}}>Ship AI features with confidence: RAG, agents, fine - tuning, evals and MLOps.</p> <div style={{display: 'grid', gap: 12, margin_top: 16}}> <Item title="Applied AI" details={["RAG over private data", "Task - specific agents", "Vision + speech", "Personalization"]} /> <Item title="Model Ops" details={["Offline evals", "Safety + guardrails", "Batch + streaming", "Cost controls"]} /> <Item title="Data & MLOps" details={["Pipelines", "Feature stores", "Vector DBs", "Monitoring + drift"]} /> </div> <Pricing /> </section> )} /**
- * Item - Function description
- */
-function Item() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h3 style={{font_weight: 700}}>{title}</h3> <ul style={{padding_left: 18, color: '#4b5563'}}>{details.map (d => (<li key={d} style={{list_style: 'disc'}}>{d}</li>))}</ul> </div> )} /**
- * Pricing - Function description
- */
-function Pricing() { return ( <div style={{margin_top: 20, display: 'grid', gap: 12, gridTemplateColumns: 'repeat (auto - fit, minmax (260px, 1fr))'}}> <Plan name="AI Discovery" price="$5k–$12k" features={["2–3 weeks", "Use - case design", "Tech selection", "Roadmap"]} /> <Plan name="Pilot" price="$15k–$45k" features={["4–8 weeks", "RAG / agent MVP", "Evals + safety", "Dashboards"]} /> <Plan name="Production" price="$50k+" features={["Hardened infra", "Monitoring", "SLAs", "Cost optimization"]} /> </div> )} /**
- * Plan - Function description
- */
-function Plan() { return ( <div style={{border: '1px solid #e5e7eb', border_radius: 12, padding: 16}}> <h4 style={{font_weight: 700}}>{name}</h4> <div style={{color: '#111827', font_weight: 800, margin_top: 4}}>{price}</div> <ul style={{padding_left: 18, color: '#4b5563', margin_top: 8}}>{features.map (function => (<li key={f} style={{list_style: 'disc'}}>{f}</li>))}</ul> <a href="https: </div> )}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <Item 
+          title="Applied AI" 
+          details={[
+            "RAG over private data",
+            "Task-specific agents",
+            "Vision + speech processing",
+            "Personalization engines",
+            "Chatbot development",
+            "Document processing"
+          ]} 
+        />
+        <Item 
+          title="Model Operations" 
+          details={[
+            "Offline evaluation systems",
+            "Safety + guardrails",
+            "Batch + streaming inference",
+            "Cost optimization",
+            "Model monitoring",
+            "A/B testing frameworks"
+          ]} 
+        />
+        <Item 
+          title="Data & MLOps" 
+          details={[
+            "Data pipeline development",
+            "Feature stores",
+            "Vector databases",
+            "Model drift monitoring",
+            "Automated retraining",
+            "Model versioning"
+          ]} 
+        />
+      </div>
+
+      <div className="mb-12">
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our AI Solutions</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <AISolution
+            title="Custom ChatGPT Assistant"
+            description="Build intelligent chatbots with your company's knowledge base"
+            features={["RAG implementation", "Custom training", "Multi-language support", "API integration"]}
+            pricing="$5,000–$15,000"
+            icon="🤖"
+          />
+          <AISolution
+            title="Document AI Processor"
+            description="Extract insights and automate document processing workflows"
+            features={["OCR + NLP", "Data extraction", "Workflow automation", "Custom models"]}
+            pricing="$8,000–$25,000"
+            icon="📄"
+          />
+          <AISolution
+            title="Predictive Analytics Engine"
+            description="Build ML models for forecasting and business intelligence"
+            features={["Time series analysis", "Feature engineering", "Model deployment", "Real-time predictions"]}
+            pricing="$12,000–$35,000"
+            icon="📊"
+          />
+          <AISolution
+            title="AI-Powered Search"
+            description="Semantic search and recommendation systems"
+            features={["Vector embeddings", "Similarity search", "Recommendation engine", "Search analytics"]}
+            pricing="$6,000–$18,000"
+            icon="🔍"
+          />
+          <AISolution
+            title="Computer Vision System"
+            description="Image and video analysis for automation and insights"
+            features={["Object detection", "Image classification", "Video analysis", "Real-time processing"]}
+            pricing="$10,000–$30,000"
+            icon="👁️"
+          />
+          <AISolution
+            title="AI Content Generator"
+            description="Automated content creation for marketing and documentation"
+            features={["Multi-format output", "Brand voice training", "Quality control", "Workflow integration"]}
+            pricing="$4,000–$12,000"
+            icon="✍️"
+          />
+          <AISolution
+            title="Voice AI Assistant"
+            description="Speech-to-text and voice command systems"
+            features={["Speech recognition", "Natural language processing", "Voice synthesis", "Multi-language"]}
+            pricing="$7,000–$20,000"
+            icon="🎤"
+          />
+          <AISolution
+            title="AI Data Pipeline"
+            description="Automated data processing and ML pipeline orchestration"
+            features={["ETL automation", "Feature engineering", "Model training", "Monitoring"]}
+            pricing="$9,000–$28,000"
+            icon="⚙️"
+          />
+          <AISolution
+            title="AI Security Monitor"
+            description="Intelligent threat detection and security analysis"
+            features={["Anomaly detection", "Threat classification", "Real-time alerts", "Incident response"]}
+            pricing="$11,000–$32,000"
+            icon="🛡️"
+          />
+        </div>
+      </div>
+
+      <Pricing />
+      
+      <div className="mt-12 bg-gradient-to-r from-purple-50 to-blue-50 border border-purple-200 rounded-xl p-8 text-center">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Implement AI?</h3>
+        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+          Let's discuss your AI needs and create a custom solution that delivers measurable business results.
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+            className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+            className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
+          >
+            Email Us
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Item({ title, details }: { title: string; details: string[] }) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white">
+      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+      <ul className="space-y-2">
+        {details.map((detail) => (
+          <li key={detail} className="flex items-start">
+            <span className="text-purple-500 mr-2 mt-1">•</span>
+            <span className="text-gray-600">{detail}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function AISolution({ 
+  title, 
+  description, 
+  features, 
+  pricing, 
+  icon 
+}: { 
+  title: string; 
+  description: string; 
+  features: string[]; 
+  pricing: string; 
+  icon: string; 
+}) {
+  return (
+    <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
+      <div className="text-3xl mb-4">{icon}</div>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <div className="space-y-2 mb-4">
+        {features.map((feature) => (
+          <div key={feature} className="flex items-center text-sm text-gray-600">
+            <span className="text-purple-500 mr-2">✓</span>
+            {feature}
+          </div>
+        ))}
+      </div>
+      <div className="text-2xl font-bold text-purple-600">{pricing}</div>
+    </div>
+  );
+}
+
+function Pricing() {
+  return (
+    <div className="mb-12">
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">AI Development Packages</h2>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <Plan 
+          name="AI Discovery" 
+          price="$5k–$12k" 
+          duration="2–3 weeks"
+          features={[
+            "Use-case analysis",
+            "Technology selection",
+            "Data assessment",
+            "Implementation roadmap",
+            "Proof of concept",
+            "ROI projections"
+          ]} 
+        />
+        <Plan 
+          name="AI Pilot" 
+          price="$15k–$45k" 
+          duration="4–8 weeks"
+          features={[
+            "MVP development",
+            "RAG/agent implementation",
+            "Evaluation framework",
+            "Safety guardrails",
+            "Performance dashboards",
+            "Integration testing"
+          ]} 
+          popular={true}
+        />
+        <Plan 
+          name="AI Production" 
+          price="$50k+" 
+          duration="8+ weeks"
+          features={[
+            "Production deployment",
+            "Hardened infrastructure",
+            "Advanced monitoring",
+            "SLA guarantees",
+            "Cost optimization",
+            "Dedicated support",
+            "Continuous improvement"
+          ]} 
+        />
+      </div>
+    </div>
+  );
+}
+
+function Plan({ 
+  name, 
+  price, 
+  duration, 
+  features, 
+  popular = false 
+}: { 
+  name: string; 
+  price: string; 
+  duration: string; 
+  features: string[]; 
+  popular?: boolean; 
+}) {
+  return (
+    <div className={`border rounded-xl p-8 bg-white relative ${popular ? 'border-purple-500 ring-2 ring-purple-200' : 'border-gray-200'}`}>
+      {popular && (
+        <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+          <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+            Most Popular
+          </span>
+        </div>
+      )}
+      <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
+      <div className="text-3xl font-bold text-gray-900 mb-1">{price}</div>
+      <div className="text-gray-600 mb-6">{duration}</div>
+      <ul className="space-y-3">
+        {features.map((feature) => (
+          <li key={feature} className="flex items-start">
+            <span className="text-purple-500 mr-3 mt-1">✓</span>
+            <span className="text-gray-600">{feature}</span>
+          </li>
+        ))}
+      </ul>
+      <a
+        href="mailto:kleber@ziontechgroup.com?subject=AI Services Inquiry"
+        className={`mt-6 w-full block text-center py-3 rounded-lg font-semibold transition-colors ${
+          popular 
+            ? 'bg-purple-600 text-white hover:bg-purple-700' 
+            : 'border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white'
+        }`}
+      >
+        Get Started
+      </a>
+    </div>
+  );
+}
