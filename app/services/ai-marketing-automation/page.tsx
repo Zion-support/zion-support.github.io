@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const metadata = { title: 'AI Marketing Automation | Zion Tech Group' };
 
 export default function AIMarketingAutomationPage() {
@@ -117,6 +118,12 @@ function FeatureCard({
     <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
+=======
+import React from 'react';
+import Link from 'next/link';
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       <ul className="space-y-2">
         {features.map((feature, index) => (
           <li key={index} className="flex items-start">
@@ -129,6 +136,7 @@ function FeatureCard({
   );
 }
 
+<<<<<<< HEAD
 function PricingSection() {
   return (
     <div className="mb-16">
@@ -202,6 +210,8 @@ function PricingCard({
     <div
       className={`relative bg-white border-2 rounded-xl p-8 ${popular ? 'border-yellow-500 shadow-lg' : 'border-gray-200'}`}
     >
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
           <span className="bg-yellow-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -234,6 +244,7 @@ function PricingCard({
   );
 }
 
+<<<<<<< HEAD
 function ContactSection() {
   return (
     <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-xl p-8 text-center">
@@ -262,6 +273,8 @@ function ContactSection() {
         <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
         <p>📧 kleber@ziontechgroup.com | 📞 +1 302 464 0950</p>
       </div>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     </div>
   );
 }

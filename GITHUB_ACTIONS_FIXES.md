@@ -1,6 +1,7 @@
 # GitHub Actions Fixes & Improvements
 
 ## Overview
+<<<<<<< HEAD
 
 This document summarizes all the fixes and improvements made to the GitHub Actions workflows for the Zion Tech Group application.
 
@@ -180,3 +181,8 @@ All workflows have been tested for:
 - ✅ Resource optimization
 
 The application builds successfully, and all referenced scripts and dependencies are available.
+=======
+
+### 2. Test Workflow (`test.yml`)
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

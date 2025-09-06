@@ -6,6 +6,7 @@ import React from 'react';
 
 
 
+<<<<<<< HEAD
 describe('Navigation', () => {
   test('renders without crashing', () => {
     render(<Navigation />);
@@ -27,6 +28,8 @@ describe('Navigation', () => {
   test('displays correct content', () => {
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
 });
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -49,7 +52,24 @@ describe('Navigation', () => {
   test('renders without crashing', () => {
     render(<Navigation />);'
     expect(screen.getByRole('main')).toBeInTheDocument();
+<<<<<<< HEAD
 
+
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
+
+
+
+
+  test('displays correct content', () => {
+    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
+<<<<<<< HEAD
+  });
+});
+});
+
+origin/main
+=======
 
 
 
@@ -57,11 +77,8 @@ describe('Navigation', () => {
 
   test('displays correct content', () => {
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
-  });
 });
-});
-
-origin/main
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'

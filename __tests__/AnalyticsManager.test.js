@@ -42,6 +42,7 @@ describe('AnalyticsManager', () => {
   });
 });
 });
+<<<<<<< HEAD
 });
 import _React from 'react'
 '
@@ -53,3 +54,5 @@ describe('AnalyticsManager', () => {'
   test('displays correct content', () => {'
   test('handles user interactions', () => {'
   test('applies correct styling', () => {'
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

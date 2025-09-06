@@ -10,4 +10,7 @@ export default function App.test({ }: App.testProps) {
     </div>
   );
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

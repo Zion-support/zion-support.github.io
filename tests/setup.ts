@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface SetupProps {
@@ -12,6 +13,8 @@ export default function Setup({ }: SetupProps) {
     </div>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Mock ResizeObserver;
 global.ResizeObserver = class ResizeObserver {
   observe () { /* do nothing */ }
@@ -42,3 +45,20 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
   advanceTimersByTime: vi.advanceTimersByTime.bind (vi),
   runAllTimers: vi.runAllTimers.bind (vi),
   // Reset / clear mocks;
+<<<<<<< HEAD
+=======
+import React from 'react';
+
+interface SetupProps {
+  // Add props here as needed
+}
+
+export default function Setup({ }: SetupProps) {
+  return (
+    <div>
+      <h1>Setup</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 interface Performance.testProps {
   // Add props here as needed
 }
@@ -38,17 +39,27 @@ interface PricingGuidePageProps {
 
 export default function PricingGuidePage({ }: PricingGuidePageProps) {
 =
+=======
+export default function Performance.test({ }: Performance.testProps) {
+export default function Performance.test({ }: Performance.testProps) {
+export default function PricingGuidePage({ }: PricingGuidePageProps) {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react';
 interface Performance.testProps {
   // Add props here as needed
 }
 export default function Performance.test({ }: Performance.testProps) {
+<<<<<<< HEAD
 >  return (
+=======
+  return (
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     <div>
       <h1>Performance.test</h1>
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
 }
 =
@@ -60,12 +71,19 @@ export default function Performance.test({ }: Performance.testProps) {
 
 }
 
+=======
+}
+
+
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 :src.pages.disabled/PricingGuidePage.jsx
 }
 }
 }
 }
 }
+<<<<<<< HEAD
 :temp_exclude/src.pages.disabled/PricingGuidePage.jsx
 =
 >}
@@ -83,3 +101,10 @@ export default function Performance.test({ }: Performance.testProps) {
 }
 =
 >
+=======
+}
+
+}
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

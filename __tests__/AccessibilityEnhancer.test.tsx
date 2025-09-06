@@ -13,7 +13,10 @@ describe('AccessibilityEnhancer'
   it('handles keyboard events correctly'
     const element = screen.getByRole('button'
     fireEvent.keyDown(element, { "key"
+<<<<<<< HEAD
     fireEvent.keyDown(element, { "key";
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import AccessibilityEnhancer from '../components/AccessibilityEnhancer';
 
 describe('AccessibilityEnhancer', () => {
@@ -84,3 +87,7 @@ describe('AccessibilityEnhancer', () => {
     expect(element).toHaveAttribute('tabindex', '-1');
   });
 });
+<<<<<<< HEAD
+=======
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

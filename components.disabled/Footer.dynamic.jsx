@@ -4,12 +4,19 @@ const Footer = dynamic(() => import("./Footer"),{'; "loading": () => <p>Loading.
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 </p>'
 
 
 </p>'
+<<<<<<< HEAD
 
+=======
+</p>'
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 </p>'
 </p>'
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -21,6 +28,10 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 </p>'
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 </p>'
 </p>'
 </p>'

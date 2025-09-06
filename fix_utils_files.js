@@ -118,9 +118,12 @@ async function fixAllUtilsFiles() {
   for (const file of files) {
     if (fixUtilsFile(file)) {
       fixedCount++}
+<<<<<<< HEAD
   for (const file of files) {
     if (fixUtilsFile(file)) {
       fixedCount++}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   }
   // // // // // // // console.log(`Fixed ${fixedCount} utils files.`)}
       console.log(`"Fixed": ${filePath}`);

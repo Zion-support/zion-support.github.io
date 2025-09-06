@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import { describe, it, expect } from 'vitest';
 describe('Login', () => {
   it('should work', () => {
@@ -9,7 +12,14 @@ describe('Login', () => {
 const { describe,it,expect } from "vitest"; describe("Login",() => { it("should work",() => { expect(true).toBe(true)})});''"
 import { describe,it,expect } from 'vitest'; describe('Login',() => { it('should work',() => { expect(true).toBe(true)})}
 });''
+<<<<<<< HEAD
 });''
+=======
+import { describe, it, expect } from 'vitest'
+describe('Login'
+  it('should work'
+const { describe,it,expect } from "vitest"; describe('Login', () => { it("should work"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import { describe, it, expect } from 'vitest'
 describe('Login'
   it('should work'

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 });''
 });''
 });''
@@ -27,3 +28,19 @@ describe ('community category listing', () => { it ('displays posts in Getting H
 });''
 });''
 });''
+=======
+});''
+});''
+});''
+});''
+});''
+});''
+});''
+});''
+});''
+});''
+});''
+});''
+});''
+});''
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

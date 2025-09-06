@@ -20,7 +20,10 @@ describe('SecurityDashboarddynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
+<<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityDashboarddynamic from "./components/SecurityDashboard.dynamic"; describe('SecurityDashboarddynamic', () => { test("renders without crashing",() => { render(<SecurityDashboarddynamic />); expect(screen.getByTestId("securitydashboard.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityDashboarddynamic />)}); test("handles user interactions",() => { render(<SecurityDashboarddynamic />)}); test("applies correct styling"
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -45,7 +48,13 @@ describe('SecurityDashboarddynamic', () => {
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
+<<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityDashboarddynamic from "./components/SecurityDashboard.dynamic"; describe('SecurityDashboarddynamic', () => { test("renders without crashing",() => { render(<SecurityDashboarddynamic />); expect(screen.getByTestId("securitydashboard.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityDashboarddynamic />)}); test("handles user interactions",() => { render(<SecurityDashboarddynamic />)}); test("applies correct styling"
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityDashboarddynamic from "./components/SecurityDashboard.dynamic"; describe('SecurityDashboarddynamic', () => { test("renders without crashing",() => { render(<SecurityDashboarddynamic />); expect(screen.getByTestId("securitydashboard.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityDashboarddynamic />)}); test("handles user interactions",() => { render(<SecurityDashboarddynamic />)}); test("applies correct styling"
+=======
+
+
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import SecurityDashboarddynamic from "./components/SecurityDashboard.dynamic"; describe('SecurityDashboarddynamic', () => { test("renders without crashing",() => { render(<SecurityDashboarddynamic />); expect(screen.getByTestId("securitydashboard.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<SecurityDashboarddynamic />)}); test("handles user interactions",() => { render(<SecurityDashboarddynamic />)}); test("applies correct styling"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import _React from 'react';  import '@testing-library/jest-dom'; import SecurityDashboarddynamic from '../components/SecurityDashboard.dynamic'; describe('SecurityDashboarddynamic',() => { test('renders without crashing',() => { render(<SecurityDashboarddynamic />); expect(screen.getByTestId('securitydashboard.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityDashboarddynamic />)}); test('handles user interactions',() => { render(<SecurityDashboarddynamic />)}); test('applies correct styling',() => { render(<SecurityDashboarddynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import SecurityDashboarddynamic from '../components/SecurityDashboard.dynamic'; describe('SecurityDashboarddynamic',() => { test('renders without crashing',() => { render(<SecurityDashboarddynamic />); expect(screen.getByTestId('securitydashboard.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<SecurityDashboarddynamic />)}); test('handles user interactions',() => { render(<SecurityDashboarddynamic />)}); test('applies correct styling',() => { render(<SecurityDashboarddynamic />)})});

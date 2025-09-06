@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 
@@ -42,6 +43,51 @@ const ContactSection: React.FC = () => {
       setIsSubmitting(false);
     }
   };
+=======
+fetch("/api/contact", {
+      method: "POST"
+      headers: { "Content-Type": "application/json" }
+      body: JSON.stringify(formData)})
+      .then(async (res) => {
+
+          const data = await res.json().catch(() => ({}));          throw new Error(data.error || "Failed to send message")
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
+
+        }
+        toast({
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
+
+        setIsSubmitting(false),
+        if (!res.ok) {
+          const data = await res.json().catch(() => ({})),
+          throw new Error(data.error || "Failed to send message")
+        }
+        toast({
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
+
+        setSubmitted(true),
+        setTimeout(() => setSubmitted(false), 2000),
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      })
+      .catch((err) => {
+        setIsSubmitting(false),
+        toast({
+
+
+          title: "Submission Error",
+          description: err.message,
+          variant: "destructive"})
+      })
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
   return (
     <section className="py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white">
@@ -167,6 +213,7 @@ const ContactSection: React.FC = () => {
                 />
               </div>
 
+<<<<<<< HEAD
               <div>
                 <label htmlFor="message" className="block text-sm font-medium mb-2">
                   Message *
@@ -205,3 +252,45 @@ const ContactSection: React.FC = () => {
 };
 
 export default ContactSection;
+=======
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                  </Button>
+                  {submitted && (
+                    <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
+                  )}
+
+                </div>;
+              </form>;
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+
+
+
+    </section>);
+}set_errors (field_errors);
+toast ({
+  return;
+}set_errors ({
+});
+setIsSubmitting (true);
+}) .catch ( (err) => {
+  setIsSubmitting (false);
+toast ({
+  title: "Submission Error";
+description: err.message;
+});
+}";
+}</div> <div> <label html_for="email" className="block text - sm font - medium text - zion - slate - light mb - 1" > Email </label> <Input) ";
+}</div> </div> <div> <label html_for="subject" className="block text - sm font - medium text - zion - slate - light mb - 1" > Subject </label> <Input) ";
+}</div> <div> <label html_for="message" className="block text - sm font - medium text - zion - slate - light mb - 1" > Message </label> <Textarea);
+}</div> <div> <Button > {';
+  is_submitting ? 'Sending...' : 'Send Message';
+}</Button>);
+}</div> </form> </div> </div> </div> </div> </section>);
+}'"}
+}
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

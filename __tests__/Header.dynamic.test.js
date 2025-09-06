@@ -2,8 +2,11 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Headerdy
 import _React from 'react';  import '@testing-library/jest-dom'; import Headerdynamic from '../components/Header.dynamic'; describe('Headerdynamic',() => { test('renders without crashing',() => { render(<Headerdynamic />); expect(screen.getByTestId('header.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Headerdynamic />)}); test('handles user interactions',() => { render(<Headerdynamic />)}); test('applies correct styling',() => { render(<Headerdynamic />)})});
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'

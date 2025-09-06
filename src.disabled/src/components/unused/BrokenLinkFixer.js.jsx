@@ -1,1 +1,4 @@
+<<<<<<< HEAD
 import _React,{ useState,useEffect,useCallback } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { LinkIcon,ExclamationTriangleIcon,CheckCircleIcon,XMarkIcon,ArrowPathIcon,WrenchScrewdriverIcon,InformationCircleIcon } from '@heroicons/react/24/outline'; export const BrokenLinkFixer = ({ className = ',autoCheck = true,showDetails = true,fixBrokenLinks = true }) => {; const [isOpen,setIsOpen] = useState(false); const [links,setLinks] = useState([]); const [isChecking,setIsChecking] = useState(false); const [activeTab,setActiveTab] = useState('overview'); const [stats,setStats] = useState({; "total": '0',; "healthy": '0',; "broken": '0',; "checking": '0',; "unknown": '0;' })}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

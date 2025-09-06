@@ -313,7 +313,10 @@ class LinkChecker {;
       return true} catch {;
       return false}
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Run the link checker;
 const linkChecker = new LinkChecker();
 linkChecker.checkLinks().then(() => {

@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 import React from\';react\' \"export\": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {\''\';
 const React from";react" export: default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {""";"""
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from\';react\' \"export\": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {\''\';
 const React from";react" export: default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {""";"""
 :src.disabled/components/ExpensiveComponent.jsx
@@ -14,3 +17,10 @@ const React from";react" export: default function ExpensiveComponent() { const [
 import React from\';react\' \"export\": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {\''\';
 const React from";react" export: default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {""";"""
 import _React from';react' "export": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {''';
+<<<<<<< HEAD
+=======
+import _React from';react' "export": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {''';
+import React from\';react\' \"export\": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {\''\';
+const React from";react" export: default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {""";"""
+import _React from';react' "export": default function ExpensiveComponent() { const [data,setData] = useState([]) const [loading,setLoading] = useState(true) useEffect(() => {''';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -137,8 +137,12 @@ function fixSyntaxAndConflicts() {
       let originalContent = content;
       
       // Remove merge conflict markers
+<<<<<<< HEAD
       content = content.replace(/      content = content.replace(/[\s\S]*?      content = content.replace(/      content = content.replace(//g, '');
       content = content.replace(/      
+=======
+      content = content.replace(/      content = content.replace(/      content = content.replace(/      content = content.replace(/      content = content.replace(/      
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       // Fix import statements
       content = content.replace(/import React from "react",/g, 'import React from "react";');
       content = content.replace(/import Head from 'next\/head',/g, "import Head from 'next/head';");

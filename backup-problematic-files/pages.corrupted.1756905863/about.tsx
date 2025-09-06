@@ -2,10 +2,14 @@ import type { NextPage } from \'next\'; import Head from \'next/head\'; import N
 import React from 'react';
 
 interface AboutProps {
+<<<<<<< HEAD:backup-problematic-files/pages.corrupted.1756905863/about.tsx
   className?: string;
 }
 
 const About: React.FC<AboutProps> = ({ className }) => {
+=======
+  // Add props here as needed
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7:pages.corrupted.1756905863/about.tsx
   return (
     <div className={className || ''}>
       <h1>About</h1>
@@ -13,4 +17,8 @@ const About: React.FC<AboutProps> = ({ className }) => {
     </div>
   );
 }
+<<<<<<< HEAD:backup-problematic-files/pages.corrupted.1756905863/about.tsx
 }
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7:pages.corrupted.1756905863/about.tsx

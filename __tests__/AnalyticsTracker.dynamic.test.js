@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -10,7 +13,10 @@ describe('AnalyticsTrackerdynamic', () => {
     expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument();
   });
 });
+<<<<<<< HEAD
 });
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import _React from 'react';  import '@testing-library/jest-dom'; import AnalyticsTrackerdynamic from '../components/AnalyticsTracker.dynamic'; describe('AnalyticsTrackerdynamic',() => { test('renders without crashing',() => { render(<AnalyticsTrackerdynamic />); expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<AnalyticsTrackerdynamic />)}); test('handles user interactions',() => { render(<AnalyticsTrackerdynamic />)}); test('applies correct styling',() => { render(<AnalyticsTrackerdynamic />)})});
   test('displays correct content', () => {
     render(<AnalyticsTrackerdynamic />);
@@ -42,5 +48,8 @@ describe('AnalyticsTrackerdynamic'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AnalyticsTrackerdynamic from "./components/AnalyticsTracker.dynamic"; describe('AnalyticsTrackerdynamic', () => { test("renders without crashing",() => { render(<AnalyticsTrackerdynamic />); expect(screen.getByTestId("analyticstracker.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<AnalyticsTrackerdynamic />)}); test("handles user interactions",() => { render(<AnalyticsTrackerdynamic />)}); test("applies correct styling"
 });
+<<<<<<< HEAD
 });
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import _React from 'react';  import '@testing-library/jest-dom'; import AnalyticsTrackerdynamic from '../components/AnalyticsTracker.dynamic'; describe('AnalyticsTrackerdynamic',() => { test('renders without crashing',() => { render(<AnalyticsTrackerdynamic />); expect(screen.getByTestId('analyticstracker.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<AnalyticsTrackerdynamic />)}); test('handles user interactions',() => { render(<AnalyticsTrackerdynamic />)}); test('applies correct styling',() => { render(<AnalyticsTrackerdynamic />)})});

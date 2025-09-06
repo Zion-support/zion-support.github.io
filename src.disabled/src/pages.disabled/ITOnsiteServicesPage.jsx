@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import _React from 'react'; export default function ITOnsiteServicesPage () {}; return null} }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 import React from \'react\'; export default function ITOnsiteServicesPage () {}; return null} }
 const React from "react"; export default function ITOnsiteServicesPage() { return; }; return null} }''"

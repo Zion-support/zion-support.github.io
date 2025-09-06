@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 interface LayoutProps {
   // Add props here as needed
@@ -10,3 +11,5 @@ export default function Layout({ }: LayoutProps) {
     </div>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

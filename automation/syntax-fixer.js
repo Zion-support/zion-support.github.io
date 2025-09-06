@@ -168,6 +168,7 @@ if ( {) {
 ;
     return files;
 }
+<<<<<<< HEAD
   async run() {this.log("🚀 Starting Syntax Fixer");
     try {;
       await this.fixSyntaxErrors();
@@ -183,6 +184,8 @@ if (import.meta.url === `file: //${process.argv[1]}`) {const fixer = new SyntaxF
 }
 export default SyntaxFixer;
     })
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
           modified = true
         },
 ,
@@ -215,16 +218,22 @@ export default SyntaxFixer;
       walkDir(srcDir)
     }
     return files
+<<<<<<< HEAD
 this.log("=" * 50),
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       this.log(`🎯 Syntax Fixer completed. Fixes: applied: ${this.fixesApplied}`)
     } catch (error) {
       this.log(`❌ Syntax Fixer: failed: ${error.message}`, "ERROR")
     }
   }
+<<<<<<< HEAD
 ursor/fix-lint-push-and-merge-to-main-28da
 
 ;
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ;
     });
   },;

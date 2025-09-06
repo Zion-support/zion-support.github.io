@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import '@testing-library/jest-dom';
 import AICodeGeneratortest from '../components/AICodeGenerator.test';
@@ -6,6 +7,13 @@ import AICodeGeneratortest from '../components/AICodeGenerator.test';
 import React from 'react';
 import '@testing-library/jest-dom';
 import AICodeGeneratortest from '../components/AICodeGenerator.test';
+=======
+
+
+import React from 'react';
+import '@testing-library/jest-dom';
+import AICodeGeneratortest from '../components/AICodeGenerator.test';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -14,6 +22,10 @@ import AICodeGeneratortest from '../components/AICodeGenerator.test';
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 describe('AICodeGeneratortest', () => {
   test('renders without crashing', () => {
     render(<AICodeGeneratortest />);
@@ -27,7 +39,10 @@ describe('AICodeGeneratortest', () => {
   
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   test('displays correct content', () => {
     render(<AICodeGeneratortest />);
   });
@@ -40,8 +55,11 @@ describe('AICodeGeneratortest', () => {
   test('handles user interactions', () => {
     render(<AICodeGeneratortest />);
   });
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   
   test('applies correct styling', () => {
     render(<AICodeGeneratortest />);

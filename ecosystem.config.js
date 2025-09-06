@@ -5,7 +5,10 @@
 module.exports = {;
 module && module.exports = {;
   apps:[;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 module.exports = {apps:[;
 
 
@@ -26,15 +29,21 @@ module.exports = {apps:[;
       error_file:'./logs/error-fixer-error && error.log',;
       out_file:'./logs/error-fixer-out && out.log',;
       log_file:'./logs/error-fixer-combined && combined.log',;
+<<<<<<< HEAD
       error_file:'./logs/error-fixer-error && error.log',;
       out_file:'./logs/error-fixer-out && out.log',;
       log_file:'./logs/error-fixer-combined && combined.log',;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       time:true;
     },;
     {;
       name:'intelligent-orchestrator',;
       script:'automation/intelligent-orchestrator && orchestrator.cjs',;
+<<<<<<< HEAD
       script:'automation/intelligent-orchestrator && orchestrator.cjs',;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       args:'continuous',;
       instances:1,;
       autorestart:true,;
@@ -46,15 +55,21 @@ module.exports = {apps:[;
       error_file:'./logs/orchestrator-error && error.log',;
       out_file:'./logs/orchestrator-out && out.log',;
       log_file:'./logs/orchestrator-combined && combined.log',;
+<<<<<<< HEAD
       error_file:'./logs/orchestrator-error && error.log',;
       out_file:'./logs/orchestrator-out && out.log',;
       log_file:'./logs/orchestrator-combined && combined.log',;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       time:true;
     },;
     {;
       name:'automation-dashboard',;
       script:'automation/automation-dashboard && dashboard.cjs',;
+<<<<<<< HEAD
       script:'automation/automation-dashboard && dashboard.cjs',;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       args:'start',;
       instances:1,;
       autorestart:true,;
@@ -74,7 +89,10 @@ module.exports = {apps:[;
     {;
       name:'code-quality-monitor',;
       script:'automation/code-quality-monitor && monitor.cjs',;
+<<<<<<< HEAD
       script:'automation/code-quality-monitor && monitor.cjs',;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances:1,;
       autorestart:true,;
       watch:false,;
@@ -85,15 +103,21 @@ module.exports = {apps:[;
       error_file:'./logs/code-quality-error && error.log',;
       out_file:'./logs/code-quality-out && out.log',;
       log_file:'./logs/code-quality-combined && combined.log',;
+<<<<<<< HEAD
       error_file:'./logs/code-quality-error && error.log',;
       out_file:'./logs/code-quality-out && out.log',;
       log_file:'./logs/code-quality-combined && combined.log',;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       time:true;
     },;
     {;
       name:'performance-optimizer',;
       script:'automation/performance-optimizer && optimizer.cjs',;
+<<<<<<< HEAD
       script:'automation/performance-optimizer && optimizer.cjs',;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances:1,;
       autorestart:true,;
       watch:false,;
@@ -194,6 +218,7 @@ module.exports = {apps:[;
 
       time: true
 module.exports = {
+<<<<<<< HEAD
   apps: [
     {
       name: 'error-fixer',
@@ -231,6 +256,8 @@ module.exports = {
       name: 'automation-dashboard',
       script: 'automation/automation-dashboard.cjs',
       args: 'start',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     }
     env_production: {
       NODE_ENV: "production"
@@ -351,6 +378,7 @@ export default {
         NODE_ENV: 'production',
         PORT: 3001
       },
+<<<<<<< HEAD
       error_file: './logs/dashboard-error.log',
       out_file: './logs/dashboard-out.log',
       log_file: './logs/dashboard-combined.log',
@@ -360,22 +388,31 @@ export default {
       name: 'code-quality-monitor',
       script: 'automation/code-quality-monitor.cjs',
       instances: 1,
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       cron_restart: '0 */6 * * *',
       autorestart: true,
       watch: false,
       max_memory_restart: '512M',
       env: {
+<<<<<<< HEAD
         NODE_ENV: 'production'
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     },
     {
       name: 'healthcheck',
       script: 'node',
+<<<<<<< HEAD
       args: 'scripts/pm2/healthcheck.js',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       cron_restart: '*/5 * * * *',
       autorestart: true,
       watch: false,
       max_memory_restart: '128M',
       env: {
+<<<<<<< HEAD
         NODE_ENV: 'production'
       },
       log_file: 'logs/pm2/health.log',
@@ -385,17 +422,23 @@ export default {
     {
       name: 'code-quality-monitor',
       script: 'scripts/pm2/code-quality-monitor.js',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
+<<<<<<< HEAD
         PM2_PROCESS_NAME: 'code-quality-monitor',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         QUALITY_THRESHOLD: '80',
         AUTO_FIX_CRITICAL: 'true',
       },
       cron_restart: '0 */6 * * *',
+<<<<<<< HEAD
       log_file: 'logs/pm2/code-quality-monitor.log',
       error_file: 'logs/pm2/code-quality-monitor-error.log',
       out_file: 'logs/pm2/code-quality-monitor-out.log',
@@ -403,17 +446,23 @@ export default {
     {
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
+<<<<<<< HEAD
         PM2_PROCESS_NAME: 'auto-commit-fixes',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         COMMIT_FREQUENCY: 'hourly',
         AUTO_PUSH: 'false',
       },
       cron_restart: '0 */2 * * *',
+<<<<<<< HEAD
       log_file: 'logs/pm2/auto-commit-fixes.log',
       error_file: 'logs/pm2/auto-commit-fixes-error.log',
       out_file: 'logs/pm2/auto-commit-fixes-out.log',
@@ -421,17 +470,23 @@ export default {
     {
       name: 'dependency-monitor',
       script: 'scripts/pm2/dependency-monitor.js',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
+<<<<<<< HEAD
         PM2_PROCESS_NAME: 'dependency-monitor',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         AUTO_UPDATE_DEV: 'true',
         SECURITY_ALERTS: 'true',
       },
       cron_restart: '0 0 * * 0',
+<<<<<<< HEAD
       log_file: 'logs/pm2/dependency-monitor.log',
       error_file: 'logs/pm2/dependency-monitor-error.log',
       out_file: 'logs/pm2/dependency-monitor-out.log',
@@ -439,17 +494,23 @@ export default {
     {
       name: 'performance-monitor',
       script: 'scripts/pm2/performance-monitor.js',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
+<<<<<<< HEAD
         PM2_PROCESS_NAME: 'performance-monitor',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         PERFORMANCE_THRESHOLD: '3000',
         BUNDLE_SIZE_LIMIT: '2MB',
       },
       cron_restart: '0 */8 * * *',
+<<<<<<< HEAD
       log_file: 'logs/pm2/performance-monitor.log',
       error_file: 'logs/pm2/performance-monitor-error.log',
       out_file: 'logs/pm2/performance-monitor-out.log',
@@ -457,19 +518,25 @@ export default {
     {
       name: 'git-workflow',
       script: 'scripts/pm2/git-workflow-automator.js',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
+<<<<<<< HEAD
         PM2_PROCESS_NAME: 'git-workflow',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         AUTO_BRANCH_CLEANUP: 'true',
         AUTO_MERGE_SAFE: 'true',
         CONFLICT_RESOLUTION: 'true',
         BRANCH_STRATEGY: 'gitflow',
       },
       cron_restart: '0 */6 * * *',
+<<<<<<< HEAD
       log_file: 'logs/pm2/git-workflow.log',
       error_file: 'logs/pm2/git-workflow-error.log',
       out_file: 'logs/pm2/git-workflow-out.log',
@@ -477,17 +544,23 @@ export default {
     {
       name: 'error-detection',
       script: 'scripts/pm2/error-detection-service.js',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
+<<<<<<< HEAD
         PM2_PROCESS_NAME: 'error-detection',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         AUTO_FIX_ENABLED: 'true',
         MONITOR_FREQUENCY: '*/5 * * * *',
       },
       cron_restart: '*/5 * * * *',
+<<<<<<< HEAD
       log_file: 'logs/pm2/error-detection.log',
       error_file: 'logs/pm2/error-detection-error.log',
       out_file: 'logs/pm2/error-detection-out.log',
@@ -495,22 +568,30 @@ export default {
     {
       name: 'syntax-fixer',
       script: 'scripts/pm2/syntax-error-fixer.js',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'development',
+<<<<<<< HEAD
         PM2_PROCESS_NAME: 'syntax-fixer',
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         AUTO_FIX_ENABLED: 'true',
         MONITOR_FREQUENCY: '*/10 * * * *',
       },
       cron_restart: '*/10 * * * *',
+<<<<<<< HEAD
       log_file: 'logs/pm2/syntax-fixer.log',
       error_file: 'logs/pm2/syntax-fixer-error.log',
       out_file: 'logs/pm2/syntax-fixer-out.log',
     }
   ],
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 module.exports = {
   apps: [{
     name: "ziontechgroup-site",
@@ -854,6 +935,7 @@ module.exports = {;
     exec_mode: "fork",
     env: {
       NODE_ENV: "production",
+<<<<<<< HEAD
       PORT: 3000
     },
     env_production: {
@@ -868,6 +950,8 @@ module.exports = {;
     time: true
   }]
 };
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     node_args: "--max - old - space - size = 1024",
     error_file: "./logs / err.log",
     out_file: "./logs / out.log",
@@ -882,7 +966,10 @@ module.exports = {;
       time: true
     }
   ]
+<<<<<<< HEAD
 },
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     node_args: "--max-old-space-size=1024",
     error_file: "./logs/err.log",
     out_file: "./logs/out.log",

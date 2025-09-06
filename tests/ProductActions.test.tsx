@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 interface ProductActions.testProps {
   // Add props here as needed
 }
@@ -10,6 +11,8 @@ export default function ProductActions.test({ }: ProductActions.testProps) {
     </div>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 function setup() {
   const addToCart = vi.fn().mockResolvedValue(undefined);
@@ -41,3 +44,16 @@ describe('ProductActions', () => {
     vi.useRealTimers();
   });
 });
+<<<<<<< HEAD
+=======
+interface ProductActions.testProps {
+  // Add props here as needed
+}
+export default function ProductActions.test({ }: ProductActions.testProps) {
+  return (
+    <div>
+      <h1>ProductActions.test</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

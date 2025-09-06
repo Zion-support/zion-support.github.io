@@ -32,6 +32,7 @@ function fixMergeConflicts(filePath) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
 
+<<<<<<< HEAD
 /**
  * getAllFiles - Function description
  */
@@ -50,6 +51,8 @@ function getAllFiles() {
   $2
 }
         files.push (full_path);
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 console.log('🚀 Starting comprehensive merge conflict resolution and PR merging...'),;
 // Function to fix merge conflicts in a file;
 function fixMergeConflicts(filePath) {;
@@ -57,8 +60,11 @@ function fixMergeConflicts(filePath) {;
     let content = fs.readFileSync(filePath, 'utf8'),;
     const originalContent = content;
     // Remove merge conflict markers and keep HEAD version;
+<<<<<<< HEAD
     const originalContent = content;
     // Remove merge conflict markers and keep HEAD version;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     content = content.replace(/    content = content.replace(/    if (content !== originalContent) {;
       fs.writeFileSync(filePath, content, 'utf8'),;
       console.log(`✅ Fixed merge conflicts in: ${path.relative(process.cwd(), filePath)}`),;
@@ -185,6 +191,7 @@ async function main() {
       }
     }
     let fixedCount = 0;
+<<<<<<< HEAD
     for (const file of files) {;
       try {;
         const content = fs.readFileSync(file, 'utf8'),;
@@ -243,6 +250,8 @@ async function main() {
 }
 ;
 main().catch(console.error),;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
             fixedCount++;
           }
         }
@@ -301,6 +310,7 @@ main().catch(console.error),;
   }
 }
 
+<<<<<<< HEAD
     console.log ('🔍 Scanning for merge conflicts in files...'),
     const files = getAllFiles (process.cwd (), ['.tsx.ts.jsx.js', '.json.md.css']),
     let fixed_count = 0,
@@ -312,4 +322,6 @@ if (|| content.includes (') {
   $2
 }
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 main().catch(console.error);

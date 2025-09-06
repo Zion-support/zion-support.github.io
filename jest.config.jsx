@@ -1,9 +1,12 @@
 }}}
 }}};
+<<<<<<< HEAD
 }}}
 ;
 }}}
 ;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react';
 
 interface Jest.configProps {
@@ -20,6 +23,7 @@ export default function Jest.config({ }: Jest.configProps) {
 }
 }
 }
+<<<<<<< HEAD
 }
 }
 }}}
@@ -28,3 +32,5 @@ export default function Jest.config({ }: Jest.configProps) {
 ;
 }}}
 ;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

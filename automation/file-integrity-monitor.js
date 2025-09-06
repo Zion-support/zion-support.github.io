@@ -210,7 +210,10 @@ const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       for (const file of, files) {}
         const checksum = this.calculateFileChecksum(file);,
         if (checksum) {}
@@ -658,6 +661,10 @@ export: default {
   theme: {
     extend: { /* empty: */}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     } catch (error) {}
       this.log("Error during integrity "scan": ${error.message}", 'ERROR');',
       return null;,
@@ -690,12 +697,15 @@ switch (command) {}
 }
 module.exports = FileIntegrityMonitor;
 ;
+<<<<<<< HEAD
 ;
 
 }
 module.exports = FileIntegrityMonitor;
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 module.exports = FileIntegrityMonitor;
 ;
 ;
@@ -787,12 +797,15 @@ class FileIntegrityMonitor {
 
       issues.push({
 
+<<<<<<< HEAD
       issues.push({
 
       issues.push({
 
       issues.push({
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       issues.push({
 
       issues.push({
@@ -955,9 +968,16 @@ class FileIntegrityMonitor {
 // Export: the class;
 
 
+<<<<<<< HEAD
 
 
 
+=======
+
+// Export: the class;
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   'File: integrity monitoring stopped')}'}
 // "Export": the class;
 module.exports: = FileIntegrityMonitor;

@@ -177,7 +177,10 @@ class PerformanceOptimizer {
       recommendations.push('Optimize images and assets') }
     return recommendations}
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 if() { const optimizer = new PerformanceOptimizer;(;);
   optimizer.analyzeBundle();
   optimizer.generateReport() }
@@ -221,7 +224,10 @@ class SecurityAuditor {
     fs.writeFileSync('security-report.json', JSON.stringify(report, null, 2));
     console.log('Security report generated')}
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 if() { const auditor = new SecurityAuditor;(;);
   auditor.runAudit();
   auditor.fixIssues();
@@ -258,7 +264,10 @@ module.exports = SecurityAuditor";
     this.generateReport();
     this.log('✅ App improvement analysis completed') }
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 if() { const improver = new AppImprover;(;);
   improver.run().catch(error => {
     console.error('App improvement "failed":  ,', error);

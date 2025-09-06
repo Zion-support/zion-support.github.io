@@ -13,5 +13,9 @@
    rating: number;
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number} reviews: 'numbe',r} location: 'string' ,;
    reviews: numbe,r} "location": string ,
+<<<<<<< HEAD
 
 
+=======
+export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

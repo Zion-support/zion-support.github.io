@@ -15,6 +15,7 @@ global.TextEncoder = TextEncoder,
 // @ts - expect - error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
 global.TextDecoder = TextDecoder,
 
+<<<<<<< HEAD
 // Reset fetch mocks before each test to ensure isolation;
 before_each (() => {
   fetch_mock.reset_mocks ();
@@ -30,6 +31,8 @@ global.TextEncoder = TextEncoder,
 // @ts - expect - error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
 global.TextDecoder = TextDecoder,
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Set up a mock for Vite environment variables accessed via import.meta.env;
 // This assumes that Babel (via babel - plugin - transform - import - meta or similar);
 // will transform import.meta.env.VITE_SOME_VAR to something like process.env.VITE_SOME_VAR;
@@ -193,6 +196,7 @@ global.ResizeObserver = jest.fn ().mock_implementation (() => ({
   unobserve: jest.fn (),
   disconnect: jest.fn ()})),
 // Polyfill for URL.revokeObjectURL;
+<<<<<<< HEAD
 // Check condition
 if ( {) {
   $2
@@ -340,6 +344,8 @@ global.ResizeObserver = jest.fn ().mock_implementation (() => ({
 // Polyfill for URL.revokeObjectURL;
 if (typeof URL.revokeObjectURL === 'undefined') {;
   URL.revokeObjectURL = jest.fn(),;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 // Polyfill for BroadcastChannel;
 // Check condition
@@ -372,6 +378,7 @@ if ( {) {
 import axios from 'axios',
 // @ts - ignore;
 axios.create = jest.fn (() => axios),
+<<<<<<< HEAD
       this.name = name;
     }
     post_message = jest.fn (),
@@ -395,6 +402,8 @@ import axios from 'axios',;
 // @ts-ignore;
 axios.create = jest.fn(() => axios),;
 ;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // -----------------------------;
 // Vitest Compatibility Layer for Jest;
 // -----------------------------;
@@ -536,8 +545,11 @@ if ( {) {
   // @ts - ignore;
 
   global.IntersectionObserver = MockIntersectionObserver;
+<<<<<<< HEAD
 
   global.IntersectionObserver = MockIntersectionObserver;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 // Ensure all code paths use the mock implementation;
 // Some services import the global fetch reference before jest - fetch - mock is enabled.;
@@ -615,6 +627,7 @@ if ( {) {
 }
 }
 
+<<<<<<< HEAD
 }
   // @ts - ignore;
   window.window.window.performance.getEntriesByType = () => [];
@@ -839,3 +852,5 @@ getItem: jest.fn ()
 //@ts-ignore if (!global.vi.runAllTimers) global.vi.runAllTimers = jest.runAllTimers.bind (jest);
 // @ts-ignore 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

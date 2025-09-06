@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,6 +13,7 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
+<<<<<<< HEAD
     sourcemap: true
   },
   resolve: {
@@ -23,3 +27,5 @@ export default defineConfig({
     }
   }
 })
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

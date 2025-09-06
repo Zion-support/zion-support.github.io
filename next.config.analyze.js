@@ -6,7 +6,10 @@ module.exports = {
     if (!isServer) {
       config.plugins.push(
         new BundleAnalyzerPlugin({
+<<<<<<< HEAD
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
           analyzerMode: 'static',
           openAnalyzer: false,
           reportFilename: 'bundle-analysis.html',
@@ -15,7 +18,10 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.expo
     }
     return config;
   },
+<<<<<<< HEAD
 };
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
 };
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
@@ -37,6 +43,17 @@ export const Next.config.analyze = () => {
 
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 ;}
 }
@@ -44,9 +61,12 @@ export const Next.config.analyze = () => {
 
 
 
+<<<<<<< HEAD
 }
 ;}
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 module && module.exports = {
   "webpack": (config, { isServer }) => {
@@ -58,6 +78,10 @@ module && module.exports = {
 ,;
 ;};
 ;
+<<<<<<< HEAD
+=======
+};
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 
@@ -111,6 +135,11 @@ module.exports = {
   if (!isServer) {
   config.plugins.push(;
         new BundleAnalyzerPlugin({
+<<<<<<< HEAD
+=======
+};
+,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 
@@ -164,8 +193,11 @@ const { BundleAnalyzerPlugin } = require ("webpack - bundle - analyzer"); module
 if ( { config.plugins.push () {
   $2
 } new BundleAnalyzerPlugin ({ analyzer_mode: "static", open_analyzer: false, report_filename: "bundle - analysis.html", }))} return config} }
+<<<<<<< HEAD
 },;
 ,;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 };
 ;
 ,;
@@ -197,7 +229,10 @@ module.exports = {
     if (!isServer) {
       config.plugins.push(
         new BundleAnalyzerPlugin({
+<<<<<<< HEAD
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
           analyzerMode: 'static',
           openAnalyzer: false,
           reportFilename: 'bundle-analysis.html',
@@ -206,7 +241,10 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.expo
     }
     return config;
   },
+<<<<<<< HEAD
 };
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }
 };
 const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer"); module.exports = { webpack: (config,{ isServer }) => { if (!isServer) { config.plugins.push(; new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: false,reportFilename: "bundle-analysis.html",}); )} return config} }

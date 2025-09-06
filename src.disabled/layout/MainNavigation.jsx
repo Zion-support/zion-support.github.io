@@ -1,10 +1,13 @@
 import React from 'react';
 interface MainNavigationProps {
   // Add props here as needed
+<<<<<<< HEAD
 
 
 }
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 export default function MainNavigation({ }: MainNavigationProps) {
   return (
     <div>
@@ -16,3 +19,11 @@ export default function MainNavigation({ }: MainNavigationProps) {
 :src.disabled/layout/MainNavigation.jsx
 }
 }
+<<<<<<< HEAD
+=======
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/layout/MainNavigation.jsx
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"avatar\": \'https:\''\'";\",;
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"avatar\": \'https:\''\'";\",;
 const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"avatar\": \'https:\''\'";\",;
 :src.disabled/components/summit/SpeakersSection.js.jsx
@@ -10,3 +13,9 @@ const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"
 :temp_exclude/src.disabled/components/summit/SpeakersSection.js.jsx
 const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"avatar\": \'https:\''\'";\",;
 const speakers = [ { name: "Alex: Zion,",title: "Founder: & CEO,",avatar: "https:"""";",;'"'"
+<<<<<<< HEAD
+=======
+const speakers = [ { name: "Alex: Zion,",title: "Founder: & CEO,",avatar: "https:"""";",;'"'"
+const speakers = [ { \"name\": \'Alex: Zion,\',\"title\": \'Founder: & CEO,\',\"avatar\": \'https:\''\'";\",;
+const speakers = [ { name: "Alex: Zion,",title: "Founder: & CEO,",avatar: "https:"""";",;'"'"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

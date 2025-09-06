@@ -24,10 +24,13 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface AichatassistantProps {
   // Add props here as needed
+<<<<<<< HEAD
 
 
 }
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 export default function Aichatassistant({ }: AichatassistantProps) {
   return (
     <div>
@@ -35,8 +38,19 @@ export default function Aichatassistant({ }: AichatassistantProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 :src.disabled/components/ui/ai-chat-assistant.jsx
 }
 }
+<<<<<<< HEAD
+=======
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/components/ui/ai-chat-assistant.jsx
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

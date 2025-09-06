@@ -6,6 +6,15 @@ import fs from 'fs')
 import path from 'path');
 const { execSync } = require('child_process');
 class LintingAutomation { constructor() { this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, "automation/logs/linting-automation.log");" this.lintReportFile = path.join(this.projectRoot, "automation/logs/lint-report.json"); this.lastLint = null; this.lintInterval = 60000; / 1 minute; this.isRunning = false; this.setupLogging();" this.log("Linting Automation started")} setupLogging() { const logDir = path.dirname(this.logFile); if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir, { recursive: true })} } log(message) { const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage); } async runLinting() { try {" this.log("Running linting check."); const startTime = Date.now(); / Run linting;" const lintOutput = execSync("npm run lint", { const endTime = Date.now(); const lintTime = endTime - startTime; this.lastLint = {" timestamp: new Date().toISOString() success: true; lintTime: lintTime; output: lintOutput; errors: 0; warnings: 0; };` this.log(`Linting completed successfully in ${lintTime}ms`); await this.saveLintReport()} catch (error) {"` this.log(`Linting failed: ${error.message}`); this.lastLint = {" timestamp: new Date().toISOString() success: false; error: error.message; output: output; errors: errorCount; warnings: warningCount; }; await this.saveLintReport(); await this.handleLintingFailure(error)} } async handleLintingFailure(error) {" this.log("Handling linting failure."); try { / Try to auto-fix linting issues;" this.log("Attempting to auto-fix linting issues."); "" const fixOutput = execSync("npm run lint: fix", { " this.log("Auto-fix applied"); / Run linting again to check if issues were resolved;" const recheckOutput = execSync("npm run lint", { " this.log("Linting issues resolved"); } catch (fixError) {"` this.log(`Failed to fix linting issues: ${fixError.message}`); await this.reportLintingFailure(fixError); } } async saveLintReport() { const report = {" lastLint: this.lastLint; projectRoot: this.projectRoot; eslintConfig: this.getEslintConfig() fs.writeFileSync(this.lintReportFile, JSON.stringify(report, null, 2)); } getEslintConfig() { try {} catch (error) { / Ignore errors; } " const failureFile = path.join(this.projectRoot, "automation/logs/linting-failure-report.json"); fs.writeFileSync(failureFile, JSON.stringify(failureReport, null, 2)); " this.log("Linting failure reported"); } async checkFileChanges() { try {} catch (error) {"` this.log(`File change check failed: ${error.message}`); } } getRecentFiles() { const recentFiles = []; } } catch (error) { / Ignore errors; } getFilesInDirectory(dir, fileList = []) { try { const files = fs.readdirSync(dir);  } catch (error) { / Ignore errors; } async start() { this.isRunning = true;" this.log("Linting Automation started"); / Initial linting; await this.runLinting(); / Set up interval for regular linting; setInterval(async () => { / Handle graceful shutdown;" process.on("SIGTERM", () => {" this.log("Received SIGTERM, shutting down gracefully"); this.isRunning = false; process.exit(0); }); " process.on("SIGINT", () => {" this.log("Received SIGINT, shutting down gracefully"); this.isRunning = false; process.exit(0); }); }}automation.start().catch(error => {"" console.error("Failed to start linting automation: ", error); process.exit(1);});='"`'"`
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 class LintingAutomation {}
   constructor() {}
     this.projectRoot = process.cwd();,
@@ -98,6 +107,13 @@ class LintingAutomation {}
     const recentFiles = [];,
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 #!/usr/bin/env node;
 /**
  * Linting Automation - PM2 Automation Script;
@@ -134,6 +150,13 @@ class LintingAutomation {
     fs.appendFileSync(this.logFile, logMessage)}
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   async runLinting() {
     try {
@@ -151,6 +174,13 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       };);
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 60000
@@ -174,6 +204,13 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       const warningCount = (output.match(/warning/g) || []).lengt;h;
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Parse linting output to count errors and warnings
       const output = error.stdout || error.stderr || '';
       const errorCount = (output.match(/error/g) || []).length;
@@ -228,6 +265,13 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       };);
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 "cwd": this.projectRoot,
         "encoding": 'utf8',
         "timeout": 60000
@@ -269,6 +313,13 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
           size: fs.statSync(configPath).size
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         return {}
           "exists": true;
           path: configPath;
@@ -298,6 +349,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       stack: error.stack,
       projectRoot: this.projectRoot
    ; ;};
+<<<<<<< HEAD
     return { exists: false ;}}
   async reportLintingFailure(error) {
     const failureReport = {
@@ -306,6 +358,8 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       stack: error.stack,
       projectRoot: this.projectRoot
    ; ;};
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     return { "exists": false }}
   async reportLintingFailure(error) {
     const failureReport = {
@@ -359,6 +413,13 @@ return { "exists": false };
         await this.runLinting()}
 
 
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Check for recently modified files that might need linting
       const filesToCheck = this.getRecentFiles();
       if (filesToCheck.length > 0) {
@@ -372,7 +433,10 @@ return { "exists": false };
   getRecentFiles() {
     const recentFiles = [];
     const recentFiles = [];
+<<<<<<< HEAD
     const recentFiles = [];
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     const recentFiles = [;];
     const cutoffTime = Date.now() - 600;0;0; // 1 minute ago
     try {
@@ -466,8 +530,11 @@ if (stat.isDirectory()) {
     
     return fileList}}
     
+<<<<<<< HEAD
     return fileList}}
     
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     return fileList) {
     ) {
           this.getFilesInDirectory(filePath, fileList)} else if (file.match(/\.(js|jsx|ts|tsx)$/)) {
@@ -511,9 +578,12 @@ if (stat.isDirectory()) {
     this.isRunning = true;
     this.log('Linting Automation started');
     return fileList}}
+<<<<<<< HEAD
     
     return fileList}}
     
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   async start() {}
     this.isRunning = true;,
     this.log('Linting Automation started');';,
@@ -556,6 +626,7 @@ if (stat.isDirectory()) {
         await this.checkFileChanges()}
     }, this.lintInterval);
   }
+<<<<<<< HEAD
     return fileList}}
     return fileList) {
     ) {
@@ -585,6 +656,8 @@ if (stat.isDirectory()) {
         await this.checkFileChanges()}
     }, this.lintInterval);
   }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     // Handle graceful shutdown;}
     process.on('SIGTERM', () => {'}
       this.log('Received SIGTERM, shutting down gracefully');',

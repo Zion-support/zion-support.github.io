@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "timestamp": "2025-09-06T17:31:43.872Z",
   "duration": "46s",
 =======
@@ -52,37 +53,54 @@
     "totalErrors": 5
   "timestamp": "2025-09-06T10:42:27.266Z",
   "totalDuration": 60241,
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   "successfulTasks": 6,
   "totalTasks": 8,
   "results": {
     "dependencyFix": {
       "success": true,
+<<<<<<< HEAD
       "duration": 7037,
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       "errors": [],
       "warnings": []
     },
     "codeQuality": {
       "success": false,
+<<<<<<< HEAD
       "duration": 27333,
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       "errors": [],
       "warnings": []
     },
     "securityAudit": {
       "success": true,
+<<<<<<< HEAD
       "duration": 1719,
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       "errors": [],
       "warnings": []
     },
     "buildOptimization": {
       "success": true,
+<<<<<<< HEAD
       "duration": 6250,
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       "errors": [],
       "warnings": []
     },
     "seoOptimization": {
+<<<<<<< HEAD
       "success": false,
       "duration": 39,
 "errors": [],
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       "success": true,
       "duration": 46,
       "errors": [],
@@ -90,18 +108,25 @@
     },
     "accessibilityImprovement": {
       "success": false,
+<<<<<<< HEAD
       "duration": 9508,
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       "errors": [],
       "warnings": []
     },
     "performanceOptimization": {
       "success": true,
+<<<<<<< HEAD
       "duration": 6736,
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       "errors": [],
       "warnings": []
     },
     "deployment": {
       "success": true,
+<<<<<<< HEAD
       "duration": 1612,
       "errors": [],
       "warnings": []
@@ -109,5 +134,10 @@
 =======
     "totalErrors": 6
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
+=======
+      "errors": [],
+      "warnings": []
+    }
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   }
 }

@@ -130,23 +130,40 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
+<<<<<<< HEAD
       react,
+=======
+      'react': react,
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       'react-hooks': reactHooks,
       '@next/next': nextPlugin,
     },
     rules: {
+<<<<<<< HEAD
       'react/react-in-jsx-scope': 'off',
       'react/prop-types': 'off',
       'react/display-name': 'off',
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/ban-ts-comment': 'off',
+=======
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'react/prop-types': 'off',
+      'react/react-in-jsx-scope': 'off',
+      'react/display-name': 'off',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/ban-ts-comment': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       'no-unused-vars': 'off',
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'prefer-const': 'error',
       'no-debugger': 'warn',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',
+<<<<<<< HEAD
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-32fb
     },
     languageOptions: {
@@ -169,6 +186,27 @@ export default [
     }
   }
 =======
+=======
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
+  {
+    files: ['**/*.js'],
+    languageOptions: {
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        Buffer: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         exports: 'readonly',
       },
     },
@@ -176,5 +214,8 @@ export default [
       'no-console': 'off',
     },
   },
+<<<<<<< HEAD
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-32fb
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ];

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -12,7 +15,10 @@ describe('EnhancedNavigationdynamic', () => {
     ).toBeInTheDocument();
   });
 });
+<<<<<<< HEAD
 });
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedNavigationdynamic from '../components/EnhancedNavigation.dynamic'; describe('EnhancedNavigationdynamic',() => { test('renders without crashing',() => { render(<EnhancedNavigationdynamic />); expect( screen.getByTestId('enhancednavigation.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedNavigationdynamic />)}); test('handles user interactions',() => { render(<EnhancedNavigationdynamic />)}); test('applies correct styling',() => { render(<EnhancedNavigationdynamic />)})});
   test('displays correct content', () => {
     render(<EnhancedNavigationdynamic />);
@@ -44,5 +50,8 @@ describe('EnhancedNavigationdynamic'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import EnhancedNavigationdynamic from "./components/EnhancedNavigation.dynamic"; describe('EnhancedNavigationdynamic', () => { test("renders without crashing",() => { render(<EnhancedNavigationdynamic />); expect( screen.getByTestId("enhancednavigation.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<EnhancedNavigationdynamic />)}); test("handles user interactions",() => { render(<EnhancedNavigationdynamic />)}); test("applies correct styling"
 });
+<<<<<<< HEAD
 });
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import _React from 'react';  import '@testing-library/jest-dom'; import EnhancedNavigationdynamic from '../components/EnhancedNavigation.dynamic'; describe('EnhancedNavigationdynamic',() => { test('renders without crashing',() => { render(<EnhancedNavigationdynamic />); expect( screen.getByTestId('enhancednavigation.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<EnhancedNavigationdynamic />)}); test('handles user interactions',() => { render(<EnhancedNavigationdynamic />)}); test('applies correct styling',() => { render(<EnhancedNavigationdynamic />)})});

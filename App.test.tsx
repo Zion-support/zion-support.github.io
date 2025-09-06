@@ -8,14 +8,15 @@ describe('App', () => {
     render(<App />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
-
+  
   it('displays correct content', () => {
     render(<App />);
     expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
   });
-
+  
   it('handles user interactions', () => {
     render(<App />);
+<<<<<<< HEAD
 <<<<<<< HEAD
     expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
 =======
@@ -23,3 +24,8 @@ describe('App', () => {
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-32fb
   });
 });
+=======
+    expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
+  });
+});
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -56,7 +56,10 @@ try {
                     } catch (e) {
                         exec_sync (`git checkout --theirs "${file}"`);
 
+<<<<<<< HEAD
 #!/usr/bin/env node;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 #!/usr/bin/env node;
 
 
@@ -77,9 +80,12 @@ try {;
                     console.log(`Resolving conflicts in: ${file}`);
                     try {execSync(`git checkout --ours "${file}"`);
                     } catch (e) {execSync(`git checkout --theirs "${file}"`);
+<<<<<<< HEAD
                     console.log(`Resolving conflicts in: ${file}`);
                     try {execSync(`git checkout --ours "${file}"`);
                     } catch (e) {execSync(`git checkout --theirs "${file}"`);
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
                     console.log(`Resolving conflicts in: ${file}`),;
                     try {;
@@ -144,7 +150,10 @@ try {;
     const branches = execSync('git branch -r', { encoding: 'utf8' }),;
     const branchList = branches.split('\n');
         .map(branch => branch.trim());
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')),;
         .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
 
@@ -180,5 +189,18 @@ try {;
 
     process.exit(1);
 }
+<<<<<<< HEAD
+=======
+    console.log ('📤 Pushing all changes to main...'),
+    exec_sync ('git push origin main'),
+    console.log ('🎉 All merge operations completed successfully!'),
+    console.log ('✅ All PRs have been merged into main branch'),
+    console.log ('✅ All merge conflicts have been resolved'),
+    console.log ('✅ Repository is now clean and up to date');
+} catch (error) {
+    console.error ('❌ Error during merge process:', error.message),
+    process.exit (1);
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     process.exit(1);
 }

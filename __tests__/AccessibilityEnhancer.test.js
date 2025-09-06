@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -10,7 +13,10 @@ describe('AccessibilityEnhancer', () => {
     expect(screen.getByTestId('accessibilityenhancer')).toBeInTheDocument();
   });
 });
+<<<<<<< HEAD
 });
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import _React from 'react';  import '@testing-library/jest-dom'; import AccessibilityEnhancer from '../components/AccessibilityEnhancer'; describe('AccessibilityEnhancer',() => { test('renders without crashing',() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId('accessibilityenhancer')).toBeInTheDocument()}); test('displays correct content',() => { render(<AccessibilityEnhancer />)}); test('handles user interactions',() => { render(<AccessibilityEnhancer />)}); test('applies correct styling',() => { render(<AccessibilityEnhancer />)})});
   test('displays correct content', () => {
     render(<AccessibilityEnhancer />);
@@ -45,5 +51,8 @@ describe('AccessibilityEnhancer'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import AccessibilityEnhancer from "./components/AccessibilityEnhancer"; describe('AccessibilityEnhancer', () => { test("renders without crashing",() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId("accessibilityenhancer")).toBeInTheDocument()}); test("displays correct content",() => { render(<AccessibilityEnhancer />)}); test("handles user interactions",() => { render(<AccessibilityEnhancer />)}); test("applies correct styling"
 });
+<<<<<<< HEAD
 });
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import _React from 'react';  import '@testing-library/jest-dom'; import AccessibilityEnhancer from '../components/AccessibilityEnhancer'; describe('AccessibilityEnhancer',() => { test('renders without crashing',() => { render(<AccessibilityEnhancer />); expect(screen.getByTestId('accessibilityenhancer')).toBeInTheDocument()}); test('displays correct content',() => { render(<AccessibilityEnhancer />)}); test('handles user interactions',() => { render(<AccessibilityEnhancer />)}); test('applies correct styling',() => { render(<AccessibilityEnhancer />)})});

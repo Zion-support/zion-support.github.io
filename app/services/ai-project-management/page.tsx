@@ -1,4 +1,5 @@
 export const metadata = {
+<<<<<<< HEAD
   title: 'AI Project Management Tool | Zion Tech Group',
   description: 'Streamline your projects with AI-powered project management, automated task assignment, and intelligent resource optimization.',
 };
@@ -105,6 +106,15 @@ function FeatureCard({ title, features }: { title: string; features: string[] })
         {features.map(f => (
           <li key={f} className="flex items-center">
             <span className="text-indigo-500 mr-2">•</span> {f}
+=======
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
+      <p className="text-gray-600 mb-4">{description}</p>
+      <ul className="space-y-2">
+        {benefits.map((benefit, index) => (
+          <li key={index} className="text-sm text-gray-600 flex items-center">
+            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+            {benefit}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
           </li>
         ))}
       </ul>
@@ -112,6 +122,7 @@ function FeatureCard({ title, features }: { title: string; features: string[] })
   );
 }
 
+<<<<<<< HEAD
 function Pricing() {
   return (
     <div className="mt-16">
@@ -158,6 +169,8 @@ function Pricing() {
 function Plan({ name, price, features, popular = false }: { name: string; price: string; features: string[]; popular?: boolean }) {
   return (
     <div className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? 'border-indigo-500 ring-2 ring-indigo-200' : 'border-gray-200'}`}>
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       {popular && (
         <div className="bg-indigo-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
           Most Popular
@@ -185,3 +198,10 @@ function Plan({ name, price, features, popular = false }: { name: string; price:
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

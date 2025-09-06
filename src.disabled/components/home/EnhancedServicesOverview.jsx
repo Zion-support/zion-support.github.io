@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 import React from\';react\''\';\'';
 const React from";react""";"";''"
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from\';react\''\';\'';
 const React from";react""";"";''"
 :src.disabled/components/home/EnhancedServicesOverview.jsx

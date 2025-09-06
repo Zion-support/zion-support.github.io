@@ -20,7 +20,10 @@ export default ${validName};`;
     console.log(`"Fixed": ${filePath}`)} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Fix blog pages
 const blogDir = 'pages/blog';
 if (fs.existsSync(blogDir)) {
@@ -39,7 +42,10 @@ if (fs.existsSync(servicesDir)) {
   const serviceFiles = fs.readdirSync(servicesDir).filter(file => file.endsWith('.tsx'));
   serviceFiles.forEach(file => {
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // // // // // // // console.log('Variable name fixing completed!');
     fixFile(path.join(servicesDir, file))})}
 console.log('Variable name fixing completed!');

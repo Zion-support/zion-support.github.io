@@ -24,10 +24,13 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface NewProductsPageProps {
   // Add props here as needed
+<<<<<<< HEAD
 
 
 }
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 export default function NewProductsPage({ }: NewProductsPageProps) {
   return (
     <div>
@@ -35,8 +38,19 @@ export default function NewProductsPage({ }: NewProductsPageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 :src.disabled/src/pages.disabled/NewProductsPage.jsx
 }
 }
+<<<<<<< HEAD
+=======
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/src/pages.disabled/NewProductsPage.jsx
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

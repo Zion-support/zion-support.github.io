@@ -8,6 +8,7 @@ const ScrollToTop: React.FC = () => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
+<<<<<<< HEAD
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -28,6 +29,9 @@ const ScrollToTop: React.FC = () => {
       )}
     </>
   );
+=======
+  return null;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 };
 
 export default ScrollToTop;

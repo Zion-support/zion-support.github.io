@@ -51,9 +51,12 @@ async function fixAllFiles() {
   for (const file of files) {
     if (fixFunctionName(file)) {
       fixedCount++}
+<<<<<<< HEAD
   for (const file of files) {
     if (fixFunctionName(file)) {
       fixedCount++}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   }
   // // // // // // // console.log(`Fixed ${fixedCount} files.`)}
 fixAllFiles()}}}}}}}}}

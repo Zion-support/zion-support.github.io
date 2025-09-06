@@ -81,7 +81,10 @@ function restorePage(pagePath) {;
     }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
     
 
@@ -104,8 +107,7 @@ if ( {) {
   $2
 }
         // Take the content after the conflict resolution;
-        backup_content = parts[1].split ('>>>>>>>')[0];
-      }
+        backup_content = parts[1].split ('      }
     }
     // Clean up the content;
     backup_content = backup_content.trim (),
@@ -135,7 +137,10 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
@@ -176,7 +181,16 @@ function restoreAllCorruptedPages() {
         console.log(`\n🔍 Checking: ${fullPath}`),
 
 
+<<<<<<< HEAD
 
+=======
+      } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
+        results.total++,
+        
+        console.log(`\n🔍 Checking: ${fullPath}`),
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ;
 // Function to scan and restore all corrupted pages;
 function restoreAllCorruptedPages() {;
@@ -198,8 +212,11 @@ function restoreAllCorruptedPages() {;
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
         // // // console.log(`\n🔍 Checking: ${fullPath}`),
+<<<<<<< HEAD
         const result = restorePage(fullPath),
         const result = restorePage(fullPath),
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 
@@ -212,7 +229,10 @@ function restoreAllCorruptedPages() {;
           console.log(`   Used backup: ${result.backupUsed}`)
           console.log(`   Corrupted backup: ${result.corruptedBackup}`)
         } else {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
           console.log(`   Reason: ${result.reason}`)
           results.failed++,
@@ -234,6 +254,7 @@ function restoreAllCorruptedPages() {;
           // // // console.log(`   Reason: ${result.reason}`);
 
           results.failed++,
+<<<<<<< HEAD
           results.failed++,
 
 
@@ -252,6 +273,13 @@ function restoreAllCorruptedPages() {;
           results.failed++,;
           // // // console.log(`❌ Failed: ${fullPath}`),;
           // // // console.log(`   Reason: ${result.reason}`);
+=======
+
+
+          results.failed++,
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
           results.failed++,
 
 
@@ -269,10 +297,13 @@ function restoreAllCorruptedPages() {;
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
   // Generate summary
+<<<<<<< HEAD
   return results
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
   // Generate summary
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   
   console.log('🚀 Starting page restoration process...'),
   // // // console.log('🚀 Starting page restoration process...'),
@@ -304,7 +335,10 @@ if ({
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 // Function to scan and restore all corrupted pages;
 /**
  * restoreAllCorruptedPages - Function description
@@ -382,9 +416,13 @@ if ( {) {
 }
 }
 
+<<<<<<< HEAD
 }
 
 
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ;
 module.exports = {;
   restorePage,;

@@ -29,6 +29,7 @@ const allFiles = getAllFiles('.', ['.tsx', '.ts', '.jsx', '.js']);
 for (const file of allFiles) {
   try {
     const content = fs.readFileSync(file, 'utf8');
+<<<<<<< HEAD
     if (content.includes('') |content.includes('
 const fs = require('fs'),;
 const path = require('path'),;
@@ -74,6 +75,10 @@ const problematicFiles = [],;
 const problematicFiles = [];
 
 
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 const allFiles = getAllFiles('.', ['.tsx.ts.jsx.js']),;
 for (const file of allFiles) {;
   try {;
@@ -81,8 +86,12 @@ for (const file of allFiles) {;
     if (content.includes('') || content.includes('
 }
 }
+<<<<<<< HEAD
     if (content.includes('') || content.includes('') || content.includes('>>>>>>>')) {;
     if (content.includes('      problematicFiles.push(file);
+=======
+    if (content.includes('') || content.includes('') || content.includes('    if (content.includes('      problematicFiles.push(file);
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     }
   } catch (error) {
     // Skip files that can't be read
@@ -113,6 +122,10 @@ function getAllFiles(dir, extensions) {
   }
   return files;
 }
+<<<<<<< HEAD
 ;
 console.log('✅ Debug completed'),;
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 console.log('✅ Debug completed');

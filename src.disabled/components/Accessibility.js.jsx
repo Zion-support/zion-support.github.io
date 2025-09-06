@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 import React from\';react\' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(\' \'useAccessibility must be used within an AccessibilityProvider\' ) } return context }\'';\';
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from\';react\' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(\' \'useAccessibility must be used within an AccessibilityProvider\' ) } return context }\'';\';
 import React from\';react\' const AccessibilityContext = createContext(null) export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(\' \'useAccessibility must be used within an AccessibilityProvider\' ) } return context }\'';\';
 :src.disabled/components/Accessibility.js.jsx

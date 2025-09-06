@@ -7,10 +7,13 @@ import React from 'react';
 interface BundleanalyzerProps {
   // Add props here as needed
 }
+<<<<<<< HEAD
 
 
 }
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 export default function Bundleanalyzer({ }: BundleanalyzerProps) {
   return (
     <div>
@@ -18,9 +21,12 @@ export default function Bundleanalyzer({ }: BundleanalyzerProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
 
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 }
@@ -29,3 +35,7 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

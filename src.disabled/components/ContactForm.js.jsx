@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import _React from';react' const ContactForm = () => { const [formData,setFormData] = useState({ "firstName": ',"lastName": ',"email": ',"comp": ',"phone": ',"service": ',"message": '}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState('idle') const handleInputChange = e => { const { name,value } = e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e.preventDefault() setIsSubmitting(true) setSubmitStatus('idle') try {'''';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 
@@ -8,4 +11,7 @@ import React from\';react\' const ContactForm = () => { const [formData,setFormD
 const React from";react" const ContactForm = () => { const [formData,setFormData] = useState({ firstName: ",lastName: ",email: ",comp: ",phone: ",service: ",message: "}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState("idle") const handleInputChange = e => { const { name,value } = e && e.target setFormData(prev => ({ .prev,[name]: value})) } const handleSubmit = async e => { e && e.preventDefault() setIsSubmitting(true) setSubmitStatus("idle") try {"""";"""
 import _React from';react' const ContactForm = () => { const [formData,setFormData] = useState({ "firstName": ',"lastName": ',"email": ',"comp": ',"phone": ',"service": ',"message": '}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState('idle') const handleInputChange = e => { const { name,value } = e && e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e && e.preventDefault() setIsSubmitting(true) setSubmitStatus('idle') try {'''';
 import _React from';react' const ContactForm = () => { const [formData,setFormData] = useState({ "firstName": ',"lastName": ',"email": ',"comp": ',"phone": ',"service": ',"message": '}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState('idle') const handleInputChange = e => { const { name,value } = e && e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e && e.preventDefault() setIsSubmitting(true) setSubmitStatus('idle') try {'''';
+<<<<<<< HEAD
 import _React from';react' const ContactForm = () => { const [formData,setFormData] = useState({ "firstName": ',"lastName": ',"email": ',"comp": ',"phone": ',"service": ',"message": '}) const [isSubmitting,setIsSubmitting] = useState(false) const [submitStatus,setSubmitStatus] = useState('idle') const handleInputChange = e => { const { name,value } = e && e.target setFormData(prev => ({ ...prev,[name]: value})) } const handleSubmit = async e => { e && e.preventDefault() setIsSubmitting(true) setSubmitStatus('idle') try {'''';
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

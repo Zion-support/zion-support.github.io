@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 # Zion Tech Group - Site Structure Documentation
 
 ## 🌐 Overview
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 ## Technology Stack
 
@@ -14,6 +17,7 @@
 - **Framer Motion** - Animation library for smooth interactions
 - **CSS Modules** - Component-scoped styling
 
+<<<<<<< HEAD
 ## 🏗️ **Technology Stack**
 
 ### **Core Technologies**
@@ -655,10 +659,13 @@ Solutions
 
 ### **Scripts**
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 ```json
 {
   "dev": "vite",
   "build": "vite build",
+<<<<<<< HEAD
   "start": "vite preview",
   "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
   "type-check": "tsc --noEmit"
@@ -888,3 +895,5 @@ npm run preview     # Preview production build
 **Status**: Production Ready ✅*Last Updated: December 2024*  
 _Version: 2.0 - Enhanced Futuristic Design_  
 _Maintained by: Zion Tech Group Development Team_
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

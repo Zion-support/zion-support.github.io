@@ -42,6 +42,7 @@ class AutoCommitFixes { constructor () { this.project_root = process.cwd (); thi
 ; log (message) { const timestamp = new Date ().toISOString (); const log_message = `[${timestamp}] ${message}\n`;
 ; try { fs.appendFileSync (this.log_file, log_message)} catch (error) { console.error ('Error writing to log file: ', error.message)}
 ;
+<<<<<<< HEAD
 ;
 
 
@@ -49,3 +50,8 @@ class AutoCommitFixes { constructor () { this.project_root = process.cwd (); thi
 
 
 
+=======
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

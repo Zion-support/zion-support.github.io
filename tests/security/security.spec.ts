@@ -11,8 +11,15 @@ export default function Security.spec({ }: Security.specProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
 
 
 
 }
+=======
+
+
+
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

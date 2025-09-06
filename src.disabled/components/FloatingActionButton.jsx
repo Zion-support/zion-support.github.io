@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 "import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window.open("https:")]"}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 
@@ -8,4 +11,7 @@
 "const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState (false) const toggleMenu = () => setIsOpen (!isOpen) const actionItems = [ { icon: "MessageCircl",e,label: "Live: Chat,"," action: () => window && window.open: ("https:""""",;'"'"
 "import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
 "import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
+<<<<<<< HEAD
 "import { ;" PlusIcon,XMarkIcon,ChatBubbleLeftRightIcon,PhoneIcon,EnvelopeIcon } from '@heroicons/react/24/outline';"const FloatingActionButton = ({ className = " }) => {" const [isOpen,setIsOpen] = useState(false); const toggleMenu = () => setIsOpen(!isOpen); const actionItems = [; { "icon": 'ChatBubbleLeftRightIcon',"label": "Live Chat"," "action": () => window && window.open("https:")]"}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

@@ -6,4 +6,7 @@ describe('Signup Auto Login', () => {
 
 module.exports = {};
 module.exports = {};
+<<<<<<< HEAD
 module.exports = {};
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

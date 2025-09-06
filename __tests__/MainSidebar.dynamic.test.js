@@ -24,6 +24,17 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import MainSidebar from '../components/MainSidebar.dynamic';
+<<<<<<< HEAD
+=======
+
+
+import React from 'react';
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'

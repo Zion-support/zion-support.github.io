@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 export default function handler(req,res) { res.status(200).json({ message: "Checkout session created" })}
   res.status(200).json({ message: 'Checkout session created' });
 }
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
+<<<<<<< HEAD
 export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
@@ -53,9 +59,13 @@ async function handler(req, res) {
     res.statusCode = 500;
     res.json({ error: err.message || 'Checkout session creation failed' });
   }
+<<<<<<< HEAD
 }
 
 export default withErrorLogging(handler);
+=======
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 export default function handler(req, res) {
   res.status(200).json({ message: "Checkout session created" })}
@@ -65,6 +75,10 @@ export default function handler(req,res) { res.status(200).json({ message: "Chec
 export default function handler(req, res) {
   res.status(200).json({ "message": 'Checkout session created' });
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       url: session.url
     })
   } catch (err) {,
@@ -77,3 +91,7 @@ export default withErrorLogging(handler),
 }
 
 export default withErrorLogging(handler);
+<<<<<<< HEAD
+=======
+export default function handler(req,res) { res.status(200).json({ message: 'Checkout session created' })}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

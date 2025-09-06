@@ -73,7 +73,10 @@ function fixFile(filePath) {
     return false} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 
 }

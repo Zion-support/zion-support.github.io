@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
 const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 /* eslint - disable no - console */;
 import fs from 'fs';
 import path from 'path';
@@ -116,7 +119,10 @@ main ().catch ((e) => {
 
 
 
+<<<<<<< HEAD
 ;
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 
 

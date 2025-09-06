@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -10,7 +13,10 @@ describe('ContactFormdynamic', () => {
     expect(screen.getByTestId('contactform.dynamic')).toBeInTheDocument();
   });
 });
+<<<<<<< HEAD
 });
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import _React from 'react';  import '@testing-library/jest-dom'; import ContactFormdynamic from '../components/ContactForm.dynamic'; describe('ContactFormdynamic',() => { test('renders without crashing',() => { render(<ContactFormdynamic />); expect(screen.getByTestId('contactform.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ContactFormdynamic />)}); test('handles user interactions',() => { render(<ContactFormdynamic />)}); test('applies correct styling',() => { render(<ContactFormdynamic />)})});
   test('displays correct content', () => {
     render(<ContactFormdynamic />);
@@ -42,5 +48,8 @@ describe('ContactFormdynamic'
   test('applies correct styling'
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import ContactFormdynamic from "./components/ContactForm.dynamic"; describe('ContactFormdynamic', () => { test("renders without crashing",() => { render(<ContactFormdynamic />); expect(screen.getByTestId("contactform.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<ContactFormdynamic />)}); test("handles user interactions",() => { render(<ContactFormdynamic />)}); test("applies correct styling"
 });
+<<<<<<< HEAD
 });
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import _React from 'react';  import '@testing-library/jest-dom'; import ContactFormdynamic from '../components/ContactForm.dynamic'; describe('ContactFormdynamic',() => { test('renders without crashing',() => { render(<ContactFormdynamic />); expect(screen.getByTestId('contactform.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<ContactFormdynamic />)}); test('handles user interactions',() => { render(<ContactFormdynamic />)}); test('applies correct styling',() => { render(<ContactFormdynamic />)})});

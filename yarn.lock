@@ -1065,9 +1065,12 @@
     webpack-bundle-analyzer "4.7.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-32fb
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 "@next/env@15.5.2":
   version "15.5.2"
   resolved "https://registry.npmjs.org/@next/env/-/env-15.5.2.tgz"
@@ -1377,6 +1380,73 @@
   resolved "https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.15.tgz"
   integrity sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==
   dependencies:
+<<<<<<< HEAD
+=======
+    "@supabase/node-fetch" "^2.6.14"
+
+"@supabase/functions-js@2.4.5":
+  version "2.4.5"
+  resolved "https://registry.npmjs.org/@supabase/functions-js/-/functions-js-2.4.5.tgz"
+  integrity sha512-v5GSqb9zbosquTo6gBwIiq7W9eQ7rE5QazsK/ezNiQXdCbY+bH8D9qEaBIkhVvX4ZRW5rP03gEfw5yw9tiq4EQ==
+  dependencies:
+    "@supabase/node-fetch" "^2.6.14"
+
+"@supabase/node-fetch@^2.6.13", "@supabase/node-fetch@^2.6.14", "@supabase/node-fetch@2.6.15":
+  version "2.6.15"
+  resolved "https://registry.npmjs.org/@supabase/node-fetch/-/node-fetch-2.6.15.tgz"
+  integrity sha512-1ibVeYUacxWYi9i0cf5efil6adJ9WRyZBLivgjs+AUpewx1F3xPi7gLgaASI2SmIQxPoCEjAsLAzKPgMJVgOUQ==
+  dependencies:
+    whatwg-url "^5.0.0"
+
+"@supabase/postgrest-js@1.21.3":
+  version "1.21.3"
+  resolved "https://registry.npmjs.org/@supabase/postgrest-js/-/postgrest-js-1.21.3.tgz"
+  integrity sha512-rg3DmmZQKEVCreXq6Am29hMVe1CzemXyIWVYyyua69y6XubfP+DzGfLxME/1uvdgwqdoaPbtjBDpEBhqxq1ZwA==
+  dependencies:
+    "@supabase/node-fetch" "^2.6.14"
+
+"@supabase/realtime-js@2.15.5":
+  version "2.15.5"
+  resolved "https://registry.npmjs.org/@supabase/realtime-js/-/realtime-js-2.15.5.tgz"
+  integrity sha512-/Rs5Vqu9jejRD8ZeuaWXebdkH+J7V6VySbCZ/zQM93Ta5y3mAmocjioa/nzlB6qvFmyylUgKVS1KpE212t30OA==
+  dependencies:
+    "@supabase/node-fetch" "^2.6.13"
+    "@types/phoenix" "^1.6.6"
+    "@types/ws" "^8.18.1"
+    ws "^8.18.2"
+
+"@supabase/ssr@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.npmjs.org/@supabase/ssr/-/ssr-0.6.1.tgz"
+  integrity sha512-QtQgEMvaDzr77Mk3vZ3jWg2/y+D8tExYF7vcJT+wQ8ysuvOeGGjYbZlvj5bHYsj/SpC0bihcisnwPrM4Gp5G4g==
+  dependencies:
+    cookie "^1.0.1"
+
+"@supabase/storage-js@^2.10.4":
+  version "2.11.1"
+  resolved "https://registry.npmjs.org/@supabase/storage-js/-/storage-js-2.11.1.tgz"
+  integrity sha512-kaKCJZcZrHDCO9L76bEPzNv2caCStOigOUioHw7CvdEzvcSKjVuomRfN2Y9EqXmJH4tEHoBi3tCs/Ye2e3HwDw==
+  dependencies:
+    "@supabase/node-fetch" "^2.6.14"
+
+"@supabase/supabase-js@^2.57.0":
+  version "2.57.2"
+  resolved "https://registry.npmjs.org/@supabase/supabase-js/-/supabase-js-2.57.2.tgz"
+  integrity sha512-MxaZqZKUPK1ExzOilgSZqCPCxVPjevUrh6bcWz1SrDZexFc9VJ2cJbVP1EG1hKQx/bfLdTUjIZMoIrYpYqAPYw==
+  dependencies:
+    "@supabase/auth-js" "2.71.1"
+    "@supabase/functions-js" "2.4.5"
+    "@supabase/node-fetch" "2.6.15"
+    "@supabase/postgrest-js" "1.21.3"
+    "@supabase/realtime-js" "2.15.5"
+    "@supabase/storage-js" "^2.10.4"
+
+"@swc/helpers@0.5.15":
+  version "0.5.15"
+  resolved "https://registry.npmjs.org/@swc/helpers/-/helpers-0.5.15.tgz"
+  integrity sha512-JQ5TuMi45Owi4/BIMAJBoSQoOJu12oOk/gADqlcUL9JEdHB8vyjUSsxqeNXnmXHjYKMi2WcYtezGEEhqUI/E2g==
+  dependencies:
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     tslib "^2.8.0"
 
 <<<<<<< HEAD
@@ -1542,7 +1612,16 @@
   dependencies:
     "@types/node" "*"
 
+<<<<<<< HEAD
 "@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1":
+=======
+"@types/estree@^1.0.6", "@types/estree@1.0.8":
+  version "1.0.8"
+  resolved "https://registry.npmjs.org/@types/estree/-/estree-1.0.8.tgz"
+  integrity sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==
+
+"@types/istanbul-lib-coverage@*", "@types/istanbul-lib-coverage@^2.0.0", "@types/istanbul-lib-coverage@^2.0.1", "@types/istanbul-lib-coverage@^2.0.6":
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   version "2.0.6"
 
 "@types/istanbul-lib-report@*":
@@ -1578,6 +1657,7 @@
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@types/node@*", "@types/node@^22.10.2":
   version "22.18.1"
   resolved "https://registry.npmjs.org/@types/node/-/node-22.18.1.tgz"
@@ -1598,6 +1678,8 @@
 =======
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-32fb
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 "@types/mysql@2.15.26":
   version "2.15.26"
   resolved "https://registry.npmjs.org/@types/mysql/-/mysql-2.15.26.tgz"
@@ -1606,11 +1688,19 @@
     "@types/node" "*"
 
 "@types/node@*", "@types/node@>=13.7.0":
+<<<<<<< HEAD
   version "24.3.1"
   resolved "https://registry.npmjs.org/@types/node/-/node-24.3.1.tgz"
   integrity sha512-3vXmQDXy+woz+gnrTvuvNrPzekOi+Ds0ReMxw0LzBiK3a+1k0kQn9f2NWk+lgD4rJehFUmYy2gMhJ2ZI+7YP9g==
   dependencies:
     undici-types "~7.10.0"
+=======
+  version "18.19.124"
+  resolved "https://registry.npmjs.org/@types/node/-/node-18.19.124.tgz"
+  integrity sha512-hY4YWZFLs3ku6D2Gqo3RchTd9VRCcrjqp/I0mmohYeUVA5Y8eCXKJEasHxLAJVZRJuQogfd1GiJ9lgogBgKeuQ==
+  dependencies:
+    undici-types "~5.26.4"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 "@types/pg-pool@2.0.6":
   version "2.0.6"
@@ -1651,6 +1741,7 @@
     date-fns "^3.3.1"
 
 "@types/react@*":
+<<<<<<< HEAD
   version "19.1.12"
   resolved "https://registry.npmjs.org/@types/react/-/react-19.1.12.tgz"
   integrity sha512-cMoR+FoAf/Jyq6+Df2/Z41jISvGZZ2eTlnsaJRptmZ76Caldwy1odD4xTr/gNV9VLj0AWgg/nmkevIyUfIIq5w==
@@ -1659,6 +1750,13 @@
 >>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-32fb
+=======
+  version "18.3.24"
+  resolved "https://registry.npmjs.org/@types/react/-/react-18.3.24.tgz"
+  integrity sha512-0dLEBsA1kI3OezMBF8nSsb7Nk19ZnsyE1LLhB8r27KbgU5H4pvuqZLdtE+aUkJVoXgTVuA+iLIwmZ0TuK4tx6A==
+  dependencies:
+    "@types/prop-types" "*"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     csstype "^3.0.2"
 
 "@types/semver@^7.5.0":
@@ -1666,14 +1764,50 @@
   resolved "https://registry.npmjs.org/@types/semver/-/semver-7.7.1.tgz"
   integrity sha512-FmgJfu+MOcQ370SD0ev7EI8TlCAfKYU+B4m5T3yXc1CiRN94g/SZPtsCkk506aUDtlMnFZvasDwHHUcZUEaYuA==
 
+<<<<<<< HEAD
 "@types/stack-utils@^2.0.0":
   version "2.0.3"
+=======
+"@types/stack-utils@^2.0.0", "@types/stack-utils@^2.0.3":
+  version "2.0.3"
+  resolved "https://registry.npmjs.org/@types/stack-utils/-/stack-utils-2.0.3.tgz"
+  integrity sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==
+
+"@types/tedious@^4.0.14":
+  version "4.0.14"
+  resolved "https://registry.npmjs.org/@types/tedious/-/tedious-4.0.14.tgz"
+  integrity sha512-KHPsfX/FoVbUGbyYvk1q9MMQHLPeRZhRJZdO45Q4YjvFkv4hMNghCWTvy7rdKessBsmtz4euWCWAB6/tVpI1Iw==
+  dependencies:
+    "@types/node" "*"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 "@types/tough-cookie@*":
   version "4.0.5"
   resolved "https://registry.npmjs.org/@types/tough-cookie/-/tough-cookie-4.0.5.tgz"
   integrity sha512-/Ad8+nIOV7Rl++6f1BdKxFSMgmoqEoYbHRpPcx3JEfv8VRsQe9Z4mCXeJBzxs7mbHY/XOZZuXlRNfhpVPbs6ZA==
 
+<<<<<<< HEAD
+=======
+"@types/webidl-conversions@*":
+  version "7.0.3"
+  resolved "https://registry.npmjs.org/@types/webidl-conversions/-/webidl-conversions-7.0.3.tgz"
+  integrity sha512-CiJJvcRtIgzadHCYXw7dqEnMNRjhGZlYK05Mj9OyktqV8uVT8fD2BFOB7S1uwBE3Kj2Z+4UyPmFw/Ixgw/LAlA==
+
+"@types/whatwg-url@^11.0.2":
+  version "11.0.5"
+  resolved "https://registry.npmjs.org/@types/whatwg-url/-/whatwg-url-11.0.5.tgz"
+  integrity sha512-coYR071JRaHa+xoEvvYqvnIHaVqaYrLPbsufM9BF63HkwI5Lgmy2QR8Q5K/lYDYo5AK82wOvSOS0UsLTpTG7uQ==
+  dependencies:
+    "@types/webidl-conversions" "*"
+
+"@types/ws@^8.18.1":
+  version "8.18.1"
+  resolved "https://registry.npmjs.org/@types/ws/-/ws-8.18.1.tgz"
+  integrity sha512-ThVF6DCVhA8kUGy+aazFQ4kXQ7E1Ty7A3ypFOe0IcJV8O/M511G99AW24irKrW56Wt44yG9+ij8FaqoBGkuBXg==
+  dependencies:
+    "@types/node" "*"
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 "@types/yargs-parser@*":
   version "21.0.3"
 
@@ -1849,7 +1983,11 @@ ansi-styles@^6.1.0:
 any-promise@^1.0.0:
   version "1.3.0"
 
+<<<<<<< HEAD
 anymatch@^3.0.3, anymatch@~3.1.2:
+=======
+anymatch@^3.1.3, anymatch@~3.1.2:
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   version "3.1.3"
   dependencies:
     normalize-path "^3.0.0"
@@ -3463,9 +3601,12 @@ fd-slicer@~1.1.0:
 
 fdir@^6.5.0:
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-32fb
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   version "6.5.0"
 
 file-entry-cache@^8.0.0:
@@ -5018,6 +5159,28 @@ next@^15.5.2:
     "@next/swc-win32-arm64-msvc" "15.5.2"
     "@next/swc-win32-x64-msvc" "15.5.2"
     sharp "^0.34.3"
+<<<<<<< HEAD
+=======
+
+node-cron@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.npmjs.org/node-cron/-/node-cron-4.2.1.tgz"
+  integrity sha512-lgimEHPE/QDgFlywTd8yTR61ptugX3Qer29efeyWw2rv259HtGBNn1vZVmp8lB9uo9wC0t/AT4iGqXxia+CJFg==
+
+node-domexception@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/node-domexception/-/node-domexception-1.0.0.tgz"
+  integrity sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==
+
+node-fetch@^3.3.2:
+  version "3.3.2"
+  resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-3.3.2.tgz"
+  integrity sha512-dRB78srN/l6gqWulah9SrxeYnxeddIG30+GOqK/9OlLVyLg3HPnr6SqOWTWOXKRwC2eGYCkZ59NNuSgvSrpgOA==
+  dependencies:
+    data-uri-to-buffer "^4.0.0"
+    fetch-blob "^3.1.4"
+    formdata-polyfill "^4.0.10"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 node-int64@^0.4.0:
   version "0.4.0"
@@ -6303,6 +6466,19 @@ strip-final-newline@^2.0.0:
 strip-json-comments@^3.1.1:
   version "3.1.1"
 
+<<<<<<< HEAD
+=======
+stubborn-fs@^1.2.5:
+  version "1.2.5"
+  resolved "https://registry.npmjs.org/stubborn-fs/-/stubborn-fs-1.2.5.tgz"
+  integrity sha512-H2N9c26eXjzL/S/K+i/RHHcFanE74dptvvjM8iwzwbVcWY/zjBbgRqF3K0DY4+OD+uTTASTBvDoxPDaPN02D7g==
+
+stubs@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/stubs/-/stubs-3.0.0.tgz"
+  integrity sha512-PdHt7hHUJKxvTCgbKX9C1V/ftOcjJQgz8BZwNfV5c4B6dcGqlpelTbJ999jBGZ2jYiPAwcX5dP6oBwVlBlUbxw==
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 styled-jsx@5.1.6:
   version "5.1.6"
   resolved "https://registry.npmjs.org/styled-jsx/-/styled-jsx-5.1.6.tgz"
@@ -6483,9 +6659,12 @@ tinyglobby@^0.2.13, tinyglobby@^0.2.14:
   resolved "https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.15.tgz"
   integrity sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 880ec362af67bf9be262f974cda782520e75dfd4
 =======
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-32fb
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   dependencies:
     fdir "^6.5.0"
     picomatch "^4.0.3"

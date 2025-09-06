@@ -2,12 +2,15 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.expo
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
+<<<<<<< HEAD
 
 
 module.exports = {; "webpack": (config { isServer }) = > {; if ( {; config.plugins.push() {; {; config.plugins.push(}; new BundleAnalyzerPlugin({; "analyzerMode": 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )}; return config}};
 ;
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {"webpack": (config { isServer }) => {if ( {;
       config.plugins.push() {;
@@ -44,12 +47,16 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
       config && config.plugins.push(
         new BundleAnalyzerPlugin({
           reportFilename: 'bundle-analysis.html'
+<<<<<<< HEAD
           reportFilename: 'bundle-analysis.html'
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         })
       );
     }
     return config;
   }
+<<<<<<< HEAD
 
 }
 }
@@ -72,6 +79,8 @@ module.exports = {,;
 
 }
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 };
 /* eslint-env node */
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
@@ -97,6 +106,11 @@ module.exports = {
   }
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
       config.plugins.push(};
         new BundleAnalyzerPlugin({;
@@ -111,6 +125,7 @@ module.exports = {
 
 };
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
+<<<<<<< HEAD
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
@@ -120,6 +135,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 };
 
@@ -148,6 +165,12 @@ if ( {) {
 
 
 
+<<<<<<< HEAD
+=======
+origin/main
+origin/automation-improvements-final
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }
 };
 ;

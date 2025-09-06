@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import '@testing-library/jest-dom';
 import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
@@ -6,6 +7,13 @@ import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
 import React from 'react';
 import '@testing-library/jest-dom';
 import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
+=======
+
+
+import React from 'react';
+import '@testing-library/jest-dom';
+import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -14,6 +22,10 @@ import AIChatbotSystemtest from '../components/AIChatbotSystem.test';
 
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 describe('AIChatbotSystemtest', () => {
   test('renders without crashing', () => {
     render(<AIChatbotSystemtest />);
@@ -27,7 +39,10 @@ describe('AIChatbotSystemtest', () => {
   
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   test('displays correct content', () => {
     render(<AIChatbotSystemtest />);
   });
@@ -40,8 +55,11 @@ describe('AIChatbotSystemtest', () => {
   test('handles user interactions', () => {
     render(<AIChatbotSystemtest />);
   });
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   
   test('applies correct styling', () => {
     render(<AIChatbotSystemtest />);

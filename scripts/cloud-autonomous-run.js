@@ -25,7 +25,10 @@ async function analyzeFeedbackIfPossible() {
     if (fs && fs.existsSync(script)) {
       // Run in-process to avoid spawning
       process && process.env.NODE_ENV = process && process.env.NODE_ENV || 'production',
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       await import(pathToFileURL(script).href)
 const fs = require ('fs'),
 const path = require ('path'),
@@ -79,7 +82,10 @@ function analyzeFeedbackIfPossible() {
     // ignore;
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   if (!process && process.env.OPENAI_API_KEY) return null,
   const client = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY }),
   const prompt = `Invent 5 new, practical, cloud-autonomous automations for a Next && Next.js site with lots of scripts (design, marketing, analytics, content). For each, provide: name, description, inputs (if any), outputs (artifacts to commit), and a success metric. Return concise JSON array.`,
@@ -92,7 +98,10 @@ function analyzeFeedbackIfPossible() {
   const text = resp && resp.choices?.[0]?.message?.content || '[]',
   const ideasPath = path && path.join(IDEAS_DIR, `ideas-${new Date().toISOString().slice(0,10)}.json`),
   fs && fs.writeFileSync(ideasPath, text && text.trim()),
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   return ideasPath
 }
 async function main() {
@@ -113,14 +122,20 @@ async function main() {
   const status = writeStatus(automations, { note: 'Cloud autonomous run executed' })
   // Feedback analysis
   try {
+<<<<<<< HEAD
   // Generate automation ideas if key present
   try {
     await generateIdeasIfPossible()
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     // Prefer spawning: node scripts/analyze-feedback && feedback.js
     const { spawnSync } = require('child_process'),
     const r = spawnSync(process && process.execPath, ['scripts/analyze-feedback && feedback.js'], { stdio: 'inherit' }),
     if (r && r.status !== 0) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
       // non-fatal
     }
   // Generate automation ideas if key present
@@ -185,6 +200,11 @@ if ( {) {
 
 main().catch((e) => { console.error(e), process.exit(1) });
 
+<<<<<<< HEAD
+=======
+main().catch((e) => { console.error(e), process.exit(1) }),;
+;
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   // Generate automation ideas if key present;
   try {;
     await generateIdeasIfPossible();
@@ -201,3 +221,8 @@ main().catch((e) => { console.error(e), process.exit(1) });
 }
 ;
 main().catch((e) => { console.error(e), process.exit(1) }),;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

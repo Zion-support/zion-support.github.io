@@ -6,6 +6,11 @@ import Link from 'next/link';
 import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3, Cpu, Headphones, Calendar, Send, Layers } from 'lucide-react';
 const categories = ['AI Services', 'IT Services', 'Development', 'Security'];
 
+<<<<<<< HEAD
+=======
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 export default function ServicesIndex() {
   const services = [
@@ -72,6 +77,11 @@ export default function ServicesIndex() {
         <title>Services - Zion Tech Group</title>
         <meta name=\"description\" content=\"Comprehensive technology services including AI, development, automation, and more.\" />
       </Head>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
             {services.map((service, index) => (
               <div key={index} className=\"bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6\">
                 <div className=\"flex items-center mb-4\">
@@ -199,6 +209,7 @@ export default function ServicesIndex() {;
             </p>
             <div className=\"flex flex-col sm:flex-row gap-4 justify-center\">
               <Link 
+<<<<<<< HEAD
                 href=\"/contact\"
                 className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors\"
               >
@@ -217,6 +228,8 @@ export default function ServicesIndex() {;
     </>
   );
 }
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
           </div>;
           <div className=\"text-center mt-16\">;
@@ -230,7 +243,10 @@ export default function ServicesIndex() {;
             <div className=\"flex flex-col sm:flex-row gap-4 justify-center\">;
               <Link
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
                 href=\"/contact\"
                 className=\"bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors\">;
                 Get Free Consultation;
@@ -253,3 +269,7 @@ export default function ServicesIndex() {;
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

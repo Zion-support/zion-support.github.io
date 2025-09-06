@@ -20,7 +20,10 @@ describe('TestimonialsSectiondynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
+<<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import TestimonialsSectiondynamic from "./components/TestimonialsSection.dynamic"; describe('TestimonialsSectiondynamic', () => { test("renders without crashing",() => { render(<TestimonialsSectiondynamic />); expect( screen.getByTestId("testimonialssection.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<TestimonialsSectiondynamic />)}); test("handles user interactions",() => { render(<TestimonialsSectiondynamic />)}); test("applies correct styling"
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
@@ -47,7 +50,13 @@ describe('TestimonialsSectiondynamic', () => {
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
+<<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import TestimonialsSectiondynamic from "./components/TestimonialsSection.dynamic"; describe('TestimonialsSectiondynamic', () => { test("renders without crashing",() => { render(<TestimonialsSectiondynamic />); expect( screen.getByTestId("testimonialssection.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<TestimonialsSectiondynamic />)}); test("handles user interactions",() => { render(<TestimonialsSectiondynamic />)}); test("applies correct styling"
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import TestimonialsSectiondynamic from "./components/TestimonialsSection.dynamic"; describe('TestimonialsSectiondynamic', () => { test("renders without crashing",() => { render(<TestimonialsSectiondynamic />); expect( screen.getByTestId("testimonialssection.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<TestimonialsSectiondynamic />)}); test("handles user interactions",() => { render(<TestimonialsSectiondynamic />)}); test("applies correct styling"
+=======
+
+
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import TestimonialsSectiondynamic from "./components/TestimonialsSection.dynamic"; describe('TestimonialsSectiondynamic', () => { test("renders without crashing",() => { render(<TestimonialsSectiondynamic />); expect( screen.getByTestId("testimonialssection.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<TestimonialsSectiondynamic />)}); test("handles user interactions",() => { render(<TestimonialsSectiondynamic />)}); test("applies correct styling"
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import _React from 'react';  import '@testing-library/jest-dom'; import TestimonialsSectiondynamic from '../components/TestimonialsSection.dynamic'; describe('TestimonialsSectiondynamic',() => { test('renders without crashing',() => { render(<TestimonialsSectiondynamic />); expect( screen.getByTestId('testimonialssection.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<TestimonialsSectiondynamic />)}); test('handles user interactions',() => { render(<TestimonialsSectiondynamic />)}); test('applies correct styling',() => { render(<TestimonialsSectiondynamic />)})});
 import _React from 'react';  import '@testing-library/jest-dom'; import TestimonialsSectiondynamic from '../components/TestimonialsSection.dynamic'; describe('TestimonialsSectiondynamic',() => { test('renders without crashing',() => { render(<TestimonialsSectiondynamic />); expect( screen.getByTestId('testimonialssection.dynamic') ).toBeInTheDocument()}); test('displays correct content',() => { render(<TestimonialsSectiondynamic />)}); test('handles user interactions',() => { render(<TestimonialsSectiondynamic />)}); test('applies correct styling',() => { render(<TestimonialsSectiondynamic />)})});

@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 import { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (\') const location = useLocation () const menuRef = useRef (null) \'';\''\"";
 const { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (") const location = useLocation () const menuRef = useRef (null) "";"""";"""
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (\') const location = useLocation () const menuRef = useRef (null) \'';\''\"";
 const { X,ChevronDown,Search,User,Bell const MobileNavigation = ({ isOpen,onToggle }) => { const [activeDropdown,setActiveDropdown] = useState (null) const [searchQuery,setSearchQuery] = useState (") const location = useLocation () const menuRef = useRef (null) "";"""";"""
 :src.disabled/components/MobileNavigation.jsx

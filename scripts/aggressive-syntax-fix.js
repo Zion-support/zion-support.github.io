@@ -123,7 +123,10 @@ class AggressiveSyntaxFixer {;
             // Get all TypeScript and JavaScript files
             const files = await glob('src/**/*.{ts,tsx,js,jsx}', {
                 ignore: ['node_modules/**.next/**dist/**build/**']
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
             })
             this.log(`📁 Found ${files.length} files to check`)
@@ -218,6 +221,7 @@ default function ${validFileName}() {;
   return (;
     <div>;
       <h1>${validFileName}</h1>;
+<<<<<<< HEAD
       <p > Component placeholder</p>;
     </div>);
 }`;
@@ -242,6 +246,8 @@ const ${validFileName} = {
 
         }
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
             timestamp: new Date().toISOString(),
             fixedFiles: this && this.fixedFiles,
             errors: this && this.errors,
@@ -288,10 +294,13 @@ const ${validFileName} = {}`
         const reportPath = path.join(this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date.now()}.json`)
         fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))
 
+<<<<<<< HEAD
         const reportPath = path && path.join(this && this.projectRoot, 'automationreports', `aggressive-syntax-fix-${Date && Date.now()}.json`),
         fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2)),
 
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
         return report
     }
 }
@@ -314,6 +323,10 @@ process.on('SIGTERM', () => {
 ;
 ;
 module.exports = AggressiveSyntaxFixer,;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   // // // console.log('\n🛑 Received SIGTERM, shutting down gracefully...'),
 
   // Add cleanup logic here
@@ -393,10 +406,13 @@ module.exports = AggressiveSyntaxFixer,;
 process.on('SIGINT', () => {;
   // // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),;
   // Add cleanup logic here;
+<<<<<<< HEAD
   process.exit (0);
 }),
 ;
 
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 
 const winston = require('winston'),;
 ;

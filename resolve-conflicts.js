@@ -22,11 +22,17 @@ function resolveConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
+<<<<<<< HEAD
     // Remove merge conflict markers and keep the "theirs" version (after )
     content = content.replace(/    
     // Remove any remaining conflict markers
     content = content.replace(/    content = content.replace(/[\s\S]*?    content = content.replace(/    content = content.replace(//g, '');
     content = content.replace(/    
+=======
+    // Remove merge conflict markers and keep the "theirs" version (after     content = content.replace(/    
+    // Remove any remaining conflict markers
+    content = content.replace(/    content = content.replace(/    content = content.replace(/    content = content.replace(/    content = content.replace(/    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     fs.writeFileSync(filePath, content);
     console.log(`Fixed conflicts in ${filePath}`);
   } catch (error) {
@@ -34,8 +40,11 @@ function resolveConflicts(filePath) {
   }
 }
 
+<<<<<<< HEAD
 filesToFix.forEach(resolveConflicts);
 console.log('All conflicts resolved!');
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let resolvedContent = content fs.writeFileSync(filePath,resolvedContent); return true} catch (error) { _console.error(`Error resolving conflicts in ${filePath}:`,error.message); return false} } function findFilesWithConflicts() { try {
 resolveMergeConflicts();
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let resolvedContent = content fs.writeFileSync(filePath,resolvedContent); return true} catch (error) { _console.error(`Error resolving conflicts in ${filePath}:`,error.message); return false} } function findFilesWithConflicts() { try {
@@ -105,6 +114,10 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 import fs from 'fs';
 import path from 'path';
 const fs = require('fs');
@@ -134,11 +147,17 @@ function resolveConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
+<<<<<<< HEAD
     // Remove merge conflict markers and keep the "theirs" version (after )
     content = content.replace(/    
     // Remove any remaining conflict markers
     content = content.replace(/    content = content.replace(/[\s\S]*?    content = content.replace(/    content = content.replace(//g, '');
     content = content.replace(/    
+=======
+    // Remove merge conflict markers and keep the "theirs" version (after     content = content.replace(/    
+    // Remove any remaining conflict markers
+    content = content.replace(/    content = content.replace(/    content = content.replace(/    content = content.replace(/    content = content.replace(/    
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     fs.writeFileSync(filePath, content);
     console.log(`Fixed conflicts in ${filePath}`);
   } catch (error) {
@@ -146,8 +165,11 @@ function resolveConflicts(filePath) {
   }
 }
 
+<<<<<<< HEAD
 filesToFix.forEach(resolveConflicts);
 console.log('All conflicts resolved!');
+=======
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let resolvedContent = content fs.writeFileSync(filePath,resolvedContent); return true} catch (error) { _console.error(`Error resolving conflicts in ${filePath}:`,error.message); return false} } function findFilesWithConflicts() { try {
 resolveMergeConflicts();
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); const { execSync } = require('child_process'); function resolveMergeConflicts(filePath) { try { const content = fs.readFileSync(filePath,'utf8'); let resolvedContent = content fs.writeFileSync(filePath,resolvedContent); return true} catch (error) { _console.error(`Error resolving conflicts in ${filePath}:`,error.message); return false} } function findFilesWithConflicts() { try {

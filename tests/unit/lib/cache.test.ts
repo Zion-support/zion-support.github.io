@@ -14,6 +14,7 @@ export default function Cache.test({ }: Cache.testProps) {
 }
 }
 }
+<<<<<<< HEAD
 }
 =
 
@@ -22,4 +23,12 @@ export default function Cache.test({ }: Cache.testProps) {
 >
 
 
+=======
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
 }

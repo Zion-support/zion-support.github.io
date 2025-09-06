@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 interface NewsletterSubscription.testProps {
   // Add props here as needed
 }
@@ -9,6 +10,12 @@ interface NewsletterSubscription.testProps {
 }
 
 >interface NewsletterSubscription.testProps {
+=======
+
+interface NewsletterSubscription.testProps {
+  // Add props here as needed
+interface NewsletterSubscription.testProps {
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
   // Add props here as needed
 }
 export default function NewsletterSubscription.test({ }: NewsletterSubscription.testProps) {
@@ -18,6 +25,7 @@ export default function NewsletterSubscription.test({ }: NewsletterSubscription.
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 <
 
 =
@@ -28,3 +36,9 @@ export default function NewsletterSubscription.test({ }: NewsletterSubscription.
 
 >}
 >
+=======
+}
+
+
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7

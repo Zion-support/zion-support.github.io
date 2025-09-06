@@ -5,7 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+<<<<<<< HEAD
     "build": "node --max-old-space-size=8192 ./node_modules/.bin/next build",
+=======
+    "build": "vite build",
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
@@ -434,4 +438,8 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-12f7
