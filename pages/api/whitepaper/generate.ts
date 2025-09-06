@@ -69,7 +69,7 @@ export default async function handler(
 
 function fallbackMarkdown(input: any): string {
   const distLines = Array.isArray(input?.distribution)
-? input.distribution
+    ? input.distribution
         .map((d: any) => `- ${d.label}: ${d.percent}%`)
         .join("\n")
     : "";

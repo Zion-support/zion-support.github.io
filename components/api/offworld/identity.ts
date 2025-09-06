@@ -12,7 +12,7 @@ export default async function handler(
   } catch (e: any) {
     return res.status(500).json({ error: e.message });
   }
-try {
+  try {
     const { address } = req.query as { address?: string };
     const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);

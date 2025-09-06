@@ -10,7 +10,7 @@ export default function ApiPerformanceTestingPage() {
     "Synthetic traffic for staging",
   ];
 
-return (
+  return (
     <>
       <SEO
         title="API Performance Testing"

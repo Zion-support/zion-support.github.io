@@ -6,6 +6,7 @@ import {
   Milestone,
   MilestoneStatus,
   isMilestoneStatus
+
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 
@@ -59,10 +60,7 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   };
-<<<<<<< HEAD
-  
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1488
+
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
   
