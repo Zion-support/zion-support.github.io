@@ -1,12 +1,8 @@
 
-import { Header } from "@/components/Header",
-<<<<<<< HEAD
-import { Footer } from "@/components/Footer";
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
-=======
-import { Footer } from "@/components/Footer",
-import { QuoteRequestForm } from "@/components/QuoteRequestForm",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function RequestQuote() {
   return (
     <>
@@ -17,14 +13,20 @@ export default function RequestQuote() {
       <Footer />
     </>
   )
-<<<<<<< HEAD
-}
+
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {QuoteRequestForm} from "@/components/QuoteRequestForm";
+=======
+
+
 =======
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+
 export default function RequestQuote() {;
-  return (;
+  return (
     <>;
       <Header />;
       <div className="min-h-screen bg-zion-blue">;
@@ -34,5 +36,26 @@ export default function RequestQuote() {;
     </>;
   );
 }
+
+import { Header } from '@/components / Header';
+import { Footer } from '@/components / Footer';
+import { QuoteRequestForm } from '@/components / QuoteRequestForm';
+export default /**
+ * RequestQuote - Function description
+ */
+function RequestQuote() {
+  return (
+    <>;
+      <Header />;
+      <div className="min - h-screen bg - zion - blue">;
+        <QuoteRequestForm />;
+      </div>;
+      <Footer />;
+    </>);
+}
+
+=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

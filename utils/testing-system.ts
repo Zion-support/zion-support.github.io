@@ -1,19 +1,28 @@
-<<<<<<< HEAD
-export class TestingSystem {
-  static async testUserInteraction(
-    element: HTMLElement
-    action: 'click' | 'type' | 'hover'
-  ) {
+
+  static async testUserInteraction (
+    element: HTMLElement,
+    action: 'click' | 'type' | 'hover') {
     switch (action) {
-      case 'click':
-        element.click();
+      case 'click':;
+        element.click ();
+
         break;
-      case 'type': // Handle typing
+      case 'type': // Handle typing;
         break;
-      case 'hover': // Handle hover
+      case 'hover': // Handle hover;
         break;
     }
-  }
+
+
+
+
 =======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+}
+=======
+  }
+>>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+  }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

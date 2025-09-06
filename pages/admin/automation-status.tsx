@@ -1,9 +1,6 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const AutomationStatus: NextPage = () => {
   return (
     <div>
@@ -16,13 +13,18 @@ const AutomationStatus: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-<<<<<<< HEAD
-  )
-}
-export default AutomationStatus;
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+export default AutomationStatus,;
 
 =======
   );
 };
 export default AutomationStatus;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,36 +1,48 @@
 
-import React, { forwardRef } from "react",
-import { ChevronDown } from 'lucide-react'
-<<<<<<< HEAD
-import { cn } from "@/lib/utils";
-import { SafeRef } from "@/types/ref-types";
+
+      return (<a;
+          href={href}
+    return (<button;
+        ref={ref}
+
+SidebarMenuItem.display_name = "SidebarMenuItem";
+
+export { SidebarMenuItem, SidebarMenuGroup }
+export { SidebarMenuItem, SidebarMenuGroup }
+}
+export { SidebarMenuItem, SidebarMenuGroup }
+
+SidebarMenuItem && SidebarMenuItem.displayName = "SidebarMenuItem";
+
+export { SidebarMenuItem, SidebarMenuGroup };
+export { SidebarMenuItem, SidebarMenuGroup };
+};
+
+export { SidebarMenuItem, SidebarMenuGroup };
+
 =======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+=======
+
+=======
+=======
+import React, { forwardRef } from "react",
+import { ChevronDown } from 'lucide-react'
+import { cn } from "@/lib/utils",
+import { SafeRef } from "@/types/ref-types",
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode,
   active?: boolean,
   href?: string,
   target?: string,
   badge?: React.ReactNode
-<<<<<<< HEAD
-}
 
-const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
-  ({ icon, active, children, href, target, badge, className, ...props }, ref,) => {
-    if (href) {
-      return(<a
-          href={href}
-    return(<button
-        ref={ref}
-SidebarMenuItem.displayName = "SidebarMenuItem"
-export { SidebarMenuItem, SidebarMenuGroup }
-export { SidebarMenuItem, SidebarMenuGroup }
-}
-export { SidebarMenuItem, SidebarMenuGroup }
-
-=======
 import React, { forwardRef } from "react",;
 import { ChevronDown } from 'lucide-react';
 import { cn } from "@/lib/utils",;
@@ -134,4 +146,7 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
   );
 },;
 export { SidebarMenuItem, SidebarMenuGroup };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

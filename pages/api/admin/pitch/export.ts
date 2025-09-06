@@ -1,7 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { ensureAdminFromApi } from '../../../../utils/auth';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
 
   const { allowed } = await ensureAdminFromApi(req)
   if (!allowed) return res.status(403).json({ error: 'Forbidden' })
@@ -10,7 +8,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' })
   if (format === 'gslides') {
     // TODO: integrate Google Slides API and return created deck URL
-    const url = `https://docs.google.com/presentation/d/${encodeURIComponent('stub-' + (version |'draft'))}`
+
+
     return res.status(200).json({ url })
   }
   // Fallback: return a minimal PDF-like blob by sending HTML and letting client download, here we return a simple HTML as octet-stream.
@@ -32,31 +31,9 @@ function escapeHtml(str: string) {
     .replace(/'/g, '&#039,')
 }
 
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const isAdmin = req.headers['x-admin'] === 'true';
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
-    if (req.method === 'POST') {
-      const { slides, format, version } = req.body || {};
-      if (!Array.isArray(slides)) return res.status(400).json({ error: 'Invalid slides' });
-
-      if (format === 'gslides') {
-        // TODO: integrate Google Slides API and return created deck URL
-        const url = `https://docs.google.com/presentation/d/${encodeURIComponent('stub-' + (version || 'draft'))}`;
-        res.json({ url });
-      } else {
-        res.status(400).json({ error: 'Unsupported format' });
-      }
-    } else {
-      res.setHeader('Allow', 'POST');
-      res.status(405).end('Method Not Allowed');
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

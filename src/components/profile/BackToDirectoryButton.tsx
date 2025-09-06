@@ -1,36 +1,48 @@
 
-import React from 'react',
-<<<<<<< HEAD
+
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowLeft } from 'lucide-react'
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-=======
-import { Button } from "@/components/ui/button",
-import Link from "next/link",
-import { ArrowLeft } from 'lucide-react'
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+
 export function BackToDirectoryButton() {
+=======
+import { ArrowLeft } from 'lucide-react';
+export function BackToDirectoryButton() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-    <div className="container mx-auto px-4 md: px-6 mb-12">
-      <Button variant="outline" asChild className="my-8">
-        <Link href="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">
-          <ArrowLeft className="mr-2 h-4 w-4" />
-<<<<<<< HEAD
+    <div className='container mx-auto px-4 md:px-6 mb-12'>;
+      <Button variant='outline' asChild className='my-8'>;
+        <Link
+          href='/talents'
+
+
+          Back to Talent Directory
+
+=======
+        </Link>
+      </Button>
+    </div>
+  );
+};
+  );
+};
 =======
           Back to Talent Directory
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </Link>
       </Button>
     </div>
   )
-<<<<<<< HEAD
-}
-  )
-}
+
+          className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'>;
+          <ArrowLeft className='mr-2 h-4 w-4' />          Back to Talent Directory    <div className="container mx-auto px-4 md: px-6 mb-12">;
 =======
+
+=======
+
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import Link from "next/link";
@@ -38,14 +50,58 @@ import { ArrowLeft } from 'lucide-react';
 export function BackToDirectoryButton() {;
   return (;
     <div className="container mx-auto px-4 md: px-6 mb-12">;
+
       <Button variant="outline" asChild className="my-8">;
         <Link href="/talents" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white">;
           <ArrowLeft className="mr-2 h-4 w-4" />;
-          Back to Talent Directory;
         </Link>;
       </Button>;
     </div>;
   );
 }
+
+
+=======
+          Back to Talent Directory
+        </Link>
+      </Button>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import React from 'react';
+import { Button } from '@/components / ui / button';
+import Link from 'next / link';
+import { ArrowLeft } from 'lucide-react';
+import { Button  } from '@/components / ui / button';
+import Link from './next / link';
+export /**
+ * BackToDirectoryButton - Function description
+ */
+function BackToDirectoryButton() {
+  return (
+    <div className='container mx - auto px - 4 md:px - 6 mb - 12'>;
+      <Button variant='outline' as_child className='my - 8'>;
+        <Link;
+          href='/talents';
+          className='border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white';
+        >;
+          <ArrowLeft className='mr - 2 h - 4 w - 4' />          Back to Talent Directory    <div className="container mx - auto px - 4 md: px - 6 mb - 12">;
+      <Button variant="outline" as_child className="my - 8">;
+        <Link href="/talents" className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white">;
+          <ArrowLeft className="mr - 2 h - 4 w - 4" />;
+        </Link>;
+      </Button>;
+    </div>);
+}
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

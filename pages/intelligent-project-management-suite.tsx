@@ -1,25 +1,8 @@
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
-<<<<<<< HEAD
-export async function getStaticProps() {
-	return (getSlugStaticProps as any)({ params: { slug: 'intelligent-project-management-suite' } })
-}
-export default function IntelligentProjectManagementSuite(props: any) {
-	return <ServicePage {...props} />
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-export async function getStaticProps() {;
-	return (getSlugStaticProps as any)({ params: { slug: 'intelligent-project-management-suite' } });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-export default function IntelligentProjectManagementSuite(req, res) {
-  try {
-	return <ServicePage {...props} />;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

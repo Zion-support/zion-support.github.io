@@ -1,12 +1,29 @@
 
-import { ResumeWizard as WizardComponent } from './wizard';
-<<<<<<< HEAD
-export function ResumeWizard() {
+import { ResumeWizard, as, WizardComponent  } from './wizard';
+export /**
+ * ResumeWizard - Function description
+ */
+function ResumeWizard() {
+
   return <WizardComponent />;
 }
 =======
+import {ResumeWizard, as, WizardComponent} from './wizard';
 export function ResumeWizard() {;
   return <WizardComponent />;
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+
+import { ResumeWizard as WizardComponent } from './wizard';
+
+export function ResumeWizard() {;
+  return <WizardComponent />;
+
+}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+

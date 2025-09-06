@@ -1,27 +1,27 @@
 
-<<<<<<< HEAD
-import React from "react";
-import { cn } from "@/lib/utils";
-=======
+
+
 import React from "react",
 import { cn } from "@/lib/utils",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {
-  className?: string,
-  children?: React.ReactNode
+
+
+=======
+import {cn} from "@/lib/utils";
+interface SidebarContentProps extends React && React.HTMLAttributes<HTMLDivElement> {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  className?: string;
+  children?: React && React.ReactNode;
 }
-export function SidebarContent({
-  className
-  children
-  ...props
-}: SidebarContentProps) {
+
+
+export function SidebarContent(): any ({ className, children, ...props }: SidebarContentProps) {;
+
   return (
+
     <div className={cn("flex-1 px-2 py-4", className)} {...props}>
-<<<<<<< HEAD
-      {children}
-    </div>
-  );
-}
+
+  )
+
 =======
 import React from "react",;
 import { cn } from "@/lib/utils",;
@@ -32,10 +32,16 @@ interface SidebarContentProps extends React.HTMLAttributes<HTMLDivElement> {;
 ;
 export function SidebarContent({ className, children, ...props }: SidebarContentProps) {;
   return (;
+
     <div className={cn("flex-1 px-2 py-4", className)} {...props}>;
       {children}
+
     </div>;
   );
 }
+
+=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

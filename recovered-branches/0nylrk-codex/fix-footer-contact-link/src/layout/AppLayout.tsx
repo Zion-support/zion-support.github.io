@@ -1,12 +1,8 @@
 
-import React from "react",
-<<<<<<< HEAD
-import { AppHeader } from "./AppHeader";
-import { Footer } from "@/components/Footer";
-=======
-import { AppHeader } from "./AppHeader",
-import { Footer } from "@/components/Footer",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface AppLayoutProps {
 
   children: React.ReactNode
@@ -14,36 +10,43 @@ interface AppLayoutProps {
   hideFooter?: boolean
 }
 export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
+
+import React from "react";
+import {AppHeader} from "./AppHeader";
+import {Footer} from "@/components/Footer";
+=======
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <AppHeader />
       <main className="flex-grow">
-<<<<<<< HEAD
-        {children}
-      </main>
-      {!hideFooter && <Footer />}
-    </div>
-  )
-}
+
+
 =======
 import React from "react",;
 import { AppHeader } from "./AppHeader",;
 import { Footer } from "@/components/Footer",;
+
 interface AppLayoutProps {;
-  children: React.ReactNode;
+  children: React && React.ReactNode,;
   hideFooter?: boolean;
 }
-;
-export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {;
-  return (;
+
+export function AppLayout(): any ({ children, hideFooter = false }: AppLayoutProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
     <div className="flex flex-col min-h-screen bg-background">;
       <AppHeader />;
       <main className="flex-grow">;
         {children}
-      </main>
+      </main>;
       {!hideFooter && <Footer />}
+
     </div>;
   );
 }
+
+=======
+
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

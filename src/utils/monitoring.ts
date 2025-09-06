@@ -1,13 +1,25 @@
-// Monitoring utilities
-export const logEvent = (event: string) => {
-  console.log('Event logged:', event);
+
+// Monitoring utilities;
+export const log_event = (event: string) =>: any {
+  console.log ('Event logged:', event);
 }
-export const trackPerformance = () => {
-  console.log('Tracking performance...');
-<<<<<<< HEAD
+;
+export const track_performance = () =>: any {
+  console.log ('Tracking performance...');
 }
+;
+
 =======
+// Monitoring utilities
+export const logEvent = (event: string) => {;
+  console.log('Event logged:', event);
+
 };
-  });
+
+export const trackPerformance = () => {;
+
+  console.log('Tracking performance...');
+
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

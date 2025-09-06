@@ -19,21 +19,7 @@ jest.mock("next/router", () => ({
         off: jest.fn(),
         emit: jest.fn()
       },
-<<<<<<< HEAD:backup-problematic-files/jest.setup.js
-      isFallback: false
-    }
-  }
-}));
 
-// Mock Next.js Image component
-jest.mock('next/image', () => ({
-  __esModule: true,
-  default: (props) => {
-    // eslint-disable-next-line @next/next/no-img-element
-    return <img {...props} />
-  }
-}));
-=======
 
     };
   },
@@ -45,19 +31,17 @@ jest.mock("next/image", () => {
     return <img src={src} alt={alt} {...props} />;
   };
 });
->>>>>>> main:jest.setup.js
+
+
 
 // Mock Next.js Link component
 jest.mock('next/link', () => ({
   __esModule: true,
   default: ({ children, href, ...props }) => {
-<<<<<<< HEAD:backup-problematic-files/jest.setup.js
-    return <a href={href} {...props}>{children}</a>
-  }
-=======
+
 
   },
->>>>>>> main:jest.setup.js
+
 }));
 
 // Mock window.matchMedia
@@ -89,4 +73,7 @@ global.ResizeObserver = class ResizeObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
+
 };
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

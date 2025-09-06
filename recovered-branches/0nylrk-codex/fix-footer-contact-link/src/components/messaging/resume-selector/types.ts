@@ -1,6 +1,7 @@
 
-<<<<<<< HEAD
-import { Resume } from "@/types/resume";
+
+import { Resume  } from '@/types / resume';
+
 export interface ResumeOption {
   id: string;
   title: string;
@@ -9,7 +10,14 @@ export interface ResumeOption {
   file?: File
 }
 export interface ResumeSelectorProps {
+
+
+
 =======
+
+=======
+
+
 import { Resume } from "@/types/resume",
 export interface ResumeOption {
   id: string,
@@ -26,7 +34,13 @@ export interface ResumeOption {;
   file?: File;
 }
 ;
+
 export interface ResumeSelectorProps {;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onResumeSelected: (resumeOption: ResumeOption) => void;
+=======
+  onResumeSelected: (resume_option: ResumeOption) => void;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

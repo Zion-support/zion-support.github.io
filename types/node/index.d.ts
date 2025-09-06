@@ -1,9 +1,14 @@
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type;
-<<<<<<< HEAD
-interface Buffer {}
-declare const __dirname: string;
-declare const __filename: string;
+
+declare const __dirname: string,
+declare const __filename: string,
+
 export {}
+=======
+// eslint-disable-next-line @typescript-eslint/no-empty-object-type;
+
+declare const __dirname: string,;
+declare const __filename: string,;
+
 =======
 interface Buffer {  } catch (error) {
     console.error("Error:", error);
@@ -12,5 +17,8 @@ interface Buffer {  } catch (error) {
 }
 declare const __dirname: string;
 declare const __filename: string;
+
+
 export {};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

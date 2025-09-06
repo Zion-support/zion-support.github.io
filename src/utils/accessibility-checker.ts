@@ -1,16 +1,24 @@
-// Accessibility checker utilities
-export const checkAccessibility = () => {
-  console.log('Checking accessibility...');
-<<<<<<< HEAD
+
+// Accessibility checker utilities;
+export const check_accessibility = () =>: any {
+  console.log ('Checking accessibility...');
 }
-export const validateAriaLabels = () => {
-  console.log('Validating ARIA labels...');
+;
+export const validateAriaLabels = () =>: any {
+  console.log ('Validating ARIA labels...');
 }
+;
+
 =======
+// Accessibility checker utilities
+export const checkAccessibility = () => {;
+  console.log('Checking accessibility...');
+
 };
 
-export const validateAriaLabels = () => {
+export const validateAriaLabels = () => {;
   console.log('Validating ARIA labels...');
 };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

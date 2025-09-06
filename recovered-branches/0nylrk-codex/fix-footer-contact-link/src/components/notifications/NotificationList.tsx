@@ -1,12 +1,20 @@
 
-<<<<<<< HEAD
-import React from 'react';
-import { ScrollArea  } from '@/components/ui/scroll-area';
-import { Skeleton  } from '@/components/ui/skeleton';
-import { Button  } from '@/components/ui/button';
-import { NotificationItem  } from './NotificationItem';
-import { Notification } from '@/context/notifications';
-interface NotificationListProps {
+
+
+  loading: boolean,
+  error: string | null,
+  notifications: Notification[],
+  onMarkAsRead: (id: string) => Promise<void>,
+  onDismiss: (id: string) => Promise<void>,
+  onRetry: () => void
+}
+
+export const NotificationList: React.FC<NotificationListProps> = ({;
+  loading;
+  error;
+  notifications;
+  onMarkAsRead;
+
 =======
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
@@ -22,7 +30,8 @@ interface NotificationListProps {;
   onDismiss: (id: string) => Promise<void>,;
   onRetry: () => void;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   loading: boolean
   error: string | null
@@ -33,63 +42,143 @@ interface NotificationListProps {;
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
-<<<<<<< HEAD
+
+import {ScrollArea} from '@/components/ui/scroll-area';
+import {Skeleton} from '@/components/ui/skeleton';
+import {Button} from '@/components/ui/button';
+import {NotificationItem} from './NotificationItem';
+import {Notification} from '@/context/notifications';
+interface NotificationListProps {;
+  loading: boolean,;
+  error: string | null,;
+  notifications: Notification[],;
+  onMarkAsRead: (id: string) => Promise<void>,;
+  onDismiss: (id: string) => Promise<void>,;
+  onRetry: () => void;
+}
+
+export const NotificationList: React.FC<NotificationListProps> = ({;
+
+=======
+import {ScrollArea} from '@/components / ui / scroll - area';
+import {Skeleton} from '@/components / ui / skeleton';
+import {Button} from '@/components / ui / button';
+import {NotificationItem} from './NotificationItem';
+import {Notification} from '@/context / notifications';
+interface NotificationListProps {
+  loading: boolean,
+  error: string | null,
+  notifications: Notification[],
+  onMarkAsRead: (id: string) => Promise < void>,
+  on_dismiss: (id: string) => Promise < void>,
+  on_retry: () => void;
+}
+export const NotificationList: React.FC < NotificationListProps> = ({
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   loading;
   error;
   notifications;
   onMarkAsRead;
 
-  onDismiss
-=======
+
   loading,
   error,
   notifications,
   onMarkAsRead,
+
   onDismiss,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onRetry
+=======
+  on_dismiss,
+  on_retry;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }) => {
   return (
-    <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">
+    <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
-        <div className="p-8 text-center text-amber-500">
-          <p>{error}</p>
+
+  onDismiss,;
+  onRetry;
+}) => {;
+  return (
+    <ScrollArea className="flex-1 overflow-y-auto max-h-[350px]">;
+      {error ? (;
+        <div className="p-8 text-center text-amber-500">;
+          <p>{error}</p>;
           <Button
-            variant="outline"
-            size="sm"
+            variant="outline" 
+            size="sm" 
+
             className="mt-2"
-            onClick={onRetry}
-          >
-            Try Again
-          </Button>
-        </div>
-      ) : loading ? (
-        <div className="p-4 space-y-4">
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
-          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />
-        </div>
-      ) : notifications.length === 0 ? (
-        <div className="p-8 text-center text-zion-slate-light">
-          <p>No notifications yet</p>
-        </div>
-      ) : (
-        notifications.map((notification) => (
+            onClick={onRetry}>;
+            Try Again;
+          </Button>;
+        </div>;
+      ) : loading ? (;
+        <div className="p-4 space-y-4">;
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
+          <Skeleton className="h-12 w-full bg-zion-blue-dark/50" />;
+        </div>;
+      ) : notifications && notifications.length === 0 ? (;
+        <div className="p-8 text-center text-zion-slate-light">;
+          <p>No notifications yet</p>;
+        </div>;
+      ) : (;
+        notifications && notifications.map((notification) => (;
           <NotificationItem
-            key={notification.id}
+            key={notification && notification.id}
             notification={notification}
             onMarkAsRead={onMarkAsRead}
             onDismiss={onDismiss}
-          />
-        ))
+          />;
+        ));
       )}
-<<<<<<< HEAD
-    </ScrollArea>
-  )
-}
 
+
+
+    </ScrollArea>;
+  );
+
+=======
 =======
     </ScrollArea>;
   );
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        <div className="p - 8 text - center text - amber - 500">;
+          <p>{error}</p>;
+          <Button;
+            variant="outline";
+            size="sm";
+            className="mt - 2";
+            on_click={on_retry}
+          >;
+            Try Again;
+          </Button>;
+        </div>) : loading ? (
+        <div className="p - 4 space - y-4">;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+          <Skeleton className="h - 12 w - full bg - zion - blue - dark / 50" />;
+        </div>) : notifications.length === 0 ? (
+        <div className="p - 8 text - center text - zion - slate - light">;
+          <p > No notifications yet</p>;
+        </div>) : (
+        notifications.map ((notification) => (
+          <NotificationItem;
+            key={notification.id}
+            notification={notification}
+            onMarkAsRead={onMarkAsRead}
+            on_dismiss={on_dismiss}
+          />)))}
+    </ScrollArea>);
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

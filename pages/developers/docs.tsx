@@ -1,18 +1,5 @@
-import dynamic from 'next/dynamic';
-<<<<<<< HEAD
 
-const ApiDocsPage = dynamic(() => import('../../components/docs/ApiDocsPage'), { ssr: false })
 
-export default function DocsRoute() {
-  return <ApiDocsPage />
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
-const ApiDocsPage = dynamic(() => import('../../components/docs/ApiDocsPage'), { ssr: false });
-export default function DocsRoute(req, res) {
-  try {
-  return <ApiDocsPage />;
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

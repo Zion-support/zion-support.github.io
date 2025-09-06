@@ -1,16 +1,19 @@
 // Stub pricing analytics utility - placeholder for missing functionality;
-<<<<<<< HEAD
-export const trackPricingRequest = async (data: any) => {
-  // Placeholder implementation;
-  return { success: true }
-}
+
+},
+
 export const getPricingMetrics = async () => {
   // Placeholder implementation;
   return { metrics: {}, success: true }
 }
 =======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+
 export const trackPricingRequest = async (data: any) => {;
   // Placeholder implementation;
+
   return { success: true   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -24,5 +27,6 @@ export const getPricingMetrics = async () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

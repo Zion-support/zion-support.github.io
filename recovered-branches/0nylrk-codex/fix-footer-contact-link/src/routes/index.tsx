@@ -1,20 +1,39 @@
 
-import AuthRoutes from "./AuthRoutes",
-import DashboardRoutes from "./DashboardRoutes",
-import MarketplaceRoutes from "./MarketplaceRoutes",
-import TalentRoutes from "./TalentRoutes",
-import AdminRoutes from "./AdminRoutes",
-import MobileAppRoutes from "./MobileAppRoutes",
-import ContentRoutes from "./ContentRoutes",
-import ErrorRoutes from "./ErrorRoutes",
-import EnterpriseRoutes from "./EnterpriseRoutes",
-<<<<<<< HEAD
+import AuthRoutes from "./AuthRoutes";
+import DashboardRoutes from "./DashboardRoutes";
+import MarketplaceRoutes from "./MarketplaceRoutes";
+import TalentRoutes from "./TalentRoutes";
+import AdminRoutes from "./AdminRoutes";
+import MobileAppRoutes from "./MobileAppRoutes";
+import ContentRoutes from "./ContentRoutes";
+import ErrorRoutes from "./ErrorRoutes";
+import EnterpriseRoutes from "./EnterpriseRoutes";
+
 import CommunityRoutes from "./CommunityRoutes";
 import DeveloperRoutes from "./DeveloperRoutes";
+export {;
+  AuthRoutes;
+  DashboardRoutes;
+  MarketplaceRoutes;
+  TalentRoutes;
+  AdminRoutes;
+  MobileAppRoutes;
+  ContentRoutes;
+  ErrorRoutes;
+  EnterpriseRoutes;
+  CommunityRoutes;
+
+  DeveloperRoutes;
+};
+
 =======
-import CommunityRoutes from "./CommunityRoutes",
-import DeveloperRoutes from "./DeveloperRoutes",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  DeveloperRoutes;
+}
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
 export {
   AuthRoutes,
   DashboardRoutes,
@@ -27,9 +46,9 @@ export {
   EnterpriseRoutes,
   CommunityRoutes,
   DeveloperRoutes
-<<<<<<< HEAD
-}
+
 =======
+
 },
 import AuthRoutes from "./AuthRoutes",;
 import DashboardRoutes from "./DashboardRoutes",;
@@ -57,4 +76,7 @@ export {;
 };
 
 export default Index;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

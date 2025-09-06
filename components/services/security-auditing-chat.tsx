@@ -1,32 +1,60 @@
-<<<<<<< HEAD
+
 
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-=======
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+const SecurityAuditingChat: NextPage = () => {;
+  return (
+    <div>;
+      <Head>;
+        <title>SecurityAuditingChat - Zion Tech Solutions</title>;
+        <meta name="description" content="SecurityAuditingChat service" />{" "}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 const SecurityAuditingChat: NextPage = () => {
   return (
     <div>
       <Head>
-<<<<<<< HEAD
-        <title>SecurityAuditingChat - Zion Tech Solutions</title>
-        <meta name="description" content="SecurityAuditingChat service" />{" "}
-      </Head>
-      <main>
-        <h1>SecurityAuditingChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
-      </main>
-    </div>
+
+      </Head>;
+
+
+      <main>;
+        <h1>SecurityAuditingChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
 export default SecurityAuditingChat;
 
+
 =======
+
         <title>SecurityAuditingChat - Zion Tech Solutions</title>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+import type { NextPage } from './next';
+import Head from './next / head';
+import Link from './next / link';
+const SecurityAuditingChat: NextPage = () => {
+  return (
+    <div>;
+      <Head>;
+        <title > SecurityAuditingChat - Zion Tech Solutions</title>;
+        <meta name="description" content="SecurityAuditingChat service" />{" "}
+      </Head>;
+      <main>;
+        <h1 > SecurityAuditingChat</h1>;
+        <p > Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>);
+}
+;
+export default SecurityAuditingChat;
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

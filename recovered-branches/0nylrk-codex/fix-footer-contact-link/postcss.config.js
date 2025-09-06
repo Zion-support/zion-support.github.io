@@ -1,9 +1,14 @@
-<<<<<<< HEAD
-export default {plugins: {;
+
+export default {
+  plugins: {
     tailwindcss: {}
+    autoprefixer: {}}}
+
 =======
+
 export default {;
   plugins: {;
     tailwindcss: {};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     autoprefixer: {}}}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
