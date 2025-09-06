@@ -65,6 +65,8 @@ run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scan
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:run-complete-automation.sh
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
@@ -81,6 +83,7 @@ run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scan
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
@@ -92,9 +95,12 @@ run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scan
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> origin/main
 >>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:run-complete-automation.sh
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 # Security audit
 run_optional "Security Audit" "node scripts/security-audit.cjs"
 # Performance monitoring

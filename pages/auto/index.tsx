@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 import type { NextPage } from 'next',
 import Head from 'next/head',
@@ -24,11 +34,60 @@ const AutoIndex: NextPage = () => {
           <li className="border rounded p-4">
             <h2 className="font-semibold text-lg"><Link href="/auto/seo-audit">Autonomous SEO Auditor</Link></h2>
             <p className="text-sm text-gray-600">Scans pages for SEO gaps and commits a report for fixes.</p>
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           </li>
         </ul>
       </main>
     </div>
 
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+          </li>;
+        </ul>;
+      </main>;
+    </div>;
+  ),;
+};
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+export default AutoIndex;
+
+
+<<<<<<< HEAD
+=======
+=======
+export default AutoIndex;
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+import Head from 'next / head';
+import Link from 'next / link';
+          </li>;
+        </ul>;
+      </main>;
+    </div>),
+}
+;
+export default AutoIndex;
+;
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+export default AutoIndex
+
+  ),
+};
+
+  )
+}
+export default AutoIndex;
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 },
 export default AutoIndex,
 import type { NextPage } from 'next';
@@ -63,3 +122,7 @@ const AutoIndex: NextPage = () => {;
 
 
 export default AutoIndex;
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { cid } = req.query as { cid?: string }
@@ -7,6 +13,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const r = await fetch(url)
     if (!r.ok) return res.status(404).json({ error: 'Not found' })
     const data = await r.json()
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     return res.status(200).json(data)
   } catch (e: any) {
@@ -21,6 +32,11 @@ export default async function handler(req, res) {
 
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default async /**
@@ -32,6 +48,38 @@ function handler() {
   $2
 }
   try {
+<<<<<<< HEAD
+    const url = `https://${cid}.ipfs.w3s.link`,
+    const r = await fetch (url),
+    if (return res.status (404).json ({ error: 'Not found' }), ) {
+  $2
+}
+    const data = await r.json (),
+    return res.status (200).json (data);
+=======
+    return res.status(200).json(data)
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message |'Restore failed' })
+
+
+<<<<<<< HEAD
+;
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+    return res.status(500).json({ error: e?.message || 'Restore failed' })
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default async function handler(req, res) {
+  try {
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { cid } = req.query as { cid?: string };
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
     } catch (error) {
@@ -43,8 +91,12 @@ function handler() {
 }
   }
 }
+<<<<<<< HEAD
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
 
 ;
 
 
 
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

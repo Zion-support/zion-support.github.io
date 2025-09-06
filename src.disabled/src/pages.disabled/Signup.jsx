@@ -24,6 +24,17 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface SignupProps {
   // Add props here as needed
+<<<<<<< HEAD
+
+
+}
+
+<<<<<<< HEAD
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function Signup({ }: SignupProps) {
   return (
     <div>
@@ -31,4 +42,23 @@ export default function Signup({ }: SignupProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+=======
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
+:src.disabled/src/pages.disabled/Signup.jsx
+}
+<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/src/pages.disabled/Signup.jsx
+=======
+}
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+:temp_exclude/src.disabled/src/pages.disabled/Signup.jsx
+>>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+}
+>>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
