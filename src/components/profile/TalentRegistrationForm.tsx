@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -910,7 +909,6 @@ export function TalentRegistrationForm() {
   talentData: {;
   name: formData.name, title: formData.title, bio: formData.bio,  skills: skillTags, location: formData.location ;
 
-
 });
 }else {';
   //Fallback for mock/development mode logWarn ('Mock AI response - using fallback content');
@@ -957,7 +955,6 @@ if (Array.isArray (categorySkills) ) {;
   new Date () .getFullYear () ;
 }Zion Marketplace</p> ;
 
-
 };
 //Handle form submission const onSubmit = async (values: TalentFormValues) => {;
   if (skillTags.length === 0) {;
@@ -973,7 +970,6 @@ try {;
   body: {;
   talentData: {;
   name: values.name, title: values.title, bio: values.bio,  skills: skillTags, location: values.location ;
-
 
 });';
 //Extract skills from each category and ensure they're strings Object.values (categorizedSkills) .forEach (categorySkills => {;
@@ -1079,27 +1075,3 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Availability</h3> <FormField <FormLabel className="text-zion-slate-light">Current Status</FormLabel> <FormControl> <div className="space-y-2"> <div className="flex items-center space-x-2" > <input /> <label htmlFor="available" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-green-500"></div> Available Now </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="limited" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="unavailable" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
 }/> </div> </div> </CardContent> <CardFooter className="border-t border-zion-blue-light pt-6"> <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between" > <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-  enhancedProfile: z.boolean().default(true)}),
-
-type TalentFormValues = z.infer<typeof talentProfileSchema>;
-
-type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';
-
-
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-
-        variant: "destructive"}),
-      return;
-
-<<<<<<< HEAD
-          
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

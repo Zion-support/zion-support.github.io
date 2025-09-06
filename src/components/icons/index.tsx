@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { SVGProps } from 'react';
 import { logWarn } from '@/utils/productionLogger';
 import {
@@ -922,7 +921,3 @@ export const Icon: React.FC<IconProps> = ({
 
 export default Icon; // Default export the Icon component
 export const Icons = iconMap; // Export the map if you need to refer to available icons
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

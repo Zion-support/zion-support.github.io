@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -227,7 +226,6 @@ export function SupportChatbot() {
 }';
 }buffer = lines[lines.length - 1] || '' ;
 
-
 }catch (err) {';
   logErrorToProduction ('Chatbot error:', {;
   data: err ;
@@ -260,11 +258,3 @@ setTyping (false) ;
   endRef ;
 }/> </div> </div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-        if (!res.ok) throw new Error(`API error: ${res.status}`),
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

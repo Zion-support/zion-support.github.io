@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -181,7 +180,6 @@ export function ITServiceRequestHero() {
     </section>
   );
 
-
 }catch (err: any) {;
   logErrorToProduction (err);
 toast ({;
@@ -218,9 +216,3 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
   isSubmitting && (<Loader2 className="mr-2 h-4 w-4 animate-spin" /> ;
 }Request Service </Button> </form> </div> ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

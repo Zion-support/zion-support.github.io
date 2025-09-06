@@ -1,6 +1,4 @@
 #!/usr/bin/env node;
-<<<<<<< HEAD
-=======
     log("4. Continue with your workflow", "blue"),}
 }
 ;
@@ -16,7 +14,6 @@ if (require.main === module) {;
   main()}
 ;
 module.exports = { resolveMergeConflict, findConflictedFiles }
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 const fs = require("$1")
 const path = require("$1")
 const { execSync } = require("child_process")

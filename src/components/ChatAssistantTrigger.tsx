@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -78,11 +77,3 @@ return (<> <Button > <MessageSquare className="h-5 w-5" /> </Button> {;
 }/>) ;
 }</>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-            avatarUrl: 'https://placehold.co/64x64?text=AI',
-            role: 'Virtual Assistant',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Twitter, Facebook, Linkedin, Link as LinkIcon } from 'lucide-react';
@@ -82,7 +81,3 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
       ))}
     </div>
   );
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

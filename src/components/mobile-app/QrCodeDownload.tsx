@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { QrCode } from 'lucide-react';
 import { AppStoreButtons } from './AppStoreButtons';
@@ -54,10 +53,3 @@ export const QrCodeDownload: React.FC = () => {
   );
 };
 "
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

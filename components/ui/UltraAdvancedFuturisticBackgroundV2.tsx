@@ -1,4 +1,3 @@
-<<<<<<< HEAD
  canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let animationFrameId: number;
@@ -7,21 +6,7 @@ let particles: Array< {
 
 const UltraAdvancedFuturisticBackgroundV2: React.FC<
   UltraAdvancedFuturisticBackgroundV2Props
-> = ({ children, className = '' }) => {
-=======
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-interface UltraAdvancedFuturisticBackgroundV2Props {
-  children: React.ReactNode,
-  className?: string
-}
-
-const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props> = ({ 
-  children;
-  className = '' 
-}) => {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+> = ({ children, className = '' }) => {  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -33,7 +18,6 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-<<<<<<< HEAD
     let animationFrameId: number;
     let particles: Array<{
       x: number;
@@ -56,34 +40,12 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
       '#ff8000',
       '#0080ff',
       '#ff0080',
-      '#80ff00',
-=======
-    let animationFrameId: number,
-    let particles: Array<{
-      x: number,
-      y: number,
-      vx: number,
-      vy: number,
-      size: number,
-      color: string,
-      life: number,
-      maxLife: number
-    }> = [];
-
-    const colors = [
-      '#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#ff8000#0080ff', '#ff0080#80ff00'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-    ];
+      '#80ff00',    ];
 
     // Initialize particles
     const initParticles = () => {
       particles = [];
-<<<<<<< HEAD
-      for (let i = 0; i < 150; i++) {
-=======
-      for (let i = 0, i < 150, i++) {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-        particles.push({
+      for (let i = 0; i < 150; i++) {        particles.push({
           x: Math.random() * canvas.width,
           y: Math.random() * canvas.height,
           vx: (Math.random() - 0.5) * 2,
@@ -91,14 +53,8 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
           size: Math.random() * 3 + 1,
           color: colors[Math.floor(Math.random() * colors.length)],
           life: Math.random() * 100,
-<<<<<<< HEAD
           maxLife: 100,
-        });
-=======
-          maxLife: 100
-        })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-      }
+        });      }
     };
 
     // Update and draw particles
@@ -107,18 +63,12 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
 
       // Create gradient background
       const gradient = ctx.createRadialGradient(
-<<<<<<< HEAD
         canvas.width / 2,
         canvas.height / 2,
         0,
         canvas.width / 2,
         canvas.height / 2,
-        canvas.width / 2
-=======
-        canvas.width / 2, canvas.height / 2, 0;
-        canvas.width / 2, canvas.height / 2, canvas.width / 2
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-      );
+        canvas.width / 2      );
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
       gradient.addColorStop(0.5, 'rgba(20, 20, 40, 0.6)');
       gradient.addColorStop(1, 'rgba(0, 0, 0, 0.9)');
@@ -140,12 +90,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
           particle.x = Math.random() * canvas.width;
           particle.y = Math.random() * canvas.height;
           particle.life = particle.maxLife;
-<<<<<<< HEAD
-          particle.color = colors[Math.floor(Math.random() * colors.length)];
-=======
-          particle.color = colors[Math.floor(Math.random() * colors.length)]
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-        }
+          particle.color = colors[Math.floor(Math.random() * colors.length)];        }
 
         // Draw particle
         const alpha = particle.life / particle.maxLife;
@@ -159,38 +104,23 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
         particles.forEach((otherParticle, otherIndex) => {
           if (index !== otherIndex) {
             const distance = Math.sqrt(
-<<<<<<< HEAD
               Math.pow(particle.x - otherParticle.x, 2) +
-                Math.pow(particle.y - otherParticle.y, 2)
-=======
-              Math.pow(particle.x - otherParticle.x, 2) + 
-              Math.pow(particle.y - otherParticle.y, 2)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            );
+                Math.pow(particle.y - otherParticle.y, 2)            );
             if (distance < 100) {
               ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`;
               ctx.lineWidth = 1;
               ctx.beginPath();
               ctx.moveTo(particle.x, particle.y);
               ctx.lineTo(otherParticle.x, otherParticle.y);
-<<<<<<< HEAD
               ctx.stroke();
             }
           }
-        });
-=======
-              ctx.stroke()
-            }
-          }
-        })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-      });
+        });      });
 
       // Draw quantum matrix overlay
       ctx.globalAlpha = 0.1;
       ctx.strokeStyle = '#00ffff';
       ctx.lineWidth = 0.5;
-<<<<<<< HEAD
 
       // Vertical lines
       for (let x = 0; x < canvas.width; x += 50) {
@@ -205,70 +135,30 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
-        ctx.stroke();
-=======
-      
-      // Vertical lines
-      for (let x = 0, x < canvas.width, x += 50) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, canvas.height);
-        ctx.stroke()
-      }
-      
-      // Horizontal lines
-      for (let y = 0, y < canvas.height, y += 50) {
-        ctx.beginPath();
-        ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
-        ctx.stroke()
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-      }
+        ctx.stroke();      }
 
       // Draw holographic circles
       ctx.globalAlpha = 0.05;
-<<<<<<< HEAD
       for (let i = 0; i < 5; i++) {
         const centerX =
           canvas.width / 2 + Math.sin(Date.now() * 0.001 + i) * 100;
         const centerY =
           canvas.height / 2 + Math.cos(Date.now() * 0.001 + i) * 100;
         const radius = 100 + Math.sin(Date.now() * 0.002 + i) * 50;
-
-=======
-      for (let i = 0, i < 5, i++) {
-        const centerX = canvas.width / 2 + Math.sin(Date.now() * 0.001 + i) * 100;
-        const centerY = canvas.height / 2 + Math.cos(Date.now() * 0.001 + i) * 100;
-        const radius = 100 + Math.sin(Date.now() * 0.002 + i) * 50;
-        
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         ctx.strokeStyle = `hsl(${180 + i * 60}, 100%, 50%)`;
         ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
-<<<<<<< HEAD
         ctx.stroke();
       }
 
-      animationFrameId = requestAnimationFrame(updateParticles);
-=======
-        ctx.stroke()
-      }
-
-      animationFrameId = requestAnimationFrame(updateParticles)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-    };
+      animationFrameId = requestAnimationFrame(updateParticles);    };
 
     // Handle resize
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-<<<<<<< HEAD
-      initParticles();
-=======
-      initParticles()
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-    };
+      initParticles();    };
 
     window.addEventListener('resize', handleResize);
     initParticles();
@@ -277,23 +167,15 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
     return () => {
       window.removeEventListener('resize', handleResize);
       if (animationFrameId) {
-<<<<<<< HEAD
         cancelAnimationFrame(animationFrameId);
       }
-    };
-=======
-        cancelAnimationFrame(animationFrameId)
-      }
-    }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  }, []);
+    };  }, []);
 
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>
       {/* Animated Canvas Background */}
       <canvas
         ref={canvasRef}
-<<<<<<< HEAD
         className='fixed inset-0 w-full h-full pointer-events-none z-0'
         style={{
           background:
@@ -308,26 +190,10 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
           animate={{
             rotate: [0, 360],
             scale: [1, 1.2, 1],
-            opacity: [0.1, 0.3, 0.1],
-=======
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ background: 'radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(20,20,40,0.6) 50%, rgba(0,0,0,0.9) 100%)' }}
-      />
-      
-      {/* Floating Geometric Shapes */}
-      <div className="fixed inset-0 pointer-events-none z-10">
-        <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20"
-          animate={{
-            rotate: [0, 360];
-            scale: [1, 1.2, 1];
-            opacity: [0.1, 0.3, 0.1]
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-          }}
+            opacity: [0.1, 0.3, 0.1],          }}
           transition={{
             duration: 8,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: 'easeInOut',
           }}
         />
@@ -337,24 +203,10 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
           animate={{
             rotate: [360, 0],
             scale: [1, 0.8, 1],
-            opacity: [0.1, 0.4, 0.1],
-=======
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20"
-          animate={{
-            rotate: [360, 0];
-            scale: [1, 0.8, 1];
-            opacity: [0.1, 0.4, 0.1]
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-          }}
+            opacity: [0.1, 0.4, 0.1],          }}
           transition={{
             duration: 6,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: 'easeInOut',
           }}
         />
@@ -364,24 +216,10 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
           animate={{
             rotate: [0, 360],
             scale: [1, 1.3, 1],
-            opacity: [0.1, 0.2, 0.1],
-=======
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20"
-          animate={{
-            rotate: [0, 360];
-            scale: [1, 1.3, 1];
-            opacity: [0.1, 0.2, 0.1]
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-          }}
+            opacity: [0.1, 0.2, 0.1],          }}
           transition={{
             duration: 10,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: 'easeInOut',
           }}
         />
@@ -391,34 +229,15 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
           animate={{
             rotate: [360, 0],
             scale: [1, 0.9, 1],
-            opacity: [0.1, 0.3, 0.1],
-=======
-            ease: "easeInOut"
-          }}
-        />
-        
-        <motion.div
-          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
-          animate={{
-            rotate: [360, 0];
-            scale: [1, 0.9, 1];
-            opacity: [0.1, 0.3, 0.1]
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-          }}
+            opacity: [0.1, 0.3, 0.1],          }}
           transition={{
             duration: 7,
             repeat: Infinity,
-<<<<<<< HEAD
-            ease: 'easeInOut',
-=======
-            ease: "easeInOut"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-          }}
+            ease: 'easeInOut',          }}
         />
       </div>
 
       {/* Quantum Energy Particles */}
-<<<<<<< HEAD
       <div className='fixed inset-0 pointer-events-none z-20'>
         {[...Array(20)].map((_, i) => (
           <motion.div
@@ -431,39 +250,17 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
             animate={{
               y: [0, -100, 0],
               opacity: [0, 1, 0],
-              scale: [0, 1, 0],
-=======
-      <div className="fixed inset-0 pointer-events-none z-20">
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-cyan-400 rounded-full"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`
-            }}
-            animate={{
-              y: [0, -100, 0];
-              opacity: [0, 1, 0];
-              scale: [0, 1, 0]
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            }}
+              scale: [0, 1, 0],            }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
-<<<<<<< HEAD
-              ease: 'easeInOut',
-=======
-              ease: "easeInOut"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            }}
+              ease: 'easeInOut',            }}
           />
         ))}
       </div>
 
       {/* Neural Network Connections */}
-<<<<<<< HEAD
       <div className='fixed inset-0 pointer-events-none z-30'>
         <svg className='w-full h-full'>
           <defs>
@@ -475,16 +272,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
               y2='100%'
             >
               <stop offset='0%' stopColor='#00ffff' stopOpacity='0.3' />
-              <stop offset='100%' stopColor='#ff00ff' stopOpacity='0.3' />
-=======
-      <div className="fixed inset-0 pointer-events-none z-30">
-        <svg className="w-full h-full">
-          <defs>
-            <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#00ffff" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#ff00ff" stopOpacity="0.3" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-            </linearGradient>
+              <stop offset='100%' stopColor='#ff00ff' stopOpacity='0.3' />            </linearGradient>
           </defs>
           {[...Array(15)].map((_, i) => (
             <motion.line
@@ -493,52 +281,26 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
               y1={Math.random() * 100}
               x2={Math.random() * 100}
               y2={Math.random() * 100}
-<<<<<<< HEAD
               stroke='url(#neuralGradient)'
               strokeWidth='1'
               opacity='0.1'
               animate={{
                 opacity: [0.1, 0.3, 0.1],
-                strokeDasharray: [0, 100, 0],
-=======
-              stroke="url(#neuralGradient)"
-              strokeWidth="1"
-              opacity="0.1"
-              animate={{
-                opacity: [0.1, 0.3, 0.1];
-                strokeDasharray: [0, 100, 0]
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              }}
+                strokeDasharray: [0, 100, 0],              }}
               transition={{
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
-<<<<<<< HEAD
-                ease: 'easeInOut',
-=======
-                ease: "easeInOut"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              }}
+                ease: 'easeInOut',              }}
             />
           ))}
         </svg>
       </div>
 
       {/* Content */}
-<<<<<<< HEAD
       <div className='relative z-40'>{children}</div>
     </div>
   );
 };
 
 export default UltraAdvancedFuturisticBackgroundV2;
-=======
-      <div className="relative z-40">
-        {children}
-      </div>
-    </div>
-  )
-};
-
-export default UltraAdvancedFuturisticBackgroundV2;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

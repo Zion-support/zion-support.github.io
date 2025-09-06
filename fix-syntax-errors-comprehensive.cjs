@@ -19,7 +19,6 @@ function fixSyntaxErrors(filePath) {
     content = content.replace(/\\\(/g, '(');
     content = content.replace(/\\\)/g, ')');
 
-<<<<<<< HEAD
 // Function to fix common syntax errors
 function fixSyntaxErrors(content, filePath) {
     let fixes = 0;
@@ -75,83 +74,6 @@ function fixSyntaxErrors(content, filePath) {
         </div>
     );`;
     });
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-
-    // Fix malformed CSS in JSX
-    content = content.replace(/@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, '');
-    
-    // Fix malformed function declarations
-    content = content.replace(/export\s+const\s+SEO:\s*Reac\s+t\.FC<[^>]+>\s*=\s*\(/g, 'export const SEO: React.FC<SEOProps> = (');
-    
-    // Fix malformed return statements in functions
-    content = content.replace(/return\s*\(\)\s*\/\*[^*]*\*\/\s*@media\(prefers-reduced-motion:\s*reduc\s*e\)\s*\{[^}]*\}/g, 'return null;');
-
-    // Fix missing semicolons
-=======
-    // Fix missing semicolons at end of statements
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-    content = content.replace(/([^;}])\s*$/gm, '$1;');
-<<<<<<< HEAD
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-
-    // Fix missing commas in objects
-    content = content.replace(/(\w+):\s*([^}]+)\s*}/g, '$1: $2}');
-
-    // Fix missing closing braces
-    const openBraces = (content.match(/\{/g) || []).length;
-    const closeBraces = (content.match(/\}/g) || []).length;
-
-<<<<<<< HEAD
-// Fix index.tsx JSON-LD syntax
-fixFile('pages/index.tsx', 'JSON-LD script syntax', (content) => {
-    return content.replace(
-        /"sameAs":\s*\[contact\.site\]\s*\}\)\s*\}\s*\/>/g,
-        '"sameAs": [contact.site]\n            })\n          }}\n        />'
-    );
-});
-
-// Fix ErrorBoundary syntax
-fixFile('components/ErrorBoundary.tsx', 'ErrorBoundary class syntax', (content) => {
-    let fixed = content.replace(
-        /return\s*\{\s*hasError:\s*true,\s*error\s*\}\s*public\s*componentDidCatch/g,
-        'return { hasError: true, error };\n  }\n  \n  public componentDidCatch'
-    );
-    
-    useEffect(() => {
-        const fetchSavedTalents = async () => {
-            if (!user) return;
-            try {
-                setIsLoading(true);
-                // Fetch saved talents logic here
-            } catch (error) {
-                console.error('Error fetching saved talents:', error);
-            } finally {
-                setIsLoading(false);
-            }
-        };
-        fetchSavedTalents();
-    }, [user]);
-    
-    const handleRequestHire = (talentId) => {
-        // Handle hire request logic here
-    };
-    
-    return (
-        <div className="min-h-screen bg-gray-50">
-            ${content}
-        </div>
-    );`;
-    });
-
-    return { content, fixes };
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-}
 
 // Function to process a single file
 function processFile(filePath) {
@@ -208,29 +130,6 @@ async function main() {
         
     } else {
         
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-    fixed = fixed.replace(
-        /return\s*this\.props\.children;\s*\}\s*export\s*default/g,
-        'return this.props.children;\n  }\n}\n\nexport default'
-    );
-    
-    return fixed;
-});
-=======
-    if (openBraces > closeBraces) {
-      const missingBraces = openBraces - closeBraces;
-      content += '\n' + '}'.repeat(missingBraces);
-      modified = true;
-    }
-
-    // Fix missing closing parentheses
-    const openParens = (content.match(/\(/g) || []).length;
-    const closeParens = (content.match(/\)/g) || []).length;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-
     if (openParens > closeParens) {
       const missingParens = openParens - closeParens;
       content += ')'.repeat(missingParens);
@@ -291,41 +190,4 @@ async function main() {
   }
 }
 
-<<<<<<< HEAD
 console.log('\n🎯 Syntax error fixing completed!');
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-f0bd
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-=======
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
-
-  for (const file of files) {
-    const filePath = path.join(dirPath, file);
-    const stat = fs.statSync(filePath);
-
-    if (
-      stat.isDirectory() &&
-      !file.startsWith('.') &&
-      file !== 'node_modules'
-    ) {
-      fixedCount += processDirectory(filePath);
-    } else if (
-      file.endsWith('.tsx') ||
-      file.endsWith('.ts') ||
-      file.endsWith('.jsx') ||
-      file.endsWith('.js')
-    ) {
-      if (fixSyntaxErrors(filePath)) fixedCount++;
-    }
-  }
-
-  return fixedCount;
-}
-
-console.log('Starting comprehensive syntax error fixes...');
-const fixedCount = processDirectory('.');
-console.log(`Fixed ${fixedCount} files`);
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

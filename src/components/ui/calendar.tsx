@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { DayPicker } from 'react-day-picker';
@@ -30,13 +29,3 @@ export { Calendar };
   
 }/>) ;
 }"
-=======
-
-<<<<<<< HEAD
-          buttonVariants({ variant: "outline" }),
-          "h-7 w-7 bg-transparent p-0 opacity-50 hover:opacity-100"
-<<<<<<< HEAD
-          buttonVariants({ variant: "ghost" }),
-          "h-9 w-9 p-0 font-normal aria-selected:opacity-100"
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

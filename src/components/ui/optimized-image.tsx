@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -31,7 +30,6 @@ interface OptimizedImageProps {
   loading?: 'lazy' | 'eager';
   style?: React.CSSProperties;
   objectPosition?: string;
-
 
 export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
@@ -454,20 +452,3 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
     </div>
   );
 };
-=======
-
-<<<<<<< HEAD
-
-          if (entry.name === src && entry.entryType === 'resource') {
-            const resourceEntry = entry as PerformanceResourceTiming;
-            const fileSize = resourceEntry.transferSize || resourceEntry.encodedBodySize || 0;
-            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
-            
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-  );
-},
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

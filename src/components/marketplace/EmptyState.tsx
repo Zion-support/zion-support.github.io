@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from 'react';
 import {
   RefreshCw,
@@ -89,17 +88,11 @@ export function EmptyState({
   action,
   icon,
 }: EmptyStateProps) {
-  const { t } = useTranslation();
-=======
-
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  const content = defaultContent[type];
+  const { t } = useTranslation();  const content = defaultContent[type];
   const displayTitle = title || content.title;
   const displayDescription = description || content.description;
   const displayIcon = icon || content.icon;
 
-<<<<<<< HEAD
   return (
     <div className='flex flex-col items-center justify-center py-12 px-6 text-center'>
       <div className='mb-4'>{displayIcon}</div>
@@ -199,6 +192,3 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
   
     />
   );
-=======
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

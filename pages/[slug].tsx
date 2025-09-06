@@ -35,7 +35,6 @@ import { newSaasItAiServices2025 } from '../data/new-saas-it-ai-services-2025';
 import fs from 'fs';
 import path from 'path';
 type Service = typeof enhancedRealMicroSaasServices[number];
-<<<<<<< HEAD
 const service = useMemo(() => {
   if (!slug) return undefined;
   const all: any[] = ([] as any[])
@@ -63,44 +62,11 @@ const service = useMemo(() => {
         realEnterpriseServices2025 as any,
         augmentedServicesBatch3 as any,
         real2025Q3Additions as any,
-        realQ4Services2025 as any,
-=======
-
-  const service = useMemo(() => {
-    if (!slug) return undefined;
-    const all: any[] = ([] as any[])
-      .concat(
-        enhancedRealMicroSaasServices as any;
-        extraServices as any;
-        additionalEnhancedServices as any;
-        innovativeAIServices as any;
-        quantumSpaceServices as any;
-        enterpriseITServices as any;
-        newRealServices as any;
-        marketReadyServices as any;
-        realMarketServices as any;
-        new2025Services as any;
-        newRealInnovations as any;
-        emergingTechnologyServices as any;
-        comprehensiveITSolutions as any;
-        marketValidatedServices as any;
-        curatedMarketServices as any;
-        cuttingEdgeITServices as any;
-        nextGenerationAIServices as any;
-        nextGenAIServices as any;
-        industryRealServices as any;
-        professionalServices as any;
-        realEnterpriseServices2025 as any;
-        augmentedServicesBatch3 as any;
-        real2025Q3Additions as any;
-        realQ4Services2025 as any;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-        require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
+        realQ4Services2025 as any,        require('../data/real-2025-q4-additions-batch2').real2025Q4AdditionsBatch2 as any
       );
     const byLink = all.find(s => {
       try {
         const url = new URL(s.link);
-<<<<<<< HEAD
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '');
       } catch {
         return false;
@@ -177,107 +143,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
 ;
 export default function RootServiceDetailPage({ service }: { service: Service }) {;
-	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`,
-=======
-        return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '')
-      } catch {
-        return false
-      }
-    });
-    if (byLink) return byLink;
-
-function getAllServices(): Service[] {
-	return enhancedRealMicroSaasServices
-		.concat(extraServices as Service[], additionalEnhancedServices as Service[])
-		.concat(newlyAddedServices as unknown as Service[])
-		.concat(curatedMarketServices as Service[])
-		.concat(new2025Services as unknown as Service[])
-		.concat(marketValidatedServices as unknown as Service[])
-		.concat(moreRealServices2025 as unknown as Service[])
-		.concat(verified2025Additions as unknown as Service[])
-		.concat(realServicesQ12025 as unknown as Service[])
-		.concat(realEnterpriseServices2025 as unknown as Service[])
-		.concat(verifiedRealServices2025Batch2 as unknown as Service[])
-		.concat(realMarketAugmentations2025 as unknown as Service[])
-		.concat(additionalLiveServices2025 as unknown as Service[])
-		.concat(real2025Q2Additions as unknown as Service[])
-		.concat(augmentedServicesBatch3 as unknown as Service[])
-		.concat(realServicesQ22025 as unknown as Service[])
-		.concat(realServicesQ32025 as unknown as Service[])
-		.concat(realQ4Services2025 as unknown as Service[])
-		.concat(real2025Q4Additions as unknown as Service[])
-		.concat(realMarketServicesExtended as unknown as Service[])
-		.concat(real2026Q1Additions as unknown as Service[])
-		.concat(real2026Additions as unknown as Service[])
-		.concat(added2026Q2Services as unknown as Service[])
-		.concat(real2026Q3Additions as unknown as Service[])
-		.concat(real2026Q4Additions as unknown as Service[])
-		.concat(real2026Q4NewServices as unknown as Service[])
-		.concat(real2027Q1Additions as unknown as Service[])
-		.concat(newSaasItAiServices2025 as unknown as Service[])
-}
-
-function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
-}
-
-function getExistingRootPageSlugs(): Set<string> {
-	const pagesDir = path.join(process.cwd(), 'pages');
-	const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
-	const reserved = new Set<string>(['apireportsservices']);
-	const slugs = new Set<string>();
-	for (const entry of entries) {
-		if (entry.name.startsWith('_')) continue;
-		if (reserved.has(entry.name)) continue;
-		// Files at root
-		if (entry.isFile()) {
-			const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/);
-			if (m) {
-				const base = m[1];
-				if (base !== 'index' && base !== '404' && base !== '500' && base !== '[slug]') {
-					slugs.add(base)
-				}
-			}
-		}
-		// Directories at root (folder routes)
-		if (entry.isDirectory()) {
-			slugs.add(entry.name)
-		}
-	}
-	return slugs
-}
-
-export async function getStaticPaths() {
-	const services = getAllServices();
-	const slugs = new Set<string>();
-	for (const s of services) {
-		if (s.id) slugs.add(toSlug(s.id));
-		else if (s.name) slugs.add(toSlug(s.name))
-	}
-	const existing = getExistingRootPageSlugs();
-	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug));
-	return {
-		paths: filtered.map((slug) => ({ params: { slug } })),
-		fallback: false
-	}
-}
-
-export async function getStaticProps({ params }: { params: { slug: string } }) {
-	const services = getAllServices();
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
-	let service: Service | undefined = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug),
-	if (!service) {
-		return { notFound: true }
-	}
-	return {
-		props: { service }
-	}
-}
-
-export default function RootServiceDetailPage({ service }: { service: Service }) {
-	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-	return (
+	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`,	return (
 		<UltraFuturisticBackground variant="quantum" intensity="high">
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
@@ -288,51 +154,25 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 					dangerouslySetInnerHTML={{
 						__html: JSON.stringify(
 							{
-<<<<<<< HEAD
 								"@context": "https://schema.org",
-								"@type": "Service",
-=======
-								"@context": "https: //schema.org", "@type": "Service",
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-								name: service.name,
+								"@type": "Service",								name: service.name,
 								description: service.tagline || service.description,
 								url: canonical,
 								provider: {
-<<<<<<< HEAD
 									"@type": "Organization",
 									name: "Zion Tech Group",
 									url: "https://ziontechgroup.com"
 								},
 								offers: {
 									"@type": "Offer",
-									price: (service.price || '').replace(/[^0-9.]/g, ''),
-=======
-      
-									"@type": "Organization";
-									name: "Zion Tech Group",
-									url: "https://ziontechgroup.com"
-								
-    },
-    offers: {
-									"@type": "Offer";
-									price: (service.price || '').replace(/[^0-9.]/g, '');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-									priceCurrency: "USD",
+									price: (service.price || '').replace(/[^0-9.]/g, ''),									priceCurrency: "USD",
 									availability: "https://schema.org/InStock"
 								}
 							};
 							null;
-<<<<<<< HEAD
 							2;
 							);}
-				/>;
-=======
-							2
-							)
-						}}
-				/>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-			</Head>
+				/>;			</Head>
 
 			<div className="container mx-auto px-4 py-16">
 				<div className="text-center mb-10">
@@ -378,18 +218,10 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 							<div className="mt-4 space-y-3">
 								<a href="/contact" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Phone className="w-4 h-4" /> +1 302 464 0950
-<<<<<<< HEAD
 								</Link>
 								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
 									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
-								</Link>
-=======
-								</a>
-								<a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200">
-									<Mail className="w-4 h-4" /> kleber@ziontechgroup.com
-								</a>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-								<div className="flex items-start gap-2 text-gray-300">
+								</Link>								<div className="flex items-start gap-2 text-gray-300">
 									<MapPin className="w-4 h-4 mt-1" /> 364 E Main St STE 1008 Middletown DE 19709
 								</div>
 							</div>
@@ -398,23 +230,15 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 							</div>
 						</Card>
 
-<<<<<<< HEAD
-=======
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white text-lg font-semibold mb-3">Learn More</h3>
 							<a href={service.link || canonical} className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
 								Open canonical page <ExternalLink className="w-4 h-4" />
 							</a>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 						</Card>
 					</div>
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-<<<<<<< HEAD
 	);
 ;
-=======
-	)
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

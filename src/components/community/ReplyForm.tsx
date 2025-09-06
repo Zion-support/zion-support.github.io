@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
@@ -71,12 +70,3 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   );
 };
 export default ReplyForm;
-=======
-
-<<<<<<< HEAD
-
-
-
-export default ReplyForm;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

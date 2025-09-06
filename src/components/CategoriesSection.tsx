@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { GradientHeading } from './GradientHeading';
 import Link from 'next/link';
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
@@ -245,11 +244,3 @@ icon: getIcon (cat.iconName) ;
   t ('home.view all categories') ;
 }</Link> </div> </div> </section>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-        color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
-    : defaultCategories.map(cat => ({
-        ...cat;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
@@ -488,22 +487,3 @@ default: return (<Badge variant="outline" className="bg-gray-500/20 text-gray-50
 }</p> </div>) ;
 }</div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-          provider: profiles!provider_id(display_name),
-<<<<<<< HEAD
-      query = query.order('created_at', { ascending: false }),
-      
-<<<<<<< HEAD
-
-  
-
-<<<<<<< HEAD
-
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

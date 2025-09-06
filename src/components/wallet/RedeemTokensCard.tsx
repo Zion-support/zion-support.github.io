@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useWallet } from '@/hooks/useWallet';
 import {
@@ -135,10 +134,3 @@ export function RedeemTokensCard() {
       </CardContent>
     </Card>
   );
-=======
-
-<<<<<<< HEAD
-    
-    await spendTokens(option.cost, `Redeemed: ${option.title}`),
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

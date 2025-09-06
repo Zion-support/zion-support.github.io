@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import {
   Card,
@@ -83,10 +82,3 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
   );
 };
 "
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

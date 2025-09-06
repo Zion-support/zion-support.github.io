@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -438,17 +437,3 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
     </div>
   );
 };
-=======
-
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-
-  const Icon = config.icon;
-  const canRetry = showRetry && onRetry && retryCount < maxRetries;
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

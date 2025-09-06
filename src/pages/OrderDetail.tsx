@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Button } from '@/components/ui/button';
@@ -126,7 +125,6 @@ export default function OrderDetailPage() {
     </div>
   );
 
-
 };
 `Order #$ {;
   order.orderId ;
@@ -157,9 +155,3 @@ toast.success ('Order summary copied to clipboard') ;
 </li>) ) ;
 }</ul> </div> <div> </div> <Link href="/orders" className="text-zion-purple underline" > Back to orders </Link> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

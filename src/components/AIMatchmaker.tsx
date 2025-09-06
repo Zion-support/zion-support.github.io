@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { toast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -145,10 +144,3 @@ export function AIMatchmaker({
       </CardContent>
     </Card>
   );
-=======
-
-<<<<<<< HEAD
-      
-      logInfo('AI matching results:', { data: results }),
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

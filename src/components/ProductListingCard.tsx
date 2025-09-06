@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
@@ -331,7 +330,6 @@ setImageError (true) ;
 //Debug logging for development if (process.env.NODE ENV === 'development') {;
   return;
 
-
 };
 
 }> {;
@@ -395,23 +393,3 @@ router.push ('/checkout') ;
 }</div> </div> </div> </div>) ;
 };
 '"
-=======
-
-<<<<<<< HEAD
-
-
-  const stockStatus =
-    listing.stock === undefined
-
-<<<<<<< HEAD
-
-  
-  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
-
-<<<<<<< HEAD
-
-
-export const ProductListingCard = React.memo(ProductListingCardComponent),
-ProductListingCard.displayName = 'ProductListingCard';
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

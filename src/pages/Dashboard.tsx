@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { useAuth } from '@/hooks/useAuth';
@@ -524,7 +523,6 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className
   16 ";
 }className="text-zion-cyan" /> Send Test Notification </Button> <Button ;
 
-
 }> <Settings size= {;
   16 ";
 }className="text-zion-purple" /> async () => {;
@@ -542,7 +540,6 @@ toast ({";
   toast ({";
   title: "Error sending notification",  description: "Please try again", variant: "destructive" ;
 });
-
 
 }> <Bell size= {;
   16 ";
@@ -598,14 +595,3 @@ toast ({";
   roleForTour ;
 }/> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-  const userWithExtendedProps = user as any;
-  const userType = userWithExtendedProps?.userType || user?.user_metadata?.userType || 'talent';
-  const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent';
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

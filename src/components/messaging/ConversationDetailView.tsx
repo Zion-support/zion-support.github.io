@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
 import { MessageSquare } from 'lucide-react';
@@ -240,11 +239,3 @@ export function ConversationDetailView() {
   messagesEndRef ;
 }/> </div> /> <Button > Send </Button> </form> </div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-  
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import {
@@ -107,10 +106,3 @@ export function ApiDocsHub() {
   );
 
 export default ApiDocsHub;
-=======
-
-<<<<<<< HEAD
-
-export default ApiDocsHub;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

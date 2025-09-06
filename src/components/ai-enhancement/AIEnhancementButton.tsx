@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
@@ -139,9 +138,3 @@ export function AIEnhancementButton({
 }return (<Button) : (<Sparkles className=" h-4 w-4" />) ;
 }</Button>) ;
 }"
-=======
-
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 #!/usr/bin/env node
 
 const fs = require('fs');
 
 console.log('🔧 Final Syntax Cleanup');
-console.log('======================');
+console.log('=');
 
 // Function to fix all remaining syntax errors
 function fixAllSyntax(content) {

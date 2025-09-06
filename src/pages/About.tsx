@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 import { ContactSection } from '@/components/ContactSection';
@@ -287,12 +286,3 @@ export default function About() {
       </main>
     </>
   );
-=======
-
-<<<<<<< HEAD
-      image: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=300&q=80",
-<<<<<<< HEAD
-      image: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80",
-<<<<<<< HEAD
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80",
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

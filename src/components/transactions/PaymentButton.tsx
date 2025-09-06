@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -159,10 +158,3 @@ toast ({;
   isProcessing ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Processing... </>) : (buttonText) ;
 }</Button>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-        description: "Please sign in to make a purchase."}),
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

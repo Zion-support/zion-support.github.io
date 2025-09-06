@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -888,7 +887,6 @@ reader.readAsDataURL (file) ;
   providerData: {;
   name: formData.name, title: formData.title, bio: formData.bio,  services: serviceTags, location: formData.location ;
 
-
 });
 }else {';
   //Fallback for mock/development mode logWarn ('Mock AI response - using fallback content');
@@ -911,7 +909,6 @@ toast ({;
 if (newServices.length > 0) {;
   ;
 
-
 };
 //Handle form submission const onSubmit = async (values: ServiceFormValues) => {;
   if (serviceTags.length === 0) {;
@@ -930,7 +927,6 @@ try {;
   body: {;
   providerData: {;
   name: values.name, title: values.title, bio: values.bio,  services: serviceTags, location: values.location ;
-
 
 });
 //Create the service profile const {;
@@ -997,28 +993,3 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 }/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" available"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" limited"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" unavailable"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) ";
 }/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-  enhancedProfile: z.boolean().transform(val => !!val),
-  website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()}),
-
-type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
-
-
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-      let finalSummary = values.bio;
-      let finalServices = serviceTags;
-      
-<<<<<<< HEAD
-          
-<<<<<<< HEAD
-          website: values.website || null}),
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

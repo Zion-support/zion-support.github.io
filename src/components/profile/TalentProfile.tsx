@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Handshake, MessageSquare, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -152,11 +151,3 @@ export function TalentProfile({
       </div>
     </div>
   );
-=======
-
-<<<<<<< HEAD
-
-  
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

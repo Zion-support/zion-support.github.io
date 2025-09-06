@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
@@ -238,10 +237,3 @@ return (<> <Tabs value= {;
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application') ;
 }</Button> </div> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-      let fullMessage = message;
-      
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

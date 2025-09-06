@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Button } from '@/components/ui/button';
@@ -289,7 +288,3 @@ export default function Careers() {
       </main>
     </>
   );
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

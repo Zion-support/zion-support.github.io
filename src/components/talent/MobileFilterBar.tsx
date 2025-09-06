@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Search, Sliders } from 'lucide-react';
@@ -44,7 +43,3 @@ export function MobileFilterBar({
       </div>
     </div>
   );
-=======
-<<<<<<< HEAD
-  setSearchTerm, 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Phone } from 'lucide-react';
@@ -55,10 +54,3 @@ export const MobileAppHero: React.FC = () => {
   );
 };
 "
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

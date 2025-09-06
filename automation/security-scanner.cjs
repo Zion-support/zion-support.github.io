@@ -400,8 +400,8 @@ export function securityHeaders(req, res, next) {
 
 // Run the security scanner
 if (require.main === module) {
-    const scanner = new SecurityScanner(),
-    scanner.run().catch(console.error)
-  }
+    const scanner = new SecurityScanner();
+    scanner.run().catch(console.error);
+}
 
 module.exports = SecurityScanner;

@@ -50,14 +50,10 @@ try {
     try {
       let content = fs.readFileSync(mainTsxPath, 'utf8');
       content = content
-        .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-        .replace(/<<<<<<< [^\n]+[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-        .replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-        .replace(/<<<<<<< [^\n]+[\s\S]*?=======/g, '')
+        .replace(/[\s\S]*?[\s\S]*?        .replace(/<<<<<<< [^\n]+[\s\S]*?[\s\S]*?        .replace(/[\s\S]*?        .replace(/<<<<<<< [^\n]+[\s\S]*?/g, '')
         .replace(/^<<<<<<< [^\n]+$/gm, '')
-        .replace(/^=======$/gm, '')
-        .replace(/^>>>>>>> [^\n]+$/gm, '');
-      
+        .replace(/^$/gm, '')
+        .replace(/^      
       fs.writeFileSync(mainTsxPath, content);
       console.log('✅ Fixed src/main.tsx merge conflicts');
     } catch (error) {

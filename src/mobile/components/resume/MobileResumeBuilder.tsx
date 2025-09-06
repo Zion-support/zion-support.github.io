@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -405,31 +404,3 @@ function SkillsStep() {
 }</div>) ) ";
 }<Button > <Plus className="h-4 w-4" /> Add Another Skill </Button> </div> </CardContent> </Card> <Card> <CardContent className="p-4" > <div className="space-y-2" > <Label>Skill Categories</Label> <div className="grid grid-cols-2 gap-2" > <Button variant="outline" className="justify-start" >Development</Button> <Button variant="outline" className="justify-start" >Design</Button> <Button variant="outline" className="justify-start" >Marketing</Button> <Button variant="outline" className="justify-start" >Business</Button> <Button variant="outline" className="justify-start" >Data Analysis</Button> <Button variant="outline" className="justify-start" >Languages</Button> </div> </div> </CardContent> </Card> </div>) ;
 }"
-=======
-
-<<<<<<< HEAD
-type ResumeStep = "basics" | "experience" | "education" | "skills";
-
-<<<<<<< HEAD
-
-  
-  const removeExperience = (id: string) => {
-    setExperiences(experiences.filter(exp => exp.id !== id))
-  };
-  
-
-<<<<<<< HEAD
-
-  
-  const removeEducation = (id: string) => {
-    setEducations(educations.filter(edu => edu.id !== id))
-  };
-  
-
-<<<<<<< HEAD
-
-  
-
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

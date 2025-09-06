@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useDisputes } from '@/hooks/useDisputes';
@@ -756,7 +755,6 @@ if (isLoading) {";
   return (<div className=" p-8 text-center"> () => router.push (" /dashboard/disputes") ";
 }className=" mt-4"> Back to Disputes </Button> </div>) ;
 
-
 };";
 container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center justify-between gap-4" > <div> Start Review </Button>) ";
 }</div> </div> <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900"> <Check className="h-4 w-4" /> <AlertTitle>This dispute has been resolved</AlertTitle> <AlertDescription> {;
@@ -812,7 +810,6 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
 }</AvatarFallback> </Avatar>) ";
 }</div> <Separator className="my-4" /> <div className="space-y-4" > <Textarea ;
 
-
 }> Add Admin Note </Button> </div> </div> </CardContent> </Card> </TabsContent>) ";
 }</Tabs> </div> <div className="space-y-6"> <Card> <CardHeader> <CardTitle>Parties Involved</CardTitle> </CardHeader> <CardContent className="space-y-6"> <div className="flex items-start gap-4"> <Avatar className="h-10 w-10"> <AvatarImage src= {;
   dispute.client profile?.avatar url ;
@@ -826,19 +823,3 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
   dispute.id ";
 }</span> </div> <div className="flex justify-between"> </div> </CardContent> </Card> </div> </div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-  resolution_type: "compromise"}),
-   
-<<<<<<< HEAD
-
-  const isAdmin = user?.userType === "admin";
-  
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

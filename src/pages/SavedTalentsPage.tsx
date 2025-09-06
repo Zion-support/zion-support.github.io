@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { SEO } from '@/components/SEO';
 import { TalentCard } from '@/components/talent/TalentCard';
@@ -267,8 +266,6 @@ if (error) {;
 }= await supabase .from ('talent profiles') .select ('*') .eq ('id', talentId) .single ();
 return;
 
-
-
 }catch (error) {;
   logErrorToProduction (error instanceof Error ? error.message : String (error),  error instanceof Error ? error : undefined, {';
   message: 'Error toggling saved talent' ;
@@ -291,13 +288,3 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }</div>) ;
 }</div> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

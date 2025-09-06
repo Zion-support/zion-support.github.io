@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 type Question = {
-<<<<<<< HEAD
   id: string;
   question: string;
   options: string[];
@@ -10,25 +9,12 @@ type Question = {
 
 type Props = {
   questions: Question[];
-  onComplete: (score: number) => void;
-=======
-  id: string,
-  question: string,
-  options: string[],
-  answerIndex: number
-};
-
-type Props = {
-  questions: Question[],
-  onComplete: (score: number) => void
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-};
+  onComplete: (score: number) => void;};
 
 export default function Quiz({ questions, onComplete }: Props) {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [submitted, setSubmitted] = useState(false);
 
-<<<<<<< HEAD
   const score = questions.reduce(
     (acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0),
     0
@@ -50,27 +36,7 @@ export default function Quiz({ questions, onComplete }: Props) {
             {q.options.map((opt, i) => (
               <label key={i} className='flex items-center gap-2'>
                 <input
-                  type='radio'
-=======
-  const score = questions.reduce((acc, q) => acc + (answers[q.id] === q.answerIndex ? 1 : 0), 0);
-
-  function submit() {
-    setSubmitted(true);
-    onComplete(score)
-  }
-
-  return (
-    <div className="space-y-4">
-      {questions.map((q, idx) => (
-        <div key={q.id} className="border rounded p-3">
-          <div className="font-medium">{idx + 1}. {q.question}</div>
-          <div className="mt-2 grid gap-2">
-            {q.options.map((opt, i) => (
-              <label key={i} className="flex items-center gap-2">
-                <input
-                  type="radio"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-                  name={q.id}
+                  type='radio'                  name={q.id}
                   checked={answers[q.id] === i}
                   onChange={() => setAnswers({ ...answers, [q.id]: i })}
                 />
@@ -79,25 +45,15 @@ export default function Quiz({ questions, onComplete }: Props) {
             ))}
           </div>
           {submitted && (
-<<<<<<< HEAD
             <div className='mt-2 text-sm'>
               {answers[q.id] === q.answerIndex ? (
                 <span className='text-green-600'>Correct</span>
               ) : (
-                <span className='text-red-600'>Incorrect</span>
-=======
-            <div className="mt-2 text-sm">
-              {answers[q.id] === q.answerIndex ? (
-                <span className="text-green-600">Correct</span>
-              ) : (
-                <span className="text-red-600">Incorrect</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-              )}
+                <span className='text-red-600'>Incorrect</span>              )}
             </div>
           )}
         </div>
       ))}
-<<<<<<< HEAD
       <button
         onClick={submit}
         className='px-4 py-2 bg-blue-600 text-white rounded'
@@ -111,10 +67,3 @@ export default function Quiz({ questions, onComplete }: Props) {
       )}
     </div>
   );
-=======
-      <button onClick={submit} className="px-4 py-2 bg-blue-600 text-white rounded">Submit Quiz</button>
-      {submitted && <div className="text-sm">Score: {score} / {questions.length}</div>}
-    </div>
-  );
-}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

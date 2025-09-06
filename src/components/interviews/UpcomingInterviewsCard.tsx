@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -167,7 +166,3 @@ export function UpcomingInterviewsCard() {
       </CardContent>
     </Card>
   );
-=======
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

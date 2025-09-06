@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -457,12 +456,3 @@ export function PerformanceDashboard() {
       </Card>
     </div>
   );
-=======
-
-<<<<<<< HEAD
-
-        
-        observer.observe({ entryTypes: ['paintlargest-contentful-paintlayout-shiftfirst-input'] }),
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

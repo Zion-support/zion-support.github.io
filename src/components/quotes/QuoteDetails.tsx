@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import {
   Dialog,
@@ -137,10 +136,3 @@ onClose: () => void ;
 }</div> </CardContent> </Card> </div> </DialogContent> </Dialog>) ;
 };
 '"
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

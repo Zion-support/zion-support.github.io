@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
   Card,
@@ -201,9 +200,3 @@ export function SmartContractDeployment({
   isDeploying ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Deploying... </>) : ('Deploy Contract') ;
 }</Button> </CardFooter> </Card>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-  
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

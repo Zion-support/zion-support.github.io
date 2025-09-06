@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useNotifications } from '@/context/notifications/NotificationContext';
 import {
@@ -331,11 +330,3 @@ return (<> <SEO title="Notifications | Zion AI Marketplace" description="View an
 }</div>) ;
 }</TabsContent> </Tabs> </div> </main> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-      return <Badge className="bg-blue-500">Message</Badge>;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

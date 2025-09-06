@@ -183,10 +183,9 @@ class CompleteImprovementSuite {
     try {
       const content = fs.readFileSync(filePath, 'utf8');
       return (
-        content.includes('<<<<<<< HEAD') ||
-        content.includes('=======') ||
-        content.includes('>>>>>>> ')
-      );
+        content.includes('') ||
+        content.includes('') ||
+        content.includes('      );
     } catch (error) {
       return false;
     }
@@ -199,13 +198,11 @@ class CompleteImprovementSuite {
 
       // Remove merge conflict markers and keep HEAD version
       content = content.replace(
-        /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [a-f0-9]+/gs,
-        '$1'
+        /\n(.*?)\n\n(.*?)\n        '$1'
       );
 
       // Clean up any remaining markers
-      content = content.replace(/>>>>>>> [^\n]+\n/g, '');
-
+      content = content.replace(/
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(
@@ -381,10 +378,6 @@ class CompleteImprovementSuite {
 // Run the complete improvement suite
 const suite = new CompleteImprovementSuite();
 suite.run().catch(console.error);
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

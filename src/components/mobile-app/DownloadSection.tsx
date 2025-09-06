@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { QrCodeIcon } from 'lucide-react';
 import { AppStoreButtons } from './AppStoreButtons';
@@ -53,10 +52,3 @@ export const DownloadSection: React.FC = () => {
   );
 };
 "
-=======
-
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
