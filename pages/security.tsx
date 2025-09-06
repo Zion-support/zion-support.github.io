@@ -242,6 +242,28 @@ export default function SecurityPage() {
                 >
                   View Compliance Details
                 </Link>
+<<<<<<< HEAD
+=======
+=======
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import {
+  Shield,
+  Lock,
+  Eye,
+  Database,
+  Server,
+  Key,
+  CheckCircle,
+  Mail,
+  Phone,
+  MapPin,;
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 import Head from 'next/head';
 import {motion} from 'framer-motion';
@@ -556,7 +578,28 @@ export default function Security() {
                     <p className='text-white font-semibold'>PGP Key</p>
                     <p className='text-gray-300'>Available on request</p>                  </div>
                 </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+                
+                <div className="flex items-center">
+                  <Phone className="w-5 h-5 text-red-400 mr-3" />
+                  <div>
+                    <p className="text-white font-semibold">Emergency Hotline</p>
+                    <p className="text-gray-300">+1 (555) 123-HELP</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-center">
+                  <Key className="w-5 h-5 text-red-400 mr-3" />
+                  <div>
+                    <p className="text-white font-semibold">PGP Key</p>
+                    <p className="text-gray-300">Available on request</p>
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                  </div>
+                </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
               </div>
             </motion.div>
           </div>
@@ -564,13 +607,21 @@ export default function Security() {
 <<<<<<< HEAD
       </div>
     </Layout>
+<<<<<<< HEAD
   );
 }
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 
         <EnhancedFooter />
       </div>
     </>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   );
 <<<<<<< HEAD
 =======

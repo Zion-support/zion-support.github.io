@@ -1,6 +1,10 @@
 <<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import { motion } from 'framer-motion';
 import { 
   Shield, 
@@ -15,6 +19,12 @@ import {
   Target
 } from 'lucide-react';
 import Layout from '../../components/Layout';
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 const solutions = [
   {

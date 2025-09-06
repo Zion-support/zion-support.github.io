@@ -1,7 +1,19 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import { Footer } from '@/components/Footer'
+<<<<<<< HEAD
+=======
+=======
+import React from 'react'';
+import { Outlet } from 'react-router-dom'';
+import { Footer } from '@/components/Footer';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 interface AppLayoutProps {
 	children?: React.ReactNode
@@ -15,6 +27,10 @@ export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
 				{children ?? <Outlet />}
 			</main>
 			{!hideFooter && <Footer />}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 		</div>
 	)
 }
@@ -36,3 +52,11 @@ export function AppLayout({ children }: AppLayoutProps) {
   );
 }
 >>>>>>> origin/chore/build-fixes-and-slim-app
+<<<<<<< HEAD
+=======
+=======
+		</div>;
+	);
+}'"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

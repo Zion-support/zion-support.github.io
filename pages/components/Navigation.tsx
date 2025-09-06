@@ -5,6 +5,22 @@ import {
   ArrowRight,
   Award,
   BarChart3,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+  Shield,
+  Code,
+  Zap,
+  Globe,
+  Home,
+  Building,
+  FileText,
+  MessageSquare,
+  Calendar,
+  ShoppingCart,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   BookOpen,
   Brain,
   Building,
@@ -39,10 +55,56 @@ import {
   Star,
   Target,
   TrendingUp,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   Truck,
   Users,
   X,
   Zap
+<<<<<<< HEAD
+=======
+=======
+  Clock,
+  DollarSign,
+  Cpu,
+  Rocket,
+  Car,
+  Sprout,
+  Wifi,
+  GraduationCap,
+  Award as Recognition,
+  Star as Rating,
+  Users as People,
+  Settings as Config,
+  BarChart3 as Analytics,
+  Shield as Security,
+  Code as Programming,
+  Zap as Lightning,
+  Globe as World,
+  Home as House,
+  Building as Office,
+  FileText as Document,
+  MessageSquare as Chat,
+  Calendar as Schedule,
+  ShoppingCart as Cart,
+  BookOpen as Book,
+  Camera as Photo,
+  Music as Audio,
+  Gamepad2 as Gaming,
+  Heart as Love,
+  Truck as Delivery,
+  Calculator as Math,
+  CreditCard as Payment,
+  Lock as Secure,
+  Eye as View,
+  Target as Goal,
+  TrendingUp as Growth,
+  Clock as Time,
+  DollarSign as Money;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 } from 'lucide-react';
 
 const navigationItems = [

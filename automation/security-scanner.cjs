@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const { execSync } = require("child_process");"console.log(" Starting Security Scan.");const report = { timestamp: new Date().toISOString()," checks: []," vulnerabilities: [],"" overallStatus: "healthy"};/ npm audit (non-fatal)try {" const auditJson = execSync("npm audit --json", {"" encoding: "utf8","" stdio: ["ignore", "pipe", "pipe"]}); const audit = JSON.parse(auditJson); const vulnCount audit.metadata && audit.metadata.vulnerabilities ? Object.values(audit.metadata.vulnerabilities).reduce((a, b) => a + b, 0) : 0; report.checks.push({"" name: "npm audit","" status: vulnCount ? "warning" : "pass"," summary: vulnCount}); if (vulnCount) {" report.overallStatus = "warning"; }} catch (e) {"" report.checks.push({ name: "npm audit", status: "error", error: e.message });}/ sensitive files"const sensitiveFiles = [".env"," ".env.local"," ".env.production"," "private-key.pem",];const found = sensitiveFiles.filter(f => fs.existsSync(f));report.checks.push({"" name: "sensitive files","" status: found.length ? "warning" : "pass", found});"if (found.length) report.overallStatus = "warning";const out = `security-scan-report-${Date.now()}.json`;fs.writeFileSync(out, JSON.stringify(report, null, 2));"`console.log(` Security scan completed. Report: ${out}`);""`"`
 #!/usr/bin/env node;
 const fs = require('fs');
@@ -209,6 +213,42 @@ const securityReport = {
 function runSecurityCheck(name, checkFunction) {
     securityReport.summary.total++;
     console.log(`\n🔍 Security Check: ${name}`);
+<<<<<<< HEAD
+=======
+=======
+#!/usr/bin/env node
+
+const { execSync } = require('child_process');
+const fs = require('fs');
+const path = require('path');
+
+/**
+ * Security Scanner
+ * Comprehensive security scanning and enhancement automation
+ */
+class SecurityScanner {
+  constructor() {
+    this.projectRoot = process.cwd();
+    this.startTime = new Date();
+    this.results = {
+      dependencyAudit: { success: false, vulnerabilities: 0, fixes: [] },
+      codeSecurity: { success: false, issues: [], fixes: [] },
+      headersSecurity: { success: false, headers: [], recommendations: [] },
+      contentSecurityPolicy: { success: false, policy: '', recommendations: [] },
+      authenticationSecurity: { success: false, checks: [], recommendations: [] }
+    };
+  }
+
+  log(message, type = 'INFO') {
+    const timestamp = new Date().toISOString();
+    const prefix = type === 'ERROR' ? '❌' : type === 'SUCCESS' ? '✅' : type === 'WARNING' ? '⚠️' : 'ℹ️';
+    console.log(`${prefix} [${timestamp}] ${message}`);
+  }
+
+  async runCommand(command, description, options = {}) {
+    this.log(`Running: ${description}`);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     try {
         const result = checkFunction();
         if (result.status === 'pass') {
@@ -240,6 +280,10 @@ function runSecurityCheck(name, checkFunction) {
         securityReport.summary.failed++;
         console.log(`❌ ${name}: Error - ${error.message}`);
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 }
 // Check for sensitive data in files
 runSecurityCheck('Sensitive Data Scan', () => {
@@ -287,6 +331,16 @@ fs.writeFileSync(out, JSON.stringify(report, null, 2));
 console.log(`✅ Security scan completed. Report: ${out}`);
 // Check for outdated dependencies
 runSecurityCheck('Dependency Security', () => {
+<<<<<<< HEAD
+=======
+=======
+  }
+
+  async auditDependencies() {
+    this.log('\n🔍 AUDITING DEPENDENCIES');
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     try {
         if (!fs.existsSync('package.json')) {
             return {
@@ -294,6 +348,10 @@ runSecurityCheck('Dependency Security', () => {
                 message: 'package.json not found'
             };
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
         const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
         const dependencies = { ...packageJson.dependencies, ...packageJson.devDependencies };
         // Check for known vulnerable packages
@@ -358,12 +416,40 @@ runSecurityCheck('Security Headers', () => {
                 recommendation: 'Add missing security headers to next.config.js'
             };
         }
+<<<<<<< HEAD
+=======
+=======
+      }
+
+      // Try to fix vulnerabilities
+      if (vulnerabilities > 0) {
+        const fixResult = await this.runCommand(
+          'npm audit fix',
+          'Fix Security Vulnerabilities'
+        );
+        
+        if (fixResult.success) {
+          fixes.push('Successfully applied automatic fixes');
+        }
+      }
+
+      this.results.dependencyAudit = {
+        success: auditResult.success,
+        vulnerabilities,
+        fixes
+      };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     } catch (error) {
         return {
             status: 'fail',
             message: 'Could not check security headers configuration'
         };
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 });
 // Check for environment file security
 runSecurityCheck('Environment Security', () => {
@@ -384,8 +470,47 @@ runSecurityCheck('Environment Security', () => {
             if (weakPasswordPattern.test(content)) {
                 issues.push(`Weak password detected in ${file}`);
             }
+<<<<<<< HEAD
+=======
+=======
+  }
+
+  async scanCodeSecurity() {
+    this.log('\n🔍 SCANNING CODE SECURITY');
+    
+    try {
+      const issues = [];
+      const fixes = [];
+
+      // Check for common security issues
+      const securityChecks = [
+        {
+          pattern: /eval\s*\(/g,
+          issue: 'Use of eval() function detected',
+          fix: 'Replace eval() with safer alternatives like JSON.parse() or Function constructor'
+        },
+        {
+          pattern: /innerHTML\s*=/g,
+          issue: 'Direct innerHTML assignment detected',
+          fix: 'Use textContent or sanitize HTML before assignment'
+        },
+        {
+          pattern: /document\.write\s*\(/g,
+          issue: 'Use of document.write() detected',
+          fix: 'Replace document.write() with DOM manipulation methods'
+        },
+        {
+          pattern: /localStorage\.setItem\s*\([^,]+,\s*[^)]*\+/g,
+          issue: 'Potential XSS in localStorage',
+          fix: 'Sanitize data before storing in localStorage'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
         }
     });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     if (issues.length === 0) {
         return {
             status: 'pass',
@@ -417,12 +542,53 @@ runSecurityCheck('HTTPS Configuration', () => {
             message: 'HTTPS configuration not explicitly found',
             recommendation: 'Ensure HTTPS is properly configured for production'
         };
+<<<<<<< HEAD
+=======
+=======
+    
+    // Save detailed report
+    const report = {
+      timestamp: new Date().toISOString(),
+      totalDuration,
+      results: this.results,
+      summary: {
+        dependenciesAudited: this.results.dependencyAudit.success,
+        codeScanned: this.results.codeSecurity.success,
+        headersConfigured: this.results.headersSecurity.success,
+        cspConfigured: this.results.contentSecurityPolicy.success,
+        authChecked: this.results.authenticationSecurity.success
+      }
+    };
+    
+    fs.writeFileSync(
+      'security-scanner-report.json',
+      JSON.stringify(report, null, 2)
+    );
+    this.log('\n📄 Detailed report saved to security-scanner-report.json');
+  }
+
+  async run() {
+    this.log('🚀 Starting Security Scanner');
+    this.log('='.repeat(60));
+    
+    try {
+      await this.auditDependencies();
+      await this.scanCodeSecurity();
+      await this.setupSecurityHeaders();
+      await this.setupContentSecurityPolicy();
+      await this.checkAuthenticationSecurity();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     } catch (error) {
         return {
             status: 'fail',
             message: 'Could not check HTTPS configuration'
         };
     }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 });
 // Check for file permissions
 runSecurityCheck('File Permissions', () => {
@@ -492,4 +658,20 @@ if (securityReport.status === 'vulnerable') {
     process.exit(2);
 } else {
     process.exit(0);
+<<<<<<< HEAD
 }
+=======
+}
+=======
+  }
+}
+
+// Run the security scanner
+if (require.main === module) {
+    const scanner = new SecurityScanner(),
+    scanner.run().catch(console.error)
+  }
+
+module.exports = SecurityScanner;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

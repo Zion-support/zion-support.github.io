@@ -154,4 +154,7 @@ console.log('\nMerge conflict fixing complete!');
 console.log('\nMerge conflict fixing complete!');
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

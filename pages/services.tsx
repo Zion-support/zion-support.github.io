@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react';
 import Link from 'next/link';
 
@@ -1590,6 +1593,7 @@ export default function Services(): React.JSX.Element {
             }}>
               <div style={{ fontSize: 24, fontWeight: 700, color: '#22c55e' }}>40+</div>
               <div style={{ fontSize: 14, opacity: 0.8 }}>IT Solutions</div>
+<<<<<<< HEAD
             </div>
           </div>
         </div>
@@ -1636,6 +1640,8 @@ export default function Services(): React.JSX.Element {
     </main>
   );
 }
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1731,10 +1737,58 @@ export default function Services() {
                   </button>
                 </motion.div>
               ))}
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
+      <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
+      <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
+      
+      {/* CTA Section */}
+      <section style={{ 
+        maxWidth: 1400, margin: '0 auto', padding: '60px 20px',
+        textAlign: 'center', background: 'white', marginTop: 40,
+        borderRadius: 24, boxShadow: '0 4px 24px rgba(0,0,0,0.06)'
+      }}>
+        <h2 style={{ 
+          fontSize: 32, fontWeight: 700, marginBottom: 16,
+          color: '#1e293b'
+        }}>Ready to Get Started?</h2>
+        <p style={{ 
+          fontSize: 18, color: '#64748b', marginBottom: 32,
+          maxWidth: 600, margin: '0 auto 32px auto'
+        }}>
+          Contact our experts to discuss your project requirements and discover 
+          how our innovative solutions can drive your business forward.
+        </p>
+        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <Link href="/contact" style={{
+            display: 'inline-block', 
+            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
+            color: 'white', padding: '16px 32px', borderRadius: 12, 
+            fontWeight: 700, textDecoration: 'none', fontSize: 16,
+            transition: 'all 0.3s ease'
+          }}>Request a Quote</Link>
+          <a href="tel:+13024640950" style={{
+            display: 'inline-block', 
+            background: 'rgba(34, 197, 94, 0.1)', 
+            color: '#22c55e', padding: '16px 32px', borderRadius: 12, 
+            fontWeight: 700, textDecoration: 'none', fontSize: 16,
+            border: '2px solid #22c55e', transition: 'all 0.3s ease'
+          }}>Call +1 302 464 0950</a>
+        </div>
+      </section>
+    </main>
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <motion.div
@@ -2108,6 +2162,10 @@ export default function Services() {
       </main>
       <Footer />
     </>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   );
 <<<<<<< HEAD
 =======

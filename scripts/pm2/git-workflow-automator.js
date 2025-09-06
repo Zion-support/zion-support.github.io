@@ -1,5 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+/ Git Workflow Automation Scriptconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class GitWorkflowAutomator { constructor() { this.repoPath = process.cwd();" this.branch = "main"; } async checkGitStatus() { try {" const status = execSync("git status --porcelain", { encoding: "utf8" });" return status.trim().split("\n").filter(line => line.length > 0); } catch (error) {" console.error("Error checking git status:", error.message); return []; } } async getCurrentBranch() { try {" return execSync("git branch --show-current", { encoding: "utf8" }).trim(); } catch (error) {" console.error("Error getting current branch:", error.message);" return "main"; } } async stageChanges() { try {" execSync("git add .", { stdio: "inherit" });" console.log(" Changes staged successfully"); return true; } catch (error) {" console.error("Error staging changes:", error.message); return false; } } async commitChanges(message) { try {" execSync(`git commit -m "${message}"`, { stdio: "inherit" });" console.log(" Changes committed successfully"); return true; } catch (error) {" console.error("Error committing changes:", error.message); return false; } } async pushChanges() { try { const currentBranch = await this.getCurrentBranch();"` execSync(`git push origin ${currentBranch}`, { stdio: "inherit" });" console.log(" Changes pushed successfully"); return true; } catch (error) {" console.error("Error pushing changes:", error.message); return false; } } async runWorkflow() {" console.log(" Starting Git Workflow Automation."); const changes = await this.checkGitStatus(); if (changes.length === 0) {" console.log(" No changes to commit"); return true; }` console.log(` Found ${changes.length} changes to process`); const staged = await this.stageChanges(); if (!staged) return false;" const committed = await this.commitChanges("Automated commit: App improvements and automation fixes"); if (!committed) return false; const pushed = await this.pushChanges(); if (!pushed) return false;" console.log(" Git workflow completed successfully!"); return true; }}/ Run if called directlyif (require.main === module) { const automator = new GitWorkflowAutomator(); automator.runWorkflow().then(success => { process.exit(success ? 0 : 1); });}module.exports = GitWorkflowAutomator;'"`'"`
+// Git workflow automation for PM2;,
+_console.log('Git workflow automation initialized');
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 ;
@@ -267,6 +275,15 @@ if (require.main === module) {,;
 module.exports = GitWorkflowAutomator,;
 ;#!/usr/bin/env node;
 =======
+<<<<<<< HEAD
+=======
+/ Git Workflow Automation Scriptconst { execSync } = require("child_process");"const fs = require("fs");"const path = require("path");class GitWorkflowAutomator { constructor() { this.repoPath = process.cwd();" this.branch = "main"; } async checkGitStatus() { try {" const status = execSync("git status --porcelain", { encoding: "utf8" });" return status.trim().split("\n").filter(line => line.length > 0); } catch (error) {" console.error("Error checking git status:", error.message); return []; } } async getCurrentBranch() { try {" return execSync("git branch --show-current", { encoding: "utf8" }).trim(); } catch (error) {" console.error("Error getting current branch:", error.message);" return "main"; } } async stageChanges() { try {" execSync("git add .", { stdio: "inherit" });" console.log(" Changes staged successfully"); return true; } catch (error) {" console.error("Error staging changes:", error.message); return false; } } async commitChanges(message) { try {" execSync(`git commit -m "${message}"`, { stdio: "inherit" });" console.log(" Changes committed successfully"); return true; } catch (error) {" console.error("Error committing changes:", error.message); return false; } } async pushChanges() { try { const currentBranch = await this.getCurrentBranch();"` execSync(`git push origin ${currentBranch}`, { stdio: "inherit" });" console.log(" Changes pushed successfully"); return true; } catch (error) {" console.error("Error pushing changes:", error.message); return false; } } async runWorkflow() {" console.log(" Starting Git Workflow Automation."); const changes = await this.checkGitStatus(); if (changes.length === 0) {" console.log(" No changes to commit"); return true; }` console.log(` Found ${changes.length} changes to process`); const staged = await this.stageChanges(); if (!staged) return false;" const committed = await this.commitChanges("Automated commit: App improvements and automation fixes"); if (!committed) return false; const pushed = await this.pushChanges(); if (!pushed) return false;" console.log(" Git workflow completed successfully!"); return true; }}/ Run if called directlyif (require.main === module) { const automator = new GitWorkflowAutomator(); automator.runWorkflow().then(success => { process.exit(success ? 0 : 1); });}module.exports = GitWorkflowAutomator;'"`'"`
+// Git workflow automation for PM2;,
+_console.log('Git workflow automation initialized');
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node;
 /**; * Git Workflow Automator Script; * Automates git operations and workflow management; */;
 =======
@@ -871,8 +888,12 @@ _console.log('Git workflow automation initialized');
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

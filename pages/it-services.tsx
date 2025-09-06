@@ -4,6 +4,10 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import {
   Server,
   Shield,
@@ -57,6 +61,7 @@ const itServices = [{
     icon: Shield,
     features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response'],
     pricing: '$5,000 - $40,000/project',
+<<<<<<< HEAD
     category: 'Security',
     popular: true
   },
@@ -641,6 +646,9 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import { 
   Server, 
   Shield, 
@@ -701,6 +709,10 @@ const itServices = [
     icon: Shield,
     features: ['Security Assessment', 'Threat Monitoring', 'Incident Response', 'Compliance'],
     pricing: '$1,500 - $8,000/month',
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     category: 'Security',
     popular: true,
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection'],
@@ -1014,6 +1026,7 @@ export default function ITServices() {
       : services.filter(service => service.category === selectedCategory);
 
   return (
+<<<<<<< HEAD
     <Layout>
       <Head>
         <title>IT Services - Zion Tech Group</title>
@@ -1133,6 +1146,19 @@ export default function ITServices() {
 
                     <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>                      Learn More
                     </button>
+=======
+<<<<<<< HEAD
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                  <Head>
+                  <title>IT Services - Zion Tech Group</title>
+                  <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, network management, and system administration." />
+                  <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, network management, system administration" />
+                  </Head>
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">
+<div className="absolute inset-0">
+                  <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
                   </div>
                 ))}
               </div>
@@ -1481,6 +1507,176 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+=======
+    <Layout>
+      <Head>
+        <title>IT Services - Zion Tech Group</title>
+        <meta
+          name='description'
+          content='Explore our 100+ comprehensive IT services including cloud computing, cybersecurity, DevOps, blockchain solutions, and quantum computing consulting.'
+        />
+        <meta
+          name='keywords'
+          content='IT services, cloud computing, cybersecurity, DevOps, blockchain, quantum computing, enterprise solutions, infrastructure'
+        />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta name='robots' content='index, follow' />
+        <link rel='canonical' href={`${contact.site}/it-services`} />
+      </Head>
+
+      <ErrorBoundary level='page'>
+        <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
+          {/* Hero Section */}
+          <section className='py-20 px-4 text-center' role='banner'>
+            <div className='max-w-4xl mx-auto'>
+              <h1
+=======
+      description: 'Expert guidance on quantum computing implementation and optimization for enterprise applications.',
+      category: 'quantum',
+      features: ['Quantum Algorithm DesignHardware SelectionPerformance OptimizationSecurity Implementation'],
+      price: 'Custom Pricing',
+      popular: true,
+      benefits: ['Exponential SpeedupAdvanced CryptographyOptimization SolutionsFuture-Proof Technology']
+    };
+    {
+      id: 2,
+      name: 'Blockchain & Web3 Solutions',
+      description: 'Comprehensive blockchain development and Web3 integration services for modern businesses.',
+      category: 'blockchain',
+      features: ['Smart Contract DevelopmentDApp CreationDeFi IntegrationNFT Platforms'],
+      price: 'Custom Pricing',
+      popular: true,
+      benefits: ['Decentralized SolutionsEnhanced SecurityTransparencyInnovation']
+    };
+    {
+      id: 3,
+      name: 'DevSecOps & Security Automation',
+      description: 'Integrated development, security, and operations with automated security testing and deployment.',
+    category: 'devops',
+      features: ['CI/CD PipelinesSecurity ScanningAutomated TestingInfrastructure as Code'],
+      price: '$199/month',
+      popular: false,
+      benefits: ['Faster DeploymentEnhanced SecurityReduced RiskAutomated Compliance']
+    };
+    {
+      id: 4,
+      name: 'Enterprise Data Platform',
+      description: 'Comprehensive data management and analytics platform for enterprise-scale operations.',
+      category: 'enterprise',
+      features: ['Data WarehousingReal-time AnalyticsData GovernanceMachine Learning Integration'],
+      price: '$299/month',
+      popular: true,
+      benefits: ['Data-Driven InsightsScalable ArchitectureCompliance ReadyAdvanced Analytics']
+    };
+    {
+      id: 5,
+      name: 'High-Performance Computing Solutions',
+      description: 'Optimized computing infrastructure for demanding computational workloads and research.',
+      category: 'cloud',
+      features: ['GPU ComputingParallel ProcessingDistributed ComputingPerformance Monitoring'],
+      price: '$399/month',
+      popular: false,
+      benefits: ['Massive Processing PowerScalable ResourcesCost OptimizationAdvanced Capabilities']
+    };
+    {
+      id: 6,
+      name: 'Cloud Migration Services',
+      description: 'Seamless migration of applications and infrastructure to cloud platforms with zero downtime.',
+      category: 'cloud',
+      features: ['Assessment & PlanningData MigrationApplication ModernizationPerformance Optimization'],
+      price: 'Custom Pricing',
+      popular: true,
+      benefits: ['Reduced CostsEnhanced ScalabilityImproved SecurityBetter Performance']
+    };
+    {
+      id: 7,
+      name: 'Infrastructure as Code',
+      description: 'Automated infrastructure provisioning and management using modern DevOps practices.',
+      category: 'devops',
+      features: ['Terraform AutomationConfiguration ManagementVersion ControlEnvironment Provisioning'],
+      price: '$149/month',
+      popular: false,
+      benefits: ['Consistent EnvironmentsFaster ProvisioningVersion ControlReduced Errors']
+    };
+    {
+      id: 8,
+      name: 'Disaster Recovery Solutions',
+      description: 'Comprehensive backup and disaster recovery strategies to ensure business continuity.',
+      category: 'security',
+      features: ['Automated BackupsMulti-site ReplicationRecovery TestingRTO/RPO Optimization'],
+      price: '$179/month',
+      popular: true,
+      benefits: ['Business ContinuityData ProtectionMinimal DowntimeCompliance Ready']
+    };
+    {
+      id: 9,
+      name: 'Cybersecurity Assessment',
+      description: 'Comprehensive security evaluation and penetration testing for enterprise systems.',
+      category: 'security',
+      features: ['Vulnerability AssessmentPenetration TestingCompliance AuditingSecurity Recommendations'],
+      price: '$249/month',
+      popular: false,
+      benefits: ['Risk IdentificationCompliance AssuranceSecurity HardeningThreat Mitigation']
+    };
+    {
+      id: 10,
+      name: 'API Development & Integration',
+      description: 'Custom API development and third-party integration services for seamless connectivity.',
+      category: 'enterprise',
+      features: ['RESTful APIsGraphQL ServicesThird-party IntegrationAPI Documentation'],
+      price: '$129/month',
+      popular: true,
+      benefits: ['System IntegrationImproved EfficiencyScalable ArchitectureDeveloper Experience']
+    };
+    {
+      id: 11,
+      name: 'Microservices Architecture',
+      description: 'Design and implementation of microservices-based applications for scalable systems.',
+      category: 'enterprise',
+      features: ['Service DesignContainer OrchestrationService MeshMonitoring & Logging'],
+      price: '$199/month',
+      popular: false,
+      benefits: ['Scalable ArchitectureIndependent DeploymentTechnology DiversityFault Isolation']
+    };
+    {
+      id: 12,
+      name: 'Edge Computing Solutions',
+      description: 'Distributed computing infrastructure for low-latency applications and IoT systems.',
+      category: 'cloud',
+      features: ['Edge DeploymentIoT IntegrationReal-time ProcessingBandwidth Optimization'],
+      price: '$159/month',
+      popular: true,
+      benefits: ['Reduced LatencyBandwidth SavingsOffline CapabilityEnhanced Performance']
+    }
+  ];
+
+  const filteredServices = selectedCategory === 'all' 
+    ? services 
+    : services.filter(service => service.category === selectedCategory);
+
+  return (
+    <>
+      <Head>
+        <title>IT Services - Zion Tech Group</title>
+        <meta name="description" content="Explore our 100+ comprehensive IT services including cloud computing, cybersecurity, DevOps, blockchain solutions, and quantum computing consulting." />
+        <meta name="keywords" content="IT services, cloud computing, cybersecurity, DevOps, blockchain, quantum computing, enterprise solutions, infrastructure" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href={`${contact.site}/it-services`} />
+      </Head>
+      
+      <ErrorBoundary level="page">
+        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+          {/* Hero Section */}
+          <section className="py-20 px-4 text-center" role="banner">
+            <div className="max-w-4xl mx-auto">
+              <h1 
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
               >
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {level.name}
@@ -1626,12 +1822,28 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 View All Services
               </Link>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
           </motion.div>
         </div>
       </section>
                   </div>
+<<<<<<< HEAD
   );
 }
+=======
+=======
+          </section>
+
+          {/* Category Filter */}
+<<<<<<< HEAD
+          <section className='py-8 px-4'>
+            <div className='max-w-6xl mx-auto'>
+              <div className='flex flex-wrap justify-center gap-4 mb-8'>
+                {categories.map(category => (
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 
                   <Link
@@ -1718,6 +1930,10 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
         </section>
       </div>
     </Layout>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   );
 <<<<<<< HEAD
 

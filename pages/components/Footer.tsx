@@ -1,10 +1,65 @@
 import React from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+<<<<<<< HEAD
+=======
+=======
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Globe, 
+  ArrowRight,
+  Brain,
+  Network,
+  Cloud,
+  Shield,
+  BarChart3,
+  Users,
+  Settings,
+  FileText,
+  MessageSquare,
+  Calendar,
+  ShoppingCart,
+  BookOpen,
+  Building,
+  Heart,
+  DollarSign,
+  Target,
+  Zap,
+  Award,
+  Star,
+  CheckCircle,
+  Clock,
+  TrendingUp,
+  Eye,
+  Lock,
+  Code,
+  Home,
+  Camera,
+  Music,
+  Gamepad2,
+  Truck,
+  Calculator,
+  CreditCard,
+  Paintbrush,
+  HardDrive,
+  Activity,
+  Lightbulb,
+  Wrench,
+  PieChart,
+  ClipboardList,
+  Layers;
+} from 'lucide-react';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
   const footerLinks = {
     services: [
@@ -49,6 +104,7 @@ const Footer = () => {
     ]
   };
 
+<<<<<<< HEAD
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: Facebook },
     { name: 'Twitter', href: '#', icon: Twitter },
@@ -56,6 +112,19 @@ const Footer = () => {
     { name: 'Instagram', href: '#', icon: Instagram },
     { name: 'GitHub', href: '#', icon: Github }
   ];
+=======
+const microSaasCategories = [
+  { title: 'Marketing Tools', icon: Target, count: 15 },
+  { title: 'Productivity', icon: Settings, count: 12 },
+  { title: 'Analytics', icon: BarChart3, count: 18 },
+  { title: 'Automation', icon: Zap, count: 22 },
+  { title: 'Security', icon: Shield, count: 8 },
+  { title: 'Finance', icon: DollarSign, count: 10 },
+  { title: 'Design', icon: Paintbrush, count: 6 },
+  { title: 'Development', icon: Code, count: 14 }
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -186,6 +255,10 @@ const Footer = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
@@ -197,6 +270,90 @@ const Footer = () => {
             >
               © {currentYear} Zion Tech Group. All rights reserved.
             </motion.div>
+<<<<<<< HEAD
+=======
+=======
+        {/* Service Categories */}
+        <div className="mt-16 pt-8 border-t border-gray-800">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Micro SaaS Categories */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4 text-blue-400">Micro SaaS Solutions</h4>
+              <div className="grid grid-cols-2 gap-2">
+                {microSaasCategories.map((category) => (
+                  <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-400">
+                    <category.icon className="w-4 h-4" />
+                    <span>{category.title}</span>
+                    <span className="text-blue-400">({category.count})</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* AI Service Categories */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4 text-green-400">AI Services</h4>
+              <div className="grid grid-cols-2 gap-2">
+                {aiServiceCategories.map((category) => (
+                  <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-400">
+                    <category.icon className="w-4 h-4" />
+                    <span>{category.title}</span>
+                    <span className="text-green-400">({category.count})</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* IT Service Categories */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4 text-purple-400">IT Services</h4>
+              <div className="grid grid-cols-2 gap-2">
+                {itServiceCategories.map((category) => (
+                  <div key={category.title} className="flex items-center space-x-2 text-sm text-gray-400">
+                    <category.icon className="w-4 h-4" />
+                    <span>{category.title}</span>
+                    <span className="text-purple-400">({category.count})</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Stats Section */}
+        <div className="mt-16 pt-8 border-t border-gray-800">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+              <div className="text-3xl font-bold text-blue-400 mb-2">235+</div>
+              <div className="text-gray-400">Services & Solutions</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-green-400 mb-2">1,200+</div>
+              <div className="text-gray-400">Projects Completed</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">95+</div>
+              <div className="text-gray-400">Expert Team Members</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-yellow-400 mb-2">15+</div>
+              <div className="text-gray-400">Years Experience</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="bg-gray-800 border-t border-gray-700">
+        <div className="container mx-auto px-4 py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-gray-400 text-sm">
+              © 2025 Zion Tech Group. All rights reserved. | 
+              <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
+              <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
+            </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
             
             <motion.div
               initial={{ opacity: 0, y: 20 }}

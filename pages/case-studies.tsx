@@ -287,8 +287,11 @@ export default function CaseStudiesPage() {
         </section>
       </div>
     </MainLayout>
+<<<<<<< HEAD
   );
 }
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 import Head from 'next/head';
 <<<<<<< HEAD
@@ -316,6 +319,10 @@ export default function CaseStudiesPage() {
         </p>
       </section>
     </Layout>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   );
 
  </Head> </section> </Layout> 

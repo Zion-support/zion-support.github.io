@@ -107,8 +107,59 @@ const filters = [
   { name: 'Recent', count: 4 },
   { name: 'Popular', count: 2 }
 ];
+<<<<<<< HEAD
+=======
+=======
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
+import {
+  Search,
+  Filter,
+  Grid,
+  List,
+  ArrowRight,
+  ExternalLink,
+  Brain,
+  Shield,
+  Rocket,
+  Cpu,
+  Database,
+  Atom,
+  Target,
+  Star,
+  Sparkles,
+  Zap,
+  Users,
+  Award,
+  Clock,
+  CheckCircle,
+  Globe,
+  Code,
+  Server,
+  TrendingUp,
+  BarChart3,
+  Cloud,
+  Network,
+  Lightbulb,
+  Flame,
+  Zap as ZapIcon,
+  X,
+  Sliders,
+  SortAsc,
+  SortDesc,;
+} from 'lucide-react';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 export default function SearchPage() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedFilter, setSelectedFilter] = useState('All');
@@ -861,6 +912,20 @@ export default function SearchPage() {
                       >
                         <ArrowRight className="w-5 h-5" />
                       </Link>
+<<<<<<< HEAD
+=======
+=======
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [filters, setFilters] = useState({
+    category: 'all',
+    status: 'all',
+    priceRange: 'all',
+<<<<<<< HEAD
+    technology: 'all',
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
         </div>
       </section>
@@ -1003,7 +1068,11 @@ export default function SearchPage() {
                           Get Quote
                         </a>
                       </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
                     </div>
                   </motion.div>
                 ))}
@@ -1132,6 +1201,7 @@ export default function SearchPage() {
   )
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
 =======
   )
 }
@@ -1139,3 +1209,6 @@ export default function SearchPage() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

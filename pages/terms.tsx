@@ -112,6 +112,7 @@ export default function Terms() {
                 <p className="text-slate-300">
                   <strong>Address:</strong> {contact.address}
                 </p>
+<<<<<<< HEAD
               </div>
             </section>
           </div>
@@ -126,6 +127,8 @@ export default function Terms() {
     </>
   );
 }
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 import React from 'react';
 ] 
@@ -1400,9 +1403,29 @@ export default function Terms() {
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
               </div>
             </motion.div>
           </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+          <div className="mt-12 text-center">
+            <Link href="/" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
+              Back to Home
+            </Link>
+          </div>
+        </div>
+      </main>
+    </>
+  );
+}
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
         </section>
 
         {/* Agreement Section */}
@@ -1481,8 +1504,12 @@ export default Terms;
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default TermsPage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 }> <h2 className="text-4xl font-bold mb-6 text-white" > Questions About These Terms? </h2> <p className="text-xl text-gray-300 mb-8" > If you have any questions about these Terms of Service or need clarification on any provision, please don't hesitate to reach out to us. </p> <a href="mailto:kleber@ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <Mail className="w-5 h-5" /> Email Us </Link> <a href="/contact" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2" > <User className="w-5 h-5" /> Contact Form </Link> </div> </motion.div> </div> </section> </main> </Layout> </ErrorBoundary>) 
 };export default TermsPage;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

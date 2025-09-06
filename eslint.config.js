@@ -1,5 +1,6 @@
 import js from '@eslint/js';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
@@ -281,6 +282,8 @@ export default [
         React: 'readonly',
         // Jest/Testing globals
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -427,11 +430,53 @@ export default [
         ...globals.browser,
         ...globals.node,
         React: 'readonly',
+<<<<<<< HEAD
+=======
+=======
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+
+export default [
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true
+        }
+      },
+      globals: {
+        React: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        HTMLElement: 'readonly',
+        HTMLAnchorElement: 'readonly',
+        performance: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
         jest: 'readonly',
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
         expect: 'readonly',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
@@ -460,10 +505,31 @@ export default [
         'warn',
         { allowConstantExport: true }
       ],
+<<<<<<< HEAD
+=======
+=======
+        describe: 'readonly',
+        it: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly'
+      }
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks
+    },
+    rules: {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       '@typescript-eslint/no-unused-vars': 'warn',
       '@typescript-eslint/no-explicit-any': 'warn',
       'react-hooks/exhaustive-deps': 'warn',
       'no-undef': 'off',
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       'no-unused-vars': 'off',
       'no-console': 'warn',
       'react/prop-types': 'off',
@@ -567,6 +633,42 @@ export default [
       'no-console': 'warn',
       'no-undef': 'error'
     }
+<<<<<<< HEAD
+=======
+=======
+      'no-unused-vars': 'warn'
+    }
+  },
+  {
+    ignores: [
+      'node_modules/',
+      '.next/',
+      'out/',
+      'build/',
+      'dist/',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'src/pages/services/',
+      'src/pages/solutions/',
+      'src/pages/talent/',
+      'src/routes/',
+      'src/services/',
+      'src/store/',
+      'src/test/',
+      'src/utils/',
+      'tests/',
+      'tests.disabled/',
+      'types.disabled/',
+      'zion-os.disabled/',
+      'zion_academy/',
+      'temp_working/',
+      'test_build/',
+      'supabase/',
+      'working-automation-suite.cjs'
+    ]
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   }
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 ];

@@ -4,6 +4,9 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import { 
   Home, 
   Brain, 
@@ -125,8 +128,11 @@ export default function SitemapPage() {
         </section>
       </div>
     </>
+<<<<<<< HEAD
   );
 }
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -688,7 +694,13 @@ export default function SitemapPage() {
 
       <SmartFooter />
     </div>
+<<<<<<< HEAD
   ),
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  );
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 }animate= {
   {

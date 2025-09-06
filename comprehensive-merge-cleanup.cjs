@@ -1,7 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const fs = require("fs");"const path = require("path");/ Function to clean merge conflicts in a filefunction cleanMergeConflicts(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); / Remove all merge conflict markers''"
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+const fs = require("fs");"const path = require("path");/ Function to clean merge conflicts in a filefunction cleanMergeConflicts(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); / Remove all merge conflict markers''"
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 const fs = require('fs');
 const path = require('path');
 // Function to clean merge conflicts in a file;
@@ -9,11 +15,19 @@ function cleanMergeConflicts(filePath) {}
   try {}
     let content = fs.readFileSync(filePath, 'utf8');
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     // Remove all merge conflict markers
     // Remove duplicate category lines
     content = content.replace(/"category": '[^']*'},\s*"category": '[^']*'\s*}/g, (match) => {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+    // Remove all merge conflict markers
+    // Remove duplicate category lines
+    content = content.replace(/"category": '[^']*'},\s*"category": '[^']*'\s*}/g, (match) => {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     // Remove all merge conflict markers;
     content = content.replace(/[\s\S]*?[\s\S]*?origin\/cursor[^\n]*\n?/g, '');
     content = content.replace(/origin\/cursor[^\n]*\n?/g, '');
@@ -33,12 +47,20 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     content = content.replace(/"category": '[^']*'}\s*"category": '[^']*'\s*}/g, (match) => {}
       const categoryMatch = match.match(/"category": '([^']*)'/);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       if (categoryMatch) {
         return `category: '${categoryMatch[1]}'\n    }`}
       return match});
     // Remove any remaining merge conflict markers
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       if (categoryMatch) {}
         return `category: '${categoryMatch[1]}'\n    }`};
       return match}
@@ -76,4 +98,8 @@ cursor/website-audit-and-update-with-deployment-76dc;
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

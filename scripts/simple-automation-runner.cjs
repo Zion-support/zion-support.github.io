@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 #!/usr/bin/env node;
@@ -8,6 +9,8 @@ const path = require('path')      return size}}
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 #!/usr/bin/env node
 /**
  * Simple Automation Runner
@@ -144,6 +147,20 @@ async function runSimpleAutomation() {
         "timestamp": new Date().toISOString()
       });
       throw error}
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+=======
+#!/usr/bin/env node;
+const fs = require('fs')
+const path = require('path')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   }
   log(message) {
     const timestamp = new Date().toISOString();
@@ -231,6 +248,10 @@ async function runSimpleAutomation() {
       await this.runBuild();
       await this.runSecurityAudit();
       await this.applyImprovements();
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       this.generateReport();
       this.log('✅ Automation completed successfully');
     } catch (error) {
@@ -238,6 +259,13 @@ async function runSimpleAutomation() {
       this.results.status = 'failed';
     }
   }
+<<<<<<< HEAD
+=======
+=======
+      
+>>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       return size}}
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
     totalSize = getDirectorySize(buildDir);
@@ -283,10 +311,17 @@ if (require.main === module) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 module.exports = SimpleAutomationRunner;
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+module.exports = SimpleAutomationRunner;
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 module.exports = { runSimpleAutomation }) {
      {
   runSimpleAutomation().catch(console.error)}
@@ -321,6 +356,7 @@ const { execSync } = require('child_process')
     console.error(' Simple automation "failed")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         "status"
 =======
         "status"
@@ -328,3 +364,9 @@ const { execSync } = require('child_process')
 =======
         "status"
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+        "status"
+=======
+        "status"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

@@ -22,6 +22,10 @@ import Layout from '../components/Layout';
 
 const teamMembers = [
   {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     id: 1,
     name: "Kleber Santos",
     position: "CEO & Founder",
@@ -92,6 +96,37 @@ const teamMembers = [
     twitter: "https://twitter.com/lisawang",
     github: "https://github.com/lisawang",
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
+<<<<<<< HEAD
+=======
+=======
+    name: 'Dr. Sarah Johnson',
+    role: 'Chief Technology Officer',
+    expertise: 'AI & Machine Learning',
+    icon: Brain,
+    description: 'Leading our AI initiatives with 15+ years of experience in machine learning and data science.'
+  },
+  {
+    name: 'Michael Chen',
+    role: 'Cloud Solutions Architect',
+    expertise: 'Cloud Infrastructure',
+    icon: Cloud,
+    description: 'Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications.'
+  },
+  {
+    name: 'Emily Rodriguez',
+    role: 'Security Specialist',
+    expertise: 'Cybersecurity',
+    icon: Shield,
+    description: 'Ensuring enterprise-grade security with expertise in threat detection and prevention.'
+  },
+  {
+    name: 'David Thompson',
+    role: 'Team Lead',
+    expertise: 'Project Management',
+    icon: Users,
+    description: 'Leading our development teams with agile methodologies and client-focused delivery.'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   }
 ];
 
@@ -155,6 +190,10 @@ const stats = [
 
 export default function TeamPage() {
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     <Layout
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
@@ -386,6 +425,7 @@ export default function TeamPage() {
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
   );
 }
 =======
@@ -430,6 +470,9 @@ const teamMembers = [
 
 export default function TeamPage() {
   return (
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     <>
       <SEO
         title='Our Team | Zion Tech Group'
@@ -443,6 +486,10 @@ export default function TeamPage() {
         </p>
       </div>
     </>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   );
 <<<<<<< HEAD
 =======

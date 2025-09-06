@@ -192,11 +192,14 @@ module.exports = {;
       time: true,    },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       name: 'continuous-automation',
       script: 'node',
       args: 'scripts/automation/automation-orchestrator.cjs',
       cwd: '/workspace',
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
 =======
       name: 'auto-fix',
@@ -214,15 +217,42 @@ module.exports = {;
       log_file: './logs/automation-combined.log',
       time: true,    },
     {
+<<<<<<< HEAD
       name: 'comprehensive-automation',
       script: 'node',
       args: 'scripts/automation/comprehensive-continuous-automation.cjs',
+=======
+      name: 'healthcheck',
+      script: 'scripts/pm2/healthcheck.js',
+      instances: 1,
+      autorestart: true,
+      watch: false,
+      max_memory_restart: '128M',
+      env: {
+        NODE_ENV: 'production'
+      },
+      log_file: 'logs/pm2/health.log',
+      error_file: 'logs/pm2/health-error.log',
+      out_file: 'logs/pm2/health-out.log',
+    },
+    {
+      name: 'code-quality-monitor',
+      script: 'scripts/pm2/code-quality-monitor.js',
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+      name: 'bolt-zion-app',
+=======
+      name: 'ci-cd-pipeline',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+      script: 'npm',
+      args: 'run build',
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
+<<<<<<< HEAD
         NODE_ENV: 'production',      },
       cron_restart: '0 */6 * * *', // Every 6 hours
       error_file: './logs/comprehensive-automation-error.log',
@@ -291,6 +321,9 @@ module.exports = {;
       args: 'run lint',
       cwd: '/workspace',
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
 =======
         NODE_ENV: 'development',
@@ -306,6 +339,11 @@ module.exports = {;
       name: 'auto-commit-fixes',
       script: 'scripts/pm2/auto-commit-fixes.js',
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
         NODE_ENV: 'production',
       },
       log_file: 'logs/pm2/preview.log',
@@ -348,6 +386,7 @@ module.exports = {;
       max_memory_restart: '500M',
       env: {
 <<<<<<< HEAD
+<<<<<<< HEAD
         NODE_ENV: 'production',      },
       cron_restart: '0 */2 * * *', // Every 2 hours
       error_file: './logs/lint-checker-error.log',
@@ -362,6 +401,8 @@ module.exports = {;
       interpreter: "none",
       cwd: __dirname,
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
         NODE_ENV: 'production',
 =======
@@ -390,6 +431,18 @@ module.exports = {;
     }
   ]
 =======
+<<<<<<< HEAD
+=======
+=======
+        NODE_ENV: 'production',
+      },
+      cron_restart: '0 */6 * * *', // Every 6 hours
+      error_file: './logs/automation-error.log',
+      out_file: './logs/automation-out.log',
+      log_file: './logs/automation-combined.log',
+      time: true,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     },
     {
       name: 'auto-commit-fixes',
@@ -443,6 +496,7 @@ module.exports = {;
       env: {
         NODE_ENV: "production"
       },
+<<<<<<< HEAD
       log_date_format: "YYYY-MM-DD HH:mm:ss Z",
       error_file: "automation/logs/build-monitor-error.log",
       out_file: "automation/logs/build-monitor-out.log",
@@ -578,6 +632,9 @@ module.exports = {;
         CONFLICT_RESOLUTION: 'true',
         BRANCH_STRATEGY: 'gitflow',
       },
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       cron_restart: '0 */6 * * *', // Restart every 6 hours
       log_file: 'logs/pm2/git-workflow.log',
       error_file: 'logs/pm2/git-workflow-error.log',
@@ -835,4 +892,16 @@ module.exports = {}
   ];
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 };
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+=======
+      log_date_format: "YYYY-MM-DD HH:mm:ss Z",
+      error_file: "automation/logs/build-monitor-error.log",
+      out_file: "automation/logs/build-monitor-out.log",
+      time: true
+    }
+  ]
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

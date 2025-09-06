@@ -4,6 +4,7 @@ import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {
   const response = NextResponse.next();
 <<<<<<< HEAD
+<<<<<<< HEAD
   
   // Security headers
   response.headers.set('X-Frame-Options', 'DENY');
@@ -18,6 +19,8 @@ export function middleware(request: NextRequest) {
   );
   
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
   // Security Headers
   response.headers.set('X-Frame-Options', 'DENY');
@@ -83,6 +86,25 @@ export function middleware(request: NextRequest) {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
   return response;
 }
+<<<<<<< HEAD
+=======
+=======
+  
+  // Security headers
+  response.headers.set('X-Frame-Options', 'DENY');
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('Referrer-Policy', 'origin-when-cross-origin');
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  
+  // CSP header
+  response.headers.set(
+    'Content-Security-Policy',
+    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
+  );
+  
+  return response;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 export const config = {
   matcher: [

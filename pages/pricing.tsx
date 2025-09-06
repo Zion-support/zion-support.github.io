@@ -3,6 +3,10 @@
 import React from 'react';
 
 import Head from 'next/head';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 const PricingPage: React.FC = () => {
   return (
@@ -89,10 +93,13 @@ export default PricingPage;
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
 import React from 'react';
 import Head from 'next/head';
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import {
   Check,
   Star,
@@ -923,6 +930,7 @@ export default function PricingPage() {
   )
 }
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
 =======
     </UltraFuturisticBackground>
   )
@@ -931,3 +939,6 @@ export default function PricingPage() {
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

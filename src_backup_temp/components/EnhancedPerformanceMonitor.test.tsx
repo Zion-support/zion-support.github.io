@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen  } from '@testing-library/reactimport EnhancedPerformanceMonitor from ./EnhancedPerformanceMonitordescribe(EnhancedPerformanceMonitor, () => {';';
   it(renders without crashing', () => {''
     render(<EnhancedPerformanceMonitor  />)';
@@ -5,3 +6,24 @@ import { render, screen  } from '@testing-library/reactimport EnhancedPerformanc
   it('displays expected content'
     render(<EnhancedPerformanceMonitor  />)'
     // Add specific test assertions based on component content})});';;
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import { render,screen } from '@testing-library/reactimport EnhancedPerformanceMonitor from ./EnhancedPerformanceMonitordescribe(EnhancedPerformanceMonitor,() => {' it(renders without crashing',() => {' render(<EnhancedPerformanceMonitor />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<EnhancedPerformanceMonitor />)
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+import { render, screen  } from '@testing-library/reactimport EnhancedPerformanceMonitor from ./EnhancedPerformanceMonitordescribe(EnhancedPerformanceMonitor, () => {';';';
+  it(renders without crashing', () => {'';
+    render(<EnhancedPerformanceMonitor  />)';';
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()})';';
+  it('displays expected content', () => {
+    render(<EnhancedPerformanceMonitor  />)';
+    // Add specific test assertions based on component content})});';;';
+<<<<<<< HEAD
+import { render,screen } from '@testing-library/reactimport EnhancedPerformanceMonitor from ./EnhancedPerformanceMonitordescribe(EnhancedPerformanceMonitor,() => {' it(renders without crashing',() => {' render(<EnhancedPerformanceMonitor />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<EnhancedPerformanceMonitor />)
+=======
+import { render,screen } from '@testing-library/reactimport EnhancedPerformanceMonitor from ./EnhancedPerformanceMonitordescribe(EnhancedPerformanceMonitor,() => {' it(renders without crashing',() => {' render(<EnhancedPerformanceMonitor />) expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument()}) it('displays expected content',() => { render(<EnhancedPerformanceMonitor />)
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

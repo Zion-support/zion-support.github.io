@@ -40,9 +40,19 @@ class ErrorMonitor {
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
     // Initial health check
     await this.performHealthCheck();
     // Start continuous monitoring
@@ -76,8 +86,12 @@ class ErrorMonitor {
         type: 'health_check_failure',
         message: error.message,
 <<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
         timestamp: new Date().toISOString()
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
 <<<<<<< HEAD
         timestamp: new Date().toISOString()
 =======
@@ -86,7 +100,13 @@ class ErrorMonitor {
         timestamp: new Date().toISOString()
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd:automation/error-monitor.js
+=======
+=======
+        timestamp: new Date().toISOString()
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
         timestamp: new Date().toISOString(),
       });
     }
@@ -159,6 +179,10 @@ class ErrorMonitor {
       'src/App.tsx',
       'src/pages/index.tsx',
     ];
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
     for (const file of criticalFiles) {
       const filePath = path.join(this.projectRoot, file);
       if (!fs.existsSync(filePath)) {
@@ -166,6 +190,13 @@ class ErrorMonitor {
           type: 'missing_critical_file',
           file: file,
           message: `Critical file ${file} is missing`,
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
+=======
+=======
+
+     is missing`,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
           timestamp: new Date().toISOString(),
         });
         this.monitoringReport.metrics.totalErrors += 1;
@@ -175,6 +206,10 @@ class ErrorMonitor {
   parseTypeScriptErrors(output) {
     const errors = [];
     const lines = output.split('\n');
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
     for (const line of lines) {
       if (line.includes('error TS')) {
         const match = line.match(
@@ -201,6 +236,13 @@ class ErrorMonitor {
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd:automation/error-monitor.js
             timestamp: new Date().toISOString(),
           });
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
+=======
+=======
+
+    );
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
         }
       }
     }
@@ -208,14 +250,28 @@ class ErrorMonitor {
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
     return errors;
   }
   parseESLintErrors(output) {
     const errors = [];
     const lines = output.split('\n');
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
     for (const line of lines) {
       const match = line.match(/(.+):(\d+):(\d+):\s*(.+)/);
       if (match) {
@@ -243,7 +299,16 @@ class ErrorMonitor {
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd:automation/error-monitor.js
+=======
+=======
+
+    );
+      }
+    }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
           timestamp: new Date().toISOString(),
         });
       }
@@ -252,9 +317,19 @@ class ErrorMonitor {
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
     return errors;
   }
   updateHealthStatus() {
@@ -276,10 +351,14 @@ class ErrorMonitor {
     console.log(`📈 Total Errors: ${totalErrors}`);
     console.log(`⚠️  Total Warnings: ${totalWarnings}`);
 <<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
 <<<<<<< HEAD
     console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
     console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
@@ -292,7 +371,15 @@ class ErrorMonitor {
     console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd:automation/error-monitor.js
+=======
+=======
+    console.log(`🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`);
+    console.log(`🔍 Type Check Success: ${this.monitoringReport.metrics.typeCheckSuccess ? '✅' : '❌'}`);
+    console.log(`🧹 Lint Success: ${this.monitoringReport.metrics.lintSuccess ? '✅' : '❌'}`);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
     console.log(
       `🏗️  Build Success: ${this.monitoringReport.metrics.buildSuccess ? '✅' : '❌'}`
     );
@@ -310,13 +397,24 @@ class ErrorMonitor {
       const automation = new ErrorFixerAutomation();
       await automation.run();
 <<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
       console.log('✅ Error fixer completed');
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
 <<<<<<< HEAD
       console.log('✅ Error fixer completed');
 =======
 <<<<<<< HEAD
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd:automation/error-monitor.js
+=======
+=======
+      console.log('✅ Error fixer completed');
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
 
 =======
       console.log('✅ Error fixer completed');
@@ -329,8 +427,12 @@ class ErrorMonitor {
         type: 'error_fixer_failure',
         message: error.message,
 <<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
         timestamp: new Date().toISOString()
 =======
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
 <<<<<<< HEAD
         timestamp: new Date().toISOString()
 =======
@@ -339,7 +441,13 @@ class ErrorMonitor {
         timestamp: new Date().toISOString()
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd:automation/error-monitor.js
+=======
+=======
+        timestamp: new Date().toISOString()
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
         timestamp: new Date().toISOString(),
       });
     }
@@ -369,9 +477,19 @@ class ErrorMonitor {
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
 =======
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
     // Add duration to report
     this.monitoringReport.duration = Date.now() - this.startTime;
     fs.writeFileSync(
@@ -410,10 +528,28 @@ class ErrorMonitor {
     console.log('✅ Error Monitor shutdown complete');
     process.exit(0);
   }
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
 }
+=======
+<<<<<<< HEAD
+}
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js
 // Run the monitor
 if (require.main === module) {
   const monitor = new ErrorMonitor();
   monitor.start().catch(console.error);
+<<<<<<< HEAD:temp_broken_files/automation/error-monitor.js
 }
 module.exports = ErrorMonitor;
+=======
+<<<<<<< HEAD
+}
+module.exports = ErrorMonitor;
+=======
+
+module.exports = ErrorMonitor;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:automation/error-monitor.js

@@ -40,6 +40,15 @@ const apiEndpoints = [
     endpoint: '/api/it-services'
   }
 ];
+<<<<<<< HEAD
+=======
+=======
+import React from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+import Layout from '../components/Layout';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 export default function APIDocsPage() {
   return (
@@ -49,6 +58,10 @@ export default function APIDocsPage() {
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group services. Access our RESTful APIs for AI, IT, and micro SaaS solutions." />
         <meta name="keywords" content="API documentation, developer resources, REST API, integration, SDK" />
       </Head>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
@@ -160,6 +173,7 @@ export default function APIDocsPage() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   );
 }
 =======
@@ -192,9 +206,25 @@ export default function ApiDocsPage() {
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
         <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
+=======
+=======
+      <div className='container mx-auto px-4 py-16 text-gray-200'>
+        <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
+        <p className='text-gray-300'>
+          See{' '}
+          <a href='/api-docs' className='text-cyan-400 underline'>
+            API Documentation
+          </a>{' '}
+          for the full reference.
+        </p>
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
       </div>
 <<<<<<< HEAD
     </Layout>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   );
 =======
         <meta name="description" content="API reference and guides." />

@@ -21,10 +21,21 @@ import {
   Shield,
   Zap,
   Globe,
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   BarChart3,
   Search
 } from 'lucide-react';
 import SearchModal from './SearchModal';
+<<<<<<< HEAD
+=======
+=======
+  BarChart3
+} from 'lucide-react;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -329,6 +340,10 @@ export default function Navigation() {
                 Pricing
               </Link>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
@@ -342,6 +357,16 @@ export default function Navigation() {
               <Link 
                 href="/contact" 
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+<<<<<<< HEAD
+=======
+=======
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <Link
+                href=/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
               >
                 Get Started
               </Link>

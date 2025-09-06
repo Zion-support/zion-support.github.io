@@ -1,6 +1,47 @@
+<<<<<<< HEAD
 #!/usr/bin/env node;
 const { execSync } = require('child_process');
 
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node
+const { execSync } = require('child_process');
+function run(cmd) {
+	console.log(`$ ${cmd}`);
+	return execSync(cmd, { stdio: 'inherit' });
+}
+try {
+	// Lint (non-fatal), Type-check, Build
+	try { run('npm run lint'); } catch {}
+	run('npm run type-check');
+	run('npm run build');
+	// Restart preview app if running
+	try { run('pm2 reload bolt-zion-app'); } catch {}
+	console.log('Auto-fix run completed successfully.');
+} catch (e) {
+	console.error('Auto-fix run failed:', e.message);
+	process.exit(1);
+}
+#!/usr/bin/env node/usr/bin/env nodeconst { execSync } = require("child_process");function run(cmd) {console.log(`$ ${cmd}`);"return execSync(cmd, { stdio: "inherit" })}try {/ Lint (non-fatal), Type-check, Build"try { run("npm run lint")} catch {}"run("npm run type-check");"run("npm run build");/ Restart preview app if running"try { run("pm2 reload bolt-zion-app")} catch {}"console.log("Auto-fix run completed successfully.")} catch (e) {""console.error("Auto-fix run failed: ", e.message);process.exit(1)}""`"`
+#!/usr/bin/env node;
+const { execSync } = require('child_process');
+function run(cmd) {
+	return execSync(cmd, { "stdio": 'inherit' })}
+try {
+	// Lint (non-fatal), Type-check, Build
+	try { run('npm run lint')} catch {}
+	run('npm run type-check');
+	run('npm run build');
+	// Restart preview app if running
+	try { run('pm2 reload bolt-zion-app')} catch {}
+	} catch (e) {
+=======
+<<<<<<< HEAD
+#!/usr/bin/env node;
+const { execSync } = require('child_process');
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 function run(cmd) {}
 	console.log(`$ ${cmd}`);
 	return execSync(cmd, { "stdio": 'inherit' })};
@@ -247,7 +288,11 @@ try {}
 =======
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 >>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

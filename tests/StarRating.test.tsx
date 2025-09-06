@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { render,screen } from \'@testing-library/react\'; import StarRating from \'@/components/StarRating\'; test(\',\'rating 4.5 renders 4 full and 1 half star\',() => { expect(screen.getAllByTestId( \'full-star\')).toHaveLength(4)\'; expect(screen.getAllByTestId( \'half-star\')).toHaveLength(1)})\';
 const { render,screen } from "@testing-library/react"; import StarRating from "@/components/StarRating"; test(","rating 4.5 renders 4 full and 1 half star",() => { expect(screen.getAllByTestId( "full-star")).toHaveLength(4)"; expect(screen.getAllByTestId( "half-star")).toHaveLength(1)})";""
 import { render,screen } from '@testing-library/react'; import StarRating from '@/components/StarRating'; test(','rating 4.5 renders 4 full and 1 half star',() => { expect(screen.getAllByTestId( 'full-star')).toHaveLength(4)'; expect(screen.getAllByTestId( 'half-star')).toHaveLength(1)})';''
@@ -8,6 +9,18 @@ import { render,screen } from '@testing-library/react'; import StarRating from '
 import { render,screen } from \'@testing-library/react\'; import StarRating from \'@/components/StarRating\'; test(\',\'rating 4.5 renders 4 full and 1 half star\',() => { expect(screen.getAllByTestId( \'full-star\')).toHaveLength(4)\'; expect(screen.getAllByTestId( \'half-star\')).toHaveLength(1)})\';
 const { render,screen } from "@testing-library/react"; import StarRating from "@/components/StarRating"; test(","rating 4.5 renders 4 full and 1 half star",() => { expect(screen.getAllByTestId( "full-star")).toHaveLength(4)"; expect(screen.getAllByTestId( "half-star")).toHaveLength(1)})";""
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { render,screen } from \'@testing-library/react\'; import StarRating from \'@/components/StarRating\'; test(\',\'rating 4.5 renders 4 full and 1 half star\',() => { expect(screen.getAllByTestId( \'full-star\')).toHaveLength(4)\'; expect(screen.getAllByTestId( \'half-star\')).toHaveLength(1)})\';
+const { render,screen } from "@testing-library/react"; import StarRating from "@/components/StarRating"; test(","rating 4.5 renders 4 full and 1 half star",() => { expect(screen.getAllByTestId( "full-star")).toHaveLength(4)"; expect(screen.getAllByTestId( "half-star")).toHaveLength(1)})";""
+=======
+import { render,screen } from \'@testing-library/react\'; import StarRating from \'@/components/StarRating\'; test(\',\'rating 4.5 renders 4 full and 1 half star\',() => { expect(screen.getAllByTestId( \'full-star\')).toHaveLength(4)\'; expect(screen.getAllByTestId( \'half-star\')).toHaveLength(1)})\';
+const { render,screen } from "@testing-library/react"; import StarRating from "@/components/StarRating"; test(","rating 4.5 renders 4 full and 1 half star",() => { expect(screen.getAllByTestId( "full-star")).toHaveLength(4)"; expect(screen.getAllByTestId( "half-star")).toHaveLength(1)})";""
+import { render,screen } from '@testing-library/react'; import StarRating from '@/components/StarRating'; test(','rating 4.5 renders 4 full and 1 half star',() => { expect(screen.getAllByTestId( 'full-star')).toHaveLength(4)'; expect(screen.getAllByTestId( 'half-star')).toHaveLength(1)})';''
+import { render,screen } from '@testing-library/react'; import StarRating from '@/components/StarRating'; test(','rating 4.5 renders 4 full and 1 half star',() => { expect(screen.getAllByTestId( 'full-star')).toHaveLength(4)'; expect(screen.getAllByTestId( 'half-star')).toHaveLength(1)})';''
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import { render,screen } from '@testing-library/react'; import StarRating from '@/components/StarRating'; test(','rating 4.5 renders 4 full and 1 half star',() => { expect(screen.getAllByTestId( 'full-star')).toHaveLength(4)'; expect(screen.getAllByTestId( 'half-star')).toHaveLength(1)})';''
 =======
 <<<<<<< HEAD

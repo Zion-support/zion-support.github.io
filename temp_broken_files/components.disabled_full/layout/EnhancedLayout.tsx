@@ -24,6 +24,10 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
       <EnhancedFooter />
     </div>
   );
+<<<<<<< HEAD:temp_broken_files/components.disabled_full/layout/EnhancedLayout.tsx
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:components.disabled_full/layout/EnhancedLayout.tsx
 }
 <<<<<<< HEAD
  import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
@@ -33,3 +37,8 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
  import React,{ ReactNode } from "react";  import { ReactNode } from "react"; import EnhancedNavigation from "./EnhancedNavigation"; import EnhancedFooter from "./EnhancedFooter";
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD:temp_broken_files/components.disabled_full/layout/EnhancedLayout.tsx
+=======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d:components.disabled_full/layout/EnhancedLayout.tsx

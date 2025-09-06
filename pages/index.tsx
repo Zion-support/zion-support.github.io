@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import Head from 'next/head';
 import {useState, useEffect, Suspense} from 'react';
@@ -247,6 +248,9 @@ export default function Home() {
       </ErrorBoundary>;
     </>;
   );}
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react';
 <<<<<<< HEAD
 import { Button } from '@/components/ui/button';
@@ -407,8 +411,45 @@ export default function HomePage() {
                   </div>
                 </motion.div>
               ))}
+<<<<<<< HEAD
             </div>
 =======
+=======
+=======
+import Link from 'next/link';
+import Head from 'next/head';
+import { useState, useEffect, Suspense } from 'react';
+import { ContactInfo, AnimationState } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
+import PerformanceMonitor from '../components/PerformanceMonitor';
+export default function Home() {
+  const [animationState, setAnimationState] = useState<AnimationState>({
+    isLoaded: false,
+    hasError: false
+  });
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setAnimationState(prev => ({ ...prev, isLoaded: true }))
+    }, 100);
+    return () => clearTimeout(timer)
+  }, []);
+  if (animationState.hasError) {
+    return (
+      <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+        <div className="text-center text-white">
+          <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
+          <button 
+            onClick={() => window.location.reload()} 
+            className="px-4 py-2 bg-blue-600 rounded-lg hover: bg-blue-700"
+          >
+            Reload Page
+          </button>
+        </div>
+      </div>
+    );
+  };
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -528,6 +569,10 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-green-400 mb-2" aria-label="100 plus IT solutions">100+</h3>
                 <p className="text-slate-300">IT Solutions</p>
               </div>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
             </div>
           </div>
         </section>
@@ -634,6 +679,14 @@ export default function HomePage() {
 }
 import {Button} from '../src/components/ui/button';
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        {/* Services Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   return (
     <>
       <Head>
@@ -650,10 +703,26 @@ import {Button} from '../src/components/ui/button';
         {/* Hero Section */}
         <section className="min-h-screen flex items-center justify-center px-4 py-20">
           <div className="max-w-7xl mx-auto text-center">
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Core Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                Comprehensive technology solutions designed to accelerate your business growth
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
@@ -709,8 +778,14 @@ import {Button} from '../src/components/ui/button';
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Our Core Services
               </h2>
+<<<<<<< HEAD
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
+=======
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive IT solutions designed to accelerate your digital transformation journey.
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
               </p>
             </motion.div>
 
@@ -720,6 +795,10 @@ import {Button} from '../src/components/ui/button';
                   key={index}
                   className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                 >
@@ -786,6 +865,7 @@ import {Button} from '../src/components/ui/button';
                   <div className="mt-4">
                     <span className="text-2xl font-bold text-blue-600">{service.price}</span>
                   </div>
+<<<<<<< HEAD
                 </motion.div>
               ))}
             </div>
@@ -845,6 +925,9 @@ import {Button} from '../src/components/ui/button';
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
@@ -868,12 +951,52 @@ import {Button} from '../src/components/ui/button';
                       ))}
                     </ul>
                   </Card>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        {/* Why Choose Us */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Why Choose Zion Tech Group?
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                We deliver exceptional results through innovation, expertise, and dedication
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {whyChooseUs.map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                >
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <item.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
+                  <p className="text-gray-600">{item.description}</p>
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
         {/* Features Section */}
         <section className="py-20 px-4 bg-slate-900/50">
           <div className="max-w-7xl mx-auto">
@@ -985,7 +1108,11 @@ import {Button} from '../src/components/ui/button';
                       <div className="text-cyan-400 text-sm">{testimonial.role}</div>
                     </div>
                   </Card>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
                 </motion.div>
               ))}
             </div>
@@ -996,11 +1123,22 @@ import {Button} from '../src/components/ui/button';
 <<<<<<< HEAD
         <section className="py-16 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<<<<<<< HEAD
+=======
+=======
+        <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+          <div className="max-w-4xl mx-auto text-center">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 Ready to Transform Your Business?
               </h2>
@@ -1023,6 +1161,7 @@ import {Button} from '../src/components/ui/button';
                   Call Now
                 </Link>
 =======
+<<<<<<< HEAD
         <section className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -1031,6 +1170,8 @@ import {Button} from '../src/components/ui/button';
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Transform Your Business?
               </h2>
@@ -1045,7 +1186,11 @@ import {Button} from '../src/components/ui/button';
                 <Button variant="outline" size="lg">
                   Schedule Consultation
                 </Button>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
               </div>
             </motion.div>
           </div>
@@ -1055,8 +1200,15 @@ import {Button} from '../src/components/ui/button';
     </MainLayout>
   );
 }
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 =======
       </main>
     </>
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+=======
+=======
+      </main>
+    </>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

@@ -16,6 +16,10 @@
   to = "/.netlify/functions/:splat"
   status = 200
 =======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   command = "npm ci && npm run build"
   publish = "out"
 
@@ -50,6 +54,15 @@
     Origin-Agent-Cluster = "?1"
 
 # Static redirects to mirror Next.js redirects (since output: export)
+<<<<<<< HEAD
+=======
+=======
+[[plugins]]
+  package = "netlify-plugin-cloudinary"
+
+# Static redirects for exported site
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 [[redirects]]
   from = "/ai-customer-success-platform"
   to = "/services/ai-customer-success-platform/"
@@ -89,4 +102,12 @@
   from = "/affiliate-attribution-suite"
   to = "/services/affiliate-attribution-suite/"
   status = 301
+<<<<<<< HEAD
 >>>>>>> origin/chore/seo-redirects-netlify-fix
+=======
+<<<<<<< HEAD
+>>>>>>> origin/chore/seo-redirects-netlify-fix
+=======
+>>>>>>> origin/autobot/2025-08-24T03-49-38-332Z
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

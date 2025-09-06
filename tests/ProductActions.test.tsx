@@ -38,7 +38,11 @@ describe('ProductActions', () => {;
 
 =======
 import React from 'react';
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 interface ProductActions.testProps {
   // Add props here as needed
 }
@@ -61,4 +65,40 @@ export default function ProductActions.test({ }: ProductActions.testProps) {
 }
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+=======
+
+function setup() {
+  const addToCart = vi.fn().mockResolvedValue(undefined);
+  render(<ProductActions productId='1' addToCart={addToCart} />);
+  const button = screen.getByRole('button', { name: /add to cart/i });
+  return { addToCart, button };
+
+describe('ProductActions', () => {
+  it('resets label after mutation success', async () => {
+    vi.useFakeTimers();
+    const { addToCart, button } = setup();
+
+    fireEvent.click(button);
+
+    await waitFor(() => expect(addToCart).toHaveBeenCalled());
+
+    // Wait for the "Added!" status to appear
+    await waitFor(() => {
+      expect(button).toHaveTextContent('Added!');
+    });
+
+    vi.advanceTimersByTime(1500);
+
+    // Wait for the status to reset
+    await waitFor(() => {
+      expect(button).toHaveTextContent('Add to Cart');
+    });
+
+    vi.useRealTimers();
+  });
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

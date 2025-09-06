@@ -5,9 +5,192 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, Users } from 'lucide-react';
 import MainLayout from '../components/layout/MainLayout';
+<<<<<<< HEAD
+=======
+=======
+import Layout from '../components/layout/Layout';
+import SEOOptimizer from '../components/SEOOptimizer';
+import AnalyticsTracker from '../components/AnalyticsTracker';
+import ErrorBoundary from '../components/ErrorBoundary';
+import { motion } from 'framer-motion';
+<<<<<<< HEAD
+import {
+  Shield,
+  Lock,
+  Eye,
+  Database,
+  Globe,
+  User,
+  Settings,
+  AlertTriangle,
+  CheckCircle,
+  Mail,;
+=======
+import { 
+  Shield, Lock, Eye, Database, Globe, 
+  User, Settings, AlertTriangle, CheckCircle, Mail
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+} from 'lucide-react';
+
+const PrivacyPage: React.FC = () => {
+  const lastUpdated = 'January 17, 2025';
+
+  const privacySections = [
+    {
+      title: 'Information We Collect',
+<<<<<<< HEAD
+      icon: <Database className='w-8 h-8' />,
+      color: 'from-cyan-500 to-blue-500',
+      content: [
+        'Personal information (name, email, phone number, company)',
+        'Business information (company size, industry, project requirements)',
+        'Technical information (IP address, browser type, device information)',
+        'Usage data (website interactions, service usage patterns)',
+        'Communication records (emails, phone calls, support tickets)',
+      ],
+    },
+    {
+      title: 'How We Use Your Information',
+      icon: <Settings className='w-8 h-8' />,
+      color: 'from-purple-500 to-pink-500',
+      content: [
+        'Provide and improve our services',
+        'Communicate with you about our services',
+        'Process payments and manage accounts',
+        'Send marketing communications (with consent)',
+        'Analyze usage patterns and improve user experience',
+        'Comply with legal obligations',
+      ],
+    },
+    {
+      title: 'Information Sharing',
+      icon: <Globe className='w-8 h-8' />,
+      color: 'from-green-500 to-emerald-500',
+      content: [
+        'We do not sell, trade, or rent your personal information',
+        'Share with trusted service providers under strict confidentiality',
+        'Comply with legal requirements and court orders',
+        'Protect our rights, property, and safety',
+        'Business transfers (with notice and choice)',
+      ],
+    },
+    {
+      title: 'Data Security',
+      icon: <Lock className='w-8 h-8' />,
+      color: 'from-orange-500 to-red-500',
+      content: [
+        'Industry-standard encryption for data in transit and at rest',
+        'Regular security audits and vulnerability assessments',
+        'Access controls and authentication measures',
+        'Employee training on data protection',
+        'Incident response and breach notification procedures',
+      ],
+    },
+=======
+      icon: <Database className="w-8 h-8" />,
+      color: 'from-cyan-500 to-blue-500',
+      content: [
+        'Personal information (name, email, phone number, company)Business information (company size, industry, project requirements)Technical information (IP address, browser type, device information)Usage data (website interactions, service usage patterns)Communication records (emails, phone calls, support tickets)'
+      ]
+    };
+    {
+      title: 'How We Use Your Information',
+      icon: <Settings className="w-8 h-8" />,
+      color: 'from-purple-500 to-pink-500',
+      content: [
+        'Provide and improve our servicesCommunicate with you about our servicesProcess payments and manage accountsSend marketing communications (with consent)Analyze usage patterns and improve user experienceComply with legal obligations'
+      ]
+    };
+    {
+      title: 'Information Sharing',
+      icon: <Globe className="w-8 h-8" />,
+      color: 'from-green-500 to-emerald-500',
+      content: [
+        'We do not sell, trade, or rent your personal informationShare with trusted service providers under strict confidentialityComply with legal requirements and court ordersProtect our rights, property, and safetyBusiness transfers (with notice and choice)'
+      ]
+    };
+    {
+      title: 'Data Security',
+      icon: <Lock className="w-8 h-8" />,
+      color: 'from-orange-500 to-red-500',
+      content: [
+        'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
+      ]
+    }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  ];
+
+  const rights = [
+    {
+      title: 'Access',
+      description: 'Request access to your personal information',
+<<<<<<< HEAD
+      icon: <Eye className='w-6 h-6' />,
+    },
+    {
+      title: 'Correction',
+      description: 'Request correction of inaccurate information',
+      icon: <CheckCircle className='w-6 h-6' />,
+    },
+    {
+      title: 'Deletion',
+      description: 'Request deletion of your personal information',
+      icon: <AlertTriangle className='w-6 h-6' />,
+    },
+    {
+      title: 'Portability',
+      description: 'Request transfer of your data to another service',
+      icon: <Database className='w-6 h-6' />,
+    },
+    {
+      title: 'Objection',
+      description: 'Object to processing of your personal information',
+      icon: <User className='w-6 h-6' />,
+    },
+    {
+      title: 'Restriction',
+      description: 'Request restriction of processing activities',
+      icon: <Settings className='w-6 h-6' />,
+    },
+=======
+      icon: <Eye className="w-6 h-6" />
+    };
+    {
+      title: 'Correction',
+      description: 'Request correction of inaccurate information',
+      icon: <CheckCircle className="w-6 h-6" />
+    };
+    {
+      title: 'Deletion',
+      description: 'Request deletion of your personal information',
+      icon: <AlertTriangle className="w-6 h-6" />
+    };
+    {
+      title: 'Portability',
+      description: 'Request transfer of your data to another service',
+      icon: <Database className="w-6 h-6" />
+    };
+    {
+      title: 'Objection',
+      description: 'Object to processing of your personal information',
+      icon: <User className="w-6 h-6" />
+    };
+    {
+      title: 'Restriction',
+      description: 'Request restriction of processing activities',
+      icon: <Settings className="w-6 h-6" />
+    }
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  ];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
 export default function PrivacyPage() {
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     <MainLayout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
@@ -134,6 +317,7 @@ export default function PrivacyPage() {
   );
 }
 =======
+<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
@@ -238,6 +422,8 @@ const PrivacyPage: React.FC = () => {
     },  ];
 
   return (
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
     <ErrorBoundary>
       <SEOOptimizer />
       <AnalyticsTracker />
@@ -626,6 +812,7 @@ export default PrivacyPage;
 
  
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
 =======
 
  
@@ -633,3 +820,6 @@ export default PrivacyPage;
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

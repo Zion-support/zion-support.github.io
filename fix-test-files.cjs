@@ -1,8 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 // Function to fix common syntax errors in test files
 function fixTestFile(filePath) {
   try {
@@ -49,7 +52,13 @@ files.forEach(file => {
   }
 });
 console.log(`Fixed ${fixedCount} out of ${files.length} test files`);
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 // Function to fix malformed test files;
 function fixTestFile(filePath) {}
   try {}
@@ -142,4 +151,8 @@ console.log(`Fixed ${fixedCount} malformed test files`);
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
 =======
 console.log(`Removed unused fireEvent from ${fireEventCount} files`);
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

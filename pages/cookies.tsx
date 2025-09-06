@@ -349,10 +349,14 @@ export default function CookiePolicyPage() {
         </section>
       </div>
     </MainLayout>
+<<<<<<< HEAD
   );
 }
 =======
 <<<<<<< HEAD
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 <<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Head from 'next/head';
@@ -415,6 +419,10 @@ export default function CookiesPage() {
         </div>
       </Layout>
     </>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
   );
 
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground> 

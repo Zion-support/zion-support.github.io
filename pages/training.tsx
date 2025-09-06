@@ -20,10 +20,13 @@ export default function Training() {
             <p className="text-gray-600">Training page is under construction.</p>
           </div>
         </div>
+<<<<<<< HEAD
       </div>
     </Layout>
   );
 }
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 =======
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
@@ -800,9 +803,20 @@ export default function TrainingPage() {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
       </div>
     </Layout>
   ),
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+      </div>
+    </Layout>
+<<<<<<< HEAD
+  );
+<<<<<<< HEAD
+}
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 
   {
   opacity: 0, y: 20 
@@ -866,7 +880,11 @@ export default function TrainingPage() {
 
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default Training;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 =======
 };export default Training;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d

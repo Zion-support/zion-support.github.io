@@ -157,6 +157,7 @@ global.ResizeObserver = class ResizeObserver {
   unobserve() {}
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // Global test setup,
 beforeEach(() => {
@@ -168,6 +169,8 @@ beforeEach(() => {
   jest.clearAllMocks();
 });
 =======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -207,4 +210,15 @@ import '@testing-library/jest-dom'; global.IntersectionObserver = class Intersec
 import '@testing-library/jest-dom'; global.IntersectionObserver = class IntersectionObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; global.ResizeObserver = class ResizeObserver { constructor() {} disconnect() {} observe() {} unobserve() {} }; Object.defineProperty(window,'matchMedia',{ writable: true,value: jest.fn().mockImplementation(query => ({ matches: false,media: query,onchange: null,addListener: jest.fn(),removeListener: jest.fn(),addEventListener: jest.fn(),removeEventListener: jest.fn(),dispatchEvent: jest.fn(),})),});
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
+=======
+=======
+
+// Global test setup
+beforeEach(() => {
+  // Reset all mocks before each test
+  jest.clearAllMocks();
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
