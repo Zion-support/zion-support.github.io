@@ -42,15 +42,15 @@ export interface ComprehensiveService {
 
 const contact = {
   mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};
+  website: 'https://ziontechgroup && ziontechgroup.com',};
 
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
   {  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
+  email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup && ziontechgroup.com'
 };
 
 export const comprehensiveServicesExpansion: ComprehensiveService[] = [
@@ -78,7 +78,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '🔍',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-code-review-assistant',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-code-review-assistant',
     marketPosition:
       'Competes with SonarQube, CodeClimate; adds AI-powered insights and security focus.',
     targetAudience: 'Development teams, DevOps engineers, CTOs',
@@ -102,7 +102,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'AI-powered analysis engine with custom rule sets and integration APIs.',
     launchDate: '2025-01-15',
     customers: 156,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 89,
   },
   {
@@ -129,7 +129,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '🚨',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/intelligent-incident-response',
+    link: 'https://ziontechgroup && ziontechgroup.com/intelligent-incident-response',
     marketPosition:
       'Advanced alternative to PagerDuty, Opsgenie with AI capabilities.',
     targetAudience: 'SRE teams, DevOps engineers, IT operations',
@@ -151,7 +151,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'AI incident detection engine with automated response workflows and team coordination.',
     launchDate: '2025-02-01',
     customers: 89,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 67,
   },
   {
@@ -177,7 +177,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '🔐',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/quantum-resistant-cryptography',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-resistant-cryptography',
     marketPosition:
       'Early mover in post-quantum cryptography; specialized security solution.',
     targetAudience: 'Financial institutions, government agencies, healthcare',
@@ -199,7 +199,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Post-quantum algorithm implementations with hybrid encryption and key management.',
     launchDate: '2025-01-20',
     customers: 23,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 18,
   },
   {
@@ -226,7 +226,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '🤖',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/autonomous-devops-orchestrator',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-devops-orchestrator',
     marketPosition:
       'Next-generation DevOps automation; competes with traditional CI/CD tools.',
     targetAudience: 'DevOps teams, Platform engineers, SREs',
@@ -250,7 +250,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'AI-powered orchestration engine with autonomous decision-making and self-healing capabilities.',
     launchDate: '2025-02-10',
     customers: 134,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 92,
   },
   {
@@ -277,7 +277,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '🌐',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/edge-ai-inference-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/edge-ai-inference-platform',
     marketPosition:
       'Specialized edge AI platform; complements cloud AI services.',
     targetAudience: 'IoT developers, Edge computing teams, AI engineers',
@@ -299,7 +299,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Edge deployment framework with model optimization and device management capabilities.',
     launchDate: '2025-01-25',
     customers: 67,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 41,
   },
   {
@@ -326,7 +326,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '⛓️',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/blockchain-governance-automation',
+    link: 'https://ziontechgroup && ziontechgroup.com/blockchain-governance-automation',
     marketPosition:
       'Specialized blockchain governance; addresses regulatory compliance needs.',
     targetAudience: 'DeFi protocols, Enterprise blockchain, Regulatory teams',
@@ -348,7 +348,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Multi-chain governance engine with automated compliance and risk management.',
     launchDate: '2025-02-05',
     customers: 45,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 33,
   },
   {
@@ -375,7 +375,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '🎯',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
-    link: 'https://ziontechgroup.com/ai-customer-success-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-success-platform',
     marketPosition:
       'AI-enhanced customer success; competes with Gainsight, Totango.',
     targetAudience: 'Customer success teams, Account managers, Growth teams',
@@ -397,7 +397,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'AI-powered predictive analytics engine with automated engagement workflows.',
     launchDate: '2025-01-30',
     customers: 178,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 124,
   },
   {
@@ -424,7 +424,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '⚛️',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/quantum-machine-learning-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-machine-learning-platform',
     marketPosition:
       'Cutting-edge quantum ML; specialized for complex computational problems.',
     targetAudience:
@@ -447,7 +447,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Quantum algorithm library with hybrid classical-quantum optimization capabilities.',
     launchDate: '2025-02-15',
     customers: 28,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 22,
   },
   {
@@ -473,7 +473,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '📦',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/intelligent-supply-chain-optimizer',
+    link: 'https://ziontechgroup && ziontechgroup.com/intelligent-supply-chain-optimizer',
     marketPosition:
       'AI-powered supply chain; competes with SAP, Oracle, Blue Yonder.',
     targetAudience: 'Manufacturing, Retail, Logistics companies',
@@ -495,7 +495,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'AI-powered optimization engine with real-time monitoring and predictive analytics.',
     launchDate: '2025-02-20',
     customers: 89,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 67,
   },
   {
@@ -521,7 +521,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '🛡️',
     color: 'from-red-600 to-orange-700',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/cybersecurity-threat-intelligence',
+    link: 'https://ziontechgroup && ziontechgroup.com/cybersecurity-threat-intelligence',
     marketPosition:
       'Comprehensive threat intelligence; competes with CrowdStrike, Palo Alto Networks.',
     targetAudience: 'Security teams, CISOs, IT security professionals',
@@ -543,7 +543,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'AI-powered threat detection engine with automated response and intelligence sharing.',
     launchDate: '2025-02-25',
     customers: 156,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 118,
   },
   {
@@ -570,9 +570,9 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '✍️',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/ai-content-creation-suite',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-content-creation-suite',
     marketPosition:
-      'AI-powered content creation; competes with Jasper, Copy.ai, Grammarly.',
+      'AI-powered content creation; competes with Jasper, Copy && Copy.ai, Grammarly.',
     targetAudience: 'Marketing teams, Content creators, Small businesses',
     trialDays: 7,
     setupTime: '1 day',
@@ -582,7 +582,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     integrations: ['WordPress, HubSpot, Mailchimp, Social media platforms'],
     useCases: ['Content marketing, SEO optimization, Social media management'],
     roi: 'Increase content production by 300-500% and improve engagement by 25-40%.',
-    competitors: ['Jasper, Copy.ai, Grammarly, Writesonic'],
+    competitors: ['Jasper, Copy && Copy.ai, Grammarly, Writesonic'],
     marketSize: '$12B content creation tools',
     growthRate: '35% YoY',
     variant: 'ai-creative',
@@ -592,7 +592,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'AI content generation engine with optimization and distribution capabilities.',
     launchDate: '2025-03-01',
     customers: 234,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 167,
   },
   {
@@ -618,7 +618,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '📊',
     color: 'from-teal-600 to-cyan-700',
     textColor: 'text-teal-400',
-    link: 'https://ziontechgroup.com/intelligent-data-governance',
+    link: 'https://ziontechgroup && ziontechgroup.com/intelligent-data-governance',
     marketPosition:
       'AI-powered data governance; competes with Collibra, Alation, Informatica.',
     targetAudience: 'Data teams, Compliance officers, Data stewards',
@@ -640,7 +640,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'AI-powered data quality engine with automated compliance and governance workflows.',
     launchDate: '2025-03-05',
     customers: 78,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 56,
   },
   {
@@ -667,7 +667,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '💰',
     color: 'from-yellow-600 to-amber-700',
     textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/quantum-financial-trading-engine',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-financial-trading-engine',
     marketPosition:
       'Cutting-edge quantum trading; specialized for institutional investors.',
     targetAudience: 'Hedge funds, Investment banks, Institutional investors',
@@ -689,7 +689,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Quantum algorithm implementations for financial optimization and risk management.',
     launchDate: '2025-03-10',
     customers: 34,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 28,
   },
   {
@@ -716,7 +716,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '👥',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/ai-hr-automation-suite',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-hr-automation-suite',
     marketPosition:
       'AI-enhanced HR automation; competes with Workday, BambooHR, Greenhouse.',
     targetAudience: 'HR teams, Recruiters, People operations',
@@ -740,7 +740,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'AI-powered HR automation engine with intelligent workflows and analytics.',
     launchDate: '2025-03-15',
     customers: 189,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 134,
   },
   {
@@ -766,7 +766,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '🌐',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/intelligent-iot-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/intelligent-iot-platform',
     marketPosition:
       'AI-powered IoT platform; competes with AWS IoT, Azure IoT, Google Cloud IoT.',
     targetAudience: 'IoT developers, Manufacturing, Smart cities',
@@ -788,7 +788,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'IoT device management platform with AI-powered analytics and automation.',
     launchDate: '2025-03-20',
     customers: 67,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 45,
   },
   {
@@ -814,7 +814,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '🔒',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/quantum-cybersecurity-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-cybersecurity-platform',
     marketPosition:
       'Future-proof quantum security; specialized for high-security environments.',
     targetAudience:
@@ -837,7 +837,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'Quantum-resistant cryptographic implementations with hybrid security systems.',
     launchDate: '2025-03-25',
     customers: 19,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 15,
   },
   {
@@ -864,7 +864,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '📈',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-sales-intelligence-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-intelligence-platform',
     marketPosition:
       'AI-enhanced sales intelligence; competes with Salesforce Einstein, HubSpot, Pipedrive.',
     targetAudience: 'Sales teams, Sales managers, Revenue operations',
@@ -886,7 +886,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
       'AI-powered sales analytics engine with predictive insights and automation.',
     launchDate: '2025-04-01',
     customers: 234,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 178,
   },
 ];      'Predictive lead scoringCustomer behavior analysisSales process optimizationRevenue forecastingPipeline analyticsAutomated follow-upsIntegration with CRM systemsPerformance tracking';
@@ -896,7 +896,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     icon: '📈';
     color: 'from-blue-600 to-indigo-700';
     textColor: 'text-blue-400';
-    link: 'https://ziontechgroup.com/ai-sales-intelligence-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-intelligence-platform',
     marketPosition: 'AI-enhanced sales intelligence, competes with Salesforce Einstein, HubSpot, Pipedrive.';
     targetAudience: 'Sales teams, Sales managers, Revenue operations';
     trialDays: 14;
@@ -916,7 +916,7 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     implementationDetails: 'AI-powered sales analytics engine with predictive insights and automation.';
     launchDate: '2025-04-01';
     customers: 234;
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 178
   }
 ];

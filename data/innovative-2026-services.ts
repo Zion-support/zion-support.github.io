@@ -69,7 +69,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     icon: '🧠',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-consciousness-simulation-pro',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-consciousness-simulation-pro',
     marketPosition:
       'First-to-market consciousness simulation platform. No direct competitors in this specialized field.',
     targetAudience:
@@ -110,16 +110,16 @@ export const innovative2026Services: Innovative2026Service[] = [
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced AI platform with quantum computing integration, real-time consciousness simulation, and comprehensive research tools.',
     launchDate: '2026-01-15',
     customers: 150,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 89,
   },
 
@@ -148,7 +148,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     icon: '⚡',
     color: 'from-cyan-500 to-blue-600',
     textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/quantum-neural-interface-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-neural-interface-platform',
     marketPosition:
       'Leading quantum neural interface platform. Competes with Neuralink and other brain-computer interface companies.',
     targetAudience:
@@ -191,16 +191,16 @@ export const innovative2026Services: Innovative2026Service[] = [
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced neural interface platform with quantum security, real-time processing, and comprehensive integration capabilities.',
     launchDate: '2026-02-01',
     customers: 75,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 45,
   },
 
@@ -208,13 +208,13 @@ export const innovative2026Services: Innovative2026Service[] = [
   {
     id: 'ai-time-series-prediction-elite',
     name: 'AI Time Series Prediction Elite',
-    tagline: '99.9% accurate future predictions with quantum AI',
+    tagline: '99 && 99.9% accurate future predictions with quantum AI',
     price: '$1,999',
     period: '/month',
     description:
-      'Advanced AI platform that provides 99.9% accurate predictions for time series data, including financial markets, weather patterns, and business trends.',
+      'Advanced AI platform that provides 99 && 99.9% accurate predictions for time series data, including financial markets, weather patterns, and business trends.',
     features: [
-      '99.9% prediction accuracy',
+      '99 && 99.9% prediction accuracy',
       'Multi-dimensional analysis',
       'Real-time data processing',
       'Quantum AI algorithms',
@@ -229,7 +229,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     icon: '🔮',
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/ai-time-series-prediction-elite',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-time-series-prediction-elite',
     marketPosition:
       'Highest accuracy time series prediction platform. Competes with advanced financial modeling tools.',
     targetAudience:
@@ -272,16 +272,16 @@ export const innovative2026Services: Innovative2026Service[] = [
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced prediction platform with quantum AI algorithms, real-time processing, and comprehensive analytics capabilities.',
     launchDate: '2026-01-20',
     customers: 300,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 156,
   },
 
@@ -310,7 +310,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     icon: '🔒',
     color: 'from-red-500 to-pink-600',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/quantum-internet-security-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-security-platform',
     marketPosition:
       'Leading quantum internet security platform. Competes with traditional cybersecurity solutions.',
     targetAudience:
@@ -352,16 +352,16 @@ export const innovative2026Services: Innovative2026Service[] = [
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced quantum security platform with real-time monitoring, threat detection, and comprehensive protection capabilities.',
     launchDate: '2026-02-15',
     customers: 120,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 78,
   },
 
@@ -390,7 +390,7 @@ export const innovative2026Services: Innovative2026Service[] = [
     icon: '❤️',
     color: 'from-pink-500 to-rose-600',
     textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/ai-emotional-intelligence-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-emotional-intelligence-platform',
     marketPosition:
       'Leading emotional intelligence AI platform. Competes with sentiment analysis and AI interaction tools.',
     targetAudience:
@@ -432,28 +432,28 @@ export const innovative2026Services: Innovative2026Service[] = [
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced emotional intelligence platform with real-time emotion detection, analysis, and response generation capabilities.',
     launchDate: '2026-01-25',
     customers: 450,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 234,
   },
 ];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Advanced emotional intelligence platform with real-time emotion detection, analysis, and response generation capabilities.';
     launchDate: '2026-01-25';
     customers: 450;
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 234
   }
 ];

@@ -4,14 +4,14 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+  if (req && req.method !== "POST") {
+    return res && res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
-    const { name, email, role, country, source } = req.body || {};
+    const { name, email, role, country, source } = req && req.body || {};
     if (!name || !email || !role || !country) {
-      return res.status(400).json({ error: "Missing required fields" });
+      return res && res.status(400).json({ error: "Missing required fields" });
     }
 
     const { data, error } = await supabase
@@ -29,11 +29,11 @@ export default async function handler(
       .select("*")
       .single();
     if (error) {
-      return res.status(500).json({ error: error.message });
+      return res && res.status(500).json({ error: error && error.message });
     }
 
-    return res.status(200).json({ ok: true, registration: data });
+    return res && res.status(200).json({ ok: true, registration: data });
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message || "Unknown error" });
+    return res && res.status(500).json({ error: e?.message || "Unknown error" });
   }
 }

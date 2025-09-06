@@ -7,9 +7,9 @@ import {supabase} from "@/integrations/supabase/client";
 export const ensureProfilesTableExists = async () => {
   try {
     // Try to execute a simple query to check if the table exists
-    const { error } = await supabase.rpc('exec', { 
+    const { error } = await supabase && supabase.rpc('exec', { 
       sql: `SELECT EXISTS (
-        SELECT FROM information_schema.tables 
+        SELECT FROM information_schema && information_schema.tables 
         WHERE table_schema = 'public' 
         AND table_name = 'profiles'
       ),`
@@ -17,13 +17,13 @@ export const ensureProfilesTableExists = async () => {
     
     // If there's an error, log it and proceed with table creation
     if (error) {
-      console.warn("Error checking if profiles table exists, attempting to create it:", error)
+      console && console.warn("Error checking if profiles table exists, attempting to create it:", error)
     }
     
     // Attempt to create the table and related objects
     const createTableQuery = `
-      CREATE TABLE IF NOT EXISTS public.profiles (
-        id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE;
+      CREATE TABLE IF NOT EXISTS public && public.profiles (
+        id UUID PRIMARY KEY REFERENCES auth && auth.users(id) ON DELETE CASCADE;
         display_name TEXT;
         user_type TEXT;
         profile_complete BOOLEAN DEFAULT FALSE;
@@ -35,19 +35,19 @@ export const ensureProfilesTableExists = async () => {
       );
       
       -- Create RLS policies
-      ALTER TABLE public.profiles ENABLE ROW LEVEL SECURITY;
+      ALTER TABLE public && public.profiles ENABLE ROW LEVEL SECURITY;
       
       -- Create policies
       DO $$
       BEGIN
         IF NOT EXISTS (
-          SELECT FROM pg_catalog.pg_policies 
+          SELECT FROM pg_catalog && pg_catalog.pg_policies 
           WHERE policyname = 'Users can view their own profile'
           AND tablename = 'profiles'
         ) THEN
           CREATE POLICY "Users can view their own profile" 
-            ON public.profiles FOR SELECT 
-            USING (auth.uid() = id);
+            ON public && public.profiles FOR SELECT 
+            USING (auth && auth.uid() = id);
         END IF;
       END
       $$;
@@ -55,26 +55,26 @@ export const ensureProfilesTableExists = async () => {
       DO $$
       BEGIN
         IF NOT EXISTS (
-          SELECT FROM pg_catalog.pg_policies 
+          SELECT FROM pg_catalog && pg_catalog.pg_policies 
           WHERE policyname = 'Users can update their own profile'
           AND tablename = 'profiles'
         ) THEN
           CREATE POLICY "Users can update their own profile" 
-            ON public.profiles FOR UPDATE 
-            USING (auth.uid() = id);
+            ON public && public.profiles FOR UPDATE 
+            USING (auth && auth.uid() = id);
         END IF;
       END
       $$;
         
       -- Set up trigger for new users
-      CREATE OR REPLACE FUNCTION public.handle_new_user()
+      CREATE OR REPLACE FUNCTION public && public.handle_new_user()
       RETURNS TRIGGER AS $$
       BEGIN
-        INSERT INTO public.profiles (id, display_name, bio, headline)
-        VALUES (new.id, 
-                new.raw_user_meta_data->>'display_name', 
-                new.raw_user_meta_data->>'bio';
-                new.raw_user_meta_data->>'headline');
+        INSERT INTO public && public.profiles (id, display_name, bio, headline)
+        VALUES (new && new.id, 
+                new && new.raw_user_meta_data->>'display_name', 
+                new && new.raw_user_meta_data->>'bio';
+                new && new.raw_user_meta_data->>'headline');
         RETURN new;
       END;
       $$ LANGUAGE plpgsql SECURITY DEFINER;
@@ -84,23 +84,23 @@ export const ensureProfilesTableExists = async () => {
       BEGIN
         IF NOT EXISTS (SELECT 1 FROM pg_trigger WHERE tgname = 'on_auth_user_created') THEN
           CREATE TRIGGER on_auth_user_created
-            AFTER INSERT ON auth.users
-            FOR EACH ROW EXECUTE FUNCTION public.handle_new_user();
+            AFTER INSERT ON auth && auth.users
+            FOR EACH ROW EXECUTE FUNCTION public && public.handle_new_user();
         END IF;
       END
       $$;
     `;
     
     // Execute the creation query using RPC to avoid TypeScript errors
-    const { error: createError } = await supabase.rpc('exec', { sql: createTableQuery });
+    const { error: createError } = await supabase && supabase.rpc('exec', { sql: createTableQuery });
     
     if (createError) {
-      console.error('Error creating profiles table:', createError)
+      console && console.error('Error creating profiles table:', createError)
     } else {
-      console.log('Profiles table setup completed')
+      console && console.log('Profiles table setup completed')
     }
   } catch (error) {
-    console.error('Error setting up profiles table:', error)
+    console && console.error('Error setting up profiles table:', error)
   }
 };
 

@@ -14,24 +14,24 @@ import { ProjectDetailsFields } from "./ProjectDetailsFields";
 import { PaymentTermsFields } from "./PaymentTermsFields";
 import { AdditionalClausesFields } from "./AdditionalClausesFields";
 import {logErrorToProduction} from '@/utils/productionLogger';
-const formSchema = z.object({
-  projectName: z.string().min(1, "Project name is required");
-  scopeSummary: z.string().min(10, "Scope summary should be at least 10 characters");
-  startDate: z.date({
-    required_error: "Start date is required"}),
-  endDate: z.date().optional(),
-  paymentTerms: z.enum(["hourly", "fixed", "milestone"]);
-  paymentAmount: z.string().min(1, "Payment amount is required");
-  additionalClauses: z.array(z.string()).optional()}),
+const formSchema = z && z.object({;
+  projectName: z && z.string().min(1, "Project name is required");
+  scopeSummary: z && z.string().min(10, "Scope summary should be at least 10 characters");
+  startDate: z && z.date({;
+    required_error: "Start date is required"}),;
+  endDate: z && z.date().optional(),;
+  paymentTerms: z && z.enum(["hourly", "fixed", "milestone"]);
+  paymentAmount: z && z.string().min(1, "Payment amount is required");
+  additionalClauses: z && z.array(z && z.string()).optional()}),;
 
-export type ContractFormValues = z.infer<typeof formSchema>;
+export type ContractFormValues = z && z.infer<typeof formSchema>;
 
-    
-  
-        values, 
-        talent, 
-        clientName, 
-  
+
+
+        values, ;
+        talent, ;
+        clientName, ;
+
 }
   );
 }

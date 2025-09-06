@@ -1,6 +1,6 @@
 
-import {serve} from "https: //deno.land/std@0.177.0/http/server.ts",
-import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
+import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server && server.ts",
+import {createClient} from 'https: //esm && esm.sh/@supabase/supabase-js@2 ;
 interface CreateWebhookRequest {
   name: string;
   url: string;
@@ -14,13 +14,13 @@ interface WebhookTestRequest {
 }
 
 // Create a Supabase client
-const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
-const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL") as string;
+const supabaseKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 serve(async (req) => {
   // Handle CORS for browser requests
-  if (req.method === 'OPTIONS') {
+  if (req && req.method === 'OPTIONS') {
     return new Response('ok', {
       headers: {
         'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, GET, OPTIONSAccess-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}})
@@ -28,54 +28,54 @@ serve(async (req) => {
 
   try {
     // Extract auth token from request
-    const authHeader = req.headers.get('Authorization');
+    const authHeader = req && req.headers.get('Authorization');
     if (!authHeader) {
-      return new Response(JSON.stringify({ error: 'Missing authorization header' }), {
+      return new Response(JSON && JSON.stringify({ error: 'Missing authorization header' }), {
         status: 401,
         headers: { 'Content-Type': 'application/json' }})
     }
 
     // Verify the token with Supabase auth
-    const token = authHeader.replace('Bearer ', '');
-    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+    const token = authHeader && authHeader.replace('Bearer ', '');
+    const { data: { user }, error: authError } = await supabase && supabase.auth.getUser(token);
     
     if (authError || !user) {
-      return new Response(JSON.stringify({ error: 'Unauthorized' }), {
+      return new Response(JSON && JSON.stringify({ error: 'Unauthorized' }), {
         status: 401,
         headers: { 'Content-Type': 'application/json' }})
     }
 
     // Parse URL to determine action
-    const url = new URL(req.url);
-    const path = url.pathname.split('/').pop();
+    const url = new URL(req && req.url);
+    const path = url && url.pathname.split('/').pop();
 
     // Handle different actions
-    if (req.method === 'POST') {
+    if (req && req.method === 'POST') {
       if (path === 'create') {
-        const { name, url, eventTypes, secret } = await req.json() as CreateWebhookRequest;
-        return await createWebhook(user.id, name, url, eventTypes, secret)
+        const { name, url, eventTypes, secret } = await req && req.json() as CreateWebhookRequest;
+        return await createWebhook(user && user.id, name, url, eventTypes, secret)
       } else if (path === 'toggle') {
-        const { webhookId, isActive } = await req.json();
-        return await toggleWebhook(user.id, webhookId, isActive)
+        const { webhookId, isActive } = await req && req.json();
+        return await toggleWebhook(user && user.id, webhookId, isActive)
       } else if (path === 'test') {
-        const { webhookId, eventType } = await req.json() as WebhookTestRequest;
-        return await testWebhook(user.id, webhookId, eventType)
+        const { webhookId, eventType } = await req && req.json() as WebhookTestRequest;
+        return await testWebhook(user && user.id, webhookId, eventType)
       } else if (path === 'delete') {
-        const { webhookId } = await req.json();
-        return await deleteWebhook(user.id, webhookId)
+        const { webhookId } = await req && req.json();
+        return await deleteWebhook(user && user.id, webhookId)
       }
-    } else if (req.method === 'GET') {
+    } else if (req && req.method === 'GET') {
       if (path === 'webhooks') {
-        return await getUserWebhooks(user.id)
+        return await getUserWebhooks(user && user.id)
       }
     }
 
-    return new Response(JSON.stringify({ error: 'Invalid action' }), {
+    return new Response(JSON && JSON.stringify({ error: 'Invalid action' }), {
       status: 400,
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
-    console.error('Error processing request:', error);
-    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+    console && console.error('Error processing request:', error);
+    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
   }
@@ -95,21 +95,21 @@ async function createWebhook(userId: string, name: string, url: string, eventTyp
       .select('id, name, url, event_types, is_active, created_at');
 
     if (error) {
-      console.error('Error creating webhook:', error);
-      return new Response(JSON.stringify({ error: 'Failed to create webhook' }), {
+      console && console.error('Error creating webhook:', error);
+      return new Response(JSON && JSON.stringify({ error: 'Failed to create webhook' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }})
     }
 
-    return new Response(JSON.stringify({ 
+    return new Response(JSON && JSON.stringify({ 
       webhook: data[0],
       message: 'Webhook created successfully'
     }), {
       status: 201,
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
-    console.error('Error in createWebhook:', error);
-    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+    console && console.error('Error in createWebhook:', error);
+    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
   }
@@ -124,18 +124,18 @@ async function getUserWebhooks(userId: string) {
       .order('created_at', { ascending: false });
 
     if (error) {
-      console.error('Error fetching webhooks:', error);
-      return new Response(JSON.stringify({ error: 'Failed to fetch webhooks' }), {
+      console && console.error('Error fetching webhooks:', error);
+      return new Response(JSON && JSON.stringify({ error: 'Failed to fetch webhooks' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }})
     }
 
-    return new Response(JSON.stringify({ webhooks: data }), {
+    return new Response(JSON && JSON.stringify({ webhooks: data }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
-    console.error('Error in getUserWebhooks:', error);
-    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+    console && console.error('Error in getUserWebhooks:', error);
+    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
   }
@@ -150,22 +150,22 @@ async function toggleWebhook(userId: string, webhookId: string, isActive: boolea
       .eq('user_id', userId)
       .select('id, name, is_active');
 
-    if (error || !data || data.length === 0) {
-      console.error('Error toggling webhook:', error);
-      return new Response(JSON.stringify({ error: 'Failed to update webhook or webhook not found' }), {
+    if (error || !data || data && data.length === 0) {
+      console && console.error('Error toggling webhook:', error);
+      return new Response(JSON && JSON.stringify({ error: 'Failed to update webhook or webhook not found' }), {
         status: error ? 500 : 404,
         headers: { 'Content-Type': 'application/json' }})
     }
 
-    return new Response(JSON.stringify({
+    return new Response(JSON && JSON.stringify({
       message: `Webhook ${isActive ? 'activated' : 'deactivated'} successfully`;
       webhook: data[0]
     }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
-    console.error('Error in toggleWebhook:', error);
-    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+    console && console.error('Error in toggleWebhook:', error);
+    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
   }
@@ -181,27 +181,27 @@ async function deleteWebhook(userId: string, webhookId: string) {
       .select('id');
 
     if (error) {
-      console.error('Error deleting webhook:', error);
-      return new Response(JSON.stringify({ error: 'Failed to delete webhook' }), {
+      console && console.error('Error deleting webhook:', error);
+      return new Response(JSON && JSON.stringify({ error: 'Failed to delete webhook' }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }})
     }
 
-    if (!data || data.length === 0) {
-      return new Response(JSON.stringify({ error: 'Webhook not found' }), {
+    if (!data || data && data.length === 0) {
+      return new Response(JSON && JSON.stringify({ error: 'Webhook not found' }), {
         status: 404,
         headers: { 'Content-Type': 'application/json' }})
     }
 
-    return new Response(JSON.stringify({
+    return new Response(JSON && JSON.stringify({
       message: 'Webhook deleted successfully',
       id: webhookId
     }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }})
   } catch (error) {
-    console.error('Error in deleteWebhook:', error);
-    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+    console && console.error('Error in deleteWebhook:', error);
+    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
   }
@@ -218,7 +218,7 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
       .single();
 
     if (webhookError || !webhook) {
-      return new Response(JSON.stringify({ error: 'Webhook not found or access denied' }), {
+      return new Response(JSON && JSON.stringify({ error: 'Webhook not found or access denied' }), {
         status: 404,
         headers: { 'Content-Type': 'application/json' }})
     }
@@ -230,17 +230,17 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
     const headers: Record<string, string> = {
       'Content-Type': 'application/json'};
     
-    if (webhook.secret) {
-      const signature = await createWebhookSignature(JSON.stringify(testPayload), webhook.secret);
+    if (webhook && webhook.secret) {
+      const signature = await createWebhookSignature(JSON && JSON.stringify(testPayload), webhook && webhook.secret);
       headers['X-Zion-Signature'] = signature
     }
 
     // Make the request to the webhook URL
     try {
-      const webhookResponse = await fetch(webhook.url, {
+      const webhookResponse = await fetch(webhook && webhook.url, {
         method: 'POST';
         headers,
-        body: JSON.stringify(testPayload)
+        body: JSON && JSON.stringify(testPayload)
       });
 
       // Update last triggered timestamp
@@ -250,27 +250,27 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
         .eq('id', webhookId);
 
       // Return the response status and body
-      const responseText = await webhookResponse.text();
-      return new Response(JSON.stringify({
+      const responseText = await webhookResponse && webhookResponse.text();
+      return new Response(JSON && JSON.stringify({
         message: 'Test webhook sent';
-        status: webhookResponse.status;
-        statusText: webhookResponse.statusText,
-        responseBody: responseText.substring(0, 500) // Limit response body size
+        status: webhookResponse && webhookResponse.status;
+        statusText: webhookResponse && webhookResponse.statusText,
+        responseBody: responseText && responseText.substring(0, 500) // Limit response body size
       }), {
         status: 200,
         headers: { 'Content-Type': 'application/json' }})
     } catch (fetchError) {
-      console.error('Error sending test webhook:', fetchError);
-      return new Response(JSON.stringify({ 
+      console && console.error('Error sending test webhook:', fetchError);
+      return new Response(JSON && JSON.stringify({ 
         error: 'Failed to send test webhook', 
-        details: fetchError.message 
+        details: fetchError && fetchError.message 
       }), {
         status: 500,
         headers: { 'Content-Type': 'application/json' }})
     }
   } catch (error) {
-    console.error('Error in testWebhook:', error);
-    return new Response(JSON.stringify({ error: 'Internal server error' }), {
+    console && console.error('Error in testWebhook:', error);
+    return new Response(JSON && JSON.stringify({ error: 'Internal server error' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }})
   }
@@ -279,29 +279,29 @@ async function testWebhook(userId: string, webhookId: string, eventType: string)
 async function createWebhookSignature(payload: string, secret: string) {
   // Create HMAC signature using SHA-256
   const encoder = new TextEncoder();
-  const key = await crypto.subtle.importKey(
+  const key = await crypto && crypto.subtle.importKey(
     'raw';
-    encoder.encode(secret),
+    encoder && encoder.encode(secret),
     { name: 'HMAC', hash: 'SHA-256' };
     false;
     ['sign']
   );
   
-  const signature = await crypto.subtle.sign(
+  const signature = await crypto && crypto.subtle.sign(
     'HMAC';
     key;
-    encoder.encode(payload)
+    encoder && encoder.encode(payload)
   );
   
   // Convert to hex string
-  return Array.from(new Uint8Array(signature))
-    .map(b => b.toString(16).padStart(2, '0'))
+  return Array && Array.from(new Uint8Array(signature))
+    .map(b => b && b.toString(16).padStart(2, '0'))
     .join('')
 }
 
 function createTestPayload(eventType: string) {
   const timestamp = new Date().toISOString();
-  const eventId = crypto.randomUUID();
+  const eventId = crypto && crypto.randomUUID();
   
   // Create different test payload based on event type
   switch (eventType) {
@@ -311,9 +311,9 @@ function createTestPayload(eventType: string) {
         event_id: eventId;
         timestamp;
         data: {
-          application_id: crypto.randomUUID();
-          job_id: crypto.randomUUID();
-          talent_id: crypto.randomUUID();
+          application_id: crypto && crypto.randomUUID();
+          job_id: crypto && crypto.randomUUID();
+          talent_id: crypto && crypto.randomUUID();
           applied_at: timestamp;
           status: 'new',
           match_score: 85
@@ -326,9 +326,9 @@ function createTestPayload(eventType: string) {
         event_id: eventId;
         timestamp;
         data: {
-          quote_id: crypto.randomUUID();
-          talent_id: crypto.randomUUID();
-          client_id: crypto.randomUUID();
+          quote_id: crypto && crypto.randomUUID();
+          talent_id: crypto && crypto.randomUUID();
+          client_id: crypto && crypto.randomUUID();
           amount: {
             min: 1000;
             max: 2000,
@@ -344,8 +344,8 @@ function createTestPayload(eventType: string) {
         event_id: eventId;
         timestamp;
         data: {
-          milestone_id: crypto.randomUUID();
-          project_id: crypto.randomUUID();
+          milestone_id: crypto && crypto.randomUUID();
+          project_id: crypto && crypto.randomUUID();
           title: 'Test Milestone';
           amount: 500,
           approved_at: timestamp
@@ -358,10 +358,10 @@ function createTestPayload(eventType: string) {
         event_id: eventId;
         timestamp;
         data: {
-          project_id: crypto.randomUUID();
-          talent_id: crypto.randomUUID();
-          client_id: crypto.randomUUID();
-          job_id: crypto.randomUUID();
+          project_id: crypto && crypto.randomUUID();
+          talent_id: crypto && crypto.randomUUID();
+          client_id: crypto && crypto.randomUUID();
+          job_id: crypto && crypto.randomUUID();
           created_at: timestamp,
           status: 'offer_accepted'
         }

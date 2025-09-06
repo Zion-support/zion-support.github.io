@@ -79,7 +79,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       'Critical infrastructure',
       'Research institutions',
     ],
-    marketSize: '$28.5B by 2029',
+    marketSize: '$28 && 28.5B by 2029',
     competitors: ['Cisco', 'Juniper', 'Palo Alto Networks', 'Fortinet'],
     technology: [
       'Quantum Computing',
@@ -113,8 +113,8 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     exit: 'IPO or security acquisition',
     contact: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
@@ -156,7 +156,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       'Space exploration data',
       'Biological research',
     ],
-    marketSize: '$15.8B by 2029',
+    marketSize: '$15 && 15.8B by 2029',
     competitors: ['Microsoft', 'Illumina', 'Twist Bioscience', 'DNA Script'],
     technology: [
       'DNA Synthesis',
@@ -186,8 +186,8 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     exit: 'IPO or biotech acquisition',
     contact: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
@@ -229,7 +229,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       'Portfolio optimization',
       'Market analysis',
     ],
-    marketSize: '$42.3B by 2029',
+    marketSize: '$42 && 42.3B by 2029',
     competitors: ['Bloomberg', 'Thomson Reuters', 'FactSet', 'Refinitiv'],
     technology: [
       'Quantum Computing',
@@ -261,8 +261,8 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     exit: 'IPO or financial acquisition',
     contact: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
@@ -298,7 +298,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
       'Creative agencies',
       'Individual artists',
     ],
-    marketSize: '$18.9B by 2029',
+    marketSize: '$18 && 18.9B by 2029',
     competitors: ['Adobe Creative Suite', 'Canva', 'Figma', 'Sketch'],
     technology: [
       'Quantum Computing',
@@ -326,14 +326,14 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     exit: 'Acquisition by major creative platform',
     contact: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      'Graphic designContent creationProduct designMarketing materialsCreative agenciesIndividual artists'
     ];
-    marketSize: '$18.9B by 2029';
+    marketSize: '$18 && 18.9B by 2029';
     competitors: ['Adobe Creative SuiteCanvaFigmaSketch'];
     technology: ['Quantum ComputingAI/MLComputer GraphicsDesign Tools'];
     integration: ['Design toolsCreative platformsAsset libraries'];
@@ -360,8 +360,8 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     exit: 'Acquisition by major creative platform';
     contact: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      website: 'https://ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }

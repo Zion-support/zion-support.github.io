@@ -42,12 +42,12 @@ export const advancedAIServices2025 = [
     },
     category: 'Business Intelligence',
     tags: ['AI', 'Business Intelligence', 'Analytics', 'Data Visualization'],
-    website: 'https://ziontechgroup.com/business-intelligence-ai-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/business-intelligence-ai-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$27.3B',
+    marketSize: '$27 && 27.3B',
     targetAudience:
       'Business analysts, data scientists, executives, enterprise businesses',
     competitiveAdvantage:
@@ -101,12 +101,12 @@ export const advancedAIServices2025 = [
     },
     category: 'Customer Analytics',
     tags: ['AI', 'Customer Analytics', 'Personalization', 'Behavior Analysis'],
-    website: 'https://ziontechgroup.com/customer-analytics-ai',
+    website: 'https://ziontechgroup && ziontechgroup.com/customer-analytics-ai',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$15.8B',
+    marketSize: '$15 && 15.8B',
     targetAudience:
       'Marketing teams, customer success managers, e-commerce businesses, SaaS companies',
     competitiveAdvantage:
@@ -160,16 +160,16 @@ export const advancedAIServices2025 = [
     },
     category: 'Financial Risk Management',
     tags: ['AI', 'Financial Risk', 'Fraud Detection', 'Compliance'],
-    website: 'https://ziontechgroup.com/financial-risk-ai',
+    website: 'https://ziontechgroup && ziontechgroup.com/financial-risk-ai',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$12.4B',
+    marketSize: '$12 && 12.4B',
     targetAudience:
       'Banks, financial institutions, insurance companies, fintech startups',
     competitiveAdvantage:
-      'Advanced AI fraud detection with 99.7% accuracy, comprehensive risk assessment, and regulatory compliance automation',
+      'Advanced AI fraud detection with 99 && 99.7% accuracy, comprehensive risk assessment, and regulatory compliance automation',
   },
   {
     id: 'intelligent-supply-chain-optimization',
@@ -219,12 +219,12 @@ export const advancedAIServices2025 = [
     },
     category: 'Supply Chain Optimization',
     tags: ['AI', 'Supply Chain', 'Logistics', 'Optimization'],
-    website: 'https://ziontechgroup.com/supply-chain-ai',
+    website: 'https://ziontechgroup && ziontechgroup.com/supply-chain-ai',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$18.7B',
+    marketSize: '$18 && 18.7B',
     targetAudience:
       'Manufacturers, distributors, logistics companies, retail chains',
     competitiveAdvantage:
@@ -278,12 +278,12 @@ export const advancedAIServices2025 = [
     },
     category: 'Healthcare AI',
     tags: ['AI', 'Healthcare', 'Medical Imaging', 'Diagnostics'],
-    website: 'https://ziontechgroup.com/healthcare-diagnostics-ai',
+    website: 'https://ziontechgroup && ziontechgroup.com/healthcare-diagnostics-ai',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$45.2B',
+    marketSize: '$45 && 45.2B',
     targetAudience:
       'Hospitals, clinics, diagnostic centers, healthcare providers',
     competitiveAdvantage:
@@ -337,12 +337,12 @@ export const advancedAIServices2025 = [
     },
     category: 'Legal AI',
     tags: ['AI', 'Legal Tech', 'Document Analysis', 'Compliance'],
-    website: 'https://ziontechgroup.com/legal-document-ai',
+    website: 'https://ziontechgroup && ziontechgroup.com/legal-document-ai',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$8.9B',
+    marketSize: '$8 && 8.9B',
     targetAudience:
       'Law firms, legal departments, compliance officers, legal tech companies',
     competitiveAdvantage:
@@ -397,12 +397,12 @@ export const advancedAIServices2025 = [
       'Personalization',
       'Campaign Optimization',
     ],
-    website: 'https://ziontechgroup.com/marketing-automation-ai',
+    website: 'https://ziontechgroup && ziontechgroup.com/marketing-automation-ai',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$22.1B',
+    marketSize: '$22 && 22.1B',
     targetAudience:
       'Marketing teams, agencies, e-commerce businesses, SaaS companies',
     competitiveAdvantage:
@@ -456,12 +456,12 @@ export const advancedAIServices2025 = [
     },
     category: 'Sales AI',
     tags: ['AI', 'Sales Optimization', 'Lead Scoring', 'Forecasting'],
-    website: 'https://ziontechgroup.com/sales-optimization-ai',
+    website: 'https://ziontechgroup && ziontechgroup.com/sales-optimization-ai',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$16.3B',
+    marketSize: '$16 && 16.3B',
     targetAudience:
       'Sales teams, sales managers, sales operations, enterprise businesses',
     competitiveAdvantage:
@@ -520,12 +520,12 @@ export const advancedAIServices2025 = [
       'Candidate Screening',
       'Hiring Optimization',
     ],
-    website: 'https://ziontechgroup.com/hr-recruitment-ai',
+    website: 'https://ziontechgroup && ziontechgroup.com/hr-recruitment-ai',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$11.7B',
+    marketSize: '$11 && 11.7B',
     targetAudience:
       'HR departments, recruitment agencies, talent acquisition teams, enterprise businesses',
     competitiveAdvantage:
@@ -579,22 +579,22 @@ export const advancedAIServices2025 = [
     },
     category: 'Cybersecurity AI',
     tags: ['AI', 'Cybersecurity', 'Threat Detection', 'Incident Response'],
-    website: 'https://ziontechgroup.com/cybersecurity-ai',
+    website: 'https://ziontechgroup && ziontechgroup.com/cybersecurity-ai',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$173.5B',
+    marketSize: '$173 && 173.5B',
     targetAudience:
       'IT security teams, cybersecurity firms, enterprise businesses, government agencies',
     competitiveAdvantage:
-      'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
+      'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration',
   },
 ];      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup && ziontechgroup.com'
     };
-    marketSize: '$173.5B',
+    marketSize: '$173 && 173.5B',
     targetAudience: 'IT security teams, cybersecurity firms, enterprise businesses, government agencies';
-    competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
+    competitiveAdvantage: 'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
   }
 ];

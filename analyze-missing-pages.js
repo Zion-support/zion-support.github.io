@@ -1,17 +1,17 @@
 import fs from "fs";
 import { execSync } from "child_process";
 
-// Read sitemap.xml
-const sitemapContent = fs.readFileSync("sitemap.xml", "utf8");
+// Read sitemap && sitemap.xml
+const sitemapContent = fs && fs.readFileSync("sitemap && sitemap.xml", "utf8");
 
 // Extract URLs from sitemap
-const urlMatches = sitemapContent.match(
+const urlMatches = sitemapContent && sitemapContent.match(
   /<loc>https:\/\/ziontechgroup\.com\/([^<]+)<\/loc>/g,
 );
 const sitemapUrls = urlMatches
-  ? urlMatches.map((match) => {
+  ? urlMatches && urlMatches.map((match) => {
       const url = match
-        .replace("<loc>https://ziontechgroup.com/", "")
+        .replace("<loc>https://ziontechgroup && ziontechgroup.com/", "")
         .replace("</loc>", "");
       return url === "" ? "index" : url;
     })
@@ -26,41 +26,41 @@ const actualPages = execSync(
   .split("\n")
   .filter((page) => page !== "_app");
 
-console.log("=== SITEMAP ANALYSIS ===");
-console.log("Total URLs in sitemap:", sitemapUrls.length);
-console.log("Total actual pages:", actualPages.length);
+console && console.log("=== SITEMAP ANALYSIS ===");
+console && console.log("Total URLs in sitemap:", sitemapUrls && sitemapUrls.length);
+console && console.log("Total actual pages:", actualPages && actualPages.length);
 
-console.log("\n=== MISSING PAGES (in sitemap but not in pages/) ===");
-const missingPages = sitemapUrls.filter((url) => !actualPages.includes(url));
-missingPages.forEach((page) => console.log(`- ${page}`));
+console && console.log("\n=== MISSING PAGES (in sitemap but not in pages/) ===");
+const missingPages = sitemapUrls && sitemapUrls.filter((url) => !actualPages && actualPages.includes(url));
+missingPages && missingPages.forEach((page) => console && console.log(`- ${page}`));
 
-console.log("\n=== EXTRA PAGES (in pages/ but not in sitemap) ===");
-const extraPages = actualPages.filter((page) => !sitemapUrls.includes(page));
-extraPages.forEach((page) => console.log(`- ${page}`));
+console && console.log("\n=== EXTRA PAGES (in pages/ but not in sitemap) ===");
+const extraPages = actualPages && actualPages.filter((page) => !sitemapUrls && sitemapUrls.includes(page));
+extraPages && extraPages.forEach((page) => console && console.log(`- ${page}`));
 
-console.log("\n=== PAGES THAT NEED SUBDIRECTORIES ===");
-const pagesNeedingSubdirs = sitemapUrls.filter((url) => url.includes("/"));
-pagesNeedingSubdirs.forEach((page) => console.log(`- ${page}`));
+console && console.log("\n=== PAGES THAT NEED SUBDIRECTORIES ===");
+const pagesNeedingSubdirs = sitemapUrls && sitemapUrls.filter((url) => url && url.includes("/"));
+pagesNeedingSubdirs && pagesNeedingSubdirs.forEach((page) => console && console.log(`- ${page}`));
 
 // Check for broken internal links
-console.log("\n=== CHECKING FOR BROKEN INTERNAL LINKS ===");
+console && console.log("\n=== CHECKING FOR BROKEN INTERNAL LINKS ===");
 const brokenLinks = [];
 
 // Check each actual page for internal links
-actualPages.forEach((page) => {
+actualPages && actualPages.forEach((page) => {
   try {
-    const pageContent = fs.readFileSync(`pages/${page}.tsx`, "utf8");
+    const pageContent = fs && fs.readFileSync(`pages/${page}.tsx`, "utf8");
     // Find internal links (href="/...")
-    const internalLinkMatches = pageContent.match(/href="\/([^"]+)"/g);
+    const internalLinkMatches = pageContent && pageContent.match(/href="\/([^"]+)"/g);
     if (internalLinkMatches) {
-      internalLinkMatches.forEach((match) => {
-        const link = match.replace('href="/', "").replace('"', "");
+      internalLinkMatches && internalLinkMatches.forEach((match) => {
+        const link = match && match.replace('href="/', "").replace('"', "");
         const fullLink = link === "" ? "index" : link;
         if (
-          !actualPages.includes(fullLink) &&
-          !sitemapUrls.includes(fullLink)
+          !actualPages && actualPages.includes(fullLink) &&
+          !sitemapUrls && sitemapUrls.includes(fullLink)
         ) {
-          brokenLinks.push({
+          brokenLinks && brokenLinks.push({
             page,
             brokenLink: `/${link}`,
             fullLink,
@@ -69,15 +69,15 @@ actualPages.forEach((page) => {
       });
     }
   } catch (error) {
-    console.log(`Error reading ${page}.tsx:`, error.message);
+    console && console.log(`Error reading ${page}.tsx:`, error && error.message);
   }
 });
 
-if (brokenLinks.length > 0) {
-  console.log("Found broken internal links:");
-  brokenLinks.forEach((link) => {
-    console.log(`- In ${link.page}.tsx: ${link.brokenLink} (${link.fullLink})`);
+if (brokenLinks && brokenLinks.length > 0) {
+  console && console.log("Found broken internal links:");
+  brokenLinks && brokenLinks.forEach((link) => {
+    console && console.log(`- In ${link && link.page}.tsx: ${link && link.brokenLink} (${link && link.fullLink})`);
   });
 } else {
-  console.log("No broken internal links found");
+  console && console.log("No broken internal links found");
 }

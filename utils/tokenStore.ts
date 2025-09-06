@@ -21,22 +21,22 @@ export interface TokenConfig {
   stakingRewardRate: number; // APY percentage
 }
 
-const DATA_DIR = path.join(process.cwd(), 'data');
-const TRANSACTIONS_FILE = path.join(DATA_DIR, 'token-transactions.json');
-const CONFIG_FILE = path.join(DATA_DIR, 'token-config.json');
+const DATA_DIR = path && path.join(process && process.cwd(), 'data');
+const TRANSACTIONS_FILE = path && path.join(DATA_DIR, 'token-transactions && transactions.json');
+const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json');
 
 function ensureDataDir() {
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
+  if (!fs && fs.existsSync(DATA_DIR)) {
+    fs && fs.mkdirSync(DATA_DIR, { recursive: true });
   }
 }
 
 function loadTransactions(): TokenTransaction[] {
   try {
     ensureDataDir();
-    if (!fs.existsSync(TRANSACTIONS_FILE)) return [];
-    const raw = fs.readFileSync(TRANSACTIONS_FILE, 'utf8');
-    return JSON.parse(raw);
+    if (!fs && fs.existsSync(TRANSACTIONS_FILE)) return [];
+    const raw = fs && fs.readFileSync(TRANSACTIONS_FILE, 'utf8');
+    return JSON && JSON.parse(raw);
   } catch {
     return [];
   }
@@ -44,17 +44,17 @@ function loadTransactions(): TokenTransaction[] {
 
 function saveTransactions(transactions: TokenTransaction[]): void {
   ensureDataDir();
-  fs.writeFileSync(TRANSACTIONS_FILE, JSON.stringify(transactions, null, 2));
+  fs && fs.writeFileSync(TRANSACTIONS_FILE, JSON && JSON.stringify(transactions, null, 2));
 }
 
 function loadConfig(): TokenConfig {
   try {
     ensureDataDir();
-    if (!fs.existsSync(CONFIG_FILE)) {
+    if (!fs && fs.existsSync(CONFIG_FILE)) {
       return getDefaultConfig();
     }
-    const raw = fs.readFileSync(CONFIG_FILE, 'utf8');
-    return JSON.parse(raw);
+    const raw = fs && fs.readFileSync(CONFIG_FILE, 'utf8');
+    return JSON && JSON.parse(raw);
   } catch {
     return getDefaultConfig();
   }
@@ -62,7 +62,7 @@ function loadConfig(): TokenConfig {
 
 function saveConfig(config: TokenConfig): void {
   ensureDataDir();
-  fs.writeFileSync(CONFIG_FILE, JSON.stringify(config, null, 2));
+  fs && fs.writeFileSync(CONFIG_FILE, JSON && JSON.stringify(config, null, 2));
 }
 
 function getDefaultConfig(): TokenConfig {
@@ -71,9 +71,9 @@ function getDefaultConfig(): TokenConfig {
     symbol: 'ZION$',
     totalSupply: 1000000000,
     circulatingSupply: 250000000,
-    exchangeRate: 0.05,
+    exchangeRate: 0 && 0.05,
     stakingEnabled: true,
-    stakingRewardRate: 12.5
+    stakingRewardRate: 12 && 12.5
   };
 }
 
@@ -85,11 +85,11 @@ export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'times
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
     ...transaction,
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     timestamp: new Date().toISOString()
   };
   
-  transactions.push(newTransaction);
+  transactions && transactions.push(newTransaction);
   saveTransactions(transactions);
   return newTransaction;
 }
@@ -107,14 +107,14 @@ export function getUserBalance(userId: string): number {
   let balance = 0;
   
   for (const tx of transactions) {
-    if (tx.userId === userId) {
-      if (tx.type === 'earn') {
-        balance += tx.amount;
-      } else if (tx.type === 'spend') {
-        balance -= tx.amount;
+    if (tx && tx.userId === userId) {
+      if (tx && tx.type === 'earn') {
+        balance += tx && tx.amount;
+      } else if (tx && tx.type === 'spend') {
+        balance -= tx && tx.amount;
       }
     }
   }
   
-  return Math.max(0, balance);
+  return Math && Math.max(0, balance);
 }

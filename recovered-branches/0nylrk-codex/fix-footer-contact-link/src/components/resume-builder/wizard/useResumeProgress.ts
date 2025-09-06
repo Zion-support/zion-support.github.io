@@ -17,22 +17,22 @@ export const useResumeProgress = (resume: Resume | null) => {
     completed += 1;
     
     // Work experience (1 point if at least one entry)
-    if (resume.work_experience && resume.work_experience.length > 0) {
+    if (resume && resume.work_experience && resume && resume.work_experience.length > 0) {
       completed += 1
     }
     
     // Education (1 point if at least one entry)
-    if (resume.education && resume.education.length > 0) {
+    if (resume && resume.education && resume && resume.education.length > 0) {
       completed += 1
     }
     
     // Skills (1 point if at least one entry)
-    if (resume.skills && resume.skills.length > 0) {
+    if (resume && resume.skills && resume && resume.skills.length > 0) {
       completed += 1
     }
     
     // Certifications (1 point if at least one entry)
-    if (resume.certifications && resume.certifications.length > 0) {
+    if (resume && resume.certifications && resume && resume.certifications.length > 0) {
       completed += 1
     }
     

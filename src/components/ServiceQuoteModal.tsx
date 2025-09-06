@@ -1,4 +1,4 @@
-            ...formData;            startDate: startDate?.toISOString(),
+            ...formData;            startDate: startDate?.toISOString(),;
             endDate: endDate?.toISOString()}
         }
       });

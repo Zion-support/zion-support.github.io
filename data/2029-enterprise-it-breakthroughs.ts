@@ -66,7 +66,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       icon: '⚙️',
       color: 'from-blue-600 via-cyan-600 to-teal-600',
       textColor: 'text-blue-400',
-      link: 'https://ziontechgroup.com/autonomous-devops-platform',
+      link: 'https://ziontechgroup && ziontechgroup.com/autonomous-devops-platform',
       marketPosition:
         'First-to-market autonomous DevOps platform. Competes with traditional DevOps tools but offers true autonomy. Pricing reflects enterprise value and innovation.',
       targetAudience:
@@ -93,16 +93,16 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       variant: 'enterprise-futuristic',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Advanced autonomous DevOps platform with AI-powered automation, self-healing systems, and comprehensive infrastructure management. Includes security automation and compliance monitoring.',
       launchDate: '2025-01-20',
       customers: 320,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 178,
     },
     {
@@ -129,7 +129,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       icon: '☁️',
       color: 'from-indigo-600 via-blue-600 to-cyan-600',
       textColor: 'text-indigo-400',
-      link: 'https://ziontechgroup.com/quantum-cloud-infrastructure',
+      link: 'https://ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure',
       marketPosition:
         'First-to-market quantum-enhanced cloud infrastructure. Competes with traditional cloud providers but offers quantum-level performance and security. Pricing reflects quantum technology costs.',
       targetAudience:
@@ -156,16 +156,16 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       variant: 'quantum-futuristic',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Advanced quantum-enhanced cloud infrastructure with quantum performance, quantum-resistant security, and comprehensive compliance. Includes advanced analytics and integration capabilities.',
       launchDate: '2025-01-10',
       customers: 85,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 42,
     },
     {
@@ -192,7 +192,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       icon: '🛡️',
       color: 'from-red-500 via-pink-500 to-rose-500',
       textColor: 'text-red-400',
-      link: 'https://ziontechgroup.com/ai-powered-enterprise-security',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-enterprise-security',
       marketPosition:
         'Leading edge AI-powered enterprise security. Competes with traditional security tools but offers AI automation and intelligent threat detection. Pricing reflects enterprise security value.',
       targetAudience:
@@ -219,16 +219,16 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       variant: 'ai-futuristic',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Advanced AI-powered enterprise security platform with intelligent threat detection, automated response, and comprehensive security management. Includes compliance monitoring and analytics.',
       launchDate: '2025-01-25',
       customers: 280,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 156,
     },
     {
@@ -255,7 +255,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       icon: '🏢',
       color: 'from-slate-600 via-gray-600 to-zinc-600',
       textColor: 'text-slate-400',
-      link: 'https://ziontechgroup.com/autonomous-it-operations-center',
+      link: 'https://ziontechgroup && ziontechgroup.com/autonomous-it-operations-center',
       marketPosition:
         'First-to-market autonomous IT operations center. Competes with traditional IT management tools but offers true autonomy. Pricing reflects enterprise value and innovation.',
       targetAudience:
@@ -282,16 +282,16 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
       variant: 'enterprise-futuristic',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Advanced autonomous IT operations center with AI-powered management, self-healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.',
       launchDate: '2025-01-15',
       customers: 180,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 95,
     },
   ];    features: [
@@ -300,7 +300,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     ];
     popular: true, icon: '⚙️',
     color: 'from-blue-600 via-cyan-600 to-teal-600', textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/autonomous-devops-platform', marketPosition: 'First-to-market autonomous DevOps platform. Competes with traditional DevOps tools but offers true autonomy. Pricing reflects enterprise value and innovation.',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-devops-platform', marketPosition: 'First-to-market autonomous DevOps platform. Competes with traditional DevOps tools but offers true autonomy. Pricing reflects enterprise value and innovation.',
     targetAudience: 'Enterprise businesses, Technology companies, Cloud providers, DevOps teams, IT operations, System administrators',
     trialDays: 30, setupTime: '2-4 weeks',
     category: 'Enterprise IT & DevOps', realService: true,
@@ -313,15 +313,15 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     variant: 'enterprise-futuristic',
     contactInfo: {
       
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     
     },
     realImplementation: true,
     implementationDetails: 'Advanced autonomous DevOps platform with AI-powered automation, self-healing systems, and comprehensive infrastructure management. Includes security automation and compliance monitoring.',
     launchDate: '2025-01-20', customers: 320,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 178
   };
   {
@@ -335,7 +335,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     ];
     popular: true, icon: '☁️',
     color: 'from-indigo-600 via-blue-600 to-cyan-600', textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/quantum-cloud-infrastructure', marketPosition: 'First-to-market quantum-enhanced cloud infrastructure. Competes with traditional cloud providers but offers quantum-level performance and security. Pricing reflects quantum technology costs.',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure', marketPosition: 'First-to-market quantum-enhanced cloud infrastructure. Competes with traditional cloud providers but offers quantum-level performance and security. Pricing reflects quantum technology costs.',
     targetAudience: 'Enterprise businesses, Government agencies, Financial institutions, Healthcare organizations, Research institutions, Technology companies',
     trialDays: 60, setupTime: '4-8 weeks',
     category: 'Quantum & Cloud Infrastructure', realService: true,
@@ -348,15 +348,15 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     variant: 'quantum-futuristic',
     contactInfo: {
       
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     
     },
     realImplementation: true,
     implementationDetails: 'Advanced quantum-enhanced cloud infrastructure with quantum performance, quantum-resistant security, and comprehensive compliance. Includes advanced analytics and integration capabilities.',
     launchDate: '2025-01-10', customers: 85,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 42
   };
   {
@@ -370,7 +370,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     ];
     popular: true, icon: '🛡️',
     color: 'from-red-500 via-pink-500 to-rose-500', textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/ai-powered-enterprise-security', marketPosition: 'Leading edge AI-powered enterprise security. Competes with traditional security tools but offers AI automation and intelligent threat detection. Pricing reflects enterprise security value.',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-enterprise-security', marketPosition: 'Leading edge AI-powered enterprise security. Competes with traditional security tools but offers AI automation and intelligent threat detection. Pricing reflects enterprise security value.',
     targetAudience: 'Enterprise businesses, Financial institutions, Healthcare organizations, Government agencies, Technology companies, Security teams',
     trialDays: 45, setupTime: '3-6 weeks',
     category: 'AI & Enterprise Security', realService: true,
@@ -383,15 +383,15 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     variant: 'ai-futuristic',
     contactInfo: {
       
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     
     },
     realImplementation: true,
     implementationDetails: 'Advanced AI-powered enterprise security platform with intelligent threat detection, automated response, and comprehensive security management. Includes compliance monitoring and analytics.',
     launchDate: '2025-01-25', customers: 280,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 156
   };
   {
@@ -405,7 +405,7 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     ];
     popular: true, icon: '🏢',
     color: 'from-slate-600 via-gray-600 to-zinc-600', textColor: 'text-slate-400',
-    link: 'https://ziontechgroup.com/autonomous-it-operations-center', marketPosition: 'First-to-market autonomous IT operations center. Competes with traditional IT management tools but offers true autonomy. Pricing reflects enterprise value and innovation.',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-it-operations-center', marketPosition: 'First-to-market autonomous IT operations center. Competes with traditional IT management tools but offers true autonomy. Pricing reflects enterprise value and innovation.',
     targetAudience: 'Enterprise businesses, Data centers, Cloud providers, IT operations teams, System administrators, Technology companies',
     trialDays: 45, setupTime: '4-8 weeks',
     category: 'Enterprise IT & Operations', realService: true,
@@ -418,22 +418,22 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     variant: 'enterprise-futuristic',
     contactInfo: {
       
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     
     },
     realImplementation: true,
     implementationDetails: 'Advanced autonomous IT operations center with AI-powered management, self-healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.',
     launchDate: '2025-01-15', customers: 180,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 95
   }
 ];
     icon: '🏢';
     color: 'from-slate-600 via-gray-600 to-zinc-600';
     textColor: 'text-slate-400';
-    link: 'https://ziontechgroup.com/autonomous-it-operations-center';
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-it-operations-center';
     marketPosition: 'First-to-market autonomous IT operations center. Competes with traditional IT management tools but offers true autonomy. Pricing reflects enterprise value and innovation.';
     targetAudience: 'Enterprise businesses, Data centers, Cloud providers, IT operations teams, System administrators, Technology companies';
     trialDays: 45;
@@ -450,15 +450,15 @@ export const enterpriseITBreakthroughServices2029: EnterpriseITBreakthroughServi
     variant: 'enterprise-futuristic';
     contactInfo: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true;
     implementationDetails: 'Advanced autonomous IT operations center with AI-powered management, self-healing infrastructure, and comprehensive automation. Includes predictive maintenance and cost optimization.';
     launchDate: '2025-01-15';
     customers: 180;
-    rating: 4.9;
+    rating: 4 && 4.9;
     reviews: 95
   }
 ];

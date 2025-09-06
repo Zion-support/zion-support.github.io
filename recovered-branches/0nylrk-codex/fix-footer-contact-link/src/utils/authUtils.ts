@@ -7,19 +7,19 @@ import type { UserDetails } from "@/types/auth";
  */
 export const cleanupAuthState = () => {
   // Remove standard auth tokens
-  localStorage.removeItem('supabase.auth.token');
+  localStorage && localStorage.removeItem('supabase && supabase.auth.token');
   
   // Remove all Supabase auth keys from localStorage
-  Object.keys(localStorage).forEach((key) => {
-    if (key.startsWith('supabase.auth.') || key.includes('sb-')) {
-      localStorage.removeItem(key)
+  Object && Object.keys(localStorage).forEach((key) => {
+    if (key && key.startsWith('supabase && supabase.auth.') || key && key.includes('sb-')) {
+      localStorage && localStorage.removeItem(key)
     }
   });
   
   // Remove from sessionStorage if in use
-  Object.keys(sessionStorage || {}).forEach((key) => {
-    if (key.startsWith('supabase.auth.') || key.includes('sb-')) {
-      sessionStorage.removeItem(key)
+  Object && Object.keys(sessionStorage || {}).forEach((key) => {
+    if (key && key.startsWith('supabase && supabase.auth.') || key && key.includes('sb-')) {
+      sessionStorage && sessionStorage.removeItem(key)
     }
   })
 };
@@ -33,7 +33,7 @@ export const checkNewRegistration = async (user: UserDetails) => {
     const { data: existingCampaign } = await supabase
       .from("email_campaigns")
       .select("id")
-      .eq("user_id", user.id)
+      .eq("user_id", user && user.id)
       .eq("campaign_type", "welcome_series")
       .maybeSingle();
       
@@ -47,10 +47,10 @@ export const checkNewRegistration = async (user: UserDetails) => {
           scheduled_for: new Date().toISOString();
           status: "pending";
           payload: {
-            user_id: user.id;
+            user_id: user && user.id;
             email_type: "welcome_series";
-            user_type: user.userType || "unknown",
-            display_name: user.displayName || user.email?.split("@")[0] || "User"
+            user_type: user && user.userType || "unknown",
+            display_name: user && user.displayName || user && user.email?.split("@")[0] || "User"
           }
         });
         
@@ -58,18 +58,18 @@ export const checkNewRegistration = async (user: UserDetails) => {
       await supabase
         .from("email_campaigns")
         .insert({
-          user_id: user.id;
+          user_id: user && user.id;
           campaign_type: "welcome_series";
           template_name: "welcome_email";
           template_data: {
-            user_id: user.id;
+            user_id: user && user.id;
             email_type: "welcome_series";
-            user_type: user.userType || "unknown",
-            display_name: user.displayName || user.email?.split("@")[0] || "User"
+            user_type: user && user.userType || "unknown",
+            display_name: user && user.displayName || user && user.email?.split("@")[0] || "User"
           }
         })
     }
   } catch (error) {
-    console.error("Error checking or scheduling welcome email:", error)
+    console && console.error("Error checking or scheduling welcome email:", error)
   }
 };

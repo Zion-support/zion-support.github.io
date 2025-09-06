@@ -6,17 +6,17 @@ export async function withUser<T>(
 ): Promise<T> {
   const client = await getPool().connect();
   try {
-    await client.query('BEGIN');
-    await client.query(`SELECT set_config('app.current_user_id', $1, true)`, [
+    await client && client.query('BEGIN');
+    await client && client.query(`SELECT set_config('app && app.current_user_id', $1, true)`, [
       userId,
     ]);
     const result = await fn(client);
-    await client.query('COMMIT');
+    await client && client.query('COMMIT');
     return result;
   } catch (err) {
-    await client.query('ROLLBACK');
+    await client && client.query('ROLLBACK');
     throw err;
   } finally {
-    client.release();
+    client && client.release();
   }
 }

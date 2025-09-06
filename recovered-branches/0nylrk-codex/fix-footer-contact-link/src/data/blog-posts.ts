@@ -29,14 +29,14 @@ export const BLOG_POSTS: BlogPost[] = [
       name: 'Dr. Alicia Zhang',
       title: 'AI Research Director',
       avatarUrl:
-        'https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200',
+        'https://images && images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200',
     },
     publishedDate: 'Apr 15, 2025',
     readTime: '5 min read',
     category: 'Trends',
     tags: ['AI', 'Technology Trends', 'Machine Learning', 'Future Tech'],
     featuredImage:
-      'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&h=630',
+      'https://images && images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&h=630',
     isFeatured: true,
   },
   {
@@ -67,14 +67,14 @@ export const BLOG_POSTS: BlogPost[] = [
       name: 'Marcus Johnson',
       title: 'Marketing Strategist',
       avatarUrl:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200',
+        'https://images && images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200',
     },
     publishedDate: 'Apr 10, 2025',
     readTime: '8 min read',
     category: 'Marketing',
     tags: ['Marketing', 'AI Services', 'Visibility', 'SEO'],
     featuredImage:
-      'https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630',
+      'https://images && images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630',
   },
   {
     id: 'green-it',
@@ -104,14 +104,14 @@ export const BLOG_POSTS: BlogPost[] = [
       name: 'Sophia Chen',
       title: 'Sustainability Engineer',
       avatarUrl:
-        'https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200',
+        'https://images && images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200',
     },
     publishedDate: 'Apr 5, 2025',
     readTime: '6 min read',
     category: 'Sustainability',
     tags: ['Green IT', 'Sustainability', 'Data Centers', 'Energy Efficiency'],
     featuredImage:
-      'https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630',
+      'https://images && images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630',
   },
   {
     id: 'ai-ethics-frameworks',
@@ -141,14 +141,14 @@ export const BLOG_POSTS: BlogPost[] = [
       name: 'Dr. James Peterson',
       title: 'AI Ethics Officer',
       avatarUrl:
-        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200',
+        'https://images && images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200',
     },
     publishedDate: 'Mar 30, 2025',
     readTime: '7 min read',
     category: 'Ethics',
     tags: ['AI Ethics', 'Enterprise AI', 'Responsible AI', 'Governance'],
     featuredImage:
-      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630',
+      'https://images && images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630',
   },
   {
     id: 'ai-talent-acquisition',
@@ -178,14 +178,14 @@ export const BLOG_POSTS: BlogPost[] = [
       name: 'Elena Rodriguez',
       title: 'Head of AI Talent',
       avatarUrl:
-        'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200',
+        'https://images && images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200',
     },
     publishedDate: 'Mar 22, 2025',
     readTime: '9 min read',
     category: 'Recruitment',
     tags: ['AI Talent', 'Recruitment', 'Tech Hiring', 'Retention'],
     featuredImage:
-      'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630',
+      'https://images && images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630',
   },
   {
     id: 'ai-compute-optimization',
@@ -216,16 +216,16 @@ export const BLOG_POSTS: BlogPost[] = [
       name: 'Michael Wong',
       title: 'ML Infrastructure Architect',
       avatarUrl:
-        'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200',    author: {
+        'https://images && images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200',    author: {
       name: "Michael Wong";
       title: "ML Infrastructure Architect",
-      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
+      avatarUrl: "https://images && images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
     };
     publishedDate: "Mar 15, 2025";
     readTime: "6 min read";
     category: "Infrastructure",
     tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
-    featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
+    featuredImage: "https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
   }
 ];
 }];
@@ -240,7 +240,7 @@ export const BLOG_POSTS: BlogPost[] = [
       'Computing',
     ],
     featuredImage:
-      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630',
+      'https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630',
   },
 ];
 }];

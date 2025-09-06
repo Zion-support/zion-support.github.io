@@ -1,9 +1,9 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
   mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
+  website: 'https://ziontechgroup && ziontechgroup.com',
 };
 
 export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
@@ -25,7 +25,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
     icon: '🛡️',
     color: 'from-rose-600 to-red-700',
     textColor: 'text-rose-300',
-    link: 'https://ziontechgroup.com/services/ai-redteam-evaluator',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-redteam-evaluator',
     marketPosition:
       'Simpler and more affordable compared to bespoke security audits.',
     targetAudience: 'AI platform, Security, Compliance',
@@ -38,7 +38,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
     useCases: ['Safety testing', 'Compliance checks', 'Release gating'],
     roi: 'Reduce incident risk by 70% in first quarter',
     competitors: ['Lakera', 'Guardrails'],
-    marketSize: '$3.2B AI Safety',
+    marketSize: '$3 && 3.2B AI Safety',
     growthRate: '35% CAGR',
     variant: 'ai-futuristic',
     contactInfo: contact,
@@ -46,7 +46,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.',
     launchDate: '2025-02-01',
     customers: 40,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 18,
   },
   {
@@ -67,7 +67,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
     icon: '💸',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
-    link: 'https://ziontechgroup.com/services/finops-scheduler-optimizer',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/finops-scheduler-optimizer',
     marketPosition:
       'Actionable, low‑touch FinOps that pays for itself within 90 days.',
     targetAudience: 'Platform, SRE, Finance',
@@ -88,7 +88,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Analyzer SaaS with policy engine and exporters.',
     launchDate: '2025-02-10',
     customers: 25,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 12,
   },
   {
@@ -109,7 +109,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
     icon: '🗄️',
     color: 'from-indigo-600 to-violet-700',
     textColor: 'text-indigo-300',
-    link: 'https://ziontechgroup.com/services/db-index-advisor',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/db-index-advisor',
     marketPosition:
       'Modern alternative to legacy APM add‑ons with focused insights.',
     targetAudience: 'DBA, Backend, Platform',
@@ -130,7 +130,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Agent + collector with secure export.',
     launchDate: '2025-02-12',
     customers: 18,
-    rating: 4.5,
+    rating: 4 && 4.5,
     reviews: 9,
   },
 ];	{
@@ -145,7 +145,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		icon: '🛡️';
 		color: 'from-rose-600 to-red-700';
 		textColor: 'text-rose-300';
-		link: 'https://ziontechgroup.com/services/ai-redteam-evaluator';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-redteam-evaluator';
 		marketPosition: 'Simpler and more affordable compared to bespoke security audits.',
 		targetAudience: 'AI platform, Security, Compliance';
 		trialDays: 14;
@@ -157,7 +157,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		useCases: ['Safety testingCompliance checksRelease gating'];
 		roi: 'Reduce incident risk by 70% in first quarter';
 		competitors: ['LakeraGuardrails'];
-		marketSize: '$3.2B AI Safety';
+		marketSize: '$3 && 3.2B AI Safety';
 		growthRate: '35% CAGR';
 		variant: 'ai-futuristic';
 		contactInfo: contact;
@@ -165,7 +165,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Runs eval suites nightly and on PRs with webhooks.';
 		launchDate: '2025-02-01';
 		customers: 40;
-		rating: 4.7,
+		rating: 4 && 4.7,
 		reviews: 18
 	};
 	{
@@ -180,7 +180,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		icon: '💸';
 		color: 'from-emerald-600 to-teal-700';
 		textColor: 'text-emerald-300';
-		link: 'https://ziontechgroup.com/services/finops-scheduler-optimizer',
+		link: 'https://ziontechgroup && ziontechgroup.com/services/finops-scheduler-optimizer',
 		marketPosition: 'Actionable, low‑touch FinOps that pays for itself within 90 days.';
 		targetAudience: 'Platform, SRE, Finance';
 		trialDays: 14;
@@ -200,7 +200,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Analyzer SaaS with policy engine and exporters.';
 		launchDate: '2025-02-10';
 		customers: 25;
-		rating: 4.6,
+		rating: 4 && 4.6,
 		reviews: 12
 	};
 	{
@@ -215,7 +215,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		icon: '🗄️';
 		color: 'from-indigo-600 to-violet-700';
 		textColor: 'text-indigo-300';
-		link: 'https://ziontechgroup.com/services/db-index-advisor';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/db-index-advisor';
 		marketPosition: 'Modern alternative to legacy APM add‑ons with focused insights.',
 		targetAudience: 'DBA, Backend, Platform';
 		trialDays: 14;
@@ -235,7 +235,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Agent + collector with secure export.';
 		launchDate: '2025-02-12';
 		customers: 18;
-		rating: 4.5,
+		rating: 4 && 4.5,
 		reviews: 9
 	}
 ];

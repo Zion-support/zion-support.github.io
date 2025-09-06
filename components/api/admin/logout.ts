@@ -3,7 +3,7 @@ import { clearSessionCookie } from '../../../utils/adminAuth';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   clearSessionCookie(res);
-  res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res && res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
   clearSessionCookie(res);
-  res.status(200).json({ ok: true })
+  res && res.status(200).json({ ok: true })
 }

@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.disabled/components/ChatAssistant/ChatInput.jsx
+<<<<<<< HEAD:src && src.disabled/components/ChatAssistant/ChatInput && ChatInput.jsx
 <<<<<<< HEAD
 =======
 import { Send export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState(\') const inputRef = useRef(null) useEffect(() => {\''\'"\";
@@ -11,4 +11,4 @@ import React,{ useState,useRef,useEffect } from';react' import { Button } from '
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======
 import React,{ useState,useRef,useEffect } from';react' import { Button } from '../ui/Button''';' import { Send } from 'lucide-react' export function ChatInput({ onSend,disabled = false }) { const [message,setMessage] = useState('', ') const inputRef = useRef(null) useEffect(() => {'';''}
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/src.disabled/components/ChatAssistant/ChatInput.jsx
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/src && src.disabled/components/ChatAssistant/ChatInput && ChatInput.jsx

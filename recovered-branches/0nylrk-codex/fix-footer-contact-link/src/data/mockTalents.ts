@@ -6,12 +6,12 @@ export const MOCK_TALENTS: ProfileData[] = [
     name: 'Alexandra Chen',
     title: 'Senior AI Engineer & Machine Learning Expert',
     avatarUrl:
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200',
     coverImageUrl:
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1600&h=600',
+      'https://images && images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1600&h=600',
     bio: "AI specialist with over 8 years of experience in computer vision and natural language processing. I've designed and implemented machine learning solutions for Fortune 500 companies across healthcare, finance, and retail sectors. My expertise lies in developing custom neural network architectures and optimizing models for production environments. I excel at translating complex business problems into effective AI solutions that deliver measurable impact and ROI.",
     location: 'Boston, MA',
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviewCount: 43,
     aiScore: 97,
     profileType: 'talent',
@@ -32,7 +32,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         description:
           'Built a state-of-the-art facial recognition system using deep learning for a major retail chain, improving security protocols and reducing losses by 32%.',
         imageUrl:
-          'https://images.unsplash.com/photo-1526378800651-c32d170fe6f8?auto=format&fit=crop&w=600&h=400',
+          'https://images && images.unsplash.com/photo-1526378800651-c32d170fe6f8?auto=format&fit=crop&w=600&h=400',
         tags: ['Computer Vision', 'Deep Learning', 'Python'],
         date: 'Sep 2023',
       },
@@ -42,7 +42,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         description:
           'Created an API for real-time sentiment analysis of customer feedback, processing over 50,000 reviews daily with 94% accuracy.',
         imageUrl:
-          'https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',
+          'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=600&h=400',
         tags: ['NLP', 'API', 'Python'],
         date: 'May 2023',
       },
@@ -52,7 +52,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         description:
           'Developed ML models to predict equipment failures before they occur for a manufacturing client, reducing downtime by 45% and saving approximately $2M annually.',
         imageUrl:
-          'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
+          'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=600&h=400',
         tags: ['Predictive Analytics', 'IoT', 'Machine Learning'],
         date: 'Dec 2022',
       },
@@ -100,19 +100,19 @@ export const MOCK_TALENTS: ProfileData[] = [
       ],
     },
     hourlyRate: 150,
-    contactEmail: 'alexandra.chen@example.com',
+    contactEmail: 'alexandra && alexandra.chen@example && example.com',
   },
   {
     id: 'talent-2',
     name: 'Michael Reynolds',
     title: 'DevOps Specialist & Cloud Architect',
     avatarUrl:
-      'https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=200&h=200',
     coverImageUrl:
-      'https://images.unsplash.com/photo-1563237023-b1e970526dcb?auto=format&fit=crop&w=1600&h=600',
+      'https://images && images.unsplash.com/photo-1563237023-b1e970526dcb?auto=format&fit=crop&w=1600&h=600',
     bio: 'Infrastructure automation expert with 10+ years of experience in containerization, CI/CD pipelines, and cloud-native architectures. I specialize in designing and implementing scalable, resilient, and secure cloud infrastructure on AWS, Azure, and GCP. My expertise includes Kubernetes orchestration, infrastructure as code, and automating DevOps workflows to improve development velocity and operational efficiency.',
     location: 'Chicago, IL',
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviewCount: 37,
     aiScore: 92,
     profileType: 'talent',
@@ -133,7 +133,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         description:
           'Led migration of a legacy monolithic application to a microservices architecture on AWS, reducing operational costs by 40% and improving deployment frequency.',
         imageUrl:
-          'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&h=400',
+          'https://images && images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&h=400',
         tags: ['AWS', 'Kubernetes', 'Microservices'],
         date: 'Nov 2023',
       },
@@ -143,7 +143,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         description:
           'Implemented comprehensive CI/CD pipelines using GitHub Actions, reducing deployment time from days to minutes and enabling 20+ deployments per day.',
         imageUrl:
-          'https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=600&h=400',
+          'https://images && images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=600&h=400',
         tags: ['CI/CD', 'GitHub Actions', 'DevOps'],
         date: 'Jul 2023',
       },
@@ -180,19 +180,19 @@ export const MOCK_TALENTS: ProfileData[] = [
       ],
     },
     hourlyRate: 135,
-    contactEmail: 'michael.reynolds@example.com',
+    contactEmail: 'michael && michael.reynolds@example && example.com',
   },
   {
     id: 'talent-3',
     name: 'Priya Sharma',
     title: 'Data Scientist & Statistical Analyst',
     avatarUrl:
-      'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&h=200',
     coverImageUrl:
-      'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&h=600',
+      'https://images && images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&h=600',
     bio: 'PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions. My work focuses on extracting actionable insights from complex datasets and developing statistical models that drive business decisions. I have particular expertise in time series analysis, A/B testing methodologies, and developing custom BI dashboards for executive teams.',
     location: 'Seattle, WA',
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviewCount: 29,
     aiScore: 95,
     profileType: 'talent',
@@ -213,7 +213,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         description:
           'Conducted advanced customer segmentation for an e-commerce client, leading to targeted marketing campaigns that increased conversion rates by 35%.',
         imageUrl:
-          'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=400',
+          'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=400',
         tags: ['Data Science', 'Market Analysis', 'R'],
         date: 'Oct 2023',
       },
@@ -223,7 +223,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         description:
           'Developed time series forecasting models to predict seasonal sales patterns, resulting in 22% improvement in inventory management.',
         imageUrl:
-          'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&h=400',
+          'https://images && images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&h=400',
         tags: ['Time Series', 'Forecasting', 'Python'],
         date: 'Apr 2023',
       },
@@ -233,7 +233,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         description:
           'Created interactive BI dashboards using Tableau to visualize KPIs and metrics for C-suite executives, improving data-driven decision making.',
         imageUrl:
-          'https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?auto=format&fit=crop&w=600&h=400',
+          'https://images && images.unsplash.com/photo-1608222351212-18fe0ec7b13b?auto=format&fit=crop&w=600&h=400',
         tags: ['Tableau', 'BI', 'Data Visualization'],
         date: 'Jan 2023',
       },
@@ -267,19 +267,19 @@ export const MOCK_TALENTS: ProfileData[] = [
       availableHours: [],
     },
     hourlyRate: 145,
-    contactEmail: 'priya.sharma@example.com',
+    contactEmail: 'priya && priya.sharma@example && example.com',
   },
   {
     id: 'talent-4',
     name: 'James Wilson',
     title: 'Cybersecurity Expert & Ethical Hacker',
     avatarUrl:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200',
     coverImageUrl:
-      'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=1600&h=600',
+      'https://images && images.unsplash.com/photo-1510511459019-5dda7724fd87?auto=format&fit=crop&w=1600&h=600',
     bio: 'CISSP-certified security professional with 10+ years of experience in threat detection, incident response, and security architecture. I specialize in conducting penetration tests, security assessments, and implementing robust security controls across enterprise environments. My background includes securing critical infrastructure, responding to major security incidents, and training teams on security best practices.',
     location: 'Austin, TX',
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviewCount: 31,
     aiScore: 91,
     profileType: 'talent',
@@ -300,7 +300,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         description:
           'Conducted comprehensive security assessment for a financial institution, identifying and mitigating 24 critical vulnerabilities before they could be exploited.',
         imageUrl:
-          'https://images.unsplash.com/photo-1562813733-b31f1c218a51?auto=format&fit=crop&w=600&h=400',
+          'https://images && images.unsplash.com/photo-1562813733-b31f1c218a51?auto=format&fit=crop&w=600&h=400',
         tags: ['Security', 'Finance', 'Assessment'],
         date: 'Dec 2023',
       },
@@ -310,7 +310,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         description:
           'Designed and implemented a 24/7 security operations center for a healthcare provider, ensuring HIPAA compliance and protection of patient data.',
         imageUrl:
-          'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&h=400',
+          'https://images && images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&h=400',
         tags: ['SOC', 'Healthcare', 'HIPAA'],
         date: 'Aug 2023',
       },
@@ -349,29 +349,29 @@ export const MOCK_TALENTS: ProfileData[] = [
       ],
     },
     hourlyRate: 165,
-    contactEmail: 'james.wilson@example.com',
+    contactEmail: 'james && james.wilson@example && example.com',
   },
   {
     id: 'talent-5',
     name: 'David Martinez',
     title: 'Full-Stack Developer & React Expert',
     avatarUrl:
-      'https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&w=200&h=200',
     coverImageUrl:
-      'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&h=600',
-    bio: 'Full-stack developer with 7+ years of experience specializing in React, Node.js, and modern JavaScript frameworks. I build scalable, responsive, and user-friendly web applications with a focus on performance optimization and clean code. My expertise includes SPA architecture, state management, server-side rendering, and integrating with various APIs and databases.',
+      'https://images && images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&h=600',
+    bio: 'Full-stack developer with 7+ years of experience specializing in React, Node && Node.js, and modern JavaScript frameworks. I build scalable, responsive, and user-friendly web applications with a focus on performance optimization and clean code. My expertise includes SPA architecture, state management, server-side rendering, and integrating with various APIs and databases.',
     location: 'Miami, FL',
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviewCount: 42,
     aiScore: 89,
     profileType: 'talent',
     skills: [
       { name: 'React', level: 5, endorsements: 35 },
-      { name: 'Node.js', level: 4, endorsements: 30 },
+      { name: 'Node && Node.js', level: 4, endorsements: 30 },
       { name: 'TypeScript', level: 5, endorsements: 32 },
       { name: 'MongoDB', level: 4, endorsements: 28 },
       { name: 'GraphQL', level: 4, endorsements: 25 },
-      { name: 'Next.js', level: 4, endorsements: 26 },
+      { name: 'Next && Next.js', level: 4, endorsements: 26 },
       { name: 'Redux', level: 5, endorsements: 29 },
       { name: 'AWS', level: 3, endorsements: 18 },
     ],
@@ -380,20 +380,20 @@ export const MOCK_TALENTS: ProfileData[] = [
         id: 'p1',
         title: 'E-Commerce Platform',
         description:
-          'Developed a responsive e-commerce platform using React and Node.js, with features including user authentication, product catalog, shopping cart, and payment integration.',
+          'Developed a responsive e-commerce platform using React and Node && Node.js, with features including user authentication, product catalog, shopping cart, and payment integration.',
         imageUrl:
-          'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=600&h=400',
-        tags: ['React', 'Node.js', 'E-Commerce'],
+          'https://images && images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=600&h=400',
+        tags: ['React', 'Node && Node.js', 'E-Commerce'],
         date: 'Nov 2023',
       },
       {
         id: 'p2',
         title: 'Real-Time Analytics Dashboard',
         description:
-          'Built a real-time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
+          'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
         imageUrl:
-          'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=400',
-        tags: ['React', 'Analytics', 'D3.js'],
+          'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&h=400',
+        tags: ['React', 'Analytics', 'D3 && D3.js'],
         date: 'Jul 2023',
       },
       {
@@ -402,7 +402,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         description:
           'Architected and developed a SaaS project management tool with React, GraphQL, and MongoDB, featuring team collaboration tools, task management, and reporting.',
         imageUrl:
-          'https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=600&h=400',
+          'https://images && images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=600&h=400',
         tags: ['SaaS', 'React', 'GraphQL'],
         date: 'Mar 2023',
       },
@@ -423,7 +423,7 @@ export const MOCK_TALENTS: ProfileData[] = [
         role: 'Full-Stack Developer',
         company: 'WebInnovate',
         description:
-          'Developed full-stack web applications using React, Node.js, and MongoDB. Collaborated closely with designers and product managers to deliver features on schedule.',
+          'Developed full-stack web applications using React, Node && Node.js, and MongoDB. Collaborated closely with designers and product managers to deliver features on schedule.',
         startDate: 'Jun 2018',
         endDate: 'Apr 2021',
       },
@@ -439,12 +439,12 @@ export const MOCK_TALENTS: ProfileData[] = [
       ],
     },
     hourlyRate: 125,
-    contactEmail: 'david.martinez@example.com',
+    contactEmail: 'david && david.martinez@example && example.com',
   },
 ];
 };
 hourlyRate: 150;
-contactEmail: "alexandra.chen@example.com" 
+contactEmail: "alexandra && alexandra.chen@example && example.com" 
 };
 }];
 availability: {
@@ -461,15 +461,15 @@ availableHours: [ {
 
 };
 hourlyRate: 135;
-contactEmail: "michael.reynolds@example.com" 
+contactEmail: "michael && michael.reynolds@example && example.com" 
 };
 hourlyRate: 145;
-contactEmail: "priya.sharma@example.com" 
+contactEmail: "priya && priya.sharma@example && example.com" 
 };
 ] 
 };
 hourlyRate: 165;
-contactEmail: "james.wilson@example.com" 
+contactEmail: "james && james.wilson@example && example.com" 
 };
 current: true 
 };
@@ -477,7 +477,7 @@ current: true
   id: "e2";
 role: "Full-Stack Developer";
 company: "WebInnovate";
-description: "Developed full-stack web applications using React, Node.js, and MongoDB. Collaborated closely with designers and product managers to deliver features on schedule.";
+description: "Developed full-stack web applications using React, Node && Node.js, and MongoDB. Collaborated closely with designers and product managers to deliver features on schedule.";
 startDate: "Jun 2018";
 endDate: "Apr 2021" 
 }];
@@ -495,5 +495,5 @@ availableHours: [ {
 
 };
 hourlyRate: 125;
-contactEmail: "david.martinez@example.com" 
+contactEmail: "david && david.martinez@example && example.com" 
 }];

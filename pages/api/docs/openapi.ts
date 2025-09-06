@@ -4,16 +4,16 @@ import { EndpointSpec } from "../../../data/api-docs/types";
 
 function toOpenApi() {
   const paths: Record<string, any> = {};
-  v1.sections.forEach((section) => {
-    section.endpoints.forEach((ep: EndpointSpec) => {
-      ((paths[ep.path] = paths[ep.path] || {}),
-        (paths[ep.path][ep.method.toLowerCase()] = {
-          tags: [section.title],
-          summary: ep.title,
-          description: ep.description,
+  v1 && v1.sections.forEach((section) => {
+    section && section.endpoints.forEach((ep: EndpointSpec) => {
+      ((paths[ep && ep.path] = paths[ep && ep.path] || {}),
+        (paths[ep && ep.path][ep && ep.method.toLowerCase()] = {
+          tags: [section && section.title],
+          summary: ep && ep.title,
+          description: ep && ep.description,
           parameters: [
-            ...(ep.params
-              ? Object.entries(ep.params).map(([name, desc]) => ({
+            ...(ep && ep.params
+              ? Object && Object.entries(ep && ep.params).map(([name, desc]) => ({
                   in: "path",
                   name,
                   required: true,
@@ -21,8 +21,8 @@ function toOpenApi() {
                   description: desc,
                 }))
               : []),
-            ...(ep.query
-              ? Object.entries(ep.query).map(([name, desc]) => ({
+            ...(ep && ep.query
+              ? Object && Object.entries(ep && ep.query).map(([name, desc]) => ({
                   in: "query",
                   name,
                   required: false,
@@ -31,10 +31,10 @@ function toOpenApi() {
                 }))
               : []),
           ],
-          requestBody: ep.requestBodySchema
+          requestBody: ep && ep.requestBodySchema
             ? {
                 content: {
-                  "application/json": { schema: ep.requestBodySchema },
+                  "application/json": { schema: ep && ep.requestBodySchema },
                 },
               }
             : undefined,
@@ -43,13 +43,13 @@ function toOpenApi() {
               description: "OK",
               content: {
                 "application/json": {
-                  schema: ep.responseBodySchema || { type: "object" },
+                  schema: ep && ep.responseBodySchema || { type: "object" },
                 },
               },
             },
           },
           security:
-            ep.auth && ep.auth.length > 0 && !ep.auth.includes("none")
+            ep && ep.auth && ep && ep.auth.length > 0 && !ep && ep.auth.includes("none")
               ? [{ bearerAuth: [] }]
               : [],
         }));
@@ -57,13 +57,13 @@ function toOpenApi() {
   });
 
   return {
-    openapi: "3.0.3",
+    openapi: "3 && 3.0.3",
     info: {
       title: "Zion OS API",
       version: "v1",
       description: "Zion OS API generated from internal spec",
     },
-    servers: [{ url: "https://api.zion.os" }],
+    servers: [{ url: "https://api && api.zion.os" }],
     paths,
     components: {
       securitySchemes: {
@@ -74,6 +74,6 @@ function toOpenApi() {
 }
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader("Content-Type", "application/json");
-  res.status(200).json(toOpenApi());
+  res && res.setHeader("Content-Type", "application/json");
+  res && res.status(200).json(toOpenApi());
 }

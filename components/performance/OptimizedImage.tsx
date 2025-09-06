@@ -1,9 +1,32 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React from 'react';
 import Image from 'next/image';
 
-interface OptimizedImageProps {
+interface OptimizedImageProps {;
 
-  src: string, alt: string,
+  src: string, alt: string,;
   width?: number;
   height?: number;
   className?: string;
@@ -11,22 +34,22 @@ interface OptimizedImageProps {
   sizes?: string;
   quality?: number;
   fill?: boolean;
-  style?: React.CSSProperties;
+  style?: React && React.CSSProperties;
 }
 
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false,
-  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
-  quality = 85,
-  fill = false,
-  style
-}) => {
-  if (fill) {
+const OptimizedImage: React.FC<OptimizedImageProps> = ({;
+  src,;
+  alt,;
+  width,;
+  height,;
+  className = '',;
+  priority = false,;
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',;
+  quality = 85,;
+  fill = false,;
+  style;
+}) => {;
+  if (fill) {;
     return (
       <Image
         src={src}
@@ -37,12 +60,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         sizes={sizes}
         quality={quality}
         style={style}
-      />
+      />;
     );
   }
 
-
-    <Image
+    <Image;
       src={src}
       alt={alt}
 

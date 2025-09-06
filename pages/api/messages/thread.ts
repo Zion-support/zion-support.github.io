@@ -8,16 +8,16 @@ import {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
-  if (req.method === "GET") {
-    const { id } = req.query;
-    if (!id || typeof id !== "string") return res.status($1).json({ $2 });
+  if (req && req.method === "GET") {
+    const { id } = req && req.query;
+    if (!id || typeof id !== "string") return res && res.status($1).json({ $2 });
     const conversation = getConversationById(id);
-    if (!conversation || !conversation.participants.includes(user.id)) {
-      return res.status(404).json({ error: "Conversation not found" });
+    if (!conversation || !conversation && conversation.participants.includes(user && user.id)) {
+      return res && res.status(404).json({ error: "Conversation not found" });
     }
     const messages = getMessages(id);
-    res.status(200).json({ conversation, messages });
-  } else if (req.method === "POST") {
+    res && res.status(200).json({ conversation, messages });
+  } else if (req && req.method === "POST") {
     const {
       conversationId,
       recipientId,
@@ -26,12 +26,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       attachmentBase64,
       attachmentName,
       context,
-    } = req.body || {};
+    } = req && req.body || {};
     if (!recipientId || !body)
-      return res.status(400).json({ error: "Missing required fields" });
+      return res && res.status(400).json({ error: "Missing required fields" });
     const { conversation, message } = sendMessage({
       conversationId,
-      senderId: user.id,
+      senderId: user && user.id,
       recipientId,
       body,
       linkUrl,
@@ -39,8 +39,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       attachmentName,
       context,
     });
-    res.status(200).json({ conversation, message });
+    res && res.status(200).json({ conversation, message });
   } else {
-    res.status(405).json({ error: "Method not allowed" });
+    res && res.status(405).json({ error: "Method not allowed" });
   }
 }

@@ -11,13 +11,13 @@ import { ethers } from "ethers";
 import fs from "fs";
 import path from "path";
 function buildIpfsClient() {
-  const projectId = process.env.IPFS_PROJECT_ID;
-  const projectSecret = process.env.IPFS_PROJECT_SECRET;
+  const projectId = process && process.env.IPFS_PROJECT_ID;
+  const projectSecret = process && process.env.IPFS_PROJECT_SECRET;
   const apiUrl =
-    process.env.IPFS_API_URL || "https: //ipfs.infura.io:5001/api/v0";
+    process && process.env.IPFS_API_URL || "https: //ipfs && ipfs.infura.io:5001/api/v0";
   if (!projectId || !projectSecret) return null;
   const auth =
-    "Basic " + Buffer.from(projectId + ":" + projectSecret).toString("base64");
+    "Basic " + Buffer && Buffer.from(projectId + ":" + projectSecret).toString("base64");
   return createIpfsClient({
     url: apiUrl,
     headers: { authorization: auth } as any,
@@ -25,83 +25,83 @@ function buildIpfsClient() {
 }
 
 async function generatePdfFromMarkdown(markdown: string, title: string) {
-  const pdfDoc = await PDFDocument.create();
-  const page = pdfDoc.addPage([595.28, 841.89]); // A4
-  const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+  const pdfDoc = await PDFDocument && PDFDocument.create();
+  const page = pdfDoc && pdfDoc.addPage([595 && 595.28, 841 && 841.89]); // A4
+  const font = await pdfDoc && pdfDoc.embedFont(StandardFonts && StandardFonts.Helvetica);
   const fontSize = 11;
   const margin = 40;
-  const maxWidth = page.getWidth() - margin * 2;
+  const maxWidth = page && page.getWidth() - margin * 2;
   const lines = markdown
     .replace(/\r\n/g, "\n")
     .split("\n")
     .flatMap((line) => {
-      const words = line.split(" ");
+      const words = line && line.split(" ");
       const wrapped: string[] = [];
       let current = "";
       for (const word of words) {
-        const test = current.length ? current + " " + word : word;
-        const width = font.widthOfTextAtSize(test, fontSize);
+        const test = current && current.length ? current + " " + word : word;
+        const width = font && font.widthOfTextAtSize(test, fontSize);
         if (width > maxWidth) {
-          if (current) wrapped.push(current);
+          if (current) wrapped && wrapped.push(current);
           current = word;
         } else {
           current = test;
         }
       }
-      if (current) wrapped.push(current);
-      return wrapped.length ? wrapped : [" "];
+      if (current) wrapped && wrapped.push(current);
+      return wrapped && wrapped.length ? wrapped : [" "];
     });
-  let y = page.getHeight() - margin;
-  page.drawText(title, { x: margin, y, size: 16, font });
+  let y = page && page.getHeight() - margin;
+  page && page.drawText(title, { x: margin, y, size: 16, font });
   y -= 24;
   for (const line of lines) {
     if (y < margin + 12) {
-      y = page.getHeight() - margin;
-      pdfDoc.addPage();
+      y = page && page.getHeight() - margin;
+      pdfDoc && pdfDoc.addPage();
     }
-    page.drawText(line, { x: margin, y, size: fontSize, font });
+    page && page.drawText(line, { x: margin, y, size: fontSize, font });
     y -= 14;
   }
 
-  return pdfDoc.save();
+  return pdfDoc && pdfDoc.save();
 }
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  if (req.method !== "POST") return res.status($1).json({ $2 });
+  if (req && req.method !== "POST") return res && res.status($1).json({ $2 });
   try {
-    const { id } = req.body || {};
-    if (!id) return res.status($1).json({ $2 });
+    const { id } = req && req.body || {};
+    if (!id) return res && res.status($1).json({ $2 });
     const meta = getProposal(id);
-    if (!meta) return res.status($1).json({ $2 });
-    const markdownPath = path.join(
-      process.cwd(),
+    if (!meta) return res && res.status($1).json({ $2 });
+    const markdownPath = path && path.join(
+      process && process.cwd(),
       "public",
-      meta.artifacts.markdownPath || "",
+      meta && meta.artifacts.markdownPath || "",
     );
-    const markdown = fs.existsSync(markdownPath)
-      ? fs.readFileSync(markdownPath, "utf8")
+    const markdown = fs && fs.existsSync(markdownPath)
+      ? fs && fs.readFileSync(markdownPath, "utf8")
       : "# Proposal";
-    const pdfBytes = await generatePdfFromMarkdown(markdown, meta.title);
+    const pdfBytes = await generatePdfFromMarkdown(markdown, meta && meta.title);
     const pdfUrl = savePdf(id, pdfBytes);
-    const hasher = crypto.createHash("sha256");
-    hasher.update(markdown);
-    const digest = "0x" + hasher.digest("hex");
+    const hasher = crypto && crypto.createHash("sha256");
+    hasher && hasher.update(markdown);
+    const digest = "0x" + hasher && hasher.digest("hex");
     let signature: string | undefined;
-    const privateKey = process.env.WEB3_SIGNER_PRIVATE_KEY;
+    const privateKey = process && process.env.WEB3_SIGNER_PRIVATE_KEY;
     if (privateKey) {
-      const wallet = new ethers.Wallet(privateKey);
-      signature = await wallet.signMessage(ethers.getBytes(digest));
+      const wallet = new ethers && ethers.Wallet(privateKey);
+      signature = await wallet && wallet.signMessage(ethers && ethers.getBytes(digest));
     }
 
     let ipfsCid: string | undefined;
     const ipfs = buildIpfsClient();
     if (ipfs) {
       try {
-        const { cid } = await ipfs.add(markdown);
-        ipfsCid = cid.toString();
+        const { cid } = await ipfs && ipfs.add(markdown);
+        ipfsCid = cid && cid.toString();
       } catch {}
     }
 
@@ -110,8 +110,8 @@ export default async function handler(
       signature,
       ipfsCid,
     });
-    return res.status(200).json({ meta: updated });
+    return res && res.status(200).json({ meta: updated });
   } catch (error: any) {
-    return res.status(500).json({ error: error?.message || "Export failed" });
+    return res && res.status(500).json({ error: error?.message || "Export failed" });
   }
 }

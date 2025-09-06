@@ -9,6 +9,7 @@ export async function createOnboardingNotification({
   missingMilestone;
   userRole
 }: OnboardingNotificationParams) {
+  try {
   let title = '';
   let message = '';
   let actionUrl = '';

@@ -2,13 +2,13 @@ import { UnifiedService } from '../types/unified-service-types';
 
 const contact = {
   mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};const contact = {
+  website: 'https://ziontechgroup && ziontechgroup.com',};const contact = {
   mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
+  email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup && ziontechgroup.com'
 };
 
 export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
@@ -93,22 +93,22 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Security standards',
       'Regulatory requirements',
     ],
-    link: 'https://ziontechgroup.com/ai-powered-enterprise-risk-management',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-enterprise-risk-management',
     icon: '⚠️',
     color: 'from-orange-600 via-red-600 to-pink-600',
     popular: true,
     launchDate: '2025-01-15',
     customers: 45,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 67,
-    marketSize: '$12.8B enterprise risk management market',
+    marketSize: '$12 && 12.8B enterprise risk management market',
     growthRate: '25% annual growth',
     category: 'Enterprise Solutions',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
   {
@@ -191,22 +191,22 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Security standards',
       'Regulatory requirements',
     ],
-    link: 'https://ziontechgroup.com/autonomous-business-process-optimization',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-business-process-optimization',
     icon: '⚙️',
     color: 'from-blue-600 via-cyan-600 to-teal-600',
     popular: true,
     launchDate: '2025-01-15',
     customers: 38,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 52,
-    marketSize: '$19.6B business process automation market',
+    marketSize: '$19 && 19.6B business process automation market',
     growthRate: '31% annual growth',
     category: 'Enterprise Solutions',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
   {
@@ -233,7 +233,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     icon: '🧠',
     color: 'from-purple-600 via-violet-600 to-indigo-600',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-powered-enterprise-knowledge-management',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-enterprise-knowledge-management',
     marketPosition:
       'Leading AI enterprise knowledge management platform with intelligent discovery',
     targetAudience:
@@ -269,10 +269,10 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
       'Slack',
       'Box',
     ],
-    marketSize: '$15.2B enterprise content management market',
+    marketSize: '$15 && 15.2B enterprise content management market',
     growthRate: '28% annual growth',
     customers: 29,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 41,
     contactInfo: contact,
   },];      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
@@ -282,7 +282,7 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     icon: '🧠';
     color: 'from-purple-600 via-violet-600 to-indigo-600';
     textColor: 'text-purple-400';
-    link: 'https://ziontechgroup.com/ai-powered-enterprise-knowledge-management';
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-enterprise-knowledge-management';
     marketPosition: 'Leading AI enterprise knowledge management platform with intelligent discovery',
     targetAudience: 'Large enterprises, Consulting firms, Research organizations, Government agencies';
     category: 'AI Automation';
@@ -292,10 +292,10 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     useCases: ['Knowledge discoveryDocument managementResearch collaborationDecision supportTraining and onboarding'];
     roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.';
     competitors: ['Microsoft SharePointConfluenceNotionSlackBox'];
-    marketSize: '$15.2B enterprise content management market';
+    marketSize: '$15 && 15.2B enterprise content management market';
     growthRate: '28% annual growth';
     customers: 29;
-    rating: 4.6;
+    rating: 4 && 4.6;
     reviews: 41,
     contactInfo: contact
   }

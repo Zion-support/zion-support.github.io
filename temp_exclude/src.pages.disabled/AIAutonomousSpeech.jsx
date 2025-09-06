@@ -1,5 +1,28 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD:src.pages.disabled/AIAutonomousSpeech.jsx
-<<<<<<< \"HEAD\": src.pages.disabled/AIAutonomousSpeech.jsx import React from \'react\'; export default AIAutonomousSpeech; const AIAutonomousSpeech = () => { return (<> <Helmet> <title > AI Autonomous Speech Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous speech platform that continuously processes speech,recognizes voice,and generates audio with advanced AI capabilities and autonomous operation.\" / / /> <meta name=\"keywords\" content=\"AI speech,autonomous speech,speech recognition,voice processing,autonomous operations,AI speech platform\" / / /> <link rel=\"canonical\" href=\""https\": import React from \'react\'; export default AIAutonomousSpeech; const AIAutonomousSpeech = () => { return (<> <Helmet> <title > AI Autonomous Speech Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous speech platform that continuously processes speech,recognizes voice,and generates audio with advanced AI capabilities and autonomous operation.\" / / / /> <meta name=\"keywords\" content=\"AI speech,autonomous speech,speech recognition,voice processing,autonomous operations,AI speech platform\" / / / /> <link rel=\"canonical\" href=\""https\": \"";
-<<<<<<< "HEAD": src.pages.disabled/AIAutonomousSpeech.jsx import _React from 'react'; export default AIAutonomousSpeech; const AIAutonomousSpeech = () => { return (<> <Helmet> <title > AI Autonomous Speech Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous speech platform that continuously processes speech,recognizes voice,and generates audio with advanced AI capabilities and autonomous operation." / / /> <meta name="keywords" content="AI speech,autonomous speech,speech recognition,voice processing,autonomous operations,AI speech platform" / / /> <link rel="canonical" href=""https": import _React from 'react'; export default AIAutonomousSpeech; const AIAutonomousSpeech = () => { return (<> <Helmet> <title > AI Autonomous Speech Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous speech platform that continuously processes speech,recognizes voice,and generates audio with advanced AI capabilities and autonomous operation." / / / /> <meta name="keywords" content="AI speech,autonomous speech,speech recognition,voice processing,autonomous operations,AI speech platform" / / / /> <link rel="canonical" href=""https": "";
+<<<<<<< HEAD:src && src.pages.disabled/AIAutonomousSpeech && AIAutonomousSpeech.jsx
+<<<<<<< \"HEAD\": src && src.pages.disabled/AIAutonomousSpeech && AIAutonomousSpeech.jsx import React from \'react\'; export default AIAutonomousSpeech; const AIAutonomousSpeech = () => { return (<> <Helmet> <title > AI Autonomous Speech Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous speech platform that continuously processes speech,recognizes voice,and generates audio with advanced AI capabilities and autonomous operation.\" / / /> <meta name=\"keywords\" content=\"AI speech,autonomous speech,speech recognition,voice processing,autonomous operations,AI speech platform\" / / /> <linkrel=\"canonical\" href=\""https\": import React from \'react\' export default AIAutonomousSpeech const AIAutonomousSpeech = () => { return (<> <Helmet> <title > AI Autonomous Speech Platform | Zion Tech Group</title> <meta name=\"description\" content=\"Revolutionary AI autonomous speech platform that continuously processes speech,recognizes voice,and generates audio with advanced AI capabilities and autonomous operation.\" / / / /> <meta name=\"keywords\" content=\"AI speech,autonomous speech,speech recognition,voice processing,autonomous operations,AI speech platform\" / / / /> <linkrel=\"canonical\" href=\""https\": \""
+<<<<<<< "HEAD": src && src.pages.disabled/AIAutonomousSpeech && AIAutonomousSpeech.jsx import _React from 'react' export default AIAutonomousSpeech const AIAutonomousSpeech = () => { return (<> <Helmet> <title > AI Autonomous Speech Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous speech platform that continuously processes speech,recognizes voice,and generates audio with advanced AI capabilities and autonomous operation." / / /> <meta name="keywords" content="AI speech,autonomous speech,speech recognition,voice processing,autonomous operations,AI speech platform" / / /> <linkrel="canonical" href=""https": import _React from 'react' export default AIAutonomousSpeech const AIAutonomousSpeech = () => { return (<> <Helmet> <title > AI Autonomous Speech Platform | Zion Tech Group</title> <meta name="description" content="Revolutionary AI autonomous speech platform that continuously processes speech,recognizes voice,and generates audio with advanced AI capabilities and autonomous operation." / / / /> <meta name="keywords" content="AI speech,autonomous speech,speech recognition,voice processing,autonomous operations,AI speech platform" / / / /> <link rel="canonical" href=""https": "";

@@ -1,16 +1,16 @@
 import { NextApiRequest } from 'next';
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
-  const authHeader = req.headers.authorization;
-  if (!authHeader || !authHeader.startsWith('Bearer ')) {
+  const authHeader = req && req.headers.authorization;
+  if (!authHeader || !authHeader && authHeader.startsWith('Bearer ')) {
     return null;
   }
   
-  const token = authHeader.substring(7);
+  const token = authHeader && authHeader.substring(7);
   if (token && token.length > 0) {
     return {
       id: 'user-1',
-      email: 'user@example.com',
+      email: 'user@example && example.com',
       role: 'client',
       name: 'Test User'
     };
@@ -25,15 +25,15 @@ export function assertTalentOrClientForOffer(
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
-  if (u.role === 'client' && u.id === offer.clientId) return u;
+  if (u && u.role === 'client' && u && u.id === offer && offer.clientId) return u;
   if (
-    u.role === 'talent' &&
-    (u.talentSlug || talentSlugHeader) === offer.talentSlug
+    u && u.role === 'talent' &&
+    (u && u.talentSlug || talentSlugHeader) === offer && offer.talentSlug
   )
     return u;
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
-  err.statusCode = 403;
+  err && err.statusCode = 403;
   throw err;export function requireAuth(req: any): User {
   const user = getUserFromRequest(req);
   if (!user) {

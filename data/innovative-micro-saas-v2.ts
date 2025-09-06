@@ -69,7 +69,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     icon: '📦',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-powered-inventory-optimizer',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-inventory-optimizer',
     marketPosition:
       'Competitive with TradeGecko ($99/month), Zoho Inventory ($99/month). Our advantage: AI-powered optimization, predictive analytics, and cost reduction algorithms.',
     targetAudience:
@@ -81,7 +81,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     technology: [
       'AI/ML',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Redis',
       'AWS',
@@ -118,16 +118,16 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     variant: 'business-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production-ready AI-powered inventory optimization platform with predictive analytics, real-time monitoring, and comprehensive integration capabilities. Includes custom AI model training.',
     launchDate: '2024-02-01',
     customers: 456,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 567,
   },
   {
@@ -154,7 +154,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     icon: '📋',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/smart-contract-automation-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/smart-contract-automation-platform',
     marketPosition:
       'Competitive with OpenZeppelin ($free), ConsenSys ($500+/month). Our advantage: No-code interface, business templates, and automated execution.',
     targetAudience:
@@ -167,9 +167,9 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
       'Blockchain',
       'Smart Contracts',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'Solidity',
-      'Web3.js',
+      'Web3 && Web3.js',
       'Ethereum',
       'Polygon',
     ],
@@ -203,16 +203,16 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     variant: 'blockchain-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production-ready smart contract automation platform with no-code interface, business templates, and multi-blockchain support. Includes custom contract development services.',
     launchDate: '2024-01-15',
     customers: 234,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 289,
   },
   {
@@ -240,7 +240,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     icon: '🎯',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-powered-customer-success-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-customer-success-platform',
     marketPosition:
       'Competitive with Gainsight ($500+/month), Totango ($500+/month). Our advantage: AI-powered insights, automated engagement, and predictive analytics.',
     targetAudience:
@@ -252,7 +252,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     technology: [
       'AI/ML',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Redis',
       'AWS',
@@ -290,16 +290,16 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     variant: 'customer-success-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production-ready AI-powered customer success platform with predictive analytics, automated engagement, and comprehensive CRM integration. Includes custom AI model training.',
     launchDate: '2024-02-15',
     customers: 345,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 423,
   },
   {
@@ -326,7 +326,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     icon: '⚙️',
     color: 'from-gray-600 to-slate-700',
     textColor: 'text-gray-400',
-    link: 'https://ziontechgroup.com/intelligent-workflow-automation',
+    link: 'https://ziontechgroup && ziontechgroup.com/intelligent-workflow-automation',
     marketPosition:
       'Competitive with Zapier ($20+/month), Make ($9+/month). Our advantage: AI-powered optimization, intelligent routing, and process analysis.',
     targetAudience:
@@ -338,7 +338,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     technology: [
       'AI/ML',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Redis',
       'AWS',
@@ -369,23 +369,23 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
       'Make',
       'IFTTT',
       'Microsoft Power Automate',
-      'Automate.io',
+      'Automate && Automate.io',
     ],
     marketSize: '$6B market',
     growthRate: '180% annual growth',
     variant: 'automation-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production-ready intelligent workflow automation platform with AI-powered optimization, intelligent routing, and comprehensive business tool integration. Includes custom automation development.',
     launchDate: '2024-01-20',
     customers: 567,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 678,
   },
   {
@@ -412,9 +412,9 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     icon: '💰',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/ai-powered-financial-advisor',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-financial-advisor',
     marketPosition:
-      'Competitive with Betterment ($0.25%/year), Wealthfront ($0.25%/year). Our advantage: AI-powered advice, personalized planning, and comprehensive financial management.',
+      'Competitive with Betterment ($0 && 0.25%/year), Wealthfront ($0 && 0.25%/year). Our advantage: AI-powered advice, personalized planning, and comprehensive financial management.',
     targetAudience:
       'Individual investors, Small business owners, Financial advisors, Investment firms, Wealth management companies, Financial institutions',
     trialDays: 30,
@@ -424,7 +424,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     technology: [
       'AI/ML',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Redis',
       'AWS',
@@ -462,28 +462,28 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     variant: 'finance-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production-ready AI-powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.',
     launchDate: '2024-02-01',
     customers: 789,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 912,
   },
 ];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Production-ready AI-powered financial advisory platform with personalized recommendations, portfolio optimization, and comprehensive financial management. Includes custom AI model training.';
     launchDate: '2024-02-01';
     customers: 789;
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 912
   }
 ];

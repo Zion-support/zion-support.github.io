@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.disabled/hooks/useAICodeGeneration.js.jsx
+<<<<<<< HEAD:src && src.disabled/hooks/useAICodeGeneration && useAICodeGeneration.js.jsx
 <<<<<<< HEAD
 =======
 import { useState,useCallback,useRef,useEffect } from\';react\' import { useAnalytics } from\';\';./useAnalytics\' \"export\": const useAICodeGeneration = () => { const { trackEvent } = useAnalytics({ \"enableTracking\": \'tru\',e,\"enableUserBehaviorTracking\": \'true\'}) const [isGenerating,setIsGenerating] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [generatedCode,setGeneratedCode] = useState(\'';\';) const [codeAnalysis,setCodeAnalysis] = useState(null) const [suggestions,setSuggestions] = useState([]) const [history,setHistory] = useState([]) const generationTimeoutRef = useRef(null)\'';
@@ -10,4 +10,4 @@ const { useState,useCallback,useRef,useEffect } from";react" import { useAnalyti
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 =======
 const { useState,useCallback,useRef,useEffect } from";react" import { useAnalytics } from";";./useAnalytics" export: const useAICodeGeneration = () => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [isGenerating,setIsGenerating] = useState(false) const [isAnalyzing,setIsAnalyzing] = useState(false) const [generatedCode,setGeneratedCode] = useState("", ") const [codeAnalysis,setCodeAnalysis] = useState(null) const [suggestions,setSuggestions] = useState([]) const [history,setHistory] = useState([]) const generationTimeoutRef = useRef(null)"";'"'"
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/src.disabled/hooks/useAICodeGeneration.js.jsx
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/src && src.disabled/hooks/useAICodeGeneration && useAICodeGeneration.js.jsx

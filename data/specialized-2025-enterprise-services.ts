@@ -1,3 +1,26 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import { ServiceVariant } from '../types/service-variants';
 
   id: string;
@@ -44,12 +67,12 @@ import { ServiceVariant } from '../types/service-variants';
 
 const contact = {
   mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
+  website: 'https://ziontechgroup && ziontechgroup.com',};  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup && ziontechgroup.com'
 };
 
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
@@ -77,7 +100,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     icon: '🧠',
     color: 'from-purple-600 to-pink-600',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-consciousness-research',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-consciousness-research',
     marketPosition:
       'Leading AI consciousness research platform for scientific institutions',
     targetAudience:
@@ -106,7 +129,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Advanced research platform with custom AI models and collaborative research tools',
     launchDate: '2024-11-01',
     customers: 23,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 18,
     benefits: [
       'Breakthrough consciousness research',
@@ -151,7 +174,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     icon: '⚛️',
     color: 'from-blue-600 to-cyan-600',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/quantum-machine-learning',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-machine-learning',
     marketPosition:
       'Leading quantum machine learning platform for research and enterprise',
     targetAudience:
@@ -180,7 +203,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Multi-quantum backend platform with hybrid computing capabilities',
     launchDate: '2024-10-01',
     customers: 45,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 32,
     benefits: [
       '100x research acceleration',
@@ -225,7 +248,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     icon: '🔒',
     color: 'from-red-600 to-orange-600',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/quantum-resistant-cryptography',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-resistant-cryptography',
     marketPosition:
       'Leading quantum-resistant cryptography platform for enterprise security',
     targetAudience:
@@ -254,7 +277,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Enterprise-grade quantum-resistant cryptography platform with migration tools',
     launchDate: '2024-09-01',
     customers: 78,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 56,
     benefits: [
       'Future-proof security',
@@ -299,7 +322,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     icon: '🛰️',
     color: 'from-indigo-600 to-purple-600',
     textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/satellite-ai-orchestration',
+    link: 'https://ziontechgroup && ziontechgroup.com/satellite-ai-orchestration',
     marketPosition:
       'Leading AI satellite orchestration platform for space companies',
     targetAudience:
@@ -328,7 +351,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Custom satellite orchestration platform with AI-powered optimization',
     launchDate: '2024-08-01',
     customers: 12,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 8,
     benefits: [
       '400% operation optimization',
@@ -373,7 +396,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     icon: '🧬',
     color: 'from-pink-600 to-rose-600',
     textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/brain-computer-interface',
+    link: 'https://ziontechgroup && ziontechgroup.com/brain-computer-interface',
     marketPosition:
       'Leading brain-computer interface platform for research and medical applications',
     targetAudience:
@@ -402,7 +425,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Advanced BCI platform with medical-grade hardware and research tools',
     launchDate: '2024-07-01',
     customers: 8,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 5,
     benefits: [
       'Revolutionary medical applications',
@@ -447,7 +470,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     icon: '🌐',
     color: 'from-teal-600 to-cyan-600',
     textColor: 'text-teal-400',
-    link: 'https://ziontechgroup.com/autonomous-iot-ecosystem',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-iot-ecosystem',
     marketPosition:
       'Advanced autonomous IoT platform for industrial and enterprise applications',
     targetAudience:
@@ -476,7 +499,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Industrial-grade autonomous IoT platform with AI-powered management',
     launchDate: '2024-06-01',
     customers: 67,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 45,
     benefits: [
       '70% management cost reduction',
@@ -521,7 +544,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     icon: '📊',
     color: 'from-green-600 to-emerald-600',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/predictive-analytics-engine',
+    link: 'https://ziontechgroup && ziontechgroup.com/predictive-analytics-engine',
     marketPosition:
       'Leading AI-powered predictive analytics platform for enterprise',
     targetAudience:
@@ -530,7 +553,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
     setupTime: '2-3 weeks',
     category: 'Advanced Analytics & AI',
     realService: true,
-    technology: ['Python, TensorFlow, PyTorch, Scikit-learn, React, Node.js'],
+    technology: ['Python, TensorFlow, PyTorch, Scikit-learn, React, Node && Node.js'],
     integrations: [
       'Data warehouses, Business intelligence tools, CRM systems, ERP platforms',
     ],
@@ -548,7 +571,7 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
       'Enterprise-grade predictive analytics platform with custom model development',
     launchDate: '2024-05-01',
     customers: 189,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 145,
     benefits: [
       '60% decision accuracy improvement',
@@ -583,7 +606,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     icon: '⚛️';
     color: 'from-blue-600 to-cyan-600';
     textColor: 'text-blue-400';
-    link: 'https://ziontechgroup.com/quantum-machine-learning';
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-machine-learning';
     marketPosition: 'Leading quantum machine learning platform for research and enterprise';
     targetAudience: 'Research institutions, Financial services, Pharmaceutical companies, Logistics companies';
     trialDays: 21;
@@ -603,7 +626,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     implementationDetails: 'Multi-quantum backend platform with hybrid computing capabilities';
     launchDate: '2024-10-01';
     customers: 45;
-    rating: 4.9;
+    rating: 4 && 4.9;
     reviews: 32;
     benefits: [
       '100x research accelerationQuantum advantage in optimizationHybrid computing capabilitiesMulti-quantum backend supportExpert quantum consulting'
@@ -630,7 +653,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     icon: '🔒';
     color: 'from-red-600 to-orange-600';
     textColor: 'text-red-400';
-    link: 'https://ziontechgroup.com/quantum-resistant-cryptography';
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-resistant-cryptography';
     marketPosition: 'Leading quantum-resistant cryptography platform for enterprise security';
     targetAudience: 'Financial institutions, Government agencies, Healthcare organizations, Defense contractors';
     trialDays: 30;
@@ -650,7 +673,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     implementationDetails: 'Enterprise-grade quantum-resistant cryptography platform with migration tools';
     launchDate: '2024-09-01';
     customers: 78;
-    rating: 4.8;
+    rating: 4 && 4.8;
     reviews: 56;
     benefits: [
       'Future-proof securityQuantum-resistant algorithmsCompliance readinessMigration supportExpert consultation'
@@ -677,7 +700,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     icon: '🛰️';
     color: 'from-indigo-600 to-purple-600';
     textColor: 'text-indigo-400';
-    link: 'https://ziontechgroup.com/satellite-ai-orchestration';
+    link: 'https://ziontechgroup && ziontechgroup.com/satellite-ai-orchestration';
     marketPosition: 'Leading AI satellite orchestration platform for space companies';
     targetAudience: 'Satellite companies, Space agencies, Telecommunications, Earth observation companies';
     trialDays: 14;
@@ -697,7 +720,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     implementationDetails: 'Custom satellite orchestration platform with AI-powered optimization';
     launchDate: '2024-08-01';
     customers: 12;
-    rating: 4.9;
+    rating: 4 && 4.9;
     reviews: 8;
     benefits: [
       '400% operation optimization60% mission cost reductionAutonomous operationsAI mission planningExpert space consulting'
@@ -724,7 +747,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     icon: '🧬';
     color: 'from-pink-600 to-rose-600';
     textColor: 'text-pink-400';
-    link: 'https://ziontechgroup.com/brain-computer-interface';
+    link: 'https://ziontechgroup && ziontechgroup.com/brain-computer-interface';
     marketPosition: 'Leading brain-computer interface platform for research and medical applications';
     targetAudience: 'Research institutions, Medical centers, Rehabilitation facilities, Technology companies';
     trialDays: 7;
@@ -744,7 +767,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     implementationDetails: 'Advanced BCI platform with medical-grade hardware and research tools';
     launchDate: '2024-07-01';
     customers: 8;
-    rating: 5.0;
+    rating: 5 && 5.0;
     reviews: 5;
     benefits: [
       'Revolutionary medical applicationsBreakthrough research capabilitiesCognitive enhancementMedical rehabilitationExpert neural consultation'
@@ -771,7 +794,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     icon: '🌐';
     color: 'from-teal-600 to-cyan-600';
     textColor: 'text-teal-400';
-    link: 'https://ziontechgroup.com/autonomous-iot-ecosystem';
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-iot-ecosystem';
     marketPosition: 'Advanced autonomous IoT platform for industrial and enterprise applications';
     targetAudience: 'Manufacturing companies, Smart cities, Energy companies, Industrial IoT providers';
     trialDays: 30;
@@ -791,7 +814,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     implementationDetails: 'Industrial-grade autonomous IoT platform with AI-powered management';
     launchDate: '2024-06-01';
     customers: 67;
-    rating: 4.7;
+    rating: 4 && 4.7;
     reviews: 45;
     benefits: [
       '70% management cost reduction50% operational efficiencyAutonomous managementSelf-healing networksAI optimization'
@@ -818,14 +841,14 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     icon: '📊';
     color: 'from-green-600 to-emerald-600';
     textColor: 'text-green-400';
-    link: 'https://ziontechgroup.com/predictive-analytics-engine';
+    link: 'https://ziontechgroup && ziontechgroup.com/predictive-analytics-engine';
     marketPosition: 'Leading AI-powered predictive analytics platform for enterprise';
     targetAudience: 'Businesses, Financial services, Retail companies, Manufacturing companies';
     trialDays: 21;
     setupTime: '2-3 weeks';
     category: 'Advanced Analytics & AI';
     realService: true;
-    technology: ['Python, TensorFlow, PyTorch, Scikit-learn, React, Node.js'];
+    technology: ['Python, TensorFlow, PyTorch, Scikit-learn, React, Node && Node.js'];
     integrations: ['Data warehouses, Business intelligence tools, CRM systems, ERP platforms'];
     useCases: ['Sales forecasting, Demand prediction, Risk assessment, Performance optimization'];
     roi: 'Improve decision-making accuracy by 60% and reduce operational costs by 35%';
@@ -838,7 +861,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     implementationDetails: 'Enterprise-grade predictive analytics platform with custom model development';
     launchDate: '2024-05-01';
     customers: 189;
-    rating: 4.8;
+    rating: 4 && 4.8;
     reviews: 145;
     benefits: [
       '60% decision accuracy improvement35% operational cost reductionAdvanced ML algorithmsReal-time predictionsCustom model development'

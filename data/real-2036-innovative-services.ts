@@ -35,10 +35,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       'Custom dashboard builder',
       'Mobile-responsive interface',
     ],
-    link: 'https://ziontechgroup.com/services/ai-business-intelligence-platform-pro',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-business-intelligence-platform-pro',
     launchDate: '2036-01-20',
-    rating: 4.8,
-    marketSize: '$25.6B',
+    rating: 4 && 4.8,
+    marketSize: '$25 && 25.6B',
     targetAudience: 'Enterprise businesses, Data analysts, C-suite executives',
     competitiveAdvantage:
       'Advanced AI algorithms, Real-time processing, Natural language interface',
@@ -77,10 +77,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       '24/7 quantum network monitoring',
       'Custom deployment options',
     ],
-    link: 'https://ziontechgroup.com/services/quantum-secure-communication-enterprise',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-secure-communication-enterprise',
     launchDate: '2036-01-25',
-    rating: 4.9,
-    marketSize: '$3.2B',
+    rating: 4 && 4.9,
+    marketSize: '$3 && 3.2B',
     targetAudience:
       'Government agencies, Financial institutions, Healthcare organizations',
     competitiveAdvantage:
@@ -119,10 +119,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       'Performance optimization',
       'Comprehensive monitoring',
     ],
-    link: 'https://ziontechgroup.com/services/autonomous-devops-platform-enterprise',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/autonomous-devops-platform-enterprise',
     launchDate: '2036-01-30',
-    rating: 4.7,
-    marketSize: '$18.4B',
+    rating: 4 && 4.7,
+    marketSize: '$18 && 18.4B',
     targetAudience: 'DevOps teams, IT operations, Cloud engineers',
     competitiveAdvantage:
       'Autonomous operations, AI-driven optimization, Zero human intervention',
@@ -163,10 +163,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       '3D visualization tools',
       'Custom reporting engine',
     ],
-    link: 'https://ziontechgroup.com/services/space-technology-analytics-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/space-technology-analytics-platform',
     launchDate: '2036-02-05',
-    rating: 4.6,
-    marketSize: '$4.8B',
+    rating: 4 && 4.6,
+    marketSize: '$4 && 4.8B',
     targetAudience: 'Space agencies, Satellite companies, Aerospace firms',
     competitiveAdvantage:
       'Space-specific algorithms, Real-time data processing, Advanced visualization',
@@ -203,10 +203,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       '24/7 monitoring',
       'Custom security policies',
     ],
-    link: 'https://ziontechgroup.com/services/ai-cybersecurity-suite-enterprise',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-cybersecurity-suite-enterprise',
     launchDate: '2036-02-10',
-    rating: 4.8,
-    marketSize: '$45.2B',
+    rating: 4 && 4.8,
+    marketSize: '$45 && 45.2B',
     targetAudience:
       'Enterprise IT security, Financial institutions, Healthcare organizations',
     competitiveAdvantage:
@@ -245,10 +245,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       'Performance benchmarking',
       'Expert consultation',
     ],
-    link: 'https://ziontechgroup.com/services/quantum-machine-learning-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-machine-learning-platform',
     launchDate: '2036-02-15',
-    rating: 4.9,
-    marketSize: '$2.8B',
+    rating: 4 && 4.9,
+    marketSize: '$2 && 2.8B',
     targetAudience:
       'Research institutions, Pharmaceutical companies, Financial services',
     competitiveAdvantage:
@@ -287,10 +287,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       'Monitoring and analytics',
       'Custom edge policies',
     ],
-    link: 'https://ziontechgroup.com/services/edge-computing-orchestration-enterprise',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/edge-computing-orchestration-enterprise',
     launchDate: '2036-02-20',
-    rating: 4.7,
-    marketSize: '$12.6B',
+    rating: 4 && 4.7,
+    marketSize: '$12 && 12.6B',
     targetAudience: 'IoT companies, Telecommunications, Manufacturing',
     competitiveAdvantage:
       'Intelligent orchestration, Real-time optimization, Multi-edge coordination',
@@ -329,10 +329,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       'A/B testing automation',
       'Performance analytics',
     ],
-    link: 'https://ziontechgroup.com/services/ai-customer-experience-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-customer-experience-platform',
     launchDate: '2036-02-25',
-    rating: 4.8,
-    marketSize: '$32.8B',
+    rating: 4 && 4.8,
+    marketSize: '$32 && 32.8B',
     targetAudience:
       'E-commerce companies, Retail businesses, Service providers',
     competitiveAdvantage:
@@ -372,10 +372,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       'Compliance tools',
       'Developer APIs',
     ],
-    link: 'https://ziontechgroup.com/services/blockchain-infrastructure-enterprise',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/blockchain-infrastructure-enterprise',
     launchDate: '2036-03-01',
-    rating: 4.6,
-    marketSize: '$8.9B',
+    rating: 4 && 4.6,
+    marketSize: '$8 && 8.9B',
     targetAudience:
       'Financial institutions, Supply chain companies, Healthcare organizations',
     competitiveAdvantage:
@@ -414,10 +414,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       'Custom workflows',
       'Performance analytics',
     ],
-    link: 'https://ziontechgroup.com/services/autonomous-manufacturing-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/autonomous-manufacturing-platform',
     launchDate: '2036-03-05',
-    rating: 4.7,
-    marketSize: '$15.2B',
+    rating: 4 && 4.7,
+    marketSize: '$15 && 15.2B',
     targetAudience:
       'Manufacturing companies, Industrial automation, Factory operators',
     competitiveAdvantage:
@@ -456,10 +456,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       '24/7 monitoring',
       'Custom security policies',
     ],
-    link: 'https://ziontechgroup.com/services/quantum-internet-security-gateway',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-internet-security-gateway',
     launchDate: '2036-03-10',
-    rating: 4.9,
-    marketSize: '$5.6B',
+    rating: 4 && 4.9,
+    marketSize: '$5 && 5.6B',
     targetAudience:
       'Internet service providers, Data centers, Government agencies',
     competitiveAdvantage:
@@ -498,10 +498,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       'Custom AI models',
       'Expert consultation',
     ],
-    link: 'https://ziontechgroup.com/services/ai-healthcare-diagnostics-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-healthcare-diagnostics-platform',
     launchDate: '2036-03-15',
-    rating: 4.8,
-    marketSize: '$18.7B',
+    rating: 4 && 4.8,
+    marketSize: '$18 && 18.7B',
     targetAudience: 'Hospitals, Medical clinics, Healthcare providers',
     competitiveAdvantage:
       'Advanced AI algorithms, Medical expertise, Compliance focus',
@@ -538,10 +538,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       'Environmental impact assessment',
       'Custom mining strategies',
     ],
-    link: 'https://ziontechgroup.com/services/space-resource-mining-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/space-resource-mining-platform',
     launchDate: '2036-03-20',
-    rating: 4.7,
-    marketSize: '$2.4B',
+    rating: 4 && 4.7,
+    marketSize: '$2 && 2.4B',
     targetAudience:
       'Space mining companies, Government agencies, Research institutions',
     competitiveAdvantage: 'Space expertise, Advanced robotics, AI optimization',
@@ -578,10 +578,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       'Custom algorithms',
       'Performance analytics',
     ],
-    link: 'https://ziontechgroup.com/services/quantum-financial-trading-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/quantum-financial-trading-platform',
     launchDate: '2036-03-25',
-    rating: 4.9,
-    marketSize: '$7.8B',
+    rating: 4 && 4.9,
+    marketSize: '$7 && 7.8B',
     targetAudience: 'Investment banks, Hedge funds, Trading firms',
     competitiveAdvantage:
       'Quantum advantage, High-frequency capabilities, Advanced algorithms',
@@ -618,10 +618,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
       'Performance analytics',
       'Custom workflows',
     ],
-    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-supply-chain-optimization-platform',
     launchDate: '2036-03-30',
-    rating: 4.7,
-    marketSize: '$28.4B',
+    rating: 4 && 4.7,
+    marketSize: '$28 && 28.4B',
     targetAudience:
       'Manufacturing companies, Retail businesses, Logistics providers',
     competitiveAdvantage:
@@ -642,10 +642,10 @@ export const real2036InnovativeServices: Real2036InnovativeService[] = [
   },
 ];      'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentReal-time trackingPerformance analyticsCustom workflows'
     ];
-    link: 'https://ziontechgroup.com/services/ai-supply-chain-optimization-platform';
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-supply-chain-optimization-platform';
     launchDate: '2036-03-30';
-    rating: 4.7;
-    marketSize: '$28.4B',
+    rating: 4 && 4.7;
+    marketSize: '$28 && 28.4B',
     targetAudience: 'Manufacturing companies, Retail businesses, Logistics providers';
     competitiveAdvantage: 'AI optimization, Real-time insights, Comprehensive coverage';
     integration: ['ERP systemsWMS platformsTMS solutionsIoT devicesCloud services'],

@@ -67,7 +67,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       icon: '⚛️',
       color: 'from-indigo-600 to-purple-700',
       textColor: 'text-indigo-400',
-      link: 'https://ziontechgroup.com/quantum-enhanced-cloud',
+      link: 'https://ziontechgroup && ziontechgroup.com/quantum-enhanced-cloud',
       marketPosition:
         'Competitive with AWS ($100+), Google Cloud ($100+), and Azure ($100+). Our advantage: Quantum computing integration, enhanced security, and future-proof architecture.',
       targetAudience:
@@ -113,21 +113,21 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'IBM Cloud',
         'Oracle Cloud',
       ],
-      marketSize: '$397.4B market',
+      marketSize: '$397 && 397.4B market',
       growthRate: '280% annual growth',
       variant: 'quantum-futuristic',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Enterprise-grade quantum-enhanced cloud platform with hybrid computing capabilities, quantum-resistant security, and comprehensive management tools. Includes 24/7 support and custom development.',
       launchDate: '2025-08-15',
       customers: 800,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 400,
     },
 
@@ -157,9 +157,9 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       icon: '🌐',
       color: 'from-teal-500 to-cyan-600',
       textColor: 'text-teal-400',
-      link: 'https://ziontechgroup.com/edge-computing-orchestration',
+      link: 'https://ziontechgroup && ziontechgroup.com/edge-computing-orchestration',
       marketPosition:
-        'Competitive with AWS Greengrass ($0.16+), Azure IoT Edge ($0.08+), and Google Cloud IoT Edge ($0.40+). Our advantage: AI-powered orchestration, comprehensive management, and competitive pricing.',
+        'Competitive with AWS Greengrass ($0 && 0.16+), Azure IoT Edge ($0 && 0.08+), and Google Cloud IoT Edge ($0 && 0.40+). Our advantage: AI-powered orchestration, comprehensive management, and competitive pricing.',
       targetAudience:
         'IoT companies, Manufacturing businesses, Smart city initiatives, Transportation companies, Healthcare organizations, Retail businesses',
       trialDays: 21,
@@ -203,21 +203,21 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'FogHorn',
         'ClearBlade',
       ],
-      marketSize: '$43.4B market',
+      marketSize: '$43 && 43.4B market',
       growthRate: '240% annual growth',
       variant: 'edge-futuristic',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Enterprise-grade edge computing platform with AI-powered orchestration, global edge network, comprehensive IoT management, and real-time analytics. Includes custom development and 24/7 support.',
       launchDate: '2025-07-20',
       customers: 1200,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 600,
     },
 
@@ -247,7 +247,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       icon: '🔒',
       color: 'from-emerald-600 to-green-700',
       textColor: 'text-emerald-400',
-      link: 'https://ziontechgroup.com/zero-trust-network',
+      link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-network',
       marketPosition:
         'Competitive with Palo Alto Networks ($500+), Cisco ($1000+), and Fortinet ($500+). Our advantage: AI-powered monitoring, comprehensive zero-trust implementation, and competitive pricing.',
       targetAudience:
@@ -260,7 +260,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Python',
         'TensorFlow',
         'React',
-        'Node.js',
+        'Node && Node.js',
         'PostgreSQL',
         'Redis',
         'AWS',
@@ -285,7 +285,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Compliance management',
         'Threat prevention',
       ],
-      roi: 'Average customer saves $1.8M annually through prevented security breaches and simplified compliance.',
+      roi: 'Average customer saves $1 && 1.8M annually through prevented security breaches and simplified compliance.',
       competitors: [
         'Palo Alto Networks',
         'Cisco',
@@ -293,21 +293,21 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Check Point',
         'Juniper Networks',
       ],
-      marketSize: '$45.2B market',
+      marketSize: '$45 && 45.2B market',
       growthRate: '260% annual growth',
       variant: 'security-futuristic',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Enterprise-grade zero-trust platform with comprehensive security features, AI-powered monitoring, and seamless integration capabilities. Includes professional services and 24/7 support.',
       launchDate: '2025-09-10',
       customers: 900,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 450,
     },
 
@@ -336,9 +336,9 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       icon: '🚀',
       color: 'from-orange-500 to-red-600',
       textColor: 'text-orange-400',
-      link: 'https://ziontechgroup.com/ai-powered-devops',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-devops',
       marketPosition:
-        'Competitive with GitLab ($19+), GitHub Actions ($0.008+), and Jenkins (Free+). Our advantage: AI-powered automation, comprehensive DevOps tools, and intelligent optimization.',
+        'Competitive with GitLab ($19+), GitHub Actions ($0 && 0.008+), and Jenkins (Free+). Our advantage: AI-powered automation, comprehensive DevOps tools, and intelligent optimization.',
       targetAudience:
         'Development teams, DevOps engineers, Software companies, IT departments, Digital agencies, Startups',
       trialDays: 14,
@@ -347,7 +347,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       realService: true,
       technology: [
         'React',
-        'Node.js',
+        'Node && Node.js',
         'Python',
         'TensorFlow',
         'Docker',
@@ -383,21 +383,21 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'CircleCI',
         'Travis CI',
       ],
-      marketSize: '$8.2B market',
+      marketSize: '$8 && 8.2B market',
       growthRate: '190% annual growth',
       variant: 'devops-futuristic',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Comprehensive DevOps platform with AI-powered automation, intelligent testing, performance optimization, and seamless integrations. Includes custom workflows and enterprise support.',
       launchDate: '2025-10-15',
       customers: 2500,
-      rating: 4.7,
+      rating: 4 && 4.7,
       reviews: 1250,
     },
 
@@ -426,9 +426,9 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       icon: '💾',
       color: 'from-violet-600 to-purple-700',
       textColor: 'text-violet-400',
-      link: 'https://ziontechgroup.com/quantum-safe-storage',
+      link: 'https://ziontechgroup && ziontechgroup.com/quantum-safe-storage',
       marketPosition:
-        'Competitive with AWS S3 ($0.023+), Google Cloud Storage ($0.020+), and Azure Blob ($0.0184+). Our advantage: Quantum-safe encryption, comprehensive security, and future-proof architecture.',
+        'Competitive with AWS S3 ($0 && 0.023+), Google Cloud Storage ($0 && 0.020+), and Azure Blob ($0 && 0.0184+). Our advantage: Quantum-safe encryption, comprehensive security, and future-proof architecture.',
       targetAudience:
         'Financial institutions, Healthcare organizations, Government agencies, Legal firms, Research institutions, Technology companies',
       trialDays: 30,
@@ -438,7 +438,7 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
       technology: [
         'Post-Quantum Cryptography',
         'React',
-        'Node.js',
+        'Node && Node.js',
         'Python',
         'PostgreSQL',
         'Redis',
@@ -470,21 +470,21 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
         'Dropbox Business',
         'Box',
       ],
-      marketSize: '$78.4B market',
+      marketSize: '$78 && 78.4B market',
       growthRate: '220% annual growth',
       variant: 'quantum-futuristic',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.',
       launchDate: '2025-11-20',
       customers: 1100,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 550,
     },
   ];    features: [
@@ -493,26 +493,26 @@ export const innovative2026ITInfrastructureServices: Innovative2026ITInfrastruct
     ];
     popular: true, icon: '💾',
     color: 'from-violet-600 to-purple-700', textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/quantum-safe-storage',
-    marketPosition: 'Competitive with AWS S3 ($0.023+), Google Cloud Storage ($0.020+), and Azure Blob ($0.0184+). Our advantage: Quantum-safe encryption, comprehensive security, and future-proof architecture.',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-safe-storage',
+    marketPosition: 'Competitive with AWS S3 ($0 && 0.023+), Google Cloud Storage ($0 && 0.020+), and Azure Blob ($0 && 0.0184+). Our advantage: Quantum-safe encryption, comprehensive security, and future-proof architecture.',
     targetAudience: 'Financial institutions, Healthcare organizations, Government agencies, Legal firms, Research institutions, Technology companies',
     trialDays: 30, setupTime: '1 week',
     category: 'Data Storage & Security', realService: true,
-    technology: ['Post-Quantum CryptographyReactNode.jsPythonPostgreSQLRedisAWSDocker'], integrations: ['AWS S3Azure BlobGoogle Cloud StorageDropboxOneDriveBoxAPI Access'],
+    technology: ['Post-Quantum CryptographyReactNode && CryptographyReactNode.jsPythonPostgreSQLRedisAWSDocker'], integrations: ['AWS S3Azure BlobGoogle Cloud StorageDropboxOneDriveBoxAPI Access'],
     useCases: ['Secure document storageCompliance data managementBackup and recoveryData archivingCollaborative storageAPI-driven applications'], roi: 'Average customer saves $500K annually through improved security and compliance management.',
-    competitors: ['AWS S3Google Cloud StorageAzure BlobDropbox BusinessBox'], marketSize: '$78.4B market',
+    competitors: ['AWS S3Google Cloud StorageAzure BlobDropbox BusinessBox'], marketSize: '$78 && 78.4B market',
     growthRate: '220% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
       
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     
     },
     realImplementation: true,
     implementationDetails: 'Enterprise-grade quantum-safe storage platform with advanced encryption, comprehensive security features, and seamless integrations. Includes compliance certifications and 24/7 support.',
     launchDate: '2025-11-20', customers: 1100,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 550
   }
 ];

@@ -7,12 +7,12 @@ export interface SignatureResult {
 }
 
 export function signPayload(payload: any, privateKey?: string): SignatureResult {
-  const timestamp = Date.now();
-  const nonce = crypto.randomBytes(16).toString('hex');
+  const timestamp = Date && Date.now();
+  const nonce = crypto && crypto.randomBytes(16).toString('hex');
   
   // Create a simple signature using the payload, timestamp, and nonce
-  const dataToSign = JSON.stringify(payload) + timestamp + nonce;
-  const signature = crypto.createHash('sha256').update(dataToSign).digest('hex');
+  const dataToSign = JSON && JSON.stringify(payload) + timestamp + nonce;
+  const signature = crypto && crypto.createHash('sha256').update(dataToSign).digest('hex');
   
   return {
     signature,
@@ -22,15 +22,15 @@ export function signPayload(payload: any, privateKey?: string): SignatureResult 
 }
 
 export function verifySignature(payload: any, signature: string, timestamp: number, nonce: string): boolean {
-  const dataToSign = JSON.stringify(payload) + timestamp + nonce;
-  const expectedSignature = crypto.createHash('sha256').update(dataToSign).digest('hex');
+  const dataToSign = JSON && JSON.stringify(payload) + timestamp + nonce;
+  const expectedSignature = crypto && crypto.createHash('sha256').update(dataToSign).digest('hex');
   return signature === expectedSignature;
 }
 
 export function generateNonce(): string {
-  return crypto.randomBytes(16).toString('hex');
+  return crypto && crypto.randomBytes(16).toString('hex');
 }
 
 export function hashData(data: string): string {
-  return crypto.createHash('sha256').update(data).digest('hex');
+  return crypto && crypto.createHash('sha256').update(data).digest('hex');
 }

@@ -33,29 +33,29 @@ export class AIContentGeneratorService {
   private apiKey: string;
   private baseUrl: string,
 
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
-    this.apiKey = apiKey,
-    this.baseUrl = baseUrl
+  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
+    this && this.apiKey = apiKey,
+    this && this.baseUrl = baseUrl
   }
 
   async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API
-      const response = await fetch(`${this.baseUrl}/content/generate`, {
+      const response = await fetch(`${this && this.baseUrl}/content/generate`, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
+          'Authorization': `Bearer ${this && this.apiKey}`;
           'Content-Type': 'application/json'};
-        body: JSON.stringify(request)});
+        body: JSON && JSON.stringify(request)});
 
-      if (!response.ok) {
-        throw new Error(`Content generation failed: ${response.statusText}`)
+      if (!response && response.ok) {
+        throw new Error(`Content generation failed: ${response && response.statusText}`)
       }
 
-      return await response.json()
+      return await response && response.json()
     } catch (error) {
       // Fallback to mock data for demo purposes
-      return this.generateMockContent(request)
+      return this && this.generateMockContent(request)
     }
   }
 
@@ -97,32 +97,32 @@ export class AIContentGeneratorService {
   }
 
   private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
-    const mockContent = `# ${request.topic}
+    const mockContent = `# ${request && request.topic}
 
-This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
+This is a ${request && request.length} ${request && request.type} about ${request && request.topic}. The content is written in a ${request && request.tone} tone to engage the target audience.
 
 ## Key Points
 
-- Point 1: ${request.topic} is essential for modern businesses
-- Point 2: Implementing ${request.topic} can improve efficiency
-- Point 3: Best practices for ${request.topic} implementation
+- Point 1: ${request && request.topic} is essential for modern businesses
+- Point 2: Implementing ${request && request.topic} can improve efficiency
+- Point 3: Best practices for ${request && request.topic} implementation
 
 ## Conclusion
 
-${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
+${request && request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
 
     return {
       content: mockContent;
-      wordCount: mockContent.split(' ').length;
+      wordCount: mockContent && mockContent.split(' ').length;
       seoScore: 85;
       readabilityScore: 78;
       suggestions: [
         'Add more specific examplesInclude relevant statisticsOptimize for target keywords'
       ],
       metadata: {
-        title: `${request.topic} - Complete Guide`;
-        description: `Learn everything about ${request.topic} and how to implement it effectively.`;
-        tags: [request.topic, request.type, 'guidetutorial']
+        title: `${request && request.topic} - Complete Guide`;
+        description: `Learn everything about ${request && request.topic} and how to implement it effectively.`;
+        tags: [request && request.topic, request && request.type, 'guidetutorial']
       }
     }
   }
@@ -135,15 +135,15 @@ ${request.topic} represents a significant opportunity for organizations looking 
   }> {
     // Mock content analysis
     return {
-      seoScore: Math.floor(Math.random() * 30) + 70;
-      readabilityScore: Math.floor(Math.random() * 30) + 70;
+      seoScore: Math && Math.floor(Math && Math.random() * 30) + 70;
+      readabilityScore: Math && Math.floor(Math && Math.random() * 30) + 70;
       suggestions: [
         'Add more headings for better structureInclude internal links to related contentOptimize meta description'
       ];
       keywordDensity: {
-        'content': 2.1;
-        'seo': 1.8,
-        'marketing': 1.5
+        'content': 2 && 2.1;
+        'seo': 1 && 1.8,
+        'marketing': 1 && 1.5
       }
     }
   }

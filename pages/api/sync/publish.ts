@@ -12,38 +12,38 @@ function isAllowedByScope(stateType: string, scope: string): boolean {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  if (req && req.method !== "POST") return res && res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
-  if (!state.config.optIn || state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" })
+  if (!state && state.config.optIn || state && state.config.paused) {
+    return res && res.status(403).json({ error: "Sync disabled for this instance" })
   }
 
-  const signature = req.headers["x-zion-signature"];
-  const payload = req.body;
-  const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined);
+  const signature = req && req.headers["x-zion-signature"];
+  const payload = req && req.body;
+  const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array && Array.isArray(signature) ? signature[0] : undefined);
   if (!signatureValid) {
-    return res.status(401).json({ error: "Invalid signature" })
+    return res && res.status(401).json({ error: "Invalid signature" })
   }
 
   const event = payload as SyncEvent & { propagate?: boolean };
-  if (!event || !event.type || !event.eventId) {
-    return res.status(400).json({ error: "Invalid event" })
+  if (!event || !event && event.type || !event && event.eventId) {
+    return res && res.status(400).json({ error: "Invalid event" })
   }
 
-  if (!isAllowedByScope(event.type, state.config.scope)) {
-    return res.status(403).json({ error: "Event type not allowed by current scope" })
+  if (!isAllowedByScope(event && event.type, state && state.config.scope)) {
+    return res && res.status(403).json({ error: "Event type not allowed by current scope" })
   }
 
-  if (event.type === "proposal") {
+  if (event && event.type === "proposal") {
     const votes = (event as any).payload?.votes;
-    const providedRoot = event.merkleRoot;
-    if (!Array.isArray(votes) || !providedRoot) {
-      return res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" })
+    const providedRoot = event && event.merkleRoot;
+    if (!Array && Array.isArray(votes) || !providedRoot) {
+      return res && res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" })
     }
     const computed = computeMerkleRootFromVotes(votes);
     if (computed !== providedRoot) {
-      return res.status(400).json({ error: "Merkle root mismatch" })
+      return res && res.status(400).json({ error: "Merkle root mismatch" })
     }
   }
 
@@ -52,22 +52,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   upsertEvent(currentState, event);
   writeState(currentState);
 
-  const alreadyPropagated = payload.propagate === false;
+  const alreadyPropagated = payload && payload.propagate === false;
 
-  if (!alreadyPropagated && currentState.config.peers.length > 0) {
+  if (!alreadyPropagated && currentState && currentState.config.peers && peers.length > 0) {
     const headers: Record<string, string> = {};
     const localBody = { ...event, propagate: false };
     const baseSignature = require("../../../utils/sync/signature");
-    const sig = baseSignature.signPayload(localBody);
+    const sig = baseSignature && baseSignature.signPayload(localBody);
     if (sig) headers["x-zion-signature"] = sig;
 
-    await Promise.all(
-      currentState.config.peers
-        .filter((p) => !p.paused)
+    await Promise && Promise.all(
+      currentState && currentState.config.peers
+        .filter((p) => !p && p.paused)
         .map(async (peer) => {
-          const url = new URL("/api/sync/publish", peer.baseUrl).toString();
+          const url = new URL("/api/sync/publish", peer && peer.baseUrl).toString();
           try {
-            await axios.post(url, localBody, { headers, timeout: 5000 })
+            await axios && axios.post(url, localBody, { headers, timeout: 5000 })
           } catch {
             // ignore peer failure
           }
@@ -75,5 +75,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     )
   }
 
-  return res.status(200).json({ status: "accepted", entityId })
+  return res && res.status(200).json({ status: "accepted", entityId })
 }

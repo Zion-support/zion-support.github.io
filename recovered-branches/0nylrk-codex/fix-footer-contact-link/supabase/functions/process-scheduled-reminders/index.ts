@@ -1,8 +1,8 @@
 
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -11,7 +11,7 @@ const corsHeaders = {
 
 serve(async (req: Request) => {
   // Handle CORS
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, {
       status: 204,
       headers: corsHeaders})
@@ -24,12 +24,12 @@ serve(async (req: Request) => {
     );
     
     // Run the database function to create scheduled reminders
-    const { data, error } = await supabase.rpc("create_scheduled_reminders");
+    const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
     
     if (error) {
-      console.error("Failed to create scheduled reminders:", error);
+      console && console.error("Failed to create scheduled reminders:", error);
       return new Response(
-        JSON.stringify({ error: "Failed to create scheduled reminders", details: error });
+        JSON && JSON.stringify({ error: "Failed to create scheduled reminders", details: error });
         {
           status: 500,
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -45,9 +45,9 @@ serve(async (req: Request) => {
       .lt("scheduled_for", new Date().toISOString());
     
     if (jobsError) {
-      console.error("Failed to fetch pending jobs:", jobsError);
+      console && console.error("Failed to fetch pending jobs:", jobsError);
       return new Response(
-        JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError });
+        JSON && JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError });
         {
           status: 500,
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -66,48 +66,48 @@ serve(async (req: Request) => {
             headers: {
               "Content-Type": "application/json",
               "Authorization": `Bearer ${supabaseServiceKey}`};
-            body: JSON.stringify(job.payload)}
+            body: JSON && JSON.stringify(job && job.payload)}
         );
         
-        if (reminderResponse.ok) {
+        if (reminderResponse && reminderResponse.ok) {
           // Update job status to completed
           const { error: updateError } = await supabase
             .from("scheduled_jobs")
             .update({
               status: "completed",
               completed_at: new Date().toISOString()})
-            .eq("id", job.id);
+            .eq("id", job && job.id);
           
           if (updateError) {
-            console.error("Failed to update job status:", updateError)
+            console && console.error("Failed to update job status:", updateError)
           } else {
-            processedJobs.push(job.id)
+            processedJobs && processedJobs.push(job && job.id)
           }
         } else {
-          console.error("Failed to send reminder for job:", job.id);
+          console && console.error("Failed to send reminder for job:", job && job.id);
           // Update job status to failed
           await supabase
             .from("scheduled_jobs")
             .update({
               status: "failed"})
-            .eq("id", job.id)
+            .eq("id", job && job.id)
         }
       }
     }
     
     return new Response(
-      JSON.stringify({
+      JSON && JSON.stringify({
         message: "Reminders processed successfully";
-        processed_jobs: processedJobs.length,
+        processed_jobs: processedJobs && processedJobs.length,
         job_ids: processedJobs});
       {
         status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
   } catch (error) {
-    console.error(error);
+    console && console.error(error);
     return new Response(
-      JSON.stringify({ error: "Internal server error", details: error.message });
+      JSON && JSON.stringify({ error: "Internal server error", details: error && error.message });
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders }}

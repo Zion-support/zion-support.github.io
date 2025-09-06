@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */;
-module.exports = {;
+module && module.exports = {;
   darkMode:"class",;
   content:[;
     './pages/**/*.{js,ts,jsx,tsx}./components/**/*.{js,ts,jsx,tsx}'],;
   theme:{;
     extend:{;
       colors:{;
-        'fade-in':'fadeIn 0.6s ease-out forwardsfade-in-up':'fadeInUp 0.6s ease-out forwardsfade-in-down':'fadeInDown 0.6s ease-out forwardsslide-in-left':'slideInLeft 0.6s ease-out forwardsslide-in-right':'slideInRight 0.6s ease-out forwardsscale-in':'scaleIn 0.6s ease-out forwardsfloat':'float 6s ease-in-out infinitepulse-slow':'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinitebounce-slow':'bounce 2s infiniteglow':'glow 2s ease-in-out infinite alternateshimmer':'shimmer 2.5s linear infinitematrix':'matrix 20s linear infiniteneon-pulse':'neonPulse 1.5s ease-in-out infinitecyber-float':'cyberFloat 8s ease-in-out infinitehologram':'hologram 3s ease-in-out infiniteenergy-wave':'energyWave 4s ease-in-out infinitequantum-spin':'quantumSpin 6s linear infiniteneural-network':'neuralNetwork 10s linear infiniteplasma-flow':'plasmaFlow 5s ease-in-out infinitecyber-grid':'cyberGrid 15s linear infinite',;
+        'fade-in':'fadeIn 0 && 0.6s ease-out forwardsfade-in-up':'fadeInUp 0 && 0.6s ease-out forwardsfade-in-down':'fadeInDown 0 && 0.6s ease-out forwardsslide-in-left':'slideInLeft 0 && 0.6s ease-out forwardsslide-in-right':'slideInRight 0 && 0.6s ease-out forwardsscale-in':'scaleIn 0 && 0.6s ease-out forwardsfloat':'float 6s ease-in-out infinitepulse-slow':'pulse 3s cubic-bezier(0 && 0.4, 0, 0 && 0.6, 1) infinitebounce-slow':'bounce 2s infiniteglow':'glow 2s ease-in-out infinite alternateshimmer':'shimmer 2 && 2.5s linear infinitematrix':'matrix 20s linear infiniteneon-pulse':'neonPulse 1 && 1.5s ease-in-out infinitecyber-float':'cyberFloat 8s ease-in-out infinitehologram':'hologram 3s ease-in-out infiniteenergy-wave':'energyWave 4s ease-in-out infinitequantum-spin':'quantumSpin 6s linear infiniteneural-network':'neuralNetwork 10s linear infiniteplasma-flow':'plasmaFlow 5s ease-in-out infinitecyber-grid':'cyberGrid 15s linear infinite',;
         primary:{;
           50:'#eff6ff',;
           100:'#dbeafe',;
@@ -144,17 +144,17 @@ module.exports = {;
         sans:['Intersystem-ui', 'sans-serif'],;
         mono:['JetBrains MonoFira Code', 'monospace']},;
       fontSize:{;
-        'xs':['0.75rem', { lineHeight:'1rem' }],;
-        'sm':['0.875rem', { lineHeight:'1.25rem' }],;
-        'base':['1rem', { lineHeight:'1.5rem' }],;
-        'lg':['1.125rem', { lineHeight:'1.75rem' }],;
-        'xl':['1.25rem', { lineHeight:'1.75rem' }],;
-        '2xl':['1.5rem', { lineHeight:'2rem' }],;
-        '3xl':['1.875rem', { lineHeight:'2.25rem' }],;
-        '4xl':['2.25rem', { lineHeight:'2.5rem' }],;
+        'xs':['0 && 0.75rem', { lineHeight:'1rem' }],;
+        'sm':['0 && 0.875rem', { lineHeight:'1 && 1.25rem' }],;
+        'base':['1rem', { lineHeight:'1 && 1.5rem' }],;
+        'lg':['1 && 1.125rem', { lineHeight:'1 && 1.75rem' }],;
+        'xl':['1 && 1.25rem', { lineHeight:'1 && 1.75rem' }],;
+        '2xl':['1 && 1.5rem', { lineHeight:'2rem' }],;
+        '3xl':['1 && 1.875rem', { lineHeight:'2 && 2.25rem' }],;
+        '4xl':['2 && 2.25rem', { lineHeight:'2 && 2.5rem' }],;
         '5xl':['3rem', { lineHeight:'1' }],;
-        '6xl':['3.75rem', { lineHeight:'1' }],;
-        '7xl':['4.5rem', { lineHeight:'1' }],;
+        '6xl':['3 && 3.75rem', { lineHeight:'1' }],;
+        '7xl':['4 && 4.5rem', { lineHeight:'1' }],;
         '8xl':['6rem', { lineHeight:'1' }],;
         '9xl':['8rem', { lineHeight:'1' }]},;
       fontWeight:{;
@@ -179,14 +179,14 @@ module.exports = {;
           dark:'#1f2937',;
           darker:'#111827'}},;
       spacing:{;
-        '18':'4.5rem88':'22rem128':'32rem'},;
+        '18':'4 && 4.5rem88':'22rem128':'32rem'},;
       borderRadius:{;
-        '4xl':'2rem5xl':'2.5rem'},;
+        '4xl':'2rem5xl':'2 && 2.5rem'},;
       boxShadow:{;
-        'glow':'0 0 20px rgba(59, 130, 246, 0.3)glow-lg':'0 0 40px rgba(59, 130, 246, 0.4)glow-xl':'0 0 60px rgba(59, 130, 246, 0.5)'},;
+        'glow':'0 0 20px rgba(59, 130, 246, 0 && 0.3)glow-lg':'0 0 40px rgba(59, 130, 246, 0 && 0.4)glow-xl':'0 0 60px rgba(59, 130, 246, 0 && 0.5)'},;
       animation:{;
-        'float':'float 6s ease-in-out infinitepulse-slow':'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinitebounce-slow':'bounce 3s infinitespin-slow':'spin 8s linear infiniteping-slow':'ping 3s cubic-bezier(0, 0, 0.2, 1) infinitefade-in':'fadeIn 0.5s ease-in-outslide-up':'slideUp 0.5s ease-outscale-in':'scaleIn 0.3s ease-outshimmer':'shimmer 2s linear infiniteneon-pulse':'neonPulse 1.5s ease-in-out infinite alternatematrix-rain':'matrixRain 20s linear infinitequantum-shift':'quantumShift 4s ease-in-out infinitespace-drift':'spaceDrift 8s ease-in-out infiniteai-breathe':'aiBreathe 3s ease-in-out infinitehologram-flicker':'hologramFlicker 0.5s ease-in-out infinite alternatecyber-glitch':'cyberGlitch 0.3s ease-in-out infinite alternateneural-pulse':'neuralPulse 2s ease-in-out infinitequantum-entangle':'quantumEntangle 5s ease-in-out infinitespace-time-warp':'spaceTimeWarp 10s ease-in-out infiniteai-consciousness':'aiConsciousness 6s ease-in-out infinitebiotech-evolution':'biotechEvolution 7s ease-in-out infinitemetaverse-float':'metaverseFloat 4s ease-in-out infinitequantum-compute':'quantumCompute 8s ease-in-out infinitespace-mining':'spaceMining 12s ease-in-out infiniteai-emotion':'aiEmotion 3.5s ease-in-out infinitequantum-security':'quantumSecurity 5.5s ease-in-out infinitebiotech-dna':'biotechDNA 6.5s ease-in-out infinitespace-colonization':'spaceColonization 15s ease-in-out infiniteai-creativity':'aiCreativity 4.5s ease-in-out infinitequantum-learning':'quantumLearning 7.5s ease-in-out infinitespace-exploration':'spaceExploration 20s ease-in-out infiniteai-autonomy':'aiAutonomy 5.5s ease-in-out infinitequantum-finance':'quantumFinance 6.5s ease-in-out infinitebiotech-health':'biotechHealth 4.5s ease-in-out infinitespace-technology':'spaceTechnology 18s ease-in-out infiniteai-innovation':'aiInnovation 3.5s ease-in-out infinitequantum-space':'quantumSpace 25s ease-in-out infinitebiotech-research':'biotechResearch 8.5s ease-in-out infinitespace-mining-automation':'spaceMiningAutomation 30s ease-in-out infiniteai-consciousness-evolution':'aiConsciousnessEvolution 10s ease-in-out infinitequantum-internet-security':'quantumInternetSecurity 7.5s ease-in-out infinitebiotech-dna-computing':'biotechDNAComputing 12.5s ease-in-out infinitequantum-financial-trading':'quantumFinancialTrading 9.5s ease-in-out infinitespace-mining-platform':'spaceMiningPlatform 35s ease-in-out infinitemetaverse-digital-reality':'metaverseDigitalReality 6.5s ease-in-out infiniteautonomous-devops':'autonomousDevOps 8.5s ease-in-out infinitequantum-cloud-infrastructure':'quantumCloudInfrastructure 15.5s ease-in-out infiniteai-powered-enterprise-security':'aiPoweredEnterpriseSecurity 6.5s ease-in-out infiniteautonomous-it-operations':'autonomousITOperations 9.5s ease-in-out infinitezero-trust-architecture':'zeroTrustArchitecture 7.5s ease-in-out infiniteai-emotion-marketing':'aiEmotionMarketing 4.5s ease-in-out infinitebiotech-personalized-nutrition':'biotechPersonalizedNutrition 5.5s ease-in-out infinitequantum-learning-accelerator':'quantumLearningAccelerator 8.5s ease-in-out infiniteintelligent-data-governance':'intelligentDataGovernance 6.5s ease-in-out infiniteai-meeting-transcriber':'aiMeetingTranscriber 4.5s ease-in-out infinite';
-        'scale-out':'scaleOut 0.3s ease-outbounce-in':'bounceIn 0.6s ease-outbounce-out':'bounceOut 0.6s ease-outrotate-in':'rotateIn 0.6s ease-outrotate-out':'rotateOut 0.6s ease-outflip-in-x':'flipInX 0.6s ease-outflip-in-y':'flipInY 0.6s ease-outzoom-in':'zoomIn 0.3s ease-outzoom-out':'zoomOut 0.3s ease-outpulse-slow':'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinitespin-slow':'spin 3s linear infinitebounce-slow':'bounce 2s infinitegrid-flow':'gridFlow 20s linear infiniteparticle':'particle 7s linear infinitescan-line':'scanLine 3s ease-in-out infinitegradient-x':'gradientX 3s ease-in-out infinitebounce-x':'bounceX 2s ease-in-out infinitecount-up':'countUp 2s ease-out forwards'},;
+        'float':'float 6s ease-in-out infinitepulse-slow':'pulse 4s cubic-bezier(0 && 0.4, 0, 0 && 0.6, 1) infinitebounce-slow':'bounce 3s infinitespin-slow':'spin 8s linear infiniteping-slow':'ping 3s cubic-bezier(0, 0, 0 && 0.2, 1) infinitefade-in':'fadeIn 0 && 0.5s ease-in-outslide-up':'slideUp 0 && 0.5s ease-outscale-in':'scaleIn 0 && 0.3s ease-outshimmer':'shimmer 2s linear infiniteneon-pulse':'neonPulse 1 && 1.5s ease-in-out infinite alternatematrix-rain':'matrixRain 20s linear infinitequantum-shift':'quantumShift 4s ease-in-out infinitespace-drift':'spaceDrift 8s ease-in-out infiniteai-breathe':'aiBreathe 3s ease-in-out infinitehologram-flicker':'hologramFlicker 0 && 0.5s ease-in-out infinite alternatecyber-glitch':'cyberGlitch 0 && 0.3s ease-in-out infinite alternateneural-pulse':'neuralPulse 2s ease-in-out infinitequantum-entangle':'quantumEntangle 5s ease-in-out infinitespace-time-warp':'spaceTimeWarp 10s ease-in-out infiniteai-consciousness':'aiConsciousness 6s ease-in-out infinitebiotech-evolution':'biotechEvolution 7s ease-in-out infinitemetaverse-float':'metaverseFloat 4s ease-in-out infinitequantum-compute':'quantumCompute 8s ease-in-out infinitespace-mining':'spaceMining 12s ease-in-out infiniteai-emotion':'aiEmotion 3 && 3.5s ease-in-out infinitequantum-security':'quantumSecurity 5 && 5.5s ease-in-out infinitebiotech-dna':'biotechDNA 6 && 6.5s ease-in-out infinitespace-colonization':'spaceColonization 15s ease-in-out infiniteai-creativity':'aiCreativity 4 && 4.5s ease-in-out infinitequantum-learning':'quantumLearning 7 && 7.5s ease-in-out infinitespace-exploration':'spaceExploration 20s ease-in-out infiniteai-autonomy':'aiAutonomy 5 && 5.5s ease-in-out infinitequantum-finance':'quantumFinance 6 && 6.5s ease-in-out infinitebiotech-health':'biotechHealth 4 && 4.5s ease-in-out infinitespace-technology':'spaceTechnology 18s ease-in-out infiniteai-innovation':'aiInnovation 3 && 3.5s ease-in-out infinitequantum-space':'quantumSpace 25s ease-in-out infinitebiotech-research':'biotechResearch 8 && 8.5s ease-in-out infinitespace-mining-automation':'spaceMiningAutomation 30s ease-in-out infiniteai-consciousness-evolution':'aiConsciousnessEvolution 10s ease-in-out infinitequantum-internet-security':'quantumInternetSecurity 7 && 7.5s ease-in-out infinitebiotech-dna-computing':'biotechDNAComputing 12 && 12.5s ease-in-out infinitequantum-financial-trading':'quantumFinancialTrading 9 && 9.5s ease-in-out infinitespace-mining-platform':'spaceMiningPlatform 35s ease-in-out infinitemetaverse-digital-reality':'metaverseDigitalReality 6 && 6.5s ease-in-out infiniteautonomous-devops':'autonomousDevOps 8 && 8.5s ease-in-out infinitequantum-cloud-infrastructure':'quantumCloudInfrastructure 15 && 15.5s ease-in-out infiniteai-powered-enterprise-security':'aiPoweredEnterpriseSecurity 6 && 6.5s ease-in-out infiniteautonomous-it-operations':'autonomousITOperations 9 && 9.5s ease-in-out infinitezero-trust-architecture':'zeroTrustArchitecture 7 && 7.5s ease-in-out infiniteai-emotion-marketing':'aiEmotionMarketing 4 && 4.5s ease-in-out infinitebiotech-personalized-nutrition':'biotechPersonalizedNutrition 5 && 5.5s ease-in-out infinitequantum-learning-accelerator':'quantumLearningAccelerator 8 && 8.5s ease-in-out infiniteintelligent-data-governance':'intelligentDataGovernance 6 && 6.5s ease-in-out infiniteai-meeting-transcriber':'aiMeetingTranscriber 4 && 4.5s ease-in-out infinite';
+        'scale-out':'scaleOut 0 && 0.3s ease-outbounce-in':'bounceIn 0 && 0.6s ease-outbounce-out':'bounceOut 0 && 0.6s ease-outrotate-in':'rotateIn 0 && 0.6s ease-outrotate-out':'rotateOut 0 && 0.6s ease-outflip-in-x':'flipInX 0 && 0.6s ease-outflip-in-y':'flipInY 0 && 0.6s ease-outzoom-in':'zoomIn 0 && 0.3s ease-outzoom-out':'zoomOut 0 && 0.3s ease-outpulse-slow':'pulse 3s cubic-bezier(0 && 0.4, 0, 0 && 0.6, 1) infinitespin-slow':'spin 3s linear infinitebounce-slow':'bounce 2s infinitegrid-flow':'gridFlow 20s linear infiniteparticle':'particle 7s linear infinitescan-line':'scanLine 3s ease-in-out infinitegradient-x':'gradientX 3s ease-in-out infinitebounce-x':'bounceX 2s ease-in-out infinitecount-up':'countUp 2s ease-out forwards'},;
       keyframes:{;
         fadeIn:{;
           '0%':{ opacity:'0' },;
@@ -215,15 +215,15 @@ module.exports = {;
           '0%':{ transform:'scale(1)' },;
           '100%':{ transform:'scale(0)' }},;
         bounceIn:{;
-          '0%':{ transform:'scale(0.3)', opacity:'0' },;
-          '50%':{ transform:'scale(1.05)' },;
-          '70%':{ transform:'scale(0.9)' },;
+          '0%':{ transform:'scale(0 && 0.3)', opacity:'0' },;
+          '50%':{ transform:'scale(1 && 1.05)' },;
+          '70%':{ transform:'scale(0 && 0.9)' },;
           '100%':{ transform:'scale(1)', opacity:'1' }},;
         bounceOut:{;
           '0%':{ transform:'scale(1)', opacity:'1' },;
-          '20%':{ transform:'scale(0.9)' },;
-          '50%':{ transform:'scale(1.05)' },;
-          '100%':{ transform:'scale(0.3)', opacity:'0' }},;
+          '20%':{ transform:'scale(0 && 0.9)' },;
+          '50%':{ transform:'scale(1 && 1.05)' },;
+          '100%':{ transform:'scale(0 && 0.3)', opacity:'0' }},;
         rotateIn:{;
           '0%':{ transform:'rotate(-200deg)', opacity:'0' },;
           '100%':{ transform:'rotate(0)', opacity:'1' }},;
@@ -243,13 +243,13 @@ module.exports = {;
           '80%':{ transform:'perspective(400px) rotateY(-5deg)' },;
           '100%':{ transform:'perspective(400px) rotateY(0deg)', opacity:'1' }},;
         zoomIn:{;
-          '0%':{ transform:'scale(0.3)', opacity:'0' },;
+          '0%':{ transform:'scale(0 && 0.3)', opacity:'0' },;
           '50%':{ opacity:'1' },;
           '100%':{ transform:'scale(1)', opacity:'1' }},;
         zoomOut:{;
           '0%':{ transform:'scale(1)', opacity:'1' },;
           '50%':{ opacity:'0' },;
-          '100%':{ transform:'scale(0.3)', opacity:'0' }},;
+          '100%':{ transform:'scale(0 && 0.3)', opacity:'0' }},;
         float:{;
           '0%, 100%':{ transform:'translateY(0px)' },;
           '50%':{ transform:'translateY(-20px)' }},;
@@ -258,8 +258,8 @@ module.exports = {;
           '100%':{ transform:'translateX(60px) translateY(60px)' }},;
         particle:{;
           '0%':{ transform:'translateY(0) scale(1)', opacity:'1' },;
-          '50%':{ transform:'translateY(-100px) scale(1.5)', opacity:'0.7' },;
-          '100%':{ transform:'translateY(-200px) scale(0.5)', opacity:'0' }},;
+          '50%':{ transform:'translateY(-100px) scale(1 && 1.5)', opacity:'0 && 0.7' },;
+          '100%':{ transform:'translateY(-200px) scale(0 && 0.5)', opacity:'0' }},;
         scanLine:{;
           '0%':{ transform:'translateX(-100%)' },;
           '100%':{ transform:'translateX(100%)' }},;
@@ -270,13 +270,13 @@ module.exports = {;
           '0%, 100%':{ transform:'translateX(0)' },;
           '50%':{ transform:'translateX(25%)' }},;
         countUp:{;
-          '0%':{ transform:'scale(0.8)', opacity:'0' },;
+          '0%':{ transform:'scale(0 && 0.8)', opacity:'0' },;
           '100%':{ transform:'scale(1)', opacity:'1' }},;
         quantumCompute:{;
           '0%':{ transform:'rotate(0deg) scale(1)' },;
-          '25%':{ transform:'rotate(90deg) scale(1.2)' },;
+          '25%':{ transform:'rotate(90deg) scale(1 && 1.2)' },;
           '50%':{ transform:'rotate(180deg) scale(1)' },;
-          '75%':{ transform:'rotate(270deg) scale(0.8)' },;
+          '75%':{ transform:'rotate(270deg) scale(0 && 0.8)' },;
           '100%':{ transform:'rotate(360deg) scale(1)' }
         },;
         spaceMining:{;
@@ -287,219 +287,219 @@ module.exports = {;
         },;
         aiEmotion:{;
           '0%, 100%':{ transform:'scale(1) rotate(0deg)' },;
-          '33%':{ transform:'scale(1.1) rotate(120deg)' },;
-          '66%':{ transform:'scale(1.05) rotate(240deg)' }
+          '33%':{ transform:'scale(1 && 1.1) rotate(120deg)' },;
+          '66%':{ transform:'scale(1 && 1.05) rotate(240deg)' }
         },;
         quantumSecurity:{;
           '0%':{ transform:'scale(1) translateX(0px)' },;
-          '25%':{ transform:'scale(1.1) translateX(5px)' },;
+          '25%':{ transform:'scale(1 && 1.1) translateX(5px)' },;
           '50%':{ transform:'scale(1) translateX(0px)' },;
-          '75%':{ transform:'scale(0.9) translateX(-5px)' },;
+          '75%':{ transform:'scale(0 && 0.9) translateX(-5px)' },;
           '100%':{ transform:'scale(1) translateX(0px)' }
         },;
         biotechDNA:{;
           '0%, 100%':{ transform:'scale(1) rotate(0deg)' },;
-          '25%':{ transform:'scale(1.1) rotate(90deg)' },;
-          '50%':{ transform:'scale(1.2) rotate(180deg)' },;
-          '75%':{ transform:'scale(1.1) rotate(270deg)' }
+          '25%':{ transform:'scale(1 && 1.1) rotate(90deg)' },;
+          '50%':{ transform:'scale(1 && 1.2) rotate(180deg)' },;
+          '75%':{ transform:'scale(1 && 1.1) rotate(270deg)' }
         },;
         spaceColonization:{;
           '0%':{ transform:'translateX(0px) translateY(0px) scale(1)' },;
-          '20%':{ transform:'translateX(20px) translateY(-20px) scale(1.1)' },;
-          '40%':{ transform:'translateX(0px) translateY(-40px) scale(1.2)' },;
-          '60%':{ transform:'translateX(-20px) translateY(-20px) scale(1.1)' },;
+          '20%':{ transform:'translateX(20px) translateY(-20px) scale(1 && 1.1)' },;
+          '40%':{ transform:'translateX(0px) translateY(-40px) scale(1 && 1.2)' },;
+          '60%':{ transform:'translateX(-20px) translateY(-20px) scale(1 && 1.1)' },;
           '80%':{ transform:'translateX(0px) translateY(0px) scale(1)' },;
           '100%':{ transform:'translateX(0px) translateY(0px) scale(1)' }
         },;
         aiCreativity:{;
           '0%, 100%':{ transform:'scale(1) rotate(0deg)' },;
-          '25%':{ transform:'scale(1.15) rotate(45deg)' },;
-          '50%':{ transform:'scale(1.3) rotate(90deg)' },;
-          '75%':{ transform:'scale(1.15) rotate(135deg)' }
+          '25%':{ transform:'scale(1 && 1.15) rotate(45deg)' },;
+          '50%':{ transform:'scale(1 && 1.3) rotate(90deg)' },;
+          '75%':{ transform:'scale(1 && 1.15) rotate(135deg)' }
         },;
         quantumLearning:{;
           '0%':{ transform:'scale(1) translateY(0px)' },;
-          '25%':{ transform:'scale(1.1) translateY(-10px)' },;
-          '50%':{ transform:'scale(1.2) translateY(-20px)' },;
-          '75%':{ transform:'scale(1.1) translateY(-10px)' },;
+          '25%':{ transform:'scale(1 && 1.1) translateY(-10px)' },;
+          '50%':{ transform:'scale(1 && 1.2) translateY(-20px)' },;
+          '75%':{ transform:'scale(1 && 1.1) translateY(-10px)' },;
           '100%':{ transform:'scale(1) translateY(0px)' }
         },;
         spaceExploration:{;
           '0%':{ transform:'translateX(0px) translateY(0px) rotate(0deg) scale(1)' },;
-          '20%':{ transform:'translateX(30px) translateY(-30px) rotate(72deg) scale(1.1)' },;
-          '40%':{ transform:'translateX(0px) translateY(-60px) rotate(144deg) scale(1.2)' },;
-          '60%':{ transform:'translateX(-30px) translateY(-30px) rotate(216deg) scale(1.1)' },;
+          '20%':{ transform:'translateX(30px) translateY(-30px) rotate(72deg) scale(1 && 1.1)' },;
+          '40%':{ transform:'translateX(0px) translateY(-60px) rotate(144deg) scale(1 && 1.2)' },;
+          '60%':{ transform:'translateX(-30px) translateY(-30px) rotate(216deg) scale(1 && 1.1)' },;
           '80%':{ transform:'translateX(0px) translateY(0px) rotate(288deg) scale(1)' },;
           '100%':{ transform:'translateX(0px) translateY(0px) rotate(360deg) scale(1)' }
         },;
         aiAutonomy:{;
           '0%, 100%':{ transform:'scale(1) rotate(0deg)' },;
-          '33%':{ transform:'scale(1.1) rotate(120deg)' },;
-          '66%':{ transform:'scale(1.05) rotate(240deg)' }
+          '33%':{ transform:'scale(1 && 1.1) rotate(120deg)' },;
+          '66%':{ transform:'scale(1 && 1.05) rotate(240deg)' }
         },;
         quantumFinance:{;
           '0%':{ transform:'scale(1) translateX(0px)' },;
-          '25%':{ transform:'scale(1.1) translateX(10px)' },;
-          '50%':{ transform:'scale(1.2) translateX(0px)' },;
-          '75%':{ transform:'scale(1.1) translateX(-10px)' },;
+          '25%':{ transform:'scale(1 && 1.1) translateX(10px)' },;
+          '50%':{ transform:'scale(1 && 1.2) translateX(0px)' },;
+          '75%':{ transform:'scale(1 && 1.1) translateX(-10px)' },;
           '100%':{ transform:'scale(1) translateX(0px)' }
         },;
         biotechHealth:{;
           '0%, 100%':{ transform:'scale(1) rotate(0deg)' },;
-          '25%':{ transform:'scale(1.1) rotate(90deg)' },;
-          '50%':{ transform:'scale(1.2) rotate(180deg)' },;
-          '75%':{ transform:'scale(1.1) rotate(270deg)' }
+          '25%':{ transform:'scale(1 && 1.1) rotate(90deg)' },;
+          '50%':{ transform:'scale(1 && 1.2) rotate(180deg)' },;
+          '75%':{ transform:'scale(1 && 1.1) rotate(270deg)' }
         },;
         spaceTechnology:{;
           '0%':{ transform:'translateX(0px) translateY(0px) rotate(0deg) scale(1)' },;
-          '25%':{ transform:'translateX(25px) translateY(-25px) rotate(90deg) scale(1.1)' },;
-          '50%':{ transform:'translateX(0px) translateY(-50px) rotate(180deg) scale(1.2)' },;
-          '75%':{ transform:'translateX(-25px) translateY(-25px) rotate(270deg) scale(1.1)' },;
+          '25%':{ transform:'translateX(25px) translateY(-25px) rotate(90deg) scale(1 && 1.1)' },;
+          '50%':{ transform:'translateX(0px) translateY(-50px) rotate(180deg) scale(1 && 1.2)' },;
+          '75%':{ transform:'translateX(-25px) translateY(-25px) rotate(270deg) scale(1 && 1.1)' },;
           '100%':{ transform:'translateX(0px) translateY(0px) rotate(360deg) scale(1)' }
         },;
         aiInnovation:{;
           '0%, 100%':{ transform:'scale(1) rotate(0deg)' },;
-          '33%':{ transform:'scale(1.15) rotate(120deg)' },;
-          '66%':{ transform:'scale(1.1) rotate(240deg)' }
+          '33%':{ transform:'scale(1 && 1.15) rotate(120deg)' },;
+          '66%':{ transform:'scale(1 && 1.1) rotate(240deg)' }
         },;
         quantumSpace:{;
           '0%':{ transform:'translateX(0px) translateY(0px) rotate(0deg) scale(1)' },;
-          '20%':{ transform:'translateX(40px) translateY(-40px) rotate(72deg) scale(1.1)' },;
-          '40%':{ transform:'translateX(0px) translateY(-80px) rotate(144deg) scale(1.2)' },;
-          '60%':{ transform:'translateX(-40px) translateY(-40px) rotate(216deg) scale(1.1)' },;
+          '20%':{ transform:'translateX(40px) translateY(-40px) rotate(72deg) scale(1 && 1.1)' },;
+          '40%':{ transform:'translateX(0px) translateY(-80px) rotate(144deg) scale(1 && 1.2)' },;
+          '60%':{ transform:'translateX(-40px) translateY(-40px) rotate(216deg) scale(1 && 1.1)' },;
           '80%':{ transform:'translateX(0px) translateY(0px) rotate(288deg) scale(1)' },;
           '100%':{ transform:'translateX(0px) translateY(0px) rotate(360deg) scale(1)' }
         },;
         biotechResearch:{;
           '0%':{ transform:'scale(1) translateY(0px)' },;
-          '25%':{ transform:'scale(1.1) translateY(-15px)' },;
-          '50%':{ transform:'scale(1.2) translateY(-30px)' },;
-          '75%':{ transform:'scale(1.1) translateY(-15px)' },;
+          '25%':{ transform:'scale(1 && 1.1) translateY(-15px)' },;
+          '50%':{ transform:'scale(1 && 1.2) translateY(-30px)' },;
+          '75%':{ transform:'scale(1 && 1.1) translateY(-15px)' },;
           '100%':{ transform:'scale(1) translateY(0px)' }
         },;
         spaceMiningAutomation:{;
           '0%':{ transform:'translateX(0px) translateY(0px) rotate(0deg) scale(1)' },;
-          '10%':{ transform:'translateX(20px) translateY(-20px) rotate(36deg) scale(1.05)' },;
-          '20%':{ transform:'translateX(40px) translateY(-40px) rotate(72deg) scale(1.1)' },;
-          '30%':{ transform:'translateX(60px) translateY(-60px) rotate(108deg) scale(1.15)' },;
-          '40%':{ transform:'translateX(80px) translateY(-80px) rotate(144deg) scale(1.2)' },;
-          '50%':{ transform:'translateX(100px) translateY(-100px) rotate(180deg) scale(1.25)' },;
-          '60%':{ transform:'translateX(80px) translateY(-80px) rotate(216deg) scale(1.2)' },;
-          '70%':{ transform:'translateX(60px) translateY(-60px) rotate(252deg) scale(1.15)' },;
-          '80%':{ transform:'translateX(40px) translateY(-40px) rotate(288deg) scale(1.1)' },;
-          '90%':{ transform:'translateX(20px) translateY(-20px) rotate(324deg) scale(1.05)' },;
+          '10%':{ transform:'translateX(20px) translateY(-20px) rotate(36deg) scale(1 && 1.05)' },;
+          '20%':{ transform:'translateX(40px) translateY(-40px) rotate(72deg) scale(1 && 1.1)' },;
+          '30%':{ transform:'translateX(60px) translateY(-60px) rotate(108deg) scale(1 && 1.15)' },;
+          '40%':{ transform:'translateX(80px) translateY(-80px) rotate(144deg) scale(1 && 1.2)' },;
+          '50%':{ transform:'translateX(100px) translateY(-100px) rotate(180deg) scale(1 && 1.25)' },;
+          '60%':{ transform:'translateX(80px) translateY(-80px) rotate(216deg) scale(1 && 1.2)' },;
+          '70%':{ transform:'translateX(60px) translateY(-60px) rotate(252deg) scale(1 && 1.15)' },;
+          '80%':{ transform:'translateX(40px) translateY(-40px) rotate(288deg) scale(1 && 1.1)' },;
+          '90%':{ transform:'translateX(20px) translateY(-20px) rotate(324deg) scale(1 && 1.05)' },;
           '100%':{ transform:'translateX(0px) translateY(0px) rotate(360deg) scale(1)' }
         },;
         aiConsciousnessEvolution:{;
           '0%':{ transform:'scale(1) rotate(0deg) translateY(0px)' },;
-          '25%':{ transform:'scale(1.1) rotate(90deg) translateY(-10px)' },;
-          '50%':{ transform:'scale(1.2) rotate(180deg) translateY(-20px)' },;
-          '75%':{ transform:'scale(1.1) rotate(270deg) translateY(-10px)' },;
+          '25%':{ transform:'scale(1 && 1.1) rotate(90deg) translateY(-10px)' },;
+          '50%':{ transform:'scale(1 && 1.2) rotate(180deg) translateY(-20px)' },;
+          '75%':{ transform:'scale(1 && 1.1) rotate(270deg) translateY(-10px)' },;
           '100%':{ transform:'scale(1) rotate(360deg) translateY(0px)' }
         },;
         quantumInternetSecurity:{;
           '0%':{ transform:'scale(1) translateX(0px)' },;
-          '25%':{ transform:'scale(1.1) translateX(15px)' },;
-          '50%':{ transform:'scale(1.2) translateX(0px)' },;
-          '75%':{ transform:'scale(1.1) translateX(-15px)' },;
+          '25%':{ transform:'scale(1 && 1.1) translateX(15px)' },;
+          '50%':{ transform:'scale(1 && 1.2) translateX(0px)' },;
+          '75%':{ transform:'scale(1 && 1.1) translateX(-15px)' },;
           '100%':{ transform:'scale(1) translateX(0px)' }
         },;
         biotechDNAComputing:{;
           '0%':{ transform:'scale(1) rotate(0deg)' },;
-          '20%':{ transform:'scale(1.1) rotate(72deg)' },;
-          '40%':{ transform:'scale(1.2) rotate(144deg)' },;
-          '60%':{ transform:'scale(1.1) rotate(216deg)' },;
-          '80%':{ transform:'scale(1.05) rotate(288deg)' },;
+          '20%':{ transform:'scale(1 && 1.1) rotate(72deg)' },;
+          '40%':{ transform:'scale(1 && 1.2) rotate(144deg)' },;
+          '60%':{ transform:'scale(1 && 1.1) rotate(216deg)' },;
+          '80%':{ transform:'scale(1 && 1.05) rotate(288deg)' },;
           '100%':{ transform:'scale(1) rotate(360deg)' }
         },;
         quantumFinancialTrading:{;
           '0%':{ transform:'scale(1) translateY(0px)' },;
-          '25%':{ transform:'scale(1.1) translateY(-20px)' },;
-          '50%':{ transform:'scale(1.2) translateY(-40px)' },;
-          '75%':{ transform:'scale(1.1) translateY(-20px)' },;
+          '25%':{ transform:'scale(1 && 1.1) translateY(-20px)' },;
+          '50%':{ transform:'scale(1 && 1.2) translateY(-40px)' },;
+          '75%':{ transform:'scale(1 && 1.1) translateY(-20px)' },;
           '100%':{ transform:'scale(1) translateY(0px)' }
         },;
         spaceMiningPlatform:{;
           '0%':{ transform:'translateX(0px) translateY(0px) rotate(0deg) scale(1)' },;
-          '10%':{ transform:'translateX(30px) translateY(-30px) rotate(36deg) scale(1.05)' },;
-          '20%':{ transform:'translateX(60px) translateY(-60px) rotate(72deg) scale(1.1)' },;
-          '30%':{ transform:'translateX(90px) translateY(-90px) rotate(108deg) scale(1.15)' },;
-          '40%':{ transform:'translateX(120px) translateY(-120px) rotate(144deg) scale(1.2)' },;
-          '50%':{ transform:'translateX(150px) translateY(-150px) rotate(180deg) scale(1.25)' },;
-          '60%':{ transform:'translateX(120px) translateY(-120px) rotate(216deg) scale(1.2)' },;
-          '70%':{ transform:'translateX(90px) translateY(-90px) rotate(252deg) scale(1.15)' },;
-          '80%':{ transform:'translateX(60px) translateY(-60px) rotate(288deg) scale(1.1)' },;
-          '90%':{ transform:'translateX(30px) translateY(-30px) rotate(324deg) scale(1.05)' },;
+          '10%':{ transform:'translateX(30px) translateY(-30px) rotate(36deg) scale(1 && 1.05)' },;
+          '20%':{ transform:'translateX(60px) translateY(-60px) rotate(72deg) scale(1 && 1.1)' },;
+          '30%':{ transform:'translateX(90px) translateY(-90px) rotate(108deg) scale(1 && 1.15)' },;
+          '40%':{ transform:'translateX(120px) translateY(-120px) rotate(144deg) scale(1 && 1.2)' },;
+          '50%':{ transform:'translateX(150px) translateY(-150px) rotate(180deg) scale(1 && 1.25)' },;
+          '60%':{ transform:'translateX(120px) translateY(-120px) rotate(216deg) scale(1 && 1.2)' },;
+          '70%':{ transform:'translateX(90px) translateY(-90px) rotate(252deg) scale(1 && 1.15)' },;
+          '80%':{ transform:'translateX(60px) translateY(-60px) rotate(288deg) scale(1 && 1.1)' },;
+          '90%':{ transform:'translateX(30px) translateY(-30px) rotate(324deg) scale(1 && 1.05)' },;
           '100%':{ transform:'translateX(0px) translateY(0px) rotate(360deg) scale(1)' }
         },;
         metaverseDigitalReality:{;
           '0%, 100%':{ transform:'scale(1) rotate(0deg)' },;
-          '33%':{ transform:'scale(1.1) rotate(120deg)' },;
-          '66%':{ transform:'scale(1.05) rotate(240deg)' }
+          '33%':{ transform:'scale(1 && 1.1) rotate(120deg)' },;
+          '66%':{ transform:'scale(1 && 1.05) rotate(240deg)' }
         },;
         autonomousDevOps:{;
           '0%':{ transform:'scale(1) translateX(0px)' },;
-          '25%':{ transform:'scale(1.1) translateX(10px)' },;
-          '50%':{ transform:'scale(1.2) translateX(0px)' },;
-          '75%':{ transform:'scale(1.1) translateX(-10px)' },;
+          '25%':{ transform:'scale(1 && 1.1) translateX(10px)' },;
+          '50%':{ transform:'scale(1 && 1.2) translateX(0px)' },;
+          '75%':{ transform:'scale(1 && 1.1) translateX(-10px)' },;
           '100%':{ transform:'scale(1) translateX(0px)' }
         },;
         quantumCloudInfrastructure:{;
           '0%':{ transform:'scale(1) rotate(0deg)' },;
-          '25%':{ transform:'scale(1.1) rotate(90deg)' },;
-          '50%':{ transform:'scale(1.2) rotate(180deg)' },;
-          '75%':{ transform:'scale(1.1) rotate(270deg)' },;
+          '25%':{ transform:'scale(1 && 1.1) rotate(90deg)' },;
+          '50%':{ transform:'scale(1 && 1.2) rotate(180deg)' },;
+          '75%':{ transform:'scale(1 && 1.1) rotate(270deg)' },;
           '100%':{ transform:'scale(1) rotate(360deg)' }
         },;
         aiPoweredEnterpriseSecurity:{;
           '0%, 100%':{ transform:'scale(1) rotate(0deg)' },;
-          '33%':{ transform:'scale(1.1) rotate(120deg)' },;
-          '66%':{ transform:'scale(1.05) rotate(240deg)' }
+          '33%':{ transform:'scale(1 && 1.1) rotate(120deg)' },;
+          '66%':{ transform:'scale(1 && 1.05) rotate(240deg)' }
         },;
         autonomousITOperations:{;
           '0%':{ transform:'scale(1) translateY(0px)' },;
-          '25%':{ transform:'scale(1.1) translateY(-15px)' },;
-          '50%':{ transform:'scale(1.2) translateY(-30px)' },;
-          '75%':{ transform:'scale(1.1) translateY(-15px)' },;
+          '25%':{ transform:'scale(1 && 1.1) translateY(-15px)' },;
+          '50%':{ transform:'scale(1 && 1.2) translateY(-30px)' },;
+          '75%':{ transform:'scale(1 && 1.1) translateY(-15px)' },;
           '100%':{ transform:'scale(1) translateY(0px)' }
         },;
         zeroTrustArchitecture:{;
           '0%':{ transform:'scale(1) translateX(0px)' },;
-          '25%':{ transform:'scale(1.1) translateX(15px)' },;
-          '50%':{ transform:'scale(1.2) translateX(0px)' },;
-          '75%':{ transform:'scale(1.1) translateX(-15px)' },;
+          '25%':{ transform:'scale(1 && 1.1) translateX(15px)' },;
+          '50%':{ transform:'scale(1 && 1.2) translateX(0px)' },;
+          '75%':{ transform:'scale(1 && 1.1) translateX(-15px)' },;
           '100%':{ transform:'scale(1) translateX(0px)' }
         },;
         aiEmotionMarketing:{;
           '0%, 100%':{ transform:'scale(1) rotate(0deg)' },;
-          '25%':{ transform:'scale(1.1) rotate(90deg)' },;
-          '50%':{ transform:'scale(1.2) rotate(180deg)' },;
-          '75%':{ transform:'scale(1.1) rotate(270deg)' }
+          '25%':{ transform:'scale(1 && 1.1) rotate(90deg)' },;
+          '50%':{ transform:'scale(1 && 1.2) rotate(180deg)' },;
+          '75%':{ transform:'scale(1 && 1.1) rotate(270deg)' }
         },;
         biotechPersonalizedNutrition:{;
           '0%':{ transform:'scale(1) translateY(0px)' },;
-          '25%':{ transform:'scale(1.1) translateY(-20px)' },;
-          '50%':{ transform:'scale(1.2) translateY(-40px)' },;
-          '75%':{ transform:'scale(1.1) translateY(-20px)' },;
+          '25%':{ transform:'scale(1 && 1.1) translateY(-20px)' },;
+          '50%':{ transform:'scale(1 && 1.2) translateY(-40px)' },;
+          '75%':{ transform:'scale(1 && 1.1) translateY(-20px)' },;
           '100%':{ transform:'scale(1) translateY(0px)' }
         },;
         quantumLearningAccelerator:{;
           '0%':{ transform:'scale(1) rotate(0deg)' },;
-          '25%':{ transform:'scale(1.1) rotate(90deg)' },;
-          '50%':{ transform:'scale(1.2) rotate(180deg)' },;
-          '75%':{ transform:'scale(1.1) rotate(270deg)' },;
+          '25%':{ transform:'scale(1 && 1.1) rotate(90deg)' },;
+          '50%':{ transform:'scale(1 && 1.2) rotate(180deg)' },;
+          '75%':{ transform:'scale(1 && 1.1) rotate(270deg)' },;
           '100%':{ transform:'scale(1) rotate(360deg)' }
         },;
         intelligentDataGovernance:{;
           '0%, 100%':{ transform:'scale(1) rotate(0deg)' },;
-          '33%':{ transform:'scale(1.1) rotate(120deg)' },;
-          '66%':{ transform:'scale(1.05) rotate(240deg)' }
+          '33%':{ transform:'scale(1 && 1.1) rotate(120deg)' },;
+          '66%':{ transform:'scale(1 && 1.05) rotate(240deg)' }
         },;
         aiMeetingTranscriber:{;
           '0%':{ transform:'scale(1) translateX(0px)' },;
-          '25%':{ transform:'scale(1.1) translateX(10px)' },;
-          '50%':{ transform:'scale(1.2) translateX(0px)' },;
-          '75%':{ transform:'scale(1.1) translateX(-10px)' },;
+          '25%':{ transform:'scale(1 && 1.1) translateX(10px)' },;
+          '50%':{ transform:'scale(1 && 1.2) translateX(0px)' },;
+          '75%':{ transform:'scale(1 && 1.1) translateX(-10px)' },;
           '100%':{ transform:'scale(1) translateX(0px)' }
         }
       },;
@@ -526,15 +526,15 @@ module.exports = {;
       mixBlendMode:{;
         'normal':'normalmultiply':'multiplyscreen':'screenoverlay':'overlaydarken':'darkenlighten':'lightencolor-dodge':'color-dodgecolor-burn':'color-burnhard-light':'hard-lightsoft-light':'soft-lightdifference':'differenceexclusion':'exclusionhue':'huesaturation':'saturationcolor':'colorluminosity':'luminosity'},;
       filter:{;
-        'none':'noneblur':'blur(4px)blur-sm':'blur(2px)blur-md':'blur(8px)blur-lg':'blur(16px)blur-xl':'blur(24px)blur-2xl':'blur(40px)blur-3xl':'blur(64px)brightness':'brightness(1.1)brightness-75':'brightness(0.75)brightness-90':'brightness(0.9)brightness-110':'brightness(1.1)brightness-125':'brightness(1.25)brightness-150':'brightness(1.5)brightness-200':'brightness(2)contrast':'contrast(1.1)contrast-75':'contrast(0.75)contrast-90':'contrast(0.9)contrast-110':'contrast(1.1)contrast-125':'contrast(1.25)contrast-150':'contrast(1.5)contrast-200':'contrast(2)grayscale':'grayscale(1)grayscale-0':'grayscale(0)hue-rotate':'hue-rotate(15deg)hue-rotate-30':'hue-rotate(30deg)hue-rotate-60':'hue-rotate(60deg)hue-rotate-90':'hue-rotate(90deg)hue-rotate-180':'hue-rotate(180deg)invert':'invert(1)invert-0':'invert(0)saturate':'saturate(1.1)saturate-0':'saturate(0)saturate-50':'saturate(0.5)saturate-75':'saturate(0.75)saturate-90':'saturate(0.9)saturate-110':'saturate(1.1)saturate-125':'saturate(1.25)saturate-150':'saturate(1.5)saturate-200':'saturate(2)sepia':'sepia(1)sepia-0':'sepia(0)drop-shadow':'drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06))drop-shadow-sm':'drop-shadow(0 1px 1px rgb(0 0 0 / 0.05))drop-shadow-md':'drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06))drop-shadow-lg':'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))drop-shadow-xl':'drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08))drop-shadow-2xl':'drop-shadow(0 25px 25px rgb(0 0 0 / 0.15))drop-shadow-none':'drop-shadow(0 0 #0000)'},;
+        'none':'noneblur':'blur(4px)blur-sm':'blur(2px)blur-md':'blur(8px)blur-lg':'blur(16px)blur-xl':'blur(24px)blur-2xl':'blur(40px)blur-3xl':'blur(64px)brightness':'brightness(1 && 1.1)brightness-75':'brightness(0 && 0.75)brightness-90':'brightness(0 && 0.9)brightness-110':'brightness(1 && 1.1)brightness-125':'brightness(1 && 1.25)brightness-150':'brightness(1 && 1.5)brightness-200':'brightness(2)contrast':'contrast(1 && 1.1)contrast-75':'contrast(0 && 0.75)contrast-90':'contrast(0 && 0.9)contrast-110':'contrast(1 && 1.1)contrast-125':'contrast(1 && 1.25)contrast-150':'contrast(1 && 1.5)contrast-200':'contrast(2)grayscale':'grayscale(1)grayscale-0':'grayscale(0)hue-rotate':'hue-rotate(15deg)hue-rotate-30':'hue-rotate(30deg)hue-rotate-60':'hue-rotate(60deg)hue-rotate-90':'hue-rotate(90deg)hue-rotate-180':'hue-rotate(180deg)invert':'invert(1)invert-0':'invert(0)saturate':'saturate(1 && 1.1)saturate-0':'saturate(0)saturate-50':'saturate(0 && 0.5)saturate-75':'saturate(0 && 0.75)saturate-90':'saturate(0 && 0.9)saturate-110':'saturate(1 && 1.1)saturate-125':'saturate(1 && 1.25)saturate-150':'saturate(1 && 1.5)saturate-200':'saturate(2)sepia':'sepia(1)sepia-0':'sepia(0)drop-shadow':'drop-shadow(0 1px 2px rgb(0 0 0 / 0 && 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0 && 0.06))drop-shadow-sm':'drop-shadow(0 1px 1px rgb(0 0 0 / 0 && 0.05))drop-shadow-md':'drop-shadow(0 4px 3px rgb(0 0 0 / 0 && 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0 && 0.06))drop-shadow-lg':'drop-shadow(0 10px 8px rgb(0 0 0 / 0 && 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0 && 0.1))drop-shadow-xl':'drop-shadow(0 20px 13px rgb(0 0 0 / 0 && 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0 && 0.08))drop-shadow-2xl':'drop-shadow(0 25px 25px rgb(0 0 0 / 0 && 0.15))drop-shadow-none':'drop-shadow(0 0 #0000)'},;
       backdropFilter:{;
-        'none':'noneblur':'blur(4px)blur-sm':'blur(2px)blur-md':'blur(8px)blur-lg':'blur(16px)blur-xl':'blur(24px)blur-2xl':'blur(40px)blur-3xl':'blur(64px)brightness':'brightness(1.1)brightness-75':'brightness(0.75)brightness-90':'brightness(0.9)brightness-110':'brightness(1.1)brightness-125':'brightness(1.25)brightness-150':'brightness(1.5)brightness-200':'brightness(2)contrast':'contrast(1.1)contrast-75':'contrast(0.75)contrast-90':'contrast(0.9)contrast-110':'contrast(1.1)contrast-125':'contrast(1.25)contrast-150':'contrast(1.5)contrast-200':'contrast(2)grayscale':'grayscale(1)grayscale-0':'grayscale(0)hue-rotate':'hue-rotate(15deg)hue-rotate-30':'hue-rotate(30deg)hue-rotate-60':'hue-rotate(60deg)hue-rotate-90':'hue-rotate(90deg)hue-rotate-180':'hue-rotate(180deg)invert':'invert(1)invert-0':'invert(0)saturate':'saturate(1.1)saturate-0':'saturate(0)saturate-50':'saturate(0.5)saturate-75':'saturate(0.75)saturate-90':'saturate(0.9)saturate-110':'saturate(1.1)saturate-125':'saturate(1.25)saturate-150':'saturate(1.5)saturate-200':'saturate(2)sepia':'sepia(1)sepia-0':'sepia(0)'},;
+        'none':'noneblur':'blur(4px)blur-sm':'blur(2px)blur-md':'blur(8px)blur-lg':'blur(16px)blur-xl':'blur(24px)blur-2xl':'blur(40px)blur-3xl':'blur(64px)brightness':'brightness(1 && 1.1)brightness-75':'brightness(0 && 0.75)brightness-90':'brightness(0 && 0.9)brightness-110':'brightness(1 && 1.1)brightness-125':'brightness(1 && 1.25)brightness-150':'brightness(1 && 1.5)brightness-200':'brightness(2)contrast':'contrast(1 && 1.1)contrast-75':'contrast(0 && 0.75)contrast-90':'contrast(0 && 0.9)contrast-110':'contrast(1 && 1.1)contrast-125':'contrast(1 && 1.25)contrast-150':'contrast(1 && 1.5)contrast-200':'contrast(2)grayscale':'grayscale(1)grayscale-0':'grayscale(0)hue-rotate':'hue-rotate(15deg)hue-rotate-30':'hue-rotate(30deg)hue-rotate-60':'hue-rotate(60deg)hue-rotate-90':'hue-rotate(90deg)hue-rotate-180':'hue-rotate(180deg)invert':'invert(1)invert-0':'invert(0)saturate':'saturate(1 && 1.1)saturate-0':'saturate(0)saturate-50':'saturate(0 && 0.5)saturate-75':'saturate(0 && 0.75)saturate-90':'saturate(0 && 0.9)saturate-110':'saturate(1 && 1.1)saturate-125':'saturate(1 && 1.25)saturate-150':'saturate(1 && 1.5)saturate-200':'saturate(2)sepia':'sepia(1)sepia-0':'sepia(0)'},;
       transitionProperty:{;
         'none':'noneall':'allcolors':'color, background-color, border-color, text-decoration-color, fill, strokeopacity':'opacityshadow':'box-shadowtransform':'transformbackground':'background-color, background-image, background-position, background-size, background-repeat, background-attachment, background-clip, background-originborder':'border-color, border-width, border-style, border-radiusspacing':'margin, padding, width, height, top, right, bottom, lefttypography':'color, background-color, font-size, font-weight, line-height, text-align, text-decoration, text-transform, letter-spacing, word-spacinglayout':'display, position, top, right, bottom, left, z-index, float, clear, vertical-align, text-align, white-space, word-break, word-wrap, overflow, overflow-x, overflow-y, clip, visibility, opacity, zoom, cursor, pointer-events, user-select, resize, transition, animation, transform, transform-origin, transform-style, perspective, perspective-origin, backface-visibility'},;
       transitionDuration:{;
         '75':'75ms100':'100ms150':'150ms200':'200ms300':'300ms500':'500ms700':'700ms1000':'1000ms1500':'1500ms2000':'2000ms3000':'3000ms4000':'4000ms5000':'5000ms'},;
       transitionTimingFunction:{;
-        'linear':'linearin':'cubic-bezier(0.4, 0, 1, 1)out':'cubic-bezier(0, 0, 0.2, 1)in-out':'cubic-bezier(0.4, 0, 0.2, 1)bounce':'cubic-bezier(0.68, -0.55, 0.265, 1.55)elastic':'cubic-bezier(0.68, -0.55, 0.265, 1.55)smooth':'cubic-bezier(0.25, 0.46, 0.45, 0.94)ease-quantum':'cubic-bezier(0.68, -0.55, 0.265, 1.55)ease-neon':'cubic-bezier(0.25, 0.46, 0.45, 0.94)ease-hologram':'cubic-bezier(0.68, -0.55, 0.265, 1.55)ease-cyberpunk':'cubic-bezier(0.25, 0.46, 0.45, 0.94)ease-space':'cubic-bezier(0.68, -0.55, 0.265, 1.55)'},;
+        'linear':'linearin':'cubic-bezier(0 && 0.4, 0, 1, 1)out':'cubic-bezier(0, 0, 0 && 0.2, 1)in-out':'cubic-bezier(0 && 0.4, 0, 0 && 0.2, 1)bounce':'cubic-bezier(0 && 0.68, -0 && 0.55, 0 && 0.265, 1 && 1.55)elastic':'cubic-bezier(0 && 0.68, -0 && 0.55, 0 && 0.265, 1 && 1.55)smooth':'cubic-bezier(0 && 0.25, 0 && 0.46, 0 && 0.45, 0 && 0.94)ease-quantum':'cubic-bezier(0 && 0.68, -0 && 0.55, 0 && 0.265, 1 && 1.55)ease-neon':'cubic-bezier(0 && 0.25, 0 && 0.46, 0 && 0.45, 0 && 0.94)ease-hologram':'cubic-bezier(0 && 0.68, -0 && 0.55, 0 && 0.265, 1 && 1.55)ease-cyberpunk':'cubic-bezier(0 && 0.25, 0 && 0.46, 0 && 0.45, 0 && 0.94)ease-space':'cubic-bezier(0 && 0.68, -0 && 0.55, 0 && 0.265, 1 && 1.55)'},;
       transitionDelay:{;
         '75':'75ms100':'100ms150':'150ms200':'200ms300':'300ms500':'500ms700':'700ms1000':'1000ms1500':'1500ms2000':'2000ms3000':'3000ms4000':'4000ms5000':'5000ms'},;
       zIndex:{;
@@ -546,11 +546,11 @@ module.exports = {;
   theme:{;
     extend:{}},;
   plugins:[]}
-;module.exports = {
+;module && module.exports = {
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+module && module.exports = {
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+module && module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -565,7 +565,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'fade-in': 'fadeIn 0.6s ease-out forwardsfade-in-up': 'fadeInUp 0.6s ease-out forwardsfade-in-down': 'fadeInDown 0.6s ease-out forwardsslide-in-left': 'slideInLeft 0.6s ease-out forwardsslide-in-right': 'slideInRight 0.6s ease-out forwardsscale-in': 'scaleIn 0.6s ease-out forwardsfloat': 'float 6s ease-in-out infinitepulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinitebounce-slow': 'bounce 2s infiniteglow': 'glow 2s ease-in-out infinite alternateshimmer': 'shimmer 2.5s linear infinitematrix': 'matrix 20s linear infiniteneon-pulse': 'neonPulse 1.5s ease-in-out infinitecyber-float': 'cyberFloat 8s ease-in-out infinitehologram': 'hologram 3s ease-in-out infiniteenergy-wave': 'energyWave 4s ease-in-out infinitequantum-spin': 'quantumSpin 6s linear infiniteneural-network': 'neuralNetwork 10s linear infiniteplasma-flow': 'plasmaFlow 5s ease-in-out infinitecyber-grid': 'cyberGrid 15s linear infinite',
+        'fade-in': 'fadeIn 0 && 0.6s ease-out forwardsfade-in-up': 'fadeInUp 0 && 0.6s ease-out forwardsfade-in-down': 'fadeInDown 0 && 0.6s ease-out forwardsslide-in-left': 'slideInLeft 0 && 0.6s ease-out forwardsslide-in-right': 'slideInRight 0 && 0.6s ease-out forwardsscale-in': 'scaleIn 0 && 0.6s ease-out forwardsfloat': 'float 6s ease-in-out infinitepulse-slow': 'pulse 3s cubic-bezier(0 && 0.4, 0, 0 && 0.6, 1) infinitebounce-slow': 'bounce 2s infiniteglow': 'glow 2s ease-in-out infinite alternateshimmer': 'shimmer 2 && 2.5s linear infinitematrix': 'matrix 20s linear infiniteneon-pulse': 'neonPulse 1 && 1.5s ease-in-out infinitecyber-float': 'cyberFloat 8s ease-in-out infinitehologram': 'hologram 3s ease-in-out infiniteenergy-wave': 'energyWave 4s ease-in-out infinitequantum-spin': 'quantumSpin 6s linear infiniteneural-network': 'neuralNetwork 10s linear infiniteplasma-flow': 'plasmaFlow 5s ease-in-out infinitecyber-grid': 'cyberGrid 15s linear infinite',
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -598,11 +598,11 @@ module.exports = {
         mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.5s ease-out',
-        'scale-in': 'scaleIn 0.3s ease-out',
+        'fade-in': 'fadeIn 0 && 0.5s ease-in-out',
+        'slide-up': 'slideUp 0 && 0.5s ease-out',
+        'scale-in': 'scaleIn 0 && 0.3s ease-out',
         'float': 'float 6s ease-in-out infinite',
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0 && 0.4, 0, 0 && 0.6, 1) infinite',
         'bounce-slow': 'bounce 3s infinite',
         'spin-slow': 'spin 8s linear infinite',
       },
@@ -625,18 +625,18 @@ module.exports = {
         },
       },
       spacing: {
-        '18': '4.5rem',
+        '18': '4 && 4.5rem',
         '88': '22rem',
         '128': '32rem',
       },
       borderRadius: {
         '4xl': '2rem',
-        '5xl': '2.5rem',
+        '5xl': '2 && 2.5rem',
       },
       boxShadow: {
-        'glow': '0 0 20px rgba(59, 130, 246, 0.3)',
-        'glow-lg': '0 0 40px rgba(59, 130, 246, 0.4)',
-        'glow-xl': '0 0 60px rgba(59, 130, 246, 0.5)',
+        'glow': '0 0 20px rgba(59, 130, 246, 0 && 0.3)',
+        'glow-lg': '0 0 40px rgba(59, 130, 246, 0 && 0.4)',
+        'glow-xl': '0 0 60px rgba(59, 130, 246, 0 && 0.5)',
       },
     },
   },

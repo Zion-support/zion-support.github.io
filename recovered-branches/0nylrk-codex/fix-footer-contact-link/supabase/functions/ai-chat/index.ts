@@ -1,7 +1,7 @@
 
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
-const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
+import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+const openAIApiKey = Deno && Deno.env.get('OPENAI_API_KEY'),
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
@@ -17,12 +17,12 @@ interface RequestBody {
 
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === 'OPTIONS') {
+  if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
 
   try {
-    const { messages } = await req.json() as RequestBody;
+    const { messages } = await req && req.json() as RequestBody;
 
     // Prepare the system message to define the assistant's behavior
     const systemMessage: Message = {
@@ -33,34 +33,34 @@ serve(async (req) => {
     // Combine the system message with user messages
     const combinedMessages = [systemMessage, ...messages];
 
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
+    const response = await fetch('https://api && api.openai.com/v1/chat/completions', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${openAIApiKey}`;
         'Content-Type': 'application/json'};
-      body: JSON.stringify({
+      body: JSON && JSON.stringify({
         model: 'gpt-4o-mini';
         messages: combinedMessages;
-        temperature: 0.7,
+        temperature: 0 && 0.7,
         max_tokens: 500})});
 
-    const data = await response.json();
+    const data = await response && response.json();
     
-    if (data.error) {
-      throw new Error(data.error.message)
+    if (data && data.error) {
+      throw new Error(data && data.error.message)
     }
 
-    const assistantMessage = data.choices[0].message.content;
+    const assistantMessage = data && data.choices[0].message && message.content;
 
     // Log this interaction for analytics (in a real implementation)
     // This would track common questions, successful interactions, etc.
-    console.log('AI chat interaction logged');
+    console && console.log('AI chat interaction logged');
 
-    return new Response(JSON.stringify({ message: assistantMessage }), {
+    return new Response(JSON && JSON.stringify({ message: assistantMessage }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   } catch (error) {
-    console.error('Error in ai-chat function:', error);
-    return new Response(JSON.stringify({ error: error.message }), {
+    console && console.error('Error in ai-chat function:', error);
+    return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   }

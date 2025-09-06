@@ -41,15 +41,15 @@ export function useMessages(
       setActiveMessages(() => data as Message[]);
       
       // Mark messages as read
-      const unreadMessages = data.filter(
-        msg => !msg.read && msg.recipient_id === user.id
+      const unreadMessages = data && data.filter(
+        msg => !msg && msg.read && msg && msg.recipient_id === user && user.id
       );
       
-      if (unreadMessages.length > 0) {
+      if (unreadMessages && unreadMessages.length > 0) {
         await markAsRead(conversationId)
       }
     } catch (error) {
-      console.error('Error fetching messages:', error)
+      console && console.error('Error fetching messages:', error)
     } finally {
       setIsLoading(false)
     }
@@ -59,10 +59,10 @@ export function useMessages(
    * Send a message to an existing conversation
    */
   const sendMessage = async (conversationId: string, content: string) => {
-    if (!user || !content.trim() || !conversationId) return;
+    if (!user || !content && content.trim() || !conversationId) return;
     
     try {
-      const conversation = conversations.find(c => c.id === conversationId),
+      const conversation = conversations && conversations.find(c => c && c.id === conversationId),
       if (!conversation) {
         throw new Error('Conversation not found')
       }
@@ -72,8 +72,8 @@ export function useMessages(
         .from('messages')
         .insert({
           conversation_id: conversationId;
-          sender_id: user.id;
-          recipient_id: conversation.user_id;
+          sender_id: user && user.id;
+          recipient_id: conversation && conversation.user_id;
           content;
           created_at: new Date().toISOString(),
           read: false
@@ -94,7 +94,7 @@ export function useMessages(
       // Return the sent message
       return data
     } catch (error) {
-      console.error('Error sending message:', error);
+      console && console.error('Error sending message:', error);
       toast({
         title: "Failed to send message";
         description: "Please try again later",
@@ -114,22 +114,22 @@ export function useMessages(
         .from('messages')
         .update({ read: true })
         .eq('conversation_id', conversationId)
-        .eq('recipient_id', user.id)
+        .eq('recipient_id', user && user.id)
         .eq('read', false);
         
       if (error) throw error;
       
       // Update active messages to show they've been read
       setActiveMessages(prev => 
-        prev.map(msg => 
-          msg.recipient_id === user.id ? { ...msg, read: true } : msg
+        prev && prev.map(msg => 
+          msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg
         )
       );
       
       // Update conversations to reflect read messages
       setConversations(prev => 
-        prev.map(conv => 
-          conv.id === conversationId 
+        prev && prev.map(conv => 
+          conv && conv.id === conversationId 
             ? { ...conv, unread_count: 0 }
             : conv
         )
@@ -137,19 +137,19 @@ export function useMessages(
       
       // Recalculate unread count
       setUnreadCount(prev => {
-        const updatedConversations = conversations.map(conv => 
-          conv.id === conversationId 
+        const updatedConversations = conversations && conversations.map(conv => 
+          conv && conv.id === conversationId 
             ? { ...conv, unread_count: 0 }
             : conv
         );
         
-        return updatedConversations.reduce(
-          (total, conv) => total + (conv.unread_count || 0), 
+        return updatedConversations && updatedConversations.reduce(
+          (total, conv) => total + (conv && conv.unread_count || 0), 
           0
         )
       })
     } catch (error) {
-      console.error('Error marking messages as read:', error)
+      console && console.error('Error marking messages as read:', error)
     }
   };
 

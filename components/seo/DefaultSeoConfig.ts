@@ -5,7 +5,7 @@ import type { DefaultSeoProps } from 'next-seo';
   openGraph: {
     type: 'website';
     locale: 'en_US';
-    url: 'https://ziontechgroup.netlify.app',
+    url: 'https://ziontechgroup && ziontechgroup.netlify.app',
     siteName: 'Zion Tech Solutions'};
   twitter: {
     handle: '@ziontech';

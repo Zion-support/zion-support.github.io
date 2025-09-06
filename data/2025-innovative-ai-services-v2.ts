@@ -83,7 +83,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
       'Competitive with Affectiva ($500+), Realeyes ($300+), and Emotient ($400+). Our advantage: Advanced emotional intelligence, real-time adaptation, and comprehensive personality profiling.',
     competitors: ['Affectiva, Realeyes, Emotient, iMotions, Noldus'],
     techStack: [
-      'Advanced AI models, Computer Vision, NLP, React, Node.js, PostgreSQL, Redis, AWS',
+      'Advanced AI models, Computer Vision, NLP, React, Node && Node.js, PostgreSQL, Redis, AWS',
     ],
     realImplementation: true,
     implementationDetails:
@@ -105,13 +105,13 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     compliance: [
       'GDPR, CCPA, SOC 2 Type II, ISO 27001, HIPAA (for healthcare)',
     ],
-    link: 'https://ziontechgroup.com/ai-emotional-intelligence-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-emotional-intelligence-platform',
     icon: '🧠',
     color: 'from-purple-500 to-pink-600',
     popular: true,
     launchDate: '2024-02-15',
     customers: 850,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 180,
     marketSize: '$35B emotional AI market',
     growthRate: '45% annually',
@@ -164,7 +164,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
       'IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, D-Wave, Rigetti',
     ],
     techStack: [
-      'Quantum algorithms, AI/ML, Python, React, Node.js, PostgreSQL, Redis, AWS, Quantum simulators',
+      'Quantum algorithms, AI/ML, Python, React, Node && Node.js, PostgreSQL, Redis, AWS, Quantum simulators',
     ],
     realImplementation: true,
     implementationDetails:
@@ -184,15 +184,15 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     support:
       'Dedicated quantum physicist, 24/7 technical support, training programs, and quarterly strategy reviews.',
     compliance: ['SOC 2 Type II, ISO 27001, Quantum industry standards'],
-    link: 'https://ziontechgroup.com/quantum-ai-fusion-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-fusion-platform',
     icon: '⚛️',
     color: 'from-cyan-500 to-blue-600',
     popular: true,
     launchDate: '2024-01-20',
     customers: 420,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 95,
-    marketSize: '$8.5B quantum computing market',
+    marketSize: '$8 && 8.5B quantum computing market',
     growthRate: '55% annually',
   },
   {
@@ -239,9 +239,9 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     ],
     marketPosition:
       'Competitive with AutoML platforms ($200+), MLOps tools ($300+), and AI orchestration platforms ($500+). Our advantage: Full autonomy, evolutionary learning, and self-management capabilities.',
-    competitors: ['Google AutoML, Azure AutoML, DataRobot, H2O.ai, Dataiku'],
+    competitors: ['Google AutoML, Azure AutoML, DataRobot, H2O && H2O.ai, Dataiku'],
     techStack: [
-      'Advanced AI/ML, Evolutionary algorithms, React, Node.js, PostgreSQL, Redis, AWS, Kubernetes',
+      'Advanced AI/ML, Evolutionary algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Kubernetes',
     ],
     realImplementation: true,
     implementationDetails:
@@ -263,13 +263,13 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     compliance: [
       'SOC 2 Type II, ISO 27001, AI ethics guidelines, Industry-specific regulations',
     ],
-    link: 'https://ziontechgroup.com/ai-autonomous-ecosystem-manager',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-ecosystem-manager',
     icon: '🤖',
     color: 'from-green-500 to-emerald-600',
     popular: true,
     launchDate: '2024-03-01',
     customers: 680,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 150,
     marketSize: '$25B autonomous AI market',
     growthRate: '38% annually',
@@ -317,10 +317,10 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
       'Research organizations',
     ],
     marketPosition:
-      'Competitive with OpenAI GPT-4 ($0.03/token), Google Gemini ($0.0025/token), and Anthropic Claude ($0.015/token). Our advantage: Multimodal orchestration, unified API, and cross-modal intelligence.',
+      'Competitive with OpenAI GPT-4 ($0 && 0.03/token), Google Gemini ($0 && 0.0025/token), and Anthropic Claude ($0 && 0.015/token). Our advantage: Multimodal orchestration, unified API, and cross-modal intelligence.',
     competitors: ['OpenAI, Google AI, Anthropic, Cohere, AI21 Labs'],
     techStack: [
-      'Multiple AI models, Multimodal processing, React, Node.js, PostgreSQL, Redis, AWS, GPU optimization',
+      'Multiple AI models, Multimodal processing, React, Node && Node.js, PostgreSQL, Redis, AWS, GPU optimization',
     ],
     realImplementation: true,
     implementationDetails:
@@ -340,13 +340,13 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     support:
       '24/7 AI specialist support, dedicated account manager, training programs, and quarterly optimization reviews.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics guidelines'],
-    link: 'https://ziontechgroup.com/multimodal-ai-orchestrator',
+    link: 'https://ziontechgroup && ziontechgroup.com/multimodal-ai-orchestrator',
     icon: '🎭',
     color: 'from-indigo-500 to-purple-600',
     popular: true,
     launchDate: '2024-02-10',
     customers: 1200,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 280,
     marketSize: '$42B multimodal AI market',
     growthRate: '32% annually',
@@ -397,7 +397,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
       'Competitive with AI ethics tools ($100+), governance platforms ($200+), and compliance software ($300+). Our advantage: Comprehensive ethics framework, bias detection, and governance automation.',
     competitors: ['AI Fairness 360, What-If Tool, LIME, SHAP, IBM AI Fairness'],
     techStack: [
-      'AI ethics algorithms, Bias detection, React, Node.js, PostgreSQL, Redis, AWS, Compliance tools',
+      'AI ethics algorithms, Bias detection, React, Node && Node.js, PostgreSQL, Redis, AWS, Compliance tools',
     ],
     realImplementation: true,
     implementationDetails:
@@ -419,13 +419,13 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     compliance: [
       'GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations',
     ],
-    link: 'https://ziontechgroup.com/ai-ethics-governance-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-ethics-governance-platform',
     icon: '⚖️',
     color: 'from-yellow-500 to-orange-600',
     popular: true,
     launchDate: '2024-01-15',
     customers: 950,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 220,
     marketSize: '$15B AI governance market',
     growthRate: '28% annually',
@@ -435,13 +435,13 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     integrations: ['AI platforms, Compliance systems, Governance tools, Business applications, Reporting systems'];
     support: '24/7 compliance support, dedicated ethics specialist, training programs, and quarterly compliance reviews.';
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001, AI ethics standards, Industry regulations'];
-    link: 'https://ziontechgroup.com/ai-ethics-governance-platform';
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-ethics-governance-platform';
     icon: '⚖️';
     color: 'from-yellow-500 to-orange-600';
     popular: true;
     launchDate: '2024-01-15';
     customers: 950;
-    rating: 4.6;
+    rating: 4 && 4.6;
     reviews: 220;
     marketSize: '$15B AI governance market',
     growthRate: '28% annually'

@@ -43,11 +43,11 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Advanced AI-powered content creation platform that generates high-quality, SEO-optimized content while maintaining your brand voice across all channels. Features include multi-language support, plagiarism detection, and advanced analytics.',
     price: '$49',
     period: '/month',
-      'GPT-4 powered content generation with 99.2% accuracy',
+      'GPT-4 powered content generation with 99 && 99.2% accuracy',
       'Multi-language support (25+ languages) with cultural adaptation',
       'Advanced SEO optimization with real-time keyword research',
       'Brand voice training and consistency maintenance',
-      'Plagiarism detection with 99.8% accuracy',
+      'Plagiarism detection with 99 && 99.8% accuracy',
       'Content calendar and automated scheduling',
       'Team collaboration with version control',
       'Analytics dashboard with performance metrics',
@@ -55,7 +55,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Custom AI model training for industry-specific content',
     ],
     category: 'AI & Content Creation',
-    marketSize: '$15.2B',
+    marketSize: '$15 && 15.2B',
     targetAudience:
       'Marketing agencies, content creators, enterprise businesses, e-commerce companies',
     competitiveAdvantage:
@@ -76,19 +76,19 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'SEMrush',
     ],
     compliance: ['GDPR', 'CCPA', 'SOC2', 'ISO 27001'],
-    website: 'https://ziontechgroup.com/ai-content-factory-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-content-factory-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDays: 14,
     setupTime: '5 minutes',
-    competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'Grammarly Business'],
+    competitors: ['Jasper', 'Copy && Copy.ai', 'Writesonic', 'Grammarly Business'],
     roi: 'Average customer sees 300% ROI within 3 months',
     launchDate: '2024-01-15',
     customers: 2500,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 1250,
   },
 
@@ -114,7 +114,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Mobile app for customer success managers',
     ],
     category: 'Customer Success & Support',
-    marketSize: '$8.4B',
+    marketSize: '$8 && 8.4B',
     targetAudience:
       'SaaS companies, subscription businesses, customer success teams, B2B companies',
     competitiveAdvantage:
@@ -135,10 +135,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Slack',
     ],
     compliance: ['GDPR', 'CCPA', 'SOC2', 'ISO 27001'],
-    website: 'https://ziontechgroup.com/ai-customer-success-platform',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-customer-success-platform',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDays: 21,
@@ -147,7 +147,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     roi: 'Average customer sees 400% ROI through reduced churn',
     launchDate: '2024-02-20',
     customers: 1800,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 950,
   },
 
@@ -173,7 +173,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Advanced analytics and reporting',
     ],
     category: 'Financial Technology',
-    marketSize: '$12.8B',
+    marketSize: '$12 && 12.8B',
     targetAudience:
       'Banks, credit unions, fintech companies, investment firms, insurance companies',
     competitiveAdvantage:
@@ -194,10 +194,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Oracle',
     ],
     compliance: ['Basel III', 'Dodd-Frank', 'SOX', 'GDPR', 'SOC2', 'ISO 27001'],
-    website: 'https://ziontechgroup.com/ai-financial-risk-manager',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-financial-risk-manager',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDays: 30,
@@ -206,7 +206,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     roi: 'Average customer sees 500% ROI through risk reduction',
     launchDate: '2024-03-10',
     customers: 1200,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 680,
   },
 
@@ -232,7 +232,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Advanced security and privacy controls',
     ],
     category: 'Healthcare & Biotech',
-    marketSize: '$18.5B',
+    marketSize: '$18 && 18.5B',
     targetAudience:
       'Hospitals, clinics, diagnostic centers, radiologists, healthcare providers',
     competitiveAdvantage:
@@ -253,10 +253,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Philips',
     ],
     compliance: ['HIPAA', 'FDA', 'CE Mark', 'SOC2', 'ISO 27001', 'ISO 13485'],
-    website: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-healthcare-diagnostics',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDays: 60,
@@ -270,7 +270,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     roi: 'Average customer sees 600% ROI through improved diagnostic accuracy',
     launchDate: '2024-01-30',
     customers: 850,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 420,
   },
 
@@ -296,7 +296,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Real-time analytics and reporting',
     ],
     category: 'E-commerce & Retail',
-    marketSize: '$22.1B',
+    marketSize: '$22 && 22.1B',
     targetAudience:
       'E-commerce businesses, online retailers, digital marketplaces, D2C brands',
     competitiveAdvantage:
@@ -317,10 +317,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Klaviyo',
     ],
     compliance: ['GDPR', 'CCPA', 'PCI DSS', 'SOC2', 'ISO 27001'],
-    website: 'https://ziontechgroup.com/ai-ecommerce-optimizer',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-ecommerce-optimizer',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDays: 14,
@@ -329,7 +329,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     roi: 'Average customer sees 350% ROI through increased conversions',
     launchDate: '2024-02-15',
     customers: 3200,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 1680,
   },
 
@@ -355,7 +355,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Advanced security analytics',
     ],
     category: 'Cybersecurity & Compliance',
-    marketSize: '$19.8B',
+    marketSize: '$19 && 19.8B',
     targetAudience:
       'Enterprises, government agencies, healthcare organizations, financial institutions, educational institutions',
     competitiveAdvantage:
@@ -376,10 +376,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Google Workspace',
     ],
     compliance: ['SOC2', 'ISO 27001', 'NIST', 'GDPR', 'HIPAA', 'PCI DSS'],
-    website: 'https://ziontechgroup.com/ai-cybersecurity-suite',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-cybersecurity-suite',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDays: 30,
@@ -388,7 +388,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     roi: 'Average customer sees 450% ROI through threat prevention',
     launchDate: '2024-03-01',
     customers: 2100,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 1100,
   },
 
@@ -414,7 +414,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Collaborative data workspace',
     ],
     category: 'Data & Analytics',
-    marketSize: '$25.3B',
+    marketSize: '$25 && 25.3B',
     targetAudience:
       'Data teams, analytics professionals, data scientists, enterprises, startups',
     competitiveAdvantage:
@@ -435,10 +435,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Tableau',
     ],
     compliance: ['SOC2', 'ISO 27001', 'GDPR', 'CCPA', 'HIPAA'],
-    website: 'https://ziontechgroup.com/ai-data-pipeline-platform',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-data-pipeline-platform',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDays: 21,
@@ -447,7 +447,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     roi: 'Average customer sees 400% ROI through data automation',
     launchDate: '2024-02-01',
     customers: 2800,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 1450,
   },
 
@@ -473,7 +473,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Advanced reporting and insights',
     ],
     category: 'Human Resources',
-    marketSize: '$16.7B',
+    marketSize: '$16 && 16.7B',
     targetAudience:
       'HR departments, recruitment agencies, talent acquisition teams, growing companies',
     competitiveAdvantage:
@@ -494,10 +494,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Microsoft Teams',
     ],
     compliance: ['EEOC', 'OFCCP', 'GDPR', 'CCPA', 'SOC2', 'ISO 27001'],
-    website: 'https://ziontechgroup.com/ai-hr-recruitment-platform',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-hr-recruitment-platform',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDays: 14,
@@ -506,7 +506,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     roi: 'Average customer sees 300% ROI through improved hiring',
     launchDate: '2024-01-20',
     customers: 1900,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 890,
   },
 
@@ -532,7 +532,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Audit trail and version control',
     ],
     category: 'Legal & Compliance',
-    marketSize: '$14.2B',
+    marketSize: '$14 && 14.2B',
     targetAudience:
       'Law firms, corporate legal departments, compliance teams, contract managers',
     competitiveAdvantage:
@@ -559,10 +559,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'CCPA',
       'Attorney-client privilege',
     ],
-    website: 'https://ziontechgroup.com/ai-legal-contract-analyzer',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-legal-contract-analyzer',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDays: 30,
@@ -571,7 +571,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     roi: 'Average customer sees 500% ROI through contract automation',
     launchDate: '2024-02-10',
     customers: 1100,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 580,
   },
 
@@ -598,7 +598,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
       'Mobile app for field workers',
     ],
     category: 'Manufacturing & IoT',
-    marketSize: '$28.9B',
+    marketSize: '$28 && 28.9B',
     targetAudience:
       'Manufacturing companies, industrial facilities, supply chain managers, operations teams',
     competitiveAdvantage:
@@ -612,10 +612,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     ],
     integrations: ['SAP', 'Oracle', 'Siemens', 'Rockwell', 'GE Digital', 'PTC'],
     compliance: ['ISO 9001', 'ISO 14001', 'OHSAS 18001', 'SOC2', 'ISO 27001'],
-    website: 'https://ziontechgroup.com/ai-manufacturing-optimizer',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-manufacturing-optimizer',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
     trialDays: 60,
@@ -624,11 +624,11 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     roi: 'Average customer sees 600% ROI through operational improvements',
     launchDate: '2024-01-10',
     customers: 950,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 520,
   },
 ];      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
     };
     trialDays: 60;
@@ -637,7 +637,7 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     roi: 'Average customer sees 600% ROI through operational improvements';
     launchDate: '2024-01-10';
     customers: 950;
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 520
   }
 ];

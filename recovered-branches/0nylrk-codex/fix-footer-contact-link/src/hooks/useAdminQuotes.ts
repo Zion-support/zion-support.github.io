@@ -15,32 +15,32 @@ export const useAdminQuotes = () => {
   // Fetch all quote requests
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotesadmin'];
-    queryFn: () => quoteRequestService.getAll(),
+    queryFn: () => quoteRequestService && quoteRequestService.getAll(),
     enabled: true});
 
   // Filter quotes based on selected filters
-  const filteredQuotes = allQuotes.filter((quote) => {
+  const filteredQuotes = allQuotes && allQuotes.filter((quote) => {
     // Status filter
-    if (statusFilter !== 'all' && quote.status !== statusFilter) {
+    if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
       return false
     }
     
     // Archive filter
-    if (archiveFilter === 'active' && quote.is_archived) {
+    if (archiveFilter === 'active' && quote && quote.is_archived) {
       return false
     }
-    if (archiveFilter === 'archived' && !quote.is_archived) {
+    if (archiveFilter === 'archived' && !quote && quote.is_archived) {
       return false
     }
     
     // Search filter
     if (searchQuery) {
-      const query = searchQuery.toLowerCase();
+      const query = searchQuery && searchQuery.toLowerCase();
       if (
-        !quote.requester_name.toLowerCase().includes(query) &&
-        !quote.project_name.toLowerCase().includes(query) &&
-        !quote.project_summary.toLowerCase().includes(query) &&
-        !(quote.talent_name && quote.talent_name.toLowerCase().includes(query))
+        !quote && quote.requester_name.toLowerCase().includes(query) &&
+        !quote && quote.project_name.toLowerCase().includes(query) &&
+        !quote && quote.project_summary.toLowerCase().includes(query) &&
+        !(quote && quote.talent_name && quote && quote.talent_name.toLowerCase().includes(query))
       ) {
         return false
       }
@@ -48,16 +48,16 @@ export const useAdminQuotes = () => {
     
     // Date range filter
     if (dateRange?.from) {
-      const createdAt = new Date(quote.created_at);
-      if (createdAt < dateRange.from) {
+      const createdAt = new Date(quote && quote.created_at);
+      if (createdAt < dateRange && dateRange.from) {
         return false
       }
     }
     
     if (dateRange?.to) {
-      const createdAt = new Date(quote.created_at);
-      const endDate = new Date(dateRange.to);
-      endDate.setHours(23, 59, 59, 999), // End of day
+      const createdAt = new Date(quote && quote.created_at);
+      const endDate = new Date(dateRange && dateRange.to);
+      endDate && endDate.setHours(23, 59, 59, 999), // End of day
       if (createdAt > endDate) {
         return false
       }
@@ -69,18 +69,18 @@ export const useAdminQuotes = () => {
   // Update quote status mutation
   const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
-      quoteRequestService.updateStatus(id, status);
+      quoteRequestService && quoteRequestService.updateStatus(id, status);
     onSuccess: () => {
       toast({
         title: "Status updated",
         description: "The quote request status has been updated"
       });
-      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+      queryClient && queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
     };
     onError: (error: Error) => {
       toast({
         title: "Error";
-        description: "Failed to update status: " + error.message,
+        description: "Failed to update status: " + error && error.message,
         variant: "destructive"
       })
     }
@@ -89,20 +89,20 @@ export const useAdminQuotes = () => {
   // Archive/Unarchive mutation
   const toggleArchiveMutation = useMutation({
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
-      quoteRequestService.toggleArchive(id, isArchived);
+      quoteRequestService && quoteRequestService.toggleArchive(id, isArchived);
     onSuccess: (_, variables) => {
       toast({
-        title: variables.isArchived ? "Quote archived" : "Quote unarchived",
-        description: variables.isArchived 
+        title: variables && variables.isArchived ? "Quote archived" : "Quote unarchived",
+        description: variables && variables.isArchived 
           ? "The quote request has been archived" 
           : "The quote request has been moved back to active quotes"
       });
-      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+      queryClient && queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
     };
     onError: (error: Error) => {
       toast({
         title: "Error";
-        description: "Failed to update quote: " + error.message,
+        description: "Failed to update quote: " + error && error.message,
         variant: "destructive"
       })
     }
@@ -110,18 +110,18 @@ export const useAdminQuotes = () => {
 
   // Delete mutation
   const deleteMutation = useMutation({
-    mutationFn: (id: string) => quoteRequestService.delete(id);
+    mutationFn: (id: string) => quoteRequestService && quoteRequestService.delete(id);
     onSuccess: () => {
       toast({
         title: "Quote deleted",
         description: "The quote request has been permanently deleted"
       });
-      queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
+      queryClient && queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
     };
     onError: (error: Error) => {
       toast({
         title: "Error";
-        description: "Failed to delete quote: " + error.message,
+        description: "Failed to delete quote: " + error && error.message,
         variant: "destructive"
       })
     }
@@ -140,8 +140,8 @@ export const useAdminQuotes = () => {
     dateRange;
     setDateRange,
     updateStatus: (id: string, status: QuoteStatus) => 
-      updateStatusMutation.mutate({ id, status });
+      updateStatusMutation && updateStatusMutation.mutate({ id, status });
     toggleArchive: (id: string, isArchived: boolean) => 
-      toggleArchiveMutation.mutate({ id, isArchived });
-    deleteQuote: (id: string) => deleteMutation.mutate(id)}
+      toggleArchiveMutation && toggleArchiveMutation.mutate({ id, isArchived });
+    deleteQuote: (id: string) => deleteMutation && deleteMutation.mutate(id)}
 };

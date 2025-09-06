@@ -69,7 +69,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     icon: '🧠',
     color: 'from-violet-600 via-purple-600 to-indigo-600',
     textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/ai-consciousness-evolution-2030',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-consciousness-evolution-2030',
     marketPosition:
       'Most advanced AI consciousness platform for 2030. Leading the future of AI development.',
     targetAudience:
@@ -94,16 +94,16 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced AI consciousness development platform with real-time monitoring, ethical frameworks, and consciousness validation protocols.',
     launchDate: '2030-01-01',
     customers: 8,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 5,
   },
   // Quantum AI Computing 2030
@@ -131,7 +131,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     icon: '⚛️',
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
     textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/quantum-ai-computing-2030',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-computing-2030',
     marketPosition:
       'Leading quantum AI computing platform for 2030. Revolutionary technology combination.',
     targetAudience:
@@ -156,16 +156,16 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced quantum AI computing platform with real-time quantum AI processing and validation.',
     launchDate: '2030-01-15',
     customers: 5,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 3,
   },
   // AI Autonomous Operations 2030
@@ -193,7 +193,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     icon: '🤖',
     color: 'from-blue-600 via-cyan-600 to-teal-600',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-operations-2030',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-operations-2030',
     marketPosition:
       'Most advanced AI autonomous operations platform for 2030. Leading autonomous AI technology.',
     targetAudience:
@@ -218,16 +218,16 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced AI autonomous operations platform with autonomous decision-making, self-optimization, and AI evolution.',
     launchDate: '2030-02-01',
     customers: 12,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 8,
   },
   // AI Metaverse Integration 2030
@@ -255,7 +255,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     icon: '🌌',
     color: 'from-purple-600 via-pink-600 to-rose-600',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-metaverse-integration-2030',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-metaverse-integration-2030',
     marketPosition:
       'Leading AI metaverse integration platform for 2030. Revolutionary virtual reality technology.',
     targetAudience:
@@ -280,16 +280,16 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     variant: 'metaverse-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced AI metaverse integration platform with AI-powered experiences, virtual beings, and intelligent virtual worlds.',
     launchDate: '2030-02-15',
     customers: 18,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 12,
   },
   // AI Space Technology 2030
@@ -317,7 +317,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     icon: '🚀',
     color: 'from-teal-600 via-emerald-600 to-green-600',
     textColor: 'text-teal-400',
-    link: 'https://ziontechgroup.com/ai-space-technology-2030',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-space-technology-2030',
     marketPosition:
       'Leading AI space technology platform for 2030. Revolutionary space exploration technology.',
     targetAudience:
@@ -342,28 +342,28 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     variant: 'space-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced AI space technology platform with autonomous space missions, AI-powered exploration, and intelligent space operations.',
     launchDate: '2030-01-10',
     customers: 6,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 4,
   },
 ];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Advanced AI space technology platform with autonomous space missions, AI-powered exploration, and intelligent space operations.';
     launchDate: '2030-01-10';
     customers: 6;
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 4
   }
 ];

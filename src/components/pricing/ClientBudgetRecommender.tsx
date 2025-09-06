@@ -1,125 +1,124 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { logErrorToProduction } from '@/utils/productionLogger';
-import {
-  getClientBudgetSuggestion,
-  PricingSuggestion,
-  ClientBudgetParams,
+import {;
+  getClientBudgetSuggestion,;
+  PricingSuggestion,;
+  ClientBudgetParams,;
   trackPricingSuggestion,;
 } from '@/services/pricingSuggestionService';
 import { PricingSuggestionBox } from './PricingSuggestionBox';
 import { useAuth } from '@/hooks/useAuth';
 import { Sparkles } from 'lucide-react';
 
-interface ClientBudgetRecommenderProps {
+interface ClientBudgetRecommenderProps {;
   jobTitle: string;
   category: string;
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
-  onSuggestionApplied: (minValue: number, maxValue: number) => void;interface ClientBudgetRecommenderProps {
-  jobTitle: string,
-  category: string,
-  timeline?: string,
-  scope?: string,
-  experienceLevel?: string,
-  onSuggestionApplied: (minValue: number, maxValue: number,) => void
+  onSuggestionApplied: (minValue: number, maxValue: number) => void;interface ClientBudgetRecommenderProps {;
+  jobTitle: string,;
+  category: string,;
+  timeline?: string,;
+  scope?: string,;
+  experienceLevel?: string,;
+  onSuggestionApplied: (minValue: number, maxValue: number,) => void;
 }
 
-export const ClientBudgetRecommender: React.FC<
-  ClientBudgetRecommenderProps
-> = ({
-  jobTitle,
-  category,
-  timeline,
-  scope,
-  experienceLevel,
-  onSuggestionApplied,
-}) => {
+export const ClientBudgetRecommender: React.FC<;
+  ClientBudgetRecommenderProps;
+> = ({;
+  jobTitle,;
+  category,;
+  timeline,;
+  scope,;
+  experienceLevel,;
+  onSuggestionApplied,;
+}) => {;
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
   const { user } = useAuth();
-  const generateSuggestion = async () => {
-    if (!jobTitle || !category) {
+  const generateSuggestion = async () => {;
+    if (!jobTitle || !category) {;
       return;
     }
 
     setIsLoading(true);
-    try {
-      const params: ClientBudgetParams = {
-        jobTitle,
-        category,
+    try {;
+      const params: ClientBudgetParams = {;
+        jobTitle,;
+        category,;
       };        jobTitle;
         category};
 
-      if (timeline) params.timeline = timeline;
-      if (scope) params.scope = scope;
-      if (experienceLevel) params.experienceLevel = experienceLevel;
+      if (timeline) params && params.timeline = timeline;
+      if (scope) params && params.scope = scope;
+      if (experienceLevel) params && params.experienceLevel = experienceLevel;
 
       const result = await getClientBudgetSuggestion(params);
       setSuggestion(result);
-    } catch (error) {
-      logErrorToProduction('Error generating budget suggestion:', {
-        data: error,
+    } catch (error) {;
+      logErrorToProduction('Error generating budget suggestion:', {;
+        data: error,;
       });
-    } finally {
+    } finally {;
       setIsLoading(false);
     }
   };
 
-  const handleApplySuggestion = () => {
-    if (suggestion) {
-      onSuggestionApplied(suggestion.minRate, suggestion.maxRate);
+  const handleApplySuggestion = () => {;
+    if (suggestion) {;
+      onSuggestionApplied(suggestion && suggestion.minRate, suggestion && suggestion.maxRate);
 
-      // Track this suggestion application
-      if (user && user.id) {
-        trackPricingSuggestion({
-          userId: user.id,
-          suggestionType: 'client',
-          suggestedMin: suggestion.minRate,
-          suggestedMax: suggestion.maxRate,
-          accepted: true,
+      // Track this suggestion application;
+      if (user && user.id) {;
+        trackPricingSuggestion({;
+          userId: user.id,;
+          suggestionType: 'client',;
+          suggestedMin: suggestion && suggestion.minRate,;
+          suggestedMax: suggestion && suggestion.maxRate,;
+          accepted: true,;
         });
       }
     }
   };
 
   return (
-    <div className='space-y-4'>
-      <div>
-        {!suggestion && !isLoading ? (
+    <div className='space-y-4'>;
+      <div>;
+        {!suggestion && !isLoading ? (;
           <Button
             type='button'
             variant='outline'
             onClick={generateSuggestion}
             disabled={!jobTitle || !category}
-            className='w-full'          >
-            <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation
-          </Button>
-        ) : (
+            className='w-full'>;
+            <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation;
+          </Button>;
+        ) : (;
           <PricingSuggestionBox
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
-            rateType='hourly'          />
+            rateType='hourly'          />;
         )}
-      </div>
-    </div>
+      </div>;
+    </div>;
   );
 };
-if (scope) params.scope = scope;
-if (experienceLevel) params.experienceLevel = experienceLevel;
+if (scope) params && params.scope = scope;
+if (experienceLevel) params && params.experienceLevel = experienceLevel;
 //Track this suggestion application if (user && user.id) {;
   trackPricingSuggestion ({;
-  ;
+
 
 };
 return (<div className="space-y-4" > <div> {";
-  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={;
-  generateSuggestion ";
+  !suggestion && !isLoading ? (<Buttontype="button" variant="outline" onClick={
+  generateSuggestion "
 }> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />) ;
 }</div> </div>) ;
 };
-'"  )
-},
-;
+'"  );
+},;

@@ -69,7 +69,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     icon: '🧠',
     color: 'from-indigo-600 to-purple-600',
     textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/neuromorphic-computing-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/neuromorphic-computing-platform',
     marketPosition:
       'First commercial neuromorphic computing platform. Competitive advantage: Brain-inspired architecture, ultra-efficiency, and real-time learning.',
     targetAudience:
@@ -108,16 +108,16 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced neuromorphic computing platform with brain-inspired architecture and ultra-efficient AI processing.',
     launchDate: '2026-04-01',
     customers: 15,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 12,
   },
 
@@ -146,7 +146,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     icon: '🔐',
     color: 'from-green-600 to-emerald-600',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/quantum-internet-security-gateway',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-security-gateway',
     marketPosition:
       'First quantum internet security gateway. Competitive advantage: Unbreakable encryption, quantum-resistant algorithms, and future-proof security.',
     targetAudience:
@@ -185,16 +185,16 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Quantum internet security gateway with unbreakable encryption and quantum-resistant algorithms.',
     launchDate: '2026-03-15',
     customers: 45,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 38,
   },
 
@@ -223,7 +223,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     icon: '🧬',
     color: 'from-blue-600 to-cyan-600',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/synthetic-biology-ai-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/synthetic-biology-ai-platform',
     marketPosition:
       'First AI-powered synthetic biology platform. Competitive advantage: AI-driven design, comprehensive simulation, and lab integration.',
     targetAudience:
@@ -262,16 +262,16 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'AI-powered synthetic biology platform with genetic engineering and lab automation integration.',
     launchDate: '2026-04-15',
     customers: 25,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 20,
   },
 
@@ -300,7 +300,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     icon: '🚁',
     color: 'from-sky-600 to-blue-600',
     textColor: 'text-sky-400',
-    link: 'https://ziontechgroup.com/autonomous-drone-fleet-management',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-drone-fleet-management',
     marketPosition:
       'First autonomous drone fleet management platform. Competitive advantage: AI autonomy, fleet coordination, and zero human intervention.',
     targetAudience:
@@ -339,16 +339,16 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     variant: 'ai-autonomous',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Autonomous drone fleet management platform with AI-powered navigation and fleet coordination.',
     launchDate: '2026-03-01',
     customers: 80,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 65,
   },
 
@@ -377,7 +377,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     icon: '🧠',
     color: 'from-purple-600 to-pink-600',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/brain-computer-interface-devkit',
+    link: 'https://ziontechgroup && ziontechgroup.com/brain-computer-interface-devkit',
     marketPosition:
       'First comprehensive BCI development kit. Competitive advantage: Complete BCI solution, neural processing, and device control.',
     targetAudience:
@@ -416,16 +416,16 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Comprehensive brain-computer interface development kit with neural processing and device control.',
     launchDate: '2026-05-01',
     customers: 20,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 15,
   },
 
@@ -454,7 +454,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     icon: '⚛️',
     color: 'from-cyan-600 to-blue-600',
     textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/quantum-machine-learning-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-machine-learning-platform',
     marketPosition:
       'First commercial quantum machine learning platform. Competitive advantage: Quantum algorithms, hybrid ML, and quantum advantage.',
     targetAudience:
@@ -493,16 +493,16 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced quantum machine learning platform with quantum algorithms and hybrid ML capabilities.',
     launchDate: '2026-04-01',
     customers: 35,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 28,
   },
 
@@ -531,7 +531,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     icon: '🚗',
     color: 'from-red-600 to-orange-600',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform-2026',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai-platform-2026',
     marketPosition:
       'First level 5 autonomous vehicle AI platform. Competitive advantage: Full autonomy, advanced safety, and comprehensive AI.',
     targetAudience:
@@ -570,16 +570,16 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     variant: 'ai-autonomous',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Next-generation autonomous vehicle AI platform with level 5 autonomy and advanced safety systems.',
     launchDate: '2026-06-01',
     customers: 15,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 12,
   },
 
@@ -608,7 +608,7 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     icon: '🏙️',
     color: 'from-gray-600 to-slate-600',
     textColor: 'text-gray-400',
-    link: 'https://ziontechgroup.com/digital-twin-smart-cities',
+    link: 'https://ziontechgroup && ziontechgroup.com/digital-twin-smart-cities',
     marketPosition:
       'First comprehensive smart city digital twin platform. Competitive advantage: Complete city modeling, real-time data, and predictive analytics.',
     targetAudience:
@@ -647,28 +647,28 @@ export const emergingTech2026ServicesV4: EmergingTech2026ServiceV4[] = [
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
     launchDate: '2026-05-15',
     customers: 30,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 25,
   },
 ];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true;
     implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.';
     launchDate: '2026-05-15';
     customers: 30;
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 25
   }
 ];

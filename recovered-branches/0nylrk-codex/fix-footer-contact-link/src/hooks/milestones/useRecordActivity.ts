@@ -19,7 +19,7 @@ export const useRecordActivity = () => {
         .from('milestone_activities')
         .insert({
           milestone_id: milestoneId;
-          user_id: user.id;
+          user_id: user && user.id;
           action;
           previous_status: previousStatus;
           new_status: newStatus,
@@ -34,7 +34,7 @@ export const useRecordActivity = () => {
       
       return data
     } catch (err: any) {
-      console.error("Error recording activity:", err);
+      console && console.error("Error recording activity:", err);
       return null
     }
   };

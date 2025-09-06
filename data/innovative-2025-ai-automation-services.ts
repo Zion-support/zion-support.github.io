@@ -66,7 +66,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       icon: '🚀',
       color: 'from-purple-600 to-indigo-700',
       textColor: 'text-purple-400',
-      link: 'https://ziontechgroup.com/ai-autonomous-business-orchestrator',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-business-orchestrator',
       marketPosition:
         'First-to-market autonomous business process orchestration. Competes with traditional BPM tools but offers complete autonomy and self-optimization.',
       targetAudience:
@@ -76,7 +76,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       category: 'AI Automation & Orchestration',
       realService: true,
       technology: [
-        'OpenAI GPT-4, Anthropic Claude, LangChain, React, Node.js, PostgreSQL, Redis, Kubernetes, Docker',
+        'OpenAI GPT-4, Anthropic Claude, LangChain, React, Node && Node.js, PostgreSQL, Redis, Kubernetes, Docker',
       ],
       integrations: [
         'Salesforce, SAP, Oracle, Microsoft Dynamics, Slack, Teams, Custom APIs, Webhooks',
@@ -93,16 +93,16 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       variant: 'ai-automation',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Full enterprise platform with autonomous decision-making engine, advanced ML models, comprehensive monitoring, and zero-touch operations.',
       launchDate: '2025-01-15',
       customers: 75,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 45,
     },
 
@@ -131,7 +131,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       icon: '🔮',
       color: 'from-blue-600 to-cyan-700',
       textColor: 'text-blue-400',
-      link: 'https://ziontechgroup.com/ai-predictive-customer-intelligence',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-predictive-customer-intelligence',
       marketPosition:
         'Industry-leading predictive accuracy in customer intelligence. Competes with Salesforce Einstein ($75/user/month) but offers superior prediction capabilities.',
       targetAudience:
@@ -141,7 +141,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       category: 'AI Customer Intelligence',
       realService: true,
       technology: [
-        'TensorFlow, PyTorch, Scikit-learn, Python, React, Node.js, PostgreSQL, Redis, Apache Kafka',
+        'TensorFlow, PyTorch, Scikit-learn, Python, React, Node && Node.js, PostgreSQL, Redis, Apache Kafka',
       ],
       integrations: [
         'Shopify, WooCommerce, HubSpot, Salesforce, Mailchimp, Stripe, Custom APIs',
@@ -156,16 +156,16 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       variant: 'ai-analytics',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Full ML platform with real-time data processing, advanced predictive models, comprehensive analytics, and enterprise-grade security.',
       launchDate: '2025-02-01',
       customers: 120,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 78,
     },
 
@@ -194,7 +194,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       icon: '⚡',
       color: 'from-green-600 to-emerald-700',
       textColor: 'text-green-400',
-      link: 'https://ziontechgroup.com/ai-autonomous-code-generation',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-code-generation',
       marketPosition:
         'First-to-market autonomous code generation and deployment. Competes with GitHub Copilot ($10/month) but offers complete autonomous development lifecycle.',
       targetAudience:
@@ -204,7 +204,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       category: 'AI Development & DevOps',
       realService: true,
       technology: [
-        'OpenAI GPT-4, Anthropic Claude, GitHub Copilot API, React, Node.js, PostgreSQL, Docker, Kubernetes',
+        'OpenAI GPT-4, Anthropic Claude, GitHub Copilot API, React, Node && Node.js, PostgreSQL, Docker, Kubernetes',
       ],
       integrations: [
         'GitHub, GitLab, Bitbucket, Jenkins, CircleCI, AWS, Azure, GCP, Slack, Teams',
@@ -219,16 +219,16 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       variant: 'ai-development',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Full autonomous development platform with AI code generation, automated testing, security scanning, and deployment automation.',
       launchDate: '2025-01-20',
       customers: 95,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 62,
     },
 
@@ -258,7 +258,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       icon: '📈',
       color: 'from-yellow-600 to-orange-700',
       textColor: 'text-yellow-400',
-      link: 'https://ziontechgroup.com/ai-autonomous-financial-trading',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-financial-trading',
       marketPosition:
         'Advanced autonomous trading with superior risk management. Competes with Alpaca ($0-99/month) but offers complete autonomy and advanced AI.',
       targetAudience:
@@ -268,7 +268,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       category: 'AI Financial Trading',
       realService: true,
       technology: [
-        'TensorFlow, PyTorch, Python, React, Node.js, PostgreSQL, Redis, Apache Kafka, Docker',
+        'TensorFlow, PyTorch, Python, React, Node && Node.js, PostgreSQL, Redis, Apache Kafka, Docker',
       ],
       integrations: [
         'Interactive Brokers, TD Ameritrade, E*TRADE, Robinhood, Custom broker APIs',
@@ -283,16 +283,16 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       variant: 'ai-finance',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Full autonomous trading platform with advanced AI algorithms, real-time market data, risk management, and compliance tools.',
       launchDate: '2025-02-15',
       customers: 45,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 38,
     },
 
@@ -322,7 +322,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       icon: '🏥',
       color: 'from-red-600 to-pink-700',
       textColor: 'text-red-400',
-      link: 'https://ziontechgroup.com/ai-autonomous-healthcare-diagnosis',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-healthcare-diagnosis',
       marketPosition:
         'Industry-leading medical AI with autonomous capabilities. Competes with IBM Watson Health but offers superior accuracy and autonomy.',
       targetAudience:
@@ -332,7 +332,7 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       category: 'AI Healthcare',
       realService: true,
       technology: [
-        'TensorFlow, PyTorch, Medical AI models, Python, React, Node.js, PostgreSQL, HIPAA-compliant cloud',
+        'TensorFlow, PyTorch, Medical AI models, Python, React, Node && Node.js, PostgreSQL, HIPAA-compliant cloud',
       ],
       integrations: [
         'Epic, Cerner, Allscripts, Custom EMR systems, Medical devices, Insurance systems',
@@ -349,16 +349,16 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
       variant: 'ai-healthcare',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.',
       launchDate: '2025-03-01',
       customers: 35,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 28,
     },
   ];    features: [
@@ -367,11 +367,11 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     ];
     popular: true, icon: '🏥',
     color: 'from-red-600 to-pink-700', textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-healthcare-diagnosis', marketPosition: 'Industry-leading medical AI with autonomous capabilities. Competes with IBM Watson Health but offers superior accuracy and autonomy.',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-healthcare-diagnosis', marketPosition: 'Industry-leading medical AI with autonomous capabilities. Competes with IBM Watson Health but offers superior accuracy and autonomy.',
     targetAudience: 'Hospitals, Medical clinics, Telemedicine providers, Healthcare systems, Medical researchers, Insurance companies',
     trialDays: 60, setupTime: '4-8 weeks',
     category: 'AI Healthcare', realService: true,
-    technology: ['TensorFlow, PyTorch, Medical AI models, Python, React, Node.js, PostgreSQL, HIPAA-compliant cloud'];
+    technology: ['TensorFlow, PyTorch, Medical AI models, Python, React, Node && Node.js, PostgreSQL, HIPAA-compliant cloud'];
     integrations: ['Epic, Cerner, Allscripts, Custom EMR systems, Medical devices, Insurance systems'];
     useCases: ['Medical diagnosis, Patient monitoring, Treatment planning, Medical imaging analysis, Drug safety checking, Clinical research'];
     roi: 'Average customer sees 700% ROI within 12 months through improved diagnosis accuracy and patient outcomes.',
@@ -380,15 +380,15 @@ export const innovative2025AIAutomationServices: InnovativeAIAutomationService[]
     variant: 'ai-healthcare',
     contactInfo: {
       
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     
     },
     realImplementation: true,
     implementationDetails: 'Full medical AI platform with advanced diagnostic models, patient monitoring, treatment recommendations, and HIPAA compliance.',
     launchDate: '2025-03-01', customers: 35,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 28
   }
 ];

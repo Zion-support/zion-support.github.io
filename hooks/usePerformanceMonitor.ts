@@ -22,48 +22,48 @@ export function usePerformanceMonitor() {
     setIsSupported(true);
 
     const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
+      const entries = list && list.getEntries();
       
-      entries.forEach((entry) => {
-        if (entry.entryType === 'navigation') {
+      entries && entries.forEach((entry) => {
+        if (entry && entry.entryType === 'navigation') {
           const navEntry = entry as PerformanceNavigationTiming;
           setMetrics(prev => ({
             ...prev,
-            loadTime: navEntry.loadEventEnd - navEntry.loadEventStart,
+            loadTime: navEntry && navEntry.loadEventEnd - navEntry && navEntry.loadEventStart,
           }));
         }
         
-        if (entry.entryType === 'paint') {
+        if (entry && entry.entryType === 'paint') {
           const paintEntry = entry as PerformancePaintTiming;
-          if (paintEntry.name === 'first-contentful-paint') {
+          if (paintEntry && paintEntry.name === 'first-contentful-paint') {
             setMetrics(prev => ({
               ...prev,
-              firstContentfulPaint: paintEntry.startTime,
+              firstContentfulPaint: paintEntry && paintEntry.startTime,
             }));
           }
         }
         
-        if (entry.entryType === 'largest-contentful-paint') {
+        if (entry && entry.entryType === 'largest-contentful-paint') {
           const lcpEntry = entry as PerformanceEntry;
           setMetrics(prev => ({
             ...prev,
-            largestContentfulPaint: lcpEntry.startTime,
+            largestContentfulPaint: lcpEntry && lcpEntry.startTime,
           }));
         }
         
-        if (entry.entryType === 'first-input') {
+        if (entry && entry.entryType === 'first-input') {
           const fidEntry = entry as PerformanceEventTiming;
           setMetrics(prev => ({
             ...prev,
-            firstInputDelay: fidEntry.processingStart - fidEntry.startTime,
+            firstInputDelay: fidEntry && fidEntry.processingStart - fidEntry && fidEntry.startTime,
           }));
         }
         
-        if (entry.entryType === 'layout-shift') {
+        if (entry && entry.entryType === 'layout-shift') {
           const clsEntry = entry as PerformanceEntry & { value: number };
           setMetrics(prev => ({
             ...prev,
-            cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry.value,
+            cumulativeLayoutShift: (prev?.cumulativeLayoutShift || 0) + clsEntry && clsEntry.value,
           }));
         }
       });
@@ -71,14 +71,14 @@ export function usePerformanceMonitor() {
 
     // Observe different performance entry types
     try {
-      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+      observer && observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.warn('Performance Observer not fully supported:', error);
+      console && console.warn('Performance Observer not fully supported:', error);
     }
 
     return () => {
-      observer.disconnect();
+      observer && observer.disconnect();
     };
   }, []);
 

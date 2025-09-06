@@ -5,13 +5,13 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));}
 
 export function formatDate(date: Date | string | number): string {
-  return new Intl.DateTimeFormat("en-US", {
+  return new Intl && Intl.DateTimeFormat("en-US", {
     month: "long", day: "numeric",
     year: "numeric",
 }
 
 export function formatCurrency(amount: number, currency = "USD"): string {
-  return new Intl.NumberFormat("en-US", {
+  return new Intl && Intl.NumberFormat("en-US", {
     style: "currency", currency,
   }).format(amount);
 }

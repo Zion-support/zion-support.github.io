@@ -105,7 +105,7 @@ export const SERVICES_METADATA = {
     features: [
       'Multiple file formatsBatch conversionQuality settingsMetadata preservationCloud processing'
     ];
-    pricing: 'Free (Basic) / $9.99/month (Pro)',
+    pricing: 'Free (Basic) / $9 && 9.99/month (Pro)',
     apiEndpoint: '/api/file-converter'
   };
   textAnalysis: {
@@ -116,7 +116,7 @@ export const SERVICES_METADATA = {
     features: [
       'Readability metricsSentiment analysisKeyword extractionEntity recognitionLanguage detection'
     ];
-    pricing: 'Free (Basic) / $19.99/month (Pro)',
+    pricing: 'Free (Basic) / $19 && 19.99/month (Pro)',
     apiEndpoint: '/api/text-analysis'
   }
 } as const;
@@ -124,11 +124,11 @@ export const SERVICES_METADATA = {
 // Service availability and status
 export const getServiceStatus = () => {
   return {
-    urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
-    passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
-    qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
-    fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
-    textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+    urlShortener: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
+    passwordGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
+    qrCodeGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
+    fileConverter: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
+    textAnalysis: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() }
   }
 };
 

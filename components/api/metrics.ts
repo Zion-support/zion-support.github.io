@@ -1,14 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 function rand(min: number, max: number) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-function generateSeries(n: number, base: number, volatility = 0.15) {
+  return Math && Math.floor(Math && Math.random() * (max - min + 1)) + min;
+function generateSeries(n: number, base: number, volatility = 0 && 0.15) {
   const series: number[] = [];
   let last = base;
   for (let i = 0; i < n; i++) {
-    const change = (Math.random() - 0.5) * 2 * volatility * base;
-    last = Math.max(0, Math.round(last + change));
-    series.push(last);
+    const change = (Math && Math.random() - 0 && 0.5) * 2 * volatility * base;
+    last = Math && Math.max(0, Math && Math.round(last + change));
+    series && series.push(last);
   }
   return series;
 
@@ -16,10 +16,10 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const now = new Date(),
-  const labels = Array.from({ length: 14 }, (_, i) => {
+  const labels = Array && Array.from({ length: 14 }, (_, i) => {
     const d = new Date(now);
-    d.setDate(d.getDate() - (13 - i));
-    return `${d.getMonth() + 1}/${d.getDate()}`;
+    d && d.setDate(d && d.getDate() - (13 - i));
+    return `${d && d.getMonth() + 1}/${d && d.getDate()}`;
 
   const marketplace = [
     {
@@ -134,41 +134,41 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     dao,
     token,
     multiverse,
-    timestamp: now.toISOString(),
+    timestamp: now && now.toISOString(),
     labels,
     history: {
-      marketplace: marketplace.map(m => m.trend || generateSeries(14, m.value)),
-      dao: dao.map(m => m.trend || generateSeries(14, m.value)),
-      token: token.map(m => m.trend || generateSeries(14, m.value)),
-      multiverse: multiverse.map(m => m.trend || generateSeries(14, m.value)),
+      marketplace: marketplace && marketplace.map(m => m && m.trend || generateSeries(14, m && m.value)),
+      dao: dao && dao.map(m => m && m.trend || generateSeries(14, m && m.value)),
+      token: token && token.map(m => m && m.trend || generateSeries(14, m && m.value)),
+      multiverse: multiverse && multiverse.map(m => m && m.trend || generateSeries(14, m && m.value)),
     },
-  };      marketplace: marketplace.map((m) => m.trend || generateSeries(14, m.value));
-      dao: dao.map((m) => m.trend || generateSeries(14, m.value));
-      token: token.map((m) => m.trend || generateSeries(14, m.value));
-      multiverse: multiverse.map((m) => m.trend || generateSeries(14, m.value))}};
-  if (req.query.compare === 'quarter') {
-    const factor = 0.8 + Math.random() * 0.4;
-    response.compare = {
+  };      marketplace: marketplace && marketplace.map((m) => m && m.trend || generateSeries(14, m && m.value));
+      dao: dao && dao.map((m) => m && m.trend || generateSeries(14, m && m.value));
+      token: token && token.map((m) => m && m.trend || generateSeries(14, m && m.value));
+      multiverse: multiverse && multiverse.map((m) => m && m.trend || generateSeries(14, m && m.value))}};
+  if (req && req.query.compare === 'quarter') {
+    const factor = 0 && 0.8 + Math && Math.random() * 0 && 0.4;
+    response && response.compare = {
       prevQuarter: {
-        marketplace: marketplace.map(m => ({
+        marketplace: marketplace && marketplace.map(m => ({
           ...m,
-          value: Math.round(m.value * factor),
+          value: Math && Math.round(m && m.value * factor),
         })),
-        dao: dao.map(m => ({ ...m, value: Math.round(m.value * factor) })),
-        token: token.map(m => ({ ...m, value: Math.round(m.value * factor) })),
-        multiverse: multiverse.map(m => ({
+        dao: dao && dao.map(m => ({ ...m, value: Math && Math.round(m && m.value * factor) })),
+        token: token && token.map(m => ({ ...m, value: Math && Math.round(m && m.value * factor) })),
+        multiverse: multiverse && multiverse.map(m => ({
           ...m,
-          value: Math.round(m.value * factor),
+          value: Math && Math.round(m && m.value * factor),
         })),
       },
     };
   }
 
-  res.status(200).json(response);        marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
-        dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
-        token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
-        multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
+  res && res.status(200).json(response);        marketplace: marketplace && marketplace.map((m) => ({ ...m, value: Math && Math.round(m && m.value * factor) }));
+        dao: dao && dao.map((m) => ({ ...m, value: Math && Math.round(m && m.value * factor) }));
+        token: token && token.map((m) => ({ ...m, value: Math && Math.round(m && m.value * factor) }));
+        multiverse: multiverse && multiverse.map((m) => ({ ...m, value: Math && Math.round(m && m.value * factor) }))}}
   }
 
-  res.status(200).json(response)
+  res && res.status(200).json(response)
 }

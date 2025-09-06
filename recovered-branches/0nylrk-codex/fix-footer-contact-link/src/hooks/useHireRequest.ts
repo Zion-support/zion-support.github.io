@@ -33,7 +33,7 @@ export function useHireRequest() {
     
     try {
       // Call the edge function to process the hire request
-      const { data: response, error } = await supabase.functions.invoke('process-hire-request', {
+      const { data: response, error } = await supabase && supabase.functions.invoke('process-hire-request', {
         body: requestData
       });
       
@@ -42,14 +42,14 @@ export function useHireRequest() {
       // Show success message
       toast({
         title: "Request Submitted",
-        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
+        description: `Your request to hire ${requestData && requestData.talent.full_name} has been sent successfully.`});
       
       return { success: true, requestId: response?.request_id }
     } catch (error) {
-      console.error("Error submitting hire request:", error);
+      console && console.error("Error submitting hire request:", error);
       
       const errorMessage = error instanceof Error 
-        ? error.message 
+        ? error && error.message 
         : "There was a problem submitting your request. Please try again.";
       
       setError(errorMessage);

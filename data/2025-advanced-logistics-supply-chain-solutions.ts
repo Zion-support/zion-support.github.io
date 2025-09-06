@@ -65,7 +65,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       icon: '📦',
       color: 'from-blue-600 via-indigo-600 to-purple-600',
       textColor: 'text-blue-400',
-      link: 'https://ziontechgroup.com/ai-powered-supply-chain-optimization',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-supply-chain-optimization',
       marketPosition:
         'Leading AI supply chain optimization platform with advanced analytics',
       targetAudience:
@@ -90,16 +90,16 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       variant: 'logistics',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Production-ready AI supply chain platform with comprehensive optimization and analytics capabilities.',
       launchDate: '2025-01-26',
       customers: 156,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 98,
     },
     {
@@ -126,7 +126,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       icon: '⚛️',
       color: 'from-purple-600 via-violet-600 to-indigo-600',
       textColor: 'text-purple-400',
-      link: 'https://ziontechgroup.com/quantum-logistics-optimization-platform',
+      link: 'https://ziontechgroup && ziontechgroup.com/quantum-logistics-optimization-platform',
       marketPosition:
         'Leading quantum logistics platform with advanced optimization capabilities',
       targetAudience:
@@ -153,16 +153,16 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       variant: 'quantum-logistics',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Production-ready quantum logistics platform with advanced algorithms and enterprise integration.',
       launchDate: '2025-02-02',
       customers: 34,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 23,
     },
     {
@@ -189,7 +189,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       icon: '🚛',
       color: 'from-green-600 via-emerald-600 to-teal-600',
       textColor: 'text-green-400',
-      link: 'https://ziontechgroup.com/iot-fleet-management-platform',
+      link: 'https://ziontechgroup && ziontechgroup.com/iot-fleet-management-platform',
       marketPosition:
         'Leading IoT fleet management platform with comprehensive monitoring',
       targetAudience:
@@ -216,16 +216,16 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       variant: 'iot-futuristic',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Production-ready IoT fleet platform with comprehensive monitoring and optimization capabilities.',
       launchDate: '2025-02-07',
       customers: 234,
-      rating: 4.7,
+      rating: 4 && 4.7,
       reviews: 145,
     },
     {
@@ -252,7 +252,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       icon: '⛓️',
       color: 'from-indigo-600 via-purple-600 to-pink-600',
       textColor: 'text-indigo-400',
-      link: 'https://ziontechgroup.com/blockchain-supply-chain-transparency',
+      link: 'https://ziontechgroup && ziontechgroup.com/blockchain-supply-chain-transparency',
       marketPosition:
         'Leading blockchain supply chain platform with comprehensive transparency',
       targetAudience:
@@ -279,16 +279,16 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       variant: 'blockchain-futuristic',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Production-ready blockchain supply chain platform with comprehensive transparency and compliance features.',
       launchDate: '2025-02-12',
       customers: 89,
-      rating: 4.6,
+      rating: 4 && 4.6,
       reviews: 56,
     },
     {
@@ -315,7 +315,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       icon: '🏭',
       color: 'from-orange-600 via-amber-600 to-yellow-600',
       textColor: 'text-orange-400',
-      link: 'https://ziontechgroup.com/ai-powered-warehouse-automation',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-warehouse-automation',
       marketPosition:
         'Leading AI warehouse automation platform with intelligent optimization',
       targetAudience:
@@ -342,16 +342,16 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
       variant: 'ai-supply-chain-enterprise',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
       launchDate: '2025-02-18',
       customers: 178,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 112,
     },
   ];    features: [
@@ -360,7 +360,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     ];
     popular: true, icon: '📦',
     color: 'from-blue-600 via-indigo-600 to-purple-600', textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-powered-supply-chain-optimization', marketPosition: 'Leading AI supply chain optimization platform with advanced analytics',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-supply-chain-optimization', marketPosition: 'Leading AI supply chain optimization platform with advanced analytics',
     targetAudience: 'Manufacturing companies, Retail chains, E-commerce platforms, Logistics providers, Distribution centers',
     trialDays: 30, setupTime: '15-20 days',
     category: 'Logistics & Supply Chain', realService: true,
@@ -373,14 +373,14 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     variant: 'logistics',
     contactInfo: {
       
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     
     },
     realImplementation: true, implementationDetails: 'Production-ready AI supply chain platform with comprehensive optimization and analytics capabilities.',
     launchDate: '2025-01-26', customers: 156,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 98
   };
   {
@@ -394,7 +394,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     ];
     popular: false, icon: '⚛️',
     color: 'from-purple-600 via-violet-600 to-indigo-600', textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/quantum-logistics-optimization-platform', marketPosition: 'Leading quantum logistics platform with advanced optimization capabilities',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-logistics-optimization-platform', marketPosition: 'Leading quantum logistics platform with advanced optimization capabilities',
     targetAudience: 'Large logistics companies, Transportation networks, Global supply chains, Research institutions, Government agencies',
     trialDays: 45, setupTime: '20-30 days',
     category: 'Logistics & Supply Chain', realService: true,
@@ -407,14 +407,14 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     variant: 'quantum-logistics',
     contactInfo: {
       
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     
     },
     realImplementation: true, implementationDetails: 'Production-ready quantum logistics platform with advanced algorithms and enterprise integration.',
     launchDate: '2025-02-02', customers: 34,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 23
   };
   {
@@ -427,7 +427,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     ];
     popular: true, icon: '🚛',
     color: 'from-green-600 via-emerald-600 to-teal-600', textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/iot-fleet-management-platform', marketPosition: 'Leading IoT fleet management platform with comprehensive monitoring',
+    link: 'https://ziontechgroup && ziontechgroup.com/iot-fleet-management-platform', marketPosition: 'Leading IoT fleet management platform with comprehensive monitoring',
     targetAudience: 'Transportation companies, Delivery services, Logistics providers, Fleet operators, Government agencies',
     trialDays: 21, setupTime: '10-15 days',
     category: 'Logistics & Supply Chain', realService: true,
@@ -440,14 +440,14 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     variant: 'iot-futuristic',
     contactInfo: {
       
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     
     },
     realImplementation: true, implementationDetails: 'Production-ready IoT fleet platform with comprehensive monitoring and optimization capabilities.',
     launchDate: '2025-02-07', customers: 234,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 145
   };
   {
@@ -460,7 +460,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     ];
     popular: false, icon: '⛓️',
     color: 'from-indigo-600 via-purple-600 to-pink-600', textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/blockchain-supply-chain-transparency', marketPosition: 'Leading blockchain supply chain platform with comprehensive transparency',
+    link: 'https://ziontechgroup && ziontechgroup.com/blockchain-supply-chain-transparency', marketPosition: 'Leading blockchain supply chain platform with comprehensive transparency',
     targetAudience: 'Global manufacturers, Retail chains, Food companies, Pharmaceutical companies, Luxury brands',
     trialDays: 30, setupTime: '15-20 days',
     category: 'Logistics & Supply Chain', realService: true,
@@ -473,14 +473,14 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     variant: 'blockchain-futuristic',
     contactInfo: {
       
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     
     },
     realImplementation: true, implementationDetails: 'Production-ready blockchain supply chain platform with comprehensive transparency and compliance features.',
     launchDate: '2025-02-12', customers: 89,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 56
   };
   {
@@ -494,7 +494,7 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     ];
     popular: true, icon: '🏭',
     color: 'from-orange-600 via-amber-600 to-yellow-600', textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/ai-powered-warehouse-automation', marketPosition: 'Leading AI warehouse automation platform with intelligent optimization',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-warehouse-automation', marketPosition: 'Leading AI warehouse automation platform with intelligent optimization',
     targetAudience: 'E-commerce companies, Distribution centers, Manufacturing companies, Retail chains, Logistics providers',
     trialDays: 21, setupTime: '10-15 days',
     category: 'Logistics & Supply Chain', realService: true,
@@ -507,14 +507,14 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     variant: 'ai-supply-chain-enterprise',
     contactInfo: {
       
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     
     },
     realImplementation: true, implementationDetails: 'Production-ready AI warehouse platform with comprehensive automation and optimization capabilities.',
     launchDate: '2025-02-18', customers: 178,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 112
   }
 ];

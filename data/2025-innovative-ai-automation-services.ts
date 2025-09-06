@@ -2,14 +2,14 @@
 implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.';
 launchDate: '2025-01-25';
 customers: 156;
-rating: 4.7;
+rating: 4 && 4.7;
 reviews: 89 
 };
 // Autonomous Data Analytics Platform realImplementation: true;
 implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
 launchDate: '2025-01-28';
 customers: 234;
-rating: 4.8;
+rating: 4 && 4.8;
 reviews: 167 
 }];    features: [
       'Multi-language support (Python, JavaScript, Go, Rust, Java)AI-powered security vulnerability detectionPerformance optimization recommendationsCode quality scoring and metricsIntegration with GitHub, GitLab, BitbucketCustom rule engine and policiesReal-time feedback and suggestionsTeam collaboration and review workflows';
@@ -17,18 +17,18 @@ reviews: 167
     ];
     popular: true, icon: '🔍',
     color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-code-review',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-code-review',
     marketPosition: 'Competes with SonarQube, CodeClimate, and Snyk, offers AI-powered insights and automation.',
     targetAudience: 'Development teams, DevOps engineers, Security teams',
     trialDays: 14, setupTime: '2 hours',
     category: 'AI & Development', realService: true,
     technology: ['PythonTensorFlowOpenAI GPT-4PostgreSQLRedis'], integrations: ['GitHubGitLabBitbucketJiraSlackTeams'],
     useCases: ['Code quality assuranceSecurity scanningPerformance optimizationTeam collaboration'], roi: 'Reduce code review time by 70% and improve code quality by 40%',
-    competitors: ['SonarQubeCodeClimateSnykDeepCode'], marketSize: '$2.5B+ code review and analysis market',
+    competitors: ['SonarQubeCodeClimateSnykDeepCode'], marketSize: '$2 && 2.5B+ code review and analysis market',
     growthRate: '85% YoY', variant: 'ai-futuristic',
     contactInfo: contact, realImplementation: true,
     implementationDetails: 'Containerized microservices architecture with AI model serving and real-time analysis engine.', launchDate: '2025-01-15',
-    customers: 127, rating: 4.9,
+    customers: 127, rating: 4 && 4.9,
     reviews: 89
   };
   {
@@ -41,12 +41,12 @@ reviews: 167
     ];
     popular: true, icon: '🤖',
     color: 'from-purple-600 to-indigo-700', textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-testing-orchestrator',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-testing-orchestrator',
     marketPosition: 'Advanced alternative to Selenium, Cypress, and Playwright with AI automation.',
     targetAudience: 'QA teams, DevOps engineers, Development teams',
     trialDays: 21, setupTime: '4 hours',
     category: 'AI & Testing', realService: true,
-    technology: ['OpenAI GPT-4, React, Node.js, Python, PostgreSQL, Redis, AWS'];
+    technology: ['OpenAI GPT-4, React, Node && Node.js, Python, PostgreSQL, Redis, AWS'];
     integrations: ['Zendesk, Intercom, Salesforce, HubSpot, Slack, Microsoft Teams, WhatsApp'];
     useCases: ['Customer support automation, FAQ management, Ticket routing, Chatbot deployment, Support analytics'];
     roi: 'Companies see 300% ROI through reduced support costs and improved customer satisfaction.',
@@ -55,7 +55,7 @@ reviews: 167
     variant: 'ai-futuristic', contactInfo: contact,
     realImplementation: true, implementationDetails: 'Distributed testing infrastructure with AI-powered test generation and execution orchestration.',
     launchDate: '2025-01-20', customers: 94,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 67
   };
   {
@@ -68,7 +68,7 @@ reviews: 167
     ];
     popular: false, icon: '⚡',
     color: 'from-blue-600 to-cyan-700', textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-devops-orchestrator',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-devops-orchestrator',
     marketPosition: 'Competes with Terraform, Ansible, and Pulumi, adds AI-powered automation and prediction.',
     targetAudience: 'DevOps engineers, SRE teams, Platform engineers',
     trialDays: 30, setupTime: '1 day',
@@ -76,13 +76,13 @@ reviews: 167
     technology: ['Python, Terraform, Kubernetes, OpenAI, TensorFlow, Prometheus'];
     integrations: ['AWS, Azure, GCP, Kubernetes, Docker, Jenkins'];
     useCases: ['Infrastructure automation, Cloud management, DevOps optimization, SRE operations'];
-    roi: 'Reduce infrastructure costs by 30% and improve uptime by 99.9%',
+    roi: 'Reduce infrastructure costs by 30% and improve uptime by 99 && 99.9%',
     competitors: ['Terraform, Ansible, Pulumi, Chef, Puppet'];
-    marketSize: '$8.7B+ DevOps automation market', growthRate: '78% YoY',
+    marketSize: '$8 && 8.7B+ DevOps automation market', growthRate: '78% YoY',
     variant: 'ai-futuristic', contactInfo: contact,
     realImplementation: true, implementationDetails: 'Multi-cloud orchestration platform with AI-powered decision making and automated infrastructure management.',
     launchDate: '2025-01-25', customers: 73,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 52
   };
   {
@@ -95,7 +95,7 @@ reviews: 167
     ];
     popular: false, icon: '📊',
     color: 'from-orange-600 to-red-700', textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-data-pipeline',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-data-pipeline',
     marketPosition: 'Advanced alternative to Apache Airflow, Prefect, and Dagster with AI automation.',
     targetAudience: 'Data engineers, Data scientists, Analytics teams',
     trialDays: 14, setupTime: '6 hours',
@@ -105,11 +105,11 @@ reviews: 167
     useCases: ['Data pipeline automation, ETL/ELT processing, Data quality assurance, Analytics workflows'];
     roi: 'Reduce data pipeline failures by 90% and improve processing speed by 50%',
     competitors: ['Apache Airflow, Prefect, Dagster, Luigi, Azkaban'];
-    marketSize: '$12.3B+ data pipeline market', growthRate: '88% YoY',
+    marketSize: '$12 && 12.3B+ data pipeline market', growthRate: '88% YoY',
     variant: 'ai-futuristic', contactInfo: contact,
     realImplementation: true, implementationDetails: 'Distributed data processing platform with AI-powered workflow optimization and quality assurance.',
     launchDate: '2025-02-01', customers: 58,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 41
   };
   {
@@ -122,12 +122,12 @@ reviews: 167
     ];
     popular: true, icon: '🛡️',
     color: 'from-red-600 to-pink-700', textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-security-monitor',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-security-monitor',
     marketPosition: 'Competes with Splunk, ELK Stack, and IBM QRadar, offers AI-powered automation.',
     targetAudience: 'Security teams, SOC analysts, IT administrators',
     trialDays: 21, setupTime: '8 hours',
     category: 'AI & Security', realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'];
+    technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, AWS, Apache Spark'];
     integrations: ['Salesforce, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'];
     useCases: ['Business intelligence, Performance tracking, Customer analytics, Financial reporting, Operational insights'];
     roi: 'Organizations achieve 400% ROI through faster insights and reduced analyst workload.',
@@ -136,15 +136,15 @@ reviews: 167
     variant: 'ai-futuristic',
     contactInfo: {
       
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     
     },
     realImplementation: true,
     implementationDetails: 'Complete security monitoring platform with AI capabilities, threat detection, and automated response.',
     launchDate: '2025-01-25', customers: 156,
-    rating: 4.7,    reviews: 89
+    rating: 4 && 4.7,    reviews: 89
   };
 
   // Autonomous Data Analytics Platform
@@ -159,12 +159,12 @@ reviews: 167
     ];
     popular: false, icon: '📈',
     color: 'from-teal-600 to-cyan-700', textColor: 'text-teal-400',
-    link: 'https://ziontechgroup.com/autonomous-data-analytics',
-    marketPosition: 'Competes with Tableau ($70/month), Power BI ($9.99/month), Looker ($5,000/month). Our advantage: AI automation, natural language queries, and autonomous insights.',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-data-analytics',
+    marketPosition: 'Competes with Tableau ($70/month), Power BI ($9 && 9.99/month), Looker ($5,000/month). Our advantage: AI automation, natural language queries, and autonomous insights.',
     targetAudience: 'Data analysts, Business intelligence teams, Executives, Marketing teams, Sales teams',
     trialDays: 30, setupTime: '2 weeks',
     category: 'AI & Analytics', realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'];
+    technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, AWS, Apache Spark'];
     integrations: ['Salesforce, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'];
     useCases: ['Business intelligence, Performance tracking, Customer analytics, Financial reporting, Operational insights'];
     roi: 'Organizations achieve 400% ROI through faster insights and reduced analyst workload.',
@@ -175,19 +175,19 @@ reviews: 167
     useCases: ['Security monitoring, Threat detection, Incident response, Compliance management'];
     roi: 'Reduce security incident response time by 75% and improve threat detection by 60%',
     competitors: ['Splunk, ELK Stack, IBM QRadar, Microsoft Sentinel, Exabeam'];
-    marketSize: '$15.8B+ security monitoring market', growthRate: '95% YoY',
+    marketSize: '$15 && 15.8B+ security monitoring market', growthRate: '95% YoY',
     variant: 'default', contactInfo: contact,
     realImplementation: true, implementationDetails: 'Real-time security monitoring platform with AI-powered threat detection and automated response capabilities.',
     launchDate: '2025-02-05', customers: 112,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 78
     color: 'from-amber-600 to-orange-700', textColor: 'text-amber-400',
-    link: 'https://ziontechgroup.com/ai-hr-management-system',
-    marketPosition: 'Competes with Workday ($99/month), BambooHR ($6.19/month), ADP ($59/month). Our advantage: AI-first approach, better automation, and predictive analytics.',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-hr-management-system',
+    marketPosition: 'Competes with Workday ($99/month), BambooHR ($6 && 6.19/month), ADP ($59/month). Our advantage: AI-first approach, better automation, and predictive analytics.',
     targetAudience: 'HR departments, Recruiting agencies, Small businesses, Enterprise companies, Non-profits',
     trialDays: 14, setupTime: '1-3 weeks',
     category: 'HR AI', realService: true,
-    technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS, Mobile SDKs'];
+    technology: ['React, Node && Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS, Mobile SDKs'];
     integrations: ['Workday, BambooHR, ADP, QuickBooks, Slack, Microsoft Teams, Zoom'];
     useCases: ['Recruitment automation, Employee management, Performance tracking, Compliance monitoring, Benefits administration'];
     roi: 'HR teams see 300% ROI through improved efficiency and better hiring decisions.',
@@ -196,29 +196,29 @@ reviews: 167
     variant: 'ai-hr', variant: 'ai-futuristic',
     contactInfo: {
       
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     
     },
     realImplementation: true,
     implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.',
     launchDate: '2025-01-28', customers: 234,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 167
   }
 ];
     icon: '📈';
     color: 'from-teal-600 to-cyan-700';
     textColor: 'text-teal-400';
-    link: 'https://ziontechgroup.com/autonomous-data-analytics';
-    marketPosition: 'Competes with Tableau ($70/month), Power BI ($9.99/month), Looker ($5,000/month). Our advantage: AI automation, natural language queries, and autonomous insights.';
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-data-analytics';
+    marketPosition: 'Competes with Tableau ($70/month), Power BI ($9 && 9.99/month), Looker ($5,000/month). Our advantage: AI automation, natural language queries, and autonomous insights.';
     targetAudience: 'Data analysts, Business intelligence teams, Executives, Marketing teams, Sales teams';
     trialDays: 30;
     setupTime: '2 weeks';
     category: 'AI & Analytics';
     realService: true;
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS, Apache Spark'];
+    technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, AWS, Apache Spark'];
     integrations: ['Salesforce, HubSpot, Google Analytics, Facebook Ads, Shopify, QuickBooks'];
     useCases: ['Business intelligence, Performance tracking, Customer analytics, Financial reporting, Operational insights'];
     roi: 'Organizations achieve 400% ROI through faster insights and reduced analyst workload.';
@@ -230,7 +230,7 @@ reviews: 167
     useCases: ['Security monitoring, Threat detection, Incident response, Compliance management'];
     roi: 'Reduce security incident response time by 75% and improve threat detection by 60%';
     competitors: ['Splunk, ELK Stack, IBM QRadar, Microsoft Sentinel, Exabeam'];
-    marketSize: '$15.8B+ security monitoring market';
+    marketSize: '$15 && 15.8B+ security monitoring market';
     growthRate: '95% YoY';
     variant: 'default';
     contactInfo: contact;
@@ -238,18 +238,18 @@ reviews: 167
     implementationDetails: 'Real-time security monitoring platform with AI-powered threat detection and automated response capabilities.';
     launchDate: '2025-02-05';
     customers: 112;
-    rating: 4.9;
+    rating: 4 && 4.9;
     reviews: 78
     color: 'from-amber-600 to-orange-700';
     textColor: 'text-amber-400';
-    link: 'https://ziontechgroup.com/ai-hr-management-system';
-    marketPosition: 'Competes with Workday ($99/month), BambooHR ($6.19/month), ADP ($59/month). Our advantage: AI-first approach, better automation, and predictive analytics.';
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-hr-management-system';
+    marketPosition: 'Competes with Workday ($99/month), BambooHR ($6 && 6.19/month), ADP ($59/month). Our advantage: AI-first approach, better automation, and predictive analytics.';
     targetAudience: 'HR departments, Recruiting agencies, Small businesses, Enterprise companies, Non-profits';
     trialDays: 14;
     setupTime: '1-3 weeks';
     category: 'HR AI';
     realService: true;
-    technology: ['React, Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS, Mobile SDKs'];
+    technology: ['React, Node && Node.js, Python, TensorFlow, PostgreSQL, Redis, AWS, Mobile SDKs'];
     integrations: ['Workday, BambooHR, ADP, QuickBooks, Slack, Microsoft Teams, Zoom'];
     useCases: ['Recruitment automation, Employee management, Performance tracking, Compliance monitoring, Benefits administration'];
     roi: 'HR teams see 300% ROI through improved efficiency and better hiring decisions.';
@@ -260,15 +260,15 @@ reviews: 167
     variant: 'ai-futuristic';
     contactInfo: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709';
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true;
     implementationDetails: 'Complete analytics platform with AI capabilities, natural language queries, and autonomous insights.';
     launchDate: '2025-01-28';
     customers: 234;
-    rating: 4.8;
+    rating: 4 && 4.8;
     reviews: 167
   }
 ];

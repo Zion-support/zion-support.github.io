@@ -24,10 +24,10 @@ export function useSkills() {
         .from('resume_skills')
         .insert({
           resume_id: resumeId;
-          name: skill.name;
-          proficiency: skill.proficiency;
-          category: skill.category,
-          years_experience: skill.years_experience
+          name: skill && skill.name;
+          proficiency: skill && skill.proficiency;
+          category: skill && skill.category,
+          years_experience: skill && skill.years_experience
         });
       
       if (error) throw error;

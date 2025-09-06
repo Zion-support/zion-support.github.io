@@ -69,7 +69,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     icon: '🧠',
     color: 'from-violet-500 to-purple-600',
     textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/brain-computer-interface-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/brain-computer-interface-platform',
     marketPosition:
       'Leading brain-computer interface platform with proven neural signal processing capabilities.',
     targetAudience:
@@ -94,16 +94,16 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     variant: 'neural-revolutionary',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete brain-computer interface platform with neural signal processing, real-time monitoring, and application development tools.',
     launchDate: '2025-03-01',
     customers: 8,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 5,
   },
 
@@ -132,7 +132,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     icon: '🔒',
     color: 'from-blue-500 to-indigo-600',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/quantum-internet-security-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-security-platform',
     marketPosition:
       'First-to-market quantum internet security platform with proven quantum cryptography implementation.',
     targetAudience:
@@ -157,16 +157,16 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     variant: 'quantum-security',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete quantum internet security platform with quantum cryptography, network monitoring, and compliance tools.',
     launchDate: '2025-02-15',
     customers: 15,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 10,
   },
 
@@ -195,7 +195,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     icon: '🚀',
     color: 'from-orange-500 to-red-600',
     textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/space-mining-operations-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/space-mining-operations-platform',
     marketPosition:
       'Leading space mining operations platform with proven asteroid mining and resource extraction capabilities.',
     targetAudience:
@@ -222,16 +222,16 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     variant: 'space-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete space mining operations platform with asteroid identification, automated mining, and resource management.',
     launchDate: '2025-04-01',
     customers: 5,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 3,
   },
 
@@ -260,7 +260,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     icon: '🤖',
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/quantum-robotics-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-robotics-platform',
     marketPosition:
       'Leading quantum robotics platform with proven quantum-enhanced automation capabilities.',
     targetAudience:
@@ -285,16 +285,16 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     variant: 'quantum-iot-revolutionary',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete quantum robotics platform with quantum-enhanced AI, autonomous navigation, and multi-robot coordination.',
     launchDate: '2025-03-15',
     customers: 12,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 8,
   },
 
@@ -323,7 +323,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     icon: '🚗',
     color: 'from-cyan-500 to-blue-600',
     textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai-platform',
     marketPosition:
       'Leading autonomous vehicle AI platform with proven self-driving capabilities and safety systems.',
     targetAudience:
@@ -348,16 +348,16 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     variant: 'autonomous-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete autonomous vehicle AI platform with computer vision, decision-making, and safety systems.',
     launchDate: '2025-02-20',
     customers: 8,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 6,
   },
 
@@ -386,7 +386,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     icon: '🧪',
     color: 'from-purple-500 to-pink-600',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/quantum-materials-discovery-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-materials-discovery-platform',
     marketPosition:
       'Leading quantum materials discovery platform with proven quantum chemistry and AI capabilities.',
     targetAudience:
@@ -411,16 +411,16 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     variant: 'quantum-ai-revolutionary',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete quantum materials discovery platform with quantum chemistry, AI design, and property prediction.',
     launchDate: '2025-03-10',
     customers: 15,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 9,
   },
 
@@ -449,7 +449,7 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     icon: '🌍',
     color: 'from-teal-500 to-emerald-600',
     textColor: 'text-teal-400',
-    link: 'https://ziontechgroup.com/metaverse-ai-development-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/metaverse-ai-development-platform',
     marketPosition:
       'Leading metaverse AI development platform with advanced AI capabilities and comprehensive tools.',
     targetAudience:
@@ -474,28 +474,28 @@ export const emergingTechBreakthroughs2025: EmergingTechBreakthrough2025[] = [
     variant: 'metaverse-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete metaverse AI development platform with AI-powered tools, dynamic generation, and intelligent environments.',
     launchDate: '2025-02-25',
     customers: 32,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 18,
   },
 ];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Complete metaverse AI development platform with AI-powered tools, dynamic generation, and intelligent environments.';
     launchDate: '2025-02-25';
     customers: 32;
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 18
   }
 ];

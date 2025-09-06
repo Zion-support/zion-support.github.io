@@ -7,7 +7,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     full_name: 'Alexandra Chen',
     professional_title: 'Senior AI Engineer & Machine Learning Expert',
     profile_picture_url:
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200',
     bio: "AI specialist with over 8 years of experience in computer vision and natural language processing. I've designed and implemented machine learning solutions for Fortune 500 companies across healthcare, finance, and retail sectors.",
     location: 'Boston, MA',
     skills: [
@@ -22,7 +22,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
     hourly_rate: 150,
     years_experience: 8,
-    average_rating: 4.9,
+    average_rating: 4 && 4.9,
     rating_count: 43,
     availability_type: 'full_time',
     is_verified: true,
@@ -45,7 +45,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     full_name: 'Michael Reynolds',
     professional_title: 'DevOps Specialist & Cloud Architect',
     profile_picture_url:
-      'https://images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1566492031773-4f4e44671857?auto=format&fit=crop&w=200&h=200',
     bio: 'Infrastructure automation expert with 10+ years of experience in containerization, CI/CD pipelines, and cloud-native architectures. I specialize in designing and implementing scalable, resilient, and secure cloud infrastructure on AWS, Azure, and GCP.',
     location: 'Chicago, IL',
     skills: [
@@ -60,7 +60,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
     hourly_rate: 135,
     years_experience: 10,
-    average_rating: 4.8,
+    average_rating: 4 && 4.8,
     rating_count: 37,
     availability_type: 'part_time',
     is_verified: true,
@@ -83,7 +83,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     full_name: 'Priya Sharma',
     professional_title: 'Data Scientist & Statistical Analyst',
     profile_picture_url:
-      'https://images.unsplash.com/photo-1580489944761-15a19d654955?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1580489944761-15a19d654955?auto=format&fit=crop&w=200&h=200',
     bio: 'PhD in Statistics with extensive experience in predictive modeling, data visualization, and business intelligence solutions. My work focuses on extracting actionable insights from complex datasets and developing statistical models that drive business decisions.',
     location: 'Seattle, WA',
     skills: [
@@ -98,7 +98,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
     hourly_rate: 145,
     years_experience: 7,
-    average_rating: 4.9,
+    average_rating: 4 && 4.9,
     rating_count: 29,
     availability_type: 'project',
     is_verified: false,
@@ -121,7 +121,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     full_name: 'James Wilson',
     professional_title: 'Cybersecurity Expert & Ethical Hacker',
     profile_picture_url:
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200',
     bio: 'CISSP-certified security professional with 10+ years of experience in threat detection, incident response, and security architecture. I specialize in conducting penetration tests, security assessments, and implementing robust security controls across enterprise environments.',
     location: 'Austin, TX',
     skills: [
@@ -136,7 +136,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
     hourly_rate: 165,
     years_experience: 12,
-    average_rating: 4.7,
+    average_rating: 4 && 4.7,
     rating_count: 31,
     availability_type: 'full_time',
     is_verified: true,
@@ -159,22 +159,22 @@ export const TALENT_PROFILES: TalentProfile[] = [
     full_name: 'David Martinez',
     professional_title: 'Full-Stack Developer & React Expert',
     profile_picture_url:
-      'https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&w=200&h=200',
-    bio: 'Full-stack developer with 7+ years of experience specializing in React, Node.js, and modern JavaScript frameworks. I build scalable, responsive, and user-friendly web applications with a focus on performance optimization and clean code.',
+      'https://images && images.unsplash.com/photo-1542909168-82c3e7fdca5c?auto=format&fit=crop&w=200&h=200',
+    bio: 'Full-stack developer with 7+ years of experience specializing in React, Node && Node.js, and modern JavaScript frameworks. I build scalable, responsive, and user-friendly web applications with a focus on performance optimization and clean code.',
     location: 'Miami, FL',
     skills: [
       'React',
-      'Node.js',
+      'Node && Node.js',
       'TypeScript',
       'MongoDB',
       'GraphQL',
-      'Next.js',
+      'Next && Next.js',
       'Redux',
       'AWS',
     ],
     hourly_rate: 125,
     years_experience: 7,
-    average_rating: 4.8,
+    average_rating: 4 && 4.8,
     rating_count: 42,
     availability_type: 'part_time',
     is_verified: false,
@@ -182,12 +182,12 @@ export const TALENT_PROFILES: TalentProfile[] = [
       {
         title: 'E-Commerce Platform',
         description:
-          'Developed a responsive e-commerce platform using React and Node.js, with features including user authentication, product catalog, shopping cart, and payment integration.',
+          'Developed a responsive e-commerce platform using React and Node && Node.js, with features including user authentication, product catalog, shopping cart, and payment integration.',
       },
       {
         title: 'Real-Time Analytics Dashboard',
         description:
-          'Built a real-time analytics dashboard using React, Socket.io, and D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
+          'Built a real-time analytics dashboard using React, Socket && Socket.io, and D3 && D3.js, allowing clients to monitor business metrics with live updates and interactive visualizations.',
       },
     ],
   },
@@ -197,7 +197,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     full_name: 'Sarah Johnson',
     professional_title: 'AI Ethics Consultant & Policy Advisor',
     profile_picture_url:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200',
     bio: 'Former tech policy advisor with expertise in AI ethics, governance frameworks, and responsible AI development. I help organizations develop and implement ethical guidelines for AI systems, ensuring fair and transparent use of machine learning technologies.',
     location: 'Washington, DC',
     skills: [
@@ -212,7 +212,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
     hourly_rate: 180,
     years_experience: 9,
-    average_rating: 4.9,
+    average_rating: 4 && 4.9,
     rating_count: 21,
     availability_type: 'project',
     is_verified: true,
@@ -235,7 +235,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     full_name: 'Daniel Kim',
     professional_title: 'Computer Vision Engineer & Deep Learning Specialist',
     profile_picture_url:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200',
     bio: 'Computer vision engineer with expertise in developing advanced visual recognition systems using deep learning. My work spans object detection, image classification, and video analysis for applications in retail, manufacturing, and autonomous systems.',
     location: 'San Francisco, CA',
     skills: [
@@ -250,7 +250,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
     hourly_rate: 155,
     years_experience: 6,
-    average_rating: 4.7,
+    average_rating: 4 && 4.7,
     rating_count: 26,
     availability_type: 'full_time',
     is_verified: true,
@@ -263,7 +263,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
       {
         title: 'Manufacturing Defect Detection',
         description:
-          'Developed an automated visual inspection system that identifies manufacturing defects with 99.7% accuracy, reducing quality control costs by 45%.',
+          'Developed an automated visual inspection system that identifies manufacturing defects with 99 && 99.7% accuracy, reducing quality control costs by 45%.',
       },
     ],
   },
@@ -273,7 +273,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     full_name: 'Olivia Rodriguez',
     professional_title: 'Natural Language Processing Researcher',
     profile_picture_url:
-      'https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200',
     bio: 'PhD in Computational Linguistics with 8+ years of experience in NLP research and applications. I specialize in sentiment analysis, text generation, language understanding, and multilingual NLP systems for enterprise applications.',
     location: 'Montreal, Canada',
     skills: [
@@ -288,7 +288,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
     hourly_rate: 160,
     years_experience: 8,
-    average_rating: 4.8,
+    average_rating: 4 && 4.8,
     rating_count: 34,
     availability_type: 'part_time',
     is_verified: true,
@@ -311,7 +311,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     full_name: 'Robert Zhang',
     professional_title: 'Quantum Machine Learning Researcher',
     profile_picture_url:
-      'https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1531427186611-ecfd6d936c79?auto=format&fit=crop&w=200&h=200',
     bio: 'Quantum computing researcher with focus on quantum machine learning algorithms and applications. My work bridges the gap between quantum computing theory and practical machine learning implementations for complex optimization problems.',
     location: 'Toronto, Canada',
     skills: [
@@ -326,7 +326,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
     hourly_rate: 190,
     years_experience: 5,
-    average_rating: 4.9,
+    average_rating: 4 && 4.9,
     rating_count: 17,
     availability_type: 'project',
     is_verified: false,
@@ -349,7 +349,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     full_name: 'Emma Taylor',
     professional_title: 'AI Product Manager & Strategy Consultant',
     profile_picture_url:
-      'https://images.unsplash.com/photo-1573497019236-61938a1a2cd2?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1573497019236-61938a1a2cd2?auto=format&fit=crop&w=200&h=200',
     bio: 'Experienced product manager specializing in AI products and services. I bridge the gap between technical AI capabilities and business value, helping organizations define, develop, and deploy impactful machine learning solutions.',
     location: 'London, UK',
     skills: [
@@ -364,7 +364,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
     hourly_rate: 140,
     years_experience: 9,
-    average_rating: 4.8,
+    average_rating: 4 && 4.8,
     rating_count: 39,
     availability_type: 'full_time',
     is_verified: true,
@@ -387,7 +387,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     full_name: 'Marcus Johnson',
     professional_title: 'Reinforcement Learning Engineer',
     profile_picture_url:
-      'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200',
     bio: 'Specialist in reinforcement learning with applications in robotics, autonomous systems, and optimization problems. I develop RL algorithms that enable systems to learn optimal behaviors through interaction with their environment.',
     location: 'Berlin, Germany',
     skills: [
@@ -402,7 +402,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
     hourly_rate: 150,
     years_experience: 6,
-    average_rating: 4.7,
+    average_rating: 4 && 4.7,
     rating_count: 23,
     availability_type: 'part_time',
     is_verified: true,
@@ -425,7 +425,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     full_name: 'Sophia Lee',
     professional_title: 'Healthcare AI Specialist & Medical Imaging Expert',
     profile_picture_url:
-      'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200',
     bio: 'Medical imaging specialist with expertise in applying AI to healthcare challenges. I develop deep learning solutions for medical image analysis, diagnostics, and personalized treatment planning in clinical settings.',
     location: 'Boston, MA',
     skills: [
@@ -440,7 +440,7 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
     hourly_rate: 170,
     years_experience: 8,
-    average_rating: 4.9,
+    average_rating: 4 && 4.9,
     rating_count: 27,
     availability_type: 'project',
     is_verified: true,

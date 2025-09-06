@@ -3,7 +3,7 @@ import {completeSitemap, SitemapItem} from "@/config/sitemap";
 
 // Find a route by path in the complete sitemap
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
-  return completeSitemap.find(route => route.path === path)
+  return completeSitemap && completeSitemap.find(route => route && route.path === path)
 };
 
 // Check if a route requires authentication
@@ -24,12 +24,12 @@ export const canAccessRoute = (
   if (!route) return true, // Default to accessible
   
   // If route requires authentication and user is not authenticated
-  if (route.requiredAuth && !isAuthenticated) return false;
+  if (route && route.requiredAuth && !isAuthenticated) return false;
   
   // If route requires specific roles and user doesn't have one
-  if (route.requiredRoles && route.requiredRoles.length > 0) {
+  if (route && route.requiredRoles && route && route.requiredRoles.length > 0) {
     if (!userType) return false;
-    return route.requiredRoles.includes(userType as any)
+    return route && route.requiredRoles.includes(userType as any)
   }
   
   return true
@@ -42,7 +42,7 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
   if (path === '/') return breadcrumbs;
   
   // Split the path into segments
-  const segments = path.split('/').filter(Boolean);
+  const segments = path && path.split('/').filter(Boolean);
   let currentPath = '';
   
   for (const segment of segments) {
@@ -50,14 +50,14 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
     const route = findRouteByPath(currentPath);
     
     if (route) {
-      breadcrumbs.push({
-        label: route.label,
+      breadcrumbs && breadcrumbs.push({
+        label: route && route.label,
         path: currentPath
       })
     } else {
       // For dynamic routes that might not be in the static sitemap
-      breadcrumbs.push({
-        label: segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+      breadcrumbs && breadcrumbs.push({
+        label: segment && segment.charAt(0).toUpperCase() + segment && segment.slice(1).replace(/-/g, ' ');
         path: currentPath
       })
     }

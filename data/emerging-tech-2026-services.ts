@@ -69,7 +69,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     icon: '🧠',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/neuromorphic-computing-platform-2026',
+    link: 'https://ziontechgroup && ziontechgroup.com/neuromorphic-computing-platform-2026',
     marketPosition:
       'Competitive with Intel Loihi ($500-2000), IBM TrueNorth ($1000-5000), and BrainChip ($200-1000). Our advantage: Advanced neural architecture, real-time learning, and autonomous capabilities.',
     targetAudience:
@@ -82,7 +82,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       'Neuromorphic Computing',
       'Spiking Neural Networks',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Redis',
       'AWS',
@@ -113,21 +113,21 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       'Qualcomm Zeroth',
       'SpiNNaker',
     ],
-    marketSize: '$8.7B market',
+    marketSize: '$8 && 8.7B market',
     growthRate: '400% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced neuromorphic computing platform with brain-inspired architecture, real-time learning, and autonomous decision-making capabilities. Includes custom hardware integration and robotics control.',
     launchDate: '2026-04-01',
     customers: 150,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 100,
   },
 
@@ -156,7 +156,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     icon: '🧬',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
-    link: 'https://ziontechgroup.com/dna-computing-platform-2026',
+    link: 'https://ziontechgroup && ziontechgroup.com/dna-computing-platform-2026',
     marketPosition:
       'Competitive with Microsoft DNA Storage ($1000-5000), Catalog DNA ($500-2000), and Twist Bioscience ($200-1000). Our advantage: Advanced molecular computing, parallel processing, and biological integration.',
     targetAudience:
@@ -170,7 +170,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       'Molecular Biology',
       'Bioinformatics',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Redis',
       'AWS',
@@ -198,21 +198,21 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       'Illumina',
       'Pacific Biosciences',
     ],
-    marketSize: '$12.5B market',
+    marketSize: '$12 && 12.5B market',
     growthRate: '500% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced DNA computing platform with molecular data storage, parallel processing, and biological integration. Includes laboratory equipment integration and bioinformatics analysis.',
     launchDate: '2026-05-01',
     customers: 80,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 60,
   },
 
@@ -242,7 +242,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     icon: '💡',
     color: 'from-yellow-500 to-orange-600',
     textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/photonic-computing-platform-2026',
+    link: 'https://ziontechgroup && ziontechgroup.com/photonic-computing-platform-2026',
     marketPosition:
       'Competitive with Lightmatter ($2000-10000), PsiQuantum ($5000-50000), and Xanadu ($1000-10000). Our advantage: Advanced photonic processing, quantum integration, and ultra-low latency.',
     targetAudience:
@@ -256,7 +256,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       'Quantum Optics',
       'Optical Computing',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Redis',
       'AWS',
@@ -284,21 +284,21 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       'PicoQuant',
       'ID Quantique',
     ],
-    marketSize: '$15.2B market',
+    marketSize: '$15 && 15.2B market',
     growthRate: '450% annual growth',
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced photonic computing platform with light-speed processing, quantum optical computing, and ultra-low latency capabilities. Includes optical network integration and quantum communication.',
     launchDate: '2026-04-15',
     customers: 120,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 80,
   },
 
@@ -327,7 +327,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     icon: '🌟',
     color: 'from-pink-500 to-rose-600',
     textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/holographic-display-platform-2026',
+    link: 'https://ziontechgroup && ziontechgroup.com/holographic-display-platform-2026',
     marketPosition:
       'Competitive with Looking Glass ($600-6000), Voxon ($2000-10000), and RealView ($1000-5000). Our advantage: True 3D holographic display, interactive capabilities, and multi-user collaboration.',
     targetAudience:
@@ -341,7 +341,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       '3D Rendering',
       'Computer Vision',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Redis',
       'AWS',
@@ -371,21 +371,21 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       'HoloLens',
       'Magic Leap',
     ],
-    marketSize: '$18.9B market',
+    marketSize: '$18 && 18.9B market',
     growthRate: '350% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced holographic display platform with true 3D visualization, interactive interfaces, and multi-user collaboration. Includes content creation tools and AR/VR integration.',
     launchDate: '2026-03-20',
     customers: 300,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 200,
   },
 
@@ -414,7 +414,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     icon: '🤖',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-400',
-    link: 'https://ziontechgroup.com/swarm-robotics-platform-2026',
+    link: 'https://ziontechgroup && ziontechgroup.com/swarm-robotics-platform-2026',
     marketPosition:
       'Competitive with Boston Dynamics ($1000-5000), iRobot ($500-2000), and KUKA ($2000-10000). Our advantage: Swarm coordination, autonomous collaboration, and scalable networks.',
     targetAudience:
@@ -428,7 +428,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       'Multi-Agent Systems',
       'Machine Learning',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Redis',
       'AWS',
@@ -450,21 +450,21 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     ],
     roi: 'Average customer sees 500% ROI within 15 months through improved efficiency and autonomous operations.',
     competitors: ['Boston Dynamics', 'iRobot', 'KUKA', 'ABB', 'FANUC'],
-    marketSize: '$22.3B market',
+    marketSize: '$22 && 22.3B market',
     growthRate: '380% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced swarm robotics platform with multi-robot coordination, autonomous task allocation, and scalable networks. Includes mission planning tools and performance analytics.',
     launchDate: '2026-04-10',
     customers: 200,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 150,
   },
 
@@ -493,7 +493,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     icon: '🌐',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/quantum-internet-platform-2026',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-platform-2026',
     marketPosition:
       'Competitive with traditional internet providers ($50-500/month) plus quantum security. Our advantage: Quantum-secured infrastructure, unbreakable encryption, and future-proof technology.',
     targetAudience:
@@ -507,7 +507,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       'Quantum Key Distribution',
       'Post-Quantum Cryptography',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Redis',
       'AWS',
@@ -534,21 +534,21 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       'Security companies',
       'Telecommunications companies',
     ],
-    marketSize: '$28.7B market',
+    marketSize: '$28 && 28.7B market',
     growthRate: '500% annual growth',
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced quantum internet platform with quantum-secured infrastructure, key distribution, and post-quantum cryptography. Includes network management and security monitoring.',
     launchDate: '2026-05-15',
     customers: 100,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 80,
   },
 
@@ -577,7 +577,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     icon: '🔒',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/biometric-ai-platform-2026',
+    link: 'https://ziontechgroup && ziontechgroup.com/biometric-ai-platform-2026',
     marketPosition:
       'Competitive with Face ID (Apple), Touch ID (Apple), and Windows Hello (Microsoft). Our advantage: Multi-modal biometrics, AI-powered verification, and comprehensive security.',
     targetAudience:
@@ -591,7 +591,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       'Computer Vision',
       'Machine Learning',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Redis',
       'AWS',
@@ -620,21 +620,21 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       'Samsung Knox',
       'BioCatch',
     ],
-    marketSize: '$32.1B market',
+    marketSize: '$32 && 32.1B market',
     growthRate: '280% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced biometric AI platform with multi-modal authentication, AI-powered verification, and comprehensive security features. Includes integration APIs and compliance management.',
     launchDate: '2026-03-25',
     customers: 500,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 350,
   },
 
@@ -664,7 +664,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
     icon: '⚡',
     color: 'from-yellow-500 to-amber-600',
     textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/quantum-energy-platform-2026',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-energy-platform-2026',
     marketPosition:
       'Competitive with Siemens Energy ($1000-5000), GE Digital ($2000-10000), and Schneider Electric ($500-3000). Our advantage: Quantum computing power, advanced optimization, and predictive capabilities.',
     targetAudience:
@@ -678,7 +678,7 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       'Energy Management',
       'Machine Learning',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Redis',
       'AWS',
@@ -706,33 +706,33 @@ export const emergingTech2026Services: EmergingTech2026Service[] = [
       'ABB',
       'Honeywell',
     ],
-    marketSize: '$25.8B market',
+    marketSize: '$25 && 25.8B market',
     growthRate: '320% annual growth',
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.',
     launchDate: '2026-04-20',
     customers: 180,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 120,
   },
 ];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Advanced quantum energy platform with energy optimization, renewable energy management, and smart grid capabilities. Includes real-time monitoring and predictive analytics.';
     launchDate: '2026-04-20';
     customers: 180;
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 120
   }
 ];

@@ -1,23 +1,23 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-const DataPipelineEngineeringChat: NextPage = () => {
+const DataPipelineEngineeringChat: NextPage = () => {;
   return (
-    <div>
-      <Head>
-        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>
+    <div>;
+      <Head>;
+        <title>DataPipelineEngineeringChat - Zion Tech Solutions</title>;
         <meta
           name="description"
           content="DataPipelineEngineeringChat service"
         />{" "}
-      </Head>
+      </Head>;
 
-      <main>
-        <h1>DataPipelineEngineeringChat</h1>
-        <p>Service details coming soon...</p>
-        <a href="/services">Back to Services</a>
-      </main>
-    </div>
+      <main>;
+        <h1>DataPipelineEngineeringChat</h1>;
+        <p>Service details coming soon...</p>;
+        <a href="/services">Back to Services</a>;
+      </main>;
+    </div>;
   );
 };
 

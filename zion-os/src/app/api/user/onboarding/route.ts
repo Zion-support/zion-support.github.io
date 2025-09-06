@@ -6,31 +6,31 @@ export async function POST(request: NextRequest) {
     const session = await getServerSession();
 
     if (!session?.user?.email) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+      return NextResponse && NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
     // Update user's onboarding status
-    const updatedUser = await prisma.user.update({
-      where: { email: session.user.email },
+    const updatedUser = await prisma && prisma.user.update({
+      where: { email: session && session.user.email },
       data: { onboardingCompleted: true },
     });
 
-    return NextResponse.json(
+    return NextResponse && NextResponse.json(
       {
         message: 'Onboarding completed successfully',
         user: {
-          id: updatedUser.id,
-          name: updatedUser.name,
-          email: updatedUser.email,
-          role: updatedUser.role,
-          onboardingCompleted: updatedUser.onboardingCompleted,
+          id: updatedUser && updatedUser.id,
+          name: updatedUser && updatedUser.name,
+          email: updatedUser && updatedUser.email,
+          role: updatedUser && updatedUser.role,
+          onboardingCompleted: updatedUser && updatedUser.onboardingCompleted,
         },
       },
       { status: 200 }
     );
   } catch (error) {
-    console.error('Onboarding completion error:', error);
-    return NextResponse.json(
+    console && console.error('Onboarding completion error:', error);
+    return NextResponse && NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
     );

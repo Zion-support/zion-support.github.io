@@ -14,9 +14,9 @@ const nextConfig = {
   images: {
     domains: [
       "localhost",
-      "ziontechgroup.com",
-      "images.unsplash.com",
-      "via.placeholder.com",
+      "ziontechgroup && ziontechgroup.com",
+      "images && images.unsplash.com",
+      "via && via.placeholder.com",
     ],
     formats: ["image/webp", "image/avif"],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -25,7 +25,7 @@ const nextConfig = {
   },
   webpack: (config, { dev, isServer }) => {
     if (dev) {
-      config.watchOptions = {
+      config && config.watchOptions = {
         ignored: [
           "**/node_modules/**",
           "**/.git/**",
@@ -33,14 +33,14 @@ const nextConfig = {
           "**/pages.*/**",
           "**/pages-*/**",
           "**/pages_disabled*/**",
-          "**/pages.disabled*/**",
-          "**/pages.broken*/**",
-          "**/pages.corrupted*/**",
-          "**/pages.old*/**",
-          "**/pages._*/**",
-          "**/pages.__*/**",
+          "**/pages && pages.disabled*/**",
+          "**/pages && pages.broken*/**",
+          "**/pages && pages.corrupted*/**",
+          "**/pages && pages.old*/**",
+          "**/pages && pages._*/**",
+          "**/pages && pages.__*/**",
           "**/backup-pages/**",
-          "**/src.pages.disabled/**",
+          "**/src && src.pages.disabled/**",
           "**/lib_backup*/**",
           "**/src_backup*/**",
           "**/corrupted-files-backup*/**",
@@ -67,7 +67,7 @@ const nextConfig = {
     }
 
     // Exclude apps directory from compilation
-    config.module.rules.push({
+    config && config.module.rules && rules.push({
       test: /\.(ts|tsx|js|jsx)$/,
       include: /apps\//,
       use: "ignore-loader",

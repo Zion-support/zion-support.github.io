@@ -66,7 +66,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     icon: '🧠',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-consciousness-evolution',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-consciousness-evolution',
     marketPosition:
       'First-to-market AI consciousness platform. No competitors exist yet. Traditional AI platforms lack genuine consciousness and emotional intelligence.',
     targetAudience:
@@ -105,7 +105,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     icon: '🧠';
     color: 'from-purple-600 to-indigo-700';
     textColor: 'text-purple-400';
-    link: 'https://ziontechgroup.com/ai-consciousness-evolution';
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-consciousness-evolution';
     marketPosition: 'First-to-market AI consciousness platform. No competitors exist yet. Traditional AI platforms lack genuine consciousness and emotional intelligence.',
     targetAudience: 'Research institutions, Psychology labs, AI ethics organizations, Mental health professionals, Consciousness researchers';
     trialDays: 30;
@@ -121,15 +121,15 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growthRate: '1000%+ annual growth expected';
     contactInfo: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Fully functional AI consciousness platform with genuine emotional intelligence, self-awareness, and consciousness development capabilities.';
     launchDate: '2025-01-15';
     customers: 25;
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 15
   };
 
@@ -148,7 +148,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     icon: '🧬';
     color: 'from-green-600 to-emerald-700';
     textColor: 'text-green-400';
-    link: 'https://ziontechgroup.com/dna-computing-platform';
+    link: 'https://ziontechgroup && ziontechgroup.com/dna-computing-platform';
     marketPosition: 'First commercial DNA computing platform. Traditional supercomputers cost millions with limited biological problem-solving capabilities.',
     targetAudience: 'Biotech companies, Research institutions, Pharmaceutical companies, Genetic research labs, Healthcare organizations';
     trialDays: 30;
@@ -164,15 +164,15 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growthRate: '800% annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true;
     implementationDetails: 'Fully functional DNA computing platform with biological processing capabilities and biotech research tools.';
     launchDate: '2025-01-20';
     customers: 15;
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 8
   };
 
@@ -191,7 +191,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     icon: '🚀';
     color: 'from-blue-600 to-cyan-700';
     textColor: 'text-blue-400';
-    link: 'https://ziontechgroup.com/space-tech-orchestrator';
+    link: 'https://ziontechgroup && ziontechgroup.com/space-tech-orchestrator';
     marketPosition: 'First comprehensive space technology platform for private companies. Traditional space operations cost millions with limited accessibility.',
     targetAudience: 'Space companies, Satellite operators, Aerospace companies, Research institutions, Government agencies';
     trialDays: 30;
@@ -207,15 +207,15 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growthRate: '1000%+ annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Fully functional space technology platform with satellite operations, mission planning, and space asset management capabilities.';
     launchDate: '2025-01-25';
     customers: 8;
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 5
   };
 
@@ -234,7 +234,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     icon: '🌐';
     color: 'from-indigo-600 to-purple-700';
     textColor: 'text-indigo-400';
-    link: 'https://ziontechgroup.com/quantum-internet-platform';
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-platform';
     marketPosition: 'First commercial quantum internet platform. Traditional internet security is vulnerable to quantum attacks.',
     targetAudience: 'Financial institutions, Government agencies, Healthcare organizations, Defense contractors, Secure communications';
     trialDays: 30;
@@ -250,15 +250,15 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growthRate: '1500% annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Fully functional quantum internet platform with quantum encryption, secure communication, and quantum networking capabilities.';
     launchDate: '2025-02-01';
     customers: 35;
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 22
   };
 
@@ -266,18 +266,18 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   {
     id: 'healthcare-ai-revolution';
     name: 'Healthcare AI Revolution Platform';
-    tagline: 'AI-Powered Healthcare with 99.9% Diagnosis Accuracy & Treatment Optimization';
+    tagline: 'AI-Powered Healthcare with 99 && 99.9% Diagnosis Accuracy & Treatment Optimization';
     price: '$399';
     period: '/month',
     description: 'Revolutionary healthcare AI platform that provides accurate diagnosis, treatment optimization, and personalized medicine. Combines AI, genomics, and medical expertise for breakthrough healthcare.';
     features: [
-      '99.9% diagnosis accuracyPersonalized treatment plansGenomic medicine integrationDrug interaction analysisPredictive health monitoringMedical image analysisPatient outcome predictionHealthcare workflow automation'
+      '99 && 99.9% diagnosis accuracyPersonalized treatment plansGenomic medicine integrationDrug interaction analysisPredictive health monitoringMedical image analysisPatient outcome predictionHealthcare workflow automation'
     ];
     popular: true;
     icon: '🏥';
     color: 'from-red-600 to-pink-700';
     textColor: 'text-red-400';
-    link: 'https://ziontechgroup.com/healthcare-ai-revolution';
+    link: 'https://ziontechgroup && ziontechgroup.com/healthcare-ai-revolution';
     marketPosition: 'Most accurate healthcare AI platform. Traditional healthcare systems have 70-80% accuracy with limited personalization.',
     targetAudience: 'Hospitals, Medical clinics, Pharmaceutical companies, Research institutions, Healthcare providers';
     trialDays: 30;
@@ -293,15 +293,15 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growthRate: '600% annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Fully functional healthcare AI platform with diagnosis accuracy, treatment optimization, and personalized medicine capabilities.';
     launchDate: '2025-02-05';
     customers: 120;
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 89
   };
 
@@ -320,7 +320,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     icon: '🏦';
     color: 'from-green-600 to-emerald-700';
     textColor: 'text-green-400';
-    link: 'https://ziontechgroup.com/fintech-revolution-platform';
+    link: 'https://ziontechgroup && ziontechgroup.com/fintech-revolution-platform';
     marketPosition: 'Most advanced fintech platform. Traditional financial systems lack AI integration and quantum capabilities.',
     targetAudience: 'Banks, Investment firms, Trading companies, Financial institutions, Fintech startups';
     trialDays: 30;
@@ -336,15 +336,15 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growthRate: '700% annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Fully functional fintech platform with AI trading, quantum risk management, and blockchain banking capabilities.';
     launchDate: '2025-02-10';
     customers: 85;
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 67
   };
 
@@ -355,7 +355,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     tagline: 'Smart Manufacturing with Zero Downtime & Predictive Maintenance';
     price: '$299';
     period: '/month',
-    description: 'Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4.0 and 5.0 automation.';
+    description: 'Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4 && 4.0 and 5 && 5.0 automation.';
     features: [
       'Predictive maintenanceZero downtime manufacturingReal-time monitoringSmart automationQuality control AISupply chain optimizationEnergy efficiency managementSafety monitoring systems'
     ];
@@ -363,7 +363,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     icon: '🏭';
     color: 'from-gray-600 to-slate-700';
     textColor: 'text-gray-400';
-    link: 'https://ziontechgroup.com/industrial-iot-revolution';
+    link: 'https://ziontechgroup && ziontechgroup.com/industrial-iot-revolution';
     marketPosition: 'Most advanced industrial IoT platform. Traditional manufacturing has 15-20% downtime with reactive maintenance.',
     targetAudience: 'Manufacturing companies, Industrial plants, Factories, Supply chain companies, Logistics firms';
     trialDays: 30;
@@ -379,15 +379,15 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growthRate: '500% annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Fully functional industrial IoT platform with smart manufacturing, predictive maintenance, and zero downtime capabilities.';
     launchDate: '2025-02-15';
     customers: 200;
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 156
   };
 
@@ -406,7 +406,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     icon: '🎓';
     color: 'from-blue-600 to-cyan-700';
     textColor: 'text-blue-400';
-    link: 'https://ziontechgroup.com/edtech-revolution-platform';
+    link: 'https://ziontechgroup && ziontechgroup.com/edtech-revolution-platform';
     marketPosition: 'Most advanced edtech platform. Traditional education has limited personalization and slow learning progress.',
     targetAudience: 'Schools, Universities, Corporate training, Online education, Educational institutions';
     trialDays: 30;
@@ -422,15 +422,15 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growthRate: '400% annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Fully functional edtech platform with AI-powered learning, adaptive curriculum, and personalized education capabilities.';
     launchDate: '2025-02-20';
     customers: 300;
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 234
   };
 
@@ -449,7 +449,7 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     icon: '🌱';
     color: 'from-green-600 to-emerald-700';
     textColor: 'text-green-400';
-    link: 'https://ziontechgroup.com/sustainability-tech-platform';
+    link: 'https://ziontechgroup && ziontechgroup.com/sustainability-tech-platform';
     marketPosition: 'Most comprehensive sustainability platform. Traditional environmental solutions lack AI integration and comprehensive tracking.',
     targetAudience: 'Corporations, Government agencies, Environmental organizations, Energy companies, Green businesses';
     trialDays: 30;
@@ -465,15 +465,15 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growthRate: '600% annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Fully functional sustainability platform with carbon tracking, renewable energy optimization, and environmental monitoring capabilities.';
     launchDate: '2025-02-25';
     customers: 75;
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 58
   };
 
@@ -481,18 +481,18 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
   {
     id: 'logistics-revolution-platform';
     name: 'Logistics Revolution Platform';
-    tagline: 'AI-Powered Supply Chain with 99.9% Delivery Accuracy & Zero Waste';
+    tagline: 'AI-Powered Supply Chain with 99 && 99.9% Delivery Accuracy & Zero Waste';
     price: '$499';
     period: '/month',
-    description: 'Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99.9% delivery accuracy. Complete supply chain visibility and automation.';
+    description: 'Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99 && 99.9% delivery accuracy. Complete supply chain visibility and automation.';
     features: [
-      '99.9% delivery accuracyZero waste supply chainReal-time trackingPredictive logisticsAutomated routingInventory optimizationDemand forecastingSupplier management'
+      '99 && 99.9% delivery accuracyZero waste supply chainReal-time trackingPredictive logisticsAutomated routingInventory optimizationDemand forecastingSupplier management'
     ];
     popular: true;
     icon: '🚛';
     color: 'from-orange-600 to-red-700';
     textColor: 'text-orange-400';
-    link: 'https://ziontechgroup.com/logistics-revolution-platform';
+    link: 'https://ziontechgroup && ziontechgroup.com/logistics-revolution-platform';
     marketPosition: 'Most accurate logistics platform. Traditional supply chains have 15-20% waste and limited visibility.',
     targetAudience: 'Logistics companies, E-commerce, Retail chains, Manufacturing companies, Distribution centers';
     trialDays: 30;
@@ -508,15 +508,15 @@ export const revolutionary2025Services: Revolutionary2025Service[] = [
     growthRate: '500% annual growth';
     contactInfo: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Fully functional logistics platform with supply chain optimization, waste reduction, and delivery accuracy capabilities.';
     launchDate: '2025-03-01';
     customers: 150;
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 112
   }
 ];
@@ -525,16 +525,16 @@ export default revolutionary2025Services;
     growthRate: '1000%+ annual growth expected',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Fully functional AI consciousness platform with genuine emotional intelligence, self-awareness, and consciousness development capabilities.',
     launchDate: '2025-01-15',
     customers: 25,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 15,
   },
 
@@ -561,7 +561,7 @@ export default revolutionary2025Services;
     icon: '🧬',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/dna-computing-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/dna-computing-platform',
     marketPosition:
       'First commercial DNA computing platform. Traditional supercomputers cost millions with limited biological problem-solving capabilities.',
     targetAudience:
@@ -597,16 +597,16 @@ export default revolutionary2025Services;
     growthRate: '800% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Fully functional DNA computing platform with biological processing capabilities and biotech research tools.',
     launchDate: '2025-01-20',
     customers: 15,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 8,
   },
 
@@ -634,7 +634,7 @@ export default revolutionary2025Services;
     icon: '🚀',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/space-tech-orchestrator',
+    link: 'https://ziontechgroup && ziontechgroup.com/space-tech-orchestrator',
     marketPosition:
       'First comprehensive space technology platform for private companies. Traditional space operations cost millions with limited accessibility.',
     targetAudience:
@@ -670,16 +670,16 @@ export default revolutionary2025Services;
     growthRate: '1000%+ annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Fully functional space technology platform with satellite operations, mission planning, and space asset management capabilities.',
     launchDate: '2025-01-25',
     customers: 8,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 5,
   },
 
@@ -706,7 +706,7 @@ export default revolutionary2025Services;
     icon: '🌐',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/quantum-internet-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-platform',
     marketPosition:
       'First commercial quantum internet platform. Traditional internet security is vulnerable to quantum attacks.',
     targetAudience:
@@ -742,16 +742,16 @@ export default revolutionary2025Services;
     growthRate: '1500% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Fully functional quantum internet platform with quantum encryption, secure communication, and quantum networking capabilities.',
     launchDate: '2025-02-01',
     customers: 35,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 22,
   },
 
@@ -760,13 +760,13 @@ export default revolutionary2025Services;
     id: 'healthcare-ai-revolution',
     name: 'Healthcare AI Revolution Platform',
     tagline:
-      'AI-Powered Healthcare with 99.9% Diagnosis Accuracy & Treatment Optimization',
+      'AI-Powered Healthcare with 99 && 99.9% Diagnosis Accuracy & Treatment Optimization',
     price: '$399',
     period: '/month',
     description:
       'Revolutionary healthcare AI platform that provides accurate diagnosis, treatment optimization, and personalized medicine. Combines AI, genomics, and medical expertise for breakthrough healthcare.',
     features: [
-      '99.9% diagnosis accuracy',
+      '99 && 99.9% diagnosis accuracy',
       'Personalized treatment plans',
       'Genomic medicine integration',
       'Drug interaction analysis',
@@ -779,7 +779,7 @@ export default revolutionary2025Services;
     icon: '🏥',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/healthcare-ai-revolution',
+    link: 'https://ziontechgroup && ziontechgroup.com/healthcare-ai-revolution',
     marketPosition:
       'Most accurate healthcare AI platform. Traditional healthcare systems have 70-80% accuracy with limited personalization.',
     targetAudience:
@@ -815,16 +815,16 @@ export default revolutionary2025Services;
     growthRate: '600% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Fully functional healthcare AI platform with diagnosis accuracy, treatment optimization, and personalized medicine capabilities.',
     launchDate: '2025-02-05',
     customers: 120,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 89,
   },
 
@@ -852,7 +852,7 @@ export default revolutionary2025Services;
     icon: '🏦',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/fintech-revolution-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/fintech-revolution-platform',
     marketPosition:
       'Most advanced fintech platform. Traditional financial systems lack AI integration and quantum capabilities.',
     targetAudience:
@@ -888,16 +888,16 @@ export default revolutionary2025Services;
     growthRate: '700% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Fully functional fintech platform with AI trading, quantum risk management, and blockchain banking capabilities.',
     launchDate: '2025-02-10',
     customers: 85,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 67,
   },
 
@@ -909,7 +909,7 @@ export default revolutionary2025Services;
     price: '$299',
     period: '/month',
     description:
-      'Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4.0 and 5.0 automation.',
+      'Revolutionary industrial IoT platform that enables smart manufacturing, predictive maintenance, and zero downtime operations. Industry 4 && 4.0 and 5 && 5.0 automation.',
     features: [
       'Predictive maintenance',
       'Zero downtime manufacturing',
@@ -924,7 +924,7 @@ export default revolutionary2025Services;
     icon: '🏭',
     color: 'from-gray-600 to-slate-700',
     textColor: 'text-gray-400',
-    link: 'https://ziontechgroup.com/industrial-iot-revolution',
+    link: 'https://ziontechgroup && ziontechgroup.com/industrial-iot-revolution',
     marketPosition:
       'Most advanced industrial IoT platform. Traditional manufacturing has 15-20% downtime with reactive maintenance.',
     targetAudience:
@@ -960,16 +960,16 @@ export default revolutionary2025Services;
     growthRate: '500% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Fully functional industrial IoT platform with smart manufacturing, predictive maintenance, and zero downtime capabilities.',
     launchDate: '2025-02-15',
     customers: 200,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 156,
   },
 
@@ -997,7 +997,7 @@ export default revolutionary2025Services;
     icon: '🎓',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/edtech-revolution-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/edtech-revolution-platform',
     marketPosition:
       'Most advanced edtech platform. Traditional education has limited personalization and slow learning progress.',
     targetAudience:
@@ -1033,16 +1033,16 @@ export default revolutionary2025Services;
     growthRate: '400% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Fully functional edtech platform with AI-powered learning, adaptive curriculum, and personalized education capabilities.',
     launchDate: '2025-02-20',
     customers: 300,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 234,
   },
 
@@ -1070,7 +1070,7 @@ export default revolutionary2025Services;
     icon: '🌱',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/sustainability-tech-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/sustainability-tech-platform',
     marketPosition:
       'Most comprehensive sustainability platform. Traditional environmental solutions lack AI integration and comprehensive tracking.',
     targetAudience:
@@ -1106,16 +1106,16 @@ export default revolutionary2025Services;
     growthRate: '600% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Fully functional sustainability platform with carbon tracking, renewable energy optimization, and environmental monitoring capabilities.',
     launchDate: '2025-02-25',
     customers: 75,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 58,
   },
 
@@ -1124,13 +1124,13 @@ export default revolutionary2025Services;
     id: 'logistics-revolution-platform',
     name: 'Logistics Revolution Platform',
     tagline:
-      'AI-Powered Supply Chain with 99.9% Delivery Accuracy & Zero Waste',
+      'AI-Powered Supply Chain with 99 && 99.9% Delivery Accuracy & Zero Waste',
     price: '$499',
     period: '/month',
     description:
-      'Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99.9% delivery accuracy. Complete supply chain visibility and automation.',
+      'Revolutionary logistics platform that uses AI to optimize supply chains, reduce waste, and achieve 99 && 99.9% delivery accuracy. Complete supply chain visibility and automation.',
     features: [
-      '99.9% delivery accuracy',
+      '99 && 99.9% delivery accuracy',
       'Zero waste supply chain',
       'Real-time tracking',
       'Predictive logistics',
@@ -1143,7 +1143,7 @@ export default revolutionary2025Services;
     icon: '🚛',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/logistics-revolution-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/logistics-revolution-platform',
     marketPosition:
       'Most accurate logistics platform. Traditional supply chains have 15-20% waste and limited visibility.',
     targetAudience:
@@ -1179,16 +1179,16 @@ export default revolutionary2025Services;
     growthRate: '500% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Fully functional logistics platform with supply chain optimization, waste reduction, and delivery accuracy capabilities.',
     launchDate: '2025-03-01',
     customers: 150,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 112,
   },
 ];

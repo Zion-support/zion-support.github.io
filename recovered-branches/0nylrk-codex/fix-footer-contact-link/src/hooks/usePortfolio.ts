@@ -23,7 +23,7 @@ export function usePortfolio() {
       const { data, error } = await supabase
         .from('portfolio_projects')
         .select('*')
-        .eq('user_id', user.id)
+        .eq('user_id', user && user.id)
         .order('created_at', { ascending: false });
       
       if (error) throw error;
@@ -31,8 +31,8 @@ export function usePortfolio() {
       setProjects(data || []);
       return data || []
     } catch (e: any) {
-      console.error('Error fetching portfolio projects:', e);
-      setError(e.message);
+      console && console.error('Error fetching portfolio projects:', e);
+      setError(e && e.message);
       return []
     } finally {
       setIsLoading(false)
@@ -52,14 +52,14 @@ export function usePortfolio() {
       const { data, error } = await supabase
         .from('portfolio_projects')
         .insert({
-          user_id: user.id;
-          title: project.title;
-          description: project.description;
-          technologies: project.technologies;
-          image_url: project.image_url;
-          github_url: project.github_url;
-          demo_url: project.demo_url,
-          pdf_url: project.pdf_url
+          user_id: user && user.id;
+          title: project && project.title;
+          description: project && project.description;
+          technologies: project && project.technologies;
+          image_url: project && project.image_url;
+          github_url: project && project.github_url;
+          demo_url: project && project.demo_url,
+          pdf_url: project && project.pdf_url
         })
         .select('id')
         .single();
@@ -72,13 +72,13 @@ export function usePortfolio() {
       });
       
       await fetchProjects();
-      return data.id
+      return data && data.id
     } catch (e: any) {
-      console.error('Error adding portfolio project:', e);
-      setError(e.message);
+      console && console.error('Error adding portfolio project:', e);
+      setError(e && e.message);
       toast({
         title: "Error",
-        description: `Could not add project: ${e.message}`;
+        description: `Could not add project: ${e && e.message}`;
         variant: "destructive"
       });
       return null
@@ -100,16 +100,16 @@ export function usePortfolio() {
       const { error } = await supabase
         .from('portfolio_projects')
         .update({
-          title: project.title;
-          description: project.description;
-          technologies: project.technologies;
-          image_url: project.image_url;
-          github_url: project.github_url;
-          demo_url: project.demo_url,
-          pdf_url: project.pdf_url
+          title: project && project.title;
+          description: project && project.description;
+          technologies: project && project.technologies;
+          image_url: project && project.image_url;
+          github_url: project && project.github_url;
+          demo_url: project && project.demo_url,
+          pdf_url: project && project.pdf_url
         })
         .eq('id', projectId)
-        .eq('user_id', user.id);
+        .eq('user_id', user && user.id);
       
       if (error) throw error;
       
@@ -121,11 +121,11 @@ export function usePortfolio() {
       await fetchProjects();
       return true
     } catch (e: any) {
-      console.error('Error updating portfolio project:', e);
-      setError(e.message);
+      console && console.error('Error updating portfolio project:', e);
+      setError(e && e.message);
       toast({
         title: "Error",
-        description: `Could not update project: ${e.message}`;
+        description: `Could not update project: ${e && e.message}`;
         variant: "destructive"
       });
       return false
@@ -148,7 +148,7 @@ export function usePortfolio() {
         .from('portfolio_projects')
         .delete()
         .eq('id', projectId)
-        .eq('user_id', user.id);
+        .eq('user_id', user && user.id);
       
       if (error) throw error;
       
@@ -157,14 +157,14 @@ export function usePortfolio() {
         description: "Your portfolio project has been deleted"
       });
       
-      setProjects(projects.filter(p => p.id !== projectId));
+      setProjects(projects && projects.filter(p => p && p.id !== projectId));
       return true
     } catch (e: any) {
-      console.error('Error deleting portfolio project:', e);
-      setError(e.message);
+      console && console.error('Error deleting portfolio project:', e);
+      setError(e && e.message);
       toast({
         title: "Error",
-        description: `Could not delete project: ${e.message}`;
+        description: `Could not delete project: ${e && e.message}`;
         variant: "destructive"
       });
       return false

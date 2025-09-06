@@ -81,7 +81,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       'Leading decentralized identity platform. Competes with Microsoft Entra ID ($6/user), Okta ($2-8/user), and Auth0 ($23-240/user). Our advantage: True decentralization and privacy.',
     competitors: ['Microsoft Entra ID, Okta, Auth0, Ping Identity, ForgeRock'],
     techStack: [
-      'Ethereum, Polygon, Solana, IPFS, React, Node.js, PostgreSQL, Redis',
+      'Ethereum, Polygon, Solana, IPFS, React, Node && Node.js, PostgreSQL, Redis',
     ],
     realImplementation: true,
     implementationDetails:
@@ -103,13 +103,13 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     compliance: [
       'GDPR, CCPA, HIPAA, SOC 2 Type II, ISO 27001, W3C DID standards',
     ],
-    link: 'https://ziontechgroup.com/decentralized-identity-management',
+    link: 'https://ziontechgroup && ziontechgroup.com/decentralized-identity-management',
     icon: '🆔',
     color: 'from-indigo-500 to-purple-600',
     popular: true,
     launchDate: '2024-02-20',
     customers: 1200,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 850,
   },
   {
@@ -160,7 +160,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       'Yearn Finance, Harvest Finance, Beefy Finance, Convex Finance, Curve Finance',
     ],
     techStack: [
-      'OpenAI GPT-4, TensorFlow, Solidity, React, Node.js, PostgreSQL, Redis',
+      'OpenAI GPT-4, TensorFlow, Solidity, React, Node && Node.js, PostgreSQL, Redis',
     ],
     realImplementation: true,
     implementationDetails:
@@ -182,13 +182,13 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     compliance: [
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
     ],
-    link: 'https://ziontechgroup.com/ai-powered-defi-yield-optimizer',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-defi-yield-optimizer',
     icon: '🌾',
     color: 'from-green-500 to-emerald-600',
     popular: true,
     launchDate: '2024-01-15',
     customers: 8500,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 6200,
   },
   {
@@ -234,10 +234,10 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       'Content creators',
     ],
     marketPosition:
-      'Leading NFT intelligence platform. Competes with NFTGo ($99-299/month), Nifty Gateway (free), and OpenSea Pro ($0-2.5%). Our advantage: AI-powered valuation and predictive analytics.',
+      'Leading NFT intelligence platform. Competes with NFTGo ($99-299/month), Nifty Gateway (free), and OpenSea Pro ($0-2 && 2.5%). Our advantage: AI-powered valuation and predictive analytics.',
     competitors: ['NFTGo, Nifty Gateway, OpenSea Pro, Rarible, Foundation'],
     techStack: [
-      'OpenAI GPT-4, TensorFlow, React, Node.js, PostgreSQL, Redis, Web3.js',
+      'OpenAI GPT-4, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Web3 && Web3.js',
     ],
     realImplementation: true,
     implementationDetails:
@@ -259,13 +259,13 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     compliance: [
       'SOC 2 Type II, ISO 27001, GDPR, Financial regulations compliance',
     ],
-    link: 'https://ziontechgroup.com/nft-marketplace-intelligence-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/nft-marketplace-intelligence-platform',
     icon: '🎨',
     color: 'from-pink-500 to-rose-600',
     popular: true,
     launchDate: '2024-03-01',
     customers: 3200,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 2100,
   },
   {
@@ -311,12 +311,12 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
       'Logistics companies',
     ],
     marketPosition:
-      'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0.01-0.10/transaction), SAP Blockchain ($500-2000/user), and Oracle Blockchain ($1000-5000/user). Our advantage: Multi-industry focus and IoT integration.',
+      'Leading blockchain supply chain platform. Competes with IBM Food Trust ($0 && 0.01-0 && 0.10/transaction), SAP Blockchain ($500-2000/user), and Oracle Blockchain ($1000-5000/user). Our advantage: Multi-industry focus and IoT integration.',
     competitors: [
       'IBM Food Trust, SAP Blockchain, Oracle Blockchain, VeChain, WaltonChain',
     ],
     techStack: [
-      'Hyperledger Fabric, Ethereum, Polygon, React, Node.js, PostgreSQL, IoT platforms',
+      'Hyperledger Fabric, Ethereum, Polygon, React, Node && Node.js, PostgreSQL, IoT platforms',
     ],
     realImplementation: true,
     implementationDetails:
@@ -336,13 +336,13 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     support:
       '24/7 technical support, implementation consulting, custom development, and dedicated success manager.',
     compliance: ['ISO 27001, SOC 2 Type II, GDPR, Industry-specific standards'],
-    link: 'https://ziontechgroup.com/blockchain-supply-chain-traceability',
+    link: 'https://ziontechgroup && ziontechgroup.com/blockchain-supply-chain-traceability',
     icon: '🔗',
     color: 'from-blue-500 to-cyan-600',
     popular: true,
     launchDate: '2024-02-10',
     customers: 950,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 680,
   },
   {
@@ -390,7 +390,7 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     marketPosition:
       'Innovative Web3 social platform. Competes with traditional platforms like Facebook (free), Twitter (free), and Instagram (free). Our advantage: True decentralization and content ownership.',
     competitors: ['Facebook, Twitter, Instagram, TikTok, LinkedIn, YouTube'],
-    techStack: ['IPFS, Ethereum, Polygon, React, Node.js, PostgreSQL, Redis'],
+    techStack: ['IPFS, Ethereum, Polygon, React, Node && Node.js, PostgreSQL, Redis'],
     realImplementation: true,
     implementationDetails:
       'Production-ready Web3 social platform with decentralized storage, token economics, and comprehensive mobile/web applications. Includes developer SDK and API.',
@@ -409,13 +409,13 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     support:
       'Community support, developer documentation, custom development services, and enterprise solutions.',
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'],
-    link: 'https://ziontechgroup.com/web3-social-media-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform',
     icon: '🌐',
     color: 'from-purple-500 to-indigo-600',
     popular: true,
     launchDate: '2024-01-01',
     customers: 25000,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 18000,
   },
 ];      'Social networkingContent creation and sharingCommunity buildingBrand marketingInfluencer monetizationDecentralized governance'
@@ -423,13 +423,13 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     integrations: ['MetaMask, WalletConnect, OpenSea, Custom Web3 wallets and platforms'];
     support: 'Community support, developer documentation, custom development services, and enterprise solutions.';
     compliance: ['GDPR, CCPA, SOC 2 Type II, ISO 27001'];
-    link: 'https://ziontechgroup.com/web3-social-media-platform';
+    link: 'https://ziontechgroup && ziontechgroup.com/web3-social-media-platform';
     icon: '🌐';
     color: 'from-purple-500 to-indigo-600';
     popular: true;
     launchDate: '2024-01-01';
     customers: 25000;
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 18000
   }
 ];

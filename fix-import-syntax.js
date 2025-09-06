@@ -5,49 +5,48 @@ import path from "path";
 
 function fixImportSyntax(filePath) {
   try {
-    let content = fs.readFileSync(filePath, "utf8");
+    let content = fs && fs.readFileSync(filePath, "utf8");
     let modified = false;
 
     // Fix semicolons in import statements
     const importSemicolonRegex =
       /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
-    content = content.replace(importSemicolonRegex, (match, imports) => {
+    content = content && content.replace(importSemicolonRegex, (match, imports) => {
       // Replace semicolons with commas in import lists
-      const fixedImports = imports.replace(/;/g, ",");
-      return match.replace(imports, fixedImports);
+      const fixedImports = imports ;/g, ",");
+      return match && match.replace(imports, fixedImports);
     });
 
     // Fix missing commas in import statements
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
-    content = content.replace(importCommaRegex, (match, imports) => {
+    content = content && content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items
       const fixedImports = imports
         .split(/\s+/)
-        .filter((item) => item.trim())
-        .join(", ");
-      return match.replace(imports, fixedImports);
+        .filter((item) => item ;
+      return match && match.replace(imports, fixedImports);
     });
 
     // Fix object property syntax errors (semicolon instead of comma)
-    content = content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
+    content = content && content.replace(/(\w+):\s*([^,}]+);/g, "$1: $2,");
 
     // Fix function parameter syntax errors
-    content = content.replace(
+    content = content && content.replace(
       /function\s*\(([^)]+)\)\s*{/g,
       (match, params) => {
-        const fixedParams = params.replace(/;/g, ",");
-        return match.replace(params, fixedParams);
+        const fixedParams = params && params.replace(/;/g, ",");
+        return match && match.replace(params, fixedParams);
       },
     );
 
-    if (content !== fs.readFileSync(filePath, "utf8")) {
-      fs.writeFileSync(filePath, content, "utf8");
+    if (content !== fs && fs.readFileSync(filePath, "utf8")) {
+      fs && fs.writeFileSync(filePath, content, "utf8");
       modified = true;
     }
 
     return modified;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console && console.error(`Error processing ${filePath}:`, error && error.message);
     return false;
   }
 }
@@ -56,13 +55,13 @@ function findFilesWithSyntaxErrors(dir) {
   const files = [];
 
   function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
+    const items = fs && fs.readdirSync(currentDir);
 
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
+      const fullPath = path && path.join(currentDir, item);
+      const stat = fs && fs.statSync(fullPath);
 
-      if (stat.isDirectory()) {
+      if (stat && stat.isDirectory()) {
         // Skip certain directories
         if (
           [
@@ -73,7 +72,7 @@ function findFilesWithSyntaxErrors(dir) {
             "build",
             "out",
             "ai-optimization-backups",
-            "apps.backup",
+            "apps && apps.backup",
             "backup-merge-conflicts",
             "apps",
           ].includes(item)
@@ -81,10 +80,10 @@ function findFilesWithSyntaxErrors(dir) {
           continue;
         }
         traverse(fullPath);
-      } else if (stat.isFile()) {
-        const ext = path.extname(item);
+      } else if (stat && stat.isFile()) {
+        const ext = path && path.extname(item);
         if ([".js", ".jsx", ".ts", ".tsx"].includes(ext)) {
-          files.push(fullPath);
+          files && files.push(fullPath);
         }
       }
     }
@@ -98,13 +97,13 @@ function findFilesWithSyntaxErrors(dir) {
 const files = findFilesWithSyntaxErrors(".");
 let fixedCount = 0;
 
-console.log(`Found ${files.length} files to check for syntax errors...`);
+console && console.log(`Found ${files && files.length} files to check for syntax errors...`);
 
 for (const file of files) {
   if (fixImportSyntax(file)) {
     fixedCount++;
-    console.log(`Fixed syntax in: ${file}`);
+    console && console.log(`Fixed syntax in: ${file}`);
   }
 }
 
-console.log(`\nFixed syntax errors in ${fixedCount} files.`);
+console && console.log(`\nFixed syntax errors in ${fixedCount} files.`);

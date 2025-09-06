@@ -10,32 +10,32 @@ import { UploadSection } from './UploadSection';
 import { SelectResumeSection } from './SelectResumeSection';
 import { ResumeOption, ResumeSelectorProps } from './types';
 import {logErrorToProduction} from '@/utils/productionLogger';
-export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
+export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps) {;
 
   const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'>('recent');
   const [selectedResume, setSelectedResume] = useState<ResumeOption | null>(null);
   const [resumeOptions, setResumeOptions] = useState<ResumeOption[]>([]);
   const [customFile, setCustomFile] = useState<File | null>(null);
   const [isLoading, setIsLoading] = useState(false);
-  
+
   const { resume, fetchResume } = useResume();
-  
-  // Fetch resume data when component mounts
-  useEffect((,) => {
-    const loadResumes = async () => {
+
+  // Fetch resume data when component mounts;
+  useEffect((,) => {;
+    const loadResumes = async () => {;
       setIsLoading(true);
-      try {
-        await fetchResume()
-      } catch (error) {
-        logErrorToProduction('Error loading resumes:', { data: error })
-      } finally {
-        setIsLoading(false)
+      try {;
+        await fetchResume();
+      } catch (error) {;
+        logErrorToProduction('Error loading resumes:', { data: error });
+      } finally {;
+        setIsLoading(false);
       }
     };
-    
-            return
+
+            return;
       }
-  
+
 }
   );
 }

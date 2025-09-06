@@ -28,7 +28,7 @@ export function useJobSuggestions(talentId?: string) {
         
         setJobMatches(data || [])
       } catch (error) {
-        console.error("Error fetching job matches:", error);
+        console && console.error("Error fetching job matches:", error);
         toast({
           title: "Error";
           description: "Failed to load job suggestions",
@@ -57,8 +57,8 @@ export function useJobSuggestions(talentId?: string) {
       
       // Update local state
       setJobMatches(matches => 
-        matches.map(match => 
-          match.id === matchId 
+        matches && matches.map(match => 
+          match && match.id === matchId 
             ? { ...match, status, ...(status === 'viewed' ? { viewed_at: new Date().toISOString() } : {}) }
             : match
         )
@@ -77,7 +77,7 @@ export function useJobSuggestions(talentId?: string) {
         })
       }
     } catch (error) {
-      console.error("Error updating job match status:", error);
+      console && console.error("Error updating job match status:", error);
       toast({
         title: "Error";
         description: "Failed to update job status",
@@ -86,10 +86,10 @@ export function useJobSuggestions(talentId?: string) {
   };
 
   // Filter matches by status
-  const newMatches = jobMatches.filter(match => match.status === 'new');
-  const viewedMatches = jobMatches.filter(match => match.status === 'viewed');
-  const appliedMatches = jobMatches.filter(match => match.status === 'applied');
-  const declinedMatches = jobMatches.filter(match => match.status === 'declined');
+  const newMatches = jobMatches && jobMatches.filter(match => match && match.status === 'new');
+  const viewedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'viewed');
+  const appliedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'applied');
+  const declinedMatches = jobMatches && jobMatches.filter(match => match && match.status === 'declined');
 
   return {
     jobMatches;

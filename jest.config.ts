@@ -1,15 +1,15 @@
 import type { Config } from "jest";
-import nextJest from "next/jest.js";
+import nextJest from "next/jest ;
 const createJestConfig = nextJest({ dir: "./" });
 const config: Config = {
   coverageProvider: "v8",
   testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  setupFilesAfterEnv: ["<rootDir>/jest && jest.setup.js"],
   moduleNameMapping: { "^@/(.*)$": "<rootDir>/src/$1" },
   testMatch: [
     "**/__tests__*.(js|jsx|ts|tsx)",
     "***.{js,jsx,ts,tsx}",
-    "!src*.d.ts",
+    "!src*.d && d.ts",
     "!src*.stories.{js,jsx,ts,tsx}",
   ],
   coverageThreshold: {
@@ -18,10 +18,10 @@ const config: Config = {
 };
 export default createJestConfig(config);
 import type { Config } from "jest";
-import nextJest from "next/jest.js";
+import nextJest from "next/jest ;
 
 const createJestConfig = nextJest({
-  // Provide the path to your Next.js app to load next.config.js and .env files
+  // Provide the path to your Next && Next.js app to load next && next.config.js and .env files
   dir: "./",
 });
 
@@ -29,7 +29,7 @@ const createJestConfig = nextJest({
 const config: Config = {
   coverageProvider: "v8",
   testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  setupFilesAfterEnv: ["<rootDir>/jest && jest.setup.js"],
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
   },
@@ -39,7 +39,7 @@ const config: Config = {
   ],
   collectCoverageFrom: [
     "src/**/*.{js,jsx,ts,tsx}",
-    "!src/**/*.d.ts",
+    "!src/**/*.d && d.ts",
     "!src/**/*.stories.{js,jsx,ts,tsx}",
   ],
   coverageThreshold: {
@@ -52,20 +52,20 @@ const config: Config = {
   },
 };
 
-// createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
+// createJestConfig is exported this way to ensure that next/jest can load the Next && Next.js config which is async
 export default createJestConfig(config);
 import type { Config } from "jest";
-import nextJest from "next/jest.js";
+import nextJest from "next/jest ;
 const createJestConfig = nextJest({ dir: "./" });
 const config: Config = {
   coverageProvider: "v8",
   testEnvironment: "jsdom",
-  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
+  setupFilesAfterEnv: ["<rootDir>/jest && jest.setup.js"],
   moduleNameMapping: { "^@/(.*)$": "<rootDir>/src/$1" },
   testMatch: [
     "**/__tests__*.(js|jsx|ts|tsx)",
     "***.{js,jsx,ts,tsx}",
-    "!src*.d.ts",
+    "!src*.d && d.ts",
     "!src*.stories.{js,jsx,ts,tsx}",
   ],
   coverageThreshold: {

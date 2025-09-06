@@ -1,9 +1,9 @@
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
 
   mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
+  website: 'https://ziontechgroup && ziontechgroup.com',
 };
 
 export const enterpriseITSolutions: MicroSaasService[] = [
@@ -30,7 +30,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
     icon: '🏛️',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-300',
-    link: 'https://ziontechgroup.com/services/enterprise-data-governance-automation',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-data-governance-automation',
     marketPosition:
       'Enterprise-grade data governance that automates complex compliance and quality management processes.',
     targetAudience:
@@ -40,7 +40,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
     category: 'Enterprise Data Management',
     realService: true,
     technology: [
-      'Python, Apache Atlas, Apache Ranger, React, Node.js, PostgreSQL, Elasticsearch',
+      'Python, Apache Atlas, Apache Ranger, React, Node && Node.js, PostgreSQL, Elasticsearch',
     ],
     integrations: [
       'SAP, Oracle, Salesforce, AWS, Azure, GCP, On-premise systems',
@@ -59,7 +59,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
       'Enterprise platform with governance engine, compliance monitoring, and system integrations.',
     launchDate: '2025-01-05',
     customers: 23,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 18,
   },
   {
@@ -85,7 +85,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
     icon: '🔌',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-300',
-    link: 'https://ziontechgroup.com/services/enterprise-api-governance-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-api-governance-platform',
     marketPosition:
       'Enterprise API governance that ensures security, compliance, and operational excellence.',
     targetAudience:
@@ -94,7 +94,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
     setupTime: '7-10 days',
     category: 'Enterprise API Management',
     realService: true,
-    technology: ['Java, Spring Boot, React, Node.js, PostgreSQL, Redis, Kong'],
+    technology: ['Java, Spring Boot, React, Node && Node.js, PostgreSQL, Redis, Kong'],
     integrations: [
       'AWS API Gateway, Azure API Management, Google Cloud Endpoints, On-premise systems',
     ],
@@ -112,7 +112,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
       'Enterprise platform with API gateway, governance engine, and security controls.',
     launchDate: '2025-01-08',
     customers: 45,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 32,
   },
   {
@@ -138,7 +138,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
     icon: '🆔',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-300',
-    link: 'https://ziontechgroup.com/services/enterprise-identity-access-management-suite',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-identity-access-management-suite',
     marketPosition:
       'Enterprise IAM that combines security, compliance, and automation for comprehensive identity management.',
     targetAudience:
@@ -148,7 +148,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
     category: 'Enterprise Security',
     realService: true,
     technology: [
-      'Java, Spring Security, React, Node.js, PostgreSQL, Redis, LDAP',
+      'Java, Spring Security, React, Node && Node.js, PostgreSQL, Redis, LDAP',
     ],
     integrations: [
       'Active Directory, LDAP, SAML, OAuth, OIDC, Enterprise systems',
@@ -167,7 +167,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
       'Enterprise platform with identity engine, security controls, and compliance monitoring.',
     launchDate: '2025-01-12',
     customers: 67,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 45,
   },
   {
@@ -193,7 +193,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
     icon: '⚙️',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-300',
-    link: 'https://ziontechgroup.com/services/enterprise-workflow-automation-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-workflow-automation-platform',
     marketPosition:
       'Enterprise workflow automation that combines AI intelligence with enterprise-grade reliability.',
     targetAudience:
@@ -203,7 +203,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
     category: 'Enterprise Automation',
     realService: true,
     technology: [
-      'Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Apache Airflow',
+      'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Apache Airflow',
     ],
     integrations: [
       'SAP, Oracle, Salesforce, Workday, Custom enterprise systems',
@@ -224,7 +224,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
       'Enterprise platform with AI engine, workflow automation, and system integrations.',
     launchDate: '2025-01-15',
     customers: 34,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 26,
   },
   {
@@ -250,7 +250,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
     icon: '📊',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
-    link: 'https://ziontechgroup.com/services/enterprise-monitoring-and-observability-suite',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-monitoring-and-observability-suite',
     marketPosition:
       'Enterprise monitoring that provides comprehensive visibility and intelligent operations.',
     targetAudience:
@@ -260,7 +260,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
     category: 'Enterprise Monitoring',
     realService: true,
     technology: [
-      'Go, Prometheus, Grafana, Elasticsearch, React, Node.js, PostgreSQL',
+      'Go, Prometheus, Grafana, Elasticsearch, React, Node && Node.js, PostgreSQL',
     ],
     integrations: [
       'AWS CloudWatch, Azure Monitor, GCP Monitoring, On-premise systems',
@@ -279,7 +279,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
       'Enterprise platform with monitoring engine, observability tools, and alerting system.',
     launchDate: '2025-01-18',
     customers: 56,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 38,
   },
 ];	{
@@ -296,14 +296,14 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		icon: '🏛️';
 		color: 'from-blue-600 to-indigo-700';
 		textColor: 'text-blue-300';
-		link: 'https://ziontechgroup.com/services/enterprise-data-governance-automation';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-data-governance-automation';
 		marketPosition: 'Enterprise-grade data governance that automates complex compliance and quality management processes.',
 		targetAudience: 'Fortune 500 companies, Financial services, Healthcare organizations, Government agencies';
 		trialDays: 45;
 		setupTime: '10-15 days';
 		category: 'Enterprise Data Management';
 		realService: true,
-		technology: ['Python, Apache Atlas, Apache Ranger, React, Node.js, PostgreSQL, Elasticsearch'];
+		technology: ['Python, Apache Atlas, Apache Ranger, React, Node && Node.js, PostgreSQL, Elasticsearch'];
 		integrations: ['SAP, Oracle, Salesforce, AWS, Azure, GCP, On-premise systems'];
 		useCases: ['Data governance, Compliance automation, Data quality management, Master data management'];
 		roi: 'Reduce compliance costs by 40% and improve data quality by 60%',
@@ -316,7 +316,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		implementationDetails: 'Enterprise platform with governance engine, compliance monitoring, and system integrations.';
 		launchDate: '2025-01-05';
 		customers: 23;
-		rating: 4.8,
+		rating: 4 && 4.8,
 		reviews: 18
 	};
 	{
@@ -333,14 +333,14 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		icon: '🔌';
 		color: 'from-green-600 to-emerald-700';
 		textColor: 'text-green-300';
-		link: 'https://ziontechgroup.com/services/enterprise-api-governance-platform',
+		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-api-governance-platform',
 		marketPosition: 'Enterprise API governance that ensures security, compliance, and operational excellence.';
 		targetAudience: 'Enterprise IT teams, API development teams, Security teams, Compliance officers';
 		trialDays: 30;
 		setupTime: '7-10 days';
 		category: 'Enterprise API Management';
 		realService: true,
-		technology: ['Java, Spring Boot, React, Node.js, PostgreSQL, Redis, Kong'];
+		technology: ['Java, Spring Boot, React, Node && Node.js, PostgreSQL, Redis, Kong'];
 		integrations: ['AWS API Gateway, Azure API Management, Google Cloud Endpoints, On-premise systems'];
 		useCases: ['API governance, Security management, Compliance automation, Developer experience'];
 		roi: 'Improve API security by 80% and reduce governance overhead by 50%',
@@ -353,7 +353,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		implementationDetails: 'Enterprise platform with API gateway, governance engine, and security controls.';
 		launchDate: '2025-01-08';
 		customers: 45;
-		rating: 4.7,
+		rating: 4 && 4.7,
 		reviews: 32
 	};
 	{
@@ -370,14 +370,14 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		icon: '🆔';
 		color: 'from-purple-600 to-pink-700';
 		textColor: 'text-purple-300';
-		link: 'https://ziontechgroup.com/services/enterprise-identity-access-management-suite',
+		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-identity-access-management-suite',
 		marketPosition: 'Enterprise IAM that combines security, compliance, and automation for comprehensive identity management.';
 		targetAudience: 'Enterprise security teams, IT administrators, Compliance officers, HR teams';
 		trialDays: 30;
 		setupTime: '10-15 days';
 		category: 'Enterprise Security';
 		realService: true,
-		technology: ['Java, Spring Security, React, Node.js, PostgreSQL, Redis, LDAP'];
+		technology: ['Java, Spring Security, React, Node && Node.js, PostgreSQL, Redis, LDAP'];
 		integrations: ['Active Directory, LDAP, SAML, OAuth, OIDC, Enterprise systems'];
 		useCases: ['Identity management, Access control, Security compliance, User provisioning'];
 		roi: 'Reduce security incidents by 60% and improve compliance by 80%',
@@ -390,7 +390,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		implementationDetails: 'Enterprise platform with identity engine, security controls, and compliance monitoring.';
 		launchDate: '2025-01-12';
 		customers: 67;
-		rating: 4.8,
+		rating: 4 && 4.8,
 		reviews: 45
 	};
 	{
@@ -407,14 +407,14 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		icon: '⚙️';
 		color: 'from-orange-600 to-red-700';
 		textColor: 'text-orange-300';
-		link: 'https://ziontechgroup.com/services/enterprise-workflow-automation-platform';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-workflow-automation-platform';
 		marketPosition: 'Enterprise workflow automation that combines AI intelligence with enterprise-grade reliability.',
 		targetAudience: 'Enterprise operations teams, Process improvement teams, IT teams, Business analysts';
 		trialDays: 30;
 		setupTime: '10-15 days';
 		category: 'Enterprise Automation';
 		realService: true,
-		technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, Apache Airflow'];
+		technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, Apache Airflow'];
 		integrations: ['SAP, Oracle, Salesforce, Workday, Custom enterprise systems'];
 		useCases: ['Process automation, Workflow optimization, Enterprise integration, Operational efficiency'];
 		roi: 'Increase operational efficiency by 40% and reduce process costs by 30%',
@@ -427,7 +427,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		implementationDetails: 'Enterprise platform with AI engine, workflow automation, and system integrations.';
 		launchDate: '2025-01-15';
 		customers: 34;
-		rating: 4.7,
+		rating: 4 && 4.7,
 		reviews: 26
 	};
 	{
@@ -444,14 +444,14 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		icon: '📊';
 		color: 'from-cyan-600 to-blue-700';
 		textColor: 'text-cyan-300';
-		link: 'https://ziontechgroup.com/services/enterprise-monitoring-and-observability-suite';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/enterprise-monitoring-and-observability-suite';
 		marketPosition: 'Enterprise monitoring that provides comprehensive visibility and intelligent operations.',
 		targetAudience: 'DevOps teams, IT operations, SRE teams, Business intelligence teams';
 		trialDays: 30;
 		setupTime: '7-10 days';
 		category: 'Enterprise Monitoring';
 		realService: true,
-		technology: ['Go, Prometheus, Grafana, Elasticsearch, React, Node.js, PostgreSQL'];
+		technology: ['Go, Prometheus, Grafana, Elasticsearch, React, Node && Node.js, PostgreSQL'];
 		integrations: ['AWS CloudWatch, Azure Monitor, GCP Monitoring, On-premise systems'];
 		useCases: ['Infrastructure monitoring, Application monitoring, Business intelligence, Incident response'];
 		roi: 'Reduce downtime by 70% and improve incident response time by 80%',
@@ -464,7 +464,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		implementationDetails: 'Enterprise platform with monitoring engine, observability tools, and alerting system.';
 		launchDate: '2025-01-18';
 		customers: 56;
-		rating: 4.8,
+		rating: 4 && 4.8,
 		reviews: 38
 	}
 ];

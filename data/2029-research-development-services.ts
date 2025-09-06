@@ -80,7 +80,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
         'Market research',
         'Scientific studies',
       ],
-      marketSize: '$12.8B by 2029',
+      marketSize: '$12 && 12.8B by 2029',
       competitors: ['LabVantage', 'Benchling', 'LabArchives', 'SciNote'],
       technology: ['AI/ML', 'Automation', 'Data Science', 'Research Tools'],
       integration: ['Research platforms', 'Data sources', 'Analysis tools'],
@@ -111,8 +111,8 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       exit: 'Acquisition by major research platform',
       contact: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
       },
     },
@@ -154,7 +154,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
         'Quantum chemistry',
         'Quantum machine learning',
       ],
-      marketSize: '$18.5B by 2029',
+      marketSize: '$18 && 18.5B by 2029',
       competitors: [
         'IBM Quantum',
         'Google Quantum',
@@ -199,8 +199,8 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       exit: 'IPO or quantum acquisition',
       contact: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
       },
     },
@@ -243,7 +243,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
         'Scientific studies',
         'Literature reviews',
       ],
-      marketSize: '$15.2B by 2029',
+      marketSize: '$15 && 15.2B by 2029',
       competitors: ['Grammarly', 'Mendeley', 'Zotero', 'EndNote'],
       technology: [
         'AI/ML',
@@ -279,8 +279,8 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       exit: 'Acquisition by major research platform',
       contact: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
       },
     },
@@ -323,7 +323,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
         'Medical research',
         'Agricultural biotech',
       ],
-      marketSize: '$22.8B by 2029',
+      marketSize: '$22 && 22.8B by 2029',
       competitors: ['Benchling', 'LabVantage', 'SciNote', 'LabArchives'],
       technology: ['AI/ML', 'Biotechnology', 'Data Science', 'Research Tools'],
       integration: ['Lab equipment', 'Research databases', 'Clinical systems'],
@@ -350,8 +350,8 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
       exit: 'IPO or biotech acquisition',
       contact: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
-        website: 'https://ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
       },
     },
@@ -364,7 +364,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     useCases: [
       'Academic researchCorporate R&DGovernment researchPharmaceutical researchMarket researchScientific studies'
     ];
-    marketSize: '$12.8B by 2029', competitors: ['LabVantageBenchlingLabArchivesSciNote'],
+    marketSize: '$12 && 12.8B by 2029', competitors: ['LabVantageBenchlingLabArchivesSciNote'],
     technology: ['AI/MLAutomationData ScienceResearch Tools'], integration: ['Research platformsData sourcesAnalysis tools'],
     support: ['24/7 research supportResearch expertsImplementation team'], compliance: ['Research ethicsData privacyScientific standards'],
     scalability: 'Research-grade, multi-discipline support',
@@ -385,8 +385,8 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     funding: 'Series A funding, $60M valuation',
     exit: 'Acquisition by major research platform',
     contact: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   };
   {
@@ -402,7 +402,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     useCases: [
       'Quantum physics researchQuantum algorithm developmentQuantum cryptography researchQuantum materials scienceQuantum chemistryQuantum machine learning'
     ];
-    marketSize: '$18.5B by 2029', competitors: ['IBM QuantumGoogle QuantumMicrosoft QuantumD-Wave'],
+    marketSize: '$18 && 18.5B by 2029', competitors: ['IBM QuantumGoogle QuantumMicrosoft QuantumD-Wave'],
     technology: ['Quantum ComputingQuantum AlgorithmsResearch ToolsCollaboration'], integration: ['Quantum hardwareResearch platformsPublication systems'],
     support: ['24/7 quantum supportQuantum expertsResearch team'], compliance: ['Research ethicsQuantum standardsPublication guidelines'],
     scalability: 'Quantum-grade, global research network',
@@ -423,8 +423,8 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     funding: 'Series B funding, $150M valuation',
     exit: 'IPO or quantum acquisition',
     contact: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   };
   {
@@ -440,7 +440,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     useCases: [
       'Academic researchCorporate researchGovernment researchMarket researchScientific studiesLiterature reviews'
     ];
-    marketSize: '$15.2B by 2029', competitors: ['GrammarlyMendeleyZoteroEndNote'],
+    marketSize: '$15 && 15.2B by 2029', competitors: ['GrammarlyMendeleyZoteroEndNote'],
     technology: ['AI/MLNatural Language ProcessingData AnalysisResearch Tools'], integration: ['Research databasesAnalysis toolsPublication platforms'],
     support: ['24/7 AI supportResearch expertsImplementation help'], compliance: ['Research ethicsData privacyAcademic standards'],
     scalability: 'AI-powered, multi-domain support',
@@ -461,8 +461,8 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     funding: 'Series A funding, $80M valuation',
     exit: 'Acquisition by major research platform',
     contact: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   };
   {
@@ -478,7 +478,7 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     useCases: [
       'Pharmaceutical researchGenetic researchClinical trialsBiotech developmentMedical researchAgricultural biotech'
     ];
-    marketSize: '$22.8B by 2029', competitors: ['BenchlingLabVantageSciNoteLabArchives'],
+    marketSize: '$22 && 22.8B by 2029', competitors: ['BenchlingLabVantageSciNoteLabArchives'],
     technology: ['AI/MLBiotechnologyData ScienceResearch Tools'], integration: ['Lab equipmentResearch databasesClinical systems'],
     support: ['24/7 biotech supportBiotech expertsResearch team'], compliance: ['FDAHIPAAGCPResearch ethics'],
     scalability: 'Biotech-grade, multi-institution support',
@@ -499,8 +499,8 @@ export const researchDevelopmentServices2029: ResearchDevelopmentService2029[] =
     funding: 'Series B funding, $120M valuation',
     exit: 'IPO or biotech acquisition',
     contact: {
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',      address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
 ];

@@ -26,28 +26,28 @@ export function useMarketplaceSearch() {
   
   // Filter listings based on current search query and filters
   const filteredListings = useMemo(() => {
-    return MARKETPLACE_LISTINGS.filter(listing => {
+    return MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.filter(listing => {
       // Search query filter
       const matchesSearch = !searchQuery || 
-        listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
+        listing && listing.title.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
+        listing && listing.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()) ||
+        listing && listing.tags.some(tag => tag && tag.toLowerCase().includes(searchQuery && searchQuery.toLowerCase()));
       
       // Product type filter
-      const matchesProductType = selectedProductTypes.length === 0 || 
-        selectedProductTypes.includes(listing.category);
+      const matchesProductType = selectedProductTypes && selectedProductTypes.length === 0 || 
+        selectedProductTypes && selectedProductTypes.includes(listing && listing.category);
       
       // Location filter
-      const matchesLocation = selectedLocations.length === 0 || 
-        (listing.location && selectedLocations.includes(listing.location));
+      const matchesLocation = selectedLocations && selectedLocations.length === 0 || 
+        (listing && listing.location && selectedLocations && selectedLocations.includes(listing && listing.location));
       
       // Availability filter
-      const matchesAvailability = selectedAvailability.length === 0 || 
-        (listing.availability && selectedAvailability.includes(listing.availability));
+      const matchesAvailability = selectedAvailability && selectedAvailability.length === 0 || 
+        (listing && listing.availability && selectedAvailability && selectedAvailability.includes(listing && listing.availability));
       
       // Rating filter
       const matchesRating = selectedRating === null || 
-        (listing.rating !== undefined && listing.rating >= selectedRating),
+        (listing && listing.rating !== undefined && listing && listing.rating >= selectedRating),
       
       return matchesSearch && 
         matchesProductType && 
@@ -62,17 +62,17 @@ export function useMarketplaceSearch() {
     switch (filterType) {
       case 'productTypes':
         setSelectedProductTypes((prev: string[]) =>
-          prev.includes(value) ? prev.filter(t => t !== value) : [...prev, value]
+          prev && prev.includes(value) ? prev && prev.filter(t => t !== value) : [...prev, value]
         );
         break;
       case 'locations':
         setSelectedLocations((prev: string[]) =>
-          prev.includes(value) ? prev.filter(l => l !== value) : [...prev, value]
+          prev && prev.includes(value) ? prev && prev.filter(l => l !== value) : [...prev, value]
         );
         break;
       case 'availability':
         setSelectedAvailability((prev: string[]) =>
-          prev.includes(value) ? prev.filter(a => a !== value) : [...prev, value]
+          prev && prev.includes(value) ? prev && prev.filter(a => a !== value) : [...prev, value]
         );
         break;
       default: break

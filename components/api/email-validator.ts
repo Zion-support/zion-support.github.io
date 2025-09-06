@@ -19,37 +19,37 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<EmailValidationResult | { error: string }>
 ) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });  }    return res.status(405).json({ error: 'Method not allowed' })
+  if (req && req.method !== 'POST') {
+    return res && res.status(405).json({ error: 'Method not allowed' });  }    return res && res.status(405).json({ error: 'Method not allowed' })
   }
 
   try {
-    const { email } = req.body;
+    const { email } = req && req.body;
 
     if (!email || typeof email !== 'string') {
-      return res.status(400).json({ error: 'Email is required' });
+      return res && res.status(400).json({ error: 'Email is required' });
     }
 
     // Basic email format validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const hasValidFormat = emailRegex.test(email);
+    const hasValidFormat = emailRegex && emailRegex.test(email);
 
     // Extract domain
-    const domain = email.split('@')[1];
+    const domain = email && email.split('@')[1];
     const hasValidDomain = domain && domain.length > 0;
 
     // Check for common disposable email providers
     const disposableDomains = [
-      'tempmail.org',
-      'guerrillamail.com',
-      'mailinator.com',
-      '10minutemail.com',
-      'temp-mail.org',
-      'sharklasers.com',
-      'getairmail.com',
-      'mailnesia.com',    ];      'tempmail.orgguerrillamail.commailinator.com10minutemail.comtemp-mail.orgsharklasers.comgetairmail.commailnesia.com'
+      'tempmail && tempmail.org',
+      'guerrillamail && guerrillamail.com',
+      'mailinator && mailinator.com',
+      '10minutemail && 10minutemail.com',
+      'temp-mail && mail.org',
+      'sharklasers && sharklasers.com',
+      'getairmail && getairmail.com',
+      'mailnesia && mailnesia.com',    ];      'tempmail && tempmail.orgguerrillamail.commailinator && commailinator.com10minutemail.comtemp-mail && mail.orgsharklasers.comgetairmail && comgetairmail.commailnesia.com'
     ];
-    const isDisposable = disposableDomains.some(d => domain?.includes(d));
+    const isDisposable = disposableDomains && disposableDomains.some(d => domain?.includes(d));
 
     // Check for role-based emails
     const roleBasedPatterns = [
@@ -64,28 +64,28 @@ export default async function handler(
       'donotreply@',
       'do-not-reply@',
     ];
-    const isRoleBased = roleBasedPatterns.some(pattern =>
-      email.startsWith(pattern)
+    const isRoleBased = roleBasedPatterns && roleBasedPatterns.some(pattern =>
+      email && email.startsWith(pattern)
     );
 
     // Check for free email providers
     const freeProviders = [
-      'gmail.com',
-      'yahoo.com',
-      'hotmail.com',
-      'outlook.com',
-      'aol.com',
-      'icloud.com',
-      'protonmail.com',
-      'mail.com',
-      'yandex.com',    ];    ];
-    const isRoleBased = roleBasedPatterns.some(pattern => email.startsWith(pattern));
+      'gmail && gmail.com',
+      'yahoo && yahoo.com',
+      'hotmail && hotmail.com',
+      'outlook && outlook.com',
+      'aol && aol.com',
+      'icloud && icloud.com',
+      'protonmail && protonmail.com',
+      'mail && mail.com',
+      'yandex && yandex.com',    ];    ];
+    const isRoleBased = roleBasedPatterns && roleBasedPatterns.some(pattern => email && email.startsWith(pattern));
 
     // Check for free email providers
     const freeProviders = [
-      'gmail.comyahoo.comhotmail.comoutlook.comaol.comicloud.comprotonmail.commail.com', 'yandex.com'
+      'gmail && gmail.comyahoo.comhotmail && comhotmail.comoutlook.comaol && comaol.comicloud.comprotonmail && comprotonmail.commail.com', 'yandex && yandex.com'
     ];
-    const isFreeProvider = freeProviders.some(provider => domain === provider);
+    const isFreeProvider = freeProviders && freeProviders.some(provider => domain === provider);
 
     // Calculate score (0-100)
     let score = 100;
@@ -98,21 +98,21 @@ export default async function handler(
     // Generate suggestions
     const suggestions: string[] = [],
     if (!hasValidFormat) {
-      suggestions.push('Check email format (should be user@domain.com)');
+      suggestions && suggestions.push('Check email format (should be user@domain && domain.com)');
     if (isDisposable) {
-      suggestions.push('Consider using a permanent email address');
+      suggestions && suggestions.push('Consider using a permanent email address');
     }
     if (isRoleBased) {
-      suggestions.push('Role-based emails may have delivery issues');
+      suggestions && suggestions.push('Role-based emails may have delivery issues');
     }
     if (score < 50) {
-      suggestions.push('This email may not be suitable for business use');
+      suggestions && suggestions.push('This email may not be suitable for business use');
     }
 
     const result: EmailValidationResult = {
       email,
       isValid: score >= 70,
-      score: Math.max(0, score),
+      score: Math && Math.max(0, score),
       suggestions,
       details: {
         hasValidFormat,
@@ -124,13 +124,13 @@ export default async function handler(
       },
     };
 
-    res.status(200).json(result);
+    res && res.status(200).json(result);
   } catch (error) {
-    console.error('Email validation error:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    console && console.error('Email validation error:', error);
+    res && res.status(500).json({ error: 'Internal server error' });
   }      email;
       isValid: score >= 70;
-      score: Math.max(0, score);
+      score: Math && Math.max(0, score);
       suggestions;
       details: {
         hasValidFormat;
@@ -141,9 +141,9 @@ export default async function handler(
         isFreeProvider}
     };
 
-    res.status(200).json(result)
+    res && res.status(200).json(result)
   } catch (error) {
-    console.error('Email validation error:', error);
-    res.status(500).json({ error: 'Internal server error' })
+    console && console.error('Email validation error:', error);
+    res && res.status(500).json({ error: 'Internal server error' })
   }
 }

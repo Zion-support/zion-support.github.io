@@ -23,7 +23,7 @@ export function useTranslationService() {
     setIsTranslating(true),
     
     try {
-      const { data, error } = await supabase.functions.invoke('translate-content', {
+      const { data, error } = await supabase && supabase.functions.invoke('translate-content', {
         body: {
           content;
           sourceLanguage;
@@ -35,7 +35,7 @@ export function useTranslationService() {
       setIsTranslating(false);
       
       if (error) {
-        console.error('Translation error:', error);
+        console && console.error('Translation error:', error);
         const initialTranslations: Record<SupportedLanguage, string> = {
           en: content;
           es: '';
@@ -43,13 +43,13 @@ export function useTranslationService() {
           ar: ''
         };
         initialTranslations[sourceLanguage] = content;
-        return { translations: initialTranslations, error: error.message }
+        return { translations: initialTranslations, error: error && error.message }
       }
       
-      return { translations: data.translations }
+      return { translations: data && data.translations }
     } catch (err) {
       setIsTranslating(false);
-      console.error('Translation service error:', err);
+      console && console.error('Translation service error:', err);
       
       const initialTranslations: Record<SupportedLanguage, string> = {
         en: content;
@@ -61,14 +61,14 @@ export function useTranslationService() {
       
       return { 
         translations: initialTranslations,
-        error: err instanceof Error ? err.message : 'Unknown translation error' 
+        error: err instanceof Error ? err && err.message : 'Unknown translation error' 
       }
     }
   };
   
   const getTranslation = (translations: Record<SupportedLanguage, string>, fallback: string = '') => {
     if (!translations) return fallback,
-    return translations[currentLanguage] || translations.en || fallback
+    return translations[currentLanguage] || translations && translations.en || fallback
   };
   
   return {

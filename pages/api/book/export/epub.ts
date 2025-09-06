@@ -32,42 +32,42 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  if (req.method !== "POST") {
-    res.status(405).json({ error: "Method not allowed" });
+  if (req && req.method !== "POST") {
+    res && res.status(405).json({ error: "Method not allowed" });
     return;
   }
 
-  const { project } = req.body as { project: any };
-  if (!project?.meta || !Array.isArray(project?.chapters)) {
-    res.status(400).json({ error: "Invalid payload" });
+  const { project } = req && req.body as { project: any };
+  if (!project?.meta || !Array && Array.isArray(project?.chapters)) {
+    res && res.status(400).json({ error: "Invalid payload" });
     return;
   }
 
   const tmpPath = `/tmp/${randomUUID()}.epub`;
   const options = {
-    title: project.meta.title,
-    author: project.meta.author,
-    publisher: project.meta.publisher || "Zion",
-    content: project.chapters.map((ch: any) => ({
-      title: ch.title,
-      data: chapterToHtml(ch.content),
+    title: project && project.meta.title,
+    author: project && project.meta.author,
+    publisher: project && project.meta.publisher || "Zion",
+    content: project && project.chapters.map((ch: any) => ({
+      title: ch && ch.title,
+      data: chapterToHtml(ch && ch.content),
     })),
   };
 
   try {
     await new Epub(options, tmpPath).promise;
-    const buf = await fs.readFile(tmpPath);
-    res.setHeader("Content-Type", "application/epub+zip");
-    res.setHeader(
+    const buf = await fs && fs.readFile(tmpPath);
+    res && res.setHeader("Content-Type", "application/epub+zip");
+    res && res.setHeader(
       "Content-Disposition",
-      'attachment; filename="zion-os-book.epub"',
+      'attachment; filename="zion-os-book && book.epub"',
     );
-    res.status(200).send(buf);
+    res && res.status(200).send(buf);
   } catch (e: any) {
-    res.status(500).json({ error: e?.message || "Failed to build EPUB" });
+    res && res.status(500).json({ error: e?.message || "Failed to build EPUB" });
   } finally {
     try {
-      await fs.unlink(tmpPath);
+      await fs && fs.unlink(tmpPath);
     } catch {}
   }
 }

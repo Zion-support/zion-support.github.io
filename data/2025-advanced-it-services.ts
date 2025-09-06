@@ -51,12 +51,12 @@ export const advancedITServices2025 = [
       'Security',
       'Scalability',
     ],
-    website: 'https://ziontechgroup.com/quantum-cloud-infrastructure',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$178.9B',
+    marketSize: '$178 && 178.9B',
     targetAudience:
       'Enterprise businesses, cloud providers, research institutions, government agencies',
     competitiveAdvantage:
@@ -110,12 +110,12 @@ export const advancedITServices2025 = [
     },
     category: 'Edge Computing',
     tags: ['AI', 'Edge Computing', 'IoT', 'Distributed Computing'],
-    website: 'https://ziontechgroup.com/edge-computing-ai',
+    website: 'https://ziontechgroup && ziontechgroup.com/edge-computing-ai',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$43.4B',
+    marketSize: '$43 && 43.4B',
     targetAudience:
       'IoT companies, telecommunications, manufacturing, smart cities',
     competitiveAdvantage:
@@ -174,12 +174,12 @@ export const advancedITServices2025 = [
       'Identity Management',
       'Threat Detection',
     ],
-    website: 'https://ziontechgroup.com/zero-trust-security-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/zero-trust-security-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$173.5B',
+    marketSize: '$173 && 173.5B',
     targetAudience:
       'IT security teams, cybersecurity firms, enterprise businesses, government agencies',
     competitiveAdvantage:
@@ -233,12 +233,12 @@ export const advancedITServices2025 = [
     },
     category: 'Blockchain',
     tags: ['Blockchain', 'Smart Contracts', 'Enterprise', 'Compliance'],
-    website: 'https://ziontechgroup.com/enterprise-blockchain-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/enterprise-blockchain-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$19.9B',
+    marketSize: '$19 && 19.9B',
     targetAudience:
       'Financial institutions, supply chain companies, healthcare providers, government agencies',
     competitiveAdvantage:
@@ -292,12 +292,12 @@ export const advancedITServices2025 = [
     },
     category: 'DevOps',
     tags: ['AI', 'DevOps', 'CI/CD', 'Automation'],
-    website: 'https://ziontechgroup.com/devops-ai-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/devops-ai-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$8.2B',
+    marketSize: '$8 && 8.2B',
     targetAudience:
       'Development teams, DevOps engineers, software companies, enterprise businesses',
     competitiveAdvantage:
@@ -352,12 +352,12 @@ export const advancedITServices2025 = [
       'Security',
       'High-Speed Communication',
     ],
-    website: 'https://ziontechgroup.com/quantum-net-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-net-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$12.8B',
+    marketSize: '$12 && 12.8B',
     targetAudience:
       'Telecommunications, financial institutions, government agencies, research institutions',
     competitiveAdvantage:
@@ -416,12 +416,12 @@ export const advancedITServices2025 = [
       'Infrastructure Management',
       'Automation',
     ],
-    website: 'https://ziontechgroup.com/autonomous-it-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/autonomous-it-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$28.7B',
+    marketSize: '$28 && 28.7B',
     targetAudience:
       'IT operations teams, system administrators, enterprise businesses, managed service providers',
     competitiveAdvantage:
@@ -480,12 +480,12 @@ export const advancedITServices2025 = [
       'Infrastructure',
       'Energy Efficiency',
     ],
-    website: 'https://ziontechgroup.com/quantum-data-center-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-data-center-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$89.3B',
+    marketSize: '$89 && 89.3B',
     targetAudience:
       'Data center operators, cloud providers, enterprise businesses, government agencies',
     competitiveAdvantage:
@@ -544,12 +544,12 @@ export const advancedITServices2025 = [
       'Encryption',
       'Threat Detection',
     ],
-    website: 'https://ziontechgroup.com/quantum-cyber-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-cyber-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$173.5B',
+    marketSize: '$173 && 173.5B',
     targetAudience:
       'IT security teams, cybersecurity firms, government agencies, financial institutions',
     competitiveAdvantage:
@@ -603,21 +603,21 @@ export const advancedITServices2025 = [
     },
     category: 'Cloud Migration',
     tags: ['Quantum Computing', 'Cloud Migration', 'AI', 'Zero Downtime'],
-    website: 'https://ziontechgroup.com/quantum-migration-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-migration-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$15.7B',
+    marketSize: '$15 && 15.7B',
     targetAudience:
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',
     competitiveAdvantage:
       'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration',
   },
 ];      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup && ziontechgroup.com'
     };
-    marketSize: '$15.7B',
+    marketSize: '$15 && 15.7B',
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }

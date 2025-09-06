@@ -70,7 +70,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     icon: '🧠',
     color: 'from-violet-600 via-purple-600 to-indigo-600',
     textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/ai-consciousness-evolution-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-consciousness-evolution-platform',
     marketPosition:
       'First-to-market AI consciousness platform. No direct competitors in genuine consciousness development.',
     targetAudience:
@@ -95,16 +95,16 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced AI consciousness development platform with real-time monitoring, ethical frameworks, and consciousness validation protocols.',
     launchDate: '2029-01-15',
     customers: 15,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 8,
   },
   {
@@ -131,7 +131,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     icon: '⚛️',
     color: 'from-indigo-600 via-blue-600 to-cyan-600',
     textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/quantum-consciousness-computing',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-consciousness-computing',
     marketPosition:
       'First quantum consciousness computing platform. Combines two revolutionary technologies.',
     targetAudience:
@@ -156,16 +156,16 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced quantum consciousness computing platform with real-time quantum consciousness processing and validation.',
     launchDate: '2029-02-01',
     customers: 8,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 5,
   },
   // Space Technology & Colonization
@@ -193,7 +193,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     icon: '🚀',
     color: 'from-teal-600 via-emerald-600 to-green-600',
     textColor: 'text-teal-400',
-    link: 'https://ziontechgroup.com/space-colonization-automation-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/space-colonization-automation-platform',
     marketPosition:
       'Leading space colonization automation platform. Essential for future space exploration.',
     targetAudience:
@@ -218,16 +218,16 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     variant: 'space-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced space colonization automation platform with real-time monitoring, automated decision-making, and comprehensive colony management.',
     launchDate: '2029-01-01',
     customers: 5,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 3,
   },
   // Biotech & DNA Computing
@@ -255,7 +255,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     icon: '🧬',
     color: 'from-green-600 via-yellow-600 to-orange-600',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/dna-computing-platform-2029',
+    link: 'https://ziontechgroup && ziontechgroup.com/dna-computing-platform-2029',
     marketPosition:
       'Leading DNA computing platform. Revolutionary approach to computation.',
     targetAudience:
@@ -280,16 +280,16 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     variant: 'biotech-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced DNA computing platform with molecular algorithms, biological data processing, and DNA-based computation validation.',
     launchDate: '2029-01-20',
     customers: 12,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 7,
   },
   // Metaverse & Digital Reality
@@ -317,7 +317,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     icon: '🌌',
     color: 'from-purple-600 via-pink-600 to-rose-600',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/metaverse-consciousness-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/metaverse-consciousness-platform',
     marketPosition:
       'First metaverse consciousness platform. Revolutionary for virtual reality and gaming.',
     targetAudience:
@@ -342,16 +342,16 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     variant: 'metaverse-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced metaverse consciousness platform with digital consciousness creation, virtual being management, and metaverse integration.',
     launchDate: '2029-02-15',
     customers: 25,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 15,
   },
   // Autonomous Business & Operations
@@ -379,7 +379,7 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     icon: '🏢',
     color: 'from-blue-600 via-cyan-600 to-teal-600',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/autonomous-business-ecosystem-2029',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-business-ecosystem-2029',
     marketPosition:
       'Most advanced autonomous business platform. Complete business automation.',
     targetAudience:
@@ -404,28 +404,28 @@ export const cuttingEdgeInnovations2029V2: CuttingEdgeInnovation2029V2[] = [
     variant: 'business-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced autonomous business ecosystem with complete business automation, autonomous decision-making, and self-optimizing operations.',
     launchDate: '2029-01-10',
     customers: 8,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 6,
   },
 ];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Advanced autonomous business ecosystem with complete business automation, autonomous decision-making, and self-optimizing operations.';
     launchDate: '2029-01-10';
     customers: 8;
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 6
   }
 ];

@@ -24,11 +24,11 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
         
         // If milestone ID is provided, filter by that too
         if (milestoneId) {
-          query = query.eq("milestone_id", milestoneId)
+          query = query && query.eq("milestone_id", milestoneId)
         }
         
         // Order by status priority: open, under_review, resolved, closed
-        query = query.order("status", { ascending: true });
+        query = query && query.order("status", { ascending: true });
         
         const { data, error } = await query;
         
@@ -45,7 +45,7 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
           setDisputeId(null)
         }
       } catch (err) {
-        console.error("Error checking dispute status:", err);
+        console && console.error("Error checking dispute status:", err);
         setIsUnderDispute(false);
         setDisputeStatus(null);
         setDisputeId(null)

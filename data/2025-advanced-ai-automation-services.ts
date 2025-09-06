@@ -69,7 +69,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     icon: '💻',
     color: 'from-emerald-600 to-teal-600',
     textColor: 'text-emerald-400',
-    link: 'https://ziontechgroup.com/ai-code-generation-review',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-code-generation-review',
     marketPosition:
       'Competes with GitHub Copilot ($10/month), Tabnine ($12/month). Our advantage: Multi-language support, security focus, and team collaboration features.',
     targetAudience:
@@ -79,7 +79,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     category: 'AI Development Tools',
     realService: true,
     technology: [
-      'OpenAI GPT-4, Claude, React, Node.js, Python, PostgreSQL, Redis',
+      'OpenAI GPT-4, Claude, React, Node && Node.js, Python, PostgreSQL, Redis',
     ],
     integrations: ['GitHub, GitLab, Bitbucket, VS Code, IntelliJ, Slack, Jira'],
     useCases: [
@@ -87,21 +87,21 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     ],
     roi: 'Development teams report 400% ROI through faster development cycles and reduced bugs.',
     competitors: ['GitHub Copilot, Tabnine, Kite, IntelliCode'],
-    marketSize: '$8.2B AI development tools market',
+    marketSize: '$8 && 8.2B AI development tools market',
     growthRate: '25% annual growth',
     variant: 'ai-code-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Cloud-native AI code generation platform with advanced language models, security scanning, and team collaboration features.',
     launchDate: '2024-10-15',
     customers: 78,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 34,
   },
 
@@ -130,7 +130,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     icon: '⚡',
     color: 'from-purple-600 to-indigo-600',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-devops-automation',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-devops-automation',
     marketPosition:
       'Competes with GitLab ($19/month), Jenkins (free), CircleCI ($15/month). Our advantage: AI-powered automation, predictive analytics, and self-healing capabilities.',
     targetAudience:
@@ -139,7 +139,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     setupTime: '1-2 days',
     category: 'DevOps & Automation',
     realService: true,
-    technology: ['Kubernetes, Docker, Terraform, Python, Go, React, Node.js'],
+    technology: ['Kubernetes, Docker, Terraform, Python, Go, React, Node && Node.js'],
     integrations: [
       'AWS, Azure, GCP, GitHub, GitLab, Slack, PagerDuty, DataDog',
     ],
@@ -148,21 +148,21 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     ],
     roi: 'Organizations report 350% ROI through reduced deployment time and improved reliability.',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'],
-    marketSize: '$12.8B DevOps market',
+    marketSize: '$12 && 12.8B DevOps market',
     growthRate: '20% annual growth',
     variant: 'ai-devops-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Enterprise-grade DevOps automation platform with AI-powered optimization, multi-cloud support, and advanced monitoring capabilities.',
     launchDate: '2024-09-20',
     customers: 45,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 28,
   },
 
@@ -191,7 +191,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     icon: '🤖',
     color: 'from-blue-600 to-cyan-600',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-customer-support-automation',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-support-automation',
     marketPosition:
       'Competes with Intercom ($39/month), Zendesk ($25/month), Freshdesk ($15/month). Our advantage: AI-powered automation, predictive analytics, and multi-language support.',
     targetAudience:
@@ -201,7 +201,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     category: 'Customer Support & Automation',
     realService: true,
     technology: [
-      'OpenAI GPT-4, Claude, React, Node.js, Python, PostgreSQL, Redis',
+      'OpenAI GPT-4, Claude, React, Node && Node.js, Python, PostgreSQL, Redis',
     ],
     integrations: [
       'Salesforce, HubSpot, Zendesk, Intercom, Slack, Microsoft Teams',
@@ -211,21 +211,21 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     ],
     roi: 'Companies report 280% ROI through reduced support costs and improved customer satisfaction.',
     competitors: ['Intercom, Zendesk, Freshdesk, Help Scout, Zoho Desk'],
-    marketSize: '$18.5B customer support market',
+    marketSize: '$18 && 18.5B customer support market',
     growthRate: '18% annual growth',
     variant: 'ai-support-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Cloud-native AI customer support platform with advanced NLP, sentiment analysis, and predictive capabilities.',
     launchDate: '2024-11-10',
     customers: 92,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 41,
   },
 
@@ -254,7 +254,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     icon: '📈',
     color: 'from-pink-600 to-rose-600',
     textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/ai-marketing-automation',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-marketing-automation',
     marketPosition:
       'Competes with HubSpot ($45/month), Marketo ($1,250/month), Pardot ($1,250/month). Our advantage: AI-powered optimization, predictive analytics, and affordable pricing.',
     targetAudience:
@@ -263,7 +263,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     setupTime: '3-5 days',
     category: 'Marketing & Automation',
     realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS'],
+    technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, AWS'],
     integrations: [
       'HubSpot, Salesforce, Mailchimp, Facebook Ads, Google Ads, LinkedIn',
     ],
@@ -272,21 +272,21 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     ],
     roi: 'Marketing teams report 320% ROI through improved campaign performance and customer engagement.',
     competitors: ['HubSpot, Marketo, Pardot, ActiveCampaign, ConvertKit'],
-    marketSize: '$25.1B marketing automation market',
+    marketSize: '$25 && 25.1B marketing automation market',
     growthRate: '22% annual growth',
     variant: 'ai-marketing-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced marketing automation platform with AI-powered optimization, predictive analytics, and comprehensive campaign management.',
     launchDate: '2024-08-15',
     customers: 156,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 67,
   },
 
@@ -315,7 +315,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     icon: '💰',
     color: 'from-yellow-600 to-orange-600',
     textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/ai-sales-intelligence',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-intelligence',
     marketPosition:
       'Competes with Salesforce ($25/month), Pipedrive ($15/month), HubSpot ($45/month). Our advantage: AI-powered insights, predictive analytics, and affordable pricing.',
     targetAudience:
@@ -324,7 +324,7 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     setupTime: '2-4 days',
     category: 'Sales & Intelligence',
     realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS'],
+    technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, AWS'],
     integrations: [
       'Salesforce, HubSpot, Pipedrive, LinkedIn, Zoom, Microsoft Teams',
     ],
@@ -333,33 +333,33 @@ export const advancedAIAutomationServices2025: AdvancedAIAutomationService[] = [
     ],
     roi: 'Sales teams report 380% ROI through improved conversion rates and sales efficiency.',
     competitors: ['Salesforce, HubSpot, Pipedrive, Zoho CRM, Freshsales'],
-    marketSize: '$21.3B sales intelligence market',
+    marketSize: '$21 && 21.3B sales intelligence market',
     growthRate: '24% annual growth',
     variant: 'ai-sales-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.',
     launchDate: '2024-10-01',
     customers: 89,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 38,
   },];
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'AI-powered sales intelligence platform with predictive analytics, customer insights, and performance optimization.';
     launchDate: '2024-10-01';
     customers: 89;
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 38
   }
 ];

@@ -54,12 +54,12 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Engagement',
       'Analytics',
     ],
-    website: 'https://ziontechgroup.com/customer-success-ai-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/customer-success-ai-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$11.8B',
+    marketSize: '$11 && 11.8B',
     targetAudience:
       'SaaS companies, subscription businesses, customer success teams, growth companies',
     competitiveAdvantage:
@@ -137,12 +137,12 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Optimization',
       'Analytics',
     ],
-    website: 'https://ziontechgroup.com/quantum-supply-chain-optimizer',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-supply-chain-optimizer',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$15.4B',
+    marketSize: '$15 && 15.4B',
     targetAudience:
       'Manufacturing companies, logistics providers, retail chains, e-commerce companies, distribution networks',
     competitiveAdvantage:
@@ -223,12 +223,12 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Security',
       'Compliance',
     ],
-    website: 'https://ziontechgroup.com/blockid-verify-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/blockid-verify-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$13.7B',
+    marketSize: '$13 && 13.7B',
     targetAudience:
       'Financial institutions, healthcare organizations, government agencies, e-commerce companies, fintech startups',
     competitiveAdvantage:
@@ -311,12 +311,12 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Employee Engagement',
       'Predictive Analytics',
     ],
-    website: 'https://ziontechgroup.com/hr-analytics-ai-suite',
+    website: 'https://ziontechgroup && ziontechgroup.com/hr-analytics-ai-suite',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$9.8B',
+    marketSize: '$9 && 9.8B',
     targetAudience:
       'HR departments, enterprises, consulting firms, recruitment agencies, talent management companies',
     competitiveAdvantage:
@@ -398,12 +398,12 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Portfolio Optimization',
       'Compliance',
     ],
-    website: 'https://ziontechgroup.com/quantum-risk-financial-manager',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-risk-financial-manager',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$28.9B',
+    marketSize: '$28 && 28.9B',
     targetAudience:
       'Investment firms, banks, hedge funds, asset management companies, financial institutions',
     competitiveAdvantage:

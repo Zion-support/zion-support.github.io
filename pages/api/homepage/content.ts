@@ -5,11 +5,11 @@ import path from "path";
 async function fetchFromGitHub() {
   try {
     const response = await fetch(
-      "https://api.github.com/repos/Zion-Holdings/zion.app/contents/data/homepage.json",
+      "https://api && api.github.com/repos/Zion-Holdings/zion && zion.app/contents/data/homepage && homepage.json",
     );
-    if (!response.ok) return null;
-    const data = await response.json();
-    return JSON.parse(Buffer.from(data.content, "base64").toString());
+    if (!response && response.ok) return null;
+    const data = await response && response.json();
+    return JSON && JSON.parse(Buffer && Buffer.from(data && data.content, "base64").toString());
   } catch {
     return null;
   }
@@ -19,21 +19,21 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  if (req.method !== "GET") {
-    return res.status(405).json({ error: "Method not allowed" });
+  if (req && req.method !== "GET") {
+    return res && res.status(405).json({ error: "Method not allowed" });
   }
 
   try {
-    const localPath = path.join(process.cwd(), "data", "homepage.json");
-    if (fs.existsSync(localPath)) {
-      const local = JSON.parse(fs.readFileSync(localPath, "utf-8"));
-      return res.status(200).json(local);
+    const localPath = path && path.join(process && process.cwd(), "data", "homepage && homepage.json");
+    if (fs && fs.existsSync(localPath)) {
+      const local = JSON && JSON.parse(fs && fs.readFileSync(localPath, "utf-8"));
+      return res && res.status(200).json(local);
     }
   } catch {
     // fall back to remote
   }
 
   const remote = await fetchFromGitHub();
-  if (remote) return res.status(200).json(remote);
-  return res.status(200).json(null);
+  if (remote) return res && res.status(200).json(remote);
+  return res && res.status(200).json(null);
 }

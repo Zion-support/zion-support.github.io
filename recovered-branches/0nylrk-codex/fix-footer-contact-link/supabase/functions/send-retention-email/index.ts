@@ -1,13 +1,13 @@
 
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-import {Resend} from "npm: resend@2.0.0";
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.45.0",
+import {Resend} from "npm: resend@2 ;
 // Initialize Resend with API key
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
+const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
 
 // Initialize Supabase client
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
 const corsHeaders = {
@@ -27,13 +27,13 @@ interface EmailData {
 
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
 
   try {
     // Extract job data from request
-    const jobData = await req.json();
+    const jobData = await req && req.json();
     const { id: jobId, payload } = jobData;
     const emailData = payload as EmailData;
     
@@ -41,24 +41,24 @@ serve(async (req) => {
     const { data: userData, error: userError } = await supabase
       .from("profiles")
       .select("id, display_name, avatar_url, user_type")
-      .eq("id", emailData.user_id)
+      .eq("id", emailData && emailData.user_id)
       .single();
     
     if (userError) {
-      throw new Error(`Error fetching user data: ${userError.message}`)
+      throw new Error(`Error fetching user data: ${userError && userError.message}`)
     }
     
     const { data: authUser, error: authError } = await supabase
-      .from("auth.users")
+      .from("auth && auth.users")
       .select("email")
-      .eq("id", emailData.user_id)
+      .eq("id", emailData && emailData.user_id)
       .single();
     
     if (authError) {
-      throw new Error(`Error fetching user email: ${authError.message}`)
+      throw new Error(`Error fetching user email: ${authError && authError.message}`)
     }
     
-    const userEmail = authUser.email;
+    const userEmail = authUser && authUser.email;
     if (!userEmail) {
       throw new Error("User email not found")
     }
@@ -67,14 +67,14 @@ serve(async (req) => {
     const { subject, html } = await generateEmail(emailData, userData);
 
     // Send email via Resend
-    const emailResponse = await resend.emails.send({
-      from: "Zion AI Marketplace <notifications@zion.ai>";
+    const emailResponse = await resend && resend.emails.send({
+      from: "Zion AI Marketplace <notifications@zion && zion.ai>";
       to: userEmail;
       subject: subject,
       html: html});
 
-    if (emailResponse.error) {
-      throw new Error(`Failed to send email: ${emailResponse.error.message}`)
+    if (emailResponse && emailResponse.error) {
+      throw new Error(`Failed to send email: ${emailResponse && emailResponse.error.message}`)
     }
 
     // Update job status
@@ -91,11 +91,11 @@ serve(async (req) => {
       .update({
         status: "sent",
         sent_at: new Date().toISOString()})
-      .eq("user_id", emailData.user_id)
-      .eq("campaign_type", emailData.email_type);
+      .eq("user_id", emailData && emailData.user_id)
+      .eq("campaign_type", emailData && emailData.email_type);
 
     return new Response(
-      JSON.stringify({
+      JSON && JSON.stringify({
         success: true;
         message: "Email sent successfully",
         email: emailResponse});
@@ -106,12 +106,12 @@ serve(async (req) => {
         status: 200}
     )
   } catch (error) {
-    console.error("Error in send-retention-email function:", error);
+    console && console.error("Error in send-retention-email function:", error);
 
     return new Response(
-      JSON.stringify({
+      JSON && JSON.stringify({
         success: false,
-        error: error.message});
+        error: error && error.message});
       {
         headers: {
           ...corsHeaders,
@@ -180,30 +180,30 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
     }
   } else if (email_type === "inactivity_3") {
     // Day 3 incomplete action reminder
-    if (emailData.onboarding_status) {
-      const onboarding = emailData.onboarding_status;
+    if (emailData && emailData.onboarding_status) {
+      const onboarding = emailData && emailData.onboarding_status;
       
       if (user_type === "jobSeeker" || user_type === "creator") {
-        if (!onboarding.profile_completed) {
+        if (!onboarding && onboarding.profile_completed) {
           nextAction = "complete your profile";
           ctaLink = "/profile";
           ctaText = "Complete Your Profile"
-        } else if (!onboarding.skills_added) {
+        } else if (!onboarding && onboarding.skills_added) {
           nextAction = "add your skills to get matched with the right opportunities";
           ctaLink = "/profile/skills";
           ctaText = "Add Your Skills"
-        } else if (!onboarding.availability_set) {
+        } else if (!onboarding && onboarding.availability_set) {
           nextAction = "set your availability to help clients find you";
           ctaLink = "/profile/settings";
           ctaText = "Set Your Availability"
         }
       } else {
         // For clients
-        if (!onboarding.job_posted) {
+        if (!onboarding && onboarding.job_posted) {
           nextAction = "post your first job to start finding talent";
           ctaLink = "/post-job";
           ctaText = "Post a Job"
-        } else if (!onboarding.talent_invited) {
+        } else if (!onboarding && onboarding.talent_invited) {
           nextAction = "invite talent to speed up your hiring process";
           ctaLink = "/talent";
           ctaText = "Find Talent"
@@ -320,12 +320,12 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
   } else if (email_type === "unfilled_job_14_days") {
     // Email for clients with unfilled jobs
     return {
-      subject: `Tips to find the perfect talent for "${emailData.job_title}"`;
+      subject: `Tips to find the perfect talent for "${emailData && emailData.job_title}"`;
       html: `
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
           <h2>Let's find talent for your job</h2>
           <p>Hi ${firstName},</p>
-          <p>We noticed your job "${emailData.job_title}" has been open for a while. Here are some tips to attract more qualified candidates: </p>
+          <p>We noticed your job "${emailData && emailData.job_title}" has been open for a while. Here are some tips to attract more qualified candidates: </p>
           <ul>
             <li>Review and update your job description with more details</li>
             <li>Consider adjusting your budget range if possible</li>
@@ -333,7 +333,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
             <li>Add more specific skills requirements</li>
           </ul>
           <div style="margin: 25px 0,">
-            <a href="${supabaseUrl}/dashboard/jobs/${emailData.job_id}" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Update Job Post</a>
+            <a href="${supabaseUrl}/dashboard/jobs/${emailData && emailData.job_id}" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px,">Update Job Post</a>
           </div>
           <p>The Zion AI Marketplace Team</p>
         </div>

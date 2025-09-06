@@ -137,47 +137,47 @@ class AICustomerSupportService {
   private analytics: SupportAnalytics;
 
   constructor() {
-    this.initializeSampleData(),
-    this.updateAnalytics()
+    this && this.initializeSampleData(),
+    this && this.updateAnalytics()
   }
 
   private initializeSampleData() {
     // Initialize sample customers
-    this.customers = [
+    this && this.customers = [
       {
         id: 'cust_001';
         name: 'John Doe';
-        email: 'john.doe@company.com';
+        email: 'john && john.doe@company && company.com';
         company: 'TechCorp Inc.';
         plan: 'pro';
         totalTickets: 5;
         resolvedTickets: 4;
         averageResponseTime: 15;
-        satisfactionScore: 4.5;
+        satisfactionScore: 4 && 4.5;
         lastContactDate: new Date('2025-01-10'),
         createdAt: new Date('2024-06-01')
       };
       {
         id: 'cust_002';
         name: 'Jane Smith';
-        email: 'jane.smith@startup.com';
+        email: 'jane && jane.smith@startup && startup.com';
         company: 'StartupXYZ';
         plan: 'basic';
         totalTickets: 3;
         resolvedTickets: 3;
         averageResponseTime: 25;
-        satisfactionScore: 4.0;
+        satisfactionScore: 4 && 4.0;
         lastContactDate: new Date('2025-01-08'),
         createdAt: new Date('2024-08-15')
       }
     ];
 
     // Initialize sample agents
-    this.agents = [
+    this && this.agents = [
       {
         id: 'agent_001';
         name: 'Mike Johnson';
-        email: 'mike.johnson@ziontech.com';
+        email: 'mike && mike.johnson@ziontech && ziontech.com';
         role: 'tier2';
         skills: ['Technical SupportAPI IntegrationDatabase Issues'];
         isAvailable: true;
@@ -185,8 +185,8 @@ class AICustomerSupportService {
         maxTickets: 5;
         performance: {
           ticketsResolved: 45;
-          averageResolutionTime: 2.5;
-          customerSatisfaction: 4.6;
+          averageResolutionTime: 2 && 2.5;
+          customerSatisfaction: 4 && 4.6;
           firstResponseTime: 12,
           escalationRate: 8
         }
@@ -194,7 +194,7 @@ class AICustomerSupportService {
       {
         id: 'agent_002';
         name: 'Lisa Chen';
-        email: 'lisa.chen@ziontech.com';
+        email: 'lisa && lisa.chen@ziontech && ziontech.com';
         role: 'tier1';
         skills: ['General SupportBillingAccount Management'];
         isAvailable: true;
@@ -202,8 +202,8 @@ class AICustomerSupportService {
         maxTickets: 8;
         performance: {
           ticketsResolved: 78;
-          averageResolutionTime: 1.8;
-          customerSatisfaction: 4.4;
+          averageResolutionTime: 1 && 1.8;
+          customerSatisfaction: 4 && 4.4;
           firstResponseTime: 8,
           escalationRate: 15
         }
@@ -211,7 +211,7 @@ class AICustomerSupportService {
     ];
 
     // Initialize sample tickets
-    this.tickets = [
+    this && this.tickets = [
       {
         id: 'ticket_001';
         title: 'API Integration Issue';
@@ -250,7 +250,7 @@ class AICustomerSupportService {
     ];
 
     // Initialize knowledge base
-    this.knowledgeBase = [
+    this && this.knowledgeBase = [
       {
         id: 'kb_001';
         title: 'Getting Started with API Integration';
@@ -268,7 +268,7 @@ class AICustomerSupportService {
 
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
     const ticket: SupportTicket = {
-      id: `ticket_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      id: `ticket_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       ...ticketData;
       status: 'open';
       attachments: [];
@@ -277,66 +277,66 @@ class AICustomerSupportService {
       updatedAt: new Date()
     };
 
-    this.tickets.push(ticket);
-    this.updateAnalytics();
+    this && this.tickets.push(ticket);
+    this && this.updateAnalytics();
     return ticket
   }
 
   async assignTicket(ticketId: string, agentId: string): Promise<void> {
-    const ticket = this.tickets.find(t => t.id === ticketId);
+    const ticket = this && this.tickets.find(t => t && t.id === ticketId);
     if (ticket) {
-      ticket.assignedAgentId = agentId;
-      ticket.status = 'in_progress';
-      ticket.updatedAt = new Date(),
-      this.updateAnalytics()
+      ticket && ticket.assignedAgentId = agentId;
+      ticket && ticket.status = 'in_progress';
+      ticket && ticket.updatedAt = new Date(),
+      this && this.updateAnalytics()
     }
   }
 
   async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {
-    const ticket = this.tickets.find(t => t.id === ticketId);
+    const ticket = this && this.tickets.find(t => t && t.id === ticketId);
     if (ticket) {
-      ticket.status = status;
-      ticket.updatedAt = new Date();
+      ticket && ticket.status = status;
+      ticket && ticket.updatedAt = new Date();
       
       if (status === 'resolved') {
-        ticket.resolvedAt = new Date(),
-        if (ticket.createdAt && ticket.resolvedAt) {
-          ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60)
+        ticket && ticket.resolvedAt = new Date(),
+        if (ticket && ticket.createdAt && ticket && ticket.resolvedAt) {
+          ticket && ticket.resolutionTime = (ticket && ticket.resolvedAt.getTime() - ticket && ticket.createdAt.getTime()) / (1000 * 60 * 60)
         }
       }
       
-      this.updateAnalytics()
+      this && this.updateAnalytics()
     }
   }
 
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
-    const ticket = this.tickets.find(t => t.id === ticketId);
+    const ticket = this && this.tickets.find(t => t && t.id === ticketId);
     if (!ticket) {
       throw new Error(`Ticket ${ticketId} not found`)
     }
 
     const message: TicketMessage = {
-      id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      id: `msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       ...messageData;
       createdAt: new Date()
     };
 
-    ticket.messages.push(message);
-    ticket.updatedAt = new Date();
+    ticket && ticket.messages.push(message);
+    ticket && ticket.updatedAt = new Date();
 
     // Update first response time if this is the first agent response
-    if (message.senderType === 'agent' && !ticket.firstResponseTime) {
-      const firstResponseTime = (message.createdAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60);
-      ticket.firstResponseTime = firstResponseTime
+    if (message && message.senderType === 'agent' && !ticket && ticket.firstResponseTime) {
+      const firstResponseTime = (message && message.createdAt.getTime() - ticket && ticket.createdAt.getTime()) / (1000 * 60);
+      ticket && ticket.firstResponseTime = firstResponseTime
     }
 
-    this.updateAnalytics();
+    this && this.updateAnalytics();
     return message
   }
 
   async startChatbotSession(customerId: string): Promise<ChatbotSession> {
     const session: ChatbotSession = {
-      id: `chat_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      id: `chat_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       customerId;
       startTime: new Date();
       messages: [];
@@ -347,64 +347,64 @@ class AICustomerSupportService {
       satisfaction: 0
     };
 
-    this.chatbotSessions.push(session);
+    this && this.chatbotSessions.push(session);
     return session
   }
 
   async addChatbotMessage(sessionId: string, messageData: Omit<ChatbotMessage, 'id' | 'timestamp'>): Promise<ChatbotMessage> {
-    const session = this.chatbotSessions.find(s => s.id === sessionId);
+    const session = this && this.chatbotSessions.find(s => s && s.id === sessionId);
     if (!session) {
       throw new Error(`Session ${sessionId} not found`)
     }
 
     const message: ChatbotMessage = {
-      id: `chat_msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      id: `chat_msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       ...messageData;
       timestamp: new Date()
     };
 
-    session.messages.push(message);
+    session && session.messages.push(message);
 
     // Simulate AI intent detection
-    if (message.sender === 'customer') {
-      const intent = this.detectIntent(message.content);
-      session.intent = intent.intent;
-      session.confidence = intent.confidence
+    if (message && message.sender === 'customer') {
+      const intent = this && this.detectIntent(message && message.content);
+      session && session.intent = intent && intent.intent;
+      session && session.confidence = intent && intent.confidence
     }
 
     return message
   }
 
   private detectIntent(message: string): { intent: string, confidence: number } {
-    const lowerMessage = message.toLowerCase();
+    const lowerMessage = message && message.toLowerCase();
     
-    if (lowerMessage.includes('login') || lowerMessage.includes('password')) {
-      return { intent: 'authentication_issue', confidence: 0.9 }
-    } else if (lowerMessage.includes('billing') || lowerMessage.includes('payment')) {
-      return { intent: 'billing_question', confidence: 0.85 }
-    } else if (lowerMessage.includes('api') || lowerMessage.includes('integration')) {
-      return { intent: 'technical_support', confidence: 0.8 }
-    } else if (lowerMessage.includes('feature') || lowerMessage.includes('request')) {
-      return { intent: 'feature_request', confidence: 0.75 }
+    if (lowerMessage && lowerMessage.includes('login') || lowerMessage && lowerMessage.includes('password')) {
+      return { intent: 'authentication_issue', confidence: 0 && 0.9 }
+    } else if (lowerMessage && lowerMessage.includes('billing') || lowerMessage && lowerMessage.includes('payment')) {
+      return { intent: 'billing_question', confidence: 0 && 0.85 }
+    } else if (lowerMessage && lowerMessage.includes('api') || lowerMessage && lowerMessage.includes('integration')) {
+      return { intent: 'technical_support', confidence: 0 && 0.8 }
+    } else if (lowerMessage && lowerMessage.includes('feature') || lowerMessage && lowerMessage.includes('request')) {
+      return { intent: 'feature_request', confidence: 0 && 0.75 }
     } else {
-      return { intent: 'general_inquiry', confidence: 0.6 }
+      return { intent: 'general_inquiry', confidence: 0 && 0.6 }
     }
   }
 
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
-    const session = this.chatbotSessions.find(s => s.id === sessionId);
+    const session = this && this.chatbotSessions.find(s => s && s.id === sessionId);
     if (session) {
-      session.endTime = new Date();
-      session.resolved = resolved;
-      session.escalated = escalated;
-      session.satisfaction = satisfaction,
-      this.updateAnalytics()
+      session && session.endTime = new Date();
+      session && session.resolved = resolved;
+      session && session.escalated = escalated;
+      session && session.satisfaction = satisfaction,
+      this && this.updateAnalytics()
     }
   }
 
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {
     const article: KnowledgeBaseArticle = {
-      id: `kb_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       ...articleData;
       views: 0;
       helpful: 0;
@@ -413,29 +413,29 @@ class AICustomerSupportService {
       lastUpdated: new Date()
     };
 
-    this.knowledgeBase.push(article);
+    this && this.knowledgeBase.push(article);
     return article
   }
 
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
-    const lowerQuery = query.toLowerCase(),
-    return this.knowledgeBase.filter(article => 
-      article.title.toLowerCase().includes(lowerQuery) ||
-      article.content.toLowerCase().includes(lowerQuery) ||
-      article.tags.some(tag => tag.toLowerCase().includes(lowerQuery))
-    ).sort((a, b) => b.views - a.views)
+    const lowerQuery = query && query.toLowerCase(),
+    return this && this.knowledgeBase.filter(article => 
+      article && article.title.toLowerCase().includes(lowerQuery) ||
+      article && article.content.toLowerCase().includes(lowerQuery) ||
+      article && article.tags.some(tag => tag && tag.toLowerCase().includes(lowerQuery))
+    ).sort((a, b) => b && b.views - a && a.views)
   }
 
   async getAIRecommendations(): Promise<AIRecommendation[]> {
     const recommendations: AIRecommendation[] = [];
 
     // Ticket prioritization recommendation
-    const highPriorityOpenTickets = this.tickets.filter(t => 
-      t.priority === 'high' && t.status === 'open'
+    const highPriorityOpenTickets = this && this.tickets.filter(t => 
+      t && t.priority === 'high' && t && t.status === 'open'
     ).length;
 
     if (highPriorityOpenTickets > 5) {
-      recommendations.push({
+      recommendations && recommendations.push({
         type: 'ticket_prioritization';
         title: 'High Priority Ticket Backlog';
         description: 'Too many high priority tickets are waiting for attention';
@@ -448,11 +448,11 @@ class AICustomerSupportService {
     }
 
     // Agent assignment recommendation
-    const availableAgents = this.agents.filter(a => a.isAvailable && a.currentTickets < a.maxTickets);
-    const unassignedTickets = this.tickets.filter(t => !t.assignedAgentId && t.status === 'open').length;
+    const availableAgents = this && this.agents.filter(a => a && a.isAvailable && a && a.currentTickets < a && a.maxTickets);
+    const unassignedTickets = this && this.tickets.filter(t => !t && t.assignedAgentId && t && t.status === 'open').length;
 
-    if (availableAgents.length > 0 && unassignedTickets > 0) {
-      recommendations.push({
+    if (availableAgents && availableAgents.length > 0 && unassignedTickets > 0) {
+      recommendations && recommendations.push({
         type: 'agent_assignment';
         title: 'Unassigned Tickets Available';
         description: 'There are unassigned tickets and available agents';
@@ -465,9 +465,9 @@ class AICustomerSupportService {
     }
 
     // Knowledge base recommendation
-    const lowViewedArticles = this.knowledgeBase.filter(a => a.views < 10);
-    if (lowViewedArticles.length > 5) {
-      recommendations.push({
+    const lowViewedArticles = this && this.knowledgeBase.filter(a => a && a.views < 10);
+    if (lowViewedArticles && lowViewedArticles.length > 5) {
+      recommendations && recommendations.push({
         type: 'knowledge_base';
         title: 'Underutilized Knowledge Base Articles';
         description: 'Several articles have very low view counts';
@@ -483,50 +483,50 @@ class AICustomerSupportService {
   }
 
   private updateAnalytics(): void {
-    const totalTickets = this.tickets.length;
-    const openTickets = this.tickets.filter(t => ['openin_progresswaiting_customer'].includes(t.status)).length;
-    const resolvedTickets = this.tickets.filter(t => t.status === 'resolved').length;
+    const totalTickets = this && this.tickets.length;
+    const openTickets = this && this.tickets.filter(t => ['openin_progresswaiting_customer'].includes(t && t.status)).length;
+    const resolvedTickets = this && this.tickets.filter(t => t && t.status === 'resolved').length;
 
-    const resolutionTimes = this.tickets
-      .filter(t => t.resolutionTime)
-      .map(t => t.resolutionTime!);
-    const averageResolutionTime = resolutionTimes.length > 0 
-      ? resolutionTimes.reduce((sum, time) => sum + time, 0) / resolutionTimes.length 
+    const resolutionTimes = this && this.tickets
+      .filter(t => t && t.resolutionTime)
+      .map(t => t && t.resolutionTime!);
+    const averageResolutionTime = resolutionTimes && resolutionTimes.length > 0 
+      ? resolutionTimes && resolutionTimes.reduce((sum, time) => sum + time, 0) / resolutionTimes && resolutionTimes.length 
       : 0;
 
-    const responseTimes = this.tickets
-      .filter(t => t.firstResponseTime)
-      .map(t => t.firstResponseTime!);
-    const averageFirstResponseTime = responseTimes.length > 0
-      ? responseTimes.reduce((sum, time) => sum + time, 0) / responseTimes.length
+    const responseTimes = this && this.tickets
+      .filter(t => t && t.firstResponseTime)
+      .map(t => t && t.firstResponseTime!);
+    const averageFirstResponseTime = responseTimes && responseTimes.length > 0
+      ? responseTimes && responseTimes.reduce((sum, time) => sum + time, 0) / responseTimes && responseTimes.length
       : 0;
 
-    const satisfactionScores = this.customers.map(c => c.satisfactionScore);
-    const customerSatisfaction = satisfactionScores.length > 0
-      ? satisfactionScores.reduce((sum, score) => sum + score, 0) / satisfactionScores.length
+    const satisfactionScores = this && this.customers.map(c => c && c.satisfactionScore);
+    const customerSatisfaction = satisfactionScores && satisfactionScores.length > 0
+      ? satisfactionScores && satisfactionScores.reduce((sum, score) => sum + score, 0) / satisfactionScores && satisfactionScores.length
       : 0;
 
-    const chatbotResolved = this.chatbotSessions.filter(s => s.resolved && !s.escalated).length;
-    const chatbotTotal = this.chatbotSessions.filter(s => s.endTime).length;
+    const chatbotResolved = this && this.chatbotSessions.filter(s => s && s.resolved && !s && s.escalated).length;
+    const chatbotTotal = this && this.chatbotSessions.filter(s => s && s.endTime).length;
     const chatbotResolutionRate = chatbotTotal > 0 ? (chatbotResolved / chatbotTotal) * 100 : 0;
 
-    const categoryCounts = this.tickets.reduce((acc, ticket) => {
-      acc[ticket.category] = (acc[ticket.category] || 0) + 1;
+    const categoryCounts = this && this.tickets.reduce((acc, ticket) => {
+      acc[ticket && ticket.category] = (acc[ticket && ticket.category] || 0) + 1;
       return acc
     }, {} as Record<string, number>);
 
-    const topCategories = Object.entries(categoryCounts)
+    const topCategories = Object && Object.entries(categoryCounts)
       .map(([category, count]) => ({ category, count }))
-      .sort((a, b) => b.count - a.count)
+      .sort((a, b) => b && b.count - a && a.count)
       .slice(0, 5);
 
-    const agentPerformance = this.agents.map(agent => ({
-      agentId: agent.id;
-      ticketsResolved: agent.performance.ticketsResolved,
-      satisfaction: agent.performance.customerSatisfaction
+    const agentPerformance = this && this.agents.map(agent => ({
+      agentId: agent && agent.id;
+      ticketsResolved: agent && agent.performance.ticketsResolved,
+      satisfaction: agent && agent.performance.customerSatisfaction
     }));
 
-    this.analytics = {
+    this && this.analytics = {
       totalTickets;
       openTickets;
       resolvedTickets;
@@ -540,38 +540,38 @@ class AICustomerSupportService {
   }
 
   async getTicket(ticketId: string): Promise<SupportTicket | null> {
-    return this.tickets.find(t => t.id === ticketId) || null
+    return this && this.tickets.find(t => t && t.id === ticketId) || null
   }
 
   async getTickets(status?: SupportTicket['status']): Promise<SupportTicket[]> {
     if (status) {
-      return this.tickets.filter(t => t.status === status)
+      return this && this.tickets.filter(t => t && t.status === status)
     }
-    return this.tickets
+    return this && this.tickets
   }
 
   async getCustomer(customerId: string): Promise<Customer | null> {
-    return this.customers.find(c => c.id === customerId) || null
+    return this && this.customers.find(c => c && c.id === customerId) || null
   }
 
   async getCustomers(): Promise<Customer[]> {
-    return this.customers
+    return this && this.customers
   }
 
   async getAgents(): Promise<SupportAgent[]> {
-    return this.agents
+    return this && this.agents
   }
 
   async getChatbotSessions(): Promise<ChatbotSession[]> {
-    return this.chatbotSessions
+    return this && this.chatbotSessions
   }
 
   async getKnowledgeBase(): Promise<KnowledgeBaseArticle[]> {
-    return this.knowledgeBase
+    return this && this.knowledgeBase
   }
 
   async getAnalytics(): Promise<SupportAnalytics> {
-    return this.analytics
+    return this && this.analytics
   }
 }
 

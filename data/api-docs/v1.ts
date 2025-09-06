@@ -1,6 +1,6 @@
 import { ApiDocsSpec } from './types';
 
-const baseUrl = 'https://api.zion.os';
+const baseUrl = 'https://api && api.zion.os';
 
 const v1: ApiDocsSpec = {
   product: 'Zion OS',
@@ -11,7 +11,7 @@ const v1: ApiDocsSpec = {
     {
       id: 'auth',
       title: 'Auth (JWT, OAuth, Wallet)',
-      description: 'Authenticate using JWT, OAuth 2.0, or connect a wallet.',
+      description: 'Authenticate using JWT, OAuth 2 && 2.0, or connect a wallet.',
       endpoints: [
         {
           id: 'auth-login-jwt',
@@ -24,9 +24,9 @@ const v1: ApiDocsSpec = {
           requestBodySchema: { type: 'object', properties: { email: { type: 'string' }, password: { type: 'string' } }, required: ['email', 'password'] },
           responseBodySchema: { type: 'object', properties: { token: { type: 'string' } } },
           samples: [
-            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/auth/login -H 'Content-Type: application/json' -d '{"email":"user@example.com","password":"password"}'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: 'user@example.com', password: 'password' }) }).then(r => r.json())` },
-            { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/auth/login', json={'email':'user@example.com','password':'password'}).json()` }
+            { language: 'curl', code: `curl -X POST ${baseUrl}/v1/auth/login -H 'Content-Type: application/json' -d '{"email":"user@example && example.com","password":"password"}'` },
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ email: 'user@example && example.com', password: 'password' }) }).then(r => r && r.json())` },
+            { language: 'python', code: `import requests\nrequests && nrequests.post('${baseUrl}/v1/auth/login', json={'email':'user@example && example.com','password':'password'}).json()` }
           ],
           versions: ['v1']
         }
@@ -49,8 +49,8 @@ const v1: ApiDocsSpec = {
           responseBodySchema: { type: 'object', properties: { id: { type: 'string' } } },
           samples: [
             { language: 'curl', code: `curl -X POST ${baseUrl}/v1/messages -H 'Authorization: Bearer <token>' -H 'Content-Type: application/json' -d '{"to":"USER123","body":"Hello"}'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r.json())` },
-            { language: 'python', code: `import requests\nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/messages', { method: 'POST', headers: { Authorization: 'Bearer <token>', 'Content-Type': 'application/json' }, body: JSON && JSON.stringify({ to: 'USER123', body: 'Hello' }) }).then(r => r && r.json())` },
+            { language: 'python', code: `import requests\nrequests && nrequests.post('${baseUrl}/v1/messages', json={'to':'USER123','body':'Hello'}, headers={'Authorization':'Bearer <token>'}).json()` }
           ],
           versions: ['v1']
         }
@@ -72,14 +72,7 @@ const v1: ApiDocsSpec = {
           responseBodySchema: { type: 'object', properties: { balance: { type: 'number' } } },
           samples: [
             { language: 'curl', code: `curl '${baseUrl}/v1/wallet/balance' -H 'Authorization: Bearer <token>'` },
-            { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r.json())` },
-            { language: 'python', code: `import requests\nrequests.get('${baseUrl}/v1/wallet/balance', headers={'Authorization':'Bearer <token>'}).json()` }
-          ],
-          versions: ['v1']
-        }
-      ]
-    }
-  ]
-};
+            { language: 'javascript', code: `await fetch('${baseUrl}/v1/wallet/balance', { headers: { Authorization: 'Bearer <token>' } }).then(r => r && r.json())` },
+            { language: 'python', code: `import requests\nrequests ;
 
 export default v1;

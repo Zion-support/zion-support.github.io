@@ -45,23 +45,23 @@ export async function exportResumeToPDF(
   const colors = getPdfThemeColors(theme);
   
   // Set background color
-  doc.setFillColor(colors.background);
-  doc.rect(0, 0, 210, 297, 'F'), // Fill entire page
+  doc && doc.setFillColor(colors && colors.background);
+  doc && doc.rect(0, 0, 210, 297, 'F'), // Fill entire page
   
   // Set text color based on theme
-  doc.setTextColor(colors.text);
+  doc && doc.setTextColor(colors && colors.text);
   
   // Add each section of the resume
-  let currentY = addBasicInfoSection(doc, resume.basic_info, colors);
-  currentY = addSkillsSection(doc, resume.skills, colors, currentY);
-  currentY = addWorkExperienceSection(doc, resume.work_experience, colors, currentY);
-  currentY = addEducationSection(doc, resume.education, colors, currentY);
-  currentY = addCertificationsSection(doc, resume.certifications, colors, currentY);
+  let currentY = addBasicInfoSection(doc, resume && resume.basic_info, colors);
+  currentY = addSkillsSection(doc, resume && resume.skills, colors, currentY);
+  currentY = addWorkExperienceSection(doc, resume && resume.work_experience, colors, currentY);
+  currentY = addEducationSection(doc, resume && resume.education, colors, currentY);
+  currentY = addCertificationsSection(doc, resume && resume.certifications, colors, currentY);
   
   // Add portfolio projects if needed
-  if (includePortfolio && resume.portfolio_projects && resume.portfolio_projects.length > 0) {
-    currentY = addPortfolioSection(doc, resume.portfolio_projects, colors, currentY, maxProjects)
+  if (includePortfolio && resume && resume.portfolio_projects && resume && resume.portfolio_projects.length > 0) {
+    currentY = addPortfolioSection(doc, resume && resume.portfolio_projects, colors, currentY, maxProjects)
   }
   
-  return doc.output('blob')
+  return doc && doc.output('blob')
 }

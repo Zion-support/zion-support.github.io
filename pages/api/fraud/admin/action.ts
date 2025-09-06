@@ -6,23 +6,24 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
+  try {
+  if (req && req.method !== "POST") {
+    return res && res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { fraudId, action, reason, adminId } = req.body || {};
+  const { fraudId, action, reason, adminId } = req && req.body || {};
   if (!fraudId || !action) {
-    return res.status(400).json({ error: "Missing fraudId or action" });
+    return res && res.status(400).json({ error: "Missing fraudId or action" });
   }
 
   const store = getFraudStore();
-  const fraud = store.getById(fraudId);
+  const fraud = store && store.getById(fraudId);
   if (!fraud) {
-    return res.status(404).json({ error: "Fraud record not found" });
+    return res && res.status(404).json({ error: "Fraud record not found" });
   }
 
   const adminAction: AdminActionType = {
-    id: `action-${Date.now()}`,
+    id: `action-${Date && Date.now()}`,
     fraudId,
     action,
     reason,
@@ -30,7 +31,7 @@ export default async function handler(
     timestamp: new Date().toISOString(),
   };
 
-  store.addAdminAction(adminAction);
+  store && store.addAdminAction(adminAction);
 
-  return res.status(200).json({ success: true, action: adminAction });
+  return res && res.status(200).json({ success: true, action: adminAction });
 }

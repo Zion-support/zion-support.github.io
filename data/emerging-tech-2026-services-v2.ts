@@ -69,7 +69,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     icon: '🧠',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/neuromorphic-computing-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/neuromorphic-computing-platform',
     marketPosition:
       'Competitive with Intel Loihi ($2000+/month), IBM TrueNorth ($1500+/month), and BrainChip ($1000+/month). Our advantage: More affordable pricing, better developer tools, and comprehensive research platform.',
     targetAudience:
@@ -82,7 +82,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       'Neuromorphic Chips',
       'Spiking Neural Networks',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Custom Hardware',
     ],
@@ -109,21 +109,21 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       'SpiNNaker',
       'TrueNorth',
     ],
-    marketSize: '$8.2B market',
+    marketSize: '$8 && 8.2B market',
     growthRate: '450% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production-ready neuromorphic platform with custom hardware, simulation tools, and research collaboration features.',
     launchDate: '2026-04-01',
     customers: 120,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 85,
   },
 
@@ -152,7 +152,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     icon: '🌐',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/quantum-internet-security',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-security',
     marketPosition:
       'Competitive with Cloudflare ($20-200), AWS Shield ($3000+/month), and Akamai ($1000+/month). Our advantage: Quantum-resistant security, specialized protection, and future-proof architecture.',
     targetAudience:
@@ -165,7 +165,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       'Post-Quantum Cryptography',
       'Quantum Algorithms',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'AWS',
     ],
@@ -192,21 +192,21 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       'Imperva',
       'F5 Networks',
     ],
-    marketSize: '$45.2B market',
+    marketSize: '$45 && 45.2B market',
     growthRate: '280% annual growth',
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production-ready quantum security platform with post-quantum algorithms, real-time monitoring, and enterprise deployment.',
     launchDate: '2026-03-15',
     customers: 680,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 420,
   },
 
@@ -235,7 +235,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     icon: '🧬',
     color: 'from-emerald-600 to-green-700',
     textColor: 'text-emerald-400',
-    link: 'https://ziontechgroup.com/synthetic-biology-ai-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/synthetic-biology-ai-platform',
     marketPosition:
       'Competitive with Ginkgo Bioworks ($1000+/month), Zymergen ($800+/month), and Twist Bioscience ($600+/month). Our advantage: AI-first approach, better pricing, and comprehensive tools.',
     targetAudience:
@@ -248,7 +248,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       'AI/ML',
       'Bioinformatics',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'AWS',
     ],
@@ -274,21 +274,21 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       'Benchling',
       'DNA Script',
     ],
-    marketSize: '$13.8B market',
+    marketSize: '$13 && 13.8B market',
     growthRate: '380% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production-ready synthetic biology platform with AI algorithms, DNA design tools, and research collaboration features.',
     launchDate: '2026-04-15',
     customers: 280,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 180,
   },
 
@@ -317,7 +317,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     icon: '☢️',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/fusion-energy-ai-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/fusion-energy-ai-platform',
     marketPosition:
       'Competitive with General Fusion ($2000+/month), TAE Technologies ($1500+/month), and Commonwealth Fusion ($1800+/month). Our advantage: AI-first approach, better pricing, and comprehensive tools.',
     targetAudience:
@@ -330,7 +330,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       'AI/ML',
       'Plasma Physics',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Custom Hardware',
     ],
@@ -356,21 +356,21 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       'Helion Energy',
       'Tokamak Energy',
     ],
-    marketSize: '$2.1B market',
+    marketSize: '$2 && 2.1B market',
     growthRate: '520% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production-ready fusion AI platform with plasma control algorithms, reactor optimization, and research tools.',
     launchDate: '2026-05-01',
     customers: 95,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 65,
   },
 
@@ -399,7 +399,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     icon: '⚛️',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/quantum-machine-learning',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-machine-learning',
     marketPosition:
       'Competitive with IBM Quantum ($0-1000), Google Quantum ($500+/month), and Amazon Braket ($0-1000). Our advantage: Better pricing, comprehensive tools, and specialized quantum ML.',
     targetAudience:
@@ -412,7 +412,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       'Quantum Computing',
       'Machine Learning',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Quantum Simulators',
     ],
@@ -439,21 +439,21 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       'Microsoft Azure Quantum',
       'Rigetti',
     ],
-    marketSize: '$1.8B market',
+    marketSize: '$1 && 1.8B market',
     growthRate: '380% annual growth',
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production-ready quantum ML platform with quantum algorithms, hybrid computing, and research tools.',
     launchDate: '2026-04-20',
     customers: 420,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 280,
   },
 
@@ -482,7 +482,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     icon: '🚗',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-400',
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai-platform',
     marketPosition:
       'Competitive with Waymo ($1500+/month), Cruise ($1200+/month), and Tesla ($800+/month). Our advantage: More affordable pricing, comprehensive tools, and better developer experience.',
     targetAudience:
@@ -495,7 +495,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       'AI/ML',
       'Computer Vision',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Simulation Engines',
     ],
@@ -516,21 +516,21 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     ],
     roi: 'Average customer sees 600% ROI through accelerated development and improved safety.',
     competitors: ['Waymo', 'Cruise', 'Tesla', 'Mobileye', 'Aurora'],
-    marketSize: '$54.2B market',
+    marketSize: '$54 && 54.2B market',
     growthRate: '320% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production-ready autonomous vehicle platform with AI algorithms, simulation tools, and testing capabilities.',
     launchDate: '2026-05-15',
     customers: 180,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 120,
   },
 
@@ -559,7 +559,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     icon: '🧠',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/brain-computer-interface',
+    link: 'https://ziontechgroup && ziontechgroup.com/brain-computer-interface',
     marketPosition:
       'Competitive with Neuralink ($1000+/month), CTRL-labs ($800+/month), and Kernel ($1200+/month). Our advantage: More affordable pricing, comprehensive tools, and better research platform.',
     targetAudience:
@@ -572,7 +572,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       'Neural Engineering',
       'AI/ML',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Custom Hardware',
     ],
@@ -593,21 +593,21 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     ],
     roi: 'Average customer sees 700% ROI through breakthrough research and medical applications.',
     competitors: ['Neuralink', 'CTRL-labs', 'Kernel', 'OpenBCI', 'Emotiv'],
-    marketSize: '$1.7B market',
+    marketSize: '$1 && 1.7B market',
     growthRate: '450% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production-ready BCI platform with neural processing, AI algorithms, and medical compliance features.',
     launchDate: '2026-06-01',
     customers: 95,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 65,
   },
 
@@ -636,7 +636,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     icon: '🌐',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/quantum-internet-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-platform',
     marketPosition:
       'Competitive with quantum research initiatives and government projects. Our advantage: Comprehensive platform, better tools, and research collaboration features.',
     targetAudience:
@@ -649,7 +649,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       'Quantum Computing',
       'Quantum Communication',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Quantum Hardware',
     ],
@@ -674,33 +674,33 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
       'Academic institutions',
       'Quantum companies',
     ],
-    marketSize: '$0.8B market',
+    marketSize: '$0 && 0.8B market',
     growthRate: '600% annual growth',
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production-ready quantum internet platform with quantum networking, communication protocols, and research tools.',
     launchDate: '2026-06-15',
     customers: 65,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 45,
   },
 ];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Production-ready quantum internet platform with quantum networking, communication protocols, and research tools.';
     launchDate: '2026-06-15';
     customers: 65;
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 45
   }
 ];

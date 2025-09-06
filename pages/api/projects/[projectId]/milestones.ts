@@ -10,35 +10,35 @@ import { Milestone } from "../../../../utils/types/milestones";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
-  const { projectId } = req.query as { projectId: string };
+  const { projectId } = req && req.query as { projectId: string };
   const project = getProject(projectId);
   if (!project) {
-    res.status(404).json({ error: "Project not found" });
+    res && res.status(404).json({ error: "Project not found" });
     return;
   }
   if (!assertParticipantOrAdmin(project, user)) {
-    res.status(403).json({ error: "Forbidden" });
+    res && res.status(403).json({ error: "Forbidden" });
     return;
   }
 
-  if (req.method === "GET") {
-    res.status(200).json({ milestones: project.milestones });
+  if (req && req.method === "GET") {
+    res && res.status(200).json({ milestones: project && project.milestones });
     return;
   }
 
-  if (req.method === "POST") {
+  if (req && req.method === "POST") {
     if (!isClient(project, user)) {
       res
         .status(403)
         .json({ error: "Only client (or admin) can add milestones" });
       return;
     }
-    const body = req.body as Partial<Milestone>;
+    const body = req && req.body as Partial<Milestone>;
     if (
       !body ||
-      !body.title ||
-      !body.dueDate ||
-      typeof body.amountUsd !== "number"
+      !body && body.title ||
+      !body && body.dueDate ||
+      typeof body && body.amountUsd !== "number"
     ) {
       res
         .status(400)
@@ -46,16 +46,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return;
     }
     const created = addMilestone(project, {
-      title: body.title,
-      description: body.description,
-      dueDate: body.dueDate,
-      amountUsd: body.amountUsd,
-      attachments: body.attachments || [],
+      title: body && body.title,
+      description: body && body.description,
+      dueDate: body && body.dueDate,
+      amountUsd: body && body.amountUsd,
+      attachments: body && body.attachments || [],
     });
-    res.status(201).json({ milestone: created });
+    res && res.status(201).json({ milestone: created });
     return;
   }
 
-  res.setHeader("Allow", "GET, POST");
-  res.status(405).end("Method Not Allowed");
+  res && res.setHeader("Allow", "GET, POST");
+  res && res.status(405).end("Method Not Allowed");
 }

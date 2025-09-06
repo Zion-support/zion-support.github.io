@@ -1,12 +1,11 @@
 
-
 }
 
-// Main export with error boundary
-export default function EquipmentPage() {
+// Main export with error boundary;
+export default function EquipmentPage() {;
   return (
-    <EquipmentErrorBoundary>
-      <EquipmentPageContent />
-    </EquipmentErrorBoundary>
+    <EquipmentErrorBoundary>;
+      <EquipmentPageContent />;
+    </EquipmentErrorBoundary>;
   );
 }

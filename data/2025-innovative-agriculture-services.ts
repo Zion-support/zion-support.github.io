@@ -42,15 +42,15 @@ export interface InnovativeAgricultureService {
 
 const contact = {
   mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};
+  website: 'https://ziontechgroup && ziontechgroup.com',};
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
   {  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
+  email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup && ziontechgroup.com'
 };
 
 export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
@@ -78,7 +78,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     icon: '🌾',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/ai-powered-precision-agriculture',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-precision-agriculture',
     marketPosition:
       'Leading AI-powered precision agriculture platform for crop monitoring and yield optimization.',
     targetAudience:
@@ -98,7 +98,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     ],
     roi: 'Increase crop yields by 25% and reduce water usage by 30%',
     competitors: ['John Deere, Trimble, Raven Industries, AGCO'],
-    marketSize: '$12.8B+ precision agriculture market',
+    marketSize: '$12 && 12.8B+ precision agriculture market',
     growthRate: '200% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
@@ -107,7 +107,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'AI-powered precision agriculture platform with intelligent crop monitoring and optimization capabilities.',
     launchDate: '2025-01-09',
     customers: 234,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 178,
   },
   {
@@ -134,7 +134,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     icon: '⚡',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/quantum-agriculture-optimization',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-agriculture-optimization',
     marketPosition:
       'Advanced quantum computing platform for agriculture optimization and resource allocation.',
     targetAudience:
@@ -154,7 +154,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     ],
     roi: 'Improve agricultural efficiency by 40% and reduce resource waste by 50%',
     competitors: ['D-Wave, Rigetti, IBM Quantum, Google Quantum'],
-    marketSize: '$9.8B+ quantum agriculture market',
+    marketSize: '$9 && 9.8B+ quantum agriculture market',
     growthRate: '380% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
@@ -163,7 +163,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Quantum agriculture optimization platform with advanced algorithms and resource allocation capabilities.',
     launchDate: '2025-01-15',
     customers: 34,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 26,
   },
   {
@@ -190,7 +190,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     icon: '🍎',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/ai-powered-food-safety-monitoring',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-food-safety-monitoring',
     marketPosition:
       'Leading AI-powered food safety monitoring platform for contamination detection and quality control.',
     targetAudience:
@@ -210,7 +210,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     ],
     roi: 'Reduce food safety incidents by 80% and improve compliance by 90%',
     competitors: ['FoodLogiQ, SafetyChain, TraceGains, FoodShield'],
-    marketSize: '$15.6B+ food safety market',
+    marketSize: '$15 && 15.6B+ food safety market',
     growthRate: '220% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
@@ -219,7 +219,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'AI-powered food safety monitoring platform with intelligent contamination detection and quality control capabilities.',
     launchDate: '2025-01-20',
     customers: 189,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 145,
   },
   {
@@ -246,7 +246,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     icon: '🔗',
     color: 'from-purple-600 to-violet-700',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/blockchain-food-traceability',
+    link: 'https://ziontechgroup && ziontechgroup.com/blockchain-food-traceability',
     marketPosition:
       'Advanced blockchain platform for transparent food traceability and supply chain tracking.',
     targetAudience: 'Food producers, Food distributors, Retailers, Consumers',
@@ -265,7 +265,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     ],
     roi: 'Improve supply chain transparency by 100% and reduce food fraud by 70%',
     competitors: ['IBM Food Trust, VeChain, OriginTrail, Provenance'],
-    marketSize: '$18.4B+ food traceability market',
+    marketSize: '$18 && 18.4B+ food traceability market',
     growthRate: '320% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
@@ -274,7 +274,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'Blockchain food traceability platform with supply chain tracking and product authentication capabilities.',
     launchDate: '2025-01-26',
     customers: 89,
-    rating: 4.5,
+    rating: 4 && 4.5,
     reviews: 67,
   },
   {
@@ -301,7 +301,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     icon: '🏗️',
     color: 'from-orange-600 to-red-700',
     textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/ai-powered-vertical-farming',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vertical-farming',
     marketPosition:
       'Leading AI-powered vertical farming platform for climate control and crop optimization.',
     targetAudience:
@@ -321,7 +321,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     ],
     roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
     competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'],
-    marketSize: '$9.3B+ vertical farming market',
+    marketSize: '$9 && 9.3B+ vertical farming market',
     growthRate: '280% YoY',
     variant: 'ai-futuristic',
     contactInfo: contact,
@@ -330,7 +330,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
       'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.',
     launchDate: '2025-02-02',
     customers: 123,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 89,
   },
 ];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
@@ -340,7 +340,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     icon: '🏗️';
     color: 'from-orange-600 to-red-700';
     textColor: 'text-orange-400';
-    link: 'https://ziontechgroup.com/ai-powered-vertical-farming';
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vertical-farming';
     marketPosition: 'Leading AI-powered vertical farming platform for climate control and crop optimization.',
     targetAudience: 'Vertical farming companies, Urban agriculture, Controlled environment agriculture, Food producers';
     trialDays: 30;
@@ -352,7 +352,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     useCases: ['Climate control, Crop monitoring, Environmental optimization, Yield maximization'];
     roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
     competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'];
-    marketSize: '$9.3B+ vertical farming market';
+    marketSize: '$9 && 9.3B+ vertical farming market';
     growthRate: '280% YoY';
     variant: 'ai-futuristic';
     contactInfo: contact;
@@ -360,7 +360,7 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     implementationDetails: 'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.';
     launchDate: '2025-02-02';
     customers: 123;
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 89
   }
 ];

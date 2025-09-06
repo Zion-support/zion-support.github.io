@@ -65,9 +65,9 @@ export const innovative2025Services: Innovative2025Service[] = [
     icon: '🔮',
     color: 'from-purple-500 to-indigo-600',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-multimodal-fusion-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-multimodal-fusion-platform',
     marketPosition:
-      'Leading edge in multimodal AI. Competes with OpenAI GPT-4V ($0.03/token) and Google Gemini ($0.0025/token) but offers unified processing.',
+      'Leading edge in multimodal AI. Competes with OpenAI GPT-4V ($0 && 0.03/token) and Google Gemini ($0 && 0.0025/token) but offers unified processing.',
     targetAudience:
       'Research institutions, Healthcare, Autonomous vehicles, Content creation, Security & surveillance',
     trialDays: 30,
@@ -101,16 +101,16 @@ export const innovative2025Services: Innovative2025Service[] = [
     variant: 'quantum-holographic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production-ready platform with GPU acceleration, real-time processing, and enterprise-grade security.',
     launchDate: '2025-01-15',
     customers: 45,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 28,
   },
   {
@@ -133,7 +133,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     icon: '💝',
     color: 'from-pink-500 to-rose-600',
     textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/ai-emotional-intelligence-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-emotional-intelligence-platform',
     marketPosition:
       'Pioneering emotional AI technology. Competes with Affectiva ($500-2000/month) and Realeyes ($1000-5000/month) with superior accuracy.',
     targetAudience:
@@ -165,21 +165,21 @@ export const innovative2025Services: Innovative2025Service[] = [
     ],
     roi: 'Improves customer satisfaction by 40% and engagement rates by 60% within 3 months.',
     competitors: ['Affectiva', 'Realeyes', 'Emotient', 'Noldus'],
-    marketSize: '$3.8B emotional AI market',
+    marketSize: '$3 && 3.8B emotional AI market',
     growthRate: '180% annual growth',
     variant: 'holographic-matrix',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced emotion recognition with privacy controls, real-time processing, and comprehensive analytics.',
     launchDate: '2025-02-01',
     customers: 78,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 52,
   },
   {
@@ -202,9 +202,9 @@ export const innovative2025Services: Innovative2025Service[] = [
     icon: '⚛️',
     color: 'from-cyan-500 to-blue-600',
     textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/ai-quantum-hybrid-computing',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-quantum-hybrid-computing',
     marketPosition:
-      'Leading edge in quantum-classical hybrid computing. Competes with IBM Quantum ($0.60/quantum-second) and Google Quantum with AI integration.',
+      'Leading edge in quantum-classical hybrid computing. Competes with IBM Quantum ($0 && 0.60/quantum-second) and Google Quantum with AI integration.',
     targetAudience:
       'Financial services, Pharmaceutical research, Logistics, Cybersecurity, Research institutions',
     trialDays: 45,
@@ -233,21 +233,21 @@ export const innovative2025Services: Innovative2025Service[] = [
     ],
     roi: 'Delivers 1000%+ ROI through solving previously impossible problems in weeks instead of years.',
     competitors: ['IBM Quantum', 'Google Quantum', 'Rigetti', 'D-Wave'],
-    marketSize: '$8.6B quantum computing market',
+    marketSize: '$8 && 8.6B quantum computing market',
     growthRate: '300% annual growth',
     variant: 'quantum-cyberpunk',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production quantum-classical hybrid platform with real-time optimization and enterprise security.',
     launchDate: '2025-01-01',
     customers: 22,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 18,
   },
   // Blockchain & Web3 Innovation Services
@@ -271,7 +271,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     icon: '🔗',
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/ai-blockchain-analytics',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-blockchain-analytics',
     marketPosition:
       'Leading AI-powered blockchain analytics. Competes with Chainalysis ($10,000+/month) and Elliptic ($5000+/month) with better AI insights.',
     targetAudience:
@@ -303,21 +303,21 @@ export const innovative2025Services: Innovative2025Service[] = [
     ],
     roi: 'Reduces fraud losses by 85% and improves trading decisions by 40% within 2 months.',
     competitors: ['Chainalysis', 'Elliptic', 'CipherTrace', 'TRM Labs'],
-    marketSize: '$2.1B blockchain analytics market',
+    marketSize: '$2 && 2.1B blockchain analytics market',
     growthRate: '220% annual growth',
     variant: 'cyberpunk',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Real-time blockchain monitoring with AI-powered insights and comprehensive reporting.',
     launchDate: '2025-01-20',
     customers: 156,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 89,
   },
   // Metaverse & Virtual Reality Innovation Services
@@ -341,7 +341,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     icon: '🌐',
     color: 'from-violet-500 to-purple-600',
     textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/ai-metaverse-creation-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-metaverse-creation-platform',
     marketPosition:
       'Leading AI-powered metaverse creation. Competes with Unity ($40/month) and Unreal Engine ($1,850/year) with AI automation.',
     targetAudience:
@@ -367,21 +367,21 @@ export const innovative2025Services: Innovative2025Service[] = [
     ],
     roi: 'Reduces development time by 70% and increases user engagement by 150% within 4 months.',
     competitors: ['Unity', 'Unreal Engine', 'Roblox Studio', 'Decentraland'],
-    marketSize: '$12.5B metaverse market',
+    marketSize: '$12 && 12.5B metaverse market',
     growthRate: '280% annual growth',
     variant: 'holographic-matrix',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'AI-powered metaverse creation platform with real-time generation and optimization.',
     launchDate: '2025-02-15',
     customers: 34,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 23,
   },
   // IoT & Edge Computing Innovation Services
@@ -405,9 +405,9 @@ export const innovative2025Services: Innovative2025Service[] = [
     icon: '🌐',
     color: 'from-orange-500 to-red-600',
     textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/ai-iot-edge-intelligence',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-iot-edge-intelligence',
     marketPosition:
-      'Leading edge AI for IoT. Competes with AWS Greengrass ($0.16/device/month) and Azure IoT Edge with superior AI capabilities.',
+      'Leading edge AI for IoT. Competes with AWS Greengrass ($0 && 0.16/device/month) and Azure IoT Edge with superior AI capabilities.',
     targetAudience:
       'Manufacturing, Smart cities, Healthcare, Agriculture, Transportation',
     trialDays: 21,
@@ -436,21 +436,21 @@ export const innovative2025Services: Innovative2025Service[] = [
       'Google Cloud IoT',
       'IBM Edge Application Manager',
     ],
-    marketSize: '$6.7B edge AI market',
+    marketSize: '$6 && 6.7B edge AI market',
     growthRate: '190% annual growth',
     variant: 'cyberpunk',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production edge AI platform with real-time processing and device optimization.',
     launchDate: '2025-01-10',
     customers: 89,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 67,
   },
   // Cybersecurity Innovation Services
@@ -474,9 +474,9 @@ export const innovative2025Services: Innovative2025Service[] = [
     icon: '🛡️',
     color: 'from-red-500 to-pink-600',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/ai-cyber-threat-hunting',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-cyber-threat-hunting',
     marketPosition:
-      'Leading AI-powered threat hunting. Competes with CrowdStrike ($8.99/endpoint/month) and SentinelOne ($5.00/endpoint/month) with superior AI.',
+      'Leading AI-powered threat hunting. Competes with CrowdStrike ($8 && 8.99/endpoint/month) and SentinelOne ($5 && 5.00/endpoint/month) with superior AI.',
     targetAudience:
       'Enterprise security teams, MSSPs, Government agencies, Financial institutions, Healthcare',
     trialDays: 30,
@@ -506,21 +506,21 @@ export const innovative2025Services: Innovative2025Service[] = [
     ],
     roi: 'Reduces security incidents by 75% and response time by 90% within 6 months.',
     competitors: ['CrowdStrike', 'SentinelOne', 'Carbon Black', 'Cylance'],
-    marketSize: '$18.2B AI cybersecurity market',
+    marketSize: '$18 && 18.2B AI cybersecurity market',
     growthRate: '240% annual growth',
     variant: 'quantum-cyberpunk',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production AI threat hunting platform with real-time detection and automated response.',
     launchDate: '2025-01-05',
     customers: 67,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 45,
   },
   // Healthcare Innovation Services
@@ -544,7 +544,7 @@ export const innovative2025Services: Innovative2025Service[] = [
     icon: '🏥',
     color: 'from-blue-500 to-indigo-600',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-healthcare-diagnostics',
     marketPosition:
       'Leading AI healthcare diagnostics. Competes with Aidoc ($1000-5000/month) and Zebra Medical ($500-2000/month) with superior accuracy.',
     targetAudience:
@@ -575,21 +575,21 @@ export const innovative2025Services: Innovative2025Service[] = [
     ],
     roi: 'Improves diagnostic accuracy by 25% and reduces reading time by 40% within 4 months.',
     competitors: ['Aidoc', 'Zebra Medical', 'Butterfly Network', 'Enlitic'],
-    marketSize: '$9.8B AI healthcare market',
+    marketSize: '$9 && 9.8B AI healthcare market',
     growthRate: '210% annual growth',
     variant: 'holographic-matrix',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production healthcare AI platform with FDA compliance and clinical validation.',
     launchDate: '2025-01-01',
     customers: 23,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 19,
   },
   // Financial Technology Innovation Services
@@ -613,9 +613,9 @@ export const innovative2025Services: Innovative2025Service[] = [
     icon: '📈',
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/ai-financial-trading-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-financial-trading-platform',
     marketPosition:
-      'Leading AI financial trading. Competes with Alpaca ($0.01/share) and Interactive Brokers ($0.005/share) with superior AI algorithms.',
+      'Leading AI financial trading. Competes with Alpaca ($0 && 0.01/share) and Interactive Brokers ($0 && 0.005/share) with superior AI algorithms.',
     targetAudience:
       'Hedge funds, Investment firms, Individual traders, Financial institutions, Asset managers',
     trialDays: 30,
@@ -645,33 +645,33 @@ export const innovative2025Services: Innovative2025Service[] = [
     ],
     roi: 'Improves trading performance by 35% and reduces risk by 50% within 6 months.',
     competitors: ['Alpaca', 'Interactive Brokers', 'Robinhood', 'E*TRADE'],
-    marketSize: '$11.3B algorithmic trading market',
+    marketSize: '$11 && 11.3B algorithmic trading market',
     growthRate: '260% annual growth',
     variant: 'quantum-cyberpunk',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Production financial AI platform with real-time trading and comprehensive risk management.',
     launchDate: '2025-01-15',
     customers: 45,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 32,
   },
 ];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true;
     implementationDetails: 'Production financial AI platform with real-time trading and comprehensive risk management.';
     launchDate: '2025-01-15';
     customers: 45;
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 32
   }
 ];

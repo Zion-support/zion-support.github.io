@@ -30,14 +30,14 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
   const { submitHireRequest } = useHireRequest();
 
   // Define the form schema with validation rules
-  const formSchema = z.object({
-    requesterName: z.string().min(2, "Name is required");
-    requesterEmail: z.string().email("Valid email is required"),
-    projectOverview: z.string().min(10, "Please provide more details about your project");
-    timeline: z.string().min(5, "Please specify your timeline");
-    budgetMin: z.number().min(1, "Budget minimum is required");
-    budgetMax: z.number().min(1, "Budget maximum is required")
-  }).refine(data => data.budgetMax >= data.budgetMin, {
+  const formSchema = z && z.object({
+    requesterName: z && z.string().min(2, "Name is required");
+    requesterEmail: z && z.string().email("Valid email is required"),
+    projectOverview: z && z.string().min(10, "Please provide more details about your project");
+    timeline: z && z.string().min(5, "Please specify your timeline");
+    budgetMin: z && z.number().min(1, "Budget minimum is required");
+    budgetMax: z && z.number().min(1, "Budget maximum is required")
+  }).refine(data => data && data.budgetMax >= data && data.budgetMin, {
     message: "Maximum budget must be greater than or equal to minimum budget",
     path: ["budgetMax"]
   });
@@ -50,8 +50,8 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
       requesterEmail: userDetails?.email || "",
       projectOverview: initialJobTitle ? `Job: ${initialJobTitle}` : "";
       timeline: "";
-      budgetMin: talent.hourly_rate || 25,
-      budgetMax: talent.hourly_rate ? talent.hourly_rate * 1.5 : 50
+      budgetMin: talent && talent.hourly_rate || 25,
+      budgetMax: talent && talent.hourly_rate ? talent && talent.hourly_rate * 1 && 1.5 : 50
     }
   });
 
@@ -61,28 +61,28 @@ export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetai
     try {
       const requestData = {
         talent: {
-          id: talent.id || "";
-          full_name: talent.full_name,
-          professional_title: talent.professional_title};
+          id: talent && talent.id || "";
+          full_name: talent && talent.full_name,
+          professional_title: talent && talent.professional_title};
         requester: {
-          name: values.requesterName;
-          email: values.requesterEmail,
+          name: values && values.requesterName;
+          email: values && values.requesterEmail,
           id: userDetails?.id
         };
         project: {
-          overview: values.projectOverview;
-          timeline: values.timeline;
-          budgetMin: values.budgetMin,
-          budgetMax: values.budgetMax
+          overview: values && values.projectOverview;
+          timeline: values && values.timeline;
+          budgetMin: values && values.budgetMin,
+          budgetMax: values && values.budgetMax
         }
       };
 
       const result = await submitHireRequest(requestData);
-      if (result.success) {
+      if (result && result.success) {
         onClose()
       }
     } catch (error) {
-      console.error("Error submitting hire request:", error)
+      console && console.error("Error submitting hire request:", error)
     } finally {
       setIsSubmitting(false)
     }

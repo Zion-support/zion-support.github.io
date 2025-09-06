@@ -71,7 +71,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     icon: '⚖️',
     color: 'from-purple-600 to-indigo-600',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-legal-document-analyzer',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-legal-document-analyzer',
     marketPosition:
       'Competes with DocuSign ($25/month), ContractPodAi ($500/month). Our advantage: AI analysis reduces review time by 80% and catches 95% of potential issues.',
     targetAudience:
@@ -89,21 +89,21 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     ],
     roi: 'Law firms report 400% ROI through faster document processing and reduced legal risks.',
     competitors: ['DocuSign, ContractPodAi, LexisNexis, Westlaw'],
-    marketSize: '$15.2B legal tech market',
+    marketSize: '$15 && 15.2B legal tech market',
     growthRate: '18% annual growth',
     variant: 'ai-legal-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Cloud-native SaaS platform with AI algorithms for legal document analysis, natural language processing, and risk assessment.',
     launchDate: '2025-01-15',
     customers: 28,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 15,
   },
 
@@ -132,9 +132,9 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     icon: '🔐',
     color: 'from-blue-600 to-cyan-600',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/quantum-secure-communication',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-secure-communication',
     marketPosition:
-      'Competes with Signal (Free), Wickr ($4.99/month). Our advantage: Quantum-resistant encryption that future-proofs against quantum attacks.',
+      'Competes with Signal (Free), Wickr ($4 && 4.99/month). Our advantage: Quantum-resistant encryption that future-proofs against quantum attacks.',
     targetAudience:
       'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Research institutions',
     trialDays: 30,
@@ -142,7 +142,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     category: 'Cybersecurity & Communication',
     realService: true,
     technology: [
-      'React, Node.js, Python, Quantum algorithms, Post-quantum crypto, Docker, Kubernetes',
+      'React, Node && Node.js, Python, Quantum algorithms, Post-quantum crypto, Docker, Kubernetes',
     ],
     integrations: ['Slack, Microsoft Teams, Zoom, Salesforce, SAP, Oracle'],
     useCases: [
@@ -150,21 +150,21 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     ],
     roi: 'Organizations report 500% ROI through enhanced security and compliance with future regulations.',
     competitors: ['Signal, Wickr, Telegram, WhatsApp Business'],
-    marketSize: '$8.7B quantum security market',
+    marketSize: '$8 && 8.7B quantum security market',
     growthRate: '45% annual growth',
     variant: 'quantum-security-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Quantum-secure communication platform with hardware quantum key distribution and software post-quantum cryptography.',
     launchDate: '2025-01-10',
     customers: 15,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 8,
   },
 
@@ -193,7 +193,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     icon: '🏥',
     color: 'from-green-600 to-emerald-600',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/ai-healthcare-diagnostics',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-healthcare-diagnostics',
     marketPosition:
       'Competes with IBM Watson Health ($500/month), Google Health AI (Custom pricing). Our advantage: 95% diagnostic accuracy and seamless EHR integration.',
     targetAudience:
@@ -213,21 +213,21 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     competitors: [
       'IBM Watson Health, Google Health AI, Microsoft Healthcare, NVIDIA Clara',
     ],
-    marketSize: '$45.8B AI healthcare market',
+    marketSize: '$45 && 45.8B AI healthcare market',
     growthRate: '25% annual growth',
     variant: 'ai-healthcare-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'AI-powered healthcare diagnostics platform with FDA-cleared algorithms and HIPAA-compliant infrastructure.',
     launchDate: '2025-01-05',
     customers: 22,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 12,
   },
 
@@ -256,7 +256,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     icon: '🚚',
     color: 'from-orange-600 to-red-600',
     textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/autonomous-supply-chain-optimization',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-supply-chain-optimization',
     marketPosition:
       'Competes with SAP Supply Chain ($1,000/month), Oracle SCM ($800/month). Our advantage: Autonomous optimization reduces costs by 25% and improves efficiency by 40%.',
     targetAudience:
@@ -278,21 +278,21 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     competitors: [
       'SAP Supply Chain, Oracle SCM, Manhattan Associates, JDA Software',
     ],
-    marketSize: '$19.2B supply chain software market',
+    marketSize: '$19 && 19.2B supply chain software market',
     growthRate: '12% annual growth',
     variant: 'supply-chain-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'AI-powered supply chain optimization platform with autonomous decision-making and predictive analytics.',
     launchDate: '2025-01-12',
     customers: 35,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 18,
   },
 
@@ -322,7 +322,7 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     icon: '📈',
     color: 'from-yellow-600 to-amber-600',
     textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/quantum-financial-trading',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-financial-trading',
     marketPosition:
       'Competes with Bloomberg Terminal ($2,000/month), Thomson Reuters ($1,500/month). Our advantage: Quantum algorithms provide 10x faster analysis and superior risk modeling.',
     targetAudience:
@@ -342,33 +342,33 @@ export const innovativeNewServices2025: InnovativeNewService[] = [
     ],
     roi: 'Financial institutions report 800% ROI through improved trading performance and reduced risk exposure.',
     competitors: ['Bloomberg Terminal, Thomson Reuters, FactSet, Refinitiv'],
-    marketSize: '$32.1B financial technology market',
+    marketSize: '$32 && 32.1B financial technology market',
     growthRate: '22% annual growth',
     variant: 'quantum-financial-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.',
     launchDate: '2025-01-08',
     customers: 12,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 6,
   },
 ];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true;
     implementationDetails: 'Quantum-powered financial trading platform with advanced algorithms and real-time market analysis.';
     launchDate: '2025-01-08';
     customers: 12;
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 6
   }
 ];

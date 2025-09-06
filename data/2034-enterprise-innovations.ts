@@ -67,7 +67,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [
       'Quantum key distribution',
       'Advanced authentication',
     ],
-    marketSize: '$45.6B by 2035',
+    marketSize: '$45 && 45.6B by 2035',
     competitors: ['Palo Alto Networks', 'CrowdStrike', 'SentinelOne'],
     competitiveAdvantage:
       'Only platform combining quantum computing with zero trust architecture',
@@ -90,9 +90,9 @@ export const enterprise2034Services: EnterpriseService2034[] = [
       'Advanced authentication',
     ],
     scalability: 'Unlimited enterprise protection',
-    uptime: '99.999% security platform availability',
+    uptime: '99 && 99.999% security platform availability',
     contact: '+1 302 464 0950',
-    website: 'https://ziontechgroup.com/quantum-zero-trust-architecture',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-zero-trust-architecture',
   },
   {
     id: 'ai-autonomous-devops-platform',
@@ -135,7 +135,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [
       'CI/CD pipelines',
       'Cloud orchestration',
     ],
-    marketSize: '$28.9B by 2035',
+    marketSize: '$28 && 28.9B by 2035',
     competitors: ['GitLab', 'Jenkins', 'CircleCI'],
     competitiveAdvantage: 'Only fully autonomous AI-powered DevOps platform',
     implementationTime: '4-8 months',
@@ -159,9 +159,9 @@ export const enterprise2034Services: EnterpriseService2034[] = [
       'Access controls',
     ],
     scalability: 'Unlimited DevOps automation',
-    uptime: '99.99% DevOps platform availability',
+    uptime: '99 && 99.99% DevOps platform availability',
     contact: '+1 302 464 0950',
-    website: 'https://ziontechgroup.com/ai-autonomous-devops-platform',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-devops-platform',
   },
   {
     id: 'quantum-edge-computing-orchestrator',
@@ -204,7 +204,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [
       'Quantum routing',
       'Edge security',
     ],
-    marketSize: '$35.7B by 2035',
+    marketSize: '$35 && 35.7B by 2035',
     competitors: ['AWS Greengrass', 'Azure IoT Edge', 'Google Edge TPU'],
     competitiveAdvantage:
       'Only platform using quantum computing for edge orchestration',
@@ -224,9 +224,9 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     compliance: ['Edge security standards', 'IoT compliance', 'Data privacy'],
     security: ['Quantum encryption', 'Edge security', 'Access controls'],
     scalability: 'Unlimited edge orchestration',
-    uptime: '99.99% edge platform availability',
+    uptime: '99 && 99.99% edge platform availability',
     contact: '+1 302 464 0950',
-    website: 'https://ziontechgroup.com/quantum-edge-computing-orchestrator',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-edge-computing-orchestrator',
   },
   {
     id: 'ai-powered-it-operations-center',
@@ -269,7 +269,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [
       'Predictive analytics',
       'Real-time processing',
     ],
-    marketSize: '$42.1B by 2035',
+    marketSize: '$42 && 42.1B by 2035',
     competitors: ['ServiceNow', 'BMC', 'IBM'],
     competitiveAdvantage:
       'Only fully AI-powered autonomous IT operations platform',
@@ -290,9 +290,9 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     compliance: ['ITIL', 'ISO 20000', 'SOC 2', 'IT operations standards'],
     security: ['AI-powered security', 'Access controls', 'Audit trails'],
     scalability: 'Unlimited IT operations',
-    uptime: '99.99% operations platform availability',
+    uptime: '99 && 99.99% operations platform availability',
     contact: '+1 302 464 0950',
-    website: 'https://ziontechgroup.com/ai-powered-it-operations-center',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-powered-it-operations-center',
   },
   {
     id: 'quantum-blockchain-infrastructure',
@@ -335,7 +335,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [
       'Cross-chain protocols',
       'Advanced cryptography',
     ],
-    marketSize: '$52.3B by 2035',
+    marketSize: '$52 && 52.3B by 2035',
     competitors: ['Ethereum', 'Hyperledger', 'Corda'],
     competitiveAdvantage:
       'Only platform combining quantum computing with blockchain',
@@ -363,9 +363,9 @@ export const enterprise2034Services: EnterpriseService2034[] = [
       'Smart contract security',
     ],
     scalability: 'Unlimited blockchain transactions',
-    uptime: '99.99% blockchain platform availability',
+    uptime: '99 && 99.99% blockchain platform availability',
     contact: '+1 302 464 0950',
-    website: 'https://ziontechgroup.com/quantum-blockchain-infrastructure',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-blockchain-infrastructure',
   },
   {
     id: 'ai-autonomous-data-center',
@@ -408,7 +408,7 @@ export const enterprise2034Services: EnterpriseService2034[] = [
       'Predictive analytics',
       'Real-time monitoring',
     ],
-    marketSize: '$38.9B by 2035',
+    marketSize: '$38 && 38.9B by 2035',
     competitors: ['VMware', 'Microsoft', 'Dell'],
     competitiveAdvantage:
       'Only fully autonomous AI-powered data center platform',
@@ -433,13 +433,13 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     ],
     security: ['AI-powered security', 'Physical security', 'Access controls'],
     scalability: 'Unlimited data center management',
-    uptime: '99.999% data center platform availability',
+    uptime: '99 && 99.999% data center platform availability',
     contact: '+1 302 464 0950',
-    website: 'https://ziontechgroup.com/ai-autonomous-data-center',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-data-center',
   },
 ];      'Advanced AI algorithmsIoT sensorsMachine learning systemsAutomation frameworksPredictive analyticsReal-time monitoring'
     ];
-    marketSize: '$38.9B by 2035';
+    marketSize: '$38 && 38.9B by 2035';
     competitors: ['VMwareMicrosoftDell'];
     competitiveAdvantage: 'Only fully autonomous AI-powered data center platform';
     implementationTime: '6-12 months';
@@ -452,8 +452,8 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     compliance: ['Data center standardsEnergy efficiencySecurity compliance'];
     security: ['AI-powered securityPhysical securityAccess controls'];
     scalability: 'Unlimited data center management';
-    uptime: '99.999% data center platform availability';
+    uptime: '99 && 99.999% data center platform availability';
     contact: '+1 302 464 0950',
-    website: 'https://ziontechgroup.com/ai-autonomous-data-center'
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-data-center'
   }
 ];

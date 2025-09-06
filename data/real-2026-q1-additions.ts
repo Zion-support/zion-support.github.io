@@ -1,9 +1,9 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
   mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
+  website: 'https://ziontechgroup && ziontechgroup.com',
 };
 
 export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
@@ -25,14 +25,14 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     icon: '🤝',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
-    link: 'https://ziontechgroup.com/services/affiliate-analytics-starter',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/affiliate-analytics-starter',
     category: 'Developer Tools',
     realService: true,
     marketPosition: 'Focused alternative to heavy affiliate platforms',
     targetAudience: 'SaaS and eCommerce',
     trialDays: 14,
     setupTime: '1 day',
-    technology: ['Next.js, Stripe, Webhooks'],
+    technology: ['Next && Next.js, Stripe, Webhooks'],
     integrations: ['Stripe', 'PayPal', 'Google Analytics'],
     useCases: ['Partner growth', 'Automated payouts'],
     roi: 'Grow partner revenue by 10–25%',
@@ -45,7 +45,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Event ingestion, attribution, payout jobs',
     launchDate: '2026-01-10',
     customers: 12,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 7,
   },
   {
@@ -66,14 +66,14 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     icon: '💬',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
-    link: 'https://ziontechgroup.com/services/customer-feedback-intelligence',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/customer-feedback-intelligence',
     category: 'AI & Data',
     realService: true,
     marketPosition: 'Actionable product feedback without heavy BI',
     targetAudience: 'Product and CX teams',
     trialDays: 14,
     setupTime: '1 hour',
-    technology: ['Embeddings, Vector DB, Next.js'],
+    technology: ['Embeddings, Vector DB, Next && Next.js'],
     integrations: ['Zendesk', 'Intercom', 'G2', 'Capterra'],
     useCases: ['Prioritize roadmap', 'Reduce churn'],
     roi: 'Ship high-impact features faster',
@@ -86,7 +86,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Connectors, clustering, scoring models',
     launchDate: '2026-01-12',
     customers: 9,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 5,
   },
   {
@@ -107,7 +107,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     icon: '🛡️',
     color: 'from-rose-600 to-pink-700',
     textColor: 'text-rose-300',
-    link: 'https://ziontechgroup.com/services/api-security-posture-monitor',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/api-security-posture-monitor',
     category: 'Quality & Monitoring',
     realService: true,
     marketPosition: 'Developer-first API security posture',
@@ -127,7 +127,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Spec analyzers, runners, annotations',
     launchDate: '2026-01-14',
     customers: 11,
-    rating: 4.5,
+    rating: 4 && 4.5,
     reviews: 6,
   },
   {
@@ -148,7 +148,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     icon: '⏰',
     color: 'from-amber-500 to-orange-600',
     textColor: 'text-amber-300',
-    link: 'https://ziontechgroup.com/services/edge-cron-orchestrator',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/edge-cron-orchestrator',
     category: 'Developer Tools',
     realService: true,
     marketPosition: 'Unified schedules across clouds',
@@ -168,7 +168,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Scheduler API, dashboard, webhooks',
     launchDate: '2026-01-18',
     customers: 7,
-    rating: 4.5,
+    rating: 4 && 4.5,
     reviews: 4,
   },
   {
@@ -189,7 +189,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     icon: '📨',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-300',
-    link: 'https://ziontechgroup.com/services/email-parsing-routing-api',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/email-parsing-routing-api',
     category: 'Developer Tools',
     realService: true,
     marketPosition: 'Developer-friendly email ingestion',
@@ -201,7 +201,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     useCases: ['Ticket intake', 'CRM capture'],
     roi: 'Automate manual email triage',
     competitors: ['Mailparser', 'Integromat'],
-    marketSize: '$0.8B',
+    marketSize: '$0 && 0.8B',
     growthRate: '10% CAGR',
     variant: 'neural-quantum',
     contactInfo: contact,
@@ -209,7 +209,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Inbound parsers, queueing, UI',
     launchDate: '2026-01-20',
     customers: 8,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 5,
   },
   {
@@ -230,7 +230,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     icon: '📝',
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-300',
-    link: 'https://ziontechgroup.com/services/ai-marketing-content-studio',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-marketing-content-studio',
     category: 'AI & Data',
     realService: true,
     marketPosition: 'On-brand AI content for teams',
@@ -250,7 +250,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Template engine, tone guardrails',
     launchDate: '2026-01-22',
     customers: 15,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 9,
   },
   {
@@ -271,7 +271,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     icon: '🔐',
     color: 'from-sky-600 to-blue-700',
     textColor: 'text-sky-300',
-    link: 'https://ziontechgroup.com/services/security-headers-scanner',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/security-headers-scanner',
     category: 'Quality & Monitoring',
     realService: true,
     marketPosition: 'Simple posture checks for web apps',
@@ -283,7 +283,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     useCases: ['Header hardening', 'Compliance reports'],
     roi: 'Reduce risk and review toil',
     competitors: ['Mozilla Observatory'],
-    marketSize: '$0.5B',
+    marketSize: '$0 && 0.5B',
     growthRate: '8% CAGR',
     variant: 'holographic',
     contactInfo: contact,
@@ -291,7 +291,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Scanners, CI annotations, reports',
     launchDate: '2026-01-25',
     customers: 20,
-    rating: 4.5,
+    rating: 4 && 4.5,
     reviews: 10,
   },
   {
@@ -312,7 +312,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     icon: '📦',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
-    link: 'https://ziontechgroup.com/services/ml-feature-store-starter',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ml-feature-store-starter',
     category: 'AI & Data',
     realService: true,
     marketPosition: 'Lean feature store for teams',
@@ -332,7 +332,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Schemas, validators, API',
     launchDate: '2026-01-28',
     customers: 6,
-    rating: 4.5,
+    rating: 4 && 4.5,
     reviews: 3,
   },
   {
@@ -353,7 +353,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     icon: '📈',
     color: 'from-lime-500 to-emerald-600',
     textColor: 'text-lime-300',
-    link: 'https://ziontechgroup.com/services/slo-burn-rate-coach',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/slo-burn-rate-coach',
     category: 'Observability',
     realService: true,
     marketPosition: 'SLOs without the complexity',
@@ -365,7 +365,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     useCases: ['Error budgets', 'Coaching'],
     roi: 'Fewer incidents',
     competitors: ['Nobl9'],
-    marketSize: '$0.8B',
+    marketSize: '$0 && 0.8B',
     growthRate: '14% CAGR',
     variant: 'holographic-matrix',
     contactInfo: contact,
@@ -373,7 +373,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'SLO calc, alerting, UI',
     launchDate: '2026-02-01',
     customers: 10,
-    rating: 4.5,
+    rating: 4 && 4.5,
     reviews: 6,
   },
   {
@@ -394,7 +394,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     icon: '⚡',
     color: 'from-cyan-600 to-purple-700',
     textColor: 'text-cyan-300',
-    link: 'https://ziontechgroup.com/services/browser-performance-optimizer',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/browser-performance-optimizer',
     category: 'Quality & Monitoring',
     realService: true,
     marketPosition: 'Developer-first CWV improvements',
@@ -406,7 +406,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     useCases: ['CWV, bundle size'],
     roi: '+20 LCP, fewer regressions',
     competitors: ['SpeedCurve', 'Calibre'],
-    marketSize: '$0.5B',
+    marketSize: '$0 && 0.5B',
     growthRate: '12% CAGR',
     variant: 'neural-quantum-cyberpunk',
     contactInfo: contact,
@@ -414,7 +414,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'RUM SDK, CI checks, UI',
     launchDate: '2026-02-05',
     customers: 5,
-    rating: 4.5,
+    rating: 4 && 4.5,
     reviews: 3,
   },
   {
@@ -435,7 +435,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     icon: '💸',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
-    link: 'https://ziontechgroup.com/services/cloud-cost-governance-suite',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/cloud-cost-governance-suite',
     category: 'Cloud & FinOps',
     realService: true,
     marketPosition: 'Governance overlay for FinOps',
@@ -455,7 +455,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Connectors, policies, exporters',
     launchDate: '2026-02-08',
     customers: 6,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 4,
   },
   {
@@ -476,7 +476,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     icon: '📘',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
-    link: 'https://ziontechgroup.com/services/api-changelog-sdk-publisher',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/api-changelog-sdk-publisher',
     category: 'Developer Tools',
     realService: true,
     marketPosition: 'Ship API portals faster',
@@ -488,7 +488,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     useCases: ['Dev portals', 'SDKs'],
     roi: 'Docs/SDKs 5× faster',
     competitors: ['ReadMe', 'Redocly'],
-    marketSize: '$1.5B',
+    marketSize: '$1 && 1.5B',
     growthRate: '18% CAGR',
     variant: 'neural-quantum',
     contactInfo: contact,
@@ -496,7 +496,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Schema importers, generators, UI',
     launchDate: '2026-02-12',
     customers: 9,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 6,
   },
 ];	{
@@ -511,14 +511,14 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		icon: '🤝';
 		color: 'from-emerald-600 to-teal-700';
 		textColor: 'text-emerald-300';
-		link: 'https://ziontechgroup.com/services/affiliate-analytics-starter';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/affiliate-analytics-starter';
 		category: 'Developer Tools';
 		realService: true;
 		marketPosition: 'Focused alternative to heavy affiliate platforms';
 		targetAudience: 'SaaS and eCommerce';
 		trialDays: 14;
 		setupTime: '1 day',
-		technology: ['Next.js, Stripe, Webhooks'];
+		technology: ['Next && Next.js, Stripe, Webhooks'];
 		integrations: ['StripePayPalGoogle Analytics'];
 		useCases: ['Partner growthAutomated payouts'];
 		roi: 'Grow partner revenue by 10–25%';
@@ -531,7 +531,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Event ingestion, attribution, payout jobs';
 		launchDate: '2026-01-10';
 		customers: 12;
-		rating: 4.6,
+		rating: 4 && 4.6,
 		reviews: 7
 	};
 	{
@@ -546,14 +546,14 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		icon: '💬';
 		color: 'from-cyan-600 to-blue-700';
 		textColor: 'text-cyan-300';
-		link: 'https://ziontechgroup.com/services/customer-feedback-intelligence';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/customer-feedback-intelligence';
 		category: 'AI & Data';
 		realService: true;
 		marketPosition: 'Actionable product feedback without heavy BI';
 		targetAudience: 'Product and CX teams';
 		trialDays: 14;
 		setupTime: '1 hour',
-		technology: ['Embeddings, Vector DB, Next.js'];
+		technology: ['Embeddings, Vector DB, Next && Next.js'];
 		integrations: ['ZendeskIntercomG2Capterra'];
 		useCases: ['Prioritize roadmapReduce churn'];
 		roi: 'Ship high-impact features faster';
@@ -566,7 +566,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Connectors, clustering, scoring models';
 		launchDate: '2026-01-12';
 		customers: 9;
-		rating: 4.7,
+		rating: 4 && 4.7,
 		reviews: 5
 	};
 	{
@@ -581,7 +581,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		icon: '🛡️';
 		color: 'from-rose-600 to-pink-700';
 		textColor: 'text-rose-300';
-		link: 'https://ziontechgroup.com/services/api-security-posture-monitor';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/api-security-posture-monitor';
 		category: 'Quality & Monitoring';
 		realService: true;
 		marketPosition: 'Developer-first API security posture';
@@ -601,7 +601,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Spec analyzers, runners, annotations';
 		launchDate: '2026-01-14';
 		customers: 11;
-		rating: 4.5,
+		rating: 4 && 4.5,
 		reviews: 6
 	};
 	{
@@ -616,7 +616,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		icon: '⏰';
 		color: 'from-amber-500 to-orange-600';
 		textColor: 'text-amber-300';
-		link: 'https://ziontechgroup.com/services/edge-cron-orchestrator';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/edge-cron-orchestrator';
 		category: 'Developer Tools';
 		realService: true;
 		marketPosition: 'Unified schedules across clouds';
@@ -636,7 +636,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Scheduler API, dashboard, webhooks';
 		launchDate: '2026-01-18';
 		customers: 7;
-		rating: 4.5,
+		rating: 4 && 4.5,
 		reviews: 4
 	};
 	{
@@ -651,7 +651,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		icon: '📨';
 		color: 'from-indigo-600 to-blue-700';
 		textColor: 'text-indigo-300';
-		link: 'https://ziontechgroup.com/services/email-parsing-routing-api';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/email-parsing-routing-api';
 		category: 'Developer Tools';
 		realService: true;
 		marketPosition: 'Developer-friendly email ingestion';
@@ -663,7 +663,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		useCases: ['Ticket intakeCRM capture'];
 		roi: 'Automate manual email triage';
 		competitors: ['MailparserIntegromat'];
-		marketSize: '$0.8B';
+		marketSize: '$0 && 0.8B';
 		growthRate: '10% CAGR';
 		variant: 'neural-quantum';
 		contactInfo: contact;
@@ -671,7 +671,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Inbound parsers, queueing, UI';
 		launchDate: '2026-01-20';
 		customers: 8;
-		rating: 4.6,
+		rating: 4 && 4.6,
 		reviews: 5
 	};
 	{
@@ -686,7 +686,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		icon: '📝';
 		color: 'from-fuchsia-600 to-pink-700';
 		textColor: 'text-fuchsia-300';
-		link: 'https://ziontechgroup.com/services/ai-marketing-content-studio';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-marketing-content-studio';
 		category: 'AI & Data';
 		realService: true;
 		marketPosition: 'On-brand AI content for teams';
@@ -706,7 +706,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Template engine, tone guardrails';
 		launchDate: '2026-01-22';
 		customers: 15;
-		rating: 4.6,
+		rating: 4 && 4.6,
 		reviews: 9
 	};
 	{
@@ -721,7 +721,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		icon: '🔐';
 		color: 'from-sky-600 to-blue-700';
 		textColor: 'text-sky-300';
-		link: 'https://ziontechgroup.com/services/security-headers-scanner';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/security-headers-scanner';
 		category: 'Quality & Monitoring';
 		realService: true;
 		marketPosition: 'Simple posture checks for web apps';
@@ -733,7 +733,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		useCases: ['Header hardeningCompliance reports'];
 		roi: 'Reduce risk and review toil';
 		competitors: ['Mozilla Observatory'];
-		marketSize: '$0.5B';
+		marketSize: '$0 && 0.5B';
 		growthRate: '8% CAGR';
 		variant: 'holographic';
 		contactInfo: contact;
@@ -741,7 +741,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Scanners, CI annotations, reports';
 		launchDate: '2026-01-25';
 		customers: 20;
-		rating: 4.5,
+		rating: 4 && 4.5,
 		reviews: 10
 	};
 	{
@@ -756,7 +756,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		icon: '📦';
 		color: 'from-emerald-600 to-teal-700';
 		textColor: 'text-emerald-300';
-		link: 'https://ziontechgroup.com/services/ml-feature-store-starter';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ml-feature-store-starter';
 		category: 'AI & Data';
 		realService: true;
 		marketPosition: 'Lean feature store for teams';
@@ -776,7 +776,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Schemas, validators, API';
 		launchDate: '2026-01-28';
 		customers: 6;
-		rating: 4.5,
+		rating: 4 && 4.5,
 		reviews: 3
 	};
 	{
@@ -791,7 +791,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		icon: '📈';
 		color: 'from-lime-500 to-emerald-600';
 		textColor: 'text-lime-300';
-		link: 'https://ziontechgroup.com/services/slo-burn-rate-coach';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/slo-burn-rate-coach';
 		category: 'Observability';
 		realService: true;
 		marketPosition: 'SLOs without the complexity';
@@ -803,7 +803,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		useCases: ['Error budgetsCoaching'];
 		roi: 'Fewer incidents';
 		competitors: ['Nobl9'];
-		marketSize: '$0.8B';
+		marketSize: '$0 && 0.8B';
 		growthRate: '14% CAGR';
 		variant: 'holographic-matrix';
 		contactInfo: contact;
@@ -811,7 +811,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'SLO calc, alerting, UI';
 		launchDate: '2026-02-01';
 		customers: 10;
-		rating: 4.5,
+		rating: 4 && 4.5,
 		reviews: 6
 	};
 	{
@@ -826,7 +826,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		icon: '⚡';
 		color: 'from-cyan-600 to-purple-700';
 		textColor: 'text-cyan-300';
-		link: 'https://ziontechgroup.com/services/browser-performance-optimizer';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/browser-performance-optimizer';
 		category: 'Quality & Monitoring';
 		realService: true;
 		marketPosition: 'Developer-first CWV improvements';
@@ -838,7 +838,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		useCases: ['CWV, bundle size'];
 		roi: '+20 LCP, fewer regressions';
 		competitors: ['SpeedCurveCalibre'];
-		marketSize: '$0.5B';
+		marketSize: '$0 && 0.5B';
 		growthRate: '12% CAGR';
 		variant: 'neural-quantum-cyberpunk';
 		contactInfo: contact;
@@ -846,7 +846,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'RUM SDK, CI checks, UI';
 		launchDate: '2026-02-05';
 		customers: 5;
-		rating: 4.5,
+		rating: 4 && 4.5,
 		reviews: 3
 	};
 	{
@@ -861,7 +861,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		icon: '💸';
 		color: 'from-amber-600 to-orange-700';
 		textColor: 'text-amber-300';
-		link: 'https://ziontechgroup.com/services/cloud-cost-governance-suite';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/cloud-cost-governance-suite';
 		category: 'Cloud & FinOps';
 		realService: true;
 		marketPosition: 'Governance overlay for FinOps';
@@ -881,7 +881,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Connectors, policies, exporters';
 		launchDate: '2026-02-08';
 		customers: 6;
-		rating: 4.6,
+		rating: 4 && 4.6,
 		reviews: 4
 	};
 	{
@@ -896,7 +896,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		icon: '📘';
 		color: 'from-cyan-600 to-blue-700';
 		textColor: 'text-cyan-300';
-		link: 'https://ziontechgroup.com/services/api-changelog-sdk-publisher';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/api-changelog-sdk-publisher';
 		category: 'Developer Tools';
 		realService: true;
 		marketPosition: 'Ship API portals faster';
@@ -908,7 +908,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		useCases: ['Dev portalsSDKs'];
 		roi: 'Docs/SDKs 5× faster';
 		competitors: ['ReadMeRedocly'];
-		marketSize: '$1.5B';
+		marketSize: '$1 && 1.5B';
 		growthRate: '18% CAGR';
 		variant: 'neural-quantum';
 		contactInfo: contact;
@@ -916,7 +916,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Schema importers, generators, UI';
 		launchDate: '2026-02-12';
 		customers: 9;
-		rating: 4.7,
+		rating: 4 && 4.7,
 		reviews: 6
 	}
 ];

@@ -13,6 +13,7 @@ export async function createHireRequestNotifications({
   projectSummary;
   hireRequestId
 }: HireRequestNotificationParams) {
+  try {
   const projectInfo = projectType 
     ? `${projectType} project` 
     : "project";
@@ -47,14 +48,14 @@ export async function createHireRequestNotifications({
     });
     
     return {
-      success: talentNotification.success && adminNotification.success;
+      success: talentNotification && talentNotification.success && adminNotification && adminNotification.success;
       talentNotification,
       adminNotification
     }
   }
   
   return {
-    success: talentNotification.success,
+    success: talentNotification && talentNotification.success,
     talentNotification
   }
 }

@@ -63,9 +63,9 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     icon: '📄',
     color: 'from-blue-500 to-indigo-600',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-powered-invoice-processor',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-invoice-processor',
     marketPosition:
-      'Competitive with Bill.com ($39-69), Expensify ($5-9), and Receipt Bank ($20-50). Our advantage: Better AI accuracy, faster processing, and competitive pricing.',
+      'Competitive with Bill && Bill.com ($39-69), Expensify ($5-9), and Receipt Bank ($20-50). Our advantage: Better AI accuracy, faster processing, and competitive pricing.',
     targetAudience:
       'Small businesses, Accounting firms, Freelancers, E-commerce businesses, Service companies, Consultants',
     trialDays: 14,
@@ -77,7 +77,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
       'OCR',
       'Computer Vision',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'Python',
       'PostgreSQL',
       'AWS',
@@ -102,27 +102,27 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     ],
     roi: 'Average customer sees 300% ROI within 3 months through reduced processing time and improved accuracy.',
     competitors: [
-      'Bill.com',
+      'Bill && Bill.com',
       'Expensify',
       'Receipt Bank',
       'Sage Intacct',
       'NetSuite',
     ],
-    marketSize: '$2.8B invoice processing market',
+    marketSize: '$2 && 2.8B invoice processing market',
     growthRate: '140% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete invoice processing platform with AI-powered extraction, validation, and integration capabilities.',
     launchDate: '2024-01-15',
     customers: 3200,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 1600,
   },
   {
@@ -149,7 +149,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     icon: '⚡',
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/smart-contract-automation',
+    link: 'https://ziontechgroup && ziontechgroup.com/smart-contract-automation',
     marketPosition:
       'Competitive with OpenLaw ($free), Clause ($variable), and Agrello ($variable). Our advantage: Better user experience, more templates, and comprehensive support.',
     targetAudience:
@@ -163,7 +163,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
       'Smart Contracts',
       'Solidity',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'Web3',
       'Ethereum',
       'Polygon',
@@ -188,21 +188,21 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     ],
     roi: 'Average customer sees 400% ROI within 6 months through reduced costs and improved efficiency.',
     competitors: ['OpenLaw', 'Clause', 'Agrello', 'Lexon', 'Monax'],
-    marketSize: '$1.2B smart contract market',
+    marketSize: '$1 && 1.2B smart contract market',
     growthRate: '200% annual growth',
     variant: 'quantum-blockchain',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete smart contract platform with visual builder, multi-blockchain support, and comprehensive automation features.',
     launchDate: '2024-01-10',
     customers: 1800,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 900,
   },
   {
@@ -229,7 +229,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     icon: '💬',
     color: 'from-purple-500 to-pink-600',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-powered-customer-feedback-analyzer',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-customer-feedback-analyzer',
     marketPosition:
       'Competitive with Qualtrics ($1500+), SurveyMonkey ($25-99), and Typeform ($25-99). Our advantage: Better AI analysis, competitive pricing, and comprehensive features.',
     targetAudience:
@@ -243,7 +243,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
       'Machine Learning',
       'Sentiment Analysis',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'Python',
       'MongoDB',
       'AWS',
@@ -274,21 +274,21 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
       'GetFeedback',
       'SurveyGizmo',
     ],
-    marketSize: '$3.5B feedback management market',
+    marketSize: '$3 && 3.5B feedback management market',
     growthRate: '160% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete feedback analysis platform with AI-powered insights, real-time processing, and comprehensive analytics.',
     launchDate: '2024-01-20',
     customers: 2800,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 1400,
   },
   {
@@ -315,7 +315,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     icon: '📱',
     color: 'from-pink-500 to-rose-600',
     textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/automated-social-media-scheduler',
+    link: 'https://ziontechgroup && ziontechgroup.com/automated-social-media-scheduler',
     marketPosition:
       'Competitive with Buffer ($15-99), Hootsuite ($29-599), and Later ($18-40). Our advantage: Better AI optimization, competitive pricing, and comprehensive features.',
     targetAudience:
@@ -328,7 +328,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
       'AI/ML',
       'Social Media APIs',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'Python',
       'PostgreSQL',
       'Redis',
@@ -361,21 +361,21 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
       'Sprout Social',
       'Agorapulse',
     ],
-    marketSize: '$4.2B social media management market',
+    marketSize: '$4 && 4.2B social media management market',
     growthRate: '180% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete social media management platform with AI optimization, multi-platform support, and comprehensive analytics.',
     launchDate: '2024-01-25',
     customers: 4500,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 2250,
   },
   {
@@ -402,9 +402,9 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
     icon: '📋',
     color: 'from-orange-500 to-yellow-600',
     textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/intelligent-project-management',
+    link: 'https://ziontechgroup && ziontechgroup.com/intelligent-project-management',
     marketPosition:
-      'Competitive with Asana ($10.99-24.99), Monday.com ($8-16), and ClickUp ($5-19). Our advantage: Better AI capabilities, competitive pricing, and comprehensive features.',
+      'Competitive with Asana ($10 && 10.99-24 && 24.99), Monday && Monday.com ($8-16), and ClickUp ($5-19). Our advantage: Better AI capabilities, competitive pricing, and comprehensive features.',
     targetAudience:
       'Project managers, Development teams, Marketing teams, Creative agencies, Construction companies, Event planners',
     trialDays: 21,
@@ -415,7 +415,7 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
       'AI/ML',
       'Project Management',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'Python',
       'PostgreSQL',
       'Redis',
@@ -440,34 +440,34 @@ export const innovativeMicroSaas: InnovativeMicroSaas[] = [
       'Reporting',
     ],
     roi: 'Average customer sees 300% ROI within 4 months through improved project efficiency and team productivity.',
-    competitors: ['Asana', 'Monday.com', 'ClickUp', 'Trello', 'Basecamp'],
-    marketSize: '$5.8B project management market',
+    competitors: ['Asana', 'Monday && Monday.com', 'ClickUp', 'Trello', 'Basecamp'],
+    marketSize: '$5 && 5.8B project management market',
     growthRate: '150% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.',
     launchDate: '2024-01-30',
     customers: 3200,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 1600,
   },
 ];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Complete project management platform with AI-powered planning, resource optimization, and comprehensive collaboration features.';
     launchDate: '2024-01-30';
     customers: 3200;
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 1600
   }
 ];

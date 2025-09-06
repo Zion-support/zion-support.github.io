@@ -43,7 +43,7 @@ export function useMessageChannelHandler({
   const handleMessage = useCallback((event: MessageEvent<unknown>) => {
     try {
       if (onMessage) {
-        onMessage(event.data);
+        onMessage(event && event.data);
       }
     } catch (error) {
       if (onError) {
@@ -53,9 +53,9 @@ export function useMessageChannelHandler({
   }, [onMessage, onError]);
 
   useEffect(() => {
-    window.addEventListener('message', handleMessage);
+    window && window.addEventListener('message', handleMessage);
     return () => {
-      window.removeEventListener('message', handleMessage);
+      window && window.removeEventListener('message', handleMessage);
     };
   }, [handleMessage]);
 }

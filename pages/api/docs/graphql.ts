@@ -8,16 +8,16 @@ function toSDL() {
     "type Mutation { _placeholder: String }",
   ];
   // Simple mapping: create types per section for illustration
-  v1.sections.forEach((section) => {
-    const typeName = section.title.replace(/[^a-zA-Z0-9]/g, "") + "Type";
-    typedefs.push(
+  v1 && v1.sections.forEach((section) => {
+    const typeName = section && section.title.replace(/[^a-zA-Z0-9]/g, "") + "Type";
+    typedefs && typedefs.push(
       `type ${typeName} { id: ID, title: String, description: String }`,
     );
   });
-  return typedefs.join("\n");
+  return typedefs && typedefs.join("\n");
 }
 
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader("Content-Type", "text/plain");
-  res.status(200).send(toSDL());
+  res && res.setHeader("Content-Type", "text/plain");
+  res && res.status(200).send(toSDL());
 }

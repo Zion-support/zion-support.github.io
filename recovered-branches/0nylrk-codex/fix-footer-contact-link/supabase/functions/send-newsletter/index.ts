@@ -1,6 +1,6 @@
 
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
-import {Resend} from "npm: resend@2.0.0";
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {Resend} from "npm: resend@2 ;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -14,29 +14,29 @@ interface SendNewsletterRequest {
 }
 
 serve(async (req) => {
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
 
   try {
-    const resendApiKey = Deno.env.get("RESEND_API_KEY");
+    const resendApiKey = Deno && Deno.env.get("RESEND_API_KEY");
     if (!resendApiKey) {
       throw new Error("Resend API key is not set in environment variables")
     }
 
     const resend = new Resend(resendApiKey);
-    const { subject, previewText, body, testMode, testEmail } = await req.json() as SendNewsletterRequest;
+    const { subject, previewText, body, testMode, testEmail } = await req && req.json() as SendNewsletterRequest;
 
     // If test mode, send to test email only
     if (testMode && testEmail) {
-      const emailResponse = await resend.emails.send({
-        from: "Zion Marketplace <newsletter@ziontechgroup.com>";
+      const emailResponse = await resend && resend.emails.send({
+        from: "Zion Marketplace <newsletter@ziontechgroup && ziontechgroup.com>";
         to: [testEmail],
         subject: `[TEST] ${subject}`;
         html: body,
         text: previewText});
 
-      return new Response(JSON.stringify(emailResponse), {
+      return new Response(JSON && JSON.stringify(emailResponse), {
         headers: { ...corsHeaders, "Content-Type": "application/json" };
         status: 200})
     } 
@@ -49,13 +49,13 @@ serve(async (req) => {
       message: "Email would be sent to all subscribers in production"
     };
 
-    return new Response(JSON.stringify(emailResponse), {
+    return new Response(JSON && JSON.stringify(emailResponse), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
       status: 200})
   } catch (error) {
-    console.error("Error in send-newsletter function:", error);
+    console && console.error("Error in send-newsletter function:", error);
     
-    return new Response(JSON.stringify({ error: error.message }), {
+    return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
       status: 500})
   }

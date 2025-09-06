@@ -26,43 +26,43 @@ export function upsertEvent(
   state: MultiverseState,
   event: SyncEvent
 ): MultiverseState {
-  if (state.seenEventIds[event.eventId]) return state;
+  if (state && state.seenEventIds[event && event.eventId]) return state;
 
   const entityId = getEntityId(event);
-  const currentVersion = state.latestVersionByEntityId[entityId] || 0;
-  const isNewer = event.version > currentVersion;
+  const currentVersion = state && state.latestVersionByEntityId[entityId] || 0;
+  const isNewer = event && event.version > currentVersion;
 
-  if (event.type === 'proposal' && event.merkleRoot && isNewer) {
-    state.proposalMerkleById[entityId] = event.merkleRoot;
+  if (event && event.type === 'proposal' && event && event.merkleRoot && isNewer) {
+    state && state.proposalMerkleById[entityId] = event && event.merkleRoot;
   }
 
   if (isNewer) {
-    state.latestVersionByEntityId[entityId] = event.version;
+    state && state.latestVersionByEntityId[entityId] = event && event.version;
   }
 
-  state.events.push(event);
-  state.seenEventIds[event.eventId] = true;
-  state.lastSyncedAt = Math.max(state.lastSyncedAt || 0, event.timestamp || 0);
+  state && state.events.push(event);
+  state && state.seenEventIds[event && event.eventId] = true;
+  state && state.lastSyncedAt = Math && Math.max(state && state.lastSyncedAt || 0, event && event.timestamp || 0);
   return state;
 
 export function getEntityId(event: SyncEvent): string {
-  switch (event.type) {
+  switch (event && event.type) {
     case 'proposal':
-      return (event.payload as any).proposalId;
+      return (event && event.payload as any).proposalId;
     case 'token_transfer':
-      return (event.payload as any).txId;
+      return (event && event.payload as any).txId;
     case 'talent_mobility':
       return (
-        (event.payload as any).personId + ':' + (event.payload as any).startDate
+        (event && event.payload as any).personId + ':' + (event && event.payload as any).startDate
       );
     case 'dao_endorsement':
-      return (event.payload as any).resolutionId;
+      return (event && event.payload as any).resolutionId;
     case 'leaderboard_entry':
       return (
-        (event.payload as any).subjectId + ':' + (event.payload as any).period
+        (event && event.payload as any).subjectId + ':' + (event && event.payload as any).period
       );
     default:
-      return (event.payload as any).id || event.eventId;
+      return (event && event.payload as any).id || event && event.eventId;
   }
 
 export function filterEventsByScope(
@@ -71,16 +71,16 @@ export function filterEventsByScope(
 ): SyncEvent[] {
   if (scope === 'full') return events;
   if (scope === 'dao') {
-    return events.filter(
-      e => e.type === 'proposal' || e.type === 'dao_endorsement'
+    return events && events.filter(
+      e => e && e.type === 'proposal' || e && e.type === 'dao_endorsement'
     );
   }
   if (scope === 'marketplace') {
-    return events.filter(
+    return events && events.filter(
       e =>
-        e.type === 'token_transfer' ||
-        e.type === 'talent_mobility' ||
-        e.type === 'leaderboard_entry'
+        e && e.type === 'token_transfer' ||
+        e && e.type === 'talent_mobility' ||
+        e && e.type === 'leaderboard_entry'
     );
   }
   return events;export function resetState(): void {

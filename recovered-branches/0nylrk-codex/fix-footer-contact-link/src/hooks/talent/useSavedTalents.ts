@@ -13,7 +13,7 @@ export function useSavedTalents() {
   // Fetch saved talents
   useEffect(() => {
     const fetchSavedTalents = async () => {
-      if (!isAuthenticated || !userDetails.id) {
+      if (!isAuthenticated || !userDetails && userDetails.id) {
         setIsLoading(false);
         return
       }
@@ -25,15 +25,15 @@ export function useSavedTalents() {
         const { data: savedData, error: savedError } = await supabase
           .from('saved_talents')
           .select('talent_id')
-          .eq('user_id', userDetails.id);
+          .eq('user_id', userDetails && userDetails.id);
           
         if (savedError) throw savedError;
 
         if (savedData) {
-          const talentIds = savedData.map(item => item.talent_id);
+          const talentIds = savedData && savedData.map(item => item && item.talent_id);
           setSavedTalentIds(talentIds);
           
-          if (talentIds.length > 0) {
+          if (talentIds && talentIds.length > 0) {
             // Fetch full talent profiles for saved talents
             const { data: talentData, error: talentError } = await supabase
               .from('talent_profiles')
@@ -48,7 +48,7 @@ export function useSavedTalents() {
           }
         }
       } catch (error) {
-        console.error('Error fetching saved talents:', error);
+        console && console.error('Error fetching saved talents:', error);
         toast({
           title: "Error loading favorites";
           description: "There was a problem loading your saved talents.",
@@ -60,11 +60,11 @@ export function useSavedTalents() {
     };
     
     fetchSavedTalents()
-  }, [isAuthenticated, userDetails.id]);
+  }, [isAuthenticated, userDetails && userDetails.id]);
 
   // Toggle save talent
   const toggleSaveTalent = async (talent: TalentProfile) => {
-    if (!isAuthenticated || !userDetails.id || !talent.id) {
+    if (!isAuthenticated || !userDetails && userDetails.id || !talent && talent.id) {
       toast({
         title: "Authentication required";
         description: "Please log in to save talents to your favorites",
@@ -73,7 +73,7 @@ export function useSavedTalents() {
       return
     }
     
-    const isSaved = savedTalentIds.includes(talent.id);
+    const isSaved = savedTalentIds && savedTalentIds.includes(talent && talent.id);
     
     try {
       if (isSaved) {
@@ -81,36 +81,36 @@ export function useSavedTalents() {
         const { error } = await supabase
           .from('saved_talents')
           .delete()
-          .eq('user_id', userDetails.id)
-          .eq('talent_id', talent.id);
+          .eq('user_id', userDetails && userDetails.id)
+          .eq('talent_id', talent && talent.id);
           
         if (error) throw error;
         
-        setSavedTalents(prev => prev.filter(t => t.id !== talent.id));
-        setSavedTalentIds(prev => prev.filter(id => id !== talent.id));
+        setSavedTalents(prev => prev && prev.filter(t => t && t.id !== talent && talent.id));
+        setSavedTalentIds(prev => prev && prev.filter(id => id !== talent && talent.id));
         
         toast({
           title: "Removed from favorites",
-          description: `${talent.full_name} has been removed from your favorites`})
+          description: `${talent && talent.full_name} has been removed from your favorites`})
       } else {
         // Add to saved_talents
         const { error } = await supabase
           .from('saved_talents')
           .insert({
-            user_id: userDetails.id,
-            talent_id: talent.id});
+            user_id: userDetails && userDetails.id,
+            talent_id: talent && talent.id});
           
         if (error) throw error;
         
         setSavedTalents(prev => [...prev, talent]);
-        setSavedTalentIds(prev => [...prev, talent.id]);
+        setSavedTalentIds(prev => [...prev, talent && talent.id]);
         
         toast({
           title: "Added to favorites",
-          description: `${talent.full_name} has been added to your favorites`})
+          description: `${talent && talent.full_name} has been added to your favorites`})
       }
     } catch (error) {
-      console.error('Error toggling saved talent:', error);
+      console && console.error('Error toggling saved talent:', error);
       toast({
         title: "Error";
         description: "There was a problem updating your favorites. Please try again.",
@@ -121,7 +121,7 @@ export function useSavedTalents() {
 
   // Check if talent is saved
   const isTalentSaved = (talentId: string) => {
-    return savedTalentIds.includes(talentId)
+    return savedTalentIds && savedTalentIds.includes(talentId)
   };
 
   return {

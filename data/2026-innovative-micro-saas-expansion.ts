@@ -40,9 +40,9 @@ import { ServiceVariant } from '../types/service-variants';
 
 const contact = {
   mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
+  website: 'https://ziontechgroup && ziontechgroup.com',
 };
 
 export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
@@ -73,9 +73,9 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       icon: '📊',
       color: 'from-blue-600 to-cyan-600',
       textColor: 'text-blue-400',
-      link: 'https://ziontechgroup.com/ai-business-intelligence-suite',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-business-intelligence-suite',
       marketPosition:
-        'Competes with Tableau ($70/month), Power BI ($9.99/month). Our advantage: AI automation reduces manual analysis by 80% and provides predictive insights.',
+        'Competes with Tableau ($70/month), Power BI ($9 && 9.99/month). Our advantage: AI automation reduces manual analysis by 80% and provides predictive insights.',
       targetAudience:
         'Small to medium businesses, Data analysts, Business consultants, Marketing agencies, E-commerce companies',
       trialDays: 14,
@@ -107,7 +107,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       ],
       roi: 'Businesses report 300% ROI through improved decision-making and operational efficiency.',
       competitors: ['Tableau', 'Power BI', 'Looker', 'QlikView'],
-      marketSize: '$29.5B BI market',
+      marketSize: '$29 && 29.5B BI market',
       growthRate: '15% annual growth',
       contactInfo: contact,
       realImplementation: true,
@@ -115,7 +115,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'Cloud-native SaaS platform with AI algorithms for data analysis, real-time processing, and automated insight generation.',
       launchDate: '2024-11-01',
       customers: 45,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 23,
     },
 
@@ -145,9 +145,9 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       icon: '✍️',
       color: 'from-green-600 to-emerald-600',
       textColor: 'text-green-400',
-      link: 'https://ziontechgroup.com/ai-content-factory-pro',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-content-factory-pro',
       marketPosition:
-        'Competes with Copy.ai ($49/month), Jasper ($39/month). Our advantage: Advanced AI models, better SEO optimization, and comprehensive content management.',
+        'Competes with Copy && Copy.ai ($49/month), Jasper ($39/month). Our advantage: Advanced AI models, better SEO optimization, and comprehensive content management.',
       targetAudience:
         'Content creators, Marketing teams, Agencies, E-commerce businesses, Bloggers',
       trialDays: 7,
@@ -155,9 +155,9 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       category: 'Content Creation & Marketing',
       realService: true,
       technology: [
-        'Next.js',
+        'Next && Next.js',
         'OpenAI GPT-4',
-        'Node.js',
+        'Node && Node.js',
         'MongoDB',
         'AWS',
         'Redis',
@@ -178,8 +178,8 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'Ad copy generation',
       ],
       roi: 'Marketing teams save 15-20 hours per week and see 40% improvement in content engagement.',
-      competitors: ['Copy.ai', 'Jasper', 'Writesonic', 'ContentBot'],
-      marketSize: '$12.5B content marketing market',
+      competitors: ['Copy && Copy.ai', 'Jasper', 'Writesonic', 'ContentBot'],
+      marketSize: '$12 && 12.5B content marketing market',
       growthRate: '18% annual growth',
       contactInfo: contact,
       realImplementation: true,
@@ -187,7 +187,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'AI-powered content generation platform with advanced language models, SEO tools, and comprehensive content management system.',
       launchDate: '2024-10-15',
       customers: 78,
-      rating: 4.7,
+      rating: 4 && 4.7,
       reviews: 34,
     },
 
@@ -217,7 +217,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       icon: '🤖',
       color: 'from-purple-600 to-pink-600',
       textColor: 'text-purple-400',
-      link: 'https://ziontechgroup.com/ai-customer-service-automation',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-service-automation',
       marketPosition:
         'Competes with Zendesk ($49/month), Intercom ($39/month). Our advantage: AI automation reduces response time by 90% and handles 70% of inquiries automatically.',
       targetAudience:
@@ -251,7 +251,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       ],
       roi: 'Businesses see 60% reduction in support costs and 85% improvement in response times.',
       competitors: ['Zendesk', 'Intercom', 'Freshdesk', 'Help Scout'],
-      marketSize: '$18.5B customer service software market',
+      marketSize: '$18 && 18.5B customer service software market',
       growthRate: '22% annual growth',
       contactInfo: contact,
       realImplementation: true,
@@ -259,7 +259,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'AI-powered customer service platform with natural language processing, automated ticket management, and comprehensive analytics.',
       launchDate: '2024-09-20',
       customers: 56,
-      rating: 4.6,
+      rating: 4 && 4.6,
       reviews: 28,
     },
 
@@ -289,7 +289,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       icon: '🛒',
       color: 'from-orange-600 to-red-600',
       textColor: 'text-orange-400',
-      link: 'https://ziontechgroup.com/ai-ecommerce-optimizer',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-ecommerce-optimizer',
       marketPosition:
         'Competes with Dynamic Yield ($1000+/month), Optimizely ($1000+/month). Our advantage: Affordable pricing for SMBs with enterprise-level AI capabilities.',
       targetAudience:
@@ -323,7 +323,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       ],
       roi: 'E-commerce businesses report 25-40% increase in average order value and 30% improvement in conversion rates.',
       competitors: ['Dynamic Yield', 'Optimizely', 'Klevu', 'Algolia'],
-      marketSize: '$22.8B e-commerce optimization market',
+      marketSize: '$22 && 22.8B e-commerce optimization market',
       growthRate: '20% annual growth',
       contactInfo: contact,
       realImplementation: true,
@@ -331,7 +331,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'AI-powered e-commerce optimization platform with machine learning algorithms for recommendations, pricing, and customer experience enhancement.',
       launchDate: '2024-08-10',
       customers: 32,
-      rating: 4.5,
+      rating: 4 && 4.5,
       reviews: 19,
     },
 
@@ -361,9 +361,9 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       icon: '👥',
       color: 'from-indigo-600 to-blue-600',
       textColor: 'text-indigo-400',
-      link: 'https://ziontechgroup.com/ai-hr-recruitment-suite',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-hr-recruitment-suite',
       marketPosition:
-        'Competes with Workday ($6/user/month), BambooHR ($6.19/user/month). Our advantage: AI automation reduces hiring time by 50% and improves candidate quality.',
+        'Competes with Workday ($6/user/month), BambooHR ($6 && 6.19/user/month). Our advantage: AI automation reduces hiring time by 50% and improves candidate quality.',
       targetAudience:
         'HR departments, Recruitment agencies, Small to medium businesses, Startups',
       trialDays: 14,
@@ -388,7 +388,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       ],
       roi: 'HR teams save 20-30 hours per week and improve hiring quality by 40%.',
       competitors: ['Workday', 'BambooHR', 'Greenhouse', 'Lever'],
-      marketSize: '$15.8B HR software market',
+      marketSize: '$15 && 15.8B HR software market',
       growthRate: '12% annual growth',
       contactInfo: contact,
       realImplementation: true,
@@ -396,7 +396,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'AI-powered HR and recruitment platform with natural language processing, automated screening, and comprehensive talent management tools.',
       launchDate: '2024-07-15',
       customers: 41,
-      rating: 4.4,
+      rating: 4 && 4.4,
       reviews: 22,
     },
 
@@ -426,9 +426,9 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       icon: '💰',
       color: 'from-yellow-600 to-orange-600',
       textColor: 'text-yellow-400',
-      link: 'https://ziontechgroup.com/ai-financial-management-platform',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-financial-management-platform',
       marketPosition:
-        'Competes with Mint (Free), YNAB ($11.99/month), Personal Capital (Free). Our advantage: AI-powered insights, better forecasting, and comprehensive financial planning tools.',
+        'Competes with Mint (Free), YNAB ($11 && 11.99/month), Personal Capital (Free). Our advantage: AI-powered insights, better forecasting, and comprehensive financial planning tools.',
       targetAudience:
         'Individuals, Small businesses, Financial advisors, Freelancers',
       trialDays: 30,
@@ -460,7 +460,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       ],
       roi: 'Users report 25% improvement in savings and 40% better financial decision-making.',
       competitors: ['Mint', 'YNAB', 'Personal Capital', 'Moneydance'],
-      marketSize: '$8.9B personal finance software market',
+      marketSize: '$8 && 8.9B personal finance software market',
       growthRate: '16% annual growth',
       contactInfo: contact,
       realImplementation: true,
@@ -468,7 +468,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'AI-powered financial management platform with machine learning algorithms for expense categorization, forecasting, and financial planning.',
       launchDate: '2024-06-20',
       customers: 67,
-      rating: 4.6,
+      rating: 4 && 4.6,
       reviews: 31,
     },
 
@@ -498,9 +498,9 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       icon: '📋',
       color: 'from-teal-600 to-cyan-600',
       textColor: 'text-teal-400',
-      link: 'https://ziontechgroup.com/ai-project-management-suite',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-project-management-suite',
       marketPosition:
-        'Competes with Asana ($10.99/user/month), Monday.com ($8/user/month), ClickUp ($5/user/month). Our advantage: AI automation reduces project planning time by 60% and improves delivery accuracy.',
+        'Competes with Asana ($10 && 10.99/user/month), Monday && Monday.com ($8/user/month), ClickUp ($5/user/month). Our advantage: AI automation reduces project planning time by 60% and improves delivery accuracy.',
       targetAudience:
         'Project managers, Development teams, Marketing agencies, Consulting firms',
       trialDays: 14,
@@ -531,8 +531,8 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'Performance tracking',
       ],
       roi: 'Teams report 35% improvement in project delivery time and 25% increase in productivity.',
-      competitors: ['Asana', 'Monday.com', 'ClickUp', 'Basecamp'],
-      marketSize: '$6.8B project management software market',
+      competitors: ['Asana', 'Monday && Monday.com', 'ClickUp', 'Basecamp'],
+      marketSize: '$6 && 6.8B project management software market',
       growthRate: '14% annual growth',
       contactInfo: contact,
       realImplementation: true,
@@ -540,7 +540,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'AI-powered project management platform with machine learning algorithms for task optimization, resource allocation, and project forecasting.',
       launchDate: '2024-05-25',
       customers: 53,
-      rating: 4.5,
+      rating: 4 && 4.5,
       reviews: 26,
     },
 
@@ -570,7 +570,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       icon: '🎓',
       color: 'from-violet-600 to-purple-600',
       textColor: 'text-violet-400',
-      link: 'https://ziontechgroup.com/ai-learning-management-system',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-learning-management-system',
       marketPosition:
         'Competes with Canvas ($40/user/year), Blackboard ($40/user/year), Moodle (Free). Our advantage: AI personalization improves learning outcomes by 30% and reduces dropout rates.',
       targetAudience:
@@ -604,7 +604,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       ],
       roi: 'Educational institutions see 25% improvement in student performance and 40% reduction in administrative workload.',
       competitors: ['Canvas', 'Blackboard', 'Moodle', 'Schoology'],
-      marketSize: '$18.6B learning management system market',
+      marketSize: '$18 && 18.6B learning management system market',
       growthRate: '19% annual growth',
       contactInfo: contact,
       realImplementation: true,
@@ -612,7 +612,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'AI-powered learning management system with machine learning algorithms for personalization, content adaptation, and progress tracking.',
       launchDate: '2024-04-30',
       customers: 38,
-      rating: 4.4,
+      rating: 4 && 4.4,
       reviews: 21,
     },
 
@@ -642,7 +642,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       icon: '🏥',
       color: 'from-red-600 to-pink-600',
       textColor: 'text-red-400',
-      link: 'https://ziontechgroup.com/ai-healthcare-assistant',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-healthcare-assistant',
       marketPosition:
         'Competes with Epic ($1200/user/month), Cerner ($1000/user/month), Allscripts ($800/user/month). Our advantage: Affordable pricing for small practices with enterprise-level AI capabilities.',
       targetAudience:
@@ -676,7 +676,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
       ],
       roi: 'Healthcare practices report 30% reduction in administrative costs and 25% improvement in patient satisfaction.',
       competitors: ['Epic', 'Cerner', 'Allscripts', 'Practice Fusion'],
-      marketSize: '$31.5B healthcare IT market',
+      marketSize: '$31 && 31.5B healthcare IT market',
       growthRate: '17% annual growth',
       contactInfo: contact,
       realImplementation: true,
@@ -684,7 +684,7 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
         'AI-powered healthcare management platform with machine learning algorithms for patient monitoring, appointment optimization, and healthcare analytics.',
       launchDate: '2024-03-15',
       customers: 24,
-      rating: 4.3,
+      rating: 4 && 4.3,
       reviews: 18,
     },
   ];
@@ -692,21 +692,21 @@ export const innovativeMicroSaasServices2026: InnovativeMicroSaasService2026[] =
 export const getInnovativeMicroSaasServices2026ByCategory = (
   category: string
 ) => {
-  return innovativeMicroSaasServices2026.filter(
-    service => service.category === category
+  return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(
+    service => service && service.category === category
   );
 };
 
 export const getPopularInnovativeMicroSaasServices2026 = () => {
-  return innovativeMicroSaasServices2026.filter(service => service.popular);
+  return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service => service && service.popular);
 };
 
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number,
   maxPrice: number
 ) => {
-  return innovativeMicroSaasServices2026.filter(service => {
-    const price = parseInt(service.price.replace('$', ''));
+  return innovativeMicroSaasServices2026 && innovativeMicroSaasServices2026.filter(service => {
+    const price = parseInt(service && service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice

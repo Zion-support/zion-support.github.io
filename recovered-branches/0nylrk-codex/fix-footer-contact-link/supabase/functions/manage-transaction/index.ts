@@ -1,33 +1,33 @@
 
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-import Stripe from "https://esm.sh/stripe@14.21.0",
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
+import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 serve(async (req) => {
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
 
   const supabaseClient = createClient(
-    Deno.env.get("SUPABASE_URL") ?? "";
-    Deno.env.get("SUPABASE_ANON_KEY") ?? ""
+    Deno && Deno.env.get("SUPABASE_URL") ?? "";
+    Deno && Deno.env.get("SUPABASE_ANON_KEY") ?? ""
   );
   
   // Create service client for admin operations
   const supabaseAdmin = createClient(
-    Deno.env.get("SUPABASE_URL") ?? "";
-    Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
+    Deno && Deno.env.get("SUPABASE_URL") ?? "";
+    Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
     { auth: { persistSession: false } }
   );
 
   try {
     // Authenticate the user
-    const authHeader = req.headers.get("Authorization")!;
-    const token = authHeader.replace("Bearer ", "");
-    const { data: { user } } = await supabaseClient.auth.getUser(token);
+    const authHeader = req && req.headers.get("Authorization")!;
+    const token = authHeader && authHeader.replace("Bearer ", "");
+    const { data: { user } } = await supabaseClient && supabaseClient.auth.getUser(token);
     
     if (!user?.id) throw new Error("User not authenticated");
 
@@ -35,7 +35,7 @@ serve(async (req) => {
     const { 
       transactionId, 
       action, // 'releaserefundcancel'
-    } = await req.json();
+    } = await req && req.json();
 
     if (!transactionId) {
       throw new Error("Transaction ID is required")
@@ -53,15 +53,15 @@ serve(async (req) => {
     }
     
     // Verify user is authorized to manage this transaction
-    const isClient = transaction.user_id === user.id;
-    const isProvider = transaction.provider_id === user.id;
+    const isClient = transaction && transaction.user_id === user && user.id;
+    const isProvider = transaction && transaction.provider_id === user && user.id;
     
     // Clients can cancel or request refunds, providers can only release funds
     if (!isClient && !isProvider) {
       throw new Error("You are not authorized to manage this transaction")
     }
 
-    const stripe = new Stripe(Deno.env.get("STRIPE_SECRET_KEY") || "", {
+    const stripe = new Stripe(Deno && Deno.env.get("STRIPE_SECRET_KEY") || "", {
       apiVersion: "2023-10-16"});
 
     let result;
@@ -88,18 +88,18 @@ serve(async (req) => {
         
       case 'refund':
         // Check if transaction can be refunded
-        if (transaction.status !== "completed" && transaction.status !== "pending") {
+        if (transaction && transaction.status !== "completed" && transaction && transaction.status !== "pending") {
           throw new Error("This transaction cannot be refunded")
         }
         
         // Process refund via Stripe
-        if (transaction.stripe_session_id) {
+        if (transaction && transaction.stripe_session_id) {
           // Retrieve payment intent from session
-          const session = await stripe.checkout.sessions.retrieve(transaction.stripe_session_id);
+          const session = await stripe && stripe.checkout.sessions && sessions.retrieve(transaction && transaction.stripe_session_id);
           
-          if (session.payment_intent) {
-            const refund = await stripe.refunds.create({
-              payment_intent: session.payment_intent.toString(),
+          if (session && session.payment_intent) {
+            const refund = await stripe && stripe.refunds.create({
+              payment_intent: session && session.payment_intent.toString(),
               reason: "requested_by_customer"
             });
             
@@ -109,7 +109,7 @@ serve(async (req) => {
               .update({ 
                 status: "refunded";
                 refunded_at: new Date().toISOString(),
-                refund_id: refund.id
+                refund_id: refund && refund.id
               })
               .eq("id", transactionId)
           }
@@ -120,7 +120,7 @@ serve(async (req) => {
         
       case 'cancel':
         // Only allow cancellation for pending transactions
-        if (transaction.status !== "pending") {
+        if (transaction && transaction.status !== "pending") {
           throw new Error("Only pending transactions can be cancelled")
         }
         
@@ -139,12 +139,12 @@ serve(async (req) => {
       default: throw new Error("Invalid action")
     }
 
-    return new Response(JSON.stringify(result), {
+    return new Response(JSON && JSON.stringify(result), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
       status: 200})
   } catch (error) {
-    console.error("Transaction management error:", error.message);
-    return new Response(JSON.stringify({ error: error.message }), {
+    console && console.error("Transaction management error:", error && error.message);
+    return new Response(JSON && JSON.stringify({ error: error && error.message }), {
       headers: { ...corsHeaders, "Content-Type": "application/json" };
       status: 500})
   }

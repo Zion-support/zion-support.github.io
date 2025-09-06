@@ -85,7 +85,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Planetary Resources, Deep Space Industries, AstroForge, TransAstra, Karman+',
     ],
     techStack: [
-      'Space robotics, AI/ML, Satellite technology, React, Node.js, PostgreSQL, Redis, AWS, Space systems',
+      'Space robotics, AI/ML, Satellite technology, React, Node && Node.js, PostgreSQL, Redis, AWS, Space systems',
     ],
     realImplementation: true,
     implementationDetails:
@@ -107,15 +107,15 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     compliance: [
       'Space regulations, International treaties, Safety standards, Industry regulations',
     ],
-    link: 'https://ziontechgroup.com/space-mining-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/space-mining-platform',
     icon: '🚀',
     color: 'from-purple-500 to-pink-600',
     popular: true,
     launchDate: '2024-01-05',
     customers: 120,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 45,
-    marketSize: '$3.5B space mining market',
+    marketSize: '$3 && 3.5B space mining market',
     growthRate: '85% annually',
   },
   {
@@ -166,7 +166,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'IBM Quantum, Google Quantum AI, D-Wave, Rigetti, Specialized bio-computing platforms',
     ],
     techStack: [
-      'Quantum computing, Biological algorithms, Bioinformatics, React, Node.js, PostgreSQL, Redis, AWS',
+      'Quantum computing, Biological algorithms, Bioinformatics, React, Node && Node.js, PostgreSQL, Redis, AWS',
     ],
     realImplementation: true,
     implementationDetails:
@@ -188,13 +188,13 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     compliance: [
       'Research ethics, Data privacy, Scientific standards, Industry regulations',
     ],
-    link: 'https://ziontechgroup.com/quantum-bio-computing-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-bio-computing-platform',
     icon: '🧬',
     color: 'from-green-500 to-emerald-600',
     popular: true,
     launchDate: '2024-02-01',
     customers: 280,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 85,
     marketSize: '$12B quantum bio-computing market',
     growthRate: '65% annually',
@@ -247,7 +247,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Neuralink, CTRL-labs, Kernel, Paradromics, specialized BCI platforms',
     ],
     techStack: [
-      'Neural signal processing, AI/ML, React, Node.js, PostgreSQL, Redis, AWS, Neural hardware',
+      'Neural signal processing, AI/ML, React, Node && Node.js, PostgreSQL, Redis, AWS, Neural hardware',
     ],
     realImplementation: true,
     implementationDetails:
@@ -269,13 +269,13 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     compliance: [
       'Medical device regulations, Data privacy, Ethical guidelines, Industry standards',
     ],
-    link: 'https://ziontechgroup.com/brain-computer-interface-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/brain-computer-interface-platform',
     icon: '🧠',
     color: 'from-blue-500 to-indigo-600',
     popular: true,
     launchDate: '2024-01-15',
     customers: 450,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 120,
     marketSize: '$18B BCI market',
     growthRate: '55% annually',
@@ -328,7 +328,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Specialized energy platforms, Quantum computing services, Simulation software, Energy optimization tools',
     ],
     techStack: [
-      'Quantum computing, Energy algorithms, React, Node.js, PostgreSQL, Redis, AWS, Energy systems',
+      'Quantum computing, Energy algorithms, React, Node && Node.js, PostgreSQL, Redis, AWS, Energy systems',
     ],
     realImplementation: true,
     implementationDetails:
@@ -350,13 +350,13 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     compliance: [
       'Energy regulations, Safety standards, Environmental regulations, Industry standards',
     ],
-    link: 'https://ziontechgroup.com/quantum-energy-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-energy-platform',
     icon: '⚡',
     color: 'from-yellow-500 to-orange-600',
     popular: true,
     launchDate: '2024-02-10',
     customers: 320,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 95,
     marketSize: '$25B quantum energy market',
     growthRate: '45% annually',
@@ -409,7 +409,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
       'Waymo, Tesla Autopilot, Cruise, Argo AI, specialized AV platforms',
     ],
     techStack: [
-      'Advanced AI/ML, Computer Vision, Robotics, React, Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
+      'Advanced AI/ML, Computer Vision, Robotics, React, Node && Node.js, PostgreSQL, Redis, AWS, Vehicle systems',
     ],
     realImplementation: true,
     implementationDetails:
@@ -431,13 +431,13 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     compliance: [
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai-platform',
     icon: '🚗',
     color: 'from-red-500 to-pink-600',
     popular: true,
     launchDate: '2024-01-25',
     customers: 180,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 65,
     marketSize: '$35B autonomous vehicle market',
     growthRate: '75% annually',
@@ -447,13 +447,13 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
     support: '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';
     compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform';
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai-platform';
     icon: '🚗';
     color: 'from-red-500 to-pink-600';
     popular: true;
     launchDate: '2024-01-25';
     customers: 180;
-    rating: 4.9;
+    rating: 4 && 4.9;
     reviews: 65;
     marketSize: '$35B autonomous vehicle market',
     growthRate: '75% annually'

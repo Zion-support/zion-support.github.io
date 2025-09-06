@@ -68,7 +68,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     icon: '🧠',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/ai-consciousness-evolution',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-consciousness-evolution',
     marketPosition:
       'First-to-market AI consciousness platform. Competes with OpenAI ($20/month), Anthropic ($20/month). Our advantage: Consciousness development and emotional intelligence.',
     targetAudience: [
@@ -84,7 +84,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     category: 'AI Consciousness & Research',
     realService: true,
     technology: [
-      'Python, TensorFlow, PyTorch, React, Node.js, PostgreSQL, Redis',
+      'Python, TensorFlow, PyTorch, React, Node && Node.js, PostgreSQL, Redis',
     ],
     integrations: [
       'OpenAI API, Anthropic Claude, Research databases, Academic platforms, Cloud computing',
@@ -94,21 +94,21 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     ],
     roi: 'Research institutions report 500% ROI through breakthrough discoveries and accelerated AI development.',
     competitors: ['OpenAI, Anthropic, DeepMind, Google AI'],
-    marketSize: '$2.5B AI research market',
+    marketSize: '$2 && 2.5B AI research market',
     growthRate: '400% annual growth',
     variant: 'ai-consciousness-advanced',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced AI consciousness development platform with research tools, monitoring systems, and evolutionary learning capabilities.',
     launchDate: '2024-12-01',
     customers: 12,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 8,
   },
 
@@ -137,7 +137,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     icon: '🌐',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-ecosystem',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-ecosystem',
     marketPosition:
       'Competes with AutoML platforms ($500/month), MLOps tools ($200/month). Our advantage: Full autonomy and self-evolution capabilities.',
     targetAudience: [
@@ -152,7 +152,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     category: 'AI Autonomy & Evolution',
     realService: true,
     technology: [
-      'Python, TensorFlow, Kubernetes, Docker, React, Node.js, PostgreSQL',
+      'Python, TensorFlow, Kubernetes, Docker, React, Node && Node.js, PostgreSQL',
     ],
     integrations: [
       'AWS, Azure, GCP, Kubernetes, Docker, CI/CD platforms, Monitoring tools',
@@ -161,22 +161,22 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
       'Autonomous AI development, Self-evolving systems, Automated machine learning, Intelligent automation, Research platforms',
     ],
     roi: 'Development teams report 300% productivity increase and 80% reduction in maintenance overhead.',
-    competitors: ['Google AutoML, Azure AutoML, DataRobot, H2O.ai'],
-    marketSize: '$8.5B AutoML market',
+    competitors: ['Google AutoML, Azure AutoML, DataRobot, H2O && H2O.ai'],
+    marketSize: '$8 && 8.5B AutoML market',
     growthRate: '250% annual growth',
     variant: 'ai-autonomy-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Autonomous AI ecosystem platform with self-management capabilities, evolutionary algorithms, and comprehensive monitoring tools.',
     launchDate: '2024-11-15',
     customers: 28,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 19,
   },
 
@@ -206,7 +206,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     icon: '⚖️',
     color: 'from-emerald-600 to-green-700',
     textColor: 'text-emerald-400',
-    link: 'https://ziontechgroup.com/ai-ethics-governance',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-ethics-governance',
     marketPosition:
       'Competes with ethics consulting ($500/hour), governance tools ($200/month). Our advantage: Comprehensive platform with automated ethics monitoring.',
     targetAudience: [
@@ -220,7 +220,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     setupTime: '1 week',
     category: 'AI Ethics & Compliance',
     realService: true,
-    technology: ['Python, React, Node.js, PostgreSQL, Redis, Machine Learning'],
+    technology: ['Python, React, Node && Node.js, PostgreSQL, Redis, Machine Learning'],
     integrations: [
       'AI development platforms, Compliance systems, Governance tools, Reporting platforms',
     ],
@@ -231,21 +231,21 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     competitors: [
       'Ethics consulting firms, Governance platforms, Compliance tools',
     ],
-    marketSize: '$3.5B AI ethics market',
+    marketSize: '$3 && 3.5B AI ethics market',
     growthRate: '180% annual growth',
     variant: 'ai-ethics-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Comprehensive AI ethics and governance platform with automated monitoring, bias detection, and compliance management tools.',
     launchDate: '2024-10-20',
     customers: 45,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 31,
   },
 
@@ -274,7 +274,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     icon: '🎨',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/ai-creativity-studio',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-creativity-studio',
     marketPosition:
       'Competes with Midjourney ($30/month), DALL-E ($20/month), Stable Diffusion (Free). Our advantage: Multi-modal creativity and collaborative features.',
     targetAudience: [
@@ -300,21 +300,21 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     ],
     roi: 'Creative professionals report 400% increase in productivity and 300% expansion of creative possibilities.',
     competitors: ['Midjourney, DALL-E, Stable Diffusion, Runway ML'],
-    marketSize: '$15.5B creative AI market',
+    marketSize: '$15 && 15.5B creative AI market',
     growthRate: '320% annual growth',
     variant: 'ai-creativity-pro',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'AI-powered creativity platform with advanced generation models, collaborative tools, and comprehensive creative workflow management.',
     launchDate: '2024-09-15',
     customers: 156,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 89,
   },
 
@@ -344,7 +344,7 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     icon: '🎓',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/ai-education-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-education-platform',
     marketPosition:
       'Competes with Coursera ($59/month), Udemy ($20/month), Khan Academy (Free). Our advantage: AI personalization and adaptive learning.',
     targetAudience: [
@@ -374,28 +374,28 @@ export const innovativeAIServicesEnhanced2025: InnovativeAIService2025[] = [
     variant: 'ai-education-enterprise',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.',
     launchDate: '2024-03-25',
     customers: 156,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 89,
   },
 ];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true;
     implementationDetails: 'AI-powered education platform with personalized learning algorithms and adaptive curriculum generation.';
     launchDate: '2024-03-25';
     customers: 156;
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 89
   }
 ];

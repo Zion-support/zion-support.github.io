@@ -39,12 +39,12 @@ export interface EmergingTechService2026 {
 
 const contact = {
   mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
+  website: 'https://ziontechgroup && ziontechgroup.com',};  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup && ziontechgroup.com'
 };
 
 export const emergingTechServices2026: EmergingTechService2026[] = [
@@ -73,9 +73,9 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     icon: '🔮',
     color: 'from-purple-600 to-indigo-600',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/quantum-computing-as-a-service',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-computing-as-a-service',
     marketPosition:
-      'Competes with IBM Quantum ($0.60/credit), Amazon Braket ($0.30/hour), Google Quantum AI (Free). Our advantage: AI optimization improves quantum algorithm performance by 40% and reduces quantum resource requirements.',
+      'Competes with IBM Quantum ($0 && 0.60/credit), Amazon Braket ($0 && 0.30/hour), Google Quantum AI (Free). Our advantage: AI optimization improves quantum algorithm performance by 40% and reduces quantum resource requirements.',
     targetAudience:
       'Research institutions, Pharmaceutical companies, Financial institutions, AI research labs, Universities',
     trialDays: 30,
@@ -112,7 +112,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Google Quantum AI',
       'Rigetti',
     ],
-    marketSize: '$8.5B quantum computing market',
+    marketSize: '$8 && 8.5B quantum computing market',
     growthRate: '45% annual growth',
     contactInfo: contact,
     realImplementation: true,
@@ -120,7 +120,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Cloud-native quantum computing platform with AI-optimized algorithms, multi-provider access, and comprehensive quantum development tools.',
     launchDate: '2024-12-15',
     customers: 23,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 18,
   },
 
@@ -150,7 +150,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     icon: '⛓️',
     color: 'from-blue-600 to-cyan-600',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-blockchain-intelligence-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-blockchain-intelligence-platform',
     marketPosition:
       'Competes with Chainalysis ($1000+/month), Elliptic ($500/month), CipherTrace ($300/month). Our advantage: AI automation provides deeper insights and reduces analysis time by 80%.',
     targetAudience:
@@ -163,7 +163,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Python',
       'TensorFlow',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Redis',
     ],
@@ -184,7 +184,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     ],
     roi: 'Users report 300% ROI through improved trading strategies and DeFi optimization.',
     competitors: ['Chainalysis', 'Elliptic', 'CipherTrace', 'Glassnode'],
-    marketSize: '$19.9B blockchain analytics market',
+    marketSize: '$19 && 19.9B blockchain analytics market',
     growthRate: '35% annual growth',
     contactInfo: contact,
     realImplementation: true,
@@ -192,7 +192,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'AI-powered blockchain analytics platform with intelligent data analysis, DeFi optimization, and comprehensive blockchain intelligence.',
     launchDate: '2024-11-20',
     customers: 156,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 89,
   },
 
@@ -222,9 +222,9 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     icon: '📡',
     color: 'from-green-600 to-emerald-600',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/ai-iot-intelligence-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-iot-intelligence-platform',
     marketPosition:
-      'Competes with AWS IoT ($0.08/million messages), Azure IoT Hub ($0.50/million messages), Google Cloud IoT ($0.40/million messages). Our advantage: AI automation reduces IoT management complexity by 60% and improves device performance.',
+      'Competes with AWS IoT ($0 && 0.08/million messages), Azure IoT Hub ($0 && 0.50/million messages), Google Cloud IoT ($0 && 0.40/million messages). Our advantage: AI automation reduces IoT management complexity by 60% and improves device performance.',
     targetAudience:
       'Smart home companies, Industrial IoT providers, City planners, Manufacturing companies',
     trialDays: 14,
@@ -235,7 +235,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Python',
       'TensorFlow',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Redis',
     ],
@@ -256,7 +256,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     ],
     roi: 'Organizations report 250% ROI through improved device management and operational efficiency.',
     competitors: ['AWS IoT', 'Azure IoT Hub', 'Google Cloud IoT', 'ThingWorx'],
-    marketSize: '$384.7B IoT market',
+    marketSize: '$384 && 384.7B IoT market',
     growthRate: '28% annual growth',
     contactInfo: contact,
     realImplementation: true,
@@ -264,7 +264,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'AI-powered IoT platform with intelligent device management, real-time analytics, and comprehensive automation capabilities.',
     launchDate: '2024-10-25',
     customers: 89,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 45,
   },
 
@@ -294,7 +294,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     icon: '📶',
     color: 'from-indigo-600 to-purple-600',
     textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/edge-computing-optimization-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/edge-computing-optimization-platform',
     marketPosition:
       'Competes with AWS Outposts ($1000+/month), Azure Stack Edge ($1000+/month), Google Anthos ($1000+/month). Our advantage: AI optimization improves edge performance by 40% and reduces latency by 60%.',
     targetAudience:
@@ -333,7 +333,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'Google Anthos',
       'VMware Edge',
     ],
-    marketSize: '$67.2B edge computing market',
+    marketSize: '$67 && 67.2B edge computing market',
     growthRate: '32% annual growth',
     contactInfo: contact,
     realImplementation: true,
@@ -341,7 +341,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'AI-powered edge computing platform with intelligent optimization, 5G network management, and comprehensive edge application support.',
     launchDate: '2024-09-30',
     customers: 45,
-    rating: 4.5,
+    rating: 4 && 4.5,
     reviews: 23,
   },
 
@@ -371,7 +371,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     icon: '🥽',
     color: 'from-pink-600 to-rose-600',
     textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/ai-ar-vr-development-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-ar-vr-development-platform',
     marketPosition:
       'Competes with Unity Pro ($180/month), Unreal Engine (5% royalty), Vuforia ($500/month). Our advantage: AI automation reduces AR/VR development time by 70% and improves content quality.',
     targetAudience:
@@ -405,7 +405,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     ],
     roi: 'Developers report 400% ROI through faster development and improved content quality.',
     competitors: ['Unity', 'Unreal Engine', 'Vuforia', 'ARKit'],
-    marketSize: '$31.1B AR/VR market',
+    marketSize: '$31 && 31.1B AR/VR market',
     growthRate: '38% annual growth',
     contactInfo: contact,
     realImplementation: true,
@@ -413,7 +413,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'AI-powered AR/VR development platform with intelligent content creation, user experience optimization, and comprehensive development tools.',
     launchDate: '2024-08-15',
     customers: 67,
-    rating: 4.4,
+    rating: 4 && 4.4,
     reviews: 34,
   },
 
@@ -443,7 +443,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     icon: '🤖',
     color: 'from-slate-600 to-gray-600',
     textColor: 'text-slate-400',
-    link: 'https://ziontechgroup.com/ai-robotics-automation-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-robotics-automation-platform',
     marketPosition:
       'Competes with ABB RobotStudio ($2000/month), FANUC ROBOGUIDE ($1500/month), KUKA Sim ($1000/month). Our advantage: AI automation improves robotic efficiency by 50% and reduces programming time by 80%.',
     targetAudience:
@@ -475,7 +475,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'KUKA Sim',
       'Universal Robots',
     ],
-    marketSize: '$43.8B robotics market',
+    marketSize: '$43 && 43.8B robotics market',
     growthRate: '25% annual growth',
     contactInfo: contact,
     realImplementation: true,
@@ -483,7 +483,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'AI-powered robotics platform with intelligent control systems, automation optimization, and comprehensive robotics management.',
     launchDate: '2024-07-20',
     customers: 34,
-    rating: 4.3,
+    rating: 4 && 4.3,
     reviews: 18,
   },
 
@@ -513,7 +513,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
     icon: '🔄',
     color: 'from-cyan-600 to-teal-600',
     textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/ai-digital-twin-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-digital-twin-platform',
     marketPosition:
       'Competes with Siemens Digital Twin ($5000/month), PTC ThingWorx ($3000/month), GE Digital Twin ($2000/month). Our advantage: AI automation reduces digital twin creation time by 60% and improves simulation accuracy.',
     targetAudience:
@@ -552,7 +552,7 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'GE Digital Twin',
       'Autodesk',
     ],
-    marketSize: '$86.1B digital twin market',
+    marketSize: '$86 && 86.1B digital twin market',
     growthRate: '42% annual growth',
     contactInfo: contact,
     realImplementation: true,
@@ -560,27 +560,27 @@ export const emergingTechServices2026: EmergingTechService2026[] = [
       'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
     launchDate: '2024-06-25',
     customers: 56,
-    rating: 4.4,
+    rating: 4 && 4.4,
     reviews: 29,
   },
 ];
 
 export const getEmergingTechServices2026ByCategory = (category: string) => {
-  return emergingTechServices2026.filter(
-    service => service.category === category
+  return emergingTechServices2026 && emergingTechServices2026.filter(
+    service => service && service.category === category
   );
 };
 
 export const getPopularEmergingTechServices2026 = () => {
-  return emergingTechServices2026.filter(service => service.popular);
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
 };
 
 export const getEmergingTechServices2026ByPriceRange = (
   minPrice: number,
   maxPrice: number
 ) => {
-  return emergingTechServices2026.filter(service => {
-    const price = parseInt(service.price.replace('$', ''));
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => {
+    const price = parseInt(service && service.price.replace('$', ''));
     return price >= minPrice && price <= maxPrice;
   });
 };    return price >= minPrice && price <= maxPrice

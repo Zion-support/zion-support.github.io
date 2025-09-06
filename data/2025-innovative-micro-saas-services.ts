@@ -66,7 +66,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '📝',
       color: 'from-blue-500 to-cyan-600',
       textColor: 'text-blue-400',
-      link: 'https://ziontechgroup.com/ai-content-factory',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-content-factory',
       marketPosition:
         'Leading AI content platform. Competes with basic content tools but offers comprehensive AI strategy.',
       targetAudience:
@@ -82,7 +82,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'SEO Tools',
         'Python',
         'React',
-        'Node.js',
+        'Node && Node.js',
       ],
       integrations: [
         'WordPress',
@@ -110,16 +110,16 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       variant: 'saas-content',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Advanced AI content platform with strategy optimization, multi-channel management, and comprehensive performance analytics.',
       launchDate: '2025-01-01',
       customers: 150,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 89,
     },
 
@@ -148,7 +148,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '📊',
       color: 'from-green-500 to-emerald-600',
       textColor: 'text-green-400',
-      link: 'https://ziontechgroup.com/crm-intelligence-platform',
+      link: 'https://ziontechgroup && ziontechgroup.com/crm-intelligence-platform',
       marketPosition:
         'Leading AI-powered CRM platform. Competes with basic CRM tools but offers intelligent automation.',
       targetAudience:
@@ -164,7 +164,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Automation',
         'Python',
         'React',
-        'Node.js',
+        'Node && Node.js',
       ],
       integrations: [
         'Salesforce',
@@ -189,16 +189,16 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       variant: 'saas-crm',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Advanced AI-powered CRM platform with intelligent automation, predictive analytics, and comprehensive customer insights.',
       launchDate: '2025-01-15',
       customers: 200,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 125,
     },
 
@@ -228,7 +228,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '🧠',
       color: 'from-purple-500 to-indigo-600',
       textColor: 'text-purple-400',
-      link: 'https://ziontechgroup.com/decision-engine-platform',
+      link: 'https://ziontechgroup && ziontechgroup.com/decision-engine-platform',
       marketPosition:
         'Leading AI decision engine platform. Competes with basic analytics tools but offers automated decision-making.',
       targetAudience:
@@ -268,16 +268,16 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       variant: 'saas-intelligence',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Advanced AI decision engine platform with automated decision-making, predictive modeling, and comprehensive business intelligence.',
       launchDate: '2025-01-20',
       customers: 120,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 78,
     },
 
@@ -306,7 +306,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '🛒',
       color: 'from-orange-500 to-red-600',
       textColor: 'text-orange-400',
-      link: 'https://ziontechgroup.com/ecommerce-optimization-platform',
+      link: 'https://ziontechgroup && ziontechgroup.com/ecommerce-optimization-platform',
       marketPosition:
         'Leading AI e-commerce optimization platform. Competes with basic e-commerce tools but offers comprehensive AI optimization.',
       targetAudience:
@@ -322,7 +322,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'E-commerce',
         'Python',
         'React',
-        'Node.js',
+        'Node && Node.js',
       ],
       integrations: [
         'Shopify',
@@ -350,16 +350,16 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       variant: 'saas-ecommerce',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Advanced AI e-commerce optimization platform with intelligent recommendations, dynamic pricing, and comprehensive performance analytics.',
       launchDate: '2025-02-01',
       customers: 180,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 95,
     },
 
@@ -389,7 +389,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '👥',
       color: 'from-teal-500 to-cyan-600',
       textColor: 'text-teal-400',
-      link: 'https://ziontechgroup.com/hr-automation-platform',
+      link: 'https://ziontechgroup && ziontechgroup.com/hr-automation-platform',
       marketPosition:
         'Leading AI-powered HR platform. Competes with basic HR tools but offers intelligent automation.',
       targetAudience:
@@ -405,7 +405,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Analytics',
         'Python',
         'React',
-        'Node.js',
+        'Node && Node.js',
       ],
       integrations: [
         'ATS platforms',
@@ -429,16 +429,16 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       variant: 'saas-hr',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Advanced AI-powered HR platform with recruitment automation, performance tracking, and comprehensive HR analytics.',
       launchDate: '2025-02-15',
       customers: 95,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 58,
     },
 
@@ -468,7 +468,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '💰',
       color: 'from-yellow-500 to-amber-600',
       textColor: 'text-yellow-400',
-      link: 'https://ziontechgroup.com/financial-analytics-platform',
+      link: 'https://ziontechgroup && ziontechgroup.com/financial-analytics-platform',
       marketPosition:
         'Leading AI financial analytics platform. Competes with basic financial tools but offers intelligent analysis.',
       targetAudience:
@@ -508,16 +508,16 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       variant: 'saas-financial',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Advanced AI financial analytics platform with intelligent analysis, predictive modeling, and comprehensive financial insights.',
       launchDate: '2025-02-10',
       customers: 85,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 52,
     },
 
@@ -547,7 +547,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '🚚',
       color: 'from-gray-500 to-slate-600',
       textColor: 'text-gray-400',
-      link: 'https://ziontechgroup.com/supply-chain-intelligence',
+      link: 'https://ziontechgroup && ziontechgroup.com/supply-chain-intelligence',
       marketPosition:
         'Leading AI supply chain platform. Competes with basic supply chain tools but offers intelligent optimization.',
       targetAudience:
@@ -591,16 +591,16 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       variant: 'saas-supply-chain',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Advanced AI supply chain platform with intelligent optimization, demand forecasting, and comprehensive supply chain analytics.',
       launchDate: '2025-03-01',
       customers: 65,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 38,
     },
 
@@ -630,7 +630,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '📢',
       color: 'from-pink-500 to-rose-600',
       textColor: 'text-pink-400',
-      link: 'https://ziontechgroup.com/marketing-automation-platform',
+      link: 'https://ziontechgroup && ziontechgroup.com/marketing-automation-platform',
       marketPosition:
         'Leading AI marketing automation platform. Competes with basic marketing tools but offers intelligent automation.',
       targetAudience:
@@ -646,7 +646,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Personalization',
         'Python',
         'React',
-        'Node.js',
+        'Node && Node.js',
       ],
       integrations: [
         'Email platforms',
@@ -673,16 +673,16 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       variant: 'saas-marketing',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Advanced AI marketing automation platform with intelligent optimization, automated workflows, and comprehensive performance analytics.',
       launchDate: '2025-02-20',
       customers: 140,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 82,
     },
 
@@ -712,7 +712,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       icon: '📋',
       color: 'from-indigo-500 to-purple-600',
       textColor: 'text-indigo-400',
-      link: 'https://ziontechgroup.com/project-management-intelligence',
+      link: 'https://ziontechgroup && ziontechgroup.com/project-management-intelligence',
       marketPosition:
         'Leading AI project management platform. Competes with basic project tools but offers intelligent optimization.',
       targetAudience:
@@ -728,7 +728,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
         'Risk Management',
         'Python',
         'React',
-        'Node.js',
+        'Node && Node.js',
       ],
       integrations: [
         'Project management tools',
@@ -755,16 +755,16 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
       variant: 'saas-project',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.',
       launchDate: '2025-03-05',
       customers: 75,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 45,
     },
   ];    features: [
@@ -773,25 +773,25 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService2025
     ];
     popular: false, icon: '📋',
     color: 'from-indigo-500 to-purple-600', textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/project-management-intelligence', marketPosition: 'Leading AI project management platform. Competes with basic project tools but offers intelligent optimization.',
+    link: 'https://ziontechgroup && ziontechgroup.com/project-management-intelligence', marketPosition: 'Leading AI project management platform. Competes with basic project tools but offers intelligent optimization.',
     targetAudience: 'Project managers, Construction companies, Software development teams, Consulting firms, Government agencies, Large enterprises',
     trialDays: 21, setupTime: '6-8 weeks',
     category: 'Project Management', realService: true,
-    technology: ['AI/MLProject ManagementResource OptimizationRisk ManagementPythonReactNode.js'], integrations: ['Project management toolsTime tracking systemsCommunication platformsAnalytics toolsERP systems'],
+    technology: ['AI/MLProject ManagementResource OptimizationRisk ManagementPythonReactNode && ManagementPythonReactNode.js'], integrations: ['Project management toolsTime tracking systemsCommunication platformsAnalytics toolsERP systems'],
     useCases: ['Project planningResource allocationRisk managementPerformance trackingTeam collaborationBudget optimization'], roi: 'Project teams report 350%+ ROI through improved project success rates and efficiency.',
     competitors: ['Basic project management toolsTraditional planning platforms'], marketSize: '$45B+ market',
     growthRate: '250%+ annual growth', variant: 'saas-project',
     contactInfo: {
       
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     
     },
     realImplementation: true,
     implementationDetails: 'Advanced AI project management platform with intelligent planning, resource optimization, and comprehensive project analytics.',
     launchDate: '2025-03-05', customers: 75,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 45
   }
 ];

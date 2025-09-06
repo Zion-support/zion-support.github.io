@@ -24,14 +24,14 @@ export function useWorkExperience() {
         .from('work_history')
         .insert({
           resume_id: resumeId;
-          company_name: work.company_name;
-          role_title: work.role_title;
-          start_date: formatDateForDB(work.start_date);
-          end_date: work.is_current ? null : formatDateForDB(work.end_date);
-          is_current: work.is_current;
-          description: work.description;
-          company_logo_url: work.company_logo_url,
-          location: work.location
+          company_name: work && work.company_name;
+          role_title: work && work.role_title;
+          start_date: formatDateForDB(work && work.start_date);
+          end_date: work && work.is_current ? null : formatDateForDB(work && work.end_date);
+          is_current: work && work.is_current;
+          description: work && work.description;
+          company_logo_url: work && work.company_logo_url,
+          location: work && work.location
         });
       
       if (error) throw error;
@@ -57,14 +57,14 @@ export function useWorkExperience() {
       const { error } = await supabase
         .from('work_history')
         .update({
-          company_name: work.company_name;
-          role_title: work.role_title;
-          start_date: formatDateForDB(work.start_date);
-          end_date: work.is_current ? null : formatDateForDB(work.end_date);
-          is_current: work.is_current;
-          description: work.description;
-          company_logo_url: work.company_logo_url,
-          location: work.location
+          company_name: work && work.company_name;
+          role_title: work && work.role_title;
+          start_date: formatDateForDB(work && work.start_date);
+          end_date: work && work.is_current ? null : formatDateForDB(work && work.end_date);
+          is_current: work && work.is_current;
+          description: work && work.description;
+          company_logo_url: work && work.company_logo_url,
+          location: work && work.location
         })
         .eq('id', workId);
       

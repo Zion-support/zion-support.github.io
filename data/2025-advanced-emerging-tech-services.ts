@@ -51,12 +51,12 @@ export const advancedEmergingTechServices2025 = [
       'Lunar Resources',
       'Space Operations',
     ],
-    website: 'https://ziontechgroup.com/space-mining-operations',
+    website: 'https://ziontechgroup && ziontechgroup.com/space-mining-operations',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$3.8B',
+    marketSize: '$3 && 3.8B',
     targetAudience:
       'Space agencies, mining companies, aerospace firms, government agencies',
     competitiveAdvantage:
@@ -115,12 +115,12 @@ export const advancedEmergingTechServices2025 = [
       'DNA Computing',
       'Hybrid Processing',
     ],
-    website: 'https://ziontechgroup.com/quantum-bio-computing',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-bio-computing',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$2.1B',
+    marketSize: '$2 && 2.1B',
     targetAudience:
       'Research institutions, pharmaceutical companies, biotechnology firms, government agencies',
     competitiveAdvantage:
@@ -179,12 +179,12 @@ export const advancedEmergingTechServices2025 = [
       'Neurological Research',
       'Medical Technology',
     ],
-    website: 'https://ziontechgroup.com/brain-interface-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/brain-interface-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$1.9B',
+    marketSize: '$1 && 1.9B',
     targetAudience:
       'Medical research institutions, healthcare providers, neuroscience labs, government agencies',
     competitiveAdvantage:
@@ -243,12 +243,12 @@ export const advancedEmergingTechServices2025 = [
       'Sustainable Energy',
       'Energy Optimization',
     ],
-    website: 'https://ziontechgroup.com/quantum-energy-fusion',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-energy-fusion',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$4.7B',
+    marketSize: '$4 && 4.7B',
     targetAudience:
       'Energy companies, power utilities, research institutions, government agencies',
     competitiveAdvantage:
@@ -307,16 +307,16 @@ export const advancedEmergingTechServices2025 = [
       'Fleet Management',
       'Transportation',
     ],
-    website: 'https://ziontechgroup.com/autonomous-vehicle-ai',
+    website: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$54.2B',
+    marketSize: '$54 && 54.2B',
     targetAudience:
       'Automotive companies, transportation firms, logistics companies, government agencies',
     competitiveAdvantage:
-      'Advanced AI navigation with 99.8% accuracy, comprehensive safety systems, and extensive vehicle system integration',
+      'Advanced AI navigation with 99 && 99.8% accuracy, comprehensive safety systems, and extensive vehicle system integration',
   },
   {
     id: 'quantum-materials-discovery-platform',
@@ -371,12 +371,12 @@ export const advancedEmergingTechServices2025 = [
       'AI Discovery',
       'Research Platform',
     ],
-    website: 'https://ziontechgroup.com/quantum-materials-discovery',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-materials-discovery',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$2.8B',
+    marketSize: '$2 && 2.8B',
     targetAudience:
       'Materials science companies, research institutions, manufacturing firms, government agencies',
     competitiveAdvantage:
@@ -435,12 +435,12 @@ export const advancedEmergingTechServices2025 = [
       'Automation',
       'Intelligent Systems',
     ],
-    website: 'https://ziontechgroup.com/quantum-robotics-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-robotics-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$3.2B',
+    marketSize: '$3 && 3.2B',
     targetAudience:
       'Robotics companies, manufacturing firms, automation specialists, research institutions',
     competitiveAdvantage:
@@ -499,12 +499,12 @@ export const advancedEmergingTechServices2025 = [
       'Encryption',
       'Secure Communication',
     ],
-    website: 'https://ziontechgroup.com/quantum-internet-security',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-security',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$8.9B',
+    marketSize: '$8 && 8.9B',
     targetAudience:
       'Internet service providers, telecommunications companies, government agencies, cybersecurity firms',
     competitiveAdvantage:
@@ -563,12 +563,12 @@ export const advancedEmergingTechServices2025 = [
       'Supply Chain',
       'Route Optimization',
     ],
-    website: 'https://ziontechgroup.com/quantum-logistics-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-logistics-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$12.4B',
+    marketSize: '$12 && 12.4B',
     targetAudience:
       'Logistics companies, supply chain managers, transportation firms, e-commerce businesses',
     competitiveAdvantage:
@@ -622,21 +622,21 @@ export const advancedEmergingTechServices2025 = [
     },
     category: 'Quantum Metaverse',
     tags: ['Quantum Computing', 'Metaverse', 'Virtual Reality', 'AI Graphics'],
-    website: 'https://ziontechgroup.com/quantum-metaverse-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-metaverse-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$6.8B',
+    marketSize: '$6 && 6.8B',
     targetAudience:
       'Gaming companies, virtual reality firms, entertainment companies, technology startups',
     competitiveAdvantage:
       'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
   },
 ];      phone: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com'
+      email: 'kleber@ziontechgroup && ziontechgroup.com'
     };
-    marketSize: '$6.8B',
+    marketSize: '$6 && 6.8B',
     targetAudience: 'Gaming companies, virtual reality firms, entertainment companies, technology startups';
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }

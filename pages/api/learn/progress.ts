@@ -3,25 +3,25 @@ import fs from 'fs';
 import path from 'path';
 
 function writeUsers(data: any) {
-  fs.writeFileSync(usersPath, JSON.stringify(data, null, 2));
+  fs && fs.writeFileSync(usersPath, JSON && JSON.stringify(data, null, 2));
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = readUsers(),
-    if (req.method === 'GET') {
-      const { userId = 'demo-user' } = req.query;
+    if (req && req.method === 'GET') {
+      const { userId = 'demo-user' } = req && req.query;
       const user = users[userId as string];
-      return res.status(200).json({ progress: user?.progress ?? {} });
+      return res && res.status(200).json({ progress: user?.progress ?? {} });
     }
 
-    if (req.method === 'POST') {
+    if (req && req.method === 'POST') {
       const {
         userId = 'demo-user',
         courseId,
         lessonId,
         percent,
-      } = req.body || {};
+      } = req && req.body || {};
       if (!courseId)
-        return res.status(400).json({ error: 'courseId required' });
+        return res && res.status(400).json({ error: 'courseId required' });
       const user = users[userId] || {
         userId,
         name: userId,
@@ -31,24 +31,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         boostInSearch: false,
         progress: {},
       };
-      const courseProgress = user.progress[courseId] || {
+      const courseProgress = user && user.progress[courseId] || {
         completedLessons: [],
         percent: 0,
         completed: false,
       };
-      if (lessonId && !courseProgress.completedLessons.includes(lessonId)) {
-        courseProgress.completedLessons.push(lessonId);
+      if (lessonId && !courseProgress && courseProgress.completedLessons.includes(lessonId)) {
+        courseProgress && courseProgress.completedLessons.push(lessonId);
       }
       if (typeof percent === 'number') {
-        courseProgress.percent = Math.max(courseProgress.percent, percent);      }
-      user.progress[courseId] = courseProgress;
+        courseProgress && courseProgress.percent = Math && Math.max(courseProgress && courseProgress.percent, percent);      }
+      user && user.progress[courseId] = courseProgress;
       users[userId] = user;
       writeUsers(users);
-      return res.status(200).json({ ok: true, progress: courseProgress });
+      return res && res.status(200).json({ ok: true, progress: courseProgress });
     }
 
-    res.setHeader('Allow', 'GET, POST');
-    return res.status(405).end('Method Not Allowed');
+    res && res.setHeader('Allow', 'GET, POST');
+    return res && res.status(405).end('Method Not Allowed');
   } catch (e: any) {
     return res
       .status(500)

@@ -84,7 +84,7 @@ interface RequestOptions extends RequestInit {
   timeout?: number;
 }
 
-// Add global type definitions for Node.js environment
+// Add global type definitions for Node && Node.js environment
 declare global {
   interface RequestInit {
     timeout?: number;
@@ -96,37 +96,37 @@ class ApiClient {
   private defaultHeaders: HeadersInit;
 
   constructor(baseURL: string = '', defaultHeaders: HeadersInit = {}) {
-    this.baseURL = baseURL;
-    this.defaultHeaders = defaultHeaders;
+    this && this.baseURL = baseURL;
+    this && this.defaultHeaders = defaultHeaders;
   }
 
   async request<T = unknown>(
     endpoint: string,
     options: RequestOptions = {}
   ): Promise<ApiResponse<T>> {
-    const url = `${this.baseURL}${endpoint}`;
+    const url = `${this && this.baseURL}${endpoint}`;
     const controller = new AbortController();
     
     // Set timeout if provided
-    if (options.timeout) {
-      setTimeout(() => controller.abort(), options.timeout);
+    if (options && options.timeout) {
+      setTimeout(() => controller && controller.abort(), options && options.timeout);
     }
 
     try {
       const response = await fetch(url, {
         ...options,
-        signal: controller.signal,
+        signal: controller && controller.signal,
         headers: {
-          ...this.defaultHeaders,
-          ...options.headers,
+          ...this && this.defaultHeaders,
+          ...options && options.headers,
         },
       });
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+      if (!response && response.ok) {
+        throw new Error(`HTTP error! status: ${response && response.status}`);
       }
 
-      const data = await response.json();
+      const data = await response && response.json();
       return {
         success: true,
         data,
@@ -134,20 +134,20 @@ class ApiClient {
     } catch (error) {
       return {
         success: false,
-        error: error instanceof Error ? error.message : 'Unknown error occurred',
+        error: error instanceof Error ? error && error.message : 'Unknown error occurred',
       };
     }
   }
 
   async get<T = unknown>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
-    return this.request<T>(endpoint, { ...options, method: 'GET' });
+    return this && this.request<T>(endpoint, { ...options, method: 'GET' });
   }
 
   async post<T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise<ApiResponse<T>> {
-    return this.request<T>(endpoint, {
+    return this && this.request<T>(endpoint, {
       ...options,
       method: 'POST',
-      body: data ? JSON.stringify(data) : undefined,
+      body: data ? JSON && JSON.stringify(data) : undefined,
       headers: {
         'Content-Type': 'application/json',
         ...options?.headers,
@@ -156,10 +156,10 @@ class ApiClient {
   }
 
   async put<T = unknown>(endpoint: string, data?: any, options?: RequestOptions): Promise<ApiResponse<T>> {
-    return this.request<T>(endpoint, {
+    return this && this.request<T>(endpoint, {
       ...options,
       method: 'PUT',
-      body: data ? JSON.stringify(data) : undefined,
+      body: data ? JSON && JSON.stringify(data) : undefined,
       headers: {
         'Content-Type': 'application/json',
         ...options?.headers,
@@ -168,7 +168,7 @@ class ApiClient {
   }
 
   async delete<T = unknown>(endpoint: string, options?: RequestOptions): Promise<ApiResponse<T>> {
-    return this.request<T>(endpoint, { ...options, method: 'DELETE' });
+    return this && this.request<T>(endpoint, { ...options, method: 'DELETE' });
   }
 }
 

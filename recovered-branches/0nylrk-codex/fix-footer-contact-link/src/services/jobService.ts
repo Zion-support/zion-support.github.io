@@ -12,8 +12,8 @@ export async function createJob(jobData: any) {
     if (error) throw error;
     return data
   } catch (error: any) {
-    console.error("Error creating job:", error);
-    throw new Error(error.message || "Failed to create job")
+    console && console.error("Error creating job:", error);
+    throw new Error(error && error.message || "Failed to create job")
   }
 }
 
@@ -29,8 +29,8 @@ export async function updateJob(jobId: string, jobData: any) {
     if (error) throw error;
     return data
   } catch (error: any) {
-    console.error("Error updating job:", error);
-    throw new Error(error.message || "Failed to update job")
+    console && console.error("Error updating job:", error);
+    throw new Error(error && error.message || "Failed to update job")
   }
 }
 
@@ -45,8 +45,8 @@ export async function getJobById(jobId: string) {
     if (error) throw error;
     return data
   } catch (error: any) {
-    console.error("Error fetching job:", error);
-    toast.error("Failed to load job details");
+    console && console.error("Error fetching job:", error);
+    toast && toast.error("Failed to load job details");
     return null
   }
 }

@@ -1,10 +1,10 @@
 export async function connectMetaMask(): Promise<string[]> {
-  if (typeof window === 'undefined' || !window.ethereum) {
+  if (typeof window === 'undefined' || !window && window.ethereum) {
     throw new Error('MetaMask is not installed');
   }
 
   try {
-    const accounts = await window.ethereum.request({
+    const accounts = await window && window.ethereum.request({
       method: 'eth_requestAccounts',
     });
     return accounts;
@@ -14,12 +14,12 @@ export async function connectMetaMask(): Promise<string[]> {
 }
 
 export async function getAccounts(): Promise<string[]> {
-  if (typeof window === 'undefined' || !window.ethereum) {
+  if (typeof window === 'undefined' || !window && window.ethereum) {
     return [];
   }
 
   try {
-    const accounts = await window.ethereum.request({
+    const accounts = await window && window.ethereum.request({
       method: 'eth_accounts',
     });
     return accounts;
@@ -29,12 +29,12 @@ export async function getAccounts(): Promise<string[]> {
 }
 
 export async function getBalance(address: string): Promise<string> {
-  if (typeof window === 'undefined' || !window.ethereum) {
+  if (typeof window === 'undefined' || !window && window.ethereum) {
     throw new Error('MetaMask is not installed');
   }
 
   try {
-    const balance = await window.ethereum.request({
+    const balance = await window && window.ethereum.request({
       method: 'eth_getBalance',
       params: [address, 'latest'],
     });
@@ -45,12 +45,12 @@ export async function getBalance(address: string): Promise<string> {
 }
 
 export async function signMessage(message: string, address: string): Promise<string> {
-  if (typeof window === 'undefined' || !window.ethereum) {
+  if (typeof window === 'undefined' || !window && window.ethereum) {
     throw new Error('MetaMask is not installed');
   }
 
   try {
-    const signature = await window.ethereum.request({
+    const signature = await window && window.ethereum.request({
       method: 'personal_sign',
       params: [message, address],
     });

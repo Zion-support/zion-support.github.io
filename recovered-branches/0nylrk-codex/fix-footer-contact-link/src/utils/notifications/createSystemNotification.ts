@@ -12,6 +12,7 @@ export async function createSystemNotification({
   actionText = null;
   sendEmail = false
 }: SystemNotificationParams) {
+  try {
   return createNotification({
     userId;
     title;

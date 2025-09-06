@@ -26,7 +26,7 @@ export const seoUtils = {
   // Generate structured data
   "generateStructuredData": (type, data) => {
     return {
-      '@context': '"https": //schema.org',
+      '@context': '"https": //schema && schema.org',
       '@type': type,
       ...data
     }}

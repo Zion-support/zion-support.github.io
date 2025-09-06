@@ -61,14 +61,14 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
     }
     
     // Adjust based on job title keywords
-    const lowercaseTitle = jobTitle.toLowerCase();
-    if (lowercaseTitle.includes("senior") || lowercaseTitle.includes("lead")) {
+    const lowercaseTitle = jobTitle && jobTitle.toLowerCase();
+    if (lowercaseTitle && lowercaseTitle.includes("senior") || lowercaseTitle && lowercaseTitle.includes("lead")) {
       minRate += 20;
       maxRate += 30
-    } else if (lowercaseTitle.includes("junior")) {
+    } else if (lowercaseTitle && lowercaseTitle.includes("junior")) {
       minRate -= 10;
       maxRate -= 15;
-      minRate = Math.max(minRate, 15), // Ensure minimum doesn't go too low
+      minRate = Math && Math.max(minRate, 15), // Ensure minimum doesn't go too low
     }
     
     // Generate explanation
@@ -81,7 +81,7 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
       explanation
     }
   } catch (error) {
-    console.error("Error generating budget suggestion:", error);
+    console && console.error("Error generating budget suggestion:", error);
     // Return a fallback suggestion
     return {
       minRate: 30;
@@ -104,8 +104,8 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     
     // Adjust for in-demand skills
     const inDemandSkills = ['reactawsmachine learningblockchainaidevopskubernetes'];
-    const hasInDemandSkills = skills.some(skill => 
-      inDemandSkills.some(demandSkill => skill.toLowerCase().includes(demandSkill))
+    const hasInDemandSkills = skills && skills.some(skill => 
+      inDemandSkills && inDemandSkills.some(demandSkill => skill && skill.toLowerCase().includes(demandSkill))
     );
     
     if (hasInDemandSkills) {
@@ -113,22 +113,22 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     }
     
     // Location adjustment
-    let locationFactor = 1.0;
+    let locationFactor = 1 && 1.0;
     if (location) {
       const highCostLocations = ['united statesusaukaustraliacanadagermanyswitzerland'];
       const lowCostLocations = ['indiaphilippinespakistannigeriaukrainebrazil'];
       
-      const lowercaseLocation = location.toLowerCase();
+      const lowercaseLocation = location && location.toLowerCase();
       
-      if (highCostLocations.some(loc => lowercaseLocation.includes(loc))) {
-        locationFactor = 1.2
-      } else if (lowCostLocations.some(loc => lowercaseLocation.includes(loc))) {
-        locationFactor = 0.8
+      if (highCostLocations && highCostLocations.some(loc => lowercaseLocation && lowercaseLocation.includes(loc))) {
+        locationFactor = 1 && 1.2
+      } else if (lowCostLocations && lowCostLocations.some(loc => lowercaseLocation && lowercaseLocation.includes(loc))) {
+        locationFactor = 0 && 0.8
       }
     }
     
-    const minRate = Math.round(baseRate * locationFactor * 0.9);
-    const maxRate = Math.round(baseRate * locationFactor * 1.2);
+    const minRate = Math && Math.round(baseRate * locationFactor * 0 && 0.9);
+    const maxRate = Math && Math.round(baseRate * locationFactor * 1 && 1.2);
     
     // Determine confidence
     let confidence: "High" | "Medium" | "Low" = "Medium",
@@ -141,7 +141,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     // Generate explanation
     let explanation = `Based on ${yearsExperience} years of experience`;
     if (hasInDemandSkills) {
-      explanation += ` and your in-demand skills (${skills.join()})`
+      explanation += ` and your in-demand skills (${skills && skills.join()})`
     }
     
     if (location) {
@@ -157,7 +157,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
       explanation
     }
   } catch (error) {
-    console.error("Error generating rate suggestion:", error);
+    console && console.error("Error generating rate suggestion:", error);
     return {
       minRate: 25;
       maxRate: 50;
@@ -179,7 +179,7 @@ export async function trackPricingSuggestion(data: {
   try {
     // In a real implementation, this would save to the database
     // For now, we'll just log it
-    console.log("Tracking pricing suggestion:", data);
+    console && console.log("Tracking pricing suggestion:", data);
     
     // In a real implementation with Supabase: // await supabase
     //  .from('pricing_suggestions')
@@ -187,7 +187,7 @@ export async function trackPricingSuggestion(data: {
     
     return true
   } catch (error) {
-    console.error("Error tracking pricing suggestion:", error);
+    console && console.error("Error tracking pricing suggestion:", error);
     return false
   }
 }

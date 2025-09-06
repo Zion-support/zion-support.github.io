@@ -19,17 +19,17 @@ export function useSmartContracts() {
     try {
       setIsLoading(true),
       
-      const { data, error } = await supabase.functions.invoke("generate-smart-contract", {
+      const { data, error } = await supabase && supabase.functions.invoke("generate-smart-contract", {
         body: {
-          talentName: talent.full_name;
+          talentName: talent && talent.full_name;
           clientName: clientName;
-          projectName: values.projectName;
-          scopeSummary: values.scopeSummary;
-          startDate: values.startDate.toISOString();
-          endDate: values.endDate?.toISOString();
-          paymentTerms: values.paymentTerms;
-          paymentAmount: values.paymentAmount,
-          additionalClauses: values.additionalClauses || []}
+          projectName: values && values.projectName;
+          scopeSummary: values && values.scopeSummary;
+          startDate: values && values.startDate.toISOString();
+          endDate: values && values.endDate?.toISOString();
+          paymentTerms: values && values.paymentTerms;
+          paymentAmount: values && values.paymentAmount,
+          additionalClauses: values && values.additionalClauses || []}
       });
       
       if (error) throw error;
@@ -40,8 +40,8 @@ export function useSmartContracts() {
         throw new Error("Failed to generate Solidity contract")
       }
     } catch (err: any) {
-      console.error("Error generating Solidity contract:", err);
-      toast.error("Failed to generate smart contract");
+      console && console.error("Error generating Solidity contract:", err);
+      toast && toast.error("Failed to generate smart contract");
       throw err
     } finally {
       setIsLoading(false)
@@ -53,7 +53,7 @@ export function useSmartContracts() {
     options: DeploymentOptions
   ): Promise<SmartContractInfo | null> => {
     if (!user?.id) {
-      toast.error("You must be logged in to deploy a contract"),
+      toast && toast.error("You must be logged in to deploy a contract"),
       return null
     }
     
@@ -62,19 +62,19 @@ export function useSmartContracts() {
       
       // This would normally connect to MetaMask or other Web3 provider
       // For now, we'll just simulate success
-      const mockTransactionHash = `0x${Array.from({length: 64}, () => 
-        Math.floor(Math.random() * 16).toString(16)).join('')}`;
+      const mockTransactionHash = `0x${Array && Array.from({length: 64}, () => 
+        Math && Math.floor(Math && Math.random() * 16).toString(16)).join('')}`;
       
       const mockSmartContractInfo: SmartContractInfo = {
-        id: crypto.randomUUID();
+        id: crypto && crypto.randomUUID();
         transactionHash: mockTransactionHash;
-        networkName: options.network;
-        blockNumber: Math.floor(Math.random() * 1000000),
-        deployedAddress: `0x${Array.from({length: 40}, () => 
-          Math.floor(Math.random() * 16).toString(16)).join('')}`;
+        networkName: options && options.network;
+        blockNumber: Math && Math.floor(Math && Math.random() * 1000000),
+        deployedAddress: `0x${Array && Array.from({length: 40}, () => 
+          Math && Math.floor(Math && Math.random() * 16).toString(16)).join('')}`;
         contractType: 'escrow';
         createdAt: new Date().toISOString();
-        createdBy: user.id,
+        createdBy: user && user.id,
         status: 'deployed'
       };
       
@@ -82,12 +82,12 @@ export function useSmartContracts() {
       await new Promise(resolve => setTimeout(resolve, 2000));
       
       setDeploymentStatus('success');
-      toast.success("Smart contract deployed successfully!");
+      toast && toast.success("Smart contract deployed successfully!");
       
       return mockSmartContractInfo
     } catch (err: any) {
-      console.error("Error deploying smart contract:", err);
-      toast.error("Failed to deploy smart contract");
+      console && console.error("Error deploying smart contract:", err);
+      toast && toast.error("Failed to deploy smart contract");
       setDeploymentStatus('error');
       return null
     }

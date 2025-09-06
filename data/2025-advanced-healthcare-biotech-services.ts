@@ -66,7 +66,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       icon: '🧬',
       color: 'from-green-600 to-emerald-600',
       textColor: 'text-green-400',
-      link: 'https://ziontechgroup.com/ai-drug-discovery-platform',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-drug-discovery-platform',
       marketPosition:
         'Competes with Schrödinger ($50,000/year), Atomwise ($100,000/year), Insilico Medicine ($500,000/year). Our advantage: Affordable pricing, comprehensive features, and AI-powered insights.',
       targetAudience:
@@ -76,7 +76,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       category: 'AI Drug Discovery & Biotech',
       realService: true,
       technology: [
-        'Python, TensorFlow, PyTorch, React, Node.js, Molecular dynamics, Bioinformatics',
+        'Python, TensorFlow, PyTorch, React, Node && Node.js, Molecular dynamics, Bioinformatics',
       ],
       integrations: [
         'PubChem, ChEMBL, PDB, Clinical trial databases, Research platforms',
@@ -88,21 +88,21 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       competitors: [
         'Schrödinger, Atomwise, Insilico Medicine, BenevolentAI, Exscientia',
       ],
-      marketSize: '$45.8B AI drug discovery market',
+      marketSize: '$45 && 45.8B AI drug discovery market',
       growthRate: '35% annual growth',
       variant: 'ai-drug-discovery-enterprise',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Advanced AI drug discovery platform with molecular modeling, target identification, and predictive analytics.',
       launchDate: '2024-08-15',
       customers: 23,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 12,
     },
 
@@ -131,7 +131,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       icon: '🧬',
       color: 'from-blue-600 to-indigo-600',
       textColor: 'text-blue-400',
-      link: 'https://ziontechgroup.com/precision-medicine-genomics',
+      link: 'https://ziontechgroup && ziontechgroup.com/precision-medicine-genomics',
       marketPosition:
         'Competes with 23andMe ($199/kit), AncestryDNA ($99/kit), Color Genomics ($249/test). Our advantage: Comprehensive platform, AI-powered insights, and healthcare integration.',
       targetAudience:
@@ -141,7 +141,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       category: 'Precision Medicine & Genomics',
       realService: true,
       technology: [
-        'Python, TensorFlow, React, Node.js, Bioinformatics tools, Cloud computing',
+        'Python, TensorFlow, React, Node && Node.js, Bioinformatics tools, Cloud computing',
       ],
       integrations: [
         'Epic, Cerner, Allscripts, Lab systems, Research databases',
@@ -153,21 +153,21 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       competitors: [
         '23andMe, AncestryDNA, Color Genomics, Invitae, Myriad Genetics',
       ],
-      marketSize: '$78.6B precision medicine market',
+      marketSize: '$78 && 78.6B precision medicine market',
       growthRate: '28% annual growth',
       variant: 'precision-medicine-enterprise',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Comprehensive precision medicine platform with genomic analysis, AI diagnostics, and personalized treatment recommendations.',
       launchDate: '2024-09-20',
       customers: 45,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 23,
     },
 
@@ -196,7 +196,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       icon: '🩻',
       color: 'from-purple-600 to-pink-600',
       textColor: 'text-purple-400',
-      link: 'https://ziontechgroup.com/ai-medical-imaging-analysis',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-medical-imaging-analysis',
       marketPosition:
         'Competes with Aidoc ($500/month), Zebra Medical ($200/month), Arterys ($300/month). Our advantage: Comprehensive imaging support, affordable pricing, and advanced AI capabilities.',
       targetAudience:
@@ -206,7 +206,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       category: 'AI Medical Imaging & Diagnostics',
       realService: true,
       technology: [
-        'Python, TensorFlow, PyTorch, React, Node.js, Medical imaging libraries',
+        'Python, TensorFlow, PyTorch, React, Node && Node.js, Medical imaging libraries',
       ],
       integrations: [
         'PACS systems, DICOM, EHR systems, Medical devices, Cloud platforms',
@@ -216,21 +216,21 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       ],
       roi: 'Healthcare providers report 400% ROI through improved diagnostic accuracy and workflow efficiency.',
       competitors: ['Aidoc, Zebra Medical, Arterys, Enlitic, Infervision'],
-      marketSize: '$32.1B AI medical imaging market',
+      marketSize: '$32 && 32.1B AI medical imaging market',
       growthRate: '42% annual growth',
       variant: 'ai-imaging-enterprise',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Advanced AI medical imaging platform with automated analysis, diagnosis assistance, and clinical decision support.',
       launchDate: '2024-10-10',
       customers: 67,
-      rating: 4.7,
+      rating: 4 && 4.7,
       reviews: 34,
     },
 
@@ -259,9 +259,9 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       icon: '🏥',
       color: 'from-teal-600 to-cyan-600',
       textColor: 'text-teal-400',
-      link: 'https://ziontechgroup.com/digital-health-telemedicine',
+      link: 'https://ziontechgroup && ziontechgroup.com/digital-health-telemedicine',
       marketPosition:
-        'Competes with Teladoc ($49/month), Amwell ($79/month), Doxy.me ($35/month). Our advantage: Comprehensive platform, AI integration, and affordable pricing.',
+        'Competes with Teladoc ($49/month), Amwell ($79/month), Doxy && Doxy.me ($35/month). Our advantage: Comprehensive platform, AI integration, and affordable pricing.',
       targetAudience:
         'Healthcare providers, Hospitals, Clinics, Telemedicine companies, Health systems',
       trialDays: 21,
@@ -269,7 +269,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       category: 'Digital Health & Telemedicine',
       realService: true,
       technology: [
-        'React, Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis',
+        'React, Node && Node.js, WebRTC, Python, TensorFlow, PostgreSQL, Redis',
       ],
       integrations: [
         'Epic, Cerner, Allscripts, Practice management systems, Insurance systems',
@@ -278,22 +278,22 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
         'Telemedicine consultations, Remote patient monitoring, Health analytics, Patient engagement, Chronic disease management',
       ],
       roi: 'Healthcare providers report 350% ROI through improved patient access and reduced operational costs.',
-      competitors: ['Teladoc, Amwell, Doxy.me, MDLive, PlushCare'],
-      marketSize: '$185.6B digital health market',
+      competitors: ['Teladoc, Amwell, Doxy && Doxy.me, MDLive, PlushCare'],
+      marketSize: '$185 && 185.6B digital health market',
       growthRate: '25% annual growth',
       variant: 'digital-health-enterprise',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Comprehensive digital health platform with telemedicine, remote monitoring, and health analytics capabilities.',
       launchDate: '2024-07-15',
       customers: 156,
-      rating: 4.6,
+      rating: 4 && 4.6,
       reviews: 78,
     },
 
@@ -322,7 +322,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       icon: '🔬',
       color: 'from-orange-600 to-red-600',
       textColor: 'text-orange-400',
-      link: 'https://ziontechgroup.com/clinical-trial-management-optimization',
+      link: 'https://ziontechgroup && ziontechgroup.com/clinical-trial-management-optimization',
       marketPosition:
         'Competes with Medidata ($500/month), Veeva Vault ($1,000/month), Oracle Clinical ($2,000/month). Our advantage: AI-powered optimization, comprehensive features, and competitive pricing.',
       targetAudience:
@@ -332,7 +332,7 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       category: 'Clinical Research & Trials',
       realService: true,
       technology: [
-        'Python, TensorFlow, React, Node.js, PostgreSQL, Clinical trial software',
+        'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Clinical trial software',
       ],
       integrations: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'],
       useCases: [
@@ -342,21 +342,21 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       competitors: [
         'Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel',
       ],
-      marketSize: '$67.2B clinical trial market',
+      marketSize: '$67 && 67.2B clinical trial market',
       growthRate: '18% annual growth',
       variant: 'clinical-trial-enterprise',
       contactInfo: {
         mobile: '+1 302 464 0950',
-        email: 'kleber@ziontechgroup.com',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
         address: '364 E Main St STE 1008 Middletown DE 19709',
-        website: 'https://ziontechgroup.com',
+        website: 'https://ziontechgroup && ziontechgroup.com',
       },
       realImplementation: true,
       implementationDetails:
         'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
       launchDate: '2024-11-01',
       customers: 34,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 19,
     },
   ];    features: [
@@ -365,29 +365,29 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     ];
     popular: true, icon: '🔬',
     color: 'from-orange-600 to-red-600', textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/clinical-trial-management-optimization',
+    link: 'https://ziontechgroup && ziontechgroup.com/clinical-trial-management-optimization',
     marketPosition: 'Competes with Medidata ($500/month), Veeva Vault ($1,000/month), Oracle Clinical ($2,000/month). Our advantage: AI-powered optimization, comprehensive features, and competitive pricing.',
     targetAudience: 'Pharmaceutical companies, CROs, Research institutions, Hospitals, Clinical research teams',
     trialDays: 30, setupTime: '3-6 weeks',
     category: 'Clinical Research & Trials', realService: true,
-    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Clinical trial software'];
+    technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Clinical trial software'];
     integrations: ['EDC systems, CTMS, ePRO, eConsent, Regulatory databases'];
     useCases: ['Clinical trial optimization, Patient recruitment, Data management, Regulatory compliance, Risk management'];
     roi: 'Research organizations report 400% ROI through faster trial completion and improved data quality.',
     competitors: ['Medidata, Veeva Vault, Oracle Clinical, IBM Clinical Development, Parexel'];
-    marketSize: '$67.2B clinical trial market', growthRate: '18% annual growth',
+    marketSize: '$67 && 67.2B clinical trial market', growthRate: '18% annual growth',
     variant: 'clinical-trial-enterprise',
     contactInfo: {
       
-      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     
     },
     realImplementation: true,
     implementationDetails: 'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
     launchDate: '2024-11-01', customers: 34,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 19
   }
 ];

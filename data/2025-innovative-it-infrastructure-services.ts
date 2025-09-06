@@ -55,12 +55,12 @@ export const innovativeITInfrastructureServices2025 = [
       'Real-time Processing',
       'Infrastructure Orchestration',
     ],
-    website: 'https://ziontechgroup.com/quantum-edge-computing-orchestrator',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-edge-computing-orchestrator',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$28.7B',
+    marketSize: '$28 && 28.7B',
     targetAudience:
       'IoT companies, autonomous vehicle manufacturers, smart city developers, industrial automation firms',
     competitiveAdvantage:
@@ -94,7 +94,7 @@ export const innovativeITInfrastructureServices2025 = [
       'Next-generation cybersecurity platform that implements zero-trust architecture with quantum-resistant encryption, AI-powered threat detection, and autonomous security response.',
     features: [
       'Quantum-resistant encryption algorithms',
-      'AI-powered threat detection with 99.9% accuracy',
+      'AI-powered threat detection with 99 && 99.9% accuracy',
       'Zero-trust network architecture',
       'Autonomous security response and remediation',
       'Real-time threat intelligence',
@@ -144,12 +144,12 @@ export const innovativeITInfrastructureServices2025 = [
       'Threat Detection',
       'Network Security',
     ],
-    website: 'https://ziontechgroup.com/zero-trust-quantum-security-platform',
+    website: 'https://ziontechgroup && ziontechgroup.com/zero-trust-quantum-security-platform',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$42.3B',
+    marketSize: '$42 && 42.3B',
     targetAudience:
       'Enterprise businesses, government agencies, financial institutions, healthcare providers, critical infrastructure',
     competitiveAdvantage:
@@ -228,12 +228,12 @@ export const innovativeITInfrastructureServices2025 = [
       'Incident Response',
     ],
     website:
-      'https://ziontechgroup.com/autonomous-devops-intelligence-platform',
+      'https://ziontechgroup && ziontechgroup.com/autonomous-devops-intelligence-platform',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$35.8B',
+    marketSize: '$35 && 35.8B',
     targetAudience:
       'Software development companies, IT departments, DevOps teams, technology startups',
     competitiveAdvantage:
@@ -311,12 +311,12 @@ export const innovativeITInfrastructureServices2025 = [
       'Infrastructure Optimization',
       'Quantum Security',
     ],
-    website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure-platform',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$65.4B',
+    marketSize: '$65 && 65.4B',
     targetAudience:
       'Enterprise businesses, technology companies, research institutions, government agencies',
     competitiveAdvantage:
@@ -400,12 +400,12 @@ export const innovativeITInfrastructureServices2025 = [
       'Predictive Maintenance',
       'Infrastructure Management',
     ],
-    website: 'https://ziontechgroup.com/ai-powered-data-center-automation',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-powered-data-center-automation',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$31.2B',
+    marketSize: '$31 && 31.2B',
     targetAudience:
       'Data center operators, cloud providers, enterprise businesses, colocation facilities',
     competitiveAdvantage:

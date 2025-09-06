@@ -34,12 +34,12 @@ export const practicalBusinessSolutions2028: PracticalBusinessSolution2028[] = [
     realImplementation: true,
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
+      email: "kleber@ziontechgroup && ziontechgroup.com";
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

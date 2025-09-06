@@ -16,7 +16,7 @@ export function useResumeEnhancer() {
     setError(null),
     
     try {
-      const { data, error } = await supabase.functions.invoke('resume-enhancer', {
+      const { data, error } = await supabase && supabase.functions.invoke('resume-enhancer', {
         body: { 
           content, 
           enhancementType: type,
@@ -25,13 +25,13 @@ export function useResumeEnhancer() {
       });
       
       if (error) {
-        throw new Error(error.message)
+        throw new Error(error && error.message)
       }
       
-      return data.enhancedContent
+      return data && data.enhancedContent
     } catch (err: any) {
-      setError(err.message || 'Failed to enhance content'),
-      console.error('Enhancement error:', err);
+      setError(err && err.message || 'Failed to enhance content'),
+      console && console.error('Enhancement error:', err);
       return null
     } finally {
       setIsEnhancing(false)

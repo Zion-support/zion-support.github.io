@@ -54,12 +54,12 @@ export const cuttingEdgeITServices2025 = [
       'Performance',
       'Scalability',
     ],
-    website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-cloud-infrastructure-platform',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$22.1B',
+    marketSize: '$22 && 22.1B',
     targetAudience:
       'Cloud providers, enterprises, financial institutions, government agencies, research institutions',
     competitiveAdvantage:
@@ -137,12 +137,12 @@ export const cuttingEdgeITServices2025 = [
       'AI Deployment',
       'Low Latency',
     ],
-    website: 'https://ziontechgroup.com/edge-computing-orchestration-platform',
+    website: 'https://ziontechgroup && ziontechgroup.com/edge-computing-orchestration-platform',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$18.7B',
+    marketSize: '$18 && 18.7B',
     targetAudience:
       'IoT companies, telecommunications providers, manufacturing companies, smart city developers',
     competitiveAdvantage:
@@ -223,12 +223,12 @@ export const cuttingEdgeITServices2025 = [
       'IAM',
       'Threat Detection',
     ],
-    website: 'https://ziontechgroup.com/zero-trust-security-platform',
+    website: 'https://ziontechgroup && ziontechgroup.com/zero-trust-security-platform',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$31.2B',
+    marketSize: '$31 && 31.2B',
     targetAudience:
       'Enterprises, government agencies, financial institutions, healthcare organizations, educational institutions',
     competitiveAdvantage:
@@ -306,12 +306,12 @@ export const cuttingEdgeITServices2025 = [
       'Enterprise',
       'Automation',
     ],
-    website: 'https://ziontechgroup.com/blockchain-enterprise-platform',
+    website: 'https://ziontechgroup && ziontechgroup.com/blockchain-enterprise-platform',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$19.9B',
+    marketSize: '$19 && 19.9B',
     targetAudience:
       'Financial institutions, supply chain companies, healthcare organizations, government agencies, manufacturing companies',
     competitiveAdvantage:
@@ -386,12 +386,12 @@ export const cuttingEdgeITServices2025 = [
     },
     category: 'DevOps',
     tags: ['AI DevOps', 'Automation', 'CI/CD', 'Monitoring', 'Performance'],
-    website: 'https://ziontechgroup.com/ai-powered-devops-platform',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-powered-devops-platform',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$25.6B',
+    marketSize: '$25 && 25.6B',
     targetAudience:
       'Software development companies, enterprises, DevOps teams, IT operations teams, development agencies',
     competitiveAdvantage:

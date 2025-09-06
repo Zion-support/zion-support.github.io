@@ -41,9 +41,9 @@ import { ServiceVariant } from '../types/service-variants';
 
 const contact = {
   mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
+  website: 'https://ziontechgroup && ziontechgroup.com',
 };
 
 export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
@@ -73,7 +73,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '📊',
       color: 'from-blue-600 to-purple-700',
       textColor: 'text-blue-400',
-      link: 'https://ziontechgroup.com/ai-business-intelligence',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-business-intelligence',
       marketPosition:
         'Competes with Tableau, Power BI, and Looker with AI-first approach',
       targetAudience: 'Data analysts, business executives, operations managers',
@@ -81,7 +81,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       setupTime: '2-3 days',
       category: 'AI & Analytics',
       realService: true,
-      technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],
+      technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'],
       integrations: [
         'Salesforce, HubSpot, Google Analytics, AWS, Azure, Slack',
       ],
@@ -99,7 +99,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'Cloud-native platform with real-time data processing and AI model training',
       launchDate: '2024-11-01',
       customers: 127,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 89,
     },
 
@@ -127,7 +127,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '🎯',
       color: 'from-green-600 to-teal-700',
       textColor: 'text-green-400',
-      link: 'https://ziontechgroup.com/ai-customer-experience',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-experience',
       marketPosition:
         'Advanced alternative to Intercom, Zendesk, and HubSpot with AI capabilities',
       targetAudience:
@@ -137,7 +137,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       category: 'AI & Customer Experience',
       realService: true,
       technology: [
-        'Python, TensorFlow, React, Node.js, MongoDB, Elasticsearch',
+        'Python, TensorFlow, React, Node && Node.js, MongoDB, Elasticsearch',
       ],
       integrations: [
         'Shopify, WooCommerce, Salesforce, HubSpot, Intercom, Zendesk',
@@ -156,7 +156,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'Multi-tenant SaaS platform with real-time AI processing and scalable architecture',
       launchDate: '2024-10-15',
       customers: 94,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 67,
     },
 
@@ -185,7 +185,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '🔒',
       color: 'from-red-600 to-orange-700',
       textColor: 'text-red-400',
-      link: 'https://ziontechgroup.com/quantum-cybersecurity',
+      link: 'https://ziontechgroup && ziontechgroup.com/quantum-cybersecurity',
       marketPosition:
         'Leading-edge alternative to CrowdStrike, Palo Alto Networks with quantum capabilities',
       targetAudience: 'CISOs, security teams, compliance officers, IT managers',
@@ -194,13 +194,13 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       category: 'Cybersecurity & Quantum',
       realService: true,
       technology: [
-        'Python, Rust, React, Node.js, PostgreSQL, Redis, Quantum algorithms',
+        'Python, Rust, React, Node && Node.js, PostgreSQL, Redis, Quantum algorithms',
       ],
       integrations: ['Active Directory, Okta, AWS, Azure, GCP, SIEM systems'],
       useCases: [
         'Enterprise security, Government agencies, Financial institutions, Healthcare organizations',
       ],
-      roi: 'Reduce security incidents by 70% and achieve 99.9% threat detection accuracy',
+      roi: 'Reduce security incidents by 70% and achieve 99 && 99.9% threat detection accuracy',
       competitors: [
         'CrowdStrike, Palo Alto Networks, SentinelOne, Carbon Black',
       ],
@@ -213,7 +213,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'Enterprise-grade platform with quantum-resistant cryptography and AI threat intelligence',
       launchDate: '2024-09-01',
       customers: 156,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 112,
     },
 
@@ -242,7 +242,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '🚚',
       color: 'from-indigo-600 to-blue-700',
       textColor: 'text-indigo-400',
-      link: 'https://ziontechgroup.com/ai-supply-chain',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-supply-chain',
       marketPosition:
         'Competes with SAP, Oracle, and Blue Yonder with AI-first approach',
       targetAudience:
@@ -252,7 +252,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       category: 'AI & Supply Chain',
       realService: true,
       technology: [
-        'Python, TensorFlow, React, Node.js, PostgreSQL, Apache Kafka',
+        'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Apache Kafka',
       ],
       integrations: [
         'SAP, Oracle, NetSuite, Shopify, WooCommerce, ERP systems',
@@ -273,7 +273,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'Enterprise-grade platform with real-time data processing and AI model training',
       launchDate: '2024-08-15',
       customers: 78,
-      rating: 4.7,
+      rating: 4 && 4.7,
       reviews: 54,
     },
 
@@ -302,7 +302,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '🌐',
       color: 'from-purple-600 to-pink-700',
       textColor: 'text-purple-400',
-      link: 'https://ziontechgroup.com/edge-computing-orchestration',
+      link: 'https://ziontechgroup && ziontechgroup.com/edge-computing-orchestration',
       marketPosition:
         'Competes with AWS Greengrass, Azure IoT Edge, and Google Cloud IoT',
       targetAudience: 'DevOps engineers, IoT developers, cloud architects',
@@ -310,7 +310,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       setupTime: '1 week',
       category: 'Edge Computing & IoT',
       realService: true,
-      technology: ['Go, Rust, React, Node.js, Kubernetes, Docker, MQTT'],
+      technology: ['Go, Rust, React, Node && Node.js, Kubernetes, Docker, MQTT'],
       integrations: ['AWS, Azure, GCP, Kubernetes, Docker, IoT platforms'],
       useCases: [
         'IoT applications, Real-time analytics, Content delivery networks, Industrial automation',
@@ -328,7 +328,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'Cloud-native platform with Kubernetes-based orchestration and IoT device management',
       launchDate: '2024-07-01',
       customers: 63,
-      rating: 4.6,
+      rating: 4 && 4.6,
       reviews: 42,
     },
 
@@ -356,7 +356,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '⚖️',
       color: 'from-yellow-600 to-orange-700',
       textColor: 'text-yellow-400',
-      link: 'https://ziontechgroup.com/ai-legal-automation',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-legal-automation',
       marketPosition:
         'Competes with DocuSign, ContractPodAi, and Ironclad with AI capabilities',
       targetAudience:
@@ -365,7 +365,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       setupTime: '2 weeks',
       category: 'AI & Legal Tech',
       realService: true,
-      technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis'],
+      technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis'],
       integrations: [
         'DocuSign, Salesforce, Microsoft Office, Google Workspace, Legal databases',
       ],
@@ -383,7 +383,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'Enterprise-grade platform with AI-powered document analysis and legal compliance checking',
       launchDate: '2024-06-15',
       customers: 89,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 61,
     },
 
@@ -411,7 +411,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '🧬',
       color: 'from-cyan-600 to-blue-700',
       textColor: 'text-cyan-400',
-      link: 'https://ziontechgroup.com/quantum-ai-research',
+      link: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-research',
       marketPosition:
         'Leading-edge platform competing with IBM Quantum, Google Quantum AI, and Microsoft Azure Quantum',
       targetAudience:
@@ -421,7 +421,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       category: 'Quantum AI & Research',
       realService: true,
       technology: [
-        'Python, Qiskit, TensorFlow, React, Node.js, PostgreSQL, Quantum simulators',
+        'Python, Qiskit, TensorFlow, React, Node && Node.js, PostgreSQL, Quantum simulators',
       ],
       integrations: [
         'IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, AWS Braket',
@@ -442,7 +442,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'Research-grade platform with quantum hardware integration and AI model training',
       launchDate: '2024-05-01',
       customers: 34,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 28,
     },
 
@@ -470,7 +470,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '🤖',
       color: 'from-emerald-600 to-teal-700',
       textColor: 'text-emerald-400',
-      link: 'https://ziontechgroup.com/autonomous-devops',
+      link: 'https://ziontechgroup && ziontechgroup.com/autonomous-devops',
       marketPosition:
         'Advanced alternative to GitLab, Jenkins, and CircleCI with AI automation',
       targetAudience:
@@ -480,7 +480,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       category: 'AI & DevOps',
       realService: true,
       technology: [
-        'Go, Python, React, Node.js, Kubernetes, Docker, Prometheus',
+        'Go, Python, React, Node && Node.js, Kubernetes, Docker, Prometheus',
       ],
       integrations: ['GitHub, GitLab, AWS, Azure, GCP, Kubernetes, Docker'],
       useCases: [
@@ -497,7 +497,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'Cloud-native platform with AI-powered automation and self-healing capabilities',
       launchDate: '2024-04-15',
       customers: 112,
-      rating: 4.7,
+      rating: 4 && 4.7,
       reviews: 78,
     },
 
@@ -526,7 +526,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '🚀',
       color: 'from-violet-600 to-purple-700',
       textColor: 'text-violet-400',
-      link: 'https://ziontechgroup.com/space-technology',
+      link: 'https://ziontechgroup && ziontechgroup.com/space-technology',
       marketPosition:
         'Leading-edge platform competing with SpaceX, Blue Origin, and NASA technologies',
       targetAudience:
@@ -536,7 +536,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       category: 'Space Technology & Innovation',
       realService: true,
       technology: [
-        'Python, Rust, React, Node.js, PostgreSQL, Quantum algorithms, AI models',
+        'Python, Rust, React, Node && Node.js, PostgreSQL, Quantum algorithms, AI models',
       ],
       integrations: [
         'NASA APIs, ESA systems, SpaceX technologies, Satellite networks',
@@ -555,7 +555,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'Space-grade platform with quantum communication and AI-powered mission control',
       launchDate: '2024-03-01',
       customers: 18,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 15,
     },
 
@@ -584,7 +584,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '🧠',
       color: 'from-pink-600 to-rose-700',
       textColor: 'text-pink-400',
-      link: 'https://ziontechgroup.com/neural-interface',
+      link: 'https://ziontechgroup && ziontechgroup.com/neural-interface',
       marketPosition:
         'Pioneering platform competing with Neuralink, Kernel, and CTRL-labs technologies',
       targetAudience:
@@ -594,7 +594,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       category: 'Neural Technology & BCI',
       realService: true,
       technology: [
-        'Python, C++, React, Node.js, PostgreSQL, TensorFlow, Signal processing',
+        'Python, C++, React, Node && Node.js, PostgreSQL, TensorFlow, Signal processing',
       ],
       integrations: [
         'EEG devices, Medical imaging systems, Research databases, Clinical trial platforms',
@@ -613,7 +613,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'Research-grade platform with neural signal processing and AI-powered analysis',
       launchDate: '2024-02-15',
       customers: 23,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 19,
     },
 
@@ -642,7 +642,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '🏥',
       color: 'from-emerald-600 to-green-700',
       textColor: 'text-emerald-400',
-      link: 'https://ziontechgroup.com/ai-healthcare-analytics',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-healthcare-analytics',
       marketPosition:
         'Advanced alternative to Epic, Cerner, and Allscripts with AI capabilities',
       targetAudience:
@@ -651,7 +651,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       setupTime: '4-6 weeks',
       category: 'AI & Healthcare',
       realService: true,
-      technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, FHIR, HL7'],
+      technology: ['Python, TensorFlow, React, Node && Node.js, PostgreSQL, FHIR, HL7'],
       integrations: [
         'Epic, Cerner, Allscripts, Epic, AWS, Azure, Google Cloud',
       ],
@@ -669,7 +669,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'HIPAA-compliant platform with real-time AI processing and healthcare data integration',
       launchDate: '2024-01-15',
       customers: 67,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 45,
     },
 
@@ -697,7 +697,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '💰',
       color: 'from-yellow-600 to-orange-700',
       textColor: 'text-yellow-400',
-      link: 'https://ziontechgroup.com/quantum-financial-modeling',
+      link: 'https://ziontechgroup && ziontechgroup.com/quantum-financial-modeling',
       marketPosition:
         'Leading-edge platform competing with Bloomberg, Refinitiv, and FactSet with quantum capabilities',
       targetAudience:
@@ -707,7 +707,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       category: 'Quantum AI & Finance',
       realService: true,
       technology: [
-        'Python, Qiskit, TensorFlow, React, Node.js, PostgreSQL, Quantum algorithms',
+        'Python, Qiskit, TensorFlow, React, Node && Node.js, PostgreSQL, Quantum algorithms',
       ],
       integrations: [
         'Bloomberg Terminal, Refinitiv, FactSet, Trading platforms, Market data feeds',
@@ -726,7 +726,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'Enterprise-grade platform with quantum hardware integration and real-time financial data processing',
       launchDate: '2024-01-01',
       customers: 42,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 31,
     },
 
@@ -754,16 +754,16 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '✍️',
       color: 'from-purple-600 to-indigo-700',
       textColor: 'text-purple-400',
-      link: 'https://ziontechgroup.com/ai-content-creation',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-content-creation',
       marketPosition:
-        'Advanced alternative to Grammarly, Copy.ai, and Jasper with comprehensive content management',
+        'Advanced alternative to Grammarly, Copy && Copy.ai, and Jasper with comprehensive content management',
       targetAudience:
         'Marketing teams, content creators, agencies, businesses, influencers',
       trialDays: 21,
       setupTime: '1 week',
       category: 'AI & Content Creation',
       realService: true,
-      technology: ['Python, GPT models, React, Node.js, MongoDB, Redis, NLP'],
+      technology: ['Python, GPT models, React, Node && Node.js, MongoDB, Redis, NLP'],
       integrations: [
         'WordPress, Shopify, HubSpot, Mailchimp, Social media platforms',
       ],
@@ -771,7 +771,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'Blog writing, Social media content, Email marketing, Product descriptions',
       ],
       roi: 'Increase content production by 300% and improve engagement by 45%',
-      competitors: ['Grammarly, Copy.ai, Jasper, Writesonic, ContentBot'],
+      competitors: ['Grammarly, Copy && Copy.ai, Jasper, Writesonic, ContentBot'],
       marketSize: '$12B+ Content Creation market',
       growthRate: '35% YoY',
       variant: 'ai-content-enterprise',
@@ -781,7 +781,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'Cloud-native platform with AI-powered content generation and multi-channel distribution',
       launchDate: '2023-12-15',
       customers: 156,
-      rating: 4.7,
+      rating: 4 && 4.7,
       reviews: 98,
     },
 
@@ -809,7 +809,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '🎥',
       color: 'from-red-600 to-pink-700',
       textColor: 'text-red-400',
-      link: 'https://ziontechgroup.com/edge-ai-video-processing',
+      link: 'https://ziontechgroup && ziontechgroup.com/edge-ai-video-processing',
       marketPosition:
         'Competes with NVIDIA DeepStream, Intel OpenVINO, and AWS Panorama with edge-first approach',
       targetAudience:
@@ -819,7 +819,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       category: 'Edge Computing & AI',
       realService: true,
       technology: [
-        'Python, TensorFlow, OpenCV, React, Node.js, Kubernetes, Docker',
+        'Python, TensorFlow, OpenCV, React, Node && Node.js, Kubernetes, Docker',
       ],
       integrations: [
         'NVIDIA GPUs, Intel processors, AWS, Azure, GCP, IoT platforms',
@@ -840,7 +840,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'Edge-native platform with real-time AI processing and scalable video analytics',
       launchDate: '2023-12-01',
       customers: 89,
-      rating: 4.6,
+      rating: 4 && 4.6,
       reviews: 67,
     },
 
@@ -869,7 +869,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '👥',
       color: 'from-blue-600 to-cyan-700',
       textColor: 'text-blue-400',
-      link: 'https://ziontechgroup.com/ai-hr-management',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-hr-management',
       marketPosition:
         'Advanced alternative to Workday, BambooHR, and ADP with AI capabilities',
       targetAudience:
@@ -879,7 +879,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       category: 'AI & HR Tech',
       realService: true,
       technology: [
-        'Python, TensorFlow, React, Node.js, PostgreSQL, Redis, NLP',
+        'Python, TensorFlow, React, Node && Node.js, PostgreSQL, Redis, NLP',
       ],
       integrations: [
         'LinkedIn, Indeed, ATS systems, Payroll platforms, HRIS systems',
@@ -898,7 +898,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'Cloud-native platform with AI-powered HR automation and comprehensive analytics',
       launchDate: '2023-11-15',
       customers: 134,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 89,
     },
 
@@ -926,7 +926,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '⚛️',
       color: 'from-cyan-600 to-blue-700',
       textColor: 'text-cyan-400',
-      link: 'https://ziontechgroup.com/quantum-machine-learning',
+      link: 'https://ziontechgroup && ziontechgroup.com/quantum-machine-learning',
       marketPosition:
         'Leading-edge platform competing with IBM Quantum, Google Quantum AI, and Microsoft Azure Quantum',
       targetAudience:
@@ -936,7 +936,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       category: 'Quantum AI & Research',
       realService: true,
       technology: [
-        'Python, Qiskit, TensorFlow, PyTorch, React, Node.js, Quantum simulators',
+        'Python, Qiskit, TensorFlow, PyTorch, React, Node && Node.js, Quantum simulators',
       ],
       integrations: [
         'IBM Quantum, Google Quantum AI, Microsoft Azure Quantum, AWS Braket',
@@ -957,7 +957,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'Research-grade platform with quantum hardware integration and ML model acceleration',
       launchDate: '2023-11-01',
       customers: 56,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 42,
     },
 
@@ -986,7 +986,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '⚡',
       color: 'from-yellow-500 to-orange-600',
       textColor: 'text-yellow-400',
-      link: 'https://ziontechgroup.com/ai-energy-management',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-energy-management',
       marketPosition:
         'Competes with Schneider Electric, Siemens, and Honeywell with AI-first approach',
       targetAudience:
@@ -996,7 +996,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       category: 'AI & Energy',
       realService: true,
       technology: [
-        'Python, TensorFlow, React, Node.js, PostgreSQL, IoT protocols, ML algorithms',
+        'Python, TensorFlow, React, Node && Node.js, PostgreSQL, IoT protocols, ML algorithms',
       ],
       integrations: [
         'Building management systems, IoT sensors, Smart meters, Energy trading platforms',
@@ -1017,7 +1017,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'IoT-native platform with real-time AI processing and comprehensive energy analytics',
       launchDate: '2023-10-15',
       customers: 78,
-      rating: 4.7,
+      rating: 4 && 4.7,
       reviews: 54,
     },
 
@@ -1045,7 +1045,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       icon: '🤖',
       color: 'from-gray-600 to-slate-700',
       textColor: 'text-gray-400',
-      link: 'https://ziontechgroup.com/autonomous-supply-chain-robotics',
+      link: 'https://ziontechgroup && ziontechgroup.com/autonomous-supply-chain-robotics',
       marketPosition:
         'Leading-edge platform competing with Amazon Robotics, Fetch Robotics, and Locus Robotics',
       targetAudience:
@@ -1055,7 +1055,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
       category: 'AI & Robotics',
       realService: true,
       technology: [
-        'Python, ROS, TensorFlow, React, Node.js, PostgreSQL, Computer Vision',
+        'Python, ROS, TensorFlow, React, Node && Node.js, PostgreSQL, Computer Vision',
       ],
       integrations: [
         'WMS systems, ERP platforms, IoT sensors, Robotics hardware, Cloud platforms',
@@ -1076,7 +1076,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
         'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management',
       launchDate: '2023-10-01',
       customers: 34,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 28,
     },
   ];    features: [
@@ -1085,12 +1085,12 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
     ];
     popular: true, icon: '🤖',
     color: 'from-gray-600 to-slate-700', textColor: 'text-gray-400',
-    link: 'https://ziontechgroup.com/autonomous-supply-chain-robotics',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-supply-chain-robotics',
     marketPosition: 'Leading-edge platform competing with Amazon Robotics, Fetch Robotics, and Locus Robotics',
     targetAudience: 'E-commerce companies, logistics providers, manufacturers, warehouse operators',
     trialDays: 60, setupTime: '8-12 weeks',
     category: 'AI & Robotics', realService: true,
-    technology: ['Python, ROS, TensorFlow, React, Node.js, PostgreSQL, Computer Vision'];
+    technology: ['Python, ROS, TensorFlow, React, Node && Node.js, PostgreSQL, Computer Vision'];
     integrations: ['WMS systems, ERP platforms, IoT sensors, Robotics hardware, Cloud platforms'];
     useCases: ['Warehouse automation, Order fulfillment, Inventory management, Last-mile delivery'];
     roi: 'Increase warehouse efficiency by 300% and reduce operational costs by 40%',
@@ -1099,7 +1099,7 @@ export const innovative2025MicroSaasExpansionV3: InnovativeMicroSaasService[] =
     variant: 'autonomous-robotics-enterprise', contactInfo: contact,
     realImplementation: true, implementationDetails: 'Robotics-grade platform with AI-powered autonomy and comprehensive logistics management',
     launchDate: '2023-10-01', customers: 34,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 28
   }
 ];

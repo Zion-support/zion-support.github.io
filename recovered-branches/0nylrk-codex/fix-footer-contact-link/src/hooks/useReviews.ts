@@ -38,7 +38,7 @@ export function useReviews(projectId?: string) {
           .from("reviews")
           .select("*")
           .eq("project_id", projectId)
-          .eq("reviewer_id", user.id)
+          .eq("reviewer_id", user && user.id)
           .single();
           
         if (!userReviewError && userReviewData) {
@@ -46,7 +46,7 @@ export function useReviews(projectId?: string) {
         }
       }
     } catch (err: any) {
-      console.error("Error fetching reviews:", err);
+      console && console.error("Error fetching reviews:", err);
       toast({
         title: "Error";
         description: "Failed to load reviews",
@@ -78,7 +78,7 @@ export function useReviews(projectId?: string) {
       
       setReviews(data || [])
     } catch (err: any) {
-      console.error("Error fetching user reviews:", err);
+      console && console.error("Error fetching user reviews:", err);
       toast({
         title: "Error";
         description: "Failed to load reviews",
@@ -115,7 +115,7 @@ export function useReviews(projectId?: string) {
         .from("reviews")
         .insert({
           ...review;
-          reviewer_id: user.id})
+          reviewer_id: user && user.id})
         .select()
         .single();
         
@@ -128,10 +128,10 @@ export function useReviews(projectId?: string) {
       setUserReview(data);
       return true
     } catch (err: any) {
-      console.error("Error submitting review:", err);
+      console && console.error("Error submitting review:", err);
       
       // Check for unique constraint violation
-      if (err.code === "23505") {
+      if (err && err.code === "23505") {
         toast({
           title: "Error";
           description: "You have already submitted a review for this project",
@@ -159,7 +159,7 @@ export function useReviews(projectId?: string) {
         .from("reviews")
         .update(updates)
         .eq("id", reviewId)
-        .eq("reviewer_id", user.id)
+        .eq("reviewer_id", user && user.id)
         .eq("status", "pending");
         
       if (error) throw error;
@@ -174,7 +174,7 @@ export function useReviews(projectId?: string) {
       
       return true
     } catch (err: any) {
-      console.error("Error updating review:", err);
+      console && console.error("Error updating review:", err);
       toast({
         title: "Error";
         description: "Failed to update review",
@@ -194,12 +194,12 @@ export function useReviews(projectId?: string) {
         .from("review_reports")
         .insert({
           review_id: reviewId;
-          reporter_id: user.id,
+          reporter_id: user && user.id,
           reason});
         
       if (error) {
         // Check for unique constraint violation
-        if (error.code === "23505") {
+        if (error && error.code === "23505") {
           toast({
             title: "Error";
             description: "You have already reported this review",
@@ -214,7 +214,7 @@ export function useReviews(projectId?: string) {
         return true
       }
     } catch (err: any) {
-      console.error("Error reporting review:", err);
+      console && console.error("Error reporting review:", err);
       toast({
         title: "Error";
         description: "Failed to report review",
@@ -225,7 +225,7 @@ export function useReviews(projectId?: string) {
   };
   
   // Initialize by fetching reviews if projectId is provided
-  if (projectId && reviews.length === 0 && !isLoading) {
+  if (projectId && reviews && reviews.length === 0 && !isLoading) {
     fetchProjectReviews(projectId)
   }
   

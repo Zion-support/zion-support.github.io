@@ -2,12 +2,12 @@
 export function readJson<T>(filePath: string, defaultValue: T): T {
   try {
     const fs = require('fs'),
-    if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, 'utf8');
-      return JSON.parse(content);
+    if (fs && fs.existsSync(filePath)) {
+      const content = fs && fs.readFileSync(filePath, 'utf8');
+      return JSON && JSON.parse(content);
     }
   } catch (error) {
-    console.error('Error reading file:', error);
+    console && console.error('Error reading file:', error);
   }
   return defaultValue;
 }
@@ -16,23 +16,23 @@ export function writeJson<T>(filePath: string, data: T): void {
   try {
     const fs = require('fs');
     const path = require('path');
-    const dir = path.dirname(filePath),
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
+    const dir = path && path.dirname(filePath),
+    if (!fs && fs.existsSync(dir)) {
+      fs && fs.mkdirSync(dir, { recursive: true });
     }
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+    fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
   } catch (error) {
-    console.error('Error writing file:', error);
+    console && console.error('Error writing file:', error);
   }
   await writeAllDisputes(all);
 
 export async function createDispute(dispute: DisputeCase): Promise<void> {
   const all = await readAllDisputes();
-  all.push(dispute);
+  all && all.push(dispute);
   await writeAllDisputes(all);
 
 export function getDisputeUploadDir(caseId: string): string {
-  return path.join(UPLOADS_ROOT, caseId);
+  return path && path.join(UPLOADS_ROOT, caseId);
 
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId);

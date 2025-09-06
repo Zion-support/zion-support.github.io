@@ -1,6 +1,29 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
-interface AccessibilityContextType {
+interface AccessibilityContextType {;
   highContrast: boolean;
   largeText: boolean;
   reducedMotion: boolean;
@@ -9,27 +32,27 @@ interface AccessibilityContextType {
   toggleReducedMotion: () => void;
 }
 
-const AccessibilityContext = createContext<
-  AccessibilityContextType | undefined
+const AccessibilityContext = createContext<;
+  AccessibilityContextType | undefined;
 >(undefined);
 
-export const useAccessibility = () => {
+export const useAccessibility = () => {;
   const context = useContext(AccessibilityContext);
-  if (context === undefined) {
-    throw new Error(
-      "useAccessibility must be used within an AccessibilityProvider",
+  if (context === undefined) {;
+    throw new Error(;
+      "useAccessibility must be used within an AccessibilityProvider",;
     );
   }
   return context;
 };
 
-interface AccessibilityProviderProps {
-  children: React.ReactNode;
+interface AccessibilityProviderProps {;
+  children: React && React.ReactNode;
 }
 
-export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
-  children,
-}) => {
+export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({;
+  children,;
+}) => {;
   const [highContrast, setHighContrast] = useState(false);
   const [largeText, setLargeText] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -38,23 +61,22 @@ export const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
   const toggleLargeText = () => setLargeText(!largeText);
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
 
-  const value = {
-    highContrast,
-    largeText,
-    reducedMotion,
-    toggleHighContrast,
-    toggleLargeText,
-    toggleReducedMotion,
+  const value = {;
+    highContrast,;
+    largeText,;
+    reducedMotion,;
+    toggleHighContrast,;
+    toggleLargeText,;
+    toggleReducedMotion,;
   };
 
   return (
-    <AccessibilityContext.Provider value={value}>
+    <AccessibilityContext && AccessibilityContext.Provider value={value}>;
       <div
-        className={`${highContrast ? "high-contrast" : ""} ${largeText ? "large-text" : ""} ${reducedMotion ? "reduced-motion" : ""}`}
-      >
+        className={`${highContrast ? "high-contrast" : ""} ${largeText ? "large-text" : ""} ${reducedMotion ? "reduced-motion" : ""}`}>;
         {children}
-      </div>
-    </AccessibilityContext.Provider>
+      </div>;
+    </AccessibilityContext && AccessibilityContext.Provider>;
   );
 };
 

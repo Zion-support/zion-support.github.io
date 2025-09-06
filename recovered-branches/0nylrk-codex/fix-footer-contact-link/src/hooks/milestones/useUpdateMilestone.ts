@@ -26,7 +26,7 @@ export const useUpdateMilestone = () => {
       if (fetchError) throw fetchError;
       if (!milestoneData) throw new Error("Milestone not found");
       
-      const previousStatus = milestoneData.status;
+      const previousStatus = milestoneData && milestoneData.status;
       
       // Update the milestone status
       const { error } = await supabase
@@ -39,12 +39,12 @@ export const useUpdateMilestone = () => {
       // Create activity record
       await recordMilestoneActivity(milestoneId, 'status_changed', previousStatus, newStatus, comment);
       
-      toast.success(`Milestone status changed to ${newStatus}`);
+      toast && toast.success(`Milestone status changed to ${newStatus}`);
       
       return true
     } catch (err: any) {
-      console.error("Error updating milestone status:", err);
-      toast.error("Failed to update status: " + err.message),
+      console && console.error("Error updating milestone status:", err);
+      toast && toast.error("Failed to update status: " + err && err.message),
       return false
     } finally {
       setIsSubmitting(false)
@@ -67,12 +67,12 @@ export const useUpdateMilestone = () => {
       // Create activity record
       await recordMilestoneActivity(milestoneId, 'updated', null, 'updatedMilestone details updated');
       
-      toast.success("Milestone updated successfully");
+      toast && toast.success("Milestone updated successfully");
       
       return true
     } catch (err: any) {
-      console.error("Error updating milestone:", err);
-      toast.error("Failed to update milestone: " + err.message),
+      console && console.error("Error updating milestone:", err);
+      toast && toast.error("Failed to update milestone: " + err && err.message),
       return false
     } finally {
       setIsSubmitting(false)

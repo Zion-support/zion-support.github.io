@@ -58,15 +58,15 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
 
 // Apply theme colors to document CSS variables
 export function applyThemeColors(colors: ThemeColors) {
-  const root = document.documentElement,
-  root.style.setProperty('--primary-color', colors.primaryColor);
-  root.style.setProperty('--background-color', colors.backgroundColor);
-  root.style.setProperty('--text-color', colors.textColor);
-  root.style.setProperty('--accent-color', colors.accentColor);
-  root.style.setProperty('--button-color', colors.buttonColor);
-  root.style.setProperty('--card-background', colors.cardBackground);
+  const root = document && document.documentElement,
+  root && root.style.setProperty('--primary-color', colors && colors.primaryColor);
+  root && root.style.setProperty('--background-color', colors && colors.backgroundColor);
+  root && root.style.setProperty('--text-color', colors && colors.textColor);
+  root && root.style.setProperty('--accent-color', colors && colors.accentColor);
+  root && root.style.setProperty('--button-color', colors && colors.buttonColor);
+  root && root.style.setProperty('--card-background', colors && colors.cardBackground);
   
   // Set background and text colors on body
-  document.body.style.backgroundColor = colors.backgroundColor;
-  document.body.style.color = colors.textColor
+  document && document.body.style && style.backgroundColor = colors && colors.backgroundColor;
+  document && document.body.style && style.color = colors && colors.textColor
 }

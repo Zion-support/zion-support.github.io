@@ -45,12 +45,12 @@ export interface EmergingTechInnovationService {
 
 const contact = {
   mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
+  website: 'https://ziontechgroup && ziontechgroup.com',};  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup && ziontechgroup.com'
 };
 
 export const emergingTechInnovations: EmergingTechInnovation[] = [
@@ -79,7 +79,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     icon: '🌐',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/quantum-internet-protocol-stack',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-protocol-stack',
     marketPosition: 'Pioneering quantum internet infrastructure platform',
     targetAudience:
       'Telecommunications companies, Government agencies, Research institutions, Financial institutions',
@@ -109,7 +109,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Custom quantum internet infrastructure with protocol development and hardware integration',
     launchDate: '2024-08-01',
     customers: 18,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 12,
     benefits: [
       'Unbreakable quantum encryption',
@@ -155,7 +155,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     icon: '🚗',
     color: 'from-blue-600 to-cyan-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-vehicle-ai-platform',
     marketPosition:
       'Leading AI platform for autonomous vehicle development and deployment',
     targetAudience:
@@ -182,7 +182,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Enterprise-grade platform with safety certification and vehicle integration',
     launchDate: '2024-10-01',
     customers: 67,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 45,
     benefits: [
       '3x faster development',
@@ -228,7 +228,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     icon: '🔄',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
-    link: 'https://ziontechgroup.com/enterprise-digital-twin-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/enterprise-digital-twin-platform',
     marketPosition:
       'Leading digital twin platform for enterprise asset management and optimization',
     targetAudience:
@@ -238,7 +238,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     category: 'Edge Computing & IoT',
     realService: true,
     technology: [
-      'Unity3D, Unreal Engine, Python, Node.js, IoT protocols, 3D modeling',
+      'Unity3D, Unreal Engine, Python, Node && Node.js, IoT protocols, 3D modeling',
     ],
     integrations: [
       'IoT platforms, ERP systems, SCADA systems, Cloud platforms, CAD software',
@@ -259,7 +259,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Cloud-native platform with 3D visualization and IoT integration',
     launchDate: '2025-01-01',
     customers: 89,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 67,
     benefits: [
       '30% reduction in maintenance costs',
@@ -305,7 +305,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     icon: '🤖',
     color: 'from-gray-600 to-slate-700',
     textColor: 'text-gray-400',
-    link: 'https://ziontechgroup.com/ai-robotics-orchestration',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-robotics-orchestration',
     marketPosition:
       'Leading AI-powered robotics orchestration platform for intelligent automation',
     targetAudience:
@@ -334,7 +334,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Enterprise-grade platform with robotics integration and safety certification',
     launchDate: '2024-12-01',
     customers: 56,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 42,
     benefits: [
       '40% improvement in efficiency',
@@ -379,7 +379,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     icon: '🧪',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/quantum-materials-discovery',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-materials-discovery',
     marketPosition: 'Pioneering quantum-powered materials discovery platform',
     targetAudience:
       'Pharmaceutical companies, Materials science firms, Research institutions, Chemical companies',
@@ -409,7 +409,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Research-grade platform with quantum computing access and expert consultation',
     launchDate: '2024-09-01',
     customers: 28,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 19,
     benefits: [
       '10-100x faster discovery',
@@ -455,7 +455,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     icon: '🌐',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/enterprise-metaverse-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/enterprise-metaverse-platform',
     marketPosition:
       'Leading enterprise metaverse platform for business applications and collaboration',
     targetAudience:
@@ -464,7 +464,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     setupTime: '2-4 weeks',
     category: 'Metaverse & VR/AR',
     realService: true,
-    technology: ['Unity3D, Unreal Engine, WebGL, Three.js, Python, JavaScript'],
+    technology: ['Unity3D, Unreal Engine, WebGL, Three && Three.js, Python, JavaScript'],
     integrations: [
       'Business systems, CRM platforms, Learning management systems, Social platforms',
     ],
@@ -482,7 +482,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Cloud-native platform with 3D creation tools and business integration',
     launchDate: '2024-11-01',
     customers: 134,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 98,
     benefits: [
       '70% reduction in travel costs',
@@ -527,7 +527,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     icon: '⚡',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/quantum-energy-optimization',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-energy-optimization',
     marketPosition: 'Leading quantum-powered energy optimization platform',
     targetAudience:
       'Utility companies, Energy providers, Smart grid operators, Sustainability consultants',
@@ -557,7 +557,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Enterprise-grade platform with quantum computing access and grid integration',
     launchDate: '2024-10-01',
     customers: 45,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 32,
     benefits: [
       '25% reduction in energy costs',
@@ -603,7 +603,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     icon: '🧬',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/ai-biotechnology-research',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-biotechnology-research',
     marketPosition: 'Leading AI-powered biotechnology research platform',
     targetAudience:
       'Biotech companies, Pharmaceutical companies, Research institutions, Healthcare organizations',
@@ -631,7 +631,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Research-grade platform with laboratory integration and expert consultation',
     launchDate: '2025-01-15',
     customers: 34,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 23,
     benefits: [
       '5x faster research',
@@ -677,7 +677,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
     icon: '🛡️',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/quantum-threat-intelligence',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-threat-intelligence',
     marketPosition:
       'Pioneering quantum-powered cybersecurity platform with AI-driven intelligence',
     targetAudience:
@@ -706,7 +706,7 @@ export const emergingTechInnovations: EmergingTechInnovation[] = [
       'Enterprise-grade platform with quantum computing access and AI integration',
     launchDate: '2024-12-01',
     customers: 89,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 67,
     benefits: [
       '90% faster threat detection',

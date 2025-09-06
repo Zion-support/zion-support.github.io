@@ -23,10 +23,10 @@ export function useResumeActions() {
       const { data, error } = await supabase
         .from('talent_resumes')
         .insert({
-          user_id: user.id;
-          title: basicInfo.title;
-          headline: basicInfo.headline,
-          summary: basicInfo.summary
+          user_id: user && user.id;
+          title: basicInfo && basicInfo.title;
+          headline: basicInfo && basicInfo.headline,
+          summary: basicInfo && basicInfo.summary
         })
         .select('id')
         .single();
@@ -35,7 +35,7 @@ export function useResumeActions() {
       
       showSuccessToast("Resume created", "Your resume has been created successfully");
       
-      return data.id
+      return data && data.id
     } catch (e: any) {
       return handleResumeError(e, 'Could not create resume') ? null : null
     } finally {
@@ -56,12 +56,12 @@ export function useResumeActions() {
       const { error } = await supabase
         .from('talent_resumes')
         .update({
-          title: basicInfo.title;
-          headline: basicInfo.headline,
-          summary: basicInfo.summary
+          title: basicInfo && basicInfo.title;
+          headline: basicInfo && basicInfo.headline,
+          summary: basicInfo && basicInfo.summary
         })
         .eq('id', resumeId)
-        .eq('user_id', user.id);
+        .eq('user_id', user && user.id);
       
       if (error) throw error;
       
@@ -87,7 +87,7 @@ export function useResumeActions() {
       const { error: resetError } = await supabase
         .from('talent_resumes')
         .update({ is_active: false })
-        .eq('user_id', user.id);
+        .eq('user_id', user && user.id);
       
       if (resetError) throw resetError;
       
@@ -96,7 +96,7 @@ export function useResumeActions() {
         .from('talent_resumes')
         .update({ is_active: true })
         .eq('id', resumeId)
-        .eq('user_id', user.id);
+        .eq('user_id', user && user.id);
       
       if (error) throw error;
       

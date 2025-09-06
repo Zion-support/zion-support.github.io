@@ -5,11 +5,11 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST");
-    return res.status(405).json({ error: "Method Not Allowed" });
+  if (req && req.method !== "POST") {
+    res && res.setHeader("Allow", "POST");
+    return res && res.status(405).json({ error: "Method Not Allowed" });
     const { name, entityType, pointOfContact, useCaseType, brand } =
-      req.body || {};
+      req && req.body || {};
     if (
       !name ||
       !entityType ||
@@ -17,7 +17,7 @@ export default async function handler(
       !pointOfContact?.name ||
       !useCaseType
     ) {
-      return res.status(400).json({ error: "Missing required fields" });
+      return res && res.status(400).json({ error: "Missing required fields" });
     }
     try {
       const { partner, apiKey } = await createPartner({
@@ -27,21 +27,21 @@ export default async function handler(
         useCaseType,
         brand,
       });
-      return res.status(201).json({
+      return res && res.status(201).json({
         partner: {
-          id: partner.id,
-          name: partner.name,
-          status: partner.status,
-          entityType: partner.entityType,
-          useCaseType: partner.useCaseType,
-          createdAt: partner.createdAt,
+          id: partner && partner.id,
+          name: partner && partner.name,
+          status: partner && partner.status,
+          entityType: partner && partner.entityType,
+          useCaseType: partner && partner.useCaseType,
+          createdAt: partner && partner.createdAt,
         },
-        apiKey: apiKey.key,
-        dashboardUrl: `/partners/dashboard?pid=${partner.id}`,
+        apiKey: apiKey && apiKey.key,
+        dashboardUrl: `/partners/dashboard?pid=${partner && partner.id}`,
       });
     } catch (e) {
-      return res.status(500).json({ error: "Failed to create partner" });
+      return res && res.status(500).json({ error: "Failed to create partner" });
     }
-    return res.status(500).json({ error: "Failed to create partner" });
+    return res && res.status(500).json({ error: "Failed to create partner" });
   }
 }

@@ -5,21 +5,21 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 const LoadingSpinner = () =>
-  React.createElement(
+  React && React.createElement(
     'div',
     { className: 'flex items-center justify-center p-8' },
-    React.createElement('div', {
+    React && React.createElement('div', {
       className: 'animate-spin rounded-full h-8 w-8 border-b-2 border-primary',
     })
   );
 
 const LoadingSkeleton = () =>
-  React.createElement(
+  React && React.createElement(
     'div',
     { className: 'animate-pulse space-y-4' },
-    React.createElement('div', { className: 'h-4 bg-gray-200 rounded w-3/4' }),
-    React.createElement('div', { className: 'h-4 bg-gray-200 rounded w-1/2' }),
-    React.createElement('div', { className: 'h-32 bg-gray-200 rounded' })
+    React && React.createElement('div', { className: 'h-4 bg-gray-200 rounded w-3/4' }),
+    React && React.createElement('div', { className: 'h-4 bg-gray-200 rounded w-1/2' }),
+    React && React.createElement('div', { className: 'h-32 bg-gray-200 rounded' })
   );
 
 // Chart components (heavy - only load when needed)
@@ -32,14 +32,14 @@ const LoadingSkeleton = () =>
 // );
 
 export const DynamicPieChart = dynamic(
-  () => import('recharts').then(mod => ({ default: mod.PieChart })),
+  () => import('recharts').then(mod => ({ default: mod && mod.PieChart })),
   {    loading: LoadingSkeleton,
     ssr: false,
   }
 );
 
 export const DynamicBarChart = dynamic(
-  () => import('recharts').then(mod => ({ default: mod.BarChart })),
+  () => import('recharts').then(mod => ({ default: mod && mod.BarChart })),
   {    loading: LoadingSkeleton,
     ssr: false,
   }
@@ -76,7 +76,7 @@ export const DynamicBarChart = dynamic(
 
 // Virtual list for large datasets
 export const DynamicVirtualList = dynamic(
-  () => import('react-window').then(mod => ({ default: mod.FixedSizeList })),
+  () => import('react-window').then(mod => ({ default: mod && mod.FixedSizeList })),
   {    loading: LoadingSkeleton,
     ssr: false,
   }

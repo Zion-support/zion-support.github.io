@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test')'
-test.describe('"Accessibility"
+test && test.describe('"Accessibility"
   test('"page"
     "await"
   test('"images"

@@ -1,23 +1,23 @@
 // Test setup file for Jest
 import '@testing-library/jest-dom';
 
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
+// Mock window && window.matchMedia
+Object && Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: jest.fn().mockImplementation(query => ({
+  value: jest && jest.fn().mockImplementation(query => ({
     matches: false,
     media: query,
     onchange: null,
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-    dispatchEvent: jest.fn(),
+    addListener: jest && jest.fn(), // deprecated
+    removeListener: jest && jest.fn(), // deprecated
+    addEventListener: jest && jest.fn(),
+    removeEventListener: jest && jest.fn(),
+    dispatchEvent: jest && jest.fn(),
   })),
 });
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
+global && global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
   disconnect() {}
   observe() {}
@@ -25,7 +25,7 @@ global.IntersectionObserver = class IntersectionObserver {
 };
 
 // Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
+global && global.ResizeObserver = class ResizeObserver {
   constructor() {}
   disconnect() {}
   observe() {}
@@ -33,32 +33,32 @@ global.ResizeObserver = class ResizeObserver {
 };
 
 // Mock console methods to reduce noise in tests
-const originalError = console.error;
-const originalWarn = console.warn;
+const originalError = console && console.error;
+const originalWarn = console && console.warn;
 
 beforeAll(() => {
-  console.error = (...args: any[]) => {
+  console && console.error = (...args: any[]) => {
     if (
       typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render is no longer supported')
+      args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
     ) {
       return;
     }
-    originalError.call(console, ...args);
+    originalError && originalError.call(console, ...args);
   };
   
-  console.warn = (...args: any[]) => {
+  console && console.warn = (...args: any[]) => {
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('Warning:') || args[0].includes('Deprecated:'))
     ) {
       return;
     }
-    originalWarn.call(console, ...args);
+    originalWarn && originalWarn.call(console, ...args);
   };
 });
 
 afterAll(() => {
-  console.error = originalError;
-  console.warn = originalWarn;
+  console && console.error = originalError;
+  console && console.warn = originalWarn;
 });

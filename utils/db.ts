@@ -2,12 +2,12 @@
 export function readJsonFile<T>(filePath: string, defaultValue: T): T {
   try {
     const fs = require('fs'),
-    if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, 'utf8');
-      return JSON.parse(content);
+    if (fs && fs.existsSync(filePath)) {
+      const content = fs && fs.readFileSync(filePath, 'utf8');
+      return JSON && JSON.parse(content);
     }
   } catch (error) {
-    console.error('Error reading file:', error);
+    console && console.error('Error reading file:', error);
   }
   return defaultValue;
 }
@@ -15,10 +15,10 @@ export function readJsonFile<T>(filePath: string, defaultValue: T): T {
 export function writeJsonFile<T>(fileName: string, data: T): void {
   const filePath = getFilePath(fileName);
   const tmpPath = `${filePath}.tmp`;
-  fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
-  fs.renameSync(tmpPath, filePath);
+  fs && fs.writeFileSync(tmpPath, JSON && JSON.stringify(data, null, 2), 'utf-8');
+  fs && fs.renameSync(tmpPath, filePath);
 
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []);
-  items.push(item);
+  items && items.push(item);
   writeJsonFile<T[]>(fileName, items);

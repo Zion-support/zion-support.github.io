@@ -21,180 +21,180 @@ import Referrals from "@/pages/Referrals";
 import DeveloperPortal from "@/pages/DeveloperPortal";
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
-const DashboardRoutes = () => {
+const DashboardRoutes = () => {;
   return (
-    <Routes>
+    <Routes>;
       {/* Dashboard Routes */}
-      <Route 
+      <Route
         path="/dashboard" 
         element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
+          <ProtectedRoute>;
+            <Dashboard />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
         path="/client-dashboard" 
         element={
-          <ProtectedRoute>
-            <ClientDashboard />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
+          <ProtectedRoute>;
+            <ClientDashboard />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
         path="/talent-dashboard" 
         element={
-          <ProtectedRoute>
-            <TalentDashboard />
-          </ProtectedRoute>
+          <ProtectedRoute>;
+            <TalentDashboard />;
+          </ProtectedRoute>;
         }
-      />
-      <Route 
+      />;
+      <Route
         path="/creator-dashboard" 
         element={
-          <ProtectedRoute>
-            <CreatorDashboard />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
+          <ProtectedRoute>;
+            <CreatorDashboard />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
         path="/analytics" 
         element={
-          <ProtectedRoute>
-            <Analytics />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
+          <ProtectedRoute>;
+            <Analytics />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
         path="/project/:id/milestones" 
         element={
-          <ProtectedRoute>
-            <ProjectMilestones />
-          </ProtectedRoute>
-        } 
-      />
+          <ProtectedRoute>;
+            <ProjectMilestones />;
+          </ProtectedRoute>;
+        } ;
+      />;
       <Route
         path="/project/:id"
         element={
-          <ProtectedRoute>
-            <ProjectDetails />
-          </ProtectedRoute>
+          <ProtectedRoute>;
+            <ProjectDetails />;
+          </ProtectedRoute>;
         }
-      />
+      />;
       <Route
         path="/project/:id/room"
         element={
-          <ProtectedRoute>
-            <ProjectRoom />
-          </ProtectedRoute>
+          <ProtectedRoute>;
+            <ProjectRoom />;
+          </ProtectedRoute>;
         }
-      />
+      />;
       <Route
         path="/messages"
         element={
-          <ProtectedRoute>
-            <MessagingInbox />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
+          <ProtectedRoute>;
+            <MessagingInbox />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
         path="/inbox" 
         element={
-          <ProtectedRoute>
-            <MessagingInbox />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
+          <ProtectedRoute>;
+            <MessagingInbox />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
         path="/payments" 
         element={
-          <ProtectedRoute>
-            <Payments />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
+          <ProtectedRoute>;
+            <Payments />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
         path="/interviews" 
         element={
-          <ProtectedRoute>
-            <Interviews />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
+          <ProtectedRoute>;
+            <Interviews />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
         path="/notifications" 
         element={
-          <ProtectedRoute>
-            <Notifications />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
+          <ProtectedRoute>;
+            <Notifications />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
         path="/applications/track" 
         element={
-          <ProtectedRoute>
-            <ApplicationStatusTracker />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
+          <ProtectedRoute>;
+            <ApplicationStatusTracker />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
         path="/hiring-tracker" 
         element={
-          <ProtectedRoute>
-            <HiringTracker />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
+          <ProtectedRoute>;
+            <HiringTracker />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
         path="/portfolio-builder" 
         element={
-          <ProtectedRoute>
-            <PortfolioBuilder />
-          </ProtectedRoute>
-        } 
-      />
-      <Route 
+          <ProtectedRoute>;
+            <PortfolioBuilder />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
         path="/referrals" 
         element={
-          <ProtectedRoute>
-            <Referrals />
-          </ProtectedRoute>
-        } 
-      />
+          <ProtectedRoute>;
+            <Referrals />;
+          </ProtectedRoute>;
+        } ;
+      />;
       <Route
         path="/developers"
         element={
-          <ProtectedRoute>
-            <DeveloperPortal />
-          </ProtectedRoute>
+          <ProtectedRoute>;
+            <DeveloperPortal />;
+          </ProtectedRoute>;
         }
-      />
+      />;
       <Route
         path="/wallet"
         element={
-          <ProtectedRoute>
-            <WalletPage />
-          </ProtectedRoute>
+          <ProtectedRoute>;
+            <WalletPage />;
+          </ProtectedRoute>;
         }
-      />
+      />;
       <Route
         path="/dashboard/api-access"
         element={
-          <ProtectedRoute>
-            <DeveloperPortal />
-          </ProtectedRoute>
-        } 
-      />
+          <ProtectedRoute>;
+            <DeveloperPortal />;
+          </ProtectedRoute>;
+        } ;
+      />;
       <Route
         path="/contract-builder"
         element={
-          <ProtectedRoute>
-            <ContractBuilder />
-          </ProtectedRoute>
-        } 
-      />
-    </Routes>
-  )
+          <ProtectedRoute>;
+            <ContractBuilder />;
+          </ProtectedRoute>;
+        } ;
+      />;
+    </Routes>;
+  );
 };
 
 export default DashboardRoutes;

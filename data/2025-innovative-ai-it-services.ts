@@ -105,13 +105,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     compliance: [
       'AI Ethics Guidelines, Research Standards, Patent Compliance, International AI Safety Protocols',
     ],
-    link: 'https://ziontechgroup.com/ai-consciousness-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-consciousness-platform',
     icon: '🧠',
     color: 'from-violet-500 to-purple-600',
     popular: true,
     launchDate: '2025-01-01',
     customers: 25,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 12,
   },
   {
@@ -181,13 +181,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     compliance: [
       'SOC 2 Type II, ISO 27001, Quantum Security Standards, Enterprise Security Protocols',
     ],
-    link: 'https://ziontechgroup.com/quantum-ai-orchestrator',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-orchestrator',
     icon: '⚛️',
     color: 'from-indigo-500 to-blue-600',
     popular: true,
     launchDate: '2025-01-15',
     customers: 150,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 89,
   },
   {
@@ -219,7 +219,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     ],
     benefits: [
       'Reduce DevOps workload by 90%',
-      'Improve system reliability by 99.9%',
+      'Improve system reliability by 99 && 99.9%',
       'Reduce deployment failures by 95%',
       'Optimize costs by 40%',
       'Enable 24/7 autonomous operations',
@@ -256,13 +256,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     support:
       '24/7 support, dedicated DevOps consultants, implementation specialists, and ongoing optimization.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
-    link: 'https://ziontechgroup.com/autonomous-devops-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-devops-platform',
     icon: '🤖',
     color: 'from-green-500 to-emerald-600',
     popular: true,
     launchDate: '2025-01-10',
     customers: 500,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 234,
   },
   {
@@ -331,13 +331,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     support:
       '24/7 security operations center, dedicated security consultants, incident response team, and ongoing optimization.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS, FedRAMP'],
-    link: 'https://ziontechgroup.com/zero-trust-ai-security',
+    link: 'https://ziontechgroup && ziontechgroup.com/zero-trust-ai-security',
     icon: '🛡️',
     color: 'from-red-500 to-pink-600',
     popular: true,
     launchDate: '2025-01-20',
     customers: 300,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 156,
   },
   {
@@ -410,13 +410,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     compliance: [
       'Space regulations, International space law, Safety protocols, Environmental standards',
     ],
-    link: 'https://ziontechgroup.com/space-mining-ai',
+    link: 'https://ziontechgroup && ziontechgroup.com/space-mining-ai',
     icon: '🚀',
     color: 'from-purple-500 to-indigo-600',
     popular: true,
     launchDate: '2025-01-25',
     customers: 15,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 8,
   },
   {
@@ -489,13 +489,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     compliance: [
       'Research ethics, Laboratory safety, Data privacy, International research standards',
     ],
-    link: 'https://ziontechgroup.com/dna-computing-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/dna-computing-platform',
     icon: '🧬',
     color: 'from-teal-500 to-cyan-600',
     popular: true,
     launchDate: '2025-01-30',
     customers: 75,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 45,
   },
   {
@@ -566,13 +566,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     compliance: [
       'Content moderation, Privacy regulations, Payment compliance, Platform guidelines',
     ],
-    link: 'https://ziontechgroup.com/metaverse-development-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/metaverse-development-platform',
     icon: '🌐',
     color: 'from-blue-500 to-indigo-600',
     popular: true,
     launchDate: '2025-02-01',
     customers: 800,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 423,
   },
   {
@@ -643,13 +643,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     compliance: [
       'Transportation regulations, Safety standards, Environmental compliance, International trade laws',
     ],
-    link: 'https://ziontechgroup.com/autonomous-logistics-ai',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-logistics-ai',
     icon: '🚚',
     color: 'from-orange-500 to-red-600',
     popular: true,
     launchDate: '2025-02-05',
     customers: 450,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 267,
   },
   {
@@ -720,20 +720,20 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     compliance: [
       'Financial regulations, Trading compliance, Risk management standards, International financial laws',
     ],
-    link: 'https://ziontechgroup.com/quantum-financial-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-financial-platform',
     icon: '💰',
     color: 'from-green-500 to-emerald-600',
     popular: true,
     launchDate: '2025-02-10',
     customers: 200,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 134,
   },
   {
     id: 'ai-healthcare-diagnostic',
     name: 'AI Healthcare Diagnostic Platform',
     tagline:
-      'AI-powered medical diagnostics with 99.9% accuracy for early disease detection',
+      'AI-powered medical diagnostics with 99 && 99.9% accuracy for early disease detection',
     description:
       'Revolutionary healthcare platform that uses AI to provide accurate medical diagnostics, early disease detection, and personalized treatment recommendations. Reduces diagnostic errors and improves patient outcomes.',
     category: 'Healthcare & Biotechnology',
@@ -757,7 +757,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
       'Research collaboration tools',
     ],
     benefits: [
-      'Improve diagnostic accuracy by 99.9%',
+      'Improve diagnostic accuracy by 99 && 99.9%',
       'Reduce diagnostic errors by 95%',
       'Enable early disease detection',
       'Improve patient outcomes by 80%',
@@ -799,13 +799,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     compliance: [
       'FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards',
     ],
-    link: 'https://ziontechgroup.com/ai-healthcare-diagnostic',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-healthcare-diagnostic',
     icon: '🏥',
     color: 'from-blue-500 to-indigo-600',
     popular: true,
     launchDate: '2025-02-15',
     customers: 350,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 189,
   },
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
@@ -813,13 +813,13 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     integrations: ['EHR systems, Medical devices, Imaging equipment, Laboratory systems, Telemedicine platforms'];
     support: '24/7 medical support, dedicated healthcare consultants, implementation specialists, and ongoing optimization.';
     compliance: ['FDA approval, HIPAA, GDPR, Medical device regulations, Clinical standards'];
-    link: 'https://ziontechgroup.com/ai-healthcare-diagnostic';
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-healthcare-diagnostic';
     icon: '🏥';
     color: 'from-blue-500 to-indigo-600';
     popular: true;
     launchDate: '2025-02-15';
     customers: 350;
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 189
   }
 ];

@@ -62,9 +62,9 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     icon: '⚖️',
     color: 'from-blue-500 to-indigo-600',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-legal-documents',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-legal-documents',
     marketPosition:
-      'Leading AI legal document platform with 99.7% accuracy rate',
+      'Leading AI legal document platform with 99 && 99.7% accuracy rate',
     targetAudience:
       'Law firms, legal professionals, small businesses, entrepreneurs, real estate agents',
     trialDays: 14,
@@ -94,14 +94,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Legal research',
     ],
     roi: '300% time savings on document creation',
-    competitors: ['LegalZoom', 'Rocket Lawyer', 'LawDepot', 'Template.net'],
-    marketSize: '$2.1B legal tech market',
+    competitors: ['LegalZoom', 'Rocket Lawyer', 'LawDepot', 'Template && Template.net'],
+    marketSize: '$2 && 2.1B legal tech market',
     growthRate: '35% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
   {
@@ -128,7 +128,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     icon: '🤖',
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/ai-customer-service',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-customer-service',
     marketPosition:
       'Industry-leading AI customer service with 95% customer satisfaction',
     targetAudience:
@@ -160,14 +160,14 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Appointment booking',
     ],
     roi: '60% reduction in support costs',
-    competitors: ['Intercom', 'Zendesk', 'Freshdesk', 'Drift', 'Tawk.to'],
-    marketSize: '$15.8B customer service software market',
+    competitors: ['Intercom', 'Zendesk', 'Freshdesk', 'Drift', 'Tawk && Tawk.to'],
+    marketSize: '$15 && 15.8B customer service software market',
     growthRate: '28% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
   {
@@ -194,7 +194,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     icon: '📈',
     color: 'from-purple-500 to-pink-600',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-seo-optimizer',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-seo-optimizer',
     marketPosition:
       'Leading AI SEO platform with 40% better ranking improvements',
     targetAudience:
@@ -227,13 +227,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ],
     roi: '200% increase in organic traffic in 6 months',
     competitors: ['SEMrush', 'Ahrefs', 'Moz', 'Yoast SEO', 'RankMath'],
-    marketSize: '$8.2B SEO tools market',
+    marketSize: '$8 && 8.2B SEO tools market',
     growthRate: '32% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
   {
@@ -260,7 +260,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     icon: '🎬',
     color: 'from-red-500 to-pink-600',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/ai-video-editing',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-video-editing',
     marketPosition: 'Cutting-edge AI video editing with 10x faster workflow',
     targetAudience:
       'Content creators, video marketers, social media managers, film students, small businesses',
@@ -298,13 +298,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Camtasia',
       'Filmora',
     ],
-    marketSize: '$3.2B video editing software market',
+    marketSize: '$3 && 3.2B video editing software market',
     growthRate: '45% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
   {
@@ -331,7 +331,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     icon: '📊',
     color: 'from-cyan-500 to-blue-600',
     textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/ai-data-analytics',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-data-analytics',
     marketPosition:
       'Leading AI analytics platform with 90% accuracy in predictions',
     targetAudience:
@@ -365,13 +365,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     ],
     roi: '150% improvement in decision-making speed',
     competitors: ['Tableau', 'Power BI', 'Looker', 'QlikView', 'Domo'],
-    marketSize: '$23.4B business intelligence market',
+    marketSize: '$23 && 23.4B business intelligence market',
     growthRate: '38% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
   {
@@ -398,7 +398,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     icon: '👥',
     color: 'from-indigo-500 to-purple-600',
     textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/ai-hr-recruitment',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-hr-recruitment',
     marketPosition:
       'Leading AI recruitment platform with 70% faster hiring process',
     targetAudience:
@@ -438,13 +438,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Lever',
       'SmartRecruiters',
     ],
-    marketSize: '$2.8B recruitment software market',
+    marketSize: '$2 && 2.8B recruitment software market',
     growthRate: '42% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
   {
@@ -471,7 +471,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     icon: '💰',
     color: 'from-yellow-500 to-orange-600',
     textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/ai-sales-automation',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-sales-automation',
     marketPosition:
       'Industry-leading sales automation with 35% increase in conversion rates',
     targetAudience:
@@ -511,13 +511,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Zoho CRM',
       'Freshsales',
     ],
-    marketSize: '$18.6B CRM market',
+    marketSize: '$18 && 18.6B CRM market',
     growthRate: '33% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
   {
@@ -544,7 +544,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     icon: '🔍',
     color: 'from-teal-500 to-green-600',
     textColor: 'text-teal-400',
-    link: 'https://ziontechgroup.com/ai-market-research',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-market-research',
     marketPosition:
       'Leading AI market research with 95% accuracy in trend predictions',
     targetAudience:
@@ -582,13 +582,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Euromonitor',
       'Forrester',
     ],
-    marketSize: '$1.9B market research market',
+    marketSize: '$1 && 1.9B market research market',
     growthRate: '28% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
   {
@@ -615,9 +615,9 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     icon: '🔗',
     color: 'from-gray-500 to-slate-600',
     textColor: 'text-gray-400',
-    link: 'https://ziontechgroup.com/ai-blockchain-analytics',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-blockchain-analytics',
     marketPosition:
-      'Leading blockchain analytics with 99.9% transaction accuracy',
+      'Leading blockchain analytics with 99 && 99.9% transaction accuracy',
     targetAudience:
       'Cryptocurrency traders, blockchain companies, financial institutions, regulators',
     trialDays: 21,
@@ -650,16 +650,16 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Chainalysis',
       'Elliptic',
       'CipherTrace',
-      'Blockchain.com',
+      'Blockchain && Blockchain.com',
       'Etherscan',
     ],
-    marketSize: '$1.2B blockchain analytics market',
+    marketSize: '$1 && 1.2B blockchain analytics market',
     growthRate: '65% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
   {
@@ -686,7 +686,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     icon: '☁️',
     color: 'from-blue-500 to-cyan-600',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/ai-cloud-cost-optimizer',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-cloud-cost-optimizer',
     marketPosition:
       'Leading cloud cost optimization with 40% average cost reduction',
     targetAudience:
@@ -725,13 +725,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
       'Cloudability',
       'AWS Cost Explorer',
     ],
-    marketSize: '$4.8B cloud cost management market',
+    marketSize: '$4 && 4.8B cloud cost management market',
     growthRate: '52% annual growth',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
   },
   {
@@ -758,13 +758,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     support:
       'Dedicated health coach, community support, and 24/7 platform assistance.',
     compliance: ['HIPAA, GDPR, CCPA, SOC 2 Type II'],
-    link: 'https://ziontechgroup.com/ai-health-coach',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-health-coach',
     icon: '🏃‍♂️',
     color: 'from-red-500 to-pink-600',
     popular: false,
     launchDate: '2024-03-05',
     customers: 1100,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 134,
   },
   {
@@ -798,11 +798,11 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     marketPosition:
       'Alternatives include Superhuman AI and Front AI. Differentiator: policy guardrails and CRM context sync.',
     competitors: ['Superhuman', 'Front', 'Zendesk AI'],
-    techStack: ['Next.js', 'TypeScript', 'PostgreSQL', 'OpenAI', 'Gmail API'],
+    techStack: ['Next && Next.js', 'TypeScript', 'PostgreSQL', 'OpenAI', 'Gmail API'],
     realImplementation: true,
     implementationDetails:
       'OAuth inbox connectors, policy engine, reply suggestions, review queue, audit logs.',
-    roi: 'Reduce support headcount needs by 0.2–0.5 FTE per 1k tickets/mo.',
+    roi: 'Reduce support headcount needs by 0 && 0.2–0 && 0.5 FTE per 1k tickets/mo.',
     useCases: [
       'Support autoreplies',
       'Sales follow-ups',
@@ -811,13 +811,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     integrations: ['Gmail', 'Outlook', 'HubSpot', 'Zendesk', 'Slack'],
     support: 'Email and chat support with onboarding concierge for teams',
     compliance: ['GDPR', 'CCPA', 'SOC 2 Type II'],
-    link: 'https://ziontechgroup.com/ai-email-responder',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-email-responder',
     icon: '📧',
     color: 'from-cyan-600 to-blue-700',
     popular: true,
     launchDate: '2025-02-01',
     customers: 180,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 46,
   },
   {
@@ -849,7 +849,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     marketPosition:
       'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.',
     competitors: ['Typeform', 'SurveySparrow', 'Tally'],
-    techStack: ['Next.js', 'Supabase', 'Vercel Edge', 'OpenAI'],
+    techStack: ['Next && Next.js', 'Supabase', 'Vercel Edge', 'OpenAI'],
     realImplementation: true,
     implementationDetails:
       'Template gallery, response store, analytics, export jobs.',
@@ -858,13 +858,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     integrations: ['HubSpot', 'Segment', 'Zapier'],
     support: 'Email support, templates library',
     compliance: ['GDPR', 'CCPA'],
-    link: 'https://ziontechgroup.com/mobile-surveys',
+    link: 'https://ziontechgroup && ziontechgroup.com/mobile-surveys',
     icon: '📱',
     color: 'from-emerald-600 to-teal-700',
     popular: false,
     launchDate: '2024-12-10',
     customers: 95,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 22,
   },
   {
@@ -892,7 +892,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     marketPosition:
       'Alternative to Notion templates + Asana. Faster to start with curated flows.',
     competitors: ['Asana', 'ClickUp', 'Notion'],
-    techStack: ['Next.js', 'Prisma', 'PostgreSQL'],
+    techStack: ['Next && Next.js', 'Prisma', 'PostgreSQL'],
     realImplementation: true,
     implementationDetails:
       'Template JSON schemas, rules engine, import/export.',
@@ -901,13 +901,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     integrations: ['Google Calendar', 'Slack', 'Linear'],
     support: 'Email support',
     compliance: ['GDPR'],
-    link: 'https://ziontechgroup.com/productivity-planner',
+    link: 'https://ziontechgroup && ziontechgroup.com/productivity-planner',
     icon: '🗓️',
     color: 'from-purple-600 to-pink-600',
     popular: false,
     launchDate: '2025-01-20',
     customers: 60,
-    rating: 4.5,
+    rating: 4 && 4.5,
     reviews: 14,
   },
   {
@@ -935,7 +935,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     marketPosition:
       'Lean alternative to Hopin and Eventbrite with richer analytics.',
     competitors: ['Hopin', 'Eventbrite'],
-    techStack: ['Next.js', 'Stripe', 'Supabase'],
+    techStack: ['Next && Next.js', 'Stripe', 'Supabase'],
     realImplementation: true,
     implementationDetails: 'Stripe checkout, QR codes, analytics dashboards.',
     roi: 'Increase sponsorship revenue 10–20%.',
@@ -943,13 +943,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     integrations: ['Stripe', 'Mailchimp', 'Zapier'],
     support: 'Priority email support',
     compliance: ['GDPR', 'PCI'],
-    link: 'https://ziontechgroup.com/event-management',
+    link: 'https://ziontechgroup && ziontechgroup.com/event-management',
     icon: '🎫',
     color: 'from-indigo-600 to-blue-700',
     popular: false,
     launchDate: '2024-11-18',
     customers: 70,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 18,
   },
   {
@@ -977,7 +977,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     marketPosition:
       'Simpler than Impact and PartnerStack with transparent pricing.',
     competitors: ['PartnerStack', 'Impact'],
-    techStack: ['Next.js', 'PostgreSQL', 'Stripe'],
+    techStack: ['Next && Next.js', 'PostgreSQL', 'Stripe'],
     realImplementation: true,
     implementationDetails: 'Link generation, tracking pixels, payout ledger.',
     roi: 'Affiliate channel +10–30% revenue.',
@@ -985,13 +985,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     integrations: ['Shopify', 'WooCommerce', 'Stripe'],
     support: 'Email support',
     compliance: ['GDPR'],
-    link: 'https://ziontechgroup.com/affiliate-tracking',
+    link: 'https://ziontechgroup && ziontechgroup.com/affiliate-tracking',
     icon: '🔗',
     color: 'from-rose-600 to-red-700',
     popular: false,
     launchDate: '2024-10-12',
     customers: 55,
-    rating: 4.4,
+    rating: 4 && 4.4,
     reviews: 12,
   },
   {
@@ -1019,7 +1019,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     marketPosition:
       'Alternative to Plausible and Fathom with built-in insights.',
     competitors: ['Plausible', 'Fathom'],
-    techStack: ['Next.js', 'Edge Analytics', 'PostgreSQL'],
+    techStack: ['Next && Next.js', 'Edge Analytics', 'PostgreSQL'],
     realImplementation: true,
     implementationDetails: 'Script tag, event API, insights jobs.',
     roi: 'Improve conversion 5–15% via insights.',
@@ -1027,13 +1027,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     integrations: ['Shopify', 'Webflow', 'Zapier'],
     support: 'Email support',
     compliance: ['GDPR'],
-    link: 'https://ziontechgroup.com/website-analytics',
+    link: 'https://ziontechgroup && ziontechgroup.com/website-analytics',
     icon: '📊',
     color: 'from-sky-600 to-cyan-700',
     popular: true,
     launchDate: '2025-02-05',
     customers: 140,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 28,
   },
   {
@@ -1060,7 +1060,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     targetAudience: ['MSPs', 'IT teams'],
     marketPosition: 'Lightweight alternative to Zendesk and Freshservice.',
     competitors: ['Zendesk', 'Freshservice'],
-    techStack: ['Next.js', 'PostgreSQL', 'Node.js'],
+    techStack: ['Next && Next.js', 'PostgreSQL', 'Node && Node.js'],
     realImplementation: true,
     implementationDetails: 'Inbound parser, workflow builder, KB CMS.',
     roi: 'Reduce ticket volume 15–25% via KB.',
@@ -1068,13 +1068,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     integrations: ['Okta', 'Google Workspace', 'Slack'],
     support: 'Email support',
     compliance: ['GDPR', 'SOC 2'],
-    link: 'https://ziontechgroup.com/it-helpdesk',
+    link: 'https://ziontechgroup && ziontechgroup.com/it-helpdesk',
     icon: '🛠️',
     color: 'from-slate-600 to-gray-700',
     popular: false,
     launchDate: '2024-09-22',
     customers: 120,
-    rating: 4.5,
+    rating: 4 && 4.5,
     reviews: 31,
   },
   {
@@ -1101,7 +1101,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     targetAudience: ['D2C brands', 'Marketplaces'],
     marketPosition: 'Competitive with Loop and Returnly at simpler pricing.',
     competitors: ['Loop', 'Returnly'],
-    techStack: ['Next.js', 'Stripe', 'Shopify API'],
+    techStack: ['Next && Next.js', 'Stripe', 'Shopify API'],
     realImplementation: true,
     implementationDetails:
       'Webhook integrations, label providers, RMA workflows.',
@@ -1110,13 +1110,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     integrations: ['Shopify', 'Shippo', 'EasyPost'],
     support: 'Email support',
     compliance: ['GDPR'],
-    link: 'https://ziontechgroup.com/return-manager',
+    link: 'https://ziontechgroup && ziontechgroup.com/return-manager',
     icon: '📦',
     color: 'from-amber-600 to-orange-700',
     popular: false,
     launchDate: '2024-08-30',
     customers: 75,
-    rating: 4.4,
+    rating: 4 && 4.4,
     reviews: 19,
   },
   {
@@ -1144,7 +1144,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     marketPosition:
       'Alternative to Lemlist and Mailshake with stricter safety.',
     competitors: ['Lemlist', 'Mailshake'],
-    techStack: ['Next.js', 'PostgreSQL', 'OpenAI'],
+    techStack: ['Next && Next.js', 'PostgreSQL', 'OpenAI'],
     realImplementation: true,
     implementationDetails: 'Warmup safe-guards, DNS checks, reply classifier.',
     roi: '+10–20% conversion uplift.',
@@ -1152,13 +1152,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     integrations: ['HubSpot', 'Pipedrive', 'Gmail'],
     support: 'Email support',
     compliance: ['GDPR', 'CAN-SPAM'],
-    link: 'https://ziontechgroup.com/email-followups',
+    link: 'https://ziontechgroup && ziontechgroup.com/email-followups',
     icon: '📨',
     color: 'from-blue-600 to-indigo-700',
     popular: false,
     launchDate: '2025-01-25',
     customers: 90,
-    rating: 4.5,
+    rating: 4 && 4.5,
     reviews: 17,
   },
   {
@@ -1185,7 +1185,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     targetAudience: ['Podcasters', 'Agencies'],
     marketPosition: 'Alternative to Descript transcripts with simpler pricing.',
     competitors: ['Descript', 'Rev'],
-    techStack: ['Whisper', 'Next.js', 'S3'],
+    techStack: ['Whisper', 'Next && Next.js', 'S3'],
     realImplementation: true,
     implementationDetails: 'Batch jobs, cloud storage, editor UI.',
     roi: 'Cut post-production hours by 60–80%.',
@@ -1193,13 +1193,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     integrations: ['RSS', 'YouTube', 'Anchor'],
     support: 'Email support',
     compliance: ['GDPR'],
-    link: 'https://ziontechgroup.com/podcast-transcription',
+    link: 'https://ziontechgroup && ziontechgroup.com/podcast-transcription',
     icon: '🎙️',
     color: 'from-fuchsia-600 to-violet-700',
     popular: true,
     launchDate: '2024-12-02',
     customers: 210,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 52,
   },
   {
@@ -1235,13 +1235,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     integrations: ['S3', 'GCS', 'Databricks'],
     support: 'Priority support',
     compliance: ['GDPR', 'SOC 2'],
-    link: 'https://ziontechgroup.com/services/ai-knowledge-graph-studio',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-knowledge-graph-studio',
     icon: '🕸️',
     color: 'from-teal-600 to-emerald-700',
     popular: true,
     launchDate: '2025-02-08',
     customers: 35,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 11,
   },
   {
@@ -1269,7 +1269,7 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     marketPosition:
       'Comparable to OpenRouter/EdenAI; adds governance and audit.',
     competitors: ['OpenRouter', 'EdenAI', 'Helicone'],
-    techStack: ['Node.js', 'PostgreSQL', 'OpenAI', 'Anthropic'],
+    techStack: ['Node && Node.js', 'PostgreSQL', 'OpenAI', 'Anthropic'],
     realImplementation: true,
     implementationDetails: 'Multi-tenant projects, RBAC, per-key metering.',
     roi: 'Cut model costs by 20–40%.',
@@ -1277,13 +1277,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     integrations: ['OpenAI', 'Anthropic', 'Azure'],
     support: 'Priority support',
     compliance: ['GDPR', 'SOC 2'],
-    link: 'https://ziontechgroup.com/services/llm-guarded-api-gateway',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/llm-guarded-api-gateway',
     icon: '🛡️',
     color: 'from-cyan-700 to-blue-800',
     popular: true,
     launchDate: '2025-02-08',
     customers: 42,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 13,
   },
   {
@@ -1318,13 +1318,13 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     integrations: ['S3', 'BigQuery', 'Snowflake'],
     support: 'Email support',
     compliance: ['GDPR'],
-    link: 'https://ziontechgroup.com/services/serverless-lakehouse-starter',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/serverless-lakehouse-starter',
     icon: '🏗️',
     color: 'from-stone-600 to-zinc-700',
     popular: false,
     launchDate: '2025-02-08',
     customers: 24,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 7,
   },
   {
@@ -1359,19 +1359,19 @@ export const realMicroSaasServices: RealMicroSaasService[] = [
     integrations: ['dbt', 'GitHub', 'BigQuery'],
     support: 'Email support',
     compliance: ['GDPR'],
-    link: 'https://ziontechgroup.com/services/data-contracts-hub',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/data-contracts-hub',
     icon: '📜',
     color: 'from-lime-600 to-green-700',
     popular: false,
     launchDate: '2025-02-08',
     customers: 19,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 6,
   },];
 
 // Helper functions
 export const getServicesByCategory = (category: string) => {
-  return realMicroSaasServices.filter(service => service.category === category);    id: 'data-contracts-hub';
+  return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);    id: 'data-contracts-hub';
     name: 'Data Contracts Hub';
     tagline: 'Diff schemas, enforce CI gates, and prevent breaking changes';
     description: 'Manage dataset contracts with schema versioning, diffs, and CI checks to prevent downstream breakages.';
@@ -1390,23 +1390,23 @@ export const getServicesByCategory = (category: string) => {
     integrations: ['dbtGitHubBigQuery'];
     support: 'Email support';
     compliance: ['GDPR'];
-    link: 'https://ziontechgroup.com/services/data-contracts-hub';
+    link: 'https://ziontechgroup && ziontechgroup.com/services/data-contracts-hub';
     icon: '📜';
     color: 'from-lime-600 to-green-700';
     popular: false;
     launchDate: '2025-02-08';
     customers: 19;
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 6
   }
 ];
 
 // Helper functions
 export const getServicesByCategory = (category: string) => {
-  return realMicroSaasServices.filter(service => service.category === category);
+  return realMicroSaasServices && realMicroSaasServices.filter(service => service && service.category === category);
 marketPosition: 'Lightweight alternative to Typeform and SurveySparrow with better mobile UX.';
 competitors: ['TypeformSurveySparrowTally'];
-techStack: ['Next.jsSupabaseVercel EdgeOpenAI'];
+techStack: ['Next && Next.jsSupabaseVercel EdgeOpenAI'];
 realImplementation: true;
 implementationDetails: 'Template gallery, response store, analytics, export jobs.';
 roi: 'Improves feedback volume 20–50%.';
@@ -1414,18 +1414,18 @@ useCases: ['NPSBeta feedbackLead qual'];
 integrations: ['HubSpotSegmentZapier'];
 support: 'Email support, templates library';
 compliance: ['GDPRCCPA'];
-link: 'https://ziontechgroup.com/mobile-surveys';
+link: 'https://ziontechgroup && ziontechgroup.com/mobile-surveys';
 icon: '📱';
 color: 'from-emerald-600 to-teal-700';
 popular: false;
 launchDate: '2024-12-10';
 customers: 95;
-rating: 4.6;
+rating: 4 && 4.6;
 reviews: 22 
 };
 marketPosition: 'Alternative to Notion templates + Asana. Faster to start with curated flows.';
 competitors: ['AsanaClickUpNotion'];
-techStack: ['Next.jsPrismaPostgreSQL'];
+techStack: ['Next && Next.jsPrismaPostgreSQL'];
 realImplementation: true;
 implementationDetails: 'Template JSON schemas, rules engine, import/export.';
 roi: 'Deliverables throughput +15–25%.';
@@ -1433,13 +1433,13 @@ useCases: ['Client deliveryEditorial calendarSprints'];
 integrations: ['Google CalendarSlackLinear'];
 support: 'Email support';
 compliance: ['GDPR'];
-link: 'https://ziontechgroup.com/productivity-planner';
+link: 'https://ziontechgroup && ziontechgroup.com/productivity-planner';
 icon: '🗓️';
 color: 'from-purple-600 to-pink-600';
 popular: false;
 launchDate: '2025-01-20';
 customers: 60;
-rating: 4.5;
+rating: 4 && 4.5;
 reviews: 14 
 };
 

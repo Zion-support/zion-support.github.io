@@ -25,22 +25,22 @@ export function useMilestoneGenerator() {
     try {
       setIsGenerating(true),
 
-      const { data, error } = await supabase.functions.invoke('generate-milestones', {
+      const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
         body: input
       });
 
       if (error) throw error;
 
       // Mark each milestone as AI generated
-      const milestonesWithFlag = data.milestones.map((milestone: any) => ({
+      const milestonesWithFlag = data && data.milestones.map((milestone: any) => ({
         ...milestone,
         isAiGenerated: true}));
 
       setGeneratedMilestones(milestonesWithFlag);
       return milestonesWithFlag
     } catch (error) {
-      console.error('Error generating milestones:', error);
-      toast.error('Failed to generate milestones');
+      console && console.error('Error generating milestones:', error);
+      toast && toast.error('Failed to generate milestones');
       return []
     } finally {
       setIsGenerating(false)

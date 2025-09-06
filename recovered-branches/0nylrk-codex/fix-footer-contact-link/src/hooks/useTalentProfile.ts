@@ -26,7 +26,7 @@ export function useTalentProfile(id: string | undefined) {
         // In a real implementation, we would fetch from Supabase
         // For now, we'll use mock data
         setTimeout(() => {
-          const foundProfile = MOCK_TALENTS.find(talent => talent.id === id);
+          const foundProfile = MOCK_TALENTS && MOCK_TALENTS.find(talent => talent && talent.id === id);
           
           if (foundProfile) {
             setProfile(convertProfileToTalentProfile(foundProfile))
@@ -46,7 +46,7 @@ export function useTalentProfile(id: string | undefined) {
           setIsLoading(false)
         }, 800)
       } catch (err) {
-        console.error("Error fetching profile:", err);
+        console && console.error("Error fetching profile:", err);
         setError("Failed to load profile data");
         setIsLoading(false)
       }

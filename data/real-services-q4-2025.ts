@@ -1,9 +1,9 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
   mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
+  website: 'https://ziontechgroup && ziontechgroup.com',
 };
 
 export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
@@ -28,7 +28,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     icon: '📧',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
-    link: 'https://ziontechgroup.com/services/ai-email-responder-pro',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-responder-pro',
     marketPosition:
       'Alternative to Front/Superhuman add-ons with deeper AI and governance.',
     targetAudience: 'Sales, Success, Support, Ops',
@@ -36,7 +36,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     setupTime: '2 hours',
     category: 'AI & Data',
     realService: true,
-    technology: ['Gmail/O365 APIs', 'OpenAI/Groq', 'Next.js'],
+    technology: ['Gmail/O365 APIs', 'OpenAI/Groq', 'Next && Next.js'],
     integrations: ['Gmail', 'Outlook', 'Salesforce', 'HubSpot', 'Zendesk'],
     useCases: ['Inbound triage', 'Follow-ups', 'NPS outreach'],
     roi: 'Reduce first response time by 60% and improve CSAT by 20%+',
@@ -49,7 +49,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'OAuth, vector memory, policy guardrails',
     launchDate: '2025-10-15',
     customers: 24,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 17,
   },
   {
@@ -72,7 +72,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     icon: '🔗',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
-    link: 'https://ziontechgroup.com/services/affiliate-analytics-hub',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/affiliate-analytics-hub',
     marketPosition:
       'Easier than enterprise suites; purpose-built for small teams.',
     targetAudience: 'E-commerce, SaaS, Media',
@@ -80,11 +80,11 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     setupTime: '1 day',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Next.js', 'PostgreSQL', 'Workers/Edge'],
+    technology: ['Next && Next.js', 'PostgreSQL', 'Workers/Edge'],
     integrations: ['Stripe', 'Shopify', 'WooCommerce'],
     useCases: ['Partner programs', 'Influencer payouts'],
     roi: 'Grow partner-attributed revenue by 10–30%',
-    competitors: ['Impact.com (complex)', 'Tune (enterprise)'],
+    competitors: ['Impact && Impact.com (complex)', 'Tune (enterprise)'],
     marketSize: '$15B+ affiliate tech',
     growthRate: '12% CAGR',
     variant: 'network-futuristic',
@@ -93,7 +93,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Webhook ingestion, cookie-less heuristics',
     launchDate: '2025-11-01',
     customers: 35,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 21,
   },
   {
@@ -117,7 +117,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     icon: '📦',
     color: 'from-orange-600 to-red-600',
     textColor: 'text-orange-200',
-    link: 'https://ziontechgroup.com/services/return-management-saas',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/return-management-saas',
     marketPosition:
       '90% of SMBs lack streamlined returns; fast ROI with fewer tickets.',
     targetAudience: 'DTC brands, Marketplaces',
@@ -125,7 +125,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     setupTime: '1 day',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Next.js', 'Stripe', 'Shippo'],
+    technology: ['Next && Next.js', 'Stripe', 'Shippo'],
     integrations: ['Shopify', 'Klaviyo', 'Gorgias'],
     useCases: ['Returns and exchanges', 'Warehouse ops'],
     roi: 'Cut support tickets by 35% and improve retention',
@@ -138,7 +138,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Carrier APIs and automation rules',
     launchDate: '2025-11-20',
     customers: 12,
-    rating: 4.5,
+    rating: 4 && 4.5,
     reviews: 9,
   },
   {
@@ -161,7 +161,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     icon: '📱',
     color: 'from-purple-600 to-pink-600',
     textColor: 'text-purple-300',
-    link: 'https://ziontechgroup.com/services/survey-studio-mobile',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/survey-studio-mobile',
     marketPosition:
       'Faster to deploy than Qualtrics/Typeform for mobile CX teams.',
     targetAudience: 'CX, Product, Research',
@@ -169,7 +169,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     setupTime: '1 hour',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Next.js', 'Twilio', 'PostgreSQL'],
+    technology: ['Next && Next.js', 'Twilio', 'PostgreSQL'],
     integrations: ['Segment', 'HubSpot', 'Slack'],
     useCases: ['NPS/CSAT', 'In-app feedback', 'Research studies'],
     roi: 'Improve survey completion by 2-3x on mobile',
@@ -182,7 +182,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Client SDK + webhooks',
     launchDate: '2025-10-28',
     customers: 16,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 10,
   },
   {
@@ -205,7 +205,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     icon: '📊',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-300',
-    link: 'https://ziontechgroup.com/services/website-analytics-lite',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/website-analytics-lite',
     marketPosition:
       'Simple alternative to GA4; easy client reporting for agencies.',
     targetAudience: 'Agencies, SMBs, Creators',
@@ -213,7 +213,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     setupTime: '30 minutes',
     category: 'Developer Tools',
     realService: true,
-    technology: ['Next.js', 'PostgreSQL', 'ClickHouse (optional)'],
+    technology: ['Next && Next.js', 'PostgreSQL', 'ClickHouse (optional)'],
     integrations: ['Shopify', 'WordPress', 'Webflow'],
     useCases: ['Funnel analysis', 'Campaign attribution'],
     roi: 'Faster insights with low overhead',
@@ -226,7 +226,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     implementationDetails: 'Lightweight script & edge collection',
     launchDate: '2025-12-05',
     customers: 9,
-    rating: 4.5,
+    rating: 4 && 4.5,
     reviews: 6,
   },
 ];	{
@@ -243,14 +243,14 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		icon: '📧';
 		color: 'from-cyan-600 to-blue-700';
 		textColor: 'text-cyan-300';
-		link: 'https://ziontechgroup.com/services/ai-email-responder-pro';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-email-responder-pro';
 		marketPosition: 'Alternative to Front/Superhuman add-ons with deeper AI and governance.',
 		targetAudience: 'Sales, Success, Support, Ops';
 		trialDays: 14;
 		setupTime: '2 hours';
 		category: 'AI & Data';
 		realService: true;
-		technology: ['Gmail/O365 APIsOpenAI/GroqNext.js'];
+		technology: ['Gmail/O365 APIsOpenAI/GroqNext && GroqNext.js'];
 		integrations: ['GmailOutlookSalesforceHubSpotZendesk'];
 		useCases: ['Inbound triageFollow-upsNPS outreach'];
 		roi: 'Reduce first response time by 60% and improve CSAT by 20%+';
@@ -263,7 +263,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'OAuth, vector memory, policy guardrails';
 		launchDate: '2025-10-15';
 		customers: 24;
-		rating: 4.8,
+		rating: 4 && 4.8,
 		reviews: 17
 	};
 	{
@@ -280,18 +280,18 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		icon: '🔗';
 		color: 'from-emerald-600 to-teal-700';
 		textColor: 'text-emerald-300';
-		link: 'https://ziontechgroup.com/services/affiliate-analytics-hub',
+		link: 'https://ziontechgroup && ziontechgroup.com/services/affiliate-analytics-hub',
 		marketPosition: 'Easier than enterprise suites, purpose-built for small teams.';
 		targetAudience: 'E-commerce, SaaS, Media';
 		trialDays: 14;
 		setupTime: '1 day';
 		category: 'Developer Tools';
 		realService: true;
-		technology: ['Next.jsPostgreSQLWorkers/Edge'];
+		technology: ['Next && Next.jsPostgreSQLWorkers/Edge'];
 		integrations: ['StripeShopifyWooCommerce'];
 		useCases: ['Partner programsInfluencer payouts'];
 		roi: 'Grow partner-attributed revenue by 10–30%';
-		competitors: ['Impact.com (complex)Tune (enterprise)'];
+		competitors: ['Impact && Impact.com (complex)Tune (enterprise)'];
 		marketSize: '$15B+ affiliate tech';
 		growthRate: '12% CAGR';
 		variant: 'network-futuristic';
@@ -300,7 +300,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Webhook ingestion, cookie-less heuristics';
 		launchDate: '2025-11-01';
 		customers: 35;
-		rating: 4.6,
+		rating: 4 && 4.6,
 		reviews: 21
 	};
 	{
@@ -317,14 +317,14 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		icon: '📦';
 		color: 'from-orange-600 to-red-600';
 		textColor: 'text-orange-200';
-		link: 'https://ziontechgroup.com/services/return-management-saas',
+		link: 'https://ziontechgroup && ziontechgroup.com/services/return-management-saas',
 		marketPosition: '90% of SMBs lack streamlined returns, fast ROI with fewer tickets.';
 		targetAudience: 'DTC brands, Marketplaces';
 		trialDays: 14;
 		setupTime: '1 day';
 		category: 'Developer Tools';
 		realService: true;
-		technology: ['Next.jsStripeShippo'];
+		technology: ['Next && Next.jsStripeShippo'];
 		integrations: ['ShopifyKlaviyoGorgias'];
 		useCases: ['Returns and exchangesWarehouse ops'];
 		roi: 'Cut support tickets by 35% and improve retention';
@@ -337,7 +337,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Carrier APIs and automation rules';
 		launchDate: '2025-11-20';
 		customers: 12;
-		rating: 4.5,
+		rating: 4 && 4.5,
 		reviews: 9
 	};
 	{
@@ -354,14 +354,14 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		icon: '📱';
 		color: 'from-purple-600 to-pink-600';
 		textColor: 'text-purple-300';
-		link: 'https://ziontechgroup.com/services/survey-studio-mobile';
+		link: 'https://ziontechgroup && ziontechgroup.com/services/survey-studio-mobile';
 		marketPosition: 'Faster to deploy than Qualtrics/Typeform for mobile CX teams.',
 		targetAudience: 'CX, Product, Research';
 		trialDays: 7;
 		setupTime: '1 hour';
 		category: 'Developer Tools';
 		realService: true;
-		technology: ['Next.jsTwilioPostgreSQL'];
+		technology: ['Next && Next.jsTwilioPostgreSQL'];
 		integrations: ['SegmentHubSpotSlack'];
 		useCases: ['NPS/CSATIn-app feedbackResearch studies'];
 		roi: 'Improve survey completion by 2-3x on mobile';
@@ -374,7 +374,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Client SDK + webhooks';
 		launchDate: '2025-10-28';
 		customers: 16;
-		rating: 4.6,
+		rating: 4 && 4.6,
 		reviews: 10
 	};
 	{
@@ -391,14 +391,14 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		icon: '📊';
 		color: 'from-indigo-600 to-blue-700';
 		textColor: 'text-indigo-300';
-		link: 'https://ziontechgroup.com/services/website-analytics-lite',
+		link: 'https://ziontechgroup && ziontechgroup.com/services/website-analytics-lite',
 		marketPosition: 'Simple alternative to GA4, easy client reporting for agencies.';
 		targetAudience: 'Agencies, SMBs, Creators';
 		trialDays: 7;
 		setupTime: '30 minutes';
 		category: 'Developer Tools';
 		realService: true;
-		technology: ['Next.jsPostgreSQLClickHouse (optional)'];
+		technology: ['Next && Next.jsPostgreSQLClickHouse (optional)'];
 		integrations: ['ShopifyWordPressWebflow'];
 		useCases: ['Funnel analysisCampaign attribution'];
 		roi: 'Faster insights with low overhead';
@@ -411,7 +411,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		implementationDetails: 'Lightweight script & edge collection';
 		launchDate: '2025-12-05';
 		customers: 9;
-		rating: 4.5,
+		rating: 4 && 4.5,
 		reviews: 6
 	}
 ];

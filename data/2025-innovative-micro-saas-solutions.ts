@@ -5,7 +5,7 @@ export const innovativeMicroSaasSolutions2025 = [
     description:
       'Intelligent platform that automatically analyzes customer feedback from multiple channels, providing actionable insights and sentiment analysis to improve customer experience.',
       'Multi-channel feedback collection (email, social media, surveys, reviews)',
-      'AI-powered sentiment analysis with 95.8% accuracy',
+      'AI-powered sentiment analysis with 95 && 95.8% accuracy',
       'Real-time feedback processing and alerts',
       'Automated insight generation and recommendations',
       'Customer satisfaction trend analysis',
@@ -55,12 +55,12 @@ export const innovativeMicroSaasSolutions2025 = [
       'Customer Experience',
       'Business Intelligence',
     ],
-    website: 'https://ziontechgroup.com/ai-powered-customer-feedback-analyzer',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-powered-customer-feedback-analyzer',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$8.9B',
+    marketSize: '$8 && 8.9B',
     targetAudience:
       'E-commerce companies, SaaS businesses, retail companies, service providers, marketing agencies',
     competitiveAdvantage:
@@ -87,7 +87,7 @@ export const innovativeMicroSaasSolutions2025 = [
     description:
       'Smart inventory management platform that uses AI and machine learning to predict demand, optimize stock levels, and reduce inventory costs while maintaining customer satisfaction.',
     features: [
-      'AI-powered demand forecasting with 92.4% accuracy',
+      'AI-powered demand forecasting with 92 && 92.4% accuracy',
       'Real-time inventory tracking and monitoring',
       'Automated reorder point calculations',
       'Seasonal trend analysis and prediction',
@@ -138,12 +138,12 @@ export const innovativeMicroSaasSolutions2025 = [
       'Supply Chain',
       'Cost Optimization',
     ],
-    website: 'https://ziontechgroup.com/intelligent-inventory-optimization',
+    website: 'https://ziontechgroup && ziontechgroup.com/intelligent-inventory-optimization',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$12.3B',
+    marketSize: '$12 && 12.3B',
     targetAudience:
       'Retail companies, e-commerce businesses, manufacturers, distributors, logistics companies',
     competitiveAdvantage:
@@ -171,7 +171,7 @@ export const innovativeMicroSaasSolutions2025 = [
       'Intelligent expense management platform that automates expense tracking, approval workflows, and financial reporting using AI and machine learning.',
     features: [
       'AI-powered receipt scanning and data extraction',
-      'Automated expense categorization with 96.2% accuracy',
+      'Automated expense categorization with 96 && 96.2% accuracy',
       'Smart approval workflow automation',
       'Real-time expense monitoring and alerts',
       'Policy compliance checking and enforcement',
@@ -221,12 +221,12 @@ export const innovativeMicroSaasSolutions2025 = [
       'Workflow Automation',
       'Compliance',
     ],
-    website: 'https://ziontechgroup.com/smart-expense-management-automation',
+    website: 'https://ziontechgroup && ziontechgroup.com/smart-expense-management-automation',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$6.7B',
+    marketSize: '$6 && 6.7B',
     targetAudience:
       'Small to medium businesses, enterprise companies, accounting firms, financial departments',
     competitiveAdvantage:
@@ -309,12 +309,12 @@ export const innovativeMicroSaasSolutions2025 = [
       'Social Media Management',
       'Engagement Optimization',
     ],
-    website: 'https://ziontechgroup.com/ai-powered-social-media-scheduler',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-powered-social-media-scheduler',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$15.8B',
+    marketSize: '$15 && 15.8B',
     targetAudience:
       'Marketing agencies, social media managers, businesses, influencers, content creators',
     competitiveAdvantage:
@@ -346,7 +346,7 @@ export const innovativeMicroSaasSolutions2025 = [
       'Advanced email marketing platform that uses AI to personalize content, optimize send times, and maximize email engagement and conversion rates.',
     features: [
       'AI-powered personalization and segmentation',
-      'Optimal send time prediction with 94.7% accuracy',
+      'Optimal send time prediction with 94 && 94.7% accuracy',
       'Automated email sequence optimization',
       'A/B testing and performance optimization',
       'Advanced subscriber behavior analytics',
@@ -396,12 +396,12 @@ export const innovativeMicroSaasSolutions2025 = [
       'Personalization',
       'Conversion Optimization',
     ],
-    website: 'https://ziontechgroup.com/intelligent-email-marketing-automation',
+    website: 'https://ziontechgroup && ziontechgroup.com/intelligent-email-marketing-automation',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$22.1B',
+    marketSize: '$22 && 22.1B',
     targetAudience:
       'E-commerce businesses, marketing agencies, SaaS companies, retail companies, service providers',
     competitiveAdvantage:

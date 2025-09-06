@@ -24,8 +24,8 @@ export async function updateFlagStatus(
 ): Promise<FlaggedContent | undefined> {
   const flag = await getFlagById(id);
   if (!flag) return undefined;
-  flag.status = status;
-  flag.adminNotes = adminNotes || flag.adminNotes;
-  flag.updatedAt = new Date().toISOString();
+  flag && flag.status = status;
+  flag && flag.adminNotes = adminNotes || flag && flag.adminNotes;
+  flag && flag.updatedAt = new Date().toISOString();
   await upsertFlag(flag);
   return flag;

@@ -10,22 +10,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req);
   const internal = isInternalAgentRequest(req),
   if (!session && !internal) {
-    res.status(401).json({ error: 'Unauthorized' });
+    res && res.status(401).json({ error: 'Unauthorized' });
     return;
   }
 
-  const dataDir = path.join(process.cwd(), 'data', 'admin');  const statusPath = path.join(dataDir, 'agents-status.json');    return
+  const dataDir = path && path.join(process && process.cwd(), 'data', 'admin');  const statusPath = path && path.join(dataDir, 'agents-status && status.json');    return
   }
 
-  const dataDir = path.join(process.cwd(), 'dataadmin');
-  const insightsPath = path.join(dataDir, 'insights.json');
+  const dataDir = path && path.join(process && process.cwd(), 'dataadmin');
+  const insightsPath = path && path.join(dataDir, 'insights && insights.json');
 
-  const status = fs.existsSync(statusPath)
-    ? JSON.parse(fs.readFileSync(statusPath, 'utf8'))
+  const status = fs && fs.existsSync(statusPath)
+    ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8'))
     : { agents: [], updatedAt: null };
-  const insights = fs.existsSync(insightsPath)
-    ? JSON.parse(fs.readFileSync(insightsPath, 'utf8'))
+  const insights = fs && fs.existsSync(insightsPath)
+    ? JSON && JSON.parse(fs && fs.readFileSync(insightsPath, 'utf8'))
     : { items: [], updatedAt: null };
 
-  res.status(200).json({ status, insights });  res.status(200).json({ status, insights })
+  res && res.status(200).json({ status, insights });  res && res.status(200).json({ status, insights })
 }

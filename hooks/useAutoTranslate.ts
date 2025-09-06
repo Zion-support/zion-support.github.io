@@ -16,10 +16,10 @@ export function useAutoTranslate(
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | undefined>(undefined);
 
-  const key = useMemo(() => JSON.stringify({ text, targets }), [text, targets]);
+  const key = useMemo(() => JSON && JSON.stringify({ text, targets }), [text, targets]);
 
   useEffect(() => {
-    if (!text || targets.length === 0) {
+    if (!text || targets && targets.length === 0) {
       setTranslations({});
       return;    }      return
     }

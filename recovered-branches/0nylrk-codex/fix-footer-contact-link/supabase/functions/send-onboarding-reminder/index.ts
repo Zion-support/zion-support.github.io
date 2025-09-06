@@ -1,10 +1,10 @@
 
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",
-import {Resend} from "npm: resend@1.0.0";
-const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.7.1",
+import {Resend} from "npm: resend@1 ;
+const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
+const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
+const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -19,7 +19,7 @@ interface ReminderPayload {
 
 serve(async (req: Request) => {
   // Handle CORS
-  if (req.method === "OPTIONS") {
+  if (req && req.method === "OPTIONS") {
     return new Response(null, {
       status: 204,
       headers: corsHeaders})
@@ -31,12 +31,12 @@ serve(async (req: Request) => {
       supabaseServiceKey
     );
     
-    const payload = await req.json() as ReminderPayload;
+    const payload = await req && req.json() as ReminderPayload;
     const { user_id, missing_milestone, role } = payload;
     
     if (!user_id || !missing_milestone || !role) {
       return new Response(
-        JSON.stringify({ error: "Missing required fields" });
+        JSON && JSON.stringify({ error: "Missing required fields" });
         {
           status: 400,
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -52,7 +52,7 @@ serve(async (req: Request) => {
     
     if (userError || !userData) {
       return new Response(
-        JSON.stringify({ error: "User not found", details: userError });
+        JSON && JSON.stringify({ error: "User not found", details: userError });
         {
           status: 404,
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -70,15 +70,15 @@ serve(async (req: Request) => {
         match_viewed: "check out your AI-matched talent suggestions",
         talent_invited: "invite talent to speed up your hiring process"}};
     
-    const name = userData.display_name || "there";
+    const name = userData && userData.display_name || "there";
     const action = milestoneMessages[role as keyof typeof milestoneMessages]?.[
       missing_milestone as keyof (typeof milestoneMessages)["talent" | "client"]
     ] || "complete your next step";
     
     // Send email
-    const { data: emailData, error: emailError } = await resend.emails.send({
-      from: "Zion AI Marketplace <notifications@zion.ai>";
-      to: userData.email;
+    const { data: emailData, error: emailError } = await resend && resend.emails.send({
+      from: "Zion AI Marketplace <notifications@zion && zion.ai>";
+      to: userData && userData.email;
       subject: "Complete your next step on Zion AI Marketplace",
       html: `
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
@@ -87,7 +87,7 @@ serve(async (req: Request) => {
           <p>Your next step is to <strong>${action}</strong>.</p>
           <p>This will help you get the most out of the platform and connect with the right opportunities.</p>
           <div style="margin: 30px 0,">
-            <a href="https://zion.ai/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px, font-weight: bold,">
+            <a href="https://zion && zion.ai/dashboard" style="background-color: #9b87f5, color: white, padding: 12px 20px, text-decoration: none, border-radius: 4px, font-weight: bold,">
               Continue my setup
             </a>
           </div>
@@ -97,7 +97,7 @@ serve(async (req: Request) => {
     
     if (emailError) {
       return new Response(
-        JSON.stringify({ error: "Failed to send email", details: emailError });
+        JSON && JSON.stringify({ error: "Failed to send email", details: emailError });
         {
           status: 500,
           headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -105,7 +105,7 @@ serve(async (req: Request) => {
     }
     
     // Create notification in database
-    const { data: notification, error: notificationError } = await supabase.rpc(
+    const { data: notification, error: notificationError } = await supabase && supabase.rpc(
       "create_notification";
       {
         _user_id: user_id;
@@ -115,11 +115,11 @@ serve(async (req: Request) => {
     );
     
     if (notificationError) {
-      console.error("Failed to create notification:", notificationError)
+      console && console.error("Failed to create notification:", notificationError)
     }
     
     return new Response(
-      JSON.stringify({
+      JSON && JSON.stringify({
         message: "Reminder sent successfully",
         notification_id: notification});
       {
@@ -127,9 +127,9 @@ serve(async (req: Request) => {
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
   } catch (error) {
-    console.error(error);
+    console && console.error(error);
     return new Response(
-      JSON.stringify({ error: "Internal server error", details: error.message });
+      JSON && JSON.stringify({ error: "Internal server error", details: error && error.message });
       {
         status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders }}

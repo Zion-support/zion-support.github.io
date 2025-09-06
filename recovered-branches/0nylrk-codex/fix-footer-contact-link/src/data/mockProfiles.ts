@@ -5,12 +5,12 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     name: 'TechSolutions Inc.',
     title: 'Enterprise AI Integration Services',
     avatarUrl:
-      'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=200&h=200',
     coverImageUrl:
-      'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600',
+      'https://images && images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600',
     bio: 'Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.',
     location: 'San Francisco, CA',
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviewCount: 124,
     aiScore: 95,
     profileType: 'service' as 'service' | 'talent',
@@ -30,7 +30,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         description:
           'Built an AI-powered system for medical diagnostics, reducing diagnosis time by 60%.',
         imageUrl:
-          'https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&h=300',
+          'https://images && images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&h=300',
         tags: ['Healthcare', 'AI', 'Machine Learning'],
         date: 'Oct 2023',
       },
@@ -40,7 +40,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         description:
           'Developed predictive models for investment analysis with 92% accuracy.',
         imageUrl:
-          'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',
+          'https://images && images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300',
         tags: ['Finance', 'Analytics', 'Python'],
         date: 'Jun 2023',
       },
@@ -50,7 +50,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         description:
           'Implemented ML algorithms to optimize logistics, reducing costs by 28%.',
         imageUrl:
-          'https://images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300',
+          'https://images && images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300',
         tags: ['Logistics', 'Optimization', 'AI'],
         date: 'Jan 2023',
       },
@@ -94,12 +94,12 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
     name: 'Alexandra Chen',
     title: 'Senior AI Engineer & Machine Learning Expert',
     avatarUrl:
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200',
+      'https://images && images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200',
     coverImageUrl:
-      'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1600&h=600',
+      'https://images && images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1600&h=600',
     bio: 'AI specialist with expertise in computer vision and natural language processing.',
     location: 'Boston, MA',
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviewCount: 43,
     aiScore: 97,
     profileType: 'talent' as 'service' | 'talent',
@@ -119,7 +119,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         description:
           'Built a state-of-the-art facial recognition system using deep learning.',
         imageUrl:
-          'https://images.unsplash.com/photo-1526378800651-c32d170fe6f8?auto=format&fit=crop&w=500&h=300',
+          'https://images && images.unsplash.com/photo-1526378800651-c32d170fe6f8?auto=format&fit=crop&w=500&h=300',
         tags: ['Computer Vision', 'Deep Learning', 'Python'],
         date: 'Sep 2023',
       },
@@ -129,7 +129,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         description:
           'Created an API for real-time sentiment analysis of customer feedback.',
         imageUrl:
-          'https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=500&h=300',
+          'https://images && images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&w=500&h=300',
         tags: ['NLP', 'API', 'Python'],
         date: 'May 2023',
       },
@@ -139,7 +139,7 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         description:
           'Developed ML models to predict equipment failures before they occur.',
         imageUrl:
-          'https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=500&h=300',
+          'https://images && images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=500&h=300',
         tags: ['Predictive Analytics', 'IoT', 'Machine Learning'],
         date: 'Dec 2022',
       },

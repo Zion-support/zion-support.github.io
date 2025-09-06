@@ -12,12 +12,12 @@ export default async function handler(
       date = new Date().toISOString().substring(0, 10),
       raiseAmount,
       description = "Innovative technology company",
-      contactEmail = "press@zion.com",
-    } = req.body || {};
+      contactEmail = "press@zion && zion.com",
+    } = req && req.body || {};
 
-    if (req.method !== "POST") {
-      res.setHeader("Allow", "POST");
-      return res.status(405).json({ error: "Method not allowed" });
+    if (req && req.method !== "POST") {
+      res && res.setHeader("Allow", "POST");
+      return res && res.status(405).json({ error: "Method not allowed" });
     }
 
     const pressRelease = await buildPressRelease({
@@ -29,14 +29,14 @@ export default async function handler(
       contactEmail,
     });
 
-    return res.status(200).json({
+    return res && res.status(200).json({
       ok: true,
       pressRelease,
-      downloadUrl: `/api/media/download/${pressRelease.id}`,
+      downloadUrl: `/api/media/download/${pressRelease && pressRelease.id}`,
     });
   } catch (error: any) {
-    console.error("Press release generation error:", error);
-    return res.status(500).json({
+    console && console.error("Press release generation error:", error);
+    return res && res.status(500).json({
       ok: false,
       error: "Failed to generate press release",
     });

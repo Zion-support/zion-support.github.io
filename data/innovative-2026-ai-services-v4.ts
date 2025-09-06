@@ -69,7 +69,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     icon: '🧠',
     color: 'from-purple-600 to-pink-600',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/services/ai-consciousness-simulation-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-consciousness-simulation-platform',
     marketPosition:
       'First AI consciousness simulation platform. Competes with basic AI models but offers consciousness simulation capabilities.',
     targetAudience:
@@ -111,16 +111,16 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     variant: 'ai-consciousness',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Full AI consciousness simulation platform with cognitive modeling, emotional intelligence, and comprehensive research tools.',
     launchDate: '2024-12-01',
     customers: 23,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 67,
   },
 
@@ -149,7 +149,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     icon: '🤖',
     color: 'from-blue-600 to-cyan-600',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/services/autonomous-ai-agents-platform-2026',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/autonomous-ai-agents-platform-2026',
     marketPosition:
       'Advanced autonomous AI agents platform. Competes with basic automation tools but offers true AI autonomy.',
     targetAudience:
@@ -169,7 +169,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     ],
     integrations: [
       'Zapier',
-      'Make.com',
+      'Make && Make.com',
       'Custom APIs',
       'Business systems',
       'Cloud platforms',
@@ -192,16 +192,16 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     variant: 'ai-autonomous',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Full autonomous AI agents platform with learning capabilities, multi-agent coordination, and comprehensive automation features.',
     launchDate: '2024-11-15',
     customers: 156,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 289,
   },
 
@@ -230,7 +230,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     icon: '🏥',
     color: 'from-green-600 to-emerald-600',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/services/ai-healthcare-companion-2026',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-healthcare-companion-2026',
     marketPosition:
       'Advanced AI healthcare companion. Competes with basic health apps but offers AI-powered personalized care.',
     targetAudience:
@@ -273,16 +273,16 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     variant: 'ai-healthcare',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Full AI healthcare companion platform with personalized monitoring, health insights, and comprehensive healthcare integration.',
     launchDate: '2024-10-01',
     customers: 234,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 456,
   },
 
@@ -311,7 +311,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     icon: '✍️',
     color: 'from-indigo-600 to-purple-600',
     textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/services/ai-content-creation-revolution',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-content-creation-revolution',
     marketPosition:
       'Revolutionary AI content creation platform. Competes with basic AI writers but offers unlimited multi-format content generation.',
     targetAudience:
@@ -354,16 +354,16 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     variant: 'ai-creative',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Full AI content creation platform with unlimited generation, multi-format support, and comprehensive content optimization.',
     launchDate: '2024-09-15',
     customers: 567,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 892,
   },
 
@@ -392,7 +392,7 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     icon: '❤️',
     color: 'from-red-600 to-pink-600',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/services/ai-emotional-intelligence-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-emotional-intelligence-platform',
     marketPosition:
       'Advanced AI emotional intelligence platform. Competes with basic sentiment analysis but offers comprehensive emotional understanding.',
     targetAudience:
@@ -435,28 +435,28 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     variant: 'ai-emotional',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Full AI emotional intelligence platform with emotion recognition, sentiment analysis, and comprehensive emotional response capabilities.',
     launchDate: '2024-08-01',
     customers: 89,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 167,
   },
 ];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Full AI emotional intelligence platform with emotion recognition, sentiment analysis, and comprehensive emotional response capabilities.';
     launchDate: '2024-08-01';
     customers: 89;
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 167
   }
 ];

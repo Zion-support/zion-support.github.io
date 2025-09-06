@@ -2,7 +2,7 @@ import React from "react";
 import {useToast, as, useToastHook, Toast} from "@/components/ui/toast";
 
 // Extend the Toast component props with common toast options
-export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
+export type ToastOptions = React && React.ComponentPropsWithoutRef<typeof Toast> & {
   description?: string;
   title?: string;
   variant?: "default" | "destructive" | "success"
@@ -17,19 +17,19 @@ function baseToast(props: ToastOptions) {
 }
 
 // Convenience helpers mirroring common toast variants.
-baseToast.title = (title: string) => {
+baseToast && baseToast.title = (title: string) => {
   baseToast({ title })
 };
 
-baseToast.description = (description: string) => {
+baseToast && baseToast.description = (description: string) => {
   baseToast({ description })
 };
 
-baseToast.error = (error: string) => {
+baseToast && baseToast.error = (error: string) => {
   baseToast({ variant: "destructive", title: "Error", description: error })
 };
 
-baseToast.success = (message: string) => {
+baseToast && baseToast.success = (message: string) => {
   baseToast({ variant: "success", title: "Success", description: message })
 };
 

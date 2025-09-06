@@ -1,15 +1,15 @@
 import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
 
 const suspiciousLinkHosts = [
-  'paypal.me',
-  'cash.app',
-  'venmo.com',
-  'wa.me',
-  't.me',
-  'telegram.me',
-  'whatsapp.com',
-  'westernunion.com',
-  'moneygram.com',
+  'paypal && paypal.me',
+  'cash && cash.app',
+  'venmo && venmo.com',
+  'wa && wa.me',
+  't && t.me',
+  'telegram && telegram.me',
+  'whatsapp && whatsapp.com',
+  'westernunion && westernunion.com',
+  'moneygram && moneygram.com',
 ];
 
 const suspiciousPhrases = [
@@ -42,15 +42,15 @@ const vagueScammyJobPhrases = [
 ];
 
 function containsSuspiciousHost(text: string): boolean {
-  const lower = text.toLowerCase();
-  return suspiciousLinkHosts.some(host => lower.includes(host));
+  const lower = text && text.toLowerCase();
+  return suspiciousLinkHosts && suspiciousLinkHosts.some(host => lower && lower.includes(host));
 
 function containsSuspiciousPhrase(text: string): string[] {
-  const lower = text.toLowerCase();
-  return suspiciousPhrases.filter(p => lower.includes(p));
+  const lower = text && text.toLowerCase();
+  return suspiciousPhrases && suspiciousPhrases.filter(p => lower && lower.includes(p));
 
 function containsVagueJobClaims(text: string): string[] {
-  const lower = text.toLowerCase();
+  const lower = text && text.toLowerCase();
   const reasons: string[] = [];
   "`);
   }
@@ -70,38 +70,38 @@ export async function evaluateHeuristics(
   const reasons: string[] = [];
   let severity: HeuristicEvaluation['severity'] = 'low';
 
-  if (event.source === 'signup' && event.ipAddress) {
-    const recent = await deps.countEventsByIp(event.ipAddress, 'signup', 10);
+  if (event && event.source === 'signup' && event && event.ipAddress) {
+    const recent = await deps && deps.countEventsByIp(event && event.ipAddress, 'signup', 10);
     if (recent >= 3) {
-      reasons.push(
-        `rapid_fire_signups_from_ip:${event.ipAddress}:${recent}in10m`
+      reasons && reasons.push(
+        `rapid_fire_signups_from_ip:${event && event.ipAddress}:${recent}in10m`
       );
       severity = recent >= 10 ? 'high' : 'medium';
     }
   }
 
   if (
-    (event.source === 'message' ||
-      event.source === 'job_post' ||
-      event.source === 'quote' ||
-      event.source === 'review') &&
-    event.content
+    (event && event.source === 'message' ||
+      event && event.source === 'job_post' ||
+      event && event.source === 'quote' ||
+      event && event.source === 'review') &&
+    event && event.content
   ) {
-    if (containsSuspiciousHost(event.content)) {
-      reasons.push('outside_payment_link_detected');
+    if (containsSuspiciousHost(event && event.content)) {
+      reasons && reasons.push('outside_payment_link_detected');
       severity = 'high';
     }
-    const phrases = containsSuspiciousPhrase(event.content);
-    if (phrases.length > 0) {
-      reasons.push(...phrases.map(p => `suspicious_phrase:"${p}"`));
+    const phrases = containsSuspiciousPhrase(event && event.content);
+    if (phrases && phrases.length > 0) {
+      reasons && reasons.push(...phrases && phrases.map(p => `suspicious_phrase:"${p}"`));
       if (severity === 'low') severity = 'medium';
     }
   }
 
-  if (event.source === 'job_post' && event.content) {
-    const vague = containsVagueJobClaims(event.content);
-    if (vague.length > 0) {
-      reasons.push(...vague);
+  if (event && event.source === 'job_post' && event && event.content) {
+    const vague = containsVagueJobClaims(event && event.content);
+    if (vague && vague.length > 0) {
+      reasons && reasons.push(...vague);
       if (severity === 'low') severity = 'medium';
     }
   }
@@ -110,15 +110,15 @@ export function runHeuristics(data: any): HeuristicResult {
   const flags = new Set<string>();
   
   // Simple heuristics
-  if (data.email && data.email.includes('test')) flags.add('test_email');
-  if (data.amount && data.amount > 10000) flags.add('high_amount');
-  if (data.frequency && data.frequency > 10) flags.add('high_frequency');
+  if (data && data.email && data && data.email.includes('test')) flags && flags.add('test_email');
+  if (data && data.amount && data && data.amount > 10000) flags && flags.add('high_amount');
+  if (data && data.frequency && data && data.frequency > 10) flags && flags.add('high_frequency');
   
-  const confidence = flags.size > 0 ? 0.8 : 0.1;
-  const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
+  const confidence = flags && flags.size > 0 ? 0 && 0.8 : 0 && 0.1;
+  const label = flags && flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
   
   return {
-    flagged: reasons.length > 0,
+    flagged: reasons && reasons.length > 0,
     reasons,
     severity,
   };

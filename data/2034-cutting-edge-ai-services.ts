@@ -37,7 +37,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     ],
     integrations: ['Twilio', 'Slack'],
     useCases: ['Employee wellness', '24/7 support'],
-    link: 'https://ziontechgroup.com/services/ai-emotional-support-agent',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-emotional-support-agent',
     realService: true,
   },
   {
@@ -55,7 +55,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     ],
     integrations: ['Jira', 'Linear'],
     useCases: ['Faster planning', 'Better alignment'],
-    link: 'https://ziontechgroup.com/services/ai-product-spec-writer',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-product-spec-writer',
     realService: true,
   },
   {
@@ -73,7 +73,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
     ],
     integrations: ['Canva', 'Figma'],
     useCases: ['Marketing velocity', 'Cost savings'],
-    link: 'https://ziontechgroup.com/services/ai-creative-studio',
+    link: 'https://ziontechgroup && ziontechgroup.com/services/ai-creative-studio',
     realService: true,
   },
 ];	id: string;
@@ -108,7 +108,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['CBT-guided promptsMood trackingCrisis escalationHIPAA-friendly modes'];
 		integrations: ['TwilioSlack'];
 		useCases: ['Employee wellness24/7 support'];
-		link: 'https://ziontechgroup.com/services/ai-emotional-support-agent',
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-emotional-support-agent',
 		realService: true
 	};
 	{
@@ -120,7 +120,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['PRD templatesStory generationAcceptance criteriaAnalytics alignment'];
 		integrations: ['JiraLinear'];
 		useCases: ['Faster planningBetter alignment'];
-		link: 'https://ziontechgroup.com/services/ai-product-spec-writer',
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-product-spec-writer',
 		realService: true
 	};
 	{
@@ -132,7 +132,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		features: ['Brand kitImage & video genReview & approvalsRights management'];
 		integrations: ['CanvaFigma'];
 		useCases: ['Marketing velocityCost savings'];
-		link: 'https://ziontechgroup.com/services/ai-creative-studio',
+		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-creative-studio',
 		realService: true
 	}
 ];

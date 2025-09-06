@@ -59,7 +59,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     ],
     benefits: [
       'Reduce operational costs by 90%',
-      'Improve system reliability by 99.9%',
+      'Improve system reliability by 99 && 99.9%',
       'Accelerate deployment cycles by 10x',
       'Eliminate manual interventions',
       'Enhance security posture',
@@ -73,7 +73,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Infrastructure automation',
       'Performance optimization',
     ],
-    marketSize: '$25.8B by 2029',
+    marketSize: '$25 && 25.8B by 2029',
     competitors: ['GitLab', 'Jenkins', 'CircleCI', 'GitHub Actions'],
     technology: ['AI/ML', 'Kubernetes', 'Terraform', 'Monitoring Tools'],
     integration: ['Cloud platforms', 'CI/CD tools', 'Monitoring systems'],
@@ -100,8 +100,8 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     exit: 'IPO or enterprise acquisition',
     contact: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
@@ -143,7 +143,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Optimization problems',
       'Research and development',
     ],
-    marketSize: '$35.2B by 2029',
+    marketSize: '$35 && 35.2B by 2029',
     competitors: ['AWS', 'Microsoft Azure', 'Google Cloud', 'IBM Cloud'],
     technology: [
       'Quantum Computing',
@@ -173,8 +173,8 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     exit: 'IPO or cloud acquisition',
     contact: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
@@ -216,7 +216,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Security automation',
       'Risk assessment',
     ],
-    marketSize: '$38.7B by 2029',
+    marketSize: '$38 && 38.7B by 2029',
     competitors: ['CrowdStrike', 'SentinelOne', 'Darktrace', 'Cylance'],
     technology: [
       'AI/ML',
@@ -246,15 +246,15 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     exit: 'IPO or security acquisition',
     contact: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
     id: 'autonomous-it-operations-center',
     name: 'Autonomous IT Operations Center',
     description:
-      'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99.99% uptime and optimal performance.',
+      'Fully autonomous IT operations center that manages enterprise IT infrastructure, applications, and services without human intervention, providing 99 && 99.99% uptime and optimal performance.',
     category: [
       'IT Operations',
       'Automation',
@@ -274,7 +274,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Continuous optimization',
     ],
     benefits: [
-      'Achieve 99.99% uptime',
+      'Achieve 99 && 99.99% uptime',
       'Reduce operational costs by 85%',
       'Eliminate manual interventions',
       'Improve system performance',
@@ -289,7 +289,7 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       'Service desk automation',
       'IT service management',
     ],
-    marketSize: '$28.9B by 2029',
+    marketSize: '$28 && 28.9B by 2029',
     competitors: ['ServiceNow', 'BMC', 'Micro Focus', 'Ivanti'],
     technology: ['AI/ML', 'Automation', 'Monitoring', 'ITSM'],
     integration: ['ITSM platforms', 'Monitoring tools', 'Enterprise systems'],
@@ -310,14 +310,14 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     exit: 'IPO or enterprise acquisition',
     contact: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      website: 'https://ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },
 ];      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
     ];
-    marketSize: '$28.9B by 2029';
+    marketSize: '$28 && 28.9B by 2029';
     competitors: ['ServiceNowBMCMicro FocusIvanti'];
     technology: ['AI/MLAutomationMonitoringITSM'];
     integration: ['ITSM platformsMonitoring toolsEnterprise systems'];
@@ -344,8 +344,8 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     exit: 'IPO or enterprise acquisition';
     contact: {
       mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      website: 'https://ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
+      website: 'https://ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }

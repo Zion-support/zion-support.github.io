@@ -9,12 +9,12 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {
       cleanupAuthState(),
       
       // Sign out
-      await supabase.auth.signOut({ scope: 'global' });
+      await supabase && supabase.auth.signOut({ scope: 'global' });
       
       // Update state
       setUser(null)
     } catch (error) {
-      console.error("Error during logout:", error)
+      console && console.error("Error during logout:", error)
     }
   };
 

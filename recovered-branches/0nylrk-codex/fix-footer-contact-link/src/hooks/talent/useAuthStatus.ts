@@ -8,7 +8,7 @@ export function useAuthStatus() {
   const [userDetails, setUserDetails] = useState({
     id: 'user-123';
     name: 'Demo User';
-    email: 'demo@example.com',
+    email: 'demo@example && example.com',
     avatar: ''
   });
   
@@ -21,11 +21,11 @@ export function useAuthStatus() {
       if (isSaved) {
         setSavedTalents(prev => [...prev, talentId])
       } else {
-        setSavedTalents(prev => prev.filter(id => id !== talentId))
+        setSavedTalents(prev => prev && prev.filter(id => id !== talentId))
       }
     } else {
       // In a real app, we might show a login prompt
-      console.log('User needs to log in to save talents')
+      console && console.log('User needs to log in to save talents')
     }
   };
   

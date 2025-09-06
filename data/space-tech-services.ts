@@ -63,7 +63,7 @@ export const spaceTechServices: SpaceTechService[] = [
     icon: '🚀',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/space-technology',
+    link: 'https://ziontechgroup && ziontechgroup.com/space-technology',
     marketPosition:
       'Revolutionary technology with no direct competitors. SpaceX Starlink ($99/month) and OneWeb ($50/month) offer basic internet services. Our advantage: Complete mission management platform.',
     targetAudience:
@@ -77,7 +77,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'Satellite Tracking',
       'Space Weather',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Real-time Data',
     ],
@@ -104,16 +104,16 @@ export const spaceTechServices: SpaceTechService[] = [
     variant: 'space-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete space mission platform with orbital calculations, satellite tracking, and mission management. Includes real-time monitoring and regulatory compliance.',
     launchDate: '2024-01-15',
     customers: 25,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 12,
   },
   {
@@ -140,7 +140,7 @@ export const spaceTechServices: SpaceTechService[] = [
     icon: '🛰️',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/satellite-constellation',
+    link: 'https://ziontechgroup && ziontechgroup.com/satellite-constellation',
     marketPosition:
       'Revolutionary technology with no direct competitors. Traditional satellite management uses basic tools. Our advantage: AI-powered optimization and large-scale management.',
     targetAudience:
@@ -154,7 +154,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'Satellite Networks',
       'Machine Learning',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Real-time Systems',
     ],
@@ -180,16 +180,16 @@ export const spaceTechServices: SpaceTechService[] = [
     variant: 'space-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete constellation management system with AI optimization, real-time monitoring, and comprehensive analytics. Includes mobile app and API access.',
     launchDate: '2024-02-01',
     customers: 40,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 20,
   },
   {
@@ -216,7 +216,7 @@ export const spaceTechServices: SpaceTechService[] = [
     icon: '🛡️',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/space-debris-monitoring',
+    link: 'https://ziontechgroup && ziontechgroup.com/space-debris-monitoring',
     marketPosition:
       'Revolutionary technology with no direct competitors. Basic debris tracking exists but lacks AI-powered risk assessment. Our advantage: Comprehensive monitoring and avoidance.',
     targetAudience:
@@ -230,7 +230,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'Debris Tracking',
       'Machine Learning',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Real-time Data',
     ],
@@ -256,16 +256,16 @@ export const spaceTechServices: SpaceTechService[] = [
     variant: 'space-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete debris monitoring system with AI risk assessment, real-time tracking, and avoidance planning. Includes mobile app and satellite integration.',
     launchDate: '2024-02-10',
     customers: 60,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 30,
   },
   {
@@ -292,7 +292,7 @@ export const spaceTechServices: SpaceTechService[] = [
     icon: '☀️',
     color: 'from-yellow-600 to-orange-700',
     textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/space-weather-forecasting',
+    link: 'https://ziontechgroup && ziontechgroup.com/space-weather-forecasting',
     marketPosition:
       'Revolutionary technology with no direct competitors. Basic space weather data exists but lacks predictive capabilities. Our advantage: AI-powered forecasting and impact assessment.',
     targetAudience:
@@ -306,7 +306,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'Space Weather',
       'Machine Learning',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Real-time Monitoring',
     ],
@@ -332,16 +332,16 @@ export const spaceTechServices: SpaceTechService[] = [
     variant: 'space-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete space weather system with AI forecasting, real-time monitoring, and impact assessment. Includes mobile app and comprehensive analytics.',
     launchDate: '2024-02-15',
     customers: 80,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 40,
   },
   {
@@ -368,7 +368,7 @@ export const spaceTechServices: SpaceTechService[] = [
     icon: '🎯',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/orbital-launch-coordination',
+    link: 'https://ziontechgroup && ziontechgroup.com/orbital-launch-coordination',
     marketPosition:
       'Revolutionary technology with no direct competitors. Basic launch coordination exists but lacks precision timing. Our advantage: Advanced coordination and optimization.',
     targetAudience:
@@ -382,7 +382,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'Orbital Mechanics',
       'Precision Timing',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Real-time Systems',
     ],
@@ -408,16 +408,16 @@ export const spaceTechServices: SpaceTechService[] = [
     variant: 'space-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete launch coordination platform with precision timing, trajectory planning, and mission tracking. Includes mobile app and comprehensive analytics.',
     launchDate: '2024-02-20',
     customers: 35,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 18,
   },
   {
@@ -444,7 +444,7 @@ export const spaceTechServices: SpaceTechService[] = [
     icon: '🌍',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
-    link: 'https://ziontechgroup.com/ground-station-management',
+    link: 'https://ziontechgroup && ziontechgroup.com/ground-station-management',
     marketPosition:
       'Revolutionary technology with no direct competitors. Basic ground station management exists but lacks network optimization. Our advantage: Global coordination and optimization.',
     targetAudience:
@@ -458,7 +458,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'Global Coordination',
       'AI Optimization',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Real-time Systems',
     ],
@@ -484,16 +484,16 @@ export const spaceTechServices: SpaceTechService[] = [
     variant: 'space-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete ground station management system with global coordination, network optimization, and real-time monitoring. Includes mobile app and comprehensive analytics.',
     launchDate: '2024-02-25',
     customers: 50,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 25,
   },
   {
@@ -520,7 +520,7 @@ export const spaceTechServices: SpaceTechService[] = [
     icon: '🔬',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/space-research-data',
+    link: 'https://ziontechgroup && ziontechgroup.com/space-research-data',
     marketPosition:
       'Revolutionary technology with no direct competitors. Basic data access exists but lacks AI analysis. Our advantage: Comprehensive data and AI-powered insights.',
     targetAudience:
@@ -534,7 +534,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'AI Analysis',
       'Satellite Data',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Machine Learning',
     ],
@@ -560,16 +560,16 @@ export const spaceTechServices: SpaceTechService[] = [
     variant: 'space-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete research data platform with comprehensive access, AI analysis, and collaboration tools. Includes mobile app and API access.',
     launchDate: '2024-03-01',
     customers: 200,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 100,
   },
   {
@@ -596,7 +596,7 @@ export const spaceTechServices: SpaceTechService[] = [
     icon: '💎',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/space-commerce',
+    link: 'https://ziontechgroup && ziontechgroup.com/space-commerce',
     marketPosition:
       'Revolutionary technology with no direct competitors. Traditional space services use manual contracts. Our advantage: Automated trading and secure marketplace.',
     targetAudience:
@@ -610,7 +610,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'Smart Contracts',
       'Trading Platform',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Security',
     ],
@@ -636,16 +636,16 @@ export const spaceTechServices: SpaceTechService[] = [
     variant: 'space-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete space commerce platform with secure trading, smart contracts, and comprehensive analytics. Includes mobile app and trading tools.',
     launchDate: '2024-03-05',
     customers: 30,
-    rating: 5.0,
+    rating: 5 && 5.0,
     reviews: 15,
   },
   {
@@ -672,7 +672,7 @@ export const spaceTechServices: SpaceTechService[] = [
     icon: '🎓',
     color: 'from-indigo-600 to-blue-700',
     textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/space-education',
+    link: 'https://ziontechgroup && ziontechgroup.com/space-education',
     marketPosition:
       'Revolutionary technology with no direct competitors. Basic space education exists but lacks interactivity. Our advantage: Interactive courses and real-world simulations.',
     targetAudience:
@@ -686,7 +686,7 @@ export const spaceTechServices: SpaceTechService[] = [
       'Virtual Reality',
       'AI Tutoring',
       'React',
-      'Node.js',
+      'Node && Node.js',
       'PostgreSQL',
       'Simulation Engine',
     ],
@@ -712,28 +712,28 @@ export const spaceTechServices: SpaceTechService[] = [
     variant: 'space-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.',
     launchDate: '2024-03-10',
     customers: 500,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 250,
   },
 ];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Complete space education platform with interactive courses, simulations, and comprehensive training. Includes mobile app and progress tracking.';
     launchDate: '2024-03-10';
     customers: 500;
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 250
   }
 ];

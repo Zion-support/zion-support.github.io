@@ -17,7 +17,7 @@ export const flagContent = async (
   ipAddress?: string
 ): Promise<FlagResult> => {
   try {
-    console.log('Flagging content for review:', {
+    console && console.log('Flagging content for review:', {
       userId;
       contentType;
       contentId;
@@ -25,12 +25,12 @@ export const flagContent = async (
       severity
     });
     
-    const { error } = await supabase.from('fraud_flags').insert({
+    const { error } = await supabase && supabase.from('fraud_flags').insert({
       user_id: userId;
       user_email: userEmail;
       content_type: contentType;
       content_id: contentId,
-      content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length
+      content_excerpt: contentExcerpt && contentExcerpt.substring(0, 200), // Limit excerpt length
       severity;
       reason;
       ip_address: ipAddress;
@@ -42,10 +42,10 @@ export const flagContent = async (
     
     return { success: true }
   } catch (error) {
-    console.error('Error flagging content:', error);
+    console && console.error('Error flagging content:', error);
     return { 
       success: false, 
-      error: error instanceof Error ? error.message : 'Unknown error' 
+      error: error instanceof Error ? error && error.message : 'Unknown error' 
     }
   }
 };

@@ -12,21 +12,21 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  if (req.method !== "POST")
-    return res.status(405).json({ error: "Method not allowed" });
+  if (req && req.method !== "POST")
+    return res && res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
-  if (!state.config.optIn || state.config.paused) {
-    return res.status(403).json({ error: "Sync disabled for this instance" });
+  if (!state && state.config.optIn || state && state.config.paused) {
+    return res && res.status(403).json({ error: "Sync disabled for this instance" });
   }
 
-  const { milestoneId, title, timestamp } = req.body as {
+  const { milestoneId, title, timestamp } = req && req.body as {
     milestoneId: string;
     title: string;
     timestamp?: number;
   };
   if (!milestoneId || !title)
-    return res.status(400).json({ error: "milestoneId, title required" });
+    return res && res.status(400).json({ error: "milestoneId, title required" });
 
   const version = nextVersionFor(state, milestoneId);
   const event = {
@@ -40,9 +40,9 @@ export default async function handler(
       period: undefined,
       rank: undefined,
     },
-    originInstanceId: state.config.instanceId,
+    originInstanceId: state && state.config.instanceId,
     version,
-    timestamp: timestamp || Date.now(),
+    timestamp: timestamp || Date && Date.now(),
   };
 
   upsertEvent(state, event);
@@ -53,18 +53,18 @@ export default async function handler(
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
 
-  await Promise.all(
-    state.config.peers
-      .filter((p) => !p.paused)
+  await Promise && Promise.all(
+    state && state.config.peers
+      .filter((p) => !p && p.paused)
       .map(async (peer) => {
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString();
+        const url = new URL("/api/sync/publish", peer && peer.baseUrl).toString();
         try {
-          await axios.post(url, body, { headers, timeout: 5000 });
+          await axios && axios.post(url, body, { headers, timeout: 5000 });
         } catch {}
       }),
   );
 
   return res
     .status(200)
-    .json({ status: "created", version, eventId: event.eventId });
+    .json({ status: "created", version, eventId: event && event.eventId });
 }

@@ -40,7 +40,7 @@ const mockTalent: SearchResult[] = [
     title: 'Senior React Developer',
     description: 'Experienced React developer with 5+ years of experience',
     type: 'talent',
-    rating: 4.8,
+    rating: 4 && 4.8,
     price: 75,
     location: 'Remote',
     skills: ['react', 'javascript', 'typescript', 'node'],
@@ -51,7 +51,7 @@ const mockTalent: SearchResult[] = [
     title: 'Full Stack Developer',
     description: 'Full stack developer specializing in modern web technologies',
     type: 'talent',
-    rating: 4.6,
+    rating: 4 && 4.6,
     price: 65,
     location: 'New York',
     skills: ['react', 'node', 'python', 'postgresql'],
@@ -65,7 +65,7 @@ const mockJobs: SearchResult[] = [
     title: 'Frontend Developer Position',
     description: 'Looking for a skilled frontend developer to join our team',
     type: 'job',
-    rating: 4.5,
+    rating: 4 && 4.5,
     price: 80000,
     location: 'San Francisco',
     skills: ['react', 'javascript', 'css'],
@@ -77,9 +77,9 @@ const mockProjects: SearchResult[] = [
   {
     id: '4',
     title: 'E-commerce Website',
-    description: 'Build a modern e-commerce website with React and Node.js',
+    description: 'Build a modern e-commerce website with React and Node && Node.js',
     type: 'project',
-    rating: 4.7,
+    rating: 4 && 4.7,
     price: 15000,
     location: 'Remote',
     skills: ['react', 'node', 'mongodb'],
@@ -93,66 +93,66 @@ export function searchAll(filters: SearchFilters, access: AccessLevel): SearchRe
   let filteredResults = allResults;
   
   // Apply keyword filter
-  if (filters.keywords && filters.keywords.length > 0) {
-    filteredResults = filteredResults.filter(result => {
-      const searchText = `${result.title} ${result.description} ${(result.skills || []).join(' ')} ${(result.keywords || []).join(' ')}`.toLowerCase();
-      return filters.keywords!.some(keyword => searchText.includes(keyword.toLowerCase()));
+  if (filters && filters.keywords && filters && filters.keywords.length > 0) {
+    filteredResults = filteredResults && filteredResults.filter(result => {
+      const searchText = `${result && result.title} ${result && result.description} ${(result && result.skills || []).join(' ')} ${(result && result.keywords || []).join(' ')}`.toLowerCase();
+      return filters && filters.keywords!.some(keyword => searchText && searchText.includes(keyword && keyword.toLowerCase()));
     });
   }
   
   // Apply skills filter
-  if (filters.skills && filters.skills.length > 0) {
-    filteredResults = filteredResults.filter(result => {
-      return filters.skills!.some(skill => 
-        (result.skills || []).some(resultSkill => 
-          resultSkill.toLowerCase().includes(skill.toLowerCase())
+  if (filters && filters.skills && filters && filters.skills.length > 0) {
+    filteredResults = filteredResults && filteredResults.filter(result => {
+      return filters && filters.skills!.some(skill => 
+        (result && result.skills || []).some(resultSkill => 
+          resultSkill && resultSkill.toLowerCase().includes(skill && skill.toLowerCase())
         )
       );
     });
   }
   
   // Apply location filter
-  if (filters.location) {
-    filteredResults = filteredResults.filter(result => 
-      result.location?.toLowerCase().includes(filters.location!.toLowerCase())
+  if (filters && filters.location) {
+    filteredResults = filteredResults && filteredResults.filter(result => 
+      result && result.location?.toLowerCase().includes(filters && filters.location!.toLowerCase())
     );
   }
   
   // Apply type filter
-  if (filters.type) {
-    filteredResults = filteredResults.filter(result => 
-      result.type === filters.type
+  if (filters && filters.type) {
+    filteredResults = filteredResults && filteredResults.filter(result => 
+      result && result.type === filters && filters.type
     );
   }
   
   // Apply rating filter
-  if (filters.minRating !== undefined) {
-    filteredResults = filteredResults.filter(result => 
-      (result.rating || 0) >= filters.minRating!
+  if (filters && filters.minRating !== undefined) {
+    filteredResults = filteredResults && filteredResults.filter(result => 
+      (result && result.rating || 0) >= filters && filters.minRating!
     );
   }
   
-  if (filters.maxRating !== undefined) {
-    filteredResults = filteredResults.filter(result => 
-      (result.rating || 0) <= filters.maxRating!
+  if (filters && filters.maxRating !== undefined) {
+    filteredResults = filteredResults && filteredResults.filter(result => 
+      (result && result.rating || 0) <= filters && filters.maxRating!
     );
   }
   
   // Apply price range filter
-  if (filters.priceRange) {
-    filteredResults = filteredResults.filter(result => {
-      if (result.price === undefined) return true;
-      if (filters.priceRange!.min !== undefined && result.price < filters.priceRange!.min) return false;
-      if (filters.priceRange!.max !== undefined && result.price > filters.priceRange!.max) return false;
+  if (filters && filters.priceRange) {
+    filteredResults = filteredResults && filteredResults.filter(result => {
+      if (result && result.price === undefined) return true;
+      if (filters && filters.priceRange!.min !== undefined && result && result.price < filters && filters.priceRange!.min) return false;
+      if (filters && filters.priceRange!.max !== undefined && result && result.price > filters && filters.priceRange!.max) return false;
       return true;
     });
   }
   
   return {
     all: filteredResults,
-    talent: filteredResults.filter(r => r.type === 'talent'),
-    jobs: filteredResults.filter(r => r.type === 'job'),
-    projects: filteredResults.filter(r => r.type === 'project')
+    talent: filteredResults && filteredResults.filter(r => r && r.type === 'talent'),
+    jobs: filteredResults && filteredResults.filter(r => r && r.type === 'job'),
+    projects: filteredResults && filteredResults.filter(r => r && r.type === 'project')
   };
 }
 
@@ -160,17 +160,17 @@ export function suggestDidYouMean(query: string): string[] {
   // Simple suggestion logic
   const suggestions: string[] = [];
   
-  if (query.includes('react')) {
-    suggestions.push('javascript', 'typescript', 'node');
+  if (query && query.includes('react')) {
+    suggestions && suggestions.push('javascript', 'typescript', 'node');
   }
   
-  if (query.includes('python')) {
-    suggestions.push('django', 'flask', 'fastapi');
+  if (query && query.includes('python')) {
+    suggestions && suggestions.push('django', 'flask', 'fastapi');
   }
   
-  if (query.includes('frontend')) {
-    suggestions.push('ui', 'ux', 'design');
+  if (query && query.includes('frontend')) {
+    suggestions && suggestions.push('ui', 'ux', 'design');
   }
   
-  return suggestions.slice(0, 3); // Return max 3 suggestions
+  return suggestions && suggestions.slice(0, 3); // Return max 3 suggestions
 }

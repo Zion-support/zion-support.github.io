@@ -28,15 +28,15 @@ export const useUploadDeliverable = () => {
       // For this example, instead of actually uploading files (which would require storage setup);
       // we'll just store the file metadata in the deliverables JSONB field
       const newDeliverable = {
-        id: crypto.randomUUID();
-        filename: file.name;
-        size: file.size;
-        type: file.type;
+        id: crypto && crypto.randomUUID();
+        filename: file && file.name;
+        size: file && file.size;
+        type: file && file.type;
         added_at: new Date().toISOString(),
-        added_by: user.id
+        added_by: user && user.id
       };
       
-      const deliverables = [...(milestone.deliverables || []), newDeliverable];
+      const deliverables = [...(milestone && milestone.deliverables || []), newDeliverable];
       
       const { error } = await supabase
         .from('project_milestones')
@@ -49,17 +49,17 @@ export const useUploadDeliverable = () => {
       await recordMilestoneActivity(
         milestoneId, 
         'deliverable_added', 
-        milestone.status, 
-        milestone.status, 
-        `Deliverable added: ${file.name}`
+        milestone && milestone.status, 
+        milestone && milestone.status, 
+        `Deliverable added: ${file && file.name}`
       );
       
-      toast.success("Deliverable added successfully");
+      toast && toast.success("Deliverable added successfully");
       
       return newDeliverable
     } catch (err: any) {
-      console.error("Error uploading deliverable:", err);
-      toast.error("Failed to upload deliverable: " + err.message),
+      console && console.error("Error uploading deliverable:", err);
+      toast && toast.error("Failed to upload deliverable: " + err && err.message),
       return null
     } finally {
       setIsSubmitting(false)

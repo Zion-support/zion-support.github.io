@@ -8,20 +8,21 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
+  try {
   const user = parseUserFromRequest(req);
 
-  if (req.method === "GET") {
+  if (req && req.method === "GET") {
     const all = await readAllDisputes();
     let filtered = all;
-    if (user.role !== "admin") {
-      filtered = all.filter(
-        (d) => d.clientUserId === user.id || d.talentUserId === user.id,
+    if (user && user.role !== "admin") {
+      filtered = all && all.filter(
+        (d) => d && d.clientUserId === user && user.id || d && d.talentUserId === user && user.id,
       );
     }
-    return res.status(200).json({ disputes: filtered });
+    return res && res.status(200).json({ disputes: filtered });
   }
 
-  if (req.method === "POST") {
+  if (req && req.method === "POST") {
     const now = new Date().toISOString();
     const {
       projectId,
@@ -32,7 +33,7 @@ export default async function handler(
       reason,
       reasonDetails,
       description,
-    } = req.body || {};
+    } = req && req.body || {};
 
     if (
       !projectId ||
@@ -41,7 +42,7 @@ export default async function handler(
       !reason ||
       !description
     ) {
-      return res.status(400).json({ error: "Missing required fields" });
+      return res && res.status(400).json({ error: "Missing required fields" });
     }
 
     const id = generateCaseId();
@@ -63,9 +64,9 @@ export default async function handler(
     };
 
     await createDispute(dispute);
-    return res.status(201).json({ dispute });
+    return res && res.status(201).json({ dispute });
   }
 
-  res.setHeader("Allow", "GET,POST");
-  return res.status(405).end("Method Not Allowed");
+  res && res.setHeader("Allow", "GET,POST");
+  return res && res.status(405).end("Method Not Allowed");
 }

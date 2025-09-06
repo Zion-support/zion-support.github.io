@@ -70,7 +70,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     icon: '🧠',
     color: 'from-purple-600 to-pink-600',
     textColor: 'text-purple-400',
-    link: 'https://ziontechgroup.com/ai-consciousness-simulation-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-consciousness-simulation-platform',
     marketPosition:
       'First-to-market consciousness simulation platform. No direct competitors in this space. Comparable to advanced AI research platforms like OpenAI ($20K+/month) but specialized in consciousness.',
     targetAudience:
@@ -116,16 +116,16 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced quantum neural network platform with consciousness simulation algorithms, ethical frameworks, and research collaboration tools. Includes real-time consciousness mapping and evolution tracking.',
     launchDate: '2029-01-15',
     customers: 45,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 89,
   },
   {
@@ -152,7 +152,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     icon: '🏢',
     color: 'from-blue-600 to-indigo-600',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/autonomous-ai-corporation-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/autonomous-ai-corporation-platform',
     marketPosition:
       'First autonomous corporation platform. Comparable to enterprise AI suites like IBM Watson ($50K+/month) but with full autonomy capabilities.',
     targetAudience:
@@ -197,16 +197,16 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Comprehensive autonomous AI platform with corporate management capabilities, decision-making algorithms, and operational automation. Includes real-time monitoring and human oversight options.',
     launchDate: '2029-02-01',
     customers: 12,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 34,
   },
   {
@@ -233,7 +233,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     icon: '👁️',
     color: 'from-green-600 to-teal-600',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/ai-reality-augmentation-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-reality-augmentation-platform',
     marketPosition:
       'First reality augmentation platform. Comparable to advanced AR/VR platforms like Magic Leap ($15K+/month) but with AI-powered perception modification.',
     targetAudience:
@@ -278,16 +278,16 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     variant: 'ai-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced reality augmentation platform with AI-powered perception modification, neural interface integration, and real-time enhancement capabilities. Includes safety protocols and ethical guidelines.',
     launchDate: '2029-01-30',
     customers: 78,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 156,
   },
   // Quantum & Neuroscience Services
@@ -315,7 +315,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     icon: '⚛️',
     color: 'from-indigo-600 to-purple-600',
     textColor: 'text-indigo-400',
-    link: 'https://ziontechgroup.com/quantum-brain-computer-interface',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-brain-computer-interface',
     marketPosition:
       'First quantum BCI platform. Comparable to advanced BCI systems like Neuralink ($20K+/month) but with quantum communication capabilities.',
     targetAudience:
@@ -360,16 +360,16 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced quantum BCI platform with neural communication capabilities, quantum encryption, and real-time brain-computer synchronization. Includes safety protocols and research tools.',
     launchDate: '2029-02-15',
     customers: 23,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 67,
   },
   {
@@ -396,7 +396,7 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     icon: '⏰',
     color: 'from-yellow-600 to-orange-600',
     textColor: 'text-yellow-400',
-    link: 'https://ziontechgroup.com/quantum-time-manipulation-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-time-manipulation-platform',
     marketPosition:
       'First time manipulation platform. No direct competitors. Comparable to advanced quantum research platforms ($30K+/month) but specialized in temporal manipulation.',
     targetAudience:
@@ -440,28 +440,28 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     variant: 'quantum-futuristic',
     contactInfo: {
       mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
+      website: 'https://ziontechgroup && ziontechgroup.com',
     },
     realImplementation: true,
     implementationDetails:
       'Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.',
     launchDate: '2029-03-01',
     customers: 8,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 23,
   },
 ];      mobile: '+1 302 464 0950';
-      email: 'kleber@ziontechgroup.com';
+      email: 'kleber@ziontechgroup && ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup && ziontechgroup.com'
     };
     realImplementation: true,
     implementationDetails: 'Advanced quantum temporal manipulation platform with time perception modification, temporal analysis, and quantum temporal effects. Includes research tools and safety protocols.';
     launchDate: '2029-03-01';
     customers: 8;
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 23
   }
 ];

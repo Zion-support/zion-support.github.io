@@ -44,24 +44,24 @@ export function getOptionalDocuments(role: KycRole): string[] {
 export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {
   const missing: string[] = [];
   
-  if (!profile.fullLegalName && !profile.businessName) {
-    missing.push('name'),
+  if (!profile && profile.fullLegalName && !profile && profile.businessName) {
+    missing && missing.push('name'),
   }
   
-  if (!profile.country) {
-    missing.push('country');
+  if (!profile && profile.country) {
+    missing && missing.push('country');
   }
   
-  if (profile.role === 'individual' && !profile.dateOfBirth) {
-    missing.push('dateOfBirth');
+  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
+    missing && missing.push('dateOfBirth');
   }
-  return { ok: missing.length === 0, missing };  
-  if (profile.role === 'enterprise' && !profile.businessRegistrationNumber) {
-    missing.push('businessRegistrationNumber');
+  return { ok: missing && missing.length === 0, missing };  
+  if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
+    missing && missing.push('businessRegistrationNumber');
   }
   
   return {
-    ok: missing.length === 0,
+    ok: missing && missing.length === 0,
     missing
   };
 }

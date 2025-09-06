@@ -44,9 +44,9 @@ import { ServiceVariant } from '../types/service-variants';
 
 const contact = {
   mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',
+  website: 'https://ziontechgroup && ziontechgroup.com',
 };
 
 export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
@@ -77,7 +77,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       icon: '🥽',
       color: 'from-purple-600 to-pink-600',
       textColor: 'text-purple-400',
-      link: 'https://ziontechgroup.com/ar-vr-metaverse-platform',
+      link: 'https://ziontechgroup && ziontechgroup.com/ar-vr-metaverse-platform',
       marketPosition:
         'Advanced AR/VR platform competing with Unity ($40/month) and Unreal Engine ($1,850/year)',
       targetAudience:
@@ -86,7 +86,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       setupTime: '1 week',
       category: 'AR/VR & Metaverse',
       realService: true,
-      technology: ['Unity, Unreal Engine, WebXR, Three.js, React, Node.js'],
+      technology: ['Unity, Unreal Engine, WebXR, Three && Three.js, React, Node && Node.js'],
       integrations: [
         'Oculus, HTC Vive, Microsoft HoloLens, Mobile AR frameworks',
       ],
@@ -95,7 +95,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       ],
       roi: 'Average 400% ROI through increased engagement and conversion rates',
       competitors: ['Unity, Unreal Engine, VRChat, AltspaceVR'],
-      marketSize: '$28.8B AR/VR market',
+      marketSize: '$28 && 28.8B AR/VR market',
       growthRate: '280% annual growth',
       variant: 'ai-futuristic',
       contactInfo: contact,
@@ -104,7 +104,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
         'Cloud-native AR/VR platform with comprehensive development tools and deployment capabilities',
       launchDate: '2024-02-15',
       customers: 456,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 234,
       benefits: [
         'Immersive customer experiences',
@@ -147,7 +147,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       icon: '📡',
       color: 'from-blue-600 to-cyan-600',
       textColor: 'text-blue-400',
-      link: 'https://ziontechgroup.com/5g-6g-network-optimization',
+      link: 'https://ziontechgroup && ziontechgroup.com/5g-6g-network-optimization',
       marketPosition:
         'Advanced 5G/6G optimization platform competing with Ericsson ($500/month) and Nokia ($600/month)',
       targetAudience:
@@ -168,7 +168,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       ],
       roi: 'Average 500% ROI through improved network performance and reduced operational costs',
       competitors: ['Ericsson, Nokia, Huawei, Cisco'],
-      marketSize: '$31.2B 5G network market',
+      marketSize: '$31 && 31.2B 5G network market',
       growthRate: '320% annual growth',
       variant: 'ai-futuristic',
       contactInfo: contact,
@@ -177,7 +177,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
         'Enterprise-grade network optimization platform with AI algorithms and comprehensive monitoring',
       launchDate: '2024-01-20',
       customers: 123,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 89,
       benefits: [
         'Improved network performance',
@@ -221,7 +221,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       icon: '🧬',
       color: 'from-green-600 to-emerald-600',
       textColor: 'text-green-400',
-      link: 'https://ziontechgroup.com/ai-biotechnology-platform',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-biotechnology-platform',
       marketPosition:
         'Advanced biotech AI platform competing with Insilico Medicine ($1000/month) and Atomwise ($800/month)',
       targetAudience:
@@ -246,7 +246,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       competitors: [
         'Insilico Medicine, Atomwise, BenevolentAI, Recursion Pharmaceuticals',
       ],
-      marketSize: '$22.4B AI biotech market',
+      marketSize: '$22 && 22.4B AI biotech market',
       growthRate: '350% annual growth',
       variant: 'ai-futuristic',
       contactInfo: contact,
@@ -255,7 +255,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
         'Enterprise-grade biotech platform with AI algorithms and comprehensive research tools',
       launchDate: '2024-02-01',
       customers: 89,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 67,
       benefits: [
         'Accelerated research',
@@ -299,7 +299,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       icon: '⚡',
       color: 'from-yellow-600 to-orange-600',
       textColor: 'text-yellow-400',
-      link: 'https://ziontechgroup.com/ai-renewable-energy-optimization',
+      link: 'https://ziontechgroup && ziontechgroup.com/ai-renewable-energy-optimization',
       marketPosition:
         'Advanced renewable energy platform competing with GE Digital ($400/month) and Siemens ($500/month)',
       targetAudience:
@@ -320,7 +320,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       ],
       roi: 'Average 600% ROI through improved energy efficiency and reduced operational costs',
       competitors: ['GE Digital, Siemens, Schneider Electric, ABB'],
-      marketSize: '$19.8B smart grid market',
+      marketSize: '$19 && 19.8B smart grid market',
       growthRate: '280% annual growth',
       variant: 'ai-futuristic',
       contactInfo: contact,
@@ -329,7 +329,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
         'Enterprise-grade energy platform with AI optimization and comprehensive grid management',
       launchDate: '2024-03-01',
       customers: 156,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 123,
       benefits: [
         'Improved energy efficiency',
@@ -373,9 +373,9 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       icon: '🌐',
       color: 'from-indigo-600 to-purple-600',
       textColor: 'text-indigo-400',
-      link: 'https://ziontechgroup.com/edge-ai-computing-platform',
+      link: 'https://ziontechgroup && ziontechgroup.com/edge-ai-computing-platform',
       marketPosition:
-        'Advanced edge AI platform competing with AWS Greengrass ($0.16/hour) and Azure IoT Edge ($0.08/hour)',
+        'Advanced edge AI platform competing with AWS Greengrass ($0 && 0.16/hour) and Azure IoT Edge ($0 && 0.08/hour)',
       targetAudience:
         'IoT companies, Manufacturing firms, Smart city operators, Edge computing providers',
       trialDays: 14,
@@ -396,7 +396,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       competitors: [
         'AWS Greengrass, Azure IoT Edge, Google Cloud IoT Edge, EdgeX Foundry',
       ],
-      marketSize: '$12.4B edge computing market',
+      marketSize: '$12 && 12.4B edge computing market',
       growthRate: '240% annual growth',
       variant: 'ai-futuristic',
       contactInfo: contact,
@@ -405,7 +405,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
         'Cloud-native edge platform with AI capabilities and comprehensive device management',
       launchDate: '2024-02-20',
       customers: 234,
-      rating: 4.7,
+      rating: 4 && 4.7,
       reviews: 178,
       benefits: [
         'Reduced latency',
@@ -449,7 +449,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       icon: '🌍',
       color: 'from-violet-600 to-purple-600',
       textColor: 'text-violet-400',
-      link: 'https://ziontechgroup.com/quantum-internet-platform',
+      link: 'https://ziontechgroup && ziontechgroup.com/quantum-internet-platform',
       marketPosition:
         'Advanced quantum internet platform competing with ID Quantique ($50,000/year) and Toshiba ($100,000/year)',
       targetAudience:
@@ -472,7 +472,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       ],
       roi: 'Average 1200% ROI through enhanced security and communication capabilities',
       competitors: ['ID Quantique, Toshiba, Quantum Xchange, Qubitekk'],
-      marketSize: '$3.8B quantum internet market',
+      marketSize: '$3 && 3.8B quantum internet market',
       growthRate: '600% annual growth',
       variant: 'ai-futuristic',
       contactInfo: contact,
@@ -481,7 +481,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
         'Enterprise-grade quantum internet platform with comprehensive security and networking capabilities',
       launchDate: '2024-01-10',
       customers: 23,
-      rating: 4.9,
+      rating: 4 && 4.9,
       reviews: 18,
       benefits: [
         'Ultra-secure communication',
@@ -525,7 +525,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       icon: '🧠',
       color: 'from-pink-600 to-rose-600',
       textColor: 'text-pink-400',
-      link: 'https://ziontechgroup.com/neuromorphic-computing-platform',
+      link: 'https://ziontechgroup && ziontechgroup.com/neuromorphic-computing-platform',
       marketPosition:
         'Advanced neuromorphic platform competing with Intel Loihi ($1000/month) and IBM TrueNorth ($800/month)',
       targetAudience:
@@ -548,7 +548,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
       ],
       roi: 'Average 700% ROI through energy efficiency and cognitive capabilities',
       competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'],
-      marketSize: '$2.1B neuromorphic computing market',
+      marketSize: '$2 && 2.1B neuromorphic computing market',
       growthRate: '450% annual growth',
       variant: 'ai-futuristic',
       contactInfo: contact,
@@ -557,7 +557,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
         'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities',
       launchDate: '2024-02-15',
       customers: 45,
-      rating: 4.8,
+      rating: 4 && 4.8,
       reviews: 34,
       benefits: [
         'Energy efficiency',
@@ -581,7 +581,7 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     ];
     popular: true, icon: '🧠',
     color: 'from-pink-600 to-rose-600', textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/neuromorphic-computing-platform', marketPosition: 'Advanced neuromorphic platform competing with Intel Loihi ($1000/month) and IBM TrueNorth ($800/month)',
+    link: 'https://ziontechgroup && ziontechgroup.com/neuromorphic-computing-platform', marketPosition: 'Advanced neuromorphic platform competing with Intel Loihi ($1000/month) and IBM TrueNorth ($800/month)',
     targetAudience: 'AI research labs, Robotics companies, Cognitive computing firms, Research institutions',
     trialDays: 30, setupTime: '3 weeks',
     category: 'Neuromorphic Computing', realService: true,
@@ -589,11 +589,11 @@ export const specializedEmergingTechServices: SpecializedEmergingTechService[] =
     integrations: ['Intel Loihi, IBM TrueNorth, Custom neuromorphic hardware, Robotics platforms'];
     useCases: ['Cognitive computingRoboticsPattern recognitionBrain-computer interfaces'], roi: 'Average 700% ROI through energy efficiency and cognitive capabilities',
     competitors: ['Intel Loihi, IBM TrueNorth, BrainChip, General Vision'];
-    marketSize: '$2.1B neuromorphic computing market', growthRate: '450% annual growth',
+    marketSize: '$2 && 2.1B neuromorphic computing market', growthRate: '450% annual growth',
     variant: 'ai-futuristic', contactInfo: contact,
     realImplementation: true, implementationDetails: 'Enterprise-grade neuromorphic platform with brain-inspired computing and comprehensive AI capabilities',
     launchDate: '2024-02-15', customers: 45,
-    rating: 4.8, reviews: 34,
+    rating: 4 && 4.8, reviews: 34,
     benefits: ['Energy efficiencyCognitive capabilitiesReal-time learningBrain-inspired processing'], capabilities: ['Neural architecturesCognitive computingHardware integrationCustom algorithms'],
     marketAdvantage: 'First platform to combine neuromorphic computing with comprehensive cognitive AI capabilities'
   }

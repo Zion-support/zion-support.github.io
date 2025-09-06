@@ -57,12 +57,12 @@ export const cuttingEdgeAIServices2025 = [
       'Self-Awareness',
       'Human-AI Collaboration',
     ],
-    website: 'https://ziontechgroup.com/ai-consciousness-evolution-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-consciousness-evolution-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$52.8B',
+    marketSize: '$52 && 52.8B',
     targetAudience:
       'Research institutions, AI development companies, psychology departments, consciousness researchers',
     competitiveAdvantage:
@@ -148,12 +148,12 @@ export const cuttingEdgeAIServices2025 = [
       'Pattern Recognition',
       'Hybrid Computing',
     ],
-    website: 'https://ziontechgroup.com/quantum-ai-fusion-platform',
+    website: 'https://ziontechgroup && ziontechgroup.com/quantum-ai-fusion-platform',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$78.5B',
+    marketSize: '$78 && 78.5B',
     targetAudience:
       'Research institutions, technology companies, financial institutions, pharmaceutical companies',
     competitiveAdvantage:
@@ -233,12 +233,12 @@ export const cuttingEdgeAIServices2025 = [
       'Machine Learning',
       'Automation',
     ],
-    website: 'https://ziontechgroup.com/ai-autonomous-ecosystem',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-ecosystem',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$45.2B',
+    marketSize: '$45 && 45.2B',
     targetAudience:
       'Enterprises, technology companies, research institutions, government agencies',
     competitiveAdvantage:
@@ -318,12 +318,12 @@ export const cuttingEdgeAIServices2025 = [
       'Fairness',
       'Compliance',
     ],
-    website: 'https://ziontechgroup.com/ai-ethics-governance-platform',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-ethics-governance-platform',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$28.7B',
+    marketSize: '$28 && 28.7B',
     targetAudience:
       'Enterprises, government agencies, research institutions, AI development companies',
     competitiveAdvantage:
@@ -397,12 +397,12 @@ export const cuttingEdgeAIServices2025 = [
     },
     category: 'AI Creativity',
     tags: ['AI', 'Creativity', 'Content Generation', 'Design', 'Innovation'],
-    website: 'https://ziontechgroup.com/ai-creativity-studio-pro',
+    website: 'https://ziontechgroup && ziontechgroup.com/ai-creativity-studio-pro',
     contact: {
       phone: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
+      email: 'kleber@ziontechgroup && ziontechgroup.com',
     },
-    marketSize: '$35.4B',
+    marketSize: '$35 && 35.4B',
     targetAudience:
       'Creative agencies, design firms, marketing companies, content creators',
     competitiveAdvantage:

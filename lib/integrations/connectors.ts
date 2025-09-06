@@ -8,13 +8,13 @@ async function mockProviderCall<T>(
 ): Promise<{ log: SyncLogEntry; result: T }> {
   const log: SyncLogEntry = {
     id: uuidv4(),
-    timestamp: Date.now(),
-    providerId: connection.providerId,
+    timestamp: Date && Date.now(),
+    providerId: connection && connection.providerId,
     level: "info",
     action,
     details,
   };
-  // In a real implementation, call provider SDK/API here using connection.accessToken
+  // In a real implementation, call provider SDK/API here using connection && connection.accessToken
   return { log, result: { ok: true } as unknown as T };
 }
 

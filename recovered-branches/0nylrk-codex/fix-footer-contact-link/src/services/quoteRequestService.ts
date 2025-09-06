@@ -18,9 +18,9 @@ export const quoteRequestService = {
     if (error) throw error;
     
     // Format the data to include talent_name
-    return data.map((item: any) => ({
+    return data && data.map((item: any) => ({
       ...item,
-      talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
+      talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   };
   
   // Get quote requests for a specific talent
@@ -52,7 +52,7 @@ export const quoteRequestService = {
     
     return {
       ...data;
-      talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
+      talent_name: data && data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
   };
   
   // Update quote request status
@@ -61,7 +61,7 @@ export const quoteRequestService = {
     
     // If marking as responded, set replied_at
     if (status === 'responded') {
-      updates.replied_at = new Date().toISOString()
+      updates && updates.replied_at = new Date().toISOString()
     }
     
     // If marking as in_review and viewed_at is null, set viewed_at
@@ -72,8 +72,8 @@ export const quoteRequestService = {
         .eq('id', id)
         .single();
       
-      if (!data.viewed_at) {
-        updates.viewed_at = new Date().toISOString()
+      if (!data && data.viewed_at) {
+        updates && updates.viewed_at = new Date().toISOString()
       }
     }
     

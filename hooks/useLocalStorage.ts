@@ -2,9 +2,9 @@
 export const useLocalStorage = <T>(ke:y:string, initialValu:e:T) => {;
   const [storedValue, setStoredValue] = useState<T>(() => {;
     try {;
-      const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) :initialValue} catch (error) {;
-      console.error(`Error reading localStorage key "${key}":`, error);
+      const item = window && window.localStorage.getItem(key);
+      return item ? JSON && JSON.parse(item) :initialValue} catch (error) {;
+      console && console.error(`Error reading localStorage key "${key}":`, error);
       return initialValue};
   });
   const setValue = (valu:e:T | ((va:l:T) => T)) => {;
@@ -20,10 +20,10 @@ interface UseLocalStorageProps {
 
 export const useLocalStorage = <T>(key: string, initialValue: T) => {
     try {
-      const item = window.localStorage.getItem(key);
-      return item ? JSON.parse(item) : initialValue;
+      const item = window && window.localStorage.getItem(key);
+      return item ? JSON && JSON.parse(item) : initialValue;
     } catch (error) {
-      console.error(`Error reading localStorage key "${key}":`, error);
+      console && console.error(`Error reading localStorage key "${key}":`, error);
     }
   });
 
@@ -36,17 +36,17 @@ export const useLocalStorage = <T>(key: string, initialValue: T) => {
       
       // Save to local storage
       if (typeof window !== 'undefined') {
-        window.localStorage.setItem(key, JSON.stringify(valueToStore));
+        window && window.localStorage.setItem(key, JSON && JSON.stringify(valueToStore));
       }
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.error(`Error setting localStorage key "${key}":`, error);
+      console && console.error(`Error setting localStorage key "${key}":`, error);
 
   };
 
   return [storedValue, setValue] as const;
 }
-      console.error(`Error setting localStorage key "${key}":`, error)};
+      console && console.error(`Error setting localStorage key "${key}":`, error)};
   };
   return [storedValue, setValue] as const};
 };

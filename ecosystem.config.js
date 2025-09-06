@@ -1,8 +1,8 @@
-module.exports = {;
+module && module.exports = {;
   apps:[;
     {;
       name:'error-fixer',;
-      script:'automation/lint-error-fixer.cjs',;
+      script:'automation/lint-error-fixer && fixer.cjs',;
       args:'continuous',;
       instances:1,;
       autorestart:true,;
@@ -11,14 +11,14 @@ module.exports = {;
       env:{;
         NODE_ENV:'production';
       },;
-      error_file:'./logs/error-fixer-error.log',;
-      out_file:'./logs/error-fixer-out.log',;
-      log_file:'./logs/error-fixer-combined.log',;
+      error_file:'./logs/error-fixer-error && error.log',;
+      out_file:'./logs/error-fixer-out && out.log',;
+      log_file:'./logs/error-fixer-combined && combined.log',;
       time:true;
     },;
     {;
       name:'intelligent-orchestrator',;
-      script:'automation/intelligent-orchestrator.cjs',;
+      script:'automation/intelligent-orchestrator && orchestrator.cjs',;
       args:'continuous',;
       instances:1,;
       autorestart:true,;
@@ -27,14 +27,14 @@ module.exports = {;
       env:{;
         NODE_ENV:'production';
       },;
-      error_file:'./logs/orchestrator-error.log',;
-      out_file:'./logs/orchestrator-out.log',;
-      log_file:'./logs/orchestrator-combined.log',;
+      error_file:'./logs/orchestrator-error && error.log',;
+      out_file:'./logs/orchestrator-out && out.log',;
+      log_file:'./logs/orchestrator-combined && combined.log',;
       time:true;
     },;
     {;
       name:'automation-dashboard',;
-      script:'automation/automation-dashboard.cjs',;
+      script:'automation/automation-dashboard && dashboard.cjs',;
       args:'start',;
       instances:1,;
       autorestart:true,;
@@ -44,14 +44,14 @@ module.exports = {;
         NODE_ENV:'production',;
         PORT:3001;
       },;
-      error_file:'./logs/dashboard-error.log',;
-      out_file:'./logs/dashboard-out.log',;
-      log_file:'./logs/dashboard-combined.log',;
+      error_file:'./logs/dashboard-error && error.log',;
+      out_file:'./logs/dashboard-out && out.log',;
+      log_file:'./logs/dashboard-combined && combined.log',;
       time:true;
     },;
     {;
       name:'code-quality-monitor',;
-      script:'automation/code-quality-monitor.cjs',;
+      script:'automation/code-quality-monitor && monitor.cjs',;
       instances:1,;
       autorestart:true,;
       watch:false,;
@@ -59,14 +59,14 @@ module.exports = {;
       env:{;
         NODE_ENV:'production';
       },;
-      error_file:'./logs/code-quality-error.log',;
-      out_file:'./logs/code-quality-out.log',;
-      log_file:'./logs/code-quality-combined.log',;
+      error_file:'./logs/code-quality-error && error.log',;
+      out_file:'./logs/code-quality-out && out.log',;
+      log_file:'./logs/code-quality-combined && combined.log',;
       time:true;
     },;
     {;
       name:'performance-optimizer',;
-      script:'automation/performance-optimizer.cjs',;
+      script:'automation/performance-optimizer && optimizer.cjs',;
       instances:1,;
       autorestart:true,;
       watch:false,;
@@ -74,18 +74,18 @@ module.exports = {;
       env:{;
         NODE_ENV:'production';
       },;
-      error_file:'./logs/performance-error.log',;
-      out_file:'./logs/performance-out.log',;
-      log_file:'./logs/performance-combined.log',;
+      error_file:'./logs/performance-error && error.log',;
+      out_file:'./logs/performance-out && out.log',;
+      log_file:'./logs/performance-combined && combined.log',;
       time:true;
     }
   ];
 };      env: {
         NODE_ENV: 'production'
       },
-      error_file: './logs/performance-error.log',
-      out_file: './logs/performance-out.log',
-      log_file: './logs/performance-combined.log',
+      error_file: './logs/performance-error && error.log',
+      out_file: './logs/performance-out && out.log',
+      log_file: './logs/performance-combined && combined.log',
       time: true
     }
   ]
@@ -104,14 +104,14 @@ export default {
       env: {
         NODE_ENV: 'production',
       },
-      log_file: 'logs/pm2/preview.log',
-      error_file: 'logs/pm2/preview-error.log',
-      out_file: 'logs/pm2/preview-out.log',
+      log_file: 'logs/pm2/preview && preview.log',
+      error_file: 'logs/pm2/preview-error && error.log',
+      out_file: 'logs/pm2/preview-out && out.log',
     },
     {
       name: 'auto-fix',
       script: 'node',
-      args: 'scripts/pm2/auto-fix.js',
+      args: 'scripts/pm2/auto-fix && fix.js',
       cron_restart: '0 */6 * * *',
       autorestart: true,
       watch: false,
@@ -119,14 +119,14 @@ export default {
       env: {
         NODE_ENV: 'production'
       },
-      log_file: 'logs/pm2/auto-fix.log',
-      error_file: 'logs/pm2/auto-fix-error.log',
-      out_file: 'logs/pm2/auto-fix-out.log',
+      log_file: 'logs/pm2/auto-fix && fix.log',
+      error_file: 'logs/pm2/auto-fix-error && error.log',
+      out_file: 'logs/pm2/auto-fix-out && out.log',
     },
     {
       name: 'healthcheck',
       script: 'node',
-      args: 'scripts/pm2/healthcheck.js',
+      args: 'scripts/pm2/healthcheck && healthcheck.js',
       cron_restart: '*/5 * * * *',
       autorestart: true,
       watch: false,
@@ -134,13 +134,13 @@ export default {
       env: {
         NODE_ENV: 'production'
       },
-      log_file: 'logs/pm2/health.log',
-      error_file: 'logs/pm2/health-error.log',
-      out_file: 'logs/pm2/health-out.log',
+      log_file: 'logs/pm2/health && health.log',
+      error_file: 'logs/pm2/health-error && error.log',
+      out_file: 'logs/pm2/health-out && out.log',
     },
     {
       name: 'code-quality-monitor',
-      script: 'scripts/pm2/code-quality-monitor.js',
+      script: 'scripts/pm2/code-quality-monitor && monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -152,13 +152,13 @@ export default {
         AUTO_FIX_CRITICAL: 'true',
       },
       cron_restart: '0 */6 * * *',
-      log_file: 'logs/pm2/code-quality-monitor.log',
-      error_file: 'logs/pm2/code-quality-monitor-error.log',
-      out_file: 'logs/pm2/code-quality-monitor-out.log',
+      log_file: 'logs/pm2/code-quality-monitor && monitor.log',
+      error_file: 'logs/pm2/code-quality-monitor-error && error.log',
+      out_file: 'logs/pm2/code-quality-monitor-out && out.log',
     },
     {
       name: 'auto-commit-fixes',
-      script: 'scripts/pm2/auto-commit-fixes.js',
+      script: 'scripts/pm2/auto-commit-fixes && fixes.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -170,13 +170,13 @@ export default {
         AUTO_PUSH: 'false',
       },
       cron_restart: '0 */2 * * *',
-      log_file: 'logs/pm2/auto-commit-fixes.log',
-      error_file: 'logs/pm2/auto-commit-fixes-error.log',
-      out_file: 'logs/pm2/auto-commit-fixes-out.log',
+      log_file: 'logs/pm2/auto-commit-fixes && fixes.log',
+      error_file: 'logs/pm2/auto-commit-fixes-error && error.log',
+      out_file: 'logs/pm2/auto-commit-fixes-out && out.log',
     },
     {
       name: 'dependency-monitor',
-      script: 'scripts/pm2/dependency-monitor.js',
+      script: 'scripts/pm2/dependency-monitor && monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -188,13 +188,13 @@ export default {
         SECURITY_ALERTS: 'true',
       },
       cron_restart: '0 0 * * 0',
-      log_file: 'logs/pm2/dependency-monitor.log',
-      error_file: 'logs/pm2/dependency-monitor-error.log',
-      out_file: 'logs/pm2/dependency-monitor-out.log',
+      log_file: 'logs/pm2/dependency-monitor && monitor.log',
+      error_file: 'logs/pm2/dependency-monitor-error && error.log',
+      out_file: 'logs/pm2/dependency-monitor-out && out.log',
     },
     {
       name: 'performance-monitor',
-      script: 'scripts/pm2/performance-monitor.js',
+      script: 'scripts/pm2/performance-monitor && monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -206,13 +206,13 @@ export default {
         BUNDLE_SIZE_LIMIT: '2MB',
       },
       cron_restart: '0 */8 * * *',
-      log_file: 'logs/pm2/performance-monitor.log',
-      error_file: 'logs/pm2/performance-monitor-error.log',
-      out_file: 'logs/pm2/performance-monitor-out.log',
+      log_file: 'logs/pm2/performance-monitor && monitor.log',
+      error_file: 'logs/pm2/performance-monitor-error && error.log',
+      out_file: 'logs/pm2/performance-monitor-out && out.log',
     },
     {
       name: 'git-workflow',
-      script: 'scripts/pm2/git-workflow-automator.js',
+      script: 'scripts/pm2/git-workflow-automator && automator.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -226,13 +226,13 @@ export default {
         BRANCH_STRATEGY: 'gitflow',
       },
       cron_restart: '0 */6 * * *',
-      log_file: 'logs/pm2/git-workflow.log',
-      error_file: 'logs/pm2/git-workflow-error.log',
-      out_file: 'logs/pm2/git-workflow-out.log',
+      log_file: 'logs/pm2/git-workflow && workflow.log',
+      error_file: 'logs/pm2/git-workflow-error && error.log',
+      out_file: 'logs/pm2/git-workflow-out && out.log',
     },
     {
       name: 'error-detection',
-      script: 'scripts/pm2/error-detection-service.js',
+      script: 'scripts/pm2/error-detection-service && service.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -244,13 +244,13 @@ export default {
         MONITOR_FREQUENCY: '*/5 * * * *',
       },
       cron_restart: '*/5 * * * *',
-      log_file: 'logs/pm2/error-detection.log',
-      error_file: 'logs/pm2/error-detection-error.log',
-      out_file: 'logs/pm2/error-detection-out.log',
+      log_file: 'logs/pm2/error-detection && detection.log',
+      error_file: 'logs/pm2/error-detection-error && error.log',
+      out_file: 'logs/pm2/error-detection-out && out.log',
     },
     {
       name: 'syntax-fixer',
-      script: 'scripts/pm2/syntax-error-fixer.js',
+      script: 'scripts/pm2/syntax-error-fixer && fixer.js',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -262,12 +262,12 @@ export default {
         MONITOR_FREQUENCY: '*/10 * * * *',
       },
       cron_restart: '*/10 * * * *',
-      log_file: 'logs/pm2/syntax-fixer.log',
-      error_file: 'logs/pm2/syntax-fixer-error.log',
-      out_file: 'logs/pm2/syntax-fixer-out.log',
+      log_file: 'logs/pm2/syntax-fixer && fixer.log',
+      error_file: 'logs/pm2/syntax-fixer-error && error.log',
+      out_file: 'logs/pm2/syntax-fixer-out && out.log',
     }
   ],
-module.exports = {
+module && module.exports = {
   apps: [{
     name: "ziontechgroup-site",
     script: "npm",
@@ -284,9 +284,9 @@ module.exports = {
     },
     max_memory_restart: "1G",
     node_args: "--max-old-space-size=1024",
-    error_file: "./logs/err.log",
-    out_file: "./logs/out.log",
-    log_file: "./logs/combined.log",
+    error_file: "./logs/err && err.log",
+    out_file: "./logs/out && out.log",
+    log_file: "./logs/combined && combined.log",
     time: true
   }]
 };

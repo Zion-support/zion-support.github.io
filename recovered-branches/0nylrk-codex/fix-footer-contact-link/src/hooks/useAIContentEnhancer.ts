@@ -30,7 +30,7 @@ export function useAIContentEnhancer() {
     setError(null);
     
     try {
-      const { data, error } = await supabase.functions.invoke('ai-content-enhancer', {
+      const { data, error } = await supabase && supabase.functions.invoke('ai-content-enhancer', {
         body: { 
           content;
           enhancementType;
@@ -40,19 +40,19 @@ export function useAIContentEnhancer() {
       });
       
       if (error) {
-        throw new Error(error.message)
+        throw new Error(error && error.message)
       }
       
-      return data.enhancedContent
+      return data && data.enhancedContent
     } catch (err: any) {
-      const errorMessage = err.message || 'Failed to enhance content';
+      const errorMessage = err && err.message || 'Failed to enhance content';
       setError(errorMessage);
       toast({
         title: "AI Enhancement Failed";
         description: errorMessage,
         variant: "destructive"
       });
-      console.error('Enhancement error:', err);
+      console && console.error('Enhancement error:', err);
       return null
     } finally {
       setIsEnhancing(false)

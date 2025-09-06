@@ -1,10 +1,10 @@
 import { defineConfig, devices } from '@playwright/test';
 import { defineConfig, devices } from '@playwright/test',;
-;
+
 export default defineConfig({;
   testDir:'tests/e2e',;
   use:{;
-    baseURL:process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;
+    baseURL:process && process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',;
     trace:'on-first-retry'},;
   projects:[;
     {;
@@ -41,7 +41,7 @@ export default defineConfig({;
     ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
 }),;import { defineConfig, devices } from "@playwright/test";
 import { defineConfig, devices } from '@playwright/test';
-    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
+    baseURL: process && process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000',
     trace: 'on-first-retry'
   },
   projects: [

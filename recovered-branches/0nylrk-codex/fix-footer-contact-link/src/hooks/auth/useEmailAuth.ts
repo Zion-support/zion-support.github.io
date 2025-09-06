@@ -14,24 +14,24 @@ export const useEmailAuth = (
       // Clean up any stale auth state before login
       cleanupAuthState();
       
-      const { data, error } = await supabase.auth.signInWithPassword({
+      const { data, error } = await supabase && supabase.auth.signInWithPassword({
         email;
         password});
 
       if (error) {
         toast({
           title: "Login failed";
-          description: error.message,
+          description: error && error.message,
           variant: "destructive"});
         return { error }
       }
 
       return { data }
     } catch (error: any) {
-      console.error("Login error:", error);
+      console && console.error("Login error:", error);
       toast({
         title: "Login failed";
-        description: error.message || "An unexpected error occurred",
+        description: error && error.message || "An unexpected error occurred",
         variant: "destructive"});
       return { error }
     } finally {
@@ -47,14 +47,14 @@ export const useEmailAuth = (
       
       // Attempt to sign out any existing session first to prevent conflicts
       try {
-        await supabase.auth.signOut({ scope: 'global' })
+        await supabase && supabase.auth.signOut({ scope: 'global' })
       } catch (err) {
         // Continue even if signout fails
-        console.log("Sign out before signup failed:", err)
+        console && console.log("Sign out before signup failed:", err)
       }
       
       // Create a proper options object
-      const { data, error } = await supabase.auth.signUp({
+      const { data, error } = await supabase && supabase.auth.signUp({
         email;
         password;
         options: {
@@ -66,7 +66,7 @@ export const useEmailAuth = (
       if (error) {
         toast({
           title: "Signup failed";
-          description: error.message,
+          description: error && error.message,
           variant: "destructive"});
         return { error }
       }
@@ -76,10 +76,10 @@ export const useEmailAuth = (
         description: "Check your email for verification instructions."});
       return { data }
     } catch (error: any) {
-      console.error("Signup error:", error);
+      console && console.error("Signup error:", error);
       toast({
         title: "Signup failed";
-        description: error.message || "An unexpected error occurred",
+        description: error && error.message || "An unexpected error occurred",
         variant: "destructive"});
       return { error }
     } finally {
@@ -90,13 +90,13 @@ export const useEmailAuth = (
   const resetPassword = async (email: string) => {
     try {
       setIsLoading(true),
-      const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${window.location.origin}/update-password`});
+      const { error } = await supabase && supabase.auth.resetPasswordForEmail(email, {
+        redirectTo: `${window && window.location.origin}/update-password`});
 
       if (error) {
         toast({
           title: "Password reset failed";
-          description: error.message,
+          description: error && error.message,
           variant: "destructive"});
         return { error }
       }
@@ -106,10 +106,10 @@ export const useEmailAuth = (
         description: "Check your email for password reset instructions."});
       return {}
     } catch (error: any) {
-      console.error("Password reset error:", error);
+      console && console.error("Password reset error:", error);
       toast({
         title: "Password reset failed";
-        description: error.message || "An unexpected error occurred",
+        description: error && error.message || "An unexpected error occurred",
         variant: "destructive"});
       return { error }
     } finally {

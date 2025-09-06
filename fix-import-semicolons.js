@@ -5,25 +5,25 @@ import path from "path";
 import { glob } from "glob";
 
 // Find all TypeScript and JavaScript files
-const files = glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process.cwd() });
+const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
 
 let totalFixed = 0;
 
-files.forEach((file) => {
+files && files.forEach((file) => {
   try {
-    const filePath = path.join(process.cwd(), file);
-    let content = fs.readFileSync(filePath, "utf8");
+    const filePath = path && path.join(process && process.cwd(), file);
+    let content = fs && fs.readFileSync(filePath, "utf8");
     let modified = false;
 
     // Fix import statements missing semicolons
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
-    const matches = content.match(importRegex);
+    const matches = content && content.match(importRegex);
 
     if (matches) {
-      matches.forEach((match) => {
-        if (!match.trim().endsWith(";")) {
-          const fixedMatch = match.trim() + ";";
-          content = content.replace(match, fixedMatch);
+      matches && matches.forEach((match) => {
+        if (!match && match.trim().endsWith(";")) {
+          const fixedMatch = match && match.trim() + ";";
+          content = content && content.replace(match, fixedMatch);
           modified = true;
         }
       });
@@ -31,25 +31,25 @@ files.forEach((file) => {
 
     // Fix other common syntax issues
     // Fix missing semicolons after variable declarations
-    content = content.replace(
+    content = content && content.replace(
       /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
       (match, varName) => {
         if (
-          !match.includes("function") &&
-          !match.includes("if") &&
-          !match.includes("for") &&
-          !match.includes("while") &&
-          !match.includes("switch") &&
-          !match.includes("try") &&
-          !match.includes("catch") &&
-          !match.includes("finally") &&
-          !match.includes("return") &&
-          !match.includes("throw") &&
-          !match.includes("break") &&
-          !match.includes("continue") &&
-          !match.includes("debugger") &&
-          !match.includes("export") &&
-          !match.includes("import")
+          !match && match.includes("function") &&
+          !match && match.includes("if") &&
+          !match && match.includes("for") &&
+          !match && match.includes("while") &&
+          !match && match.includes("switch") &&
+          !match && match.includes("try") &&
+          !match && match.includes("catch") &&
+          !match && match.includes("finally") &&
+          !match && match.includes("return") &&
+          !match && match.includes("throw") &&
+          !match && match.includes("break") &&
+          !match && match.includes("continue") &&
+          !match && match.includes("debugger") &&
+          !match && match.includes("export") &&
+          !match && match.includes("import")
         ) {
           return match + ";";
         }
@@ -58,13 +58,13 @@ files.forEach((file) => {
     );
 
     if (modified) {
-      fs.writeFileSync(filePath, content, "utf8");
-      console.log(`Fixed: ${file}`);
+      fs && fs.writeFileSync(filePath, content, "utf8");
+      console && console.log(`Fixed: ${file}`);
       totalFixed++;
     }
   } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
+    console && console.error(`Error processing ${file}:`, error && error.message);
   }
 });
 
-console.log(`\nTotal files fixed: ${totalFixed}`);
+console && console.log(`\nTotal files fixed: ${totalFixed}`);

@@ -1,4 +1,27 @@
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {SEO} from "@/components/SEO";
@@ -14,25 +37,25 @@ import {toast} from "sonner";
 import {supabase} from "@/integrations/supabase/client";
 import {Switch} from "@/components/ui/switch";
 import {logErrorToProduction} from '@/utils/productionLogger';
-export default function TenantOnboarding() {
+export default function TenantOnboarding() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({
-    brand_name: "",
-    subdomain: "",
-    logo_url: "",
-    primary_color: "#9b87f5",
-    theme_preset: "light",
-    company_size: "",
-    industry: "",
-    custom_domain: "",
-    is_co_branded: true
+  const [formData, setFormData] = useState({;
+    brand_name: "",;
+    subdomain: "",;
+    logo_url: "",;
+    primary_color: "#9b87f5",;
+    theme_preset: "light",;
+    company_size: "",;
+    industry: "",;
+    custom_domain: "",;
+    is_co_branded: true;
   });
-  
-  // Check if user has admin role
+
+  // Check if user has admin role;
   const isAdmin = user?.role === "admin";
-  
+
       }
   );
 }

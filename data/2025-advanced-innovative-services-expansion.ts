@@ -44,12 +44,12 @@ import { ServiceVariant } from '../types/service-variants';
 
 const contact = {
   mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',};  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
+  website: 'https://ziontechgroup && ziontechgroup.com',};  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup && ziontechgroup.com'
 };
 
 export const advancedInnovativeServices: AdvancedInnovativeService[] = [
@@ -78,7 +78,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     icon: '🤖',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
-    link: 'https://ziontechgroup.com/ai-autonomous-devops-orchestrator',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-devops-orchestrator',
     marketPosition:
       'Next-generation DevOps platform with autonomous operations and AI-driven optimization',
     targetAudience: 'DevOps engineers, Platform teams, Engineering managers',
@@ -104,12 +104,12 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Cloud-native platform with enterprise SSO, custom integrations, and dedicated support',
     launchDate: '2025-01-15',
     customers: 89,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 67,
     benefits: [
       '70% faster deployment cycles',
       '40% reduction in infrastructure costs',
-      '99.9% deployment success rate',
+      '99 && 99.9% deployment success rate',
       'Zero-downtime deployments',
       '24/7 autonomous monitoring',
     ],
@@ -150,7 +150,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     icon: '💰',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/quantum-financial-modeling',
+    link: 'https://ziontechgroup && ziontechgroup.com/quantum-financial-modeling',
     marketPosition:
       'Pioneering quantum computing platform for financial services',
     targetAudience:
@@ -179,7 +179,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Custom quantum computing infrastructure with dedicated quantum hardware access',
     launchDate: '2024-12-01',
     customers: 34,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 28,
     benefits: [
       '15-25% improvement in portfolio returns',
@@ -224,7 +224,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     icon: '🔍',
     color: 'from-red-600 to-pink-700',
     textColor: 'text-red-400',
-    link: 'https://ziontechgroup.com/ai-threat-hunting-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-threat-hunting-platform',
     marketPosition:
       'Next-generation cybersecurity platform with autonomous threat hunting capabilities',
     targetAudience: 'CISOs, Security teams, SOC analysts, IT managers',
@@ -250,7 +250,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Cloud-native platform with enterprise SSO, custom integrations, and dedicated support',
     launchDate: '2024-11-15',
     customers: 156,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 112,
     benefits: [
       '80% faster threat detection',
@@ -296,7 +296,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     icon: '🌐',
     color: 'from-blue-600 to-indigo-700',
     textColor: 'text-blue-400',
-    link: 'https://ziontechgroup.com/edge-ai-inference-platform',
+    link: 'https://ziontechgroup && ziontechgroup.com/edge-ai-inference-platform',
     marketPosition:
       'Leading edge AI platform for real-time inference and decision making',
     targetAudience:
@@ -321,7 +321,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Cloud-native platform with edge device management and AI model optimization',
     launchDate: '2025-02-01',
     customers: 67,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 45,
     benefits: [
       '90% reduction in latency',
@@ -366,7 +366,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     icon: '🛰️',
     color: 'from-violet-600 to-purple-700',
     textColor: 'text-violet-400',
-    link: 'https://ziontechgroup.com/satellite-ai-mission-control',
+    link: 'https://ziontechgroup && ziontechgroup.com/satellite-ai-mission-control',
     marketPosition: 'Pioneering AI-powered satellite mission control platform',
     targetAudience:
       'Satellite operators, Space agencies, Aerospace companies, Research institutions',
@@ -394,7 +394,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Custom satellite control infrastructure with AI model training and optimization',
     launchDate: '2024-10-15',
     customers: 23,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 18,
     benefits: [
       '25% improvement in mission success rate',
@@ -440,7 +440,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     icon: '🧠',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-400',
-    link: 'https://ziontechgroup.com/bci-development-kit',
+    link: 'https://ziontechgroup && ziontechgroup.com/bci-development-kit',
     marketPosition:
       'Leading BCI development platform for neural interface applications',
     targetAudience:
@@ -469,7 +469,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Complete hardware and software platform with expert consultation and support',
     launchDate: '2024-09-01',
     customers: 12,
-    rating: 4.9,
+    rating: 4 && 4.9,
     reviews: 8,
     benefits: [
       '5x faster BCI development',
@@ -515,7 +515,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     icon: '📊',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
-    link: 'https://ziontechgroup.com/real-time-streaming-analytics',
+    link: 'https://ziontechgroup && ziontechgroup.com/real-time-streaming-analytics',
     marketPosition:
       'High-performance streaming analytics platform for real-time insights',
     targetAudience:
@@ -544,7 +544,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Cloud-native platform with real-time processing and analytics capabilities',
     launchDate: '2025-01-01',
     customers: 134,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 98,
     benefits: [
       '90% reduction in decision latency',
@@ -589,7 +589,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     icon: '🔗',
     color: 'from-orange-600 to-yellow-700',
     textColor: 'text-orange-400',
-    link: 'https://ziontechgroup.com/enterprise-blockchain-orchestration',
+    link: 'https://ziontechgroup && ziontechgroup.com/enterprise-blockchain-orchestration',
     marketPosition:
       'Leading enterprise blockchain platform for simplified deployment and management',
     targetAudience:
@@ -616,7 +616,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Enterprise-grade platform with multi-blockchain support and compliance features',
     launchDate: '2024-12-15',
     customers: 78,
-    rating: 4.6,
+    rating: 4 && 4.6,
     reviews: 56,
     benefits: [
       '70% faster blockchain deployment',
@@ -661,7 +661,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     icon: '🏥',
     color: 'from-teal-600 to-green-700',
     textColor: 'text-teal-400',
-    link: 'https://ziontechgroup.com/ai-medical-imaging-analysis',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-medical-imaging-analysis',
     marketPosition:
       'Leading AI-powered medical imaging analysis platform for healthcare',
     targetAudience:
@@ -690,7 +690,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'FDA-compliant platform with enterprise integration and expert support',
     launchDate: '2024-11-01',
     customers: 45,
-    rating: 4.8,
+    rating: 4 && 4.8,
     reviews: 34,
     benefits: [
       '25% improvement in diagnostic accuracy',
@@ -735,7 +735,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
     icon: '🌍',
     color: 'from-green-600 to-emerald-700',
     textColor: 'text-green-400',
-    link: 'https://ziontechgroup.com/ai-climate-prediction',
+    link: 'https://ziontechgroup && ziontechgroup.com/ai-climate-prediction',
     marketPosition:
       'Leading AI-powered climate prediction platform for environmental sustainability',
     targetAudience:
@@ -764,7 +764,7 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Research-grade platform with environmental compliance and expert support',
     launchDate: '2025-02-15',
     customers: 23,
-    rating: 4.7,
+    rating: 4 && 4.7,
     reviews: 17,
     benefits: [
       '30% improvement in prediction accuracy',
