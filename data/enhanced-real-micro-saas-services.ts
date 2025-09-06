@@ -2431,6 +2431,14 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
     'Climate Technology': ['Climate Technology']
   };
 
+  // Find matching categories
+  const matchingCategories = categoryMapping[categoryName] || [];
+  
+  return enhancedRealMicroSaasServices.filter(service => 
+    matchingCategories.includes(service.category)
+  );
+};
+
 // Service categories
 export const serviceCategories = [
   'All',
@@ -2490,42 +2498,13 @@ export const serviceCategories = [
   'Agriculture & Food Tech'
 ];
 
-export const getServicesByCategory = (category: string) => {
-  if (category === 'All') return allEnhancedRealMicroSaasServices;
-  return allEnhancedRealMicroSaasServices.filter(service => service.category === category);
-};
-
 export const getPopularServices = () => {
-  return allEnhancedRealMicroSaasServices.filter(service => service.popular);
+  return enhancedRealMicroSaasServices.filter(service => service.popular);
 };
 
 export const getServicesByPriceRange = (min: number, max: number) => {
-  return allEnhancedRealMicroSaasServices.filter(service => {
+  return enhancedRealMicroSaasServices.filter(service => {
     const price = parseInt(service.price.replace('$', ''));
     return price >= min && (max === Infinity ? true : price <= max);
   });
 };
-
-export const serviceCategories = [
-  'All',
-  'Quantum Computing',
-  'AI & Machine Learning',
-  'Cybersecurity',
-  'Biomedical & Healthcare',
-  'Financial Technology',
-  'Content & Marketing',
-  'Data Analytics & BI',
-  'Customer Service & Support',
-  'Supply Chain & Logistics',
-  'Human Resources',
-  'Legal Technology',
-  'Sales & Marketing',
-  'Blockchain & Web3',
-  'IoT & Edge Computing',
-  'Cloud & Infrastructure',
-  'Video & Media',
-  'SEO & Digital Marketing',
-  'Automation & Robotics',
-  'Edge Computing',
-  'Predictive Analytics'
-];

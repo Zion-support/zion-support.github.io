@@ -1,26 +1,37 @@
 import React from 'react';
-import ServiceLanding from '../components/sections/ServiceLanding';
+import Head from 'next/head';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
 export default function AIAutonomousEcosystemManager() {
 	return (
-		<ServiceLanding
-			title="AI Autonomous Ecosystem Manager"
-			slug="ai-autonomous-ecosystem-manager"
-			description="Coordinate fleets of specialized AI agents to manage complex multi-team workflows. Enforce policies, allocate resources, and ensure safety across the ecosystem."
-			subtitle="Govern multi-agent systems with policy, observability, and guardrails."
-			pricePerMonthUSD={2999}
-			implementationWeeks="Implementation: 4–8 weeks"
-			roiNote="Average ROI 4–9x within 6 months"
-			features={[
-				"Agent registry, roles, and capabilities graph",
-				"Policy engine with human-in-the-loop controls",
-				"Observability: traces, metrics, red-teaming",
-				"Sandboxing and E2E approvals for sensitive actions",
-				"Cost and performance optimization",
-				"Integrations: Kubernetes, Slack/Teams, Jira, GitHub"
-			]}
-			industries={["Platform Teams", "R&D", "Operations", "Security"]}
-			canonical="https://ziontechgroup.com/ai-autonomous-ecosystem-manager"
-		/>
+		<UltraFuturisticBackground>
+			<Head>
+				<title>AI Autonomous Ecosystem Manager - Zion Tech Group</title>
+				<meta name="description" content="AI-powered ecosystem management for autonomous business operations." />
+				<link rel="canonical" href="/ai-autonomous-ecosystem-manager" />
+			</Head>
+			
+			<div className="min-h-screen py-20 px-4">
+				<div className="max-w-6xl mx-auto">
+					<div className="text-center mb-16">
+						<h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+							AI Autonomous Ecosystem Manager
+						</h1>
+						<p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+							AI-powered ecosystem management for autonomous business operations.
+						</p>
+					</div>
+
+					<div className="text-center">
+						<a 
+							href="/contact" 
+							className="inline-block px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300"
+						>
+							Get Started
+						</a>
+					</div>
+				</div>
+			</div>
+		</UltraFuturisticBackground>
 	);
 }

@@ -1,10 +1,14 @@
 import React from 'react';
-import SEO from '../components/SEO';
+import Head from 'next/head';
 
 export default function AccessibilityScannerPage() {
 	return (
 		<>
-			<SEO title="Accessibility Scanner" description="Automated WCAG scanning and remediation guidance." canonical="/accessibility-scanner" />
+			<Head>
+				<title>Accessibility Scanner - Zion Tech Group</title>
+				<meta name="description" content="Automated WCAG scanning and remediation guidance." />
+				<link rel="canonical" href="/accessibility-scanner" />
+			</Head>
 			<section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
 				<div className="container mx-auto px-4 max-w-3xl">
 					<h1 className="text-3xl md:text-5xl font-extrabold tracking-tight gradient-text-cyan-purple">Accessibility Scanner</h1>

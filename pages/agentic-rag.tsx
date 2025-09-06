@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
 import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
 
@@ -18,7 +18,7 @@ export default function AgenticRAGPage() {
 		{ name: 'Enterprise', price: 'Custom', items: ['Siloed indexes', 'SOC2/ISO support', 'Private VPC', 'SAML/SSO'] }];
 
 	return (
-		<UltraFuturisticMatrixBackground>
+		<UltraFuturisticBackground>
 			<Head>
 				<title>Agentic RAG Platform | Zion Tech Group</title>
 				<meta name="description" content="High-accuracy retrieval augmented generation with ingestion, indexing, reranking, and evaluation built-in." />
@@ -78,6 +78,6 @@ export default function AgenticRAGPage() {
 					</div>
 				</div>
 			</div>
-		</UltraFuturisticMatrixBackground>
+		</UltraFuturisticBackground>
 	);
 }
