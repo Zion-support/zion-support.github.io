@@ -1,47 +1,18 @@
- export default function About () {;
-  const team = [ {;
-  name: "Alex Johnson";";
-role: "CEO";";
-image: "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=300&q=80";";
-bio: "Alex Johnson leads Zion as CEO, driving the company's vision to democratize AI globally. With over a decade of experience in technology startups, Alex previously built enterprise platforms adopted by Fortune 500 companies. At Zion, he focuses on building partnerships and ensuring that innovation benefits everyone. Alex believes in open collaboration and empowers the team to push boundaries while upholding transparency. Outside work, he mentors young entrepreneurs and enjoys exploring new cultures. He loves hiking,  reading science fiction, and cooking." ;
+import React from 'react';
+
+const About = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">
+          About
+        </h1>
+        <p className="text-gray-600">
+          This is a placeholder about page.
+        </p>
+      </div>
+    </div>
+  );
 };
-{";
-  name: "Maria Chen";";
-role: "CTO";";
-image: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=300&q=80";'";
-bio: "Maria Chen, Zion's CTO, oversees the platform's technical strategy and architecture. She has led engineering teams at several AI-focused startups, delivering scalable solutions that power millions of users. At Zion,  Maria champions a culture of experimentation and rigorous security, ensuring the marketplace remains reliable and cutting-edge. She collaborates closely with open-source communities and mentors young developers in her spare time. Maria holds a master's in computer science and enjoys painting landscapes when she's not coding. She also loves robotics projects." ;
-};
-{";
-  name: "Sam Lee";";
-role: "Head of Community";";
-image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=300&q=80";'";
-bio: "Sam Lee serves as Zion's Head of Community, cultivating relationships with developers, partners, and customers worldwide. He previously launched multiple tech communities that grew from small meetups into thriving networks. At Zion, Sam orchestrates events, online forums, and mentorship programs that encourage collaboration and knowledge sharing. His empathetic approach helps newcomers feel welcomed while promoting an inclusive culture. Sam studied communications and has a background in user advocacy. In his downtime,  he enjoys photography and traveling with his family, often." ;
-}];
-const timeline = [ {";
-  year: "2019";";
-text: "Company founded to link AI innovators with businesses through a truly open global marketplace worldwide." ;
-};
-{";
-  year: "2020";";
-text: "Launched early beta, inviting first users to explore collaborative tools and provide invaluable feedback insights." ;
-};
-{";
-  year: "2021";";
-text: "Closed seed round, expanding engineering team to accelerate development and scale infrastructure globally for growth." ;
-};
-{";
-  year: "2022";";
-text: "Released ZionGPT core, forging partnerships with industry leaders across multiple high-tech sectors to drive innovation." ;
-};
-{";
-  year: "2023";";
-text: "Hosted inaugural Zion Summit showcasing real-world deployments and collaborative community-driven innovation from around the world." ;
-};
-{";
-  year: "2024";";
-text: "Expanded into decentralized talent marketplace empowering creators worldwide to launch cutting-edge AI solutions and collaborate." ;
-}];'";
-min-h-screen bg-zion-blue pt-24 pb-20"> <div className=" container mx-auto px-4 sm:px-6 lg:px-8 space-y-24"> <div className=" text-center content-section"> <GradientHeading>About Zion</GradientHeading> <p className=" mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto"> The world's first free marketplace dedicated to high-tech and artificial intelligence </p> </div> <div className=" grid grid-cols-1 lg:grid-cols-2 gap-16 items-center content-section"> <div> a global community where the future of technology is being built today. </p> </div> <div className=" rounded-lg overflow-hidden relative w-full h-full"> <img src=" https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&h=600&q=80"alt=" Team collaboration"className=" object-cover"/> </div> </div> <div className=" grid grid-cols-1 lg:grid-cols-2 gap-16 items-center lg:flex-row-reverse content-section"> <div> </p> </div> <div className=" rounded-lg overflow-hidden lg:order-first relative w-full h-full"> <img src=" https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&h=600&q=80"alt=" Tech innovation"className=" object-cover"/> </div> </div> </svg> </div> <h3 className=" text-xl font-bold text-white mb-3">Innovation</h3> <p className=" text-zion-slate-light"> We embrace cutting-edge technologies and creative thinking to push the boundaries of what's possible. </p> </div> </svg> </div> <h3 className=" text-xl font-bold text-white mb-3">Community</h3> <p className=" text-zion-slate-light"> We believe in the power of collaboration and fostering an inclusive ecosystem where everyone can thrive. </p> </div> </p> </div> </div> </div> </li>) ) ;
-}</ol> </div> </div>) ) ";
-}</div> </div> <div className=" content-section text-center"> <h2 className=" text-3xl font-bold text-white mb-4">Press Kit</h2> <p className=" text-zion-slate-light mb-4">Download our logos, color palette and press release templates.</p> <a href=" /toolkit assets/media kit.zip"download className=" text-zion-cyan underline" > Download Media Kit (.zip) </Link> </div> </div> </Link> . </p> </div> <ContactSection /> </main> </>) ;
-}'"
+
+export default About;

@@ -1,2 +1,0 @@
- // Simple heuristics // - Low stake: prefer low fees (Polygon, BNB, Avalanche) // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum // - Region hints (very rough) : // APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum 
-}

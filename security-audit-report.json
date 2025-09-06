@@ -1,11 +1,23 @@
 {
-  "timestamp": "2025-09-06T00:32:21.706Z",
-  "vulnerabilities": 11,
+  "timestamp": "2025-09-06T01:33:10.691Z",
+  "totalDuration": 7194,
+  "vulnerabilities": [
+    "Dependencies have security vulnerabilities"
+  ],
+  "fixes": [
+    "Secret scanning completed",
+    "Configuration security audit completed",
+    "Security headers configuration generated"
+  ],
+  "errors": [],
   "recommendations": [
-    "Run \"npm audit fix\" to resolve dependency vulnerabilities",
-    "Review and remove any hardcoded secrets",
-    "Update outdated dependencies",
-    "Implement proper environment variable management",
-    "Add security headers to Next.js configuration"
+    "Address all identified security vulnerabilities",
+    "Implement automated security scanning in CI/CD",
+    "Regular security audits and dependency updates",
+    "Enable Content Security Policy (CSP)",
+    "Implement rate limiting for API endpoints",
+    "Use HTTPS in production",
+    "Regular security training for development team",
+    "Implement security monitoring and alerting"
   ]
 }

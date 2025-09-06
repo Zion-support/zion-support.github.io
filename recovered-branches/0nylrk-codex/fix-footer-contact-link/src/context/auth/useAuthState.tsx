@@ -1,2 +1,0 @@
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 /** * Custom hook to manage auth state */ 
-}
