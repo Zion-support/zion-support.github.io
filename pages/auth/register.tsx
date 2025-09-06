@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import SignupForm from '@/components/auth/SignupForm',
-import { AuthButtons } from '@/components/AuthButtons',
-import { fireEvent } from '@/lib/analytics',
-import { logInfo } from '@/utils/productionLogger',
-import { useRouter } from 'next/router',
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import SignupForm from '@/components/auth/SignupForm';
+import { AuthButtons } from '@/components/AuthButtons';
+import { fireEvent } from '@/lib/analytics';
+import { logInfo } from '@/utils/productionLogger';
+import { useRouter } from 'next/router';
 const RegisterPage = () => {
-  const router = useRouter(),
+  const router = useRouter();
 
   useEffect(() => {
     fireEvent('signup_page_view')
-  }, []),
+  }, []);
 
   const handleSuccess = ({ email, emailVerificationRequired }: {
     email: string,
@@ -22,7 +22,7 @@ const RegisterPage = () => {
     } else {
       router.push('/auth/login?registrationSuccess=true')
     }
-  },
+  };
 
   return (
     <>
@@ -41,7 +41,7 @@ const RegisterPage = () => {
               width={48}
               height={48}
               onError={(e) => {
-                const target = e.currentTarget as HTMLImageElement,
+                const target = e.currentTarget as HTMLImageElement;
                 target.style.display = 'none'
               }}
             />
@@ -90,6 +90,6 @@ const RegisterPage = () => {
       </div>
     </>
   )
-},
+};
 
-export default RegisterPage,
+export default RegisterPage;

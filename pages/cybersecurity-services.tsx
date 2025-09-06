@@ -1,50 +1,50 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud, 
-  CheckCircle, ArrowRight, Star, Clock, Target,
+  CheckCircle, ArrowRight, Star, Clock, Target;
   Zap, Users, BarChart3, Settings, Database
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services',
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const serviceHighlights = [
   {
     title: 'Zero Trust Security',
-    description: 'Never trust, always verify - Advanced zero trust implementation',
+    description: 'Never trust, always verify - Advanced zero trust implementation';
     icon: Shield,
     color: 'from-red-500 to-pink-600',
     features: ['Continuous verificationMicro-segmentationAdaptive controlsReal-time monitoring']
-  },
+  };
   {
     title: 'AI Threat Intelligence',
     description: 'Predict and prevent cyber threats with AI intelligence',
     icon: Eye,
     color: 'from-indigo-500 to-purple-600',
     features: ['Real-time detectionPredictive analyticsAutomated responseGlobal intelligence']
-  },
+  };
   {
     title: 'Cloud Security Posture',
     description: 'Secure your cloud infrastructure with comprehensive posture management',
     icon: Cloud,
     color: 'from-blue-500 to-cyan-600',
     features: ['Multi-cloud monitoringCompliance automationRisk managementSecurity analytics']
-  },
+  };
   {
     title: 'DevSecOps Security',
     description: 'Integrate security into your DevOps pipeline seamlessly',
     icon: Cpu,
     color: 'from-green-500 to-emerald-600',
     features: ['Automated testingVulnerability scanningCompliance automationSecurity metrics']
-  },
+  };
   {
     title: 'IoT Security Platform',
     description: 'Secure your IoT ecosystem with comprehensive protection',
@@ -52,7 +52,7 @@ const serviceHighlights = [
     color: 'from-purple-500 to-violet-600',
     features: ['Device authenticationNetwork monitoringThreat detectionAutomated response']
   }
-],
+];
 
 const benefits = [
   {
@@ -60,26 +60,26 @@ const benefits = [
     description: 'Advanced AI algorithms detect threats before they become incidents',
     icon: Shield,
     color: 'text-red-400'
-  },
+  };
   {
     title: 'Zero False Positives',
     description: 'AI-powered analysis eliminates false alarms and alert fatigue',
     icon: CheckCircle,
     color: 'text-green-400'
-  },
+  };
   {
     title: '24/7 Security Monitoring',
     description: 'Round-the-clock protection with automated incident response',
     icon: Clock,
     color: 'text-blue-400'
-  },
+  };
   {
     title: 'Compliance Automation',
     description: 'Automated compliance reporting and audit preparation',
     icon: BarChart3,
     color: 'text-purple-400'
   }
-],
+];
 
 export default function CybersecurityServices() {
   return (

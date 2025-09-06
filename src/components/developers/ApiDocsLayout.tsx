@@ -1,24 +1,24 @@
 
-import { SearchSuggestion } from "@/types/search",
-import React, { useState } from "react",
-import Link from 'next/link',
-import { useRouter } from 'next/router',
+import { SearchSuggestion } from "@/types/search";
+import React, { useState } from "react";
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Search } from 'lucide-react'
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { cn } from "@/lib/utils",
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
+import { cn } from "@/lib/utils";
 import {
- getDocsSearchPath,
+ getDocsSearchPath;
  docsSearchSuggestions
-} from "@/data/docsSearchData",
+} from "@/data/docsSearchData";
 
 interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
 
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
-  const router = useRouter(),
-  const currentPath = router.pathname,
-  const [searchValue, setSearchValue] = useState(""),
+  const router = useRouter();
+  const currentPath = router.pathname;
+  const [searchValue, setSearchValue] = useState("");
 
   const navigationItems = [
    { title: "Getting Started", path: "/developers/docs/getting-started" },
@@ -28,21 +28,21 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
     { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],
 
   const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
-    const path = getDocsSearchPath(suggestion.text),
+    const path = getDocsSearchPath(suggestion.text);
     if (path) {
-      router.push(path),
+      router.push(path);
       setSearchValue("")
     }
-  },
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
-    const path = getDocsSearchPath(searchValue),
+    e.preventDefault();
+    const path = getDocsSearchPath(searchValue);
     if (path) {
-      router.push(path),
+      router.push(path);
       setSearchValue("")
     }
-  },
+  };
 
   return (
     <div className="flex min-h-screen bg-zinc-950">
@@ -74,7 +74,7 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
          key={item.path}
          href={item.path}
          className={cn(
-          "block px-3 py-2 rounded-md text-sm",
+          "block px-3 py-2 rounded-md text-sm";
           currentPath === item.path
            ? "bg-zion-purple/20 text-zion-cyan"
            : "text-zinc-400 hover:text-white hover:bg-zinc-900"
@@ -94,4 +94,4 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   )
 }
 
-export default ApiDocsLayout,
+export default ApiDocsLayout;

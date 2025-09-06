@@ -1,67 +1,67 @@
-import React, { useState, useRef, useEffect } from 'react',
-import Image from 'next/image',
-import { cn } from '@/lib/utils',
+import React, { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
+import { cn } from '@/lib/utils';
 interface OptimizedImageProps {
   src: string,
   alt: string,
-  width?: number,
-  height?: number,
-  className?: string,
-  priority?: boolean,
-  placeholder?: 'blur' | 'empty',
-  blurDataURL?: string,
-  quality?: number,
-  sizes?: string,
-  onLoad?: () => void,
-  onError?: () => void,
-  fallbackSrc?: string,
+  width?: number;
+  height?: number;
+  className?: string;
+  priority?: boolean;
+  placeholder?: 'blur' | 'empty';
+  blurDataURL?: string;
+  quality?: number;
+  sizes?: string;
+  onLoad?: () => void;
+  onError?: () => void;
+  fallbackSrc?: string;
   lazy?: boolean
 }
 
 export function OptimizedImage({
-  src,
-  alt,
-  width,
-  height,
-  className,
-  priority = false,
-  placeholder = 'empty',
-  blurDataURL,
-  quality = 75,
-  sizes,
-  onLoad,
-  onError,
-  fallbackSrc,
-  lazy = true,
+  src;
+  alt;
+  width;
+  height;
+  className;
+  priority = false;
+  placeholder = 'empty';
+  blurDataURL;
+  quality = 75;
+  sizes;
+  onLoad;
+  onError;
+  fallbackSrc;
+  lazy = true;
   ...props
 }: OptimizedImageProps) {
-  const [isLoading, setIsLoading] = useState(true),
-  const [hasError, setHasError] = useState(false),
-  const [isInView, setIsInView] = useState(!lazy || priority),
-  const imgRef = useRef<HTMLDivElement>(null),
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
+  const [isInView, setIsInView] = useState(!lazy || priority);
+  const imgRef = useRef<HTMLDivElement>(null);
 
   // Intersection Observer for lazy loading
   useEffect(() => {
-    if (!lazy || priority || isInView) return,
+    if (!lazy || priority || isInView) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry && entry.isIntersecting) {
-          setIsInView(true),
+          setIsInView(true);
           observer.disconnect()
         }
-      },
+      };
       {
         rootMargin: '50px', // Start loading 50px before the image enters viewport
       }
-    ),
+    );
 
     if (imgRef.current) {
       observer.observe(imgRef.current)
     }
 
     return () => observer.disconnect()
-  }, [lazy, priority, isInView]),
+  }, [lazy, priority, isInView]);
 
   // Generate WebP-compatible src
   const getOptimizedSrc = (originalSrc: string) => {
@@ -72,22 +72,22 @@ export function OptimizedImage({
     
     // For internal images, Next.js will handle optimization
     return originalSrc
-  },
+  };
 
   const handleLoad = () => {
-    setIsLoading(false),
+    setIsLoading(false);
     onLoad?.()
-  },
+  };
 
   const handleError = () => {
-    setHasError(true),
-    setIsLoading(false),
+    setHasError(true);
+    setIsLoading(false);
     onError?.()
-  },
+  };
 
   // Generate blur placeholder
   const generateBlurDataURL = () => {
-    if (blurDataURL) return blurDataURL,
+    if (blurDataURL) return blurDataURL;
     
     // Generate a simple gray blur placeholder
     return `data: image/svg+xml,base64,${Buffer.from(
@@ -101,7 +101,7 @@ export function OptimizedImage({
         <rect width="100%" height="100%" fill="url(#grad)" />
       </svg>`
     ).toString('base64')}`
-  },
+  };
 
   return (
     <div
@@ -120,7 +120,7 @@ export function OptimizedImage({
           onLoad={handleLoad}
           onError={handleError}
           className={cn(
-            'transition-opacity duration-300',
+            'transition-opacity duration-300';
             isLoading ? 'opacity-0' : 'opacity-100'
           )}
           {...props}
@@ -174,7 +174,7 @@ export function withImageOptimization<P extends { src: string, alt: string }>(
   Component: React.ComponentType<P>
 ) {
   return function OptimizedComponent(props: P) {
-    const { src, alt, ...otherProps } = props,
+    const { src, alt, ...otherProps } = props;
     
     return (
       <OptimizedImage
@@ -189,9 +189,9 @@ export function withImageOptimization<P extends { src: string, alt: string }>(
 // Utility to preload critical images
 export function preloadImage(src: string): Promise<void> {
   return new Promise((resolve, reject) => {
-    const img = new window.Image(),
-    img.onload = () => resolve(),
-    img.onerror = reject,
+    const img = new window.Image();
+    img.onload = () => resolve();
+    img.onerror = reject;
     img.src = src
   })
 }
@@ -199,9 +199,9 @@ export function preloadImage(src: string): Promise<void> {
 // Utility to get image dimensions
 export function getImageDimensions(src: string): Promise<{ width: number, height: number }> {
   return new Promise((resolve, reject) => {
-    const img = new window.Image(),
+    const img = new window.Image();
     img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight }),
-    img.onerror = reject,
+    img.onerror = reject;
     img.src = src
   })
 } 

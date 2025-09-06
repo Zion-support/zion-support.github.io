@@ -1,15 +1,15 @@
 
-import React from "react",
-import { Button } from "@/components/ui/button",
+import React from "react";
+import { Button } from "@/components/ui/button";
 import { Check, X } from 'lucide-react'
 import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
 export function EnterprisePricingTable() {
   const plans = [
     {
@@ -31,7 +31,7 @@ export function EnterprisePricingTable() {
         { name: "Dedicated success manager", included: false }]},
     {
       name: "Business",
-      price: "$1,999",
+      price: "$1,999";
       billing: "/month",
       description: "Ideal for growing companies",
       users: "Up to 50 users",

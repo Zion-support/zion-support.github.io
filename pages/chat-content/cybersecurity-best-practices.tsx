@@ -1,5 +1,5 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
+import type { NextPage } from 'next';
+import Head from 'next/head';
 const CybersecurityBestPractices: NextPage = () => {
   return (
     <div>
@@ -14,6 +14,6 @@ const CybersecurityBestPractices: NextPage = () => {
       </main>
     </div>
   )
-},
+};
 
-export default CybersecurityBestPractices,
+export default CybersecurityBestPractices;

@@ -1,18 +1,18 @@
-import React, { useState } from 'react',
-import SEO from '../components/SEO',
-import Layout from '../components/layout/Layout',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react';
+import SEO from '../components/SEO';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
 import { 
   GraduationCap, Users, Clock, Award, BookOpen, Video, 
-  Headphones, Code, Brain, Atom, Rocket, Shield, Zap,
-  Star, CheckCircle, ArrowRight, ChevronDown, ChevronUp,
-  Play, Download, ExternalLink, Calendar, MapPin, DollarSign,
+  Headphones, Code, Brain, Atom, Rocket, Shield, Zap;
+  Star, CheckCircle, ArrowRight, ChevronDown, ChevronUp;
+  Play, Download, ExternalLink, Calendar, MapPin, DollarSign;
   TrendingUp, Target, Lightbulb, Building, Globe, Server
-} from 'lucide-react',
+} from 'lucide-react';
 
 export default function TrainingPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [expandedProgram, setExpandedProgram] = useState<number | null>(null),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [expandedProgram, setExpandedProgram] = useState<number | null>(null);
 
   const trainingCategories = [
     { id: 'all', name: 'All Programs', count: 24 },
@@ -20,7 +20,7 @@ export default function TrainingPage() {
     { id: 'quantum-computing', name: 'Quantum Computing', count: 6 },
     { id: 'autonomous-ops', name: 'Autonomous Operations', count: 5 },
     { id: 'enterprise-it', name: 'Enterprise IT', count: 5 }
-  ],
+  ];
 
   const featuredPrograms = [
     {
@@ -30,15 +30,15 @@ export default function TrainingPage() {
       category: 'ai-consciousness',
       duration: '12 weeks',
       level: 'Intermediate to Advanced',
-      price: '$2,999',
+      price: '$2,999';
       rating: 4.9,
-      students: '1,247',
+      students: '1,247';
       featured: true,
       icon: <Brain className="w-12 h-12" />,
       highlights: [
         'Hands-on AI consciousness platform developmentReal-world project implementationExpert mentorship and supportIndustry-recognized certificationLifetime access to course materials'
       ]
-    },
+    };
     {
       id: 2,
       title: 'Quantum Computing Implementation Specialist',
@@ -46,7 +46,7 @@ export default function TrainingPage() {
       category: 'quantum-computing',
       duration: '16 weeks',
       level: 'Advanced',
-      price: '$3,499',
+      price: '$3,499';
       rating: 4.8,
       students: '892',
       featured: true,
@@ -54,7 +54,7 @@ export default function TrainingPage() {
       highlights: [
         'Quantum algorithm developmentEnterprise integration strategiesPerformance optimization techniquesSecurity and compliance considerationsHands-on quantum simulator access'
       ]
-    },
+    };
     {
       id: 3,
       title: 'Autonomous Business Operations Master',
@@ -62,16 +62,16 @@ export default function TrainingPage() {
       category: 'autonomous-ops',
       duration: '10 weeks',
       level: 'Intermediate',
-      price: '$2,499',
+      price: '$2,499';
       rating: 4.9,
-      students: '1,156',
+      students: '1,156';
       featured: true,
       icon: <Rocket className="w-12 h-12" />,
       highlights: [
         'Business process automation designAI-powered decision making systemsChange management strategiesROI measurement and optimizationIndustry best practices and case studies'
       ]
     }
-  ],
+  ];
 
   const allPrograms = [
     // AI Consciousness Programs
@@ -82,11 +82,11 @@ export default function TrainingPage() {
       category: 'ai-consciousness',
       duration: '6 weeks',
       level: 'Beginner',
-      price: '$1,299',
+      price: '$1,299';
       rating: 4.7,
-      students: '2,341',
+      students: '2,341';
       icon: <Brain className="w-8 h-8" />
-    },
+    };
     {
       id: 5,
       title: 'Advanced AI Consciousness Architecture',
@@ -94,11 +94,11 @@ export default function TrainingPage() {
       category: 'ai-consciousness',
       duration: '14 weeks',
       level: 'Advanced',
-      price: '$3,999',
+      price: '$3,999';
       rating: 4.9,
       students: '567',
       icon: <Brain className="w-8 h-8" />
-    },
+    };
     {
       id: 6,
       title: 'AI Ethics and Governance',
@@ -106,11 +106,11 @@ export default function TrainingPage() {
       category: 'ai-consciousness',
       duration: '8 weeks',
       level: 'Intermediate',
-      price: '$1,899',
+      price: '$1,899';
       rating: 4.8,
-      students: '1,023',
+      students: '1,023';
       icon: <Shield className="w-8 h-8" />
-    },
+    };
     {
       id: 7,
       title: 'AI Consciousness API Development',
@@ -118,11 +118,11 @@ export default function TrainingPage() {
       category: 'ai-consciousness',
       duration: '10 weeks',
       level: 'Intermediate',
-      price: '$2,199',
+      price: '$2,199';
       rating: 4.7,
       students: '789',
       icon: <Code className="w-8 h-8" />
-    },
+    };
 
     // Quantum Computing Programs
     {
@@ -132,11 +132,11 @@ export default function TrainingPage() {
       category: 'quantum-computing',
       duration: '8 weeks',
       level: 'Beginner',
-      price: '$1,599',
+      price: '$1,599';
       rating: 4.6,
-      students: '1,456',
+      students: '1,456';
       icon: <Atom className="w-8 h-8" />
-    },
+    };
     {
       id: 9,
       title: 'Quantum Machine Learning',
@@ -144,11 +144,11 @@ export default function TrainingPage() {
       category: 'quantum-computing',
       duration: '12 weeks',
       level: 'Advanced',
-      price: '$3,299',
+      price: '$3,299';
       rating: 4.8,
       students: '423',
       icon: <Atom className="w-8 h-8" />
-    },
+    };
     {
       id: 10,
       title: 'Quantum Security and Cryptography',
@@ -156,11 +156,11 @@ export default function TrainingPage() {
       category: 'quantum-computing',
       duration: '10 weeks',
       level: 'Intermediate',
-      price: '$2,399',
+      price: '$2,399';
       rating: 4.7,
       students: '678',
       icon: <Shield className="w-8 h-8" />
-    },
+    };
 
     // Autonomous Operations Programs
     {
@@ -170,11 +170,11 @@ export default function TrainingPage() {
       category: 'autonomous-ops',
       duration: '8 weeks',
       level: 'Intermediate',
-      price: '$1,999',
+      price: '$1,999';
       rating: 4.8,
       students: '945',
       icon: <Zap className="w-8 h-8" />
-    },
+    };
     {
       id: 12,
       title: 'Autonomous Decision Systems',
@@ -182,11 +182,11 @@ export default function TrainingPage() {
       category: 'autonomous-ops',
       duration: '12 weeks',
       level: 'Advanced',
-      price: '$2,999',
+      price: '$2,999';
       rating: 4.9,
       students: '567',
       icon: <Target className="w-8 h-8" />
-    },
+    };
 
     // Enterprise IT Programs
     {
@@ -196,11 +196,11 @@ export default function TrainingPage() {
       category: 'enterprise-it',
       duration: '10 weeks',
       level: 'Intermediate',
-      price: '$2,299',
+      price: '$2,299';
       rating: 4.7,
       students: '823',
       icon: <Building className="w-8 h-8" />
-    },
+    };
     {
       id: 14,
       title: 'Cloud-Native AI Development',
@@ -208,11 +208,11 @@ export default function TrainingPage() {
       category: 'enterprise-it',
       duration: '8 weeks',
       level: 'Intermediate',
-      price: '$1,899',
+      price: '$1,899';
       rating: 4.6,
-      students: '1,134',
+      students: '1,134';
       icon: <Server className="w-8 h-8" />
-    },
+    };
     {
       id: 15,
       title: 'DevOps for AI Systems',
@@ -220,37 +220,37 @@ export default function TrainingPage() {
       category: 'enterprise-it',
       duration: '6 weeks',
       level: 'Intermediate',
-      price: '$1,599',
+      price: '$1,599';
       rating: 4.8,
       students: '756',
       icon: <Zap className="w-8 h-8" />
     }
-  ],
+  ];
 
   const filteredPrograms = allPrograms.filter(program => 
     selectedCategory === 'all' || program.category === selectedCategory
-  ),
+  );
 
   const getCategoryIcon = (category: string) => {
     const icons = {
-      'ai-consciousness': <Brain className="w-6 h-6" />,
-      'quantum-computing': <Atom className="w-6 h-6" />,
-      'autonomous-ops': <Rocket className="w-6 h-6" />,
+      'ai-consciousness': <Brain className="w-6 h-6" />;
+      'quantum-computing': <Atom className="w-6 h-6" />;
+      'autonomous-ops': <Rocket className="w-6 h-6" />;
       'enterprise-it': <Building className="w-6 h-6" />
-    },
+    };
     return icons[category as keyof typeof icons] || <GraduationCap className="w-6 h-6" />
-  },
+  };
 
   const getCategoryColor = (category: string) => {
     const colors = {
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
-    },
+    };
     return colors[category as keyof typeof colors] || 'gray'
-  },
+  };
 
   const toggleProgram = (id: number) => {
     setExpandedProgram(expandedProgram === id ? null : id)
-  },
+  };
 
   return (
     <Layout>
@@ -596,7 +596,7 @@ export default function TrainingPage() {
                   path: [
                     'AI Consciousness FundamentalsConsciousness Architecture DesignAdvanced ImplementationEthics and GovernanceAPI DevelopmentSystem OptimizationReal-world ApplicationsExpert Certification'
                   ]
-                },
+                };
                 {
                   title: 'Quantum Computing Specialist',
                   description: 'Master quantum computing from basic principles to enterprise implementation.',
@@ -608,7 +608,7 @@ export default function TrainingPage() {
                   path: [
                     'Quantum Computing BasicsQuantum AlgorithmsMachine Learning IntegrationSecurity ImplementationEnterprise SolutionsAdvanced Applications'
                   ]
-                },
+                };
                 {
                   title: 'Autonomous Operations Leader',
                   description: 'Lead the transformation to fully autonomous business operations.',
@@ -711,6 +711,6 @@ export default function TrainingPage() {
       </div>
     </Layout>
   )
-},
+};
 
-export default Training,
+export default Training;

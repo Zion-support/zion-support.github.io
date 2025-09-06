@@ -1,35 +1,35 @@
-import Link from 'next/link',
-import Head from 'next/head',
-import { useState, useEffect } from 'react',
-import { ContactInfo } from '../types',
-import ErrorBoundary from '../components/ErrorBoundary',
-import LoadingSpinner from '../components/LoadingSpinner',
+import Link from 'next/link';
+import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import { ContactInfo } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+import LoadingSpinner from '../components/LoadingSpinner';
 export default function Services() {
-  const [isLoaded, setIsLoaded] = useState(false),
+  const [isLoaded, setIsLoaded] = useState(false);
   
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100),
+    const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
-  }, []),
+  }, []);
 
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  },
+  };
 
   const serviceCategories = [
     {
       title: 'Micro SaaS Products',
-      description: 'Innovative, focused software solutions for modern businesses',
+      description: 'Innovative, focused software solutions for modern businesses';
       count: '150+',
       color: 'blue',
       services: [
         'AI-Powered Video Clip MakerSmart Contract AnalyzerCybersecurity Threat IntelligenceMulti-Language Website TranslatorPredictive Inventory OptimizerReal-Time Analytics DashboardAutomated Customer SupportBlockchain Transaction Monitor'
-      ],
+      ];
       href: '/micro-saas'
-    },
+    };
     {
       title: 'AI Services',
       description: 'Advanced artificial intelligence solutions for enterprise needs',
@@ -37,9 +37,9 @@ export default function Services() {
       color: 'purple',
       services: [
         'Autonomous AI AgentsAI-Powered Financial TradingAI Legal Document AnalysisAI-Powered Voice AnalyticsAI-Powered Search & DiscoveryMachine Learning Model TrainingNatural Language ProcessingComputer Vision Solutions'
-      ],
+      ];
       href: '/ai-services'
-    },
+    };
     {
       title: 'IT & Cloud Services',
       description: 'Comprehensive IT solutions for enterprise-grade operations',
@@ -47,10 +47,10 @@ export default function Services() {
       color: 'green',
       services: [
         'Quantum Computing ConsultingBlockchain & Web3 SolutionsDevSecOps & Security AutomationEnterprise Data PlatformHigh-Performance ComputingCloud Migration ServicesInfrastructure as CodeDisaster Recovery Solutions'
-      ],
+      ];
       href: '/it-services'
     }
-  ],
+  ];
 
   const getColorClasses = (color: string) => {
     const colors = {
@@ -60,14 +60,14 @@ export default function Services() {
         text: 'text-blue-400',
         border: 'border-blue-500/40',
         ring: 'focus:ring-blue-500'
-      },
+      };
       purple: {
         bg: 'bg-purple-600',
         hover: 'hover:bg-purple-700',
         text: 'text-purple-400',
         border: 'border-purple-500/40',
         ring: 'focus:ring-purple-500'
-      },
+      };
       green: {
         bg: 'bg-green-600',
         hover: 'hover:bg-green-700',
@@ -75,9 +75,9 @@ export default function Services() {
         border: 'border-green-500/40',
         ring: 'focus:ring-green-500'
       }
-    },
+    };
     return colors[color as keyof typeof colors] || colors.blue
-  },
+  };
 
   return (
     <>
@@ -115,7 +115,7 @@ export default function Services() {
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-3 gap-8">
                 {serviceCategories.map((category, index) => {
-                  const colors = getColorClasses(category.color),
+                  const colors = getColorClasses(category.color);
                   return (
                     <div 
                       key={category.title}

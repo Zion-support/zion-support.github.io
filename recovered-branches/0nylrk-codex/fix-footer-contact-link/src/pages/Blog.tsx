@@ -1,23 +1,23 @@
 
-import { useState } from "react",
-import { Link } from "react-router-dom",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { GradientHeading } from "@/components/GradientHeading",
-import { SEO } from "@/components/SEO",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
-import { BlogPost } from "@/types/blog",
-import { Search } from "lucide-react",
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { BlogPost } from "@/types/blog";
+import { Search } from "lucide-react";
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
   {
     id: "ai-trends-2025",
     title: "10 Emerging AI Trends to Watch in 2025",
     slug: "ai-trends-2025",
-    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
+    excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.";
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
 
 <h2>1. Multimodal AI Systems</h2>
@@ -33,19 +33,19 @@ const BLOG_POSTS: BlogPost[] = [
 <p>The convergence of quantum computing and AI is beginning to yield practical applications. While still in early stages, quantum-enhanced machine learning algorithms are demonstrating superior performance for specific optimization and pattern recognition problems.</p>
 
 <h2>5. AI for Climate Solutions</h2>
-<p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`,
+<p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
     author: {
       name: "Dr. Alicia Zhang",
       title: "AI Research Director",
       avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
-    },
-    publishedDate: "Apr 15, 2025",
+    };
+    publishedDate: "Apr 15, 2025";
     readTime: "5 min read",
     category: "Trends",
-    tags: ["AI", "Technology Trends", "Machine Learning", "Future Tech"],
+    tags: ["AI", "Technology Trends", "Machine Learning", "Future Tech"];
     featuredImage: "https://images.unsplash.com/photo-1677442135026-f00ef565c4be?auto=format&fit=crop&w=1200&h=630",
     isFeatured: true
-  },
+  };
   {
     id: "optimize-ai-listings",
     title: "How to Optimize Your AI Service Listings for Maximum Visibility",
@@ -66,18 +66,18 @@ const BLOG_POSTS: BlogPost[] = [
 <p>Consider offering tiered packages that cater to different client needs and budgets. Clearly differentiate what's included in each tier, and consider adding value-based pricing elements that tie your compensation to client results.</p>
 
 <h2>Leveraging Reviews and Testimonials</h2>
-<p>Social proof is powerful. Actively request detailed reviews from satisfied clients, and feature the most compelling testimonials prominently in your listing. Respond professionally to all feedback, including any critical reviews.</p>`,
+<p>Social proof is powerful. Actively request detailed reviews from satisfied clients, and feature the most compelling testimonials prominently in your listing. Respond professionally to all feedback, including any critical reviews.</p>`;
     author: {
       name: "Marcus Johnson",
       title: "Marketing Strategist",
       avatarUrl: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200"
-    },
-    publishedDate: "Apr 10, 2025",
+    };
+    publishedDate: "Apr 10, 2025";
     readTime: "8 min read",
     category: "Marketing",
-    tags: ["Marketing", "AI Services", "Visibility", "SEO"],
+    tags: ["Marketing", "AI Services", "Visibility", "SEO"];
     featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630"
-  },
+  };
   {
     id: "green-it",
     title: "Green IT: Reducing Your Data Center's Carbon Footprint",
@@ -98,18 +98,18 @@ const BLOG_POSTS: BlogPost[] = [
 <p>Right-sizing infrastructure and implementing dynamic workload management ensures computing resources are used efficiently. Modern orchestration tools can automatically balance workloads to maximize utilization while powering down unused capacity.</p>
 
 <h2>Measuring and Reporting Impact</h2>
-<p>Implementing comprehensive monitoring and establishing environmental KPIs creates accountability and identifies opportunities for improvement. Many organizations now include sustainability metrics in their regular performance reporting alongside traditional IT measurements.</p>`,
+<p>Implementing comprehensive monitoring and establishing environmental KPIs creates accountability and identifies opportunities for improvement. Many organizations now include sustainability metrics in their regular performance reporting alongside traditional IT measurements.</p>`;
     author: {
       name: "Sophia Chen",
       title: "Sustainability Engineer",
       avatarUrl: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200"
-    },
-    publishedDate: "Apr 5, 2025",
+    };
+    publishedDate: "Apr 5, 2025";
     readTime: "6 min read",
     category: "Sustainability",
-    tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"],
+    tags: ["Green IT", "Sustainability", "Data Centers", "Energy Efficiency"];
     featuredImage: "https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=1200&h=630"
-  },
+  };
   {
     id: "ai-ethics-frameworks",
     title: "Implementing Ethical AI Frameworks in Enterprise Applications",
@@ -130,18 +130,18 @@ const BLOG_POSTS: BlogPost[] = [
 <p>Even highly accurate AI systems require human oversight mechanisms. Implement appropriate appeal processes, confidence thresholds that trigger human review, and ongoing monitoring for performance drift that might introduce new ethical concerns.</p>
 
 <h2>Continuous Ethical Evaluation</h2>
-<p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`,
+<p>Ethics isn't a one-time consideration. Establish regular review cycles that evaluate both technical performance and ethical implications of deployed systems. Create channels for stakeholder feedback, including affected users and communities.</p>`;
     author: {
       name: "Dr. James Peterson",
       title: "AI Ethics Officer",
       avatarUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"
-    },
-    publishedDate: "Mar 30, 2025",
+    };
+    publishedDate: "Mar 30, 2025";
     readTime: "7 min read",
     category: "Ethics",
-    tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"],
+    tags: ["AI Ethics", "Enterprise AI", "Responsible AI", "Governance"];
     featuredImage: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&h=630"
-  },
+  };
   {
     id: "ai-talent-acquisition",
     title: "Winning the AI Talent War: Recruitment Strategies for 2025",
@@ -162,18 +162,18 @@ const BLOG_POSTS: BlogPost[] = [
 <p>The most successful AI employers have embraced truly global talent strategies, creating distributed teams that leverage expertise regardless of location. This approach requires investing in collaboration tools, asynchronous workflows, and inclusive management practices.</p>
 
 <h2>Retention Through Growth Paths</h2>
-<p>Create clear advancement opportunities that don't force technical experts into management tracks. Dual-ladder career paths that equally value technical depth and leadership skills ensure AI professionals can progress while playing to their strengths.</p>`,
+<p>Create clear advancement opportunities that don't force technical experts into management tracks. Dual-ladder career paths that equally value technical depth and leadership skills ensure AI professionals can progress while playing to their strengths.</p>`;
     author: {
       name: "Elena Rodriguez",
       title: "Head of AI Talent",
       avatarUrl: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=200&h=200"
-    },
-    publishedDate: "Mar 22, 2025",
+    };
+    publishedDate: "Mar 22, 2025";
     readTime: "9 min read",
     category: "Recruitment",
-    tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"],
+    tags: ["AI Talent", "Recruitment", "Tech Hiring", "Retention"];
     featuredImage: "https://images.unsplash.com/photo-1542744173-8659239358d7?auto=format&fit=crop&w=1200&h=630"
-  },
+  };
   {
     id: "ai-compute-optimization",
     title: "AI Compute Optimization: Balancing Performance and Cost",
@@ -194,49 +194,49 @@ const BLOG_POSTS: BlogPost[] = [
 <p>Implementing techniques like mixed precision training, gradient accumulation, and efficient hyperparameter optimization can significantly reduce training time and costs. Modern frameworks provide many of these optimizations with minimal configuration.</p>
 
 <h2>Inference Serving Architecture</h2>
-<p>The deployment architecture for AI models dramatically impacts both performance and cost. Consider batching strategies, hardware acceleration options, and scaling policies that align with your application's latency requirements and traffic patterns.</p>`,
+<p>The deployment architecture for AI models dramatically impacts both performance and cost. Consider batching strategies, hardware acceleration options, and scaling policies that align with your application's latency requirements and traffic patterns.</p>`;
     author: {
       name: "Michael Wong",
       title: "ML Infrastructure Architect",
       avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
-    },
-    publishedDate: "Mar 15, 2025",
+    };
+    publishedDate: "Mar 15, 2025";
     readTime: "6 min read",
     category: "Infrastructure",
-    tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"],
+    tags: ["AI Infrastructure", "Cost Optimization", "Machine Learning", "Computing"];
     featuredImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=630"
   }
-],
+];
 
 // Categories for filtering
 const CATEGORIES = [
-  "All Categories",
-  "Trends",
-  "Marketing",
-  "Sustainability",
-  "Ethics",
-  "Recruitment",
+  "All Categories";
+  "Trends";
+  "Marketing";
+  "Sustainability";
+  "Ethics";
+  "Recruitment";
   "Infrastructure"
-],
+];
 
 export default function Blog() {
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [selectedCategory, setSelectedCategory] = useState("All Categories"),
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("All Categories");
   
   // Filter blog posts based on search and category
   const filteredPosts = BLOG_POSTS.filter(post => {
     const matchesSearch = 
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
       post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
+      post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       
-    const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory,
+    const matchesCategory = selectedCategory === "All Categories" || post.category === selectedCategory;
     
     return matchesSearch && matchesCategory
-  }),
+  });
   
   // Get featured posts
-  const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured),
+  const featuredPosts = BLOG_POSTS.filter(post => post.isFeatured);
   
   return (
     <>
@@ -393,7 +393,7 @@ export default function Blog() {
               <Button 
                 variant="outline" 
                 onClick={() => {
-                  setSearchQuery(""),
+                  setSearchQuery("");
                   setSelectedCategory("All Categories")
                 }}
                 className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"

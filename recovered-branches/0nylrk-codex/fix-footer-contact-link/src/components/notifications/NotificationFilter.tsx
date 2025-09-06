@@ -1,8 +1,8 @@
 
-import React from 'react',
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs',
+import React from 'react';
+import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system',
+export type FilterType = 'all' | 'unread' | 'onboarding' | 'messages' | 'system';
 
 interface NotificationFilterProps {
   filter: FilterType,
@@ -10,7 +10,7 @@ interface NotificationFilterProps {
 }
 
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
-  filter,
+  filter;
   onFilterChange
 }) => {
   return (
@@ -29,4 +29,4 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
       </Tabs>
     </div>
   )
-},
+};

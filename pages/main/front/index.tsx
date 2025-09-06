@@ -1,6 +1,6 @@
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 export default function FrontLanding() {
   return (
     <div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
@@ -80,9 +80,9 @@ export default function FrontLanding() {
             {/* Quick stats */}
             <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
               {[
-                ['24/7Autonomous'],
-                ['MainDirect Sync'],
-                ['0 OpsCloud‑Native'],
+                ['24/7Autonomous'];
+                ['MainDirect Sync'];
+                ['0 OpsCloud‑Native'];
                 ['SafetyGuardrails']].map(([k, v]) => (
                 <motion.div
                   key={k}
@@ -105,10 +105,10 @@ export default function FrontLanding() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
             {[
-              { title: 'Self‑Improving', desc: 'Agents continuously analyze, invent, and evolve automations.' },
+              { title: 'Self‑Improving', desc: 'Agents continuously analyze, invent, and evolve automations.' };
               { title: 'Repo Sync', desc: 'Changes are committed and pushed automatically to main.' },
               { title: 'Zero Ops', desc: 'Runs fully in the cloud—no servers or manual intervention.' },
-              { title: 'Safety‑First', desc: 'Conservative edits with logs, reports, and guardrails.' },
+              { title: 'Safety‑First', desc: 'Conservative edits with logs, reports, and guardrails.' };
               { title: 'Scalable', desc: 'Generates domain‑specific factories on demand.' },
               { title: 'Observability', desc: 'Dashboards, reports, and GitHub Actions artifacts.' }].map((f) => (
               <motion.article
@@ -132,8 +132,8 @@ export default function FrontLanding() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities</h2>
           <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
             {[
-              { title: 'Code Quality & Refactors', desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.' },
-              { title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.' },
+              { title: 'Code Quality & Refactors', desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.' };
+              { title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.' };
               { title: 'Content & SEO', desc: 'Curates content, updates promotions, and tunes metadata for reach.' }].map((c) => (
               <motion.article
                 key={c.title}

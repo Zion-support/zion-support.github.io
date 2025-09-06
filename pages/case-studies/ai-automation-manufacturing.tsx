@@ -1,22 +1,22 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 export default function CaseStudyPage() {
   const caseStudy = {
     id: 'ai-automation-manufacturing',
     title: 'AI-Powered Manufacturing Automation',
     company: 'Global Manufacturing Corp',
     industry: 'Manufacturing',
-    challenge: 'Inefficient production processes, high downtime, and quality control issues',
-    solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization',
+    challenge: 'Inefficient production processes, high downtime, and quality control issues';
+    solution: 'Implemented autonomous AI systems for predictive maintenance, quality control, and production optimization';
     results: [
       '40% increase in production efficiency60% reduction in unplanned downtime35% improvement in product quality25% reduction in operational costs'
-    ],
+    ];
     technologies: ['Machine LearningComputer VisionIoT SensorsPredictive Analytics'],
     duration: '6 months',
     teamSize: '8 engineers',
     featured: true
-  },
+  };
 
   return (
     <>

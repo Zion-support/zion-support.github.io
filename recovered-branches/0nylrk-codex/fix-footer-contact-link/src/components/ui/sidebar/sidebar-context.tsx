@@ -27,19 +27,19 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
 }
 
 export const SidebarProvider = React.forwardRef<
-  HTMLDivElement,
+  HTMLDivElement;
   SidebarProviderProps
 >(
   (
     {
-      defaultOpen = true,
+      defaultOpen = true;
       open: openProp,
       onOpenChange: setOpenProp,
-      className,
-      style,
-      children,
+      className;
+      style;
+      children;
       ...props
-    },
+    };
     ref
   ) => {
     const isMobile = useIsMobile()
@@ -60,7 +60,7 @@ export const SidebarProvider = React.forwardRef<
 
         // This sets the cookie to keep the sidebar state.
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
-      },
+      };
       [setOpenProp, open]
     )
 
@@ -93,13 +93,13 @@ export const SidebarProvider = React.forwardRef<
 
     const contextValue = React.useMemo(
       (): SidebarContextType => ({
-        state,
-        open,
-        setOpen,
-        isMobile,
-        openMobile,
-        setOpenMobile,
-        toggleSidebar}),
+        state;
+        open;
+        setOpen;
+        isMobile;
+        openMobile;
+        setOpenMobile;
+        toggleSidebar});
       [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar]
     )
 
@@ -109,12 +109,12 @@ export const SidebarProvider = React.forwardRef<
           <div
               style={
               {
-                "--sidebar-width": "16rem",
-                "--sidebar-width-icon": "3rem",
+                "--sidebar-width": "16rem";
+                "--sidebar-width-icon": "3rem";
                 ...style} as CSSProperties
               }
             className={cn(
-              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
+              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar";
               className
             )}
             ref={ref}

@@ -1,9 +1,9 @@
 
-import React, { useMemo } from 'react',
+import React, { useMemo } from 'react';
 import { User } from 'lucide-react'
-import { Conversation } from '@/types/messaging',
-import { ConversationItem } from './ConversationItem',
-import { FixedSizeList as List, ListChildComponentProps } from 'react-window',
+import { Conversation } from '@/types/messaging';
+import { ConversationItem } from './ConversationItem';
+import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
 
 interface ConversationsListProps {
   conversations: Conversation[],
@@ -13,19 +13,19 @@ interface ConversationsListProps {
 }
 
 export function ConversationsList({
-  conversations,
-  activeConversation,
-  setActiveConversation,
+  conversations;
+  activeConversation;
+  setActiveConversation;
   markAsRead
 }: ConversationsListProps) {
-  const itemSize = 80,
+  const itemSize = 80;
 
   const listHeight = useMemo(() => {
     return Math.min(conversations.length * itemSize, 600)
-  }, [conversations.length]),
+  }, [conversations.length]);
 
   const Row = ({ index, style }: ListChildComponentProps) => {
-    const conversation = conversations[index],
+    const conversation = conversations[index];
     
     if (!conversation) {
       return <div style={style} />
@@ -37,13 +37,13 @@ export function ConversationsList({
           conversation={conversation}
           isActive={activeConversation?.id === conversation.id}
           onClick={() => {
-            setActiveConversation(conversation),
+            setActiveConversation(conversation);
             markAsRead(conversation.id)
           }}
         />
       </div>
     )
-  },
+  };
 
   return (
     <div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto">

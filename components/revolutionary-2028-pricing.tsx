@@ -1,24 +1,24 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
-  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
-  Building, Factory, Camera, Video, Music, Gamepad2,
+  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
+  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
+  Building, Factory, Camera, Video, Music, Gamepad2;
   Crown, Award, Target, Users, Clock, Globe2
-} from 'lucide-react',
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
-import { futuristic2028Services } from '../data/2028-futuristic-innovations',
-import { emergingTech2028Services } from '../data/2028-emerging-tech-services',
+} from 'lucide-react';
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
+import { futuristic2028Services } from '../data/2028-futuristic-innovations';
+import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const pricingTiers = [
   {
@@ -28,12 +28,12 @@ const pricingTiers = [
     description: 'Perfect for small businesses and startups',
     features: [
       'Basic AI integrationStandard supportCore features accessEmail supportBasic analyticsMobile app access'
-    ],
+    ];
     popular: false,
     color: 'from-blue-600 to-cyan-600',
     cta: 'Get Started',
     href: '/contact'
-  },
+  };
   {
     name: 'Professional',
     price: '$999',
@@ -41,46 +41,46 @@ const pricingTiers = [
     description: 'Ideal for growing businesses and enterprises',
     features: [
       'Advanced AI capabilitiesPriority supportFull feature accessPhone & email supportAdvanced analyticsAPI accessCustom integrationsTraining & onboarding'
-    ],
+    ];
     popular: true,
     color: 'from-purple-600 to-pink-600',
     cta: 'Start Free Trial',
     href: '/contact'
-  },
+  };
   {
     name: 'Enterprise',
     price: 'Custom',
     period: '',
     description: 'Tailored solutions for large organizations',
     features: [
-      'Custom AI developmentDedicated support teamWhite-label solutions24/7 phone supportCustom analyticsFull API accessCustom integrationsDedicated account manager',
+      'Custom AI developmentDedicated support teamWhite-label solutions24/7 phone supportCustom analyticsFull API accessCustom integrationsDedicated account manager';
       'SLA guaranteesOn-premise deployment'
-    ],
+    ];
     popular: false,
     color: 'from-indigo-600 to-purple-600',
     cta: 'Contact Sales',
     href: '/contact'
   }
-],
+];
 
 const servicePricing = [
   {
     category: '🚀 2028 Futuristic Innovations',
     services: futuristic2028Services.slice(0, 6)
-  },
+  };
   {
     category: '🏙️ Smart City & Infrastructure',
     services: emergingTech2028Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0, 4)
-  },
+  };
   {
     category: '⚛️ Quantum & Advanced Tech',
     services: futuristic2028Services.filter(s => s.category.includes('Quantum')).slice(0, 4)
-  },
+  };
   {
     category: '🤖 AI & Machine Learning',
     services: emergingTech2028Services.filter(s => s.category.includes('AI')).slice(0, 4)
   }
-],
+];
 
 export default function Revolutionary2028Pricing() {
   return (

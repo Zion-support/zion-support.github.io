@@ -1,12 +1,12 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
-import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
 
 export default function WebsitePerformanceMonitorPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false),
-  const [analysisResults, setAnalysisResults] = useState(null),
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const [analysisResults, setAnalysisResults] = useState(null);
 
   const features = [
     {
@@ -18,13 +18,13 @@ export default function WebsitePerformanceMonitorPage() {
     {
       icon: <Gauge className="w-8 h-8 text-white" />,
       title: 'Performance Metrics',
-      description: 'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.',
+      description: 'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.';
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500'},
     {
       icon: <AlertTriangle className="w-8 h-8 text-white" />,
       title: 'Issue Detection',
-      description: 'Automatically detect and alert on performance issues, downtime, and bottlenecks.',
+      description: 'Automatically detect and alert on performance issues, downtime, and bottlenecks.';
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       gradient: 'from-orange-400 to-red-500'},
     {
@@ -37,41 +37,41 @@ export default function WebsitePerformanceMonitorPage() {
   const metrics = [
     {
       name: 'Core Web Vitals',
-      description: 'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.',
+      description: 'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.';
       icon: '⚡',
       color: 'text-blue-400'
-    },
+    };
     {
       name: 'Page Load Time',
       description: 'Comprehensive analysis of page load performance across different devices and locations.',
       icon: '🚀',
       color: 'text-green-400'
-    },
+    };
     {
       name: 'Uptime Monitoring',
       description: '99.9% uptime monitoring with instant alerts for any downtime or performance issues.',
       icon: '🔄',
       color: 'text-purple-400'
-    },
+    };
     {
       name: 'Mobile Performance',
       description: 'Mobile-first performance testing and optimization recommendations.',
       icon: '📱',
       color: 'text-orange-400'
-    },
+    };
     {
       name: 'SEO Impact',
       description: 'Performance metrics that directly affect your search engine rankings and visibility.',
       icon: '🔍',
       color: 'text-cyan-400'
-    },
+    };
     {
       name: 'User Experience',
       description: 'Real user experience metrics and conversion impact analysis.',
       icon: '👥',
       color: 'text-pink-400'
     }
-  ],
+  ];
 
   const pricing = [
     {
@@ -81,9 +81,9 @@ export default function WebsitePerformanceMonitorPage() {
       description: 'Perfect for small websites and blogs',
       features: [
         '5 websites monitoredBasic performance metricsDaily monitoringEmail alertsBasic reportingCore Web Vitals tracking'
-      ],
+      ];
       popular: false
-    },
+    };
     {
       name: 'Professional',
       price: '$79',
@@ -91,9 +91,9 @@ export default function WebsitePerformanceMonitorPage() {
       description: 'Ideal for growing businesses and e-commerce sites',
       features: [
         '25 websites monitoredAdvanced performance metricsReal-time monitoringSMS & email alertsAdvanced reportingPerformance optimization tipsAPI accessTeam collaboration'
-      ],
+      ];
       popular: true
-    },
+    };
     {
       name: 'Enterprise',
       price: '$199',
@@ -101,13 +101,13 @@ export default function WebsitePerformanceMonitorPage() {
       description: 'For large organizations with critical performance requirements',
       features: [
         'Unlimited websitesEnterprise-grade monitoringCustom alerting rules24/7 supportCustom integrationsWhite-label reportingSLA guaranteesOn-premise options'
-      ],
+      ];
       popular: false
     }
-  ],
+  ];
 
   const handleAnalyzeWebsite = async () => {
-    setIsAnalyzing(true),
+    setIsAnalyzing(true);
     // Simulate website analysis
     setTimeout(() => {
       setAnalysisResults({
@@ -120,10 +120,10 @@ export default function WebsitePerformanceMonitorPage() {
         recommendations: [
           'Optimize images and implement lazy loadingMinimize render-blocking resourcesEnable compression and cachingConsider using a CDN for global performance'
         ]
-      }),
+      });
       setIsAnalyzing(false)
     }, 4000)
-  },
+  };
 
   return (
     <>

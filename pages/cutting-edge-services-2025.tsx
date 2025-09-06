@@ -1,19 +1,19 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
-import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, ExternalLink } from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services',
-import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services',
-import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas',
-import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, ExternalLink } from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeITServices2025 } from '../data/2025-cutting-edge-it-services';
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const serviceCategories = [
   {
@@ -24,7 +24,7 @@ const serviceCategories = [
     color: 'from-violet-500 to-purple-600',
     bgColor: 'from-violet-900/20 to-purple-900/20',
     borderColor: 'border-violet-500/30'
-  },
+  };
   {
     title: 'Quantum & Emerging Tech',
     description: 'Breakthrough quantum computing and space technology solutions',
@@ -33,7 +33,7 @@ const serviceCategories = [
     color: 'from-indigo-500 to-blue-600',
     bgColor: 'from-indigo-900/20 to-blue-900/20',
     borderColor: 'border-indigo-500/30'
-  },
+  };
   {
     title: 'Enterprise IT',
     description: 'Advanced enterprise infrastructure and security solutions',
@@ -42,7 +42,7 @@ const serviceCategories = [
     color: 'from-blue-500 to-cyan-600',
     bgColor: 'from-blue-900/20 to-cyan-900/20',
     borderColor: 'border-blue-500/30'
-  },
+  };
   {
     title: 'Micro SAAS',
     description: 'Innovative business solutions for modern enterprises',
@@ -52,7 +52,7 @@ const serviceCategories = [
     bgColor: 'from-teal-900/20 to-emerald-900/20',
     borderColor: 'border-teal-500/30'
   }
-],
+];
 
 export default function CuttingEdgeServices2025() {
   return (

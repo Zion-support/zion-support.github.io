@@ -1,19 +1,19 @@
-import React, { useState } from 'react',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { 
   Star, CheckCircle, ArrowRight, TrendingUp, Users, 
-  Award, Clock, Zap, Shield, Brain, Atom, Rocket,
-  ShoppingCart, Cpu, Globe, Lock, Video, Palette,
+  Award, Clock, Zap, Shield, Brain, Atom, Rocket;
+  ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
-} from 'lucide-react',
-import { realMarketServices } from '../../data/2024-real-market-services',
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services',
+} from 'lucide-react';
+import { realMarketServices } from '../../data/2024-real-market-services';
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const serviceCategories = [
   {
@@ -24,7 +24,7 @@ const serviceCategories = [
     color: 'from-violet-500 to-purple-500',
     services: aiEmergingTechServices.filter(s => s.category.includes('AI')),
     gradient: 'from-violet-500/20 to-indigo-500/20'
-  },
+  };
   {
     id: 'quantum-tech',
     title: '⚛️ Quantum & Emerging Tech',
@@ -33,7 +33,7 @@ const serviceCategories = [
     color: 'from-indigo-500 to-blue-500',
     services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') || s.category.includes('Blockchain')),
     gradient: 'from-indigo-500/20 to-cyan-500/20'
-  },
+  };
   {
     id: 'enterprise-it',
     title: '🏙️ Enterprise IT Solutions',
@@ -42,7 +42,7 @@ const serviceCategories = [
     color: 'from-blue-500 to-cyan-500',
     services: realMarketServices.filter(s => s.category.includes('Security') || s.category.includes('HR') || s.category.includes('Project')),
     gradient: 'from-blue-500/20 to-teal-500/20'
-  },
+  };
   {
     id: 'business-automation',
     title: '🛒 Business Automation',
@@ -51,7 +51,7 @@ const serviceCategories = [
     color: 'from-teal-500 to-emerald-500',
     services: realMarketServices.filter(s => s.category.includes('E-commerce') || s.category.includes('Marketing') || s.category.includes('Finance')),
     gradient: 'from-teal-500/20 to-green-500/20'
-  },
+  };
   {
     id: 'robotics-automation',
     title: '🤖 Robotics & Automation',
@@ -60,7 +60,7 @@ const serviceCategories = [
     color: 'from-green-500 to-yellow-500',
     services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') || s.category.includes('Edge')),
     gradient: 'from-green-500/20 to-orange-500/20'
-  },
+  };
   {
     id: 'research-development',
     title: '🔬 Research & Development',
@@ -70,22 +70,22 @@ const serviceCategories = [
     services: aiEmergingTechServices.filter(s => s.category.includes('Drug') || s.category.includes('Climate')),
     gradient: 'from-orange-500/20 to-pink-500/20'
   }
-],
+];
 
 export default function UltraFuturisticServiceShowcase2034() {
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
 
-  const allServices = [...realMarketServices, ...aiEmergingTechServices],
+  const allServices = [...realMarketServices, ...aiEmergingTechServices];
   
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || 
-      serviceCategories.some(cat => cat.services.includes(service)),
+      serviceCategories.some(cat => cat.services.includes(service));
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch
-  }),
+  });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -95,12 +95,12 @@ export default function UltraFuturisticServiceShowcase2034() {
         staggerChildren: 0.1
       }
     }
-  },
+  };
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
-  },
+  };
 
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">

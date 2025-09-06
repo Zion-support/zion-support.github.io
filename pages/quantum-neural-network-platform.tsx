@@ -1,12 +1,12 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   Atom, Brain, Cpu, Zap, Shield, Globe, 
-  Rocket, Target, TrendingUp, Users, CheckCircle,
+  Rocket, Target, TrendingUp, Users, CheckCircle;
   ArrowRight, Star, Award, Clock, DollarSign
-} from 'lucide-react',
+} from 'lucide-react';
 
 const QuantumNeuralNetworkPlatform = () => {
   const features = [
@@ -15,54 +15,54 @@ const QuantumNeuralNetworkPlatform = () => {
       title: "Quantum Consciousness Integration",
       description: "Advanced AI consciousness with quantum processing capabilities",
       color: "from-purple-500 to-pink-500"
-    },
+    };
     {
       icon: Atom,
       title: "Quantum Neural Processing",
       description: "Revolutionary quantum computing for neural network operations",
       color: "from-blue-500 to-cyan-500"
-    },
+    };
     {
       icon: Cpu,
       title: "Hybrid AI Architecture",
       description: "Combines classical and quantum computing for optimal performance",
       color: "from-emerald-500 to-teal-500"
-    },
+    };
     {
       icon: Shield,
       title: "Quantum Security",
       description: "Unbreakable encryption using quantum cryptography",
       color: "from-red-500 to-orange-500"
     }
-  ],
+  ];
 
   const benefits = [
-    "1000x faster neural network training",
-    "Quantum-level security and encryption",
-    "Scalable consciousness simulation",
-    "Real-time quantum decision making",
-    "Advanced pattern recognition",
+    "1000x faster neural network training";
+    "Quantum-level security and encryption";
+    "Scalable consciousness simulation";
+    "Real-time quantum decision making";
+    "Advanced pattern recognition";
     "Future-proof technology foundation"
-  ],
+  ];
 
   const useCases = [
     {
       title: "AI Research & Development",
       description: "Accelerate AI breakthroughs with quantum processing power"
-    },
+    };
     {
       title: "Cybersecurity",
       description: "Unbreakable security protocols using quantum encryption"
-    },
+    };
     {
       title: "Scientific Discovery",
       description: "Solve complex scientific problems in minutes, not years"
-    },
+    };
     {
       title: "Financial Modeling",
       description: "Advanced risk assessment and market prediction algorithms"
     }
-  ],
+  ];
 
   return (
     <>
@@ -255,6 +255,6 @@ const QuantumNeuralNetworkPlatform = () => {
       </div>
     </>
   )
-},
+};
 
-export default QuantumNeuralNetworkPlatform,
+export default QuantumNeuralNetworkPlatform;

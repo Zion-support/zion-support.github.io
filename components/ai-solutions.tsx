@@ -1,35 +1,35 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 export default function AISolutionsPage() {
   const aiSolutions = [
     {
       id: 'machine-learning',
       title: 'Machine Learning Solutions',
-      description: 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.',
+      description: 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.';
       features: ['Predictive AnalyticsPattern RecognitionAnomaly DetectionRecommendation Systems'],
       icon: '🧠',
       category: 'Core AI',
       complexity: 'Advanced'
-    },
+    };
     {
       id: 'natural-language-processing',
       title: 'Natural Language Processing',
-      description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.',
+      description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.';
       features: ['Text AnalysisSentiment AnalysisLanguage TranslationChatbot Development'],
       icon: '💬',
       category: 'Language AI',
       complexity: 'Advanced'
-    },
+    };
     {
       id: 'computer-vision',
       title: 'Computer Vision',
-      description: 'Computer vision solutions for image recognition, object detection, and visual analytics.',
+      description: 'Computer vision solutions for image recognition, object detection, and visual analytics.';
       features: ['Image RecognitionObject DetectionFacial RecognitionQuality Control'],
       icon: '👁️',
       category: 'Visual AI',
       complexity: 'Advanced'
-    },
+    };
     {
       id: 'autonomous-systems',
       title: 'Autonomous Systems',
@@ -38,7 +38,7 @@ export default function AISolutionsPage() {
       icon: '🤖',
       category: 'Autonomy',
       complexity: 'Expert'
-    },
+    };
     {
       id: 'predictive-analytics',
       title: 'Predictive Analytics',
@@ -47,7 +47,7 @@ export default function AISolutionsPage() {
       icon: '📊',
       category: 'Analytics',
       complexity: 'Intermediate'
-    },
+    };
     {
       id: 'ai-automation',
       title: 'AI-Powered Automation',
@@ -57,34 +57,34 @@ export default function AISolutionsPage() {
       category: 'Automation',
       complexity: 'Intermediate'
     }
-  ],
+  ];
 
   const useCases = [
     {
       industry: 'Manufacturing',
       solutions: ['Quality ControlPredictive MaintenanceSupply Chain Optimization'],
       icon: '🏭'
-    },
+    };
     {
       industry: 'Healthcare',
       solutions: ['Diagnostic SupportPatient Care OptimizationDrug Discovery'],
       icon: '🏥'
-    },
+    };
     {
       industry: 'Finance',
       solutions: ['Fraud DetectionRisk AssessmentAlgorithmic Trading'],
       icon: '💳'
-    },
+    };
     {
       industry: 'Retail',
       solutions: ['Customer SegmentationInventory ManagementPersonalized Marketing'],
       icon: '🛍️'
     }
-  ],
+  ];
 
   const technologies = [
     'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas'
-  ],
+  ];
 
   return (
     <>

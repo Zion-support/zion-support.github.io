@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react',
+import { useEffect, useState } from 'react';
 
 type Note = {
   id: string,
@@ -7,27 +7,27 @@ type Note = {
   text: string,
   authorId: string,
   createdAt: number
-},
+};
 
 export default function AdminNotesConsole() {
-  const [isAdmin, setIsAdmin] = useState(true),
-  const [notes, setNotes] = useState<Note[]>([]),
-  const [loading, setLoading] = useState(false),
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     async function load() {
-      setLoading(true),
+      setLoading(true);
       try {
         const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } }),
-        if (!res.ok) return,
-        const data = await res.json(),
+        if (!res.ok) return;
+        const data = await res.json();
         setNotes(data.notes || [])
       } finally {
         setLoading(false)
       }
     }
     if (isAdmin) load()
-  }, [isAdmin]),
+  }, [isAdmin]);
 
   return (
     <div className="space-y-4">

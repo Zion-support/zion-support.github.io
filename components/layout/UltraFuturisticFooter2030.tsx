@@ -1,19 +1,19 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom, 
-  Rocket, Shield, Cpu, Target, Microscope, Users,
-  Facebook, Twitter, Linkedin, Instagram, Youtube,
+  Rocket, Shield, Cpu, Target, Microscope, Users;
+  Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle
-} from 'lucide-react',
+} from 'lucide-react';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const serviceCategories = [
   {
@@ -24,7 +24,7 @@ const serviceCategories = [
       { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator' },
       { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager' }
     ]
-  },
+  };
   {
     title: '⚛️ Quantum & Emerging Tech',
     services: [
@@ -33,7 +33,7 @@ const serviceCategories = [
       { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform' },
       { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }
     ]
-  },
+  };
   {
     title: '🧬 Biotech & DNA Computing',
     services: [
@@ -42,7 +42,7 @@ const serviceCategories = [
       { name: 'Predictive Health Analytics', href: '/ai-predictive-health-analytics' },
       { name: 'Research Automation', href: '/advanced-research-automation' }
     ]
-  },
+  };
   {
     title: '🏙️ Enterprise IT Solutions',
     services: [
@@ -51,7 +51,7 @@ const serviceCategories = [
       { name: 'AI Enterprise Security', href: '/ai-powered-enterprise-security' },
       { name: 'Intelligent Data Governance', href: '/intelligent-data-governance' }
     ]
-  },
+  };
   {
     title: '🌌 Space & Metaverse Tech',
     services: [
@@ -60,7 +60,7 @@ const serviceCategories = [
       { name: 'Quantum Research Platform', href: '/quantum-research-platform' },
       { name: 'AI Research Assistant', href: '/ai-research-assistant' }
     ]
-  },
+  };
   {
     title: '🎯 2030 Innovative Micro SAAS',
     services: [
@@ -70,7 +70,7 @@ const serviceCategories = [
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030' }
     ]
   }
-],
+];
 
 const quickLinks = [
   { name: 'Home', href: '/' },
@@ -81,7 +81,7 @@ const quickLinks = [
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' }
-],
+];
 
 const companyInfo = [
   { name: 'About Us', href: '/about' },
@@ -90,7 +90,7 @@ const companyInfo = [
   { name: 'Partners', href: '/partners' },
   { name: 'Support', href: '/support' },
   { name: 'Status', href: '/status' }
-],
+];
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -99,11 +99,11 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
   { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
-],
+];
 
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP Authorized'
-],
+];
 
 export default function UltraFuturisticFooter2030() {
   return (

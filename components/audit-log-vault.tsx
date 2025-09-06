@@ -10,11 +10,11 @@ export default function AuditLogVaultPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  },
+  };
 
   const features = [
     'Append-only, tamper-evident storageFlexible retention and legal holdsCryptographic digests and attestationsFine-grained search and export bundlesChain-of-custody and access reviewsAlerts for risky access patterns'
-  ],
+  ];
 
   return (
     <UltraAdvancedFuturisticBackground>

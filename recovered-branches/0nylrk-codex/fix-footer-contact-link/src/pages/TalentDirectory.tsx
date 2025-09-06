@@ -1,58 +1,58 @@
 
-import React, { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
-import { TalentGrid } from "@/components/talent/TalentGrid",
-import { FilterSidebar } from "@/components/talent/FilterSidebar",
-import { TalentResults } from "@/components/talent/TalentResults",
-import { useTalentDirectory } from "@/hooks/useTalentDirectory",
-import { SORT_OPTIONS } from "@/data/sortOptions",
-import { X } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { TalentProfile } from "@/types/talent",
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { AppLayout } from "@/layout/AppLayout";
+import { TalentGrid } from "@/components/talent/TalentGrid";
+import { FilterSidebar } from "@/components/talent/FilterSidebar";
+import { TalentResults } from "@/components/talent/TalentResults";
+import { useTalentDirectory } from "@/hooks/useTalentDirectory";
+import { SORT_OPTIONS } from "@/data/sortOptions";
+import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { TalentProfile } from "@/types/talent";
 export default function TalentDirectory() {
-  const navigate = useNavigate(),
+  const navigate = useNavigate();
 
   // Use our custom hook to manage state
   const {
-    filteredTalents,
-    isLoading,
-    searchTerm,
-    setSearchTerm,
-    selectedSkills,
-    selectedAvailability,
-    selectedRegions,
-    priceRange,
-    setPriceRange,
-    experienceRange,
-    setExperienceRange,
-    sortOption,
-    setSortOption,
-    isMobileFilterOpen,
-    setIsMobileFilterOpen,
-    isHireModalOpen,
-    setIsHireModalOpen,
-    selectedTalent,
-    setSelectedTalent,
-    expandedSections,
-    isAuthenticated,
-    savedTalents,
-    toggleSkill,
-    toggleAvailability,
-    toggleRegion,
-    clearFilters,
-    toggleSection,
-    handleToggleSave} = useTalentDirectory(),
+    filteredTalents;
+    isLoading;
+    searchTerm;
+    setSearchTerm;
+    selectedSkills;
+    selectedAvailability;
+    selectedRegions;
+    priceRange;
+    setPriceRange;
+    experienceRange;
+    setExperienceRange;
+    sortOption;
+    setSortOption;
+    isMobileFilterOpen;
+    setIsMobileFilterOpen;
+    isHireModalOpen;
+    setIsHireModalOpen;
+    selectedTalent;
+    setSelectedTalent;
+    expandedSections;
+    isAuthenticated;
+    savedTalents;
+    toggleSkill;
+    toggleAvailability;
+    toggleRegion;
+    clearFilters;
+    toggleSection;
+    handleToggleSave} = useTalentDirectory();
   
   const handleRequestHire = (talent: TalentProfile) => {
-    setSelectedTalent(talent),
+    setSelectedTalent(talent);
     setIsHireModalOpen(true)
-  },
+  };
   
   const viewProfile = (id: string) => {
     // Navigate to the talent profile page
     navigate(`/talent/${id}`)
-  },
+  };
   
   return (
     <AppLayout>
@@ -111,16 +111,16 @@ export default function TalentDirectory() {
               handleToggleSave={handleToggleSave}
               isAuthenticated={isAuthenticated}
               activeFiltersProps={{
-                selectedSkills,
-                toggleSkill,
-                selectedAvailability,
-                toggleAvailability,
-                selectedRegions,
-                toggleRegion,
-                priceRange,
-                setPriceRange,
-                experienceRange,
-                setExperienceRange,
+                selectedSkills;
+                toggleSkill;
+                selectedAvailability;
+                toggleAvailability;
+                selectedRegions;
+                toggleRegion;
+                priceRange;
+                setPriceRange;
+                experienceRange;
+                setExperienceRange;
                 clearFilters}}
             />
             

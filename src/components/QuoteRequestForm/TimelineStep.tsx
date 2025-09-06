@@ -1,12 +1,12 @@
 
-import { format } from "date-fns",
-import { Calendar } from "@/components/ui/calendar",
-import { Button } from "@/components/ui/button",
-import { Label } from "@/components/ui/label",
+import { format } from "date-fns";
+import { Calendar } from "@/components/ui/calendar";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
 import { CalendarIcon } from 'lucide-react'
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { cn } from "@/lib/utils",
-import { QuoteFormData } from "@/types/quotes",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { cn } from "@/lib/utils";
+import { QuoteFormData } from "@/types/quotes";
 interface TimelineStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -54,7 +54,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                     <Button
                       variant="outline"
                       className={cn(
-                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark";
                         !formData.startDate && "text-zion-slate-light"
                       )}
                     >
@@ -81,7 +81,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                     <Button
                       variant="outline"
                       className={cn(
-                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark",
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark";
                         !formData.endDate && "text-zion-slate-light"
                       )}
                     >

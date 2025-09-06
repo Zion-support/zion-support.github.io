@@ -1,5 +1,5 @@
-import { CategoryCard } from "@/components/CategoryCard",
-import { GradientHeading } from "@/components/GradientHeading",
+import { CategoryCard } from "@/components/CategoryCard";
+import { GradientHeading } from "@/components/GradientHeading";
 import ErrorBoundary from "@/components/GlobalErrorBoundary", // Import ErrorBoundary
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 
@@ -8,32 +8,32 @@ import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react'
 const categories = [
   {
     title: "Services",
-    description: "On-demand IT support, consulting, development, and more",
+    description: "On-demand IT support, consulting, development, and more";
     icon: <Briefcase className="w-10 h-10" />,
     link: "/services", // Link for the card itself
     color: undefined, // Let CategoryCard use default color
-  },
+  };
   {
     title: "Talents",
-    description: "Connect with AI experts, developers, and tech specialists",
+    description: "Connect with AI experts, developers, and tech specialists";
     icon: <Users className="w-10 h-10" />,
     link: "/talent", // Link for the card itself
     color: undefined, // Let CategoryCard use default color
-  },
+  };
   {
     title: "Equipment",
-    description: "Rent or buy specialized hardware, servers, and devices",
+    description: "Rent or buy specialized hardware, servers, and devices";
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment", // Link for the card itself
     color: undefined, // Let CategoryCard use default color
-  },
+  };
   {
     title: "Innovation",
     description: "Discover cutting-edge solutions and tech breakthroughs",
     icon: <Lightbulb className="w-10 h-10" />,
     link: "/innovation",
     color: undefined, // Let CategoryCard use default color
-  }],
+  }];
 
 export default function AllCategoriesPage() {
   return (

@@ -1,23 +1,23 @@
-import Link from 'next/link',
-import Head from 'next/head',
-import { useState, useEffect } from 'react',
-import { ContactInfo } from '../types',
-import ErrorBoundary from '../components/ErrorBoundary',
+import Link from 'next/link';
+import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import { ContactInfo } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
 export default function MicroSaaS() {
-  const [isLoaded, setIsLoaded] = useState(false),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
   
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoaded(true), 100),
+    const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
-  }, []),
+  }, []);
 
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
-  },
+  };
 
   const categories = [
     { id: 'all', name: 'All Products', count: 150 },
@@ -27,7 +27,7 @@ export default function MicroSaaS() {
     { id: 'security', name: 'Security', count: 20 },
     { id: 'productivity', name: 'Productivity', count: 15 },
     { id: 'marketing', name: 'Marketing', count: 15 }
-  ],
+  ];
 
   const products = [
     {
@@ -38,7 +38,7 @@ export default function MicroSaaS() {
       features: ['AI Content AnalysisAuto-EditingMultiple FormatsCloud Processing'],
       price: '$29/month',
       popular: true
-    },
+    };
     {
       id: 2,
       name: 'Smart Contract Analyzer',
@@ -47,7 +47,7 @@ export default function MicroSaaS() {
       features: ['Vulnerability DetectionGas OptimizationCode ReviewAudit Reports'],
       price: '$99/month',
       popular: false
-    },
+    };
     {
       id: 3,
       name: 'Cybersecurity Threat Intelligence',
@@ -56,7 +56,7 @@ export default function MicroSaaS() {
       features: ['Threat DetectionRisk AssessmentIncident ResponseCompliance Monitoring'],
       price: '$149/month',
       popular: true
-    },
+    };
     {
       id: 4,
       name: 'Multi-Language Website Translator',
@@ -65,7 +65,7 @@ export default function MicroSaaS() {
       features: ['100+ LanguagesContext TranslationSEO OptimizationReal-time Updates'],
       price: '$49/month',
       popular: false
-    },
+    };
     {
       id: 5,
       name: 'Predictive Inventory Optimizer',
@@ -74,7 +74,7 @@ export default function MicroSaaS() {
       features: ['Demand ForecastingStock OptimizationCost AnalysisIntegration APIs'],
       price: '$79/month',
       popular: true
-    },
+    };
     {
       id: 6,
       name: 'Real-Time Analytics Dashboard',
@@ -83,7 +83,7 @@ export default function MicroSaaS() {
       features: ['Real-time DataCustom DashboardsAlert SystemExport Capabilities'],
       price: '$59/month',
       popular: false
-    },
+    };
     {
       id: 7,
       name: 'Automated Customer Support',
@@ -92,7 +92,7 @@ export default function MicroSaaS() {
       features: ['Chatbot IntegrationTicket ManagementKnowledge BaseMulti-channel Support'],
       price: '$89/month',
       popular: true
-    },
+    };
     {
       id: 8,
       name: 'Blockchain Transaction Monitor',
@@ -101,7 +101,7 @@ export default function MicroSaaS() {
       features: ['Multi-chain SupportTransaction TrackingAlert SystemAPI Access'],
       price: '$69/month',
       popular: false
-    },
+    };
     {
       id: 9,
       name: 'Social Media Scheduler',
@@ -110,7 +110,7 @@ export default function MicroSaaS() {
       features: ['Multi-platformContent CalendarAnalyticsAuto-posting'],
       price: '$39/month',
       popular: false
-    },
+    };
     {
       id: 10,
       name: 'Document Processing AI',
@@ -119,7 +119,7 @@ export default function MicroSaaS() {
       features: ['OCR TechnologyData ExtractionFormat ConversionBatch Processing'],
       price: '$59/month',
       popular: true
-    },
+    };
     {
       id: 11,
       name: 'Workflow Automation Engine',
@@ -128,7 +128,7 @@ export default function MicroSaaS() {
       features: ['Visual BuilderIntegration HubConditional LogicMonitoring'],
       price: '$79/month',
       popular: false
-    },
+    };
     {
       id: 12,
       name: 'Email Marketing Optimizer',
@@ -138,11 +138,11 @@ export default function MicroSaaS() {
       price: '$49/month',
       popular: true
     }
-  ],
+  ];
 
   const filteredProducts = selectedCategory === 'all' 
     ? products 
-    : products.filter(product => product.category === selectedCategory),
+    : products.filter(product => product.category === selectedCategory);
 
   return (
     <>

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react',
+import React, { useState, useEffect } from 'react';
 
 const ScrollToTop: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false),
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -10,17 +10,17 @@ const ScrollToTop: React.FC = () => {
       } else {
         setIsVisible(false)
       }
-    },
+    };
 
-    window.addEventListener('scroll', toggleVisibility),
+    window.addEventListener('scroll', toggleVisibility);
     return () => window.removeEventListener('scroll', toggleVisibility)
-  }, []),
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'})
-  },
+  };
 
   return (
     <>
@@ -48,6 +48,6 @@ const ScrollToTop: React.FC = () => {
       )}
     </>
   )
-},
+};
 
-export default ScrollToTop,
+export default ScrollToTop;

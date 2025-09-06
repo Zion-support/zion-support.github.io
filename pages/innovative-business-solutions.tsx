@@ -1,31 +1,31 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, 
   Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, 
   Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, 
   Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon, 
-  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,
-  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon,
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon;
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon;
   Wifi, Building, Cpu as CpuIcon, TrendingUp as ChartIcon, Megaphone, HeadphonesIcon, Users as TeamIcon
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions',
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { innovativeBusinessSolutions2025 } from '../data/2025-innovative-business-solutions';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const heroStats = [
   { label: 'Business Solutions', value: '100+', icon: <Target className="w-5 h-5" /> },
   { label: 'Happy Businesses', value: '250+', icon: <Users className="w-5 h-5" /> },
   { label: 'Success Rate', value: '99.5%', icon: <Award className="w-5 h-5" /> },
   { label: 'ROI Average', value: '400%', icon: <TrendingUp className="w-5 h-5" /> }
-],
+];
 
 const serviceCategories = [
   {
@@ -35,7 +35,7 @@ const serviceCategories = [
     icon: ChartIcon,
     color: 'from-blue-500 to-cyan-600',
     features: ['Data AnalysisPredictive AnalyticsReal-time Insights']
-  },
+  };
   {
     title: 'Marketing Automation',
     description: 'Intelligent marketing automation with AI-driven optimization',
@@ -43,7 +43,7 @@ const serviceCategories = [
     icon: Megaphone,
     color: 'from-purple-500 to-pink-600',
     features: ['Campaign OptimizationContent PersonalizationROI Tracking']
-  },
+  };
   {
     title: 'Sales Intelligence',
     description: 'AI-powered sales automation and intelligence solutions',
@@ -51,7 +51,7 @@ const serviceCategories = [
     icon: TrendingUp,
     color: 'from-green-500 to-emerald-600',
     features: ['Lead ScoringSales ForecastingPipeline Optimization']
-  },
+  };
   {
     title: 'Customer Service',
     description: 'Intelligent customer service with AI automation',
@@ -59,7 +59,7 @@ const serviceCategories = [
     icon: HeadphonesIcon,
     color: 'from-orange-500 to-red-600',
     features: ['AI ChatbotsTicket AutomationSentiment Analysis']
-  },
+  };
   {
     title: 'HR Management',
     description: 'AI-powered HR automation and management solutions',
@@ -68,7 +68,7 @@ const serviceCategories = [
     color: 'from-teal-500 to-cyan-600',
     features: ['Recruitment AutomationPerformance AnalyticsEmployee Engagement']
   }
-],
+];
 
 const heroFeatures = [
   {
@@ -76,53 +76,53 @@ const heroFeatures = [
     description: 'Advanced AI algorithms that provide intelligent insights and automation for business operations.',
     icon: Brain,
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
-  },
+  };
   {
     title: 'Automated Workflows',
     description: 'Intelligent automation that reduces manual tasks and improves operational efficiency.',
     icon: Settings,
     gradient: 'bg-gradient-to-r from-purple-500 to-pink-600'
-  },
+  };
   {
     title: 'Real-time Analytics',
     description: 'Live data insights and analytics that enable data-driven decision making.',
     icon: BarChart3,
     gradient: 'bg-gradient-to-r from-green-500 to-emerald-600'
-  },
+  };
   {
     title: 'Predictive Capabilities',
     description: 'AI-powered predictions that help businesses anticipate trends and optimize performance.',
     icon: Sparkles,
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
   }
-],
+];
 
 const testimonials = [
   {
     name: 'Michael Rodriguez',
-    role: 'CEO, GrowthTech Solutions',
+    role: 'CEO, GrowthTech Solutions';
     company: 'GrowthTech Solutions',
     content: 'Zion Tech Group\'s business intelligence platform has transformed our decision-making process. We now have real-time insights that have increased our revenue by 300%.',
     rating: 5,
     avatar: '👨‍💼'
-  },
+  };
   {
     name: 'Sarah Johnson',
-    role: 'Marketing Director, DigitalFlow Agency',
+    role: 'Marketing Director, DigitalFlow Agency';
     company: 'DigitalFlow Agency',
     content: 'The AI marketing automation platform has revolutionized our campaigns. We\'ve seen conversion rates increase by 150% while reducing costs by 40%.',
     rating: 5,
     avatar: '👩‍💼'
-  },
+  };
   {
     name: 'David Chen',
-    role: 'Sales Manager, TechSales Pro',
+    role: 'Sales Manager, TechSales Pro';
     company: 'TechSales Pro',
     content: 'Their sales intelligence platform has increased our sales productivity by 200%. The AI-powered lead scoring and forecasting are game-changers.',
     rating: 5,
     avatar: '👨‍💻'
   }
-],
+];
 
 export default function InnovativeBusinessSolutions() {
   return (

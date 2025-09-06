@@ -1,11 +1,11 @@
-import React from 'react',
+import React from 'react';
 export default function SEOIndex() {
-  const [slugs, setSlugs] = React.useState<string[]>([]),
+  const [slugs, setSlugs] = React.useState<string[]>([]);
 
   React.useEffect(() => {
     // In a real app, list from API or build-time, here we rely on directory hint not available at runtime.
     setSlugs([])
-  }, []),
+  }, []);
 
   return (
     <div>

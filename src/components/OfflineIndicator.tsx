@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react',
+import { useState, useEffect } from 'react';
 import { WifiOff, Wifi } from 'lucide-react'
-import { Alert, AlertDescription } from '@/components/ui/alert',
+import { Alert, AlertDescription } from '@/components/ui/alert';
 
 export const OfflineIndicator = () => {
-  const [isOnline, setIsOnline] = useState(true),
-  const [showOfflineAlert, setShowOfflineAlert] = useState(false),
+  const [isOnline, setIsOnline] = useState(true);
+  const [showOfflineAlert, setShowOfflineAlert] = useState(false);
 
   useEffect(() => {
     const updateOnlineStatus = () => {
-      const online = navigator.onLine,
-      setIsOnline(online),
+      const online = navigator.onLine;
+      setIsOnline(online);
       
       if (!online) {
         setShowOfflineAlert(true)
@@ -17,22 +17,22 @@ export const OfflineIndicator = () => {
         // Show brief "back online" message then hide
         setTimeout(() => setShowOfflineAlert(false), 3000)
       }
-    },
+    };
 
     // Set initial status
-    updateOnlineStatus(),
+    updateOnlineStatus();
 
     // Listen for online/offline events
-    window.addEventListener('online', updateOnlineStatus),
-    window.addEventListener('offline', updateOnlineStatus),
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
 
     return () => {
-      window.removeEventListener('online', updateOnlineStatus),
+      window.removeEventListener('online', updateOnlineStatus);
       window.removeEventListener('offline', updateOnlineStatus)
     }
-  }, [showOfflineAlert]),
+  }, [showOfflineAlert]);
 
-  if (!showOfflineAlert) return null,
+  if (!showOfflineAlert) return null;
 
   return (
     <div className="fixed top-4 right-4 z-50 max-w-sm pointer-events-none">

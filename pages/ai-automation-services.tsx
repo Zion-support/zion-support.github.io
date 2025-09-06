@@ -1,20 +1,20 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   Zap, Brain, Code, Shield, Users, TrendingUp, 
-  CheckCircle, ArrowRight, Star, Clock, Target,
+  CheckCircle, ArrowRight, Star, Clock, Target;
   Cpu, Rocket, Globe, BarChart3, Settings
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services',
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const serviceHighlights = [
   {
@@ -23,28 +23,28 @@ const serviceHighlights = [
     icon: Code,
     color: 'from-emerald-500 to-teal-600',
     features: ['Multi-language supportSecurity scanningPerformance optimizationTeam collaboration']
-  },
+  };
   {
     title: 'DevOps Automation',
     description: 'Intelligent automation for modern DevOps workflows with predictive analytics',
     icon: Cpu,
     color: 'from-purple-500 to-indigo-600',
     features: ['CI/CD optimizationSelf-healing infrastructureCost optimizationMulti-cloud support']
-  },
+  };
   {
     title: 'Customer Support AI',
     description: 'Transform customer support with intelligent automation and sentiment analysis',
     icon: Users,
     color: 'from-blue-500 to-cyan-600',
     features: ['Intelligent chatbotsMulti-language supportPredictive resolution24/7 availability']
-  },
+  };
   {
     title: 'Marketing Automation',
     description: 'AI-powered marketing automation with predictive analytics and optimization',
     icon: BarChart3,
     color: 'from-pink-500 to-rose-600',
     features: ['Campaign optimizationCustomer personalizationROI trackingMulti-channel automation']
-  },
+  };
   {
     title: 'Sales Intelligence',
     description: 'Boost sales performance with AI-powered insights and predictive analytics',
@@ -52,7 +52,7 @@ const serviceHighlights = [
     color: 'from-yellow-500 to-orange-600',
     features: ['Lead scoringSales forecastingCustomer insightsPerformance optimization']
   }
-],
+];
 
 const benefits = [
   {
@@ -60,26 +60,26 @@ const benefits = [
     description: 'Automate repetitive tasks and focus on high-value activities',
     icon: Zap,
     color: 'text-emerald-400'
-  },
+  };
   {
     title: '300% ROI Improvement',
     description: 'Significant returns through increased efficiency and productivity',
     icon: TrendingUp,
     color: 'text-blue-400'
-  },
+  };
   {
     title: '24/7 Operation',
     description: 'Round-the-clock automation without human intervention',
     icon: Clock,
     color: 'text-purple-400'
-  },
+  };
   {
     title: 'Real-time Insights',
     description: 'Instant analytics and decision-making support',
     icon: BarChart3,
     color: 'text-pink-400'
   }
-],
+];
 
 export default function AIAutomationServices() {
   return (

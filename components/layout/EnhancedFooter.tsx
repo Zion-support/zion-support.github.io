@@ -6,21 +6,21 @@ import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
 =======
-import React from 'react',
-import { motion } from 'framer-motion',
+import React from 'react';
+import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, Globe, 
-  Twitter, Linkedin, Facebook, Instagram,
-  ArrowRight, Rocket, Brain, Cpu, Shield,
+  Twitter, Linkedin, Facebook, Instagram;
+  ArrowRight, Rocket, Brain, Cpu, Shield;
   Star, Users, TrendingUp, Zap
-} from 'lucide-react',
+} from 'lucide-react';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const serviceCategories = [
   {
@@ -31,7 +31,7 @@ const serviceCategories = [
       { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' },
       { name: 'AI Quantum Hybrid Computing', href: '/ai-quantum-hybrid-computing' }
     ]
-  },
+  };
   {
     title: 'Cutting-Edge IT',
     services: [
@@ -40,7 +40,7 @@ const serviceCategories = [
       { name: '5G Private Networks', href: '/5g-private-network-solutions' },
       { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' }
     ]
-  },
+  };
   {
     title: 'Innovative SaaS',
     services: [
@@ -50,7 +50,7 @@ const serviceCategories = [
       { name: 'AI Mental Health Companion', href: '/ai-mental-health-companion' }
     ]
   }
-],
+];
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
@@ -59,7 +59,7 @@ const companyLinks = [
   { name: 'Case Studies', href: '/case-studies' },
   { name: 'Blog', href: '/blog' },
   { name: 'Resources', href: '/resources' }
-],
+];
 
 const supportLinks = [
   { name: 'Contact Support', href: '/contact' },
@@ -68,7 +68,7 @@ const supportLinks = [
   { name: 'Status Page', href: '/status' },
   { name: 'Security', href: '/security' },
   { name: 'Privacy Policy', href: '/privacy' }
-],
+];
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
@@ -76,7 +76,7 @@ const socialLinks = [
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Globe }],
 
 export default function EnhancedFooter() {
-  const currentYear = new Date().getFullYear(),
+  const currentYear = new Date().getFullYear();
 >>>>>>> pr-11992
 
   const services = [
@@ -272,7 +272,7 @@ export default function EnhancedFooter() {
               <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => {
-                  const Icon = social.icon,
+                  const Icon = social.icon;
                   return (
                     <a
                       key={social.name}

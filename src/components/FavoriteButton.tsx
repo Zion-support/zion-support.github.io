@@ -1,15 +1,15 @@
-import React from 'react',
+import React from 'react';
 import { Heart } from 'lucide-react'
-import { cn } from '@/lib/utils',
-import { useWishlist } from '@/hooks/useWishlist',
-import { useAuth } from '@/hooks/useAuth',
-import { toast } from '@/hooks/use-toast',
-import { LoginModal } from '@/components/auth/LoginModal',
+import { cn } from '@/lib/utils';
+import { useWishlist } from '@/hooks/useWishlist';
+import { useAuth } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
+import { LoginModal } from '@/components/auth/LoginModal';
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger} from '@/components/ui/tooltip',
+  Tooltip;
+  TooltipContent;
+  TooltipProvider;
+  TooltipTrigger} from '@/components/ui/tooltip';
 
 interface FavoriteButtonProps {
   itemId: string,
@@ -17,19 +17,19 @@ interface FavoriteButtonProps {
 }
 
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
-  const { isWishlisted, toggle } = useWishlist(),
-  const { isAuthenticated } = useAuth(),
-  const [loginOpen, setLoginOpen] = React.useState(false),
+  const { isWishlisted, toggle } = useWishlist();
+  const { isAuthenticated } = useAuth();
+  const [loginOpen, setLoginOpen] = React.useState(false);
 
   const handleClick = (e: React.MouseEvent) => {
-    e.stopPropagation(),
+    e.stopPropagation();
     if (!isAuthenticated) {
-      setLoginOpen(true),
+      setLoginOpen(true);
       return
     }
     
-    const wasWishlisted = isWishlisted(itemId),
-    toggle(itemId),
+    const wasWishlisted = isWishlisted(itemId);
+    toggle(itemId);
     
     // Provide feedback
     toast({
@@ -37,9 +37,9 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
       description: wasWishlisted 
         ? "Item has been removed from your wishlist" 
         : "Item has been added to your wishlist"})
-  },
+  };
 
-  const active = isWishlisted(itemId),
+  const active = isWishlisted(itemId);
 
   return (
     <>
@@ -48,7 +48,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
           <TooltipTrigger asChild>
             <button
               className={cn(
-                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors',
+                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors';
                 className
               )}
               onClick={handleClick}
@@ -56,7 +56,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
             >
               <Heart
                 className={cn(
-                  'h-4 w-4 transition-transform duration-200',
+                  'h-4 w-4 transition-transform duration-200';
                   active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate'
                 )}
               />

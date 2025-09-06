@@ -1,11 +1,11 @@
-import React from 'react',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react",
-import { formatDistanceToNow } from "date-fns",
-import { JobMatch } from "@/types/jobs",
+import React from 'react';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Building, MapPin, Clock, DollarSign, Star } from "lucide-react";
+import { formatDistanceToNow } from "date-fns";
+import { JobMatch } from "@/types/jobs";
 interface JobMatchProps {
   matchId: string,
   talentId: string,
@@ -23,7 +23,7 @@ interface JobMatchProps {
 }
 
 export function JobMatchCard({ 
-  matchId,
+  matchId;
   talentId, 
   name, 
   title, 
@@ -32,7 +32,7 @@ export function JobMatchCard({
   location, 
   category, 
   matchPercent, 
-  skills,
+  skills;
   onApply, 
   onViewDetails, 
   onInvite 
@@ -41,22 +41,22 @@ export function JobMatchCard({
     if (onApply) {
       onApply(matchId)
     }
-  },
+  };
 
   const handleViewDetails = () => {
     if (onViewDetails) {
       onViewDetails(matchId)
     }
-  },
+  };
 
   const handleInvite = () => {
     if (onInvite) {
       onInvite(matchId)
     }
-  },
+  };
 
   // Generate a formatted date for display
-  const postedDate = new Date(),
+  const postedDate = new Date();
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
   
   return (

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react",
-import Tree, { TreeNode } from "../../components/ui/Tree",
+import React, { useEffect, useState } from "react";
+import Tree, { TreeNode } from "../../components/ui/Tree";
 
 interface ApiResponse {
   nodes: TreeNode[],
@@ -7,55 +7,55 @@ interface ApiResponse {
 }
 
 export default function DevTreePage() {
-  const [nodes, setNodes] = useState<TreeNode[] | null>(null),
-  const [error, setError] = useState<string | null>(null),
-  const [git, setGit] = useState<ApiResponse["status"] | null>(null),
-  const [adminToken, setAdminToken] = useState<string>(""),
+  const [nodes, setNodes] = useState<TreeNode[] | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [git, setGit] = useState<ApiResponse["status"] | null>(null);
+  const [adminToken, setAdminToken] = useState<string>("");
 
   const fetchTree = async (token?: string) => {
     try {
       const resp = await fetch("/api/dev/source-map", {
         headers: token ? { "x-admin-token": token } : undefined}),
       if (!resp.ok) {
-        const j = await resp.json().catch(() => ({})),
+        const j = await resp.json().catch(() => ({}));
         throw new Error(j.error || `HTTP ${resp.status}`)
       }
       const data: ApiResponse = await resp.json(),
-      setNodes(data.nodes),
+      setNodes(data.nodes);
       setGit(data.status)
     } catch (e: any) {
       setError(e.message || "Failed to load")
     }
-  },
+  };
 
   useEffect(() => {
-    const stored = localStorage.getItem("ADMIN_TOKEN") || "",
-    setAdminToken(stored),
+    const stored = localStorage.getItem("ADMIN_TOKEN") || "";
+    setAdminToken(stored);
     fetchTree(stored)
-  }, []),
+  }, []);
 
   const handleSaveToken = () => {
-    localStorage.setItem("ADMIN_TOKEN", adminToken),
+    localStorage.setItem("ADMIN_TOKEN", adminToken);
     fetchTree(adminToken)
-  },
+  };
 
   const onDeploy = async (p: string) => {
     try {
       const resp = await fetch("/api/dev/source-map", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          "x-admin-token": adminToken},
+          "Content-Type": "application/json";
+          "x-admin-token": adminToken};
         body: JSON.stringify({ path: p })}),
       if (!resp.ok) {
-        const j = await resp.json().catch(() => ({})),
+        const j = await resp.json().catch(() => ({}));
         throw new Error(j.error || `HTTP ${resp.status}`)
       }
       await fetchTree(adminToken)
     } catch (e: any) {
       setError(e.message || "Deploy failed")
     }
-  },
+  };
 
   return (
     <div className="p-6 max-w-5xl mx-auto">

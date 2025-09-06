@@ -1,16 +1,16 @@
-import React from 'react',
-import Link from 'next/link',
-import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react',
+import React from 'react';
+import Link from 'next/link';
+import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
 
 export default function FuturisticFooter() {
-  const currentYear = new Date().getFullYear(),
+  const currentYear = new Date().getFullYear();
   
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  },
+  };
 
   const quickLinks = [
     { name: 'Services', href: '/services' },

@@ -1,18 +1,18 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, 
-  Brain, DollarSign, Dna, Rocket, Users, Award, Zap,
+  Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github
-} from 'lucide-react',
+} from 'lucide-react';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const serviceCategories = [
   {
@@ -24,7 +24,7 @@ const serviceCategories = [
       { name: 'AI Autonomous Marketing Orchestrator', href: '/ai-autonomous-marketing-orchestrator' },
       { name: 'AI Autonomous Sales Intelligence', href: '/ai-autonomous-sales-intelligence' }
     ]
-  },
+  };
   {
     title: 'Cybersecurity & Quantum',
     services: [
@@ -34,7 +34,7 @@ const serviceCategories = [
       { name: 'AI Autonomous Vulnerability Scanner', href: '/ai-autonomous-vulnerability-scanner' },
       { name: 'Quantum Secure Communication', href: '/quantum-secure-communication' }
     ]
-  },
+  };
   {
     title: 'Fintech & Blockchain',
     services: [
@@ -44,7 +44,7 @@ const serviceCategories = [
       { name: 'AI Autonomous Insurance Platform', href: '/ai-autonomous-insurance-platform' },
       { name: 'Quantum Payment Processing', href: '/quantum-payment-processing' }
     ]
-  },
+  };
   {
     title: 'Healthcare & Biotech',
     services: [
@@ -55,7 +55,7 @@ const serviceCategories = [
       { name: 'AI Autonomous Clinical Trials', href: '/ai-autonomous-clinical-trials' }
     ]
   }
-],
+];
 
 const companyLinks = [
   { name: 'About Us', href: '/about' },
@@ -66,7 +66,7 @@ const companyLinks = [
   { name: 'Investors', href: '/investors' },
   { name: 'Contact Us', href: '/contact' },
   { name: 'Locations', href: '/locations' }
-],
+];
 
 const resourceLinks = [
   { name: 'Documentation', href: '/docs' },
@@ -77,7 +77,7 @@ const resourceLinks = [
   { name: 'Training & Certification', href: '/training' },
   { name: 'Community Forum', href: '/community' },
   { name: 'Developer Resources', href: '/developer-resources' }
-],
+];
 
 const socialLinks = [
   { name: 'Facebook', href: '#', icon: Facebook },
@@ -86,7 +86,7 @@ const socialLinks = [
   { name: 'Instagram', href: '#', icon: Instagram },
   { name: 'YouTube', href: '#', icon: Youtube },
   { name: 'GitHub', href: '#', icon: Github }
-],
+];
 
 export default function UltraFuturisticFooter2026() {
   return (

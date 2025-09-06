@@ -1,9 +1,9 @@
-import React from 'react',
-import Head from 'next/head',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
-import { Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain } from 'lucide-react',
+import React from 'react';
+import Head from 'next/head';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+import { Mail, Phone, MapPin, ShieldCheck, Rocket, Sparkles, Globe, Cpu, Brain } from 'lucide-react';
 
 export default function AboutPage() {
 	const contactInfo = {
@@ -11,14 +11,14 @@ export default function AboutPage() {
 		email: 'kleber@ziontechgroup.com',
 		address: '364 E Main St STE 1008 Middletown DE 19709',
 		website: 'https://ziontechgroup.com'
-	},
+	};
 
 	const pillars = [
-		{ title: 'AI-first Engineering', icon: <Brain className="w-6 h-6" />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' },
-		{ title: 'Platform and SRE', icon: <ShieldCheck className="w-6 h-6" />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' },
+		{ title: 'AI-first Engineering', icon: <Brain className="w-6 h-6" />, desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.' };
+		{ title: 'Platform and SRE', icon: <ShieldCheck className="w-6 h-6" />, desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.' };
 		{ title: 'Quantum R&D', icon: <Cpu className="w-6 h-6" />, desc: 'Exploratory quantum workloads with pragmatic business outcomes.' },
 		{ title: 'Global Delivery', icon: <Globe className="w-6 h-6" />, desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.' }
-	],
+	];
 
 	return (
 		<UltraFuturisticBackground variant="holographic" intensity="high">
@@ -97,10 +97,10 @@ export default function AboutPage() {
 	)
 }
 
-import React from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import Button from '../components/ui/Button',
+import React from 'react';
+import Head from 'next/head';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
 export default function AboutPage() {
   const values = [
     {
@@ -125,13 +125,13 @@ export default function AboutPage() {
   const services = [
     {
       title: 'AI Development',
-      description: 'Advanced machine learning models, natural language processing, computer vision systems, and autonomous decision making.',
+      description: 'Advanced machine learning models, natural language processing, computer vision systems, and autonomous decision making.';
       icon: '🧠',
       color: 'text-cyan-400',
       gradient: 'from-cyan-400 to-blue-500'},
     {
       title: 'Automation Systems',
-      description: 'Cloud infrastructure automation, CI/CD pipeline optimization, self-healing applications, and performance monitoring.',
+      description: 'Cloud infrastructure automation, CI/CD pipeline optimization, self-healing applications, and performance monitoring.';
       icon: '⚙️',
       color: 'text-fuchsia-400',
       gradient: 'from-fuchsia-400 to-purple-500'}],
@@ -147,7 +147,7 @@ export default function AboutPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  },
+  };
 
   return (
       {/* Mission & Vision */}

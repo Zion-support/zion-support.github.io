@@ -1,15 +1,15 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 export default function ResourceCaseStudyPage() {
   const caseStudy = {
     id: 'ai-automation-manufacturing',
     title: 'AI-Powered Manufacturing Automation',
     company: 'Global Manufacturing Corp',
     industry: 'Manufacturing',
-    results: '40% increase in production efficiency, 60% reduction in downtime',
+    results: '40% increase in production efficiency, 60% reduction in downtime';
     description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
-  },
+  };
 
   return (
     <>

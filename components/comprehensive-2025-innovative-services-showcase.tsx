@@ -1,13 +1,13 @@
-import React from 'react',
-import SEO from '../components/SEO',
-import Layout from '../components/layout/Layout',
-import { motion } from 'framer-motion',
+import React from 'react';
+import SEO from '../components/SEO';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
 import { 
   Star, Brain, Atom, Shield, Zap, TrendingUp, Globe, 
   Rocket, Lock, Palette, Factory, Database, Cloud, 
   Cpu, Eye, Target, Users, BarChart3
-} from 'lucide-react',
-import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch',
+} from 'lucide-react';
+import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
 const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   const categories = [
     { name: 'AI & Marketing', icon: Brain, color: 'from-purple-500 to-pink-500' },
@@ -19,17 +19,17 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
     { name: 'Quantum & Healthcare', icon: Cpu, color: 'from-violet-500 to-purple-500' },
     { name: 'AI & Creativity', icon: Palette, color: 'from-pink-500 to-rose-500' },
     { name: 'AI & Robotics', icon: Database, color: 'from-emerald-500 to-green-500' }
-  ],
+  ];
 
   const getCategoryIcon = (category: string) => {
-    const cat = categories.find(c => c.name === category),
+    const cat = categories.find(c => c.name === category);
     return cat ? cat.icon : Star
-  },
+  };
 
   const getCategoryColor = (category: string) => {
-    const cat = categories.find(c => c.name === category),
+    const cat = categories.find(c => c.name === category);
     return cat ? cat.color : 'from-gray-500 to-gray-600'
-  },
+  };
 
   return (
     <Layout>
@@ -126,7 +126,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category, index) => {
-              const IconComponent = category.icon,
+              const IconComponent = category.icon;
               return (
                 <motion.div
                   key={category.name}
@@ -174,7 +174,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {innovative2025MicroSaasBatch.filter(service => service.popular).map((service, index) => {
-              const IconComponent = getCategoryIcon(service.category),
+              const IconComponent = getCategoryIcon(service.category);
               return (
                 <motion.div
                   key={service.id}
@@ -250,7 +250,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {innovative2025MicroSaasBatch.map((service, index) => {
-              const IconComponent = getCategoryIcon(service.category),
+              const IconComponent = getCategoryIcon(service.category);
               return (
                 <motion.div
                   key={service.id}
@@ -326,6 +326,6 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       </section>
     </Layout>
   )
-},
+};
 
-export default Comprehensive2025InnovativeServicesShowcase,
+export default Comprehensive2025InnovativeServicesShowcase;

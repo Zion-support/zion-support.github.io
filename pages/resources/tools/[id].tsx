@@ -1,10 +1,10 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { useRouter } from 'next/router',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 export default function ToolResourcePage() {
-  const router = useRouter(),
-  const { id } = router.query,
+  const router = useRouter();
+  const { id } = router.query;
 
   // Tools data - this should match the data in resources.tsx
   const tools = [
@@ -56,11 +56,11 @@ export default function ToolResourcePage() {
           <li>Prioritized action items</li>
           <li>Resources and tools for implementation</li>
         </ul>
-      `,
+      `;
       features: [
         'Comprehensive evaluation frameworkIndustry benchmarkingActionable recommendationsProgress trackingResource library access'
       ]
-    },
+    };
     {
       id: 'ai-maturity-model',
       title: 'AI Maturity Model',
@@ -112,11 +112,11 @@ export default function ToolResourcePage() {
           <li>Progress tracking and measurement</li>
           <li>Stakeholder alignment and communication</li>
         </ul>
-      `,
+      `;
       features: [
         '5-level maturity frameworkMulti-dimensional assessmentGap analysis toolsTransformation roadmapProgress tracking'
       ]
-    },
+    };
     {
       id: 'performance-benchmark',
       title: 'Performance Benchmarking Tool',
@@ -177,14 +177,14 @@ export default function ToolResourcePage() {
           <li>Success metrics and measurement approaches</li>
           <li>Risk mitigation and contingency planning</li>
         </ul>
-      `,
+      `;
       features: [
         'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking'
       ]
     }
-  ],
+  ];
 
-  const tool = tools.find(t => t.id === id),
+  const tool = tools.find(t => t.id === id);
 
   if (!tool) {
     return (

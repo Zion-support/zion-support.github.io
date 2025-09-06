@@ -1,41 +1,41 @@
-import React, { useState } from 'react',
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger',
-import { useRouter } from 'next/router',
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { ProductListing } from "@/types/listings",
+import React, { useState } from 'react';
+import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
+import { useRouter } from 'next/router';
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ProductListing } from "@/types/listings";
 import { DollarSign } from 'lucide-react'
-import { RatingStars } from "@/components/RatingStars",
-import { FavoriteButton } from "@/components/FavoriteButton",
-import { useDispatch } from 'react-redux',
-import type { AppDispatch } from '@/store',
-import { addItem } from '@/store/cartSlice',
-import { toast } from '@/hooks/use-toast',
-import { useCurrency } from '@/hooks/useCurrency',
+import { RatingStars } from "@/components/RatingStars";
+import { FavoriteButton } from "@/components/FavoriteButton";
+import { useDispatch } from 'react-redux';
+import type { AppDispatch } from '@/store';
+import { addItem } from '@/store/cartSlice';
+import { toast } from '@/hooks/use-toast';
+import { useCurrency } from '@/hooks/useCurrency';
 import Image from 'next/image', // Import next/image
 
 interface ProductListingCardProps {
   listing: ProductListing,
-  view?: 'grid' | 'list',
+  view?: 'grid' | 'list';
   onRequestQuote?: (id: string) => void,
   detailBasePath?: string
 }
 
 const ProductListingCardComponent = ({
-  listing,
-  view = 'grid',
-  onRequestQuote,
+  listing;
+  view = 'grid';
+  onRequestQuote;
   detailBasePath = '/marketplace/listing'
 }: ProductListingCardProps) => {
-  const isGrid = view === 'grid',
-  const router = useRouter(),
-  const [loading, setLoading] = useState(false),
+  const isGrid = view === 'grid';
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
   const [imageSrc, setImageSrc] = useState(
     listing.images && listing.images.length > 0 && listing.images[0]
     ? listing.images[0] 
     : '/placeholder.svg'
-  ),
-  const [imageError, setImageError] = useState(false),
+  );
+  const [imageError, setImageError] = useState(false);
 
   const stockStatus =
     listing.stock === undefined
@@ -44,7 +44,7 @@ const ProductListingCardComponent = ({
       ? 'Out of stock'
       : listing.stock <= 5
       ? 'Low stock'
-      : 'In stock',
+      : 'In stock';
 
   const stockVariant =
     listing.stock === undefined
@@ -53,21 +53,21 @@ const ProductListingCardComponent = ({
       ? 'destructive'
       : listing.stock <= 5
       ? 'warning'
-      : 'success',
+      : 'success';
     
-  const { formatPrice } = useCurrency(),
+  const { formatPrice } = useCurrency();
 
   const getPrice = () => {
-    if (listing.price === null) return "Custom pricing",
+    if (listing.price === null) return "Custom pricing";
     return formatPrice(listing.price)
-  },
+  };
 
   const handleImageError = () => {
     if (!imageError) { // Prevent infinite loops if placeholder also fails
-      setImageSrc('/placeholder.svg'),
+      setImageSrc('/placeholder.svg');
       setImageError(true)
     }
-  },
+  };
   
   const handleViewListing = () => {
     // Debug logging for development
@@ -88,34 +88,34 @@ const ProductListingCardComponent = ({
     }
     
     router.push(`${detailBasePath}/${listing.id}`)
-  },
+  };
 
-  const dispatch = useDispatch<AppDispatch>(),
+  const dispatch = useDispatch<AppDispatch>();
 
   const addToCart = () => {
-    setLoading(true),
+    setLoading(true);
     dispatch(
       addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
-    ),
+    );
     toast.success(`1× ${listing.title} added`, {
       action: {
         label: 'View Cart',
         onClick: () => router.push('/cart')}}),
     setLoading(false)
-  },
+  };
   
   const handleRequestQuote = (e: React.MouseEvent) => {
-    e.preventDefault(),
-    e.stopPropagation(),
+    e.preventDefault();
+    e.stopPropagation();
     
     if (onRequestQuote) {
       onRequestQuote(listing.id)
     } else {
       router.push(`/request-quote?listing=${listing.id}`)
     }
-  },
+  };
   
-  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',
+  const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
 
   return (
     <div
@@ -126,7 +126,7 @@ const ProductListingCardComponent = ({
       role="button"
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault(),
+          e.preventDefault();
           handleViewListing()
         }
       }}
@@ -139,7 +139,7 @@ const ProductListingCardComponent = ({
         tabIndex={-1} // Remove from tab order as parent is focusable
         onKeyDown={(e) => {
           if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault(),
+            e.preventDefault();
             handleViewListing()
           }
         }}
@@ -261,7 +261,7 @@ const ProductListingCardComponent = ({
                 // Add to cart first, then redirect to checkout
                 dispatch(
                   addItem({ id: listing.id, title: listing.title, price: listing.price ?? 0 })
-                ),
+                );
                 router.push('/checkout')
               }}
               disabled={loading}
@@ -284,7 +284,7 @@ const ProductListingCardComponent = ({
       </div>
     </div>
   )
-},
+};
 
-export const ProductListingCard = React.memo(ProductListingCardComponent),
-ProductListingCard.displayName = 'ProductListingCard',
+export const ProductListingCard = React.memo(ProductListingCardComponent);
+ProductListingCard.displayName = 'ProductListingCard';

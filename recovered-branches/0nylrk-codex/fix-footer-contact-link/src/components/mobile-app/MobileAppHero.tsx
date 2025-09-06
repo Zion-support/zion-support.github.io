@@ -1,9 +1,9 @@
 
-import React from "react",
-import { Link } from "react-router-dom",
-import { ArrowRight, Phone } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { AppStoreButtons } from "./AppStoreButtons",
+import React from "react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Phone } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { AppStoreButtons } from "./AppStoreButtons";
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
   const appStoreUrl = "#", // Replace with actual App Store URL when available
@@ -47,4 +47,4 @@ export const MobileAppHero: React.FC = () => {
       </div>
     </section>
   )
-},
+};

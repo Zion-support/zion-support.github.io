@@ -1,21 +1,21 @@
 
-import { useState } from "react",
-import { useAuth } from "@/hooks/useAuth",
+import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
 import { 
-  BookOpen,
+  BookOpen;
   Code, 
   Key, 
   List, 
   LucideIcon, 
   Terminal, 
   Webhook 
-} from "lucide-react",
+} from "lucide-react";
 
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
-import { WebhooksManager } from "@/components/developers/WebhooksManager",
-import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
-import { ApiLogs } from "@/components/developers/ApiLogs",
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
+import { WebhooksManager } from "@/components/developers/WebhooksManager";
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
+import { ApiLogs } from "@/components/developers/ApiLogs";
 interface TabDefinition {
   id: string,
   label: string,
@@ -23,8 +23,8 @@ interface TabDefinition {
 }
 
 export function DeveloperPortal() {
-  const { user } = useAuth(),
-  const [activeTab, setActiveTab] = useState<string>("documentation"),
+  const { user } = useAuth();
+  const [activeTab, setActiveTab] = useState<string>("documentation");
   
   // Define the tabs
   const tabs: TabDefinition[] = [
@@ -49,7 +49,7 @@ export function DeveloperPortal() {
       <div className="border-b border-zinc-800 mb-8">
         <div className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
-            const Icon = tab.icon,
+            const Icon = tab.icon;
             return (
               <button
                 key={tab.id}

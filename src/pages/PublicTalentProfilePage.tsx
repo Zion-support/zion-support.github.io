@@ -1,35 +1,35 @@
 
-import { useState, useEffect } from "react",
-import { useRouter } from "next/router",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/components/ui/use-toast",
-import { SEO } from "@/components/SEO",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
-import { HireNowCTA } from "@/components/profile/HireNowCTA",
-import { logErrorToProduction } from '@/utils/productionLogger',
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/components/ui/use-toast";
+import { SEO } from "@/components/SEO";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { HireNowCTA } from "@/components/profile/HireNowCTA";
+import { logErrorToProduction } from '@/utils/productionLogger';
 import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
 
 export default function ProfilePage() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-  const router = useRouter(),
-  const profileId = router.query.profileId as string,
-  const [profileData, setProfileData] = useState<any>(null),
-  const [isLoading, setIsLoading] = useState(true),
-  const [isError, setIsError] = useState(false),
+  const router = useRouter();
+  const profileId = router.query.profileId as string;
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     const fetchProfile = async () => {
-      setIsLoading(true),
-      setIsError(false),
+      setIsLoading(true);
+      setIsError(false);
       try {
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
-          .single(),
+          .single();
 
         if (error) {
           throw error
@@ -38,7 +38,7 @@ export default function ProfilePage() {
         setProfileData(data)
       } catch (error) {
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
-        setIsError(true),
+        setIsError(true);
         toast({
           title: "Error",
           description: "Failed to load profile. Please try again later.",
@@ -46,12 +46,12 @@ export default function ProfilePage() {
       } finally {
         setIsLoading(false)
       }
-    },
+    };
 
     if (profileId) {
       fetchProfile()
     }
-  }, [profileId]),
+  }, [profileId]);
 
   if (isLoading) {
     return (

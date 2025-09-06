@@ -1,24 +1,24 @@
-import { useState, useEffect } from "react",
-import { useRouter } from 'next/router',
-import { GradientHeading } from "@/components/GradientHeading",
-import { ProductListingCard } from "@/components/ProductListingCard",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
+import { useState, useEffect } from "react";
+import { useRouter } from 'next/router';
+import { GradientHeading } from "@/components/GradientHeading";
+import { ProductListingCard } from "@/components/ProductListingCard";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
-  Select,
-  SelectValue,
-  SelectTrigger,
-  SelectContent,
-  SelectItem} from "@/components/ui/select",
-import { Checkbox } from "@/components/ui/checkbox",
-import Skeleton from "react-loading-skeleton",
-import "react-loading-skeleton/dist/skeleton.css",
-import { Slider } from "@/components/ui/slider",
-import { ProductListing, ListingView } from "@/types/listings",
+  Select;
+  SelectValue;
+  SelectTrigger;
+  SelectContent;
+  SelectItem} from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
+import { Slider } from "@/components/ui/slider";
+import { ProductListing, ListingView } from "@/types/listings";
 import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-import { captureException } from "@/utils/sentry",
+import { toast } from "@/hooks/use-toast";
+import { captureException } from "@/utils/sentry";
 interface PriceRange {
   min: number,
   max: number
@@ -30,7 +30,7 @@ interface DynamicListingPageProps {
   categorySlug: string,
   listings: ProductListing[],
   categoryFilters: { label: string, value: string }[],
-  initialPrice?: PriceRange,
+  initialPrice?: PriceRange;
   /**
    * Base path for listing detail pages. Defaults to `/marketplace/listing`.
    */
@@ -38,68 +38,68 @@ interface DynamicListingPageProps {
 }
 
 export function DynamicListingPage({
-  title,
-  description,
-  categorySlug,
+  title;
+  description;
+  categorySlug;
   listings: allListings,
-  categoryFilters,
+  categoryFilters;
   initialPrice = { min: 0, max: 10000 },
   detailBasePath = "/marketplace/listing"}: DynamicListingPageProps) {
-  const router = useRouter(),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]),
+  const router = useRouter();
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
   const toggleCategory = (category: string) => {
     setSelectedCategories(prev =>
       prev.includes(category)
         ? prev.filter(c => c !== category)
         : [...prev, category]
     )
-  },
-  const clearCategories = () => setSelectedCategories([]),
-  const [view, setView] = useState<ListingView>("grid"),
-  const isGrid = view === "grid",
+  };
+  const clearCategories = () => setSelectedCategories([]);
+  const [view, setView] = useState<ListingView>("grid");
+  const isGrid = view === "grid";
   // Swap icons to match action
   const ToggleViewIcon = isGrid ? (
     <List className="h-4 w-4" />
   ) : (
     <LayoutGrid className="h-4 w-4" />
-  ),
-  const [isLoading, setIsLoading] = useState(false),
+  );
+  const [isLoading, setIsLoading] = useState(false);
   const [priceRange, setPriceRange] = useState<PriceRange>({
     min: 0,
     max: 10000}),
 
-  const [selectedRating, setSelectedRating] = useState<number | null>(null),
-  const [selectedBrand, setSelectedBrand] = useState("all"),
-  const [specQuery, setSpecQuery] = useState(""),
-  const [selectedAvailability, setSelectedAvailability] = useState("all"),
-  const [sortOption, setSortOption] = useState("newest"),
+  const [selectedRating, setSelectedRating] = useState<number | null>(null);
+  const [selectedBrand, setSelectedBrand] = useState("all");
+  const [specQuery, setSpecQuery] = useState("");
+  const [selectedAvailability, setSelectedAvailability] = useState("all");
+  const [sortOption, setSortOption] = useState("newest");
 
   const brandOptions = Array.from(
-    new Set(allListings.map((l) => l.brand).filter(Boolean)),
-  ),
+    new Set(allListings.map((l) => l.brand).filter(Boolean));
+  );
   const availabilityOptions = Array.from(
-    new Set(allListings.map((l) => l.availability).filter(Boolean)),
-  ),
+    new Set(allListings.map((l) => l.availability).filter(Boolean));
+  );
 
   useEffect(() => {
-    const listingsWithPrice = allListings.filter((l) => l.price !== null),
+    const listingsWithPrice = allListings.filter((l) => l.price !== null);
     if (listingsWithPrice.length > 0) {
-      const max = Math.max(...listingsWithPrice.map((l) => l.price || 0)),
-      setPriceRange({ min: 0, max }),
+      const max = Math.max(...listingsWithPrice.map((l) => l.price || 0));
+      setPriceRange({ min: 0, max });
       setCurrentPriceFilter([0, max])
     }
-  }, [allListings]),
+  }, [allListings]);
 
   const [currentPriceFilter, setCurrentPriceFilter] = useState<
     [number, number]
-  >([0, initialPrice.max]),
+  >([0, initialPrice.max]);
 
   const handleSliderChange = (values: number[]) => {
-    const [min, max] = values.map(Number),
-    if (min == null || max == null || isNaN(min) || isNaN(max)) return,
+    const [min, max] = values.map(Number);
+    if (min == null || max == null || isNaN(min) || isNaN(max)) return;
     setCurrentPriceFilter([min, max])
-  },
+  };
 
   let filteredListings: ProductListing[] = [],
   try {
@@ -110,40 +110,40 @@ export function DynamicListingPage({
         listing.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (listing.tags &&
           listing.tags.some((tag: string) =>
-            tag.toLowerCase().includes(searchQuery.toLowerCase()),
-          )),
+            tag.toLowerCase().includes(searchQuery.toLowerCase());
+          ));
 
       const matchesBrand =
         selectedBrand === "all" ||
-        (listing.brand && listing.brand === selectedBrand),
+        (listing.brand && listing.brand === selectedBrand);
 
       const matchesSpecs =
         !specQuery ||
         (listing.specifications &&
           listing.specifications.some((s) =>
-            s.toLowerCase().includes(specQuery.toLowerCase()),
+            s.toLowerCase().includes(specQuery.toLowerCase());
           )) ||
         (listing.tags &&
           listing.tags.some((tag) =>
-            tag.toLowerCase().includes(specQuery.toLowerCase()),
-          )),
+            tag.toLowerCase().includes(specQuery.toLowerCase());
+          ));
 
       const matchesAvailability =
         selectedAvailability === "all" ||
-        (listing.availability && listing.availability === selectedAvailability),
+        (listing.availability && listing.availability === selectedAvailability);
 
       const matchesCategory =
         selectedCategories.length === 0 ||
-        selectedCategories.includes(listing.category),
+        selectedCategories.includes(listing.category);
 
       const matchesPrice =
         listing.price === null ||
         (listing.price >= currentPriceFilter[0] &&
-          listing.price <= currentPriceFilter[1]),
+          listing.price <= currentPriceFilter[1]);
 
       const matchesRating =
         selectedRating === null ||
-        (listing.rating !== undefined && listing.rating >= selectedRating),
+        (listing.rating !== undefined && listing.rating >= selectedRating);
 
       return (
         matchesSearch &&
@@ -154,14 +154,14 @@ export function DynamicListingPage({
         matchesSpecs &&
         matchesAvailability
       )
-    }),
+    });
     filteredListings.sort((a, b) => {
       switch (sortOption) {
-        case "price-asc": return (a.price || 0) - (b.price || 0),
+        case "price-asc": return (a.price || 0) - (b.price || 0);
         case "price-desc":
-          return (b.price || 0) - (a.price || 0),
+          return (b.price || 0) - (a.price || 0);
         case "rating":
-          return (b.rating || 0) - (a.rating || 0),
+          return (b.rating || 0) - (a.rating || 0);
         case "newest":
         default:
           return (
@@ -171,17 +171,17 @@ export function DynamicListingPage({
       }
     })
   } catch (error) {
-    captureException(error),
+    captureException(error);
     logErrorToProduction('Listing filter error:', { data: error })
   }
 
   const handleRequestQuote = (listingId: string) => {
-    setIsLoading(true),
+    setIsLoading(true);
 
-    const listing = allListings.find((item) => item.id === listingId),
+    const listing = allListings.find((item) => item.id === listingId);
 
     setTimeout(() => {
-      setIsLoading(false),
+      setIsLoading(false);
       if (listing) {
         toast({
           title: "Quote Requested",
@@ -203,7 +203,7 @@ export function DynamicListingPage({
         router.push("/request-quote")
       }
     }, 500)
-  },
+  };
 
   return (
     <div className="min-h-screen bg-zion-blue py-12 px-4">
@@ -380,13 +380,13 @@ export function DynamicListingPage({
                 variant="outline"
                 className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
                 onClick={() => {
-                  logInfo("Clearing filters"),
-                  setSearchQuery(""),
-                  clearCategories(),
-                  setCurrentPriceFilter([0, priceRange.max]),
-                  setSelectedRating(null),
-                  setSelectedBrand("all"),
-                  setSpecQuery(""),
+                  logInfo("Clearing filters");
+                  setSearchQuery("");
+                  clearCategories();
+                  setCurrentPriceFilter([0, priceRange.max]);
+                  setSelectedRating(null);
+                  setSelectedBrand("all");
+                  setSpecQuery("");
                   setSelectedAvailability("all")
                 }}
               >
@@ -506,12 +506,12 @@ export function DynamicListingPage({
                 <Button
                   variant="outline"
                   onClick={() => {
-                    setSearchQuery(""),
-                    clearCategories(),
-                    setCurrentPriceFilter([0, priceRange.max]),
-                    setSelectedRating(null),
-                    setSelectedBrand("all"),
-                    setSpecQuery(""),
+                    setSearchQuery("");
+                    clearCategories();
+                    setCurrentPriceFilter([0, priceRange.max]);
+                    setSelectedRating(null);
+                    setSelectedBrand("all");
+                    setSpecQuery("");
                     setSelectedAvailability("all")
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"

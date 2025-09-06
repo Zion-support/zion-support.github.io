@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 interface ButtonProps {
-  children: React.ReactNode;
+  children: React.ReactNode,
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
@@ -12,13 +12,13 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({
-  children,
-  variant = 'primary',
-  size = 'md',
-  className = '',
-  onClick,
-  disabled = false,
-  type = 'button',
+  children;
+  variant = 'primary';
+  size = 'md';
+  className = '';
+  onClick;
+  disabled = false;
+  type = 'button';
 }) => {
   const baseClasses = 'font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
   

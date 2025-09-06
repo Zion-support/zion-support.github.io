@@ -1,18 +1,18 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Search, Filter, Grid, List, ArrowRight, ChevronRight,
+  Search, Filter, Grid, List, ArrowRight, ChevronRight;
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,
+  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon
-} from 'lucide-react',
-import SmartHeader from '../components/SmartHeader',
-import SmartFooter from '../components/SmartFooter',
+} from 'lucide-react';
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
 export default function ExplorePage() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [sortBy, setSortBy] = useState('popularity'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popularity');
 
   const categories = [
     {
@@ -23,7 +23,7 @@ export default function ExplorePage() {
       color: 'from-purple-500 to-pink-500',
       serviceCount: 25,
       featured: true
-    },
+    };
     {
       id: 'quantum',
       name: 'Quantum Computing',
@@ -32,7 +32,7 @@ export default function ExplorePage() {
       color: 'from-blue-500 to-cyan-500',
       serviceCount: 18,
       featured: true
-    },
+    };
     {
       id: 'cybersecurity',
       name: 'Cybersecurity',
@@ -41,7 +41,7 @@ export default function ExplorePage() {
       color: 'from-red-500 to-orange-500',
       serviceCount: 22,
       featured: true
-    },
+    };
     {
       id: 'cloud',
       name: 'Cloud & DevOps',
@@ -50,7 +50,7 @@ export default function ExplorePage() {
       color: 'from-emerald-500 to-teal-500',
       serviceCount: 20,
       featured: false
-    },
+    };
     {
       id: 'edge',
       name: 'Edge Computing',
@@ -59,7 +59,7 @@ export default function ExplorePage() {
       color: 'from-yellow-500 to-orange-500',
       serviceCount: 15,
       featured: false
-    },
+    };
     {
       id: 'space',
       name: 'Space Technology',
@@ -68,7 +68,7 @@ export default function ExplorePage() {
       color: 'from-indigo-500 to-purple-500',
       serviceCount: 12,
       featured: true
-    },
+    };
     {
       id: 'biotech',
       name: 'Biotechnology',
@@ -77,7 +77,7 @@ export default function ExplorePage() {
       color: 'from-pink-500 to-rose-500',
       serviceCount: 16,
       featured: false
-    },
+    };
     {
       id: 'blockchain',
       name: 'Blockchain',
@@ -86,7 +86,7 @@ export default function ExplorePage() {
       color: 'from-green-500 to-emerald-500',
       serviceCount: 14,
       featured: false
-    },
+    };
     {
       id: 'automation',
       name: 'Automation',
@@ -95,7 +95,7 @@ export default function ExplorePage() {
       color: 'from-cyan-500 to-blue-500',
       serviceCount: 19,
       featured: false
-    },
+    };
     {
       id: 'fintech',
       name: 'Financial Technology',
@@ -105,7 +105,7 @@ export default function ExplorePage() {
       serviceCount: 17,
       featured: false
     }
-  ],
+  ];
 
   const featuredServices = [
     {
@@ -114,20 +114,20 @@ export default function ExplorePage() {
       category: 'ai',
       description: 'Revolutionary AI consciousness platform with emotional intelligence',
       status: 'beta',
-      price: '$1,999/month',
+      price: '$1,999/month';
       icon: Brain,
       color: 'from-purple-500 to-pink-500'
-    },
+    };
     {
       id: 'quantum-neural-networks',
       title: 'Quantum Neural Networks',
       category: 'quantum',
       description: 'Quantum-powered AI with advanced consciousness capabilities',
       status: 'beta',
-      price: '$1,299/month',
+      price: '$1,299/month';
       icon: Atom,
       color: 'from-blue-500 to-cyan-500'
-    },
+    };
     {
       id: 'quantum-cybersecurity',
       title: 'Quantum Cybersecurity',
@@ -137,39 +137,39 @@ export default function ExplorePage() {
       price: '$799/month',
       icon: Shield,
       color: 'from-red-500 to-orange-500'
-    },
+    };
     {
       id: 'space-technology',
       title: 'Space Technology Innovation',
       category: 'space',
       description: 'AI-powered space exploration and resource optimization',
       status: 'beta',
-      price: '$2,499/month',
+      price: '$2,499/month';
       icon: Rocket,
       color: 'from-indigo-500 to-purple-500'
     }
-  ],
+  ];
 
   // Filter categories based on search
   const filteredCategories = categories.filter(category => {
     const matchesSearch = category.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         category.description.toLowerCase().includes(searchTerm.toLowerCase()),
-    const matchesFilter = selectedCategory === 'all' || category.id === selectedCategory,
+                         category.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesFilter = selectedCategory === 'all' || category.id === selectedCategory;
     return matchesSearch && matchesFilter
-  }),
+  });
 
   // Sort categories
   const sortedCategories = [...filteredCategories].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
-        return b.serviceCount - a.serviceCount,
+        return b.serviceCount - a.serviceCount;
       case 'name':
-        return a.name.localeCompare(b.name),
+        return a.name.localeCompare(b.name);
       case 'featured':
-        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0),
+        return (b.featured ? 1 : 0) - (a.featured ? 1 : 0);
       default: return 0
     }
-  }),
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -443,35 +443,35 @@ export default function ExplorePage() {
                 description: 'The evolution of AI towards true consciousness and emotional intelligence',
                 trend: 'Rising',
                 color: 'from-purple-500 to-pink-500'
-              },
+              };
               {
                 icon: Atom,
                 title: 'Quantum Supremacy',
                 description: 'Breakthroughs in quantum computing and quantum AI applications',
                 trend: 'Breakthrough',
                 color: 'from-blue-500 to-cyan-500'
-              },
+              };
               {
                 icon: Shield,
                 title: 'Quantum Security',
                 description: 'Quantum-resistant cryptography and AI-powered threat detection',
                 trend: 'Critical',
                 color: 'from-red-500 to-orange-500'
-              },
+              };
               {
                 icon: Rocket,
                 title: 'Space Innovation',
                 description: 'AI-powered space exploration and resource optimization',
                 trend: 'Emerging',
                 color: 'from-indigo-500 to-purple-500'
-              },
+              };
               {
                 icon: ZapIcon,
                 title: 'Neural Interfaces',
                 description: 'Brain-computer interfaces and neural augmentation',
                 trend: 'Experimental',
                 color: 'from-pink-500 to-rose-500'
-              },
+              };
               {
                 icon: TrendingUp,
                 title: 'Autonomous Systems',

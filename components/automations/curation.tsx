@@ -1,18 +1,18 @@
-import React from "react",
-import fs from "fs",
-import path from "path",
+import React from "react";
+import fs from "fs";
+import path from "path";
 type Experiment = {
   title: string,
-  hypothesis?: string,
-  metric?: string,
-  effort?: number,
+  hypothesis?: string;
+  metric?: string;
+  effort?: number;
   impact?: number
-},
+};
 
 type Props = {
   updatedAt: string | null,
   items: Experiment[]
-},
+};
 
 export default function CurationPage({ updatedAt, items }: Props) {
   return (
@@ -55,9 +55,9 @@ export default function CurationPage({ updatedAt, items }: Props) {
 
 export async function getStaticProps() {
   try {
-    const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json"),
-    const raw = fs.readFileSync(filePath, "utf8"),
-    const parsed = JSON.parse(raw),
+    const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
+    const raw = fs.readFileSync(filePath, "utf8");
+    const parsed = JSON.parse(raw);
     return {
       props: {
         updatedAt: parsed.updatedAt || null,

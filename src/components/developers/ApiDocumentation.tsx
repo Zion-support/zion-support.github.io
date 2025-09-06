@@ -1,12 +1,12 @@
 
-import { useState } from "react",
+import { useState } from "react";
 import { BookOpen, Terminal } from 'lucide-react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Alert, AlertDescription } from "@/components/ui/alert",
-import { Badge } from "@/components/ui/badge",
-import CodeBlock from "./CodeBlock",
-import { logInfo } from '@/utils/productionLogger',
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Badge } from "@/components/ui/badge";
+import CodeBlock from "./CodeBlock";
+import { logInfo } from '@/utils/productionLogger';
 interface EndpointParam {
   name: string,
   type: string,
@@ -18,9 +18,9 @@ interface EndpointSectionProps {
   method: string,
   endpoint: string,
   description: string,
-  note?: string,
-  params?: EndpointParam[],
-  codeExamples?: Record<string, string>,
+  note?: string;
+  params?: EndpointParam[];
+  codeExamples?: Record<string, string>;
   responseExamples?: { success: string }
 }
 
@@ -75,10 +75,10 @@ export function ApiDocumentation() {
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-}),
+});
 
-const data = await response.json(),
-logInfo(data),`,
+const data = await response.json();
+logInfo(data),`;
                 python: `import requests
 
 headers = {
@@ -87,7 +87,7 @@ headers = {
 
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/jobs',
-    params={'limit': 10, 'category': 'development'},
+    params={'limit': 10, 'category': 'development'};
     headers=headers
 )
 
@@ -98,25 +98,25 @@ print(data)`
                 success: `{
   "data": [
     {
-      "id": "job_abc123",
-      "title": "Senior React Developer",
-      "description": "We need an experienced React developer...",
-      "category": "development",
-      "skills": ["react", "typescript", "node.js"],
+      "id": "job_abc123";
+      "title": "Senior React Developer";
+      "description": "We need an experienced React developer...";
+      "category": "development";
+      "skills": ["react", "typescript", "node.js"];
       "budget": {
-        "min": 5000,
-        "max": 10000,
+        "min": 5000;
+        "max": 10000;
         "currency": "USD"
-      },
-      "status": "active",
-      "client_id": "user_xyz789",
+      };
+      "status": "active";
+      "client_id": "user_xyz789";
       "created_at": "2025-05-15T10:30:00Z"
-    },
+    };
     // More jobs...
-  ],
+  ];
   "meta": {
-    "total": 42,
-    "page": 1,
+    "total": 42;
+    "page": 1;
     "limit": 10
   }
 }`
@@ -141,10 +141,10 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-}),
+});
 
-const data = await response.json(),
-logInfo(data),`,
+const data = await response.json();
+logInfo(data),`;
                 python: `import requests
 
 headers = {
@@ -153,7 +153,7 @@ headers = {
 
 job_id = 'job_abc123'
 response = requests.get(
-    f'https://api.ziontechgroup.com/v1/jobs/{job_id}',
+    f'https://api.ziontechgroup.com/v1/jobs/{job_id}';
     headers=headers
 )
 
@@ -163,20 +163,20 @@ print(data)`
               responseExamples={{
                 success: `{
   "data": {
-    "id": "job_abc123",
-    "title": "Senior React Developer",
-    "description": "We need an experienced React developer...",
-    "category": "development",
-    "skills": ["react", "typescript", "node.js"],
+    "id": "job_abc123";
+    "title": "Senior React Developer";
+    "description": "We need an experienced React developer...";
+    "category": "development";
+    "skills": ["react", "typescript", "node.js"];
     "budget": {
-      "min": 5000,
-      "max": 10000,
+      "min": 5000;
+      "max": 10000;
       "currency": "USD"
-    },
-    "status": "active",
-    "client_id": "user_xyz789",
-    "created_at": "2025-05-15T10:30:00Z",
-    "deadline": "2025-06-30T23:59:59Z",
+    };
+    "status": "active";
+    "client_id": "user_xyz789";
+    "created_at": "2025-05-15T10:30:00Z";
+    "deadline": "2025-06-30T23:59:59Z";
     "application_count": 12
   }
 }`
@@ -203,22 +203,22 @@ print(data)`
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
-    "title": "Senior React Developer",
-    "description": "We need an experienced React developer...",
-    "category": "development",
-    "skills": ["react", "typescript", "node.js"],
+    "title": "Senior React Developer";
+    "description": "We need an experienced React developer...";
+    "category": "development";
+    "skills": ["react", "typescript", "node.js"];
     "budget": {
-      "min": 5000,
-      "max": 10000,
+      "min": 5000;
+      "max": 10000;
       "currency": "USD"
-    },
+    };
     "deadline": "2025-06-30T23:59:59Z"
-  }'`,
+  }'`;
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  },
+  };
   body: JSON.stringify({
     title: 'Senior React Developer',
     description: 'We need an experienced React developer...',
@@ -228,13 +228,13 @@ print(data)`
       min: 5000,
       max: 10000,
       currency: 'USD'
-    },
+    };
     deadline: '2025-06-30T23:59:59Z'
   })
-}),
+});
 
-const data = await response.json(),
-logInfo(data),`,
+const data = await response.json();
+logInfo(data),`;
                 python: `import requests
 import json
 
@@ -243,18 +243,18 @@ headers = {
 }
 
 payload = {
-    'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'],
+    'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'];
     'budget': {
-        'min': 5000,
-        'max': 10000,
+        'min': 5000;
+        'max': 10000;
         'currency': 'USD'
-    },
+    };
     'deadline': '2025-06-30T23:59:59Z'
 }
 
 response = requests.post(
-    'https://api.ziontechgroup.com/v1/jobs',
-    headers=headers,
+    'https://api.ziontechgroup.com/v1/jobs';
+    headers=headers;
     data=json.dumps(payload)
 )
 
@@ -264,19 +264,19 @@ print(data)`
               responseExamples={{
                 success: `{
   "data": {
-    "id": "job_def456",
-    "title": "Senior React Developer",
-    "description": "We need an experienced React developer...",
-    "category": "development",
-    "skills": ["react", "typescript", "node.js"],
+    "id": "job_def456";
+    "title": "Senior React Developer";
+    "description": "We need an experienced React developer...";
+    "category": "development";
+    "skills": ["react", "typescript", "node.js"];
     "budget": {
-      "min": 5000,
-      "max": 10000,
+      "min": 5000;
+      "max": 10000;
       "currency": "USD"
-    },
-    "status": "new",
-    "client_id": "user_xyz789",
-    "created_at": "2025-05-16T14:22:10Z",
+    };
+    "status": "new";
+    "client_id": "user_xyz789";
+    "created_at": "2025-05-16T14:22:10Z";
     "deadline": "2025-06-30T23:59:59Z"
   }
 }`
@@ -305,10 +305,10 @@ print(data)`
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-}),
+});
 
-const data = await response.json(),
-logInfo(data),`,
+const data = await response.json();
+logInfo(data),`;
                 python: `import requests
 
 headers = {
@@ -317,7 +317,7 @@ headers = {
 
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/talent',
-    params={'skills': 'react,typescript'},
+    params={'skills': 'react,typescript'};
     headers=headers
 )
 
@@ -328,19 +328,19 @@ print(data)`
                 success: `{
   "data": [
     {
-      "id": "talent_abc123",
-      "display_name": "Jane Smith",
-      "headline": "Senior Frontend Developer",
-      "skills": ["react", "typescript", "javascript"],
-      "availability": "available",
-      "average_rating": 4.8,
+      "id": "talent_abc123";
+      "display_name": "Jane Smith";
+      "headline": "Senior Frontend Developer";
+      "skills": ["react", "typescript", "javascript"];
+      "availability": "available";
+      "average_rating": 4.8;
       "rating_count": 15
-    },
+    };
     // More talent profiles...
-  ],
+  ];
   "meta": {
-    "total": 28,
-    "page": 1,
+    "total": 28;
+    "page": 1;
     "limit": 20
   }
 }`
@@ -365,10 +365,10 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talent
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-}),
+});
 
-const data = await response.json(),
-logInfo(data),`,
+const data = await response.json();
+logInfo(data),`;
                 python: `import requests
 
 headers = {
@@ -377,7 +377,7 @@ headers = {
 
 talent_id = 'talent_abc123'
 response = requests.get(
-    f'https://api.ziontechgroup.com/v1/talent/{talent_id}',
+    f'https://api.ziontechgroup.com/v1/talent/{talent_id}';
     headers=headers
 )
 
@@ -387,27 +387,27 @@ print(data)`
               responseExamples={{
                 success: `{
   "data": {
-    "id": "talent_abc123",
-    "display_name": "Jane Smith",
-    "headline": "Senior Frontend Developer",
-    "bio": "10+ years of experience in frontend development...",
-    "skills": ["react", "typescript", "javascript", "css", "html"],
-    "availability": "available",
-    "average_rating": 4.8,
-    "rating_count": 15,
+    "id": "talent_abc123";
+    "display_name": "Jane Smith";
+    "headline": "Senior Frontend Developer";
+    "bio": "10+ years of experience in frontend development...";
+    "skills": ["react", "typescript", "javascript", "css", "html"];
+    "availability": "available";
+    "average_rating": 4.8;
+    "rating_count": 15;
     "portfolio": [
       {
-        "id": "proj_123",
-        "title": "E-commerce Platform",
-        "description": "Built a modern e-commerce platform using React...",
-        "technologies": ["react", "redux", "node.js"],
+        "id": "proj_123";
+        "title": "E-commerce Platform";
+        "description": "Built a modern e-commerce platform using React...";
+        "technologies": ["react", "redux", "node.js"];
         "image_url": "https://example.com/portfolio/123.jpg"
       }
-    ],
+    ];
     "certifications": [
       {
-        "name": "AWS Certified Developer",
-        "issuing_organization": "Amazon Web Services",
+        "name": "AWS Certified Developer";
+        "issuing_organization": "Amazon Web Services";
         "issue_date": "2024-01-15"
       }
     ]
@@ -439,21 +439,21 @@ print(data)`
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
-    "talent_id": "talent_abc123",
-    "project_name": "E-commerce Website Redesign",
-    "project_summary": "Redesign our outdated e-commerce website with modern UI",
-    "project_description": "Our current website is 5 years old and needs a complete overhaul...",
-    "timeline": "2-3 months",
-    "budget_min": 8000,
-    "budget_max": 12000,
-    "requester_name": "John Doe",
+    "talent_id": "talent_abc123";
+    "project_name": "E-commerce Website Redesign";
+    "project_summary": "Redesign our outdated e-commerce website with modern UI";
+    "project_description": "Our current website is 5 years old and needs a complete overhaul...";
+    "timeline": "2-3 months";
+    "budget_min": 8000;
+    "budget_max": 12000;
+    "requester_name": "John Doe";
     "requester_email": "john@example.com"
-  }'`,
+  }'`;
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {
   method: 'POST',
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-  },
+  };
   body: JSON.stringify({
     talent_id: 'talent_abc123',
     project_name: 'E-commerce Website Redesign',
@@ -465,10 +465,10 @@ print(data)`
     requester_name: 'John Doe',
     requester_email: 'john@example.com'
   })
-}),
+});
 
-const data = await response.json(),
-logInfo(data),`,
+const data = await response.json();
+logInfo(data),`;
                 python: `import requests
 import json
 
@@ -477,14 +477,14 @@ headers = {
 }
 
 payload = {
-    'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000,
-    'budget_max': 12000,
+    'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000;
+    'budget_max': 12000;
     'requester_name': 'John Doerequester_email': 'john@example.com'
 }
 
 response = requests.post(
-    'https://api.ziontechgroup.com/v1/quotes',
-    headers=headers,
+    'https://api.ziontechgroup.com/v1/quotes';
+    headers=headers;
     data=json.dumps(payload)
 )
 
@@ -494,19 +494,19 @@ print(data)`
               responseExamples={{
                 success: `{
   "data": {
-    "id": "quote_def456",
-    "talent_id": "talent_abc123",
-    "requester_id": "user_xyz789",
-    "project_name": "E-commerce Website Redesign",
-    "project_summary": "Redesign our outdated e-commerce website with modern UI",
-    "project_description": "Our current website is 5 years old and needs a complete overhaul...",
-    "timeline": "2-3 months",
-    "budget_min": 8000,
-    "budget_max": 12000,
-    "budget_display": "$8,000 - $12,000",
-    "requester_name": "John Doe",
-    "requester_email": "john@example.com",
-    "status": "new",
+    "id": "quote_def456";
+    "talent_id": "talent_abc123";
+    "requester_id": "user_xyz789";
+    "project_name": "E-commerce Website Redesign";
+    "project_summary": "Redesign our outdated e-commerce website with modern UI";
+    "project_description": "Our current website is 5 years old and needs a complete overhaul...";
+    "timeline": "2-3 months";
+    "budget_min": 8000;
+    "budget_max": 12000;
+    "budget_display": "$8,000 - $12,000";
+    "requester_name": "John Doe";
+    "requester_email": "john@example.com";
+    "status": "new";
     "created_at": "2025-05-16T14:30:15Z"
   }
 }`
@@ -532,10 +532,10 @@ print(data)`
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-}),
+});
 
-const data = await response.json(),
-logInfo(data),`,
+const data = await response.json();
+logInfo(data),`;
                 python: `import requests
 
 headers = {
@@ -554,21 +554,21 @@ print(data)`
                 success: `{
   "data": [
     {
-      "id": "quote_def456",
-      "talent_id": "talent_abc123",
-      "project_name": "E-commerce Website Redesign",
-      "project_summary": "Redesign our outdated e-commerce website with modern UI",
-      "budget_display": "$8,000 - $12,000",
-      "status": "new",
-      "created_at": "2025-05-16T14:30:15Z",
-      "viewed_at": null,
+      "id": "quote_def456";
+      "talent_id": "talent_abc123";
+      "project_name": "E-commerce Website Redesign";
+      "project_summary": "Redesign our outdated e-commerce website with modern UI";
+      "budget_display": "$8,000 - $12,000";
+      "status": "new";
+      "created_at": "2025-05-16T14:30:15Z";
+      "viewed_at": null;
       "replied_at": null
-    },
+    };
     // More quotes...
-  ],
+  ];
   "meta": {
-    "total": 5,
-    "page": 1,
+    "total": 5;
+    "page": 1;
     "limit": 20
   }
 }`
@@ -593,29 +593,29 @@ print(data)`
               </p>
               
               <CodeBlock
-                code={`import crypto from 'crypto',
+                code={`import crypto from 'crypto';
 // Function to verify webhook signature
 function verifyWebhookSignature(payload, signature, secret) {
-  const hmac = crypto.createHmac('sha256', secret),
-  const expectedSignature = hmac.update(payload).digest('hex'),
+  const hmac = crypto.createHmac('sha256', secret);
+  const expectedSignature = hmac.update(payload).digest('hex');
   return crypto.timingSafeEqual(
-    Buffer.from(signature),
+    Buffer.from(signature);
     Buffer.from(expectedSignature)
   )
 }
 
 // Example usage in Express.js
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
-  const signature = req.headers['x-zion-signature'],
-  const payload = req.body.toString(),
-  const webhookSecret = process.env.WEBHOOK_SECRET,
+  const signature = req.headers['x-zion-signature'];
+  const payload = req.body.toString();
+  const webhookSecret = process.env.WEBHOOK_SECRET;
   
   if (!verifyWebhookSignature(payload, signature, webhookSecret)) {
     return res.status(401).send('Invalid signature')
   }
   
   // Process the webhook event
-  const event = JSON.parse(payload),
+  const event = JSON.parse(payload);
   logInfo('Received valid webhook:', { data: event }),
   
   // Respond to acknowledge receipt
@@ -660,15 +660,15 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               
               <CodeBlock
                 code={`{
-  "event_type": "new_application",
-  "event_id": "evt_abc123def456",
-  "timestamp": "2025-05-16T15:30:00Z",
+  "event_type": "new_application";
+  "event_id": "evt_abc123def456";
+  "timestamp": "2025-05-16T15:30:00Z";
   "data": {
-    "application_id": "app_123456",
-    "job_id": "job_abc123",
-    "talent_id": "talent_xyz789",
-    "applied_at": "2025-05-16T15:28:30Z",
-    "status": "new",
+    "application_id": "app_123456";
+    "job_id": "job_abc123";
+    "talent_id": "talent_xyz789";
+    "applied_at": "2025-05-16T15:28:30Z";
+    "status": "new";
     "match_score": 85
   }
 }`}
@@ -742,11 +742,11 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               <CodeBlock
                 code={`{
   "error": {
-    "code": "invalid_request",
-    "message": "The request was invalid",
+    "code": "invalid_request";
+    "message": "The request was invalid";
     "details": [
       {
-        "field": "project_name",
+        "field": "project_name";
         "message": "Project name is required"
       }
     ]
@@ -780,15 +780,15 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
 
 // Helper component for API endpoint documentation
 function EndpointSection({
-  method,
-  endpoint,
-  description,
-  note,
-  params = [],
-  codeExamples,
+  method;
+  endpoint;
+  description;
+  note;
+  params = [];
+  codeExamples;
   responseExamples
 }: EndpointSectionProps) {
-  const [activeTab, setActiveTab] = useState("curl"),
+  const [activeTab, setActiveTab] = useState("curl");
   
   return (
     <div className="border border-zinc-800 rounded-md">

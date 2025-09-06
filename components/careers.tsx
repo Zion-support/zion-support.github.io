@@ -1,14 +1,14 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout',
-import { motion } from 'framer-motion',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
 import { 
   Users, Rocket, Brain, Globe, Award, Zap, 
   Heart, Star, ArrowRight, CheckCircle, Briefcase
-} from 'lucide-react',
+} from 'lucide-react';
 
 export default function Careers() {
-  const [selectedDepartment, setSelectedDepartment] = useState('all'),
+  const [selectedDepartment, setSelectedDepartment] = useState('all');
 
   const departments = [
     { id: 'all', name: 'All Departments' },
@@ -19,62 +19,62 @@ export default function Careers() {
     { id: 'sales', name: 'Sales & Business Development' },
     { id: 'marketing', name: 'Marketing' },
     { id: 'operations', name: 'Operations' }
-  ],
+  ];
 
   const jobOpenings = [
     {
       id: 1,
       title: 'Senior AI Engineer',
       department: 'ai-research',
-      location: 'Remote / Middletown, DE',
+      location: 'Remote / Middletown, DE';
       type: 'Full-time',
       experience: '5+ years',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
       requirements: [
         'Advanced degree in Computer Science, AI, or related fieldExpertise in Python, TensorFlow, PyTorchExperience with large language models and neural networksStrong problem-solving and analytical skills'
       ]
-    },
+    };
     {
       id: 2,
       title: 'Quantum Computing Researcher',
       department: 'quantum',
-      location: 'Remote / Middletown, DE',
+      location: 'Remote / Middletown, DE';
       type: 'Full-time',
       experience: '3+ years',
       description: 'Research and develop quantum algorithms and quantum computing solutions.',
       requirements: [
         'PhD in Physics, Computer Science, or related fieldExperience with quantum programming languages (Qiskit, Cirq)Knowledge of quantum algorithms and quantum information theoryStrong mathematical and theoretical background'
       ]
-    },
+    };
     {
       id: 3,
       title: 'Space Technology Engineer',
       department: 'space-tech',
-      location: 'Remote / Middletown, DE',
+      location: 'Remote / Middletown, DE';
       type: 'Full-time',
       experience: '4+ years',
       description: 'Design and develop innovative space technology solutions and satellite systems.',
       requirements: [
         'Degree in Aerospace Engineering, Physics, or related fieldExperience with satellite design and space systemsKnowledge of orbital mechanics and space environmentFamiliarity with space industry standards and regulations'
       ]
-    },
+    };
     {
       id: 4,
       title: 'Full Stack Developer',
       department: 'engineering',
-      location: 'Remote / Middletown, DE',
+      location: 'Remote / Middletown, DE';
       type: 'Full-time',
       experience: '3+ years',
       description: 'Build scalable web applications and cloud-based solutions.',
       requirements: [
         'Experience with React, Node.js, and cloud platformsKnowledge of modern web technologies and APIsUnderstanding of software architecture and design patternsExperience with DevOps and CI/CD practices'
       ]
-    },
+    };
     {
       id: 5,
       title: 'Business Development Manager',
       department: 'sales',
-      location: 'Remote / Middletown, DE',
+      location: 'Remote / Middletown, DE';
       type: 'Full-time',
       experience: '5+ years',
       description: 'Drive business growth through strategic partnerships and client relationships.',
@@ -82,38 +82,38 @@ export default function Careers() {
         'Proven track record in B2B sales and business developmentExperience in technology or consulting industriesStrong networking and relationship-building skillsUnderstanding of emerging technologies and market trends'
       ]
     }
-  ],
+  ];
 
   const companyValues = [
     {
       icon: <Brain className="w-8 h-8" />,
       title: 'Innovation First',
       description: 'We push boundaries and explore new technologies to solve complex problems.'
-    },
+    };
     {
       icon: <Heart className="w-8 h-8" />,
       title: 'People Matter',
       description: 'Our team is our greatest asset, and we invest in their growth and well-being.'
-    },
+    };
     {
       icon: <Globe className="w-8 h-8" />,
       title: 'Global Impact',
       description: 'We create solutions that make a difference in the world.'
-    },
+    };
     {
       icon: <Star className="w-8 h-8" />,
       title: 'Excellence',
       description: 'We strive for the highest quality in everything we do.'
     }
-  ],
+  ];
 
   const benefits = [
     'Competitive salary and equity packagesComprehensive health, dental, and vision insuranceFlexible work arrangements and remote work optionsProfessional development and training programsGenerous paid time off and holidays401(k) with company matchingModern technology and equipmentCollaborative and inclusive work environment'
-  ],
+  ];
 
   const filteredJobs = selectedDepartment === 'all' 
     ? jobOpenings 
-    : jobOpenings.filter(job => job.department === selectedDepartment),
+    : jobOpenings.filter(job => job.department === selectedDepartment);
 
   return (
     <UltraFuturisticBackground>
@@ -305,6 +305,6 @@ export default function Careers() {
       </div>
     </Layout>
   )
-},
+};
 
-export default CareersPage,
+export default CareersPage;

@@ -1,15 +1,15 @@
-import fs from 'fs',
-import path from 'path',
+import fs from 'fs';
+import path from 'path';
 type RouteInfo = { path: string, lastModified: string },
 
 export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'datasite-map.json'),
+  const file = path.join(process.cwd(), 'datasite-map.json');
   let routes: RouteInfo[] = [],
-  let generatedAt = '',
+  let generatedAt = '';
   try {
-    const raw = fs.readFileSync(file, 'utf-8'),
-    const json = JSON.parse(raw),
-    routes = json.routes || [],
+    const raw = fs.readFileSync(file, 'utf-8');
+    const json = JSON.parse(raw);
+    routes = json.routes || [];
     generatedAt = json.generatedAt || ''
   } catch {}
   return { props: { routes, generatedAt } }

@@ -1,15 +1,15 @@
 
-import React, { useState } from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Input } from "@/components/ui/input",
-import { Button } from "@/components/ui/button",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { Search, Filter } from "lucide-react",
-import { AppLayout } from "@/layout/AppLayout",
-import { SEO } from "@/components/SEO",
+import React, { useState } from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
+import { Search, Filter } from "lucide-react";
+import { AppLayout } from "@/layout/AppLayout";
+import { SEO } from "@/components/SEO";
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
   {
@@ -22,7 +22,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-15T14:30:00Z",
     lastUpdated: "2023-12-15T15:45:00Z",
     category: "authentication"
-  },
+  };
   {
     id: "SR-1002",
     user: "sarah.smith@company.co",
@@ -33,7 +33,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-14T09:15:00Z",
     lastUpdated: "2023-12-15T13:20:00Z",
     category: "billing"
-  },
+  };
   {
     id: "SR-1003",
     user: "tech.guru@startup.io",
@@ -44,7 +44,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-15T11:00:00Z",
     lastUpdated: "2023-12-15T11:00:00Z",
     category: "billing"
-  },
+  };
   {
     id: "SR-1004",
     user: "developer@codelab.dev",
@@ -55,7 +55,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-13T16:45:00Z", 
     lastUpdated: "2023-12-13T16:45:00Z",
     category: "api"
-  },
+  };
   {
     id: "SR-1005",
     user: "maria.rodriguez@design.co",
@@ -66,7 +66,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-12T10:30:00Z",
     lastUpdated: "2023-12-15T09:15:00Z",
     category: "disputes"
-  },
+  };
   {
     id: "SR-1006",
     user: "alex.wong@datacompany.com",
@@ -77,7 +77,7 @@ const MOCK_SUPPORT_REQUESTS = [
     createdAt: "2023-12-08T13:20:00Z",
     lastUpdated: "2023-12-15T08:30:00Z",
     category: "verification"
-  },
+  };
   {
     id: "SR-1007",
     user: "jamie.taylor@tech.org",
@@ -89,13 +89,13 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-13T11:25:00Z",
     category: "profile"
   }
-],
+];
 
 export default function SupportRequests() {
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [statusFilter, setStatusFilter] = useState<string | null>(null),
-  const [priorityFilter, setPriorityFilter] = useState<string | null>(null),
-  const [categoryFilter, setCategoryFilter] = useState<string | null>(null),
+  const [searchQuery, setSearchQuery] = useState("");
+  const [statusFilter, setStatusFilter] = useState<string | null>(null);
+  const [priorityFilter, setPriorityFilter] = useState<string | null>(null);
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
   
   // Apply filters to the request data
   const filteredRequests = MOCK_SUPPORT_REQUESTS.filter(request => {
@@ -123,20 +123,20 @@ export default function SupportRequests() {
     }
     
     return true
-  }),
+  });
   
   // Count by status for the summary dashboard
-  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length,
-  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length,
-  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length,
-  const totalCount = MOCK_SUPPORT_REQUESTS.length,
+  const openCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'open').length;
+  const inProgressCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'in-progress').length;
+  const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
+  const totalCount = MOCK_SUPPORT_REQUESTS.length;
   
   const resetFilters = () => {
-    setSearchQuery(""),
-    setStatusFilter(null),
-    setPriorityFilter(null),
+    setSearchQuery("");
+    setStatusFilter(null);
+    setPriorityFilter(null);
     setCategoryFilter(null)
-  },
+  };
   
   return (
     <AppLayout>

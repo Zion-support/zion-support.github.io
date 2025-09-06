@@ -1,54 +1,54 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { 
   Brain, Cpu, Database, Zap, Shield, Rocket, 
   ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-} from 'lucide-react',
-import EnhancedNavigation from '../../components/EnhancedNavigation',
-import EnhancedFooter from '../../components/EnhancedFooter',
+} from 'lucide-react';
+import EnhancedNavigation from '../../components/EnhancedNavigation';
+import EnhancedFooter from '../../components/EnhancedFooter';
 export default function AIMLServicesPage() {
   const services = [
     {
       title: "Custom AI Solutions",
       description: "Tailored AI applications built for your specific business needs",
-      features: ["Machine Learning Models", "Neural Networks", "Predictive Analytics", "Natural Language Processing"],
-      price: "From $5,000",
+      features: ["Machine Learning Models", "Neural Networks", "Predictive Analytics", "Natural Language Processing"];
+      price: "From $5,000";
       icon: Brain,
       color: "from-purple-500 to-pink-500"
-    },
+    };
     {
       title: "AI-Powered Automation",
       description: "Intelligent automation systems that learn and adapt",
-      features: ["Process Automation", "Workflow Optimization", "Smart Decision Making", "Continuous Learning"],
-      price: "From $3,500",
+      features: ["Process Automation", "Workflow Optimization", "Smart Decision Making", "Continuous Learning"];
+      price: "From $3,500";
       icon: Zap,
       color: "from-blue-500 to-cyan-500"
-    },
+    };
     {
       title: "Data Intelligence Platform",
       description: "Advanced analytics and insights powered by AI",
-      features: ["Big Data Processing", "Real-time Analytics", "Business Intelligence", "Predictive Insights"],
-      price: "From $7,500",
+      features: ["Big Data Processing", "Real-time Analytics", "Business Intelligence", "Predictive Insights"];
+      price: "From $7,500";
       icon: Database,
       color: "from-emerald-500 to-teal-500"
-    },
+    };
     {
       title: "AI Consulting & Strategy",
       description: "Strategic guidance for AI implementation and transformation",
-      features: ["AI Roadmap Planning", "Technology Assessment", "Implementation Strategy", "ROI Optimization"],
-      price: "From $2,500",
+      features: ["AI Roadmap Planning", "Technology Assessment", "Implementation Strategy", "ROI Optimization"];
+      price: "From $2,500";
       icon: Rocket,
       color: "from-orange-500 to-red-500"
     }
-  ],
+  ];
 
   const stats = [
     { number: "500+", label: "AI Models Deployed", icon: Brain },
     { number: "99.9%", label: "Accuracy Rate", icon: CheckCircle },
     { number: "24/7", label: "AI Monitoring", icon: Clock },
     { number: "2500%", label: "Average ROI", icon: TrendingUp }
-  ],
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">

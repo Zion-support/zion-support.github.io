@@ -1,26 +1,26 @@
-import React from 'react',
-import Head from 'next/head',
-import Layout from '../../components/layout/Layout',
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react',
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services',
-import { extraServices } from '../../data/extra-services',
-import { additionalEnhancedServices } from '../../data/additional-real-services',
-import { newlyAddedServices } from '../../data/newly-added-services',
-import { curatedMarketServices } from '../../data/curated-market-services',
-import { new2025Services } from '../../data/new-2025-services',
-import { marketValidatedServices } from '../../data/market-validated-services',
-import { moreRealServices2025 } from '../../data/more-real-services-2025',
-import { verified2025Additions } from '../../data/verified-2025-additions',
-import { realServicesQ12025 } from '../../data/real-services-q1-2025',
-import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025',
-type Service = typeof enhancedRealMicroSaasServices[number],
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../../components/layout/Layout';
+import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
+import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
+import { extraServices } from '../../data/extra-services';
+import { additionalEnhancedServices } from '../../data/additional-real-services';
+import { newlyAddedServices } from '../../data/newly-added-services';
+import { curatedMarketServices } from '../../data/curated-market-services';
+import { new2025Services } from '../../data/new-2025-services';
+import { marketValidatedServices } from '../../data/market-validated-services';
+import { moreRealServices2025 } from '../../data/more-real-services-2025';
+import { verified2025Additions } from '../../data/verified-2025-additions';
+import { realServicesQ12025 } from '../../data/real-services-q1-2025';
+import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
+type Service = typeof enhancedRealMicroSaasServices[number];
 
 const contactInfo = {
 	mobile: '+1 302 464 0950',
 	email: 'kleber@ziontechgroup.com',
 	address: '364 E Main St STE 1008 Middletown DE 19709',
 	website: 'https://ziontechgroup.com'
-},
+};
 
 function getPriceValue(price: Service['price']): string {
 	if (price && typeof price === 'object' && 'monthly' in price) {
@@ -42,7 +42,7 @@ function getAllServices(): Service[] {
 		.concat(moreRealServices2025 as unknown as Service[])
 		.concat(verified2025Additions as unknown as Service[])
 		.concat(realServicesQ12025 as unknown as Service[])
-		.concat(realServicesQ32025 as unknown as Service[]),
+		.concat(realServicesQ32025 as unknown as Service[]);
 		.concat(newVerifiedServicesQ22025 as unknown as Service[])
 }
 
@@ -52,8 +52,8 @@ function toSlug(value: string): string {
 
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
-		const url = new URL(link),
-		const path = url.pathname.replace(/^\/+|\/+$/g, ''),
+		const url = new URL(link);
+		const path = url.pathname.replace(/^\/+|\/+$/g, '');
 		if (path.startsWith('services/')) {
 			return path.substring('services/'.length)
 		}
@@ -64,24 +64,24 @@ function extractServiceSlugFromLink(link: string): string | null {
 }
 
 export async function getStaticPaths() {
-	const services = getAllServices(),
-	const slugs = new Set<string>(),
+	const services = getAllServices();
+	const slugs = new Set<string>();
 
 	// Define static service slugs that should not be handled by this dynamic route
 	const staticServiceSlugs = [
 		'ai-evaluation-orchestratorai-support-triage-routerai-code-review-assistant-proai-revenue-forecasting-copilot'
-	],
+	];
 
 	for (const s of services) {
 		// Prefer explicit link under /services/* when available
-		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null,
+		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
 		if (fromLink && !staticServiceSlugs.includes(fromLink)) {
-			slugs.add(fromLink),
+			slugs.add(fromLink);
 			continue
 		}
 		// Fall back to normalized id or name to provide a stable URL under /services/*
-		const idSlug = s.id ? toSlug(s.id) : '',
-		const nameSlug = s.name ? toSlug(s.name) : '',
+		const idSlug = s.id ? toSlug(s.id) : '';
+		const nameSlug = s.name ? toSlug(s.name) : '';
 		
 		if (idSlug && !staticServiceSlugs.includes(idSlug)) {
 			slugs.add(idSlug)
@@ -98,14 +98,14 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
-	const services = getAllServices(),
-	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, ''),
+	const services = getAllServices();
+	const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
 
 	let service: Service | undefined = services.find((s) => {
-		if (!s.link) return false,
-		const fromLink = extractServiceSlugFromLink(s.link),
+		if (!s.link) return false;
+		const fromLink = extractServiceSlugFromLink(s.link);
 		return fromLink === incomingSlug
-	}),
+	});
 
 	if (!service) {
 		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)
@@ -132,24 +132,24 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 					dangerouslySetInnerHTML={{
 						__html: JSON.stringify(
 							{
-								"@context": "https://schema.org",
-								"@type": "Service",
+								"@context": "https://schema.org";
+								"@type": "Service";
 								name: service.name,
 								description: service.tagline || service.description,
 								url: service.link,
 								provider: {
-									"@type": "Organization",
+									"@type": "Organization";
 									name: "Zion Tech Group",
 									url: "https://ziontechgroup.com"
-								},
+								};
 								offers: {
-									"@type": "Offer",
+									"@type": "Offer";
 									        price: "99",
 									priceCurrency: "USD",
 									availability: "https://schema.org/InStock"
 								}
-							},
-							null,
+							};
+							null;
 							2
 							)
 						}}
@@ -243,18 +243,18 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 				</div>
 			</div>
 		</Layout>
-	),
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import { useRouter } from 'next/router',
-import Link from 'next/link',
-import EnhancedLayout from '@/components/layout/EnhancedLayout',
-import services from '@/data/services/services.json',
+	);
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
+import EnhancedLayout from '@/components/layout/EnhancedLayout';
+import services from '@/data/services/services.json';
 const ServiceDetail: NextPage = () => {
-  const router = useRouter(),
-  const { slug } = router.query as { slug?: string },
-  const items = services as any[],
-  const service = items.find((s) => s.slug === slug),
+  const router = useRouter();
+  const { slug } = router.query as { slug?: string };
+  const items = services as any[];
+  const service = items.find((s) => s.slug === slug);
 
   if (!service) {
     return (
@@ -270,7 +270,7 @@ const ServiceDetail: NextPage = () => {
     )
   }
 
-  const priceRange = `$${service.priceRangeUSD[0]} - $${service.priceRangeUSD[1]}`,
+  const priceRange = `$${service.priceRangeUSD[0]} - $${service.priceRangeUSD[1]}`;
 
   return (
     <EnhancedLayout>
@@ -300,7 +300,7 @@ const ServiceDetail: NextPage = () => {
       </div>
     </EnhancedLayout>
   )
-},
+};
 
 export default ServiceDetail
 }

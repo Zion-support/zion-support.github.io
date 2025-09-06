@@ -1,11 +1,11 @@
-import React from "react",
-import { useRouter } from "next/router",
-import Link from "next/link",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth",
-import { useWishlist } from "@/hooks/useWishlist",
-import { useCart } from '@/context/CartContext',
-import { logWarn } from '@/utils/productionLogger',
+import React from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { useWishlist } from "@/hooks/useWishlist";
+import { useCart } from '@/context/CartContext';
+import { logWarn } from '@/utils/productionLogger';
 import { Home, Search, MessageCircle, Heart, MessageSquare, ShoppingCart, User } from 'lucide-react'
 
 interface MobileBottomNavProps {
@@ -13,14 +13,14 @@ interface MobileBottomNavProps {
 }
 
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
-  const router = useRouter(),
-  const { user } = useAuth(),
-  const isAuthenticated = !!user,
+  const router = useRouter();
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
   const { items: wishlistItems } = useWishlist(), // Renamed to avoid conflict
-  const favoritesCount = wishlistItems.length,
+  const favoritesCount = wishlistItems.length;
 
   const cartContextValue = useCart(), // Call hook at top level
-  let cartCount = 0,
+  let cartCount = 0;
   if (cartContextValue && cartContextValue.items) {
     cartCount = cartContextValue.items.reduce((sum, i) => sum + i.quantity, 0)
   } else {
@@ -33,19 +33,19 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       href: "/",
       icon: Home,
       matches: (path: string) => path === "/"
-    },
+    };
     {
       name: "Browse",
       href: "/talent",
       icon: Search,
       matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")
-    },
+    };
     {
       name: "Community",
       href: "/community",
       icon: MessageCircle,
       matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")
-    },
+    };
     {
       name: "Wishlist",
       href: "/wishlist",
@@ -53,7 +53,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/wishlist"),
       badge: favoritesCount,
       authRequired: true
-    },
+    };
     {
       name: "Messages",
       href: "/messages",
@@ -61,14 +61,14 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
       badge: unreadCount,
       authRequired: true
-    },
+    };
     {
       name: "Cart",
       href: "/cart",
       icon: ShoppingCart,
       matches: (path: string) => path.startsWith("/cart"),
       badge: cartCount
-    },
+    };
     {
       name: "Dashboard",
       href: "/dashboard",
@@ -76,12 +76,12 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       matches: (path: string) => path.startsWith("/dashboard"),
       authRequired: true
     }
-  ],
+  ];
 
   // Filter items based on auth status
   const visibleItems = navItems.filter(item => 
     !item.authRequired || (item.authRequired && isAuthenticated)
-  ),
+  );
 
   return (
     <nav className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-t border-primary/20">
@@ -92,7 +92,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
             href={item.href}
             aria-label={item.name}
             className={cn(
-              "flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+              "flex flex-col items-center justify-center w-full h-full px-1 py-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
               item.matches(router.pathname)
                 ? "text-primary"
                 : "text-foreground/70 hover:text-foreground"

@@ -1,12 +1,12 @@
 
-import { useState, useMemo } from "react",
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
-import { Input } from "@/components/ui/input",
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
-import { Globe, Search, ArrowUpDown } from "lucide-react",
-import { Button } from "@/components/ui/button",
+import { useState, useMemo } from "react";
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing";
+import { Input } from "@/components/ui/input";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Globe, Search, ArrowUpDown } from "lucide-react";
+import { Button } from "@/components/ui/button";
 export function ITServicePricingTable() {
-  const [searchQuery, setSearchQuery] = useState(""),
+  const [searchQuery, setSearchQuery] = useState("");
   const [sortConfig, setSortConfig] = useState<{
     key: keyof CountryPricing,
     direction: "ascending" | "descending"
@@ -15,7 +15,7 @@ export function ITServicePricingTable() {
     direction: "ascending"}),
 
   const sortedData = useMemo(() => {
-    let filteredData = [...onsiteServicePricing],
+    let filteredData = [...onsiteServicePricing];
     
     // Filter by search query
     if (searchQuery) {
@@ -33,19 +33,19 @@ export function ITServicePricingTable() {
         return sortConfig.direction === "ascending" ? 1 : -1
       }
       return 0
-    }),
+    });
     
     return filteredData
-  }, [onsiteServicePricing, searchQuery, sortConfig]),
+  }, [onsiteServicePricing, searchQuery, sortConfig]);
 
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
-      key,
+      key;
       direction: 
         sortConfig.key === key && sortConfig.direction === "ascending" 
           ? "descending" 
           : "ascending"})
-  },
+  };
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">

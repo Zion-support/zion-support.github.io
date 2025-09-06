@@ -1,6 +1,6 @@
-import { cn } from "@/lib/utils",
-import { Badge } from "@/components/ui/badge",
-import { Button } from "@/components/ui/button",
+import { cn } from "@/lib/utils";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { StarIcon } from 'lucide-react'
 import Image from 'next/image', // Import next/image
 import React, { useState } from 'react', // Import useState
@@ -8,14 +8,14 @@ import React, { useState } from 'react', // Import useState
 interface ListingScoreCardProps {
   title: string,
   description: string,
-  image?: string,
+  image?: string;
   category: string,
-  tags?: string[],
-  author?: string,
-  authorImage?: string,
-  aiScore?: number,
-  rating?: number,
-  reviewCount?: number,
+  tags?: string[];
+  author?: string;
+  authorImage?: string;
+  aiScore?: number;
+  rating?: number;
+  reviewCount?: number;
   className?: string
 }
 
@@ -24,20 +24,20 @@ export function ListingScoreCard({
   description, 
   image, 
   category, 
-  tags,
-  author,
-  authorImage,
-  aiScore,
-  rating = 0,
-  reviewCount = 0,
+  tags;
+  author;
+  authorImage;
+  aiScore;
+  rating = 0;
+  reviewCount = 0;
   className
 }: ListingScoreCardProps) {
-  const [mainImageError, setMainImageError] = useState(false),
-  const [authorImageError, setAuthorImageError] = useState(false),
+  const [mainImageError, setMainImageError] = useState(false);
+  const [authorImageError, setAuthorImageError] = useState(false);
 
   return (
     <div className={cn(
-      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
+      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group";
       className
     )}>
       {image && !mainImageError && (

@@ -1,23 +1,23 @@
-import React from 'react',
-import Link from 'next/link',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { 
   Rocket, Brain, Atom, Zap, Sparkles, Shield, 
-  Phone, Mail, MapPin, Globe, ArrowRight,
-  Linkedin, Twitter, Facebook, Instagram, Youtube, Github,
-  CheckCircle, Award, Star, Crown, Gem, Infinity,
-  Heart, ShieldCheck, Users, Briefcase, BookOpen,
-  Target, Microscope, Cpu, Database, Cloud, Lock,
-  Home, Building, DollarSign, FileText, MessageSquare, MessageCircle, Newspaper, Handshake, LifeBuoy, Activity,
+  Phone, Mail, MapPin, Globe, ArrowRight;
+  Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
+  CheckCircle, Award, Star, Crown, Gem, Infinity;
+  Heart, ShieldCheck, Users, Briefcase, BookOpen;
+  Target, Microscope, Cpu, Database, Cloud, Lock;
+  Home, Building, DollarSign, FileText, MessageSquare, MessageCircle, Newspaper, Handshake, LifeBuoy, Activity;
   ShoppingCart, UserCheck, BarChart, Palette, Video, LockIcon, GlobeIcon, CpuIcon
-} from 'lucide-react',
+} from 'lucide-react';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const serviceCategories = [
   {
@@ -29,17 +29,17 @@ const serviceCategories = [
       { name: 'AI-Powered Cybersecurity', href: '/ai-cybersecurity-platform', price: '$799/month' },
       { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform', price: '$3,999/month' }
     ]
-  },
+  };
   {
     title: '⚛️ Quantum & Emerging Tech',
     icon: Atom,
     services: [
-      { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', price: '$1,999/month' },
+      { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', price: '$1,999/month' };
       { name: 'Blockchain AI Platform', href: '/blockchain-ai-platform', price: '$899/month' },
       { name: 'Edge AI Computing', href: '/edge-ai-computing-platform', price: '$599/month' },
       { name: 'AI Climate Modeling', href: '/ai-climate-modeling-platform', price: '$1,299/month' }
     ]
-  },
+  };
   {
     title: '🏙️ Enterprise IT Solutions',
     icon: Cpu,
@@ -49,7 +49,7 @@ const serviceCategories = [
       { name: 'HR Automation Suite', href: '/hr-automation-suite', price: '$179/month' },
       { name: 'Project Management AI', href: '/project-management-ai-platform', price: '$199/month' }
     ]
-  },
+  };
   {
     title: '🛒 Business Automation',
     icon: ShoppingCart,
@@ -60,7 +60,7 @@ const serviceCategories = [
       { name: 'Legal Document Automation', href: '/legal-document-automation', price: '$399/month' }
     ]
   }
-],
+];
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home },
@@ -71,7 +71,7 @@ const quickLinks = [
   { name: 'Case Studies', href: '/case-studies', icon: FileText },
   { name: 'Blog', href: '/blog', icon: MessageSquare },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
-],
+];
 
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -80,7 +80,7 @@ const companyLinks = [
   { name: 'Partners', href: '/partners', icon: Handshake },
   { name: 'Support', href: '/support', icon: LifeBuoy },
   { name: 'Status', href: '/status', icon: Activity }
-],
+];
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
@@ -88,18 +88,18 @@ const socialLinks = [
   { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
-],
+];
 
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
-],
+];
 
 const stats = [
   { label: 'Happy Customers', value: '50K+', icon: Users },
   { label: 'Services Delivered', value: '200+', icon: Rocket },
   { label: 'Countries Served', value: '45+', icon: Globe },
   { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
-],
+];
 
 export default function UltraFuturisticFooter2034() {
   return (

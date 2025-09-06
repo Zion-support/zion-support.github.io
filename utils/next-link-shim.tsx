@@ -6,15 +6,15 @@ interface HTMLElement {
 }
 
 interface HTMLAnchorElement extends HTMLElement {
-  href: string;
+  href: string,
   className?: string;
 }
 
 type Href = string | { pathname?: string; href?: string };
 
 type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
-  href: Href;
-  children: React.ReactNode;
+  href: Href,
+  children: React.ReactNode,
 };
 
 function resolveHref(href: Href): string {

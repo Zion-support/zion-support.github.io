@@ -1,21 +1,21 @@
-import React from 'react',
-import Link from 'next/link',
+import React from 'react';
+import Link from 'next/link';
 import { 
   Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, 
   Shield, Users, Briefcase, BookOpen, MessageCircle, 
   Star, TrendingUp, Target, Layers, Cpu, Database, 
   Cloud, Lock, ShieldCheck, Heart, Leaf, Car, 
-  GraduationCap, Scale, Building, Factory, Camera,
-  Video, Music, Gamepad2, Sun, Moon, Wind, Droplets,
+  GraduationCap, Scale, Building, Factory, Camera;
+  Video, Music, Gamepad2, Sun, Moon, Wind, Droplets;
   Code
-} from 'lucide-react',
+} from 'lucide-react';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const serviceCategories = [
   {
@@ -26,7 +26,7 @@ const serviceCategories = [
       { name: 'Autonomous Drone Delivery Network', href: '/autonomous-drone-delivery-network' },
       { name: 'AI Healthcare Diagnosis Platform', href: '/ai-healthcare-diagnosis-platform' }
     ]
-  },
+  };
   {
     title: '🏙️ Smart City & Infrastructure',
     services: [
@@ -35,7 +35,7 @@ const serviceCategories = [
       { name: 'Digital Twin Manufacturing Platform', href: '/digital-twin-manufacturing-platform' },
       { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai' }
     ]
-  },
+  };
   {
     title: '⚛️ Quantum & Advanced Tech',
     services: [
@@ -44,7 +44,7 @@ const serviceCategories = [
       { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway' },
       { name: 'Quantum Internet Protocol', href: '/quantum-internet-protocol' }
     ]
-  },
+  };
   {
     title: '🤖 AI & Machine Learning',
     services: [
@@ -54,7 +54,7 @@ const serviceCategories = [
       { name: 'AI Legal Research Platform', href: '/ai-legal-research-platform' }
     ]
   }
-],
+];
 
 const companyLinks = [
   { name: 'About Us', href: '/about', icon: Users },
@@ -63,7 +63,7 @@ const companyLinks = [
   { name: 'Careers', href: '/careers', icon: TrendingUp },
   { name: 'Contact', href: '/contact', icon: MessageCircle },
   { name: 'Support', href: '/support', icon: ShieldCheck }
-],
+];
 
 const resourceLinks = [
   { name: 'Documentation', href: '/docs', icon: BookOpen },
@@ -72,14 +72,14 @@ const resourceLinks = [
   { name: 'Mobile Apps', href: '/mobile', icon: Globe },
   { name: 'Cloud Services', href: '/cloud', icon: Cloud },
   { name: 'Security Center', href: '/security', icon: Shield }
-],
+];
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Users },
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: MessageCircle },
   { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Video },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Code }
-],
+];
 
 export default function UltraFuturisticFooter2028() {
   return (

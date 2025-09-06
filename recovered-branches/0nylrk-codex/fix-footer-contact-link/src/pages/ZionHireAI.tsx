@@ -1,17 +1,17 @@
 
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { SEO } from "@/components/SEO",
-import { useWhitelabel } from "@/context/WhitelabelContext",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from "lucide-react",
-import { useAuth } from "@/hooks/useAuth",
-import { Link } from "react-router-dom",
+import React from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { SEO } from "@/components/SEO";
+import { useWhitelabel } from "@/context/WhitelabelContext";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
+import { Link } from "react-router-dom";
 export default function ZionHireAI() {
-  const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
-  const { isAuthenticated } = useAuth(),
+  const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
+  const { isAuthenticated } = useAuth();
   
   return (
     <>
@@ -76,7 +76,7 @@ export default function ZionHireAI() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight">Powerful AI Hiring Tools</h2>
               <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">
-                Our comprehensive suite of AI-powered hiring tools help you streamline your recruiting process,
+                Our comprehensive suite of AI-powered hiring tools help you streamline your recruiting process;
                 find better candidates, and make data-driven decisions.
               </p>
             </div>

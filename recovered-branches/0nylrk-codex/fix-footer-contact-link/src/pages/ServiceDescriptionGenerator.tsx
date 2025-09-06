@@ -1,15 +1,15 @@
 
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",
-import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",
-import { SEO } from "@/components/SEO",
-import { useAuth } from "@/hooks/useAuth",
-import { Navigate } from "react-router-dom",
+import React, { useState } from "react";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm";
+import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay";
+import { SEO } from "@/components/SEO";
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
 export default function ServiceDescriptionGenerator() {
-  const { isAuthenticated, isLoading } = useAuth(),
-  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
+  const { isAuthenticated, isLoading } = useAuth();
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
   
   // Show loading while checking authentication
   if (isLoading) {
@@ -28,9 +28,9 @@ export default function ServiceDescriptionGenerator() {
   }
 
   const handleDescriptionSave = (editedDescription: string) => {
-    setGeneratedDescription(editedDescription),
+    setGeneratedDescription(editedDescription);
     // Here you could also save to database if needed
-  },
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">

@@ -1,8 +1,8 @@
-import React from 'react',
-import SEO from '../components/SEO',
+import React from 'react';
+import SEO from '../components/SEO';
 const ext = (url: string) => (
 	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
-),
+);
 
 export default function ServicesAdvertisingPage() {
 	return (
@@ -12,9 +12,9 @@ export default function ServicesAdvertisingPage() {
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
 
   const benefits = [
-    '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling',
+    '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling';
     'Flexible deployment: SaaS or self-hosted options'
-  ],
+  ];
 
 				{/* New: Core micro SaaS and AI additions */}
 				<section className="space-y-6">
@@ -40,9 +40,9 @@ export default function ServicesAdvertisingPage() {
         { name: 'OpenRouter', href: 'https://openrouter.ai/models' },
         { name: 'Weights & Biases', href: 'https://wandb.ai/site/pricing' },
         { name: 'Humanloop', href: 'https://humanloop.com/pricing' }
-      ],
+      ];
       note: 'SMB budgets: $100–$2,000/mo. Enterprise: $5k–$100k+/mo depending on volume and models.'
-    },
+    };
     {
       title: 'Security & Compliance',
       links: [
@@ -52,9 +52,9 @@ export default function ServicesAdvertisingPage() {
         { name: 'Cloudflare Zero Trust', href: 'https://www.cloudflare.com/products/zero-trust/pricing/' },
         { name: 'Snyk', href: 'https://snyk.io/plans/' },
         { name: 'Okta', href: 'https://www.okta.com/pricing/' }
-      ],
+      ];
       note: 'SMB budgets: $200–$5,000/mo. Enterprise: $10k–$250k/yr+ for broader suites.'
-    },
+    };
     {
       title: 'Vector & Search',
       links: [
@@ -63,9 +63,9 @@ export default function ServicesAdvertisingPage() {
         { name: 'Qdrant', href: 'https://qdrant.tech/pricing/' },
         { name: 'Elasticsearch Serverless', href: 'https://www.elastic.co/pricing/' },
         { name: 'Milvus', href: 'https://zilliz.com/pricing' }
-      ],
+      ];
       note: 'SMB budgets: $50–$1,000/mo. Enterprise: $2k–$50k+/mo depending on throughput/latency.'
-    },
+    };
     {
       title: 'Cloud & Edge',
       links: [
@@ -75,46 +75,46 @@ export default function ServicesAdvertisingPage() {
         { name: 'Cloudflare', href: 'https://www.cloudflare.com/plans/' },
         { name: 'Netlify', href: 'https://www.netlify.com/pricing/' },
         { name: 'Vercel', href: 'https://vercel.com/pricing' }
-      ],
+      ];
       note: 'SMB budgets: $200–$10,000/mo.'
-    },
+    };
     {
       title: 'Product Analytics',
       links: [
         { name: 'Mixpanel', href: 'https://mixpanel.com/pricing/' },
         { name: 'Amplitude', href: 'https://amplitude.com/pricing' },
         { name: 'PostHog', href: 'https://posthog.com/pricing' }
-      ],
+      ];
       note: 'SMB budgets: $0–$1,500/mo.'
-    },
+    };
     {
       title: 'Incident & On‑Call',
       links: [
         { name: 'PagerDuty', href: 'https://www.pagerduty.com/pricing/' },
         { name: 'Opsgenie', href: 'https://www.atlassian.com/software/opsgenie/pricing' },
         { name: 'Better Stack', href: 'https://betterstack.com/status/pricing' }
-      ],
+      ];
       note: 'SMB budgets: $10–$1,000/mo.'
-    },
+    };
     {
       title: 'Email & Deliverability',
       links: [
         { name: 'SendGrid', href: 'https://sendgrid.com/pricing/' },
         { name: 'Mailgun', href: 'https://www.mailgun.com/pricing/' },
         { name: 'Postmark', href: 'https://postmarkapp.com/pricing' }
-      ],
+      ];
       note: 'SMB budgets: $15–$500/mo.'
-    },
+    };
     {
       title: 'Observability & APM',
       links: [
         { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },
         { name: 'New Relic', href: 'https://newrelic.com/pricing' },
         { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' }
-      ],
+      ];
       note: 'SMB budgets: $50–$2,000/mo.'
     }
-  ],
+  ];
 
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Document Summarizer</h2>
@@ -316,27 +316,27 @@ export default function ServicesAdvertisingPage() {
                   { name: 'Weights & Biases', href: 'https://wandb.ai/site/pricing' },
                   { name: 'Humanloop', href: 'https://humanloop.com/pricing' },
                   { name: 'Promptfoo', href: 'https://www.promptfoo.dev/pricing' }
-                ]},
+                ]};
                 { title: 'LLM Platforms', range: '$100–$2,000/mo', links: [
                   { name: 'OpenAI', href: 'https://openai.com/api/pricing' },
                   { name: 'Anthropic', href: 'https://www.anthropic.com/pricing' },
                   { name: 'OpenRouter', href: 'https://openrouter.ai/models' }
-                ]},
+                ]};
                 { title: 'Observability/APM', range: '$50–$2,000/mo', links: [
                   { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },
                   { name: 'New Relic', href: 'https://newrelic.com/pricing' },
                   { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' }
-                ]},
+                ]};
                 { title: 'Security & Compliance', range: '$200–$5,000/mo', links: [
                   { name: 'Wiz', href: 'https://www.wiz.io/pricing' },
                   { name: 'Prisma Cloud', href: 'https://www.paloaltonetworks.com/prisma/cloud/pricing' },
                   { name: 'Vault', href: 'https://www.hashicorp.com/products/vault/pricing' }
-                ]},
+                ]};
                 { title: 'Vector DB & Retrieval', range: '$20–$1,000/mo', links: [
                   { name: 'Pinecone', href: 'https://www.pinecone.io/pricing/' },
                   { name: 'Weaviate', href: 'https://weaviate.io/pricing' },
                   { name: 'Qdrant', href: 'https://qdrant.tech/pricing/' }
-                ]},
+                ]};
                 { title: 'Email Deliverability', range: '$50–$300/mo', links: [
                   { name: 'Mailgun', href: 'https://www.mailgun.com/pricing/' },
                   { name: 'SendGrid', href: 'https://sendgrid.com/pricing/' },

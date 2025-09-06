@@ -1,5 +1,5 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
+import type { NextPage } from 'next';
+import Head from 'next/head';
 const DigitalTransformationInsights: NextPage = () => {
   return (
     <div>
@@ -14,6 +14,6 @@ const DigitalTransformationInsights: NextPage = () => {
       </main>
     </div>
   )
-},
+};
 
-export default DigitalTransformationInsights,
+export default DigitalTransformationInsights;

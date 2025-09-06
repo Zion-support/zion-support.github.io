@@ -1,32 +1,32 @@
-import { useState, useEffect } from 'react',
-import { useRouter } from 'next/router',
-import { Input } from '@/components/ui/input',
-import { Button } from '@/components/ui/button',
-import { Alert, AlertDescription } from '@/components/ui/alert',
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react'
-import { AuthLayout } from '@/layout',
+import { AuthLayout } from '@/layout';
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
-import { logWarn, logErrorToProduction } from '@/utils/productionLogger',
+import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 
 export default function VerifyStatus() {
 
-  const router = useRouter(),
+  const router = useRouter();
   const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
   const { email: emailParam } = router.query,
-  const [email, setEmail] = useState(''),
-  const [message, setMessage] = useState(''),
-  const [error, setError] = useState(''),
-  const [isResending, setIsResending] = useState(false),
-  const [isCheckingStatus, setIsCheckingStatus] = useState(false),
-  const [lastSentTime, setLastSentTime] = useState<Date | null>(null),
-  const [countdown, setCountdown] = useState(0),
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
+  const [isResending, setIsResending] = useState(false);
+  const [isCheckingStatus, setIsCheckingStatus] = useState(false);
+  const [lastSentTime, setLastSentTime] = useState<Date | null>(null);
+  const [countdown, setCountdown] = useState(0);
 
   useEffect(() => {
     if (typeof emailParam === 'string') {
       setEmail(emailParam)
     }
-  }, [emailParam]),
+  }, [emailParam]);
 
   // Countdown timer for resend button
   useEffect(() => {
@@ -37,30 +37,30 @@ export default function VerifyStatus() {
       }, 1000)
     }
     return () => clearInterval(interval)
-  }, [countdown]),
+  }, [countdown]);
 
   const handleResendEmail = async () => {
     if (!email) {
-      setError('Please enter your email address'),
+      setError('Please enter your email address');
       return
     }
 
-    setIsResending(true),
-    setError(''),
-    setMessage(''),
+    setIsResending(true);
+    setError('');
+    setMessage('');
 
     try {
       const response = await fetch('/api/resend-verification-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
-      }),
+      });
 
-      const data = await response.json(),
+      const data = await response.json();
 
       if (response.ok) {
-        setMessage('Verification email sent successfully! Please check your inbox.'),
-        setLastSentTime(new Date()),
+        setMessage('Verification email sent successfully! Please check your inbox.');
+        setLastSentTime(new Date());
         setCountdown(60), // 60 second cooldown
       } else {
         setError(data.message || 'Failed to resend verification email')
@@ -70,24 +70,24 @@ export default function VerifyStatus() {
     } finally {
       setIsResending(false)
     }
-  },
+  };
 
   const handleCheckStatus = async () => {
     if (!email) {
-      setError('Please enter your email address'),
+      setError('Please enter your email address');
       return
     }
 
-    setIsCheckingStatus(true),
-    setError(''),
-    setMessage(''),
+    setIsCheckingStatus(true);
+    setError('');
+    setMessage('');
 
     try {
       // Attempt to refresh the session to get the latest user status
       const { error: refreshError } = await supabase.auth.refreshSession(),
 
       if (refreshError) {
-        // Don't treat all refresh errors as critical for this check,
+        // Don't treat all refresh errors as critical for this check;
         // as user might not have a session yet or it might be invalid.
         logWarn('Error during session refresh:', { data: refreshError.message })
       }
@@ -97,25 +97,25 @@ export default function VerifyStatus() {
 
       if (getUserError) {
         setError(`Failed to get user status: ${getUserError.message}. Please try logging in directly.`),
-        setIsCheckingStatus(false),
+        setIsCheckingStatus(false);
         return
       }
 
       if (user && user.email_confirmed_at) {
-        setMessage('Email is verified! Redirecting to login...'),
+        setMessage('Email is verified! Redirecting to login...');
         // The onAuthStateChange listener in AuthProvider should ideally handle redirection.
         // But we can also push them to login page directly.
         setTimeout(() => {
           router.push(`/auth/login?email=${encodeURIComponent(email)}`)
         }, 2000)
       } else if (user) {
-        setMessage('Email is not yet verified. Please check your inbox for the verification link and click it. If you have already clicked it, try logging in.'),
-        setMessage('Email is not yet verified. Please check your inbox for the verification link. If you have just clicked it, please wait a few moments and try again, or attempt to log in.'),
+        setMessage('Email is not yet verified. Please check your inbox for the verification link and click it. If you have already clicked it, try logging in.');
+        setMessage('Email is not yet verified. Please check your inbox for the verification link. If you have just clicked it, please wait a few moments and try again, or attempt to log in.');
         setError(''), // Clear previous errors
       } else {
         // This case means there's no active user session found by Supabase client.
         // This is expected if they haven't clicked the link from a different browser/device context yet.
-        setMessage('No active session found. Please click the verification link in your email. If you have just done so, please wait a few moments and try again, or attempt to log in.'),
+        setMessage('No active session found. Please click the verification link in your email. If you have just done so, please wait a few moments and try again, or attempt to log in.');
         setError('')
       }
     } catch (err: any) {
@@ -124,15 +124,15 @@ export default function VerifyStatus() {
     } finally {
       setIsCheckingStatus(false)
     }
-  },
+  };
 
   const handleTryLogin = () => {
     router.push(`/auth/login?email=${encodeURIComponent(email)}`)
-  },
+  };
 
   const handleGoBack = () => {
     router.back()
-  },
+  };
 
   return (
     <AuthLayout>

@@ -1,6 +1,6 @@
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 export default function CaseStudyPage() {
   const caseStudy = {
     id: 'content-generation-scale',
@@ -11,12 +11,12 @@ export default function CaseStudyPage() {
     solution: 'Deployed autonomous content generation systems with human oversight and quality control',
     results: [
       '10x increase in content output85% improvement in engagement metrics70% reduction in content creation time95% client satisfaction rate'
-    ],
+    ];
     technologies: ['Natural Language ProcessingContent OptimizationSEO AutomationAnalytics'],
     duration: '4 months',
     teamSize: '5 engineers + 3 content specialists',
     featured: false
-  },
+  };
 
   return (
     <>

@@ -1,20 +1,20 @@
 
-import React from "react",
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
-import { CodeBlock } from "@/components/developers/CodeBlock",
+import React from "react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import { CodeBlock } from "@/components/developers/CodeBlock";
 export function ApiGettingStarted() {
   const authExample = `curl -X GET \\
   https: //api.zionai.com/v1/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY"`,
 
-  const quickStartJs = `import axios from 'axios',
+  const quickStartJs = `import axios from 'axios';
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
   headers: {
     Authorization: \`Bearer \${API_KEY}\`
   }
-}),
+});
 
-console.log(response.data),`,
+console.log(response.data),`;
 
   return (
     <ApiDocsLayout>
@@ -85,4 +85,4 @@ console.log(response.data),`,
   )
 }
 
-export default ApiGettingStarted,
+export default ApiGettingStarted;

@@ -1,24 +1,24 @@
 
-import React from "react",
-import { useHireRequestForm, FormValues } from "./useHireRequestForm",
-import { Button } from "@/components/ui/button",
-import { DialogFooter } from "@/components/ui/dialog",
-import { Form } from "@/components/ui/form",
-import { Loader2 } from "lucide-react",
-import { TalentProfile } from "@/types/talent",
-import { PersonalInfoFields } from "./PersonalInfoFields",
-import { ProjectDetailsField } from "./ProjectDetailsField",
-import { TimelineField } from "./TimelineField",
-import { BudgetFields } from "./BudgetFields",
+import React from "react";
+import { useHireRequestForm, FormValues } from "./useHireRequestForm";
+import { Button } from "@/components/ui/button";
+import { DialogFooter } from "@/components/ui/dialog";
+import { Form } from "@/components/ui/form";
+import { Loader2 } from "lucide-react";
+import { TalentProfile } from "@/types/talent";
+import { PersonalInfoFields } from "./PersonalInfoFields";
+import { ProjectDetailsField } from "./ProjectDetailsField";
+import { TimelineField } from "./TimelineField";
+import { BudgetFields } from "./BudgetFields";
 export interface HireRequestFormProps {
   talent: TalentProfile,
   onClose: () => void,
-  initialJobTitle?: string,
+  initialJobTitle?: string;
   userDetails?: {
-    name?: string,
-    email?: string,
+    name?: string;
+    email?: string;
     id?: string
-  },
+  };
   onSubmitSuccess?: () => void
 }
 
@@ -26,9 +26,9 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
   const { form, isSubmitting, onSubmit } = useHireRequestForm({ 
     talent, 
     onClose: onSubmitSuccess || onClose, 
-    initialJobTitle,
+    initialJobTitle;
     userDetails 
-  }),
+  });
   
   return (
     <Form {...form}>

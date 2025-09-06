@@ -1,7 +1,7 @@
 
-import React from "react",
-import { ClickableBadge } from "@/components/ui/clickable-badge",
-import { X } from "lucide-react",
+import React from "react";
+import { ClickableBadge } from "@/components/ui/clickable-badge";
+import { X } from "lucide-react";
 interface ActiveFiltersBarProps {
   selectedProductTypes: string[],
   selectedLocations: string[],
@@ -14,13 +14,13 @@ interface ActiveFiltersBarProps {
 }
 
 export function ActiveFiltersBar({
-  selectedProductTypes,
-  selectedLocations,
-  selectedAvailability,
-  selectedRating,
-  searchQuery,
-  onRemoveFilter,
-  onRemoveRating,
+  selectedProductTypes;
+  selectedLocations;
+  selectedAvailability;
+  selectedRating;
+  searchQuery;
+  onRemoveFilter;
+  onRemoveRating;
   onClearSearch
 }: ActiveFiltersBarProps) {
   const hasActiveFilters = 
@@ -28,9 +28,9 @@ export function ActiveFiltersBar({
     selectedLocations.length > 0 || 
     selectedAvailability.length > 0 || 
     selectedRating !== null ||
-    !!searchQuery,
+    !!searchQuery;
     
-  if (!hasActiveFilters) return null,
+  if (!hasActiveFilters) return null;
   
   return (
     <div className="flex flex-wrap gap-2 items-center mb-4">

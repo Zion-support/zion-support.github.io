@@ -1,13 +1,13 @@
 
-import { Resume } from '@/types/resume',
+import { Resume } from '@/types/resume';
 import {
-  PreviewHeader,
-  ResumeBasicInfoSection,
-  WorkExperienceSection,
-  EducationSection,
-  SkillsSection,
+  PreviewHeader;
+  ResumeBasicInfoSection;
+  WorkExperienceSection;
+  EducationSection;
+  SkillsSection;
   CertificationsSection
-} from './preview',
+} from './preview';
 
 interface PreviewResumeProps {
   resume: Resume,

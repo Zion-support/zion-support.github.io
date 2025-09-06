@@ -1,7 +1,7 @@
-import React, { useState } from 'react',
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',
-import { Badge } from '@/components/ui/badge',
-import { Button } from '@/components/ui/button',
+import React, { useState } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { CheckCircle, AlertCircle, TrendingUp, Zap, Shield, Search } from 'lucide-react'
 
 interface PerformanceMetrics {
@@ -26,17 +26,17 @@ const PerformanceDashboard: React.FC = () => {
     pageCount: 166,
     loadTime: 1.2,
     healthStatus: 'healthy'
-  }),
+  });
 
   const improvements: Improvement[] = [
     {
       id: '1',
       title: 'Fixed Search Bar Issues',
-      description: 'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems',
+      description: 'Resolved first keystrokes ignored, suggestion clicks, and Enter key search problems';
       status: 'completed',
       impact: 'high',
       category: 'ux'
-    },
+    };
     {
       id: '2', 
       title: 'Environment Validation System',
@@ -44,7 +44,7 @@ const PerformanceDashboard: React.FC = () => {
       status: 'completed',
       impact: 'high',
       category: 'build'
-    },
+    };
     {
       id: '3',
       title: 'NextAuth Configuration Fix',
@@ -52,7 +52,7 @@ const PerformanceDashboard: React.FC = () => {
       status: 'completed',
       impact: 'medium',
       category: 'security'
-    },
+    };
     {
       id: '4',
       title: 'API Client Error Handling',
@@ -60,7 +60,7 @@ const PerformanceDashboard: React.FC = () => {
       status: 'completed',
       impact: 'medium',
       category: 'ux'
-    },
+    };
     {
       id: '5',
       title: 'Bundle Analyzer Integration',
@@ -68,7 +68,7 @@ const PerformanceDashboard: React.FC = () => {
       status: 'completed',
       impact: 'medium',
       category: 'performance'
-    },
+    };
     {
       id: '6',
       title: 'Health Check Endpoint',
@@ -77,37 +77,37 @@ const PerformanceDashboard: React.FC = () => {
       impact: 'medium',
       category: 'security'
     }
-  ],
+  ];
 
   const getStatusIcon = (status: string) => {
     switch (status) {
-      case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />,
-      case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />,
-      case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />,
+      case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />;
+      case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />;
+      case 'planned': return <TrendingUp className="h-4 w-4 text-blue-500" />;
       default: return <AlertCircle className="h-4 w-4 text-gray-500" />
     }
-  },
+  };
 
   const getImpactColor = (impact: string) => {
     switch (impact) {
-      case 'high': return 'bg-red-100 text-red-800',
-      case 'medium': return 'bg-yellow-100 text-yellow-800',
-      case 'low': return 'bg-green-100 text-green-800',
+      case 'high': return 'bg-red-100 text-red-800';
+      case 'medium': return 'bg-yellow-100 text-yellow-800';
+      case 'low': return 'bg-green-100 text-green-800';
       default: return 'bg-gray-100 text-gray-800'
     }
-  },
+  };
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'performance': return <Zap className="h-4 w-4" />,
-      case 'security': return <Shield className="h-4 w-4" />,
-      case 'ux': return <Search className="h-4 w-4" />,
-      case 'build': return <TrendingUp className="h-4 w-4" />,
+      case 'performance': return <Zap className="h-4 w-4" />;
+      case 'security': return <Shield className="h-4 w-4" />;
+      case 'ux': return <Search className="h-4 w-4" />;
+      case 'build': return <TrendingUp className="h-4 w-4" />;
       default: return <CheckCircle className="h-4 w-4" />
     }
-  },
+  };
 
-  const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
+  const completedImprovements = improvements.filter(imp => imp.status === 'completed');
 
   return (
     <div className="space-y-6 p-6">
@@ -216,6 +216,6 @@ const PerformanceDashboard: React.FC = () => {
       </div>
     </div>
   )
-},
+};
 
 export default PerformanceDashboard, 

@@ -1,42 +1,42 @@
-import React from 'react',
+import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Badge } from '@/components/ui/badge',
-import { formatDistanceToNow } from 'date-fns',
-import { cn } from '@/lib/utils',
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { formatDistanceToNow } from 'date-fns';
+import { cn } from '@/lib/utils';
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger} from '@/components/ui/tooltip',
-import { useRouter } from 'next/router',
-import { Notification, NotificationType } from '@/context/notifications',
+  Tooltip;
+  TooltipContent;
+  TooltipProvider;
+  TooltipTrigger} from '@/components/ui/tooltip';
+import { useRouter } from 'next/router';
+import { Notification, NotificationType } from '@/context/notifications';
 
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':
-      return <span className="text-blue-500">💬</span>,
+      return <span className="text-blue-500">💬</span>;
     case 'quote_request':
-      return <span className="text-purple-500">📝</span>,
+      return <span className="text-purple-500">📝</span>;
     case 'booking_confirmation':
-      return <span className="text-green-500">✅</span>,
+      return <span className="text-green-500">✅</span>;
     case 'hire_request':
-      return <span className="text-zion-purple">🤝</span>,
+      return <span className="text-zion-purple">🤝</span>;
     case 'onboarding':
-      return <span className="text-zion-cyan">🚀</span>,
+      return <span className="text-zion-cyan">🚀</span>;
     case 'system':
-      return <span className="text-yellow-500">⚠️</span>,
+      return <span className="text-yellow-500">⚠️</span>;
     case 'project_update':
-      return <span className="text-indigo-400">📌</span>,
+      return <span className="text-indigo-400">📌</span>;
     case 'milestone_complete':
-      return <span className="text-green-500">🏁</span>,
+      return <span className="text-green-500">🏁</span>;
     case 'order_status':
-      return <span className="text-orange-500">📦</span>,
+      return <span className="text-orange-500">📦</span>;
     default:
       return <span className="text-gray-500">📣</span>
   }
-},
+};
 
 interface NotificationItemProps {
   notification: Notification,
@@ -45,8 +45,8 @@ interface NotificationItemProps {
 }
 
 export const NotificationItem: React.FC<NotificationItemProps> = ({
-  notification,
-  onMarkAsRead,
+  notification;
+  onMarkAsRead;
   onDismiss}) => {
   const router = useRouter(), // Changed from useNavigate to useRouter
 
@@ -58,11 +58,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     if (notification.action_url) {
       router.push(notification.action_url), // Changed to router.push
     }
-  },
+  };
 
   return (<div
       className={cn(
-        'p-3 border-b border-zion-blue-light relative group',
+        'p-3 border-b border-zion-blue-light relative group';
         !notification.read ? 'bg-zion-blue-dark/30' : '')}
     >
       <div className="flex items-start gap-2">
@@ -112,7 +112,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 size="icon"
                 className="h-6 w-6"
                 onClick={(e) => {
-                  e.stopPropagation(),
+                  e.stopPropagation();
                   onMarkAsRead(notification.id)
                 }}
                 aria-label="Mark as read"
@@ -134,7 +134,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 size="icon"
                 className="h-6 w-6"
                 onClick={(e) => {
-                  e.stopPropagation(),
+                  e.stopPropagation();
                   onDismiss(notification.id)
                 }}
                 aria-label="Dismiss notification"
@@ -150,4 +150,4 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
       </div>
     </div>
   )
-},
+};

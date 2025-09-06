@@ -1,12 +1,12 @@
-import React from 'react',
-import Head from 'next/head',
-import { motion } from 'framer-motion',
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { 
   Handshake, Globe, Rocket, Brain, Atom, Shield, 
   ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
-} from 'lucide-react',
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter',
+} from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
 export default function PartnersPage() {
   const partners = [
     {
@@ -16,10 +16,10 @@ export default function PartnersPage() {
       logo: "/api/placeholder/200/100",
       website: "https://azure.microsoft.com",
       partnership: "Technology Alliance",
-      benefits: ["Joint go-to-market", "Technical integration", "Co-selling opportunities"],
+      benefits: ["Joint go-to-market", "Technical integration", "Co-selling opportunities"];
       icon: Globe,
       color: "from-blue-500 to-cyan-500"
-    },
+    };
     {
       name: "NVIDIA",
       category: "AI & Computing",
@@ -27,10 +27,10 @@ export default function PartnersPage() {
       logo: "/api/placeholder/200/100",
       website: "https://nvidia.com",
       partnership: "Technology Partner",
-      benefits: ["Hardware optimization", "Joint R&D", "Market expansion"],
+      benefits: ["Hardware optimization", "Joint R&D", "Market expansion"];
       icon: Brain,
       color: "from-green-500 to-emerald-500"
-    },
+    };
     {
       name: "IBM Quantum",
       category: "Quantum Computing",
@@ -38,10 +38,10 @@ export default function PartnersPage() {
       logo: "/api/placeholder/200/100",
       website: "https://quantum-computing.ibm.com",
       partnership: "Research Partner",
-      benefits: ["Quantum access", "Joint research", "Enterprise deployment"],
+      benefits: ["Quantum access", "Joint research", "Enterprise deployment"];
       icon: Atom,
       color: "from-purple-500 to-pink-500"
-    },
+    };
     {
       name: "Cisco",
       category: "Cybersecurity",
@@ -49,10 +49,10 @@ export default function PartnersPage() {
       logo: "/api/placeholder/200/100",
       website: "https://cisco.com",
       partnership: "Security Alliance",
-      benefits: ["Network integration", "Security solutions", "Global reach"],
+      benefits: ["Network integration", "Security solutions", "Global reach"];
       icon: Shield,
       color: "from-red-500 to-orange-500"
-    },
+    };
     {
       name: "AWS",
       category: "Cloud Services",
@@ -60,10 +60,10 @@ export default function PartnersPage() {
       logo: "/api/placeholder/200/100",
       website: "https://aws.amazon.com",
       partnership: "Technology Partner",
-      benefits: ["Cloud infrastructure", "AI services", "Global expansion"],
+      benefits: ["Cloud infrastructure", "AI services", "Global expansion"];
       icon: Rocket,
       color: "from-yellow-500 to-orange-500"
-    },
+    };
     {
       name: "Intel",
       category: "Hardware & AI",
@@ -71,49 +71,49 @@ export default function PartnersPage() {
       logo: "/api/placeholder/200/100",
       website: "https://intel.com",
       partnership: "Technology Partner",
-      benefits: ["Hardware optimization", "Edge computing", "Performance tuning"],
+      benefits: ["Hardware optimization", "Edge computing", "Performance tuning"];
       icon: Brain,
       color: "from-indigo-500 to-purple-500"
     }
-  ],
+  ];
 
   const partnershipTypes = [
     {
       title: "Technology Alliance",
       description: "Deep technical integration and joint product development",
-      benefits: ["Shared technology roadmap", "Joint R&D", "Co-innovation"],
+      benefits: ["Shared technology roadmap", "Joint R&D", "Co-innovation"];
       icon: Handshake,
       color: "from-blue-500 to-cyan-500"
-    },
+    };
     {
       title: "Go-to-Market",
       description: "Joint sales and marketing initiatives for mutual growth",
-      benefits: ["Co-selling opportunities", "Joint marketing", "Revenue sharing"],
+      benefits: ["Co-selling opportunities", "Joint marketing", "Revenue sharing"];
       icon: Rocket,
       color: "from-purple-500 to-pink-500"
-    },
+    };
     {
       title: "Research Partnership",
       description: "Collaborative research in emerging technologies",
-      benefits: ["Joint publications", "Shared IP", "Academic collaboration"],
+      benefits: ["Joint publications", "Shared IP", "Academic collaboration"];
       icon: Brain,
       color: "from-emerald-500 to-teal-500"
-    },
+    };
     {
       title: "Channel Partnership",
       description: "Distribution and reseller partnerships for market expansion",
-      benefits: ["Channel enablement", "Training programs", "Support collaboration"],
+      benefits: ["Channel enablement", "Training programs", "Support collaboration"];
       icon: Users,
       color: "from-orange-500 to-red-500"
     }
-  ],
+  ];
 
   const stats = [
     { number: "50+", label: "Strategic Partners", icon: Handshake },
     { number: "100+", label: "Joint Projects", icon: Rocket },
     { number: "25+", label: "Countries", icon: Globe },
     { number: "300%", label: "Growth Rate", icon: TrendingUp }
-  ],
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">

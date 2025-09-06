@@ -1,11 +1,11 @@
-import React from 'react',
-import { ErrorBoundary, FallbackProps } from 'react-error-boundary',
-import * as Sentry from '@sentry/nextjs',
-import { mutate } from 'swr',
-import { Button } from '@/components/ui/button',
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert',
+import React from 'react';
+import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
+import * as Sentry from '@sentry/nextjs';
+import { mutate } from 'swr';
+import { Button } from '@/components/ui/button';
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { RefreshCcw, AlertCircle } from 'lucide-react'
-import {logErrorToProduction} from '@/utils/productionLogger',
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface MarketplaceErrorFallbackProps extends FallbackProps {
   // Additional props if needed
 }
@@ -20,7 +20,7 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
       logErrorToProduction('Error during retry:', { data: retryError }),
       Sentry.captureException(retryError)
     }
-  },
+  };
 
   return (
     <div className="flex items-center justify-center min-h-[400px] p-6">
@@ -76,13 +76,13 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
     logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, { componentStack: errorInfo.componentStack }),
     
     Sentry.withScope((scope) => {
-      scope.setTag('errorBoundarymarketplace'),
+      scope.setTag('errorBoundarymarketplace');
       scope.setContext('errorInfo', {
         componentStack: errorInfo.componentStack || undefined}),
-      scope.setLevel('error'),
+      scope.setLevel('error');
       Sentry.captureException(error)
     })
-  },
+  };
 
   return (
     <ErrorBoundary 

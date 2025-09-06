@@ -1,36 +1,36 @@
-import { useState, useEffect } from "react",
-import { SEO } from "@/components/SEO",
-import { TalentCard } from "@/components/talent/TalentCard",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
-import { toast } from "@/components/ui/use-toast",
-import { useRouter } from 'next/router',
-import { logErrorToProduction } from '@/utils/productionLogger',
-import { EmptyState } from "@/components/ui/empty-state",
+import { useState, useEffect } from "react";
+import { SEO } from "@/components/SEO";
+import { TalentCard } from "@/components/talent/TalentCard";
+import { useAuth } from "@/hooks/useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { TalentProfile } from "@/types/talent";
+import { toast } from "@/components/ui/use-toast";
+import { useRouter } from 'next/router';
+import { logErrorToProduction } from '@/utils/productionLogger';
+import { EmptyState } from "@/components/ui/empty-state";
 import { Heart } from 'lucide-react'
-import { logInfo, logWarn } from '@/utils/productionLogger',
+import { logInfo, logWarn } from '@/utils/productionLogger';
 
 export default function SavedTalentsPage() {
 
-  const { user } = useAuth(),
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const router = useRouter(),
+  const { user } = useAuth();
+  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const router = useRouter();
   // Using router.asPath instead of useLocation
 
   useEffect(() => {
     if (!user) {
       router.push(`/auth/login?returnTo=${encodeURIComponent(router.asPath)}`)
     }
-  }, [user, router]),
+  }, [user, router]);
 
   useEffect(() => {
     const fetchSavedTalents = async () => {
-      setIsLoading(true),
+      setIsLoading(true);
       try {
         if (!user) {
-          logWarn("User not authenticated."),
+          logWarn("User not authenticated.");
           return
         }
 
@@ -39,23 +39,23 @@ export default function SavedTalentsPage() {
           .select(
             `
             talent_profile (
-              id,
-              user_id,
-              full_name,
-              professional_title,
-              profile_picture_url,
-              hourly_rate,
-              bio,
-              years_experience,
-              key_projects,
-              skills,
-              location,
-              availability,
+              id;
+              user_id;
+              full_name;
+              professional_title;
+              profile_picture_url;
+              hourly_rate;
+              bio;
+              years_experience;
+              key_projects;
+              skills;
+              location;
+              availability;
               is_verified
             )
           `
           )
-          .eq("user_id", user.id),
+          .eq("user_id", user.id);
 
         if (error) {
           throw error
@@ -65,7 +65,7 @@ export default function SavedTalentsPage() {
           // Extract talent profiles and convert to TalentProfile type
           const talentProfiles = data.map(
             (item: any) => item.talent_profile as unknown as TalentProfile
-          ),
+          );
           setSavedTalents(talentProfiles)
         }
       } catch (error) {
@@ -77,26 +77,26 @@ export default function SavedTalentsPage() {
       } finally {
         setIsLoading(false)
       }
-    },
+    };
 
     fetchSavedTalents()
-  }, [user]),
+  }, [user]);
 
   const handleViewProfile = (talentId: string) => {
     router.push(`/talent/${talentId}`)
-  },
+  };
 
   const handleRequestHire = (talent: TalentProfile) => {
     logInfo('Request to hire:', { data: talent }),
     toast({
       title: "Hire Request Sent",
       description: `A hire request has been sent to ${talent.full_name}.`})
-  },
+  };
 
   const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {
     try {
       if (!user) {
-        logWarn("User not authenticated."),
+        logWarn("User not authenticated.");
         return
       }
   
@@ -106,7 +106,7 @@ export default function SavedTalentsPage() {
           .from('saved_talents')
           .delete()
           .eq('user_id', user.id)
-          .eq('talent_id', talentId),
+          .eq('talent_id', talentId);
   
         if (error) {
           throw error
@@ -114,7 +114,7 @@ export default function SavedTalentsPage() {
   
         setSavedTalents(prevTalents =>
           prevTalents.filter(talent => talent.id !== talentId)
-        ),
+        );
         toast({
           title: "Talent Removed",
           description: "Talent removed from saved list."})
@@ -133,7 +133,7 @@ export default function SavedTalentsPage() {
           .from('talent_profiles')
           .select('*')
           .eq('id', talentId)
-          .single(),
+          .single();
   
         if (talentError) {
           logErrorToProduction(talentError instanceof Error ? talentError.message : String(talentError), talentError instanceof Error ? talentError : undefined, { message: 'Error fetching talent profile' }),
@@ -145,7 +145,7 @@ export default function SavedTalentsPage() {
         }
   
         if (talentData) {
-          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]),
+          setSavedTalents(prevTalents => [...prevTalents, talentData as unknown as TalentProfile]);
           toast({
             title: "Talent Saved",
             description: "Talent saved to your list."})
@@ -158,7 +158,7 @@ export default function SavedTalentsPage() {
         description: "Failed to update saved talents. Please try again later.",
         variant: "destructive"})
     }
-  },
+  };
 
   return (
     <>

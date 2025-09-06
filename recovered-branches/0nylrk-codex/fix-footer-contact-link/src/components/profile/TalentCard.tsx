@@ -1,9 +1,9 @@
 
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
-import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",
-import { Link } from "react-router-dom",
-import { TalentProfile } from "@/types/talent",
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
+import { Link } from "react-router-dom";
+import { TalentProfile } from "@/types/talent";
 export interface TalentCardProps {
   talent: TalentProfile,
   onViewProfile: (id: string) => void,
@@ -14,37 +14,37 @@ export interface TalentCardProps {
 }
 
 export function TalentCard({
-  talent,
-  onViewProfile,
-  onRequestHire,
-  isSaved,
-  onToggleSave,
+  talent;
+  onViewProfile;
+  onRequestHire;
+  isSaved;
+  onToggleSave;
   isAuthenticated
 }: TalentCardProps) {
   const handleViewProfile = () => {
     if (onViewProfile) {
       onViewProfile(talent.id)
     }
-  },
+  };
 
   const handleRequestHire = (e: React.MouseEvent) => {
-    e.preventDefault(),
-    e.stopPropagation(),
+    e.preventDefault();
+    e.stopPropagation();
     if (onRequestHire) {
       onRequestHire(talent)
     }
-  },
+  };
 
   const handleToggleSave = (e: React.MouseEvent) => {
-    e.preventDefault(),
-    e.stopPropagation(),
+    e.preventDefault();
+    e.stopPropagation();
     if (onToggleSave) {
       onToggleSave(talent.id, !isSaved)
     }
-  },
+  };
 
   // Extract skills - limit to 5 for display
-  const skills = talent.skills?.slice(0, 5) || [],
+  const skills = talent.skills?.slice(0, 5) || [];
 
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer" onClick={handleViewProfile}>

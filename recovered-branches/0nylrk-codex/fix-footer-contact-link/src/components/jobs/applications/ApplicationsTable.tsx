@@ -1,23 +1,23 @@
 
-import { format } from "date-fns",
-import { JobApplication } from "@/types/jobs",
-import { Avatar } from "@/components/ui/avatar",
-import { Badge } from "@/components/ui/badge",
-import { ClickableBadge } from "@/components/ui/clickable-badge",
+import { format } from "date-fns";
+import { JobApplication } from "@/types/jobs";
+import { Avatar } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
+import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { 
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
   TableRow
-} from "@/components/ui/table",
-import { ApplicationActions } from "./ApplicationActions",
-import { StatusBadge } from "./StatusBadge",
-import { Briefcase, User } from "lucide-react",
-import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal",
-import { useState } from "react",
-import { toast } from "@/hooks/use-toast",
+} from "@/components/ui/table";
+import { ApplicationActions } from "./ApplicationActions";
+import { StatusBadge } from "./StatusBadge";
+import { Briefcase, User } from "lucide-react";
+import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmationModal";
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
 interface ApplicationsTableProps {
   applications: JobApplication[],
   processingId: string | null,
@@ -30,16 +30,16 @@ export function ApplicationsTable({
   applications, 
   processingId, 
   onViewApplication, 
-  onStatusChange,
+  onStatusChange;
   onViewScore
 }: ApplicationsTableProps) {
-  const [hireModalOpen, setHireModalOpen] = useState(false),
-  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
+  const [hireModalOpen, setHireModalOpen] = useState(false);
+  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
   
   const handleHireClick = (application: JobApplication) => {
-    setSelectedApplication(application),
+    setSelectedApplication(application);
     setHireModalOpen(true)
-  },
+  };
   
   const handleHireConfirmed = () => {
     // This will be called after the hire confirmation is completed
@@ -47,7 +47,7 @@ export function ApplicationsTable({
       title: "Hiring process initiated",
       description: "Offer has been sent to the talent."
     })
-  },
+  };
   
   return (
     <>

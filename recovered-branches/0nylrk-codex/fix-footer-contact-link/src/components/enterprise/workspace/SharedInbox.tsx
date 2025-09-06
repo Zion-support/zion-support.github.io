@@ -1,7 +1,7 @@
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
+import React from "react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 export function SharedInbox() {
   // Mock messages
   const messages = [
@@ -12,7 +12,7 @@ export function SharedInbox() {
       preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm.",
       timestamp: "2h ago",
       unread: true
-    },
+    };
     {
       id: "msg-2",
       from: "Talent Support",
@@ -20,7 +20,7 @@ export function SharedInbox() {
       preview: "We've found 5 new candidates that match your recent job posting for UI/UX Designer.",
       timestamp: "Yesterday",
       unread: false
-    },
+    };
     {
       id: "msg-3",
       from: "Sarah Wilson",
@@ -29,7 +29,7 @@ export function SharedInbox() {
       timestamp: "2d ago",
       unread: false
     }
-  ],
+  ];
 
   return (
     <Card>

@@ -1,13 +1,28 @@
-import React, { useState } from 'react';
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Menu,
-  X,
+  Menu;
+  X;
 } from 'lucide-react';
+
+=======
+import React from 'react';
+import Link from 'next/link';
+import Button from '../ui/Button';
+>>>>>>> pr-11992
 const Header: React.FC = () => {
+  const [, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navigationItems = [
     { name: 'Home', href: '/' },
@@ -72,10 +87,10 @@ const Header: React.FC = () => {
       </AnimatePresence>
     </header>
   )
-},
+};
 
 <<<<<<< HEAD
 export default Header;
 =======
-export default Header,
+export default Header;
 >>>>>>> pr-11992

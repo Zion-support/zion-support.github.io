@@ -1,13 +1,13 @@
 
-import { GradientHeading } from "./GradientHeading",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import { Button } from "./ui/button",
-import { Link } from "react-router-dom",
-import { BLOG_POSTS } from "@/data/blog-posts",
+import { GradientHeading } from "./GradientHeading";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
+import { BLOG_POSTS } from "@/data/blog-posts";
 // Get the 3 most recent blog posts
 const recentPosts = [...BLOG_POSTS].sort((a, b) => {
   return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
-}).slice(0, 3),
+}).slice(0, 3);
 
 export function BlogSection() {
   return (
@@ -39,7 +39,7 @@ export function BlogSection() {
                   className="object-cover w-full h-full opacity-60 hover:opacity-80 transition-opacity duration-300"
                   loading="lazy"
                   onError={(e: React.SyntheticEvent<HTMLImageElement, Event>) => {
-                    const target = e.currentTarget as HTMLImageElement,
+                    const target = e.currentTarget as HTMLImageElement;
                     target.src =
                       "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3"
                   }}

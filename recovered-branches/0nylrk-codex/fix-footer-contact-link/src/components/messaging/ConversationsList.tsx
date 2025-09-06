@@ -1,8 +1,8 @@
 
-import React from 'react',
-import { User } from 'lucide-react',
-import { Conversation } from '@/types/messaging',
-import { ConversationItem } from './ConversationItem',
+import React from 'react';
+import { User } from 'lucide-react';
+import { Conversation } from '@/types/messaging';
+import { ConversationItem } from './ConversationItem';
 interface ConversationsListProps {
   conversations: Conversation[],
   activeConversation: Conversation | null,
@@ -11,7 +11,7 @@ interface ConversationsListProps {
 }
 
 export function ConversationsList({ 
-  conversations,
+  conversations;
   activeConversation, 
   setActiveConversation, 
   markAsRead 
@@ -38,7 +38,7 @@ export function ConversationsList({
               conversation={conversation}
               isActive={activeConversation?.id === conversation.id}
               onClick={() => {
-                setActiveConversation(conversation),
+                setActiveConversation(conversation);
                 markAsRead(conversation.id)
               }}
             />

@@ -1,30 +1,30 @@
-import React, { useState, useEffect, useMemo } from 'react',
-import { useRouter } from 'next/router',
+import React, { useState, useEffect, useMemo } from 'react';
+import { useRouter } from 'next/router';
 import { Search, Filter, X, SortAsc, SortDesc, GridIcon, List, Loader2 } from 'lucide-react'
-import { Button } from '@/components/ui/button',
-import { Input } from '@/components/ui/input',
-import { Badge } from '@/components/ui/badge',
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select',
-import { Checkbox } from '@/components/ui/checkbox',
-import { Slider } from '@/components/ui/slider',
-import { Separator } from '@/components/ui/separator',
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet',
-import { EnhancedSearchInput } from './EnhancedSearchInput',
-import { generateSearchSuggestions } from '@/data/marketplaceData',
-import { logErrorToProduction, logInfo } from '@/utils/productionLogger',
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Badge } from '@/components/ui/badge';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Checkbox } from '@/components/ui/checkbox';
+import { Slider } from '@/components/ui/slider';
+import { Separator } from '@/components/ui/separator';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
+import { EnhancedSearchInput } from './EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data/marketplaceData';
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
 
 interface SearchResult {
   id: string,
   title: string,
   description: string,
   type: 'product' | 'talent' | 'blog' | 'service',
-  category?: string,
-  url?: string,
-  image?: string,
-  price?: number,
-  currency?: string,
-  rating?: number,
-  tags?: string[],
+  category?: string;
+  url?: string;
+  image?: string;
+  price?: number;
+  currency?: string;
+  rating?: number;
+  tags?: string[];
   date?: string
 }
 
@@ -56,7 +56,7 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
     return <span className={className}>{text}</span>
   }
 
-  const parts = text.split(new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')),
+  const parts = text.split(new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi'));
   
   return (
     <span className={className}>
@@ -71,7 +71,7 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
       )}
     </span>
   )
-},
+};
 
 // Search Result Card Component
 const SearchResultCard: React.FC<{ 
@@ -79,17 +79,17 @@ const SearchResultCard: React.FC<{
   searchTerm: string, 
   viewMode: 'grid' | 'list' 
 }> = ({ result, searchTerm, viewMode }) => {
-  const router = useRouter(),
+  const router = useRouter();
 
   const handleClick = () => {
     if (result.url) {
       router.push(result.url)
     }
-  },
+  };
 
   const cardClass = viewMode === 'grid' 
     ? "bg-card border rounded-lg p-4 hover: shadow-lg transition-shadow cursor-pointer"
-    : "bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4",
+    : "bg-card border rounded-lg p-4 hover:shadow-lg transition-shadow cursor-pointer flex gap-4";
 
   return (
     <div onClick={handleClick} className={cardClass}>
@@ -151,7 +151,7 @@ const SearchResultCard: React.FC<{
       </div>
     </div>
   )
-},
+};
 
 // Filter Sidebar Component
 const FilterSidebar: React.FC<{
@@ -164,15 +164,15 @@ const FilterSidebar: React.FC<{
     { id: 'talent', label: 'Talent' },
     { id: 'service', label: 'Services' },
     { id: 'blog', label: 'Blog Posts' }
-  ],
+  ];
 
   const handleTypeChange = (typeId: string, checked: boolean) => {
     const newTypes = checked 
       ? [...filters.types, typeId]
-      : filters.types.filter(t => t !== typeId),
+      : filters.types.filter(t => t !== typeId);
     
     onFiltersChange({ ...filters, types: newTypes })
-  },
+  };
 
   const handlePriceChange = (values: number[]) => {
     onFiltersChange({ 
@@ -180,7 +180,7 @@ const FilterSidebar: React.FC<{
       minPrice: values[0] ?? 0, 
       maxPrice: values[1] ?? 10000 
     })
-  },
+  };
 
   return (
     <div className="space-y-6">
@@ -265,7 +265,7 @@ const FilterSidebar: React.FC<{
       </div>
     </div>
   )
-},
+};
 
 // No Results Component
 const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string) => void }> = ({ 
@@ -273,13 +273,13 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
   onNewSearch 
 }) => {
   const suggestions = [
-    "AI & Machine Learning",
-    "Web Development",
-    "Mobile App Development",
-    "Data Analysis",
-    "UI/UX Design",
+    "AI & Machine Learning";
+    "Web Development";
+    "Mobile App Development";
+    "Data Analysis";
+    "UI/UX Design";
     "Blockchain Development"
-  ],
+  ];
 
   return (
     <div className="text-center py-12">
@@ -320,19 +320,19 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
       </div>
     </div>
   )
-},
+};
 
 // Main Search Results Page Component
 export const SearchResultsPage: React.FC = () => {
-  const router = useRouter(),
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [results, setResults] = useState<SearchResult[]>([]),
-  const [loading, setLoading] = useState(false),
-  const [totalCount, setTotalCount] = useState(0),
-  const [currentPage, setCurrentPage] = useState(1),
-  const [hasMore, setHasMore] = useState(false),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [showFilters, setShowFilters] = useState(false),
+  const router = useRouter();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [results, setResults] = useState<SearchResult[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [totalCount, setTotalCount] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [hasMore, setHasMore] = useState(false);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [showFilters, setShowFilters] = useState(false);
   
   const [filters, setFilters] = useState<SearchFilters>({
     types: [],
@@ -341,43 +341,43 @@ export const SearchResultsPage: React.FC = () => {
     maxPrice: 10000,
     minRating: 0,
     sort: 'relevance'
-  }),
+  });
 
-  const suggestions = generateSearchSuggestions(),
+  const suggestions = generateSearchSuggestions();
 
   // Extract available categories from results for filter
   const availableCategories = useMemo(() => {
-    const categories = new Set<string>(),
+    const categories = new Set<string>();
     results.forEach(result => {
       if (result.category) categories.add(result.category)
-    }),
+    });
     return Array.from(categories).sort()
-  }, [results]),
+  }, [results]);
 
   // Sync search term with URL
   useEffect(() => {
     if (router.isReady && router.query.q) {
-      const urlTerm = router.query.q as string,
+      const urlTerm = router.query.q as string;
       setSearchTerm(urlTerm)
     }
-  }, [router.isReady, router.query.q]),
+  }, [router.isReady, router.query.q]);
 
   // Search function
   const performSearch = async (term: string, page: number = 1, newFilters?: SearchFilters) => {
     if (!term.trim()) {
-      setResults([]),
-      setTotalCount(0),
+      setResults([]);
+      setTotalCount(0);
       return
     }
 
-    setLoading(true),
+    setLoading(true);
     try {
-      const searchFilters = newFilters || filters,
+      const searchFilters = newFilters || filters;
       const params = new URLSearchParams({
         query: term,
         page: page.toString(),
         limit: '20'
-      }),
+      });
 
       if (searchFilters.types.length > 0) {
         params.append('type', searchFilters.types.join())
@@ -398,7 +398,7 @@ export const SearchResultsPage: React.FC = () => {
         params.append('sort', searchFilters.sort)
       }
 
-      const response = await fetch(`/api/search?${params}`),
+      const response = await fetch(`/api/search?${params}`);
       const data: SearchResponse = await response.json(),
 
       if (page === 1) {
@@ -407,9 +407,9 @@ export const SearchResultsPage: React.FC = () => {
         setResults(prev => [...prev, ...data.results])
       }
       
-      setTotalCount(data.totalCount),
-      setCurrentPage(data.page),
-      setHasMore(data.hasMore),
+      setTotalCount(data.totalCount);
+      setCurrentPage(data.page);
+      setHasMore(data.hasMore);
 
       logInfo('Search completed', { 
         term, 
@@ -418,44 +418,44 @@ export const SearchResultsPage: React.FC = () => {
       })
     } catch (error) {
       logErrorToProduction('Search failed', { data: error }),
-      setResults([]),
+      setResults([]);
       setTotalCount(0)
     } finally {
       setLoading(false)
     }
-  },
+  };
 
   // Search when term or filters change
   useEffect(() => {
     if (searchTerm.trim()) {
-      performSearch(searchTerm, 1, filters),
+      performSearch(searchTerm, 1, filters);
       setCurrentPage(1)
     }
-  }, [searchTerm, filters]),
+  }, [searchTerm, filters]);
 
   // Handle search input
   const handleSearch = (term: string) => {
-    setSearchTerm(term),
+    setSearchTerm(term);
     router.push(`/search?q=${encodeURIComponent(term)}`, undefined, { shallow: true })
-  },
+  };
 
   // Handle filter changes
   const handleFiltersChange = (newFilters: SearchFilters) => {
     setFilters(newFilters)
-  },
+  };
 
   // Load more results
   const loadMore = () => {
     if (hasMore && !loading) {
       performSearch(searchTerm, currentPage + 1)
     }
-  },
+  };
 
   // Active filters count
   const activeFiltersCount = filters.types.length + 
     (filters.category ? 1 : 0) + 
     (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) +
-    (filters.minRating > 0 ? 1 : 0),
+    (filters.minRating > 0 ? 1 : 0);
 
   return (
     <div className="container mx-auto px-4 py-6">
@@ -631,6 +631,6 @@ export const SearchResultsPage: React.FC = () => {
       )}
     </div>
   )
-},
+};
 
 export default SearchResultsPage, 

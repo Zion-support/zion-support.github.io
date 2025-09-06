@@ -1,14 +1,14 @@
 
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button",
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
 import { Leaf, Server, Cloud } from 'lucide-react'
-import Link from "next/link",
+import Link from "next/link";
 export default function GreenIT() {
   const greenITSolutions = [
     {
       title: "Energy-Efficient Hardware",
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
+      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
       icon: Server},
     {
       title: "Optimized Cooling Systems",
@@ -18,7 +18,7 @@ export default function GreenIT() {
       title: "Renewable Energy Integration",
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
       icon: Leaf}
-  ],
+  ];
 
   return (
     <>

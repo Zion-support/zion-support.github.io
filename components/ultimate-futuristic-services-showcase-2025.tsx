@@ -1,29 +1,29 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Link from 'next/link',
-import { motion, AnimatePresence } from 'framer-motion',
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Star, TrendingUp, Users, Award, Clock, Heart, 
   Brain, Atom, Shield, Rocket, Zap, Globe, 
-  CheckCircle, ArrowRight, Search, Filter,
-  ChevronDown, ChevronUp, Eye, Play, Sparkles,
-  Target, Microscope, Lock, Cloud, BarChart3,
-  Settings, Cpu, Database, Network, Server,
-  ShieldCheck, GlobeIcon, StarIcon, TrendingUpIcon,
-  UsersIcon, CheckCircleIcon, ArrowRightIcon,
-  CpuIcon, DollarSign, Phone, Mail, MapPin,
-  Dna, Target as TargetIcon, Shield as ShieldIcon,
-  BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon,
+  CheckCircle, ArrowRight, Search, Filter;
+  ChevronDown, ChevronUp, Eye, Play, Sparkles;
+  Target, Microscope, Lock, Cloud, BarChart3;
+  Settings, Cpu, Database, Network, Server;
+  ShieldCheck, GlobeIcon, StarIcon, TrendingUpIcon;
+  UsersIcon, CheckCircleIcon, ArrowRightIcon;
+  CpuIcon, DollarSign, Phone, Mail, MapPin;
+  Dna, Target as TargetIcon, Shield as ShieldIcon;
+  BookOpen, Sparkles as SparklesIcon, Zap as ZapIcon;
   Brain as BrainIcon, Play as PlayIcon
-} from 'lucide-react',
-import Layout from '../components/layout/Layout',
-import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services',
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-},
+};
 
 const serviceCategories = [
   {
@@ -32,63 +32,63 @@ const serviceCategories = [
     icon: Brain,
     color: 'from-violet-500 to-purple-600',
     count: 3
-  },
+  };
   {
     title: 'Quantum & Emerging Tech',
     description: 'Breakthrough quantum computing and space technology solutions',
     icon: Atom,
     color: 'from-indigo-500 to-blue-600',
     count: 4
-  },
+  };
   {
     title: 'Space Technology',
     description: 'AI-powered space exploration and resource extraction',
     icon: Rocket,
     color: 'from-blue-500 to-cyan-600',
     count: 1
-  },
+  };
   {
     title: 'Financial Technology',
     description: 'Quantum AI-powered financial trading and analytics',
     icon: DollarSign,
     color: 'from-green-500 to-emerald-600',
     count: 1
-  },
+  };
   {
     title: 'Content Automation',
     description: 'Autonomous AI content creation and management',
     icon: BookOpen,
     color: 'from-purple-500 to-pink-600',
     count: 1
-  },
+  };
   {
     title: 'Cybersecurity',
     description: 'Quantum encryption and advanced threat detection',
     icon: Shield,
     color: 'from-red-500 to-orange-600',
     count: 1
-  },
+  };
   {
     title: 'Healthcare Technology',
     description: 'AI-powered medical diagnostics and treatment',
     icon: Heart,
     color: 'from-teal-500 to-cyan-600',
     count: 1
-  },
+  };
   {
     title: 'Energy Technology',
     description: 'Quantum computing for fusion power and energy optimization',
     icon: Zap,
     color: 'from-yellow-500 to-orange-600',
     count: 1
-  },
+  };
   {
     title: 'Education Technology',
     description: 'Personalized AI-powered learning platforms',
     icon: BookOpen,
     color: 'from-indigo-500 to-purple-600',
     count: 1
-  },
+  };
   {
     title: 'Materials Science',
     description: 'AI-powered quantum materials research and discovery',
@@ -96,42 +96,42 @@ const serviceCategories = [
     color: 'from-cyan-500 to-blue-600',
     count: 1
   }
-],
+];
 
 const stats = [
   { number: '15+', label: 'Revolutionary Services', icon: Star, color: 'text-cyan-400' },
   { number: '1000%+', label: 'Average ROI', icon: TrendingUp, color: 'text-purple-400' },
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' },
   { number: '24/7', label: 'Expert Support', icon: Clock, color: 'text-pink-400' }
-],
+];
 
 export default function UltimateFuturisticServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState(''),
-  const [selectedCategory, setSelectedCategory] = useState('all'),
-  const [sortBy, setSortBy] = useState('popular'),
-  const [viewMode, setViewMode] = useState('grid'),
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popular');
+  const [viewMode, setViewMode] = useState('grid');
 
   const filteredServices = ultimateFuturisticServices2025.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
-    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     return matchesSearch && matchesCategory
-  }),
+  });
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
+        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
       case 'price-high':
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, '')),
+        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
       case 'rating':
-        return b.rating - a.rating,
+        return b.rating - a.rating;
       case 'customers':
-        return b.customers - a.customers,
+        return b.customers - a.customers;
       default: return b.popular ? 1 : -1
     }
-  }),
+  });
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -141,7 +141,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
         staggerChildren: 0.1
       }
     }
-  },
+  };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
@@ -152,7 +152,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
         duration: 0.5
       }
     }
-  },
+  };
 
   return (
     <Layout>
@@ -431,7 +431,7 @@ export default function UltimateFuturisticServicesShowcase2025() {
               <p className="text-gray-400 mb-6">Try adjusting your search criteria or category filter</p>
               <button
                 onClick={() => {
-                  setSearchTerm(''),
+                  setSearchTerm('');
                   setSelectedCategory('all')
                 }}
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300"

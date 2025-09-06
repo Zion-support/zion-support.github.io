@@ -1,19 +1,19 @@
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import Link from "next/link",
-import { useTranslation } from "react-i18next",
+import React from "react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
+import { useTranslation } from "react-i18next";
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Calendar, BookOpen, Code, Building, Clock } from 'lucide-react'
-import { cn } from "@/lib/utils",
+import { cn } from "@/lib/utils";
 interface FeatureCTAsProps {
-  className?: string,
+  className?: string;
   style?: React.CSSProperties
 }
 
 export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
-  const { t } = useTranslation(),
+  const { t } = useTranslation();
   const features = [
     {
       key: 'ai_talent_matching',
@@ -22,14 +22,14 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       icon: <Search className="h-10 w-10 p-2 rounded-md bg-blue-100 text-blue-700" />,
       link: '/match',
       badge: 'popular'
-    },
+    };
     {
       key: 'talent_directory',
       descriptionKey: 'talent_directory_desc',
       detailsKey: 'talent_directory_details',
       icon: <Users className="h-10 w-10 p-2 rounded-md bg-purple-100 text-purple-700" />,
       link: '/talent'
-    },
+    };
     {
       key: 'services_marketplace',
       descriptionKey: 'services_marketplace_desc',
@@ -37,21 +37,21 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       icon: <Zap className="h-10 w-10 p-2 rounded-md bg-cyan-100 text-cyan-700" />,
       link: '/services',
       badge: 'new'
-    },
+    };
     {
       key: 'equipment_catalog',
       descriptionKey: 'equipment_catalog_desc',
       detailsKey: 'equipment_catalog_details',
       icon: <Settings className="h-10 w-10 p-2 rounded-md bg-amber-100 text-amber-700" />,
       link: '/equipment'
-    },
+    };
     {
       key: 'community_hub',
       descriptionKey: 'community_hub_desc',
       detailsKey: 'community_hub_details',
       icon: <MessageSquare className="h-10 w-10 p-2 rounded-md bg-emerald-100 text-emerald-700" />,
       link: '/community'
-    },
+    };
     {
       key: 'mobile_app',
       descriptionKey: 'mobile_app_desc',
@@ -59,35 +59,35 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       icon: <Smartphone className="h-10 w-10 p-2 rounded-md bg-indigo-100 text-indigo-700" />,
       link: '/mobile-launch',
       badge: 'featured'
-    },
+    };
     {
       key: 'enterprise_solutions',
       descriptionKey: 'enterprise_solutions_desc',
       detailsKey: 'enterprise_solutions_details',
       icon: <Building className="h-10 w-10 p-2 rounded-md bg-pink-100 text-pink-700" />,
       link: '/enterprise'
-    },
+    };
     {
       key: 'developer_tools',
       descriptionKey: 'developer_tools_desc',
       detailsKey: 'developer_tools_details',
       icon: <Code className="h-10 w-10 p-2 rounded-md bg-gray-100 text-gray-700" />,
       link: '/developers'
-    },
+    };
     {
       key: 'learning_resources',
       descriptionKey: 'learning_resources_desc',
       detailsKey: 'learning_resources_details',
       icon: <BookOpen className="h-10 w-10 p-2 rounded-md bg-teal-100 text-teal-700" />,
       link: '/blog'
-    },
+    };
     {
       key: 'project_management',
       descriptionKey: 'project_management_desc',
       detailsKey: 'project_management_details',
       icon: <Calendar className="h-10 w-10 p-2 rounded-md bg-red-100 text-red-700" />,
       link: '/project-milestones'
-    },
+    };
     {
       key: 'zion_hire_ai',
       descriptionKey: 'zion_hire_ai_desc',
@@ -96,12 +96,12 @@ export function FeatureCTAs({ className, style }: FeatureCTAsProps) {
       link: '/zion-hire-ai',
       badge: 'premium'
     }
-  ],
+  ];
 
   return (
     <section
       className={cn(
-        "py-16 bg-gradient-to-b from-background to-background/90",
+        "py-16 bg-gradient-to-b from-background to-background/90";
         className
       )}
       style={style}

@@ -1,9 +1,9 @@
-import React from 'react',
-import Link from 'next/link',
-import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react',
+import React from 'react';
+import Link from 'next/link';
+import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear(),
+  const currentYear = new Date().getFullYear();
 
   const footerSections = [
     {
@@ -15,7 +15,7 @@ const EnhancedFooter: React.FC = () => {
         { name: 'Space Technology', href: '/space-technology' },
         { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
       ]
-    },
+    };
     {
       title: 'Company',
       links: [
@@ -25,7 +25,7 @@ const EnhancedFooter: React.FC = () => {
         { name: 'Careers', href: '/careers' },
         { name: 'Contact', href: '/contact' }
       ]
-    },
+    };
     {
       title: 'Resources',
       links: [
@@ -36,13 +36,13 @@ const EnhancedFooter: React.FC = () => {
         { name: 'Terms of Service', href: '/terms' }
       ]
     }
-  ],
+  ];
 
   const socialLinks = [
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
-  ],
+  ];
 
   return (
     <footer className="bg-slate-950 border-t border-white/10">
@@ -133,6 +133,6 @@ const EnhancedFooter: React.FC = () => {
       </div>
     </footer>
   )
-},
+};
 
-export default EnhancedFooter,
+export default EnhancedFooter;

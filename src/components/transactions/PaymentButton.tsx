@@ -1,33 +1,33 @@
-import { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { cn } from "@/lib/utils",
-import { useAuth } from "@/hooks/useAuth",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import { Loader2 } from 'lucide-react'
-import { useRouter } from 'next/router',
-import {logErrorToProduction} from '@/utils/productionLogger',
+import { useRouter } from 'next/router';
+import {logErrorToProduction} from '@/utils/productionLogger';
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
   providerId: string,
-  buttonText?: string,
-  className?: string,
-  onPaymentInitiated?: () => void,
+  buttonText?: string;
+  className?: string;
+  onPaymentInitiated?: () => void;
   redirectUrl?: string
 }
 
 export function PaymentButton({
-  amount,
-  serviceId,
-  providerId,
-  buttonText = "Purchase",
-  className,
-  onPaymentInitiated,
+  amount;
+  serviceId;
+  providerId;
+  buttonText = "Purchase";
+  className;
+  onPaymentInitiated;
   redirectUrl}: PaymentButtonProps) {
-  const [isProcessing, setIsProcessing] = useState(false),
-  const { isAuthenticated, user } = useAuth(),
-  const router = useRouter(),
+  const [isProcessing, setIsProcessing] = useState(false);
+  const { isAuthenticated, user } = useAuth();
+  const router = useRouter();
   
   const handlePaymentClick = async () => {
     if (!isAuthenticated) {
@@ -35,13 +35,13 @@ export function PaymentButton({
         title: "Authentication required",
         description: "Please sign in to make a purchase."}),
 
-      const returnTo = encodeURIComponent(`/checkout?sku=${serviceId}`),
-      router.push(`/auth/login?returnTo=${returnTo}`),
+      const returnTo = encodeURIComponent(`/checkout?sku=${serviceId}`);
+      router.push(`/auth/login?returnTo=${returnTo}`);
       return
     }
     
     try {
-      setIsProcessing(true),
+      setIsProcessing(true);
       
       if (onPaymentInitiated) {
         onPaymentInitiated()
@@ -50,9 +50,9 @@ export function PaymentButton({
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
         body: {
-          amount,
-          serviceId,
-          providerId,
+          amount;
+          serviceId;
+          providerId;
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
           cancelUrl: window.location.href}}),
@@ -81,14 +81,14 @@ export function PaymentButton({
         setIsProcessing(false)
       }, 1500)
     }
-  },
+  };
   
   return (
     <Button
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
-        "relative min-w-[120px]",
+        "relative min-w-[120px]";
         className
       )}
     >

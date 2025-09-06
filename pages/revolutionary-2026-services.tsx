@@ -1,9 +1,9 @@
-import React from 'react',
-import Head from 'next/head',
-import Revolutionary2026UltimateNavigation from '../components/layout/Revolutionary2026UltimateNavigation',
-import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero',
-import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase',
-import { Phone, Mail } from 'lucide-react',
+import React from 'react';
+import Head from 'next/head';
+import Revolutionary2026UltimateNavigation from '../components/layout/Revolutionary2026UltimateNavigation';
+import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero';
+import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase';
+import { Phone, Mail } from 'lucide-react';
 
 export default function Revolutionary2026ServicesPage() {
   return (
@@ -39,26 +39,26 @@ export default function Revolutionary2026ServicesPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "description": "Revolutionary AI, quantum computing, and emerging technology services for 2026",
+              "@context": "https://schema.org";
+              "@type": "Organization";
+              "name": "Zion Tech Group";
+              "url": "https://ziontechgroup.com";
+              "logo": "https://ziontechgroup.com/logo.png";
+              "description": "Revolutionary AI, quantum computing, and emerging technology services for 2026";
               "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
+                "@type": "PostalAddress";
+                "streetAddress": "364 E Main St STE 1008";
+                "addressLocality": "Middletown";
+                "addressRegion": "DE";
+                "postalCode": "19709";
                 "addressCountry": "US"
-              },
+              };
               "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
+                "@type": "ContactPoint";
+                "telephone": "+1-302-464-0950";
+                "contactType": "customer service";
                 "email": "kleber@ziontechgroup.com"
-              },
+              };
               "sameAs": [
                 "https://github.com/Zion-Holdings"
               ]
@@ -103,35 +103,35 @@ export default function Revolutionary2026ServicesPage() {
                   title: 'AI Consciousness',
                   description: 'First-to-market AI consciousness orchestration and autonomous intelligence systems.',
                   color: 'from-purple-500 to-pink-500'
-                },
+                };
                 {
                   icon: '⚛️',
                   title: 'Quantum Technology',
-                  description: 'Leading-edge quantum computing, cryptography, and quantum internet infrastructure.',
+                  description: 'Leading-edge quantum computing, cryptography, and quantum internet infrastructure.';
                   color: 'from-blue-500 to-cyan-500'
-                },
+                };
                 {
                   icon: '🚀',
                   title: 'Emerging Tech',
-                  description: 'Cutting-edge holographic metaverse, space tech, and autonomous manufacturing.',
+                  description: 'Cutting-edge holographic metaverse, space tech, and autonomous manufacturing.';
                   color: 'from-green-500 to-emerald-500'
-                },
+                };
                 {
                   icon: '🏥',
                   title: 'Healthcare Innovation',
-                  description: 'Revolutionary AI drug discovery, autonomous healthcare, and biotech research.',
+                  description: 'Revolutionary AI drug discovery, autonomous healthcare, and biotech research.';
                   color: 'from-teal-500 to-cyan-500'
-                },
+                };
                 {
                   icon: '💰',
                   title: 'Fintech Revolution',
                   description: 'Next-generation autonomous business intelligence and quantum blockchain solutions.',
                   color: 'from-yellow-500 to-orange-500'
-                },
+                };
                 {
                   icon: '🌐',
                   title: 'Global Impact',
-                  description: 'Serving 2,500+ customers worldwide with transformative technology solutions.',
+                  description: 'Serving 2,500+ customers worldwide with transformative technology solutions.';
                   color: 'from-indigo-500 to-purple-500'
                 }
               ].map((feature, index) => (

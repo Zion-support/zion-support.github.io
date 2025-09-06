@@ -1,11 +1,11 @@
 
-import { DynamicListingPage } from "@/components/DynamicListingPage",
-import { ProductListing } from "@/types/listings",
-import { AppLayout } from "@/layout/AppLayout",
-import { TrustedBySection } from "@/components/TrustedBySection",
-import { Button } from "@/components/ui/button",
-import { Link } from "react-router-dom",
-import { Globe } from "lucide-react",
+import { DynamicListingPage } from "@/components/DynamicListingPage";
+import { ProductListing } from "@/types/listings";
+import { AppLayout } from "@/layout/AppLayout";
+import { TrustedBySection } from "@/components/TrustedBySection";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Globe } from "lucide-react";
 // Sample service listings
 const SERVICE_LISTINGS: ProductListing[] = [
   {
@@ -15,7 +15,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     category: "Development",
     price: 5000,
     currency: "$",
-    tags: ["AI Integration", "Machine Learning", "Enterprise"],
+    tags: ["AI Integration", "Machine Learning", "Enterprise"];
     author: {
       name: "TechSolutions Inc.",
       id: "tech-solutions",
@@ -28,11 +28,11 @@ const SERVICE_LISTINGS: ProductListing[] = [
   {
     id: "service-2",
     title: "Cloud Infrastructure Management",
-    description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.",
+    description: "24/7 monitoring and management of your cloud infrastructure to ensure optimal performance, security, and cost efficiency.";
     category: "Management",
     price: 3000,
     currency: "$",
-    tags: ["Cloud", "DevOps", "Security"],
+    tags: ["Cloud", "DevOps", "Security"];
     author: {
       name: "CloudPro Experts",
       id: "cloud-pro"},
@@ -48,7 +48,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     category: "Analytics",
     price: 4500,
     currency: "$",
-    tags: ["Big Data", "Analytics", "Business Intelligence"],
+    tags: ["Big Data", "Analytics", "Business Intelligence"];
     author: {
       name: "DataMind Solutions",
       id: "datamind",
@@ -65,7 +65,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     category: "Security",
     price: 6000,
     currency: "$",
-    tags: ["Cybersecurity", "Penetration Testing", "Compliance"],
+    tags: ["Cybersecurity", "Penetration Testing", "Compliance"];
     author: {
       name: "SecureNet Team",
       id: "secure-net"},
@@ -77,11 +77,11 @@ const SERVICE_LISTINGS: ProductListing[] = [
   {
     id: "service-5",
     title: "IT Infrastructure Modernization",
-    description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.",
+    description: "Transform your legacy systems into modern, agile infrastructure that supports innovation and business growth.";
     category: "Consulting",
     price: 8500,
     currency: "$",
-    tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"],
+    tags: ["Digital Transformation", "Legacy Systems", "Infrastructure"];
     author: {
       name: "ModernizeIT Consulting",
       id: "modernize-it"},
@@ -97,7 +97,7 @@ const SERVICE_LISTINGS: ProductListing[] = [
     category: "Strategy",
     price: 7500,
     currency: "$",
-    tags: ["AI Strategy", "Digital Transformation", "Business Growth"],
+    tags: ["AI Strategy", "Digital Transformation", "Business Growth"];
     author: {
       name: "AI Future Consulting",
       id: "ai-future",

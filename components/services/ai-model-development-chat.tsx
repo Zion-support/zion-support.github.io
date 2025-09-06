@@ -1,6 +1,6 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
 const AiModelDevelopmentChat: NextPage = () => {
   return (
     <div>
@@ -16,6 +16,6 @@ const AiModelDevelopmentChat: NextPage = () => {
       </main>
     </div>
   )
-},
+};
 
-export default AiModelDevelopmentChat,
+export default AiModelDevelopmentChat;

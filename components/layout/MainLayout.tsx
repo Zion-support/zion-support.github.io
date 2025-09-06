@@ -4,9 +4,9 @@ import Header from '../Header';
 import Footer from './Footer';
 
 interface MainLayoutProps {
-  title: string;
-  description: string;
-  children: React.ReactNode;
+  title: string,
+  description: string,
+  children: React.ReactNode,
   keywords?: string;
   image?: string;
   url?: string;
@@ -17,16 +17,16 @@ interface MainLayoutProps {
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({
-  children,
-  title = "Zion Tech Group - Leading Technology Solutions Provider",
-  description = "Transform your business with cutting-edge AI, IT services, and micro SaaS solutions. Expert technology consulting and implementation services.",
-  keywords = "technology solutions, AI services, IT consulting, micro SaaS, cloud computing, digital transformation, cybersecurity, software development",
-  image,
-  url,
-  type = 'website',
-  noindex = false,
-  nofollow = false,
-  canonical,
+  children;
+  title = "Zion Tech Group - Leading Technology Solutions Provider";
+  description = "Transform your business with cutting-edge AI, IT services, and micro SaaS solutions. Expert technology consulting and implementation services.";
+  keywords = "technology solutions, AI services, IT consulting, micro SaaS, cloud computing, digital transformation, cybersecurity, software development";
+  image;
+  url;
+  type = 'website';
+  noindex = false;
+  nofollow = false;
+  canonical;
 }) => {
   return (
     <>

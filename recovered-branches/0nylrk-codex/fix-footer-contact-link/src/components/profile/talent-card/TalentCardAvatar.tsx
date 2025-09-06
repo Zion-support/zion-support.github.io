@@ -1,9 +1,9 @@
 
-import React from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import React from "react";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 interface TalentCardAvatarProps {
-  profilePicture?: string,
+  profilePicture?: string;
   fullName: string
 }
 
@@ -15,7 +15,7 @@ export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarP
       .map(part => part[0])
       .join('')
       .toUpperCase()
-  },
+  };
 
   return (
     <Avatar className="w-14 h-14 border-2 border-zion-blue-light">

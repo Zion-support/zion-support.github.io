@@ -1,7 +1,7 @@
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Download, FileImage, FileText, FileType, FileVideo, Link } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
+import { toast } from "@/hooks/use-toast";
 interface ResourceItem {
   id: string,
   title: string,
@@ -16,11 +16,11 @@ export function PartnerResources() {
     {
       id: 'logo-pack',
       title: 'Zion AI Logo Pack',
-      description: 'Official logos in various formats (PNG, SVG, JPG)',
+      description: 'Official logos in various formats (PNG, SVG, JPG)';
       type: 'image',
       icon: <FileImage className="h-10 w-10 text-zion-purple" />,
       url: '#'
-    },
+    };
     {
       id: 'brand-guidelines',
       title: 'Brand Guidelines',
@@ -28,7 +28,7 @@ export function PartnerResources() {
       type: 'document',
       icon: <FileText className="h-10 w-10 text-zion-cyan" />,
       url: '#'
-    },
+    };
     {
       id: 'banner-templates',
       title: 'Social Media Banners',
@@ -36,7 +36,7 @@ export function PartnerResources() {
       type: 'image',
       icon: <FileImage className="h-10 w-10 text-zion-purple" />,
       url: '#'
-    },
+    };
     {
       id: 'promotional-video',
       title: 'Promotional Video',
@@ -44,7 +44,7 @@ export function PartnerResources() {
       type: 'video',
       icon: <FileVideo className="h-10 w-10 text-red-500" />,
       url: '#'
-    },
+    };
     {
       id: 'email-templates',
       title: 'Email Templates',
@@ -52,7 +52,7 @@ export function PartnerResources() {
       type: 'document',
       icon: <FileText className="h-10 w-10 text-zion-cyan" />,
       url: '#'
-    },
+    };
     {
       id: 'talking-points',
       title: 'Talking Points',
@@ -61,7 +61,7 @@ export function PartnerResources() {
       icon: <FileText className="h-10 w-10 text-zion-cyan" />,
       url: '#'
     }
-  ],
+  ];
 
   const handleDownload = (resource: ResourceItem) => {
     // In a real app, this would download the actual resource
@@ -69,7 +69,7 @@ export function PartnerResources() {
       title: "Download started",
       description: `Downloading ${resource.title}`,
       variant: "default"})
-  },
+  };
 
   return (
     <div className="space-y-6">
