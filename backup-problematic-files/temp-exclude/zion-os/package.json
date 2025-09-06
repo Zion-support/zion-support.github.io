@@ -1,4 +1,7 @@
 {
+
+:clean-build/package.json
+ursor/automate-test-improve-and-merge-code-646c
   "name": "clean-build",
   "version": "0.1.0",
   "private": true,
@@ -21,6 +24,8 @@
     "eslint-config-next": "15.5.2"
   }
 }
+
+:backup-problematic-files/temp-exclude/zion-os/package.json
   "name": "zion-tech-group-website",
   "version": "1.0.0",
   "private": true,
@@ -55,6 +60,7 @@
     "typescript": "5.4.5"
   }
 }
+:backup-problematic-files/temp-exclude/zion-os/package.json
   "name": "clean-build",
   "version": "0.1.0",
   "private": true,
@@ -77,3 +83,5 @@
     "eslint-config-next": "15.5.2"
   }
 }
+>>>>>>> main:clean-build/package.json
+ursor/automate-test-improve-and-merge-code-646c
