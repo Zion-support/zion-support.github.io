@@ -1,9 +1,9 @@
 import React from 'react';
-
 interface OnsiteSupportProps {
   // Add props here as needed
 }
 
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function OnsiteSupport({ }: OnsiteSupportProps) {
   return (
     <div>
@@ -11,4 +11,18 @@ export default function OnsiteSupport({ }: OnsiteSupportProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+:src.pages.disabled/OnsiteSupport.jsx
 }
+}
+ursor/add-new-services-and-deploy-updates-0462
+
+
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+:src.pages.disabled/OnsiteSupport.jsx
+}
+}
+}
+}
+}
+:temp_exclude/src.pages.disabled/OnsiteSupport.jsx

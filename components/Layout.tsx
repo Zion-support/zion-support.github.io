@@ -1,95 +1,148 @@
+import React from "react";
+import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
+ursor/integrate-build-improve-and-re-verify-8f7d
 import React from 'react';
 import Head from 'next/head';
-import { Header } from './Header';
+import Header from './Header';
 import Footer from './Footer';
+origin/automation-improvements-final
 
+import React from "react";
+import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer";
+origin/main
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
   description?: string;
   keywords?: string;
+  canonical?: string;
+  ogTitle?: string;
+  ogDescription?: string;
   ogImage?: string;
   noIndex?: boolean;
 }
-
-export default function Layout({
-  children,
-  title = 'Zion Tech Group - Leading AI & Technology Solutions',
-  description = 'Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results.',
-  keywords = 'AI solutions, cloud services, technology consulting, digital transformation, IT services, machine learning, cybersecurity',
-  ogImage = '/og-image.jpg',
+const Layout: React.FC<LayoutProps> = ({
+  children
+  title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"
+  description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses."
+  keywords = "AI services, IT solutions, micro SaaS, technology consulting, digital transformation"
+  canonical = "https://ziontechgroup.com"
+  ogTitle
+  ogDescription
+  ogImage = "https://ziontechgroup.com/og-image.jpg"
   noIndex = false
-}: LayoutProps) {
+}) => {
+  const jsonLd = {
+    "@context": "https://schema.org"
+    "@type": "Organization"
+    name: "Zion Tech Group"
+    url: "https://ziontechgroup.com"
+    logo: "https://ziontechgroup.com/logo.png"
+    description: description
+    address: {
+      "@type": "PostalAddress"
+      streetAddress: "364 E Main St STE 1008"
+      addressLocality: "Middletown"
+      addressRegion: "DE"
+      postalCode: "19709"
+      addressCountry: "US"
+    }
+    contactPoint: {
+      "@type": "ContactPoint"
+      telephone: "+1-302-464-0950"
+      contactType: "customer service"
+      email: "kleber@ziontechgroup.com"
+    }
+  }
   return (
-    <>
+    <div className="min-h-screen bg-white">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        
+        {canonical && <link rel="canonical" href={canonical} />}
+        {noIndex && <meta name="robots" content="noindex,nofollow" />}
         {/* Open Graph */}
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
+        <meta property="og:title" content={ogTitle |title} />
+        <meta
+          property="og:description"
+          content={ogDescription |description}
+        />
         <meta property="og:image" content={ogImage} />
+        <meta property="og:url" content={canonical} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={title} />
-        <meta name="twitter:description" content={description} />
+        <meta name="twitter:title" content={ogTitle |title} />
+        <meta
+          name="twitter:description"
+          content={ogDescription |description}
+        />
         <meta name="twitter:image" content={ogImage} />
-        
-        {/* SEO */}
-        <meta name="robots" content={noIndex ? 'noindex,nofollow' : 'index,follow'} />
-        <link rel="canonical" href="https://ziontechgroup.com" />
-        
-        {/* Structured Data */}
+        {/* JSON-LD */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              "name": "Zion Tech Group",
-              "url": "https://ziontechgroup.com",
-              "logo": "https://ziontechgroup.com/logo.png",
-              "description": description,
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "364 E Main St STE 1008",
-                "addressLocality": "Middletown",
-                "addressRegion": "DE",
-                "postalCode": "19709",
-                "addressCountry": "US"
-              },
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-302-464-0950",
-                "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"
-              },
-              "sameAs": [
-                "https://facebook.com/ziontechgroup",
-                "https://twitter.com/ziontechgroup",
-                "https://linkedin.com/company/ziontechgroup",
-                "https://instagram.com/ziontechgroup",
-                "https://github.com/ziontechgroup"
-              ]
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </Head>
-      
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1 pt-16">
-          {children}
-        </main>
-        <Footer />
-      </div>
-    </>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </div>
+import React, { ReactNode } from "react";
+
+interface LayoutProps {
+  children: ReactNode,
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
+      {children}
+    </main>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   );
 }
+export default Layout;
+import React, { ReactNode } from "react";
+interface LayoutProps {
+  children: ReactNode;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+  return (
+    <main className="min-h-screen">
+      {children  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </main>
+  );
+};
+export default Layout;

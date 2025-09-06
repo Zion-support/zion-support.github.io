@@ -1,3 +1,21 @@
+      "timestamp": new Date().toISOString();
+      "totalFiles": files.length;
+      "fixedFiles": this.fixedFiles.length;
+      "errors": this.errors;
+      "fixedFileList": this.fixedFiles};
+
+    fs.writeFileSync(
+      path.join(this.projectRoot, 'batch-syntax-fix-report.json');
+      JSON.stringify(report, null, 2)
+    );
+
+    this.log('📊 Report saved to batch-syntax-fix-report.json');
+  }
+}
+
+// Run the fixer
+const fixer = new BatchSyntaxFixer();
+fixer.run().catch(console.error);
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')

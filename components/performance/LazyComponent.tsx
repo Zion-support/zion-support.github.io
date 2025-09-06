@@ -1,14 +1,37 @@
 import React from 'react';
+};
+import React, { Suspense, lazy } from 'react';
+
+import React from 'react'
+}
+import React, { Suspense, lazy } from 'react';
+
 
 interface LazyComponentProps {
-  // Add props here as needed
+  component: ComponentType<Record<string, unknown>>;
+  fallback?: ReactNode;
+  [key: string]: unknown
 }
 
-export default function LazyComponent({ }: LazyComponentProps) {
+const LazyComponent: React.FC<LazyComponentProps> = ({
+  component: Component
+  fallback = <div className="animate-pulse bg-gray-200 h-32 rounded" />
+
+  ...props
   return (
-    <div>
-      <h1>LazyComponent</h1>
-      <p>This component is currently under development.</p>
-    </div>
+    <Suspense fallback={fallback}>
+      <Component {...props} />
+    </Suspense>
   );
 }
+export default LazyComponent;
+
+import React from 'react';
+};
+import React from 'react',;
+},
+
+
+import React from 'react';
+}
+

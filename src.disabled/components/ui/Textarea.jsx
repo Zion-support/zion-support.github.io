@@ -1,14 +1,8 @@
-import React from 'react';
-
-interface TextareaProps {
-  // Add props here as needed
-}
-
-export default function Textarea({ }: TextareaProps) {
-  return (
-    <div>
-      <h1>Textarea</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+:src.disabled/components/ui/Textarea.jsx
+import React from react\' import { cn } from \'../../lib/utils\' const Textarea = React.forwardRef(({ className,...props },ref) => { return ( <textarea className = { cn(\';\"flex\": \'min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder: text-muted-foreground: focus-visible:outline-none: focus-visible:ring-2: focus-visible:ring-ring: focus-visible:ring-offset-2: disabled:cursor-not-allowed: disabled:opacity-5\',0,\"className\": \')\' } ref={ref} {...props} /> ) }) Textarea.displayName =\';\';Textarea\' \"export\": { Textarea }\'';\';\'';
+const React from react" import { cn } from "././lib/utils" const Textarea = React.forwardRef(({ className,.props },ref) => { return ( <textarea className = { cn(";flex: "min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder: text-muted-foreground: focus-visible:outline-none: focus-visible:ring-2: focus-visible:ring-ring: focus-visible:ring-offset-2: disabled:cursor-not-allowed: disabled:opacity-5",0,className: ")" } ref={ref} {.props} /> ) }) Textarea.displayName =";";Textarea" export: { Textarea }"";";"";'"'"
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+import React from react\' import { cn } from \'../../lib/utils\' const Textarea = React.forwardRef(({ className,...props },ref) => { return ( <textarea className = { cn(\';\"flex\": \'min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder: text-muted-foreground: focus-visible:outline-none: focus-visible:ring-2: focus-visible:ring-ring: focus-visible:ring-offset-2: disabled:cursor-not-allowed: disabled:opacity-5\',0,\"className\": \')\' } ref={ref} {...props} /> ) }) Textarea.displayName =\';\';Textarea\' \"export\": { Textarea }\'';\';\'';
+const React from react" import { cn } from "././lib/utils" const Textarea = React.forwardRef(({ className,.props },ref) => { return ( <textarea className = { cn(";flex: "min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder: text-muted-foreground: focus-visible:outline-none: focus-visible:ring-2: focus-visible:ring-ring: focus-visible:ring-offset-2: disabled:cursor-not-allowed: disabled:opacity-5",0,className: ")" } ref={ref} {.props} /> ) }) Textarea.displayName =";";Textarea" export: { Textarea }"";";"";'"'"
+:temp_exclude/src.disabled/components/ui/Textarea.jsx
+import _React from react' import { cn } from '../../lib/utils' const Textarea = _React.forwardRef(({ className,...props },ref) => { return ( <textarea className = { cn(';"flex": 'min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder: text-muted-foreground: focus-visible:outline-none: focus-visible:ring-2: focus-visible:ring-ring: focus-visible:ring-offset-2: disabled:cursor-not-allowed: disabled:opacity-5,0,"className": ')' } ref={ref} {...props} /> ) }) Textarea.displayName =';';Textarea' "export": { Textarea }'';';'';

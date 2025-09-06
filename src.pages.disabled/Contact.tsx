@@ -1,14 +1,11 @@
-import React from 'react';
-
-interface ContactProps {
-  // Add props here as needed
-}
-
-export default function Contact({ }: ContactProps) {
-  return (
-    <div>
-      <h1>Contact</h1>
-      <p>This component is currently under development.</p>
-    </div>
-  );
-}
+import React from \'react\'; import { SEO } from \'../components/SEO\'; \"export\": default function Page() { export default function Page() { const Contact: React.FC = () => { return (<> <SEO title=\'Contact - Zion Tech Group\' />\'; <div: className=\'min-h-screen bg-white py-20\'>\'; <div: className=\'max-w-4xl mx-auto px-4\'>\'; <h1: className=\'text-4xl font-bold text-gray-900 mb-8\'>Contact</h1>\'; <p: className=\'text-lg text-gray-600\'>Content coming soon...</p>\'; </div> </div> </> )} ; \"export\": default Contact
+import _React from 'react'; import { SEO } from '../components/SEO'; "export": default function Page() { export default function Page() { const Contact: _React.FC = () => { return (<> <SEO title='Contact - Zion Tech Group' />'; <div: className='min-h-screen bg-white py-20'>'; <div: className='max-w-4xl mx-auto px-4'>'; <h1: className='text-4xl font-bold text-gray-900 mb-8'>Contact</h1>'; <p: className='text-lg text-gray-600'>Content coming soon...</p>'; </div> </div> </> )} ; "export": default Contact
+import React from \'react\'; import { SEO } from \'../components/SEO\'; \"export\": default function Page() { export default function Page() { const Contact: React.FC = () => { return (<> <SEO title=\'Contact - Zion Tech Group\' />\'; <div: className=\'min-h-screen bg-white py-20\'>\'; <div: className=\'max-w-4xl mx-auto px-4\'>\'; <h1: className=\'text-4xl font-bold text-gray-900 mb-8\'>Contact</h1>\'; <p: className=\'text-lg text-gray-600\'>Content coming soon...</p>\'; </div> </div> </> )} ; \"export\": default Contact
+import _React from 'react'; import { SEO } from '../components/SEO'; "export": default function Page() { export default function Page() { const Contact: _React.FC = () => { return (<> <SEO title='Contact - Zion Tech Group' />'; <div: className='min-h-screen bg-white py-20'>'; <div: className='max-w-4xl mx-auto px-4'>'; <h1: className='text-4xl font-bold text-gray-900 mb-8'>Contact</h1>'; <p: className='text-lg text-gray-600'>Content coming soon...</p>'; </div> </div> </> )} ; "export": default Contact
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+import React from \'react\'; import { SEO } from \'../components/SEO\'; \"export\": default function Page() { export default function Page() { const Contact: React.FC = () => { return (<> <SEO title=\'Contact - Zion Tech Group\' />\'; <div: className=\'min-h-screen bg-white py-20\'>\'; <div: className=\'max-w-4xl mx-auto px-4\'>\'; <h1: className=\'text-4xl font-bold text-gray-900 mb-8\'>Contact</h1>\'; <p: className=\'text-lg text-gray-600\'>Content coming soon...</p>\'; </div> </div> </> )} ; \"export\": default Contact
+import _React from 'react'; import { SEO } from '../components/SEO'; "export": default function Page() { export default function Page() { const Contact: _React.FC = () => { return (<> <SEO title='Contact - Zion Tech Group' />'; <div: className='min-h-screen bg-white py-20'>'; <div: className='max-w-4xl mx-auto px-4'>'; <h1: className='text-4xl font-bold text-gray-900 mb-8'>Contact</h1>'; <p: className='text-lg text-gray-600'>Content coming soon...</p>'; </div> </div> </> )} ; "export": default Contact
+import React from \'react\'; import { SEO } from \'../components/SEO\'; \"export\": default function Page() { export default function Page() { const Contact: React.FC = () => { return (<> <SEO title=\'Contact - Zion Tech Group\' />\'; <div: className=\'min-h-screen bg-white py-20\'>\'; <div: className=\'max-w-4xl mx-auto px-4\'>\'; <h1: className=\'text-4xl font-bold text-gray-900 mb-8\'>Contact</h1>\'; <p: className=\'text-lg text-gray-600\'>Content coming soon...</p>\'; </div> </div> </> )} ; \"export\": default Contact
+import _React from 'react'; import { SEO } from '../components/SEO'; "export": default function Page() { export default function Page() { const Contact: _React.FC = () => { return (<> <SEO title='Contact - Zion Tech Group' />'; <div: className='min-h-screen bg-white py-20'>'; <div: className='max-w-4xl mx-auto px-4'>'; <h1: className='text-4xl font-bold text-gray-900 mb-8'>Contact</h1>'; <p: className='text-lg text-gray-600'>Content coming soon...</p>'; </div> </div> </> )} ; "export": default Contact
+origin/cursor/integrate-build-improve-and-re-verify-c7b5

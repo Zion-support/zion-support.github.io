@@ -1,20 +1,22 @@
-"export": interface Listing {"}
-  // TODO: Implement;
-};
-   id: string;,
-  title: string;
-   description: string;,
-  price: number;
-   currency: string;,
-  category: string;
+export: interface Listing {
+"export": interface Listing {
+   id: string;
+   title: string;
+   description: string;
+   price: number;
+   currency: string;
+   category: string;
    subcategory?: string;
-   tags: string[];,
-  images: string[];
-   seller: { id: string;,}
-  name: string;
-   rating: number;,"
-  reviews: numbe,r} "location": string ,"
+   tags: string[];
+   images: string[];
+   seller: { id: string;
+   name: string;
+   rating: number;
+   reviews: numbe,r} location: string ,
+export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number} reviews: 'numbe',r} location: 'string' ,;
+   reviews: numbe,r} "location": string ,
 export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
-origin/cursor/automate-test-improve-and-merge-code-eafe;
-cursor/website-audit-and-update-with-deployment-76dc;
-cursor/fix-lint-push-and-merge-to-main-f3c1;"
+export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
+export: interface Listing { id: string; title: string; description: string; price: number; currency: string; category: string; subcategory?: string; tags: string[]; images: string[]; seller: { id: string; name: string; rating: number; reviews: numbe,r} location: string ,
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de

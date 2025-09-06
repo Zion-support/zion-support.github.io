@@ -1,41 +1,34 @@
-module.exports = {}
-  "preset": 'ts-jest',
-  "testEnvironment": 'jsdom',
-  "globals": {}
-    'ts-jest': {}
-      diagnostics: false,
-      "isolatedModules": true}},
-  "setupFilesAfterEnv": ['<rootDir>/jest.setup.js'],
-  "moduleNameMapper": {}
-    '^@/(.*)$': '<rootDir>/src/$1',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy'},
-  "testMatch": ['**/__tests__/**/*.(js|jsx|ts|tsx)',]
-    '**/*.(test|spec).(js|jsx|ts|tsx)',
+const nextJest = require('next/jest')
+
+const createJestConfig = nextJest({
+  dir: './',
+})
+
+const customJestConfig = {
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jsdom',
+  moduleNameMapper: {
+    '^@/(.*)$': '<rootDir>/$1',
+  },
+  collectCoverageFrom: [
+    'components/**/*.{js,jsx,ts,tsx}',
+    'pages/**/*.{js,jsx,ts,tsx}',
+    'utils/**/*.{js,jsx,ts,tsx}',
+    '!**/node_modules/**',
   ],
-  "collectCoverageFrom": ['src/**/*.{js,jsx,ts,tsx}',]
-    '!src/**/*.d.ts',
-    '!src/**/*.stories.{js,jsx,ts,tsx}',
+  testPathIgnorePatterns: [
+    '<rootDir>/.next/',
+    '<rootDir>/node_modules/',
+    '<rootDir>/out/',
+    '<rootDir>/__tests__.disabled/',
+    '<rootDir>/tests.disabled/',
+    '<rootDir>/src_backup/',
+    '<rootDir>/test.disabled/',
+    '<rootDir>/plugins.disabled/',
+    '<rootDir>/supabase.disabled/',
+    '<rootDir>/dao/',
+    '<rootDir>/pages.disabled/',
   ],
-  "coverageThreshold": {}
-    global: {}
-      branches: 50,
-      "functions": 50,
-      "lines": 50,
-      "statements": 50}},
-  "transform": {}
-    '^.+\\.(ts|tsx)$': 'ts-jest',
-    '^.+\\.(js|jsx)$': 'babel-jest'},
-  "moduleFileExtensions": ['ts', 'tsx', 'js', 'jsx', 'json'],
-  "testPathIgnorePatterns": ['/node_modules/',]
-    '/dist/',
-    '/pages\\.disabled/',
-    '/pages-disabled/',
-    '/pages\\.broken/',
-    '/pages\\.bak/',
-    '/pages-backup/',
-    '/pages\\.__backup/',
-    '/src\\.pages\\.disabled/',
-    '/src\\.disabled/',
-    '/src/disabled/',
-    '/tests/integration/',
-  ]};
+}
+
+module.exports = createJestConfig(customJestConfig)

@@ -1,160 +1,165 @@
 import React from 'react';
-import Layout from '../components/Layout';
-import { motion } from 'framer-motion';
-import { Users, MessageCircle, Calendar, Award, CheckCircle, ArrowRight } from 'lucide-react';
-
+import Head from 'next/head';
 export default function CommunityPage() {
-  const communityFeatures = [
-    {
-      title: "Developer Forums",
-      description: "Connect with developers and share knowledge",
-      icon: MessageCircle,
-      features: ["Technical Discussions", "Code Sharing", "Problem Solving"]
-    },
-    {
-      title: "Events & Webinars",
-      description: "Join our regular events and learning sessions",
-      icon: Calendar,
-      features: ["Monthly Webinars", "Tech Talks", "Workshops"]
-    },
-    {
-      title: "Expert Network",
-      description: "Access to our network of technology experts",
-      icon: Users,
-      features: ["Mentorship", "Consultations", "Collaboration"]
-    },
-    {
-      title: "Recognition Program",
-      description: "Get recognized for your contributions",
-      icon: Award,
-      features: ["Community Badges", "Contributor Recognition", "Special Access"]
-    }
-  ];
-
   return (
-    <Layout 
-      title="Community - Zion Tech Group"
-      description="Join our vibrant community of developers, technologists, and innovators. Connect, learn, and grow together."
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-teal-900 via-blue-900 to-indigo-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Community
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Join our vibrant community of developers, technologists, and innovators. 
-                Connect, learn, and grow together in the world of technology.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {communityFeatures.map((feature, index) => {
-                const IconComponent = feature.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="text-teal-600 mb-4">
-                      <IconComponent className="w-10 h-10" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4">
-                      {feature.description}
-                    </p>
-                    <ul className="space-y-2">
-                      {feature.features.map((item, itemIndex) => (
-                        <li key={itemIndex} className="flex items-center text-sm text-gray-600">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        {/* Community Stats Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Community by the Numbers
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our growing community of technology enthusiasts and professionals.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-teal-600 mb-2">2,500+</div>
-                <div className="text-gray-600">Active Members</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-teal-600 mb-2">150+</div>
-                <div className="text-gray-600">Monthly Events</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-teal-600 mb-2">5,000+</div>
-                <div className="text-gray-600">Forum Posts</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-teal-600 mb-2">50+</div>
-                <div className="text-gray-600">Expert Contributors</div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-teal-600 to-blue-600 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Join Our Community Today
-            </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Ready to connect with like-minded professionals and expand your knowledge? Join our community today.
+    <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
+      <Head>
+        <title>Community | Zion Tech Group</title>
+        <meta
+          name='description'
+          content='Community forum and resources for Zion Tech Group users'
+        />
+        <link rel='canonical' href='https://ziontechgroup.com/community' />
+        <meta
+          name='description'
+          content='Join the Zion Tech Group community and stay updated.'
+        />
+      </Head>
+      <div className='max-w-5xl mx-auto space-y-8'>
+        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+          Community
+        </h1>
+        <p className='text-slate-300'>
+          Join our community. Ask questions, share solutions, and learn best
+          practices.
+        </p>
+        <div className='grid md:grid-cols-2 gap-6'>
+          <div className='p-6 rounded-2xl bg-white/5 border border-white/10'>
+            <h2 className='text-white text-xl font-semibold mb-2'>Get Help</h2>
+            <p className='text-slate-300'>
+              Visit the{' '}
+              <a className='text-cyan-400 underline' href='/support'>
+                Support Center
+              </a>{' '}
+              or email{' '}
+              <a
+                className='text-purple-400'
+                href='mailto: kleber@ziontechgroup.com'
+              >
+                kleber@ziontechgroup.com
+              </a>
+              .
             </p>
-            <motion.a
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-teal-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"
-              whileHover={{ scale: 1.05 }}
-            >
-              Join Community
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </motion.a>
           </div>
-        </section>
+          <div className='p-6 rounded-2xl bg-white/5 border border-white/10'>
+            <h2 className='text-white text-xl font-semibold mb-2'>Follow Us</h2>
+            <ul className='text-slate-300 space-y-1'>
+              <li>
+                <a
+                  className='text-cyan-400'
+                  href='https://linkedin.com/company/ziontechgroup'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  className='text-cyan-400'
+                  href='https://github.com/Zion-Holdings'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  GitHub
+                </a>
+              </li>
+              <li>
+                <a
+                  className='text-cyan-400'
+                  href='https://instagram.com/ziontechgroup'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
+                  className='text-cyan-400'
+                  href='https://youtube.com/@ziontechgroup'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  YouTube
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </Layout>
+    </div>;
   );
+
 }
+import React from 'react',
+import Head from 'next/head',
+export default function CommunityPage() {
+	return (
+		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+			<Head>
+				<title>Community | Zion Tech Group</title>
+				<meta name="description" content="Community forum and resources for Zion Tech Group users" />
+				<link rel="canonical" href="https://ziontechgroup.com/community" />
+				<meta name="description" content="Join the Zion Tech Group community and stay updated." />
+			</Head>
+			<div className="max-w-5xl mx-auto space-y-8">
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Community</h1>
+				<p className="text-slate-300">Join our community. Ask questions, share solutions, and learn best practices.</p>
+				<div className="grid md: grid-cols-2 gap-6">
+					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">
+						<h2 className="text-white text-xl font-semibold mb-2">Get Help</h2>
+						<p className="text-slate-300">Visit the <a className="text-cyan-400 underline" href="/support">Support Center</a> or email <a className="text-purple-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
+					</div>
+					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">
+						<h2 className="text-white text-xl font-semibold mb-2">Follow Us</h2>
+						<ul className="text-slate-300 space-y-1">
+							<li><a className="text-cyan-400" href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer">LinkedIn</Link></li>
+							<li><a className="text-cyan-400" href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer">GitHub</Link></li>
+							<li><a className="text-cyan-400" href="https://instagram.com/ziontechgroup" target="_blank" rel="noopener noreferrer">Instagram</Link></li>
+							<li><a className="text-cyan-400" href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer">YouTube</Link></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
+import React from 'react';
+import Head from 'next/head';
+export default function CommunityPage(req, res) {
+  try {
+	return (;
+		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
+			<Head>;
+				<title>Community | Zion Tech Group</title>;
+				<meta name="description" content="Community forum and resources for Zion Tech Group users" />;
+				<link rel="canonical" href="https://ziontechgroup.com/community" />;
+				<meta name="description" content="Join the Zion Tech Group community and stay updated." />;
+			</Head>;
+			<div className="max-w-5xl mx-auto space-y-8">;
+				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Community</h1>;
+				<p className="text-slate-300">Join our community. Ask questions, share solutions, and learn best practices.</p>;
+				<div className="grid md: grid-cols-2 gap-6">;
+					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">;
+						<h2 className="text-white text-xl font-semibold mb-2">Get Help</h2>;
+						<p className="text-slate-300">Visit the <a className="text-cyan-400 underline" href="/support">Support Center</a> or email <a className="text-purple-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>;
+					</div>;
+					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">;
+						<h2 className="text-white text-xl font-semibold mb-2">Follow Us</h2>;
+						<ul className="text-slate-300 space-y-1">;
+							<li><a className="text-cyan-400" href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>;
+							<li><a className="text-cyan-400" href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer">GitHub</a></li>;
+							<li><a className="text-cyan-400" href="https://instagram.com/ziontechgroup" target="_blank" rel="noopener noreferrer">Instagram</a></li>;
+							<li><a className="text-cyan-400" href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer">YouTube</a></li>;
+						</ul>;
+					</div>;
+				</div>;
+			</div>;
+		</div>;
+	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
