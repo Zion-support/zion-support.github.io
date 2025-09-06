@@ -2,7 +2,6 @@ import React, { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
-import { UltimateServicesShowcase2027 as UltimateServicesShowcase } from '@/components/UltimateServicesShowcase2027';
 import { 
   Brain, 
   Shield, 
@@ -487,7 +486,6 @@ export default function Home() {
       </section>
 
       {/* Ultimate Services Showcase */}
-      <UltimateServicesShowcase />
     </>
   );
 }
