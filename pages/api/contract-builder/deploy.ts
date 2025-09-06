@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    const iface = new Interface(abi),
+    const iface = new Interface(abi);
     const data = iface.encodeDeploy(constructorArgs);
     const tx = {
       data: bytecode + data.slice(2),

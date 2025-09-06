@@ -2,9 +2,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 async function fetchJson(url: string) {
-  const resp = await fetch(url),
+  const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
-  return resp.json()
+  return resp.json();
 }
 
 function readJson(p: string) {
@@ -17,7 +17,7 @@ function writeJson(p: string, v: any) {
 
 export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
-    const cfg = readJson(configPath),
+    const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date.now();
     const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
