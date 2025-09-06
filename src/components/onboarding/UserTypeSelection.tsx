@@ -1,15 +1,14 @@
-import { useState } from 'react';
-import { Briefcase, Star, User } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { useState } from 'react'
+import { Briefcase, Star, User } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 interface UserTypeOption {
-  id: 'serviceProvider' | 'talent' | 'client';
-  name: string;
-  description: string;
-  icon: React.ElementType;
-
+  id: 'serviceProvider' | 'talent' | 'client'
+  name: string
+  description: string
+  icon: React.ElementType
 interface UserTypeSelectionProps {
-  onSelect: (userType: 'serviceProvider' | 'talent' | 'client') => void;
-  selectedType: string | null;
+  onSelect: (userType: 'serviceProvider' | 'talent' | 'client') => void
+  selectedType: string | null
 export function UserTypeSelection({
   onSelect,
   selectedType,
@@ -33,8 +32,7 @@ export function UserTypeSelection({
       description: 'I want to discover and hire talent or services',
       icon: User,
     },
-  ];
-
+  ]
   return (
     <div className='space-y-6'>
       <div className='text-center mb-6'>
@@ -46,10 +44,8 @@ export function UserTypeSelection({
 
       <div className='grid gap-4 md:grid-cols-3'>
         {userTypes.map(type => {
-          const Icon = type.icon;
-          const isSelected = selectedType === type.id;
-
-          
+          const Icon = type.icon
+          const isSelected = selectedType === type.id
               onClick={() => onSelect(type.id)}
               variant='outline'              className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
                 isSelected
@@ -71,10 +67,10 @@ export function UserTypeSelection({
                 </p>
               </div>
             </Button>
-          );
+          )
         })}
       </div>
     </div>
-  );
+  )
 }
 ;

@@ -1,41 +1,38 @@
-'use client';
-
+'use client'
 import React, {
   Suspense,
   lazy,
   useState,
   useEffect,
-  ComponentType,;
-} from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { cn } from '@/lib/utils';
-import { logErrorToProduction } from '@/utils/productionLogger';
+  ComponentType,
+} from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+import { cn } from '@/lib/utils'
+import { logErrorToProduction } from '@/utils/productionLogger'
 interface LoadingState {
-  isLoading: boolean;
-  error: Error | null;
-  retryCount: number;
-  isOnline: boolean;
-
+  isLoading: boolean
+  error: Error | null
+  retryCount: number
+  isOnline: boolean
 interface DynamicLoaderProps {
-  importFn: () => Promise<{ default: ComponentType<any> }>;
-  fallback?: React.ReactNode;
-  errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>;
-  loadingComponent?: React.ComponentType;
-  enableRetry?: boolean;
-  maxRetries?: number;
-  prefetch?: boolean;
-  className?: string;
-  children?: React.ReactNode;
-  [key: string]: any;
-
+  importFn: () => Promise<{ default: ComponentType<any> }>
+  fallback?: React.ReactNode
+  errorFallback?: React.ComponentType<{ error: Error; retry: () => void }>
+  loadingComponent?: React.ComponentType
+  enableRetry?: boolean
+  maxRetries?: number
+  prefetch?: boolean
+  className?: string
+  children?: React.ReactNode
+  [key: string]: any
 // Enhanced Loading Component
 const EnhancedLoading: React.FC<{
-  progress?: number;
-  message?: string;
-  showProgress?: boolean;
+  progress?: number
+  message?: string
+  showProgress?: boolean
 }> = ({
   progress = 0,
   message = 'Loading component...',
@@ -68,15 +65,14 @@ const EnhancedLoading: React.FC<{
       </div>
     </CardContent>
   </Card>
-);
-
+)
 // Enhanced Error Component
 const EnhancedError: React.FC<{
-  error: Error;
-  retry: () => void;
-  isOnline: boolean;
-  retryCount: number;
-  maxRetries: number;
+  error: Error
+  retry: () => void
+  isOnline: boolean
+  retryCount: number
+  maxRetries: number
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
   <Card className='w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10'>
     <CardContent className='p-6'>
@@ -115,26 +111,21 @@ const EnhancedError: React.FC<{
       </div>
     </CardContent>
   </Card>
-);
-
+)
 // Network Status Hook
 const useNetworkStatus = () => {
-  const [isOnline, setIsOnline] = useState(true);
-
+  const [isOnline, setIsOnline] = useState(true)
   useEffect(() => {
-    const updateOnlineStatus = () => setIsOnline(navigator.onLine);
-    window.addEventListener('online', updateOnlineStatus);
-    window.addEventListener('offline', updateOnlineStatus);
-
+    const updateOnlineStatus = () => setIsOnline(navigator.onLine)
+    window.addEventListener('online', updateOnlineStatus)
+    window.addEventListener('offline', updateOnlineStatus)
     return () => {
-      window.removeEventListener('online', updateOnlineStatus);
-      window.removeEventListener('offline', updateOnlineStatus);
-    };
-  }, []);
-
-  return isOnline;
-};
-
+      window.removeEventListener('online', updateOnlineStatus)
+      window.removeEventListener('offline', updateOnlineStatus)
+    }
+  }, [])
+  return isOnline
+}
 // Advanced Dynamic Component Loader
 export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   importFn,
@@ -153,28 +144,25 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     error: null,
     retryCount: 0,
     isOnline: true,
-  });
-  const [progress, setProgress] = useState(0);
+  })
+  const [progress, setProgress] = useState(0)
   const [DynamicComponent, setDynamicComponent] =
-    useState<ComponentType<any> | null>(null);
-  const isOnline = useNetworkStatus();
-
+    useState<ComponentType<any> | null>(null)
+  const isOnline = useNetworkStatus()
   // Simulate loading progress for better UX
   useEffect((,) => {
     if (loadingState.isLoading && !loadingState.error) {
       const interval = setInterval((,) => {
         setProgress(prev => {
-          if (prev >= 90) return prev;
-          return prev + Math.random() * 10;
-        });
-      }, 100);
-
-      return () => clearInterval(interval);
+          if (prev >= 90) return prev
+          return prev + Math.random() * 10
+        })
+      }, 100)
+      return () => clearInterval(interval)
     }
 
     return () => {}; // Return empty cleanup function for other paths
-  }, [loadingState.isLoading, loadingState.error]);
-
+  }, [loadingState.isLoading, loadingState.error])
   // Load component
   const loadComponent = async () => {
     try {
@@ -183,57 +171,52 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
         isLoading: true,
         error: null,
         isOnline,
-      }));
-      setProgress(0);
-
-      const component = await importFn();
-      setDynamicComponent(() => component.default);
-      setProgress(100);
-
+      }))
+      setProgress(0)
+      const component = await importFn()
+      setDynamicComponent(() => component.default)
+      setProgress(100)
       setTimeout(() => {
-        setLoadingState(prev => ({ ...prev, isLoading: false }));
+        setLoadingState(prev => ({ ...prev, isLoading: false }))
       }, 300); // Small delay for smoother transition    } catch (error) {
       logErrorToProduction('Dynamic component loading failed:', {
         data: error,
-      });
+      })
       setLoadingState(prev => ({
         ...prev,
         isLoading: false,
         error: error as Error,
         retryCount: prev.retryCount + 1,
         isOnline,
-      }));
+      }))
     }
-  };
-
+  }
   // Retry functionality
   const retry = () => {
     if (loadingState.retryCount < maxRetries) {
-      loadComponent();
+      loadComponent()
     }
-  };
-
+  }
   // Prefetch on hover/focus
   useEffect((,) => {
     if (prefetch) {
       const prefetchTimer = setTimeout(() => {
-        loadComponent();
-      }, 100);
-      return () => clearTimeout(prefetchTimer);
+        loadComponent()
+      }, 100)
+      return () => clearTimeout(prefetchTimer)
     } else {
-      loadComponent();
+      loadComponent()
       return () => {}; // Return empty cleanup function
     }
-  }, []);
-
+  }, [])
   // Update online status
   useEffect(() => {
-    setLoadingState(prev => ({ ...prev, isOnline }));
-  }, [isOnline]);
+    setLoadingState(prev => ({ ...prev, isOnline }))
+  }, [isOnline])
   // Loading state
   if (loadingState.isLoading) {
     if (loadingComponent) {
-      return React.createElement(loadingComponent);
+      return React.createElement(loadingComponent)
     }
 
     
@@ -243,7 +226,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
           message='Loading component...'
           showProgress={true}        />
       </motion.div>
-    );
+    )
   }
 
   // Error state
@@ -252,7 +235,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       return React.createElement(errorFallback, {
         error: loadingState.error,
         retry,
-      });
+      })
     }
 
           >
@@ -264,7 +247,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
           maxRetries = {maxRetries,}
         />
       </motion.div>
-    );
+    )
   }
 
   // Success state
@@ -283,12 +266,11 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
           </motion.div>
         </AnimatePresence>
       </Suspense>
-    );
+    )
   }
 
-  return null;
-};
-
+  return null
+}
 // HOC for creating dynamic components easily
 export const createDynamicComponent = <T extends ComponentType<any>>(
   importFn: (,) => Promise<{ default: T }>,
@@ -300,9 +282,8 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
       {...(options || {})}
       {...(props as any)}
     />
-  );
-};
-
+  )
+}
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
 
@@ -329,4 +310,4 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 //   }
 // )
 
-export default DynamicComponentLoader;export default DynamicComponentLoader
+export default DynamicComponentLoader; export default DynamicComponentLoader 

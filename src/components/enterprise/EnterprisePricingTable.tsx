@@ -1,16 +1,16 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Check, X } from 'lucide-react';
+import React from 'react'
+import { Button } from '@/components/ui/button'
+import { Check, X } from 'lucide-react'
 import {  Table,  Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,;
-} from '@/components/ui/table';
-import { Badge } from '@/components/ui/badge';
+  TableRow,
+} from '@/components/ui/table'
+import { Badge } from '@/components/ui/badge'
   TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@/components/ui/badge"
 export function EnterprisePricingTable() {
   const plans = [
     {
@@ -70,8 +70,7 @@ export function EnterprisePricingTable() {
         { name: 'Dedicated success manager', included: true },
       ],
     },
-  ];
-
+  ]
   return (
     <section id='pricing' className='py-20 px-4 md:px-6'>
       <div className='container mx-auto max-w-7xl'>
@@ -169,12 +168,12 @@ export function EnterprisePricingTable() {
           support        </div>
       </div>
     </section>
-  );
+  )
 }        <div className="mt-8 text-center text-sm text-muted-foreground">
           All plans include SSL security, 99.9% uptime SLA, and dedicated support
         </div>
       </div>
     </section>
-  );
+  )
 }
 ;

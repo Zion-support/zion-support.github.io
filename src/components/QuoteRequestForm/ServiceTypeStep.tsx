@@ -5,12 +5,9 @@ const listingSchema = z.object({
   category: z.string(),
   image: z.string().optional()}),
 
-      const maxRetries = 3;
-
-  
-  
-  const sourceListings = listings;
+      const maxRetries = 3
+  const sourceListings = listings
 }
-  );
+  )
 }
 ;

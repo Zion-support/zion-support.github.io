@@ -1,16 +1,15 @@
 
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hooks/useAuth";
+import { useState } from "react"
+import { Button } from "@/components/ui/button"
+import { useAuth } from "@/hooks/useAuth"
 import { useWallet as useAppWallet } from "../../../context/WalletContext.tsx", // Renamed to avoid conflict if useWallet hook is defined locally
-import { Wallet } from 'lucide-react'import { toast } from "sonner";
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { Wallet } from 'lucide-react'import { toast } from "sonner"
+import {logErrorToProduction} from '@/utils/productionLogger'
 export function Web3Login() {
 
-  const { loginWithWeb3 } = useAuth();
-  const { isWalletSystemAvailable } = useAppWallet();
-  const [isLoading, setIsLoading] = useState(false);
-
+  const { loginWithWeb3 } = useAuth()
+  const { isWalletSystemAvailable } = useAppWallet()
+  const [isLoading, setIsLoading] = useState(false)
   const handleWeb3Login = async () => {
     if (!isWalletSystemAvailable) {
       toast("Web3 login unavailable", {
@@ -19,10 +18,9 @@ export function Web3Login() {
     }
 
     try {
-      setIsLoading(true);
-      
+      setIsLoading(true)
       // Check if Ethereum provider (e.g., MetaMask) is available
-      const ethereum = (window as any).ethereum;
+      const ethereum = (window as any).ethereum
       if (!ethereum) {
         toast("Web3 wallet not found", {
           description: "Please install MetaMask or another compatible wallet."}),
@@ -38,14 +36,12 @@ export function Web3Login() {
     } finally {
       setIsLoading(false)
     }
-  };
-
-  const buttonDisabled = isLoading || !isWalletSystemAvailable;
+  }
+  const buttonDisabled = isLoading || !isWalletSystemAvailable
   const buttonTitle = !isWalletSystemAvailable
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
-    : "";
-
+    : ""
 }
-  );
+  )
 }
 ;

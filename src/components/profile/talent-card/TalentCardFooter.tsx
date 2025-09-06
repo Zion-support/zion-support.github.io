@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 interface TalentCardFooterProps {
   profile: TalentProfile,
   onViewProfile: (id: string,) => void,
@@ -6,10 +6,9 @@ interface TalentCardFooterProps {
 }
 
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false);
-  const { userDetails } = useAuthStatus();
-  const router = useRouter();
-
+  const [isHireModalOpen, setIsHireModalOpen] = useState(false)
+  const { userDetails } = useAuthStatus()
+  const router = useRouter()
   // Create a compatible UserProfile from UserDetails
   const userProfile: UserProfile = {
     id: userDetails?.id,
@@ -23,12 +22,10 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     displayName: userDetails?.name || '',
     points: 0,
     avatarUrl: userDetails?.avatar || ''
-  };
-
+  }
   // Handle request to hire
   const handleRequestHire = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    
+    e.stopPropagation()
       const handleRequestHire = (e: React.MouseEvent,) => {
     e.stopPropagation(),
     
@@ -104,4 +101,3 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
     </>
   )
 }
-;

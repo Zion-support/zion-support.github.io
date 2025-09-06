@@ -1,23 +1,21 @@
 
-import { useState } from "react";
-import { MessageSquare } from 'lucide-react'import { Button } from "@/components/ui/button";
-import { ChatAssistant } from "@/components/ChatAssistant";
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { useState } from "react"
+import { MessageSquare } from 'lucide-react'import { Button } from "@/components/ui/button"
+import { ChatAssistant } from "@/components/ChatAssistant"
+import {logErrorToProduction} from '@/utils/productionLogger'
 export function ChatAssistantTrigger() {
 
-  const [isOpen, setIsOpen] = useState(false);
-
+  const [isOpen, setIsOpen] = useState(false)
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json"};
+          "Content-Type": "application/json"}
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
-        })});
-      
+        })})
             avatarUrl: 'https://placehold.co/64x64?text=AI',
             role: 'Virtual Assistant';      if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")
@@ -58,4 +56,3 @@ export function ChatAssistantTrigger() {
     </>
   )
 }
-;

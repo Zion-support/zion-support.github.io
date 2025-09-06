@@ -1,5 +1,5 @@
-import { GradientHeading } from '@/components/GradientHeading';
-import { Clock, Map, DollarSign } from 'lucide-react';
+import { GradientHeading } from '@/components/GradientHeading'
+import { Clock, Map, DollarSign } from 'lucide-react'
 export function PageHero() {
   return (
     <div className='text-center mb-12'>
@@ -47,7 +47,7 @@ export function PageHero() {
           </p>        </div>
       </div>
     </div>
-  );
+  )
 }
           <h3 className="text-xl font-bold text-white mb-2">Transparent Pricing</h3>
           <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>
@@ -85,5 +85,5 @@ export function PageHero() {
         </div>
       </div>
     </div>
-  );
+  )
 }

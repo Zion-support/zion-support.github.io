@@ -1,15 +1,12 @@
-import React from 'react';
-import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';
-import { Phone, ShieldCheck, Clock } from 'lucide-react';
+import React from 'react'
+import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate'
+import { Phone, ShieldCheck, Clock } from 'lucide-react'
 export default function ITSupportPage() {
   const benefits = [
-    {import React from "react";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-import { Phone, ShieldCheck, Clock } from 'lucide-react'
+    {import React from "react"
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate"
 
-import React from "react";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-import { Phone, ShieldCheck, Clock } from 'lucide-react';
+import React from "react"
 export default function ITSupportPage() {
   const benefits = [
     {
@@ -30,8 +27,7 @@ export default function ITSupportPage() {
         'Get help via phone, chat, or onsite visits tailored to your needs.',
       icon: <Phone className='h-8 w-8' />,
     },
-  ];
-
+  ]
   const testimonials = [
     {
       name: 'Lisa Wong',
@@ -45,8 +41,7 @@ export default function ITSupportPage() {
       text: 'Professional and responsive. Their technicians feel like an extension of our own team.',
       avatar: '/placeholder.svg',
     },
-  ];
-
+  ]
     return (
     <ServiceLandingTemplate
       title="IT Support Services"
@@ -63,6 +58,6 @@ export default function ITSupportPage() {
       ctaText="Get IT Support"
       ctaLink="/request-quote"
     />
-  );
+  )
 }
 ;

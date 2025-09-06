@@ -1,56 +1,53 @@
-import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from useParams, useNavigateimport { Header } from '@/components/Header';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import React, { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'; // Changed from useParams, useNavigateimport { Header } from '@/components/Header'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
 import {
   Calendar,
   Clock,
   DollarSign,
   Tag,
   Users,
-  Briefcase,;
-} from 'lucide-react';import { formatDistanceToNow } from 'date-fns';
-import { toast } from 'sonner';
-import { useAuth } from '@/hooks/useAuth';
-import useJobDetails from '@/hooks/useJobDetails';
-import { ApplyToJobModal } from '@/components/messaging/job-application';
-import { SEO } from '@/components/SEO';
-import { useWhitelabel } from '@/context/WhitelabelContext';
-import { JobDetailsSkeleton } from '@/components/jobs';
+  Briefcase,
+} from 'lucide-react'; import { formatDistanceToNow } from 'date-fns'
+import { toast } from 'sonner'
+import { useAuth } from '@/hooks/useAuth'
+import useJobDetails from '@/hooks/useJobDetails'
+import { ApplyToJobModal } from '@/components/messaging/job-application'
+import { SEO } from '@/components/SEO'
+import { useWhitelabel } from '@/context/WhitelabelContext'
+import { JobDetailsSkeleton } from '@/components/jobs'
 interface Job {
-  id: string;
-  title: string;
-  description: string;
-  company_name?: string;
-  budget: { min: number; max: number };
-  client_id: string;
-  skills?: string[];
-  created_at: string;
-  category: string;
-  deadline?: string;
-
+  id: string
+  title: string
+  description: string
+  company_name?: string
+  budget: { min: number; max: number }
+  client_id: string
+  skills?: string[]
+  created_at: string
+  category: string
+  deadline?: string
 export default function JobDetails() {
   const router = useRouter(); // Init router
   const { jobId: rawJobId } = router.query; // Get jobId from query
-  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
+  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined
   const { job, isLoading, error } = useJobDetails(jobId) as {
-    job: Job | undefined;
-    isLoading: boolean;
-    error: any;
-  };
-  const { user, isAuthenticated } = useAuth();
+    job: Job | undefined
+    isLoading: boolean
+    error: any
+  }
+  const { user, isAuthenticated } = useAuth()
   // navigate is now router
-  const { isWhitelabel, brandName } = useWhitelabel();
-
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
-
+  const { isWhitelabel, brandName } = useWhitelabel()
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false)
   const formatBudget = (budget: any) => {
-    if (!budget) return 'Not specified';
-    return `$${budget.min} - $${budget.max}`;
-  };
+    if (!budget) return 'Not specified'
+    return `$${budget.min} - $${budget.max}`
+  }
   if (isLoading) {
-    return <JobDetailsSkeleton />;
+    return <JobDetailsSkeleton />
   }
 
   if (error || !job) {
@@ -64,16 +61,16 @@ export default function JobDetails() {
           </p>
           <Button onClick={() => router.push('/careers')}>View All Jobs</Button>        </div>
       </>
-    );
+    )
   }
 
   const handleApply = () => {
     if (!isAuthenticated) {
-      toast.error('Please log in to apply for this job');
+      toast.error('Please log in to apply for this job')
       router.push(
         `/login?redirect=${encodeURIComponent(`/jobs/${jobId || ''}`)}`
       ); // Added null check for jobId
-      return;
+      return
     }
 
     if (
@@ -81,19 +78,17 @@ export default function JobDetails() {
       user?.userType !== 'admin' &&
       user?.userType !== 'client'
     ) {
-      toast.error('Only job seekers can apply for jobs');
-      return;
+      toast.error('Only job seekers can apply for jobs')
+      return
     }
 
-    setIsApplyModalOpen(true);
-  };
-
+    setIsApplyModalOpen(true)
+  }
   const handleApplySuccess = async (appliedJobId: string) => {
-    toast.success('Application submitted successfully!');
-    setIsApplyModalOpen(false);
-  };
-  const isOwnJob = user?.id === job.client_id;
-
+    toast.success('Application submitted successfully!')
+    setIsApplyModalOpen(false)
+  }
+  const isOwnJob = user?.id === job.client_id
   return (
     <>
       <SEO
@@ -222,44 +217,43 @@ export default function JobDetails() {
           onClose={() => setIsApplyModalOpen(false)}        />
       )}
     </>
-  );
-
-  return (<> <Header /> <div className="container mx-auto px-4 py-16 text-center" > <h1 className="text-2xl font-bold mb-4" >Job Not Found</h1> <p className="mb-8" >The job you're looking for doesn't exist or has been removed.</p> <Button onClick={';
-  () => router.push ('/careers') ;
-}>View All Jobs</Button> </div> </>) ;
-}router.push (`/login?redirect=$ {;
-  encodeURIComponent (`/jobs/$ {';
-  jobId || '' ;
-}`) ;
-}`);
-//Added null check for jobId return;
-}setIsApplyModalOpen (true) ;
-};
-const isOwnJob = user?.id === job.client id;
-`$ {;
-  job.title ;
-}- $ {';
-  isWhitelabel ? brandName : 'Zion AI Marketplace' ;
-}` ;
-}description= {;
-  job.description.substring (0, 160) ";
-}/> <Header /> <main className="container mx-auto px-4 py-8" > <div className="mb-6" > <Button > ← Back to Jobs </Button> </div> <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" > <div className="lg:col-span-2" > <Card> <CardHeader> <div className="flex justify-between items-start" > <div> </div> </div> <Badge> {;
-  job.category ";
-}</Badge> </div> </CardHeader> <CardContent className="space-y-6" > <div> </div> </div> <div> </Badge>) ) ";
-}</div> </div> </CardContent> </Card> </div> <div> <Card> </p> </div> </div> <div className="flex items-start" > <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" /> <div className="ml-3" > <p className="text-sm text-muted-foreground" >Job Type</p> <p className="font-medium" >Freelance / Remote</p> </div> </div> {";
-  !isOwnJob && (<Button className="w-full mt-4" onClick={;
-  handleApply ;
-}disabled= {;
-  isOwnJob ;
-}> Apply Now </Button>) ;
-}</div>) ;
-}</CardContent> </Card> </div> </div> </main> {;
-  /* Job application modal */ ;
-}{;
-  job && (<ApplyToJobModal job= {;
-  {;
-  />) ;
-}</>) ;
+  )
+  return (<> <Header /> <div className="container mx-auto px-4 py-16 text-center" > <h1 className="text-2xl font-bold mb-4" >Job Not Found</h1> <p className="mb-8" >The job you're looking for doesn't exist or has been removed.</p> <Button onClick={'
+  () => router.push ('/careers') 
+}>View All Jobs</Button> </div> </>) 
+}router.push (`/login?redirect=$ {
+  encodeURIComponent (`/jobs/$ {'
+  jobId || '' 
+}`) 
+}`)
+//Added null check for jobId return
+}setIsApplyModalOpen (true) 
+}
+const isOwnJob = user?.id === job.client id
+`$ {
+  job.title 
+}- $ {'
+  isWhitelabel ? brandName : 'Zion AI Marketplace' 
+}` 
+}description= {
+  job.description.substring (0, 160) "
+}/> <Header /> <main className="container mx-auto px-4 py-8" > <div className="mb-6" > <Button > ← Back to Jobs </Button> </div> <div className="grid grid-cols-1 lg:grid-cols-3 gap-6" > <div className="lg:col-span-2" > <Card> <CardHeader> <div className="flex justify-between items-start" > <div> </div> </div> <Badge> {
+  job.category "
+}</Badge> </div> </CardHeader> <CardContent className="space-y-6" > <div> </div> </div> <div> </Badge>) ) "
+}</div> </div> </CardContent> </Card> </div> <div> <Card> </p> </div> </div> <div className="flex items-start" > <Briefcase className="mt-1 h-5 w-5 text-muted-foreground" /> <div className="ml-3" > <p className="text-sm text-muted-foreground" >Job Type</p> <p className="font-medium" >Freelance / Remote</p> </div> </div> {"
+  !isOwnJob && (<Button className="w-full mt-4" onClick={
+  handleApply 
+}disabled= {
+  isOwnJob 
+}> Apply Now </Button>) 
+}</div>) 
+}</CardContent> </Card> </div> </div> </main> {
+  /* Job application modal */ 
+}{
+  job && (<ApplyToJobModal job= {
+  {
+  />) 
+}</>) 
 }'"
 }
 }

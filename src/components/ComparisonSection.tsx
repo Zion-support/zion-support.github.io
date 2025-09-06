@@ -1,14 +1,14 @@
-import { GradientHeading } from './GradientHeading';
-import { Button } from './ui/button';
-import { CheckCircle2 } from 'lucide-react';
+import { GradientHeading } from './GradientHeading'
+import { Button } from './ui/button'
+import { CheckCircle2 } from 'lucide-react'
 import {
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,;
-} from './ui/table';
+  TableRow,
+} from './ui/table'
 export function ComparisonSection() {
   return (
     <section className='py-20 bg-zion-blue-dark'>
@@ -132,5 +132,5 @@ export function ComparisonSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }

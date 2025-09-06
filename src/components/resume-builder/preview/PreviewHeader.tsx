@@ -1,50 +1,39 @@
-import { Button } from '@/components/ui/button';
-import { ArrowLeft, FileText, Link } from 'lucide-react';import { PdfExportButton } from '../PdfExportButton';
-import { Resume } from '@/types/resume';
-import { useState } from 'react';
-import { useIsMobile } from '@/hooks/use-mobile';
-
-import { Button } from '@/components/ui/button';
-import { ArrowLeft, FileText, Link } from 'lucide-react';
-
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/button'
+import { ArrowLeft, FileText, Link } from 'lucide-react'; import { PdfExportButton } from '../PdfExportButton'
+import { Resume } from '@/types/resume'
+import { useState } from 'react'
+import { useIsMobile } from '@/hooks/use-mobile'
 import { ArrowLeft, FileText, Link } from 'lucide-react'
-import { PdfExportButton } from '../PdfExportButton';
-import { Resume } from '@/types/resume';
-import { useState } from 'react';
-import { useIsMobile } from '@/hooks/use-mobile';
+import { PdfExportButton } from '../PdfExportButton'
 interface PreviewHeaderProps {
-  resume: Resume;
-  onBack: () => void;
-
+  resume: Resume
+  onBack: () => void
 export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
-  const [isPrinting, setIsPrinting] = useState(false);
-  const isMobile = useIsMobile();
-
+  const [isPrinting, setIsPrinting] = useState(false)
+  const isMobile = useIsMobile()
   const handleBrowserPrint = () => {
-    setIsPrinting(true);
-    
+    setIsPrinting(true)
     // Inject print-specific CSS only for the duration of printing
-    const style = document.createElement('style');
+    const style = document.createElement('style')
     style.innerHTML = `
       @media print {
         body * {
-          visibility: hidden;
+          visibility: hidden
         }
         .print-section, .print-section * {
-          visibility: visible;
+          visibility: visible
         }
         .print-section {
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
+          position: absolute
+          left: 0
+          top: 0
+          width: 100%
         }
         .no-print {
-          display: none !important;        }
+          display: none !important }
       }
-    `;
-    document.head.appendChild(style);
+    `
+    document.head.appendChild(style)
         }
         .print-section, .print-section * {
           visibility: visible
@@ -59,19 +48,15 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
           display: none !important
         }
       }
-    `;
-    document.head.appendChild(style);
-
-    window.print();
-
+    `
+    document.head.appendChild(style)
+    window.print()
     // Remove the temporary style element after printing
     setTimeout(() => {
-      document.head.removeChild(style);
-      setIsPrinting(false);
-    }, 1000);
-  };
-
-  
+      document.head.removeChild(style)
+      setIsPrinting(false)
+    }, 1000)
+  }
     >
       <Button variant='outline' onClick={onBack} className='gap-2 no-print'>
         <ArrowLeft className='h-4 w-4' />        Back
@@ -99,6 +84,5 @@ export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {
         </Button>
       </div>
     </div>
-  );
+  )
 }
-;

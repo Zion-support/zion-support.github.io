@@ -1,7 +1,6 @@
-import { ChevronDown, ChevronUp } from 'lucide-react';
-import { Checkbox } from '@/components/ui/checkbox';
-import { RegionFilterProps } from '@/types/filters';
-
+import { ChevronDown, ChevronUp } from 'lucide-react'
+import { Checkbox } from '@/components/ui/checkbox'
+import { RegionFilterProps } from '@/types/filters'
 const REGION_OPTIONS = [
   { id: 'North America', label: 'North America' },
   { id: 'Europe', label: 'Europe' },
@@ -9,8 +8,7 @@ const REGION_OPTIONS = [
   { id: 'South America', label: 'South America' },
   { id: 'Australia', label: 'Australia' },
   { id: 'Africa', label: 'Africa' },
-];
-
+]
 export function RegionFilter({
   selectedRegions,
   toggleRegion,
@@ -40,9 +38,8 @@ export function RegionFilter({
                 onCheckedChange={() => toggleRegion(region.id)}
             <div key={region.id} className="flex items-center">
 
-import { ChevronDown, ChevronUp } from 'lucide-react'
-import { Checkbox } from "@/components/ui/checkbox";
-import { RegionFilterProps } from "@/types/filters";
+import { Checkbox } from "@/components/ui/checkbox"
+import { RegionFilterProps } from "@/types/filters"
 const REGION_OPTIONS = [
   { id: "North America", label: "North America" },
   { id: "Europe", label: "Europe" },
@@ -50,8 +47,7 @@ const REGION_OPTIONS = [
   { id: "South America", label: "South America" },
   { id: "Australia", label: "Australia" },
   { id: "Africa", label: "Africa" }
-];
-
+]
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -89,16 +85,15 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
         </div>
       )}
     </div>
-);
-
-  toggleSection ;
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
-}</button> {;
-  REGION OPTIONS.map (region => (<div key= {;
-  region.id ";
-}className="flex items-center" > <Checkbox > {;
-  region.label ;
-}</label> </div>) ) ;
-}</div>) ;
-}</div>) ;
+  )
+  toggleSection 
+}className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) 
+}</button> {
+  REGION OPTIONS.map (region => (<div key= {
+  region.id "
+}className="flex items-center" > <Checkbox > {
+  region.label 
+}</label> </div>) ) 
+}</div>) 
+}</div>) 
 }"}

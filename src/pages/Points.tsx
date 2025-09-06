@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 import {
   Gift,
   Star,
@@ -6,43 +6,36 @@ import {
   ShoppingBag,
   MessageSquare,
   TrendingUp,
-  History,;
-} from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import { usePoints } from '@/hooks/usePoints';
-import {
+  History,
+} from 'lucide-react'
+import { useAuth } from '@/hooks/useAuth'
+import { usePoints } from '@/hooks/usePoints'
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth';
-import { usePoints } from '@/hooks/usePoints';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
-import { usePoints } from '@/hooks/usePoints';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { formatDistanceToNow } from 'date-fns';
-import Link from 'next/link';
-import { LoginModal } from '@/components/auth/LoginModal';
+  CardTitle,
+} from '@/components/ui/card'; import { Button } from '@/components/ui/button'; import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import { ScrollArea } from '@/components/ui/scroll-area'
+import { formatDistanceToNow } from 'date-fns'
+import Link from 'next/link'
+import { LoginModal } from '@/components/auth/LoginModal'
 export default function PointsPage() {
-  const { isAuthenticated, user } = useAuth();
-  const { ledger, balance, loading, fetchLedger } = usePoints();
-  const [loginOpen, setLoginOpen] = useState(false);
-  const [redeeming, setRedeeming] = useState(false);
-
+  const { isAuthenticated, user } = useAuth()
+  const { ledger, balance, loading, fetchLedger } = usePoints()
+  const [loginOpen, setLoginOpen] = useState(false)
+  const [redeeming, setRedeeming] = useState(false)
   async function handleRedeem(reward: {
-    id: string;
-    cost: number;
-    title: string;
+    id: string
+    cost: number
+    title: string
   }) {    if (!user?.id) return;  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
-    if (!user?.id) return;
-    setRedeeming(true);
+    if (!user?.id) return
+    setRedeeming(true)
     try {
       await fetch('/api/points/redeem', {
         method: 'POST',
@@ -52,10 +45,10 @@ export default function PointsPage() {
           cost: reward.cost,
           reward: reward.title,
         }),
-      });
-      await fetchLedger();
+      })
+      await fetchLedger()
     } finally {
-      setRedeeming(false);    }      });
+      setRedeeming(false) }      })
       await fetchLedger()
     } finally {
       setRedeeming(false)
@@ -89,8 +82,7 @@ export default function PointsPage() {
       description: 'Invite friends to join Zion marketplace',
       points: '200 pts per referral',
       action: 'Share Referral Link',
-    },  ];
-
+    },  ]
   const upcomingRewards = [
     { id: 'coupon5', title: '$5 Off Coupon', cost: 500, category: 'Discount' },      title: "Refer Friends",
       description: "Invite friends to join Zion marketplace",
@@ -237,7 +229,7 @@ export default function PointsPage() {
         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       </>
-    );
+    )
   }
 
   return (
@@ -441,6 +433,6 @@ export default function PointsPage() {
         </CardContent>
       </Card>
     </div>
-  );
+  )
 }
 ;

@@ -22,11 +22,11 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       )}
     </div>
   )
-};
+}
 '"
 
-import React from "react";
-import {Button} from "@/components/ui/button";
+import React from "react"
+import {Button} from "@/components/ui/button"
 import {ShieldAlert} from 'lucide-react'
 interface EmptyFraudStateProps {
   hasFilters: boolean,
@@ -51,4 +51,4 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       )}
     </div>
   )
-};
+}

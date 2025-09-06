@@ -1,22 +1,13 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
+import React from 'react'
+import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/router'; // Changed from useNavigate
-import { CheckCircle2 } from 'lucide-react';import { useTranslation } from 'react-i18next';
-
-import React from 'react';
-import { Button } from '@/components/ui/button';
+import { CheckCircle2 } from 'lucide-react'; import { useTranslation } from 'react-i18next'
 import { useRouter } from 'next/router', // Changed from useNavigate
 import { CheckCircle2 } from 'lucide-react'
-import { useTranslation } from 'react-i18next';
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/router', // Changed from useNavigate
-import { CheckCircle2 } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 export default function PaymentSuccess() {
   const router = useRouter(); // Changed from navigate
-  const { t } = useTranslation();
-
+  const { t } = useTranslation()
   return (
     <div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4'>
       <div className='max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center'>
@@ -74,6 +65,6 @@ export default function PaymentSuccess() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 ;

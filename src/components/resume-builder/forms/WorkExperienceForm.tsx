@@ -1,25 +1,25 @@
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Input } from '@/components/ui/input';
-import { Checkbox } from '@/components/ui/checkbox';
-import { format } from 'date-fns';
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+import { Button } from '@/components/ui/button'
+import { Textarea } from '@/components/ui/textarea'
+import { Input } from '@/components/ui/input'
+import { Checkbox } from '@/components/ui/checkbox'
+import { format } from 'date-fns'
 import {
   Form,
   FormControl,
   FormField,
   FormItem,
   FormLabel,
-FormMessage,;
-} from '@/components/ui/form';import { WorkExperience } from '@/types/resume';
-import { Loader2, Edit, Trash2 } from 'lucide-react';
-import { useResume } from '@/hooks/useResume';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Card, CardContent } from '@/components/ui/card';
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+  FormMessage,
+} from '@/components/ui/form'; import { WorkExperience } from '@/types/resume'
+import { Loader2, Edit, Trash2 } from 'lucide-react'
+import { useResume } from '@/hooks/useResume'
+import { Alert, AlertDescription } from '@/components/ui/alert'
+import { Card, CardContent } from '@/components/ui/card'
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton'
 // Define schema for form validation
 const workExperienceSchema = z.object({
   company_name: z.string().min(1, 'Company name is required'),
@@ -29,16 +29,13 @@ const workExperienceSchema = z.object({
   is_current: z.boolean().default(false),
   description: z.string().optional(),
   location: z.string().optional(),
-});
-
-type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
-
+})
+type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>
 interface WorkExperienceFormProps {
-  resumeId: string;
-  workExperiences: WorkExperience[];
-  onComplete: () => void;
-  onBack: () => void;
-
+  resumeId: string
+  workExperiences: WorkExperience[]
+  onComplete: () => void
+  onBack: () => void
 export function WorkExperienceForm({
   resumeId,
   workExperiences,
@@ -50,17 +47,15 @@ export function WorkExperienceForm({
     updateWorkExperience,
     deleteWorkExperience,
     isLoading,
-  } = useResume();
-  const [editingId, setEditingId] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
-
+  } = useResume()
+  const [editingId, setEditingId] = useState<string | null>(null)
+  const [error, setError] = useState<string | null>(null)
   // Helper function to format dates to string
   const formatDateValue = (dateValue: string | Date | undefined): string => {
-    if (!dateValue) return '';
-    if (typeof dateValue === 'string') return dateValue;
-    return format(dateValue, 'yyyy-MM-dd');
-  };
-
+    if (!dateValue) return ''
+    if (typeof dateValue === 'string') return dateValue
+    return format(dateValue, 'yyyy-MM-dd')
+  }
   const form = useForm<WorkExperienceFormValues>({
     resolver: zodResolver(workExperienceSchema),
     defaultValues: {
@@ -71,13 +66,11 @@ export function WorkExperienceForm({
       description: '',
       location: '',
     },
-  });
-
+  })
   const handleAddOrUpdate = async (data: WorkExperienceFormValues,) => {
     try {
-      setError(null);
-      let success;
-
+      setError(null)
+      let success
       const experienceData: WorkExperience = {
         company_name: data.company_name, // Required field
         role_title: data.role_title, // Required field
@@ -86,12 +79,11 @@ export function WorkExperienceForm({
         is_current: data.is_current,
         description: data.description,
         location: data.location,
-      };
-
+      }
       if (editingId) {
-        success = await updateWorkExperience(editingId, experienceData);
+        success = await updateWorkExperience(editingId, experienceData)
       } else {
-        success = await addWorkExperience(resumeId, experienceData);
+        success = await addWorkExperience(resumeId, experienceData)
       }
 
       if (success) {
@@ -102,37 +94,35 @@ export function WorkExperienceForm({
           is_current: false,
           description: '',
           location: '',
-        });
-        setEditingId(null);
+        })
+        setEditingId(null)
       }
     } catch (err: any) {
-      setError(err.message || 'An error occurred');
+      setError(err.message || 'An error occurred')
     }
-  };
+  }
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);    form.reset({
       ...work,
 
   const handleEdit = (work: WorkExperience) => {
-    setEditingId(work.id!);
+    setEditingId(work.id!)
     form.reset({
       start_date: formatDateValue(work.start_date),
       end_date:
         work.end_date && !work.is_current
           ? formatDateValue(work.end_date)
           : undefined,
-    });
-  };
-
+    })
+  }
   const handleDelete = async (id: string,) => {
     if (confirm('Are you sure you want to delete this work experience?')) {
-      await deleteWorkExperience(id);
+      await deleteWorkExperience(id)
     }
-  };
-
+  }
   const handleEnhanceDescription = (enhancedContent: string) => {
-    form.setValue('description', enhancedContent);
-  };
+    form.setValue('description', enhancedContent)
+  }
   return (
     <div className='space-y-6'>
       <div>
@@ -348,7 +338,7 @@ export function WorkExperienceForm({
                 variant='outline'
                 onClick={() => {
                   if (editingId) {
-                    setEditingId(null);
+                    setEditingId(null)
                     form.reset({
                       company_name: '',
                       role_title: '',
@@ -356,9 +346,9 @@ export function WorkExperienceForm({
                       is_current: false,
                       description: '',
                       location: '',
-                    });
+                    })
                   } else {
-                    onBack();
+                    onBack()
                   }
                 }}
               >
@@ -384,12 +374,11 @@ export function WorkExperienceForm({
         </Form>
       </div>
     </div>
-  );
-
-}> {';
-  editingId ? 'Cancel': 'Back' ;
-}</Button> Next </Button>) ;
-}</div> </div> </form> </Form> </div> </div>) ;
+  )
+}> {'
+  editingId ? 'Cancel': 'Back' 
+}</Button> Next </Button>) 
+}</div> </div> </form> </Form> </div> </div>) 
 }'"  )
 }
 ;
