@@ -1,16 +1,3 @@
-
-
-export function MessageTab(): any ({;
-  message,;
-  setMessage,;
-  proposalLink,;
-  setProposalLink,;
-}: MessageTabProps) {;
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-4">;
       <div>;
@@ -20,31 +7,18 @@ export function MessageTab(): any ({;
         <Textarea
           id="message"
           value={message}
-
-          onChange={(e) => setMessage(e && e.target.value)}
-          className="h-32 bg-zion-blue-dark/20 border-zion-purple/30 text-white";
-          placeholder="Write a message to the job poster...";
-        />;
-      </div>;
-
-      <div>;
-        <Label htmlFor="proposalLink" className="text-white">;
-          Link to Proposal/Portfolio (Optional);
-        </Label>;
-
-=======
-
-      
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-      <div>
-        <Label htmlFor="proposalLink" className="text-white">Link to Proposal/Portfolio (Optional)</Label>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Input
           id="proposalLink"
           type="url"
           value={proposalLink}
-
+          onChange={(e) => setProposalLink(e && e.target.value)}
+          className="bg-zion-blue-dark/20 border-zion-purple/30 text-white";
+          placeholder="https: //...";
+        />;
+      </div>;
+    </div>;
+  );
+=======
 import React from './react';
 import { Textarea  } from '@/components / ui / textarea';
 import { Input  } from '@/components / ui / input';
@@ -87,20 +61,5 @@ function MessageTab() {
         />;
       </div>;
     </div>);
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-=======
-          onChange={(e) => setProposalLink(e.target.value)}
-          className="bg-zion-blue-dark/20 border-zion-purple/30 text-white"
-          placeholder="https: //..."
-        />
-      </div>
-
-    </div>
-
-    </div>;
-  );
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,24 +1,9 @@
-
-export default function AIAutonomousResearchAssistantPage() {;
-  return (;
-
-    <div className="min-h-screen bg-white">;
-=======
 export default /**
  * AIAutonomousResearchAssistantPage - Function description
  */
 function AIAutonomousResearchAssistantPage() {
   return (
     <div className="min - h-screen bg - white">;
-=======
-<<<<<<< HEAD
-export default function AIAutonomousResearchAssistantPage() {return (;
-=======
-export default function AIAutonomousResearchAssistantPage() {;
-  return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-    <div className="min-h-screen bg-white">;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       {/* Hero Section */}
       <section className="bg - gradient - to - r from - red - 600 to - pink - 600 text - white py - 20">;
         <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center">;

@@ -1,14 +1,5 @@
 const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState (\'all\') const [searchTerm,setSearchTerm] = useState (\') const [sortBy,setSortBy] = useState (\'name\') \'';\"";
-
-
-
-const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
-
-=======
-
-const AdvancedServicesShowcase2025 = () => { const [selectedCategory,setSelectedCategory] = useState ('all') const [searchTerm,setSearchTerm] = useState (') const [sortBy,setSortBy] = useState ('name') '';"";""}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.pages.disabled/AdvancedServicesShowcase2025.jsx
 =======
 =======
 :src.pages.disabled/AdvancedServicesShowcase2025.jsx

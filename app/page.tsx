@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -122,3 +123,5 @@ function FeatureCard({ title, description }: { title: string; description: strin
     </div>
   );
 }
+=======
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976

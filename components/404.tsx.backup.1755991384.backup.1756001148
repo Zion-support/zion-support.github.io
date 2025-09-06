@@ -1,11 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 
-<<<<<<< HEAD
-const 404: NextPage = () => {
-=======
-const NotFound404: NextPage = () => {
->>>>>>> origin/cursor/deploy-zion-brain-ai-system-5783
   return (
     <div>
       <Head>
@@ -21,8 +16,3 @@ const NotFound404: NextPage = () => {
   );
 };
 
-<<<<<<< HEAD
-export default 404;
-=======
-export default NotFound404;
->>>>>>> origin/cursor/deploy-zion-brain-ai-system-5783

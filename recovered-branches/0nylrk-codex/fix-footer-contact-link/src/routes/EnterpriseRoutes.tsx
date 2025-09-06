@@ -1,29 +1,6 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-const EnterpriseRoutes = () => {
-=======
-const EnterpriseRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Enterprise Routes */}
-
-      <Route path="/enterprise" element={<EnterprisePlans />} />;
-      <Route path="/plans/enterprise" element={<EnterprisePlans />} />;
-      <Route path="/enterprise/admin" element={<EnterpriseAdmin />} />;
-      <Route path="/company/:companySlug" element={<CompanyWorkspace />} />;
-      <Route path="/enterprise/billing" element={<EnterpriseBilling />} />;
-
-      {/* Zion Hire AI Routes */}
-      <Route path="/zion-hire-ai" element={<ZionHireAI />} />;
-      <Route path="/hire-ai" element={<ZionHireAI />} />;
-    </Routes>;
-  );
-};
-
 
 =======
 import { Fragment } from './react';
@@ -48,12 +25,6 @@ const EnterpriseRoutes = () =>: any {
     </Routes>);
 }
 ;
-=======
-
-},
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default EnterpriseRoutes;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

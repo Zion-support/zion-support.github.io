@@ -1,67 +1,19 @@
-
-import {AddMilestoneForm} from '../AddMilestoneForm';
-interface MilestoneCreatorProps {;
-  onSubmit: (data: any) => Promise<void>,;
-  isSubmitting: boolean,;
-  onCancel: () => void,;
-
+import React from 'react';
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string | null;
   projectType?: string;
 }
-
-
-export function MilestoneCreator(): any ({;
-
-=======
-
-
-
-export function MilestoneCreator({;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onSubmit;
   isSubmitting;
   onCancel;
   projectScope;
   projectStartDate;
   projectEndDate;
-
-  projectType
-}: MilestoneCreatorProps) {
-  return (
-
-    <AddMilestoneForm 
-
-=======
-import React from 'react',;
-import { AddMilestoneForm } from '../AddMilestoneForm',;
-interface MilestoneCreatorProps {;
-  onSubmit: (data: any) => Promise<void>,;
-  isSubmitting: boolean,;
-  onCancel: () => void,;
-  projectScope?: string,;
-  projectStartDate?: string,;
-  projectEndDate?: string | null,;
-  projectType?: string;
-}
-;
-export function MilestoneCreator({;
-  onSubmit,;
-  isSubmitting,;
-  onCancel,;
-  projectScope,;
-  projectStartDate;
-  projectEndDate;
   projectType;
 }: MilestoneCreatorProps) {;
-  return (;
-    <AddMilestoneForm;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+    <AddMilestoneForm
       onSubmit={onSubmit}
       isSubmitting={isSubmitting}
       onCancel={onCancel}
@@ -69,11 +21,6 @@ export function MilestoneCreator({;
       projectStartDate={projectStartDate}
       projectEndDate={projectEndDate}
       projectType={projectType}
-
-    />;
-  );
-}
-
 =======
   on_submit: (data: any) => Promise < void>,
   is_submitting: boolean,

@@ -1,0 +1,12 @@
+import React, { useState } from 'react'
+  const [title, setTitle] = useState(''
+  const [description, setDescription] = useState(''
+  const [dueDate, setDueDate] = useState(''
+  const [amountUsd, setAmountUsd] = useState<string>(''
+      setError('Please provide Title, Due Date and a valid Amount.'
+      setTitle(''
+      setDescription(''
+      setDueDate(''
+      setAmountUsd(''
+      setError(err?.message || 'Failed to create milestone'
+        {_loading ? 'Adding...' : any

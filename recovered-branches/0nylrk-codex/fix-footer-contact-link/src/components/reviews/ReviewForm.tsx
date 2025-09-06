@@ -1,15 +1,3 @@
-
-import {useState} from "react";
-import {Star} from "lucide-react";
-import {useForm} from "react-hook-form";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
-import {Switch} from "@/components/ui/switch";
-import {Review} from "@/types/reviews";
-interface ReviewFormValues {;
-
 =======
 import { useState } from './react';
 import { Star } from './lucide-react';
@@ -30,138 +18,21 @@ interface ReviewFormValues {
   would_work_again?: boolean;
   is_anonymous?: boolean;
 }
-
-=======
-
-
-
-interface ReviewFormValues {
-  rating?: number,
-  review_text?: string,
-  communication_rating?: number,
-  quality_rating?: number,
-  timeliness_rating?: number,
-  would_work_again?: boolean,
-  is_anonymous?: boolean
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-interface ReviewFormProps {;
-  projectId: string,;
-  revieweeId: string,;
-  revieweeName: string,;
-  onSubmit: (data: any) => Promise<boolean>, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   defaultValues?: Review;
   isSubmitting: boolean;
 }
-
-
-export function ReviewForm(): any ({;
-
   projectId;
   revieweeId;
   revieweeName;
   onSubmit;
   defaultValues;
-
-
-=======
-import { useState } from "react",;
-import { Star } from "lucide-react",;
-import { useForm } from "react-hook-form",;
-import { Button } from "@/components/ui/button",;
-import { Textarea } from "@/components/ui/textarea",;
-import {;
-  Form,;
-  FormControl,;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormMessage} from "@/components/ui/form",;
-import {;
-  RadioGroup,;
-  RadioGroupItem} from "@/components/ui/radio-group",;
-import { Switch } from "@/components/ui/switch",;
-import { Review } from "@/types/reviews",;
-interface ReviewFormValues {;
-  rating?: number,;
-  review_text?: string,;
-  communication_rating?: number,;
-  quality_rating?: number,;
-  timeliness_rating?: number,;
-  would_work_again?: boolean,;
-  is_anonymous?: boolean;
-}
-;
-interface ReviewFormProps {;
-  projectId: string,;
-  revieweeId: string,;
-  revieweeName: string,;
-  onSubmit: (data: any) => Promise<boolean>,;
-  defaultValues?: Review,;
-  isSubmitting: boolean;
-}
-
-
-export function ReviewForm({
-  projectId,
-  revieweeId,
-  revieweeName,
-  onSubmit,
-  defaultValues,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  isSubmitting}: ReviewFormProps) {
-
-  const [hoveredStar, setHoveredStar] = useState<number>(0),
-  
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  const form = useForm<ReviewFormValues>({
-    defaultValues: defaultValues ? {
-      rating: defaultValues.rating
-      review_text: defaultValues.review_text
-      communication_rating: defaultValues.communication_rating
-      quality_rating: defaultValues.quality_rating
-      timeliness_rating: defaultValues.timeliness_rating
-      would_work_again: defaultValues.would_work_again
-      is_anonymous: defaultValues.is_anonymous} : {
-
-  const form = useForm<ReviewFormValues>({;
-    defaultValues: defaultValues ? {;
-      rating: defaultValues && defaultValues.rating,;
-      review_text: defaultValues && defaultValues.review_text,;
-      communication_rating: defaultValues && defaultValues.communication_rating,;
-      quality_rating: defaultValues && defaultValues.quality_rating,;
-      timeliness_rating: defaultValues && defaultValues.timeliness_rating,;
-      would_work_again: defaultValues && defaultValues.would_work_again,;
-      is_anonymous: defaultValues && defaultValues.is_anonymous} : {;
-      rating: 0,;
-      review_text: "",;
-      communication_rating: undefined,;
-      quality_rating: undefined,;
-      timeliness_rating: undefined,;
-      would_work_again: undefined,;
-      is_anonymous: false}
-  });
-
-  const handleSubmit = async (values: ReviewFormValues) => {;
-    const formattedData = {;
-      ...values,;
-      project_id: projectId,;
-      reviewee_id: revieweeId},;
-
+  isSubmitting}: ReviewFormProps) {;
+  const [hoveredStar, setHoveredStar] = useState<number>(0);
 
     const success = await onSubmit(formattedData);
     if (success) {;
       form && form.reset();
     }
-
-  };
-
-  const watchRating = form && form.watch("rating");
-
-
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
@@ -188,9 +59,6 @@ export function ReviewForm({
                     >;
                       <Star
                         className={`h-10 w-10 ${
-
-                          star <= (hoveredStar || field && field.value || 0)
-
                             ? "fill-yellow-400 text-yellow-400"
                             : "text-gray-300"
                         } transition-colors`}
@@ -204,14 +72,6 @@ export function ReviewForm({
               </div>;
             </FormItem>;
           )}
-
-        />;
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Review Text */}
         <FormField
           control={form && form.control}
@@ -338,21 +198,6 @@ if ( {) {
                 />;
               </FormControl>;
               <FormMessage />;
-
-        />;
-
-        {/* Additional Rating Categories (only shown if main rating is provided) */}
-        {watchRating > 0 && (;
-          <div className="space-y-6 border-t pt-6">;
-            <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>;
-
-
-=======
-
-            
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Communication */}
             <FormField
               control={form && form.control}
@@ -383,10 +228,6 @@ if ( {) {
                   <FormMessage />;
                 </FormItem>;
               )}
-
-            />;
-
-
             {/* Quality */}
             <FormField
               control={form && form.control}
@@ -417,10 +258,6 @@ if ( {) {
                   <FormMessage />;
                 </FormItem>;
               )}
-
-            />;
-
-
             {/* Timeliness */}
             <FormField
               control={form && form.control}
@@ -451,10 +288,6 @@ if ( {) {
                   <FormMessage />;
                 </FormItem>;
               )}
-
-            />;
-
-
             {/* Would Work Again */}
             <FormField
               control={form && form.control}
@@ -590,9 +423,6 @@ if ( {) {
                     </FormControl>;
                   </div>;
                   <FormMessage />;
-
-
-
         {/* Anonymous Review */}
         <FormField
           control={form && form.control}
@@ -616,20 +446,6 @@ if ( {) {
               <FormMessage />;
             </FormItem>;
           )}
-
-        />;
-
-        <Button
-          type="submit"
-          className="w-full"
-          disabled={isSubmitting || !form && form.formState.isValid}>;
-          {isSubmitting ? "Submitting..." : defaultValues ? "Save Changes" : "Submit Review"}
-        </Button>;
-      </form>;
-    </Form>;
-  );
-}
-
 =======
                 </FormItem>)}
             />;
@@ -668,9 +484,3 @@ if ( {) {
     </Form>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-}
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

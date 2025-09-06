@@ -1,14 +1,4 @@
-
-=======
-:src && src.disabled/components/analytics/AnalyticsContainer && AnalyticsContainer.js.jsx
-
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""
-
-
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 :src.disabled/components/analytics/AnalyticsContainer.js.jsx
 " " export: function AnalyticsContainer({ children }) { const { isAuthenticated,isLoading,user } = useAuth()";";";"""

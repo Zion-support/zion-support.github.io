@@ -1,5 +1,4 @@
-
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 #!/usr/bin/"env": node {
 #!/usr/bin/env node/usr/bin/env node/usr/bin/env: node console.log(" Fixing:"; async function main() {""

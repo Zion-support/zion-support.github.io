@@ -1,9 +1,29 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React from 'react';
 interface SOC2ComplianceAutomationProps {
   // Add props here as needed
-
-
-
 export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationProps) {
   return (
     <div>
@@ -11,11 +31,17 @@ export default function SOC2ComplianceAutomation({ }: SOC2ComplianceAutomationPr
       <p>This component is currently under development.</p>
     </div>
   );
-
-
-
-}
-
+=======
 =======
 
 
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+=======
+:src.pages.disabled/SOC2ComplianceAutomation.jsx
+}
+}
+}
+}
+}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.pages.disabled/SOC2ComplianceAutomation.jsx

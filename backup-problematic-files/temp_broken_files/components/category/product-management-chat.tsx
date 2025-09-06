@@ -1,0 +1,3 @@
+import type { NextPage } from 'next'
+import Link from 'next/
+import Seo from '../../components/seo/

@@ -4,31 +4,32 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
 import React from 'react';
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
-
-
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <div className="min - h-screen flex flex - col">;
       <EnhancedNavigation />;
       <main className="flex - 1">;
         {children}
-
-
 =======
       </main>;
       <EnhancedFooter />;
@@ -37,6 +38,3 @@ import EnhancedFooter from './EnhancedFooter';
 export default EnhancedLayout;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

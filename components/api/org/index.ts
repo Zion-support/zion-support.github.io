@@ -1,26 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-=======
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' })
-
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
-=======
 
-  };
-  const data = readOrgData();
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const data = readOrgData();
   const parseArray = (v?: string | string[]) => {
     if (!v) return undefined;
-
-
+    return Array && Array.isArray(v)
+      ? v
+      : v
+          .split(',')
+          .map(s => s && s.trim())
+          .filter(Boolean);
+  }
+  const filters: OrgFilters = {
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   const filters: OrgFilters = {
     view: (req && req.query.view as OrgFilters['view']) || 'all';
@@ -32,15 +26,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     countries: parseArray(req && req.query.countries);
     search: (req && req.query.search as string) || undefined,
     teamOnly: req && req.query.teamOnly === 'true' ? true : undefined};
+
   const filtered = filterOrgData(data, filters);
   return res && res.status(200).json(filtered);
   };
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const filtered = filterOrgData(data, filters);
   return res && res.status(200).json(filtered);  return res && res.status(200).json(filtered)
 }
-
-
-
 =======
 import {readOrgData, filterOrgData} from '../../../utils / org - data';
 import type { OrgFilters, RoleType } from '../../../types / org';
@@ -106,9 +100,5 @@ const filters: OrgFilters = {
 ;
   const filtered = filterOrgData (data, filters);
   return res.status (200).json (filtered);  return res.status (200).json (filtered);
-
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

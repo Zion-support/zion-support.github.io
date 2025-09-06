@@ -1,67 +1,69 @@
-
-
+// Mock file system database utility
+export function readJson<T>(filePath: string, defaultValue: T): T {
+  try {
     }
   } catch (error) {
-    console.error('Error reading file:', error);
+    console && console.error('Error reading file:', error);
 =======
-
-  await writeAllDisputes(all);
+// Mock file system database utility;
+export function read_json < T>(file_path: string, default_value: T): T {
+  try {
+    const fs = require ('fs'),
+    if () {) {
+  $2
+}
+      const content = fs.readFileSync (file_path, 'utf8');
+      return JSON.parse (content);
+    }
   } catch (error) {
-
-    const dir = path && path.dirname(filePath),
-    if (!fs && fs.existsSync(dir)) {
-      fs && fs.mkdirSync(dir, { recursive: true });
-
+    console.error ('Error reading file:', error);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  }
+  return default_value;
+}
     }
     fs && fs.writeFileSync(filePath, JSON && JSON.stringify(data, null, 2));
-=======
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-
-
-  }
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (error) {
     console && console.error('Error writing file:', error);
   }
-
-
-
-export async function createDispute(dispute: DisputeCase): Promise<void> {;
-
-
+}
+export async function createDispute(dispute: DisputeCase): Promise<void> {
   const all = await readAllDisputes();
-  all.push(dispute);
+  all && all.push(dispute);
   await writeAllDisputes(all);
 }
-
-  return path && path.join(UPLOADS_ROOT, caseId);
-
-
+export function getDisputeUploadDir(caseId: string): string {
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
   return dir;
-
 =======
-
-
-
+export function write_json < T>(file_path: string, data: T): void {
+  try {
+    const fs = require ('fs');
+    const path = require ('path');
+    const dir = path.dirname (file_path),
+    if () {) {
+  $2
 }
-=======
-
-export function getDisputeUploadDir(caseId: string): string {;
-  return path.join(UPLOADS_ROOT, caseId);
+      fs.mkdir_sync (dir, { recursive: true });
+    }
+    fs.writeFileSync (file_path, JSON.stringify (data, null, 2));
+  } catch (error) {
+    console.error ('Error writing file:', error);
+  }
 }
-
-export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
-  const dir = getDisputeUploadDir(caseId);
-  await mkdir(dir, { recursive: true });
+export async function create_dispute (dispute: DisputeCase): Promise < void> {
+  const all = await readAllDisputes ();
+  all.push (dispute);
+  await writeAllDisputes (all);
+}
+export function getDisputeUploadDir (case_id: string): string {
+  return path.join (UPLOADS_ROOT, case_id);
+}
+export async function ensureDisputeUploadDir (case_id: string): Promise < string> {
+  const dir = getDisputeUploadDir (case_id);
+  await mkdir (dir, { recursive: true });
   return dir;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

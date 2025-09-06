@@ -1,12 +1,18 @@
+import Link from 'next/link';
+
 export const metadata = { 
+<<<<<<< HEAD
   title: 'Data Analytics Services | Zion Tech Group',
   description: 'Comprehensive data analytics services including business intelligence, data visualization, predictive analytics, and data science solutions for data-driven decision making.',
   keywords: 'data analytics, business intelligence, data visualization, predictive analytics, data science, machine learning, data consulting'
+=======
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
 };
 
 export default function DataAnalyticsPage() {
   return (
     <div className="animate-fade-in">
+<<<<<<< HEAD
       <section className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
           Data Analytics Services
@@ -60,11 +66,14 @@ export default function DataAnalyticsPage() {
             description="Streaming data processing and real-time decision making"
             features={["Stream processing", "Real-time dashboards", "Event-driven analytics", "Alert systems", "Live monitoring"]}
             price="$12,000-40,000"
+=======
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
             icon="⚡"
           />
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className="mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Data Analytics Process</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -87,10 +96,13 @@ export default function DataAnalyticsPage() {
             step="4"
             title="Visualization & Deployment"
             description="Create dashboards and deploy solutions for ongoing insights"
+=======
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976
           />
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className="mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Analytics Technology Stack</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -391,3 +403,18 @@ function CTASection() {
     </div>
   );
 }
+=======
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+          >
+            Email Us
+          </a>
+        </div>
+>>>>>>> d9a4214406946307ebf253d8e717bd531b4be976

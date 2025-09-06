@@ -1,13 +1,4 @@
-
-export type ReviewStatus = 'pending' | 'approved' | 'rejected';
-;
-
 export interface Review {
-=======
-
-export interface Review {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   project_id: string;
   reviewer_id: string;
@@ -25,25 +16,12 @@ export interface Review {;
   is_visible: boolean;
   report_count: number;
   reviewer_profile?: {
-
-    display_name: string,
-    avatar_url?: string;
-
   }
 }
-
-
-
-export interface ReviewReport {;
-
-
+export interface ReviewReport {
   id: string;
   review_id: string;
   reporter_id: string;
   reason: string;
   status: 'pending' | 'resolved' | 'dismissed';
-
-  created_at: string,
-  resolved_at?: string;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}

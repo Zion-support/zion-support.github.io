@@ -10,7 +10,13 @@ const Footer: React.FC = () => {
     });
   };
   return (
-    <footer className="bg-slate-900 text-gray-300">
+    <motion.footer
+      className="bg-slate-900 text-gray-300"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+    >
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -22,7 +28,7 @@ const Footer: React.FC = () => {
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
             </div>
             <p className="text-gray-400 mb-4 max-w-md">
-              Leading AI & Technology Solutions for a Smarter Future. We deliver cutting-edge 
+              Leading AI & Technology Solutions for a Smarter Future. We deliver cutting-edge
               technology solutions that transform businesses and drive innovation.
             </p>
             <div className="flex space-x-4">
@@ -122,8 +128,3 @@ const Footer: React.FC = () => {
           <ChevronUp className="w-5 h-5" />
         </button>
       </div>
-    </footer>
-  );
-};
-
-export default Footer;

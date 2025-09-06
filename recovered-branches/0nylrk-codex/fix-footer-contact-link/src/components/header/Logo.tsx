@@ -1,72 +1,31 @@
-
-import React from "react";
-import { Link } from "react-router-dom";
-import { useWhitelabel } from "@/context/WhitelabelContext";
-interface LogoProps {;
-
   customLogo?: string;
   customColor?: string
 }
 
-
-export function Logo(): any ({ customLogo, customColor }: LogoProps) {;
-  const { isWhitelabel, logoUrl, brandName, primaryColor } = useWhitelabel();
-
-  // Use the white-label logo if available and no specific customLogo is provided;
-  const logoToUse = customLogo || (isWhitelabel ? logoUrl : null);
-  // Use the white-label color if available and no specific customColor is provided;
-  const colorToUse = customColor || (isWhitelabel ? primaryColor : undefined);
-
-
   if (logoToUse) {;
-=======
-
-import React from "react";
-import { Link } from "react-router-dom";
-import { useWhitelabel } from "@/context/WhitelabelContext";
-interface LogoProps {
-  customLogo?: string;
-
-  // Use the white-label logo if available and no specific customLogo is provided
-  const logoToUse = customLogo || (isWhitelabel ? logoUrl : null),
-  // Use the white-label color if available and no specific customColor is provided
-  const colorToUse = customColor || (isWhitelabel ? primaryColor : undefined),
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-  if (logoToUse) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <Link to="/" className="flex items-center">;
         <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" />;
       </Link>;
     );
   }
-
+  return (
+    <Link to="/" className="flex items-center">;
+      <div
+        className="text-2xl font-bold"
+        style={colorToUse ? { color: colorToUse } : {}}>;
+        {isWhitelabel ? brandName : "Zion"}
+        <span className="text-zion-cyan">AI</span>;
+      </div>;
+    </Link>;
+  );
+=======
 import React from './react';
 import { Link  } from './react-router-dom';
 import { use_whitelabel  } from '@/context / WhitelabelContext';
 interface LogoProps {
   custom_logo?: string;
   custom_color?: string;
-=======
-
-  
-
-  return (
-    <Link to="/" className="flex items-center">
-      <div className="text-2xl font-bold" style={colorToUse ? { color: colorToUse } : {}}>
-        {isWhitelabel ? brandName : 'Zion'}<span className="text-zion-cyan">AI</span>
-      </div>
-    </Link>
-
-=======
-  )
-
-
-}
-=======
-  )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export /**
  * Logo - Function description

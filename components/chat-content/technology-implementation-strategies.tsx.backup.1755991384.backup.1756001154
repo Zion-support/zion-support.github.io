@@ -17,8 +17,3 @@ const TechnologyImplementationStrategies: NextPage = () => {
   );
 };
 
-<<<<<<< HEAD
-export default TechnologyImplementationStrategies;
-=======
-export default TechnologyImplementationStrategies;
->>>>>>> origin/cursor/deploy-zion-brain-ai-system-5783

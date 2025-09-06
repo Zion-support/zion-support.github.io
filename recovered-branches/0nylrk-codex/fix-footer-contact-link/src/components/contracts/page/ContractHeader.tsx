@@ -1,33 +1,5 @@
-
-
-
-export function ContractHeader(): any ({ onCreateClick }: ContractHeaderProps) {;
-  return (
-    <div className="flex justify-between items-center mb-8">;
-      <div>;
-        <h1 className="text-3xl font-bold">Smart Contract Builder</h1>;
-        <p className="text-muted-foreground mt-2">;
-          Create legally binding agreements with optional blockchain deployment;
-        </p>;
-      </div>;
-
-      <Button size="lg" onClick={onCreateClick}>;
-        Create New Contract;
-      </Button>;
-=======
-
-import { Button } from "@/components/ui/button";
-interface ContractHeaderProps {
-  onCreateClick: () => void;
-}
-
-
-
-
-    </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-
+=======
 import { Button  } from '@/components / ui / button';
 interface ContractHeaderProps {
   onCreateClick: () => void;
@@ -48,10 +20,5 @@ function ContractHeader() {
         Create New Contract;
       </Button>;
     </div>);
-
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-=======
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

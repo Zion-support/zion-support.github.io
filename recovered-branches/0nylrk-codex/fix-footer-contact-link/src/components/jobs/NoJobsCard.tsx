@@ -1,16 +1,3 @@
-
-
-
-
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-interface NoJobsCardProps {;
-  onUpdateProfile?: () => void;
-}
-
-
-export function NoJobsCard(): any ({ onUpdateProfile }: NoJobsCardProps) {;
-
   return (
     <Card className="bg-muted/30 border border-dashed">;
       <CardContent className="p-6 text-center">;
@@ -51,25 +38,3 @@ function NoJobsCard() {
     </Card>);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
-=======
-
-
-
-
-
-=======
-    </Card>;
-=======
-
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-interface NoJobsCardProps {
-  onUpdateProfile?: () => void
-}
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  );
-}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

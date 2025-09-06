@@ -1,39 +1,10 @@
-
-
-
-import type { UserProfile } from "@/types/auth",
-
-
-// We cannot rely on the Supabase SDK types here because the project
-// declares `@supabase/supabase-js` as an untyped external module. Define
-// a minimal user shape that includes only the properties we actually use
-// in this file.
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import type { UserProfile } from "@/types / auth";
+// We cannot rely on the Supabase SDK types here because the project;
+// declares `@supabase / supabase - js` as an untyped external module. Define;
+// a minimal user shape that includes only the properties we actually use;
+// in this file.;
 export interface SupabaseUser {
-
-  id: string,
-  email?: string | null;
-}
-/**;
-* Maps Supabase profile data to our app's user model;
-*/;
-export function mapProfileToUser (user: SupabaseUser, profile: any): UserProfile {
-
   return {
-
-    id: user && user.id;
-    email: user && user.email || "";
-    displayName: profile && profile.display_name || "";
-    userType: (profile && profile.user_type as "creator" | "jobSeeker" | "employer" | "buyer" | "admin" | null) || null;
-    profileComplete: Boolean(profile && profile.profile_complete);
-    createdAt: new Date(profile && profile.created_at).toISOString();
-    updatedAt: new Date(profile && profile.updated_at).toISOString();
-    bio: profile && profile.bio || undefined;
-    headline: profile && profile.headline || undefined;
-    avatar_url: profile && profile.avatar_url || undefined,
-    avatarUrl: profile && profile.avatar_url || undefined, // Add for compatibility
-    role: profile && profile.user_type // Map user_type to role for backward compatibility
-
 =======
     email: user.email || "";
     display_name: profile.display_name || "";
@@ -49,9 +20,3 @@ export function mapProfileToUser (user: SupabaseUser, profile: any): UserProfile
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 }
-=======
-
-  return {
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

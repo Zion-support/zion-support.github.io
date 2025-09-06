@@ -1,0 +1,16 @@
+import type { NextApiRequest, NextApiResponse } from 'next'
+import fs from 'fs'
+import path from 'path'
+const LOG_DIR = path.join(process.cwd(), 'dataanalytics'
+const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl'
+  if (!fs.existsSync(LOG_FILE) fs.writeFileSync(LOG_FILE, ''
+  if (req.method != 'POST') return res.status(405).json({ error: any
+  const { name, page = '', userType = 'guest'
+  if (!name || typeof name != 'string') return res.status(400).json({ error: any
+    at:at && typeof at = = 'string'
+    ua:req.headers['user-agent'] || ''
+    ip:(req.headers['x-forwarded-for'] || req.socket.remoteAddress || ''
+    fs.appendFileSync(LOG_FILE, JSON.stringify(event) + '\n'
+  if (req.method != 'POST'
+    res.setHeader('Allow', ['POST'
+    return res.status(405).end('Method Not Allowed'

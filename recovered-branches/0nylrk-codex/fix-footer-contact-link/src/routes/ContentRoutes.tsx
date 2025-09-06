@@ -1,53 +1,6 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-const ContentRoutes = () => {
-=======
-const ContentRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Routes>;
       {/* Content Routes */}
-
-      <Route path="/" element={<Home />} />;
-      <Route path="/home" element={<Home />} />;
-      <Route path="/about" element={<About />} />;
-
-      {/* Help Center Routes */}
-      <Route path="/help" element={<HelpCenterPage />} />;
-      <Route path="/support" element={<HelpCenterPage />} />;
-
-      {/* Blog Routes */}
-      <Route path="/blog" element={<Blog />} />;
-      <Route path="/blog/:slug" element={<BlogPost />} />;
-
-      {/* Green IT Route */}
-      <Route path="/green-it" element={<GreenIT />} />;
-
-      {/* Careers Route */}
-      <Route path="/careers" element={<Careers />} />;
-
-      {/* Account Settings */}
-      <Route path="/settings/account" element={<AccountSettings />} />;
-
-      {/* Project Room */}
-      <Route path="/project-room/:projectId" element={<ProjectRoom />} />;
-
-      {/* Video Call */}
-      <Route path="/video-call/:roomId" element={<VideoCall />} />;
-
-      {/* Global Search Route */}
-      <Route path="/search" element={<SearchPage />} />;
-
-      {/* Sitemap Page */}
-      <Route path="/sitemap-page" element={<SitemapPage />} />;
-    </Routes>;
-  );
-};
-
-
 export default ContentRoutes;
 
 =======
@@ -95,12 +48,6 @@ const ContentRoutes = () =>: any {
     </Routes>);
 }
 ;
-=======
-
-},
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ContentRoutes;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,14 +1,5 @@
 ' \' \' \' \' \' \'"export\": const MobileLaunchPage = () => {\'';
-
-
-
-' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
-
-=======
-
-' ' ' ' ' ' '"export": const MobileLaunchPage = () => {'';''}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.pages.disabled/MobileLaunchPage.jsx
 =======
 =======
 :src.pages.disabled/MobileLaunchPage.jsx

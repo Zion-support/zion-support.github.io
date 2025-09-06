@@ -1,8 +1,3 @@
-
-
-import { Button  } from '@/components / ui / button';
-interface Contract {
-
   id: string;
   title: string;
   client: string;
@@ -10,24 +5,9 @@ interface Contract {
   date: string;
   isSmartContract: boolean
 }
-
-
-interface RecentContractsTableProps {;
-
-=======
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   contracts: Contract[];
   onViewContract: (contractId: string) => void
 }
-
-
-
-export function RecentContractsTable({ contracts, onViewContract }: RecentContractsTableProps) {
-
-
   return (
     <>;
       <h2 className="text-2xl font-bold mb-4">Recent Contracts</h2>;
@@ -181,25 +161,4 @@ function RecentContractsTable() {
                     View;
                   </Button>;
                 </td>;
-
-
-
-=======
-
-          </tbody>;
-        </table>;
-      </div>;
-    </>;
-
-
-
-
-  );
-=======
-              </tr>))}
-          </tbody>;
-        </table>;
-      </div>;
-    </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

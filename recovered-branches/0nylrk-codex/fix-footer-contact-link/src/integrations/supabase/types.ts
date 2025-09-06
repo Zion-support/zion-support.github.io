@@ -1,12 +1,3 @@
-
-export type Json =;
-  | string;
-  | number;
-  | boolean;
-  | null;
-  | { [key: string]: Json | undefined }
-  | Json[];
-
 export type Database = {
   public: {
     Tables: {
@@ -124,11 +115,8 @@ export type Database = {
             referenced_columns: ["user_id"];
           }];
       }
-
-
-      api_logs: {;
-        Row: {;
-
+      api_logs: {
+        Row: {
           api_key_id: string | null;
           created_at: string;
           endpoint: string;
@@ -163,27 +151,10 @@ export type Database = {
           status_code?: number;
           user_agent?: string | null;
           user_id?: string | null;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
         Relationships: [;
           {
-
-            foreignKeyName: "api_logs_api_key_id_fkey";
-            columns: ["api_key_id"];
-            isOneToOne: false;
-            referenced_relation: "api_keys";
-            referenced_columns: ["id"];
-
           }
-=======
-
-            referencedColumns: ["id"]
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {
             foreignKeyName: "api_logs_user_id_fkey";
             columns: ["user_id"];
@@ -475,19 +446,7 @@ export type Database = {
         }
         Relationships: [;
           {
-
-            foreignKeyName: "fraud_flags_reviewed_by_fkey";
-            columns: ["reviewed_by"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-
           }
-=======
-
-          },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {
             foreignKeyName: "fraud_flags_user_id_fkey";
             columns: ["user_id"];
@@ -661,36 +620,6 @@ export type Database = {
         }
         Relationships: [;
           {
-
-
-          },
-
-
-          {
-            foreignKeyName: "job_applications_resume_id_fkey"
-            columns: ["resume_id"]
-            isOneToOne: false
-            referencedRelation: "talent_resumes"
-            referencedColumns: ["id"]
-
-            foreignKeyName: "job_applications_job_id_fkey";
-            columns: ["job_id"];
-            isOneToOne: false;
-            referenced_relation: "jobs";
-            referenced_columns: ["id"];
-          }
-=======
-
-          },
-
-
-          {
-            foreignKeyName: "job_applications_resume_id_fkey";
-            columns: ["resume_id"];
-            isOneToOne: false;
-            referenced_relation: "talent_resumes";
-            referenced_columns: ["id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           {
             foreignKeyName: "job_applications_talent_id_fkey";
@@ -782,19 +711,7 @@ export type Database = {
         }
         Relationships: [;
           {
-
-            foreignKeyName: "milestone_activities_milestone_id_fkey";
-            columns: ["milestone_id"];
-            isOneToOne: false;
-            referenced_relation: "project_milestones";
-            referenced_columns: ["id"];
-
           }
-=======
-
-          },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {
             foreignKeyName: "milestone_activities_user_id_fkey";
             columns: ["user_id"];
@@ -1133,19 +1050,7 @@ export type Database = {
         }
         Relationships: [;
           {
-
-            foreignKeyName: "profiles_id_fkey";
-            columns: ["id"];
-            isOneToOne: true;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-
           }
-=======
-
-          },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {
             foreignKeyName: "profiles_tenant_id_fkey";
             columns: ["tenant_id"];
@@ -1196,19 +1101,7 @@ export type Database = {
         }
         Relationships: [;
           {
-
-            foreignKeyName: "project_milestones_created_by_fkey";
-            columns: ["created_by"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-
           }
-=======
-
-          },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {
             foreignKeyName: "project_milestones_project_id_fkey";
             columns: ["project_id"];
@@ -1241,19 +1134,7 @@ export type Database = {
         }
         Relationships: [;
           {
-
-            foreignKeyName: "project_notes_project_id_fkey";
-            columns: ["project_id"];
-            isOneToOne: false;
-            referenced_relation: "projects";
-            referenced_columns: ["id"];
-
           }
-=======
-
-          },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {
             foreignKeyName: "project_notes_user_id_fkey";
             columns: ["user_id"];
@@ -1304,36 +1185,6 @@ export type Database = {
         }
         Relationships: [;
           {
-
-
-          },
-
-
-          {
-            foreignKeyName: "projects_job_id_fkey"
-            columns: ["job_id"]
-            isOneToOne: false
-            referencedRelation: "jobs"
-            referencedColumns: ["id"]
-
-            foreignKeyName: "projects_client_id_fkey";
-            columns: ["client_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-          }
-=======
-
-          },
-
-
-          {
-            foreignKeyName: "projects_job_id_fkey";
-            columns: ["job_id"];
-            isOneToOne: false;
-            referenced_relation: "jobs";
-            referenced_columns: ["id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           {
             foreignKeyName: "projects_talent_id_fkey";
@@ -1409,19 +1260,7 @@ export type Database = {
         }
         Relationships: [;
           {
-
-            foreignKeyName: "quote_requests_requester_id_fkey";
-            columns: ["requester_id"];
-            isOneToOne: false;
-            referenced_relation: "profiles";
-            referenced_columns: ["id"];
-
           }
-=======
-
-          },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {
             foreignKeyName: "quote_requests_talent_id_fkey";
             columns: ["talent_id"];
@@ -1430,11 +1269,8 @@ export type Database = {
             referenced_columns: ["id"];
           }];
       }
-
-
-      referral_codes: {;
-        Row: {;
-
+      referral_codes: {
+        Row: {
           code: string;
           created_at: string;
           id: string;
@@ -1454,10 +1290,6 @@ export type Database = {
           id?: string;
           updated_at?: string;
           user_id?: string;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
         Relationships: [;
           {
@@ -1501,36 +1333,6 @@ export type Database = {
         }
         Relationships: [;
           {
-
-
-          },
-
-
-          {
-            foreignKeyName: "referral_rewards_referral_id_fkey"
-            columns: ["referral_id"]
-            isOneToOne: false
-            referencedRelation: "referrals"
-            referencedColumns: ["id"]
-
-            foreignKeyName: "referral_rewards_partner_id_fkey";
-            columns: ["partner_id"];
-            isOneToOne: false;
-            referenced_relation: "partner_profiles";
-            referenced_columns: ["id"];
-          }
-=======
-
-          },
-
-
-          {
-            foreignKeyName: "referral_rewards_referral_id_fkey";
-            columns: ["referral_id"];
-            isOneToOne: false;
-            referenced_relation: "referrals";
-            referenced_columns: ["id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           {
             foreignKeyName: "referral_rewards_user_id_fkey";
@@ -1591,54 +1393,6 @@ export type Database = {
         }
         Relationships: [;
           {
-
-
-          },
-
-
-          {
-            foreignKeyName: "referrals_referral_code_fkey"
-            columns: ["referral_code"]
-            isOneToOne: false
-            referencedRelation: "referral_codes"
-            referencedColumns: ["code"]
-
-
-          },
-
-
-          {
-            foreignKeyName: "referrals_referred_id_fkey"
-            columns: ["referred_id"]
-            isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
-
-            foreignKeyName: "referrals_partner_id_fkey";
-            columns: ["partner_id"];
-            isOneToOne: false;
-            referenced_relation: "partner_profiles";
-            referenced_columns: ["id"];
-          }
-=======
-
-          },
-
-
-          {
-            foreignKeyName: "referrals_referral_code_fkey";
-            columns: ["referral_code"];
-            isOneToOne: false;
-            referenced_relation: "referral_codes";
-            referenced_columns: ["code"];
-          }
-          {
-            foreignKeyName: "referrals_referred_id_fkey";
-            columns: ["referred_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           {
             foreignKeyName: "referrals_referrer_id_fkey";
@@ -1648,11 +1402,8 @@ export type Database = {
             referenced_columns: ["user_id"];
           }];
       }
-
-
-      reminder_logs: {;
-        Row: {;
-
+      reminder_logs: {
+        Row: {
           clicked_at: string | null;
           email_body: string;
           email_subject: string;
@@ -1681,10 +1432,6 @@ export type Database = {
           reminder_type?: string;
           sent_at?: string | null;
           user_id?: string;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
         Relationships: [;
           {
@@ -1762,19 +1509,7 @@ export type Database = {
         }
         Relationships: [;
           {
-
-            foreignKeyName: "review_reports_reporter_id_fkey";
-            columns: ["reporter_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
-
           }
-=======
-
-          },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {
             foreignKeyName: "review_reports_review_id_fkey";
             columns: ["review_id"];
@@ -1840,36 +1575,6 @@ export type Database = {
         }
         Relationships: [;
           {
-
-
-          },
-
-
-          {
-            foreignKeyName: "reviews_reviewee_id_fkey"
-            columns: ["reviewee_id"]
-            isOneToOne: false
-            referencedRelation: "user_metrics"
-            referencedColumns: ["user_id"]
-
-            foreignKeyName: "reviews_project_id_fkey";
-            columns: ["project_id"];
-            isOneToOne: false;
-            referenced_relation: "projects";
-            referenced_columns: ["id"];
-          }
-=======
-
-          },
-
-
-          {
-            foreignKeyName: "reviews_reviewee_id_fkey";
-            columns: ["reviewee_id"];
-            isOneToOne: false;
-            referenced_relation: "user_metrics";
-            referenced_columns: ["user_id"];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }
           {
             foreignKeyName: "reviews_reviewer_id_fkey";
@@ -2019,19 +1724,7 @@ export type Database = {
         }
         Relationships: [;
           {
-
-            foreignKeyName: "tenant_administrators_tenant_id_fkey";
-            columns: ["tenant_id"];
-            isOneToOne: false;
-            referenced_relation: "whitelabel_tenants";
-            referenced_columns: ["id"];
-
           }
-=======
-
-          },
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {
             foreignKeyName: "tenant_administrators_user_id_fkey";
             columns: ["user_id"];
@@ -2363,13 +2056,10 @@ export type Database = {
         Relationships: [];
       }
     }
-
-
-    Functions: {;
-      check_users_needing_reminders: {;
-        Args: Record<PropertyKey never>;
-        Returns: {;
-
+    Functions: {
+      check_users_needing_reminders: {
+        Args: Record < PropertyKey, never>;
+        Returns: {
           user_id: string;
           email: string;
           display_name: string;
@@ -2379,10 +2069,6 @@ export type Database = {
           days_since_login: number;
           onboarding_status: Json;
         }[];
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       complete_referral: {
         Args: { _referred_id: string, _user_type: string }
@@ -2398,14 +2084,9 @@ export type Database = {
         }
         Returns: string;
       }
-
-
-      create_scheduled_reminders: {;
-        Args: Record<PropertyKey never>;
+      create_scheduled_reminders: {
+        Args: Record < PropertyKey, never>;
         Returns: undefined;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       flag_suspicious_content: {
         Args: {
@@ -2434,16 +2115,11 @@ export type Database = {
       }
       get_api_key_user_id: {
         Args: { key_prefix: string, provided_key: string }
-
-        Returns: string
-      }
-
-      get_current_tenant_id: {;
-        Args: Record<PropertyKey never>;
         Returns: string;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      }
+      get_current_tenant_id: {
+        Args: Record < PropertyKey, never>;
+        Returns: string;
       }
       get_event_distribution: {
         Args: { days_back?: number }
@@ -2457,14 +2133,9 @@ export type Database = {
         Args: { api_key: string }
         Returns: string;
       }
-
-
-      schedule_email_reminders: {;
-        Args: Record<PropertyKey never>;
+      schedule_email_reminders: {
+        Args: Record < PropertyKey, never>;
         Returns: number;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
       trigger_resume_scoring: {
         Args: { application_id: string }
@@ -2501,12 +2172,6 @@ export type Database = {
     }
   }
 }
-
-type DefaultSchema = Database[Extract < keyof Database, "public">];
-export type Tables<;
-  DefaultSchemaTableNameOrOptions extends;
-    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
-
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database;
@@ -2527,49 +2192,6 @@ export type Tables<;
         DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
         Row: infer R;
       }
-
-
-
-
-type DefaultSchema = Database[Extract<keyof Database, "public">]
-export type Tables<
-  DefaultSchemaTableNameOrOptions extends
-
-    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
-
-
-  TableName extends DefaultSchemaTableNameOrOptions extends {
-    schema: keyof Database
-  }
-    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
-        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
-    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
-  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
-      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {
-      Row: infer R
-    }
-    ? R
-    : never
-  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &
-        DefaultSchema["Views"])
-    ? (DefaultSchema["Tables"] &
-        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {
-        Row: infer R
-      }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      ? R
-      : never
-    : never
-export type TablesInsert<
-  DefaultSchemaTableNameOrOptions extends
-
-      ? R;
-      : never;
-    : never;
-export type TablesInsert<;
-  DefaultSchemaTableNameOrOptions extends;
-    | keyof DefaultSchema["Tables"];
-
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database;
@@ -2586,39 +2208,6 @@ export type TablesInsert<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Insert: infer I;
       }
-
-
-    | keyof DefaultSchema["Tables"]
-
-
-  TableName extends DefaultSchemaTableNameOrOptions extends {
-    schema: keyof Database
-  }
-    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
-  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
-      Insert: infer I
-    }
-    ? I
-    : never
-  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]
-    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
-        Insert: infer I
-      }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      ? I
-      : never
-    : never
-export type TablesUpdate<
-  DefaultSchemaTableNameOrOptions extends
-
-      ? I;
-      : never;
-    : never;
-export type TablesUpdate<;
-  DefaultSchemaTableNameOrOptions extends;
-    | keyof DefaultSchema["Tables"];
-
     | { schema: keyof Database }
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database;
@@ -2635,39 +2224,6 @@ export type TablesUpdate<;
     ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
         Update: infer U;
       }
-
-
-    | keyof DefaultSchema["Tables"]
-
-
-  TableName extends DefaultSchemaTableNameOrOptions extends {
-    schema: keyof Database
-  }
-    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
-  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
-      Update: infer U
-    }
-    ? U
-    : never
-  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"]
-    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
-        Update: infer U
-      }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-      ? U
-      : never
-    : never
-export type Enums<
-  DefaultSchemaEnumNameOrOptions extends
-
-      ? U;
-      : never;
-    : never;
-export type Enums<;
-  DefaultSchemaEnumNameOrOptions extends;
-    | keyof DefaultSchema["Enums"];
-
     | { schema: keyof Database }
   EnumName extends DefaultSchemaEnumNameOrOptions extends {
     schema: keyof Database;
@@ -2675,32 +2231,6 @@ export type Enums<;
     ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"];
     : never = never;
 > = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
-
-
-    | keyof DefaultSchema["Enums"]
-
-
-  EnumName extends DefaultSchemaEnumNameOrOptions extends {
-    schema: keyof Database
-  }
-    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
-    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
-  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
-    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
-    : never
-export type CompositeTypes<
-  PublicCompositeTypeNameOrOptions extends
-
-  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName];
-  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"];
-    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions];
-    : never;
-export type CompositeTypes<;
-  PublicCompositeTypeNameOrOptions extends;
-    | keyof DefaultSchema["CompositeTypes"];
-
     | { schema: keyof Database }
   CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
     schema: keyof Database;
@@ -2708,27 +2238,6 @@ export type CompositeTypes<;
     ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"];
     : never = never;
 > = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
-
-
-    | keyof DefaultSchema["CompositeTypes"]
-
-
-  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
-    schema: keyof Database
-  }
-    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
-    : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
-  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
-    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
-    : never
-
-  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName];
-  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"];
-    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions];
-    : never;
-
 export const Constants = {
   public: {
     Enums: {
@@ -2745,16 +2254,4 @@ export const Constants = {
         "accepted";
         "responded";
         "closed";
-
-        "archived"],
-      referral_status: ["pending", "completed", "expired"]}}} as const;
-
 ;
-=======
-export const Constants = {
-  public: {
-    Enums: {
-
-      api_key_scope: [
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

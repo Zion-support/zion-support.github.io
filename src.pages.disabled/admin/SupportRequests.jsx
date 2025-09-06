@@ -1,14 +1,5 @@
 import React,{ useState } from \'react\''\';\' import { Card,CardContent,CardDescription,CardHeader,CardTitle } from \'@/components/ui/card\''\';\' import { Input } from \'@/components/ui/input\''\';\' import { Button } from \'@/components/ui/button\''\';\' import { Tabs,TabsContent,TabsList,TabsTrigger } from \'@/components/ui/tabs\''\';\' import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue } from \'@/components/ui/select\''\';\' import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow } from \'@/components/ui/table\''\';\' import { Badge } from \'@/components/ui/badge\''\';\' import { Search,Filter } from \'lucide-react\''\';\' import SEO from \'@/components/SEO\'';\";\";
-
-
-
-import _React,{ useState } from 'react''';' import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card''';' import { Input } from '@/components/ui/input''';' import { Button } from '@/components/ui/button''';' import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs''';' import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue } from '@/components/ui/select''';' import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow } from '@/components/ui/table''';' import { Badge } from '@/components/ui/badge''';' import { Search,Filter } from 'lucide-react''';' import SEO from '@/components/SEO'';";";
-
-=======
-
-import _React,{ useState } from 'react''';' import { Card,CardContent,CardDescription,CardHeader,CardTitle } from '@/components/ui/card''';' import { Input } from '@/components/ui/input''';' import { Button } from '@/components/ui/button''';' import { Tabs,TabsContent,TabsList,TabsTrigger } from '@/components/ui/tabs''';' import { Select,SelectContent,SelectItem,SelectTrigger,SelectValue } from '@/components/ui/select''';' import { Table,TableBody,TableCell,TableHead,TableHeader,TableRow } from '@/components/ui/table''';' import { Badge } from '@/components/ui/badge''';' import { Search,Filter } from 'lucide-react''';' import SEO from '@/components/SEO'';";";
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.pages.disabled/admin/SupportRequests.jsx
 =======
 =======
 :src.pages.disabled/admin/SupportRequests.jsx

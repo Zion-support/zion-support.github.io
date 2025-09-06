@@ -1,0 +1,6 @@
+import fs from 'fs'
+import path from 'path'
+  const file = path.join(process.cwd(), 'datasite-map.json'
+  let generatedAt = ''
+    const raw = fs.readFileSync(file, 'utf-8'
+    generatedAt = json.generatedAt || ''
