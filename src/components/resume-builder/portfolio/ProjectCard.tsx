@@ -1,6 +1,3 @@
-
-=======
-
 import { useState } from 'react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -138,7 +135,6 @@ if ( {) {
             <div className='flex flex-wrap gap-1 mt-2'>
               {project.technologies.map((tech, index) => (
                 <Badge key={index} variant='secondary' className='text-xs'>                  {tech}                <Badge key={index} variant="secondary" className="text-xs">
-=======
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog';
 import { Edit, Trash2, Github, Link, FileText } from 'lucide-react'
 import Image from 'next/image';
@@ -161,7 +157,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
     setDeleteDialogOpen(false)
   };
 
-=======
 
 
   return (
@@ -178,7 +173,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-muted">
             <FileText className="h-12 w-12 text-muted-foreground/50" />
@@ -196,14 +190,12 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             <p className='text-sm text-muted-foreground line-clamp-3'>;
               {project && project.description}
             </p>;
-=======
                   {tech}
                 </Badge>
               ))}
             </div>
 
           )}
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
           {project && project.technologies && project && project.technologies.length > 0 && (;
             <div className='flex flex-wrap gap-1 mt-2'>;
@@ -231,7 +223,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
                 <Badge key={index} variant="secondary" className="text-xs">;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   {tech}
                 </Badge>;
               ))}
@@ -247,7 +238,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               title='GitHub'
               href = {project && project.github_url,}
 
-=======
       
       <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
         <div className="flex gap-2">
@@ -255,7 +245,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             <a
               href={project.github_url}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -306,7 +295,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           )}
         </div>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         
         <div className="flex gap-2">
           <Button variant="ghost" size="icon" onClick={() => onEdit(project)} aria-label="Edit project">
@@ -321,7 +309,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
@@ -341,7 +328,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           <AlertDialogHeader>;
             <AlertDialogTitle>Delete Project</AlertDialogTitle>;
 
-=======
             </p>)}
           {project.technologies && project.technologies.length > 0 && (
             <div className='flex flex - wrap gap - 1 mt - 2'>;
@@ -423,7 +409,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
           <AlertDialogHeader>;
             <AlertDialogTitle > Delete Project</AlertDialogTitle>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <AlertDialogDescription>;
               Are you sure you want to delete this project? This action cannot;
               be undone.            </AlertDialogDescription>;
@@ -451,7 +436,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Delete
             </AlertDialogAction>
           </AlertDialogFooter>
@@ -463,7 +447,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
     </Card>
 
               className='bg-destructive text-destructive-foreground'>            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">;
-=======
             <AlertDialogCancel > Cancel</AlertDialogCancel>;
             <AlertDialogAction;
               on_click={handle_delete}
@@ -478,7 +461,6 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               className='bg - destructive text - destructive - foreground';
             >            <AlertDialogAction on_click={handle_delete} className="bg - destructive text - destructive - foreground">;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Delete;
             </AlertDialogAction>;
           </AlertDialogFooter>;
@@ -486,15 +468,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
       </AlertDialog>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

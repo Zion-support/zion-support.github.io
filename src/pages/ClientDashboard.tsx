@@ -1,5 +1,3 @@
-
-
 function ClientDashboardContent() {;
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
@@ -48,7 +46,6 @@ function ClientDashboardContent() {;
             <Button asChild className={isMobile ? 'w-full justify-center' : ''}>;
               <Link href="/post-job">;
                 <PlusCircle className="h-4 w-4 mr-2" /> Post New Job;
-=======
     onboarding_status.response_received;
 /**
  * ClientDashboardContent - Function description
@@ -104,7 +101,6 @@ if ( {) {
             <Button as_child className={is_mobile ? 'w - full justify - center' : ''}>;
               <Link href="/post - job">;
                 <PlusCircle className="h - 4 w - 4 mr - 2" /> Post New Job;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </Link>;
             </Button>;
           </div>;
@@ -112,7 +108,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* New Onboarding Steps */}
         <div className="mb-8">;
           <ClientOnboardingSteps />;
@@ -126,7 +121,6 @@ if ( {) {
               
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <TabsContent value="all" className="mt-0">
                 <JobsList onSelectJob={handleJobSelect} />
               </TabsContent>
@@ -241,12 +235,10 @@ if ( {) {
 
           <div>;
             <div className="sticky top-4 space-y-6">;
-=======
 
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"};
 ;
 
-=======
           
           <div>
             <div className="sticky top-4 space-y-6">
@@ -290,10 +282,7 @@ export default function ClientDashboard() {;
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export default /**
  * ClientDashboard - Function description
  */
@@ -339,12 +328,5 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
  */
 function ClientDashboard() {
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

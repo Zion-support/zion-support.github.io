@@ -1,14 +1,10 @@
-
-
 import { Button } from './button';
 interface EmptyStateProps {;
 
-=======
 import { Package, RefreshCw } from 'lucide-react'
 import { Button } from './button';
 interface EmptyStateProps {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   text?: string;
   description?: string;
   onRetry?: () => void;
@@ -23,7 +19,6 @@ interface EmptyStateProps {
         {icon |<Package className="h-16 w-16" />}
       </div>
       <h3 className="text-xl font-semibold text-white mb-2">
-=======
 import { Package, RefreshCw } from 'lucide-react';
 import { Button } from './button';
 interface EmptyStateProps {
@@ -42,7 +37,6 @@ function EmptyState() {
         {icon || <Package className="h - 16 w - 16" />}
       </div>;
       <h3 className="text - xl font - semibold text - white mb - 2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {text}
       </h3>;
       {description && (
@@ -52,13 +46,11 @@ function EmptyState() {
 
 export function EmptyState(): any ({;
   text = 'No items available',;
-=======
 
         <p className="text-gray-400 mb-6 max-w-md">
 ;
 export function EmptyState({;
   text = "No items available",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   description,;
   onRetry,;
 export function EmptyState(): any ({ ;
@@ -88,7 +80,6 @@ export function EmptyState(): any ({ ;
       </div>;
       <h3 className='text-xl font-semibold text-white mb-2'>{text}</h3>;
       {description && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <p className='text-gray-400 mb-6 max-w-md'>{description}</p>      )}
       {showRetry && onRetry && (;
         <Button
@@ -108,7 +99,6 @@ export function EmptyState(): any ({ ;
       )}
       {showRetry && onRetry && (;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           onClick={onRetry}
           variant="outline"
           className="flex items-center gap-2"
@@ -117,18 +107,15 @@ export function EmptyState(): any ({ ;
 
 
 
-=======
           Try Again
 
         </Button>
       )}
     </div>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   );
 
 } 
 
-=======
         <p className='text - gray - 400 mb - 6 max - w-md'>{description}</p>;
   show_retry = false,
   icon,
@@ -167,9 +154,3 @@ export function EmptyState(): any ({ ;
         </Button>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

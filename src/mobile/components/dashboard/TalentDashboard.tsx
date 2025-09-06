@@ -1,6 +1,3 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function TalentDashboard() {
   return (
 
@@ -34,7 +31,6 @@ export function TalentDashboard() {
                 </div>
               </div>
               <div className="flex gap-2 mt-3">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <Button size="sm">Apply Now</Button>
                 <Button size="sm" variant="outline">View Details</Button>
               </div>
@@ -42,12 +38,10 @@ export function TalentDashboard() {
           </Card>
 
           
-=======
 
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Card>
             <CardContent className="p-4">
               <div className="flex justify-between items-start">
@@ -71,7 +65,6 @@ export function TalentDashboard() {
               <div className="flex gap-2 mt-3">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Button size="sm">Apply Now</Button>
                 <Button size="sm" variant="outline">View Details</Button>
               </div>
@@ -84,9 +77,7 @@ export function TalentDashboard() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <h2 className="text-lg font-medium mb-4">Application Tracker</h2>
         <Card>
           <CardContent className="p-4">
@@ -112,7 +103,6 @@ export function TalentDashboard() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button variant="outline" className="w-full mt-4">
               View All Applications
             </Button>
@@ -155,7 +145,6 @@ export function TalentDashboard() {
                     92% match;
                   </div>;
                   <span className='text-xs text-muted-foreground mt-1'>;
-=======
 import React from 'react';
 import {
   Card,
@@ -218,7 +207,6 @@ function TalentDashboard() {
                     92% match;
                   </div>;
                   <span className='text - xs text - muted - foreground mt - 1'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     2 days ago;
                   </span>;
                 </div>;
@@ -333,13 +321,11 @@ function TalentDashboard() {
         </Card>;
       </section>;
 
-=======
       
       <section>
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
         <div className="grid grid-cols-2 gap-4">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           <Button
             variant="outline"
             className="h-auto py-4 flex flex-col gap-1"
@@ -368,7 +354,6 @@ function TalentDashboard() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button variant="outline" className="h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost">
             <Zap className="h-5 w-5 mb-1" aria-hidden="true" />
             <span>AI Resume Boost</span>
@@ -378,16 +363,13 @@ function TalentDashboard() {
 
       
 
-=======
 
       
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Learning Hub</h2>
           <Button variant="ghost" size="sm" className="h-8">
 
-=======
 
             View all
           </Button>
@@ -406,11 +388,8 @@ function TalentDashboard() {
 
               </div>
 
-=======
               </div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </CardContent>
         </Card>
@@ -461,7 +440,6 @@ function TalentDashboard() {
               <div>;
                 <h3 className="font-medium">Improve your profile visibility</h3>;
                 <p className="text-sm text-muted-foreground">5 tips for getting noticed by clients</p>;
-=======
       <section>;
         <h2 className='text - lg font - medium mb - 4'>Quick Actions</h2>;
         <div className='grid grid - cols - 2 gap - 4'>;
@@ -564,7 +542,6 @@ function TalentDashboard() {
               <div>;
                 <h3 className="font - medium">Improve your profile visibility</h3>;
                 <p className="text - sm text - muted - foreground">5 tips for getting noticed by clients</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </CardContent>;
         </Card>;
@@ -573,13 +550,8 @@ function TalentDashboard() {
   );
 }
 
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
     </div>
   )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

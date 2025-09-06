@@ -1,13 +1,7 @@
-
-
-
-
 import { Button } from "@/components/ui/button",
-=======
 
 
 import { Button } from "@/components/ui/button";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
@@ -22,7 +16,6 @@ import { X } from 'lucide-react'
   const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
   // TODO: Add dependencies if needed
-=======
 import { Button } from '@/components / ui / button';
 import Link from 'next / link';
 import { useState, useEffect } from 'react';
@@ -30,14 +23,12 @@ import { X } from 'lucide-react';
   const [is_visible, setIsVisible] = useState (false);
   useEffect (() => {
   // TODO: Add dependencies if needed;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return () => {
     // Cleanup function;
 }
 
 
 
-=======
 export function FloatingCTA() {
 
 import { Button } from "@/components/ui/button",
@@ -59,11 +50,8 @@ export function FloatingCTA() {
       const threshold = 600, // Show CTA after scrolling 600px
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true)
-=======
 }, []); []);
     // Show CTA after 5 seconds;
       setIsVisible (true) }, 5000);
@@ -107,14 +95,12 @@ if ( {) {
   $2
 }
         setIsVisible (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
         setIsVisible (false);
       }
 
 import { X } from 'lucide-react';
 export function FloatingCTA() {;
-=======
 
     },
 
@@ -152,8 +138,6 @@ export function FloatingCTA() {;
     return () => {;
       window && window.removeEventListener("scroll", handleScroll);
     }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, [isClosed]);
 
   const handleClose = () => {;
@@ -191,7 +175,6 @@ export function FloatingCTA() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <X className="w-5 h-5" />
           </button>
         </div>
@@ -202,11 +185,9 @@ export function FloatingCTA() {;
             aria-label='Close'           aria-label="Button">;
             <X className='w-5 h-5' />          </button>;
             <X className="w-5 h-5" />;
-=======
 
 ;
 
-=======
 import { Button } from "@/components/ui/button",;
 import Link from "next/link",;
 import { useState, useEffect } from "react",;
@@ -319,7 +300,6 @@ return (<div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md
 
 }
 
-=======
       </AnimatePresence>;
     </>)}
             on_click={ () => setIsExpanded (false) }
@@ -328,11 +308,5 @@ return (<div className="fixed bottom - 6 left - 0 right - 0 mx - auto max - w-md
     </>)}
 '";
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

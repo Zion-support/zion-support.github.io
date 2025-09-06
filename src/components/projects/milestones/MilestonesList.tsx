@@ -1,10 +1,4 @@
-
-
-=======
-
-
-  if (isLoading) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+if (isLoading) {
     return (
       <div className="space-y-4">;
         {[1, 2, 3].map((i,) => (;
@@ -30,7 +24,6 @@
         icon = {<span className="text-3xl">📊</span>,}
         title="No Milestones Yet"
 
-=======
 
         description={isClient ? 
           "Break down the project into manageable milestones to track progress and payments." : 
@@ -61,7 +54,6 @@
         }
       />;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
     <div className="space-y-6">;
@@ -121,7 +113,6 @@
   );
 };
 
-=======
   // Check condition
 if ( {) {
   $2
@@ -195,10 +186,5 @@ if ( {) {
     </div>);
 }
 ";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-            <AddMilestoneForm 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            <AddMilestoneForm

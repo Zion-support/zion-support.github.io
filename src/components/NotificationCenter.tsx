@@ -1,13 +1,9 @@
-
-
-    unreadCount, ;
+unreadCount, ;
     markAsRead, ;
 
   const handleFilterChange = (newFilter: FilterType,) => {;
-=======
 
 
-=======
 import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react'
@@ -28,7 +24,6 @@ export const NotificationCenter: React.FC = () => {
     filteredNotifications,
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     unreadCount, 
     markAsRead, 
     markAllAsRead,
@@ -63,16 +58,13 @@ export const NotificationCenter: React.FC = () => {
     }
   },;
   const handleFilterChange = (newFilter: FilterType) => {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setFilter(newFilter as any);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
 
         </Button>;
@@ -105,7 +97,6 @@ export const NotificationCenter: React.FC = () => {
   );
 },;
 
-=======
     <Popover open={open} onOpenChange={(v, ) => set_open (v ?? false)}>;
       <PopoverTrigger as_child>;
         <Button variant="ghost" size="icon" className="relative" aria - label="Open notifications">;
@@ -138,10 +129,5 @@ export const NotificationCenter: React.FC = () => {
     </Popover>);
 },
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-        <NotificationHeader 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        <NotificationHeader

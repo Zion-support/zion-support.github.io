@@ -1,4 +1,3 @@
-
 'use client';
 import React, { useEffect, useState } from 'react';
 import {supabase} from '@/utils / supabase / client';
@@ -56,7 +55,6 @@ function UserProfile() {
   // Check condition
 if ( {) {
   $2
-=======
 
 'use client';
 import React, { useEffect, useState } from 'react';
@@ -69,7 +67,6 @@ import { useRouter } from 'next/navigation';
 import type { User as SupabaseUser, AuthChangeEvent, Session } from '@supabase/supabase-js';
 interface UserProfileProps {;
   onUserChange?: (user: SupabaseUser | null) => void;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
     return (
       <Card className='w - full max - w-sm'>;
@@ -193,7 +190,6 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
         </CardContent>;
       </Card>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
 
@@ -206,12 +202,10 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
 }
 }
 
-=======
         
         <Button onClick={handleSignOut} variant="outline" className="w-full">
           <LogOut className="h-4 w-4 mr-2" />
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           Sign Out
         </Button>
       </CardContent>
@@ -252,13 +246,10 @@ export default function UserProfile(): any ({ onUserChange }: UserProfileProps) 
     </Card>;
   );
 
-=======
 
   )
 } 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
   // Check condition
 if ( {) {
   $2
@@ -312,4 +303,3 @@ if ( {) {
         </Button>;
       </CardContent>;
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

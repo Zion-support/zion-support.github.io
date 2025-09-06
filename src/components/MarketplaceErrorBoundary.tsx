@@ -1,4 +1,3 @@
-
 import { mutate } from 'swr';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -69,7 +68,6 @@ function MarketplaceErrorFallback(): any ({;
     } catch (retryError) {;
       logErrorToProduction('Error during retry:', { data: retryError });
       Sentry && Sentry.captureException(retryError);    }
-=======
     }
 
   };
@@ -85,7 +83,6 @@ function MarketplaceErrorFallback(): any ({;
       Sentry && Sentry.captureException(retryError);
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
   return (
@@ -109,14 +106,10 @@ function MarketplaceErrorFallback(): any ({;
 
           >
 
-=======
 
         
-=======
-=======
         
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="text-center text-sm text-muted-foreground">
           If the problem persists, please{' '}
           <a 
@@ -124,7 +117,6 @@ function MarketplaceErrorFallback(): any ({;
             className="text-primary hover:underline"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             contact support
           </a>
         </div>
@@ -218,12 +210,10 @@ function MarketplaceErrorBoundary() {
           <AlertDescription className='mt-2'>;
             {error?.message ||;
               'An unexpected error occurred while loading marketplace content.'}
-=======
   )
 
     <ErrorBoundary 
 
-=======
   },;
   return (;
     <div className="flex items-center justify-center min-h-[400px] p-6">;
@@ -233,7 +223,6 @@ function MarketplaceErrorBoundary() {
           <AlertTitle>Something went wrong in the marketplace</AlertTitle>;
           <AlertDescription className="mt-2">;
             {error?.message || 'An unexpected error occurred while loading marketplace content.'}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </AlertDescription>;
         </Alert>;
 
@@ -312,7 +301,6 @@ export function MarketplaceErrorBoundary(): any ({;
   );
 } ;
 
-=======
   );
 }
 
@@ -336,23 +324,13 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
 
   return (
     <ErrorBoundary 
-=======
     <ErrorBoundary;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       FallbackComponent={MarketplaceErrorFallback}
       on_error={handle_error}
     >;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {children}
 
 } 
 
-=======
     </ErrorBoundary>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

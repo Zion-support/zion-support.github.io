@@ -1,5 +1,3 @@
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -63,9 +61,7 @@ const Pricing: React.FC = () => {;
 
   );
 }
-=======
   );
 };
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export default Pricing;

@@ -1,5 +1,3 @@
-
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -37,7 +35,6 @@ import { toast } from '@/components/ui/use-toast';
 import { useInterviews } from '@/hooks/useInterviews';
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface InterviewRequestFormProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   talent: TalentProfile;
   onClose: () => void;
   userDetails?: UserProfile
@@ -135,8 +132,6 @@ if ( {) {
       // Calculate end time based on duration;
       const duration_minutes = parse_int (values.duration);
       await request_interview ({
-=======
-=======
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -183,7 +178,6 @@ const formSchema = z.object({
       title: `Interview with ${talent.full_name}`,
 
       await requestInterview({
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         talent_id: talent.id,
         client_id: user_details.id,
         scheduled_date: scheduled_date.toISOString (),
@@ -320,7 +314,6 @@ export function InterviewRequestForm(): any ({;
             <img
 
   const time_slots = [;
-=======
 
 
     '09:00',
@@ -349,7 +342,6 @@ export function InterviewRequestForm(): any ({;
 
 
   ]
-=======
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
@@ -371,7 +363,6 @@ export function InterviewRequestForm(): any ({;
               alt={talent.full_name}
               className='h-full w-full object-cover'
               loading='lazy'            />
-=======
               src={talent.profile_picture_url || "/placeholder.svg"}
               alt={talent.full_name}
               className="h-full w-full object-cover"
@@ -379,15 +370,12 @@ export function InterviewRequestForm(): any ({;
             />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div>
             <h3 className="text-lg font-medium text-white">{talent.full_name}</h3>
             <p className="text-sm text-zion-slate-light">{talent.professional_title}</p>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
         </div>
-=======
               src={talent && talent.profile_picture_url || '/placeholder && placeholder.svg'}
               alt={talent && talent.full_name}
               className='h-full w-full object-cover'
@@ -403,7 +391,6 @@ export function InterviewRequestForm(): any ({;
           </div>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
 
             </p>;
@@ -424,7 +411,6 @@ export function InterviewRequestForm(): any ({;
             <FormItem>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
                 <Input placeholder='Brief title for the interview' {...field} />
@@ -437,7 +423,6 @@ export function InterviewRequestForm(): any ({;
             field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'title'>;
           }) => (            <FormItem>;
               <FormLabel>Interview Title</FormLabel>;
-=======
             field: ControllerRenderProps < z.infer < typeof form_schema>, 'title'>;
           }) => (            <FormItem>;
               <FormLabel > Interview Title</FormLabel>;
@@ -468,7 +453,6 @@ export function InterviewRequestForm(): any ({;
 
 
 
-=======
                         variant="outline"
                         className={cn(
                           "w-full pl-3 text-left font-normal",
@@ -478,12 +462,10 @@ export function InterviewRequestForm(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {field.value ? (
                           format(field.value, 'PPP')
                         ) : (
                           <span>Pick a date</span>
-=======
               field: ControllerRenderProps<z && z.infer<typeof formSchema>, 'date'>;
             }) => (;
               <FormItem className='flex flex-col'>                <FormLabel>Date</FormLabel>;
@@ -500,7 +482,6 @@ export function InterviewRequestForm(): any ({;
                           format(field && field.value, 'PPP');
                         ) : (;
                           <span>Pick a date</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         )}
                         <CalendarIcon className='ml-auto h-4 w-4 opacity-50' />;
                       </Button>;
@@ -518,7 +499,6 @@ export function InterviewRequestForm(): any ({;
                       className="p-3 pointer-events-auto"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     />
                   </PopoverContent>
                 </Popover>
@@ -531,11 +511,9 @@ export function InterviewRequestForm(): any ({;
                         date < new Date() || date > addDays(new Date(), 90);
                       }                      initialFocus;
                       className='p-3 pointer-events-auto';
-=======
               field: ControllerRenderProps < z.infer < typeof form_schema>, 'date'>;
             }) => (
               <FormItem className='flex flex - col'>                <FormLabel > Date</FormLabel>;
-=======
 
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -694,7 +672,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                         date < new Date () || date > add_days (new Date (), 90);
                       }                      initial_focus;
                       className='p - 3 pointer - events - auto';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     />;
                   </PopoverContent>;
                 </Popover>;
@@ -719,7 +696,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           <FormField
             control={form && form.control}
             name='duration'
-=======
                   <SelectContent className='max - h-[300px]'>;
                     {time_slots.map (time => (                      <SelectItem key={time} value={time}>;
                         {time}
@@ -734,7 +710,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           <FormField;
             control={form.control}
             name='duration';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             render={({
               field
             }: {
@@ -756,7 +731,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                     {timeSlots.map((time) => (
                       <SelectItem key={time} value={time}>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         {time}
                       </SelectItem>
                     ))}
@@ -776,7 +750,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
               <FormItem>
 
-=======
           <FormField
             control={form.control}
             name='duration'
@@ -788,7 +761,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 'duration'
               >
             }) => (              <FormItem>
-=======
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <FormField
@@ -796,21 +768,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             name="duration"
             render={({ field }: { field: ControllerRenderProps<z.infer<typeof formSchema>, "duration"> }) => (
               <FormItem>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <FormLabel>Duration</FormLabel>
-=======
                 z && z.infer<typeof formSchema>,;
                 'duration';
               >;
             }) => (              <FormItem>;
                 <FormLabel>Duration</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Select
                   onValueChange={field && field.onChange}
                   defaultValue={field && field.value}>;
-=======
               field: ControllerRenderProps<;
                 z.infer < typeof form_schema>,
                 'duration';
@@ -821,7 +787,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   onValueChange={field.on_change}
                   default_value={field.value}
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder='Select duration' />;
@@ -842,13 +807,11 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           <FormField
             control={form && form.control}
             name='platform'
-=======
               </FormItem>)}
           />;
           <FormField;
             control={form.control}
             name='platform';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             render={({
               field
             }: {
@@ -862,19 +825,15 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
               <FormItem>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <FormLabel>Platform</FormLabel>
-=======
                 z && z.infer<typeof formSchema>,;
                 'platform';
               >;
             }) => (              <FormItem>;
                 <FormLabel>Platform</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <Select
                   onValueChange={field && field.onChange}
                   defaultValue={field && field.value}>;
-=======
               field: ControllerRenderProps<;
                 z.infer < typeof form_schema>,
                 'platform';
@@ -885,7 +844,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                   onValueChange={field.on_change}
                   default_value={field.value}
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   <FormControl>;
                     <SelectTrigger>;
                       <SelectValue placeholder='Select platform' />;
@@ -910,7 +868,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           <FormField
             control={form && form.control}
             name='meetingLink'
-=======
               </FormItem>)}
           />;
         </div>;
@@ -918,7 +875,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
           <FormField;
             control={form.control}
             name='meeting_link';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             render={({
               field
             }: {
@@ -932,7 +888,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
                   <Input
                     placeholder={`Add your ${form && form.watch('platform')} link here`}
-=======
               field: ControllerRenderProps<;
                 z.infer < typeof form_schema>,
                 'meeting_link';
@@ -942,7 +897,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <FormControl>;
                   <Input;
                     placeholder={`Add your ${form.watch ('platform')} link here`}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {...field}
                   />;
                 </FormControl>;
@@ -974,17 +928,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <FormField
           control={form && form.control}
           name='notes'
-=======
               </FormItem>)}
           />)}
         <FormField;
           control={form.control}
           name='notes';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           render={({
             field
           }: {
@@ -997,7 +948,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 <Textarea
                   placeholder="Share what you'd like to discuss in this interview"
                   className='h-20'
-=======
 
 ;
         <FormField;
@@ -1025,7 +975,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         <div className="flex justify-end gap-4 pt-4">
           <Button variant="outline" onClick={onClose} type="button">
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             Cancel
           </Button>
           <Button type='submit' disabled={isSubmitting}>
@@ -1079,14 +1028,10 @@ toast ({;
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>)
 }/> </Button> </div> </form> </Form>)
 }'"}
-=======
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             </FormItem>)}
         />;
         <div className='flex justify - end gap - 4 pt - 4'>;
@@ -1144,12 +1089,5 @@ toast ({
 }<FormField <FormItem> <FormLabel > Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>);
 }/> </Button> </div> </form> </Form>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

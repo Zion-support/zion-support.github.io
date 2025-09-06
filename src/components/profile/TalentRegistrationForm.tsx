@@ -1,6 +1,4 @@
-
-
-    }
+}
   }
   // Handle removing skill tags;
   const handleRemoveSkill = (skill: string) =>: any {
@@ -114,7 +112,6 @@ if ( {) {
         throw new Error(error.message)
 
 
-=======
       name: user?.displayName || "",
       title: "",
       bio: "",
@@ -263,8 +260,6 @@ export function TalentRegistrationForm() {;
       const newSkills: string[] = [],
       
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Safely extract and flatten skills from each category
       Object.values(allCategorizedSkills).forEach(categorySkills => {
         if (Array.isArray(categorySkills)) {
@@ -276,7 +271,6 @@ export function TalentRegistrationForm() {;
 
             ) {
               newSkills.push(skill)
-=======
 import {;
   Form,;
   FormControl,;
@@ -510,8 +504,6 @@ export function TalentRegistrationForm() {;
               !skillTags && skillTags.includes(skill);
             ) {;
               newSkills && newSkills.push(skill);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   // Apply generated content to form;
   const applyGeneratedContent = () =>: any {
     // Check condition
@@ -534,7 +526,6 @@ if (
   $2
 }
               new_skills.push (skill);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             }
           });
         }
@@ -573,7 +564,6 @@ if ( {) {
 
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       await supabase.functions.invoke ('send - email', {
         body: {
@@ -634,7 +624,6 @@ if ( {) {
         description: 'Please add at least one skill to your profile.',
         variant: 'destructive',
       });
-=======
 
         title: 'Skills required',
         description: 'Please add at least one skill to your profile.',
@@ -645,14 +634,12 @@ if ( {) {
       return;
     }
     setIsSubmitting (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
 
       // For actual implementation with Supabase
       if (!user?.id) {
         throw new Error('User not authenticated')
 
-=======
         title: "Skills required",
         description: "Please add at least one skill to your profile.",
         variant: "destructive"}),
@@ -667,7 +654,6 @@ if ( {) {
         throw new Error("User not authenticated")
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
 
       });
@@ -777,7 +763,6 @@ if ( {) {
                   if (typeof skill === 'string' && skill) {;
                     aiSkills && aiSkills.push(skill);
 
-=======
       // Enhance profile if not already done;
       let final_summary = '';
       let final_skills = skill_tags;
@@ -820,11 +805,8 @@ if ( {) {
   $2
 }
                     ai_skills.push (skill);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   }
                 });
               }
@@ -870,7 +852,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Create the talent profile
       // In a real implementation, this would save to Supabase
       setTimeout((,) => {
@@ -882,14 +863,12 @@ if ( {) {
           description:
             'Your talent profile has been published and is now visible in the directory.'
         })
-=======
           title: "Profile Created Successfully",
           description: "Your talent profile has been published and is now visible in the directory."}),
         
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         // Send notification email if we have user email
         if (userEmail && values.enhancedProfile && user?.id) {
           sendEnhancementNotification(user.id, userEmail)
@@ -900,7 +879,6 @@ if ( {) {
 
         setIsSubmitting(false)
       }, 1500)
-=======
         
         setIsSubmitting(false)
       }, 1500),
@@ -908,7 +886,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Here would be the actual code to save the profile to Supabase
       /*
       const { error } = await supabase
@@ -931,7 +908,6 @@ if ( {) {
       if (error) throw error,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       */
     } catch (error: any) {
 
@@ -1000,7 +976,6 @@ if ( {) {
       });
       setIsSubmitting(false);
 
-=======
       // Get user email for notification;
       const { data: user_data } = await supabase.auth.get_user ();
       const user_email = (user_data as any).user?.email;
@@ -1052,7 +1027,6 @@ if (throw error) {
         variant: 'destructive',
       });
       setIsSubmitting (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
 
@@ -1065,7 +1039,6 @@ if (throw error) {
             Create Your Talent Profile;
           </CardTitle>;
           <CardDescription className='text-zion-slate'>;
-=======
     <div className='max - w-4xl mx - auto p - 4 md:p - 6'>;
       <Card className='bg - zion - blue - dark border - zion - blue - light'>;
         <CardHeader>;
@@ -1105,7 +1078,6 @@ if (throw error) {
                                 className='pl - 10 bg - zion - blue border - zion - blue - light text - white';
                                 placeholder='Your full name';
 
-=======
 
       logErrorToProduction('Error creating profile:', { data: error }),
       toast({
@@ -1186,7 +1158,6 @@ if (throw error) {
                               <Input
                                 className="pl-10 bg-zion-blue border-zion-blue-light text-white"
                                 placeholder="Your full name"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                                 {...field}
                               />;
                             </div>;
@@ -1202,7 +1173,6 @@ if (throw error) {
                       name='title'
                       render={({ field }: { field: any }) => (                        <FormItem>;
                           <FormLabel className='text-zion-slate-light'>;
-=======
                           <FormMessage className='text - red - 400' />;
                         </FormItem>)}
                     />;
@@ -1213,7 +1183,6 @@ if (throw error) {
                       name='title';
                       render={({ field }: { field: any }) => (                        <FormItem>;
                           <FormLabel className='text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             Professional Title;
                           </FormLabel>;
                           <FormControl>;
@@ -1239,7 +1208,6 @@ if (throw error) {
                       name='location'
                       render={({ field }: { field: any }) => (                        <FormItem>;
                           <FormLabel className='text-zion-slate-light'>;
-=======
                           <FormMessage className='text - red - 400' />;
                         </FormItem>)}
                     />;
@@ -1250,7 +1218,6 @@ if (throw error) {
                       name='location';
                       render={({ field }: { field: any }) => (                        <FormItem>;
                           <FormLabel className='text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             Location;
                           </FormLabel>;
                           <FormControl>;
@@ -1276,7 +1243,6 @@ if (throw error) {
                       name='hourlyRate'
                       render={({ field }: { field: any }) => (                        <FormItem>;
                           <FormLabel className='text-zion-slate-light'>;
-=======
                           <FormMessage className='text - red - 400' />;
                         </FormItem>)}
                     />;
@@ -1287,7 +1253,6 @@ if (throw error) {
                       name='hourly_rate';
                       render={({ field }: { field: any }) => (                        <FormItem>;
                           <FormLabel className='text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             Hourly Rate (USD);
                           </FormLabel>;
                           <FormControl>;
@@ -1343,7 +1308,6 @@ if (throw error) {
                         className='hidden'
 
                         onChange={handleAvatarUpload}                      />;
-=======
                           <FormMessage className="text-red-400" />;
                         </FormItem>;
                       )}
@@ -1452,11 +1416,9 @@ if (throw error) {
                         className="hidden"
                         onChange={handleAvatarUpload}
                       />;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </label>;
                   </div>;
                   <p className='text-sm text-zion-slate'>;
-=======
                           <FormMessage className='text - red - 400' />;
                         </FormItem>)}
                     />;
@@ -1492,7 +1454,6 @@ if (throw error) {
                     </label>;
                   </div>;
                   <p className='text - sm text - zion - slate'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     For best results, use an image at least 400x400 pixels in;
                     JPG, PNG, or GIF format.;
                   </p>;
@@ -1512,7 +1473,6 @@ if (throw error) {
 
 
                       <FormControl>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Textarea
                           className='h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white'
                           placeholder='Describe your professional background, expertise, and the value you bring to clients...'
@@ -1540,7 +1500,6 @@ if (throw error) {
                           <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />                          AI Profile Enhancement;
                         </FormLabel>;
                         <FormDescription className='text-zion-slate-light'>;
-=======
               <Separator className='bg - zion - blue - light / 50' />;
               {/* Bio Section */}
               <div className='space - y-4'>;
@@ -1578,7 +1537,6 @@ if (throw error) {
                           <Sparkles className='w - 4 h - 4 mr - 2 text - zion - purple' />                          AI Profile Enhancement;
                         </FormLabel>;
                         <FormDescription className='text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           Let AI help optimize your profile for better;
                           visibility and engagement;
                         </FormDescription>;
@@ -1602,7 +1560,6 @@ if (throw error) {
                         : 'Generate Enhanced Profile'}
                     </Button>;
                   </div>;
-=======
 
 
                         </FormLabel>
@@ -1619,7 +1576,6 @@ if (throw error) {
                           className="data-[state=checked]:bg-zion-purple"
                         />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </FormControl>
                     </FormItem>
                   )}
@@ -1628,7 +1584,6 @@ if (throw error) {
 
                     </Button>
                   </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
                 {/* Generated Content Display */}
                 {generatedContent && (;
@@ -1642,7 +1597,6 @@ if (throw error) {
 
                         onClick={applyGeneratedContent}>;
                         <Check className='mr-1 h-3 w-3' /> Apply;
-=======
 
                         type="button"
                         size="sm"
@@ -1686,8 +1640,6 @@ if (throw error) {
                                       className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none";
                                     >;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                                       {skill}
                                     </Badge>;
                                   ))}
@@ -1701,14 +1653,12 @@ if (throw error) {
                   </div>;
                 )}
 
-=======
 
 
               </div>;
 
               <Separator className='bg-zion-blue-light/50' />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Skills and Availability */}
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
                 {/* Skills Section */}
@@ -1727,7 +1677,6 @@ if (throw error) {
 
 
                           <FormControl>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             <Input
                               className='flex-1 bg-zion-blue border-zion-blue-light text-white'
                               placeholder='Add a skill...'
@@ -1758,7 +1707,6 @@ if (throw error) {
                       <p className='text-zion-slate text-sm italic'>;
                         No skills added yet;
                       </p>;
-=======
 
                             type="button"
                             variant="outline"
@@ -1794,8 +1742,6 @@ if (throw error) {
                     {skillTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No skills added yet</p>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
 
                   </div>;
@@ -1841,7 +1787,6 @@ if (throw error) {
                                 htmlFor='unavailable'
                                 className='text-white flex items-center gap-2'>;
                                 <div className='h-2 w-2 rounded-full bg-red-500'></div>;
-=======
                         <Switch;
                           aria - label='AI profile enhancement';
                           checked={field.value}
@@ -1928,12 +1873,10 @@ if (throw error) {
                     Skills & Expertise;
                   </h3>;
                   <FormField;
-=======
 
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Availability</h3>
                   <FormField
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     control={form.control}
                     name='skills';
                     render={({ field }: { field: any }) => (                      <FormItem>;
@@ -2047,10 +1990,8 @@ if (throw error) {
                         </FormControl>
                         <FormMessage className="text-red-400" />
                       </FormItem>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
 
-=======
                         <FormMessage className='text - red - 400' />;
                       </FormItem>)}
 
@@ -2080,8 +2021,6 @@ if (throw error) {
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Profile"}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </Button>
               </div>
             </CardFooter>
@@ -2115,12 +2054,10 @@ if (throw error) {
 
 }
 //Generate enhanced profile with AI return;
-=======
 }
 
 //Generate enhanced profile with AI return;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }//Call the Supabase Edge Function const {
   data, error ';
 }= await supabase.functions.invoke ('talent - profile - enhancer', {
@@ -2163,7 +2100,6 @@ if ( {) {
 
 
 }Zion Marketplace</p>
-=======
   //Extract all skills from categorized skills and properly type cast them const allCategorizedSkills = generated_content.categorized_skills;
 const new_skills: string[] = [];
 if () {) {
@@ -2187,7 +2123,6 @@ if () {) {
   // Check condition
 if ( {) {
   $2
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
   toast ({
   return;
@@ -2478,10 +2413,7 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }/> </div> </div> </CardContent> <CardFooter className="border-t border-zion-blue-light pt-6"> <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between" > <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>) ;
 }'"}
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   skill ";
 }className="bg - zion - purple / 20 hover:bg - zion - purple / 30 text - zion - purple border - none" > {
   skill;
@@ -2509,5 +2441,3 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }<div className="space - y-4"> <h3 className="text - lg font - medium text - white" >Availability</h3> <FormField <FormLabel className="text - zion - slate - light">Current Status</FormLabel> <FormControl> <div className="space - y-2"> <div className="flex items - center space - x-2" > <input /> <label html_for="available" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - green - 500"></div> Available Now </label> </div> <div className="flex items - center space - x-2" > <input /> <label html_for="limited" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - yellow - 500"></div> Limited Availability </label> </div> <div className="flex items - center space - x-2" > <input /> <label html_for="unavailable" className="text - white flex items - center gap - 2"> <div className="h - 2 w - 2 rounded - full bg - red - 500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text - red - 400" /> </FormItem>) ";
 }/> </div> </div> </CardContent> <CardFooter className="border - t border - zion - blue - light pt - 6"> <div className="flex flex - col sm:flex - row gap - 4 w - full sm:justify - between" > <Button type="button" variant="outline" className="border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

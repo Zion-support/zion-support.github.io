@@ -1,5 +1,3 @@
-
-
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript
   // can't determine the generic type for the helper from React Router.
@@ -15,12 +13,10 @@ class ErrorBoundary extends React.Component {
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
-=======
 
   const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin'
       return;
 
-=======
   const router = useRouter(),
   const postId = router.query.postId as string,
   const { user } = useAuth(),
@@ -54,7 +50,6 @@ class ErrorBoundary extends React.Component {
       const returnTo = encodeURIComponent(router.asPath),
       router.push(`/auth/login?returnTo=${returnTo}`),
       return
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
     setPost({ ...post, upvotes: post.upvotes + 1 }),
@@ -174,7 +169,6 @@ class ErrorBoundary extends React.Component {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
 
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
@@ -313,15 +307,12 @@ export default function ForumPostPage() {;
   const formattedDate = format(new Date(post && post.createdAt), "MMMM d, yyyy 'at' h: mm a"),;
 }
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 
   )
 }
-=======
 
-=======
     id: "reply1",
     post_id: "1",
     content: "Great post! I've had similar experiences with data preparation being the key to successful fine - tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",
@@ -408,6 +399,3 @@ if (return) {
 }
 
 ;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

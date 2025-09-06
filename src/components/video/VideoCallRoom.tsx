@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react',
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -21,7 +20,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   onToggleScreenShare,
   className 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 },) => {
   const [isMuted, setIsMuted] = useState(false)
   const [isVideoEnabled, setIsVideoEnabled] = useState(true)
@@ -91,7 +89,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
         <div className="flex items-center space-x-2">
           <CardTitle className="text-white">Video Call</CardTitle>
           <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">
-=======
 import { Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff, Volume2, VolumeX } from 'lucide-react';
 import './video-call ;interface Participant {;
   id: string,;
@@ -197,7 +194,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
         <div className="flex items-center space-x-2">;
           <CardTitle className="text-white">Video Call</CardTitle>;
           <Badge variant="outline" className="text-white border-zion-purple bg-zion-blue-light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             Room: {roomId}
           </Badge>;
         </div>;
@@ -340,7 +336,6 @@ if ( {) {
           {participants.length > 0 ? (
             participants.map ((participant, ) => (
               <div key={participant.id} className="video - participant bg - zion - blue - dark rounded - lg overflow - hidden relative">;
-=======
 
       
       <CardContent className="p-0">
@@ -348,9 +343,7 @@ if ( {) {
           {participants.length > 0 ? (
             participants.map((participant) => (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {participant.isVideoEnabled && !participant.isScreenSharing ? (
 
           </Badge>;
@@ -413,9 +406,7 @@ if ( {) {
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">
-=======
 
                 <div className="video-metadata flex items-center space-x-2">;
                   <span>{participant && participant.name}</span>;
@@ -436,7 +427,6 @@ if ( {) {
         </div>;
 
         <div className="bg-zion-blue-dark border-t border-zion-blue-light p-4 flex items-center justify-center space-x-3">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Button
             variant="outline"
             size="icon"
@@ -445,7 +435,6 @@ if ( {) {
           </Button>;
 
 
-=======
 
             onClick={handleToggleMute}
             aria-label={isMuted ? 'Unmute microphone' : 'Mute microphone'}
@@ -453,7 +442,6 @@ if ( {) {
             {isMuted ? <MicOff /> : <Mic />}
           </Button>
           
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button
             variant="outline"
             size="icon"
@@ -462,14 +450,12 @@ if ( {) {
           </Button>;
 
 
-=======
             onClick={handleToggleVideo}
             aria-label={isVideoEnabled ? 'Disable camera' : 'Enable camera'}
           >;
             {isVideoEnabled ? <Video /> : <VideoOff />}
           </Button>
           
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button
             variant="outline"
             size="icon"
@@ -478,14 +464,12 @@ if ( {) {
           </Button>;
 
 
-=======
             onClick={handleToggleScreenShare}
             aria-label={isScreenSharing ? 'Stop sharing screen' : 'Share screen'}
           >;
             {isScreenSharing ? <ScreenShareOff /> : <ScreenShare />}
           </Button>
           
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button
             variant="outline"
             size="icon"
@@ -494,14 +478,12 @@ if ( {) {
           </Button>;
 
 
-=======
             onClick={handleToggleAudioOnly}
             aria-label={isAudioOnly ? 'Disable audio only' : 'Enable audio only'}
           >;
             {isAudioOnly ? <VolumeX /> : <Volume2 />}
           </Button>
           
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button
             variant="destructive"
             size="icon"
@@ -512,7 +494,6 @@ if ( {) {
           >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Phone className="rotate-135" />
           </Button>
         </div>
@@ -529,10 +510,7 @@ if ( {) {
   );
 },;
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   <div className="bg - zion - blue - light h - full w - full flex items - center justify - center text - white">;
                     {/* Placeholder for actual video stream */}
                     <Video className="h - 12 w - 12 opacity - 50" />;
@@ -614,5 +592,3 @@ if ( {) {
     </Card>);
 },
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

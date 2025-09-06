@@ -1,5 +1,3 @@
-
-
 interface TalentCardAvailabilityProps {
   availability_type: string;
 }
@@ -21,10 +19,8 @@ function TalentCardAvailability() {
 
     }
   } return 'bg - gray - 500 / 20 text - gray - 400';
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Clock } from 'lucide-react'
 interface TalentCardAvailabilityProps {
   availabilityType: string
@@ -35,7 +31,6 @@ interface TalentCardAvailabilityProps {
     };
 
   }; return 'bg-gray-500/20 text-gray-400'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
 
@@ -68,9 +63,7 @@ interface TalentCardAvailabilityProps {
         return status
 
 import React from 'react';
-=======
 
-=======
 import React from "react",;
 
 import { Clock } from 'lucide-react';
@@ -93,7 +86,6 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
         return 'bg-green-500/20 text-green-400';
       case 'part-time':;
         return 'bg-yellow-500/20 text-yellow-400';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       case 'project-based':;
         return 'bg-blue-500/20 text-blue-400',;
       default:;
@@ -101,9 +93,7 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
     }
   };        return 'bg-gray-500/20 text-gray-400';
 
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   };
 
@@ -121,7 +111,6 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
 
 
 
-=======
   const getAvailabilityLabel = (status: string, ) =>: any {
     switch (status) {
       case 'full - time':;
@@ -138,19 +127,13 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
       <span>{getAvailabilityLabel (availability_type)}</span>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   return (
     <div className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}>
       <Clock className="h-3 w-3" />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
   )
 }
 ;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

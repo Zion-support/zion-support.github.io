@@ -1,13 +1,12 @@
-
 import React from 'react';
 
-
-
-
-=======
+const About = () => {
+  return (
+    <div>
+      <h1>About</h1>
+      <p>This page is under construction.</p>
+    </div>
   );
 };
 
 export default About;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

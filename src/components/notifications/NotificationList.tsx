@@ -1,8 +1,5 @@
-
-
-  onRetry
+onRetry
 },) => {
-=======
 } import React from 'react';
 import { ScrollArea } from '@/components / ui / scroll - area';
 import Skeleton from '@/components / ui / skeleton';
@@ -27,7 +24,6 @@ export const NotificationList: React.FC < NotificationListProps> = ({
   on_dismiss,
   on_retry;
 }, ) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
       {error ? (
@@ -88,7 +84,6 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   );
 };
 
-=======
         <div className="p - 8 text - center text - amber - 500">;
           <p>{error}</p>;
           <Button;
@@ -124,15 +119,11 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
     </ScrollArea>);
 }
 ";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   );
 };
 ";
 
-=======
             key={notification.id}
             notification={notification}
             onMarkAsRead={onMarkAsRead}
@@ -143,7 +134,3 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
     </ScrollArea>;
   );
 };
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

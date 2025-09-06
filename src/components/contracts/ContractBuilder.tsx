@@ -1,6 +1,4 @@
-
-
-  isOpen;
+isOpen;
   onClose;
   talent;
   clientName;
@@ -40,20 +38,16 @@
       />;
     );
   }
-=======
 
 
   }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
             
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="flex gap-2">
               <Button
                 variant="outline"
@@ -89,12 +83,9 @@
               </Button>;
 
 
-=======
 
               
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Button
                 variant="secondary"
                 size="sm"
@@ -109,11 +100,9 @@
           <TabsContent value="form" className="pt-4">;
 
             <ContractForm
-=======
 
             <ContractForm 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               talent = {talent,}
               clientName = {clientName,}
               initialValues = {formValues,}
@@ -127,11 +116,9 @@
             {generatedContract && (;
 
               <ContractPreview
-=======
 
               <ContractPreview 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 contractContent = {generatedContract,}
                 talent = {talent,}
                 onClose = {onClose,}
@@ -154,7 +141,6 @@
     </Dialog>;
   );
 
-=======
   handleContractGenerated;
 }/> </TabsContent> />);
 }</TabsContent> </Tabs> <TemplateManager is_open= {
@@ -167,12 +153,5 @@
   form_values;
 }/> </DialogContent> </Dialog>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

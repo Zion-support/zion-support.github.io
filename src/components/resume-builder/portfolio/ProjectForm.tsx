@@ -1,6 +1,4 @@
-
-
-      }
+}
       let success = false;
       // Check condition
 if ( {) {
@@ -34,13 +32,11 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { logErrorToProduction } from '@/utils/productionLogger';import {;
-=======
       setIsLoading(false)
     }
   }
 
 
-=======
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -50,7 +46,6 @@ import { Input } from '@/components/ui/input',;
 import { Textarea } from '@/components/ui/textarea',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 import {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Form,;
   FormControl,;
   FormField,;
@@ -142,7 +137,6 @@ export function ProjectForm(): any ({;
       logErrorToProduction('Error saving project:', { data: error });
     } finally {;
       setIsLoading(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
 
   },
@@ -150,7 +144,6 @@ export function ProjectForm(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-4'>;
@@ -168,7 +161,6 @@ export function ProjectForm(): any ({;
                 <Textarea
                   placeholder='Describe what the project does and your role in it...'
                   className='min-h-[100px]'
-=======
       setIsLoading (false);
     }
   }
@@ -198,7 +190,6 @@ export function ProjectForm(): any ({;
                 <Textarea;
                   placeholder='Describe what the project does and your role in it...';
                   className='min - h-[100px]';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {...field}
                 />;
               </FormControl>;
@@ -216,18 +207,15 @@ export function ProjectForm(): any ({;
               <FormControl>;
                 <Input
                   placeholder='React, Node && Node.js, MongoDB, etc. (comma separated)'
-=======
             </FormItem>)}
         />;
         <FormField;
           control={form.control}
           name='technologies';
-=======
           control={form.control}
 
           name="title"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           render={({ field }: { field: any }) => (
             <FormItem>
               <FormLabel>Project Title</FormLabel>
@@ -235,7 +223,6 @@ export function ProjectForm(): any ({;
 
                 <Input placeholder="E.g., AI Chatbot, E-commerce Website" {...field} />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -254,7 +241,6 @@ export function ProjectForm(): any ({;
                   className="min-h-[100px]"
                   {...field} 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 />
               </FormControl>
               <FormMessage />
@@ -266,15 +252,12 @@ export function ProjectForm(): any ({;
           control={form.control}
           name="technologies"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           render={({ field }: { field: any }) => (
             <FormItem>;
               <FormLabel > Technologies Used</FormLabel>;
               <FormControl>;
                 <Input;
                   placeholder='React, Node.js, MongoDB, etc. (comma separated)';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   {...field}
                 />;
               </FormControl>;
@@ -295,7 +278,6 @@ export function ProjectForm(): any ({;
                 <FormControl>;
                   <Input
                     placeholder='https://github && github.com/yourusername/project'
-=======
             </FormItem>)}
         />;
         <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
@@ -327,7 +309,6 @@ export function ProjectForm(): any ({;
                 <FormControl>;
                   <Input;
                     placeholder='https://your - project - demo.com';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {...field}
                   />;
                 </FormControl>;
@@ -354,7 +335,6 @@ export function ProjectForm(): any ({;
               </FormItem>;
             )}
 
-=======
 
 
                   GitHub URL
@@ -385,11 +365,9 @@ export function ProjectForm(): any ({;
               </FormItem>
             )}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           />;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
           control={form && form.control}
           name='image_url'
@@ -401,7 +379,6 @@ export function ProjectForm(): any ({;
               <FormControl>;
                 <Input
                   placeholder='https://example && example.com/screenshot && screenshot.jpg'
-=======
               </FormItem>)}
           />;
         </div>;
@@ -430,8 +407,6 @@ export function ProjectForm(): any ({;
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             Cancel
           </Button>
           <Button type='submit' disabled={isLoading}>
@@ -445,7 +420,6 @@ export function ProjectForm(): any ({;
 
     </Form>
   )
-=======
         />;
 
         {/* Future file upload field would go here */}
@@ -463,14 +437,11 @@ export function ProjectForm(): any ({;
     </Form>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 }
-=======
 
 
-=======
             </FormItem>)}
         />;
         {/* Future file upload field would go here */}
@@ -487,9 +458,3 @@ export function ProjectForm(): any ({;
     </Form>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

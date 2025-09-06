@@ -1,5 +1,3 @@
-
-
 import {
   AlertTriangle,
   RefreshCw,
@@ -16,7 +14,6 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / ca
 import { Badge } from '@/components / ui / badge';
 import * as Sentry from '@sentry / nextjs';
 import { logErrorToProduction } from '@/utils / production_logger';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface ErrorBoundaryState {
   has_error: boolean;
   error: Error | null;
@@ -76,7 +73,6 @@ interface ErrorBoundaryProps {
       userId: this.getUserId(),
 
       buildInfo: this.getBuildInfo()
-=======
 export class GlobalErrorBoundary extends Component<;
   ErrorBoundaryProps,
   ErrorBoundaryState;
@@ -124,7 +120,6 @@ export class GlobalErrorBoundary extends Component < ErrorBoundaryProps, ErrorBo
       url: typeof window !== 'undefined' ? window.location.href : 'SSR',
       user_id: this.getUserId (),
       build_info: this.getBuildInfo (),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
     // Log to console in development;
     // Check condition
@@ -165,7 +160,6 @@ if ( {) {
                sessionStorage.getItem('userId') || 
                null
 
-=======
     // Report to Sentry;
     Sentry.with_scope (scope => {
       scope.set_tag (
@@ -247,7 +241,6 @@ if ( {) {
           local_storage.get_item ('user_id') ||;
           session_storage.get_item ('user_id') ||;
           null);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } catch {
         return null;
       }
@@ -448,14 +441,12 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
     return null;  }      } catch {;
         return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       }
     }
     return null;
   }
 
     return null
-=======
         return null;
       }
     }
@@ -469,7 +460,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
 
 
     return 'This appears to be a temporary issue. Please try again.'
-=======
       build_time: process.env.NEXT_PUBLIC_BUILD_TIME || 'unknown',
     }
   }
@@ -588,7 +578,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       })
     }, retryDelay)
     this.retryTimeouts.push(timeout)
-=======
     if () {) {
   $2
 }
@@ -612,7 +601,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       });
     }, retry_delay);
     this.retry_timeouts.push (timeout);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
     const error_details = {
@@ -648,7 +636,6 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
     }
 
 
-=======
   private report_error = async () => {
     // Check condition
 if (return) {
@@ -658,7 +645,6 @@ if (return) {
 if (return) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       await navigator.clipboard.write_text (JSON.stringify (error_details, null, 2));
       // Could show a toast notification here;
@@ -699,7 +685,6 @@ if (return) {
 
       if (response.ok) {
         // Show success message
-=======
   private report_error = async () => {
     // Check condition
 if (return) {
@@ -731,7 +716,6 @@ if ( {) {
   $2
 }
         // Show success message;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     } catch (err) {
       logErrorToProduction ('Failed to report error:', { data: err });
@@ -749,7 +733,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   private goHome = () => {
     if (typeof window !== 'undefined') {
       window.location.href = '/'
@@ -763,7 +746,6 @@ if ( {) {
       // Use custom fallback if provided
       if (this.props.fallback) {
 
-=======
 
         return this.props.fallback;
 
@@ -787,7 +769,6 @@ if ( {) {
 
       const canRetry = this.props.enableRetry !== false && 
                        this.state.retryCount < (this.props.maxRetries || 3)
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       return (
 
@@ -797,7 +778,6 @@ if ( {) {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3 }}
           >
-=======
             transition={{ duration: 0.3 }}
           >
 
@@ -809,7 +789,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <CardTitle className="text-2xl font-bold text-gray-900 dark:text-gray-100">
                   Oops! Something went wrong
@@ -823,7 +802,6 @@ if ( {) {
                 </div>
               </CardHeader>
 
-=======
 
                       {this.props.maxRetries || 3}                    </p>                    {suggestion}
                   </p>
@@ -832,7 +810,6 @@ if ( {) {
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
 
                     </p>
-=======
                 <div className="flex items-center justify-center gap-2 mt-2">
                   <Badge 
                     variant={severity === 'critical' ? 'destructive' : severity === 'high' ? 'destructive' : 'secondary'}
@@ -852,7 +829,6 @@ if ( {) {
                 <div className="text-center">
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
                     {suggestion}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </p>
                   {this.state.retryCount > 0 && (
                     <p className="text-sm text-orange-600 dark:text-orange-400">
@@ -933,7 +909,6 @@ if ( {) {
                       Try Again;
                     </Button>;
 
-=======
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
                     </p>
                   )}
@@ -947,7 +922,6 @@ if ( {) {
                       Try Again
                     </Button>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   )}
 
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
@@ -961,7 +935,6 @@ if ( {) {
 
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {canRetry && (
                     <Button onClick={this.retry} className="flex items-center gap-2">
                       <RefreshCw className="h-4 w-4" />
@@ -970,7 +943,6 @@ if ( {) {
                   )}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Bug className="h-4 w-4" />
                     {this.state.showDetails ? 'Hide' : 'Show'} Details
                   </Button>
@@ -994,12 +966,9 @@ if ( {) {
                 </div>;
 
 
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {/* Error Details */}
                 <AnimatePresence>;
                   {this && this.state.showDetails && (;
@@ -1018,11 +987,8 @@ if ( {) {
                     >
                       <div className="space-y-4">
                         <div>
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           <h4 className="font-semibold text-sm mb-2">Error Message:</h4>
                           <code className="block p-3 bg-red-50 dark:bg-red-900/10 rounded text-sm text-red-800 dark:text-red-200 overflow-auto">
                             {this.state.error.message}
@@ -1033,7 +999,6 @@ if ( {) {
 
 
                         {process.env.NODE_ENV === 'development' &&
-=======
   private go_home = () => {
     // Check condition
 if ( {) {
@@ -1203,7 +1168,6 @@ if ( {) {
                           </code>;
                         </div>;
                         {process.env.NODE_ENV === 'development' &&;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           this.state.error.stack && (
                             <div>;
                               <h4 className='font - semibold text - sm mb - 2'>;
@@ -1244,7 +1208,6 @@ if ( {) {
                           )}
 
                         <div className='flex gap-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                           <Button
                             onClick={this && this.copyErrorDetails}
                             variant='outline'
@@ -1277,7 +1240,6 @@ if ( {) {
                             Copy Details
                           </Button>
                           {this.props.showReportButton !== false && (
-=======
 
 
 
@@ -1286,13 +1248,10 @@ if ( {) {
                           {this.props.showReportButton !== false && (
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             <Button onClick={this.reportError} variant="outline" size="sm">
                               <Send className="h-4 w-4 mr-2" />
                               Report Issue
                             </Button>
-=======
                               size='sm'>;
                               <Send className='h-4 w-4 mr-2' />                              Report Issue;
                         <div className="flex gap-2">;
@@ -1308,7 +1267,6 @@ if ( {) {
                             </Button>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                           )}
                         </div>;
                       </div>;
@@ -1322,7 +1280,6 @@ if ( {) {
 
 
 
-=======
 // Higher - order component for adding error boundaries;
 export const withErrorBoundary = <P extends object>(
   Component: React.ComponentType < P>,
@@ -1340,21 +1297,13 @@ export default GlobalErrorBoundary;
   return WrappedComponent;
 }
 export default GlobalErrorBoundary;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
       );
 
     }
 
     return this.props.children;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 // Hook for programmatic error boundary
 export const useErrorBoundary = () => {
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

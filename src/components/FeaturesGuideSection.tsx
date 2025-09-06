@@ -1,6 +1,3 @@
-
-
-
 import Link from 'next/link'
 import { GradientHeading } from './GradientHeading'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
@@ -30,7 +27,6 @@ export function FeaturesGuideSection() {
     {
 
 
-=======
         'Navigate to the AI Matcher page from the homepage or marketplace',
         'Fill in your project requirements and specifications',
         'Review the AI-recommended matches tailored to your needs',
@@ -290,7 +286,6 @@ export function FeaturesGuideSection() {
                 value={feature.id}
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
-=======
 import Link from "next/link",
 import { GradientHeading } from "./GradientHeading",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -556,7 +551,6 @@ export function FeaturesGuideSection() {;
       link: "/help";
       buttonText: "View Resources";
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     {
       id: 'talent-directory'
@@ -794,8 +788,6 @@ export function FeaturesGuideSection() {;
       ]
       link: "/help"
       buttonText: "View Resources"
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Link from 'next/link';
 import { GradientHeading } from './GradientHeading';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -1064,7 +1056,6 @@ export function FeaturesGuideSection() {;
       title: "Help & Resources",;
       description: "Access guides, tutorials, and support resources to maximize your marketplace experience.";
       icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,;
-=======
 import Link from 'next / link';
 import { GradientHeading } from './GradientHeading';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
@@ -1335,7 +1326,6 @@ function FeaturesGuideSection() {
       title: "Help & Resources",
       description: "Access guides, tutorials, and support resources to maximize your marketplace experience.";
       icon: <HelpCircle className="h - 10 w - 10 text - zion - purple" />,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       instructions: [;
         "Visit our comprehensive knowledge base";
         "Watch video tutorials on specific features";
@@ -1348,7 +1338,6 @@ function FeaturesGuideSection() {
               >;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {feature.title}
               </TabsTrigger>
             ))}
@@ -1360,7 +1349,6 @@ function FeaturesGuideSection() {
               <TabsTrigger
                 key={feature.id}
                 value={feature.id}
-=======
 
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
             {features.slice(4).map(feature => (
@@ -1368,8 +1356,6 @@ function FeaturesGuideSection() {
                 key={feature.id} 
                 value={feature.id}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
               >
                 {feature.title}
@@ -1442,7 +1428,6 @@ function FeaturesGuideSection() {
                   <p className="text-zion-slate-light mb-6">{feature.description}</p>
                   <Button 
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-=======
 
 
                     asChild
@@ -1454,7 +1439,6 @@ function FeaturesGuideSection() {
                   </Button>
                 </div>
                 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <div className="md:w-2/3 bg-zion-blue-dark p-6 rounded-lg">
                   <h4 className="text-xl font-semibold text-white mb-4">How to Use</h4>
                   <ol className="list-decimal list-inside space-y-3 pl-4">
@@ -1574,7 +1558,6 @@ function FeaturesGuideSection() {
         <div className="mt-12 text-center">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button
             variant="outline"
             className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"
@@ -1592,7 +1575,6 @@ function FeaturesGuideSection() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </Link>
           </Button>
         </div>
@@ -1614,11 +1596,8 @@ function FeaturesGuideSection() {
 };
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   </p>;
                   <Button;
                     className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple'                    as_child;
@@ -1677,12 +1656,6 @@ function FeaturesGuideSection() {
 }
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   )
 }
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,11 +1,7 @@
-
-
-=======
-      toast.success (
+toast.success (
         `Wallet connected: ${address.slice (0, 6)}...${address.slice (-4)}`);
     } catch (error: any) {
       toast.error (error.message || 'Failed to connect wallet');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
 
@@ -27,8 +23,6 @@
         
         <div className="grid gap-6 md:grid-cols-2">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
@@ -47,7 +41,6 @@
           <Card>;
             <CardHeader>;
               <CardTitle>Profile Settings</CardTitle>;
-=======
     <>;
       <SEO title='Account Settings' description='Manage your account' />;
       <Header />;
@@ -111,7 +104,6 @@
                     <Wallet className="h-4 w-4" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     Connect
                   </Button>
                 </div>
@@ -142,7 +134,6 @@
                     <Database className="h-4 w-4" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     Decentralized Backup
                   </Label>
                   <p className='text-xs text-gray-500'>
@@ -203,7 +194,6 @@
                 onClick={handleSave}
                 disabled={isSubmitting}
                 className='w-full'>;
-=======
 
                   id="backup"
                   checked={enableBackup}
@@ -223,8 +213,6 @@
                 className="w-full"
               >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className='ml-2 h-4 w-4' />}
 
@@ -232,7 +220,6 @@
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Card>
             <CardHeader>
               <CardTitle>Web3 Features</CardTitle>
@@ -245,7 +232,6 @@
                 <h3 className='font-medium'>Connected Wallet</h3>
                 {didHandle ? (
                   <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>
-=======
               </Button>;
             </CardContent>;
           </Card>;
@@ -253,7 +239,6 @@
           <Card>;
             <CardHeader>;
               <CardTitle>Web3 Features</CardTitle>;
-=======
             <CardContent className='space - y-6'>;
               <div className='space - y-2'>;
                 <Label html_for='email'>Email Address</Label>;
@@ -330,7 +315,6 @@
           <Card>;
             <CardHeader>;
               <CardTitle > Web3 Features</CardTitle>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <CardDescription>;
                 Manage your Web3 connections and features;
               </CardDescription>;
@@ -340,14 +324,12 @@
               
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div>
                 <h3 className='font-medium mb-2'>Backup Status</h3>
                 <div className='grid grid-cols-2 gap-2'>
                   <div className='bg-gray-100 p-3 rounded-md'>
                     <p className='text-sm font-medium'>Profile Data</p>
                     <p className='text-xs text-gray-500'>
-=======
               </div>;
 
               <div>;
@@ -356,7 +338,6 @@
                   <div className='bg-gray-100 p-3 rounded-md'>;
                     <p className='text-sm font-medium'>Profile Data</p>;
                     <p className='text-xs text-gray-500'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       {enableBackup ? 'Backed up' : 'Not backed up'}
                     </p>;
                   </div>;
@@ -377,7 +358,6 @@
                     <p className='text-xs text-gray-500'>;
                       {enableBackup ? 'Backed up' : 'Not backed up'}
 
-=======
             <CardContent className='space - y-6'>;
               <div className='space - y-2'>;
                 <h3 className='font - medium'>Connected Wallet</h3>;
@@ -450,14 +430,12 @@
                 </div>;
               </div>;
 
-=======
 
     </>;
   );
 };
 
 
-=======
               <div>;
                 <h3 className='font - medium mb - 2'>Recovery Options</h3>;
                 <Button;
@@ -470,7 +448,6 @@
                   {enable_backup;
                     ? 'Restore your profile data from decentralized storage';
                     : 'Enable backup first to use this feature'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </p>;
               </div>;
             </CardContent>;
@@ -479,17 +456,7 @@
       </main>;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

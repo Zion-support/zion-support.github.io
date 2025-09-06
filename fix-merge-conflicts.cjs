@@ -2,7 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 // Function to fix merge conflicts in a file
 function fixMergeConflicts(filePath) {

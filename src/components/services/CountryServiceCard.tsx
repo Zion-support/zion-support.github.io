@@ -1,11 +1,8 @@
-
-
-  // Get region flag based on country name (for demo purposes)
+// Get region flag based on country name (for demo purposes)
 
   const getRegionEmoji = (countryName: string | undefined): string => {
 
 
-=======
     if (!countryName) return "🌐",
     
     const emojiMap: Record<string string> = {
@@ -59,8 +56,6 @@
             <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
           {isPopular && (
             <Badge className='bg-zion-purple text-white border-none'>
@@ -82,7 +77,6 @@
             <span>Typical response time: {getResponseTime(country.country)}</span>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
           <div className='flex items-start'>
             <MapPin className='h-4 w-4 mr-2 text-zion-purple mt-1' />
@@ -237,14 +231,12 @@ export function CountryServiceCard(): any ({;
         </div>;
       </CardContent>;
       <CardFooter className='flex flex-col space-y-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Button
           onClick = {() => onSelect(country),}
           className={`w-full ${;
             isPopular;
               ? 'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple';
               : 'bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light';
-=======
     >;
       <CardHeader className='pb - 2'>;
         <div className='flex items - center justify - between'>;
@@ -294,7 +286,6 @@ export function CountryServiceCard(): any ({;
             is_popular;
               ? 'bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple';
               : 'bg - zion - blue hover:bg - zion - blue - light border border - zion - blue - light';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           }`}
         >;
           Select Service;
@@ -308,7 +299,6 @@ export function CountryServiceCard(): any ({;
   );
 }
 
-=======
         <Button;
           variant='outline';
           className='w - full border - zion - purple text - zion - purple hover:bg - zion - purple / 10';
@@ -325,9 +315,6 @@ export function CountryServiceCard(): any ({;
       </CardFooter>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
       <CardFooter className="flex flex-col space-y-2">
         <Button
           onClick={() => onSelect(country)}
@@ -346,7 +333,6 @@ export function CountryServiceCard(): any ({;
           onClick={() => onQuote?.(country)}
         >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           Get Quote
         </Button>
         <Button
@@ -360,5 +346,3 @@ export function CountryServiceCard(): any ({;
       </CardFooter>
     </Card>
   )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

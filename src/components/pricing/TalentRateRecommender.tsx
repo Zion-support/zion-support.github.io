@@ -1,5 +1,3 @@
-
-
 import { Sparkles } from 'lucide-react'
 interface TalentRateRecommenderProps {
 
@@ -9,7 +7,6 @@ interface TalentRateRecommenderProps {
   onSuggestionApplied: (value: number,) => void,
   rateType: "hourly" | "fixed"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
@@ -20,8 +17,6 @@ interface TalentRateRecommenderProps {
           actualValue: suggestedRate
           accepted: true
         })
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 interface TalentRateRecommenderProps {;
   skills: string[],;
   yearsExperience: number,;
@@ -93,8 +88,6 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({;
           actualValue: suggestedRate,;
           accepted: true;
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   const handleApplySuggestion = () =>: any {
     // Check condition
 if ( {) {
@@ -116,7 +109,6 @@ if ( {) {
           actual_value: suggested_rate,
           accepted: true;
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
 
@@ -125,7 +117,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -138,16 +129,13 @@ if ( {) {
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI
           </Button>
         ) : (
-=======
             disabled = {skills && skills.length === 0 || yearsExperience <= 0,}
             className="w-full">;
             <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI;
           </Button>;
         ) : (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <PricingSuggestionBox
 
-=======
 
   rateType 
 }/>) 
@@ -156,7 +144,6 @@ if ( {) {
 '"};
 };
 
-=======
             suggestion={suggestion}
             isLoading={isLoading}
             onApplySuggestion={handleApplySuggestion}
@@ -170,10 +157,7 @@ if ( {) {
 };
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     <div className="space - y-4">;
       <div>;
         {!suggestion && !is_loading ? (
@@ -211,10 +195,3 @@ return (<div className="space - y-4" > <div> {";
 }
 '"},
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

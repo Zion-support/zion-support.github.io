@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -25,7 +23,6 @@ interface PerformanceMetrics {;
   loadTime: number;
   performanceScore: number;
   chunkCount: number;
-=======
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
@@ -51,7 +48,6 @@ interface PerformanceMetrics {
   load_time: number;
   performance_score: number;
   chunk_count: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   cacheHitRate: number;
   fcp: number; // First Contentful Paint;
   lcp: number; // Largest Contentful Paint;
@@ -384,7 +380,6 @@ export function PerformanceDashboard() {;
 
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return vitals;
   };
 
@@ -443,7 +438,6 @@ export function PerformanceDashboard() {;
     const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds;
     return () => clearInterval(interval);
   }, []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div className='space-y-6'>;
@@ -452,7 +446,6 @@ export function PerformanceDashboard() {;
         <div>;
           <h2 className='text-2xl font-bold'>Performance Dashboard</h2>;
           <p className='text-muted-foreground'>;
-=======
   useEffect (() => {
     collect_metrics ();
     const interval = set_interval (collect_metrics, 30000); // Update every 30 seconds;
@@ -465,7 +458,6 @@ export function PerformanceDashboard() {;
         <div>;
           <h2 className='text - 2xl font - bold'>Performance Dashboard</h2>;
           <p className='text - muted - foreground'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Monitor bundle size, performance metrics, and optimization;
             opportunities;
           </p>;
@@ -475,7 +467,6 @@ export function PerformanceDashboard() {;
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {isLoading ? 'Collecting...' : 'Refresh'}
 
         </Button>;
@@ -487,7 +478,6 @@ export function PerformanceDashboard() {;
         <CardHeader>;
           <CardTitle className='flex items-center gap-2'>;
             <Zap className='w-5 h-5' />;
-=======
         <Button on_click={collect_metrics} disabled={is_loading}>;
           <RefreshCw;
             className={`w - 4 h - 4 mr - 2 ${is_loading ? 'animate - spin' : ''}`}
@@ -500,7 +490,6 @@ export function PerformanceDashboard() {;
         <CardHeader>;
           <CardTitle className='flex items - center gap - 2'>;
             <Zap className='w - 5 h - 5' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Performance Score;
           </CardTitle>;
         </CardHeader>;
@@ -512,10 +501,8 @@ export function PerformanceDashboard() {;
                 <p className="text-sm text-muted-foreground">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Last updated: {lastUpdated.toLocaleString()}
                 </p>
-=======
                     </Badge>;
                   </div>;
                   <Progress value={metrics && metrics.performanceScore} className='h-2' />;
@@ -526,7 +513,6 @@ export function PerformanceDashboard() {;
                 <p className='text-sm text-muted-foreground'>;
                   Last updated: {lastUpdated && lastUpdated.toLocaleString()}
                 </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </div>;
           ) : (;
@@ -571,7 +557,6 @@ export function PerformanceDashboard() {;
                 {metrics && metrics.loadTime.toFixed(0)}ms;
               </p>;
               <p className='text-xs text-muted-foreground'>;
-=======
           {metrics ? (
             <div className='space - y-4'>;
               <div className='flex items - center gap - 4'>;
@@ -719,7 +704,6 @@ export function PerformanceDashboard() {;
                           <Badge variant="secondary" className="text-xs">
                             cached
                           </Badge>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         )}
                       </div>;
                     </div>;
@@ -741,13 +725,11 @@ export function PerformanceDashboard() {;
                 <p className='text-sm text-muted-foreground text-center pt-2'>
                   ... and {chunks.length - 10} more chunks
                 </p>
-=======
 
               {chunks && chunks.length > 10 && (;
                 <p className='text-sm text-muted-foreground text-center pt-2'>;
                   ... and {chunks && chunks.length - 10} more chunks;
                 </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </div>;
           ) : (;
@@ -762,7 +744,6 @@ export function PerformanceDashboard() {;
               <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div>
                 <p className='font-medium text-green-900 dark:text-green-100'>
                   Performance monitoring active
@@ -778,7 +759,6 @@ export function PerformanceDashboard() {;
             
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
               <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>
                 <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0.5' />
@@ -847,10 +827,8 @@ export function PerformanceDashboard() {;
                 </div>;
               </div>;
             )}
-=======
 
 
-=======
 
           </div>;
         </CardContent>;
@@ -860,10 +838,7 @@ export function PerformanceDashboard() {;
 } ;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           {chunks.length > 0 ? (
             <div className='space - y-2'>;
               {chunks.slice (0, 10).map ((chunk, index) => (
@@ -958,10 +933,3 @@ export function PerformanceDashboard() {;
 }
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

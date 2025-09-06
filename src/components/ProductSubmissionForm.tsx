@@ -1,6 +1,4 @@
-
-
-    try {
+try {
       // Create the product listing;
       const product_data = {
         title: values.title,
@@ -134,7 +132,6 @@ import { useRouter } from 'next/router';
 import Image from 'next/image'; // Import next/image;
 import { logErrorToProduction } from '@/utils/productionLogger';
 
-=======
 
 
       const { data: productRecord, error: productError } = await supabase
@@ -156,7 +153,6 @@ import { useToast } from "@/hooks/use-toast",;
 import { useRouter } from "next/router",;
 import Image from 'next/image', // Import next/image;
 import {logErrorToProduction} from '@/utils/productionLogger',;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {;
   Form,;
   FormControl,;
@@ -420,7 +416,6 @@ export function ProductSubmissionForm() {;
       setIsSubmitting(false)
     }
   }
-=======
         title: "Publication Failed",
         description: error instanceof Error ? error.message : "An unknown error occurred",
         variant: "destructive"})
@@ -431,8 +426,6 @@ export function ProductSubmissionForm() {;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className='w-full'>;
       <TabsList className='grid grid-cols-2 mb-6'>;
@@ -449,10 +442,8 @@ export function ProductSubmissionForm() {;
       <TabsContent value="manual">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-6'>
-=======
           className='data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple'>;
           <Sparkles className='h-4 w-4 mr-2' />;
           AI-Powered Creation;
@@ -462,7 +453,6 @@ export function ProductSubmissionForm() {;
       <TabsContent value='manual'>;
         <Form {...form}>;
           <form onSubmit={form && form.handleSubmit(onSubmit)} className='space-y-6'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
 
       // Show success message;
@@ -519,22 +509,18 @@ export function ProductSubmissionForm() {;
                 return (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <FormItem>
                     <FormLabel>Product Title</FormLabel>
                     <FormControl>
-=======
                 field: ControllerRenderProps<ProductFormValues, 'title'>;
               }) => {;
                 const { onChange, onBlur, value, ref } = field;                return (
                   <FormItem>;
                     <FormLabel>Product Title</FormLabel>;
                     <FormControl>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <Input
 
                         ref={ref}                      />;
-=======
 
                         placeholder="Enter product title"
 ;
@@ -597,7 +583,6 @@ export function ProductSubmissionForm() {;
                 field: ControllerRenderProps < ProductFormValues, 'title'>;
               }) => {
                 const { on_change, on_blur, value, ref } = field; return (
-=======
             <FormField;
               control={form.control}
               name="description"
@@ -650,7 +635,6 @@ export function ProductSubmissionForm() {;
                 control={form.control}
                 name="price";
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <FormItem>;
                     <FormLabel > Product Title</FormLabel>;
                     <FormControl>;
@@ -674,7 +658,6 @@ export function ProductSubmissionForm() {;
                     <Textarea
                       placeholder='Describe your product in detail...'
                       className='min-h-32'
-=======
                 field: ControllerRenderProps < ProductFormValues, 'description'>;
               }) => (                <FormItem>;
                   <FormLabel > Description</FormLabel>;
@@ -682,7 +665,6 @@ export function ProductSubmissionForm() {;
                     <Textarea;
                       placeholder='Describe your product in detail...';
                       className='min - h-32';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       {...field}
                     />;
                   </FormControl>;
@@ -698,14 +680,12 @@ export function ProductSubmissionForm() {;
               <FormField
                 control={form && form.control}
                 name='price'
-=======
                 </FormItem>)}
             />;
             <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 6'>;
               <FormField;
                 control={form.control}
                 name='price';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 render={({
                   field
                 }: {
@@ -734,7 +714,6 @@ export function ProductSubmissionForm() {;
               <FormField
                 control={form && form.control}
                 name='category'
-=======
                   field: ControllerRenderProps < ProductFormValues, 'price'>;
                 }) => (                  <FormItem>;
                     <FormLabel > Price (USD)</FormLabel>;
@@ -754,14 +733,12 @@ export function ProductSubmissionForm() {;
               <FormField;
                 control={form.control}
                 name='category';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 render={({
                   field
                 }: {
 
                   field: ControllerRenderProps<ProductFormValues, 'category'>;
                 }) => (                  <FormItem>;
-=======
                   </FormItem>;
                 )}
               />;
@@ -793,14 +770,11 @@ export function ProductSubmissionForm() {;
                 name="category";
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "category"> }) => (;
                   <FormItem>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <FormLabel>Category</FormLabel>;
                     <FormControl>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <select
                         className='flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm'
                         {...field}>;
-=======
                   field: ControllerRenderProps < ProductFormValues, 'category'>;
                 }) => (                  <FormItem>;
                     <FormLabel > Category</FormLabel>;
@@ -809,7 +783,6 @@ export function ProductSubmissionForm() {;
                         className='flex h - 10 w - full rounded - md border border - input bg - background px - 3 py - 2 text - base ring - offset - background placeholder:text - muted - foreground focus - visible:outline - none focus - visible:ring - 2 focus - visible:ring - ring focus - visible:ring - offset - 2 disabled:cursor - not - allowed disabled:opacity - 50 md:text - sm';
                         {...field}
                       >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                         <option value=''>Select a category</option>;
                         <option value='digital_product'>Digital Product</option>;
                         <option value='service'>Service</option>;
@@ -828,7 +801,6 @@ export function ProductSubmissionForm() {;
             <FormField
               control={form && form.control}
               name='tags'
-=======
                   </FormItem>)}
               />;
             </div>;
@@ -840,7 +812,6 @@ export function ProductSubmissionForm() {;
                 <FormItem>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <FormLabel>Tags</FormLabel>
                   <FormControl>
                     <Input
@@ -900,7 +871,6 @@ export function ProductSubmissionForm() {;
                     />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </FormControl>
                   <FormDescription>
                     Upload a high-quality image of your product (recommended
@@ -912,11 +882,9 @@ export function ProductSubmissionForm() {;
                   
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {imagePreview && (
                     <div className='mt-2 w-full max-w-md border rounded overflow-hidden'>
                       <AspectRatio ratio={3 / 2}>
-=======
                       className='cursor-pointer'                    />;
                   </FormControl>;
                   <FormDescription>;
@@ -928,7 +896,6 @@ export function ProductSubmissionForm() {;
                   {imagePreview && (;
                     <div className='mt-2 w-full max-w-md border rounded overflow-hidden'>;
                       <AspectRatio ratio={3 / 2}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         <Image
                           src={imagePreview}
 
@@ -937,7 +904,6 @@ export function ProductSubmissionForm() {;
                           width={600} // Example width, adjust as needed
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           height={400} // Example height, adjust as needed
                           className='w-full h-full object-cover'
                           priority={false} // Preview images are not LCP
@@ -965,7 +931,6 @@ export function ProductSubmissionForm() {;
                       accept='video/mp4'
                       onChange={handleVideoChange}
                       className='cursor-pointer'
-=======
                 field: ControllerRenderProps < ProductFormValues, 'tags'>;
               }) => (                <FormItem>;
                   <FormLabel > Tags</FormLabel>;
@@ -1028,7 +993,6 @@ export function ProductSubmissionForm() {;
                       accept='video / mp4';
                       on_change={handleVideoChange}
                       className='cursor - pointer';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     />;
                   </FormControl>;
                   <FormDescription>;
@@ -1050,7 +1014,6 @@ export function ProductSubmissionForm() {;
                       accept='model/gltf-binary,.glb'
                       onChange={handleModelChange}
                       className='cursor-pointer'
-=======
                 </FormItem>)}
             />;
             <FormField;
@@ -1064,7 +1027,6 @@ export function ProductSubmissionForm() {;
                       accept='model / gltf - binary, .glb';
                       on_change={handleModelChange}
                       className='cursor - pointer';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     />;
                   </FormControl>;
                   <FormDescription>;
@@ -1108,7 +1070,6 @@ export function ProductSubmissionForm() {;
               name="model"
               render={() => (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <FormItem>
                   <FormLabel>3D Model (glb)</FormLabel>
                   <FormControl>
@@ -1126,7 +1087,6 @@ export function ProductSubmissionForm() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </Button>
             </div>
           </form>
@@ -1271,7 +1231,6 @@ const {;
 }
 
 reader.readAsDataURL (file)
-=======
   setImagePreview (reader.result as string);
 }
 reader.readAsDataURL (file);
@@ -1325,7 +1284,6 @@ const {
 
 
 
-=======
   error: update_error ';
 }= await supabase .from ('product listings');
 }//Send listing to moderation service try {';
@@ -1338,10 +1296,8 @@ const {
   toast ({
 }finally {
   setIsSubmitting (false);
-=======
 
 
-=======
       
       <TabsContent value="ai">
         <AIListingGenerator 
@@ -1356,8 +1312,6 @@ const {
   );
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 }className="w - full"> <TabsList className="grid grid - cols - 2 mb - 6" > <TabsTrigger value="manual" className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple" > ai"className="data-[state = active]:bg - zion - purple / 20 data-[state = active]:text - zion - purple"> <Sparkles className="h - 4 w - 4 mr - 2"/> AI - Powered Creation </TabsTrigger> </TabsList>;
 }";
@@ -1383,5 +1337,3 @@ const {
 }/> <div className="flex justify - end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>);
 }'"  );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

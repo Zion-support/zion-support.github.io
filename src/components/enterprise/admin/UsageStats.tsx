@@ -1,13 +1,10 @@
-
-
-  return (
+return (
 
 
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card>
           <CardHeader>
             <CardTitle>Job Postings</CardTitle>
@@ -45,7 +42,6 @@
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card>
           <CardHeader>
             <CardTitle>Candidate Contacts</CardTitle>
@@ -83,7 +79,6 @@
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card>
           <CardHeader>
             <CardTitle>AI Features</CardTitle>
@@ -119,7 +114,6 @@
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card>
           <CardHeader>
             <CardTitle>Budget Controls</CardTitle>
@@ -171,7 +165,6 @@
             <Sparkles className="h-5 w-5 text-primary" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
           <div>
             <h3 className='font-medium'>Need higher limits?</h3>
@@ -207,7 +200,6 @@ export function UsageStats() {;
       <div>;
         <h3 className='text-xl font-medium mb-4'>Usage Limits & Settings</h3>;
         <p className='text-muted-foreground mb-6'>;
-=======
     <div className='space - y-8'>;
       <div>;
         <h3 className='text - xl font - medium mb - 4'>Usage Limits & Settings</h3>;
@@ -399,19 +391,11 @@ export function UsageStats() {;
         </div>;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <Button > Contact Us</Button>;
       </div>;
     </div>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
     </div>
   )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

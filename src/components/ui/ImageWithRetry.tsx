@@ -1,6 +1,3 @@
-
-=======
-
 import React, { useState } from 'react'
 import Image, { type ImageProps } from 'next/image'
 import { cn } from '@/lib/utils';
@@ -19,7 +16,6 @@ interface ImageWithRetryProps extends Omit<ImageProps, 'src' | 'alt'> {;
 
   retryClassName?: string;  retryClassName?: string
 
-=======
 import React, { useState } from 'react',;
 import Image, { type ImageProps } from 'next/image',;
 import { cn } from '@/lib/utils',;
@@ -33,9 +29,7 @@ interface ImageWithRetryProps extends Omit<ImageProps 'src' | 'alt'> {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   fallbackSrc?: string
   /** CSS class for the retry button */
@@ -169,7 +163,6 @@ export function ImageWithRetry(): any ({;
 
   const fill = !('width' in props) && !('height' in props);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
 
@@ -195,7 +188,6 @@ export function ImageWithRetry(): any ({;
 export default ImageWithRetry;
 
 
-=======
   const fill = !('width' in props) && !('height' in props);
   return (
     <div className='relative inline - block'>      <Image    <div className="relative inline - block">;
@@ -223,14 +215,9 @@ export default ImageWithRetry;
         </button>)}
     </div>);
 export default ImageWithRetry;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   src,
   alt = '',
   fallbackSrc = '/images/image-placeholder.svg',
   className,
   retryClassName,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

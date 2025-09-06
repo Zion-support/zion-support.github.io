@@ -1,6 +1,4 @@
-
-
-  Calendar,
+Calendar,
   Clock,
   DollarSign,
   Tag,;
@@ -8,7 +6,6 @@
 
 
   Briefcase;
-=======
 import {;
   Calendar,;
   Clock,;
@@ -16,7 +13,6 @@ import {;
   Tag,;
   Users,;
   Briefcase,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from 'lucide-react';import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
 import { useAuth } from '@/hooks/useAuth';
@@ -27,7 +23,6 @@ import { SEO  } from '@/components/SEO';
 import { useWhitelabel  } from '@/context/WhitelabelContext';
 import { JobDetailsSkeleton } from '@/components/jobs';
 interface Job {;
-=======
 import { use_router } from 'next / router'; // Changed from use_params, use_navigate;
 import { Header } from '@/components / Header';
 import { Button } from '@/components / ui / button';
@@ -49,7 +44,6 @@ import { SEO } from '@/components / SEO';
 import { use_whitelabel } from '@/context / WhitelabelContext';
 import { JobDetailsSkeleton } from '@/components / jobs';
 interface Job {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   title: string;
   description: string;
@@ -68,7 +62,6 @@ export default function JobDetails() {;
 
   const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
   const { job, isLoading, error } = useJobDetails(jobId) as {;
-=======
   deadline?: string;
 ;
 export default /**
@@ -79,7 +72,6 @@ function JobDetails() {
   const { job_id: rawJobId } = router.query; // Get job_id from query;
   const job_id = typeof rawJobId === 'string' ? rawJobId : undefined;
   const { job, is_loading, error } = useJobDetails (job_id) as {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     job: Job | undefined;
     is_loading: boolean;
     error: any;
@@ -99,7 +91,6 @@ export default function JobDetails() {;
   };
   const { user, isAuthenticated } = useAuth();
 
-=======
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams, useNavigate;
 import { Header } from '@/components/Header',;
@@ -150,7 +141,6 @@ export default function JobDetails() {
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (isLoading) {
     return <JobDetailsSkeleton />;
   }
@@ -163,7 +153,6 @@ export default function JobDetails() {
   };
   if (isLoading) {;
     return <JobDetailsSkeleton />;
-=======
     return (
       <>
         <Header />
@@ -177,11 +166,9 @@ export default function JobDetails() {
 
       </>
     )
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 
   if (error || !job) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <>;
         <Header />;
@@ -282,8 +269,6 @@ export default function JobDetails() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-2">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Card>
               <CardHeader>
                 <div className='flex justify-between items-start'>
@@ -310,7 +295,6 @@ export default function JobDetails() {
                 </div>
 
             onClick={() => router && router.push('/careers')}          >;
-=======
 
                 
                 <div>
@@ -421,20 +405,17 @@ export default function JobDetails() {;
                   </h3>;
                   <div className='flex flex-wrap gap-2'>;
                     {job && job.skills?.map((skill: string, i: number) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       <Badge key={i} variant='secondary'>                        {skill}
                       </Badge>;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
 
 
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div>
             <Card>
               <CardContent className='pt-6 space-y-4'>
@@ -496,7 +477,6 @@ export default function JobDetails() {;
 
 
 
-=======
                 
                 <div className="flex items-start">
                   <Clock className="mt-1 h-5 w-5 text-muted-foreground" />
@@ -529,7 +509,6 @@ export default function JobDetails() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {isOwnJob && (
                   <div className='text-center p-2 bg-muted rounded-md mt-4'>
                     <p className='text-sm text-muted-foreground'>
@@ -546,7 +525,6 @@ export default function JobDetails() {;
                     </p>;
                   </div>;
                 )}
-=======
   const { user, is_authenticated } = use_auth ();
   // navigate is now router;
   const { is_whitelabel, brand_name } = use_whitelabel ();
@@ -705,9 +683,7 @@ if ( {) {
                     </p>;
                   </div>)}
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </CardContent>;
             </Card>;
           </div>;
@@ -716,7 +692,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Job application modal */}
       {job && (;
         <ApplyToJobModal
@@ -745,7 +720,6 @@ if ( {) {
   encodeURIComponent (`/jobs/$ {';
   jobId || '' ;
 
-=======
       {/* Job application modal */}
       {job && (
         <ApplyToJobModal;
@@ -767,7 +741,6 @@ if ( {) {
 }router.push (`/login?redirect=$ {
   encodeURIComponent (`/jobs/$ {';
   job_id || '' ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }`) ;
 }`);
 //Added null check for job_id return;
@@ -777,7 +750,6 @@ if ( {) {
 const isOwnJob = user?.id === job && job.client id;
 `$ {;
   job && job.title ;
-=======
 }
 const isOwnJob = user?.id === job.client id;
 `$ {
@@ -812,19 +784,12 @@ const isOwnJob = user?.id === job.client id;
 }'";
 }
 
-=======
 
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
             id: job.id,
             title: job.title,
             description: job.description,
             company_name: job.company_name ?? "Company",
             budget: formatBudget(job.budget),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

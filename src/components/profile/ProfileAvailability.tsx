@@ -1,5 +1,3 @@
-
-
 import { Calendar, Clock, Check } from 'lucide-react'
 import { Calendar } from 'lucide-react'
 interface ProfileAvailabilityProps {
@@ -12,7 +10,6 @@ export function ProfileAvailability({
   availability
 }: ProfileAvailabilityProps) {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
-=======
 import { Availability } from '@/types / profile';
 import { Badge } from '@/components / ui / badge';
 import { Calendar, Clock, Check } from 'lucide-react';
@@ -24,7 +21,6 @@ export /**
  */
 function ProfileAvailability() {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (status) {
       case 'available':;
         return 'bg - emerald - 500 / 20 text - emerald - 400 border - emerald - 500 / 30';
@@ -95,11 +91,9 @@ function ProfileAvailability() {
                     <Clock className='h-4 w-4 text-zion-cyan' />
                     <span>{slot.hours}</span>
                   </div>
-=======
 import { Availability } from "@/types/profile";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, Check } from 'lucide-react'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { Badge } from '@/components/ui/badge';
 import { Calendar } from 'lucide-react';
 
@@ -155,7 +149,6 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {availability.availableHours && availability.availableHours.length > 0 && (
         <div className="mt-4">
           <h4 className="text-zion-slate-light text-sm mb-2">Weekly Availability</h4>
@@ -166,7 +159,6 @@ export function ProfileAvailability({ availability }: ProfileAvailabilityProps) 
               <div key={index} className="flex items-center gap-2 text-zion-slate">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div className="w-20 text-zion-slate-light">{slot.day}:</div>
                 <div className="flex items-center gap-1">
                   <Clock className="h-4 w-4 text-zion-cyan" />
@@ -284,7 +276,6 @@ export function ProfileAvailability(): any ({;
         </div>;
       )}
 
-=======
 
 
 
@@ -294,16 +285,13 @@ export function ProfileAvailability(): any ({;
           </div>
         </div>
 
-=======
       )};
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     </div>;
   );
 }
 
 
-=======
     <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
       <h3 className='text - xl font - bold text - white mb - 4'>Availability</h3>;
       <div className='flex flex - col md:flex - row md:items - center md:gap - 6 mb - 4'>;
@@ -371,10 +359,5 @@ export function ProfileAvailability(): any ({;
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

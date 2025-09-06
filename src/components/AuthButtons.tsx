@@ -1,7 +1,3 @@
-
-
-
-
 import { useState } from 'react';
 import { Button } from '@/components / ui / button';
 import { Facebook } from 'lucide-react';
@@ -42,8 +38,6 @@ export function AuthButtons(): any ({;
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className={`mt-6 grid ${gridCols} gap-3`}>;
       {providers && providers.includes('google') && (;
@@ -68,7 +62,6 @@ export function AuthButtons(): any ({;
 
 
             </svg>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         </Button>;
       )}
@@ -91,7 +84,6 @@ export function AuthButtons(): any ({;
 
 
             </svg>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         </Button>;
       )}
@@ -112,7 +104,6 @@ export function AuthButtons(): any ({;
             <Facebook className="h-5 w-5" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         </Button>;
       )}
@@ -123,7 +114,6 @@ export function AuthButtons(): any ({;
   );
 }
 
-=======
   const grid_cols = `grid - cols-${providers.length}`;
   return (
     <div className={`mt - 6 grid ${grid_cols} gap - 3`}>;
@@ -204,9 +194,6 @@ export function AuthButtons(): any ({;
         </Button>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
           ) : (
             <>Email Login</>
@@ -218,7 +205,6 @@ export function AuthButtons(): any ({;
 };
 }
 
-=======
           type="button"
           variant="outline"
           className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
@@ -235,13 +221,8 @@ export function AuthButtons(): any ({;
         </Button>;
       )}
 
-=======
 
     </div>;
   );
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

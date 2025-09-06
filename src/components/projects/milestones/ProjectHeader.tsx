@@ -1,6 +1,4 @@
-
-
-  return (
+return (
     <div className='flex flex-col md:flex-row justify-between items-start md:items-center py-4 border-b'>;
       <div className='flex items-center'>;
         <Button
@@ -19,10 +17,7 @@
     </div>;
   );
 
-=======
   )
 
 }
 ;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

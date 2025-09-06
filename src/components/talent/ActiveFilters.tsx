@@ -1,5 +1,3 @@
-
-
 import { X } from 'lucide-react'
 interface ActiveFiltersProps {
 
@@ -28,7 +26,6 @@ interface ActiveFiltersProps {
   clearFilters: () => void
 }
 
-=======
 
 
 
@@ -36,7 +33,6 @@ interface ActiveFiltersProps {
   const hasActiveFilters = null;
     selectedSkills.length > 0 ||
     selectedAvailability.length > 0 ||
-=======
 
     selectedRegions.length > 0 ||
     experienceRange[0] !== 0 ||
@@ -48,8 +44,6 @@ interface ActiveFiltersProps {
     experienceRange[0] !== 0 ||
     experienceRange[1] !== 15 ||
     priceRange[0] !== 50 ||
-=======
-=======
 
     priceRange[1] !== 200,
   
@@ -123,7 +117,6 @@ export function ActiveFilters(): any ({;
       <span className='text-zion-slate-light text-sm'>Active filters:</span>;
 
       {selectedSkills && selectedSkills.map(skill => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <ClickableBadge
           key={skill}
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
@@ -179,11 +172,9 @@ export function ActiveFilters(): any ({;
           <X className='h-3 w-3' />;
         </ClickableBadge>;
       )}
-=======
           <X className="h-3 w-3" />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </ClickableBadge>
       ))}
       
@@ -205,7 +196,6 @@ export function ActiveFilters(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Button
         variant='ghost'
         size='sm'
@@ -219,7 +209,6 @@ export function ActiveFilters(): any ({;
 };
 }
 
-=======
       
       <Button 
         variant="ghost" 
@@ -236,9 +225,7 @@ export function ActiveFilters(): any ({;
   )
 
         className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
-=======
 
-=======
 
           <X className="h-3 w-3" />;
         </ClickableBadge>;
@@ -279,11 +266,8 @@ export function ActiveFilters(): any ({;
 }
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react';
 import { ClickableBadge } from '@/components / ui / clickable - badge';
 import { Button } from '@/components / ui / button';
@@ -383,11 +367,4 @@ if (return null) {
       </Button>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

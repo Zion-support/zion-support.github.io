@@ -1,5 +1,3 @@
-
-
 import { GradientHeading } from "@/components/GradientHeading",
 import { SkeletonCard } from '@/components/ui',
 import ErrorBoundary from "@/components/GlobalErrorBoundary",
@@ -45,13 +43,11 @@ class ErrorBoundary extends React.Component {
   const isLoading = !data && !error;
 
 
-=======
       logErrorToProduction ('Categories API error:', { data: response.status_text }),
       return CATEGORIES as CategoryType[];
     fallback_data: initial_categories}),
   const categories = data || [];
   const is_loading = !data && !error;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 import React from './react';
 import { Brain, Cloud, Shield, Code, Database, Network  } from './lucide-react';"});"});
@@ -181,7 +177,6 @@ export default Categories," ];
 export default Categories"")))))))));
 }
 
-=======
 const Categories: React.FC: = () => {, ";
   const categories = [];
   return (";
@@ -299,9 +294,3 @@ export: default Categories,
 export default Categories, " ];
 export default Categories"")))))))));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

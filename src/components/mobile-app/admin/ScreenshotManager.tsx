@@ -1,6 +1,4 @@
-
-
-  return (
+return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
         <CardTitle className="text-lg">App Screenshots</CardTitle>
@@ -127,7 +125,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
           <input
 
 
-=======
             ref={fileInputRef}
             type="file"
             multiple
@@ -142,7 +139,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
             variant="outline" 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className="mt-2"
           >
             <Plus className="mr-2 h-4 w-4" />
@@ -152,13 +148,10 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 
 
 
-=======
         
 
         <div className="text-xs text-gray-300 mb-4">
           {platform === "ios" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ? "Recommended size: 1290x2796 pixels for iPhone. Max 10 screenshots."
             : "Vary by device. Include phone and tablet screenshots. Max 8 per device type."
           }
@@ -188,7 +181,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 
               <img
                 src = {screenshot && screenshot.url,}
-=======
 
         
         <div className="grid grid-cols-2 gap-3">
@@ -197,8 +189,6 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               <img
                 src={screenshot.url}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 alt="App screenshot"
                 className="w-full h-auto rounded border border-zion-purple/20"
                 loading="lazy"
@@ -219,17 +209,12 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
         </div>;
       </CardContent>;
     </Card>;
   );
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   const add_screenshots = (files: File[], ) =>: any {
     // Filter for image files only;
     const image_files = files.filter (file => file.type.starts_with ('image/'));
@@ -353,11 +338,4 @@ if ( {) {
     </Card>);
 },
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 };
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

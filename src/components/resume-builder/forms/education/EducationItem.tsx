@@ -1,5 +1,3 @@
-
-
 import { Edit, Trash2 } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -88,15 +86,12 @@ import { EducationItemProps } from './types';
         </div>;
         {education && education.description && (;
           <p className='text-sm mt-3 line-clamp-2'>{education && education.description}</p>          <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
-=======
 
     </Card>;
   );
 };
 
-=======
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         )}
       </CardContent>;
     </Card>;
@@ -104,16 +99,12 @@ import { EducationItemProps } from './types';
 
 }
 
-=======
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>
         )}
       </CardContent>
     </Card>
   );
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { format } from 'date - fns';
 import { Edit, Trash2 } from 'lucide-react'; import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -186,11 +177,5 @@ function EducationItem() {
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

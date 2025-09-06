@@ -1,14 +1,9 @@
-
-
-=======
-
-  Card,
+Card,
   CardContent,
   CardDescription,
   CardHeader,;
   CardTitle;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
@@ -24,7 +19,6 @@ import { useRouter } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 
 
-=======
 
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -43,7 +37,6 @@ import { useRouter } from 'next/router',
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger',
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export default function Partners() {;
   logInfo('PartnersPage rendering');
@@ -83,7 +76,6 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
         logErrorToProduction('Partner login auth health check failed', {;
           data: err,;
 
-=======
 } from '@/components / ui / card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
 import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
@@ -144,22 +136,18 @@ function check_health() {
         setAuthServiceAvailable (res.ok);
         logErrorToProduction ('Partner login auth health check failed', {
           data: err,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         });
         setAuthServiceAvailable (false);
       }
     }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
     logInfo('PartnersPage rendering Unauthenticated View');
     return (
 
                   </p>                </div>        </div>
-=======
-=======
 
 
       <div className="container max-w-6xl py-10">
@@ -173,7 +161,6 @@ function check_health() {
           <Card className="bg-zion-blue-dark border-zion-blue-light">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <CardHeader>
               <CardTitle className="text-white">{t('partner.influencers.title')}</CardTitle>
               <CardDescription>{t('partner.influencers.desc')}</CardDescription>
@@ -200,7 +187,6 @@ function check_health() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <p className="font-medium text-white">{t('partner.influencers.points.resources')}</p>
                   <p className="text-sm text-zion-slate-light">{t('partner.influencers.points.resources_desc')}</p>
 
@@ -212,13 +198,11 @@ function check_health() {
 
 
           <Card className="bg-zion-blue-dark border-zion-blue-light">
-=======
 
 
           <Card className="bg-zion-blue-dark border-zion-blue-light">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <CardHeader>
               <CardTitle className="text-white">{t('partner.organizations.title')}</CardTitle>
               <CardDescription>{t('partner.organizations.desc')}</CardDescription>
@@ -245,17 +229,14 @@ function check_health() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <p className="font-medium text-white">{t('partner.organizations.points.tracking')}</p>
                   <p className="text-sm text-zion-slate-light">{t('partner.organizations.points.tracking_desc')}</p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
               </div>
             </CardContent>
           </Card>
         </div>
 
-=======
 
 
 
@@ -269,7 +250,6 @@ function check_health() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <CardTitle className="text-lg text-white">{t('partner.steps.join_title')}</CardTitle>
               </CardHeader>
@@ -288,7 +268,6 @@ function check_health() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
                 <CardTitle className="text-lg text-white">{t('partner.steps.share_title')}</CardTitle>
               </CardHeader>
@@ -313,8 +292,6 @@ function check_health() {
 
               <CardContent className="text-center text-sm text-zion-slate-light">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <p>{t('partner.steps.earn_desc')}</p>
               </CardContent>
             </Card>
@@ -325,12 +302,10 @@ function check_health() {
     checkHealth();  }, []);    checkHealth();
   }, []);
 
-=======
 
 
         <div className="flex justify-center gap-4">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Button
             size="lg"
             className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -341,7 +316,6 @@ function check_health() {
           <Button
 
 
-=======
             size="lg"
             variant="outline"
             className="text-zion-cyan border-zion-cyan"
@@ -379,7 +353,6 @@ export default function Partners() {;
     }
     checkHealth();
   }, []),;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // If not authenticated, display partner program info and signup CTA;
   if (!isAuthenticated) {;
     logInfo('PartnersPage rendering Unauthenticated View');
@@ -461,7 +434,6 @@ export default function Partners() {;
                 <div>;
                   <p className="font-medium text-white">{t('partner && partner.influencers.points && points.resources')}</p>;
                   <p className="text-sm text-zion-slate-light">{t('partner && partner.influencers.points && points.resources_desc')}</p>;
-=======
     check_health ();  }, []);    check_health ();
   }, []);
 ;
@@ -547,7 +519,6 @@ if ( {) {
                 <div>;
                   <p className="font - medium text - white">{t ('partner.influencers.points.resources')}</p>;
                   <p className="text - sm text - zion - slate - light">{t ('partner.influencers.points.resources_desc')}</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </div>;
               </div>;
             </CardContent>;
@@ -672,7 +643,6 @@ if ( {) {
         </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           )}
         </div>;
       </div>;
@@ -680,7 +650,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     );
   }
 
@@ -712,15 +681,12 @@ if ( {) {
         <div className="flex gap-2">
           <Button variant="outline" className="flex items-center gap-2" onClick={() => window.print()}>
             <FileDown className="h-4 w-4" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             {t('partner.export_csv')}
           </Button>
         </div>
       </div>
 
         </TabsList>        </TabsList>
-=======
-=======
 
 
 
@@ -733,7 +699,6 @@ if ( {) {
           <TabsTrigger value="resources">{t('partner.tabs.resources')}</TabsTrigger>
         </TabsList>
         
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <TabsContent value="overview" className="space-y-4">
           <PartnerDashboard />
         </TabsContent>
@@ -742,11 +707,9 @@ if ( {) {
         </TabsContent>
 
         <TabsContent value='earnings' className='space-y-4'>          <Card>
-=======
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <TabsContent value="earnings" className="space-y-4">
 
 
@@ -771,7 +734,6 @@ if ( {) {
         <TabsContent value='resources' className='space-y-4'>          <PartnerResources />
         <TabsContent value="resources" className="space-y-4">
 
-=======
               {/* This will be implemented later */}
               <p className="text-zion-slate-light">{t('partner.earnings_placeholder')}</p>
             </CardContent>
@@ -788,16 +750,13 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <TabsContent value="resources" className="space-y-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <PartnerResources />
         </TabsContent>
       </Tabs>
     </div>
 
   async function checkHealth () {try {}checkHealth () ;
-=======
 
   async function checkHealth () {;
   try {}checkHealth () ;
@@ -805,7 +764,6 @@ if ( {) {
 
 }, []);
 //If not authenticated, display partner program info and signup CTA </div> <div className="grid md:grid-cols-2 gap-8 mb-12" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-cyan mt-0.5" /> <div> </div> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> </CardHeader> <CardContent className="space-y-4" > <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> <div className="flex items-start gap-3" > <CheckCircle className="h-5 w-5 text-zion-purple mt-0.5" /> <div> </div> </div> </CardContent> </Card> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <FileText className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader className="text-center pb-2" > <div className="mx-auto bg-zion-blue-light rounded-full w-12 h-12 flex items-center justify-center mb-4" > <PieChart className="h-6 w-6 text-zion-cyan" /> </div> </CardContent> </Card> </div> </div> <div className="flex justify-center gap-4" > <Button size="lg" className="bg-zion-purple hover:bg-zion-purple-dark text-white" asChild > > {t ('partner.login') ;
-=======
             onClick={() => window && window.print()}
           >;
             <FileDown className='h-4 w-4' />            {t('partner && partner.export_csv')}      <h1>DEBUG: Partners Page - Authenticated View</h1>;
@@ -871,7 +829,6 @@ if ( {) {
               {/* This will be implemented later */}
               <p className='text-zion-slate-light'>;
                 {t('partner && partner.earnings_placeholder')}
-=======
         <div className='flex justify - center gap - 4'>;
           <Button;
             size='lg';
@@ -986,7 +943,6 @@ if ( {) {
               {/* This will be implemented later */}
               <p className='text - zion - slate - light'>;
                 {t ('partner.earnings_placeholder')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               </p>;
             </CardContent>;
           </Card>;
@@ -995,12 +951,8 @@ if ( {) {
         </TabsContent>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-=======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         <TabsContent value="leaderboard" className="space - y-4">;
           <PartnerLeaderboard />;
         </TabsContent>;
@@ -1037,11 +989,6 @@ function check_health() {
 
 ;
 
-=======
   )
 }
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

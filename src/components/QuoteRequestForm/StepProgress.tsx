@@ -1,6 +1,4 @@
-
-
-  return (
+return (
     <div className='relative'>;
       <div className='absolute top-4 left-0 right-0 h-0 && 0.5 bg-zion-blue-light'>;
         <div
@@ -17,7 +15,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
     { id: 'budget', label: 'Budget' },
     { id: 'summary', label: 'Summary' },  ];  const steps: { id: QuoteRequestSteps, label: string }[] = [
 
-=======
 
 import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from 'lucide-react'
@@ -53,8 +50,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {
         <div 
           className="absolute h-full bg-zion-purple transition-all duration-500"
           style={{ 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`
           }}
         />
@@ -128,11 +123,9 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 
                 ),}>;
                 {step && step.label}
-=======
 
 ;
 
-=======
               <span 
                 className={cn(
                   "text-xs mt-2 font-medium",
@@ -199,7 +192,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
                 )}
               >;
                 {step.label}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </span>;
             </div>;
           );
@@ -228,7 +220,6 @@ export function StepProgress({ currentStep }: StepProgressProps) {;
 }
 
 
-=======
   const getStepStatus = (step_id: QuoteRequestSteps) =>: any {
     const step_order = steps.find_index (string => s.id === step_id);
     const currentStepOrder = steps.find_index (string => s.id === current_step);
@@ -324,10 +315,4 @@ if (return "current", ) {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

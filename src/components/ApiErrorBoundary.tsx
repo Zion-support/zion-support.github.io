@@ -1,6 +1,4 @@
-
-
-      }
+}
       return (
 
       // Reset error state after a brief delay;
@@ -54,7 +52,6 @@ if ( {) {
 
               </AlertDescription>;
             </Alert>;
-=======
         <div className="flex min-h-screen items-center justify-center p-4">
           <div className="w-full max-w-md space-y-4">
             <Alert variant="destructive">
@@ -84,10 +81,8 @@ if ( {) {
               </AlertDescription>
             </Alert>
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
             <div className='flex flex-col gap-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <Button
 
                 onClick={this.handleRetry}
@@ -106,7 +101,6 @@ if ( {) {
                     <RefreshCw className="mr-2 h-4 w-4" />
                     Try Again
                   </>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
 
 
@@ -116,7 +110,6 @@ if ( {) {
               >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Reload Page
               </Button>
             </div>
@@ -126,7 +119,6 @@ if ( {) {
                 <span>Offline</span>
               </div>
             )}
-=======
               <AlertDescription className='mt - 2'>;
                 {isNetworkError;
                   ? !this.state.is_online;
@@ -162,7 +154,6 @@ if ( {) {
                 <WifiOff className='h - 4 w - 4' />;
                 <span > Offline</span>;
               </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             {process.env.NODE_ENV === 'development' && this.state.error && (
 
     return this.props.children;
@@ -209,7 +200,6 @@ export const useApiErrorHandler = () =>: any {
                 </pre>;
               </details>;
             )}
-=======
               <details className="mt-4 rounded border p-2 text-xs">
                 <summary className="cursor-pointer font-medium">
                   Debug Info (Development Only)
@@ -227,8 +217,6 @@ export const useApiErrorHandler = () =>: any {
 }, ;
   return { handleApiError };
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>;
         </div>;
       );
@@ -251,19 +239,11 @@ export const useApiErrorHandler = () => {;
   return { handleApiError }
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 },
   return { handleApiError }
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

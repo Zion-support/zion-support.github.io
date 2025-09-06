@@ -1,6 +1,3 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Upload, FileText } from 'lucide-react'
 interface UploadSectionProps {
   customFile: File | null;
@@ -14,14 +11,11 @@ export function UploadSection(): any ({;
   onFileUpload,;
 }: UploadSectionProps) {;
 
-=======
 
 }
 
 export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='space-y-3'>;
       <div className='flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30'>;
@@ -29,7 +23,6 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
         <p className='text-sm text-zion-slate mb-2'>;
           {customFile;
             ? customFile && customFile.name;
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Upload, FileText } from 'lucide-react';
@@ -47,7 +40,6 @@ function UploadSection() {
         <p className='text - sm text - zion - slate mb - 2'>;
           {custom_file;
             ? custom_file.name;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             : 'Drag & drop your PDF or click to browse'}
         </p>;
         <Button variant='outline' className='relative'>;
@@ -63,13 +55,10 @@ function UploadSection() {
       
       {customFile && (
 
-=======
 
       
       {customFile && (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
@@ -80,10 +69,8 @@ function UploadSection() {
           </div>
         </div>
 
-=======
 
 
-=======
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import { Upload, FileText } from 'lucide-react';
@@ -147,7 +134,6 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
   );
 }
 
-=======
           <input;
             type='file';
             className='absolute inset - 0 w - full h - full opacity - 0 cursor - pointer';
@@ -183,10 +169,5 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

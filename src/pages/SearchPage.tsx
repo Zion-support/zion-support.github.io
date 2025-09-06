@@ -1,5 +1,3 @@
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -50,7 +48,6 @@ import {
   TabsList
   TabsTrigger} from "@/components/ui/tabs"
 
-=======
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
@@ -66,7 +63,6 @@ import {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Loader2 } from 'lucide-react'
 interface SearchResult {
 
@@ -146,7 +142,6 @@ function highlight(): any (text: string, term: string) {;
     if (!router.isReady) return
     if (query.trim()) {
       fetchResults(query.trim())
-=======
   const page_key = `search-${route_key}-${router.as_path}`;
 import { use_router } from 'next / router';
 import { useRouterReady, useRouteChange } from '@/hooks / useRouterReady';
@@ -230,7 +225,6 @@ if (return) {
   $2
 }
       fetch_results (query.trim ());
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } else {
       set_results ([]);
     }
@@ -242,7 +236,6 @@ if (return) {
 
     }
     setLoading(true)
-=======
   }, [router.is_ready, query]), // Fixed dependency array;
   const fetch_results = async (term: string, ) => {
     if () {) {
@@ -252,7 +245,6 @@ if (return) {
       return;
     }
     set_loading (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       const res = await fetch (`/api / search?query=${encodeURIComponent (term)}`);
       const data = await res.json ();
@@ -366,7 +358,6 @@ export default function SearchPage() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div key={pageKey}>;
       <main className="container mx-auto px-4 py-8">;
@@ -384,7 +375,6 @@ export default function SearchPage() {;
             searchSuggestions={suggestions}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             placeholder="Search talent, jobs, and projects..."
           />
         </form>
@@ -392,7 +382,6 @@ export default function SearchPage() {;
           <div className="flex justify-center py-8">
             <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
           </div>
-=======
             onSelectSuggestion={(suggestion) => {;
               const searchTerm = suggestion && suggestion.text.trim();
               setQuery(searchTerm);              router && router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
@@ -406,7 +395,6 @@ export default function SearchPage() {;
           <div className="flex justify-center py-8">;
             <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
           </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         )}
         {!loading && marketplaceResults && marketplaceResults.length === 0 && blogResults && blogResults.length > 0 && (;
           <div>;
@@ -446,12 +434,10 @@ export default function SearchPage() {;
                 .filter((r,) => r && r.type === "product" || r && r.type === "service");
                 .map((r,) => (;
 
-=======
 
                 .filter((r) => r.type === "product" || r.type === "service")
                 .map((r) => (
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <div
                     key={`${r && r.type}-${r && r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">;
@@ -527,7 +513,6 @@ try {
 const data = await res.json ()
 if (data && data.results && Array.isArray (data.results) ) {
   setResults (data.results)
-=======
   // Add key prop to force re - render when route changes;
   const page_key = `search-${route_key}-${router.as_path}`;
   return (
@@ -673,7 +658,6 @@ if () {) {
   $2
 }
   set_results (data.results);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }else {
   set_results ([]);';
 logErrorToProduction ('Search API response structure is not as expected:', {
@@ -763,7 +747,6 @@ router.push (`/search?q=$ {
 ;
 
 
-=======
       </main>;
     </div>;
   );
@@ -794,10 +777,7 @@ router.push (`/search?q=$ {
               </div>;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
               <Link href="/pricing/" className="bg - blue - 600 text - white px - 6 py - 3 rounded - lg hover:bg - blue - 700 transition - colors">;
                 View Pricing;
@@ -808,12 +788,5 @@ router.push (`/search?q=$ {
             </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

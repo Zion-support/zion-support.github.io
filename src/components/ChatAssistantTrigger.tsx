@@ -1,6 +1,4 @@
-
-
-  // Handle sending messages to the AI chat assistant
+// Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
@@ -16,7 +14,6 @@
         throw new Error("Failed to get response from AI assistant")
       }
 
-=======
           "Content-Type": "application/json"},
         body: JSON.stringify({ 
           messages: [{ role: "user", content: message }] 
@@ -45,7 +42,6 @@ export function ChatAssistantTrigger() {;
         throw new Error("Failed to get response from AI assistant");
 
 
-=======
   const [isOpen, setIsOpen] = useState(false);
 
   // Handle sending messages to the AI chat assistant;
@@ -96,7 +92,6 @@ export function ChatAssistantTrigger() {;
   },
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <Button
@@ -114,7 +109,6 @@ export function ChatAssistantTrigger() {;
         <ChatAssistant
           isOpen = {isOpen,}
           onClose = {(,) => setIsOpen(false),}
-=======
 
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
@@ -127,7 +121,6 @@ export function ChatAssistantTrigger() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }}
           onSendMessage = {handleSendMessage,}
         />;
@@ -137,7 +130,6 @@ export function ChatAssistantTrigger() {;
   );
 }
 
-=======
 import { useState  } from './react';
 import { MessageSquare } from 'lucide-react'import { Button  } from '@/components / ui / button';
 import { ChatAssistant  } from '@/components / ChatAssistant';
@@ -195,18 +187,11 @@ if ( {) {
         />)}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
     </>;
   );
 }
 ;
 
-=======
 
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

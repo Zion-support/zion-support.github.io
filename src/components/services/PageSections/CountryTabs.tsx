@@ -1,5 +1,3 @@
-
-
 import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -14,7 +12,6 @@ import {;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CountryServiceCard } from '@/components/services/CountryServiceCard';
 import { CountryPricing } from '@/data/onsiteServicePricing';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
   setSearchQuery: (query: string) => void;
@@ -38,7 +35,6 @@ export function CountryTabs(): any ({;
     currentPage * countriesPerPage;
   );
 
-=======
 
 
 export function CountryTabs({
@@ -53,12 +49,10 @@ export function CountryTabs({
   handleCountrySelect,
   onQuote,
   searchQuery,
-=======
   const paginatedCountries = filteredCountries.slice(
     (currentPage - 1) * countriesPerPage,
     currentPage * countriesPerPage
   )
-=======
 
   setSearchQuery}: CountryTabsProps) {
   const [currentPage, setCurrentPage] = useState(1),
@@ -69,15 +63,12 @@ export function CountryTabs({
   }, [searchQuery]),
 
   const totalPages = Math.ceil(filteredCountries.length / countriesPerPage),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const paginatedCountries = filteredCountries.slice(
     (currentPage - 1) * countriesPerPage
     currentPage * countriesPerPage
 
   ),
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Tabs defaultValue='featured' className='w-full'>;
       <TabsList className='bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6'>;
@@ -91,7 +82,6 @@ export function CountryTabs({
           <h2 className="text-2xl font-bold text-white text-center">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             Featured Service Locations
           </h2>
           <p className='text-zion-slate-light text-center mt-2'>
@@ -157,7 +147,6 @@ export function CountryTabs({
               onQuote = {onQuote,}
               isPopular = {popularCountries && popularCountries.includes(country && country.country),}
             />;
-=======
 
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -199,8 +188,6 @@ export function CountryTabs({
               isPopular={popularCountries.includes(country.country)}
             />;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
 
         </div>;
@@ -251,7 +238,6 @@ export function CountryTabs({
   );
 }
 
-=======
 import { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import { Input } from '@/components / ui / input';
@@ -382,18 +368,13 @@ function CountryTabs() {
 }
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-=======
                     onClick={(e) => {;
                       e.preventDefault(),;
                       setCurrentPage(Math.max(1, currentPage - 1));
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     }}
                   />;
                 </PaginationItem>;
@@ -409,6 +390,3 @@ function CountryTabs() {
                 <PaginationItem>;
                   <PaginationNext;
                     href={`?page=${currentPage + 1}`}
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

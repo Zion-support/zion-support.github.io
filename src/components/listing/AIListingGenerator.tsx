@@ -1,4 +1,3 @@
-
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -76,7 +75,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       toast({
         title: "Content Generated"
         description: "AI has created optimized listing content for you."
@@ -88,7 +86,6 @@ if ( {) {
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again."
         variant: "destructive"
       })
-=======
       // Check condition
 if (.error) {) {
   $2
@@ -107,7 +104,6 @@ if (.error) {) {
         description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive";
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
@@ -120,7 +116,6 @@ if (.error) {) {
       onApplyGenerated(generatedContent),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       toast({
         title: "Content Applied"
         description: "The generated content has been applied to your listing."
@@ -181,7 +176,6 @@ export function AIListingGenerator(): any ({ onApplyGenerated, initialValues = {
         description: "The generated content has been applied to your listing.";
       });
 
-=======
   const handle_apply = () =>: any {
     // Check condition
 if ( {) {
@@ -192,11 +186,9 @@ if ( {) {
         title: "Content Applied",
         description: "The generated content has been applied to your listing.";
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
 
-=======
     }
 
   },
@@ -204,8 +196,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className="space-y-6">;
@@ -380,13 +370,11 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }</div>) ;
 }'";
 
-=======
   data: error;
 });
 toast ({
 }finally {
   setIsLoading (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 
 const handle_apply = () =>: any {
@@ -406,12 +394,7 @@ toast ({
 }
 }
 
-=======
     </div>;
   );
 }
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
