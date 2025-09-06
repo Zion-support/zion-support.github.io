@@ -2,17 +2,17 @@ import Link from 'next/link';
 
 export const metadata = { 
 
-
-
+  title: 'Advanced Data Analytics & BI | Zion Tech Group',
+  description: 'Transform your data into actionable insights with advanced analytics, real-time dashboards, and AI-powered business intelligence solutions.'
+  title: 'Data Analytics Solutions | Zion Tech Group',
+  description: 'Advanced data analytics solutions including business intelligence, data visualization, predictive analytics, and data engineering. Turn data into actionable insights.'
 
 };
 
 export default function DataAnalyticsPage() {
   return (
 
-
     <div className="animate-fade-in">
-
 
             icon="⚡"
           />
@@ -163,6 +163,7 @@ export default function DataAnalyticsPage() {
     </div>
   );
 
+
       <div className="text-2xl font-bold text-blue-600 mb-4">{price}</div>
       <ul className="space-y-2">
         {features.map((feature, index) => (
@@ -185,6 +186,7 @@ function Item({ title, details }: { title: string; details: string[] }) {
           <li key={index} className="flex items-start text-gray-600">
             <span className="text-blue-500 mr-2 mt-1">•</span>
             {detail}
+
 
           </li>
         ))}
@@ -236,15 +238,18 @@ function Pricing() {
 }
 
 
+
 function Plan({ name, price, duration, features }: { 
   name: string; 
   price: string; 
   duration: string;
 
+
   features: string[]; 
   popular: boolean; 
 }) {
   return (
+
 
     <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-shadow">
       <h4 className="text-2xl font-bold text-gray-900 mb-2">{name}</h4>
@@ -255,6 +260,7 @@ function Plan({ name, price, duration, features }: {
           <li key={index} className="flex items-center text-gray-600">
             <span className="text-green-500 mr-3">✓</span>
             {feature}
+
 
           </li>
         ))}
@@ -299,6 +305,27 @@ function CTASection() {
         <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
       </div>
     </div>
+  );
+}
+
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:+13024640950"
+          >
+            Call +1 302 464 0950
+          </a>
+          <a
+            href="mailto:kleber@ziontechgroup.com"
+          >
+            Email Us
+          </a>
+        </div>
+        <div className="mt-8 text-sm text-gray-500">
+          <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
+        </div>
+      </div>
+    </section>
   );
 }
 

@@ -1,53 +1,11 @@
 
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Header from './Header';
-import Footer from './Footer';
-import Sidebar from './Sidebar';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Home, 
-  Users, 
-  Briefcase, 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Menu, 
-  X, 
-  ChevronDown,
-  Star,
-  CheckCircle
-} from 'lucide-react';
-
-interface LayoutProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  ogImage?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogUrl?: string;
-  children: React.ReactNode;
-}
-
-export default function Layout({ 
-  children, 
-  title = "Zion Tech Group - Leading AI & Technology Solutions",
-  description = "Transform your business with cutting-edge AI solutions, cloud services, and technology consulting.",
-  keywords = "AI solutions, cloud services, technology consulting, digital transformation",
-  ogImage = "https://ziontechgroup.com/og-image.jpg",
-  ogTitle,
-  ogDescription,
-  ogUrl
-}: LayoutProps) {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
+
         <meta name="keywords" content={keywords} />
         <meta property="og:title" content={ogTitle || title} />
         <meta property="og:description" content={ogDescription || description} />
@@ -76,4 +34,5 @@ export default function Layout({
     </>
   );
 }
+
 

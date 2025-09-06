@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { Check, Trash2, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -6,10 +7,12 @@ import { Badge } from '@/components/ui/badge';
 import { formatDistanceToNow } from 'date-fns';
 import { cn } from '@/lib/utils';
 
+
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
+
 
   TooltipTrigger
 } from '@/components/ui/tooltip';
@@ -29,6 +32,7 @@ export const getTypeIcon = (type: NotificationType) => {
     case 'project_update':
       return <span className="text-orange-500">📦</span>;
     default:
+
 
       return <span className="text-gray-500">📣</span>;
   }
@@ -51,6 +55,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     if (notification.action_url) {
       router.push(notification.action_url), // Changed to router.push
     }
+
 
   };
 
@@ -140,6 +145,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
               >
                 <Trash2 className="h-4 w-4" />
 
+
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -147,9 +153,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
             </TooltipContent>
           </Tooltip>
 
+
         </div>
       </div>
     </TooltipProvider>
   );
 };
+
 

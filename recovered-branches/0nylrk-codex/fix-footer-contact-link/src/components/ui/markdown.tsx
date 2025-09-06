@@ -1,15 +1,10 @@
 
-
-import React from "react",
+import React from "react";
 import ReactMarkdown from "react-markdown";
 import { cn } from "@/lib/utils";
-import ReactMarkdown from "react-markdown",
-import { cn } from "@/lib/utils",
-
-
 interface MarkdownProps {
   content: string;
-  className?: string
+  className?: string;
 
 }
 export function Markdown({ content, className }: MarkdownProps) {
@@ -18,6 +13,7 @@ export function Markdown({ content, className }: MarkdownProps) {
       <ReactMarkdown>{content}</ReactMarkdown>
     </div>
 
+  );
 
 }
 

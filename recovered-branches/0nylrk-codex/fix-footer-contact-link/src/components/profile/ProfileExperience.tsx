@@ -1,19 +1,9 @@
 
-
-import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
-import { Briefcase } from "lucide-react",
-import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
-import {Briefcase} from "lucide-react";
-import { ProfileExperience as ProfileExperienceType } from "@/types/profile",
-import { Briefcase } from "lucide-react",
-
-
-
-
+import { ProfileExperience, as, ProfileExperienceType } from "@/types/profile";
+import { Briefcase } from "lucide-react";
 interface ProfileExperienceProps {
   experience: ProfileExperienceType[];
 }
-
 
 
 interface ProfileExperienceProps {
@@ -26,7 +16,6 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
 
 
 
-
       <div className="space-y-6">
         {experience.map((exp) => (
           <div key={exp.id} className="flex">
@@ -35,7 +24,6 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
                 <Briefcase className="h-5 w-5 text-zion-purple" />
               </div>
             </div>
-
 
 
 
@@ -54,8 +42,7 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
         ))}
       </div>
     </div>
-  )
-
+  );
 }
 
 export function ProfileExperience(): any ({ experience }: ProfileExperienceProps) {;

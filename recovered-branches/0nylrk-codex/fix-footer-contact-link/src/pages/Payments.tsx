@@ -1,5 +1,10 @@
 
-
+import React from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {TransactionHistory} from "@/components/transactions/TransactionHistory";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 
 export default function Payments() {
   return (
@@ -22,6 +27,7 @@ export default function Payments() {
           </div>
 
 
+
           <Tabs defaultValue="history" className="w-full">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">
               <TabsTrigger value="history">Transaction History</TabsTrigger>
@@ -31,9 +37,14 @@ export default function Payments() {
             <TabsContent value="history">
               <TransactionHistory />
             </TabsContent>
+
             <TabsContent value="settings">
               <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-6">
-                <h2 className="text-2xl font-bold text-white mb-6">Payment Settings</h2>
+
+                <h2 className="text-2xl font-bold text-white mb-6">
+                  Payment Settings
+                </h2>
+
 
                 <div className="space-y-8">
                   <div className="border-b border-zion-blue-light pb-6">
@@ -46,13 +57,14 @@ export default function Payments() {
                     </p>
                     <Button
 
-                      onClick={() => window.open('https://stripe.com_blank')}
+                      onClick={() => window.open("https://stripe.com_blank")}
 
                       className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"
                     >
                       Manage Payment Methods
                     </Button>
                   </div>
+
 
 
                   <div className="border-b border-zion-blue-light pb-6">
@@ -73,6 +85,7 @@ export default function Payments() {
                   </div>
 
 
+
                   <div>
                     <h3 className="text-lg font-medium text-white mb-3">
                       Payment Notifications
@@ -85,27 +98,34 @@ export default function Payments() {
                       <div className="flex items-center space-x-2">
                         <Checkbox id="notify-email" defaultChecked />
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
+                        <label
+                          htmlFor="notify-email"
+                          className="text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70 text-white"
+                        >
+                          Email notifications
+                        </label>
+                      </div>
+                      <div className="flex items-center space-x-2">
+                        <Checkbox id="notify-push" defaultChecked />
+                        <label
+                          htmlFor="notify-push"
+                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-white"
+                        >
+                          Push notifications
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </TabsContent>
+          </Tabs>
+        </div>
+      </div>
+      <Footer />
+    </>
+  );
+
 }
 
 

@@ -1,4 +1,5 @@
 
+
 fetch("/api/contact", {
       method: "POST"
       headers: { "Content-Type": "application/json" }
@@ -38,6 +39,7 @@ fetch("/api/contact", {
           description: err.message,
           variant: "destructive"})
       })
+
 
 
 
@@ -133,6 +135,7 @@ fetch("/api/contact", {
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address *
                   </label>
+
 
                   <Textarea
                     id="message"
@@ -408,6 +411,7 @@ if ( {) {
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
 
 
+
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                   Company
@@ -422,6 +426,7 @@ if ( {) {
                   placeholder="Your company name"
                 />
               </div>
+
 
 
                     {isSubmitting ? 'Sending...' : 'Send Message'}
@@ -464,4 +469,5 @@ description: err.message;
 }'"}
 }
 ;
+
 

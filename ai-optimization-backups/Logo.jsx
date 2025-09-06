@@ -8,6 +8,9 @@
 
 
 
+
+
+
 ;,
 import _React from 'react';';,
 import { Link } from 'react-router-dom';,
@@ -34,6 +37,20 @@ export function Logo({ customLogo, customColor }) {}
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+
+
+import React from 'react';
+
+
+
+
+
+
+
+
+
+
 
 
 import React from 'react';
@@ -68,10 +85,19 @@ export function Logo({ customLogo, customColor }) {
 
 
 
+
+
+
+
+
   return (
+
     <Link to="/" className="flex items-center space-x-3 group">
       <div
         className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"
+
+
+
 
 
 
@@ -125,6 +151,10 @@ export function Logo({ customLogo, customColor }) {
 
 
 
+
+
+
+}
 
 
 

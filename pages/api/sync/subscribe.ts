@@ -1,6 +1,5 @@
 
 
-
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 import { Peer } from "../../../utils/sync/types",;
@@ -39,31 +38,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     state.config.peers.push({ id, baseUrl: peer.baseUrl, scope: peer.scope || state.config.scope, paused: false })
 
 
-  }
-}
-;
-  writeState(state);
-  return res.status(200).json({ peers: state.config.peers });
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-}
-}
-}
-
-
-
-
-
+  writeState(state),
+  return res.status(200).json({ peers: state.config.peers })
+};
 

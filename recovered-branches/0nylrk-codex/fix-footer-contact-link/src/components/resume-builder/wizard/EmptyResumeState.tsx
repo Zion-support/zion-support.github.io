@@ -20,3 +20,8 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
     </Card>
   );
 };
+
+
+
+
+

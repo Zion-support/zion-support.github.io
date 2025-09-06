@@ -25,6 +25,7 @@ export default function AICodeReviewerPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
 
+
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
           <div className="space-y-4">
             <FeatureItem
@@ -57,11 +58,13 @@ export default function AICodeReviewerPage() {
               title="Team Analytics"
               description="Track code quality trends, team performance metrics, and improvement areas across your organization."
 
+
             />
           </div>
         </div>
 
         <div>
+
 
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing</h2>
           <div className="space-y-6">
@@ -109,10 +112,12 @@ export default function AICodeReviewerPage() {
               ]}
               popular={false}
 
+
             />
           </div>
         </div>
       </div>
+
 
 
       <div className="bg-gray-50 rounded-xl p-8 mb-16">
@@ -132,6 +137,7 @@ export default function AICodeReviewerPage() {
             step="3"
             title="Get Actionable Insights"
             description="Receive detailed reports with specific recommendations to improve your code quality and team productivity."
+
 
           />
         </div>
@@ -169,6 +175,7 @@ export default function AICodeReviewerPage() {
 }
 
 
+
 function FeatureItem({ icon, title, description }: { icon: string; title: string; description: string }) {
   return (
     <div className="flex items-start space-x-4">
@@ -176,11 +183,13 @@ function FeatureItem({ icon, title, description }: { icon: string; title: string
       <div>
         <h3 className="font-semibold text-gray-900 mb-2">{title}</h3>
 
+
         <p className="text-gray-600">{description}</p>
       </div>
     </div>
   );
 }
+
 
 
 function PricingCard({ plan, price, period, description, features, popular }: {
@@ -210,12 +219,14 @@ function PricingCard({ plan, price, period, description, features, popular }: {
             <span className="text-green-500 mr-2">✓</span>
             <span className="text-gray-600">{feature}</span>
 
+
           </li>
         ))}
       </ul>
     </div>
   );
 }
+
 
 
 function StepCard({ step, title, description }: { step: string; title: string; description: string }) {
@@ -225,6 +236,7 @@ function StepCard({ step, title, description }: { step: string; title: string; d
         {step}
       </div>
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+
 
       <p className="text-gray-600">{description}</p>
     </div>

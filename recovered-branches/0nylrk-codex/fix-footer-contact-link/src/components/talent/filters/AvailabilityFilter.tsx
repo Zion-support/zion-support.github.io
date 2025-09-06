@@ -1,16 +1,12 @@
 
-
-
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { AvailabilityFilterProps } from "@/types/filters";
 const AVAILABILITY_OPTIONS = [
-  { id: "full_time", label: "Full-time" }
-  { id: "part_time", label: "Part-time" }
-import {ChevronDown, ChevronUp} from "lucide-react";
-import {Checkbox} from "@/components/ui/checkbox";
-import {AvailabilityFilterProps} from "@/types/filters";
-
-
-],
-
+  { id: "full_time", label: "Full-time" },
+  { id: "part_time", label: "Part-time" },
+  { id: "project", label: "Project-based" },
+];
 
 
 export function AvailabilityFilter({
@@ -20,7 +16,6 @@ export function AvailabilityFilter({
   toggleSection,
   isMobileFilterOpen,
 }: AvailabilityFilterProps) {
-
 
 
   return (
@@ -36,7 +31,6 @@ export function AvailabilityFilter({
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
-
 
 
 
@@ -98,6 +92,9 @@ const AVAILABILITY_OPTIONS = [;
           ))}
         </div>;
       )}
+  );
+
+    </div>
   );
 }
 import { ChevronDown, ChevronUp  } from './lucide-react';

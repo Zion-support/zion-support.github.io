@@ -1,6 +1,5 @@
 
 
-
 import { QuoteFormData } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -15,13 +14,14 @@ export function ProjectDetailsStep({
   updateFormData,
 
 
-
 }: ProjectDetailsStepProps) {
   return (
     <div className="space-y-6">
       <div>
 
-
+        <h3 className="text-xl font-semibold text-white mb-4">
+          Tell us about your project
+        </h3>
 
 
         <div className="space-y-4">
@@ -37,7 +37,6 @@ export function ProjectDetailsStep({
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
-
 
 
 
@@ -62,6 +61,10 @@ export function ProjectDetailsStep({
       </div>
 
 
+      <div>
+        <h3 className="text-xl font-semibold text-white mb-4">
+          Contact Information
+        </h3>
 
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -118,15 +121,26 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               id="name";
               placeholder="Your name";
 
-              onChange={(e) => updateFormData({;
-                contactInfo: { ...formData.contactInfo, name: e.target.value } ;
-              })}
 
 
+value={formData.contactInfo.name}
+              onChange={(e) =>
+                updateFormData({
+                  contactInfo: {
+
+
+              value={formData.contactInfo.name}
+              onChange={(e) =>
+                updateFormData({
+                  contactInfo: {
+                    ...formData.contactInfo,
+                    name: e.target.value,
+                  },
+                })
+              }
               className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
             />
           </div>
-
 
 
           <div>
@@ -138,7 +152,17 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               placeholder="Your company name"
               value={formData.contactInfo.company}
 
-
+              onChange={(e) =>
+                updateFormData({
+                  contactInfo: {
+                    ...formData.contactInfo,
+                    company: e.target.value,
+                  },
+                })
+              }
+              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+            />
+          </div>
 
 
           <div>
@@ -147,14 +171,26 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
             </Label>
 
 
-
-
             <Input
               id="email"
               type="email"
               placeholder="Your email address"
 
 
+
+
+              value={formData.contactInfo.email}
+              onChange={(e) =>
+                updateFormData({
+                  contactInfo: {
+                    ...formData.contactInfo,
+                    email: e.target.value,
+                  },
+                })
+              }
+              className="bg-zion-blue border border-zion-blue-light focus:border-zion-purple text-white"
+            />
+          </div>
 
 
           <div>
@@ -166,7 +202,14 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
               placeholder="Your phone number"
               value={formData.contactInfo.phone}
 
-
+              onChange={(e) =>
+                updateFormData({
+                  contactInfo: {
+                    ...formData.contactInfo,
+                    phone: e.target.value,
+                  },
+                })
+              }
 
               className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white"
             />
@@ -175,15 +218,7 @@ export function ProjectDetailsStep({ formData, updateFormData }: ProjectDetailsS
       </div>
     </div>
 
-
-              className="bg-zion-blue border border-zion-blue-light focus: border-zion-purple text-white";
-import { QuoteFormData  } from '@/types / quotes';
-import { Input  } from '@/components / ui / input';
-import { Label  } from '@/components / ui / label';
-import { Textarea  } from '@/components / ui / textarea';
-interface ProjectDetailsStepProps {
-  form_data: QuoteFormData;
-  updateFormData: (data: Partial < QuoteFormData>) => void;
+  );
 
 }
             />;

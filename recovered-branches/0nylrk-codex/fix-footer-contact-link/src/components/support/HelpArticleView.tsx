@@ -61,6 +61,8 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
             </div>
 
             <div className="flex items-center space-x-3">
+
+
               <Button
                 variant="outline"
                 size="sm"
@@ -113,6 +115,45 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   );
 }
 
+
+
+                on_click={() => handle_feedback ("not - helpful")}
+                disabled={feedback_given !== null}
+              >;
+                <ThumbsDown className="h - 4 w - 4 mr - 2" />;
+                No;
+              </Button>;
+            </div>;
+          </div>;
+          {feedback_given === "not - helpful" && (
+            <div className="mt - 4 bg - zion - blue - dark p - 4 rounded - md">;
+              <p className="text - sm text - zion - slate - light mb - 2">;
+                We're sorry this article wasn't helpful. Please contact our;
+                support team for further assistance.;
+              </p>;
+              <Button;
+                size="sm";
+                className="bg - zion - purple hover:bg - zion - purple - light";
+              >;
+                Contact Support;
+              </Button>;
+            </div>)}
+        </div>;
+      </Card>;
+    </div>);
+}
+function format_date (date: string): string {
+  return new Date (date).toLocaleDateString ("en - US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
+
+
+
+
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
@@ -120,3 +161,6 @@ function formatDate(date: string): string {
     day: "numeric",
   });
 }
+
+;
+

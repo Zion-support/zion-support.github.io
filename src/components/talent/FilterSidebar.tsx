@@ -490,23 +490,4 @@ function FilterSidebar() {
     </>;
   );
 
-};
-}
 
-  );
-}
-        <Button;
-          on_click={() => window.dispatch_event (new CustomEvent ('closeMobileFilter'))}
-          className="w - full bg - zion - purple hover:bg - zion - purple - dark text - white mt - 4";
-        >;
-          Apply Filters;
-        </Button>)}
-    </>);
-}
-
-
-    </>;
-  );
-
-}
-;

@@ -201,6 +201,7 @@ function CategoryContent({;
     if (!user) {;
       toast({ title: 'Login required', description: 'Please sign in to follow this category' }),;
 
+
       return;
 
 
@@ -227,61 +228,3 @@ function CategoryContent({;
 }
 
 
-
-  )
-}
-
-
-
-  );
-};
-
-/**
- * CategoryContent - Function description
- */
-function CategoryContent() {
-  const [search_query, setSearchQuery] = useState ("");
-  const { featured_posts, recent_posts } = use_community ();
-  // Filter posts by category from context data;
-  const category_posts = [;
-    ...featured_posts.filter (post => post.category_id === category_id);
-    ...recent_posts.filter (post => post.category_id === category_id);
-  ].filter ((post, index, self, ) =>;
-    // Remove duplicates by id;
-    index === self.find_index (p => p.id === post.id));
-  // Apply search filter;
-  const filtered_posts = search_query;
-    ? category_posts.filter (post =>;
-        post.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-        post.content.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-        post.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ())));
-    : category_posts;
-  const canCreatePost = user && (!category.admin_only || user.user_type === 'admin' || user.role === 'admin');
-  const { is_followed, follow, unfollow } = useFollowedCategories ();
-  const { toast } = use_toast ();
-  const handle_follow = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      toast ({ title: 'Login required', description: 'Please sign in to follow this category' }),
-      return;
-    }
-    if () {) {
-  $2
-}
-      unfollow (category_id);
-    } else {
-      follow (category_id);
-    }
-  }
-  log_info ('CategoryContent - category_id:', { data: category_id }),
-  log_info ('CategoryContent - category_posts:', { data: category_posts }),
-  log_info ('CategoryContent - filtered_posts:', { data: filtered_posts }),
-  const category = category_id ? categories_info[category_id] : null;
-  const IconComponent = category ? icon_map[category.icon as keyof typeof icon_map] : null;
-}
-  );
-}
-
-;

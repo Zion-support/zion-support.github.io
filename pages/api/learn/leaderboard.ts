@@ -1,8 +1,6 @@
 
 
 
-
-
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -35,7 +33,5 @@ function handler() {
 
     res.status (500).json ({ error: e?.message ?? 'Failed to load leaderboard' });
   }
-
-
-
+};
 

@@ -1,41 +1,10 @@
 
-
-
 import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardFooter,
-} from "@/components/ui/card";
-import { Textarea } from "@/components/ui/textarea";
-import { Check, Pencil } from "lucide-react";
-
-
-
-interface GeneratedDescriptionDisplayProps {
-  description: string;
-  onSave: (editedDescription: string) => void;
-}
-
-
-
-
-  const { toast } = useToast();
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedDescription, setEditedDescription] = useState(description);
-
-  const handleSave = () => {
-    onSave(editedDescription),
-    setIsEditing(false),
-    toast({
-
-
-
-
+import {useToast} from "@/hooks/use-toast";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components/ui/card";
+import {Textarea} from "@/components/ui/textarea";
+import {Check, Pencil} from "lucide-react";
 
 
 
@@ -63,16 +32,36 @@ interface GeneratedDescriptionDisplayProps {
                 Edit
               </>
 
+            )}
+          </Button>
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        {isEditing ? (
+          <Textarea
+            value={editedDescription}
+            onChange={(e) => setEditedDescription(e.target.value)}
+            className="bg-zion-blue border border-zion-blue-light text-white min-h-[300px] resize-none"
+          />
+        ) : (
+          <div className="bg-zion-blue p-4 rounded-md text-white min-h-[300px] whitespace-pre-wrap">
+            {editedDescription}
+          </div>
+        )}
+      </CardContent>
+      {isEditing && (
+        <CardFooter>
+          <Button
+            onClick={handleSave}
+            className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white"
+          >
+            Save Changes
+          </Button>
+        </CardFooter>
+      )}
+    </Card>
+  );
 
-import React, { useState } from "react",;
-import { useToast } from "@/hooks/use-toast",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",;
-import { Textarea } from "@/components/ui/textarea",;
-import { Check, Pencil } from "lucide-react",;
-interface GeneratedDescriptionDisplayProps {;
-  description: string,;
-  onSave: (editedDescription: string) => void;
 }
 ;
 export function GeneratedDescriptionDisplay({;

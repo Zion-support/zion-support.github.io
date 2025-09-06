@@ -1,20 +1,15 @@
 
-
-import React from 'react',
-import { SEO } from '@/components/SEO',
-import { AppHeader } from '@/layout/AppHeader',
-import { Footer } from '@/components/Footer',
-import { ProtectedRoute } from '@/components/ProtectedRoute',
-import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent',
-
-
-
+import React from "react";
+import { SEO } from "@/components/SEO";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { ContractBuilderContent } from "@/components/contracts/page/ContractBuilderContent";
 
 function ContractBuilderPage() {
   return (
     <ProtectedRoute>
       <>
-
 
 
         <SEO
@@ -26,11 +21,12 @@ function ContractBuilderPage() {
         <main className="container mx-auto py-10 px-4">
           <ContractBuilderContent />
         </main>
+
         <Footer />
       </>
     </ProtectedRoute>
-  )
 
+  );
 }
 
 

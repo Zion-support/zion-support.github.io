@@ -1,50 +1,11 @@
 
-
-export default function HelpCenterPage() {
-  return (
-    <>
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-export default function HelpCenterPage() {
-  return (
-    <>
-
-
-
 import React from "react";
 import HelpCenter from "@/components/support/HelpCenter";
-import {SEO} from "@/components/SEO";
 
-import React from "react",
-import HelpCenter from "@/components/support/HelpCenter";
 import { SEO } from "@/components/SEO";
-import HelpCenter from "@/components/support/HelpCenter",
-import { SEO } from "@/components/SEO",
 export default function HelpCenterPage() {
   return (
     <>
-
 
 
       <SEO
@@ -56,18 +17,6 @@ export default function HelpCenterPage() {
       <HelpCenter />
     </>
 
-}
-import React from "react",;
-import HelpCenter from "@/components/support/HelpCenter",;
-import { SEO } from "@/components/SEO";
-export default function HelpCenterPage() {;
-  return (;
-
-
-
-      />;
-      <HelpCenter />;
-    </>;
   );
 }
 

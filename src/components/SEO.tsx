@@ -8,6 +8,7 @@ interface SEOProps {
   description: string;
   keywords?: string;
 
+
   url?: string;
   image?: string;
   type?: string;
@@ -107,6 +108,7 @@ export function SEO({
         {JSON.stringify(structuredData)}
       </script>
     </Helmet>
+
 
   );
 };

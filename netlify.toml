@@ -5,6 +5,20 @@ publish = "dist"
 
 [build.environment]
 
+NODE_VERSION = "20"
+NODE_OPTIONS = "--max-old-space-size=4096"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  directory = "netlify/functions"
+
+[[redirects]]
+from = "/api/*"
+to = "/.netlify/functions/:splat"
+status = 200
+
 
 # Security and caching headers for static assets
 [[headers]]
@@ -33,7 +47,13 @@ publish = "dist"
     Origin-Agent-Cluster = "?1"
 
 
-# Static redirects for exported site
+# SPA fallback for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Static redirects for specific routes
 
 [[redirects]]
 from = "/ai-customer-success-platform"
@@ -72,7 +92,7 @@ status = 301
 
 [[redirects]]
 
-  from = "/affiliate-attribution-suite"
-  to = "/services/affiliate-attribution-suite/"
-  status = 301
+from = "/affiliate-attribution-suite"
+to = "/services/affiliate-attribution-suite/"
+status = 301
 

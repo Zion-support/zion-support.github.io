@@ -5,7 +5,20 @@ interface IntegrationState {
 }
 let state: IntegrationState = {
 
+  connections: [],
+  logs: [],
+  overrides: [],
+};
+
+export function getState(): IntegrationState {;
+  return { ...state };
 }
+
+export function writeState(
+  updater: (state: IntegrationState) => void,
+): IntegrationState {
+  updater(state);
+
 
   return { ...state }
 }
@@ -26,15 +39,9 @@ export function get_state (): IntegrationState {
 export function reset_state (): void {
   state = {
 
-
-
     connections: [],
     logs: [],
-    overrides: [];
+    overrides: [],
   };
-
-
 }
-
-
 

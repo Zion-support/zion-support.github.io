@@ -1,3 +1,4 @@
+
 interface SearchResult {
   title: string, description: string
   url: string, type: 'service' | 'page' | 'category'
@@ -30,3 +31,4 @@ interface SearchResult {;
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
+

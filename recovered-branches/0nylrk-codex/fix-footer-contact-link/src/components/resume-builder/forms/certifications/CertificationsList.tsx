@@ -1,82 +1,13 @@
 
-
+import { Certification } from "@/types/resume";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Edit, Trash2 } from "lucide-react";
+import { format } from "date-fns";
 interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
-  onDelete: (id: string) => void
-
-
-import { Certification } from '@/types/resume',;
-import { Card, CardContent } from '@/components/ui/card',;
-import { Button } from '@/components/ui/button',;
-import { Edit, Trash2 } from 'lucide-react',;
-import { format } from 'date-fns',;
-interface CertificationsListProps {;
-  certifications: Certification[],;
-  onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void;
-
-import {Certification} from '@/types/resume';
-import {Card, CardContent} from '@/components/ui/card';
-import {Button} from '@/components/ui/button';
-import {Edit, Trash2} from 'lucide-react';
-import {format} from 'date-fns';
-interface CertificationsListProps {;
-  certifications: Certification[],;
-  onEdit: (cert: Certification) => void,;
-  onDelete: (id: string) => void;
-}
-
-export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
-  if (certifications && certifications.length === 0) {;
-
-
-    return null;
-  }
-
-
-
-
-
-  return (
-
-import { Certification  } from '@/types / resume';
-import { Card, CardContent  } from '@/components / ui / card';
-import { Button  } from '@/components / ui / button';
-import { Edit, Trash2  } from './lucide-react';
-import { format  } from './date - fns';
-
-interface CertificationsListProps {
-  certifications: Certification[];
-  on_edit: (cert: Certification) => void;
-  on_delete: (id: string) => void;
-}
-export /**
- * CertificationsList - Function description
- */
-function CertificationsList() {
-  // Check condition
-if ( {) {
-  $2
-}
-    return null;
-  }
-  return (
-
-                </p>
-                <p className="text-xs text-muted-foreground mt-1">
-
-                  Issued: {cert.issue_date ? (typeof cert.issue_date === 'string' 
-                    ? cert.issue_date 
-                    : format(cert.issue_date, 'MMM yyyy')) : 'N/A'}
-                  {cert.expiration_date && (;
-                    <> · Expires: {typeof cert.expiration_date === 'string';
-                      ? cert.expiration_date;
-                      : format(cert.expiration_date, 'MMM yyyy')}
-                    </>;
-
-
-
 
 }
 
@@ -164,19 +95,11 @@ export function CertificationsList({
               </div>;
             </div>;
 
-                  target="_blank";
-                  rel="noopener noreferrer";
-                  className="text - primary hover:underline";
-                >;
-                  View credential;
-                </a>;
-              </p>)}
-          </CardContent>;
-        </Card>))}
-    </div>);
-}
 
-
+            {cert.credential_url && (
+              <p className="text-xs mt-2">
+                <a
+                  href={cert.credential_url}
 
                   target="_blank"
                   rel="noopener noreferrer"
@@ -191,7 +114,7 @@ export function CertificationsList({
       ))}
     </div>
 
-
+  );
 
 }
 ;

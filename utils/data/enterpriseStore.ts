@@ -75,3 +75,17 @@ export const store = {;
       slug,;
       logoUrl: input.logoUrl,;
 
+
+
+    company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },;
+    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),;
+
+    return true;
+  },
+  list_invoices (company_id: string): InvoiceRecord[] {
+    const company = companiesById[company_id];
+    return company ? company.invoices : [];
+
+
+
+

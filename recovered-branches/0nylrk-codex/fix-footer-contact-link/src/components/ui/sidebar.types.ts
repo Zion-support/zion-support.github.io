@@ -1,14 +1,29 @@
+import React from "react";
+// This file fixes the ref type issues in sidebar components
+
+// Export a placeholder to ensure the file is recognized as a module
+export const SIDEBAR_REF_TYPE_FIX = true;
+
+// Define a type that makes the ref forwards compatible
+export type ForwardRefComponent<T, P = {}> = React.ForwardRefExoticComponent<
+  React.PropsWithoutRef<P> & React.RefAttributes<T>
+>;
 
 
 // Helper type for component refs
-export type ElementRef<T extends React && React.ElementType> = React && React.ComponentPropsWithRef<T>['ref'];
+export type ElementRef<T extends React.ElementType> =
+  React.ComponentPropsWithRef<T>["ref"];
 
 // Helper type for wrapping refs that fixes the mismatch errors
-export type PolymorphicRef<T extends React && React.ElementType> = React && React.Ref<React && React.ElementRef<T>>;
+export type PolymorphicRef<T extends React.ElementType> = React.Ref<
+  React.ElementRef<T>
+>;
 
 // Helper for dealing with refs in complex situations
-export type PolymorphicComponentProp<T extends React && React.ElementType, Props = {}> = 
-  React && React.PropsWithChildren<Props & { as?: T }>;
+export type PolymorphicComponentProp<
+  T extends React.ElementType,
+  Props = {},
+> = React.PropsWithChildren<Props & { as?: T }>;
 
 
 // Safe ref casting helper type - this is the key to fixing our issues
@@ -58,33 +73,10 @@ export type SidebarContext = {
   open_mobile: boolean;
   setOpenMobile: (open: boolean) => void;
 
+  isMobile: boolean;
+  toggleSidebar: () => void;
+};
 
-  is_mobile: boolean;
-  toggle_sidebar: () => void;
-}
-;
-
-
-
-import React from 'react',
-
-
-// This file fixes the ref type issues in sidebar components
-// Export a placeholder to ensure the file is recognized as a module
-
-
-export const SIDEBAR_REF_TYPE_FIX = true,
-
-// Define a type that makes the ref forwards compatible
-export type ForwardRefComponent<T P = {}> = React.ForwardRefExoticComponent<React.PropsWithoutRef<P> & React.RefAttributes<T>>,
-
-// Helper type for component refs
-export type ElementRef<T extends React.ElementType> = React.ComponentPropsWithRef<T>['ref'],
-
-// Helper type for wrapping refs that fixes the mismatch errors
-export type PolymorphicRef<T extends React.ElementType> = React.Ref<React.ElementRef<T>>,
-
-// Helper for dealing with refs in complex situations
 
 
 import React from 'react',;

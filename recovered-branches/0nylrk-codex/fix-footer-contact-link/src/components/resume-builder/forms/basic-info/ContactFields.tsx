@@ -1,9 +1,18 @@
 
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Control } from "react-hook-form";
+import { BasicInfoFormData } from "./schema";
+interface ContactFieldsProps {
+  control: Control<BasicInfoFormData>;
+}
 
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Control} from "react-hook-form";
-import {BasicInfoFormData} from "./schema";
 
 
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -129,6 +138,32 @@ export function ContactFields({ control } ContactFieldsProps) {;
                 {...field}
 
       />;
+
+
+      <FormField
+        control={control}
+        name="linkedin"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>LinkedIn</FormLabel>
+            <FormControl>
+              <Input
+                placeholder="https://linkedin.com/in/username"
+                {...field}
+              />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+        )}
+      />;
+
+
+      <FormField
+        control={control}
+        name="github"
+
+      />;
+
       <FormField
         control={control}
         name="linkedin"
@@ -162,25 +197,11 @@ export function ContactFields({ control } ContactFieldsProps) {;
           </FormItem>;
         )}
 
-              />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="github";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > GitHub</FormLabel>;
-            <FormControl>;
-              <Input placeholder="https://github.com / username" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-    </div>);
+      />
+    </div>
+  );
 }
+;
 
 
 

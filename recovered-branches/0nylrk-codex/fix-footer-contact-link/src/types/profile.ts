@@ -1,4 +1,10 @@
 
+export interface ProfileSkill {
+  name: string;
+  level: number; // 1-5
+  endorsements?: number;
+}
+
 
 }
   id: string;
@@ -6,6 +12,11 @@
   description: string;
   image_url?: string;
   tags?: string[];
+
+  url?: string;
+  date: string;
+}
+
 
 export interface ProfileSkill {
 
@@ -40,17 +51,22 @@ export interface ProfileExperience {;
   company: string;
   description: string;
 
-
-  status: 'available' | 'limited' | 'unavailable';
-  next_available?: string;
-  message?: string,
-  available_hours?: { day: string, hours: string }[];
-
+  startDate: string;
+  endDate?: string;
+  current?: boolean;
 }
-  id: string;
-  name: string;
-  title: string;
-  avatar_url: string;
+
+  start_date: string;
+  end_date?: string,
+  current?: boolean;
+}
+export interface Availability {
+  status: "available" | "limited" | "unavailable";
+  nextAvailable?: string;
+  message?: string;
+  availableHours?: { day: string; hours: string }[];
+}
+
 
 export interface Availability {
 
@@ -62,13 +78,15 @@ export interface Availability {
 
   reviewCount?: number;
   aiScore?: number;
-
+  profileType: "service" | "talent";
 
   skills: ProfileSkill[];
   projects: ProfileProject[];
   experience: ProfileExperience[];
   availability: Availability;
 
+  hourlyRate?: number;
+  contactEmail?: string;
 
 }
 export interface ProfileSkill {;

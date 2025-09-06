@@ -74,6 +74,7 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {;
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients.";
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized.";
 
+
           }
         </p>
       </CardContent>;

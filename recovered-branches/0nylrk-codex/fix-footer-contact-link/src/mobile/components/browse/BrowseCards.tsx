@@ -14,43 +14,39 @@ import { Badge } from '@/components / ui / badge';
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from './lucide-react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 
+
+  id: string
+  title: string
+  subtitle: string
+  description: string
+  location?: string;
+  badges: string[]
+
+
+
+interface BrowseItem {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  location?: string;
+  badges: string[];
+
   price?: string;
   image?: string;
   match?: number;
-
-
-
-  timePosted?: string
-
+  timePosted?: string;
 }
+
 interface BrowseCardsProps {
-
-
-  items: BrowseItem[]
-  type: "jobs" | "talents"
-
-  onViewDetails: (id: string) => void
-
+  items: BrowseItem[];
+  type: "jobs" | "talents";
+  onViewDetails: (id: string) => void;
 }
 
 
-export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
-  const [savedItems, setSavedItems] = useState<string[]>([]);
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]>([]);
-
-
-
-
-  const [savedItems, setSavedItems] = useState<string[]>([]),
-  
-
-  const toggleSaved = (id: string) => {
-    setSavedItems(prev =>
-      prev.includes(id)
-        ? prev.filter(itemId => itemId !== id)
-        : [...prev, id]
-    )
 
 
 

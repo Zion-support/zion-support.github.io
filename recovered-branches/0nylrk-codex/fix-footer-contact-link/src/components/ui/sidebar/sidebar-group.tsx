@@ -1,8 +1,9 @@
 import React, { forwardRef } from "react";
 
-import {ChevronDown} from "lucide-react";
-import {cn} from "@/lib/utils";
-import {SafeRef} from "@/types/ref-types";
+import { ChevronDown } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { SafeRef } from "@/types/ref-types";
+interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
 
   title?: string;
   icon?: React && React.ReactNode;
@@ -10,6 +11,20 @@ import {SafeRef} from "@/types/ref-types";
   showChevron?: boolean;
 }
 
+const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
+  (
+    {
+      title,
+      icon,
+      defaultExpanded = true,
+      showChevron = true,
+      className,
+      children,
+      ...props
+    },
+    ref,
+  ) => {
+    const [expanded, setExpanded] = React.useState(defaultExpanded);
 
 import React, { forward_ref } from './react';
 import { ChevronDown  } from './lucide-react';
@@ -99,6 +114,21 @@ const SidebarGroup = forwardRef<HTMLDivElement SidebarGroupProps>(;
     const [expanded, setExpanded] = React.useState(defaultExpanded),;
     return (;
       <div;
+
+
+        ref={ref as SafeRef<HTMLDivElement>}
+        className={cn("px-3 py-2", className)}
+        {...props}
+      >;
+            )}
+          </button>;
+        )}
+
+    )
+  }
+),
+
+
 
 
 

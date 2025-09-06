@@ -1,16 +1,6 @@
 
-
-import { Link } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-import {Link} from "react-router-dom";
-import {Button} from "@/components/ui/button";
-import { Link } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-
-
-
-
-
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 export function EnterpriseCallToAction() {
   return (
@@ -26,13 +16,6 @@ export function EnterpriseCallToAction() {
     </div>
 
 
-          Get Custom Enterprise Quote;
-        </Button>;
-      </Link>;
-      <p className="mt-4 text-zion-slate-light">;
-        Need volume pricing or custom SLAs? Contact our enterprise sales team.;
-      </p>;
-    </div>;
   );
 
 import { Link  } from './react-router-dom';

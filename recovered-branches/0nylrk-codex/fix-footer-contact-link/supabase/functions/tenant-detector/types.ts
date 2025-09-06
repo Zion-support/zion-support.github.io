@@ -1,4 +1,5 @@
 
+export interface TenantInfo {
 
   id: string;
   brand_name: string;
@@ -10,17 +11,14 @@
   landing_page_copy: {
     headline: string;
 
-}
+    subtitle: string;
 
-export interface TenantResponse {
-
-    subtitle: string,
     cta: string;
-  }
+  };
   is_active: boolean;
 }
 export interface TenantResponse {
-  tenant: TenantInfo | null,
+  tenant: TenantInfo | null;
   error?: string;
 }
 }

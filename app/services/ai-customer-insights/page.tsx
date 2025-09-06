@@ -25,6 +25,7 @@ export default function AICustomerInsightsPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
 
+
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
           <div className="space-y-4">
             <FeatureItem
@@ -57,11 +58,13 @@ export default function AICustomerInsightsPage() {
               title="Recommendation Engine"
               description="Personalized product and content recommendations based on individual customer preferences and behavior."
 
+
             />
           </div>
         </div>
 
         <div>
+
 
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Pricing</h2>
           <div className="space-y-6">
@@ -77,10 +80,12 @@ export default function AICustomerInsightsPage() {
                 "Email support",
                 "Monthly reports"
 
+
               ]}
               popular={false}
             />
             <PricingCard
+
 
               plan="Professional"
               price="$599"
@@ -94,10 +99,12 @@ export default function AICustomerInsightsPage() {
                 "Priority support",
                 "Custom dashboards"
 
+
               ]}
               popular={true}
             />
             <PricingCard
+
 
               plan="Enterprise"
               price="$1,999"
@@ -111,12 +118,14 @@ export default function AICustomerInsightsPage() {
                 "Custom integrations",
                 "On-premise deployment"
 
+
               ]}
               popular={false}
             />
           </div>
         </div>
       </div>
+
 
 
       <div className="bg-gray-50 rounded-xl p-8 mb-16">
@@ -137,9 +146,11 @@ export default function AICustomerInsightsPage() {
             title="Actionable Insights"
             description="Receive detailed reports, recommendations, and real-time dashboards to drive business decisions."
 
+
           />
         </div>
       </div>
+
 
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
@@ -245,6 +256,7 @@ export default function AICustomerInsightsPage() {
         </div>
       </div>
 
+
     </div>
   );
 }
@@ -277,6 +289,7 @@ function PricingCard({ plan, price, period, description, features, popular }: {
 }) {
   return (
 
+
     <div className={`border rounded-xl p-6 ${popular ? 'border-blue-500 bg-blue-50' : 'border-gray-200'}`}>
       {popular && (
         <div className="bg-blue-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
@@ -298,9 +311,11 @@ function PricingCard({ plan, price, period, description, features, popular }: {
         ))}
       </ul>
 
+
     </div>
   );
 }
+
 
 
 function StepCard({ step, title, description }: { step: string; title: string; description: string }) {
@@ -314,4 +329,5 @@ function StepCard({ step, title, description }: { step: string; title: string; d
     </div>
   );
 }
+
 

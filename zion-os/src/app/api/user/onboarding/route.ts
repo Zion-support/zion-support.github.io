@@ -1,4 +1,16 @@
 
+import { NextRequest, NextResponse } from "next/server";
+import { getServerSession } from "next-auth";
+import { prisma } from "@/lib/prisma";
+export async function POST(request: NextRequest) {
+  try {
+    const session = await getServerSession();
+
+
+      {
+        message: "Onboarding completed successfully",
+        user: {
+
 
           id: updatedUser && updatedUser.id,
           name: updatedUser && updatedUser.name,
@@ -11,40 +23,11 @@
     );
   } catch (error) {
 
-
-      { status: 500 }
-    );
-  }
-
-
-export async function POST(request: NextRequest) { try {
-    const body = await request.json();
-    const { userId, preferences  } = body;
-    // Mock user update - replace with actual database operation
-    const updatedUser = {
-      id: userId,
-      name: 'John Doe',
-      email: 'john@example.com',
-      role: 'user',
-      onboardingCompleted: true,
-      preferences
-    };
-    return NextResponse.json({
-      message: "Onboarding completed successfully",
-      user: {
-        id: updatedUser.id,
-        name: updatedUser.name,
-        email: updatedUser.email,
-        role: updatedUser.role,
-        onboardingCompleted: updatedUser.onboardingCompleted
-      }
-    });
-  } catch (_error) {
+    console.error("Onboarding completion error:", error);
     return NextResponse.json(
-      { error: 'Failed to complete onboarding' },
+      { error: "Internal server error" },
+      { status: 500 },
 
-
-      { status: 500 }
     );
   }
 }

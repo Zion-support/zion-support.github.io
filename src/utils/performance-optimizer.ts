@@ -1,12 +1,14 @@
 
-const images = document && document.querySelectorAll('img');
-  images && images.forEach(img => {
-    if (!img && img.loading) {
-      img && img.loading = 'lazy';
-    }
-    if (!img && img.decoding) {
-      img && img.decoding = 'async';
+// Performance optimization utilities
+export const optimizeImages = () => {;
+  const images = document.querySelectorAll('img');
+  images.forEach(img => {
+    if (!img.loading) {
+      img.loading = "lazy";
 
+    }
+    if (!img.decoding) {
+      img.decoding = "async";
     }
 
 export const preloadCriticalResources = () => {
@@ -18,6 +20,12 @@ export const preloadCriticalResources = () => {
     link && link.as = resource && resource.endsWith('.css') ? 'style' : 'font';
     document && document.head.appendChild(link);
 
+  criticalResources.forEach((resource) => {
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.href = resource;
+    link.as = resource.endsWith(".css") ? "style" : "font";
+    document.head.appendChild(link);
   });
 };
 
@@ -88,6 +96,7 @@ export const optimizeBundleSize = () => {
   return { loadComponent };
 };
 
-    link.rel = 'preload';
-    link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';
+link.rel = "preload";
+((link.href = resource),
+  (link.as = resource.endsWith(".css") ? "style" : "font"));
 

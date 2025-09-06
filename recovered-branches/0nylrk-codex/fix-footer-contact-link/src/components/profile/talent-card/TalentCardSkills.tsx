@@ -1,15 +1,6 @@
 
-
-import React from "react",
-import { Badge } from "@/components/ui/badge",
-import {Badge} from "@/components/ui/badge";
-import React from "react",
-import { Badge } from "@/components/ui/badge",
-
-
-
-
-
+import React from "react";
+import { Badge } from "@/components/ui/badge";
 
 interface TalentCardSkillsProps {
   skills: string[] | undefined;
@@ -37,12 +28,17 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
         >
 
+          {skill}
+        </Badge>
+      ))}
+      {skills.length > 4 && (
+        <Badge className="bg-zion-blue-light text-zion-slate-light border-0">
+          +{skills.length - 4} more
+        </Badge>
+      )}
+    </div>
+  );
 
-import React from "react",;
-import { Badge } from "@/components/ui/badge",;
-
-interface TalentCardSkillsProps {;
-  skills: string[] | undefined;
 }
 export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps) {;
   // Get top skills (limit to 4);

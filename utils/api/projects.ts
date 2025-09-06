@@ -4,6 +4,14 @@
 import { CurrentUser } from './auth';
 
 
+  createdAt: string;
+  updatedAt: string;
+}
+
+
+
+
+
 export interface Milestone {
   id: string;
   title: string;
@@ -114,6 +122,9 @@ export function deleteMilestone(project: Project, milestoneId: string): boolean 
 
   return true;
 }
+
+
+
 
 
 

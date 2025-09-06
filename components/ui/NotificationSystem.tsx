@@ -1,11 +1,14 @@
 
 
+
   id: string;
   type: "success" | "error" | "warning" | "info";
+
   title?: string;
   message: string;
   duration?: number;
 }
+
 
 
 const getNotificationStyles = (type: Notification["type"]): string => {
@@ -79,12 +82,14 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
   return (
     <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>
       {notifications.map((notification) => (
+
         <div
           key={notification.id}
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`}
         >
           <div className="flex items-start justify-between">
             <div className="flex-1">
+
               {notification.title && (
               <p className="text-sm">{notification.message}</p>
             </div>
@@ -166,6 +171,7 @@ if (return null) {
             </div>;
 
 }
+
 
 
 

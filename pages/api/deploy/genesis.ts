@@ -1,5 +1,6 @@
 
 
+
 function summarizeModules(
   modules: Record<string, boolean>
   bonus: Record<string, boolean>
@@ -287,10 +288,12 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: err.message || 'Internal error' })
   }
 }
+
   try {
     const body = req.body || {};
     const {
       instanceName,
+
       defaultLanguage,
       deploymentRegion,
       tokenActivation,
@@ -331,6 +334,7 @@ export default async function handler(req, res) {
     // Simulated provisioning operations – replace with real infra hooks later
     const now = new Date().toISOString();
     const provisionId = `zion-${instanceName.toLowerCase().replace(/[^a-z0-9]+/g, '-')}-${Date.now()}`;
+
     const outputActions = {
       zionGPT: {
         initialized: true,
@@ -353,6 +357,7 @@ export default async function handler(req, res) {
       },
       publicPages: []
     };
+
     res.status(200).json({
       success: true,
       provisionId,
@@ -509,3 +514,4 @@ export default async function handler(req, res) {
 
   }
 }
+

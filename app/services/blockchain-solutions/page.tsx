@@ -8,6 +8,7 @@ export default function BlockchainSolutionsPage() {
     <div className="animate-fade-in">
       <section className="py-12">
 
+
         <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Our Blockchain Solutions</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <BlockchainServiceCard
@@ -185,6 +186,7 @@ export default function BlockchainSolutionsPage() {
             price="$15k–$50k"
             icon="📊"
           />
+
 
         </div>
 

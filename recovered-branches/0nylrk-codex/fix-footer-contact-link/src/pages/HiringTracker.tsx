@@ -1,84 +1,18 @@
 
-
-
-import { useState } from "react",
-import { useParams } from "react-router-dom",
-import { AppHeader } from "@/layout/AppHeader",
-import { Footer } from "@/components/Footer",
-import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
-import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { Briefcase } from "lucide-react",
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { AppHeader } from "@/layout/AppHeader";
+import { Footer } from "@/components/Footer";
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { Briefcase } from "lucide-react";
 function HiringTrackerContent() {
-  const { jobId } = useParams() as { jobId?: string },
-  const [activeTab, setActiveTab] = useState<string>("kanban"),
+  const { jobId } = useParams() as { jobId?: string };
 
-
-
-
-
-          <TabsList>;
-            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>;
-            <TabsTrigger value="analytics">Analytics</TabsTrigger>;
-          </TabsList>;
-
-          ;
-          <TabsContent value="kanban" className="mt-6">;
-            <KanbanBoard jobId={jobId} />;
-          </TabsContent>;
-          ;
-          <TabsContent value="kanban" className="mt-6">;
-            <KanbanBoard jobId={jobId} />;
-          </TabsContent>;
-
-          <TabsContent value="analytics" className="mt-6">;
-            <HiringAnalytics jobId={jobId} />;
-
-          </TabsContent>;
-        </Tabs>;
-      </main>;
-      <Footer />;
-
-
-
-import { useState } from './react';
-import { use_params } from './react-router-dom';
-import { AppHeader } from '@/layout / AppHeader';
-import { Footer } from '@/components / Footer';
-import { KanbanBoard } from '@/components / hiring - tracker / KanbanBoard';
-import { HiringAnalytics } from '@/components / hiring - tracker / HiringAnalytics';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { SEO } from '@/components / SEO';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import { Briefcase } from './lucide-react';
-/**
- * HiringTrackerContent - Function description
- */
-function HiringTrackerContent() {
-  const { job_id } = use_params () as { job_id?: string }
-  const [active_tab, setActiveTab] = useState < string>("kanban");
-
-
-
-}
-export default function HiringTracker() {;
-  return (
-  );
-}
-;
-export default function HiringTracker() {;
-  return (;
-    <ProtectedRoute>;
-      <HiringTrackerContent />;
-    </ProtectedRoute>;
-  );
-}
-
-
-;
-
+  const [activeTab, setActiveTab] = useState<string>("kanban");
 
 }
 

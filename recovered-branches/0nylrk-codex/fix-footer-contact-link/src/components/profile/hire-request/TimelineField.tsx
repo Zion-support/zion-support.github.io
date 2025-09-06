@@ -1,19 +1,5 @@
 
 
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {UseFormReturn} from "react-hook-form";
-import {FormValues} from "./useHireRequestForm";
-
-
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { UseFormReturn } from "react-hook-form",
-import { FormValues } from "./useHireRequestForm",
-
-
-
-
 import {
   FormField,
   FormItem,
@@ -34,6 +20,7 @@ import { FormValues } from "./useHireRequestForm";
 interface TimelineFieldProps {
   form: UseFormReturn<FormValues>;
 
+
 }
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -50,12 +37,8 @@ import {FormValues} from "./useHireRequestForm";
     { value: "3-6 months", label: "3-6 months" },
     { value: "6+ months", label: "6+ months" },
 
-
-
+    { value: "Ongoing", label: "Ongoing" },
   ];
-    { value: "Ongoing", label: "Ongoing" }
-  ],
-
 
 
   return (
@@ -140,14 +123,20 @@ function TimelineField() {
           <FormLabel className="text-white">Project Timeline</FormLabel>;
           <FormControl>;
 
-                  </SelectItem>))}
 
-              </SelectContent>;
-            </Select>;
-          </FormControl>;
-          <FormMessage />;
+                    {option.label}
+                  </SelectItem>
 
-    />;
+                ))}
+              </SelectContent>
+            </Select>
+          </FormControl>
+          <FormMessage />
+        </FormItem>
+      )}
+    />
+  );
+}
 
 
 

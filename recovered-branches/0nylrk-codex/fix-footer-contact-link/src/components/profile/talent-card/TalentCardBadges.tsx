@@ -1,14 +1,15 @@
 
-
-
-
+import React from "react";
+import { Badge } from "@/components/ui/badge";
+import { Award } from "lucide-react";
 
 interface TalentCardBadgesProps {
   featured: boolean | undefined;
 }
 
 
-
+export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
+  if (!featured) return null;
 
 
   return (
@@ -19,16 +20,8 @@ interface TalentCardBadgesProps {
       </Badge>
     </div>
 
+  );
 
-
-}
-import React from "react",;
-import { Badge } from "@/components/ui/badge",;
-import { Award } from "lucide-react",;
-
-
-interface TalentCardBadgesProps {;
-  featured: boolean | undefined;
 }
 
 export function TalentCardBadges(): any ({ featured }: TalentCardBadgesProps) {;

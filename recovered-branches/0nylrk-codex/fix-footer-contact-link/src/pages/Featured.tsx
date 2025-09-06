@@ -1,13 +1,8 @@
 
-
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
 import { GradientHeading } from "@/components/GradientHeading";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
-import { GradientHeading } from "@/components/GradientHeading",
-
-
 
 export default function Featured() {
   return (
@@ -24,16 +19,12 @@ export default function Featured() {
             </GradientHeading>
             <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
 
-              Discover our handpicked selection of premium AI products and services.
-              These featured listings represent the best that the Zion Marketplace has to offer.
+              Discover our handpicked selection of premium AI products and
+              services. These featured listings represent the best that the Zion
+              Marketplace has to offer.
+
             </p>
           </div>
-
-              Discover our handpicked selection of premium AI products and services.;
-              These featured listings represent the best that the Zion Marketplace has to offer.;
-            </p>;
-          </div>;
-
 
 
 
@@ -44,7 +35,7 @@ export default function Featured() {
       <Footer />
     </>
 
-  )
+  );
 
 }
 ;

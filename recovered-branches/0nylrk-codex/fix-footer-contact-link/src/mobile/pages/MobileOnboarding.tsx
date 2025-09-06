@@ -1,9 +1,5 @@
 
 
-
-
-
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -14,6 +10,16 @@ type OnboardingStep = "language" | "role" | "signup";
 
 export function MobileOnboarding() {
 
+
+
+
+export function MobileOnboarding() {;
+
+
+  const [currentStep, setCurrentStep] = useState<OnboardingStep>("language");
+  const navigate = useNavigate();
+
+
   const goToNextStep = () => {
     if (currentStep === "language") {
       setCurrentStep("role");
@@ -22,7 +28,12 @@ export function MobileOnboarding() {
     } else {
       navigate("/mobile");
     }
+  };
 
+
+  const handleRoleSelect = () => {
+    setCurrentStep("signup");
+  };
 
 
   return (
@@ -48,6 +59,7 @@ export function MobileOnboarding() {
         )}
 
 
+
         {currentStep === "role" && (
           <div className="space-y-6">
             <div className="text-center mb-8">
@@ -68,6 +80,7 @@ export function MobileOnboarding() {
         )}
 
 
+
         {currentStep === "signup" && (
           <div className="space-y-6">
             <div className="text-center mb-6">
@@ -78,8 +91,30 @@ export function MobileOnboarding() {
             </div>
 
 
+
             <SignUpForm />
           </div>
+
+
+
+
+
+
+
+  const handleRoleSelect = () => {;
+    setCurrentStep("signup");
+  };
+
+import React, { useState } from './react';
+import { use_navigate } from './react-router-dom';
+import { Button } from '@/components / ui / button';
+import { LanguageThemeSelector } from '../components / onboarding / LanguageThemeSelector';
+import { RolePicker } from '../components / onboarding / RolePicker';
+import { SignUpForm } from '../components / onboarding / SignUpForm';
+type OnboardingStep = "language" | "role" | "signup";
+;
+
+;
 
 
 

@@ -1,23 +1,16 @@
 
+export type ForumCategory =
+  | "getting-hired"
+  | "project-help"
+  | "ai-tools"
+  | "feedback"
+  | "announcements";
 
-
-export type ForumCategory = 
-
-
-  | 'getting-hired'
-  | 'project-help'
-  | 'ai-tools'
-  | 'feedback'
-  | 'announcements';
-
-
-export type ForumCategory =;
-  | 'getting - hired';
-  | 'project - help';
-  | 'ai - tools';
-  | 'feedback';
-  | 'announcements';
-
+  id: ForumCategory;
+  name: string;
+  description: string;
+  adminOnly: boolean;
+  icon: string;
 
 }
 
@@ -36,22 +29,18 @@ export type ForumCategory =;
   upvotes: number;
   downvotes: number;
 
-export interface ForumPost {
+  replyCount: number;
+  isAnswered?: boolean;
+  isPinned?: boolean;
+  isLocked?: boolean;
+  isFeatured?: boolean;
+}
 
-export interface ForumPost {;
-  id: string;
-  title: string;
-  content: string;
-  authorId: string;
-  authorName: string;
-  authorAvatar?: string;
-  authorRole?: string;
-  categoryId: ForumCategory;
-  tags: string[];
-  createdAt: string;
-  updatedAt: string;
-  upvotes: number;
-  downvotes: number;
+
+export interface ForumReply {;
+
+
+
 
   id: string;
   post_id: string;
@@ -65,29 +54,19 @@ export interface ForumPost {;
   updated_at: string;
   upvotes: number;
 
-export interface ForumReply {
-
-export interface ForumReply {;
-  id: string;
-  postId: string;
-  parentReplyId?: string;
-  content: string;
-  authorId: string;
-  authorName: string;
-  authorAvatar?: string;
-  authorRole?: string;
-  createdAt: string;
-  updatedAt: string;
-  upvotes: number;
-
+  downvotes: number;
+  isAnswer?: boolean;
 }
-export interface Badge {
+
 
 export interface Badge {;
+
   id: string;
   name: string;
   description: string;
-
+  icon: string;
+  color: string;
+}
 
 
   icon: string,
@@ -102,14 +81,23 @@ export interface UserBadge {
 export interface CommunityUser {
 
 
+
+export interface UserBadge {;
+
+
+
   id: string;
   name: string;
   avatar?: string;
   role: string;
   reputation: number;
 
-  postCount: number;
-  replyCount: number;
-  badges: Badge[];
 
+
+  post_count: number;
+  reply_count: number;
+  badges: Badge[];
+  isVerified: boolean;
+  isModerator: boolean;
+}
 

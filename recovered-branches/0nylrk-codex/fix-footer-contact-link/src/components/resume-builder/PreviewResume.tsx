@@ -1,26 +1,21 @@
 
+import { Resume } from "@/types/resume";
+import {
+  PreviewHeader,
+  ResumeBasicInfoSection,
+  WorkExperienceSection,
+  EducationSection,
+  SkillsSection,
+  CertificationsSection,
+} from "./preview";
 
-
-import {Resume} from '@/types/resume';
-import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
-
-
-
-
-
-
-import { Resume } from '@/types/resume',;
-import {;
-  PreviewHeader,;
-  ResumeBasicInfoSection,;
-  WorkExperienceSection,;
-  EducationSection,;
-  SkillsSection,;
-  CertificationsSection;
-} from './preview',;
-interface PreviewResumeProps {;
+interface PreviewResumeProps {
   resume: Resume;
   onBack: () => void;
+}
+
+
+
 
 
 
@@ -50,7 +45,6 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
 
 
 
-
       {/* Resume Preview */}
       <div className="bg-white text-black p-8 rounded-lg shadow-lg print-section">
         <ResumeBasicInfoSection basicInfo={resume.basic_info} />
@@ -61,8 +55,9 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
       </div>
     </div>
 
-
+  );
 }
+
 
 
 

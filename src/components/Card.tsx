@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface CardProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
   title?: string;
   description?: string;
   className?: string;
@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div 
-      className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow ${className}`}
+      className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300 ${className}`}
       onClick={onClick}
     >
       {title && (

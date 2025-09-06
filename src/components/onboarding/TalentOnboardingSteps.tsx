@@ -23,7 +23,8 @@ function TalentOnboardingSteps() {
       completed: onboardingStatus.profileCompleted,
       link: "/profile",
 
-      action: "Update"},
+      action: "Update",
+    },
 
     {
       id: "skills",
@@ -31,7 +32,8 @@ function TalentOnboardingSteps() {
       completed: onboardingStatus.skillsAdded,
       link: "/profile/skills",
 
-      action: "Add Skills"},
+      action: "Add Skills",
+    },
 
     {
       id: "availability",
@@ -39,8 +41,17 @@ function TalentOnboardingSteps() {
       completed: onboardingStatus.availabilitySet,
       link: "/profile/availability",
 
-      action: "Set"},
+      action: "Set",
+    },
+
     {
+      id: "match",
+      label: "Receive your first job match",
+      completed: onboardingStatus.matchReceived,
+      link: "/talent-dashboard",
+      action: "View Matches",
+    },
+  ];
 
       id: "match",
       label: "Receive your first job match",

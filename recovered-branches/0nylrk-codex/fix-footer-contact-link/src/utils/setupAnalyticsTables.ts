@@ -1,30 +1,22 @@
 
-
+import { supabase } from "@/integrations/supabase/client";
 
 export async function ensureAnalyticsTablesExist() {
   try {
     // Check if analytics_events table exists
     const { error } = await supabase
 
-      .from('analytics_events')
+      .from("analytics_events")
+      .select("id")
+      .limit(1);
 
-
-import { supabase } from '@/integrations/supabase/client',;
-export async function ensureAnalyticsTablesExist() {;
-  try {;
-    // Check if analytics_events table exists;
-    const { error } = await supabase;
-      .from('analytics_events');
-      .select('id');
-      .limit(1),;
-    if (error && error.code === 'PGRST204') {;
-      // // // console.log('Creating analytics tables...'),;
+    if (error && error.code === "PGRST204") {
+      console.log("Creating analytics tables...");
       await createAnalyticsTables();
     }
-  } catch (error) {;
-    console.warn('Error checking if analytics tables exist:', error),;
-    // No need to create tables here, as this could be a connection error;
-
+  } catch (error) {
+    console.warn("Error checking if analytics tables exist:", error);
+    // No need to create tables here, as this could be a connection error
 
   }
 }
@@ -32,7 +24,7 @@ export async function ensureAnalyticsTablesExist() {;
 async function createAnalyticsTables() {
   try {
     // Create analytics_events table
-    await supabase && supabase.rpc('exec', {
+    await supabase.rpc("exec", {
       sql: `
 
   }
@@ -247,6 +239,26 @@ function createAnalyticsTables() {
         FROM conversions c
         LEFT JOIN page_views p ON c.date = p.date
 
-        ORDER BY c.date DESC,
-      `
+        ORDER BY c.date DESC;
+      `,
+    });
+
+    console.log("Analytics tables created successfully");
+  } catch (error) {
+    console.error("Error creating analytics tables:", error);
+    // Tables creation failed, but we can still continue
+
+
+        ORDER BY c.date DESC;
+      `;
+    });
+;
+    console.log ('Analytics tables created successfully');
+  } catch (error) {
+    console.error ('Error creating analytics tables:', error);
+    // Tables creation failed, but we can still continue;
+  }
+}
+
+
 

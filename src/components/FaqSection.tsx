@@ -1,4 +1,5 @@
 
+
 import { FileText } from 'lucide-react'
 const faqs = [
   {
@@ -412,4 +413,5 @@ export function FaqSection() {;
       </div>;
     </section>);
 }
+
 

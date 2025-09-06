@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import Button from './Button';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,6 +11,7 @@ const Header: React.FC = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   return (
     <header className="bg-gray-900 text-white shadow-lg fixed w-full top-0 z-40">
       <div className="container mx-auto px-4">
@@ -29,7 +31,6 @@ const Header: React.FC = () => {
             <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
             <Link to="/about" className="hover:text-blue-400 transition-colors">About</Link>
             <Link to="/services" className="hover:text-blue-400 transition-colors">Services</Link>
-            <Link to="/pricing" className="hover:text-blue-400 transition-colors">Pricing</Link>
             <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
           </nav>
 
@@ -52,17 +53,19 @@ const Header: React.FC = () => {
               <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
               <Link to="/about" className="hover:text-blue-400 transition-colors">About</Link>
               <Link to="/services" className="hover:text-blue-400 transition-colors">Services</Link>
-              <Link to="/pricing" className="hover:text-blue-400 transition-colors">Pricing</Link>
               <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
+              <Button variant="primary" size="small" className="w-full">
+                Get Started
+              </Button>
             </nav>
           </div>
         )}
 
       </div>
-
     </header>
   );
 };
 
 
 export default Header;
+

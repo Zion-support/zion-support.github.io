@@ -1,42 +1,43 @@
 
 
+  return (
+    <>
+      <Head>
+        <title>AI Services - Zion Tech Group</title>
 
-import Link from 'next/link',
-import Head from 'next/head';
-import { useState, useEffect  } from 'react';
-import { ContactInfo  } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-export default function AIServices() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  useEffect(() => {
-    const timer = null;
-              { title: 'AI Sales Intelligence', href: '/ai-sales-automation' }].map((c) => (
-              <Link key={c.href} href={c.href} className="p-6 rounded-2xl bg-black/40 border border-white/10 hover:border-cyan-500/40 transition-colors">
-                <div className="text-xl font-semibold">{c.title}</div>
-              </Link>
-            ))}
 
+        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+          <div className="container mx-auto px-4 py-16">
+            <h1 className="text-4xl font-bold text-center mb-8">AI Services</h1>
+            <p className="text-xl text-slate-300 text-center">
+              Advanced artificial intelligence solutions for your business.
+            </p>
           </div>
-        </div>
-      </div>
 
+                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              >;
+                AI Services;
+              </h1>;
+              <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
+                100+ Advanced Artificial Intelligence Solutions;
+              </p>;
+              <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
+                Harness the power of artificial intelligence with our comprehensive suite of AI services.;
+                From autonomous agents to predictive analytics, we provide cutting-edge AI solutions;
+                to transform your business operations.;
+              </p>;
+            </div>;
+          </section>;
+          {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
-
-      description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more.">;
-      <div className="min-h-screen bg-gray-50 py-20">;
-        <div className="container mx-auto px-4">;
-          <div className="text-center mb-12">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">;
-              AI Services;
-            </h1>;
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
-              Transform your business with cutting-edge AI solutions and;
-              services.;
-            </p>;
-          </div>;
-          <div className="text-center">;
-            <p className="text-gray-600">;
 
           <section className="py-8 px-4">
             <div className="max-w-6xl mx-auto">
@@ -352,6 +353,13 @@ export default function AIServices() {
 
 
 }
+
+
+
+
+
+
+
 
 
 

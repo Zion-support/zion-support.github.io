@@ -1,4 +1,65 @@
 
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import {
+  CheckCircle,
+  ChevronRight,
+  FileText,
+  MessageSquare,
+  Video,
+} from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+import { SeverityIndicator } from "../common/SeverityIndicator";
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+interface Milestone {
+  id: string;
+  title: string;
+  dueDate: string;
+  status: "completed" | "in_progress" | "pending";
+  paymentStatus: "paid" | "pending" | "overdue";
+  amount: string;
+}
+
+interface ProjectViewProps {
+  project: {
+    id: string;
+    title: string;
+    client: {
+      name: string;
+      avatar?: string;
+    };
+    startDate: string;
+    endDate?: string;
+    status: string;
+    totalAmount: string;
+    progress: number;
+    description: string;
+  };
+  milestones: Milestone[];
+}
+
+  const navigate = useNavigate();
+
+  const startProjectCall = () => {
+    const roomId = `project-${project.id}`,
+    toast.success("Starting project call", {
+      description: "Initializing video connection...",
+    });
+
+    navigate(`/call/${roomId}`);
+  };
+
+  const messageClient = () => {
+    toast.info("Opening message thread with client", {
+      description: `Messaging ${project.client.name}...`,
+    });
+    // Navigate to messaging with this client
+  };
+
 
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -20,6 +81,7 @@
             </div>
 
 
+
             <div className="space-y-1">
               <div className="flex justify-between items-center text-sm">
                 <span>Progress</span>
@@ -27,6 +89,7 @@
               </div>
               <Progress value={project.progress} className="h-2" />
             </div>
+
 
 
             <div className="grid grid-cols-2 gap-3 text-sm">
@@ -49,10 +112,12 @@
             </div>
 
 
+
             <div>
               <p className="text-sm text-muted-foreground mb-1">Description</p>
               <p className="text-sm">{project.description}</p>
             </div>
+
 
 
             <div className="flex gap-2">
@@ -80,6 +145,7 @@
       </Card>
 
 
+
       <section>
         <h2 className="text-lg font-medium mb-4">Milestones</h2>
         <div className="space-y-3">
@@ -98,12 +164,18 @@
                   <Badge
                     variant={
 
+                      milestone.paymentStatus === "paid"
+                        ? "default"
+                        : milestone.paymentStatus === "overdue"
+                          ? "destructive"
+                          : "outline"
 
                     }
                   >
                     {milestone.paymentStatus}
                   </Badge>
                 </div>
+
 
 
                 <div className="pl-7">
@@ -166,6 +238,8 @@
       </section>
     </div>
 
-  )
+  );
+}
+
 
 

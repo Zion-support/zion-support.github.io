@@ -1,4 +1,12 @@
 
+import React from "react";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import { CodeBlock } from "@/components/developers/CodeBlock";
+export function ApiGettingStarted() {
+
+  const authExample = `curl -X GET \\
+  https: //api.zionai.com/v1/jobs \\
+
 
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
 
@@ -39,16 +47,22 @@ console.log(response.data),`;
 
         <h2>Overview</h2>
         <p>
-          The Zion AI Marketplace API provides programmatic access to jobs, talent profiles
-          quotes, and projects. Our RESTful API lets you integrate Zion's features into your
-          own applications and workflows.
 
+          The Zion AI Marketplace API provides programmatic access to jobs,
+          talent profiles, quotes, and projects. Our RESTful API lets you
+          integrate Zion's features into your own applications and workflows.
         </p>
         <h2>Authentication</h2>
         <p>
-
+          All API requests must include your API key in the Authorization
+          header. You can generate API keys in the{" "}
+          <a href="/developers/portal" className="text-zion-cyan">
+            Developer Portal
+          </a>
+          .
 
         </p>
+
         <CodeBlock code={authExample} language="bash" showLineNumbers={false} />
 
         <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-md p-4 my-6">
@@ -70,14 +84,22 @@ console.log(response.data),`;
 
         <h2>Content Type</h2>
         <p>
-          All requests must use <code>application/json</code> content type. Set the
+
+          All requests must use <code>application/json</code> content type. Set
+          the
 
           <code>Content-Type</code> header accordingly.
         </p>
         <h2>Quick Start</h2>
         <p>Here's a simple example of fetching jobs using JavaScript:</p>
 
-        <CodeBlock code={quickStartJs} language="javascript" showLineNumbers={true} />
+
+        <CodeBlock
+          code={quickStartJs}
+          language="javascript"
+          showLineNumbers={true}
+        />
+
 
         <h2>Available APIs</h2>
         <ul>
@@ -116,7 +138,7 @@ console.log(response.data),`;
       </div>
     </ApiDocsLayout>
 
-  )
+  );
 
 }
 

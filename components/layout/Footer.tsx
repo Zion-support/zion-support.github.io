@@ -1,71 +1,19 @@
 
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-  Instagram, 
-  Github 
-} from 'lucide-react';
 
-const Footer = () => {
-  const footerSections = {
-    services: [
-      { name: 'AI Services', href: '/ai-services' },
-      { name: 'IT Services', href: '/it-services' },
-      { name: 'Micro SaaS', href: '/micro-saas' },
-      { name: 'Cloud Solutions', href: '/cloud-solutions' },
-      { name: 'Cybersecurity', href: '/security' },
-      { name: 'Data Analytics', href: '/data-analytics' }
-    ],
-    solutions: [
-      { name: 'Enterprise Solutions', href: '/enterprise-solutions' },
-      { name: 'Startup Solutions', href: '/startup-solutions' },
-      { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
-      { name: 'Cloud Migration', href: '/solutions/cloud-migration' },
-      { name: 'AI Implementation', href: '/solutions/ai-implementation' },
-      { name: 'Custom Development', href: '/custom-development' }
-    ],
-    company: [
-      { name: 'About Us', href: '/about' },
-      { name: 'Our Team', href: '/team' },
-      { name: 'Careers', href: '/careers' },
-      { name: 'Partners', href: '/partners' },
-      { name: 'News', href: '/news' },
-      { name: 'Contact', href: '/contact' }
-    ],
-    resources: [
-      { name: 'Blog', href: '/blog' },
-      { name: 'Case Studies', href: '/case-studies' },
-      { name: 'White Papers', href: '/white-papers' },
-      { name: 'Webinars', href: '/webinars' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'Support', href: '/support' }
-    ],
-    legal: [
-      { name: 'Privacy Policy', href: '/privacy' },
-      { name: 'Terms of Service', href: '/terms' },
-      { name: 'Cookie Policy', href: '/cookies' },
-      { name: 'Accessibility', href: '/accessibility' }
-    ]
-  };
 
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: Facebook },
     { name: 'Twitter', href: '#', icon: Twitter },
     { name: 'LinkedIn', href: '#', icon: Linkedin },
     { name: 'Instagram', href: '#', icon: Instagram },
+
     { name: 'GitHub', href: '#', icon: Github }
+
   ];
 
   return (
     <footer className="bg-gray-900 text-white">
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
@@ -100,11 +48,13 @@ const Footer = () => {
                 <Clock className="h-5 w-5 mr-3 text-blue-400" />
                 <span>Mon-Fri 9AM-6PM EST</span>
               </div>
+
             </div>
           </div>
 
           {/* Services */}
           <div>
+
             <h3 className="text-lg font-semibold mb-6">Services</h3>
             <ul className="space-y-3">
               {footerSections.services.map((item) => (
@@ -112,6 +62,7 @@ const Footer = () => {
                   <Link 
                     href={item.href}
                     className="text-gray-300 hover:text-white transition-colors duration-200"
+
                   >
                     {item.name}
                   </Link>
@@ -119,6 +70,7 @@ const Footer = () => {
               ))}
             </ul>
           </div>
+
 
           {/* Solutions */}
           <div>
@@ -131,10 +83,12 @@ const Footer = () => {
                     className="text-gray-300 hover:text-white transition-colors duration-200"
                   >
                     {item.name}
+
                   </Link>
                 </li>
               ))}
             </ul>
+
           </div>
 
           {/* Company */}
@@ -199,10 +153,12 @@ const Footer = () => {
                     {item.name}
                   </Link>
                 ))}
+
               </div>
             </div>
           </div>
         </div>
+
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8">
@@ -212,6 +168,7 @@ const Footer = () => {
               <span className="mr-2">Trusted by</span>
               <span className="font-semibold text-white">500+</span>
               <span className="ml-2">companies worldwide</span>
+
             </div>
           </div>
         </div>
@@ -220,5 +177,7 @@ const Footer = () => {
   );
 };
 
+
 export default Footer;
+
 

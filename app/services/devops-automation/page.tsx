@@ -1,14 +1,17 @@
 
+
 import Link from "next/link";
 
 export const metadata = {
   title: "DevOps Automation | Zion Tech Group",
   description: "Streamline your development workflow with comprehensive DevOps automation solutions. CI/CD, infrastructure as code, and monitoring.",
 
+
 };
 
 export default function DevOpsAutomationPage() {
   return (
+
 
     <div className="animate-fade-in">
       <div className="text-center mb-16">
@@ -219,6 +222,7 @@ export default function DevOpsAutomationPage() {
         <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
           Let us help you implement DevOps best practices and automation to accelerate your development process.
 
+
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -238,6 +242,7 @@ export default function DevOpsAutomationPage() {
             Email Us
           </a>
         </div>
+
 
         <div className="mt-4 text-sm text-gray-500">
           <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
@@ -285,10 +290,12 @@ function PricingCard({ plan, price, period, description, features, popular }: {
           <li key={feature} className="flex items-center">
             <span className="text-green-500 mr-2">✓</span>
 
+
             <span className="text-gray-600">{feature}</span>
           </li>
         ))}
       </ul>
+
 
     </div>
   );
@@ -302,6 +309,7 @@ function StepCard({ step, title, description }: { step: string; title: string; d
       </div>
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600">{description}</p>
+
 
     </div>
   );

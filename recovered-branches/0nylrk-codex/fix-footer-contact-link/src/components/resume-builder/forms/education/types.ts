@@ -1,4 +1,12 @@
 
+import { Education } from "@/types/resume";
+export interface EducationFormProps {
+  resumeId: string;
+  educationEntries: Education[];
+  onComplete: () => void;
+  onBack: () => void;
+}
+
 
   resumeId: string;
   educationEntries: Education[];
@@ -17,6 +25,7 @@ export interface EducationItemProps {;
 
   education: Education;
   onEdit: (education: Education) => void;
+  onDelete: (id: string) => void;
 }
 
   education: Education;
